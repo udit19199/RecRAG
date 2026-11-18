@@ -53,12 +53,12 @@ and can be deleted, so a result that only lives there can be lost.
     facts replace them. Null questions have no gold facts, so they have no
     retrieval numbers.
 - Always split by question type. Never report pooled or "overall" numbers.
-- Report each of the 3 repeats separately, and say which questions fail in all
-  3 repeats.
+- Show the average of the 3 repeats with a lowest-to-highest repeat line on the
+  same bar; keep per-repeat numbers in the run data.
 - The main comparison is Agentic Hybrid RAG vs Normal RAG on temporal and
-  comparison questions, shown as confusion matrices (both, Agentic only,
-  Normal RAG only, neither) per repeat.
-- No cost or latency in results.
+  comparison questions: Normal RAG sits next to Agentic on every chart, so no
+  separate confusion-matrix slide.
+- Cost and latency per question type go on one slide, both runs.
 - When you need a past result, look in the scene first, then in local `runs/`.
 - Before deleting local run folders, check that their results are already in
   the scene.
@@ -110,9 +110,9 @@ Helpers in `~/Workspace/local/hpe-diagrams/` (outside the repo):
   result slides and the HotpotQA and Natural Questions slide from run data.
   Its `chart()` is the reference chart style; `reset(fid)` empties a frame.
 - `newslides.py` (`stacked_chart`, `new_frame`, `delete`, `by_name`) and
-  `two_run_slides.py idk|cost`: older builders. Both list methods in the old order
-  (Agentic last), and `newslides.py stab` builds the retired stability slide;
-  fix the method order before reusing them.
+  `two_run_slides.py cost`: other builders. `two_run_slides.py` uses the right
+  method order; `newslides.py` still has Agentic last, and its `stab` builds the
+  retired stability slide; fix the order before reusing it.
 
 Excalidraw MCP quirks:
 1. Moving a bound text makes the server re-derive its container's position.
