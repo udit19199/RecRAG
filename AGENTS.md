@@ -122,6 +122,7 @@ Excalidraw MCP quirks:
 3. Changing text that has `autoResize: false` needs `autoResize: true` plus a
    width.
 4. `take_screenshot` needs `maxWidth` ≤ 1920.
+5. Multi-line or top-aligned labels can lose their frameId (and survive a frame reset). Use `deckops.unframed_in` when clearing a frame and `deckops.adopt(fid)` after adding labels.
 
 Steps for any deck change:
 1. Back up: `excalidraw scenes content get 5KJVp4wI32J --out
