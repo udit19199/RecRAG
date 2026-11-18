@@ -1,0 +1,48 @@
+{
+ "per_dataset": {
+  "multihop_rag": {
+   "answers": 1500,
+   "calls": 1538,
+   "failed": 85,
+   "empty": 563,
+   "answers_with_failure": 84
+  },
+  "hotpotqa": {
+   "answers": 1500,
+   "calls": 1522,
+   "empty": 405,
+   "failed": 142,
+   "answers_with_failure": 137
+  },
+  "natural_questions": {
+   "answers": 1500,
+   "calls": 1509,
+   "failed": 110,
+   "empty": 153,
+   "answers_with_failure": 107
+  }
+ },
+ "causes": {
+  "not valid Cypher": 171,
+  "valid Cypher, impossible request": 150,
+  "timeout (10 s)": 13,
+  "out of database memory": 3
+ },
+ "top_messages": {
+  "Cypher query failed: Expected a string value for `toLower`, but got: StringArray": 102,
+  "Cypher query failed: Invalid input 'THEN': expected an expression, ',', 'AS', 'G": 19,
+  "Cypher query failed: Text cannot be parsed to a Date": 13,
+  "Cypher query failed: The transaction has been terminated. Retry your operation i": 13,
+  "Cypher query failed: Type mismatch: expected Relationship but was List<Path> (li": 10,
+  "Cypher query failed: Multiple result columns with the same name are not supporte": 7,
+  "Cypher query failed: Invalid input 'RETURN': expected an expression or ')' (line": 4,
+  "Cypher query failed: Invalid input ''s defense undone by reliance on technology'": 4,
+  "Cypher query failed: Invalid input '(': expected an expression (line 6, column 2": 4,
+  "Cypher query failed: Invalid input ''s blockade of gaza'': expected an expressio": 3,
+  "Cypher query failed: In a WITH/RETURN with DISTINCT or an aggregation, it is not": 3,
+  "Cypher query failed: The allocation of an extra 2.0 MiB would use more than the ": 3,
+  "Cypher query failed: Invalid input ''s code'': expected an expression or ')' (li": 3,
+  "Cypher query failed: Invalid input ''s national soccer team'': expected an expre": 3,
+  "Cypher query failed: Invalid input ''s christmas carol'': expected an expression": 3
+ }
+}

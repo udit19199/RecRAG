@@ -48,7 +48,9 @@ can be deleted; run results in `runs/` are committed.
     Claude Haiku judge extracts from the gold sentences (`evals/haiku_fact_judge.py`,
     `claims`). A fact counts as found only when `judge` marks it `stated` with a
     quote that appears in the retrieved text (`full_status`). Per-question data:
-    `gold[].claims[].full_status` in `runs/heldout400/judge_support/*/per_question.jsonl`.
+    latest run `facts[].found` in `runs/final500/judge/per_question.jsonl`; previous run
+    `gold[].claims[].full_status` in `runs/heldout400/judge_support/*/per_question.jsonl`
+    (that run's facts were judged by GPT-6 Luna, before the Haiku rule).
   - Do not report gold-sentence recall or sentence-level matching; the gold
     facts replace them. Null questions have no gold facts, so they have no
     retrieval numbers.
@@ -59,9 +61,24 @@ can be deleted; run results in `runs/` are committed.
   comparison questions: Normal RAG sits next to Agentic on every chart, so no
   separate confusion-matrix slide.
 - Cost and latency per question type go on one slide, both runs.
-- When you need a past result, look in the scene first, then in local `runs/`.
-- Before deleting local run folders, check that their results are already in
-  the scene.
+- When you need a past result, look in the scene first, then in `runs/`.
+- Before deleting run folders, check that their results are already in the
+  scene.
+
+### Findings from the latest run
+
+Analyses live under `runs/final500/`, each a script plus a plain-words
+`SUMMARY.md`. Read the summary before re-deriving a number, and add a new
+analysis the same way:
+- `two_run_analysis/`: previous vs latest run per question type, wrong
+  "Insufficient Information" answers, latency, cost.
+- `repeat_variation/`: why answers varied between repeats (no summary yet;
+  numbers in its JSON).
+- `cypher_failures/`: graph queries written by the model fail 7.4% of the time
+  and come back empty another 24.5%; reach for it before blaming retrieval for a
+  missing fact.
+- `runs/agentic_tune/agent_picks/README.md`: the change that lets the agent pick
+  its evidence, and why.
 
 ### Deck
 
@@ -212,14 +229,19 @@ Use `GraphRAG` from `graphrag_retrieval.py` directly from Python.
 `graphrag_construction.py` holds the ontology and builds the graph.
 `graphrag_retrieval.py` provides the agentic retrieval tools and runs retrieval
 and answering. Dataset inputs shared by all methods live in `dataset.py`;
-evaluation helpers live in `evals/`. Save experiment results under local-only
-`runs/` (gitignored).
+evaluation helpers live in `evals/`. Save experiment results under `runs/` and
+commit them; indexes and caches there stay gitignored.
+
+The agent ends by listing the tags of the results the answer needs; code sends
+those first, then the best-scoring passages, 10 items in all (the app sends 5).
+Graph queries return facts only, never article text.
 
 ## Older datasets (archived)
 
 Hannon, REFinD, and FiNER-139 dataset files were deleted; `datasets/` now holds
-only `hotpotqa` and `multihop_rag`. They are not part of the active Agentic
-GraphRAG benchmark path.
+only `hotpotqa` and `multihop_rag`; Natural Questions and NovelQA load from the
+Hugging Face cache. `docs/refind/` is the write-up of the old REFinD experiment,
+kept for history only.
 
 ## Agent Checklist (before finishing)
 

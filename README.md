@@ -92,7 +92,7 @@ Responses API.
 | Normal RAG | Splits source pages into chunks and embeds each chunk. It does not build a graph. | LlamaIndex ranks chunks by vector similarity to the question. |
 | RAPTOR | Builds a summary tree using global and local UMAP reduction, soft GMM clusters, and recursive summaries. | Ranks chunks and summaries together by cosine similarity, with a 3,500-token context limit. |
 | HippoRAG2 | Embeds the same chunks and extracts entities and facts into its own local graph. | Its graph retrieval links question entities and facts to relevant chunks. |
-| Agentic Hybrid RAG | Uses the ontology to build a graph and chunk vector index in Neo4j. | An agent runs Neo4j vector search, then one read-only text-to-Cypher lookup, may refine either, then passes the evidence to the answer model. |
+| Agentic Hybrid RAG | Uses the ontology to build a graph and chunk vector index in Neo4j. | An agent runs Neo4j vector search, then one read-only text-to-Cypher lookup, and may search again (up to 5 model calls). It ends by listing the tagged results the answer needs; those go to the answer model first, and the best-scoring passages fill the rest. |
 
 Agentic Hybrid RAG was called Agentic GraphRAG until 15 Nov 2026. It combines vector
 search and graph lookups, hence the rename. Module, file and result-key names still say
@@ -100,8 +100,8 @@ search and graph lookups, hence the rename. Module, file and result-key names st
 
 All four baseline methods use the same title-prefixed `SentenceSplitter`
 chunks, with 256 tokens per chunk and 20 tokens of overlap. Agentic Hybrid RAG writes
-those exact chunks to Neo4j and returns at most five items. Normal RAG,
-HippoRAG2, and RAPTOR return ten items by default.
+those exact chunks to Neo4j. In benchmark runs every method passes ten items to
+the answer model; the Streamlit app passes five.
 
 ## Comparison runner
 
@@ -221,62 +221,38 @@ These runs instead use the shared RecRAG models above, so the paper's scores
 cannot be compared directly with them. The paper also does not pin its
 HippoRAG commit or publish its processed input records.
 
-## Retrieval quality
+## How answers and retrieval are scored
 
-Retrieval is scored from saved `retrieval.jsonl` files, so no method reruns.
-The headline metric comes from one LLM judge applied identically to all four
-methods:
+Every method is scored from its saved `retrieval.jsonl` and `results.jsonl`, so
+scoring never reruns a method. Claude Haiku is the only judge; judging makes no
+OpenAI calls. Two measures are reported, always split by question type:
 
-```sh
-uv run python -m evals.retrieval_judge runs/<method>/<run> ...
-```
+- **Answered right**: the answer matches a gold answer after lowercasing and
+  removing punctuation and a, an, the. Otherwise a Claude Haiku subagent decides
+  whether it names the same entity, value or yes/no. An "Insufficient
+  Information" reply that does not match is wrong. Export the cases that need
+  the judge with `uv run python -m evals.subagent_judge export OUT RUN_DIR...`.
+- **Gold facts found**, at ≥50%, ≥75% and 100% of a question's facts. Claude
+  Haiku splits each question's gold sentences into short facts once, so every
+  method is judged on the same facts. Then, per method and question, it marks
+  each fact stated, contradicted or missing, with a quote. A fact counts only
+  when it is stated and code finds the quote in the retrieved text. Run the
+  three stages from `evals/haiku_fact_judge.py`:
 
-Pass one run per method per dataset, including GraphRAG. Exact-string and
-offset matching cannot score RAPTOR's generated summaries, because the saved
-runs no longer have the tree that ties a summary to its source pages. Reading
-content is the only way to treat every architecture the same.
+  ```sh
+  uv run python -m evals.haiku_fact_judge claims OUT RUN_DIR...
+  uv run python -m evals.haiku_fact_judge judge OUT RUN_DIR...
+  uv run python -m evals.haiku_fact_judge score OUT
+  ```
 
-**Primary: answer support.** Gold sentences mark one route to the answer.
-HotpotQA labels come from each question's own ten paragraphs, but our corpus
-pools pages from 1,000 questions, so the same links often appear on other
-pages. Agentic Hybrid RAG's 1,000-character windows can also cut a gold sentence
-midway. Gold-sentence recall therefore penalized methods that reached the
-answer by another stated route. When we measured this, Agentic Hybrid RAG had the answer
-in its text for 28 of the 41 HotpotQA questions where it missed a gold
-sentence; normal RAG had it for 8 of 27. The support judge gets the question,
-the gold answer, the gold sentences as a reference route, and the items. It
-quotes a chain to the gold answer, by that route or any route the items
-state, and marks the answer stated, only mentioned, or missing. Code scores
-each question: 3 a complete verified chain with the answer stated (yes/no
-answers need only the complete chain); 2 the answer stated; 1 the answer
-mentioned, or part of a chain; 0 nothing. Support score = sum / (3 ×
-questions) × 100. Full support rate = share of questions scoring 3.
+The latest run's judge prompts, audit and per-question verdicts are in
+`runs/final500/judge/` and `runs/final500/judge_prompts.json`.
 
-**Secondary: gold-sentence recall**, scored as follows.
-
-- Each gold sentence is split into claims once per question. The claims are
-  frozen, so every method is judged against the same ones.
-- For each method and question, `gpt-6-luna` marks every claim stated,
-  missing, or contradicted. It must quote the retrieved text. The judge sees
-  no method name and no question, and the items are shuffled.
-- Code, not the judge, sets each gold sentence's integer score, using only
-  quotes that appear verbatim in the cited item: 3 every claim stated; 2 the
-  main claim stated; 1 the sentence's people or things mentioned; 0 otherwise.
-  Any verified contradiction scores 0.
-- A question takes its lowest gold sentence score, because a multi-hop
-  question needs every hop.
-- **Retrieval score** = sum of question scores / (3 × questions) × 100.
-  **Full retrieval rate** = share of questions scoring 3. Budget views cut
-  ranked methods to Agentic Hybrid RAG's per-question token volume. Intervals are paired
-  bootstraps.
-
-Verdicts are cached in `runs/retrieval_judge/cache.jsonl`, keyed by prompt
-version, model, and payload. A rerun resumes and re-scoring is free. Bump
-`PROMPT_VERSION` whenever a prompt or the scoring rule changes.
-`evals/retrieval_quality.py` keeps the older offset metrics. The judge reuses
-them only as a check: `disagreements.jsonl` lists gold sentences where the two
-disagree, and `summary_credit.jsonl` lists credit earned through RAPTOR
-summaries, for hand review.
+The previous run (`runs/heldout400/`) scored gold facts with the older GPT-6
+Luna judge in `evals/retrieval_judge.py` (verdict cache in
+`runs/retrieval_judge/cache.jsonl`). Its numbers keep that judge; new runs use
+the Haiku judge above. Gold-sentence recall, answer support and the offset
+metrics in `evals/retrieval_quality.py` are retired as reported measures.
 
 A correct answer can also come from model knowledge rather than retrieval.
 `evals/closed_book.py` answers the same questions with no context, using the
@@ -383,6 +359,33 @@ after each question without changing the answer result shape.
 
 For input formats, score limits, and the exact upstream references, see
 [the paper comparison notes](docs/benchmark.md#paper-comparison-protocol).
+
+## Run results and findings
+
+Run results are committed under `runs/`; indexes and caches there are
+gitignored. The slides in the
+[Experiments scene](https://app.excalidraw.com/s/9pwrOc81bDT/5KJVp4wI32J) are
+the reported results.
+
+| Folder | What it holds |
+| --- | --- |
+| `runs/final500/` | The latest run: MultiHop-RAG, HotpotQA and Natural Questions, 500 questions each, 4 methods, 3 repeats. `SPEC.md`, `DECISIONS.md`, `run_registry.json` (which run folders belong to it), `report.json`. |
+| `runs/heldout400/` | The previous run: 400 MultiHop-RAG questions, 3 repeats. See its `README.md`. |
+| `runs/agentic_tune/`, `runs/nq100/` | Agentic Hybrid RAG tuning runs on MultiHop-RAG and the first 100 Natural Questions, before the latest run. Each has a `README.md`. |
+| `runs/hotpotqa100/` | Per-type scores rebuilt for an older HotpotQA 100-question run whose run folders were deleted. |
+| `runs/rag/`, `runs/raptor/`, `runs/hipporag/`, `runs/graphrag/` | Per-method run folders, including the latest run's MultiHop-RAG runs. |
+
+Findings from the latest run, under `runs/final500/`:
+
+- `two_run_analysis/`: previous vs latest run per question type. Agentic
+  Hybrid RAG's wrong "Insufficient Information" answers fell from 24.0% to 9.1%
+  (comparison) and from 37.0% to 11.5% (temporal) once the agent picked its own
+  evidence; Normal RAG did not move.
+- `repeat_variation/`: why answers varied between repeats (script and JSON
+  output only, no summary yet).
+- `cypher_failures/`: of 4,569 graph queries the model wrote, 337 (7.4%) failed,
+  mostly invalid Cypher or `toLower` on a list field, and 1,121 (24.5%) ran but
+  found nothing. 328 of 4,500 answers had at least one failed query.
 
 ## Read the docs
 
