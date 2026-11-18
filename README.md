@@ -343,7 +343,8 @@ the reported results.
 | `runs/heldout400/` | The previous run: 400 MultiHop-RAG questions, 3 repeats. See its `README.md`. |
 | `runs/agentic_tune/`, `runs/nq100/` | Agentic Hybrid RAG tuning runs on MultiHop-RAG and the first 100 Natural Questions, before the latest run. Each has a `README.md`. |
 | `runs/hotpotqa100/` | Per-type scores rebuilt for an older HotpotQA 100-question run whose run folders were deleted. |
-| `runs/rag/`, `runs/raptor/`, `runs/hipporag/`, `runs/graphrag/` | Per-method run folders, including the latest run's MultiHop-RAG runs. |
+| `runs/nograph/` | Graph ablation: Agentic Hybrid RAG with the graph switched off (`RECRAG_AGENT_NO_GRAPH=1`), on the latest run's 250 MultiHop-RAG comparison and temporal questions, 3 repeats. `SPEC.md`, `run_registry.json`, `slide_data.json` (slides 09-10), `graph_audit.json`. |
+| `runs/rag/`, `runs/raptor/`, `runs/hipporag/`, `runs/graphrag/` | Per-method run folders, including the latest run's MultiHop-RAG runs and the graph-ablation runs. |
 
 Findings from the latest run, under `runs/final500/`:
 
@@ -356,6 +357,18 @@ Findings from the latest run, under `runs/final500/`:
 - `cypher_failures/`: of 4,569 graph queries the model wrote, 337 (7.4%) failed,
   mostly invalid Cypher or `toLower` on a list field, and 1,121 (24.5%) ran but
   found nothing. 328 of 4,500 answers had at least one failed query.
+
+Graph ablation, under `runs/nograph/` (answered right, mean of 3 repeats, 125
+questions per type):
+
+| Type | Normal RAG | Agentic Hybrid RAG | Agentic, no graph |
+| --- | --- | --- | --- |
+| Comparison | 51.7% | 70.4% | 70.1% |
+| Temporal | 47.7% | 76.5% | 74.9% |
+
+Switching the graph off barely moves the agent: most of its gain over Normal
+RAG comes from the agent loop, not the graph. Gold facts were not judged for
+this run.
 
 ## Read the docs
 

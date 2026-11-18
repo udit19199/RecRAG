@@ -507,6 +507,30 @@ AGENT_INSTRUCTION = TOOL_PURPOSE + (
     "article, person or part the question asks about."
 )
 
+# Graph ablation (18 Nov 2026, runs/nograph): RECRAG_AGENT_NO_GRAPH=1 runs the
+# same agent with no graph at all. The cypher_search tool is removed, and
+# vector_search results carry no entity names or graph facts. The instruction
+# drops only the cypher_search sentences; everything else is word for word the
+# same. Unset, the agent is the frozen final version.
+NO_GRAPH_AGENT_INSTRUCTION = "Use vector_search to find passages about a topic. " + (
+    "First call vector_search with the question. After that, either call "
+    "vector_search again with a refined query or make no tool call if the "
+    "evidence is sufficient. Do not repeat a search that returned no new evidence."
+    " Every result line starts with an ID such as [E1a2b3c]. When you stop "
+    "searching, do not answer the question. Reply only with the IDs of the "
+    f"results the answer needs, at most {RETRIEVAL_TOP_K}, most important first, "
+    "one per line. Pick evidence for every "
+    "article, person or part the question asks about."
+)
+NO_GRAPH_VECTOR_QUERY = """
+OPTIONAL MATCH (node)-[:FROM_DOCUMENT]->(page:Document)
+RETURN node.text AS text, page.title AS title, [] AS entities, [] AS facts, score
+"""
+
+
+def no_graph_agent() -> bool:
+    return os.environ.get("RECRAG_AGENT_NO_GRAPH") == "1"
+
 
 CYPHER_PROMPT = f"""
 Task: Generate one read-only Cypher statement for a Neo4j 5 graph database from a user input.
@@ -576,12 +600,17 @@ def _query_error(exc: neo4j.exceptions.Neo4jError) -> bool:
 
 class _ChunkVectorRetriever(VectorCypherRetriever):
     def __init__(
-        self, *, driver: Driver, database: str, embedder: GraphRAGEmbeddings
+        self,
+        *,
+        driver: Driver,
+        database: str,
+        embedder: GraphRAGEmbeddings,
+        retrieval_query: str = VECTOR_RETRIEVAL_QUERY,
     ) -> None:
         super().__init__(
             driver=driver,
             index_name="chunk_embeddings",
-            retrieval_query=VECTOR_RETRIEVAL_QUERY,
+            retrieval_query=retrieval_query,
             embedder=embedder,
             result_formatter=format_vector_record,
             neo4j_database=database,
@@ -969,6 +998,32 @@ def build_agentic_retriever(
     neo4j_schema: str | None = None,
     ontology: GraphSchema = GENERAL_ONTOLOGY_SCHEMA,
 ) -> AgenticToolsRetriever:
+    if no_graph_agent():
+        vector_only = _ChunkVectorRetriever(
+            driver=driver,
+            database=database,
+            embedder=embedder,
+            retrieval_query=NO_GRAPH_VECTOR_QUERY,
+        )
+        return AgenticToolsRetriever(
+            driver=driver,
+            llm=llm,
+            agent_llm=agent_llm,
+            tools=[
+                vector_only.convert_to_tool(
+                    name="vector_search",
+                    description=(
+                        "Find source text passages similar in meaning to the "
+                        "query. Each result has the passage and its page title."
+                    ),
+                    parameter_descriptions={
+                        "query_text": "What to search for, in plain words.",
+                    },
+                ),
+            ],
+            neo4j_database=database,
+            system_instruction=NO_GRAPH_AGENT_INSTRUCTION,
+        )
     cypher = _BoundedText2CypherRetriever(
         driver=driver,
         llm=llm,

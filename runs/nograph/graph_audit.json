@@ -1,0 +1,23 @@
+{
+ "database": "recrag-benchmark-e5315c2b5c9f57e2595cc51c",
+ "queries": {
+  "entities_with_list_name": "MATCH (n:__Entity__) WHERE NOT n.name IS :: STRING RETURN count(n) AS n",
+  "publisher_nodes": "MATCH (p:Publisher) RETURN count(p) AS n",
+  "duplicate_name_groups_case_or_space": "MATCH (n:__Entity__) WHERE n.name IS :: STRING WITH toLower(trim(n.name)) AS key, count(*) AS c WHERE c > 1 RETURN count(key) AS n",
+  "chunks_with_no_entity": "MATCH (c:Chunk) WHERE NOT EXISTS { (:__Entity__)-[:FROM_CHUNK]->(c) } RETURN count(c) AS n",
+  "entities_total": "MATCH (n:__Entity__) RETURN count(n) AS n",
+  "chunks_total": "MATCH (c:Chunk) RETURN count(c) AS n",
+  "distinct_publisher_names": "MATCH (p:Publisher) RETURN count(DISTINCT toLower(trim(toString(p.name)))) AS n",
+  "entities_in_duplicate_groups": "MATCH (n:__Entity__) WHERE n.name IS :: STRING WITH toLower(trim(n.name)) AS key, count(*) AS c WHERE c > 1 RETURN sum(c) AS n"
+ },
+ "counts": {
+  "entities_with_list_name": 0,
+  "publisher_nodes": 298,
+  "duplicate_name_groups_case_or_space": 1333,
+  "chunks_with_no_entity": 425,
+  "entities_total": 33814,
+  "chunks_total": 7728,
+  "distinct_publisher_names": 298,
+  "entities_in_duplicate_groups": 2777
+ }
+}

@@ -84,7 +84,9 @@ analysis the same way:
 
 The deck is the Experiments scene (`5KJVp4wI32J`), the only RecRAG scene. Each
 slide is a frame named `NN Title`, laid out left to right in number order;
-keep the number, canvas position and `slidesOrder` in step.
+keep the number, canvas position and `slidesOrder` in step. Every slide is
+3000 x 1688 (16:9): a taller slide shrinks to unreadable text when presented,
+so split content across slides instead of growing one.
 
 Content:
 - Both runs share every chart and table: the previous run (held-out 400, 100
@@ -92,21 +94,31 @@ Content:
   HotpotQA and Natural Questions, which the latest run alone has, get
   latest-only charts.
 - MultiHop-RAG appears per question type (comparison, temporal, inference,
-  null), never as totals across types.
+  null), never as totals across types. Two types share a slide, one row of four
+  charts each: comparison + temporal, inference + null.
+- HotpotQA is shown as one dataset (bridge and comparison pooled), in a row
+  above Natural Questions.
 - Method order on every chart and table: Normal RAG, Agentic Hybrid RAG,
   RAPTOR, HippoRAG. Normal RAG sits beside Agentic Hybrid RAG, so that
   comparison needs no slide of its own.
 - Each number lives on one slide. Fold new content into a related slide; the
   deck has no backup slides.
 - Repeat spread sits on the result charts: a thin line from lowest to highest
-  repeat. There is no stability slide.
+  repeat, and the lowest and highest repeat written in small type under each
+  average ("68.8–72.0"). There is no stability slide.
 - A new run joins the slides beside the older runs, whose results stay.
 - Wording: "changes", not "fixes"; "previous run" and "latest run", never
   dates or a timeline. Plain words a non-specialist can follow; explain any
   technical term you keep. Exact prompts stay word for word.
-- Only Agentic Hybrid RAG gets method slides: 01 how it works, 02 its prompts,
-  03 how answers are judged, 10 what changed between the runs. No architecture
-  slides for Normal RAG, RAPTOR or HippoRAG.
+- Only Agentic Hybrid RAG gets method slides: 01-02 how it works (flow; graph
+  and tools), 03-04 its prompts, 05 how answers are judged, 06-07 judge prompts,
+  15 what changed between the runs, 16 question 747. Slide 11 explains why the
+  previous run's repeats were far apart (`runs/final500/repeat_variation/`). No architecture slides for
+  Normal RAG, RAPTOR or HippoRAG. There is no separate "what the graph adds"
+  slide: its facts live on 16.
+- Slide 09 is the agent with the graph switched off (`runs/nograph/`), and
+  slide 10 splits the latest run into the 100 questions per type both runs
+  answered and the 25 new ones. Only the 100 compare the runs.
 - Prompts are shown in Comic Shanns (`fontFamily` 8), as bands: grey same in
   both runs, blue added in the latest run, orange the previous run's replaced
   text. Keep the previous run's judge prompts: its numbers still use them.
@@ -117,8 +129,7 @@ Charts:
   a tie, the previous run is the base and there is no cap.
 - Previous run orange (`#ffd8a8` fill, `#e8590c` stroke); latest run blue
   (`#a5d8ff`, `#1971c2`). Square corners, no arrows, no "45 → 46" labels.
-- Gridline and tick label every 5%. Make the slide taller than 16:9 to fit
-  rather than switching to a 10% step.
+- No gridlines or tick labels; every bar shows its figure.
 - Tables: one number per cell, one table per measure.
 - The deck is presented in dark mode: check contrast in the screenshots.
 - Text: every label centred horizontally and vertically (use the label of an
@@ -130,17 +141,31 @@ Helpers in `~/Workspace/local/hpe-diagrams/` (outside the repo):
   `moves()` (moves elements, skipping bound text), `place(order)` (lays frames
   out left to right and renames them), `restore_offsets(backup)` (puts
   elements back at their in-frame offsets from a backup).
-- `results_slides.py types [Comparison ...] | other`: rebuilds the per-type
-  result slides and the HotpotQA and Natural Questions slide from run data.
-  Its `chart()` is the reference chart style; `reset(fid)` empties a frame.
+- `results_v2.py types|other|changed|q747`: rebuilds slides 08, 12-13 (two types
+  per slide; HotpotQA pooled) and 15-16 from run data. Its `order` predates
+  slides 09-10; renumber with `nograph_slides.py order` instead.
+  `nograph_slides.py s09|s10` builds slides 09-10. It reuses
+  `chart2.py` (the reference chart style: `results_slides.py`'s `chart()` plus
+  the repeat range labels) and `results_slides.py`'s `reset(fid)`.
+- `prompts_pack.py dry|build`: the prompt slides (03-04, 06-07). Prompts are
+  packed at size 26 into as few slides as fit, each under a numbered heading
+  that says what the prompt is for. Prompt text comes from `split_slides.py`
+  (`PROMPT_SLIDES`); its `check` confirms it still matches the sources.
+- `fill_slides.py s01|s06|s16`: slide 01's previous-run row, the judging rows
+  on 05 and the next-phase table. `repeat_slide.py build`: slide 11.
+- Fill each slide: no large empty band at the bottom or beside a column.
+- Text slides: headings do the work, one short line per point, no filled
+  coloured cards (neutral greys; orange/blue only as thin run markers), each
+  fact once in the deck; detail goes in the frame's presenter notes.
+- `declutter_a.py s02|s05|s09` and `declutter_13_14.py` build slides 02, 05,
+  11, 15 and 16 in that style (script names keep the old numbers).
 - `newslides.py` (`stacked_chart`, `new_frame`, `delete`, `by_name`) and
   `two_run_slides.py cost`: other builders. `two_run_slides.py` uses the right
   method order; `newslides.py` still has Agentic last, and its `stab` builds the
   retired stability slide; fix the order before reusing it.
-- `method_slides.py s2|s3|s10`, plus `clear <frame prefix>`: rebuilds the
-  prompt, judging and what-changed slides. Its wording predates the plain-word
-  pass that `plain_wording.py` applied by element id, so after a rebuild,
-  carry that wording over by hand.
+- `method_slides.py`: prompt sources (`split_agent`, `cypher_bands`, ...),
+  drawing helpers (`S`, `table`) and `clear <frame prefix>`. Its `s1|s2|s3|s10`
+  build the old tall slides; do not use them.
 - `xmcp.py` reads the CLI's saved login: an API key or, since CLI v1, an OAuth
   access token that expires after about an hour; run `excalidraw whoami` first
   to refresh it.
