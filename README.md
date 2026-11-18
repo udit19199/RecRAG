@@ -187,39 +187,9 @@ and use the same calculation for all methods. The paper's missing NQ/HotpotQA
 scoring helper prevents exact score parity. Retrieved-token counts use
 `cl100k_base`; the paper does not specify its counting tokenizer.
 
-The paper's HotpotQA results use an unpublished random sample of 1,000 hard
-bridge questions. RecRAG's local
-`hotpotqa_distractor_validation_hard_bridge_1000_seed_42.json` uses a
-reproducible sample from the official validation split. Its exact questions
-still differ from the paper's unpublished sample. Run with `--records 1000` to
-answer the full sample. Each query searches unique context pages across those
-1,000 rows. The run's `corpus.json` records the question range, page count,
-chunk count, and corpus hash.
-
-HotpotQA answer precision, recall, and F1 use the official evaluator's
-normalization, token overlap, and yes/no handling. The paper's evaluation code
-calls `calculate_metrics`, but that helper is not included in its linked repo,
-so we cannot verify exact formula parity. The paper reports per-question
-precision, recall, and F1 averaged across questions. The paper's protocol saves
-retrieved evidence, then applies one generation script with Llama 3.1 8B or
-70B. RecRAG uses `gpt-6-luna`, and its Agentic Hybrid RAG is not the
-paper's Microsoft Community-GraphRAG. Our score formula follows HotpotQA's
-official scorer, but exact parity with the paper's helper is unverified.
-
-For paper comparisons, report HotpotQA precision, recall, and F1, and
-MultiHop-RAG `overlap_accuracy`. Exact match is an additional diagnostic,
-not the paper's headline metric. Both QA scorers extract the authors' answer
-wrapper `The answer to the question is "..."` before scoring. MultiHop-RAG
-matches the published evaluator: trim the prediction, remove its periods,
-lowercase prediction and reference, and accept any shared whitespace-delimited
-word. It does not require exact yes/no answers or use an LLM judge.
-
-The upstream HippoRAG source stays unchanged. The paper used
-`text-embedding-ada-002`,
-GPT-4o-mini for HippoRAG construction, and Llama-3.1-8B-Instruct for answers.
-These runs instead use the shared RecRAG models above, so the paper's scores
-cannot be compared directly with them. The paper also does not pin its
-HippoRAG commit or publish its processed input records.
+How these runs differ from the paper (its unpublished samples, scoring
+helper and models) is in
+[the paper comparison notes](docs/benchmark.md#differences-from-the-paper).
 
 ## How answers and retrieval are scored
 
@@ -389,10 +359,9 @@ Findings from the latest run, under `runs/final500/`:
 
 ## Read the docs
 
-- [Dataset and cost notes](docs/benchmark.md)
-- [Graph construction](docs/graphrag/construction.md)
-- [Graph retrieval](docs/graphrag/retrieval.md)
-- [Agentic Hybrid RAG evaluation](docs/graphrag/evaluation.md)
+- [Paper comparison and dataset notes](docs/benchmark.md)
+- [Agentic Hybrid RAG: graph construction, retrieval and app scores](docs/agentic-hybrid-rag.md)
+- [Research directions](docs/research-directions.md)
 
 ## Verification
 

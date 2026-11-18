@@ -240,8 +240,8 @@ Graph queries return facts only, never article text.
 
 Hannon, REFinD, and FiNER-139 dataset files were deleted; `datasets/` now holds
 only `hotpotqa` and `multihop_rag`; Natural Questions and NovelQA load from the
-Hugging Face cache. `docs/refind/` is the write-up of the old REFinD experiment,
-kept for history only.
+Hugging Face cache. The REFinD and 2WikiMultiHopQA write-ups were removed from
+`docs/` in the same commit as this line; read them from git history if needed.
 
 ## Agent Checklist (before finishing)
 
