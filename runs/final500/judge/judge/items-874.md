@@ -1,0 +1,795 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=cf39d4bf0a68ced2 ===
+Gold sentences and facts:
+Sentence 0: Taron Egerton as Johnny , a teenage gorilla who wants to sing , though his father would rather have him follow his criminal footsteps .
+  Fact 0.0: Taron Egerton plays Johnny.
+  Fact 0.1: Johnny is a teenage gorilla.
+  Fact 0.2: Johnny wants to sing.
+  Fact 0.3: Johnny's father would rather have him follow his criminal footsteps.
+
+Retrieved items:
+<item 1>
+Sing (2016 American film)
+Toronto Sun . Retrieved September 12 , 2016 . Jump up ^ `` Sing - Full Cast and Credits '' . Hollywood.com . Retrieved November 30 , 2016 . Jump up ^ Weintraub
+, Steve ' Frosty ' ( 2016 - 12 - 19 ) . `` Garth Jennings on Getting Edgar Wright and Wes Anderson to Provide Voices in ' Sing ' '' . Collider . Retrieved 2017
+- 11 - 09 . Jump up ^ `` ' Despicable Me 3 ′ Set For June 2017 Release ; ' Dr. Seuss ' How The Grinch Stole Christmas ' Arrives Five Months Later '' . Deadline
+. January 15 , 2014 . Retrieved January 16 , 2014 . Jump up ^ Hopewell , John ( January 8 , 2014 ) . `` France Fights Bidding War to Lure Hollywood Filmmakers
+'' . Variety . Retrieved January 9 , 2014 . Universal now has `` Max '' and `` Lunch '' set up at Illumination MacGuff .
+</item 1>
+
+<item 2>
+Sing (2016 American film)
+It was directed and written by Garth Jennings , co-directed by Christophe Lourdelet and starring the voices of Matthew McConaughey , Reese Witherspoon , Seth
+MacFarlane , Scarlett Johansson , John C. Reilly , Taron Egerton , and Tori Kelly . The film is about a group of anthropomorphic animals that enter a singing
+competition , hosted by a koala hoping to save his theater . The film includes more than 60 songs from famous artists and also has an original song by Stevie
+Wonder and Ariana Grande called `` Faith , '' which was nominated for a Golden Globe . It screened on the Toronto International Film Festival on September 11 ,
+2016 , premiered at Microsoft Theater on December 3 , 2016 and was released in the United States on December 21 , 2016 , by Universal Pictures . The film
+received generally positive reviews and grossed $634 million worldwide . Along with The Secret Life of Pets , it marked the first time that Illumination
+Entertainment released two feature films in the same year . A sequel , entitled Sing 2 , has been announced for a release on December 25 , 2020 .
+</item 2>
+
+<item 3>
+Sing (2016 American film)
+Contents ( hide ) 1 Plot 2 Voice cast 3 Production 4 Soundtrack 5 Release 5.1 Home media 6 Reception 6.1 Box office 6.2 Critical response 6.3 Accolades 7 Sequel
+8 References 9 External links Plot ( edit ) In a world of anthropomorphic animals , koala Buster Moon owns a theater , having been interested in show business
+since his father took him to his first music show as a child . Following financial problems brought up by the bank representative Judith , he tells his wealthy
+friend Eddie that he will host a singing competition with a prize of $1,000 . But Buster 's assistant , Miss Crawly , accidentally appends two extra zeroes ,
+and the promotional fliers showing $100,000 are blown out of Buster 's office into the city streets . Animals from all around the city gather for auditions .
+Those selected include housewife and mother of 25 piglets Rosita ; street musician mouse Mike ; mobster 's son gorilla Johnny ; and punk - rock porcupine Ash .
+</item 3>
+
+<item 4>
+Sing (2016 American film)
+Production ( edit ) In January 2014 , it was announced that Garth Jennings would write and direct an animated comedy film for Universal Pictures and
+Illumination Entertainment , about `` courage , competition and carrying a tune , '' which was originally titled Lunch , and then retitled as Sing . On January
+14 , 2015 , Matthew McConaughey was cast in the film 's lead voice role . Chris Meledandri and Janet Healy produced the film . On June 17 , 2015 , it was
+confirmed that McConaughey 's character is named Buster and that John C. Reilly would voice Eddie , a sheep and Buster 's best friend . In November 2015 , it
+was announced that Reese Witherspoon , Seth MacFarlane , Scarlett Johansson , Tori Kelly and Taron Egerton had joined the cast of the film . The film features
+65 pop songs , the rights to which cost 15 percent of the film 's $75 million budget . The animation was created entirely in France by Illumination MacGuff .
+</item 4>
+
+<item 5>
+Sing (2016 American film)
+References ( edit ) ^ Jump up to : Felperin , Leslie ( September 11 , 2016 ) . `` ' Sing ' : Film Review '' . The Hollywood Reporter . Retrieved September 12 ,
+2016 . ^ Jump up to : `` Sing ( 2016 ) '' . Box Office Mojo . Retrieved July 10 , 2017 . ^ Jump up to : Kit , Borys ( January 14 , 2015 ) . `` Matthew
+McConaughey to Star in Illumination Animated Film ( Exclusive ) '' . The Hollywood Reporter . Retrieved August 3 , 2015 . Jump up ^ Amidi , Amid ( September 9 ,
+2016 ) . `` A Complete List of Every Song in Illumination 's ' Sing ' '' . Cartoon Brew . Retrieved December 28 , 2016 . ^ Jump up to : Truitt , Brian (
+November 10 , 2015 ) . `` Sneak peek : A-list animals ' SING ' together '' . USA Today . Retrieved November 11 , 2015 .
+</item 5>
+
+<item 6>
+Sing (2016 American film)
+Sing ( 2016 American film ) - wikipedia Sing ( 2016 American film ) Jump to : navigation , search Sing Theatrical release poster Directed by Garth Jennings
+Produced by Chris Meledandri Janet Healy Written by Garth Jennings Starring Matthew McConaughey Reese Witherspoon Seth MacFarlane Scarlett Johansson John C.
+Reilly Taron Egerton Tori Kelly Music by Joby Talbot Edited by Gregory Perler Production company Illumination Entertainment Distributed by Universal Pictures
+Release date September 11 , 2016 ( 2016 - 09 - 11 ) ( TIFF ) December 21 , 2016 ( 2016 - 12 - 21 ) ( United States ) Running time 108 minutes Country United
+States Language English Budget $75 million Box office $634.1 million Sing is a 2016 American computer - animated musical comedy - drama film produced by
+Illumination Entertainment .
+</item 6>
+
+<item 7>
+Sing (2016 American film)
+The animation was created entirely in France by Illumination MacGuff . Soundtrack ( edit ) Main article : Sing : Original Motion Picture Soundtrack A soundtrack
+album for the film was released on December 21 , 2016 . Release ( edit ) The almost complete film was screened as a work in progress beginning September 11 ,
+2016 at the Toronto International Film Festival . Universal Studios released the film on December 21 , 2016 . Home Media ( edit ) Sing was released on Blu - ray
+, Blu - ray 3D , Ultra HD Blu - ray and DVD on March 21 , 2017 . It includes three short films : Gunter Babysits , Love at First Sight , and Eddie 's Life Coach
+. In Gunter Babysits , Gunter offers to watch over Rosita and Norman 's piglets while they are away as he works to prove himself to be a good babysitter . In
+Love at First Sight , Johnny sets Miss Crawly up with an online dating website where she manages to score a date with a lizard named Herman .
+</item 7>
+
+<item 8>
+Sing (2016 American film)
+Universal now has `` Max '' and `` Lunch '' set up at Illumination MacGuff . Jump up ^ Kilday , Gregg ( December 9 , 2016 ) . `` Illumination 's Chris
+Meledandri Talks Success Secrets , Rumors He 'll Head DreamWorks '' . The Hollywood Reporter . Retrieved January 22 , 2017 . Jump up ^ Keslassy , Elsa ( 2
+December 2016 ) . `` Oscar 's French Animation Connection Draws on Deep Talent Pool '' . Jump up ^ Grobar , Matt ( December 5 , 2016 ) . `` ' Sing ' Director
+Garth Jennings On Working With `` Wizards , '' The Learning Curve Of His Feature Animation Debut `` . Deadline . Retrieved December 7 , 2016 . Jump up ^ Hammond
+, Pete ( August 23 , 2016 ) . `` Universal & Illumination To Launch ' Sing ' With Live Jennifer Hudson And Tori Kelly Performances At Toronto '' . Deadline .
+Retrieved September 11 , 2016 . Jump up ^ McClintock , Pamela ( January 15 , 2014 ) .
+</item 8>
+
+<item 9>
+Sing (2016 American film)
+USA Today . Retrieved November 11 , 2015 . ^ Jump up to : Hopewell , John ( June 17 , 2015 ) . `` Annecy : Chris Meledandri on Matthew McConaughey as a Koala
+Legit Theater Owner , ' The Grinch ' '' . Variety . Retrieved August 3 , 2015 . ^ Jump up to : Trumbore , Dave ( November 11 , 2015 ) . `` Meet the Animated
+Animals of Illumination Entertainment 's 2016 Musical Comedy , ' Sing ' '' . Collider . Retrieved November 12 , 2015 . Jump up ^ Buxton , Adam ( April 14 , 2016
+) . `` EP. 16 - Pub Walk With Garth Jennings '' . soundcloud.com . Retrieved April 17 , 2016 . Jump up ^ Yuen , Jenny ( September 11 , 2016 ) . `` TIFF 2016 :
+Matthew McConaughey optimistic about ' Sing ' '' . Toronto Sun . Retrieved September 12 , 2016 .
+</item 9>
+
+<item 10>
+Sing (2016 American film)
+It 's a tale that might not be particularly thought - provoking but sure is toe - tapping . '' In her review for the Los Angeles Times , Katie Walsh called Sing
+, `` a cute movie with genuinely funny moments ( keep an eye out for the koala car wash ) , and some great tunes to boot . '' The Arizona Republic 's Bill
+Goodykoontz was rather mixed about the movie in his review and overall said , `` Sing is like an album with a good song here and there , but too much filler and
+not enough hits . '' Reviewing the version of the film screened at the Toronto International Film Festival , Stefan Pape of the British website HeyUGuys gave
+the film a mixed review of 2 / 5 , stating that `` Garth Jennings 's Sing effectively acknowledges early on that it 's following a completely unoriginal formula
+, and yet carries on regardless . '' While Peter Debruge of Variety , who also saw the film during the same festival , did not find the subplots to have any ``
+profound life lessons , '' he overall praised Jennings ' direction , the cast 's voice performances and the film 's silliness .
+</item 10>
+=== END ITEM id=cf39d4bf0a68ced2 ===
+
+=== ITEM id=2b4fa2c89d6e18f6 ===
+Gold sentences and facts:
+Sentence 0: Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .
+  Fact 0.0: Each state controls where it administers its bar exam.
+  Fact 0.1: The MBE is a standardized test.
+  Fact 0.2: The MBE must be administered on the same day across the country.
+  Fact 0.3: The MBE day occurs twice a year.
+  Fact 0.4: The MBE day is the last Wednesday in July and the last Wednesday in February.
+  Fact 0.5: Delaware and North Dakota may administer their bar exams only once, in July.
+  Fact 0.6: Delaware and North Dakota may do this if they do not have enough applicants to merit a second sitting.
+  Fact 0.7: North Dakota requires ten applicants in order to administer the February exam.
+  Fact 0.8: Most bar exams are administered on consecutive days.
+  Fact 0.9: Louisiana is the exception to consecutive-day bar exams.
+  Fact 0.10: The Louisiana Bar Exam is a three-day examination on Monday, Wednesday and Friday.
+  Fact 0.11: Louisiana's examination is the longest in the country in terms of examination time.
+  Fact 0.12: Louisiana's examination has seven hours on Monday and Wednesday.
+  Fact 0.13: Louisiana's examination has seven and one half hours on Friday.
+  Fact 0.14: Louisiana's examination totals 21.5 hours of testing.
+  Fact 0.15: Montana's bar examination occurs over a three-day period.
+  Fact 0.16: Montana's bar examination totals 18 hours of testing.
+  Fact 0.17: The bar exams in Delaware, Nevada, Ohio, South Carolina, and Texas are three days long.
+  Fact 0.18: The California bar exam moved to a two-day format beginning with the July 2017 exam.
+Sentence 1: To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school .
+  Fact 1.0: Most students engage in a regimen of study called bar review.
+  Fact 1.1: Bar review is done to refresh memory on black-letter rules tested on the bar.
+  Fact 1.2: Bar review is done between graduating from law school and sitting for the bar.
+  Fact 1.3: For bar review, most students in the United States attend a private bar review course.
+  Fact 1.4: The private bar review course is provided by a third-party company.
+  Fact 1.5: Most students in the United States do not take their bar review course from their law school.
+
+Retrieved items:
+<item 1>
+Since 2009, a new law-school system has limited bar-exam eligibility to law-school graduates. In the Philippines, the annual exam is held on four Sundays in
+November (September before 2011) and covers eight legal areas, including civil, criminal, commercial, and remedial law. In Poland, law graduates complete
+specialization-dependent practical training before an exam run by Professional Chambers with Ministry of Justice participation. Singapore’s Part B exam is
+administered by SILE, usually over four days in the
+</item 1>
+
+<item 2>
+Bar examination
+Criminal law , employment law , constitution law , administrative law , and tax law . Civil procedure law , bankruptcy and business reorganization law , and the
+system of the court of justice . And Criminal procedure law , human rights , and law on the evidence . Each part has 10 essay questions . The pass mark is 50 .
+The parts 1 - 2 are usually taken in October and the rest are usually taken in March . One does not need to pass all four parts in one year . After passing all
+the written exams , there is an oral exam . Around 10,000 bar students sit the exam each year . In 2013 , 1,231 students were called to the bar , 111 of whom
+did it in only one year . Quite confusingly with international norms , students called to the bar are referred to as netibandit ( เนติบัณฑิต ) , which gets
+translated into English as Barrister - at - Law . The Thai legal profession , however , is a fused one and those with lawyer licenses are able to practice both
+as barristers and solicitors in the British / Commonwealth sense .
+</item 2>
+
+<item 3>
+Bar examination
+The new law school system that began in 2009 allows only the graduates of a law school to apply for the bar exam . Malaysia ( edit ) Main article : Certificate
+in Legal Practice ( Malaysia ) Philippines ( edit ) The Philippine Bar Examination is administered once every year on the four Sundays of November ( September
+before 2011 ) . It covers eight areas of law : political law , labor law and social legislation , criminal law , civil law , commercial law , taxation law ,
+remedial law , and legal ethics and practical exercises . Poland ( edit ) In Poland , the bar examination is taken after graduating from a law faculty at a
+university . It allows a person to undertake practice , the duration of which varies depending on the specialization . After the practical period applicants
+must pass the exam held by the Professional Chambers with assistance from some members of the Ministry of Justice . Singapore ( edit ) The Singapore Bar
+Examination ( Part B) is administered once every year , usually over the course of four days . The exam is generally held on the last week of November , and is
+administered by the Singapore Institute of Legal Education ( SILE ) .
+</item 3>
+
+<item 4>
+Bar examination
+The common law provinces all require prospective lawyers to complete a term of articles ( usually 10 months ) after graduation from law school during which they
+work under the supervision of a qualified lawyer . The bar exams may be taken after graduation from law school , but before the commencement of articling , or
+may be taken during or after articling is completed . Once the barristers ' and solicitors ' exams have been passed and the term of articles is successfully
+completed , students may then be called the bar and admitted to the legal profession as lawyers ( barristers and solicitors ) . People 's Republic of China (
+edit ) Main article : State Judicial Exam England and Wales ( edit ) Since the UK has a separated legal profession , Law graduates in England and Wales can take
+examinations to qualify as a Barrister or a Solicitor by either undertaking the BPTC or the LPC respectively . These courses are the vocational part of the
+training required under the Bar Association and The Law Society rules and are either undertaken on a full - time basis for one year or on a part - time basis
+over two years .
+</item 4>
+
+<item 5>
+The bar examination has three parts: criminal law and procedure/enforcement; civil law, procedure and business law; and constitutional, administrative, labor,
+social-security and EU law. Passing can qualify candidates for legal and judicial roles. In Ireland, King’s Inns gives students in its one-year Barrister-at-Law
+course 14 exams over ten weeks (March–June), covering legal knowledge and practical skills; those below 50% may repeat in August–September. Iran has separate
+Bar Association and
+</item 5>
+
+<item 6>
+Bar examination
+This exam is composed of three parts : Criminal Law , Criminal Procedural Law and Law of Criminal Enforcement Civil Law , Civil Procedural Law and Business Law
+Constitutional Law , Administrative Law , Labor Law , Social Security Law and Law of the European Union . After passing these exams the candidate can practice
+law as an attorney - at - law / barrister or as a secretary / judge at the court or as a prosecutor at the public prosecutor 's office or in - house legal
+counsel or may operate individually at any field of law . Ireland ( edit ) The bar exams in Ireland are the preserve of the Honorable Society of King 's Inns ,
+which runs a series of fourteen exams over ten weeks , from March to June each year , for those enrolled as students in its one - year Barrister - at - Law
+degree course . These exams cover such skills as advocacy , research and opinion writing , consulting with clients , negotiation , drafting of legal documents
+and knowledge of civil and criminal procedure . For those who fail to meet the requisite 50 % pass mark , repeats are held in the following August and September
+.
+</item 6>
+
+<item 7>
+The bar examination covers criminal, employment, constitutional, administrative, tax, civil-procedure, bankruptcy/reorganization, court-system,
+criminal-procedure, human-rights, and evidence law. Each of four parts has 10 essay questions; the pass mark is 50. Parts 1–2 are usually held in October, the
+others in March, and candidates may pass parts over multiple years. An oral exam follows the written exams. About 10,000 students sit annually; in 2013,
+</item 7>
+
+<item 8>
+Bar examination
+A logbook signed by the judge on the bench has to certify their weekly attendance . By the end of the eighteenth month , they are eligible to apply to take the
+Final Bar Exam by submitting their case summaries , the logbook and a research work pre-approved by the Bar . It is noteworthy , however , that during these
+eighteen months , Trainees are eligible to have a limited practice of law under the supervision of their supervising Attorney . This practice does not include
+Supreme Court eligible cases and certain criminal and civil cases . Candidates will be tested on Civil law , Civil Procedure , Criminal law , Criminal Procedure
+, Commercial Law , Notary ( including rules pertaining Official Documents , Land & Real Estate registrations and regulations etc . ) . Each exam takes two days
+, a day on oral examination in front of a judge or an attorney , and a day of essay examination , in which they will be tested on hypothetical cases submitted
+to them . Successful applicants will be honoured with the title of `` First Degree Attorney '' , after they take the oath and can practice in all courts of the
+country including the Supreme Court . Those who fail must redo the apprenticeship program in full or in part before taking the Final Bar Exam again .
+</item 8>
+
+<item 9>
+The bar exam has two stages: 80 multiple-choice questions across 12 legal disciplines, with 40 correct required to advance; then four essays and a
+legal-document drafting task in specified fields and procedures. Candidates may sit it in their graduation year, and successful candidates may practise
+nationwide. In Canada, admission is provincial or territorial; outside Québec, lawyers are both barristers and solicitors and must pass their governing Law
+Society’s exams for each role.
+</item 9>
+
+<item 10>
+Bar examination
+The MEE and MPT , as uniform though not standardized tests , also must be administered on the same day across the country -- specifically the day before the MBE
+. Preparation for the exam ( edit ) Most law schools teach students common law and how to analyze hypothetical fact patterns like a lawyer , but do not
+specifically prepare law students for any particular bar exam . Only a minority of law schools offer bar preparation courses . To refresh their memory on ``
+black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and
+sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and
+not their law school . Multistate standardized Examinations ( edit ) The National Conference of Bar Examiners ( NCBE ) is a U.S. based non-profit organization
+that develops national ( `` multistate '' ) standardized tests for admission to the bar in individual states . The organization was founded in 1931 .
+</item 10>
+=== END ITEM id=2b4fa2c89d6e18f6 ===
+
+=== ITEM id=d06fa674f41cc0f4 ===
+Gold sentences and facts:
+Sentence 0: The time that has elapsed since the Camp David Accords has left no doubt as to their enormous ramifications on Middle Eastern politics . Most notably , the perception of Egypt within the Arab world changed . With the most powerful of the Arab militaries and a history of leadership in the Arab world under Nasser , Egypt had more leverage than any of the other Arab states to advance Arab interests . Egypt was subsequently suspended from the Arab League from 1979 until 1989 .
+  Fact 0.0: Time has elapsed since the Camp David Accords.
+  Fact 0.1: The passage of time has left no doubt about the enormous ramifications of the Camp David Accords on Middle Eastern politics.
+  Fact 0.2: The perception of Egypt within the Arab world changed.
+  Fact 0.3: The change in perception of Egypt was the most notable effect.
+  Fact 0.4: Egypt had the most powerful of the Arab militaries.
+  Fact 0.5: Egypt had a history of leadership in the Arab world under Nasser.
+  Fact 0.6: Egypt had more leverage than any other Arab state to advance Arab interests.
+  Fact 0.7: Egypt was subsequently suspended from the Arab League.
+  Fact 0.8: Egypt's suspension from the Arab League lasted from 1979 until 1989.
+
+Retrieved items:
+<item 1>
+Camp David Accords
+According to The Continuum Political Encyclopedia of the Middle East : The normalization of relations ( between Israel and Egypt ) went into effect in January
+1980 . Ambassadors were exchanged in February . The boycott laws were repealed by Egypt 's National Assembly the same month , and some trade began to develop ,
+albeit less than Israel had hoped for . In March 1980 regular airline flights were inaugurated . Egypt also began supplying Israel with crude oil `` . According
+to Kenneth Stein in Heroic Diplomacy : Sadat , Kissinger , Carter , Begin , and the Quest for Arab -- Israeli Peace : The Accords were another interim agreement
+or step , but negotiations that flowed from the Accords slowed for several reasons . These included an inability to bring the Jordanians into the discussions ;
+the controversy over settlements ; the inconclusive nature of the subsequent autonomy talks ; domestic opposition sustained by both Begin and Sadat and , in
+Sadat 's case , ostracism and anger from the Arab world ; the emergence of a what became a cold peace between Egypt and Israel ; and changes in foreign policy
+priorities including discontinuity in personnel committed to sustaining the negotiating process ( . )
+</item 1>
+
+<item 2>
+Camp David Accords
+Accompanied by their capable negotiating teams and with their respective interests in mind , both leaders converged on Camp David for 13 days of tense and
+dramatic negotiations from 5 to 17 September 1978 . By all accounts , Carter 's relentless drive to achieve peace and his reluctance to allow the two men to
+leave without reaching an agreement are what played the decisive role in the success of the talks . Carter 's advisers insisted on the establishment of an
+Egyptian - Israeli agreement which would lead to an eventual solution to the Palestine issue . They believed in a short , loose , and overt linkage between the
+two countries amplified by the establishment of a coherent basis for a settlement . However , Carter felt they were not `` aiming high enough '' and was
+interested in the establishment of a written `` land for peace '' agreement with Israel returning the Sinai Peninsula and West Bank . Numerous times both the
+Egyptian and Israeli leaders wanted to scrap negotiations , only to be lured back into the process by personal appeals from Carter .
+</item 2>
+
+<item 3>
+Camp David Accords
+Lastly , the biggest consequence of all may be in the psychology of the participants of the Arab - Israeli conflict . The success of Begin , Sadat , and Carter
+at Camp David demonstrated to other Arab states and entities that negotiations with Israel were possible -- that progress results only from sustained efforts at
+communication and cooperation . Despite the disappointing conclusion of the 1993 Oslo Accords between the PLO and Israel , and even though the 1994 Israel --
+Jordan peace treaty has not fully normalized relations with Israel , both of these significant developments had little chance of occurring without the precedent
+set by Camp David . Public support Although most Israelis supported the Accords , the Israeli settler movement opposed them because Sadat would not agree to a
+treaty in which Israel had any presence in the Sinai Peninsula at all , Israel had to withdraw from the entire Sinai Peninsula . Israeli settlers tried to
+prevent the government from dismantling their settlements . In Israel , there is lasting support of the Camp David Peace Accords , which have become a national
+consensus , supported by 85 % of Israelis according to a 2001 poll taken by the Jaffee Center for Strategic Studies ( Israel based ) .
+</item 3>
+
+<item 4>
+Camp David Accords
+Most notably , the perception of Egypt within the Arab world changed . With the most powerful of the Arab militaries and a history of leadership in the Arab
+world under Nasser , Egypt had more leverage than any of the other Arab states to advance Arab interests . Egypt was subsequently suspended from the Arab League
+from 1979 until 1989 . When the Camp David accords were signed , Jordan 's King Hussein saw it as a slap to the face when Sadat volunteered Jordan 's
+participation in deciding how functional autonomy would work . More specifically , Sadat effectively said that Jordan would have a role in how the West Bank
+would be administered . Like the Rabat Summit Resolution , the Camp David Accords circumscribed Jordan 's objective to reassert its control over the West Bank .
+Focusing as it did on Egypt , the Carter administration accepted Sadat 's claim that he could deliver Hussein . However , with Arab world opposition building
+against Sadat , Jordan could not risk accepting the Accords without the support from powerful Arab neighbours , like Iraq , Saudi Arabia , and Syria . Hussein
+consequently felt diplomatically snubbed .
+</item 4>
+
+<item 5>
+Camp David Accords
+Meir Rosenne and Aharon Barak . Furthermore , the absence of the media contributed to the Accord 's successes : there were no possibilities provided to either
+leader to reassure his political body or be driven to conclusions by members of his opposition . An eventual scrap of negotiations by either leader would have
+proven disastrous , resulting in taking the blame for the summit 's failure as well as a disassociation from the White House . Ultimately , neither Begin nor
+Sadat was willing to risk those eventualities . Both of them had invested enormous amounts of political capital and time to reach an agreement . Partial
+agreements Egyptian President Anwar Sadat and Israeli Prime Minister Menachem Begin acknowledge applause during a joint session of Congress in Washington , D.C.
+, during which President Jimmy Carter announced the results of the Camp David Accords , 18 September 1978 . `` Remarks on the Signing of the Camp David Accords
+'' Play media Jimmy Carter , seated with Egyptian President Anwar Sadat and Israeli Prime Minister Menachem Begin , makes statements at a Joint session of the
+United States Congress following the Camp David Accords . Problems playing this file ? See media help .
+</item 5>
+
+<item 6>
+Camp David Accords
+The issues of Israeli settlement withdrawal from the Sinai and the status of the West Bank created what seemed to be an impasse . In response , Carter had the
+choice of trying to salvage the agreement by conceding the issue of the West Bank to Begin , while advocating Sadat 's less controversial position on the
+removal of all settlements from the Sinai Peninsula . Or he could have refused to continue the talks , reported the reasons for their failure , and allowed
+Begin to bear the brunt of the blame . Carter chose to continue and for three more days negotiated . During this time , Carter even took the two leaders to the
+nearby Gettysburg National Military Park in the hopes of using the American Civil War as a simile to their own struggle . Consequently , the 13 days marking the
+Camp David Accords were considered a success . Partly due to Carter 's determination in obtaining an Israeli - Egyptian agreement , a full two - week pledge to
+a singular international problem . Additionally , Carter was beneficiary to a fully pledged American foreign team . Likewise , the Israeli delegation had a
+stable of excellent talent in Ministers Dayan and Weizman and legal experts Dr.
+</item 6>
+
+<item 7>
+Camp David Accords
+Camp David Accords - wikipedia Camp David Accords Jump to : navigation , search Camp David Accords Framework for Peace in the Middle East and Framework for the
+Conclusion of a Peace Treaty between Egypt and Israel Celebrating the signing of the Camp David Accords : Menachem Begin , Jimmy Carter , Anwar Sadat Type
+Bilateral treaty Signed 17 September 1978 ( 1978 - 09 - 17 ) Location Washington , DC , United States Original signatories Egypt Israel Signatories Menachem
+Begin ( Prime Minister of Israel ) Anwar Sadat ( President of Egypt ) Jimmy Carter ( President of the United States ) Ratifiers Egypt Israel Language English
+French The Camp David Accords were signed by Egyptian President Anwar Sadat and Israeli Prime Minister Menachem Begin on 17 September 1978 , following twelve
+days of secret negotiations at Camp David . The two framework agreements were signed at the White House , and were witnessed by United States President Jimmy
+Carter . The second of these frameworks ( A Framework for the Conclusion of a Peace Treaty between Egypt and Israel ) led directly to the 1979 Egypt -- Israel
+Peace Treaty .
+</item 7>
+
+<item 8>
+Camp David Accords
+With the withdrawal , Israel also returned Egypt 's Abu - Rudeis oil fields in western Sinai , which contained long term , commercially productive wells . The
+agreement also resulted in the United States committing to several billion dollars worth of annual subsidies to the governments of both Israel and Egypt ,
+subsidies which continue to this day , and are given as a mixture of grants and aid packages committed to purchasing U.S. materiel . From 1979 ( the year of the
+peace agreement ) to 1997 , Egypt received military aid of US $1.3 billion annually , which also helped modernize the Egyptian military . ( This is beyond
+economic , humanitarian , and other aid , which has totaled more than US $25 billion . ) Eastern - supplied until 1979 , Egypt now received American weaponry
+such as the M1A1 Abrams Tank , AH - 64 Apache gunship and the F - 16 fighter jet . In comparison , Israel has received $3 billion annually since 1985 in grants
+and military aid packages . Consequences The time that has elapsed since the Camp David Accords has left no doubt as to their enormous ramifications on Middle
+Eastern politics .
+</item 8>
+
+<item 9>
+Camp David Accords
+Hussein consequently felt diplomatically snubbed . One of Carter 's regrets was allowing Sadat to claim that he could speak for Hussein if Jordan refused to
+join the talks , but by then the damage was done to the Jordanians . United States President Jimmy Carter greeting Egyptian President Anwar Sadat at the White
+House shortly after the Camp David Accords went into effect , 8 April 1980 . The Camp David Accords also prompted the disintegration of a united Arab front in
+opposition to Israel . Egypt 's realignment created a power vacuum that Saddam Hussein of Iraq , at one time only a secondary power , hoped to fill . Because of
+the vague language concerning the implementation of Resolution 242 , the Palestinian problem became the primary issue in the Arab -- Israeli conflict
+immediately following the Camp David Accords ( and , arguably , until today ) . Many of the Arab nations blamed Egypt for not putting enough pressure on Israel
+to deal with the Palestinian problem in a way that would be satisfactory to them . Syria also informed Egypt that it would not reconcile with the nation unless
+it abandoned the peace agreement with Israel .
+</item 9>
+
+<item 10>
+Camp David Accords
+The efforts initially focused on a comprehensive resolution of disputes between Israel and the Arab countries , gradually evolving into a search for a bilateral
+agreement between Israel and Egypt . Upon assuming office on January 20 , 1977 , President Carter moved to rejuvenate the Middle East peace process that had
+stalled throughout the 1976 presidential campaign in the United States . Following the advice of a Brookings Institution report , Carter opted to replace the
+incremental , bilateral peace talks which had characterized Henry Kissinger 's shuttle diplomacy following the 1973 Yom Kippur War with a comprehensive ,
+multilateral approach . The Yom Kippur War further complicated efforts to achieve the objectives written in United Nations Security Council Resolution 242 .
+Israel 's Prime Minister Yitzhak Rabin and his successor , Menachem Begin , were both skeptical of an international conference . While Begin , who took office
+in May 1977 , officially favored the reconvening of the conference , perhaps even more vocally than Rabin , and even accepted the Palestinian presence , in
+actuality the Israelis and the Egyptians were secretly formulating a framework for bilateral talks .
+</item 10>
+=== END ITEM id=d06fa674f41cc0f4 ===
+
+=== ITEM id=236d44e05eadacb2 ===
+Gold sentences and facts:
+Sentence 0: Coordinates : 90 ° N 0 ° W ﻿ / ﻿ 90 ° N - 0 ° E ﻿ / 90 ; - 0
+  Fact 0.0: The coordinates are listed as 90 degrees N, 0 degrees W.
+  Fact 0.1: The coordinates are listed as 90 degrees N, 0 degrees E.
+  Fact 0.2: The coordinates are listed as 90, -0.
+Sentence 1: The North Pole is the northernmost point on the Earth , lying diametrically opposite the South Pole . It defines geodetic latitude 90 ° North , as well as the direction of true north . At the North Pole all directions point south ; all lines of longitude converge there , so its longitude can be defined as any degree value . Along tight latitude circles , counterclockwise is east and clockwise is west . The North Pole is at the center of the Northern Hemisphere .
+  Fact 1.0: The North Pole is the northernmost point on the Earth.
+  Fact 1.1: The North Pole lies diametrically opposite the South Pole.
+  Fact 1.2: The North Pole defines geodetic latitude 90 degrees North.
+  Fact 1.3: The North Pole defines the direction of true north.
+  Fact 1.4: At the North Pole all directions point south.
+  Fact 1.5: At the North Pole all lines of longitude converge.
+  Fact 1.6: The longitude of the North Pole can be defined as any degree value.
+  Fact 1.7: Along tight latitude circles, counterclockwise is east.
+  Fact 1.8: Along tight latitude circles, clockwise is west.
+  Fact 1.9: The North Pole is at the center of the Northern Hemisphere.
+
+Retrieved items:
+<item 1>
+North Pole
+^ Data is from a Greenlandic Weather Station at 83 ° 38 ′ N 033 ° 22 ′ W ﻿ / ﻿ 83.633 ° N 33.367 ° W ﻿ / 83.633 ; - 33.367 ﻿ ( Greenlandic Weather Station )
+located 709 km ( 441 mi ) from the North Pole . References ( edit ) Jump up ^ Black , Richard ( 8 April 2001 ) . New warning on Arctic sea ice melt . BBC Jump
+up ^ Ljunggren , David ( 5 March 2009 ) . Arctic summer ice could vanish by 2013 : expert . Reuters Jump up ^ Russian sub plants flag at North Pole , Reuters ,
+2 August 2007 Jump up ^ Андерсон , Уильям Роберт ( 1965 ) . `` '' Наутилус '' у Северного полюса `` . Воениздат . Retrieved 12 January 2012 . Jump up ^ Mouton ,
+M.W. ( 1968 ) . The International Regime of the Polar Regions .
+</item 1>
+
+<item 2>
+North Pole
+2 MLAE 2009 Expedition 2.4. 3 MLAE 2013 Expedition 3 Day and night 4 Time 5 Climate 6 Flora and fauna 7 Territorial claims to the North Pole and Arctic regions
+8 Cultural associations 9 See also 10 Notes 11 References 12 Further reading 13 External links Precise definition ( edit ) See also : Polar motion The Earth 's
+axis of rotation -- and hence the position of the North Pole -- was commonly believed to be fixed ( relative to the surface of the Earth ) until , in the 18th
+century , the mathematician Leonhard Euler predicted that the axis might `` wobble '' slightly . Around the beginning of the 20th century astronomers noticed a
+small apparent `` variation of latitude , '' as determined for a fixed point on Earth from the observation of stars . Part of this variation could be attributed
+to a wandering of the Pole across the Earth 's surface , by a range of a few metres . The wandering has several periodic components and an irregular component .
+</item 2>
+
+<item 3>
+South Pole
+The geographic coordinates of the South Pole are usually given simply as 90 ° S , since its longitude is geometrically undefined and irrelevant . When a
+longitude is desired , it may be given as 0 ° . At the South Pole , all directions face north . For this reason , directions at the Pole are given relative to
+`` grid north '' , which points northwards along the prime meridian . Along tight latitude circles , clockwise is east , and counterclockwise is west , opposite
+to the North Pole . The Geographic South Pole is located on the continent of Antarctica ( although this has not been the case for all of Earth 's history
+because of continental drift ) . It sits atop a featureless , barren , windswept and icy plateau at an altitude of 2,835 metres ( 9,301 ft ) above sea level ,
+and is located about 1,300 km ( 800 mi ) from the nearest open sea at Bay of Whales . The ice is estimated to be about 2,700 metres ( 9,000 ft ) thick at the
+Pole , so the land surface under the ice sheet is actually near sea level .
+</item 3>
+
+<item 4>
+North Pole
+Finding the North Pole . The Lyons press . ISBN 1 - 59228 - 072 - 2 . CS1 maint : Multiple names : authors list ( link ) Pal , Christopher ( 2002 ) . The Oddest
+Place on Earth : Rediscovering the North Pole . Writer 's Showcase . ISBN 0 - 595 - 21454 - 1 . Fairfield , William ( 1885 ) . Paradise Found a Cradle of the
+Human Race at the North Pole a Study of the Prehistoric World . Houghton , Mifflin . ISBN 0 - 665 - 37759 - 2 . External links ( edit ) Wikimedia Commons has
+media related to North Pole . Arctic Council The Northern Forum North Pole Web Cam FAQ on the Arctic and the North Pole Daylight , Darkness and Changing of the
+Seasons at the North Pole Video of the Nuclear Icebreaker Yamal visiting the North Pole in 2001 Polar Discovery : North Pole Observatory Expedition Polar
+exploration Arctic Ocean History Expeditions Research stations Farthest North North Pole Barentsz Hudson Marmaduke Carolus Parry North Magnetic Pole J. Ross
+J.C.
+</item 4>
+
+<item 5>
+North Pole
+North Pole - wikipedia North Pole Jump to : navigation , search For other uses , see North Pole ( disambiguation ) . Not to be confused with North Magnetic Pole
+. Coordinates : 90 ° N 0 ° W ﻿ / ﻿ 90 ° N - 0 ° E ﻿ / 90 ; - 0 An azimuthal projection showing the Arctic Ocean and the North Pole . The map also shows the 75th
+parallel north and 60th parallel north . Sea ice at the North Pole in 2006 The North Pole , also known as the Geographic North Pole or Terrestrial North Pole ,
+is ( subject to the caveats explained below ) defined as the point in the Northern Hemisphere where the Earth 's axis of rotation meets its surface . The North
+Pole is the northernmost point on the Earth , lying diametrically opposite the South Pole . It defines geodetic latitude 90 ° North , as well as the direction
+of true north . At the North Pole all directions point south ; all lines of longitude converge there , so its longitude can be defined as any degree value .
+Along tight latitude circles , counterclockwise is east and clockwise is west .
+</item 5>
+
+<item 6>
+South Pole
+South Pole - wikipedia South Pole Jump to : navigation , search This article is about the Geographic South Pole . For other uses , see South Pole (
+disambiguation ) . Coordinates : 90 ° S 180 ° E ﻿ / ﻿ 90 ° S 180 ° E ﻿ / - 90 ; 180 The Geographic South Pole . ( The flag used on the flagpole is
+interchangeable . ) Image taken by NASA showing Antarctica and the South Pole in 2005 . South Geographic Pole South Magnetic Pole ( 2007 ) South Geomagnetic
+Pole ( 2005 ) South Pole of Inaccessibility The South Pole , also known as the Geographic South Pole or Terrestrial South Pole , is one of the two points where
+the Earth 's axis of rotation intersects its surface . It is the southernmost point on the surface of the Earth and lies on the opposite side of the Earth from
+the North Pole . Situated on the continent of Antarctica , it is the site of the United States Amundsen -- Scott South Pole Station , which was established in
+1956 and has been permanently staffed since that year .
+</item 6>
+
+<item 7>
+North Pole
+Owing to its remoteness , the Pole is sometimes identified with a mysterious mountain of ancient Iranian tradition called Mount Qaf ( Jabal Qaf ) , the ``
+farthest point of the earth '' . According to certain authors , the Jabal Qaf of Muslim cosmology is a version of Rupes Nigra , a mountain whose ascent , like
+Dante 's climbing of the Mountain of Purgatory , represents the pilgrim 's progress through spiritual states . In Iranian theosophy , the heavenly Pole , the
+focal point of the spiritual ascent , acts as a magnet to draw beings to its `` palaces ablaze with immaterial matter . '' See also ( edit ) Arctic portal
+Arctic cooperation and politics Arctic Council Biome Celestial pole Ecliptic pole Inuit Circumpolar Council North Pole , Alaska Polaris Poles of astronomical
+bodies Willem Barentsz Notes ( edit ) A.
+</item 7>
+
+<item 8>
+North Pole
+There is no permanent human presence at the North Pole and no particular time zone has been assigned . Polar expeditions may use any time zone that is
+convenient , such as Greenwich Mean Time , or the time zone of the country from which they departed . Climate ( edit ) Arctic ice shrinkages of 2007 compared to
+2005 and also compared to the 1979 -- 2000 average . Main article : Climate of the Arctic See also : Climate change in the Arctic The North Pole is
+substantially warmer than the South Pole because it lies at sea level in the middle of an ocean ( which acts as a reservoir of heat ) , rather than at altitude
+on a continental land mass . Despite being an ice cap , it shares some characteristics with a tundra climate ( ETf ) due to the July and August temperatures
+peaking just above freezing . Winter temperatures at the North Pole can range from about − 50 to − 13 ° C ( − 58 to 9 ° F ) , averaging around − 31 ° C ( − 24 °
+F ) .
+</item 8>
+
+<item 9>
+North Pole
+Along tight latitude circles , counterclockwise is east and clockwise is west . The North Pole is at the center of the Northern Hemisphere . While the South
+Pole lies on a continental land mass , the North Pole is located in the middle of the Arctic Ocean amid waters that are almost permanently covered with
+constantly shifting sea ice . This makes it impractical to construct a permanent station at the North Pole ( unlike the South Pole ) . However , the Soviet
+Union , and later Russia , constructed a number of manned drifting stations on a generally annual basis since 1937 , some of which have passed over or very
+close to the Pole . Since 2002 , the Russians have also annually established a base , Barneo , close to the Pole . This operates for a few weeks during early
+spring . Studies in the 2000s predicted that the North Pole may become seasonally ice - free because of Arctic ice shrinkage , with timescales varying from 2016
+to the late 21st century or later .
+</item 9>
+
+<item 10>
+North Pole
+Exploration ( edit ) See also : Arctic exploration , Farthest North , List of Arctic expeditions , and List of firsts in the Geographic North Pole Pre-1900 (
+edit ) Gerardus Mercator 's map of the North Pole from 1595 C.G. Zorgdragers map of the North Pole from 1720 As early as the 16th century , many prominent
+people correctly believed that the North Pole was in a sea , which in the 19th century was called the Polynya or Open Polar Sea . It was therefore hoped that
+passage could be found through ice floes at favorable times of the year . Several expeditions set out to find the way , generally with whaling ships , already
+commonly used in the cold northern latitudes . One of the earliest expeditions to set out with the explicit intention of reaching the North Pole was that of
+British naval officer William Edward Parry , who in 1827 reached latitude 82 ° 45 ′ North . In 1871 the Polaris expedition , a US attempt on the Pole led by
+Charles Francis Hall , ended in disaster .
+</item 10>
+=== END ITEM id=236d44e05eadacb2 ===
+
+=== ITEM id=3cd24c8a093ce350 ===
+Gold sentences and facts:
+Sentence 0: Ladies ' singles at the XXIII Olympic Winter Games Venue Gangneung Ice Arena Gangneung , South Korea Dates 21 -- 23 February Competitors 30 from 20 nations Winning score 239.57 Medalists 01 ! Alina Zagitova Olympic Athletes from Russia 02 ! Evgenia Medvedeva Olympic Athletes from Russia 03 ! Kaetlyn Osmond Canada ← 2014 2022 →
+  Fact 0.0: The Ladies' singles event was held at the XXIII Olympic Winter Games.
+  Fact 0.1: The Ladies' singles event was held at the Gangneung Ice Arena in Gangneung, South Korea.
+  Fact 0.2: The Ladies' singles event was held on 21 to 23 February.
+  Fact 0.3: The Ladies' singles event had 30 competitors from 20 nations.
+  Fact 0.4: The winning score in the Ladies' singles event was 239.57.
+  Fact 0.5: Alina Zagitova of Olympic Athletes from Russia was the first-place medalist.
+  Fact 0.6: Evgenia Medvedeva of Olympic Athletes from Russia was the second-place medalist.
+  Fact 0.7: Kaetlyn Osmond of Canada was the third-place medalist.
+  Fact 0.8: The navigation links point to the previous event in 2014 and the next event in 2022.
+Sentence 1: The ladies ' single figure skating competition of the 2018 Winter Olympics was held at the Gangneung Ice Arena in Gangneung , South Korea . The short program was held on 21 February , and the free skating was held on 23 February .
+  Fact 1.0: The ladies' single figure skating competition was held at the 2018 Winter Olympics.
+  Fact 1.1: The ladies' single figure skating competition was held at the Gangneung Ice Arena in Gangneung, South Korea.
+  Fact 1.2: The short program was held on 21 February.
+  Fact 1.3: The free skating was held on 23 February.
+
+Retrieved items:
+<item 1>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+21 49.82 50.39 6.32 6.29 6.21 6.39 6.29 - 3.00 6 24 Isadora Williams Brazil 88.44 38.39 51.05 6.43 6.18 6.36 6.43 6.50 - 1.00 12 * Evgenia Medvedeva finished at
+higher place due to better program component score Overall ( edit ) The skaters were ranked according to their overall score . TP - Total points ; SP - Short
+program ; FS - Free skating Rank Name Nation Total points SP FS 01 ! Alina Zagitova Olympic Athletes from Russia 239.57 82.92 156.65 02 ! Evgenia Medvedeva
+Olympic Athletes from Russia 238.26 81.61 156.65 03 ! Kaetlyn Osmond Canada 231.02 78.87 152.15 Satoko Miyahara Japan 222.38 75.94 146.44 5 Carolina Kostner
+Italy 212.
+</item 1>
+
+<item 2>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Pyeongchang 2018 Olympic Organizing Committee for the 2018 Winter Olympics . Retrieved 26 December 2017 . ^ Jump up to : `` Schedule '' . Retrieved 6 January
+2018 . Jump up ^ Start list ^ Jump up to : Bieler , Des ; Janes , Chelsea ( 21 February 2018 ) . `` Alina Zagitova tops Russian teammate Evgenia Medvedeva 's
+world - record short program score '' . The Washington Post . ISSN 0190 - 8286 . Retrieved 21 February 2018 . ^ Jump up to : `` Russia 's Zagitova beats
+Medvedeva 's short program world record at Olympics '' . TASS. 21 February 2018 . Retrieved 21 February 2018 . Jump up ^ `` Qualification Systems for XXIII
+Olympic Winter Games , PyeongChang 2018 , Figure skating '' . International Skating Union ( ISU ) . 17 May 2016 . Retrieved 20 January 2018 .
+</item 2>
+
+<item 3>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+24 quotas were handed out during the 2017 World Figure Skating Championships and the remaining six were given out at the 2017 CS Nebelhorn Trophy . Each country
+decided the entry of its teams , and athletes winning the quota were not necessarily granted the right to compete . All athletes competing must have met the
+minimum total elements score , which does not include component scores . For the short program this was 20.00 and the free skate 36.00 . Schedule ( edit ) All
+times are ( UTC + 9 ) . Date Time Round 21 February 10 : 00 Short program 23 February 10 : 00 Free skating Results ( edit ) Short program ( edit ) The short
+program was held on 21 February . Pl . Name Nation TSS TES PCS SS TR PE CH IN Ded StN Alina Zagitova Olympic Athletes from Russia 82.92 WR 45.30 37.62 9.36 9.18
+9.64 9.43 9.43 0.00 28 Evgenia Medvedeva Olympic Athletes from Russia 81.61 43.
+</item 3>
+
+<item 4>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Figure skating at the 2018 Winter Olympics -- ladies ' singles - wikipedia Figure skating at the 2018 Winter Olympics -- ladies ' singles Jump to : navigation ,
+search Ladies ' singles at the XXIII Olympic Winter Games Venue Gangneung Ice Arena Gangneung , South Korea Dates 21 -- 23 February Competitors 30 from 20
+nations Winning score 239.57 Medalists 01 ! Alina Zagitova Olympic Athletes from Russia 02 ! Evgenia Medvedeva Olympic Athletes from Russia 03 ! Kaetlyn Osmond
+Canada ← 2014 2022 → Figure skating at the 2018 Winter Olympics Qualification Singles men ladies Pairs mixed Ice dancing mixed Team event mixed The ladies '
+single figure skating competition of the 2018 Winter Olympics was held at the Gangneung Ice Arena in Gangneung , South Korea . The short program was held on 21
+February , and the free skating was held on 23 February .
+</item 4>
+
+<item 5>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+97 20 23 Ivett Tóth Hungary 150.43 53.22 23 97.21 23 24 Isadora Williams Brazil 144.18 55.74 17 88.44 24 Did not advance to free skating 25 Larkyn Austman
+Canada N / A 51.42 25 N / A N / A 26 Diāna Ņikitina Latvia N / A 51.12 26 N / A N / A 27 Giada Russo Italy N / A 50.88 27 N / A N / A 28 Anita Östlund Sweden N
+/ A 49.14 28 N / A N / A 29 Anna Khnychenkova Ukraine N / A 47.59 29 N / A N / A 30 Aiza Mambekova Kazakhstan N / A 44.40 30 N / A N / A References ( edit )
+Jump up ^ `` Venues '' . www.pyeongchang2018.com/ . Pyeongchang 2018 Olympic Organizing Committee for the 2018 Winter Olympics .
+</item 5>
+
+<item 6>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+33 21 121.38 10 14 Nicole Rajičová Slovakia 175.19 60.59 13 114.60 15 15 Gabrielle Daleman Canada 172.46 68.90 7 103.56 19 16 Loena Hendrickx Belgium 171.88
+55.16 20 116.72 14 17 Kailani Craine Australia 168.61 56.77 16 111.84 16 18 Nicole Schott Germany 168.46 59.20 14 109.26 17 19 Maé - Bérénice Méité France
+159.92 53.67 22 106.25 18 20 Emmi Peltonen Finland 157.14 55.28 18 101.86 21 21 Alexia Paganini Switzerland 156.26 55.26 19 101.00 22 22 Li Xiangning China
+154.43 52.46 24 101.97 20 23 Ivett Tóth Hungary 150.43 53.
+</item 6>
+
+<item 7>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+TES - Technical Element Score ; PCS - Program Component Score SS - Skating Skills ; TR - Transitions ; PE - Performance / Execution CH - Choreography ; IN -
+Interpretation ; Ded - Deduction ; StN - Starting Number Free skating ( edit ) The free skating was held on 23 February . Pl . Name Nation TSS TES PCS SS TR PE
+CH IN Ded StN Evgenia Medvedeva Olympic Athletes from Russia * 156.65 * 79.18 * 77.47 * 9.57 9.43 9.82 9.71 9.89 0.00 24 Alina Zagitova Olympic Athletes from
+Russia * 156.65 * 81.62 * 75.03 * 9.32 9.21 9.61 9.29 9.46 0.00 22 Kaetlyn Osmond Canada 152.15 76.50 75.65 9.50 9.21 9.57 9.39 9.61 0.00 23 Satoko Miyahara
+Japan 146.
+</item 7>
+
+<item 8>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+38 75.94 146.44 5 Carolina Kostner Italy 212.44 73.15 6 139.29 5 6 Kaori Sakamoto Japan 209.71 73.18 5 136.53 6 7 Choi Da - bin South Korea 199.26 67.77 8
+131.49 8 8 Maria Sotskova Olympic Athletes from Russia 198.10 63.86 12 134.24 7 9 Bradie Tennell United States 192.35 64.01 11 128.34 9 10 Mirai Nagasu United
+States 186.54 66.93 9 119.61 12 11 Karen Chen United States 185.65 65.90 10 119.75 11 12 Elizabet Tursynbayeva Kazakhstan 177.12 58.82 15 118.30 13 13 Kim Ha -
+nul South Korea 175.71 54.33 21 121.38 10 14 Nicole Rajičová Slovakia 175.
+</item 8>
+
+<item 9>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+17 May 2016 . Retrieved 20 January 2018 . Jump up ^ `` Extract from ISU Communication 2097 '' . www.iceskating.org.uk/ . National Ice Skating Association ( UK )
+. Retrieved 20 January 2018 . Jump up ^ Short program results Jump up ^ Free skating results Jump up ^ Final results Olympic champions in figure skating --
+Ladies ' singles 1908 : Madge Syers ( GBR ) 1920 : Magda Julin ( SWE ) 1924 : Herma Szabo ( AUT ) 1928 : Sonja Henie ( NOR ) 1932 : Sonja Henie ( NOR ) 1936 :
+Sonja Henie ( NOR ) 1948 : Barbara Ann Scott ( CAN ) 1952 : Jeannette Altwegg ( GBR ) 1956 : Tenley Albright ( USA ) 1960 : Carol Heiss ( USA ) 1964 : Sjoukje
+Dijkstra ( NED ) 1968 : Peggy Fleming ( USA ) 1972 : Trixi Schuba ( AUT ) 1976 : Dorothy
+</item 9>
+
+<item 10>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Fleming ( USA ) 1972 : Trixi Schuba ( AUT ) 1976 : Dorothy Hamill ( USA ) 1980 : Anett Pötzsch ( GDR ) 1984 : Katarina Witt ( GDR ) 1988 : Katarina Witt ( GDR )
+1992 : Kristi Yamaguchi ( USA ) 1994 : Oksana Baiul ( UKR ) 1998 : Tara Lipinski ( USA ) 2002 : Sarah Hughes ( USA ) 2006 : Shizuka Arakawa ( JPN ) 2010 : Yuna
+Kim ( KOR ) 2014 : Adelina Sotnikova ( RUS ) 2018 : Alina Zagitova ( OAR ) Record scores in figure skating Combined total ( Total ) Short program ( SP ) Free
+skating ( FS ) Short dance ( SD ) Free dance ( FD ) Juniors ( J ) Men Total : Yuzuru Hanyu 330.43 SP : Yuzuru Hanyu 112.72 FS : Yuzuru Hanyu 223.
+</item 10>
+=== END ITEM id=3cd24c8a093ce350 ===
+
+=== ITEM id=5cd94804e4eb7709 ===
+Gold sentences and facts:
+Sentence 0: Originally an ordinary man by the name of Nick Chopper ( the name first appearing in The Marvelous Land of Oz ) , the Tin Woodman used to make his living chopping down trees in the forests of Oz , as his father had before him . The Wicked Witch of the East enchanted his axe to prevent him from marrying his sweetheart , after being bribed by the lazy old woman who kept the Munchkin maiden as a servant , and did not wish to lose her . ( In a later book of the series , The Tin Woodman of Oz , the woman is said to be the Witch 's servant , and it is the Witch herself who decides to enchant Nick 's axe . ) The enchanted axe chopped off his limbs , one by one . Each time he lost a limb , Ku - Klip the tinsmith replaced it with a prosthetic limb made of tin . Finally , nothing was left of him but tin . However , Ku - Klip neglected to replace his heart . Once Nick Chopper was made entirely of tin , he was no longer able to love the lady he had fallen for .
+  Fact 0.0: Nick Chopper was originally an ordinary man.
+  Fact 0.1: The name Nick Chopper first appears in The Marvelous Land of Oz.
+  Fact 0.2: Nick Chopper used to make his living chopping down trees in the forests of Oz.
+  Fact 0.3: Nick Chopper's father had also chopped down trees in the forests of Oz.
+  Fact 0.4: The Wicked Witch of the East enchanted Nick Chopper's axe to prevent him from marrying his sweetheart.
+  Fact 0.5: The Wicked Witch of the East was bribed to do this by the lazy old woman who kept the Munchkin maiden as a servant.
+  Fact 0.6: The lazy old woman did not wish to lose the Munchkin maiden servant.
+  Fact 0.7: In a later book of the series, The Tin Woodman of Oz, the woman is said to be the Witch's servant.
+  Fact 0.8: In The Tin Woodman of Oz, the Witch herself decides to enchant Nick's axe.
+  Fact 0.9: The enchanted axe chopped off Nick Chopper's limbs one by one.
+  Fact 0.10: Each time Nick lost a limb, Ku-Klip the tinsmith replaced it with a prosthetic limb made of tin.
+  Fact 0.11: Finally, nothing was left of Nick Chopper but tin.
+  Fact 0.12: Ku-Klip neglected to replace Nick Chopper's heart.
+  Fact 0.13: Once Nick Chopper was made entirely of tin, he was no longer able to love the lady he had fallen for.
+Sentence 1: In The Wonderful Wizard of Oz , Dorothy Gale befriends the Tin Woodman after they find him rusted in the forest , as he was caught in rain , and use his oil can to release him . He follows her to the Emerald City to get a heart from The Wizard . They are joined on their adventure by the Scarecrow and the Cowardly Lion . The Wizard sends Dorothy and her friends to the Winkie Country to kill the Wicked Witch of the West . The Tin Woodman 's axe proves useful in this journey , both for chopping wood to create a bridge or raft as needed , and for chopping the heads off animals that threaten the party . When the Winged monkeys are sent by the Witch of the West against the group , they throw the Tin Woodman from a great height , damaging him badly . However Winkie Tinsmiths are able to repair him after the death of the Witch .
+  Fact 1.0: In The Wonderful Wizard of Oz, Dorothy Gale befriends the Tin Woodman.
+  Fact 1.1: Dorothy and her friends find the Tin Woodman rusted in the forest.
+  Fact 1.2: The Tin Woodman was caught in rain.
+  Fact 1.3: Dorothy uses the Tin Woodman's oil can to release him.
+  Fact 1.4: The Tin Woodman follows Dorothy to the Emerald City to get a heart from the Wizard.
+  Fact 1.5: The Scarecrow and the Cowardly Lion join Dorothy and the Tin Woodman on their adventure.
+  Fact 1.6: The Wizard sends Dorothy and her friends to the Winkie Country to kill the Wicked Witch of the West.
+  Fact 1.7: The Tin Woodman's axe proves useful on this journey for chopping wood to create a bridge or raft as needed.
+  Fact 1.8: The Tin Woodman's axe is useful for chopping the heads off animals that threaten the party.
+  Fact 1.9: The Winged Monkeys are sent by the Witch of the West against the group.
+  Fact 1.10: The Winged Monkeys throw the Tin Woodman from a great height.
+  Fact 1.11: The fall damages the Tin Woodman badly.
+  Fact 1.12: Winkie Tinsmiths are able to repair the Tin Woodman after the death of the Witch.
+Sentence 2: His desire for a heart notably contrasts with the Scarecrow 's desire for brains , reflecting a common debate between the relative importance of the mind and the emotions . This occasions philosophical debate between the two friends as to why their own choices are superior ; neither convinces the other , and Dorothy , listening , is unable to decide which one is right . Symbolically , because they remain with Dorothy throughout her quest , she is provided with both and need not select . The Tin Woodman states unequivocally that he has neither heart nor brain , but cares nothing for the loss of his brain . Towards the end of the novel , though , Glinda praises his brain as not quite that of the Scarecrow 's .
+  Fact 2.0: The Tin Woodman's desire for a heart notably contrasts with the Scarecrow's desire for brains.
+  Fact 2.1: The contrast reflects a common debate between the relative importance of the mind and the emotions.
+  Fact 2.2: The two friends have a philosophical debate about why their own choices are superior.
+  Fact 2.3: Neither friend convinces the other in that debate.
+  Fact 2.4: Dorothy, listening, is unable to decide which one is right.
+  Fact 2.5: Symbolically, because the Tin Woodman and the Scarecrow remain with Dorothy throughout her quest, she is provided with both a heart and a brain and need not select.
+  Fact 2.6: The Tin Woodman states unequivocally that he has neither heart nor brain.
+  Fact 2.7: The Tin Woodman cares nothing for the loss of his brain.
+  Fact 2.8: Towards the end of the novel, Glinda praises the Tin Woodman's brain.
+  Fact 2.9: Glinda says the Tin Woodman's brain is not quite that of the Scarecrow.
+
+Retrieved items:
+<item 1>
+Tin Woodman
+) The Magical Mimics in Oz ( 1946 ) The Shaggy Man of Oz ( 1949 ) The Hidden Valley of Oz ( 1951 ) Merry Go Round in Oz ( 1963 ) Yankee in Oz ( 1972 ) The
+Enchanted Island of Oz ( 1976 ) The Forbidden Fountain of Oz ( 1980 ) The Ozmapolitan of Oz ( 1986 ) The Wicked Witch of Oz ( 1993 ) The Giant Garden of Oz (
+1993 ) The Runaway in Oz ( 1995 ) The Rundelstone of Oz ( 2000 ) The Emerald Wand of Oz ( 2005 ) Trouble Under Oz ( 2006 ) Alternate Dorothy of Oz ( 1989 )
+Locations and elements Land of Oz Emerald City Munchkin Country Gillikin Country Winkie Country Quadling Country Yellow brick road Oogaboo Deadly Desert
+Nonestica Forest of Burzee Land of Ev Merryland Mo Ix Nome Kingdom Noland Ruby slippers Silver Shoes The Oz Film Manufacturing Company Characters Dorothy Gale
+Toto Princess Ozma The Wizard of Oz Scarecrow Tin Woodman Cowardly Lion Jack Pumpkinhead Tik - Tok Sawhorse Trot Hungry Tiger
+</item 1>
+
+<item 2>
+Tin Woodman
+Toward the end , he hugged the Wizard ( Joel Grey ) saying to him `` Thank you from the bottom of my heart ! '' . In 1996 , they made a cartoon animated The Oz
+Kids . He has a son named Tin Boy . Like his father he can cut wood with his ax . And he has to be careful with water and snow or he 'll be rust . His voice
+played by Andy Milder . Hiroki Tsujiai from Ultra Maniac dresses as the Tin Man in the costume party . James Kall portrayed the Tin Man in the 2001 ABC
+miniseries Life with Judy Garland : Me and My Shadows . The Muppet Gonzo plays a similar role , the Tin Thing , in 2005 's television film The Muppets ' Wizard
+of Oz . In this version , he is the Wicked Witch 's research assistant , transformed into a robot to prevent him wanting a day off to marry Camilla . Gonzo 's
+other role is himself . He appears at the end of this film in the Muppets ' show .
+</item 2>
+
+<item 3>
+Tin Woodman
+The movie was made available for free viewing online and free downloading of its soundtrack . In the 2013 prequel , Oz the Great and Powerful , although the Tin
+Woodman does not physically appear , the film introduces his creator , the Master Tinker , portrayed by Bill Cobbs . Tin Man appears in the animated film
+Legends of Oz : Dorothy 's Return ( which is based on Dorothy of Oz ) , voiced by Kelsey Grammer . The Woodsman , a 2012 stage play written by James Ortiz with
+music by Edward W. Hardy , tells the backstory of the Tin Man , using puppetry , movement , and music . The play has received multiple Off Broadway productions
+, and won a 2016 Obie Award for Ortiz 's puppet design . In the TV series Emerald City , the Tin Woodman equivalent is Jack ( Gerran Howell ) , a friend of the
+enigmatic Tip , who helps ' him ' escape from his imprisonment by a witch . When it is revealed that Tip is actually a girl whose true identity was suppressed
+by a potion , her strained emotional state causes her to push Jack over a balcony after he kisses her .
+</item 3>
+
+<item 4>
+Tin Woodman
+They built a story around them , added Dorothy , and added a series of lessons to the effect that everyone possesses the resources they need ( such as brains ,
+a heart and courage ) if only they had self - confidence . The Wonderful Wizard of Oz was a children 's book , of course , but as Baum warned in the preface ,
+it was a `` modernized '' fairy tale as well . The Tin Man -- the human turned into a machine -- was a common feature in political cartoons and in
+advertisements in the 1890s . Indeed , he had been part of European folk art for 300 years . In political interpretations of The Wonderful Wizard of Oz , the
+Tin Woodman is supposedly described as a worker , dehumanized by industrialization . The Tin Woodman little by little lost his natural body and had it replaced
+by metal ; so he has lost his heart and can not move without the help of farmers ( represented by the Scarecrow ) ; in reality he has a strong sense of
+cooperation and love , which needs only an infusion of self - confidence to be awakened . In the 1890s many argued that to secure a political revolution a
+coalition of Farmers and Workers was needed .
+</item 4>
+
+<item 5>
+Tin Woodman
+( In a later book of the series , The Tin Woodman of Oz , the woman is said to be the Witch 's servant , and it is the Witch herself who decides to enchant Nick
+'s axe . ) The enchanted axe chopped off his limbs , one by one . Each time he lost a limb , Ku - Klip the tinsmith replaced it with a prosthetic limb made of
+tin . Finally , nothing was left of him but tin . However , Ku - Klip neglected to replace his heart . Once Nick Chopper was made entirely of tin , he was no
+longer able to love the lady he had fallen for . In The Wonderful Wizard of Oz , Dorothy Gale befriends the Tin Woodman after they find him rusted in the forest
+, as he was caught in rain , and use his oil can to release him . He follows her to the Emerald City to get a heart from The Wizard . They are joined on their
+adventure by the Scarecrow and the Cowardly Lion . The Wizard sends Dorothy and her friends to the Winkie Country to kill the Wicked Witch of the West .
+</item 5>
+
+<item 6>
+Tin Woodman
+The movie shows him moving through a colorful Oz city with his brand - new mechanical heart , before meeting a reddish female Tin Woman ( or robot ? ) to whom
+he gives the heart . She proceeds to cruelly play with the heart . An internet - collaboration , CG animated feature based on Baum 's book The Tin Woodman of Oz
+was produced by A : M Films , and completed in 2009 . In 2010 , Whitestone Motion Pictures produced a 23 - minute live - action short film , Heartless : The
+Story of the Tin Man . The film is based on the book The Tin Woodman of Oz , where Woot the Wanderer visits the Tin Man and asks how he came to be made of tin .
+In the film , the Tin Man appears to be more steam - or coal - powered . His chest cavity is covered by a door which reads `` Pedudoe Tin Co . '' but this is a
+reference to the workings of the film company , and not a reference to any Oz book or material . The movie was made available for free viewing online and free
+downloading of its soundtrack .
+</item 6>
+
+<item 7>
+Tin Woodman
+To prevent himself from completely becoming tin , Stanum seeks out help from Zelena ( now the Wicked Witch of the West ) at the Emerald City of Oz . Zelena
+agrees to help him seek out the Crimson Heart , which can save him . During their quest , Stanum tells Zelena that she does n't have to be lonely but she is
+doing her best to deny his advice . Suddenly , a lion comes of nowhere to attack Stanum , and Zelena uses her magic to make the lion go away ( at this point the
+lion has become as Zelena would put it , cowardly ) . When they finally arrived to the location of the Crimson Heart , the two learned that the only way to make
+it work is through the absorption of another person 's magic . Unfortunately Zelena 's actions and selfish greed for magic causes her to betray Stanum , whom
+she suspect was aligned with Dorothy by keeping the Crimson Heart for herself , leaving Stanum to transform into the Tin Man permanently . Some time later ,
+when Robin Hood arrives in Oz in the episode `` Heart of Gold '' , the Tin Man is seen on the side of the Yellow Brick Road , torn apart .
+</item 7>
+
+<item 8>
+Tin Woodman
+The Wizard turns out to be a `` humbug '' and can only provide a placebo heart made of silk and filled with sawdust . However , this is enough to please the Tin
+Woodman , who , with or without a heart , was all along the most tender and emotional of Dorothy 's companions ( just as the Scarecrow was the wisest and the
+Cowardly Lion the bravest ) . When he accidentally crushes an insect , he is grief - stricken and , ironically , claims that he must be careful about such
+things , while those with hearts do not need such care . This tenderness remains with him throughout the series , as in The Patchwork Girl of Oz , where he
+refuses to let a butterfly be maimed for the casting of a spell . When Dorothy returns home to her farm in Kansas , the Tin Woodman returns to the Winkie
+Country to rule as emperor . Later , he has his subjects construct a palace made entirely of tin -- from the architecture all the way down to the flowers in the
+garden . Baum emphasized that the Tin Woodman remains alive , in contrast to the windup mechanical man Tik - Tok Dorothy meets in a later book .
+</item 8>
+
+<item 9>
+Tin Woodman
+The Tin Woodman 's axe proves useful in this journey , both for chopping wood to create a bridge or raft as needed , and for chopping the heads off animals that
+threaten the party . When the Winged monkeys are sent by the Witch of the West against the group , they throw the Tin Woodman from a great height , damaging him
+badly . However Winkie Tinsmiths are able to repair him after the death of the Witch . His desire for a heart notably contrasts with the Scarecrow 's desire for
+brains , reflecting a common debate between the relative importance of the mind and the emotions . This occasions philosophical debate between the two friends
+as to why their own choices are superior ; neither convinces the other , and Dorothy , listening , is unable to decide which one is right . Symbolically ,
+because they remain with Dorothy throughout her quest , she is provided with both and need not select . The Tin Woodman states unequivocally that he has neither
+heart nor brain , but cares nothing for the loss of his brain . Towards the end of the novel , though , Glinda praises his brain as not quite that of the
+Scarecrow 's .
+</item 9>
+
+<item 10>
+Tin Woodman
+When they get to the heart , Zelena picks it up and felt some of her magic draining . When Zelena claims that Dorothy Gale put Stanum up to this task , Stanum
+commented that he never met Dorothy . He also stated that Zelena once claimed on the day they met that she would be happy being a normal human . As Stanum fully
+turns to tin and is unable to move , Zelena takes the box containing the Crystal Heart and leaves while telling Stanum that perhaps Dorothy will meet Stanum and
+free him . Modern works ( edit ) This article gives self - sourcing examples without describing their significance in the context of the article . Please help
+improve this article by adding citations to reliable sources that describe the examples ' significance , and by removing less pertinent examples . Unsourced or
+poorly sourced material may be challenged or removed . ( November 2017 ) ( Learn how and when to remove this template message ) The song `` Country Robot / A
+Letter to Dorothy '' by The Incredible Moses Leroy is written from the Tin Man 's perspective ; it includes the lyrics `` You gave me oil , I was a rusty load /
+You even helped me find my heart . ''
+</item 10>
+=== END ITEM id=5cd94804e4eb7709 ===

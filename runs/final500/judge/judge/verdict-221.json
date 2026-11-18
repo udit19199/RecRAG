@@ -1,0 +1,54 @@
+[
+{"id": "a544dad6b08761b4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Jada then praised her children for how they’ve helped her grow"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "My children, they’re little gurus."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "share two children - Jaden, 25, and Willow, 22."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "share two children - Jaden, 25, and Willow, 22."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "They’ve taught me a deep sense of self-acceptance."}]}
+]},
+{"id": "52b2b99ebdd3bddf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "da2a71f17e974698", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "626492582c1b3e24", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []}
+]},
+{"id": "84819f18a43b5f4e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Brown expressed his surprise that HSF asked HSM to"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "id": "a4dcc9015b8b4bb4",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "That answer ultimately lies with the jury"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [
+        {"item": 2, "quote": "Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges."},
+        {"item": 8, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud."}
+      ]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+    ]
+  },
+  {
+    "id": "8d403dc71ea7d016",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "0.5", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []},
+      {"fact": "2.5", "status": "missing", "evidence": []},
+      {"fact": "2.6", "status": "missing", "evidence": []},
+      {"fact": "2.7", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "12090b06e19f9091",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "McHenry himself has brushed off attempts to take the job more permanently"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "he was appointed to the role after the unprecedented ouster of McCarthy"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "the unprecedented ouster of McCarthy"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "the unprecedented ouster of McCarthy more than two weeks ago."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [
+        {"item": 7, "quote": "The House had never ousted its speaker before McCarthy"},
+        {"item": 8, "quote": "without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy."}
+      ]},
+      {"fact": "1.2", "status": "stated", "evidence": [
+        {"item": 6, "quote": "since hard-liners ousted Kevin McCarthy at the start of the month."},
+        {"item": 7, "quote": "The House had never ousted its speaker before McCarthy"}
+      ]}
+    ]
+  },
+  {
+    "id": "e1078643410be00d",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  },
+  {
+    "id": "f8a84b2f05768053",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+      {"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+      {"fact": "3.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "3.2", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "3.3", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "3.4", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  }
+]

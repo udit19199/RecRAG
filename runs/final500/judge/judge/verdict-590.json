@@ -1,0 +1,111 @@
+[
+{"id": "0840ee380584f497", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "He was awarded the 2012 Nobel Prize in Physics"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "He was awarded the 2012 Nobel Prize in Physics, jointly with Serge Haroche, for \"ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.\""}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Since 2001, Haroche is a Professor at the Collège de France and holds the Chair of Quantum Physics."}]}
+]},
+{"id": "61e3c759a62d4e9e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "7a39b8aebb1bec53", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Tender Fictions is a 1996 autobiographical documentary film directed by American experimental filmmaker Barbara Hammer."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Tender Fictions is a 1996 autobiographical documentary film directed by American experimental filmmaker Barbara Hammer."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Bougainville – Our Island Our Fight is a 1998 Australian documentary film."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "It was produced and directed by Wayne Coles-Janess."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "It was produced and directed by Wayne Coles-Janess."}]}
+]},
+{"id": "f647dceea04f558f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Steve Rash is an American film director and producer"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Steve Rash is an American film director and producer"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Steve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\""}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Steve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\""}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Steve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\""}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "\"Queens Logic\", \"\" and \"\"."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month."}]}
+]},
+{"id": "c825a0091d50e6e7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "born 3 April 1959"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Eenasul Fateh (Bengali: ঈনাসুল ফাতেহ ; born 3 April 1959)"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "also known by his stage name Aladin"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "is a Bangladeshi-British cultural practitioner, magician, live artist and former international management consultant."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "is a Bangladeshi-British cultural practitioner, magician, live artist and former international management consultant."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "is a Bangladeshi-British cultural practitioner, magician, live artist and former international management consultant."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "is a Bangladeshi-British cultural practitioner, magician, live artist and former international management consultant."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "65d10c9a188a0a8f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Broughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Broughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Broughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Broughtonia is a genus of orchids (family Orchidaceae) native to the Bahamas and the Greater Antilles."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Perilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Perilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Perilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Perilla is a genus consisting of one major Asiatic crop species \"P. frutescens\" and a few recognized wild species in nature, belonging to the mint family, Lamiaceae."}]}
+]},
+{"id": "793cd2c9630d2a7e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Steven Zhu (born 1989)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "known professionally as Zhu"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "is a Chinese American electronic musician and singer"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "is a Chinese American electronic musician and singer"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "who has been active since the beginning of 2014"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "signed to Mind of a Genius Records and Columbia Records."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 4, "quote": "signed to Mind of a Genius Records and Columbia Records."}]}
+]},
+{"id": "212e3701c645fa44", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Opened in 1933, it carries U.S. Route 80 across the Red River."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Opened in 1933, it carries U.S. Route 80 across the Red River."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "U.S. Route 80 (US 80) is an east–west United States Numbered Highway, much of which was once part of the early auto trail known as the Dixie Overland Highway."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "U.S. Route 80 (US 80) is an east–west United States Numbered Highway, much of which was once part of the early auto trail known as the Dixie Overland Highway."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 4, "quote": "The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 4, "quote": "The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 4, "quote": "The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean."}]}
+]},
+{"id": "bf906c15ffafd6a3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Eriogonum is the scientific name for a genus of flowering plants in the family Polygonaceae."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Eriogonum is the scientific name for a genus of flowering plants in the family Polygonaceae."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Aloinopsis is a genus of ice plants from South Africa."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Aloinopsis is a genus of ice plants from South Africa."}]}
+]},
+{"id": "3631daad13a0d09b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Old Smokey is a euphemistic name given to the state prison electric chair in New Jersey"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Old Smokey is a euphemistic name given to the state prison electric chair in New Jersey, which is on display at the New Jersey State Police Museum."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The chair's most notorious victim was Richard Hauptmann"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "the 20-month-old son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "the 20-month-old son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh"}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 4, "quote": "(see Lindbergh kidnapping)"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Lindbergh kidnapping became known as \"The Crime of the Century\"."}]}
+]},
+{"id": "8114d86eec3bb9b9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "of Montreal is an American experimental pop band from Athens, Georgia."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "of Montreal is an American experimental pop band from Athens, Georgia."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "of Montreal is an American experimental pop band from Athens, Georgia."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Vib Gyor was a band that was formed in Leeds, England."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Vib Gyor was a band that was formed in Leeds, England."}]}
+]}
+]

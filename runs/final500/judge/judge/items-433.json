@@ -1,0 +1,461 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "2965aa1a060b5eae",
+   "gold": [
+    {
+     "sentence": "Maximillian Oppenheimer (6 May 1902 – 26 March 1957), known as Max Ophüls (] ), was a German-born film director who worked in Germany (1931–1933), France (1933–1940 and 1950–1957), and the United States (1947–1950).",
+     "facts": {
+      "0.0": "Maximillian Oppenheimer was born on 6 May 1902.",
+      "0.1": "Maximillian Oppenheimer died on 26 March 1957.",
+      "0.2": "Maximillian Oppenheimer was known as Max Ophüls.",
+      "0.3": "Max Ophüls was a German-born film director.",
+      "0.4": "Max Ophüls worked in Germany from 1931 to 1933.",
+      "0.5": "Max Ophüls worked in France from 1933 to 1940.",
+      "0.6": "Max Ophüls worked in France from 1950 to 1957.",
+      "0.7": "Max Ophüls worked in the United States from 1947 to 1950."
+     }
+    },
+    {
+     "sentence": "Shirley Clarke (October 2, 1919 – September 23, 1997) was an American experimental and independent filmmaker.",
+     "facts": {
+      "1.0": "Shirley Clarke was born on October 2, 1919.",
+      "1.1": "Shirley Clarke died on September 23, 1997.",
+      "1.2": "Shirley Clarke was an American experimental filmmaker.",
+      "1.3": "Shirley Clarke was an American independent filmmaker."
+     }
+    }
+   ],
+   "items": [
+    "Oswalt Kolle\nOswalt Kolle (2 October 1928, Kiel – 24 September 2010, Amsterdam) was a German sex educator, who became famous during the late 1960s and early 1970s for his numerous pioneering books and films on human sexuality.\n\n His work was translated into all major languages, while his films found an audience of 140 million worldwide.\n\n In his 1997 book \"Open to Both Sides\" he came out as bisexual.\n\n He was awarded the Magnus Hirschfeld Medal in 2000.",
+    "Jacques Natanson\nFrench writer Jacques Natanson (15 May 1901 – 19 May 1975) first became involved in the movies in 1929 when one of his plays was adapted for the screen.\n\n He enjoyed a fruitful collaboration with Max Ophüls, on such films as \"La Ronde\" (1951, earning an Academy Award nomination), \"Le Plaisir\" (1952) and \"Lola Montès\" (1955).",
+    "Lev Kuleshov\nLev Vladimirovich Kuleshov (Russian: Лев Влади́мирович Кулешо́в ; 13 January [O.S. 1 January] 1899 – 29 March 1970) was a Russian and Soviet filmmaker and film theorist, one of the founders of the world's first film school, the Moscow Film School.\n\n He was given the title People's Artist of the RSFSR in 1969.\n\n He was intimately involved in development of the style of film making known as Soviet montage, especially it's psychological underpinning, including the use of editing and the cut to emotionally influence the audience, a principle known as the Kuleshov effect.\n\n He also developed the theory of creative geography, which is the use of the action around a cut to connect otherwise disparate settings into a cohesive narrative.",
+    "Max Ophüls\nMaximillian Oppenheimer (6 May 1902 – 26 March 1957), known as Max Ophüls (] ), was a German-born film director who worked in Germany (1931–1933), France (1933–1940 and 1950–1957), and the United States (1947–1950).\n\n He made nearly 30 films, the latter ones being especially notable: \"La Ronde\" (1950), \"Le Plaisir\" (1952), \"The Earrings of Madame de...\" (1953) and \"Lola Montès\" (1955).",
+    "Dan Ouellette\nDan Ouellette is an American artist, illustrator, director, author and production designer.\n\n He began drawing as a child inspired by Escher, Dalí and Moebius.\n\n His drawings usually begin with very rough sketches and are intended to capture a moment of tension or eroticism.\n\n His art pushes his audience into areas where people feel less than comfortable, stating that the \"US which is so puritanical, our bodies are usually a great source of anxiety and fear\".\n\n As a production designer, he has designed over fifteen independent feature films in the past decade as well as numerous commercials and music videos.\n\n He is best known as the director for the music videos \"Blue\" and \"Looking Glass\" by The Birthday Massacre, receiving over 4 million combined views on YouTube, and has directed music videos for the industrial band Android Lust.\n\n He has done production design for many films over the years including \"Chasing Sleep\" starring Jeff Daniels.\n\n Dan's artwork is strongly themed around surrealism and mostly done in pencil.\n\n As an artist he has exhibited widely.\n\n He has been published in numerous anthology art books including \"Bio-Mannerism\" which also features work by H.R.",
+    "Shirley Clarke\nShirley Clarke (October 2, 1919 – September 23, 1997) was an American experimental and independent filmmaker.\n\n She was also a director and editor to many famous works.",
+    "Elmer Clifton\nElmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days.\n\n A collaborator of D.W. Griffith, he appeared in \"The Birth of a Nation\" (1915) and \"Intolerance\" (1916) before giving up acting in 1917 to concentrate on work behind the camera, with Griffith and Joseph Henabery as his mentors.\n\n His first feature-length solo effort as a director was \"The Flame of Youth\" with Jack Mulhall.",
+    "Lois Weber\nLois Weber (June 13, 1879 – November 13, 1939) was an American silent film actress, screenwriter, producer, and director, who is considered \"the most important female director the American film industry has known\", and \"one of the most important and prolific film directors in the era of silent films\".\n\n Film historian Anthony Slide asserts that: \"Along with D.W. Griffith, Weber was the American cinema's first genuine auteur, a filmmaker involved in all aspects of production and one who utilized the motion picture to put across her own ideas and philosophies.\"",
+    "The Earrings of Madame de…\nThe Earrings of Madame de… (French: Madame de… ] ) is a 1953 drama film directed by Max Ophüls, adapted from Louise Leveque de Vilmorin's period novel by Ophüls, Marcel Archard and Annette Wadement.\n\n The film is considered a masterpiece of the 1950s French cinema.\n\n Andrew Sarris called it \"the most perfect film ever made\".\n\n Ophüls said the story's construction attracted him, stating \"there is always the same axis around which the action continually turns like a carousel.\n\n A tiny, scarcely visible axis: a pair of earrings.\"",
+    "Marcel Ophüls\nMarcel Ophuls (] ; born 1 November 1927) is a documentary film maker and former actor, best known for his films \"The Sorrow and the Pity\" and \"\"."
+   ]
+  },
+  {
+   "id": "6cb9ea6401908c98",
+   "gold": [
+    {
+     "sentence": "Wheelock Whitney may refer to one of three members of the Whitney family:",
+     "facts": {
+      "0.0": "Wheelock Whitney may refer to one of three members of the Whitney family."
+     }
+    },
+    {
+     "sentence": "The Whitney family is an American family notable for their social prominence, wealth, business enterprises and philanthropy, founded by John Whitney (1592–1673) who came from London, England to Watertown, Massachusetts in 1635.",
+     "facts": {
+      "1.0": "The Whitney family is an American family.",
+      "1.1": "The Whitney family is notable for their social prominence, wealth, business enterprises and philanthropy.",
+      "1.2": "The Whitney family was founded by John Whitney (1592–1673).",
+      "1.3": "John Whitney came from London, England.",
+      "1.4": "John Whitney came to Watertown, Massachusetts.",
+      "1.5": "John Whitney came to Watertown, Massachusetts in 1635."
+     }
+    }
+   ],
+   "items": [
+    "Gertrude Vanderbilt Whitney\nGertrude Vanderbilt Whitney (January 9, 1875 – April 18, 1942) was an American sculptor, art patron and collector, and founder in 1931 of the Whitney Museum of American Art in New York City.\n\n She was a prominent social figure and hostess, who was born into the wealthy Vanderbilt family and married into the Whitney family.",
+    "John Hay Whitney\nJohn Hay Whitney (August 17, 1904 – February 8, 1982), colloquially known as Jock Whitney, was U.S. Ambassador to the United Kingdom, publisher of the \"New York Herald Tribune\", and president of the Museum of Modern Art.\n\n He was a member of the Whitney family.",
+    "Greentree Stable\nGreentree Stable, in Red Bank, New Jersey, was a major American thoroughbred horse racing stable and breeding farm established in 1914 by Payne Whitney of the Whitney family of New York City.\n\n Payne Whitney operated a horse farm and stable at Saratoga Springs, New York with his brother Harry Payne Whitney, who also had a large stable of horses.\n\n Greentree Stable had a training base at Aiken, South Carolina, while Greentree Farm in Lexington, Kentucky was established in 1925 as its breeding arm.",
+    "Rockefeller family\nThe Rockefeller family ( ) is an American industrial, political, and banking family that made one of the world's largest fortunes in the oil business during the late 19th and early 20th centuries, with John D. Rockefeller and his brother William Rockefeller primarily through Standard Oil.\n\n The family is also known for its long association with and control of Chase Manhattan Bank.\n\n They are considered to be one of the most powerful families, if not the most powerful family, in the history of the United States.",
+    "James Scollay Whitney\nJames Scollay Whitney (May 19, 1811 – October 24, 1878) was an American business executive and politician.\n\n He was the father of Henry Melville Whitney and William Collins Whitney, founders of the Whitney family business interests.",
+    "Charles Andrew Whitney\nCharles Andrew Whitney (November 14, 1864- December 31, 1912) was an American businessman and industrialist in the late 19th century, born in Princeton, Massachusetts.\n\n He was part of the prominent American Whitney family.\n\n In 1859, Charles, his brother Levi L. Whitney, and Orville E. Thompson helped lead the large-scale manufacturing of leather boots and shoes in Chicago and were attributed with successfully running the first factory of its kind there.\n\n Whitney himself held patents for the manufacture of leather.",
+    "Wheelock Whitney\nWheelock Whitney may refer to one of three members of the Whitney family:",
+    "Whitney family\nThe Whitney family is an American family notable for their social prominence, wealth, business enterprises and philanthropy, founded by John Whitney (1592–1673) who came from London, England to Watertown, Massachusetts in 1635.\n\n The historic family mansion in Watertown, known as The Elms, was built in 1710.",
+    "Harry Payne Whitney\nHarry Payne Whitney (April 29, 1872 – October 26, 1930) was an American businessman, thoroughbred horse breeder, and member of the prominent Whitney family.",
+    "Ross Winans\nRoss Winans (1796–1877) was an American inventor, mechanic, and builder of locomotives and railroad machinery.\n\n He is also noted for design of pioneering cigar-hulled ships.\n\n Winans, one of the United States' first multi-millionaires, was involved in national and state politics, a southern-sympathizer and was a vehement \"states' rights\" advocate.\n\n His outspoken anti-federal stance as a member of the Maryland House of Delegates, the lower chamber of the General Assembly, (state legislature) led to his temporary arrest on board a Baltimore and Ohio Railroad train returning from an early session of the legislature held in the western Maryland town of Frederick to avoid the Union Army-occupied state capital of Annapolis in April–May, 1861, to consider the possibilities of state secession, during the early decisive period of the American Civil War.\n\n Winans was related to James McNeill Whistler through marriage (Whistler's brother George married Winans' daughter Julia)."
+   ]
+  },
+  {
+   "id": "e8c5f7e921860f2e",
+   "gold": [
+    {
+     "sentence": "Big Fish is a musical with music and lyrics by Andrew Lippa and a book by John August.",
+     "facts": {
+      "0.0": "Big Fish is a musical.",
+      "0.1": "Big Fish has music by Andrew Lippa.",
+      "0.2": "Big Fish has lyrics by Andrew Lippa.",
+      "0.3": "Big Fish has a book by John August."
+     }
+    },
+    {
+     "sentence": " He is a resident artist at the Ars Nova Theater in New York City.",
+     "facts": {
+      "1.0": "He is a resident artist at the Ars Nova Theater.",
+      "1.1": "The Ars Nova Theater is in New York City."
+     }
+    }
+   ],
+   "items": [
+    "Marc Blitzstein\nMarcus Samuel Blitzstein (March 2, 1905January 22, 1964), was an American composer, lyricist, and librettist.\n\n He won national attention in 1937 when his pro-union musical \"The Cradle Will Rock\", directed by Orson Welles, was shut down by the Works Progress Administration.\n\n He is known for \"The Cradle Will Rock\" and for his Off-Broadway translation/adaptation of \"The Threepenny Opera\" by Bertolt Brecht and Kurt Weill.\n\n His works also include the opera \"Regina\", an adaptation of Lillian Hellman's play \"The Little Foxes\"; the Broadway musical \"Juno\", based on Seán O'Casey's play \"Juno and the Paycock\"; and \"No for an Answer\".\n\n He completed translation/adaptations of Brecht's and Weill's musical play \"Rise and Fall of the City of Mahagonny\" and of Brecht's play \"Mother Courage and Her Children\" with music by Paul Dessau.",
+    "Aaron Barrett\nAaron Asher Barrett (born August 30, 1974) is the lead singer, lead guitarist, and primary songwriter of the American ska-punk band Reel Big Fish.\n\n Prior to forming Reel Big Fish, Barrett played trombone in another ska-punk act, The Scholars, along with future Reel Big Fish bandmates Scott Klopfenstein and Grant Barry.",
+    "Maurice Browne\nMaurice Browne (12 February 1881 – 21 January 1955), born in Reading, England, was best known as a theater producer in the United States and the UK.\n\n The Cambridge-educated Browne was also a poet, actor, and theater director.\n\n He has been credited, along with his then-wife Ellen Van Volkenburg, with being the founder of the Little Theatre Movement in America through his work with the Chicago Little Theatre.\n\n Browne and Van Volkenburg went on to found the department of drama at the Cornish School in Seattle in 1918, now Cornish College of the Arts.\n\n Browne's greatest triumph came in 1929 when he produced \"Journey's End\", by R. C. Sherriff in London.",
+    "Lin-Manuel Miranda\nLin-Manuel Miranda ( ; born January 16, 1980) is an American composer, lyricist, playwright, and actor best known for creating and starring in the Broadway musicals \"Hamilton\" and \"In the Heights\".\n\n He co-wrote the songs for Disney's \"Moana\" soundtrack (2016) and is set to star in their upcoming film \"Mary Poppins Returns\".\n\n Miranda's awards include a Pulitzer Prize, two Grammy Awards, an Emmy Award, a MacArthur Fellowship, and three Tony Awards.",
+    "Big Fish (musical)\nBig Fish is a musical with music and lyrics by Andrew Lippa and a book by John August.\n\n It is based on Daniel Wallace’s 1998 novel, \"\", and the 2003 film \"Big Fish\" written by August and directed by Tim Burton.",
+    "Love Birds (musical)\nLove Birds is an original musical with book, music and lyrics by Robert J. Sherman.\n\n The musical officially premiered at the 2015 Edinburgh Fringe Festival at The Pleasance on August 7, 2015.\n\n The production was directed and choreographed by Stewart Nicholls.\n\n Prior to the Edinburgh run, there were two previews held in London at the Lost Theatre (in Stockwell) on July 28 and 29.\n\n The Original Edinburgh Cast Recording was recorded on July 30 and mixed and mastered on July 31 and August 3 and was first released by SimG Records on August 12 at the Edinburgh Festival.\n\n Two Edinburgh previews took place on August 5 and 6 with Press Night taking place on August 8.\n\n The final festival performance took place on August 31.\n\n The show starred Ruth Betteridge, Greg Castiglioni, John Guerrasio, George Knapper, Jonny Purchase, Joanna Sawyer, Anna Stolli, Rafe Watts and Ryan Willis.",
+    "Marc Blitzstein\nBlitzstein also composed music for films, such as \"Surf and Seaweed\" (1931) and \"The Spanish Earth\" (1937), and he contributed two songs to the original 1960 production of Hellman's play \"Toys in the Attic\".",
+    "Love Birds (musical)\nIn its end of the year round-up of regional British fringe musical theatre, \"Musical Theatre Review\" hailed \"Love Birds\": \"a triumph of whimsy, a children’s story written with adult sensibilities and featuring a cracking score that celebrated the lost era of vaudeville.\n\n Blessed with an equally strong design from Gabriella Slade and some marvellously sensitive performances, Love Birds was probably the most accomplished piece of musical theatre to arise from the many delights at this year’s festival.\"",
+    "Andrew Lippa\nAndrew Lippa (December 22, 1964) is an American composer, lyricist, book writer, performer, and producer.\n\n He is a resident artist at the Ars Nova Theater in New York City.",
+    "Marisha Chamberlin\nMarisha Anne Chamberlain (born January 6, 1952) is an American writer.\n\n Her most recent work, the libretto for \"Mortals & Angels\", a collaboration with American composer Carol Barnett, premiered at Carnegie Hall in 2016, a companion piece to their widely produced collaborative piece, \"The World Beloved: A Bluegrass Mass\".\n\n Her stage plays, both original works and adaptations are widely produced.\n\n Her debut novel, \"The Rose Variations\", was published by Soho Press in 2009.\n\n Her play, \"Scheherazade\", won the Dramatists Guild/CBS National Award, and in her screenplay version, played on public television across the country, and was screened at the British Film Institute Festival in the category of Best of American Public Television."
+   ]
+  },
+  {
+   "id": "d59d9ebdb57cef7b",
+   "gold": [
+    {
+     "sentence": " Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.",
+     "facts": {
+      "0.0": "The magazine was launched in 2006.",
+      "0.1": "The magazine is backed by Canadian industrialist David Harrison Gilmour.",
+      "0.2": "David Harrison Gilmour is the founder of FIJI Water LLC.",
+      "0.3": "The magazine is bimonthly.",
+      "0.4": "The magazine is distributed by Zinio Systems, Inc."
+     }
+    },
+    {
+     "sentence": " The first issue appeared in January-February 2007.",
+     "facts": {
+      "1.0": "The first issue of the magazine appeared in January-February 2007."
+     }
+    },
+    {
+     "sentence": "La Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+     "facts": {
+      "2.0": "La Belle Assemblée is also known in full as 'La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies'.",
+      "2.1": "La Belle Assemblée was a British women's magazine.",
+      "2.2": "La Belle Assemblée was published from 1806 to 1837.",
+      "2.3": "La Belle Assemblée was founded by John Bell.",
+      "2.4": "John Bell lived from 1745 to 1831."
+     }
+    }
+   ],
+   "items": [
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "Essence (magazine)\nEssence is a monthly magazine for African American women between the ages of 18 and 49.\n\n It is the only magazine that focuses on reaching an audience of black women, revolves around the black woman experience, and has remained for a long period of time.\n\n The magazine covers fashion, lifestyle and beauty, with an intimate girlfriend-to-girlfriend tone, and its slogan \"Fierce, Fun, and Fabulous\" suggests the magazine's goal of empowering African-American women.\n\n The topics the magazine discusses range from celebrities, to fashion, to point-of-view pieces addressing current issues in the African-American community.\n\n A number of its readers engage closely and personally with the publication, and it claims to be the magazine \"for and about Black women\".",
+    "Annales de chimie et de physique\nAnnales de chimie et de physique (French for \"Annals of Chemistry and of Physics\") is a scientific journal that was founded in Paris, France, in 1789 under the title \"Annales de chimie\".\n\n One of the early editors was the French chemist Antoine Lavoisier.\n\n In 1815, it became the \"Annales de chimie et de physique\", and was published under that name for the next 100 years.",
+    "Diva (magazine)\nDIVA is a leading lesbian magazine in the United Kingdom, published monthly.\n\n It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.\n\n Silke Bader is also the publisher of Curve magazine in the USA and LOTL in Australia, and Linda Riley runs the European Diversity Awards and is the former publisher of g3 magazine in the UK.",
+    "La Belle (ship)\nLa Belle was one of Robert de La Salle's four ships when he explored the Gulf of Mexico with the ill-fated mission of starting a French colony at the mouth of the Mississippi River in 1685.\n\n \"La Belle\" was wrecked in present-day Matagorda Bay the following year, dooming La Salle's Texas colony to failure.\n\n For over three centuries the wreckage of \"La Belle\" lay forgotten until it was discovered by a team of state archaeologists in 1995.\n\n The discovery of La Salle's flagship was regarded as one of the most important archaeological finds of the century in Texas, and a major excavation was launched by the state of Texas that, over a period of about a year, recovered the entire shipwreck and over a million artifacts.",
+    "La Belle Assemblée\nLa Belle Assemblée (in full La Belle Assemblée or, Bell's Court and Fashionable Magazine Addressed Particularly to the Ladies) was a British women's magazine published from 1806 to 1837, founded by John Bell (1745–1831).",
+    "Auguste Brancart\nAugust or Auguste Brancart (21 July 1851 - 1894?)\n\n was a Belgian publisher of pornographic literature, credited with the first publication of \"My Secret Life\".\n\n He published translations of English pornography into French and vice versa for English publishers such as Edward Avery.\n\n He also published work of the Decadent movement such as \"Monsieur Vénus\" by Rachilde.",
+    "André Laguerre\nMarc André Laguerre (February 21, 1915 – January 18, 1979) was a journalist and magazine editor, best known as the managing editor of \"Sports Illustrated\" from 1960 to 1974, during which time he oversaw the growth in the magazine from a niche publication to become the industry leader in weekly sports magazines.\n\n It was under his leadership that the annual \"Sports Illustrated Swimsuit Issue\" was first published.\n\n When he retired in 1974, he had been managing editor of the magazine for 704 issues, then a record among magazines published by Time, Inc., SI's parent company.",
+    "Elle (magazine)\nElle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.\n\n \"Elle\" is also the world's best-selling fashion magazine.\n\n It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945.\n\n The title, in French, means \"she\" or \"her\"."
+   ]
+  },
+  {
+   "id": "816dd144b2f11656",
+   "gold": [
+    {
+     "sentence": "Ciaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+     "facts": {
+      "0.0": "Ciaran Gribbin was born in 1976.",
+      "0.1": "Ciaran Gribbin is a Northern Irish singer-songwriter.",
+      "0.2": "Ciaran Gribbin is a guitarist.",
+      "0.3": "Ciaran Gribbin is a producer.",
+      "0.4": "Ciaran Gribbin hails from Castledawson, Northern Ireland."
+     }
+    },
+    {
+     "sentence": "Brett Allen Scallions (born December 21, 1971) is an American musician.",
+     "facts": {
+      "1.0": "Brett Allen Scallions was born on December 21, 1971.",
+      "1.1": "Brett Allen Scallions is an American musician."
+     }
+    },
+    {
+     "sentence": " He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+     "facts": {
+      "2.0": "Brett Allen Scallions is the lead vocalist of the post-grunge band Fuel.",
+      "2.1": "Brett Allen Scallions is the rhythm guitarist of the post-grunge band Fuel.",
+      "2.2": "Brett Allen Scallions is the lyricist of the post-grunge band Fuel."
+     }
+    }
+   ],
+   "items": [
+    "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician.\n\n He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+    "Puppet Strings\nPuppet Strings is the fifth studio album by American rock band Fuel.\n\n Released March 4, 2014, it is their first studio effort since 2003's \"Natural Selection\" to feature original lead singer Brett Scallions and the first Fuel album not to feature original songwriter/guitarist, Carl Bell and bassist Jeff Abercrombie.\n\n Additionally, no one who participated in the recording of Fuel's previous album \"Angels & Devils\" participated in the recording of \"Puppet Strings\".",
+    "Yeah! (Fuel song)\n\"Yeah!\"\n\n is the first song released from Fuel's album \"Puppet Strings\".\n\n It is also the first song released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Graph query row:\nperson: Brett Scallions\nrelationship: MEMBER_OF\nband: Fuel\nrole: None\nperiod: None\nstatus: None",
+    "Grant Nicholas\nGrantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder.",
+    "Soul to Preach To\n\"Soul to Preach To\" is the first single released from Fuel's album \"Puppet Strings\".\n\n It is also the first single released featuring original lead singer Brett Scallions since Fuel's 2003 studio album \"Natural Selection\".",
+    "Ciaran Gribbin\nCiaran Gribbin (born 1976) is a Northern Irish singer-songwriter, guitarist and producer who hails from Castledawson, Northern Ireland.",
+    "Circus Diablo\nCircus Diablo is an American rock band, formed in early 2006 by Billy Morrison (vocals), Billy Duffy (lead guitar) and Ricky Warwick (rhythm guitar).\n\n Fuel frontman Brett Scallions and Velvet Revolver drummer Matt Sorum subsequently joined the band on bass and drums, respectively.\n\n To date, Circus Diablo have released one studio album, entitled \"Circus Diablo\".",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "The Best of Fuel\nThe Best of Fuel is a compilation album by American hard rock band Fuel.\n\n It contains songs from their first three full-length albums, \"Sunburn\", \"Something Like Human\", and \"Natural Selection\".\n\n All of the said albums featured vocalist Brett Scallions who departed from the group only a few months after the compilation's release.\n\n \"The Best of Fuel\" consists solely of the band's released singles, with the exception of \"Million Miles\" from \"Natural Selection\" (it features \"Quarter\" from the same album instead)."
+   ]
+  },
+  {
+   "id": "1ca0cc4831131ac4",
+   "gold": [
+    {
+     "sentence": "In September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\".",
+     "facts": {
+      "0.0": "The Fader published an interview with CupcakKe in September.",
+      "0.1": "In the interview, CupcakKe discussed her new album.",
+      "0.2": "CupcakKe's new album would address \"rape, and everything else\"."
+     }
+    },
+    {
+     "sentence": "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.",
+     "facts": {
+      "1.0": "The Fader, stylized as The FADER, is a New York City-based music magazine.",
+      "1.1": "The Fader was launched in 1999.",
+      "1.2": "The Fader was launched by Rob Stone and Jon Cohen.",
+      "1.3": "The Fader covers music, style and culture."
+     }
+    },
+    {
+     "sentence": " It was the first print publication to be released on iTunes.",
+     "facts": {
+      "2.0": "The Fader was the first print publication to be released on iTunes."
+     }
+    }
+   ],
+   "items": [
+    "Fader Label\nFADER Label is an independent record label based in New York City that has released albums by Matt and Kim, Yuna, Editors, Neon Indian, Birdmonster, and Saul Williams.\n\n It was founded in 2002 by Rob Stone and Jon Cohen.",
+    "SexIs\nSexIs Magazine is a quarterly print publication and daily webzine devoted to sex and sexual culture, founded in 2008 by Web Merchants, parent company of sex toy e-tailer EdenFantasys.com.\n\n The first print issue debuted in November 2009, distributed nationwide as an insert in \"BUST magazine\".\n\n The website publishes articles, columns, video presentations and news items daily.",
+    "Paper (magazine)\nPaper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film.\n\n Past cover models include Kim Kardashian, Demi Lovato, Katy Perry, Miley Cyrus, Prince, CL, and Jennifer Lopez.",
+    "VIVmag\nVIVmag is one of the earliest exclusively digital, interactive women's lifestyle magazines.\n\n Launched in 2006 and backed by Canadian industrialist David Harrison Gilmour (the founder of FIJI Water LLC), the bimonthly magazine is distributed by Zinio Systems, Inc.\n\n The first issue appeared in January-February 2007.\n\n There is no print version.\n\n The paperless title can be viewed in most browsers or downloaded to your computer and read via the Zinio Reader.\n\n The magazine is based in Thousand Oaks, California.",
+    "State (magazine)\nState.ie (formerly State Magazine) is an Irish website and formerly a monthly music magazine, which launched in April 2008 and ceased to print in January 2009 having published a total of ten issues.\n\n The magazine continues online and was voted Best Music Site in 2008 and Best Web Publication in 2010 in the Irish Web Awards.\n\n Originally the concept of the magazine involved a hard copy of which there was a charge to purchase, however after six issues it was decided to make the magazine's content free both online and in print.\n\n The first issue, April 2008, appeared on Irish shelves on 6 March 2008 and featured Michael Stipe of R.E.M. on the cover.\n\n This immediately garnered comparisons between the new magazine's similarities with \"Hot Press\" who featured Stipe on their cover at the same time, a move widely thought to be an attempt by Hot Press to stifle State's status as a serious 'alternative' to the more established local magazine.\n\n At a price of €5.50, \"State\" charged €2 more than \"Hot Press\".",
+    "The Fader\nThe Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.\n\n It was the first print publication to be released on iTunes.",
+    "Exclaim!\nExclaim!\n\n is a monthly Canadian music magazine that features in-depth coverage of new music across all genres with a special focus on Canadian and cutting-edge artists.\n\n Content is based on the monthly print publication, which publishes 9 issues per year, distributing over 103,000 copies to over 2,600 locations across Canada.\n\n The magazine has an average of 361,200 monthly readers.\n\n Their website, exclaim.ca, has an average of 675,000 unique visitors a month.",
+    "Cornerstone (agency)\nCornerstone is a New York-based creative lifestyle marketing and public relations agency with offices in New York City, Los Angeles, and London.\n\n It is helmed by co-CEOs Rob Stone and Jon Cohen.\n\n The company employs approximately 100 professionals worldwide, in addition to a network of field marketing representatives throughout the United States.",
+    "Audacious (CupcakKe album)\nIn September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\".",
+    "Rap-Up\nRap-Up is a magazine launched in 2001 by founder Devin Lazerine.\n\n The publication was originally a website devoted to hip hop, until Lazerine decided to pitch the possibility of a magazine to several publishers.\n\n The magazine is focused on the hip hop and R&B aspect of the music industry, and predominantly features interviews with artists, actors and other entertainers.\n\n Issued quarterly, the magazine's target audience was the 14 to 28 demographic, although the demographic has become older over time."
+   ]
+  },
+  {
+   "id": "bed9c440fe1a4742",
+   "gold": [
+    {
+     "sentence": " Born in Des Moines, Iowa, Watkins rose to fame in the early 1990s as a member of the girl-group TLC.",
+     "facts": {
+      "0.0": "Watkins was born in Des Moines, Iowa.",
+      "0.1": "Watkins rose to fame in the early 1990s.",
+      "0.2": "Watkins rose to fame as a member of the girl-group TLC."
+     }
+    },
+    {
+     "sentence": " She is best known as the former main vocalist and member of South Korean girl group T-ara.",
+     "facts": {
+      "1.0": "Watkins is best known as the former main vocalist of the South Korean girl group T-ara.",
+      "1.1": "Watkins is best known as the former member of the South Korean girl group T-ara."
+     }
+    }
+   ],
+   "items": [
+    "Tionne Watkins\nTionne Tenese Watkins (born April 26, 1970), better known by her stage name T-Boz, is an American singer, songwriter, actress, author, and executive producer.\n\n Born in Des Moines, Iowa, Watkins rose to fame in the early 1990s as a member of the girl-group TLC.\n\n She has won four Grammy Awards for her work with TLC.",
+    "Kim Tae-yeon discography\nApart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+    "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer.\n\n Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles.\n\n She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008).\n\n She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart.",
+    "Kim Tae-yeon\nKim Tae-yeon (born March 9, 1989), referred to as Taeyeon, is a South Korean singer.\n\n She had been a trainee at S.M. Entertainment's Starlight Academy during her middle school years before debuting as a member of the agency's girl group, Girls' Generation, in 2007.\n\n Since then, she has risen to prominence due to the group's success on the Asian music scene and further participated in the agency's projects Girls' Generation-TTS and SM the Ballad.\n\n Aside from group activities, she has also recorded songs for various television dramas and movies.",
+    "TLC (group)\nTLC is an American girl group whose original line-up consisted of Tionne \"T-Boz\" Watkins, Lisa \"Left Eye\" Lopes and Rozonda \"Chilli\" Thomas.\n\n Formed in Atlanta, Georgia in 1990, the group was very successful during the 1990s despite numerous spats with the law, each other, and the group's record label and management.\n\n They scored nine top-ten hits on the \"Billboard\" Hot 100, including four number-one singles \"Creep\", \"Waterfalls\", \"No Scrubs\", and \"Unpretty\".\n\n The group also recorded four multi-platinum albums, including \"CrazySexyCool\" (1994) which still remains the only album by a female group to receive a diamond certification from the Recording Industry Association of America (RIAA).\n\n TLC also became the first R&B group in history to receive Million certification from the Recording Industry Association of Japan (RIAJ) for \"FanMail\" (1999).",
+    "R U the Girl\nR U the Girl (also known as R U the Girl with T-Boz and Chilli) is an American reality series that aired on UPN in 2005.\n\n The series featured Tionne \"T-Boz\" Watkins and Rozonda \"Chilli\" Thomas, the remaining members of the all-girl R&B group TLC whose former member, Lisa \"Left Eye\" Lopes, died in a car crash in Honduras on April 25, 2002.\n\n Initially promoted as a contest to permanently replace Lopes 3 years after her death by TLC themselves, both Watkins and Thomas admitted that the winner of the contest would not be joining TLC full-time and would not be a full-time replacement member; the winner would only provide guest vocals on a new single by the duo.",
+    "Park So-yeon (singer)\nPark So-yeon (born October 5, 1987), better known mononymously as Soyeon, is a South Korean singer and actress.\n\n She is best known as the former main vocalist and member of South Korean girl group T-ara.",
+    "Kim Tae-yeon (actress)\nKim Tae-yeon (born January 3, 1976) is a South Korean actress.\n\n She began her entertainment career as a model, winning Model Line's 40th Fashion Model contest in 1996 and the Pantene Model contest sponsored by Ford Models in 2000.\n\n Kim made her film debut in the highly controversial film \"Lies\" in 1999.",
+    "Rain (Taeyeon song)\n\"Rain\" is a song by South Korean singer Kim Tae-yeon, a member of the South Korean girl group Girls' Generation.\n\n It was released digitally by S.M. Entertainment on February 3, 2016.",
+    "As One (musical duo)\nAs One () is a South Korean R&B duo consisting of Korean-American singers Lee Min-young (known as Lee Min) and Chae Da-hee (known as Crystal).\n\n They are signed to record label Brand New Music."
+   ]
+  },
+  {
+   "id": "223c77031d63e966",
+   "gold": [
+    {
+     "sentence": "Robert Paul Holdstock (2 August 1948 – 29 November 2009) was an English novelist and author best known for his works of Celtic, Nordic, Gothic and Pictish fantasy literature, predominantly in the fantasy subgenre of mythic fiction.",
+     "facts": {
+      "0.0": "Robert Paul Holdstock was born on 2 August 1948.",
+      "0.1": "Robert Paul Holdstock died on 29 November 2009.",
+      "0.2": "Robert Paul Holdstock was an English novelist.",
+      "0.3": "Robert Paul Holdstock was an English author.",
+      "0.4": "Robert Paul Holdstock was best known for his works of Celtic fantasy literature.",
+      "0.5": "Robert Paul Holdstock was best known for his works of Nordic fantasy literature.",
+      "0.6": "Robert Paul Holdstock was best known for his works of Gothic fantasy literature.",
+      "0.7": "Robert Paul Holdstock was best known for his works of Pictish fantasy literature.",
+      "0.8": "Robert Paul Holdstock's works are predominantly in the fantasy subgenre of mythic fiction."
+     }
+    },
+    {
+     "sentence": "Henry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.",
+     "facts": {
+      "1.0": "Henry Louis Mencken was born on September 12, 1880.",
+      "1.1": "Henry Louis Mencken died on January 29, 1956.",
+      "1.2": "Henry Louis Mencken was an American journalist.",
+      "1.3": "Henry Louis Mencken was an American satirist.",
+      "1.4": "Henry Louis Mencken was an American cultural critic.",
+      "1.5": "Henry Louis Mencken was a scholar of American English."
+     }
+    }
+   ],
+   "items": [
+    "The American Mercury\nThe American Mercury was an American magazine published from 1924 to 1981.\n\n It was founded as the brainchild of H. L. Mencken and drama critic George Jean Nathan.\n\n The magazine featured writing by some of the most important writers in the United States through the 1920s and 1930s.\n\n After a change in ownership in the 1940s, the magazine attracted conservative writers.\n\n A second change in ownership a decade later turned the magazine into a virulently anti-Semitic publication.\n\n It was published monthly in New York City.\n\n The magazine went out of business in 1981, having spent the last 25 years of its existence in decline and controversy.",
+    "Oswalt Kolle\nOswalt Kolle (2 October 1928, Kiel – 24 September 2010, Amsterdam) was a German sex educator, who became famous during the late 1960s and early 1970s for his numerous pioneering books and films on human sexuality.\n\n His work was translated into all major languages, while his films found an audience of 140 million worldwide.\n\n In his 1997 book \"Open to Both Sides\" he came out as bisexual.\n\n He was awarded the Magnus Hirschfeld Medal in 2000.",
+    "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.\n\n Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style.\n\n Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them.\n\n The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+    "John Updike\nJohn Hoyer Updike (March 18, 1932 – January 27, 2009) was an American novelist, poet, short story writer, art critic, and literary critic.\n\n One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+    "Robert Holdstock\nRobert Paul Holdstock (2 August 1948 – 29 November 2009) was an English novelist and author best known for his works of Celtic, Nordic, Gothic and Pictish fantasy literature, predominantly in the fantasy subgenre of mythic fiction.",
+    "Lionel Snell\nRamsey Dukes is the current and most well-known pen name of Lionel Snell, a contemporary English magician, publisher and author on magic and philosophy.\n\n He has also under the pen names Lemuel Johnston.\n\n Angerford and Lea, Adamai Philotunus and Per Anum Ad Astra.\n\n His regular satirical column \"The Satanist's Diary\" was published in the magazine \"Aquarian Arrow\" during the 1980s and early 1990s under the pen name The Hon Hugo C StJ l'Estrange and included a multitude of other pen names as contributors.",
+    "H. L. Mencken\nHenry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.\n\n Known as the \"Sage of Baltimore\", he is regarded as one of the most influential American writers and prose stylists of the first half of the twentieth century.\n\n He commented widely on the social scene, literature, music, prominent politicians and contemporary movements.\n\n His satirical reporting on the Scopes trial, which he dubbed the \"Monkey Trial\", also gained him attention.",
+    "Robert Holdstock bibliography\nThis is a bibliography of fantasy author Robert Holdstock.",
+    "Adam Fox\nAdam Fox (1883 – 1977), Canon, was the Dean of Divinity at Magdalen College, Oxford.\n\n He was one of the first members of the \"Inklings\", a literary group which also included C.S. Lewis and J.R.R. Tolkien.\n\n Between 1938 and 1942 he was Professor of Poetry.\n\n Later he became Canon of Westminster Abbey and he is buried there in Poet's Corner.\n\n He was also Warden (Headmaster) of the famous Radley College.",
+    "Stanley Bing\nStanley Bing is the pen name of Gil Schwartz (born May 20, 1951 in New York, NY), a business humorist and novelist.\n\n He has written a column for \"Fortune\" magazine for more than twenty years, after having spent a decade at \"Esquire\".\n\n He is the author of thirteen books including \"What Would Machiavelli Do?\"\n\n and \"The Curriculum\", a satirical textbook for a business school that also offers lessons on the Web.\n\n Schwartz is the senior executive vice president of corporate communications and Chief Communications Officer for CBS."
+   ]
+  },
+  {
+   "id": "d226f0cc6e8faf09",
+   "gold": [
+    {
+     "sentence": "Tender Fictions is a 1996 autobiographical documentary film directed by American experimental filmmaker Barbara Hammer.",
+     "facts": {
+      "0.0": "Tender Fictions is a 1996 autobiographical documentary film.",
+      "0.1": "Tender Fictions was directed by American experimental filmmaker Barbara Hammer."
+     }
+    },
+    {
+     "sentence": "Bougainville – Our Island Our Fight is a 1998 Australian documentary film.",
+     "facts": {
+      "1.0": "Bougainville – Our Island Our Fight is a 1998 Australian documentary film."
+     }
+    },
+    {
+     "sentence": " It was produced and directed by Wayne Coles-Janess.",
+     "facts": {
+      "2.0": "Bougainville – Our Island Our Fight was produced by Wayne Coles-Janess.",
+      "2.1": "Bougainville – Our Island Our Fight was directed by Wayne Coles-Janess."
+     }
+    }
+   ],
+   "items": [
+    "Flight of the Red Balloon\nFlight of the Red Balloon (French: Le voyage du ballon rouge ) is a 2007 French-Taiwanese film directed by Hou Hsiao-hsien.\n\n It is the first part in a new series of films produced by Musée d'Orsay, and tells the story of a French family as seen through the eyes of a Chinese student.\n\n The film was shot in August and September 2006 on location in Paris.\n\n This is Hou Hsiao-hsien's first non-Asian film.\n\n It references the classic 1956 French short \"The Red Balloon\" directed by Albert Lamorisse.",
+    "Wayne Coles-Janess\nWayne Coles-Janess is an Australian producer, writer and director of drama and documentary film and TV programs.\n\n Based in Melbourne, Australia, he has produced documentaries about frontier places in the country.\n\n He has also made some documentaries in several international locations, including during times of war.",
+    "From the Sea to the Land Beyond\nFrom The Sea to the Land Beyond: Britain's Coast on Film is a documentary feature film directed by Penny Woolcock, with an original soundtrack by British indie-rock band British Sea Power.\n\n The project was originally produced by Crossover and Sheffield Doc/Fest as part of The Space project from the BBC and the Arts Council England.\n\n The film was edited by Alex Fry.",
+    "Bougainville – Our Island Our Fight\nBougainville – Our Island Our Fight is a 1998 Australian documentary film.\n\n It was produced and directed by Wayne Coles-Janess.",
+    "Waiting for Happiness\nThe film presents typical Mauritanian moments of beauty, struggle, alienation, and humor, which are experienced by groups socially divided from each other, such as Bidhan women drinking tea and gossiping, West African migrants passing through Mauritania to get to Europe (and finding an unsuccessful comrade washed ashore).\n\n The young protagonist who has returned interacts with all of these groups as an outsider, as he struggles to remember even his own Hassaniya Arabic dialect, but prefers instead French.\n\n Many of the themes and characters presage Sissako's 2014 film Timbuktu, and both explore liminal Sahel identities authentically situated in everyday life.\n\n Waiting for Happiness premiered at the 2002 Cannes Film Festival in the Un Certain Regard section.",
+    "In the Shadow of the Palms\nIn the Shadow of the Palms (2005) is a documentary produced and directed by the Australian filmmaker Wayne Coles-Janess.\n\n He filmed it in Iraq prior to, during and after the fall of Saddam Hussein after the United States invasion of 2003.\n\n An Arab-language film, it documents the changes in Iraqi society and the lives of ordinary Iraqis by focusing on a cross-section of individuals.",
+    "The Boys in Company C\nThe Boys in Company C, directed by Sidney J. Furie, starring Stan Shaw, Andrew Stevens, Craig Wasson, James Canning, and Michael Lembeck, is a 1978 film about United States Marine Corps recruits preparing for duty, and their subsequent combat in the Vietnam War.\n\n It was among the first Vietnam War films to appear after the Vietnam Era, and was also the first role for R. Lee Ermey of \"Full Metal Jacket\" fame.\n\n \"The Boys in Company C\" is the first in Furie's Vietnam War motion picture trilogy, followed by 2001's \"Under Heavy Fire\" and 2006's \"The Veteran\".",
+    "Tender Fictions\nTender Fictions is a 1996 autobiographical documentary film directed by American experimental filmmaker Barbara Hammer.\n\n It is the second of a trilogy of documentary films that includes \"Nitrate Kisses\" and \"History Lessons\".\n\n Together, the three films are sometimes known as the \"History trilogy\".\n\n \"Tender Fictions\" details Hammer's life and her attempts to \"construct\" a self.\n\n The film was nominated for a prize at the 1996 Sundance Film Festival.",
+    "The Coconut Revolution\nThe Coconut Revolution is a 2001 multi-award winning documentary film about the struggle of the indigenous peoples of Bougainville Island during the Bougainville Civil War.\n\n The movement is described as the \"world's first successful eco-revolution\" and has drawn parallels with the conflict depicted in the 2009 film, \"Avatar\".",
+    "Beyond This Place (2010 film)\nBeyond This Place (2010) is a documentary film directed by Kaleo La Belle, screened at a number of film festivals.\n\n In it, La Belle reunites with his biological father Cloud Rock La Belle, a charismatic figure who was largely absent from his life.\n\n The film deals, in a personal and intimate way, with issues of parenting, issues of freedom versus responsibility, and with the aging of the 60's generation."
+   ]
+  },
+  {
+   "id": "be14b0bf56abaf3e",
+   "gold": [
+    {
+     "sentence": " It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981).",
+     "facts": {
+      "0.0": "The company began in 1995.",
+      "0.1": "The company began as the merger of two take-and-bake pizza companies.",
+      "0.2": "One of the merged companies was Papa Aldo's Pizza.",
+      "0.3": "Papa Aldo's Pizza was founded in 1981.",
+      "0.4": "The other merged company was Murphy's Pizza.",
+      "0.5": "Murphy's Pizza was founded in 1981."
+     }
+    },
+    {
+     "sentence": "Gino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia.",
+     "facts": {
+      "1.0": "Gino's Pizza and Spaghetti is a restaurant chain.",
+      "1.1": "Gino's Pizza and Spaghetti has 40 locations.",
+      "1.2": "Most of Gino's Pizza and Spaghetti's locations are within the U.S. state of West Virginia."
+     }
+    },
+    {
+     "sentence": " The company was founded by Kenney Grant in 1961.",
+     "facts": {
+      "2.0": "The company was founded by Kenney Grant.",
+      "2.1": "The company was founded in 1961."
+     }
+    }
+   ],
+   "items": [
+    "Panera Bread is a U.S.–Canada bakery-café chain headquartered near St. Louis, where it is called Saint Louis Bread Company. Indian entrepreneur Prem Ganapathy founded Dosa Plaza, growing it to 45 outlets across four countries. Quebec’s independently franchised La Belle Province is sometimes open 24 hours. Gino’s Hamburgers began in Baltimore in 1957 and relaunched in 2010. West Virginia-based Tudor’s Biscuit World serves breakfast and homestyle",
+    "Gino's Pizza and Spaghetti\nGino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia.\n\n The company was founded by Kenney Grant in 1961.\n\n Many locations are shared with Tudor's Biscuit World although the Gino's brand is exclusive to West Virginia.\n\n There is one located in Ohio, while there are stand alone Tudor's locations in eastern Kentucky, southern Ohio and southwest Virginia.\n\n Gino's serves pizza, spaghetti, sandwiches, and more.\n\n Company headquarters are located in Huntington, West Virginia and Nitro, West Virginia.",
+    "Gino's Hamburgers\nGino's Hamburgers was a fast-food restaurant chain founded in Baltimore, Maryland, by Baltimore Colts defensive end Gino Marchetti and running back Alan Ameche, along with their close friend Louis Fischer, in 1957.\n\n A new group of restaurants under the Gino's name involving some of the principals of the original chain was started in 2010.",
+    "Gino's East\nGino's East is a Chicago-based restaurant chain, notable for its deep-dish pizza (sometimes called Chicago-style pizza), and for its interior walls, which patrons have covered in graffiti and etchings.\n\n The restaurant features deep-dish pizza baked in cast-iron pans, as well as sandwiches, soups and salads.",
+    "Papa Gino's\nPapa Gino's, Inc. is a restaurant chain based in Dedham, Massachusetts specializing in American-style pizza along with pasta, subs, salads, and a variety of appetizers.\n\n There are over 150 Papa Gino's locations in Connecticut, Maine, Massachusetts, New Hampshire, and Rhode Island.",
+    "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company.\n\n It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981).\n\n The company and its franchisees operate more than 1,300 outlets in the United States and Canada.\n\n Papa Murphy's is the fifth-largest pizza chain in the United States.",
+    "John Murphy (fiddle player)\nJohn (Boss) Murphy (1875–1955) from The Leap, Churchtown, Co.\n\n Cork was a former farmer by profession, but possessed a keen interest in fiddle playing, and was renowned locally for his ability on the instrument.\n\n His father, William Murphy (1829–1911), was both a fiddle player and maker, indeed John was the proud owner of an instrument that had been made by his father.\n\n John’s father was his first fiddle teacher.\n\n His siblings, a brother and three sisters, also played the instrument but their interest in music waned as they reached adulthood and they did not continue to play.\n\n John’s musical literacy was also gained primarily from his father, who had learnt to read music at a hedge school at Ballygrace in the locality taught by a Thomas Croke.\n\n The same Thomas Croke, many years later, stayed for long periods of time in the Murphy household and would undoubtedly also have taught the young John directly.",
+    "Pizza 73\nPizza 73 is a Canadian restaurant chain that offers a number of different styles of pizza, along with chicken wings.\n\n It has been operated by Pizza Pizza since 2007.\n\n Toronto-based Pizza Pizza had acquired the restaurant for a total of $CAN70.2 million.\n\n There are 89 locations throughout Western Canada, which include the provinces of British Columbia, Alberta, and Saskatchewan.\n\n The restaurant's name originates from its original phone number: 473–7373.\n\n Founded by David Tougas and Guy Goodwin in 1985, Pizza 73 is headquartered in Edmonton, Alberta, Canada.",
+    "Lucky Luciano\nCharles \"Lucky\" Luciano ( ; born Salvatore Lucania November 24, 1897 – January 26, 1962) was an Italian-American mobster and crime boss.\n\n Luciano is considered the father of modern organized crime in the United States for the establishment of the first Commission.\n\n He was also the first official boss of the modern Genovese crime family.\n\n He was, along with his associates, instrumental in the development of the National Crime Syndicate.",
+    "Prem Ganapathy\nPrem Ganapathy is an Indian entrepreneur and businessman.\n\n He is the founder of the restaurant chain Dosa plaza.\n\n Starting with meager investment, he expanded Dosa plaza into a restaurant chain with 45 outlets in India, New Zealand, Oman, and UAE."
+   ]
+  },
+  {
+   "id": "5efa453a29cab620",
+   "gold": [
+    {
+     "sentence": " It has its offices in New Roc City in New Rochelle, New York.",
+     "facts": {
+      "0.0": "An entity has its offices in New Roc City in New Rochelle, New York."
+     }
+    },
+    {
+     "sentence": "New Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.",
+     "facts": {
+      "1.0": "New Roc City is also known as New Rochelle Center.",
+      "1.1": "New Roc City is an entertainment complex.",
+      "1.2": "New Roc City is a retail complex.",
+      "1.3": "New Roc City is a residential complex.",
+      "1.4": "New Roc City is in the Downtown section of the city of New Rochelle.",
+      "1.5": "New Rochelle is in Westchester County, New York."
+     }
+    }
+   ],
+   "items": [
+    "Ware's Department Store\nWare’s Department Store is a historic building located in the city of New Rochelle in Westchester County, New York and is significant for both architectural and commercial reasons.\n\n Ware's was Westchester’s first and, for many years, largest department store, and was prominently located on New Rochelle’s fashionable Main Street.\n\n The store operated from 1881 to the late 1930s, when the property was sold to the retailer Bloomingdale's to serve as their first suburban department store location.\n\n Not only was Ware's a key place in New Rochelle during its 20th-century boom years, its founder and owner, Howard R. Ware was a leading figure in the rapidly growing community as well.\n\n Ware first moved to New Rochelle from Massachusetts at the age of 13 and began to work as a clerk.\n\n In 1881 he became partner in the firm of Ware & Sheffield, which eventually became a stock company in 1913.\n\n renamed He was a director and vice president of the National City Bank of New Rochelle, a founder and first president of the local Y.M.C.A. from 1899 to 1916, and an active member of St.",
+    "Japanese Weekend School of New York\nThe Japanese Weekend School of New York (JWSNY; ニューヨーク \"Nyūyōku Hoshū Jugyō Kō\") is a Japanese supplementary school in the New York City metropolitan area.\n\n It has its offices in New Roc City in New Rochelle, New York.\n\n The Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\") manages the school system, and the JWSNY is one of its two weekend school systems.\n\n The JEI also operates two Japanese day schools in the New York area.",
+    "Montefiore New Rochelle Hospital\nMontefiore New Rochelle Hospital (formerly Sound Shore Medical Center) is a community-based, teaching hospital located at 16 Guion Place in the city of New Rochelle, in Westchester County, New York, and affiliated with the Albert Einstein College of Medicine.\n\n The hospital opened in 1892 as New Rochelle Hospital.\n\n On November 6, 2013, Sound Shore was acquired by the Bronx-based Montefiore Medical Center, the University Hospital for the Albert Einstein College of Medicine, was renamed Montefiore New Rochelle Hospital, and became part of the Montefiore Health System.",
+    "Princeton Community Japanese Language School\nThe Princeton Community Japanese Language School (PCJLS; プリンストン日本語学校 \"Purinsuton Nihongo Gakkō\") is a Japanese weekend school in the Princeton, New Jersey area.\n\n It holds weekend Japanese classes for Japanese citizen children abroad to the standard of the Ministry of Education, Culture, Sports, Science and Technology (MEXT), and it also has classes for people with Japanese as a second language.",
+    "New Roc City\nNew Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York.\n\n It is located at 33 LeCount Place, between Main Street North and Main Street South.\n\n The center was built on the site of the former New Rochelle Mall which closed in 1992.",
+    "Standard Star Building\nThe Standard Star Building is a historic commercial structure located in the Downtown section of New Rochelle, Westchester County, New York.\n\n The building, designed by architect Lawrence J. Barnard, was completed in 1924 and is an architecturally significant example of the Italian Renaissance style in New Rochelle.\n\n Although it has been altered, these changes occurred only on the Le Count Place façade and the interior of the building.\n\n The original Standard Star building exterior remains largely unchanged.\n\n It is further historically significant for its association with a long-published New Rochelle newspaper covering life in New Rochelle.",
+    "San Francisco Japanese School\nThe San Francisco Japanese School (SFJS, サンフランシスコ日本語 \"San Furanshisuko Nihongo Hoshū Kō\") is a weekend Japanese school serving the San Francisco Bay Area.\n\n The system, with its administrative offices in San Francisco, is a 501(c)(3) non-profit organization, and was the world's second largest overseas Japanese weekend school in 2006.\n\n The school is supported by the Japanese government.\n\n It is known as the best Japanese supplementary school in the world with mostly great teachers.\n\n Although it does have a shortage of teachers due to the large number of students.",
+    "New Jersey Japanese School\nThe New Jersey Japanese School (ニュージャージー日本人学校 , \"Nyūjājī Nihonjin Gakkō\" , NJJS) is a Japanese school located in Oakland, New Jersey, United States in the New York City metropolitan area.\n\n It is one of the two Japanese day schools operated by the Japanese Educational Institute of New York (JEI; ニューヨーク日本人教育審議会 \"Nyūyōku Nihonjin Kyōiku Shingi Kai\"), a nonprofit organization which also operates two Japanese weekend school systems in the New York City area.",
+    "New Rochelle Walk of Fame\nThe New Rochelle Walk of Fame was installed in 2011 in Ruby Dee Park at Library Green, located in the downtown section of the city of New Rochelle in Westchester County, New York.\n\n The \"walk\" is a tribute to some of New Rochelle's most notable residents from throughout its 325-year history.\n\n It was created and funded by former resident Roderick Kennedy, Jr., working in partnership with the City of New Rochelle and the New Rochelle Business Improvement District.",
+    "New Rochelle Harbor (Long Island Sound)\nNew Rochelle Harbor is the name of a harbor located along Long Island Sound in the city of New Rochelle in Westchester County, New York.\n\n The Davenport Neck peninsula off the mainland divides New Rochelle's waterfront into two bays; the westerly referred to as New Rochelle Harbor and the easterly as Echo Bay."
+   ]
+  },
+  {
+   "id": "6551e000e3f436de",
+   "gold": [
+    {
+     "sentence": " One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+     "facts": {
+      "0.0": "Updike was one of only three writers to win the Pulitzer Prize for Fiction more than once.",
+      "0.1": "The other two writers who won the Pulitzer Prize for Fiction more than once were Booth Tarkington and William Faulkner.",
+      "0.2": "Updike published more than twenty novels during his career.",
+      "0.3": "Updike published more than a dozen short-story collections during his career.",
+      "0.4": "Updike published poetry during his career.",
+      "0.5": "Updike published art and literary criticism during his career.",
+      "0.6": "Updike published children's books during his career."
+     }
+    },
+    {
+     "sentence": " Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.",
+     "facts": {
+      "1.0": "Seventeen of Updike's novels were bestsellers.",
+      "1.1": "More than 100 million copies of Updike's books are in print."
+     }
+    }
+   ],
+   "items": [
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "John Updike\nJohn Hoyer Updike (March 18, 1932 – January 27, 2009) was an American novelist, poet, short story writer, art critic, and literary critic.\n\n One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+    "David Ignatius\nDavid R. Ignatius (May 26, 1950), is an American journalist and novelist.\n\n He is an associate editor and columnist for \"The Washington Post\".\n\n He also co-hosts PostGlobal, an online discussion of international issues at Washingtonpost.com, with Fareed Zakaria.\n\n He has written nine novels, including \"Body of Lies\", which director Ridley Scott adapted into a film.\n\n He is a former Adjunct Lecturer at the Kennedy School of Government at Harvard University and currently Senior Fellow to the Future of Diplomacy Program.\n\n He has received numerous honors, including the Legion of Honor from the French Republic, the Urbino World Press Award from the Italian Republic, and a lifetime achievement award from the International Committee for Foreign Journalism.",
+    "Tom Clancy's Net Force Explorers: Gameprey\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: High Wire\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Rainbow 6: Patriots\nTom Clancy's Rainbow 6: Patriots is a cancelled first-person shooter video game, part of the \"Tom Clancy's Rainbow Six\" series, announced on the cover of the December 2011 issue of \"Game Informer\".\n\n It was to be published by Ubisoft, and was developed by the company's Montreal studio, with additional development by Ubisoft Toronto and Red Storm Entertainment.\n\n Due to the death of Tom Clancy in October 2013, concern was raised that this game would become the last to bear his name.\n\n Ubisoft has since stated that they will continue putting Tom Clancy's name on future Tom Clancy titles out of respect for the late author.",
+    "Tom Clancy's Net Force Explorers: Deathworld\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: Death Match\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: Duel Identity\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy\nThomas Leo \"Tom\" Clancy Jr. (April 12, 1947 – October 1, 2013) was an American novelist best known for his technically detailed espionage and military-science story lines set during and after the Cold War.\n\n Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.\n\n His name was also used on movie scripts written by ghost writers, nonfiction books on military subjects, and video games.\n\n He was a part-owner of the Baltimore Orioles and vice-chairman of their community activities and public affairs committees."
+   ]
+  }
+ ]
+}

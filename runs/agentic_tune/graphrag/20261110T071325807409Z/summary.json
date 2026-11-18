@@ -1,0 +1,36 @@
+{
+  "method": "graphrag",
+  "dataset": "multihop_rag",
+  "count": 5,
+  "precision": 0.6,
+  "recall": 0.6,
+  "f1": 0.6,
+  "exact_match": 0.6,
+  "overlap_accuracy": 0.6,
+  "retrieval_accuracy": 0.2,
+  "total_construction_seconds": 0.0,
+  "mean_retrieval_seconds": 33.80852638322394,
+  "mean_answer_seconds": 1.9184802416013553,
+  "mean_retrieved_tokens": 2315.0,
+  "total_storage_mb": 0.006413,
+  "categories": [
+    {
+      "question_type": "comparison_query",
+      "count": 5,
+      "accuracy": 0.6,
+      "complexity": null
+    }
+  ],
+  "total_question_cost_usd": 0.014545015,
+  "mean_question_cost_usd": 0.002909003,
+  "mean_retrieval_and_answer_seconds": 35.7270066248253,
+  "options": {
+    "top_k": 10,
+    "rerank": false,
+    "rerank_candidate_k": 20,
+    "rerank_top_k": 10,
+    "ircot": false,
+    "max_steps": 2
+  },
+  "novelqa_categories": []
+}

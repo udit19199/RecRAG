@@ -1,0 +1,801 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=e84969745644d614 ===
+Gold sentences and facts:
+Sentence 0: Arthur `` The President '' Flanders -- An inmate on death row , convicted of killing his father in an insurance - fraud scheme . His sentence is commuted to life imprisonment , but he is later murdered by an unknown inmate in the prison laundry . Arlen `` The Chief '' Bitterbuck -- A Washita Cherokee death - row inmate , convicted of killing a man in a drunken brawl over a pair of boots . His execution is the first of three mentioned in Paul 's story . Janice Edgecombe -- Paul Edgecombe 's wife . Dies in a bus accident on the way to her grandchild 's graduation in 1956 . Hal Moores -- The warden at Cold Mountain Penitentiary . Melinda Moores -- Warden Moores 's wife , who is dying of a brain tumor and is cured by John Coffey . She eventually dies of a heart attack ten years later . Curtis Anderson -- The assistant warden . Dean Stanton -- A guard on E Block who is strangled and nearly killed by William Wharton . A father of young children , he takes no part in the taking of John Coffey to Melinda Moores due to the risk of losing his job . He applies for relocation to C Block after John Coffey 's death , where he is murdered by an inmate 4 months later . Harry Terwilliger -- One of the main guards on E Block along with his friends Paul Edgecombe , Brutus Howell and Dean Stanton . He eventually dies of cancer , long after John Coffey 's execution . Bill Dodge -- A `` floater '' guard on E Block ( not permanently assigned there ) . Jack Van Hay -- A guard who is part of the execution team . He operates the switch room . Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards . Burt Hammersmith -- A reporter who wrote on the Detterick twins ' murders and John Coffey 's trial . Despite believing himself to be an `` Enlightenment '' man , he displays prejudice in his stance on `` Negroes '' and tries to convince Paul of John Coffey 's guilt . Elaine Connelly -- A friend of Paul in the present - day nursing home where he tells his story . She is later revealed to be the grandmother of the Speaker of the Georgia House of Representatives , using this position to scare Brad Dolan from harassing Paul . Homer Cribus -- The Sheriff of Trapingus County , where the murders of the Detterick twins took place . Despite playing no part in apprehending John Coffey , he later shows up at the execution . An outspoken Baptist with strong racial prejudice and immensely overweight , he later succumbs to a heart attack while having sex with a 17 - year - old African American in his office . Rob McGee -- The Deputy Sheriff of Trapingus County , who led the search party which found John Coffey . While displaying strong doubt about Coffey 's guilt after being shown signs of innocence by Paul Edgecombe , he is still powerless to call for an appeal as he is subordinate to Sheriff Cribus , whom he allegedly hopes to succeed . Brad Dolan -- A malicious nursing home employee who harasses Paul Edgecombe . Paul strongly compares him to Percy Wetmore , and several times mistakes him for Percy , despite the latter dying in 1965 . Kathe and Cora Detterick -- The two young girls whom John Coffey was convicted of raping and murdering . Killed by William Wharton . Klaus and Marjorie Detterick -- The parents of Kathe and Cora .
+  Fact 0.0: Arthur 'The President' Flanders is an inmate on death row.
+  Fact 0.1: Arthur Flanders was convicted of killing his father in an insurance-fraud scheme.
+  Fact 0.2: Arthur Flanders's sentence was commuted to life imprisonment.
+  Fact 0.3: Arthur Flanders was later murdered by an unknown inmate.
+  Fact 0.4: Arthur Flanders was murdered in the prison laundry.
+  Fact 0.5: Arlen 'The Chief' Bitterbuck is a Washita Cherokee death-row inmate.
+  Fact 0.6: Arlen Bitterbuck was convicted of killing a man in a drunken brawl over a pair of boots.
+  Fact 0.7: Arlen Bitterbuck's execution is the first of three mentioned in Paul's story.
+  Fact 0.8: Janice Edgecombe is Paul Edgecombe's wife.
+  Fact 0.9: Janice Edgecombe dies in a bus accident on the way to her grandchild's graduation.
+  Fact 0.10: Janice Edgecombe's death occurred in 1956.
+  Fact 0.11: Hal Moores is the warden at Cold Mountain Penitentiary.
+  Fact 0.12: Melinda Moores is Warden Moores's wife.
+  Fact 0.13: Melinda Moores is dying of a brain tumor.
+  Fact 0.14: John Coffey cures Melinda Moores of the brain tumor.
+  Fact 0.15: Melinda Moores dies of a heart attack ten years later.
+  Fact 0.16: Curtis Anderson is the assistant warden.
+  Fact 0.17: Dean Stanton is a guard on E Block.
+  Fact 0.18: William Wharton strangles Dean Stanton and nearly kills him.
+  Fact 0.19: Dean Stanton is a father of young children.
+  Fact 0.20: Dean Stanton takes no part in taking John Coffey to Melinda Moores due to the risk of losing his job.
+  Fact 0.21: Dean Stanton applies for relocation to C Block after John Coffey's death.
+  Fact 0.22: Dean Stanton is murdered by an inmate on C Block 4 months later.
+  Fact 0.23: Harry Terwilliger is one of the main guards on E Block.
+  Fact 0.24: Harry Terwilliger is friends with Paul Edgecombe, Brutus Howell, and Dean Stanton.
+  Fact 0.25: Harry Terwilliger dies of cancer.
+  Fact 0.26: Harry Terwilliger's death came long after John Coffey's execution.
+  Fact 0.27: Bill Dodge is a 'floater' guard on E Block.
+  Fact 0.28: Bill Dodge is not permanently assigned to E Block.
+  Fact 0.29: Jack Van Hay is a guard who is part of the execution team.
+  Fact 0.30: Jack Van Hay operates the switch room.
+  Fact 0.31: Toot-Toot is a trustee.
+  Fact 0.32: Toot-Toot stands in for the condemned during execution rehearsals.
+  Fact 0.33: Toot-Toot sells snacks to prisoners and guards.
+  Fact 0.34: Burt Hammersmith is a reporter.
+  Fact 0.35: Burt Hammersmith wrote on the Detterick twins' murders.
+  Fact 0.36: Burt Hammersmith wrote on John Coffey's trial.
+  Fact 0.37: Burt Hammersmith believes himself to be an 'Enlightenment' man.
+  Fact 0.38: Burt Hammersmith displays prejudice in his stance on 'Negroes'.
+  Fact 0.39: Burt Hammersmith tries to convince Paul Edgecombe of John Coffey's guilt.
+  Fact 0.40: Elaine Connelly is a friend of Paul Edgecombe in the present-day nursing home where he tells his story.
+  Fact 0.41: Elaine Connelly is later revealed to be the grandmother of the Speaker of the Georgia House of Representatives.
+  Fact 0.42: Elaine Connelly uses this position to scare Brad Dolan from harassing Paul.
+  Fact 0.43: Homer Cribus is the Sheriff of Trapingus County.
+  Fact 0.44: The Detterick twins' murders took place in Trapingus County.
+  Fact 0.45: Homer Cribus played no part in apprehending John Coffey.
+  Fact 0.46: Homer Cribus later shows up at the execution.
+  Fact 0.47: Homer Cribus is an outspoken Baptist.
+  Fact 0.48: Homer Cribus has strong racial prejudice.
+  Fact 0.49: Homer Cribus is immensely overweight.
+  Fact 0.50: Homer Cribus later succumbs to a heart attack while having sex with a 17-year-old African American in his office.
+  Fact 0.51: Rob McGee is the Deputy Sheriff of Trapingus County.
+  Fact 0.52: Rob McGee led the search party which found John Coffey.
+  Fact 0.53: Rob McGee displays strong doubt about Coffey's guilt after being shown signs of innocence by Paul Edgecombe.
+  Fact 0.54: Rob McGee is powerless to call for an appeal.
+  Fact 0.55: Rob McGee is subordinate to Sheriff Cribus.
+  Fact 0.56: Rob McGee allegedly hopes to succeed Sheriff Cribus.
+  Fact 0.57: Brad Dolan is a malicious nursing home employee.
+  Fact 0.58: Brad Dolan harasses Paul Edgecombe.
+  Fact 0.59: Paul Edgecombe strongly compares Brad Dolan to Percy Wetmore.
+  Fact 0.60: Paul Edgecombe several times mistakes Brad Dolan for Percy Wetmore.
+  Fact 0.61: Percy Wetmore died in 1965.
+  Fact 0.62: Kathe Detterick and Cora Detterick are two young girls.
+  Fact 0.63: John Coffey was convicted of raping and murdering Kathe and Cora Detterick.
+  Fact 0.64: William Wharton killed Kathe and Cora Detterick.
+  Fact 0.65: Klaus Detterick and Marjorie Detterick are the parents of Kathe and Cora Detterick.
+Sentence 1: Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards .
+  Fact 1.0: Toot-Toot is a trustee.
+  Fact 1.1: Toot-Toot stands in for the condemned during execution rehearsals.
+  Fact 1.2: Toot-Toot sells snacks to prisoners and guards.
+
+Retrieved items:
+<item 1>
+The Green Mile (novel)
+Paul is unsure how to help John , but John tells him not to worry , as he is ready to die anyway , wanting to escape the cruelty of the world . John 's
+execution is the last one in which Paul participates . He introduces Mr. Jingles to Elaine just before the mouse dies , having lived 64 years past these events
+, and explains that those healed by John gained an unnaturally long lifespan . Elaine dies shortly after , never learning how Paul 's wife died in his arms
+immediately after they suffered a bus accident , and that he then saw John Coffey 's ghost watching him from an overpass . Paul seems to be all alone , now 104
+years old , and wondering how much longer he will live . Characters ( edit ) Paul Edgecombe -- The protagonist and narrator of the book and the death - row
+supervisor at Cold Mountain Penitentiary . He is 40 years old when the main bulk of the story takes place , in 1932 . He is a caring man and takes excellent
+care of the men on his block , avoiding conflict and keeping the peace whenever possible .
+</item 1>
+
+<item 2>
+The Green Mile (novel)
+Curtis Anderson -- The assistant warden . Dean Stanton -- A guard on E Block who is strangled and nearly killed by William Wharton . A father of young children
+, he takes no part in the taking of John Coffey to Melinda Moores due to the risk of losing his job . He applies for relocation to C Block after John Coffey 's
+death , where he is murdered by an inmate 4 months later . Harry Terwilliger -- One of the main guards on E Block along with his friends Paul Edgecombe , Brutus
+Howell and Dean Stanton . He eventually dies of cancer , long after John Coffey 's execution . Bill Dodge -- A `` floater '' guard on E Block ( not permanently
+assigned there ) . Jack Van Hay -- A guard who is part of the execution team . He operates the switch room . Toot - Toot -- A trustee who stands in for the
+condemned during execution rehearsals and sells snacks to prisoners and guards . Burt Hammersmith -- A reporter who wrote on the Detterick twins ' murders and
+John Coffey 's trial .
+</item 2>
+
+<item 3>
+The Green Mile (novel)
+This year marks the arrival of John Coffey , a 6 ft 8 in powerfully built black man who has been convicted of raping and murdering two small white girls .
+During his time on the Mile , John interacts with fellow prisoners Eduard `` Del '' Delacroix , a Cajun arsonist , rapist , and murderer , and William Wharton (
+`` Billy the Kid '' to himself , `` Wild Bill '' to the guards ) , a wild - acting and dangerous multiple murderer who is determined to make as much trouble as
+he can before he is executed . Other inhabitants include Arlen Bitterbuck , a Native American convicted of killing a man in a fight over a pair of boots ( also
+the first character to die in the electric chair ) ; Arthur Flanders , a real estate executive who killed his father to perpetrate insurance fraud , and whose
+sentence is eventually commuted to life imprisonment ( while serving his sentence , he is killed by another inmate in the laundry room ) ; and Mr. Jingles , a
+mouse , to whom Del teaches various tricks . Paul and the other guards are irritated throughout the book by Percy Wetmore , a sadistic guard who enjoys
+antagonizing the prisoners .
+</item 3>
+
+<item 4>
+The Green Mile (novel)
+Brad Dolan -- A malicious nursing home employee who harasses Paul Edgecombe . Paul strongly compares him to Percy Wetmore , and several times mistakes him for
+Percy , despite the latter dying in 1965 . Kathe and Cora Detterick -- The two young girls whom John Coffey was convicted of raping and murdering . Killed by
+William Wharton . Klaus and Marjorie Detterick -- The parents of Kathe and Cora . Reception ( edit ) The Green Mile won the Bram Stoker Award for Best Novel in
+1996 . In 1997 , The Green Mile was nominated as Best Novel for the British Fantasy Award and the Locus Award . In 2003 the book was listed on the BBC 's The
+Big Read poll of the UK 's `` best - loved novel . '' Film adaptation ( edit ) Main article : The Green Mile ( film ) Frank Darabont adapted the novel into a
+screenplay for a feature film of the same name . Released in 1999 , the film was directed by Darabont and starred Tom Hanks as Paul Edgecombe and Michael Clarke
+Duncan as John Coffey .
+</item 4>
+
+<item 5>
+The Green Mile (novel)
+He is resurrected by John Coffey after being stomped on by Percy Wetmore . This gives him increased longevity and he finally dies 64 years later . Other
+characters ( edit ) Arthur `` The President '' Flanders -- An inmate on death row , convicted of killing his father in an insurance - fraud scheme . His
+sentence is commuted to life imprisonment , but he is later murdered by an unknown inmate in the prison laundry . Arlen `` The Chief '' Bitterbuck -- A Washita
+Cherokee death - row inmate , convicted of killing a man in a drunken brawl over a pair of boots . His execution is the first of three mentioned in Paul 's
+story . Janice Edgecombe -- Paul Edgecombe 's wife . Dies in a bus accident on the way to her grandchild 's graduation in 1956 . Hal Moores -- The warden at
+Cold Mountain Penitentiary . Melinda Moores -- Warden Moores 's wife , who is dying of a brain tumor and is cured by John Coffey . She eventually dies of a
+heart attack ten years later . Curtis Anderson -- The assistant warden .
+</item 5>
+
+<item 6>
+The Green Mile (novel)
+He is punished by being placed in solitary confinement , but never seems to learn his lesson . As John Coffey is being smuggled to Hal Moores 's house , Wild
+Bill grabs his arm and Coffey sees that he actually committed the murders Coffey was accused of . Therefore , Coffey gives Percy the `` sickness '' he took from
+the warden 's wife , causing him to kill Wharton . Eduard `` Del '' Delacroix -- He is a Cajun prisoner with a fairly slow grasp of the English language . He is
+incarcerated for multiple deaths due to a fire he started while trying to cover up his rape and murder of a young girl . While on the Mile , Del befriends a
+mouse named Mr. Jingles , who becomes his best friend in his last days on death row . Percy , his enemy , sabotages his execution , causing Del to die in a slow
+, gruesome death in the electric chair . Mr. Jingles ( nicknamed `` Steamboat Willie '' ) -- An unusually intelligent mouse who enjoys eating peppermint sweets
+. He becomes a friend to Eduard Delacroix in the few days before the man is executed .
+</item 6>
+
+<item 7>
+The Green Mile (novel)
+He is the first character to discover John Coffey 's amazing abilities , when the prisoner cures his urinary tract infection . It is also his idea to take
+Coffey to try to cure Melinda , Warden Hal Moores ' wife , of her brain tumor . He transferred to Boy 's Correctional with Brutus Howell shortly after Coffey 's
+execution . Brutus `` Brutal '' Howell -- He is second in command on the Green Mile and Paul 's best friend . He is a tall , imposing man but not violent at all
+unless necessary . His nickname of `` Brutal '' is intended as irony . A former football tackle who had gone on to play at Louisiana State University ( LSU ) in
+his youth , he eventually suffers a fatal heart attack at home , in his fifties , about twenty - five years after Coffey 's execution . John Coffey -- He is a
+massive black man ( 6 ft 8 in tall ) , on death row for the alleged rape and murder of two young girls . He is very quiet and prefers to keep to himself , weeps
+almost constantly , and is afraid of the dark .
+</item 7>
+
+<item 8>
+The Green Mile (novel)
+He is later attacked by `` Wild Bill '' Wharton , consequently wets himself , and is teased by Delacroix for it . In retaliation , Percy deliberately sabotages
+Delacroix 's execution . At the end of the story he is sent to the Briar Ridge mental institution , originally considered for a job but now as a patient , after
+Coffey transferred Melinda 's disease to him which caused him to kill William Wharton . He eventually lives through a hospital fire and dies in 1965 . William
+`` Wild Bill '' Wharton -- The antagonist of the story . He is on death row for various crimes . He does not like the nickname `` Wild Bill '' but prefers to be
+called `` Billy the Kid '' , a name which he has tattooed on his forearm . When he first arrives he manages to convince the guards that he is in a drugged
+stupor , only to attack and attempt to strangle to death Dean Stanton when they reach E Block . He continues to wreak havoc on the Mile and plays tricks such as
+urinating on the guards , amongst other things . He is punished by being placed in solitary confinement , but never seems to learn his lesson .
+</item 8>
+
+<item 9>
+The Green Mile (novel)
+Even at the end , during his execution , he asks Paul Edgecombe not to put on the traditional black silk mask used to block the view of the prisoner 's face
+because he fears the dark . Coffey is described as `` knowing his own name and not much else '' and lacks the capability to do so much as tie a simple knot .
+However , he is convicted of luring the girls away from their home , disposing of the watchdog , carefully planning and using abilities he would otherwise not
+be expected to have . He is the calmest and mildest prisoner the guards have ever seen , despite his hulking form . He turns out to be innocent of what he is
+accused of , but chooses to die anyway . Percy Wetmore -- He is a young and sadistic guard . He is disliked by Paul and the other guards because of his ways ,
+but they can not do anything about it because he is the nephew of the governor 's wife . He is very homophobic and attacks Eduard Delacroix for allegedly
+touching him , although it was an accident caused by Del stumbling out of the prison truck .
+</item 9>
+
+<item 10>
+The Green Mile (novel)
+Despite believing himself to be an `` Enlightenment '' man , he displays prejudice in his stance on `` Negroes '' and tries to convince Paul of John Coffey 's
+guilt . Elaine Connelly -- A friend of Paul in the present - day nursing home where he tells his story . She is later revealed to be the grandmother of the
+Speaker of the Georgia House of Representatives , using this position to scare Brad Dolan from harassing Paul . Homer Cribus -- The Sheriff of Trapingus County
+, where the murders of the Detterick twins took place . Despite playing no part in apprehending John Coffey , he later shows up at the execution . An outspoken
+Baptist with strong racial prejudice and immensely overweight , he later succumbs to a heart attack while having sex with a 17 - year - old African American in
+his office . Rob McGee -- The Deputy Sheriff of Trapingus County , who led the search party which found John Coffey . While displaying strong doubt about Coffey
+'s guilt after being shown signs of innocence by Paul Edgecombe , he is still powerless to call for an appeal as he is subordinate to Sheriff Cribus , whom he
+allegedly hopes to succeed .
+</item 10>
+=== END ITEM id=e84969745644d614 ===
+
+=== ITEM id=f2c4c92654a53fac ===
+Gold sentences and facts:
+Sentence 0: Douglas Irving Pederson ( born January 31 , 1968 ) is an American football coach who is currently the head coach of the Philadelphia Eagles of the National Football League ( NFL ) . He served as the offensive coordinator of the Kansas City Chiefs from 2013 -- 2015 . He spent most of his playing career as a member of the Green Bay Packers , serving as a backup quarterback to Brett Favre and holder on placekicks , and winning Super Bowl XXXI with the team over the New England Patriots . He was also a backup to Dan Marino as a member of the Miami Dolphins , and a starting quarterback for the Eagles and Cleveland Browns .
+  Fact 0.0: Douglas Irving Pederson was born on January 31, 1968.
+  Fact 0.1: Douglas Irving Pederson is an American football coach.
+  Fact 0.2: Douglas Irving Pederson is currently the head coach of the Philadelphia Eagles.
+  Fact 0.3: The Philadelphia Eagles are a team of the National Football League (NFL).
+  Fact 0.4: Douglas Irving Pederson served as the offensive coordinator of the Kansas City Chiefs from 2013 to 2015.
+  Fact 0.5: Douglas Irving Pederson spent most of his playing career as a member of the Green Bay Packers.
+  Fact 0.6: Douglas Irving Pederson served as a backup quarterback to Brett Favre with the Green Bay Packers.
+  Fact 0.7: Douglas Irving Pederson served as holder on placekicks with the Green Bay Packers.
+  Fact 0.8: Douglas Irving Pederson won Super Bowl XXXI with the Green Bay Packers over the New England Patriots.
+  Fact 0.9: Douglas Irving Pederson was also a backup to Dan Marino as a member of the Miami Dolphins.
+  Fact 0.10: Douglas Irving Pederson was a starting quarterback for the Philadelphia Eagles.
+  Fact 0.11: Douglas Irving Pederson was a starting quarterback for the Cleveland Browns.
+
+Retrieved items:
+<item 1>
+Doug Pederson
+-- 2008 ) Head coach Philadelphia Eagles ( 2009 -- 2010 ) Offensive quality control coordinator Philadelphia Eagles ( 2011 -- 2012 ) Quarterbacks coach Kansas
+City Chiefs ( 2013 -- 2015 ) Offensive coordinator Philadelphia Eagles ( 2016 -- present ) Head coach Career highlights and awards As player Super Bowl champion
+( XXXI ) As coach Super Bowl champion ( LII ) Career NFL statistics Pass attempts : 522 Pass completions : 286 Percentage : 54.7 TD -- INT : 12 -- 19 Passing
+yards : 2,762 Passer rating : 62.3 Player stats at NFL.com Head coaching record Regular season : 20 -- 12 (. 625 ) Postseason : 3 -- 0 ( 1.000 ) Career : 23 --
+12 (. 657 ) Coaching stats at PFR Douglas Irving Pederson ( born January 31 , 1968 ) is an American football coach who is currently the head coach of the
+Philadelphia Eagles of the National Football League ( NFL ) . He served as the offensive coordinator of the Kansas City Chiefs from 2013 -- 2015 .
+</item 1>
+
+<item 2>
+Doug Pederson
+Doug Pederson - wikipedia Doug Pederson Jump to : navigation , search Not to be confused with Doug Peterson . Doug Pederson Pederson in 2016 Philadelphia Eagles
+Position : Head coach Born : ( 1968 - 01 - 31 ) January 31 , 1968 ( age 50 ) Bellingham , Washington Height : 6 ft 3 in ( 1.91 m ) Weight : 221 lb ( 100 kg )
+Career information High school : Ferndale ( WA ) College : Northeast Louisiana Undrafted : 1991 Career history As player : Miami Dolphins ( 1991 ) * New York /
+New Jersey Knights ( 1992 ) Miami Dolphins ( 1992 -- 1994 ) Carolina Panthers ( 1995 ) * Rhein Fire ( 1995 ) Miami Dolphins ( 1995 ) Green Bay Packers ( 1995 --
+1998 ) Philadelphia Eagles ( 1999 ) Cleveland Browns ( 2000 ) Green Bay Packers ( 2001 -- 2004 ) * Offseason and / or practice squad member only As coach :
+Calvary Baptist Academy ( 2005 -- 2008 ) Head coach Philadelphia Eagles ( 2009 -- 2010 ) Offensive quality
+</item 2>
+
+<item 3>
+Doug Pederson
+After spending the 1991 season as a free agent , the New York / New Jersey Knights of the World League of American Football ( WLAF ) drafted him in the fifth
+round for the first pool of draft - eligible players on February 4 , 1992 . The second pool , which was drafted from on February 20 , consisted of players
+allocated by NFL teams to the league . He was the backup quarterback to Reggie Slack with the Knights from March to May 1992 . After the WLAF season finished ,
+he was re-signed by the Dolphins on June 2 , 1992 . Pederson spent 1992 training camp with the Dolphins , before being released during final roster cuts again .
+He was subsequently re-signed to the team 's practice squad , where he practiced on the scout team until he was waived on October 8 , 1992 . He was re-signed by
+the Dolphins after the season on March 3 , 1993 . After his third training camp with the Dolphins , he was waived again on August 31 , 1993 .
+</item 3>
+
+<item 4>
+Doug Pederson
+Pederson was able to steer the Dolphins to the win . Pederson also served as the backup to recently acquired Steve DeBerg for the three games Mitchell missed
+with injury . He briefly entered a week 14 game against the New York Giants while DeBerg was receiving stitches on his face . Mitchell returned as the Dolphins
+' starter after week 15 , and Pederson was released in favor of backup DeBerg and third - string quarterback Hugh Millen on December 16 , 1993 . Pederson
+re-signed with the Dolphins on April 16 , 1994 , after the season ended . He spent the entire 1994 season on the Dolphins ' active roster as the third - string
+quarterback behind Marino and Bernie Kosar . On February 15 , 1995 , Pederson was selected by the Carolina Panthers in the twenty - second round of the NFL
+Expansion Draft , after being placed on the Dolphins ' available players list on January 19 , but was released on May 24 , 1995 . He returned to the World
+League after his release , playing with Rhein Fire . Pederson re-signed with the Dolphins again in June 1995 .
+</item 4>
+
+<item 5>
+Doug Pederson
+Pederson started as the third quarterback behind Couch and Spergon Wynn , until Couch suffered a season - ending injury in week 7 . Pederson started the next
+six games , posting a 1 -- 5 record . In a week 13 game against the Baltimore Ravens , he was knocked out of the game with bruised ribs and replaced with Wynn .
+Wynn started the next week against the Jacksonville Jaguars , but he suffered a season - ending injury and Pederson replaced him . Pederson returned for the
+final two games of the season , losing both , including a 35 -- 24 loss to his former team , the Eagles , and a 24 -- 0 shutout loss to the Tennessee Titans .
+Pederson was released after the season on February 22 , 2001 . Green Bay Packers ( second stint ) ( edit ) The Packers re-signed Pederson to a one - year
+contract on March 13 , 2001 , to replace backup Matt Hasselbeck , who was traded to the Seattle Seahawks . Pederson was the primary backup to Favre for the
+entire 2001 season , and was the primary placekick holder in every game .
+</item 5>
+
+<item 6>
+Doug Pederson
+He spent most of his playing career as a member of the Green Bay Packers , serving as a backup quarterback to Brett Favre and holder on placekicks , and winning
+Super Bowl XXXI with the team over the New England Patriots . He was also a backup to Dan Marino as a member of the Miami Dolphins , and a starting quarterback
+for the Eagles and Cleveland Browns . In his second season as the Eagles ' head coach , Pederson won Super Bowl LII ( also against the Patriots ) , marking the
+first Super Bowl title in franchise history . He also became just the fourth person , after Mike Ditka , Tom Flores , and Tony Dungy to win a Super Bowl as both
+a player and head coach . Contents ( hide ) 1 Playing career 1.1 Early years 1.2 Professional 1.2. 1 Miami Dolphins 1.2. 2 First stint with Packers 1.2. 3
+Philadelphia Eagles 1.2. 4 Cleveland Browns 1.2.
+</item 6>
+
+<item 7>
+Doug Pederson
+3 Philadelphia Eagles 1.2. 4 Cleveland Browns 1.2. 5 Green Bay Packers ( second stint ) 2 Coaching career 2.1 High school 2.2 NFL assistant coaching positions
+2.3 NFL head coach 2.4 Head coaching record 2.5 Coaching tree 3 Personal life 4 References 5 External links Playing career ( edit ) Early years ( edit )
+Pederson was born in Bellingham , Washington , in 1968 . He attended Ferndale High School in nearby Ferndale , Washington , and was an All - State selection in
+football , basketball , and baseball . After high school he graduated from Northeast Louisiana University , where he was quarterback from 1987 through 1990 . He
+still holds multiple passing records at the school . Professional ( edit ) Miami Dolphins ( edit ) Pederson originally signed as a rookie free agent by the
+Miami Dolphins on May 1 , 1991 , out of Northeast Louisiana University ( now University of Louisiana at Monroe ) in Monroe , Louisiana . He was waived on August
+17 , 1991 , before the start of the regular season .
+</item 7>
+
+<item 8>
+Doug Pederson
+Jump up ^ Smith , Timothy W. ( May 17 , 1992 ) . `` Football ; Knights Do Their Part but Ca n't Gain Playoff Berth '' . The New York Times . Retrieved 2017 - 08
+- 06 . Jump up ^ `` Transactions '' . The Dispatch . June 2 , 1992 . Retrieved 2017 - 08 - 06 . Jump up ^ `` Transactions '' . The New York Times . October 8 ,
+1992 . Retrieved 2017 - 08 - 06 . Jump up ^ `` Sports Today '' . The Buffalo News . March 3 , 1993 . Retrieved 2017 - 08 - 06 . Jump up ^ `` Transactions '' .
+The New York Times . August 31 , 1993 . Retrieved 2017 - 08 - 06 . Jump up ^ `` Transactions '' . The New York Times . September 1 , 1993 . Retrieved 2017 - 08
+- 06 . Jump up ^ `` Doug Pederson '' . NFL.com .
+</item 8>
+
+<item 9>
+Doug Pederson
+Stan Humphries ( 1986 -- 1987 ) Doug Pederson ( 1987 -- 1990 ) Wendal Lowrey ( 1991 -- 1992 ) Robert Cobb ( 1993 ) Raymond Philyaw ( 1993 -- 1996 ) Daniel
+Jeremiah ( 1997 ) Andre Vige ( 1998 ) Andy Chance ( 1999 -- 2001 ) Steven Jyles ( 2002 -- 2005 ) Kinsmon Lancaster ( 2006 -- 2008 ) Trey Revell ( 2007 -- 2009 )
+Cody Wells ( 2009 , 2012 ) Kolton Browning ( 2010 -- 2013 ) Brayle Brown ( 2013 ) Pete Thomas ( 2014 ) Garrett Smith ( 2015 -- 2017 ) Earnest Carrington ( 2015
+) Will Collins ( 2016 ) Caleb Evans ( 2016 -- 2017 ) 1987 Northeast Louisiana Indians football -- NCAA Division I - AA national champions Teddy Garcia Jackie
+Harris Stan Humphries Doug Pederson Head coach : Pat Collins Assistant coaches : Rickey Bustle Chris Scelfo Green Bay Packers Super Bowl XXXI champions 4 Brett
+Favre
+</item 9>
+
+<item 10>
+Doug Pederson
+The New York Times . December 9 , 2000 . Retrieved 2017 - 08 - 06 . Jump up ^ `` Quarterback Doug Pederson officially rejoins Packers , reports Monday ; Horacek
+also added '' . packers.com . March 13 , 2001 . Retrieved 2017 - 08 - 06 . Jump up ^ `` Packers Re-Sign QB Doug Pederson '' . packers.com. April 29 , 2003 .
+Retrieved 2017 - 08 - 06 . Jump up ^ `` Giants release Collins , focus search for backup on O'Donnell '' . Buffalo News . April 29 , 2004 . Retrieved 2017 - 08
+- 06 . Jump up ^ `` Packers cut former No. 1 pick Tim Couch '' . ESPN.com . September 5 , 2004 . Retrieved 2017 - 08 - 06 . Jump up ^ Stapleton , Arnie (
+October 4 , 2004 ) . `` Packers Suffer A Giant Loss '' . The Washington Post .
+</item 10>
+=== END ITEM id=f2c4c92654a53fac ===
+
+=== ITEM id=f56229c5482447d9 ===
+Gold sentences and facts:
+Sentence 0: It was suggested that the interior of the 45 metre ( 147 ft ) wide dome should be covered with a mosaic decoration to make the most of the available light coming through the circular windows of the drum and through the lantern . Brunelleschi had proposed the vault to glimmer with resplendent gold , but his death in 1446 put an end to this project , and the walls of the dome were whitewashed . Grand Duke Cosimo I de ' Medici decided to have the dome painted with a representation of The Last Judgment . This enormous work , 3,600 metres2 ( 38 750 ft2 ) of painted surface , was started in 1568 by Giorgio Vasari and Federico Zuccari and would last till 1579 . The upper portion , near the lantern , representing The 24 Elders of Apoc. 4 was finished by Vasari before his death in 1574 . Federico Zuccari and a number of collaborators , such as Domenico Cresti , finished the other portions : ( from top to bottom ) Choirs of Angels ; Christ , Mary and Saints ; Virtues , Gifts of the Holy Spirit and Beatitudes ; and at the bottom of the cupola : Capital Sins and Hell . These frescoes are considered Zuccari 's greatest work . But the quality of the work is uneven because of the input of different artists and the different techniques . Vasari had used true fresco , while Zuccari had painted in secco . During the restoration work , which ended in 1995 , the entire pictorial cycle of The Last Judgment was photographed with specially designed equipment and all the information collected in a catalogue . All the restoration information along with reconstructed images of the frescos were stored and managed in the Thesaurus Florentinus computer system .
+  Fact 0.0: It was suggested that the interior of the 45 metre (147 ft) wide dome should be covered with a mosaic decoration.
+  Fact 0.1: The mosaic decoration was suggested to make the most of the available light coming through the circular windows of the drum.
+  Fact 0.2: The mosaic decoration was suggested to make the most of the available light coming through the lantern.
+  Fact 0.3: Brunelleschi had proposed that the vault glimmer with resplendent gold.
+  Fact 0.4: Brunelleschi died in 1446.
+  Fact 0.5: Brunelleschi's death in 1446 put an end to the gold vault project.
+  Fact 0.6: The walls of the dome were whitewashed.
+  Fact 0.7: Grand Duke Cosimo I de' Medici decided to have the dome painted with a representation of The Last Judgment.
+  Fact 0.8: The painting of The Last Judgment covers 3,600 square metres (38,750 square feet) of painted surface.
+  Fact 0.9: The painting of The Last Judgment was started in 1568 by Giorgio Vasari and Federico Zuccari.
+  Fact 0.10: The painting of The Last Judgment would last until 1579.
+  Fact 0.11: The upper portion of the painting, near the lantern, represents The 24 Elders of Apoc. 4.
+  Fact 0.12: Vasari finished the upper portion of the painting before his death in 1574.
+  Fact 0.13: Federico Zuccari and a number of collaborators, such as Domenico Cresti, finished the other portions of the painting.
+  Fact 0.14: The other portions, from top to bottom, are Choirs of Angels; Christ, Mary and Saints; Virtues, Gifts of the Holy Spirit and Beatitudes; and at the bottom of the cupola, Capital Sins and Hell.
+  Fact 0.15: The frescoes are considered Zuccari's greatest work.
+  Fact 0.16: The quality of the work is uneven because of the input of different artists and the different techniques.
+  Fact 0.17: Vasari had used true fresco.
+  Fact 0.18: Zuccari had painted in secco.
+  Fact 0.19: The restoration work ended in 1995.
+  Fact 0.20: During the restoration work, the entire pictorial cycle of The Last Judgment was photographed with specially designed equipment.
+  Fact 0.21: All the information collected during the restoration was put into a catalogue.
+  Fact 0.22: All the restoration information, along with reconstructed images of the frescos, was stored and managed in the Thesaurus Florentinus computer system.
+
+Retrieved items:
+<item 1>
+Florence Cathedral
+Vasari had used true fresco , while Zuccari had painted in secco . During the restoration work , which ended in 1995 , the entire pictorial cycle of The Last
+Judgment was photographed with specially designed equipment and all the information collected in a catalogue . All the restoration information along with
+reconstructed images of the frescos were stored and managed in the Thesaurus Florentinus computer system . Crypt ( edit ) Tomb of Filippo Brunelleschi . The
+cathedral underwent difficult excavations between 1965 and 1974 . The archaeological history of this huge area was reconstructed through the work of Dr.
+Franklin Toker : remains of Roman houses , an early Christian pavement , ruins of the former cathedral of Santa Reparata and successive enlargements of this
+church . Close to the entrance , in the part of the crypt open to the public , is the tomb of Brunelleschi . While its location is prominent , the actual tomb
+is simple and humble . That the architect was permitted such a prestigious burial place is proof of the high esteem he was given by the Florentines .
+</item 1>
+
+<item 2>
+Florence Cathedral
+Grand Duke Cosimo I de ' Medici decided to have the dome painted with a representation of The Last Judgment . This enormous work , 3,600 metres2 ( 38 750 ft2 )
+of painted surface , was started in 1568 by Giorgio Vasari and Federico Zuccari and would last till 1579 . The upper portion , near the lantern , representing
+The 24 Elders of Apoc. 4 was finished by Vasari before his death in 1574 . Federico Zuccari and a number of collaborators , such as Domenico Cresti , finished
+the other portions : ( from top to bottom ) Choirs of Angels ; Christ , Mary and Saints ; Virtues , Gifts of the Holy Spirit and Beatitudes ; and at the bottom
+of the cupola : Capital Sins and Hell . These frescoes are considered Zuccari 's greatest work . But the quality of the work is uneven because of the input of
+different artists and the different techniques . Vasari had used true fresco , while Zuccari had painted in secco .
+</item 2>
+
+<item 3>
+Florence Cathedral
+70 -- 73 . Jump up ^ King , p. 97 . Jump up ^ Mueller , Tom ( February 10 , 2014 ) . `` Mystery of Florence 's Cathedral Dome May Be Solved '' . National
+Geographic Society . Retrieved 31 December 2014 . Jump up ^ NationalGeographic.com 2014 - 02 Il Duomo Tom Mueller Jump up ^ NationalGeographic.com 2014 - 02 Il
+Doumo Design Video Jump up ^ King , pp. 105 - 107 . Jump up ^ Gartner , Peter , Filippo Brunelleschi 1377 - 1446 , p 95 . Jump up ^ King , p. 69 . Jump up ^
+Paolo Galluzzi , `` Leonard de Vinci , engineer and architect '' , p. 50 Jump up ^ Figures vary . archINFORM gives a 45 m wide tambour , while Santa Maria del
+Fiore at Structurae gives a 43 m diameter of the cupola , others as little as 42 m .
+</item 3>
+
+<item 4>
+Florence Cathedral
+Above this shrine is the painting Last Supper by the lesser - known Giovanni Balducci . There was also a glass - paste mosaic panel The Bust of Saint Zanobius
+by the 16th - century miniaturist Monte di Giovanni , but it is now on display in the Museum Opera del Duomo . Many decorations date from the 16th - century
+patronage of the Grand Dukes , such as the pavement in colored marble , attributed to Baccio d'Agnolo and Francesco da Sangallo ( 1520 -- 26 ) . Some pieces of
+marble from the façade were used , topside down , in the flooring ( as was shown by the restoration of the floor after the 1966 flooding ) . It was suggested
+that the interior of the 45 metre ( 147 ft ) wide dome should be covered with a mosaic decoration to make the most of the available light coming through the
+circular windows of the drum and through the lantern . Brunelleschi had proposed the vault to glimmer with resplendent gold , but his death in 1446 put an end
+to this project , and the walls of the dome were whitewashed .
+</item 4>
+
+<item 5>
+Florence Cathedral
+This timetable was used until the 18th century . This is one of the few clocks from that time that still exist and are in working order . The church is
+particularly notable for its 44 stained glass windows , the largest undertaking of this kind in Italy in the 14th and 15th century . The windows in the aisles
+and in the transept depict saints from the Old and the New Testament , while the circular windows in the drum of the dome or above the entrance depict Christ
+and Mary . They are the work of the greatest Florentine artists of their times , such as Donatello , Lorenzo Ghiberti , Paolo Uccello and Andrea del Castagno .
+Christ crowning Mary as Queen , the stained - glass circular window above the clock , with a rich range of coloring , was designed by Gaddo Gaddi in the early
+14th century . Donatello designed the stained - glass window ( Coronation of the Virgin ) in the drum of the dome ( the only one that can be seen from the nave
+) .
+</item 5>
+
+<item 6>
+Florence Cathedral
+Unsourced material may be challenged and removed . ( July 2012 ) ( Learn how and when to remove this template message ) Interior of the cathedral Huge clock
+decorated by Paolo Uccello . Dante and the Divine Comedy . Trompe l'oeil of Niccolò da Tolentino . Vasari 's fresco begun in 1568 , and completed by Federico
+Zuccari in 1579 . Detail under the dome . The Last Judgement ( detail ) under the dome . Tomb of Antonio d'Orso by Tino da Camaino . The Gothic interior is vast
+and gives an empty impression . The relative bareness of the church corresponds with the austerity of religious life , as preached by Girolamo Savonarola . Many
+decorations in the church have been lost in the course of time , or have been transferred to the Museum Opera del Duomo , such as the magnificent cantorial
+pulpits ( the singing galleries for the choristers ) of Luca della Robbia and Donatello .
+</item 6>
+
+<item 7>
+Florence Cathedral
+The two main competitors were two master goldsmiths , Lorenzo Ghiberti and Filippo Brunelleschi , the latter of whom was supported by Cosimo de Medici .
+Ghiberti had been the winner of a competition for a pair of bronze doors for the Baptistery in 1401 and lifelong competition between the two remained sharp .
+Brunelleschi won and received the commission . Ghiberti , appointed coadjutator , drew a salary equal to Brunelleschi 's and , though neither was awarded the
+announced prize of 200 florins , was promised equal credit , although he spent most of his time on other projects . When Brunelleschi became ill , or feigned
+illness , the project was briefly in the hands of Ghiberti . But Ghiberti soon had to admit that the whole project was beyond him . In 1423 , Brunelleschi was
+back in charge and took over sole responsibility . Work started on the dome in 1420 and was completed in 1436 . The cathedral was consecrated by Pope Eugene IV
+on March 25 , 1436 , ( the first day of the year according to the Florentine calendar ) .
+</item 7>
+
+<item 8>
+Florence Cathedral
+As this cathedral was built with funds from the public , some important works of art in this church honour illustrious men and military leaders of Florence :
+Lorenzo Ghiberti had a large artistic impact on the cathedral . Ghiberti worked with Filippo Brunelleschi on the cathedral for eighteen years and had a large
+number of projects on almost the whole east end . Some of his works were the stained glass designs , the bronze shrine of Saint Zenobius and marble revetments
+on the outside of the cathedral . Dante Before the City of Florence by Domenico di Michelino ( 1465 ) . This painting is especially interesting because it shows
+us , apart from scenes of the Divine Comedy , a view on Florence in 1465 , a Florence such as Dante himself could not have seen in his time . Funerary Monument
+to Sir John Hawkwood by Paolo Uccello ( 1436 ) . This almost monochrome fresco , transferred to canvas in the 19th century , is painted in terra verde , a color
+closest to the patina of bronze . Equestrian statue of Niccolò da Tolentino by Andrea del Castagno ( 1456 ) .
+</item 8>
+
+<item 9>
+Florence Cathedral
+This fresco , transferred on canvas in the 19th century , in the same style as the previous one , is painted in a color resembling marble . However , it is more
+richly decorated and gives more the impression of movement . Both frescoes portray the condottieri as heroic figures riding triumphantly . Both painters had
+problems when applying in painting the new rules of perspective to foreshortening : they used two unifying points , one for the horse and one for the pedestal ,
+instead a single unifying point . Busts of Giotto ( by Benedetto da Maiano ) , Brunelleschi ( by Buggiano - 1447 ) , Marsilio Ficino , and Antonio Squarcialupi
+( a most famous organist ) . These busts all date from the 15th and the 16th centuries . Above the main door is the colossal clock face with fresco portraits of
+four Prophets or Evangelists by Paolo Uccello ( 1443 ) . This one - handed liturgical clock shows the 24 hours of the hora italica ( Italian time ) , a period
+of time ending with sunset at 24 hours .
+</item 9>
+
+<item 10>
+Florence Cathedral
+Jump up ^ As referenced in `` Cupola di Santa Maria del Fiore : il cantiere di restauro 1980 - 1995 '' , a cura di Cristina Acidini Luchinat e Riccardo Dalla
+Negra published by Istituto Poligrafico e Zecca dello Stato ( Roma ) in 1995 ( ISBN 8824039561 ) Jump up ^ Thesaurus Florentinus project page ( in Italian ) ,
+Soprintendenza ai Beni Architettonici e Paesaggisitici di Firenze , Ministero dei Beni Culturali References ( edit ) Bartlett , Kenneth R. ( 1992 ) . The
+Civilization of the Italian Renaissance . Toronto : D.C. Heath and Company . ISBN 0 - 669 - 20900 - 7 ( Paperback ) . King , Ross ( 2000 ) . Brunelleschi 's
+Dome : How a Renaissance Genius Reinvented Architecture . London : Chatto & Windus . Jepson , Tim ( 2001 ) . The National Geographic Traveler , Florence &
+Tuscany . National Geographic Society .
+</item 10>
+=== END ITEM id=f56229c5482447d9 ===
+
+=== ITEM id=677acebfc8258442 ===
+Gold sentences and facts:
+Sentence 0: The season is scheduled to be released on March 8 , 2018 .
+  Fact 0.0: The season is scheduled to be released on March 8, 2018.
+
+Retrieved items:
+<item 1>
+Jessica Jones (season 2)
+Jessica Jones ( season 2 ) - wikipedia Jessica Jones ( season 2 ) Jump to : navigation , search Jessica Jones ( season 2 ) Promotional poster Starring Krysten
+Ritter Rachael Taylor Carrie - Anne Moss Eka Darville Leah Gibson J.R. Ramirez Country of origin United States Release Original network Netflix Season
+chronology ← Previous Season 1 List of Jessica Jones episodes The second season of the American web television series Jessica Jones , which is based on the
+Marvel Comics character of the same name , follows Jones as she takes on a new case after the events surrounding her encounter with Kilgrave . It is set in the
+Marvel Cinematic Universe ( MCU ) , sharing continuity with the films and other television series of the franchise . The season will be produced by Marvel
+Television in association with ABC Studios and Tall Girls Productions , with Melissa Rosenberg serving as showrunner . Krysten Ritter stars as Jones , with
+Rachael Taylor , Carrie - Anne Moss , and Eka Darville also returning from the first season . They are joined by Leah Gibson and J.R. Ramirez .
+</item 1>
+
+<item 2>
+Jessica Jones (season 2)
+`` Netflix hit ' Jessica Jones ' films at Long Island Aquarium '' . Northforker . Archived from the original on June 12 , 2017 . Retrieved June 12 , 2017 . Jump
+up ^ Ridgely , Charlie ( September 15 , 2017 ) . `` Filming Wraps on ' Jessica Jones ' Season 2 '' . Comicbook.com . Archived from the original on September 15
+, 2017 . Retrieved September 15 , 2017 . ^ Jump up to : Ramos , Dino - Ray ( December 9 , 2017 ) . `` ' Marvel 's Jessica Jones ' : Season 2 Premiere Date Set
+For Netflix Superhero Series '' . Deadline.com . Archived from the original on December 10 , 2017 . Retrieved December 10 , 2017 . Jump up ^ `` Marvel 's
+Jessica Jones '' . Netflix . Archived from the original on September 7 , 2016 . Retrieved September 7 , 2016 .
+</item 2>
+
+<item 3>
+Jessica Jones (season 2)
+Deadline.com . Archived from the original on November 19 , 2015 . Retrieved November 18 , 2015 . ^ Jump up to : Ritter , Stephanie ( May 12 , 2016 ) . Jessica
+Jones Season Two Details Revealed ! ( Exclusive ! ) . Nerdist Industries . Retrieved May 14 , 2016 . Jump up ^ Schwartz , Terri ( January 17 , 2016 ) . `` How
+Jessica Jones ' Final Triumph Is n't An Easy Resolution '' . IGN . Archived from the original on January 19 , 2016 . Retrieved January 19 , 2016 . Jump up ^
+Goldman , Eric ( January 17 , 2016 ) . `` Jessica Jones : Rachael Taylor on Trish 's Potential Hellcat Future in Season 2 '' . IGN . Archived from the original
+on January 18 , 2016 . Retrieved January 18 , 2016 . Jump up ^ Radish , Christina ( January 28 , 2016 ) .
+</item 3>
+
+<item 4>
+Jessica Jones (season 2)
+`` ' Jessica Jones ' : Raelle Tucker Joins Netflix Series As Executive Producer '' . Deadline.com . Archived from the original on April 1 , 2016 . Retrieved
+March 31 , 2016 . ^ Jump up to : Dibdin , Emma ( September 20 , 2016 ) . `` What To Expect From the Second Season of Jessica Jones '' . Esquire . Archived from
+the original on September 20 , 2016 . Retrieved September 20 , 2016 . ^ Jump up to : Ryan , Maureen ( October 22 , 2016 ) . `` ' Jessica Jones ' Hires All Women
+Directors for Season 2 , Showrunner Says '' . Variety . Archived from the original on October 23 , 2016 . Retrieved October 23 , 2016 . ^ Jump up to : Schwartz
+, Terri ( August 9 , 2016 ) . `` Jessica Jones Showrunner Melissa Rosenberg Previews The Defenders Aftermath And Season 2 Plans '' . IGN . Archived from the
+original on August 10 , 2016 .
+</item 4>
+
+<item 5>
+Jessica Jones (season 2)
+Jump up ^ Ryan , Maureen ( November 20 , 2015 ) . `` ' Jessica Jones ' Showrunner Melissa Rosenberg Talks About Her Tough Heroine '' . Variety . Archived from
+the original on November 21 , 2015 . Retrieved November 21 , 2015 . Jump up ^ Fitzpatrick , Kevin ( July 27 , 2016 ) . `` New ' Jessica Jones , ' ' Daredevil '
+and ' Punisher ' No Earlier Than 2018 ? '' . ScreenCrush . Archived from the original on July 29 , 2016 . Retrieved July 28 , 2016 . Jump up ^ Friedlander ,
+Whitney ( January 17 , 2016 ) . `` ' Jessica Jones ' Renewed for Season 2 on Netflix '' . Variety . Archived from the original on January 17 , 2016 . Retrieved
+January 18 , 2016 . Jump up ^ Andreeva , Nellie ( March 31 , 2016 ) . `` ' Jessica Jones ' : Raelle Tucker Joins Netflix Series As Executive Producer '' .
+</item 5>
+
+<item 6>
+Jessica Jones (season 2)
+On January 17 , 2016 , Netflix ordered a second season of 13 episodes . Raelle Tucker joined the season as an executive producer and writer , replacing Liz
+Friedman from the first season , who departed the series to work on the pilot for the ABC series , Conviction . Writing ( edit ) Rosenberg and the season 's
+writers were halfway through the writing process by August 2016 , with the scripts completed by the end of October 2016 . With The Defenders releasing before
+the season , Rosenberg used the miniseries as an opportunity to help `` set up '' elements for the season , working with The Defenders executive producers and
+writers Doug Petrie and Marco Ramirez to do so . Rosenberg wanted to `` continue with ( the Jessica Jones ) character '' in the season , saying , `` She 's a
+very damaged character , her damage goes beyond ( David Tennant 's ) Kilgrave . There 's a lot to mine from in her backstory and in her present day situation ''
+.
+</item 6>
+
+<item 7>
+Jessica Jones (season 2)
+Retrieved September 7 , 2016 . External links ( edit ) Marvel 's Jessica Jones on IMDb Marvel 's Jessica Jones at TV.com Jessica Jones Brian Michael Bendis
+Michael Gaydos Supporting characters Luke Cage Carol Danvers Jessica Drew Ben Urich Enemies Man Mountain Marko Purple Man Publications Alias The Pulse Jessica
+Jones In other media Jessica Jones season 1 characters Related articles Daily Bugle New Avengers Marvel Cinematic Universe Feature films Phase One Iron Man The
+Incredible Hulk Iron Man 2 Thor Captain America : The First Avenger The Avengers accolades Phase Two Iron Man 3 Thor : The Dark World Captain America : The
+Winter Soldier Guardians of the Galaxy Avengers : Age of Ultron Ant - Man Phase Three Captain America : Civil War Doctor Strange Guardians of the Galaxy Vol. 2
+Spider - Man : Homecoming Thor : Ragnarok Black Panther Avengers : Infinity War production Ant - Man and the Wasp Untitled Avengers film production Television
+series ABC Agents of S.H.I.E.L.D.
+</item 7>
+
+<item 8>
+Jessica Jones (season 2)
+Retrieved August 14 , 2017 . Jump up ^ Schwartz , Terri ( January 7 , 2015 ) . `` Netflix announces ' Daredevil , ' ' Bloodline , ' ' Kimmy Schmidt ' premiere
+dates '' . Zap2It . Archived from the original on January 10 , 2015 . Retrieved January 10 , 2015 . Jump up ^ Goldman , Eric ( July 28 , 2015 ) . `` Netflix On
+Marvel Series Release Plan And If Punisher Could Get A Spinoff '' . IGN . Archived from the original on July 28 , 2015 . Retrieved July 28 , 2015 . Jump up ^
+Weintraub , Steve ( October 12 , 2015 ) . `` Krysten Ritter & Showrunner Melissa Rosenberg Talk ' Jessica Jones ' at NYCC '' . Collider . Archived from the
+original on October 14 , 2015 . Retrieved October 15 , 2015 . Jump up ^ Ryan , Maureen ( November 20 , 2015 ) .
+</item 8>
+
+<item 9>
+Jessica Jones (season 2)
+`` JESSICA JONES Renewed For Second Season '' . Newsarama . Archived from the original on January 18 , 2016 . Retrieved January 18 , 2016 . ^ Jump up to : Beard
+, Jim ( February 3 , 2016 ) . `` Rachael Taylor Deals with Trish Walker 's Inner Demons in ' Marvel 's Jessica Jones ' '' . Marvel.com . Archived from the
+original on February 5 , 2016 . Retrieved February 5 , 2016 . ^ Jump up to : Beard , Jim ( February 5 , 2016 ) . `` Carrie - Anne Moss Pays for Hogarth 's Sins
+in ' Marvel 's Jessica Jones ' '' . Marvel.com . Archived from the original on February 6 , 2016 . Retrieved February 6 , 2016 . ^ Jump up to : Perry , Spencer
+( August 17 , 2017 ) . `` Jessica Jones Season 2 Set Photos Tease How Kilgrave Returns '' . ComingSoon.net .
+</item 9>
+
+<item 10>
+Jessica Jones (season 2)
+This was a goal that `` Marvel was completely on board with '' , and given the demand of many talented female directors at the time , the series ' producers
+looked to book only female directors first , and approach male directors later in the pre-production phase if needed . Another member of the production
+suggested that the series book only female directors for the season , which Rosenberg `` had n't contemplated ( as a ) concept prior to that conversation '' .
+She quickly made that the goal of the production , and in October 2016 , Rosenberg confirmed that all 13 episodes of the season would be directed by women .
+Release ( edit ) The second season of Jessica Jones is scheduled to be released on March 8 , 2018 , on the streaming service Netflix worldwide , in Ultra HD 4K
+and high dynamic range . Marketing ( edit ) In December 2017 , a teaser trailer for the season was released , along with announcing the season release date .
+References ( edit ) ^ Jump up to : Arrant , Chris ( January 17 , 2016 ) . `` JESSICA JONES Renewed For Second Season '' . Newsarama .
+</item 10>
+=== END ITEM id=677acebfc8258442 ===
+
+=== ITEM id=293e98b25afdd619 ===
+Gold sentences and facts:
+Sentence 0: The Sahara ( Arabic : الصحراء الكبرى ‎ , aṣ - ṣaḥrāʼ al - kubrá , ' the Great Desert ' ) is the largest hot desert and the third largest desert in the world after Antarctica and the Arctic . Its area of 9,200,000 square kilometres ( 3,600,000 sq mi ) is comparable to the area of China or the United States . The name ' Sahara ' is derived from dialectal Arabic word for `` desert '' , ṣaḥra ( صحرا / ˈsʕaħra / ) .
+  Fact 0.0: The Sahara is a desert.
+  Fact 0.1: The Sahara's Arabic name is الصحراء الكبرى, transliterated aṣ-ṣaḥrāʼ al-kubrá, meaning 'the Great Desert'.
+  Fact 0.2: The Sahara is the largest hot desert in the world.
+  Fact 0.3: The Sahara is the third largest desert in the world, after Antarctica and the Arctic.
+  Fact 0.4: The Sahara's area is 9,200,000 square kilometres (3,600,000 sq mi).
+  Fact 0.5: The Sahara's area is comparable to the area of China.
+  Fact 0.6: The Sahara's area is comparable to the area of the United States.
+  Fact 0.7: The name 'Sahara' is derived from a dialectal Arabic word for 'desert'.
+  Fact 0.8: The dialectal Arabic word is ṣaḥra (صحرا).
+
+Retrieved items:
+<item 1>
+The Sahara, also called the Great Desert, is a desert biome covering about 9.2 million km² across Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger,
+Sudan, and Tunisia. It stretches roughly 4,800 km east–west and 1,800 km north–south. Its highest point is Emi Koussi (3,415 m); its lowest is the Qattara
+Depression (−133 m). The article contains Arabic text.
+</item 1>
+
+<item 2>
+Sahara
+Oases support some life forms in extremely arid deserts . An intense Saharan dust storm sent a massive dust plume northwestward over the Atlantic Ocean on 2
+March 2003 Butte naturally sculpted by the wind The Sahara covers large parts of Algeria , Chad , Egypt , Libya , Mali , Mauritania , Niger , Western Sahara ,
+Sudan and Tunisia . It covers 9 million square kilometres ( 3,500,000 sq mi ) , amounting to 31 % of Africa . If all areas with a mean annual precipitation of
+less than 250 mm were included , the Sahara would be 11 million square kilometres ( 4,200,000 sq mi ) . It is one of three distinct physiographic provinces of
+the African massive physiographic division . The Sahara is mainly rocky hamada ( stone plateaus ) , Ergs ( sand seas - large areas covered with sand dunes )
+form only a minor part , but many of the sand dunes are over 180 metres ( 590 ft ) high .
+</item 2>
+
+<item 3>
+Sahara
+The desert comprises much of North Africa , excluding the fertile region on the Mediterranean Sea coast , the Atlas Mountains of the Maghreb , and the Nile
+Valley in Egypt and Sudan . It stretches from the Red Sea in the east and the Mediterranean in the north to the Atlantic Ocean in the west , where the landscape
+gradually changes from desert to coastal plains . To the south , it is bounded by the Sahel , a belt of semi-arid tropical savanna around the Niger River valley
+and the Sudan Region of Sub-Saharan Africa . The Sahara can be divided into several regions including : the western Sahara , the central Ahaggar Mountains , the
+Tibesti Mountains , the Aïr Mountains , the Ténéré desert , and the Libyan Desert . For several hundred thousand years , the Sahara has alternated between
+desert and savanna grassland in a 41,000 year cycle caused by changes ( `` precession '' ) in the Earth 's axis as it rotates around the sun , which change the
+location of the North African Monsoon . It is next expected to become green in about 15,000 years ( 17,000 AD ) .
+</item 3>
+
+<item 4>
+The excerpt outlines a Sahara article covering its geography, climate, ecological regions, plants and animals, history, peoples, languages, and references. It
+notes that the Sahara is defined by an ecological boundary in Africa and that mountain oases, such as those in the Ahaggar Mountains, support life in the
+extremely arid desert.
+</item 4>
+
+<item 5>
+The Sahara, whose name derives from Arabic for “desert,” is the world’s largest hot desert and third largest overall. It spans about 9.2 million km² (31% of
+Africa), across ten countries and Western Sahara. Mostly rocky plateaus, it also contains sand seas with dunes over 180 m high. Oases sustain life; radar
+beneath Safsaf Oasis reveals channels of an ancient river. Saharan dust storms can carry huge plumes across the Atlantic.
+</item 5>
+
+<item 6>
+Sahara
+The southern limit of the Sahara is indicated botanically by the southern limit of Cornulaca monacantha ( a drought - tolerant member of the Chenopodiaceae ) ,
+or northern limit of Cenchrus biflorus , a grass typical of the Sahel . According to climatic criteria , the southern limit of the Sahara corresponds to the 150
+mm ( 5.9 in ) isohyet of annual precipitation ( this is a long - term average , since precipitation varies annually ) . Important cities located in the Sahara
+include Nouakchott , the capital of Mauritania ; Tamanrasset , Ouargla , Béchar , Hassi Messaoud , Ghardaïa , and El Oued in Algeria ; Timbuktu in Mali ; Agadez
+in Niger ; Ghat in Libya ; and Faya - Largeau in Chad . Climate The Sahara is the world 's largest low - latitude hot desert . The area is located in the horse
+latitudes under the subtropical ridge , a significant belt of semi-permanent subtropical warm - core high pressure where the air from upper levels of the
+troposphere tends to sink towards the ground .
+</item 6>
+
+<item 7>
+The Sahara, the world’s largest hot desert, covers about 9.2 million km² across North Africa, from the Atlantic and Mediterranean to the Sahel. Its rocky
+plateaus, dunes, mountains, salt flats and oases support sparse, regionally varied life. Orbital and monsoon shifts have repeatedly transformed it between
+desert and “Green Sahara”; it became persistently arid around 4,200 BCE. Peoples including Berbers and Tuareg adapted through pastoralism, oasis
+</item 7>
+
+<item 8>
+Sahara
+Without proper rendering support , you may see question marks , boxes , or other symbols . Play media This video over the Sahara and the Middle East was taken
+by the crew of Expedition 29 on board the International Space Station . Tadrart Acacus desert in western Libya , part of the Sahara . The top image shows the
+Safsaf Oasis on the surface of the Sahara . The bottom ( using radar ) is the rock layer underneath , revealing black channels cut by the meandering of an
+ancient river that once fed the oasis . The Sahara ( Arabic : الصحراء الكبرى ‎ , aṣ - ṣaḥrāʼ al - kubrá , ' the Great Desert ' ) is the largest hot desert and
+the third largest desert in the world after Antarctica and the Arctic . Its area of 9,200,000 square kilometres ( 3,600,000 sq mi ) is comparable to the area of
+China or the United States . The name ' Sahara ' is derived from dialectal Arabic word for `` desert '' , ṣaḥra ( صحرا / ˈsʕaħra / ) .
+</item 8>
+
+<item 9>
+The Sahara is an extremely arid hot desert that can go years without rain. Its northern boundary meets Mediterranean ecosystems and is marked by date-palm
+cultivation, the southern limit of esparto, and roughly the 100 mm annual-rainfall line. To the south, it borders the Sahel; botanical markers and the 150 mm
+rainfall line indicate the boundary. Major cities include Nouakchott, Tamanrasset, Timbuktu, Agadez, Ghat, and
+</item 9>
+
+<item 10>
+Sahara
+Wind or rare rainfall shape the desert features : sand dunes , dune fields , sand seas , stone plateaus , gravel plains ( reg ) , dry valleys ( wadi ) , dry
+lakes ( oued ) , and salt flats ( shatt or chott ) . Unusual landforms include the Richat Structure in Mauritania . Several deeply dissected mountains , many
+volcanic , rise from the desert , including the Aïr Mountains , Ahaggar Mountains , Saharan Atlas , Tibesti Mountains , Adrar des Iforas , and the Red Sea hills
+. The highest peak in the Sahara is Emi Koussi , a shield volcano in the Tibesti range of northern Chad . The central Sahara is hyperarid , with sparse
+vegetation . The northern and southern reaches of the desert , along with the highlands , have areas of sparse grassland and desert shrub , with trees and
+taller shrubs in wadis , where moisture collects . In the central , hyperarid region , there are many subdivisions of the great desert : Tanezrouft , the Ténéré
+, the Libyan Desert , the Eastern Desert , the Nubian Desert and others .
+</item 10>
+=== END ITEM id=293e98b25afdd619 ===
+
+=== ITEM id=44d6cb93a30f2827 ===
+Gold sentences and facts:
+Sentence 0: There are several major additional characters introduced by the television series and numerous narrative details and the plotline differ radically from the source novel . For example , the planned Nazi pre-emptive nuclear strike on Japan , `` Operation Dandelion , '' is apparently being prevented only by Hitler 's personal refusal to authorise it , leading Heydrich and the faction demanding pre-emptive war to plot the Führer 's assassination . In addition , Hawthorne Abendsen does not appear in the first season of the television version and The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities rather than a novel ( although this idea may actually be borrowed from Dick 's later novel Valis which features a mysterious film depicting yet another dystopian alternative history of the USA ) . As of the Season 1 finale , these films are being tracked down by SS agents like Blake for dispatch to Hitler for an as - yet - unknown purpose .
+  Fact 0.0: The television series introduces several major additional characters.
+  Fact 0.1: The narrative details of the television series differ radically from the source novel.
+  Fact 0.2: The plotline of the television series differs radically from the source novel.
+  Fact 0.3: In the television series, the planned Nazi pre-emptive nuclear strike on Japan, 'Operation Dandelion', is apparently being prevented only by Hitler's personal refusal to authorise it.
+  Fact 0.4: Hitler's refusal to authorise Operation Dandelion leads Heydrich and the faction demanding pre-emptive war to plot the Führer's assassination.
+  Fact 0.5: Hawthorne Abendsen does not appear in the first season of the television version.
+  Fact 0.6: In the television version, The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities.
+  Fact 0.7: In the television version, The Grasshopper Lies Heavy is not a novel.
+  Fact 0.8: The idea of The Grasshopper Lies Heavy as newsreel films may actually be borrowed from Dick's later novel Valis.
+  Fact 0.9: The novel Valis features a mysterious film depicting yet another dystopian alternative history of the USA.
+  Fact 0.10: As of the Season 1 finale, these films are being tracked down by SS agents like Blake.
+  Fact 0.11: The films are being tracked down for dispatch to Hitler.
+  Fact 0.12: The films are being dispatched to Hitler for an as-yet-unknown purpose.
+
+Retrieved items:
+<item 1>
+The Man in the High Castle
+In addition , Hawthorne Abendsen does not appear in the first season of the television version and The Grasshopper Lies Heavy is a series of newsreel films
+depicting multiple alternative realities rather than a novel ( although this idea may actually be borrowed from Dick 's later novel Valis which features a
+mysterious film depicting yet another dystopian alternative history of the USA ) . As of the Season 1 finale , these films are being tracked down by SS agents
+like Blake for dispatch to Hitler for an as - yet - unknown purpose . In season two we see a map on John Smith 's wall of the world . From this map we can see
+that Japan controls the entirety of the Pacific Ocean and most of the Asian continent , including China , India and half of Russia . Japan is also shown to
+control Australia , New Zealand , western Canada , Alaska and , all pacific states in the USA . We also see that that the Japanese Empire controls the Yucatán
+Peninsula and South American countries like Chile . In contrast , Nazi Germany is shown as controlling all of Europe , Africa and the Middle East .
+</item 1>
+
+<item 2>
+The Man in the High Castle
+1992 , pp. 27 -- 52 . External links ( edit ) The Man in the High Castle cover art gallery The Man in the High Castle at the Internet Book List The Man in the
+High Castle at Worlds Without End Philip K. Dick ( works ) Novels Gather Yourselves Together ( 1950 ) Voices from the Street ( 1952 ) Solar Lottery ( 1954 )
+Mary and the Giant ( 1954 ) The World Jones Made ( 1954 ) Eye in the Sky ( 1955 ) The Man Who Japed ( 1955 ) A Time for George Stavros ( 1956 ) Pilgrim on the
+Hill ( 1956 ) The Broken Bubble ( 1956 ) The Cosmic Puppets ( 1957 ) Puttering About in a Small Land ( 1957 ) Nicholas and the Higs ( 1958 ) Time Out of Joint (
+1958 ) In Milton Lumky Territory ( 1958 ) Confessions of a Crap Artist ( 1959 ) The Man Whose Teeth Were All Exactly Alike ( 1960 ) Humpty Dumpty in Oakland (
+1960 ) Vulcan 's Hammer ( 1960 ) Dr.
+</item 2>
+
+<item 3>
+The Man in the High Castle
+The pilot episode was released by Amazon Studios on January 15 , 2015 , and was Amazon 's `` most watched pilot ever '' according to Amazon Studios ' vice
+president , Roy Price . On February 18 , 2015 , Amazon green - lit the series . The show became available for streaming on November 20 , 2015 . The television
+series diverges from the novel in many significant respects . Both the Pacific States of America and the Eastern American puppet state appear to be mere
+provinces of the Japanese and German empires without any apparent autonomous ( even quisling ) government institutions whatsoever . The Rocky Mountain States
+become an anarchic Neutral Zone . World War II appears to have ended following the destruction of Washington , D.C. with an atomic bomb , rather than a land
+invasion as in the book . As for Hitler , while elderly , he is apparently mostly hale in his Season 1 finale appearance , though other characters elsewhere in
+the season do reference his supposed physical infirmity .
+</item 3>
+
+<item 4>
+The Man in the High Castle
+A new paperback edition of the novel was published in 1992 by Vintage Books . Adaptations ( edit ) Audiobook ( edit ) An unabridged The Man in the High Castle
+audiobook , read by George Guidall and running approximately 9.5 hours over seven audio cassettes , was released in 1997 . Another unabridged audiobook version
+was released in 2008 by Blackstone Audio , read by Tom Wyner and running approximately 8.5 hours over seven CDs . A third unabridged audiobook recording was
+released in 2014 by Brilliance Audio , read by Jeff Cummings with a running time of 9 hours 58 minutes . Television ( edit ) Main article : The Man in the High
+Castle ( TV series ) After a number of attempts to adapt the book to the screen , in October 2014 Amazon 's film production unit began filming the pilot episode
+of The Man in the High Castle in Roslyn , Washington , for release through the Amazon Prime Web video streaming service .
+</item 4>
+
+<item 5>
+The Man in the High Castle
+Wegener flies back to Germany where upon landing learns that Reinhard Heydrich ( a member of the anti-Dandelion faction ) has launched a coup against Goebbels ,
+possibly installing himself as Chancellor . Meanwhile , Tagomi remains shaken by the shootout and goes to Childan to sell back the gun he used in the fight ;
+however , instead , sensing the energy from one of Frink 's jewelery items , Tagomi impulsively buys it from Childan , before undergoing a spiritually intense
+ambiguous moment where he momentarily perceives an alternative - history version of San Francisco . Later , Tagomi on a whim forces the German authorities to
+release Frink , whom Tagomi has never met and does not know is the maker of the jewelery . Juliana soon has her own spiritual experience when she arrives in
+Cheyenne . There , she discovers that Abendsen now lives in a normal house with his family , having left behind the High Castle due to a change of outlook ; he
+no longer preoccupies himself with thoughts that he might soon be assassinated .
+</item 5>
+
+<item 6>
+The Man in the High Castle
+Childan 's store is stocked in part with antiques from the Wyndam - Matson Corporation , a metalworking company . Frank Frink ( formerly Fink ) , a secretly
+Jewish -- American veteran of World War II , has just been fired from the Wyndam - Matson factory , when he agrees to join a former coworker to begin a
+handcrafted jewelry business . Meanwhile , Frink 's ex-wife , Juliana , works as a judo instructor in Cañon City , Colorado ( in the neutral buffer zone of
+Mountain States ) , where she begins a sexual relationship with an Italian truck driver and ex-soldier , Joe Cinnadella . Throughout the book , many of these
+characters frequently make important decisions using prophetic messages they interpret from the I Ching . Many characters are also reading a widely banned yet
+extremely popular new novel , The Grasshopper Lies Heavy , which depicts an alternate history in which the Allies won World War II , a concept that amazes and
+intrigues its readers .
+</item 6>
+
+<item 7>
+The Man in the High Castle
+The Man in the High Castle won the Hugo Award for Best Novel in 1963 . Beginning in 2015 , the book was adapted as a multi-season TV series , with Dick 's
+daughter , Isa Dick Hackett , serving as one of the show 's producers . Reported inspirations include Ward Moore 's alternate Civil War history , Bring the
+Jubilee ( 1953 ) , various classic World War II histories , and the I Ching ( referred to in the novel ) . The novel features a `` novel within the novel ''
+comprising an alternate history within this alternate history wherein the Allies defeat the Axis ( though in a manner distinct from the actual historical
+outcome ) .
+</item 7>
+
+<item 8>
+The Man in the High Castle
+The Nazis then helped Italy conquer most of Africa . As Japan invaded the U.S. West Coast , Germany invaded the U.S. East Coast and most of South America . By
+1947 , the U.S. and the remaining Allies surrendered to the Axis , ending the war . By the 1960s , Imperial Japan and Nazi Germany are the world 's competing
+superpowers , with Japan establishing the `` Pacific States of America '' ( P.S.A. ) from the former Western United States , with the remaining Rocky Mountain
+States now a neutral buffer zone between the P.S.A. and the Nazi - occupied former Eastern United States . For unknown reasons , Canada remains independent .
+Hitler , though still alive , is incapacitated from advanced syphilis , and Martin Bormann has become Chancellor of Germany , with Goebbels , Heydrich , Göring
+, Seyss - Inquart ( who oversees the extermination of the peoples of Africa ) , and other Nazi leaders soon vying to take his place .
+</item 8>
+
+<item 9>
+The Man in the High Castle
+Retrieved October 25 , 2015 -- via HighBeam Research . Jump up ^ Willis , Jesse ( May 29 , 2003 ) . `` Review of The Man In The High Castle by Philip K. Dick ''
+. SFFaudio . Retrieved December 10 , 2015 . Jump up ^ `` The Man in the High Castle '' . BlackstoneAudio.com . Archived from the original on August 9 , 2010 .
+Retrieved January 10 , 2016 . Jump up ^ L.B. `` Audiobook review : The Man in the High Castle by Philip K. Dick , read by Tom Weiner '' . audiofilemagazine.com
+. Retrieved January 10 , 2016 . Jump up ^ `` The Man in the High Castle '' . Audible , Inc . Jump up ^ Muir , Pat ( October 5 , 2014 ) . `` Roslyn hopes new TV
+show brings 15 more minutes of fame '' . Yakima Herald . Retrieved March 28 , 2017 .
+</item 9>
+
+<item 10>
+The Man in the High Castle
+Nathanael West 's Miss Lonelyhearts ( 1933 ) is also mentioned in the text , written before the Roosevelt assassination divergence point that separates the
+world of The Man in the High Castle from ours . In this novella , `` Miss Lonelyhearts '' is a male newspaper journalist who writes anonymous advice as an agony
+aunt to forlorn readers during the height of the Great Depression ; hence , `` Miss Lonelyhearts '' tries to find consolation in religion , casual sex , rural
+vacations , and work , none of which provide him with the sense of authenticity and engagement with the outside world that he needs . West 's book is about the
+elusive quality of interpersonal relationships and quest for personal meaning at a time of political turmoil within the United States . Philip Dick used the I
+Ching to make decisions crucial to the plot of The Man in the High Castle just as characters within the novel use the I Ching to guide decisions . Reception (
+edit ) This section needs expansion with : further , broader statements aimed at encyclopedic , balanced views . You can help by adding to it .
+</item 10>
+=== END ITEM id=44d6cb93a30f2827 ===

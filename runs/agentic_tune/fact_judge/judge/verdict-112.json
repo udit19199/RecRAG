@@ -1,0 +1,19 @@
+[
+  {"id": "fccaf21d7536d2f7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+  ]},
+  {"id": "446a8c115661f6a2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+  ]}
+]

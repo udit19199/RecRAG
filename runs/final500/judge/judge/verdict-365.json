@@ -1,0 +1,57 @@
+[
+{"id": "7fbef92b77af3efd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "632dff9daa3e3e8f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "all of that, all of it, was built on lies,” Rehn declared to the jury"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders"}, {"item": 10, "quote": "Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "He defrauded sophisticated investors and lenders"}, {"item": 4, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will"}]},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 4, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+]},
+{"id": "4c9e115698f8b1cc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "0c8346e2a4faa65b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]}
+]},
+{"id": "e1270e3b27ca7b29", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "76782bcf6670e1ed", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]}
+]}
+]

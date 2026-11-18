@@ -1,0 +1,732 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=3ec08fa6285a9427 ===
+Gold sentences and facts:
+Sentence 0: In every High Court , there is a Chief Justice and many other judges whose number is defined by the President of India .
+  Fact 0.0: Every High Court has a Chief Justice.
+  Fact 0.1: Every High Court has many other judges.
+  Fact 0.2: The number of other judges in a High Court is defined by the President of India.
+
+Retrieved items:
+<item 1>
+Indian High Courts Act 1861
+The High Court of a State is the highest court of the State and all other courts of the State work under it . Normally there is one High Court in every State
+but there can be only one High Court for two or more States as well , according to the constitution . There is one High Court at Chandigarh for Punjab , Haryana
+and Union Territory of Chandigarh . Similarly there is one High Court at Guwahati which serves Assam , Arunachal Pradesh , Mizoram and Nagaland . Composition :
+In every High Court , there is a Chief Justice and many other judges whose number is defined by the President of India . Appointment of the Judges : The Chief
+Justice of a High Court is appointed by the President with the consultation of the Chief Justice of the Supreme Court and the Governor of the State . The other
+judges are appointed by the will of President , Governor and the Chief Justice of High Court . Qualifications for the Judges ( a ) He should be a citizen of
+India .
+</item 1>
+
+<item 2>
+Indian High Courts Act 1861
+Contents ( hide ) 1 Abolishing Existing Courts 2 Qualifications of High Court Judges 3 Judicial Tenure and Seniority 4 Jurisdiction 5 References Abolishing
+existing Courts ( edit ) The Act abolished the Supreme Courts at Calcutta , Madras , and Bombay ; the Sadar Diwani Adalat and the Sadar Nizamat Adalat at
+Calcutta ; Sadar Adalat and Faujdari Adalat at Madras ; Sadar Diwani Adalat and Faujdari Adalat at Bombay ( § 8 ) . Qualifications of High Court judges ( edit )
+Each High Court could consist of a chief justice and up to 15 judges . Under § 3 of the Act , judges could be selected from barristers ( with 5 years of
+experience ) , civil servants ( with 10 years of experience including 3 years as a zillah judge ) , judges of small cause courts or sudder ameen ( with 5 years
+of experience ) , or pleaders of lander courts or High Courts ( with 05 years of experience ) .
+</item 2>
+
+<item 3>
+President of the United States
+Administrative powers Suffice it to say that the President is made the sole repository of the executive powers of the United States , and the powers entrusted
+to him as well as the duties imposed upon him are awesome indeed . William Rehnquist , Nixon v. General Services Administration , 433 U.S. 425 ( 1977 ) (
+dissenting opinion ) The president is the head of the executive branch of the federal government and is constitutionally obligated to `` take care that the laws
+be faithfully executed '' . The executive branch has over four million employees , including members of the military . Presidents make numerous executive branch
+appointments : an incoming president may make up to 6,000 before taking office and 8,000 more while serving . Ambassadors , members of the Cabinet , and other
+federal officers , are all appointed by a president with the `` advice and consent '' of a majority of the Senate . When the Senate is in recess for at least
+ten days , the president may make recess appointments . Recess appointments are temporary and expire at the end of the next session of the Senate . The power of
+a president to fire executive officials has long been a contentious political issue .
+</item 3>
+
+<item 4>
+Vice President of the United States
+The House of Representatives would choose among the five candidates with the largest numbers of votes , with each state 's representatives together casting a
+single vote . In such a case , the person who received the highest number of votes but was not chosen president would become vice president . In the case of a
+tie for second , then the Senate would choose the vice president . The emergence of political parties and nationally coordinated election campaigns during the
+1790s ( which the Constitution 's framers had not contemplated ) soon frustrated this original plan . In the election of 1796 , Federalist John Adams came in
+first , but because the Federalist electors had divided their second vote amongst several vice presidential candidates , Democratic - Republican Thomas
+Jefferson came second . Thus , the president and vice president were from opposing parties . Conflict between the two arose early on over the increasingly
+turbulent relations between the U.S. and France . Ultimately , Jefferson became more an `` opposition leader '' , and actively sought to frustrate the president
+'s policies .
+</item 4>
+
+<item 5>
+Justice of the peace
+The court specifically recognized that in the aftermath of Gideon v. Wainwright ( 1963 ) , it made no sense to allow a case to be tried before a layperson
+incapable of understanding the legal arguments of the attorney to whom the defendant was entitled under Gideon . The remaining justice courts ( as well as
+municipal courts ) were eliminated by the passage of Proposition 220 in June 1998 , which merged all lower courts within the state judicial branch into the
+superior courts ( the courts of general jurisdiction ) . Under current California law , all California judges must be licensed attorneys . Notably , the Supreme
+Court of the United States sharply disagreed with California 's analysis of the Fourteenth Amendment in the landmark case of North v. Russell , 427 U.S. 328 (
+1976 ) , in which the court held that Kentucky 's use of nonlawyer judges in its police courts was not a violation of the Fourteenth Amendment guarantees of due
+process and equal protection of the laws .
+</item 5>
+
+<item 6>
+Indian High Courts Act 1861
+Qualifications for the Judges ( a ) He should be a citizen of India . ( b ) He should have been ( I ) a judge for 10 years of Subordinate court under the
+Judicial Service of the State or ( ii ) an Advocate for 10 years in a High Courts in India ( Article 217 ) . Tenure : Originally the age of the retirement of
+the judges of the High Courts was fixed at 60 but it was raised to 62 in 1963 according to the 15th amendment of the Constitution . Removal of the Judges : A
+judge may leave his office by resigning . He will send his letter of resignation to the President . His office would be considered to have been vacated if he is
+appointed as a judge of the Supreme Court or is transferred to some other High Court . A judge of a High Court may also be removed like a judge of the Supreme
+Court . A judge of High Court may be removed by the President if the Parliament passes a motion against him by an absolute majority and 2 / 3rd majority of the
+members present and voting , both the Houses sitting separately .
+</item 6>
+
+<item 7>
+Indian High Courts Act 1861
+Salary : The pay of the Chief Justice of a High Court is rupees 90,000 / - per month and that of the other judges is rupees 85,000 / - per month . Powers and
+Functions Original Jurisdiction : The original jurisdiction of the High Court is restricted . ( a ) Every High Court under Article 226 is empowered to issue
+writs , orders , directions including writs in the nature of Habeas Corpus , Mandamus , Prohibition , Quo - warranto and Certiorari or any of them to any person
+or authority with in its territory for the enforcement of the Fundamental Rights and for any other purpose . ( b ) The original jurisdiction of High Court
+extends to matters of admiralty , matrimonial , contempt of court and cases ordered to be transferred to High Court by lower court . ( c ) The High Courts of
+Mumbai , Kolkata and Chennai have original jurisdiction on hearing straightway cases involving the Christians and Parsies . ( d ) The High Courts of Mumbai ,
+Kolkata and Chennai exercise original civil jurisdiction when the amount involved is more than two thousand rupees .
+</item 7>
+
+<item 8>
+Indian High Courts Act 1861
+It exercises the power of superintendence and control over all courts and tribunals throughout the territory except the military tribunals . Judicial tenure and
+seniority ( edit ) Under § 5 of the Act , judges served at the pleasure of Her Majesty . The chief justice had precedence over judges , whereas judges had
+seniority based on appointment . Under § 14 , the chief justice had the power to form divisions of two or more judges to hear cases . Jurisdiction ( edit )
+Under article 9 of the Act , each High Court had `` all such powers and authority for and in relation to the administration of justice '' including original and
+appellate jurisdiction over civil , criminal , admiralty , vice-admiralty , testamentary , intestate , and matrimonial matters . References ( edit ) Jump up ^
+`` Indian High Courts Act 1861 '' . GKToday. 2011 - 10 - 17 . Retrieved 2017 - 03 - 20 . Jump up ^ Criminal Justice India Series : Punjab , 2002 . Allied
+Publishers . 2002 . p. 233 .
+</item 8>
+
+<item 9>
+Justice of the peace
+Majesty 's Courts and Tribunals Service Judges ' Council Civil and family courts ( show ) Supreme Court of the United Kingdom Privy Council Court of Appeal
+Master of the Rolls Court of Appeal judge High Court of Justice President of the Queen 's Bench President of the Family Division Chancellor of the High Court
+High Court judge County courts List of county court venues County Court Business Centre District judge Family Court Court of Protection Court of Chivalry
+Criminal courts ( show ) Supreme Court of the United Kingdom Court of Appeal Lord Chief Justice Court of Appeal judge High Court of Justice President of the
+Queen 's Bench High Court judge Crown Court List of Crown Court venues Circuit judge Recorder Magistrates ' courts District judge Justice of the Peace / Lay
+magistrates Criminal prosecution ( show ) Attorney General Director of Public Prosecutions Crown Prosecution Service Legal profession ( show ) Bar Council
+Barrister Law Society of England and Wales Solicitor Solicitor Advocate Main article : Magistrate ( England and Wales ) A magistrates ' court in England and
+Wales is composed of a bench of ( usually three ) JPs or magistrates , who dispense summary justice : that is they decide on offences which carry up to six
+months in prison ,
+</item 9>
+
+<item 10>
+Indian High Courts Act 1861
+Appellate Jurisdiction : The appellate jurisdiction of the High Courts extends so : ( a ) The High Court can hear appeals in civil cases if the amount involved
+in the case is at least Rs. 5000 . ( b ) The High Court in criminal cases hears the appeal in which the accused has been sentenced to four years imprisonment by
+the Sessions Judge . v ( c ) The death sentence awarded by Sessions Judge is subject to approval by the High Court . ( d ) The High Court hear the cases
+involving interpretation of the Constitution or Law . ( e ) The High Court hears the cases on income tax , sales tax etc . Power of Judicial Review : The States
+High Courts like the Supreme Court has the power of Judicial Review . A High Court has the power to strike down any law of the State or any order of the
+executive if it violates any provision of the constitution or curtails or takes any of the Fundamental Rights of the people . Administrative and Supervisory
+Power : The State High Court performs many administrative functions within its Territorial Jurisdiction .
+</item 10>
+=== END ITEM id=3ec08fa6285a9427 ===
+
+=== ITEM id=51dca886fe6fc9f9 ===
+Gold sentences and facts:
+Sentence 0: Rigor mortis is very important in meat technology . The onset of rigor mortis and its resolution partially determine the tenderness of meat . If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length .
+  Fact 0.0: Rigor mortis is very important in meat technology
+  Fact 0.1: The onset of rigor mortis partially determines the tenderness of meat
+  Fact 0.2: The resolution of rigor mortis partially determines the tenderness of meat
+  Fact 0.3: If post-slaughter meat is immediately chilled to 15 °C (59 °F), a phenomenon known as cold shortening occurs
+  Fact 0.4: Cold shortening is the phenomenon that occurs when post-slaughter meat is immediately chilled to 15 °C (59 °F)
+  Fact 0.5: In cold shortening, the muscle sarcomeres shrink to a third of their original length
+
+Retrieved items:
+<item 1>
+Rigor mortis
+ATP is required to cause separation of the actin - myosin cross-bridges during relaxation of muscle . When oxygen is no longer present , the body may continue
+to produce ATP via anaerobic glycolysis . When the body 's glycogen is depleted , the ATP concentration diminishes , and the body enters rigor mortis because it
+is unable to break those bridges . Additionally , calcium enters the cytosol after death . Calcium is released into the cytosol due to the deterioration of the
+sarcoplasmic reticulum . Also , the breakdown of the sarcolemma causes additional calcium to enter the cytosol . The calcium activates the formation of actin -
+myosin cross-bridging . Once calcium is introduced into the cytosol , it binds to the troponin of thin filaments , which causes the troponin - tropomyosin
+complex to change shape and allow the myosin heads to bind to the active sites of actin proteins .
+</item 1>
+
+<item 2>
+Rigor mortis
+One such factor is the ambient temperature . When conditions are warm , the onset and pace of rigor mortis are sped up by providing a conducive environment for
+the metabolic processes that cause decay . Low temperatures , however , slow them down . Therefore , for a person who dies outside in frozen conditions rigor
+mortis may last several days more than normal , so investigators may have to abandon it as a tool for determining time of death . See also ( edit ) Cadaveric
+spasm References ( edit ) ^ Jump up to : Saladin , K.S. 2010 . Anatomy & Physiology : 6th edition . McGraw - Hill . ^ Jump up to : Hall , John E. , and Arthur
+C. Guyton . Guyton and Hall Textbook of Medical Physiology . Philadelphia , PA : Saunders / Elsevier , 2011 . MD Consult . Web . 26 Jan. 2015 . Jump up ^
+Fremery , Donald ( 3 February 1959 ) . `` Biochemistry of Chicken Muscle as Related to Rigor Mortis and Tenderization '' . Journal of Food Sciences . 25 ( 1 ) :
+73 -- 87 .
+</item 2>
+
+<item 3>
+Rigor mortis
+In rigor mortis myosin heads continue binding with the active sites of actin proteins via adenosine diphosphate ( ADP ) , and the muscle is unable to relax
+until further enzyme activity degrades the complex . Normal relaxation would occur by replacing ADP with ATP , which would destabilize the myosin - actin bond
+and break the cross-bridge . However , as ATP is absent , there must be a breakdown of muscle tissue by enzymes ( endogenous or bacterial ) during decomposition
+. As part of the process of decomposition , the myosin heads are degraded by the enzymes , allowing the muscle contraction to release and the body to relax .
+Decomposition of the myofilaments occurs 48 to 60 hours after the peak of rigor mortis , which occurs approximately 13 hours after death . Physical Changes (
+edit ) At the time of death , a condition called `` primary flaccidity '' occurs . Following this , the muscles stiffen in rigor mortis . All muscles in the
+body are affected . Starting between two and six hours following death , rigor mortis begins with the eyelids , neck , and jaw .
+</item 3>
+
+<item 4>
+Rigor mortis
+Journal of Food Sciences . 25 ( 1 ) : 73 -- 87 . doi : 10.1111 / j. 1365 - 2621.1960. tb17938. x . Retrieved 2 December 2015 . Jump up ^ About.com Jump up ^ ``
+Classroom Resources - Argonne National Laboratory '' . Jump up ^ `` Rigor Mortis and Other Postmortem Changes - Burial , Body , Life , Cause , Time , Person ,
+Human , Putrefaction . '' Encyclopedia of Death and Dying. 2011 . Web . 4 December 2011 . <
+http://www.deathreference.com/Py-Se/Rigor-Mortis-and-Other-Postmortem-Changes.html > . Jump up ^ `` New Zealand Journal of Agricultural Research '' . Jump up ^
+Peress , Robin . `` Discovery Health `` Rigor Mortis at the Crime Scene '' '' Discovery Health `` Health Guides '' Discovery Fit & Health , 2011 . Web . 4
+December 2011 .
+</item 4>
+
+<item 5>
+Rigor mortis
+The sequence may be due to different lactic acid levels among different muscles , which is directly related to the difference in glycogen levels and different
+types of muscle fibers . Rigor mortis then spreads to the other muscles , including the internal organs , within the next four to six hours . The onset of rigor
+mortis is affected by the individual 's age , sex , physical condition , and muscular build . Rigor mortis may not be perceivable in many infant and child
+corpses due to their smaller muscle mass . Applications in meat industry ( edit ) Rigor mortis is very important in meat technology . The onset of rigor mortis
+and its resolution partially determine the tenderness of meat . If the post-slaughter meat is immediately chilled to 15 ° C ( 59 ° F ) , a phenomenon known as
+cold shortening occurs , whereby the muscle sarcomeres shrink to a third of their original length . Cold shortening is caused by the release of stored calcium
+ions from the sarcoplasmic reticulum of muscle fibers , in response to the cold stimulus . The calcium ions trigger powerful muscle contraction aided by ATP
+molecules .
+</item 5>
+
+<item 6>
+Rigor mortis
+Rigor mortis - wikipedia Rigor mortis Jump to : navigation , search This article is about the sign of death . For other uses , see Rigor mortis ( disambiguation
+) . Stages of death Pallor mortis Algor mortis Rigor mortis Livor mortis Putrefaction Decomposition Skeletonization Fossilization Rigor mortis ( Latin : rigor
+`` stiffness '' , mortis `` of death '' ) or postmortem rigidity , the third stage of death , is one of the recognizable signs of death , caused by chemical
+changes in the muscles post mortem , which cause the limbs of the corpse to stiffen . In humans , rigor mortis can occur as soon as 4 hours post mortem .
+Contents ( hide ) 1 Physiology 2 Physical changes 3 Applications in meat industry 4 Application in forensic pathology 5 See also 6 References 7 Bibliography
+Physiology ( edit ) After death , respiration in an organism ceases , depleting the source of oxygen used in the making of adenosine triphosphate ( ATP ) .
+</item 6>
+
+<item 7>
+Rigor mortis is postmortem muscle stiffening caused by ATP depletion and calcium-driven actin–myosin bonds that muscles can no longer release. It typically
+begins 2–6 hours after death, starting in the eyelids, neck, and jaw, peaks around 13 hours, and resolves as decomposition breaks down muscle proteins. Timing
+varies with age, physique, and temperature, so it can help estimate time of death but is not definitive. In meat processing, rigor affects tenderness
+</item 7>
+
+<item 8>
+Rigor mortis
+The calcium ions trigger powerful muscle contraction aided by ATP molecules . To prevent cold shortening , a process known as electrical stimulation is carried
+out , especially in beef carcasses , immediately after slaughter and skinning . In this process , the carcass is stimulated with alternating current , causing
+it to contract and relax , which depletes the ATP reserve from the carcass and prevents cold shortening . Application in forensic pathology ( edit ) The degree
+of rigor mortis may be used in forensic pathology , to determine the approximate time of death . A dead body holds its position as rigor mortis sets in . If the
+body is moved after death , but before rigor mortis begins , forensic techniques such as livor mortis can be applied . If the position in which a body is found
+does not match the location where it is found ( for example , if it is flat on its back with one arm sticking straight up ) , that could mean someone moved it .
+Several factors also affect the progression of rigor mortis , and investigators take these into account when estimating the time of death . One such factor is
+the ambient temperature .
+</item 8>
+
+<item 9>
+Rigor mortis
+2011 . Web . 4 December 2011 . < http://www.deathreference.com/Py-Se/Rigor-Mortis-and-Other-Postmortem-Changes.html > . Saladin , Kenneth . Anatomy and
+Physiology : The Unity of Form and Function , 6th ed . McGraw - Hill . New York , 2012 . Peress , Robin . `` Discovery Health `` Rigor Mortis at the Crime Scene
+'' '' Discovery Health `` Health Guides '' Discovery Fit & Health , 2011 . Web . 4 December 2011 . <
+http://health.howstuffworks.com/diseases-conditions/death-dying/rigor-mortis-cause2.htm > . Death Outline In medicine Cell death Necrosis Avascular necrosis
+Coagulative necrosis Liquefactive necrosis Gangrenous necrosis Caseous necrosis Fat necrosis Fibrinoid necrosis Temporal lobe necrosis Programmed cell death
+AICD Anoikis Apoptosis Autophagy Intrinsic apoptosis Necroptosis Paraptosis Parthanatos Phenoptosis Pseudoapoptosis Pyroptosis Autolysis
+</item 9>
+
+<item 10>
+Rigor mortis
+Web . 4 December 2011 . < http://health.howstuffworks.com/diseases-conditions/death-dying/rigor-mortis-cause2.htm > Jump up ^ Estimating The Time of Death ,
+ExploreForensics < http://www.exploreforensics.co.uk/estimating-the-time-of-death.html Bibliography ( edit ) Bear , Mark F ; Connors , Barry W. ; Paradiso ,
+Michael A. , Neuroscience , Exploring the Brain , Philadelphia : Lippincott Williams & Wilkins ; Third Edition ( 1 February 2006 ) . ISBN 0 - 7817 - 6003 - 8
+Robert G. Mayer , `` Embalming : history , theory , and practice '' , McGraw - Hill Professional , 2005 , ISBN 0 - 07 - 143950 - 1 `` Rigor Mortis and Other
+Postmortem Changes - Burial , Body , Life , Cause , Time , Person , Human , Putrefaction . '' Encyclopedia of Death and Dying. 2011 . Web . 4 December 2011 .
+</item 10>
+=== END ITEM id=51dca886fe6fc9f9 ===
+
+=== ITEM id=8dc2ec26b6ebe70f ===
+Gold sentences and facts:
+Sentence 0: A transfer case is a part of the drivetrain of four - wheel - drive , all - wheel - drive , and other multiple powered axle vehicles . The transfer case transfers power from the transmission to the front and rear axles by means of drive shafts . It also synchronizes the difference between the rotation of the front and rear wheels , and may contain one or more sets of low range gears for off - road use .
+  Fact 0.0: A transfer case is a part of the drivetrain of four-wheel-drive, all-wheel-drive, and other multiple powered axle vehicles.
+  Fact 0.1: A transfer case transfers power from the transmission to the front and rear axles by means of drive shafts.
+  Fact 0.2: A transfer case synchronizes the difference between the rotation of the front and rear wheels.
+  Fact 0.3: A transfer case may contain one or more sets of low range gears for off-road use.
+
+Retrieved items:
+<item 1>
+Transfer case
+Married transfer cases are bolted directly to the transmission , usually between the transmission 's output shaft and the rear or main driveshaft . Sometimes a
+married transfer case is an integral part of the transmission and the two components share the same housing or `` case '' , as is commonly found on recent
+Subaru products and some other all - wheel - drive cars . Divorced / independent ( edit ) A divorced or independent transfer case is completely separate from
+the transmission . It is located further down the driveline than a married transfer case and connected to the transmission output shaft by a short driveshaft .
+Independent transfer cases are used on very long wheelbase vehicles , such as commercial trucks or military trucks . Transfer case Shift type ( edit ) M.S.O.F.
+( edit ) Manual Shift On - the - Fly transfer cases have a selector lever on the driver 's side floor transmission hump and may also have either two sealed
+automatic front axle locking hubs or two manual front axle hub selectors of `` LOCK '' and `` UNLOCK '' or `` FREE '' . To engage the four - wheel - drive
+system the vehicle must be moving at a low speed , the speed at which 4x4 can be engaged depends on the vehicle .
+</item 1>
+
+<item 2>
+Transfer case
+1 M.S.O.F. 2.3. 2 E.S.O.F. 3 See also 4 References Functions ( edit ) The transfer case receives power from the transmission and sends it to both the front and
+rear axles . This can be done with gears , hydraulics , or chain drive . On some vehicles , such as four - wheel - drive trucks or vehicles intended for off -
+road use , this feature is controlled by the driver . The driver can put the transfer case into either `` two - wheel - drive '' or `` four - wheel - drive ''
+mode . This is sometimes accomplished by means of a shifter , similar to that in a manual transmission . On some vehicles this may be electronically operated by
+a switch instead . Some vehicles , such as all - wheel - drive sports cars , have transfer cases that are not selectable . Such a transfer case is permanently
+`` locked '' into all - wheel - drive mode . Transfer cases that are designed to allow for normal road use synchronize the difference between the rotation of
+the front and rear wheels , in much the same way the differential acts on a given axle . This is necessary because the front and rear tires never turn at the
+same speed .
+</item 2>
+
+<item 3>
+Transfer case
+Transfer case - wikipedia Transfer case Jump to : navigation , search For the US military use of the term , see coffin . Inside of a 231 New Process Gear
+transfer case . Part - time / Manual , shift on the fly A transfer case is a part of the drivetrain of four - wheel - drive , all - wheel - drive , and other
+multiple powered axle vehicles . The transfer case transfers power from the transmission to the front and rear axles by means of drive shafts . It also
+synchronizes the difference between the rotation of the front and rear wheels , and may contain one or more sets of low range gears for off - road use .
+Contents ( hide ) 1 Functions 2 Types 2.1 Drive type 2.1. 1 Gear - driven 2.1. 2 Chain - driven 2.2 Housing type 2.2. 1 Married 2.2. 2 Divorced / independent
+2.3 Transfer case shift type 2.3. 1 M.S.O.F. 2.3. 2 E.S.O.F.
+</item 3>
+
+<item 4>
+A transfer case is a drivetrain component that routes transmission power to front and rear axles, synchronizes their rotation, and may provide axle locking and
+low-range gearing for extra torque and slow off-road travel. It may be driver-selectable or permanent AWD. Types vary by gear or chain drive, mounting
+(transmission-mounted or separate), and controls: manual or electronic shift-on-the-fly. Part-time systems generally must not be used on dry pavement unless
+designed to accommodate differing axle speeds.
+</item 4>
+
+<item 5>
+Transfer case
+See also ( edit ) NP - 205 AMC / Jeep Transmissions Jeep four wheel drive systems Mitsubishi Super Select References ( edit ) Jump up ^
+http://www.cdxetextbook.com/trans/finalDrives/allWheel/transfercasediff.html Transfer case differential action Jump up ^
+http://www.fourwheeler.com/techarticles/68958_how_transfer_cases_work/index.html How Transfer Cases Work Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Transfer_case&oldid=805616544 '' Categories : Vehicle technology Four - wheel drive layout Hidden categories : All
+articles with unsourced statements Articles with unsourced statements from May 2015 Articles with unsourced statements from March 2012 Talk Contents About
+Wikipedia فارسی 日本 語 Polski Русский Simple English Svenska Українська Edit links This page was last edited on 16 October 2017 , at 15 : 12 . Text is available
+under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy
+.
+</item 5>
+
+<item 6>
+Transfer case
+This is only for the four - wheel - drive high setting . To engage the four - wheel - drive low setting , the vehicle must be stopped and the transmission must
+be shifted to neutral , then the four - wheel - drive low can be selected . ESOF ( edit ) Electronic Shift On - the - Fly ( ESOF ) transfer cases have a dash -
+mounted selector switch or buttons with front sealed automatic locking axle hubs or drive flanges . Some vehicles , such as Jeeps , also have what is called
+SelecTrac , which has a slider switch on the center console . Unlike the manual transfer case , this system has a transfer case motor . To engage the four -
+wheel - drive system the vehicle must be moving at a lower speeds , the speed at which 4x4 can be engaged depends on the vehicle . This is only for the four -
+wheel - drive high setting . To engage the four - wheel - drive low setting , the vehicle must be stopped and the transmission must be shifted to neutral , then
+the four - wheel - drive low can be selected .
+</item 6>
+
+<item 7>
+Transfer case
+Those used in sports cars and performance sedans are usually `` transparent '' to the driver ; there is no shifter or select lever . Drive type ( edit ) Gear -
+driven ( edit ) There are two different types of internal power - transfer mechanism found in most transfer cases . Gear - driven transfer cases use sets of
+gears to drive either the front or both the front and rear driveshafts . These are generally strong , heavy units that are used in large trucks , but there are
+currently several gear drive cases in production for passenger cars . Chain - driven ( edit ) Chain - driven transfer cases use a chain to drive most often only
+one axle , but can drive both axles . Chain - driven transfer cases are quieter and lighter than gear - driven ones . They are used in vehicles such as compact
+trucks , full size trucks , Jeeps and SUVs . Some off - road driving enthusiasts modify their vehicles to use gear - driven transfer cases , accepting the
+additional weight and noise to gain the extra strength they generally provide . Housing type ( edit ) Married ( edit ) Transfer cases are also classified as
+either `` divorced '' / independent or `` married '' .
+</item 7>
+
+<item 8>
+Transfer case
+By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit
+organization . About Wikipedia
+</item 8>
+
+<item 9>
+Transfer case
+This is necessary because the front and rear tires never turn at the same speed . Different rates of tire rotation are generally due to different tire diameters
+( since front and rear tires inevitably wear at different rates ) and different gear ratios in the front and rear differentials since manufacturers will often
+have a slightly lower ratio in the front vs. the rear to help with control ( such as a 3.55 : 1 in the rear differential and a 3.54 : 1 in the front
+differential ) . If the transfer case did not make up the difference between the two different rates of rotation , binding would occur and the transfer case
+could become damaged . This is also why a transfer case that is not designed for on - road use must never be driven on dry pavement . Transfer cases designed
+for off - road use can mechanically lock the front and rear axles when needed ( e.g. when one of the axles is on a slippery surfaces or stuck in mud , whereas
+the other has better traction ) . This is the equivalent to the differential lock . The transfer case may contain one or more sets of low range gears for off -
+road use .
+</item 9>
+
+<item 10>
+Transfer case
+The transfer case may contain one or more sets of low range gears for off - road use . Low range gears are engaged with a shifter or electronic switch . On many
+transfer cases , this shifter is the same as the one that selects 2WD or 4WD operation . Low range gears allow the vehicle to drive at much slower speeds while
+still operating within the usable power band / RPM range of the engine . This also increases the torque available at the axles . Low - range gears are used
+during slow - speed or extreme off - road maneuvers , such as rockcrawling , navigating dangerous roads , or when pulling a heavy load . This feature is often
+absent on all - wheel - drive cars . Some very large vehicles , such as heavy equipment or military trucks , have more than one low - range gear . Types ( edit
+) Transfer cases used on `` part - time '' four - wheel - drive off - road vehicles such as trucks , truggies , rock - crawling vehicles , and some military
+vehicles generally allow the driver to select 2WD or 4WD , as well as high or low gear ranges .
+</item 10>
+=== END ITEM id=8dc2ec26b6ebe70f ===
+
+=== ITEM id=329b1cf615a5dc56 ===
+Gold sentences and facts:
+Sentence 0: Geoffrey Dyson Palmer , OBE ( born 4 June 1927 ) is an English actor known for his roles in British television sitcoms playing Jimmy Anderson in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) , Ben Parkinson in Butterflies ( 1978 -- 83 ) and Lionel Hardcastle in As Time Goes By ( 1992 -- 2005 ) . His film appearances include A Fish Called Wanda ( 1988 ) , The Madness of King George ( 1994 ) , Mrs. Brown ( 1997 ) , and Tomorrow Never Dies ( 1997 ) .
+  Fact 0.0: Geoffrey Dyson Palmer, OBE, was born on 4 June 1927.
+  Fact 0.1: Geoffrey Dyson Palmer holds the OBE honour.
+  Fact 0.2: Geoffrey Dyson Palmer is an English actor.
+  Fact 0.3: Geoffrey Dyson Palmer is known for his roles in British television sitcoms.
+  Fact 0.4: Geoffrey Dyson Palmer played Jimmy Anderson in The Fall and Rise of Reginald Perrin, which aired from 1976 to 1979.
+  Fact 0.5: Geoffrey Dyson Palmer played Ben Parkinson in Butterflies, which aired from 1978 to 1983.
+  Fact 0.6: Geoffrey Dyson Palmer played Lionel Hardcastle in As Time Goes By, which aired from 1992 to 2005.
+  Fact 0.7: Geoffrey Dyson Palmer's film appearances include A Fish Called Wanda (1988).
+  Fact 0.8: Geoffrey Dyson Palmer's film appearances include The Madness of King George (1994).
+  Fact 0.9: Geoffrey Dyson Palmer's film appearances include Mrs. Brown (1997).
+  Fact 0.10: Geoffrey Dyson Palmer's film appearances include Tomorrow Never Dies (1997).
+
+Retrieved items:
+<item 1>
+Geoffrey Palmer (actor)
+as Field Marshal Douglas Haig Inspector Morse : `` The Infernal Serpent '' ( 1990 ) as Matthew Copley - Barnes Bergerac ( 1990 ) `` Roots of Evil '' as Nigel
+Carter As Time Goes By ( 1992 -- 2005 ) as Lionel Hardcastle The Legacy of Reginald Perrin ( 1996 ) as Jimmy Anderson Alice Through the Looking Glass ( 1998 )
+as White King The Savages ( 2001 ) as Donald The 1940s House ( 2001 ) as Narrator Absolute Power ( 2003 ) as Lord Harcourt Grumpy Old Men ( 2003 -- 2004 , 2006
+) as Narrator He Knew He Was Right ( 2004 ) as Sir Marmaduke Rowley Grumpy Old Holidays ( 2006 ) as Narrator Ashes to Ashes : `` Episode 8 '' ( 2008 ) ; as Lord
+Scarman The Long Walk to Finchley ( 2008 ) ;
+</item 1>
+
+<item 2>
+Robbie Coltrane
+Conway `` A Matter of Principle '' 1982 Sin on Saturday 1982 Five Go Mad in Dorset Female shopkeeper / Male gypsy Season 1 , Episode 1 of The Comic Strip
+Presents Are You Being Served Dynamite - truck driver on CB Radio `` Calling All Customers '' Alfresco various 1984 The Young Ones Doctor in Episode `` Bambi ''
+, Bouncer in Episode `` Oil '' Blackadder the Third Samuel Johnson `` Ink and Incapability '' Tutti Frutti Danny McGlone Nominated -- British Academy Television
+Award for Best Actor 1988 Blackadder 's Christmas Carol The Spirit of Christmas 1989 The Robbie Coltrane Special LWT comedy Special 1990 Danny Champion of the
+World Victor Hazell 1991 Screen One Psychiatrist Liam Kane `` Alive And Kicking '' 1993 The Legend of Lochnagar The old man TV film , voice 1993 -- 1995 2006
+Cracker Dr.
+</item 2>
+
+<item 3>
+Geoffrey Palmer (actor)
+Two sitcom roles brought him attention in the 1970s : the hapless brother - in - law of Reggie Perrin in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) ,
+and the phlegmatic Ben Parkinson in Carla Lane 's Butterflies ( 1978 -- 83 ) . He has continued to appear in productions written by Perrin creator David Nobbs ,
+the latest being the radio comedy The Maltby Collection . He starred opposite Judi Dench for over a decade in the BBC situation comedy As Time Goes By ( 1992 --
+2005 ) . During this time he also appeared with Dench in other productions , including the James Bond film Tomorrow Never Dies , in which he portrayed Admiral
+Roebuck , and Mrs. Brown , playing Sir Henry Ponsonby to Dench 's Queen Victoria . He played Doctor Price in the Fawlty Towers episode `` The Kipper and the
+Corpse '' , determined to get breakfast amidst the confusion caused by the death of a guest and Basil 's inept way of handling the emergency .
+</item 3>
+
+<item 4>
+Robbie Coltrane
+South Atlantic Raiders GLC : The Carnage Continues ... The Pope Must Die Detectives on the Edge of a Nervous Breakdown Churchill : The Hollywood Years The Hunt
+for Tony Blair Related articles Bad News Bad News ( album ) Bootleg 20th Century Coyote French and Saunders BAFTA TV Award for Best Actor Paul Rogers ( 1955 )
+Peter Cushing ( 1956 ) Michael Gough ( 1957 ) Michael Hordern ( 1958 ) Donald Pleasence ( 1959 ) Patrick McGoohan ( 1960 ) Lee Montague ( 1961 ) Rupert Davies (
+1962 ) Harry H. Corbett ( 1963 ) Alan Badel ( 1964 ) Patrick Wymark ( 1965 ) Alan Badel ( 1966 ) Warren Mitchell ( 1967 ) Eric Porter ( 1968 ) Roy Dotrice (
+1969 ) Edward Woodward ( 1970 ) Keith Michell ( 1971 ) John Le Mesurier ( 1972 ) Anthony Hopkins ( 1973 ) Frank Finlay ( 1974 ) Peter Barkworth ( 1975 ) John
+Hurt ( 1976 ) Derek Jacobi (
+</item 4>
+
+<item 5>
+Robbie Coltrane
+) Bill Nighy ( 2004 ) Rhys Ifans ( 2005 ) Mark Rylance ( 2006 ) Jim Broadbent ( 2007 ) Andrew Garfield ( 2008 ) Stephen Dillane ( 2009 ) Kenneth Branagh ( 2010
+) Daniel Rigby ( 2011 ) Dominic West ( 2012 ) Ben Whishaw ( 2013 ) Sean Harris ( 2014 ) Jason Watkins ( 2015 ) Mark Rylance ( 2016 ) Adeel Akhtar ( 2017 ) VIAF
+: 107686124 LCCN : no95038681 ISNI : 0000 0001 1002 5330 GND : 140684794 SUDOC : 110194942 BNF : cb14031105k ( data ) SNAC : w6320rb1 Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Robbie_Coltrane&oldid=822199192 '' Categories : 21st - century Scottish male actors 1950 births Living people Alumni
+of the University of Edinburgh BAFTA winners ( people ) Alumni of the Glasgow School of Art The
+</item 5>
+
+<item 6>
+Robbie Coltrane
+Sgt . Troy 1985 Defence of the Realm Leo McAskey 1986 Caravaggio Scipione 1986 Mona Lisa Thomas Eat the Rich Jeremy 1988 Fruit Machine , The The Fruit Machine
+Annabelle 1989 Henry V Falstaff 1989 Bert Rigby , You 're a Fool Sid Trample 1989 Let It Ride Ticket Seller 1989 Danny , the Champion of the World Victor Hazell
+1989 Slipstream Montclaire 1990 Midnight Breaks Fat 1990 Nuns on the Run Charlie McManus / Sister Inviolata 1990 Perfectly Normal Alonzo Turner 1991 Pope Must
+Die , The The Pope Must Die The Pope 1991 Triple Bogey on a Par Five Hole Steffano Baccardi Oh , What a Night Todd Nominated -- Genie Award for Best Performance
+by an Actor in a Supporting Role 1993 Boswell & Johnson 's Tour of the Western Isles Dr. Samuel Johnson 1993 Adventures of Huck Finn , The The Adventures of
+Huck Finn Duke 1995 GoldenEye Valentin Dmitrovich Zukovsky 1997 Buddy Dr.
+</item 6>
+
+<item 7>
+Robbie Coltrane
+Jaggers 2014 Effie Doctor Television ( edit ) Year Title Role Notes 1979 Play for Today Jimmie `` Waterloo Sunset '' 1980 The Lost Tribe Border Post Guard ``
+Keep Us Alive '' 1981 Metal Mickey Jason `` Mickey the Demon Barber '' 1981 -- 1984 A Kick Up the Eighties All ten episodes 1981 Keep It in the Family Mr.
+</item 7>
+
+<item 8>
+Robbie Coltrane
+He played the part of Falstaff in Kenneth Branagh 's Henry V ( 1989 ) He co-starred with Eric Idle in Nuns on the Run ( 1990 ) , and played the Pope in The Pope
+Must Die ( 1991 ) . He also played a would - be private detective obsessed with Humphrey Bogart in the TV play The Bogie Man . His roles continued in the 1990s
+with the TV series Cracker ( 1993 -- 1996 , returning in 2006 for a one - off special ) , in which he starred as forensic psychologist Dr. Edward `` Fitz ''
+Fitzgerald . The role won him three BAFTA awards . Roles in bigger films followed ; the James Bond films GoldenEye ( 1995 ) and The World Is Not Enough ( 1999 )
+, a supporting role in From Hell ( 2001 ) , as well as half - giant Rubeus Hagrid in the Harry Potter films ( 2001 -- 2011 ) . J.K.
+</item 8>
+
+<item 9>
+Geoffrey Palmer (actor)
+Geoffrey Palmer ( actor ) - wikipedia Geoffrey Palmer ( actor ) Jump to : navigation , search Geoffrey Palmer OBE Palmer performing at A Breath of Fresh Air ,
+June 2008 ( 1927 - 06 - 04 ) 4 June 1927 ( age 90 ) London , England Occupation Actor Years active 1958 -- present Spouse ( s ) Sally Green ( m . 1963 )
+Children 2 , including Charles Palmer Geoffrey Dyson Palmer , OBE ( born 4 June 1927 ) is an English actor known for his roles in British television sitcoms
+playing Jimmy Anderson in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) , Ben Parkinson in Butterflies ( 1978 -- 83 ) and Lionel Hardcastle in As Time
+Goes By ( 1992 -- 2005 ) . His film appearances include A Fish Called Wanda ( 1988 ) , The Madness of King George ( 1994 ) , Mrs. Brown ( 1997 ) , and Tomorrow
+Never Dies ( 1997 ) .
+</item 9>
+
+<item 10>
+Geoffrey Palmer (actor)
+Terence `` A Surfeit of H2O '' ( 1965 ) as Martin Smythe The Saint : `` The Rough Diamonds '' ( 1963 ) as Pete Ferguson Gideon 's Way ( TV Series ) `` The Alibi
+Man '' ( 1965 ) as Jeff Grant The Baron : `` Masquerade '' ( 1966 ) as Anstruther `` The Killing '' ( 1966 ) as Anstuther The Wednesday Play : Cathy Come Home (
+1966 ) as Property Agent Mrs Thursday ( 1966 ) as Henry Baxter Doctor Who : Doctor Who and the Silurians ( 1970 ) as Masters The Mutants ( 1972 ) as
+Administrator `` Voyage of the Damned '' ( 2007 ) as Captain Hardaker Colditz ( 1972 ) as Doc The Fall and Rise of Reginald Perrin ( 1976 -- 1979 ) as Jimmy
+Anderson Butterflies ( 1978 -- 1983 ) as Ben Parkinson The Professionals ( 1978 ) as Sinclair in `` Where The Jungle Ends '' Fawlty Towers : `` The Kipper and
+the Corpse '' ( 1979 ) as Dr.
+</item 10>
+=== END ITEM id=329b1cf615a5dc56 ===
+
+=== ITEM id=6b50248fed605007 ===
+Gold sentences and facts:
+Sentence 0: A defensive three - second violation , also known as illegal defense , is a basketball rules infraction in the National Basketball Association ( NBA ) introduced in the 2001 -- 2002 season . It is assessed when a member of the defending team spends more than three seconds in the free throw lane ( also known as the 16 - foot lane , or colloquially as `` in the paint '' ) while not actively guarding an opponent . To be considered actively guarding , a defender must be within arm 's length of an opponent and in a guarding position . A three - second count is suspended if :
+  Fact 0.0: A defensive three-second violation is also known as illegal defense.
+  Fact 0.1: A defensive three-second violation is a basketball rules infraction in the National Basketball Association (NBA).
+  Fact 0.2: The defensive three-second rule was introduced in the 2001-2002 season.
+  Fact 0.3: A defensive three-second violation is assessed when a member of the defending team spends more than three seconds in the free throw lane while not actively guarding an opponent.
+  Fact 0.4: The free throw lane is also known as the 16-foot lane.
+  Fact 0.5: The free throw lane is colloquially known as 'in the paint'.
+  Fact 0.6: To be considered actively guarding, a defender must be within arm's length of an opponent.
+  Fact 0.7: To be considered actively guarding, a defender must be in a guarding position.
+  Fact 0.8: A three-second count is suspended under conditions listed after the word 'if'.
+
+Retrieved items:
+<item 1>
+NBC Sunday Night Football
+Then the banner returns to normal and show the change in the team 's score . Additionally ( beginning with Week 9 ) , timeout indicators were added below each
+team 's respective scores . For the 2010 season , the timeout indicators were changed to three white trapezoids below the team abbreviations , and the play
+clock was moved from above the team in possession of the football to above the game clock ( for the final two minutes of regulation and if necessary , overtime
+) . The down markers also changed in 2010 , which is now featuring the team logo next to the down marker . 2012 -- 14 ( edit ) The scoring banner used from 2012
+to 2014 , starting with the 2011 NFL Wild Card playoffs to Week 17 of the 2014 NFL regular season . Notice the addition of timeout indicators at the bottom ,
+and the cleaner and larger looking font in the team 's initials .
+</item 1>
+
+<item 2>
+American League
+Most umpires made the switch to the inside protector , led by Don Denkinger in 1975 and Jim Evans the next year , although several did not , including Bill
+Haller , Lou DiMuro , George Maloney , and Jerry Neudecker , who became the last MLB umpire to use the outside protector in 1985 . In 1994 , the league , along
+with the National League , reorganized again , into three divisions ( East , West , and Central ) and added a third round to the playoffs in the form of the
+American League Division Series , with the best second - place team advancing to the playoffs as a wild - card team , in addition to the three divisional
+champions . In 1998 , the newly franchised Tampa Bay Devil Rays joined the league , and the Arizona Diamondbacks joined the National League : i.e. , each league
+each added a fifteenth team . An odd number of teams per league meant that at least one team in each league would have to be idle on any given day , or
+alternatively that odd team out would have had to play an interleague game against its counterpart in the other league .
+</item 2>
+
+<item 3>
+Defensive three-second violation
+`` PBA get fresh look this season '' . Arab News . Retrieved January 13 , 2014 . Jump up ^ `` WNBA Announces Rules Changes for 2013 Season '' . WNBA . Retrieved
+Dec 16 , 2012 . Basketball ( outline ) General topics History of basketball James Naismith Variations of basketball Leagues Statistics Glossary of terms Index
+of articles Rules Bonus Jump ball Officials Turnover Violation 3 seconds Offense Defense 5 seconds Basket interference Carrying Double dribble Goaltending Shot
+clock Traveling Foul Flagrant Personal Technical Game play Air ball Alley - oop Assist Backboard shattering Ball hog Block Buzzer beater Cherry picking Dribble
+Crossover Dunk Euro step Fadeaway Fast break Fly Flop Jump shot Layup Finger roll Field goal Four - point play Free throw Hook shot Moves Pick and roll
+Positions Posterized Playbook Rebound Point Screen Back screen Slashing Steal Three - pointer Three - point play Uncontested shot Strategy General Sixth man
+Offense Continuity offense Flex Shuffle UCLA High Post Wheel Dribble drive motion Four corners Motion Princeton Run and gun Grinnell System Nellie Ball Small
+ball Triangle Defense 1
+</item 3>
+
+<item 4>
+Defensive three-second violation
+corners Motion Princeton Run and gun Grinnell System Nellie Ball Small ball Triangle Defense 1 - 2 - 1 - 1 1 -- 3 -- 1 2 -- 3 zone Amoeba Box - and - one Double
+team Full - court press Hack - a-Shaq Jordan Rules Line Man - to - man Match - up zone Triangle - and - two Zone Equipment Backboard Ball Breakaway rim Court
+Half court Key Net Possession arrow Whistle Clothing Basketball sleeve Finger sleeve Air Jordan Chuck Taylor All - Stars Miscellaneous 100 - point scorers 50 --
+40 -- 90 club AAU All - Americans AAU champions Mikan Drill Player tracking Shootaround Tip drill Winning streaks This basketball - related article is a stub .
+You can help Wikipedia by expanding it . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Defensive_three-second_violation&oldid=803130800 ''
+Categories : Basketball penalties Basketball stubs Hidden categories : Wikipedia articles needing clarification from November 2015 All stub articles Talk About
+Wikipedia Français Edit links This page was last edited on 30 September 2017 , at 17 : 04 . About Wikipedia
+</item 4>
+
+<item 5>
+2017–18 NBA season
+`` D - League salaries , two - way contracts increase NBA Draft early entries '' . CollegeBasketballTalk . Retrieved September 20 , 2017 . Jump up ^ Mahoney ,
+Brian . `` NBA referees can rule closeouts as flagrants or technical fouls '' . NBA.com . Retrieved September 22 , 2017 . Jump up ^ Bushnell , Henry . `` The
+NBA is cracking down on dangerous Zaza-esque closeouts '' . sports.yahoo.com . Retrieved September 22 , 2017 . Jump up ^ Boone , Kyle ( September 22 , 2017 ) .
+`` The NBA is finally cracking down on James Harden 's foul - drawing antics '' . CBSSports.com . Retrieved October 4 , 2017 . Jump up ^ `` NBA implementing '
+Zaza Pachulia , ' ' James Harden ' rules '' . NBCSports.com . September 21 , 2017 . Retrieved October 4 , 2017 . Jump up ^ `` NBA Board Of Governors Approves
+Changes To Draft Lottery System '' . NBA.com .
+</item 5>
+
+<item 6>
+2017–18 NBA season
+Informally dubbed as the `` Zaza Pachulia rule '' . Also , officials can now assess if a player is in a shooting motion when determining if a perimeter foul is
+a shooting or a common foul . The type of foul will be determined on the sequencing of the player 's movement if the foul happens before or after the player
+starts a shooting motion . Additionally , they can also assess an offensive foul if an offensive player intentionally lunges into the defender or locks arms to
+create contact , a rule informally dubbed as the `` Harden rule '' . On September 28 , 2017 , the NBA board of governors approved the changes to the draft
+lottery system to discourage teams from losing on purpose . Starting with the 2018 -- 19 NBA season , the teams with the three worst records will have equal
+odds at the # 1 pick . In addition , the revised draft lottery will consist of selecting the top four teams instead of the usual three that occurred for over
+two decades . The approval for the change was nearly unanimous , with only the Oklahoma City Thunder voting against the change and the Dallas Mavericks
+abstaining from voting .
+</item 6>
+
+<item 7>
+Defensive three-second violation
+The WNBA started using it in 2013 . References ( edit ) Jump up ^ NBA Official Rules ( 2009 - 2010 ) Rule 10 , Section VII , B. Retrieved July 25 , 2010 Jump up
+^ NBA Official Rules ( 2009 - 2010 ) Rule 10 , Section VII , D. Retrieved July 25 , 2010 Jump up ^ NBA Official Rules ( 2009 - 2010 ) Rule 10 , Section VII , E.
+Retrieved July 25 , 2010 Jump up ^ NBA Official Rules ( 2009 - 2010 ) Rule 10 , Section VII , Penalty . Retrieved July 25 , 2010 Jump up ^ Blinebury , Fran (
+June 8 , 2006 ) . `` Rule changes have NBA back in the fast lane '' . Houston Chronicle . Retrieved July 26 , 2010 . Jump up ^
+http://www.sportingcharts.com/dictionary/nba/defensive-three-second-violation.aspx Jump up ^ Cruz , Agnes ( January 24 , 2003 ) . `` PBA get fresh look this
+season '' . Arab News .
+</item 7>
+
+<item 8>
+Defensive three-second violation
+The offense receives one free throw and retains possession of the ball . Prior to the 2001 -- 2002 NBA season , any form of zone defense was considered an
+illegal defense violation and resulted in a warning on the first violation and then a technical foul for any subsequent violations . However , the defensive
+three - second violation makes it difficult for NBA defenses to play zone , since zone defenses usually position a player in the middle of the key to stop
+penetration . The Philippine Basketball Association used to follow the illegal defense rule until the 2003 PBA season when it was abolished . The high school
+game does not use this rule , nor does European basketball . The WNBA started using it in 2013 .
+</item 8>
+
+<item 9>
+Defensive three-second violation
+Defensive three - second violation - Wikipedia Defensive three - second violation Jump to : navigation , search A defensive three - second violation , also
+known as illegal defense , is a basketball rules infraction in the National Basketball Association ( NBA ) introduced in the 2001 -- 2002 season . It is
+assessed when a member of the defending team spends more than three seconds in the free throw lane ( also known as the 16 - foot lane , or colloquially as `` in
+the paint '' ) while not actively guarding an opponent . To be considered actively guarding , a defender must be within arm 's length of an opponent and in a
+guarding position . A three - second count is suspended if : a player is in the act of shooting there is a loss of team control the defender is actively
+guarding an opponent the defender clears the painted area it is imminent the defender will become legal In addition , a player guarding an opponent with the
+ball may be in the paint without actively guarding the opponent . The team committing a defensive three - second violation is assessed a team technical foul .
+The offense receives one free throw and retains possession of the ball .
+</item 9>
+
+<item 10>
+2017–18 NBA season
+The regular season started eight days earlier than the previous season . This move by the NBA aims for fewer `` back - to - back '' games , even fewer than the
+previous season which had already reached an all - time low to help address teams that are `` resting '' their superstars . The NBA decreased the maximum number
+of timeouts in a regulation game from 18 to 14 . The three team timeouts during the last two minutes of the game were also decreased to two per team in the last
+three minutes to improve the flow and pace of the game . The trade deadline was moved from four days after the NBA All - Star Game to ten days before it , so
+teams can settle their rosters before the All - Star break . Free - throw shooters will be assessed a delay - of - game violation if they venture outside of the
+three - point line in between attempts . The NBA also added two - way contracted players , signifying an increasing partnership between the NBA and the newly
+branded NBA G League . Referees can now assess dangerous closeouts of defenders to jump shooters with little space to land for a technical or a flagrant foul .
+</item 10>
+=== END ITEM id=6b50248fed605007 ===
+
+=== ITEM id=f40dbd22abd99ab7 ===
+Gold sentences and facts:
+Sentence 0: The Curse of Oak Island follows brothers Marty and Rick Lagina , originally from Kingsford , Michigan , through their efforts to find the speculated treasure or historical artifacts believed to be on Oak Island . The series discusses the history of the island , recent discoveries , theories , and prior attempts to investigate the site . Areas of interest include the `` Money Pit '' , Borehole 10 - x , Smith 's Cove , `` Nolan 's Cross '' , the `` Hatch '' , the `` Watchtower '' and the `` Swamp '' .
+  Fact 0.0: The Curse of Oak Island is a series.
+  Fact 0.1: The Curse of Oak Island follows brothers Marty and Rick Lagina.
+  Fact 0.2: Marty and Rick Lagina are originally from Kingsford, Michigan.
+  Fact 0.3: The Curse of Oak Island follows the Laginas' efforts to find the speculated treasure or historical artifacts believed to be on Oak Island.
+  Fact 0.4: The series discusses the history of Oak Island.
+  Fact 0.5: The series discusses recent discoveries on Oak Island.
+  Fact 0.6: The series discusses theories about Oak Island.
+  Fact 0.7: The series discusses prior attempts to investigate the site on Oak Island.
+  Fact 0.8: Areas of interest in the series include the "Money Pit".
+  Fact 0.9: Areas of interest in the series include Borehole 10-x.
+  Fact 0.10: Areas of interest in the series include Smith's Cove.
+  Fact 0.11: Areas of interest in the series include "Nolan's Cross".
+  Fact 0.12: Areas of interest in the series include the "Hatch".
+  Fact 0.13: Areas of interest in the series include the "Watchtower".
+  Fact 0.14: Areas of interest in the series include the "Swamp".
+
+Retrieved items:
+<item 1>
+Graph query row:
+show: The Curse of Oak Island
+place: Nova Scotia
+relationship: LOCATED_IN
+role: None
+context: None
+fact: None
+related_place: None
+place_relationship: None
+</item 1>
+
+<item 2>
+The Curse of Oak Island
+S. Wild West Tech The XY Factor Upcoming Blue Book The Commanders Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=The_Curse_of_Oak_Island&oldid=832882458 '' Categories : 2014 American television series debuts History ( U.S. TV
+channel ) original programs English - language television programs 2010s American television series Television shows set in Nova Scotia Oak Island Hidden
+categories : Use mdy dates from August 2014 Talk Contents About Wikipedia Français Latviešu Română Русский Edit links This page was last edited on 28 March 2018
+, at 14 : 10 . About Wikipedia
+</item 2>
+
+<item 3>
+The Curse of Oak Island
+overall No. in season Title Original air date Viewers ( millions ) 29 `` Going for Broke '' November 15 , 2016 ( 2016 - 11 - 15 ) 2.62 The team agrees to turn
+focus over to the Money Pit and review what they have collected . Researcher Zena Halpern presents a handmade copy of what she claims is a French map from 1347
+of Oak Island . The map shows locations for a `` hatch '' , a `` valve '' and an `` anchor '' on the Island . A theory is presented based on a purported
+decoding of a cipher that Joab at the time of King David transported the Ark of the Covenant to North Africa from which it was later transported onward by the
+Knights Templar from the then - Portuguese town of Safi in Morocco to Oak Island . 30 `` Always Forward '' November 22 , 2016 ( 2016 - 11 - 22 ) 2.66 While
+preparing to excavate the Money Pit , the team investigates an 18th century well on mainland Nova Scotia .
+</item 3>
+
+<item 4>
+The Curse of Oak Island
+The Curse of Oak Island - wikipedia The Curse of Oak Island Jump to : navigation , search The Curse of Oak Island Genre Reality Narrated by Robert Clotworthy
+Country of origin Canada Original language ( s ) English No. of seasons 5 No. of episodes 62 Production Executive producer ( s ) Kevin Burns Camera setup
+Multiple Running time 43 minutes Production company ( s ) Prometheus Entertainment Distributor A&E Networks Release Original network History Canada Original
+release January 5 , 2014 ( 2014 - 01 - 05 ) -- present External links Website Production website The Curse of Oak Island is an active reality television series
+that first premiered in Canada on the History network on January 5 , 2014 . The show features what is known as the Oak Island mystery , showing efforts to
+search for historical artifacts and treasure .
+</item 4>
+
+<item 5>
+The Curse of Oak Island
+2018 '' . Showbuzz Daily . Retrieved March 7 , 2018 . Further reading ( edit ) MacDonald , David ( 1965 ) . `` Treasure Hunt : The Mystery of Oak Island '' .
+Reader 's Digest -- via readersdigest.ca .
+</item 5>
+
+<item 6>
+The Curse of Oak Island
+61 17 `` A Family Album '' February 27 , 2018 ( 2018 - 02 - 27 ) 1.98 The episode includes accounts of activities on the Oak Island by the McGinnis family ,
+descendants of Samuel Ball , William Chappell 's family , the Restall Family and the family of Robert Dunfield . The Blankenship / Nolan disputes on Oak Island
+are discussed . The episode ends with a short history of the Lagina brothers ' interest in Oak Island . Note : This episode is a special . 62 18 `` Amazing
+Discoveries '' March 6 , 2018 ( 2018 - 03 - 06 ) 2.89 The gem in the Jewelry fragment found on the island is a Rhodolite Garnet stone of small value . The
+drilling obstruction in the `` money pit '' borehole is determined by divers to be a granite boulder . References ( edit ) ^ Jump up to : `` Shows A-Z - curse
+of oak island , the on history '' . The Futon Critic . Retrieved December 6 , 2017 .
+</item 6>
+
+<item 7>
+The Curse of Oak Island
+Background ( edit ) The Lagina brothers became fascinated with the island after reading the January 1965 issue of Reader 's Digest magazine that features an
+article on the Restall family 's work to investigate the so - called `` Money Pit '' . Marty and his brother Rick obtained a controlling interest in Oak Island
+Tours , which reportedly owns most of the island . The brothers were later approached by Prometheus Entertainment to do a reality show . Rick and Marty have
+engaged the assistance of father - and - son Dan and Dave Blankenship , permanent residents of the island who have likewise been searching for treasure since
+the 1960s . Theories ( edit ) The series explores various Oak Island theories and conjectures through conversations with independent researchers .
+</item 7>
+
+<item 8>
+The Curse of Oak Island
+Contents ( hide ) 1 Overview 1.1 Background 1.2 Theories 2 Series overview 3 Production 4 Episodes 4.1 Season 1 ( 2014 ) 4.2 Season 2 ( 2014 -- 2015 ) 4.3
+Season 3 ( 2015 -- 2016 ) 4.4 Season 4 ( 2016 -- 2017 ) 4.5 Season 5 ( 2017 -- 2018 ) 5 References 6 Further reading 7 External links Overview ( edit ) The
+Curse of Oak Island follows brothers Marty and Rick Lagina , originally from Kingsford , Michigan , through their efforts to find the speculated treasure or
+historical artifacts believed to be on Oak Island . The series discusses the history of the island , recent discoveries , theories , and prior attempts to
+investigate the site . Areas of interest include the `` Money Pit '' , Borehole 10 - x , Smith 's Cove , `` Nolan 's Cross '' , the `` Hatch '' , the ``
+Watchtower '' and the `` Swamp '' .
+</item 8>
+
+<item 9>
+The Curse of Oak Island
+Series overview ( edit ) Season Episodes Originally aired First aired Last aired 5 January 5 , 2014 ( 2014 - 01 - 05 ) February 9 , 2014 ( 2014 - 02 - 09 ) 10
+November 4 , 2014 ( 2014 - 11 - 04 ) January 13 , 2015 ( 2015 - 01 - 13 ) 13 November 10 , 2015 ( 2015 - 11 - 10 ) February 2 , 2016 ( 2016 - 02 - 02 ) 16
+November 15 , 2016 ( 2016 - 11 - 15 ) February 21 , 2017 ( 2017 - 02 - 21 ) 5 18 November 7 , 2017 ( 2017 - 11 - 07 ) March 6 , 2018 ( 2018 - 03 - 06 )
+Production ( edit ) Having started in 2014 , The Curse of Oak Island is currently in its fifth season . On August 2 , 2016 , it was announced that Nova Scotia
+Business Inc.
+</item 9>
+
+<item 10>
+The Curse of Oak Island
+On August 2 , 2016 , it was announced that Nova Scotia Business Inc. approved $1,271,546 in film funding for the production of the 4th season . In October 2017
+, a fifth season was announced , which began airing on November 7 , 2017 . Episodes ( edit ) Season 1 ( 2014 ) ( edit ) No . overall No. in season Title
+Original air date Viewers ( millions ) `` What Lies Below '' January 5 , 2014 ( 2014 - 01 - 05 ) 2.53 Brothers Rick and Marty Lagina now own most of Oak Island
+. Determined to resume the search for treasure on the island , they explore an abandoned shaft called Borehole 10 - X and use water pressure to pump material to
+the surface . They find a tiny piece of metal .
+</item 10>
+=== END ITEM id=f40dbd22abd99ab7 ===

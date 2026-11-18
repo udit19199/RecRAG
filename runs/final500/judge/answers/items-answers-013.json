@@ -1,0 +1,546 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "7577e454827a5dd1",
+   "kind": "answer",
+   "question": "The \"unofficial national anthem\" of Australia is the basis for the nickname of what soccer team?",
+   "gold_answers": [
+    "Australian women's national soccer team"
+   ],
+   "model_answer": "The Matildas (Australia’s women’s national soccer team)"
+  },
+  {
+   "id": "075a067b988e9fba",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "A historic Lichfield reservoir that once helped defend the Cathedral Close and power a mill."
+  },
+  {
+   "id": "0fac73d4228d59ec",
+   "kind": "answer",
+   "question": "What is the title of the person who is Head of the Department of Biological Sciences at the University of Lincoln",
+   "gold_answers": [
+    "Doctor"
+   ],
+   "model_answer": "Professor"
+  },
+  {
+   "id": "fb87016bcdae769c",
+   "kind": "answer",
+   "question": "The twenty-first season of South Park was entitled \"White People Renovating Houses\" is which episode of the series overall?",
+   "gold_answers": [
+    "278th episode"
+   ],
+   "model_answer": "278th episode of the series overall"
+  },
+  {
+   "id": "01848e91e1d82878",
+   "kind": "answer",
+   "question": "What was the name of the fanzine that interviewed the Sex Pistols bassist when he was in the band \"The Flowers of Romance?\"",
+   "gold_answers": [
+    "SKUM"
+   ],
+   "model_answer": "Sniffin’ Glue"
+  },
+  {
+   "id": "4f974e9fb293e6e4",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe, the Caucasus, Asia Minor, Iran, and parts of western and central Asia."
+  },
+  {
+   "id": "3305f8778c614ecf",
+   "kind": "answer",
+   "question": "What rank was higher than Karl Hermann Frank's rank until April 1942?",
+   "gold_answers": [
+    "Reichsführer-SS"
+   ],
+   "model_answer": "SS-Obergruppenführer"
+  },
+  {
+   "id": "ee5112d4bdcb11bb",
+   "kind": "answer",
+   "question": "What type of diet does the author of Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss advocate?",
+   "gold_answers": [
+    "micronutrient-rich"
+   ],
+   "model_answer": "A nutrient-rich, plant-based diet\n"
+  },
+  {
+   "id": "4fbc86fa0adc862a",
+   "kind": "answer",
+   "question": "Are Dogo Cubano and the Dutch Shepherd both breeds of dog?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are dog breeds."
+  },
+  {
+   "id": "d2e6ebc68609d1b2",
+   "kind": "answer",
+   "question": "Which American film director is an advisor for Disney, Rick Ray or John Lasseter?",
+   "gold_answers": [
+    "John Alan Lasseter"
+   ],
+   "model_answer": "John Lasseter"
+  },
+  {
+   "id": "5b59214111051aee",
+   "kind": "answer",
+   "question": "What made the man who abolished the Consell in 1718 resume the throne?",
+   "gold_answers": [
+    "upon his son's death"
+   ],
+   "model_answer": "The death of his son, Louis I."
+  },
+  {
+   "id": "a0d84e5098e34690",
+   "kind": "answer",
+   "question": "Come from the Heart:was first recorded by an artist that sang what genre of music?",
+   "gold_answers": [
+    "country"
+   ],
+   "model_answer": "Country music\n"
+  },
+  {
+   "id": "bd1015aa7a90eeca",
+   "kind": "answer",
+   "question": "Are Toshi and Warrel Dane both in the band Sanctuary?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "f0db99cb4fa0ec6e",
+   "kind": "answer",
+   "question": "Bank street is sandwiched between the headquarters of the Hongkong and Shanghai Banking Corporation and which other building?",
+   "gold_answers": [
+    "Bank of China Building"
+   ],
+   "model_answer": "The Hong Kong Club Building"
+  },
+  {
+   "id": "4a4c4e2f1ea64920",
+   "kind": "answer",
+   "question": "In what city does a Christian minister who won the singles title with Jan Kodes in the 1970 French Open currently reside?",
+   "gold_answers": [
+    "Perth, Western Australia"
+   ],
+   "model_answer": "Perth"
+  },
+  {
+   "id": "621324b2a715f2bc",
+   "kind": "answer",
+   "question": "What other things did  blind Arab philosopher who is also  Abd Allah ibn al-Fadl teacher do ",
+   "gold_answers": [
+    "poet, and writer"
+   ],
+   "model_answer": "He was also a physician and translator."
+  },
+  {
+   "id": "5fd0ce61b524fcb7",
+   "kind": "answer",
+   "question": "What is the scentific name of the butterfly that is widespread in the seventh-largest country in the world?",
+   "gold_answers": [
+    "I. helicon"
+   ],
+   "model_answer": "Danaus chrysippus"
+  },
+  {
+   "id": "44ca056c16138061",
+   "kind": "answer",
+   "question": "Dean Mills Reservoir is on the slopes of the hill located in what town?",
+   "gold_answers": [
+    "Rivington Moor"
+   ],
+   "model_answer": "Mandeville"
+  },
+  {
+   "id": "cb45336f8c481a3f",
+   "kind": "answer",
+   "question": "During which period the sedan variant of the Volvo V50 car was manufactured?",
+   "gold_answers": [
+    "1995 to 2012"
+   ],
+   "model_answer": "2004–2012"
+  },
+  {
+   "id": "f8ae5477dd5fe379",
+   "kind": "answer",
+   "question": "Did Qionghai or Suining  have a population of 658,798 in 2002? ",
+   "gold_answers": [
+    "In 2002, Suining had a population of 658,798."
+   ],
+   "model_answer": "Suining"
+  },
+  {
+   "id": "f8a8779783530a3b",
+   "kind": "answer",
+   "question": "Which \"Blackzilians\" fighter is currently competing in the Middleweight division of Ultimate Fighting Championship?",
+   "gold_answers": [
+    "Vitor Belfort"
+   ],
+   "model_answer": "Vitor Belfort and Rashad Evans"
+  },
+  {
+   "id": "2d88d4e321a868bb",
+   "kind": "answer",
+   "question": "Bandit was built in 1988 by which Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides?",
+   "gold_answers": [
+    "TOGO company"
+   ],
+   "model_answer": "TOGO"
+  },
+  {
+   "id": "345ce7a5ac394c3c",
+   "kind": "answer",
+   "question": "Did Nicholas Hytner and Maya Deren work in the same role in the film industry?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes, both were film directors."
+  },
+  {
+   "id": "e80623f1e342948b",
+   "kind": "answer",
+   "question": "When was the Chinese American electronic musician and singer who collaborated on the album I Remember born?",
+   "gold_answers": [
+    "1989"
+   ],
+   "model_answer": "January 26, 1985"
+  },
+  {
+   "id": "e12387f7ae5758c6",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "*Dirty Girl*, *Cracks*, *Jack & Diane*, *Black Mass*, *The Other Boleyn Girl*, *Wild Child*, *Atonement*, *Maleficent*, *The Three Musketeers*, and *The Dark Knight Rises*."
+  },
+  {
+   "id": "a8fb20bb137ef36b",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "It is a historic landmark and wildlife habitat that contributes to the region’s heritage and tourism."
+  },
+  {
+   "id": "abc0a9eb414656a3",
+   "kind": "answer",
+   "question": "\"A Summer in the Cage\" and \"American Hardcore\" are both what kind of film?",
+   "gold_answers": [
+    "documentary"
+   ],
+   "model_answer": "Documentary films"
+  },
+  {
+   "id": "7280099a1b47db87",
+   "kind": "answer",
+   "question": "On February 25, 2017 tony Harrison lost the the International Boxing Federation light middleweight world title to a boxer from what state?",
+   "gold_answers": [
+    "Maryland"
+   ],
+   "model_answer": "Texas"
+  },
+  {
+   "id": "a7200cc30ee4a167",
+   "kind": "answer",
+   "question": "When did the party inspired by Cacareco begin in Canada?",
+   "gold_answers": [
+    "1960s"
+   ],
+   "model_answer": "In the 1960s"
+  },
+  {
+   "id": "95a9f4f552f6bdf0",
+   "kind": "answer",
+   "question": "how many films has the director of \"Girl 6\" produced since 1983?",
+   "gold_answers": [
+    "over 35 films"
+   ],
+   "model_answer": "37 films"
+  },
+  {
+   "id": "fc0404785d087ef0",
+   "kind": "answer",
+   "question": "Both Mulled wine and Blue Lagoon are considered primarily alcoholic or non-alcoholic?",
+   "gold_answers": [
+    "alcoholic"
+   ],
+   "model_answer": "Alcoholic Afire? No, alcoholic."
+  },
+  {
+   "id": "bd5073845d03f230",
+   "kind": "answer",
+   "question": "Who is one other client that is represented by the same person that also represents a barrister at Doughty Street Chambers?",
+   "gold_answers": [
+    "Angelina Jolie"
+   ],
+   "model_answer": "Salman Rushdie"
+  },
+  {
+   "id": "8f55e9f678003e4e",
+   "kind": "answer",
+   "question": "Are Eryngium and Arnebia in the same kingdom of life forms?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are plants."
+  },
+  {
+   "id": "b1d18e9577873f0a",
+   "kind": "answer",
+   "question": "Where was the movement that August Brancart published literature from centerd?",
+   "gold_answers": [
+    "Western Europe"
+   ],
+   "model_answer": "France"
+  },
+  {
+   "id": "8842abbf37d81e2a",
+   "kind": "answer",
+   "question": "What year was the magazine that Stanley Bing spent a decade at founded in?",
+   "gold_answers": [
+    "1933"
+   ],
+   "model_answer": "1930"
+  },
+  {
+   "id": "59529ab5b8cd57df",
+   "kind": "answer",
+   "question": "What organization does Rosyth Dockyard and Queen Elizabeth-class aircraft carrier have in common?",
+   "gold_answers": [
+    "Navy"
+   ],
+   "model_answer": "Babcock International"
+  },
+  {
+   "id": "c98f008865ebe452",
+   "kind": "answer",
+   "question": "Which film came out first, Still Kicking: Six Artistic Women of Project Arts & Longevity or Time Bombs?",
+   "gold_answers": [
+    "Still Kicking: Six Artistic Women of Project Arts & Longevity"
+   ],
+   "model_answer": "Still Kicking: Six Artistic Women of Project Arts & Longevity (2006)"
+  },
+  {
+   "id": "a25fd93505cb3332",
+   "kind": "answer",
+   "question": "Are both the Wire Fox Terrier and West Siberian Laika dog breeds?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are dog breeds."
+  },
+  {
+   "id": "0e3ab302c31ae592",
+   "kind": "answer",
+   "question": "Were either Hou Hsiao-hsien or Kenny Ortega winners of an Academy Award?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Neither is identified as an Academy Award winner."
+  },
+  {
+   "id": "23c065b9040e17d1",
+   "kind": "answer",
+   "question": "when was Quiet in Heaven/Song of Liberty recorded?",
+   "gold_answers": [
+    "Before settling on their current name in 1982"
+   ],
+   "model_answer": "1966."
+  },
+  {
+   "id": "97d2c006ad6e4bf8",
+   "kind": "answer",
+   "question": "Fantasy Records is know for recordings of comedian Lenny Bruce, Creedence Clearwater Revival, and what American jazz pianist who composed the music for the animated television adaptations of the \"Peanuts\" comic strip?",
+   "gold_answers": [
+    "Vincent Anthony Guaraldi"
+   ],
+   "model_answer": "Vince Guaraldi"
+  },
+  {
+   "id": "4dcff3c56e92ce73",
+   "kind": "answer",
+   "question": "Live Acoustic America features a cover of a Beatles song that peaked at what number in the United Kingdom?",
+   "gold_answers": [
+    "4"
+   ],
+   "model_answer": "No. 4"
+  },
+  {
+   "id": "50d4823f839cc670",
+   "kind": "answer",
+   "question": "Dan Hurley is the brother of which head coach of Arizona State's men's basketball team?",
+   "gold_answers": [
+    "Robert Matthew Hurley"
+   ],
+   "model_answer": "Bobby Hurley"
+  },
+  {
+   "id": "738a8d6dbbc33074",
+   "kind": "answer",
+   "question": "Have singers Yang Yo-seob and Kim Tae-yeon both appeared in group bands?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have been members of groups."
+  },
+  {
+   "id": "a67ac49534585ca9",
+   "kind": "answer",
+   "question": " What type of television show did Dylan Everett star in, in 2015?",
+   "gold_answers": [
+    "American-Canadian mystery-drama"
+   ],
+   "model_answer": "Mystery-drama television series"
+  },
+  {
+   "id": "5ce4745b625c741c",
+   "kind": "answer",
+   "question": "Wangaratta Wahine, an album featuring the work of an Australian Living Treasure, was recorded by what band?",
+   "gold_answers": [
+    "The Captain Matchbox Whoopee Band"
+   ],
+   "model_answer": "The Syncopators"
+  },
+  {
+   "id": "5f734a7dacd66b86",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "About 8 miles apart."
+  },
+  {
+   "id": "ed0e5a94f7edd5b1",
+   "kind": "answer",
+   "question": "In what town does the one-time star of \"And There's More\" now live?",
+   "gold_answers": [
+    "Rochdale"
+   ],
+   "model_answer": "Auckland"
+  },
+  {
+   "id": "3f4092d3c615c75e",
+   "kind": "answer",
+   "question": "Crash is similar to what 16th century British card game in the sense that there is no betting?",
+   "gold_answers": [
+    "In Crash, there is no betting, as in Brag"
+   ],
+   "model_answer": "Brag"
+  },
+  {
+   "id": "37e67c5f470b3113",
+   "kind": "answer",
+   "question": "Are both Dictyosperma, and Huernia described as a genus?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both are genera."
+  },
+  {
+   "id": "5d78112a2a6b3c60",
+   "kind": "answer",
+   "question": "At what theater is the composer and lyricist for the musical Big Fish a residential artist?",
+   "gold_answers": [
+    "Ars Nova Theater"
+   ],
+   "model_answer": "The Eugene O’Neill Theater Center"
+  },
+  {
+   "id": "6b4eec8dc41719f9",
+   "kind": "answer",
+   "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+   "gold_answers": [
+    "Colonel Charles Hastings Judd"
+   ],
+   "model_answer": "Edward Montagu, 2nd Earl of Manchester"
+  },
+  {
+   "id": "4ff7bbe946761460",
+   "kind": "answer",
+   "question": "Was Atom Egoyans biggest commercial success on stage or on film?",
+   "gold_answers": [
+    "erotic thriller film"
+   ],
+   "model_answer": "Film"
+  },
+  {
+   "id": "66e07d429a2a8320",
+   "kind": "answer",
+   "question": "In what movie did the male star of a movie about a widowed 37-year-old woman also star in in the year 1993?",
+   "gold_answers": [
+    "\"Red Rock West\""
+   ],
+   "model_answer": "Schindler’s List"
+  },
+  {
+   "id": "d4e068876254e91b",
+   "kind": "answer",
+   "question": "Where is the transportation company that owns Talbot based in?",
+   "gold_answers": [
+    "Montreal"
+   ],
+   "model_answer": "Hoofddorp, Netherlands."
+  },
+  {
+   "id": "3f43db0d2bb7cc4a",
+   "kind": "answer",
+   "question": "Both Andrew and Jeremy Get Married and The Last Lions are what type of films?",
+   "gold_answers": [
+    "documentary film"
+   ],
+   "model_answer": "Documentary films"
+  },
+  {
+   "id": "b010e51237c99f33",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Strategic negotiation and alliance-forming\n"
+  },
+  {
+   "id": "6ec3c2f4546a6403",
+   "kind": "answer",
+   "question": "Suicide's 1977 released album features a song based on what brand's comic character?",
+   "gold_answers": [
+    "Marvel"
+   ],
+   "model_answer": "Marvel Comics"
+  },
+  {
+   "id": "c67c2011a992a81b",
+   "kind": "answer",
+   "question": "Was Talking Heads and Man or Astro-man? formed further north?",
+   "gold_answers": [
+    "Talking Heads"
+   ],
+   "model_answer": "Yes, Talking Heads formed farther north."
+  },
+  {
+   "id": "a271be0a370cf1c8",
+   "kind": "answer",
+   "question": "Nicole Gordon won a silver medal with Sara Petersen int he women's doubles at a competition held in what city?",
+   "gold_answers": [
+    "Manchester"
+   ],
+   "model_answer": "Winnipeg"
+  }
+ ],
+ "evidence": []
+}

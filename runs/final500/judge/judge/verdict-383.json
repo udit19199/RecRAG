@@ -1,0 +1,72 @@
+[
+{"id": "01a4cdd6887b3c41", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "making deals with Apple and others"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "making deals with Apple and others"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "the default search engine across platforms"}, {"item": 10, "quote": "to make Google the default search engine"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "061aba3e476efc7f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "stores’ opening and closing times on the holiday vary based on location"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "with the holiday falling on 23 November this year"}]}
+]},
+{"id": "569385022888beb2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The company did accomplish that goal"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "in doing so, it inadvertently and profoundly changed how the internet looked"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "in doing so, it inadvertently and profoundly changed how the internet looked"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "223c4d63d2fb7998", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "generative AI — technology that can produce novel imagery, passages of text and other media"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In the year since Altman catapulted ChatGPT to global fame"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []}
+]},
+{"id": "fa2d66ab23bcecd4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Their 0-3 and 1-4 starts are distant memories"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "zero completions of 20-plus yards from tight ends"}]}
+]},
+{"id": "cdc057fc43e11d61", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,826 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=5ec64a9044c36443 ===
+Gold sentences and facts:
+Sentence 0: Human fertilization is the union of a human egg and sperm , usually occurring in the ampulla of the fallopian tube . The result of this union is the production of a zygote cell , or fertilized egg , initiating prenatal development . Scientists discovered the dynamics of human fertilization in the nineteenth century .
+  Fact 0.0: Human fertilization is the union of a human egg and sperm.
+  Fact 0.1: Human fertilization usually occurs in the ampulla of the fallopian tube.
+  Fact 0.2: The result of the union of a human egg and sperm is a zygote cell, also called a fertilized egg.
+  Fact 0.3: The union of a human egg and sperm initiates prenatal development.
+  Fact 0.4: Scientists discovered the dynamics of human fertilization in the nineteenth century.
+Sentence 1: The process of fertilization involves a sperm fusing with an ovum . The most common sequence begins with ejaculation during copulation , follows with ovulation , and finishes with fertilization . Various exceptions to this sequence are possible , including artificial insemination , in vitro fertilization , external ejaculation without copulation , or copulation shortly after ovulation . Upon encountering the secondary oocyte , the acrosome of the sperm produces enzymes which allow it to burrow through the outer jelly coat of the egg . The sperm plasma then fuses with the egg 's plasma membrane , the sperm head disconnects from its flagellum and the egg travels down the Fallopian tube to reach the uterus .
+  Fact 1.0: The process of fertilization involves a sperm fusing with an ovum.
+  Fact 1.1: The most common sequence of fertilization begins with ejaculation during copulation.
+  Fact 1.2: The most common sequence of fertilization is followed by ovulation.
+  Fact 1.3: The most common sequence of fertilization finishes with fertilization.
+  Fact 1.4: Various exceptions to the most common sequence of fertilization are possible.
+  Fact 1.5: One exception to the sequence of fertilization is artificial insemination.
+  Fact 1.6: One exception to the sequence of fertilization is in vitro fertilization.
+  Fact 1.7: One exception to the sequence of fertilization is external ejaculation without copulation.
+  Fact 1.8: One exception to the sequence of fertilization is copulation shortly after ovulation.
+  Fact 1.9: Upon encountering the secondary oocyte, the acrosome of the sperm produces enzymes.
+  Fact 1.10: The enzymes from the acrosome of the sperm allow the sperm to burrow through the outer jelly coat of the egg.
+  Fact 1.11: The sperm plasma fuses with the egg's plasma membrane.
+  Fact 1.12: The sperm head disconnects from its flagellum.
+  Fact 1.13: The egg travels down the Fallopian tube to reach the uterus.
+
+Retrieved items:
+<item 1>
+Human fertilization
+Sperm preparation ( edit ) Further information : Acrosome reaction At the beginning of the process , the sperm undergoes a series of changes , as freshly
+ejaculated sperm is unable or poorly able to fertilize . The sperm must undergo capacitation in the female 's reproductive tract over several hours , which
+increases its motility and destabilizes its membrane , preparing it for the acrosome reaction , the enzymatic penetration of the egg 's tough membrane , the
+zona pellucida , which surrounds the oocyte . Zona pellucida ( edit ) After binding to the corona radiata the sperm reaches the zona pellucida , which is an
+extra-cellular matrix of glycoproteins . A special complementary molecule on the surface of the sperm head binds to a ZP3 glycoprotein in the zona pellucida .
+This binding triggers the acrosome to burst , releasing enzymes that help the sperm get through the zona pellucida . Some sperm cells consume their acrosome
+prematurely on the surface of the egg cell , facilitating the penetration by other sperm cells .
+</item 1>
+
+<item 2>
+Human fertilization
+This is why all mitochondria in humans are of maternal origin . Still , a considerable amount of RNA from the sperm is delivered to the resulting embryo and
+likely influences embryo development and the phenotype of the offspring . Replication ( edit ) The pronuclei migrate toward the center of the oocyte , rapidly
+replicating their DNA as they do so to prepare the zygote for its first mitotic division . Mitosis ( edit ) Usually 23 chromosomes from spermatozoon and 23
+chromosomes from egg cell fuse ( half of spermatozoons carry X chromosome and the other half Y chromosome ) . Their membranes dissolve , leaving no barriers
+between the male and female chromosomes . During this dissolution , a mitotic spindle forms between them . The spindle captures the chromosomes before they
+disperse in the egg cytoplasm . Upon subsequently undergoing mitosis ( which includes pulling of chromatids towards centrioles in anaphase ) the cell gathers
+genetic material from the male and female together . Thus , the first mitosis of the union of sperm and oocyte is the actual fusion of their chromosomes .
+</item 2>
+
+<item 3>
+Human fertilization
+This possibility has been investigated by computer simulations of the fertilization process . See also ( edit ) Spontaneous conception , the unassisted
+conception of a subsequent child after prior use of assisted reproductive technology References ( edit ) Jump up ^ Garrison , Fielding . An Introduction to the
+History of Medicine , pages 566 - 567 ( Saunders 1921 ) . Jump up ^ `` Archived copy '' . Archived from the original on 2011 - 12 - 22 . Retrieved 2016 - 01 -
+24 . Jump up ^ http://www.americanpregnancy.org/preventingpregnancy/pregnancyfaqmyths.html Jump up ^ Lawyers Guide to Forensic Medicine SBN 978 - 1 - 85941 -
+159 - 9 By Bernard Knight - Page 188 `` Pregnancy is well known to occur from such external ejaculation ... '' Jump up ^ `` Fertilization of the Ovum '' . Gray
+'s Anatomy . Retrieved 2010 - 10 - 16 . Jump up ^ `` Fertilization '' . Retrieved 28 July 2010 .
+</item 3>
+
+<item 4>
+Human fertilization
+As a population , sperm cells have on average 50 % genome similarity so the premature acrosomal reactions aid fertilization by a member of the same cohort . It
+may be regarded as a mechanism of kin selection . Recent studies have shown that the egg is not passive during this process . Cortical reaction ( edit ) Once
+the sperm cells find their way past the zona pellucida , the cortical reaction occurs . Cortical granules inside the secondary oocyte fuse with the plasma
+membrane of the cell , causing enzymes inside these granules to be expelled by exocytosis to the zona pellucida . This in turn causes the glyco - proteins in
+the zona pellucida to cross-link with each other -- i.e. the enzymes cause the ZP2 to hydrolyse into ZP2f -- making the whole matrix hard and impermeable to
+sperm . This prevents fertilization of an egg by more than one sperm . The cortical reaction and acrosome reaction are both essential to ensure that only one
+sperm will fertilize an egg . Fusion ( edit ) Fertilization and implantation in humans .
+</item 4>
+
+<item 5>
+Human fertilization
+Each of the two daughter cells resulting from that mitosis has one replica of each chromatid that was replicated in the previous stage . Thus , they are
+genetically identical . Fertilization age ( edit ) Fertilization is the event most commonly used to mark the zero point in descriptions of prenatal development
+of the embryo or fetus . The resultant age is known as fertilization age , fertilizational age , embryonic age , fetal age or ( intrauterine ) developmental (
+IUD ) age . Gestational age , in contrast , takes the beginning of the last menstrual period ( LMP ) as the zero point . By convention , gestational age is
+calculated by adding 14 days to fertilization age and vice versa . In fact , however , fertilization usually occurs within a day of ovulation , which , in turn
+, occurs on average 14.6 days after the beginning of the preceding menstruation ( LMP ) . There is also considerable variability in this interval , with a 95 %
+prediction interval of the ovulation of 9 to 20 days after menstruation even for an average woman who has a mean LMP - to - ovulation time of 14.6 .
+</item 5>
+
+<item 6>
+Human fertilization
+Fusion ( edit ) Fertilization and implantation in humans . After the sperm enters the cytoplasm of the oocyte ( also called ovocyte ) , the tail and the outer
+coating of the sperm disintegrate and the cortical reaction takes place , preventing other sperm from fertilizing the same egg . The oocyte now undergoes its
+second meiotic division producing the haploid ovum and releasing a polar body . The sperm nucleus then fuses with the ovum , enabling fusion of their genetic
+material . Cell membranes ( edit ) The fusion of cell membranes of the secondary oocyte and sperm takes place . Transformations ( edit ) In preparation for the
+fusion of their genetic material both the oocyte and the sperm undergo transformations as a reaction to the fusion of cell membranes . The oocyte completes its
+second meiotic division . This results in a mature ovum . The nucleus of the oocyte is called a pronucleus in this process , to distinguish it from the nuclei
+that are the result of fertilization . The sperm 's tail and mitochondria degenerate with the formation of the male pronucleus . This is why all mitochondria in
+humans are of maternal origin .
+</item 6>
+
+<item 7>
+Human fertilization
+The process of fertilization involves a sperm fusing with an ovum . The most common sequence begins with ejaculation during copulation , follows with ovulation
+, and finishes with fertilization . Various exceptions to this sequence are possible , including artificial insemination , in vitro fertilization , external
+ejaculation without copulation , or copulation shortly after ovulation . Upon encountering the secondary oocyte , the acrosome of the sperm produces enzymes
+which allow it to burrow through the outer jelly coat of the egg . The sperm plasma then fuses with the egg 's plasma membrane , the sperm head disconnects from
+its flagellum and the egg travels down the Fallopian tube to reach the uterus . In vitro fertilization ( IVF ) is a process by which egg cells are fertilized by
+sperm outside the womb , in vitro . Contents ( hide ) 1 Anatomy 1.1 Corona radiata 1.2 Cone of attraction and perivitelline membrane 1.3 Sperm preparation 1.4
+Zona pellucida 1.4.
+</item 7>
+
+<item 8>
+Human fertilization
+Human fertilization - wikipedia Human fertilization Jump to : navigation , search Part of a series on Human growth and development Stages Human embryogenesis
+Fetus Infant Toddler Early childhood Child Preadolescence Adolescence Adult Middle age Old age Biological milestones Fertilization Childbirth Walking Language
+acquisition Puberty Menopause Ageing Death Development and psychology Pre - and perinatal Infant and child Adolescent Youth Young adult Adult Maturity
+Developmental stage theories Attachment Ecological Psychosocial Psychosexual development Moral Cognitive Cultural - historical Evolutionary Human body portal
+The acrosome reaction for a sea urchin , a similar process . Note that the picture shows several stages of one and the same spermatozoon - only one penetrates
+the ovum Illustration depicting ovulation and fertilization . Human fertilization is the union of a human egg and sperm , usually occurring in the ampulla of
+the fallopian tube . The result of this union is the production of a zygote cell , or fertilized egg , initiating prenatal development . Scientists discovered
+the dynamics of human fertilization in the nineteenth century . The process of fertilization involves a sperm fusing with an ovum .
+</item 8>
+
+<item 9>
+Human fertilization
+Jump up ^ `` Fertilization '' . Retrieved 28 July 2010 . Jump up ^ Angier , Natalie ( 2007 - 06 - 12 ) . `` Sleek , Fast and Focused : The Cells That Make Dad
+Dad '' . The New York Times . Jump up ^ Suzanne Wymelenberg , Science and Babies , National Academy Press , page 17 Jump up ^ Richard E. Jones and Kristin H.
+Lopez , Human Reproductive Biology , Third Edition , Elsevier , 2006 , page 238 Jump up ^ `` Fertilization : The Cortical Reaction '' . Boundless . Boundless .
+Retrieved 14 March 2013 . Jump up ^ Jodar , M. ; Selvaraju , S. ; Sendler , E. ; Diamond , M.P. ; Krawetz , S.A. ; for the Reproductive Medicine Networks ( 2013
+) . `` The presence , role and clinical use of spermatozoal RNAs '' . Human Reproduction Update. 19 ( 6 ) : 604 -- 624 .
+</item 9>
+
+<item 10>
+Human fertilization
+1 Cortical reaction 2 Fusion 2.1 Cell membranes 2.2 Transformations 2.3 Replication 2.4 Mitosis 3 Fertilization age 4 Diseases 5 See also 6 References 7
+External links Anatomy ( edit ) Corona radiata ( edit ) The sperm binds through the corona radiata , a layer of follicle cells on the outside of the secondary
+oocyte . Fertilization occurs when the nucleus of both a sperm and an egg fuse to form a diploid cell , known as zygote . The successful fusion of gametes forms
+a new organism . Cone of attraction and perivitelline membrane ( edit ) Where the spermatozoon is about to pierce , the yolk ( ooplasm ) is drawn out into a
+conical elevation , termed the cone of attraction or reception cone . Once the spermatozoon has entered , the peripheral portion of the yolk changes into a
+membrane , the perivitelline membrane , which prevents the passage of additional spermatozoa .
+</item 10>
+=== END ITEM id=5ec64a9044c36443 ===
+
+=== ITEM id=259275061f6515c8 ===
+Gold sentences and facts:
+Sentence 0: A primary ossification center is the first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone . In long bones the primary centers occur in the diaphysis / shaft and in irregular bones the primary centers occur usually in the body of the bone . Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers .
+  Fact 0.0: A primary ossification center is the first area of a bone to start ossifying.
+  Fact 0.1: A primary ossification center usually appears during prenatal development.
+  Fact 0.2: A primary ossification center usually appears in the central part of each developing bone.
+  Fact 0.3: In long bones, the primary centers occur in the diaphysis (shaft).
+  Fact 0.4: In irregular bones, the primary centers usually occur in the body of the bone.
+  Fact 0.5: Most bones have only one primary center, such as all long bones.
+  Fact 0.6: Some irregular bones have multiple primary centers.
+  Fact 0.7: The os coxa (hip) is an irregular bone with multiple primary centers.
+  Fact 0.8: Vertebrae have multiple primary centers.
+
+Retrieved items:
+<item 1>
+Ossification center
+Anatomy , descriptive and applied . the University of California : Lea & Febiger . Development of bone Ossification Triradiate cartilage Limb development Limb
+bud Apical ectodermal ridge Zone of polarizing activity Sclerotome Myotome Septum transversum Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Ossification_center&oldid=808049222 '' Categories : Wikipedia articles incorporating text from the 20th edition of
+Gray 's Anatomy ( 1918 ) Skeletal system Tissues ( biology ) Hidden categories : Articles needing additional references from May 2011 All articles needing
+additional references Medicine infobox template using GraySubject or GrayPage Medicine infobox template using Dorlands parameter Talk About Wikipedia Nederlands
+Edit links This page was last edited on 31 October 2017 , at 15 : 42 . About Wikipedia
+</item 1>
+
+<item 2>
+Gallbladder
+Early in development , the human embryo has three germ layers and abuts an embryonic yolk sac . During the second week of embryogenesis , as the embryo grows ,
+it begins to surround and envelop portions of this sac . The enveloped portions form the basis for the adult gastrointestinal tract . Sections of this foregut
+begin to differentiate into the organs of the gastrointestinal tract , such as the esophagus , stomach , and intestines . During the fourth week of
+embryological development , the stomach rotates . The stomach , originally lying in the midline of the embryo , rotates so that its body is on the left . This
+rotation also affects the part of the gastrointestinal tube immediately below the stomach , which will go on to become the duodenum . By the end of the fourth
+week , the developing duodenum begins to spout a small outpouching on its right side , the hepatic diverticulum , which will go on to become the biliary tree .
+Just below this is a second outpouching , known as the cystic diverticulum , that will eventually develop into the gallbladder . Function ( edit ) 1 .
+</item 2>
+
+<item 3>
+Ossification center
+Here and there the matrix between two cells of the same row also becomes calcified , and transverse bars of calcified substance stretch across from one
+calcareous column to another . Thus there are longitudinal groups of the cartilage cells enclosed in oblong cavities , the walls of which are formed of
+calcified matrix which cuts off all nutrition from the cells ; the cells , in consequence , atrophy , leaving spaces called the primary areolæ . Types of
+ossification centers ( edit ) Section of fetal bone of cat . ir . Irruption of the subperiosteal tissue . p . Fibrous layer of the periosteum . o . Layer of
+osteoblasts . im . Subperiosteal bony deposit . There are two types of ossification centers -- primary and secondary . A primary ossification center is the
+first area of a bone to start ossifying . It usually appears during prenatal development in the central part of each developing bone . In long bones the primary
+centers occur in the diaphysis / shaft and in irregular bones the primary centers occur usually in the body of the bone .
+</item 3>
+
+<item 4>
+Brain
+Once neurons have positioned themselves , their axons sprout and navigate through the brain , branching and extending as they go , until the tips reach their
+targets and form synaptic connections . In a number of parts of the nervous system , neurons and synapses are produced in excessive numbers during the early
+stages , and then the unneeded ones are pruned away . For vertebrates , the early stages of neural development are similar across all species . As the embryo
+transforms from a round blob of cells into a wormlike structure , a narrow strip of ectoderm running along the midline of the back is induced to become the
+neural plate , the precursor of the nervous system . The neural plate folds inward to form the neural groove , and then the lips that line the groove merge to
+enclose the neural tube , a hollow cord of cells with a fluid - filled ventricle at the center . At the front end , the ventricles and cord swell to form three
+vesicles that are the precursors of the forebrain , midbrain , and hindbrain .
+</item 4>
+
+<item 5>
+Motor neurons develop early in embryonic life, with motor function continuing to mature through childhood. During the fourth week, their axons emerge from the
+ventral neural tube’s basal plate, in a region called the motor neuron progenitor domain (pMN). The text also notes that high-frequency motor neuron stimulation
+produces a smooth, sustained tetanic contraction as individual twitches merge and tension reaches a plateau.
+</item 5>
+
+<item 6>
+Ossification center
+Ossification center - wikipedia Ossification center Jump to : navigation , search This article needs additional citations for verification . Please help improve
+this article by adding citations to reliable sources . Unsourced material may be challenged and removed . ( May 2011 ) ( Learn how and when to remove this
+template message ) Ossification center X-ray of ossification centers in a child . Details Identifiers Latin centrum ossificationis Dorlands / Elsevier 12227335
+TA A02. 0.00. 043 FMA 75436 Anatomical terminology ( edit on Wikidata ) The first step in ossification of the cartilage is that the cartilage cells , at the
+point where ossification is commencing and which is termed as an ossification center , enlarge and arrange themselves in rows . The matrix in which they are
+imbedded increases in quantity , so that the cells become further separated from each other . A deposit of calcareous material now takes place in this matrix ,
+between the rows of cells , so that they become separated from each other by longitudinal columns of calcified matrix , presenting a granular and opaque
+appearance .
+</item 6>
+
+<item 7>
+Ossification center
+Most bones have only one primary center ( e.g. all long bones ) but some irregular bones such as the os coxa ( hip ) and vertebrae have multiple primary centers
+. A secondary ossification center is the area of ossification that appears after the primary ossification center has already appeared -- most of which appear
+during the postnatal and adolescent years . Most bones have more than one secondary ossification center . In long bones , the secondary centres appear in the
+epiphyses . References ( edit ) This article incorporates text in the public domain from the 20th edition of Gray 's Anatomy ( 1918 ) Jump up ^ Gray and Spitzka
+( 1910 ) , page 44 . Bibliography ( edit ) Gray , Henry ; Spitzka , Edward Anthony ( 1910 ) . Anatomy , descriptive and applied . the University of California :
+Lea & Febiger .
+</item 7>
+
+<item 8>
+Vertebrate nervous systems begin when dorsal ectoderm forms the neural plate, which folds into a neural groove and closes as a hollow neural tube. Its front end
+forms forebrain, midbrain, and hindbrain vesicles. The forebrain divides into telencephalon (cortex, basal ganglia, related structures) and diencephalon
+(thalamus, hypothalamus); the hindbrain divides into metencephalon (cerebellum, pons) and my
+</item 8>
+
+<item 9>
+An ossification center is where cartilage begins transforming into bone: cartilage cells enlarge, matrix calcifies, and cells eventually atrophy. Primary
+centers appear first—usually before birth, in long-bone shafts and the bodies of irregular bones; secondary centers generally appear later, often after birth,
+in long-bone ends. Some irregular bones have multiple primary centers.
+
+The glenoid cavity is a shallow, pear-shaped socket on the scapula that articulates with the humeral head to
+</item 9>
+
+<item 10>
+Middle cranial fossa
+p. 154 . ISBN 9781437735802 . Additional images ( edit ) Middle cranial fossa at human foetus Base of skull Middle cranial fossa Middle cranial fossa Middle
+cranial fossa External links ( edit ) Wikimedia Commons has media related to Middle cranial fossa . Anatomy photo : 22 : os - 0802 at the SUNY Downstate Medical
+Center Compound structures of skull Neurocranium Calvaria Diploë Asterion Pterion Stephanion Inion Bregma Lambda Fossae anterior middle posterior cranial cavity
+Base of skull Fontanelle anterior posterior sphenoidal mastoid Facial skeleton Nasion Gonion Both dacryon zygomatic arch temporal fossa infratemporal fossa
+pterygomaxillary fissure pterygopalatine fossa Foramina of the skull ( and canals , fissures , meatus , and hiatus ) Anterior cranial fossa to Orbit : ethmoidal
+foramina anterior posterior to Nasal cavity : olfactory foramina ( CN - I ) foramen cecum Middle cranial fossa to Orbit : optic canal ( CN - II ) superior
+orbital fissure ( CN - III ,
+</item 10>
+=== END ITEM id=259275061f6515c8 ===
+
+=== ITEM id=f2add1673c73f6fc ===
+Gold sentences and facts:
+Sentence 0: The Sahara ( Arabic : الصحراء الكبرى ‎ , aṣ - ṣaḥrāʼ al - kubrá , ' the Great Desert ' ) is the largest hot desert and the third largest desert in the world after Antarctica and the Arctic . Its area of 9,200,000 square kilometres ( 3,600,000 sq mi ) is comparable to the area of China or the United States . The name ' Sahara ' is derived from dialectal Arabic word for `` desert '' , ṣaḥra ( صحرا / ˈsʕaħra / ) .
+  Fact 0.0: The Sahara is a desert.
+  Fact 0.1: The Sahara's Arabic name is الصحراء الكبرى, transliterated aṣ-ṣaḥrāʼ al-kubrá, meaning 'the Great Desert'.
+  Fact 0.2: The Sahara is the largest hot desert in the world.
+  Fact 0.3: The Sahara is the third largest desert in the world, after Antarctica and the Arctic.
+  Fact 0.4: The Sahara's area is 9,200,000 square kilometres (3,600,000 sq mi).
+  Fact 0.5: The Sahara's area is comparable to the area of China.
+  Fact 0.6: The Sahara's area is comparable to the area of the United States.
+  Fact 0.7: The name 'Sahara' is derived from a dialectal Arabic word for 'desert'.
+  Fact 0.8: The dialectal Arabic word is ṣaḥra (صحرا).
+
+Retrieved items:
+<item 1>
+Earth rainfall climatology
+Most of Australia is semi-arid or desert , making it the world 's driest continent . Australia 's rainfall is mainly regulated by the movement of the monsoon
+trough during the summer rainy season , with lesser amounts falling during the winter and spring in its southernmost sections . Almost whole North Africa is
+semi-arid , arid or hyper - arid , containing the Sahara Desert which is the largest hot desert in the world , while central Africa ( known as Sub-Saharan
+Africa ) sees an annual rainy season regulated by the movement of the intertropical convergence zone or monsoon trough , though the Sahel Belt located at the
+south of the Sahara Desert knows an extremely intense and a nearly permanent dry season and only receives minimum summer rainfall . Across Asia , a large annual
+rainfall minimum , composed primarily of deserts , stretches from the Gobi Desert in Mongolia west - southwest through Pakistan and Iran into the Arabian Desert
+in Saudi Arabia . In Asia , rainfall is favored across its southern portion from India east and northeast across the Philippines and southern China into Japan
+due to the monsoon advecting moisture primarily from the Indian Ocean into the region . Similar , but weaker , monsoon circulations are present over North
+America and Australia .
+</item 1>
+
+<item 2>
+Sahara
+Wind or rare rainfall shape the desert features : sand dunes , dune fields , sand seas , stone plateaus , gravel plains ( reg ) , dry valleys ( wadi ) , dry
+lakes ( oued ) , and salt flats ( shatt or chott ) . Unusual landforms include the Richat Structure in Mauritania . Several deeply dissected mountains , many
+volcanic , rise from the desert , including the Aïr Mountains , Ahaggar Mountains , Saharan Atlas , Tibesti Mountains , Adrar des Iforas , and the Red Sea hills
+. The highest peak in the Sahara is Emi Koussi , a shield volcano in the Tibesti range of northern Chad . The central Sahara is hyperarid , with sparse
+vegetation . The northern and southern reaches of the desert , along with the highlands , have areas of sparse grassland and desert shrub , with trees and
+taller shrubs in wadis , where moisture collects . In the central , hyperarid region , there are many subdivisions of the great desert : Tanezrouft , the Ténéré
+, the Libyan Desert , the Eastern Desert , the Nubian Desert and others .
+</item 2>
+
+<item 3>
+Sahara
+Without proper rendering support , you may see question marks , boxes , or other symbols . Play media This video over the Sahara and the Middle East was taken
+by the crew of Expedition 29 on board the International Space Station . Tadrart Acacus desert in western Libya , part of the Sahara . The top image shows the
+Safsaf Oasis on the surface of the Sahara . The bottom ( using radar ) is the rock layer underneath , revealing black channels cut by the meandering of an
+ancient river that once fed the oasis . The Sahara ( Arabic : الصحراء الكبرى ‎ , aṣ - ṣaḥrāʼ al - kubrá , ' the Great Desert ' ) is the largest hot desert and
+the third largest desert in the world after Antarctica and the Arctic . Its area of 9,200,000 square kilometres ( 3,600,000 sq mi ) is comparable to the area of
+China or the United States . The name ' Sahara ' is derived from dialectal Arabic word for `` desert '' , ṣaḥra ( صحرا / ˈsʕaħra / ) .
+</item 3>
+
+<item 4>
+Sahara
+The Saharan halophytics cover 54,000 square kilometres ( 21,000 sq mi ) including : the Qattara and Siwa depressions in northern Egypt , the Tunisian salt lakes
+of central Tunisia , Chott Melghir in Algeria , and smaller areas of Algeria , Mauritania , and the southern part of Morocco . The Tanezrouft is one of the
+harshest regions on Earth as well as one of the hottest and driest parts of the Sahara , with no vegetation and very little life . It is along the borders of
+Algeria , Niger ) ) and Mali , west of the Hoggar mountains . Flora and fauna The flora of the Sahara is highly diversified based on the bio-geographical
+characteristics of this vast desert . Floristically , the Sahara has three zones based on the amount of rainfall received -- the Northern ( Mediterranean ) ,
+Central and Southern Zones . There are two transitional zones -- the Mediterranean - Sahara transition and the Sahel transition zone . The Saharan flora
+comprises around 2800 species of vascular plants . Approximately a quarter of these are endemic . About half of these species are common to the flora of the
+Arabian deserts .
+</item 4>
+
+<item 5>
+Sahara
+See also Arid Lands Information Network List of deserts List of deserts by area Neolithic Subpluvial Sahara Conservation Fund Sahara Sea Saharan explorers
+References Jump up ^ `` Largest Desert in the World '' . Retrieved 30 December 2011 . Jump up ^ Cook , Kerry H. ; Vizy , Edward K. ( 2015 ) . `` Detection and
+Analysis of an Amplified Warming of the Sahara Desert '' . Journal of Climate. 28 : 6560 . doi : 10.1175 / JCLI - D - 14 - 00230.1 . Jump up ^ `` Sahara . ''
+Online Etymology Dictionary . Douglas Harper , Historian . Retrieved 25 June 2007 . Jump up ^ `` English - Arabic online dictionary '' . Online.ectaco.co.uk. 28
+December 2006 . Retrieved 12 June 2010 . Jump up ^ Wehr , Hans ( 1994 ) . A Dictionary of Modern Written Arabic ( Arabic - English ) ( 4th ed . ) . Wiesbaden :
+Otto Harrassowitz . p. 589 .
+</item 5>
+
+<item 6>
+Sahara
+The desert comprises much of North Africa , excluding the fertile region on the Mediterranean Sea coast , the Atlas Mountains of the Maghreb , and the Nile
+Valley in Egypt and Sudan . It stretches from the Red Sea in the east and the Mediterranean in the north to the Atlantic Ocean in the west , where the landscape
+gradually changes from desert to coastal plains . To the south , it is bounded by the Sahel , a belt of semi-arid tropical savanna around the Niger River valley
+and the Sudan Region of Sub-Saharan Africa . The Sahara can be divided into several regions including : the western Sahara , the central Ahaggar Mountains , the
+Tibesti Mountains , the Aïr Mountains , the Ténéré desert , and the Libyan Desert . For several hundred thousand years , the Sahara has alternated between
+desert and savanna grassland in a 41,000 year cycle caused by changes ( `` precession '' ) in the Earth 's axis as it rotates around the sun , which change the
+location of the North African Monsoon . It is next expected to become green in about 15,000 years ( 17,000 AD ) .
+</item 6>
+
+<item 7>
+Sahara
+Sahara The Great Desert Desert A satellite image of the Sahara by NASA World Wind Countries Algeria , Chad , Egypt , Libya , Mali , Mauritania , Morocco , Niger
+, Sudan , Tunisia Highest point Emi Koussi 3,415 m ( 11,204 ft ) - coordinates 19 ° 47 ′ 36 '' N 18 ° 33 ′ 6 '' E ﻿ / ﻿ 19.79333 ° N 18.55167 ° E ﻿ / 19.79333 ;
+18.55167 Lowest point Qattara Depression − 133 m ( − 436 ft ) - coordinates 30 ° 0 ′ 0 '' N 27 ° 5 ′ 0 '' E ﻿ / ﻿ 30.00000 ° N 27.08333 ° E ﻿ / 30.00000 ;
+27.08333 Length 4,800 km ( 2,983 mi ) , E / W Width 1,800 km ( 1,118 mi ) , N / S Area 9,200,000 km ( 3,552,140 sq mi ) Biome Desert This article contains
+Arabic text .
+</item 7>
+
+<item 8>
+Sahara
+Sahara Overland . Trailblazer Guides . Wade , Lizzie ( 2015 ) . Drones and Satellites Spot Lost Civilizations in Unlikely Places . Science ( American
+Association for the Advancement of Science ) . DOI : 10.1126 / science. aaa7864 . External links Find more aboutSaharaat Wikipedia 's sister projects
+Definitions from Wiktionary Media from Wikimedia Commons Travel guide from Wikivoyage About Sahara subsurface hydrology and planned usage of the aquifers World
+deserts Desert Desertification List of deserts List of deserts by area Africa Algerian Bayuda Blue Chalbi Danakil Djurab Eastern Ferlo Farafra ( White )
+Kalahari Libyan Moçâmedes Namib Nubian Nyiri Owami Richtersveld Sahara Tanezrouft Ténéré Western Asia Ad - Dahna Akshi Arabian Aral Karakum Aralkum Badain Jaran
+Betpak - Dala Cholistan Dasht - e Kavir Dasht - e Khash Dasht - e Leili Dasht - e Loot Dasht - e Margo Dasht - e Naomid
+</item 8>
+
+<item 9>
+Sahara
+Most of the desert enjoys more than 3,600 h of bright sunshine annually or over 82 % of the time , and a wide area in the eastern part experiences in excess of
+4,000 h of bright sunshine a year or over 91 % of the time . The highest values are very close to the theoretical maximum value . A value of 4,300 h or 98 % of
+the time would be recorded in Upper Egypt ( Aswan , Luxor ) and in the Nubian Desert ( Wadi Halfa ) . The annual average direct solar irradiation is around
+2,800 kWh / ( m year ) in the Great Desert . The Sahara has a huge potential for solar energy production . Sahara desert The constantly high position of the sun
+, the extremely low relative humidity , and the lack of vegetation and rainfall make the Great Desert the hottest continuously large area worldwide , and the
+hottest place on Earth during summer in some spots . The average high temperature exceeds 38 to 40 ° C or 100.4 to 104.0 ° F during the hottest month nearly
+everywhere in the desert except at very high altitudes .
+</item 9>
+
+<item 10>
+Sahara
+The southern limit of the Sahara is indicated botanically by the southern limit of Cornulaca monacantha ( a drought - tolerant member of the Chenopodiaceae ) ,
+or northern limit of Cenchrus biflorus , a grass typical of the Sahel . According to climatic criteria , the southern limit of the Sahara corresponds to the 150
+mm ( 5.9 in ) isohyet of annual precipitation ( this is a long - term average , since precipitation varies annually ) . Important cities located in the Sahara
+include Nouakchott , the capital of Mauritania ; Tamanrasset , Ouargla , Béchar , Hassi Messaoud , Ghardaïa , and El Oued in Algeria ; Timbuktu in Mali ; Agadez
+in Niger ; Ghat in Libya ; and Faya - Largeau in Chad . Climate The Sahara is the world 's largest low - latitude hot desert . The area is located in the horse
+latitudes under the subtropical ridge , a significant belt of semi-permanent subtropical warm - core high pressure where the air from upper levels of the
+troposphere tends to sink towards the ground .
+</item 10>
+=== END ITEM id=f2add1673c73f6fc ===
+
+=== ITEM id=ed288c156ac5cee3 ===
+Gold sentences and facts:
+Sentence 0: The coastline of the island consists of a combination of long beaches , dunes , red sandstone cliffs , salt water marshes and numerous bays and harbours . The beaches , dunes and sandstone cliffs consist of sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air . The geological properties of a white silica sand found at Basin Head are unique in the province ; the sand grains cause a scrubbing noise as they rub against each other when walked on . Large dune fields on the north shore can be found on barrier islands at the entrances to various bays and harbours . The magnificent sand dunes at Greenwich are of particular significance . The shifting , parabolic dune system is home to a variety of birds and rare plants and is also a site of significant archeological interest .
+  Fact 0.0: The coastline of the island consists of a combination of long beaches, dunes, red sandstone cliffs, salt water marshes, and numerous bays and harbours.
+  Fact 0.1: The beaches, dunes, and sandstone cliffs consist of sedimentary rock and other material with a high iron concentration.
+  Fact 0.2: That iron concentration oxidizes upon exposure to air.
+  Fact 0.3: The geological properties of a white silica sand found at Basin Head are unique in the province.
+  Fact 0.4: The sand grains at Basin Head cause a scrubbing noise as they rub against each other when walked on.
+  Fact 0.5: Large dune fields on the north shore can be found on barrier islands at the entrances to various bays and harbours.
+  Fact 0.6: The magnificent sand dunes at Greenwich are of particular significance.
+  Fact 0.7: The shifting, parabolic dune system at Greenwich is home to a variety of birds and rare plants.
+  Fact 0.8: The shifting, parabolic dune system at Greenwich is also a site of significant archeological interest.
+
+Retrieved items:
+<item 1>
+Geography of Prince Edward Island
+Geography of Prince Edward Island - wikipedia Geography of Prince Edward Island Jump to : navigation , search This article contains wording that promotes the
+subject in a subjective manner without imparting real information . Please remove or replace such wording and instead of making proclamations about a subject 's
+importance , use facts and attribution to demonstrate that importance . ( August 2017 ) ( Learn how and when to remove this template message ) Prince Edward
+Island The coast of Prince Edward Island around Cavendish Geography Location Gulf of Saint Lawrence Area 5,683.91 km ( 2,194.57 sq mi ) Highest elevation 152 m
+( 499 ft ) Administration Canada Province Prince Edward Island Largest settlement Charlottetown ( pop . 32,174 ) Demographics Population 139,407 ( 2008 ) Pop .
+</item 1>
+
+<item 2>
+Geography of Prince Edward Island
+( See also a list of communities in Prince Edward Island . ) The island 's landscape is pastoral : rolling hills , pristine forests , white sand beaches , ocean
+coves and the famous red soil have given Prince Edward Island a reputation as a province of outstanding natural beauty . A number of laws have been passed by
+the provincial government to attempt to preserve the landscape through regulation , although the lack of consistent enforcement and absence of province - wide
+zoning and land - use planning has resulted in some aesthetically displeasing development in recent years . The island 's lush landscape has had a strong
+bearing not only on its economy but also its culture . Author Lucy Maud Montgomery drew inspiration from the land during the late Victorian Era for the setting
+of her classic novel Anne of Green Gables . Today , many of the same qualities that Montgomery and others found in the Island are enjoyed by tourists who visit
+during all seasons . They enjoy a variety of leisure activities , including beaches , various golf courses , eco-tourism adventures , and simply touring the
+countryside and enjoying cultural events in local communities around the island .
+</item 2>
+
+<item 3>
+Sahara
+These schemes often lead to soil degradation and salinization . Researchers from Hacettepe University ( Yücekutlu , N. et al. , 2011 ) have reported that
+Saharan soil may have bio-available iron and also some essential macro and micro nutrient elements suitable for use as fertilizer for growing wheat . History
+People lived on the edge of the desert thousands of years ago since the end of the last glacial period . The Sahara was then a much wetter place than it is
+today . Over 30,000 petroglyphs of river animals such as crocodiles survive , with half found in the Tassili n'Ajjer in southeast Algeria . Fossils of dinosaurs
+, including Afrovenator , Jobaria and Ouranosaurus , have also been found here . The modern Sahara , though , is not lush in vegetation , except in the Nile
+Valley , at a few oases , and in the northern highlands , where Mediterranean plants such as the olive tree are found to grow .
+</item 3>
+
+<item 4>
+Sahara
+Lake Victoria only recently became the source of the White Nile and dried out almost completely around 15 kya . The sudden subsequent movement of the ITCZ
+southwards with a Heinrich event ( a sudden cooling followed by a slower warming ) , linked to changes with the El Niño - Southern Oscillation cycle , led to a
+rapid drying out of the Saharan and Arabian regions , which quickly became desert . This is linked to a marked decline in the scale of the Nile floods between
+2700 and 2100 BC . Ecoregions The major topographic features of the Saharan region . The Sahara comprises several distinct ecoregions . With their variations in
+temperature , rainfall , elevation , and soil , these regions harbor distinct communities of plants and animals . The Atlantic coastal desert is a narrow strip
+along the Atlantic coast where fog generated offshore by the cool Canary Current provides sufficient moisture to sustain a variety of lichens , succulents , and
+shrubs . It covers an area of 39,900 square kilometers ( 15,400 sq mi ) in the south of Morocco and Mauritania .
+</item 4>
+
+<item 5>
+Geography of Prince Edward Island
+32,174 ) Demographics Population 139,407 ( 2008 ) Pop . density 24.53 / km ( 63.53 / sq mi ) Ethnic groups Scottish ( 38.0 % ) , English ( 28.7 % ) , Irish (
+27.9 % ) , French ( 21.3 % ) , German ( 4.0 % ) , and Dutch ( 3.1 % ) Prince Edward Island 's geography is mostly pastoral with red soil , white sand , and
+scattered communities . Known as the `` Garden of the Gulf '' , the island is located in the Gulf of Saint Lawrence north of Nova Scotia and east of New
+Brunswick , with which it forms the Northumberland Strait . PEI consists of the capital city Charlottetown , as well as urban towns Cornwall and Stratford and a
+developing urban fringe . A smaller urban area surrounds Summerside Harbor , situated on the southern shore 40 kilometers west of Charlottetown Harbor , and
+consists primarily of the city of Summerside . As with all natural harbors on the island , Charlottetown and Summerside harbors are created by rias .
+</item 5>
+
+<item 6>
+Geography of Prince Edward Island
+The geological properties of a white silica sand found at Basin Head are unique in the province ; the sand grains cause a scrubbing noise as they rub against
+each other when walked on . Large dune fields on the north shore can be found on barrier islands at the entrances to various bays and harbours . The magnificent
+sand dunes at Greenwich are of particular significance . The shifting , parabolic dune system is home to a variety of birds and rare plants and is also a site
+of significant archeological interest .
+</item 6>
+
+<item 7>
+Geography of Prince Edward Island
+See also ( edit ) Geography of Canada portal List of parks in Prince Edward Island List of islands of Prince Edward Island References ( edit ) External links (
+edit ) Geography of the provinces and territories of Canada National Geography of Canada Centre of Canada Provinces British Columbia Alberta Saskatchewan
+Manitoba Ontario Quebec New Brunswick Nova Scotia Prince Edward Island Newfoundland and Labrador Territories Yukon Northwest Territories Nunavut See also
+Regions of Canada Islands Rivers Lakes Mountains National Parks Volcanoes Portal WikiProject Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Geography_of_Prince_Edward_Island&oldid=835998214 '' Categories : Geography of Prince Edward Island Hidden categories
+: Articles with peacock terms from August 2017 All articles with peacock terms Talk Contents About Wikipedia Français Edit links This page was last edited on 12
+April 2018 , at 01 : 54 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you
+agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About
+Wikipedia
+</item 7>
+
+<item 8>
+Ring of Fire
+Peninsula Quebec City -- Windsor Corridor Peace River Country Cypress Hills Palliser 's Triangle Canadian Shield Interior Alaska - Yukon lowland taiga
+Newfoundland ( island ) Vancouver Island Gulf Islands Strait of Georgia Canadian Arctic Archipelago Labrador Peninsula Gaspé Peninsula Avalon Peninsula Bay de
+Verde Peninsula Brodeur Peninsula Melville Peninsula Bruce Peninsula Banks Peninsula ( Nunavut ) Cook Peninsula Gulf of Boothia Georgian Bay Hudson Bay James
+Bay Greenland United States Pacific Northwest Inland Northwest Northeast New England Mid-Atlantic Commonwealth West Midwest Upper Midwest Mountain States
+Intermountain West Basin and Range Province Oregon Trail Mormon Corridor Calumet Region Southwest Old Southwest Llano Estacado Central United States Tallgrass
+prairie South South Central Deep South Upland South Four Corners East Coast West Coast Gulf Coast Third Coast Coastal states Eastern United States Appalachia
+Trans - Mississippi Great North Woods Great Plains Interior Plains Great Lakes Great Basin Great Basin Desert Acadia Ozarks Ark - La - Tex Waxhaws Siouxland
+Twin Tiers Driftless Area Palouse Piedmont Atlantic coastal plain Outer Lands Black Dirt Region Blackstone Valley Piney Woods Rocky Mountains Mojave Desert The
+Dakotas The Carolinas Shawnee Hills San Fernando Valley Tornado Alley North Coast Lost Coast Emerald Triangle San Francisco Bay
+</item 8>
+
+<item 9>
+Dead Sea
+Northwest British Isles English Channel Channel Islands Cotentin Peninsula Normandy Brittany Gulf of Lion Iberia Al - Andalus Baetic System Pyrenees Alpide belt
+South Italian Peninsula Insular Italy Tuscan Archipelago Aegadian Islands Iberia Al - Andalus Baetic System Gibraltar Arc Southeastern Mediterranean Crimea
+Alpide belt Germanic Celtic Slavic countries Uralic European Plain Eurasian Steppe Pontic -- Caspian steppe Wild Fields Pannonian Basin Great Hungarian Plain
+Little Hungarian Plain Eastern Slovak Lowland Regions of North America Northern Eastern Canada Western Canada Canadian Prairies Central Canada Northern Canada
+Atlantic Canada The Maritimes French Canada English Canada Acadia Acadian Peninsula Quebec City -- Windsor Corridor Peace River Country Cypress Hills Palliser
+'s Triangle Canadian Shield Interior Alaska - Yukon lowland taiga Newfoundland ( island ) Vancouver Island Gulf Islands Strait of Georgia Canadian Arctic
+Archipelago Labrador Peninsula Gaspé Peninsula Avalon Peninsula Bay de Verde Peninsula Brodeur Peninsula Melville Peninsula Bruce Peninsula Banks Peninsula (
+Nunavut ) Cook Peninsula Gulf of Boothia Georgian Bay Hudson Bay James Bay Greenland Pacific Northwest Inland Northwest Northeast New England Mid-Atlantic
+Commonwealth West Midwest Upper Midwest Mountain States Intermountain West Basin and Range Province Oregon Trail
+</item 9>
+
+<item 10>
+Geography of Prince Edward Island
+The highest point of land is located at Springton in Queens County ( 152 metres or 499 feet above sea level ) . Contents ( hide ) 1 Communities 2 Coastline 3
+See also 4 References 5 External links Communities ( edit ) The smaller rural communities as well as the towns and villages throughout the province proudly
+retain a slower - paced , old world flavor , something that factors heavily into Prince Edward Island 's popularity as a destination for relaxation . Most rural
+communities on Prince Edward Island are based on small - scale agriculture , given that the size of farm properties is quite small when compared with other
+areas in Canada . There is an increasing amount of industrial farming as older farm properties are consolidated and modernized . Coastline ( edit ) The
+coastline of the island consists of a combination of long beaches , dunes , red sandstone cliffs , salt water marshes and numerous bays and harbours . The
+beaches , dunes and sandstone cliffs consist of sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air .
+</item 10>
+=== END ITEM id=ed288c156ac5cee3 ===
+
+=== ITEM id=a41e90e2491a4fce ===
+Gold sentences and facts:
+Sentence 0: In Moulmein , the narrator -- Orwell , writing in the first person -- is a police officer during a period of intense anti-European sentiment . Although his intellectual sympathies lie with the Burmese , his official role makes him a symbol of the oppressive imperial power . As such , he is subjected to constant baiting and jeering by the local people .
+  Fact 0.0: In Moulmein, the narrator is a police officer.
+  Fact 0.1: The narrator is Orwell.
+  Fact 0.2: Orwell writes in the first person.
+  Fact 0.3: The narrator is a police officer during a period of intense anti-European sentiment.
+  Fact 0.4: The narrator's intellectual sympathies lie with the Burmese.
+  Fact 0.5: The narrator's official role makes him a symbol of the oppressive imperial power.
+  Fact 0.6: The narrator is subjected to constant baiting and jeering by the local people.
+  Fact 0.7: The narrator is subjected to this baiting because of his role as a symbol of imperial power.
+Sentence 1: The essay describes the experience of the English narrator , possibly Orwell himself , called upon to shoot an aggressive elephant while working as a police officer in Burma . Because the locals expect him to do the job , he does so against his better judgment , his anguish increased by the elephant 's slow and painful death . The story is regarded as a metaphor for British imperialism , and for Orwell 's view that `` when the white man turns tyrant it is his own freedom that he destroys . ''
+  Fact 1.0: The essay describes the experience of the English narrator.
+  Fact 1.1: The narrator is possibly Orwell himself.
+  Fact 1.2: The narrator is called upon to shoot an aggressive elephant.
+  Fact 1.3: The narrator is working as a police officer in Burma when he is called upon to shoot the elephant.
+  Fact 1.4: The locals expect the narrator to shoot the elephant.
+  Fact 1.5: The narrator shoots the elephant against his better judgment.
+  Fact 1.6: The narrator's anguish is increased by the elephant's slow and painful death.
+  Fact 1.7: The story is regarded as a metaphor for British imperialism.
+  Fact 1.8: The story is regarded as a metaphor for Orwell's view that when the white man turns tyrant it is his own freedom that he destroys.
+
+Retrieved items:
+<item 1>
+Shooting an Elephant
+After inquiring as to the elephant 's behavior and delaying for some time , he shoots the elephant several times , wounding it but unable to kill it . The
+narrator then leaves the beast , unable to be in its presence as it continues to suffer . He later learns that it was stripped , nearly to the bone , within
+hours . His elderly colleagues agree that killing the elephant was the best thing to do , but the younger ones believe that it was worth more than the Indian it
+killed . The narrator then wonders if they will ever understand that he did it `` solely to avoid looking a fool . '' Themes ( edit ) Imperialism ( edit ) An
+anti-imperialist writer , Orwell promotes the idea that , through imperialism , both conqueror and conquered are destroyed . Orwell clearly states his
+displeasure with colonial Britain : `` I had already made up my mind that imperialism was an evil thing ... I was all for the Burmese and all against their
+oppressors , the British . '' The narrator perceives that the conqueror is not in control , but it is rather the will of the people that governs his actions .
+</item 1>
+
+<item 2>
+Shooting an Elephant
+Although it is not the narrator 's wish to shoot the elephant , and even though he holds a weapon far beyond the technological capabilities of the natives , his
+will is not his own and , due to their expectation , he realises that he must shoot the elephant ; `` I was only an absurd puppet pushed to and fro by the will
+of those yellow faces behind . '' Reflectively , the narrator realises that being forced to impose strict laws and to shoot the elephant -- he states his
+feelings against the act , but submits after comprehending he `` had got to shoot the elephant '' -- illustrates an inherent problem of hegemony : `` when the
+white man turns tyrant it is his own freedom that he destroys . '' By enforcing the strict British rule , he is forfeiting his freedom while concurrently
+oppressing the Burmese . Conqueror and conquered ( edit ) The narrator 's situation throughout the essay is one of little prospect or prominence . He comments
+on how , even though he is of the ruling class , he finds himself either largely ignored by the Burmese people or hated .
+</item 2>
+
+<item 3>
+Shooting an Elephant
+The essay finishes with him wondering if they will even understand his motive for having killed the elephant as he merely wished to salvage his pride .
+Conscience ( edit ) The narrator 's conscience plagues him greatly as he finds himself trapped between the `` hatred of the empire ( he ) served '' and his ``
+rage against the evil - spirited little beasts who tried to make ( his ) job impossible . '' He claims that he is `` all for the Burmese and all against the
+British '' and goes on to say that `` feelings like these are the normal by - products of imperialism ; ask any Anglo - Indian official , if you can catch him
+off duty . '' This creates a sense of empathy from the imperialists for the natives , but as they treat their conquerors badly , they start to feel less guilty
+and so treat them badly once more . Film adaptation ( edit ) In 2015 , `` Shooting an Elephant '' was adapted into a short film by director Juan Pablo Rothie
+and Academy Award nominated writer Alec Sokolow . The film was shot entirely on location in Nepal starring Barry Sloane as Eric Blair . Fact or fiction ( edit )
+The degree to which the story is fiction has been disputed .
+</item 3>
+
+<item 4>
+Shooting an Elephant
+After Orwell 's death in 1950 , the essay was republished several times , including in Shooting an Elephant and Other Essays ( 1950 ) , Inside the Whale and
+Other Essays ( 1957 ) , and Selected Writings ( 1958 ) . Contents ( hide ) 1 Context 2 Events 3 Themes 3.1 Imperialism 3.2 Conqueror and conquered 3.3
+Conscience 4 Film adaptation 5 Fact or fiction 6 See also 7 References 8 Further reading Context ( edit ) Britain conquered Burma over a period of 62 years (
+1823 -- 1886 ) , during which three Anglo - Burmese wars took place , and incorporated it into its Indian Empire . It was administered as a province of India
+until 1937 , when it became a separate , self - governing colony , attaining its independence on January 4 , 1948 . With a strong interest in the lives of the
+working class , Orwell -- born in India to a middle - class family , but brought up in Britain -- held the post of assistant superintendent in the British
+Indian Imperial Police in Burma from 1922 to 1927 .
+</item 4>
+
+<item 5>
+Shooting an Elephant
+Shooting an elephant - wikipedia Shooting an elephant Jump to : navigation , search `` Shooting an Elephant '' Cover of first anthology publication Author
+George Orwell Country United Kingdom Genre ( s ) Unknown whether fiction or non-fiction Published in New Writing Publication date 1936 `` Shooting an Elephant
+'' is an essay by George Orwell , first published in the literary magazine New Writing in late 1936 and broadcast by the BBC Home Service on 12 October 1948 .
+The essay describes the experience of the English narrator , possibly Orwell himself , called upon to shoot an aggressive elephant while working as a police
+officer in Burma . Because the locals expect him to do the job , he does so against his better judgment , his anguish increased by the elephant 's slow and
+painful death . The story is regarded as a metaphor for British imperialism , and for Orwell 's view that `` when the white man turns tyrant it is his own
+freedom that he destroys . '' Orwell spent some of his life in Burma in a position akin to that of the narrator , but the degree to which his account is
+autobiographical is disputed , with no conclusive evidence to prove it to be fact or fiction .
+</item 5>
+
+<item 6>
+Shooting an Elephant
+Kenny shooting an elephant in similar circumstances . When one biographer questioned Orwell 's wife , Sonia Brownell , she replied , `` Of course he shot a
+fucking a ( sic ) elephant . He said he did . Why do you always doubt his word ! '' See also ( edit ) Burmese Days Chunee George Orwell bibliography Musth Such
+, Such Were the Joys References ( edit ) ^ Jump up to : Runciman , David . Political Hypocrisy : The Mask of Power , from Hobbes to Orwell and Beyond .
+Princeton University Press , 2010 , pp. 182 -- 183 . ^ Jump up to : Orwell , George . `` Shooting an Elephant '' , The Literature Network , accessed April 17 ,
+2011 . Jump up ^ George Orwell : A Life ^ Jump up to : Larkin , Emma ( 2005 ) . Finding George Orwell in Burma ( First American ed . ) . New York : The Penguin
+Press . ISBN 1 - 59420 - 052 - 1 . Jump up ^ `` Elements of Fiction and Total Effect in Shooting an Elephant by George Orwell ( 2004 ) '' .
+</item 6>
+
+<item 7>
+Shooting an Elephant
+Retrieved 2011 - 10 - 08 . Jump up ^ `` Orwell still matters : Shooting an Elephant '' . rogalinski.com.pl -- Journalist blog . July 22 , 2011 . Archived from
+the original on May 19 , 2012 . Retrieved 2011 - 10 - 02 . ^ Jump up to : `` Staloysius : Shooting an Elephant analysis '' . Archived from the original on 2012
+- 04 - 06 . Retrieved 2011 - 10 - 08 . Jump up ^ `` Oppapers : Shooting an Elephant analysis '' . Retrieved 2011 - 10 - 10 . Jump up ^ `` Shooting an Elephant
+'' . IMDb . September 9 , 2014 . Retrieved February 21 , 2015 . Further reading ( edit ) Shooting an Elephant `` Audio Version of Shooting an Elephant '' Audio
+version of `` Shooting an Elephant '' read by Patrick E. McLean Orwell , George ( 1968 ) ( 1958 ) . Selected Writings . Heinemann Educational Books .
+</item 7>
+
+<item 8>
+Shooting an Elephant
+Fact or fiction ( edit ) The degree to which the story is fiction has been disputed . In his biography of Orwell , George Orwell : A Life , Bernard Crick cast
+doubt on the idea that Orwell himself actually shot an elephant . No independent account of Orwell 's actions has been found and there was no official record of
+the incident , which was unusual considering the destruction of valuable property . Peter Davison , the editor of Orwell 's Complete Works , includes an
+interview with George Stuart , a contemporary of Orwell in Burma , who said that Orwell was transferred to Kathar as punishment for shooting an elephant . `` An
+elephant was considered a valuable asset to any timber firm ... and Orwell would have been severely reprimanded for such unnecessary slaughter . It was not long
+after the incident that he was transferred from Moulmein to a quiet post in Upper Burma called Katha . '' Davison also includes in the complete works a news
+item from the Rangoon Gazette , March 22 , 1926 which describes a Major E.C. Kenny shooting an elephant in similar circumstances .
+</item 8>
+
+<item 9>
+Shooting an Elephant
+In Moulmein , the narrator -- Orwell , writing in the first person -- is a police officer during a period of intense anti-European sentiment . Although his
+intellectual sympathies lie with the Burmese , his official role makes him a symbol of the oppressive imperial power . As such , he is subjected to constant
+baiting and jeering by the local people . After receiving a call regarding a normally tame elephant 's rampage , the narrator , armed with a . 44 caliber
+Winchester rifle and riding on a pony , goes to the town where the elephant has been seen . Entering one of the poorest quarters , he receives conflicting
+reports and contemplates leaving , thinking the incident is a hoax . The narrator then sees a village woman chasing away children who are looking at the corpse
+of an Indian whom the elephant has trampled and killed . He sends an order to bring an elephant rifle and , followed by a group of roughly a few thousand people
+, heads toward the paddy field where the elephant has rested in its tracks . Although he does not want to kill the elephant now that it seems peaceful , the
+narrator feels pressured by the demand of the crowd for the act to be carried out .
+</item 9>
+
+<item 10>
+Shooting an Elephant
+`` Moulmein used to be full of elephants ... '' ( employed to ) haul logs in the timber firms . `` Ordinary tamed elephants have been part of Burmese life for
+centuries , ... the rare and revered white elephant , is believed in Buddhist legend to be a symbol of purity and power . '' By the time Orwell moved to
+Moulmein , in 1926 , `` ... he was most probably ambivalent about the colonial state of which he was a part . The Kipling - inspired romance of the Raj had been
+worn thin by the daily realities of his job in which , ... he witnessed ' the dirty work of Empire at close quarters ' . '' Orwell writes how he was trapped
+between his own resentment towards the Empire and the Burmese people 's resentment towards him . As a member of the ruling power , he is cornered into doing
+what the `` natives '' expect of him : `` He wears a mask , and his face grows to fit it . '' `` Events ( edit ) A passport photo of Orwell , taken during his
+time in the Burmese police force .
+</item 10>
+=== END ITEM id=a41e90e2491a4fce ===
+
+=== ITEM id=c4501c2ba0a7e43d ===
+Gold sentences and facts:
+Sentence 0: Sheila Carter is a fictional character from The Young and the Restless and The Bold and the Beautiful , American soap operas on the CBS network . Created by William J. Bell , the role was introduced in 1990 -- by Edward J. Scott -- under the portrayal of Kimberlin Brown , who portrayed the role for many intervals on both soaps until 2006 . That same year , Michelle Stafford took over the role , after Sheila had plastic surgery to look like Phyllis Summers . Brown returned to the role of Sheila on The Bold and the Beautiful , beginning on June 9 , 2017 .
+  Fact 0.0: Sheila Carter is a fictional character from The Young and the Restless.
+  Fact 0.1: Sheila Carter is a fictional character from The Bold and the Beautiful.
+  Fact 0.2: The Young and the Restless and The Bold and the Beautiful are American soap operas on the CBS network.
+  Fact 0.3: The character Sheila Carter was created by William J. Bell.
+  Fact 0.4: The role of Sheila Carter was introduced in 1990.
+  Fact 0.5: The role of Sheila Carter was introduced by Edward J. Scott.
+  Fact 0.6: The role of Sheila Carter was introduced under the portrayal of Kimberlin Brown.
+  Fact 0.7: Kimberlin Brown portrayed the role of Sheila Carter for many intervals on both soaps until 2006.
+  Fact 0.8: In 2006, Michelle Stafford took over the role of Sheila Carter.
+  Fact 0.9: Michelle Stafford took over the role after Sheila had plastic surgery to look like Phyllis Summers.
+  Fact 0.10: Kimberlin Brown returned to the role of Sheila Carter on The Bold and the Beautiful.
+  Fact 0.11: Kimberlin Brown's return to the role of Sheila Carter on The Bold and the Beautiful began on June 9, 2017.
+Sentence 1: The role was portrayed by Kimberlin Brown for a total of 16 years . Her first run was on The Young and the Restless from May 1990 to May 20 , 1992 , when the character crossed over to The Bold and the Beautiful from May 21 , 1992 , to October 2 , 1998 , again from May 24 to November 5 , 2002 , and again finally from September 26 to October 10 , 2003 . Despite being a regular cast member on The Bold and the Beautiful , Brown returned to The Young and the Restless for several guest appearances beginning on October 27 , 1992 . Brown departed on November 5 , 1992 , and reappeared for one episode on December 23 , 1992 . She continued making appearance from January 7 to 14 , 1993 , February 19 , 1993 , to March 2 , 1993 , October 11 , 1993 , October 19 to 27 , 1993 , January 12 , 1994 , and February 28 , 1995 , until March 2 , 1995 .
+  Fact 1.0: Kimberlin Brown portrayed Sheila Carter for a total of 16 years.
+  Fact 1.1: Brown's first run as Sheila Carter was on The Young and the Restless from May 1990 to May 20, 1992.
+  Fact 1.2: The character Sheila Carter crossed over to The Bold and the Beautiful from May 21, 1992, to October 2, 1998.
+  Fact 1.3: The character Sheila Carter appeared on The Bold and the Beautiful again from May 24 to November 5, 2002.
+  Fact 1.4: The character Sheila Carter appeared on The Bold and the Beautiful again finally from September 26 to October 10, 2003.
+  Fact 1.5: Brown was a regular cast member on The Bold and the Beautiful.
+  Fact 1.6: Despite being a regular cast member on The Bold and the Beautiful, Brown returned to The Young and the Restless for several guest appearances beginning on October 27, 1992.
+  Fact 1.7: Brown departed from The Young and the Restless on November 5, 1992.
+  Fact 1.8: Brown reappeared on The Young and the Restless for one episode on December 23, 1992.
+  Fact 1.9: Brown continued making appearances from January 7 to 14, 1993.
+  Fact 1.10: Brown made an appearance on February 19, 1993.
+  Fact 1.11: Brown made appearances from February 19, 1993, to March 2, 1993.
+  Fact 1.12: Brown made an appearance on October 11, 1993.
+  Fact 1.13: Brown made appearances from October 19 to 27, 1993.
+  Fact 1.14: Brown made an appearance on January 12, 1994.
+  Fact 1.15: Brown made an appearance on February 28, 1995, until March 2, 1995.
+Sentence 2: Sheila Carter Kimberlin Brown as Sheila Carter The Young and the Restless character Portrayed by Kimberlin Brown ( 1990 -- ) Michelle Stafford ( 2006 -- 07 ) Duration 1990 -- 98 2002 -- 03 2005 -- 07 2017 -- First appearance May 1990 Created by William J. Bell Introduced by Edward J. Scott ( 1990 , 1992 -- 95 ) Lee Phillip Bell ( 1992 ) Bradley Bell ( 2002 -- 03 ) John F. Smith ( 2005 ) Lynn Marie Latham and Josh Griffith ( 2006 ) Bradley Bell and Michael Minnis ( 2017 ) Crossover appearances The Bold and the Beautiful Classification Present ; regular Profile Other names Sheila Grainger Sheila Forrester Sheila Warwick Sybil Weller Sheila Lovejoy Brenda Harris Jennifer Mitchell Phyllis Newman Betsy Occupation Waitress Executive assistant Nurse Residence Los Angeles , California Michelle Stafford as Sheila Carter ( show ) Family Family Carter Mother Molly Carter Sisters Sarah Smythe Husband Scott Grainger , Sr. ( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter Granddaughters Lucy Romalotti
+  Fact 2.0: Sheila Carter is a character portrayed by Kimberlin Brown from 1990 onward.
+  Fact 2.1: Sheila Carter is a character portrayed by Michelle Stafford from 2006 to 2007.
+  Fact 2.2: The character Sheila Carter's duration on the soaps covers 1990-98, 2002-03, 2005-07 and 2017 onward.
+  Fact 2.3: The character Sheila Carter first appeared in May 1990.
+  Fact 2.4: The character Sheila Carter was created by William J. Bell.
+  Fact 2.5: The character Sheila Carter was introduced by Edward J. Scott in 1990 and 1992-95.
+  Fact 2.6: The character Sheila Carter was introduced by Lee Phillip Bell in 1992.
+  Fact 2.7: The character Sheila Carter was introduced by Bradley Bell in 2002-03.
+  Fact 2.8: The character Sheila Carter was introduced by John F. Smith in 2005.
+  Fact 2.9: The character Sheila Carter was introduced by Lynn Marie Latham and Josh Griffith in 2006.
+  Fact 2.10: The character Sheila Carter was introduced by Bradley Bell and Michael Minnis in 2017.
+  Fact 2.11: The character Sheila Carter has crossover appearances on The Bold and the Beautiful.
+  Fact 2.12: The character Sheila Carter is classified as present and regular.
+  Fact 2.13: Sheila Carter's other names include Sheila Grainger, Sheila Forrester, Sheila Warwick, Sybil Weller, Sheila Lovejoy, Brenda Harris, Jennifer Mitchell, Phyllis Newman and Betsy.
+  Fact 2.14: Sheila Carter's occupations include waitress, executive assistant and nurse.
+  Fact 2.15: Sheila Carter's residence is Los Angeles, California.
+  Fact 2.16: Sheila Carter's family is the Carter family.
+  Fact 2.17: Sheila Carter's mother is Molly Carter.
+  Fact 2.18: Sheila Carter's sister is Sarah Smythe.
+  Fact 2.19: Sheila Carter's husband was Scott Grainger, Sr. from 1991 to 1992.
+  Fact 2.20: Sheila Carter's husband was Eric Forrester from 1993 to 1995.
+  Fact 2.21: Sheila Carter's husband was James Warwick from 1997 to 1998.
+  Fact 2.22: Sheila Carter's son is Ryder Callahan.
+  Fact 2.23: Sheila Carter's daughters are Mary Carter Warwick, Diana Carter and Daisy Carter.
+  Fact 2.24: Sheila Carter's granddaughter is Lucy Romalotti.
+  Fact 2.25: Michelle Stafford portrayed Sheila Carter on the show.
+
+Retrieved items:
+<item 1>
+Sheila Carter
+Sheila continues to insinuate herself into Eric 's life , faking a concussion after a catfight with Quinn to manipulate Eric into letting her stay in the
+Forrester mansion . Sheila blackmails her ex-husband , James Warwick , into lying about the severity of her condition . Critical reception ( edit ) Sheila is
+often considered to be one of the most popular villains in daytime . Kimberlin Brown was nominated for a Daytime Emmy in the role as Outstanding Supporting
+Actress in 1993 . With the global success of The Bold and the Beautiful , Sheila is arguably the most recognisable soap opera villain in the world . References
+( edit ) ^ Jump up to : `` About Y&R : Who 's Who in Los Angeles - Sheila Carter '' . SoapCental . Retrieved 16 September 2012 . ^ Jump up to : Kroll , Dan J. (
+9 July 2005 ) . `` Y&R confirms the return of Kimberlin Brown '' . SoapCentral . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday
+, 5th August 2005 '' . CBS.com .
+</item 1>
+
+<item 2>
+Sheila Carter
+( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter
+Granddaughters Lucy Romalotti Sheila Carter is a fictional character from The Young and the Restless and The Bold and the Beautiful , American soap operas on
+the CBS network . Created by William J. Bell , the role was introduced in 1990 -- by Edward J. Scott -- under the portrayal of Kimberlin Brown , who portrayed
+the role for many intervals on both soaps until 2006 . That same year , Michelle Stafford took over the role , after Sheila had plastic surgery to look like
+Phyllis Summers . Brown returned to the role of Sheila on The Bold and the Beautiful , beginning on June 9 , 2017 . Sheila is known as a villain . A significant
+portion of Sheila 's history on both soaps revolves around her long - running conflict with Lauren Fenmore , whom she has attempted to kill on multiple
+occasions .
+</item 2>
+
+<item 3>
+Sheila Carter
+. Daytime Confidential . Retrieved 16 September 2012 . ^ Jump up to : Kroll , Dan J. ( 30 November 2009 ) . `` Is Kimberlin Brown returning to The Young and the
+Restless ? '' . SoapCentral . Retrieved 16 September 2012 . Jump up ^ Logan , Michael ( June 9 , 2017 ) . `` Kimberlin Brown Returns to The Bold and the
+Beautiful as Supervillain Sheila Carter '' . TV Insider . United States : CBS Interactive . Retrieved June 10 , 2017 . Jump up ^ Logan , Michael ( June 19 ,
+2017 ) . `` The Bold and the Beautiful : EP Bradley Bell Answers Our Burning Sheila Carter Questions '' . TV Insider . United States : TVGM Holdings LLC .
+Retrieved June 19 , 2017 . Jump up ^ Kimberlin Brown ( 1992 ) . The Bold and the Beautiful May 1992 Promo Sheila . CBS Daytime . Retrieved 7 November 2012 .
+Jump up ^ Kimberlin Brown ( 2008 ) .
+</item 3>
+
+<item 4>
+Sheila Carter
+Despite being a regular cast member on The Bold and the Beautiful , Brown returned to The Young and the Restless for several guest appearances beginning on
+October 27 , 1992 . Brown departed on November 5 , 1992 , and reappeared for one episode on December 23 , 1992 . She continued making appearance from January 7
+to 14 , 1993 , February 19 , 1993 , to March 2 , 1993 , October 11 , 1993 , October 19 to 27 , 1993 , January 12 , 1994 , and February 28 , 1995 , until March 2
+, 1995 . In July 2005 , after a 10 - year absence from The Young and the Restless , it was announced that Brown was to reprise the role . At the time , Brown
+had been appearing on ABC 's One Life to Live as Paige Miller , and Brown reportedly opted to leave the role when ABC was unable to match the financial terms of
+a contract offered to her by CBS . She returned on August 5 , 2005 , and her run ended on January 11 , 2006 .
+</item 4>
+
+<item 5>
+Graph query row:
+portrayer: Kimberlin Brown
+character: Sheila Carter
+relationship: RELATED_TO
+role: portrayed Sheila Carter
+relationship_detail: None
+fact: None
+</item 5>
+
+<item 6>
+Sheila Carter
+Sheila Carter - Wikipedia Sheila Carter Jump to : navigation , search Sheila Carter Kimberlin Brown as Sheila Carter The Young and the Restless character
+Portrayed by Kimberlin Brown ( 1990 -- ) Michelle Stafford ( 2006 -- 07 ) Duration 1990 -- 98 2002 -- 03 2005 -- 07 2017 -- First appearance May 1990 Created by
+William J. Bell Introduced by Edward J. Scott ( 1990 , 1992 -- 95 ) Lee Phillip Bell ( 1992 ) Bradley Bell ( 2002 -- 03 ) John F. Smith ( 2005 ) Lynn Marie
+Latham and Josh Griffith ( 2006 ) Bradley Bell and Michael Minnis ( 2017 ) Crossover appearances The Bold and the Beautiful Classification Present ; regular
+Profile Other names Sheila Grainger Sheila Forrester Sheila Warwick Sybil Weller Sheila Lovejoy Brenda Harris Jennifer Mitchell Phyllis Newman Betsy Occupation
+Waitress Executive assistant Nurse Residence Los Angeles , California Michelle Stafford as Sheila Carter ( show ) Family Family Carter Mother Molly Carter
+Sisters Sarah Smythe Husband Scott Grainger , Sr.
+</item 6>
+
+<item 7>
+Sheila Carter
+She has also had conflicts with Stephanie Forrester , Maggie Forrester , Amber Moore , Taylor Hayes , Brooke Logan , Phyllis Summers and Quinn Fuller . Contents
+( hide ) 1 Casting and creation 2 Development 3 Storylines 3.1 1990 -- 92 3.2 1992 -- 98 3.3 2002 -- 03 3.4 2005 -- 07 3.5 2010 , 2012 3.6 2017 -- 4 Critical
+reception 5 References 6 External links Casting and creation ( edit ) The role was portrayed by Kimberlin Brown for a total of 16 years . Her first run was on
+The Young and the Restless from May 1990 to May 20 , 1992 , when the character crossed over to The Bold and the Beautiful from May 21 , 1992 , to October 2 ,
+1998 , again from May 24 to November 5 , 2002 , and again finally from September 26 to October 10 , 2003 .
+</item 7>
+
+<item 8>
+Sheila Carter
+However , that December , the character returned , though not portrayed by Brown , but by Michelle Stafford , who in addition portrayed Phyllis Summers . For
+the reason of Brown not returning to the role , the actress said : `` I had a bad accident last year , and when they wanted me back in November , I really could
+n't go at that time , and that 's why I came back looking like somebody else . '' Stafford only portrayed the role for two months until February 9 , 2007 , when
+Sheila was shot by her longtime enemy Lauren Fenmore and presumed dead . In 2009 , reports speculated that Brown would reprise the role again on The Bold and
+the Beautiful , which was followed by more rumors speculating a return to The Young and the Restless . `` I actually got a call from ( B&B head writer and
+executive producer ) Brad Bell a while back asking if I 'd be interested in coming back , and I said , ' Sure ! ' The thing with daytime is that the storylines
+are ( written ) so far in advance , you just never know when ( you might be needed ) , '' Brown said at the time .
+</item 8>
+
+<item 9>
+Sheila Carter
+CBS.com . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Wednesday , 11th January 2006 '' . CBS.com . Retrieved 16 September 2012 .
+Jump up ^ `` The Young and the Restless : Thursday , 28th December 2006 '' . CBS.com . Retrieved 16 September 2012 . Jump up ^ `` Michelle Stafford Playing
+Sheila Carter on The Young and the Restless '' . She Knows Soaps . Retrieved 16 September 2012 . Jump up ^ Kimberlin Brown ( 2007 ) . KB Interview Nov 2007 .
+KOUS News . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday , 9th February 2007 '' . CBS.com . Retrieved 16 September 2012 . Jump
+up ^ Kerr , Luke ( 28 August 2009 ) . `` Could Kimberlin Brown Return to B&B ? '' . Daytime Confidential . Retrieved 16 September 2012 .
+</item 9>
+
+<item 10>
+Sheila Carter
+When asked where her alter - ego may be `` hiding out '' , Brown said : `` I am still getting healthy from my car accident . Right now , Sheila is hiding out in
+North Carolina -- playing golf . But do n't worry : Sheila always comes back ! '' In June 2017 , Kimberlin Brown reprised her role as Sheila on The Bold and the
+Beautiful . Executive producer Brad Bell announced Brown had been signed to a one - year deal with the serial . Development ( edit ) `` She seduced another
+woman 's husband and stole their child ... but if you think that 's bold , hold on tight ... because the hand that rocked The Young and the Restless is now
+rocking The Bold and the Beautiful . Sheila lives ... -- CBS promoting Kimberlin Brown 's crossover as Sheila On the topic of Sheila and Lauren 's `` cat fights
+'' , Brown said : `` People like cat fights because we can get away with what you ca n't get away with in everyday life . You 're living vicariously through me
+.
+</item 10>
+=== END ITEM id=c4501c2ba0a7e43d ===

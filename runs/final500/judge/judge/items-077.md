@@ -1,0 +1,863 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=2103f5d6fcb77293 ===
+Gold sentences and facts:
+Sentence 0: McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago.
+  Fact 0.0: McHenry has brushed off attempts to take the job more permanently.
+  Fact 0.1: McHenry was appointed to the role after the ouster of McCarthy.
+  Fact 0.2: The ouster of McCarthy was unprecedented.
+  Fact 0.3: The ouster of McCarthy happened more than two weeks ago.
+Sentence 1: Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives.
+  Fact 1.0: Wall Street is also absorbing the ouster of Kevin McCarthy.
+  Fact 1.1: Kevin McCarthy was the speaker of the House of Representatives.
+  Fact 1.2: Kevin McCarthy was ousted as speaker of the House of Representatives.
+
+Retrieved items:
+<item 1>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Don Bacon, R-Neb.
+
+For more than two weeks the stalemate has shut down the U.S. House, leaving a seat of American democracy severely hobbled at a time of challenges at home and
+abroad. The House Republican majority appears to have no idea how to end the political turmoil and get back to work.
+
+With Republicans in majority control of the House, 221-212, any candidate can lose only a few detractors. It appears there is no Republican at present who can
+win a clear majority, 217 votes, to become speaker.
+
+In fact, the hard-charging Judiciary chairman lost rather than gained votes despite hours spent trying to win over holdouts, no improvement from the 20 and then
+22 Republicans he lost in early rounds this week.
+
+Friday’s vote was 194 for Jordan, his lowest tally yet, and 210 for Jeffries, with two absences on each side.
+
+“He doesn’t have the votes to be speaker,” Rep.
+</item 1>
+
+<item 2>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Once a formality in Congress, the vote for House speaker has devolved into another bitter GOP showdown for the gavel.
+
+As Republicans upset and exhausted by the infighting retreated for private conversations, hundreds of protesters, if not more, amassed outside the Capitol over
+the Israel-Hamas war, a stark reminder of the dangers of having the House adrift as political challenges intensify at home and abroad.
+
+Ahead of the morning vote, Jordan, the combative Judiciary Committee chairman, made an unusual plea for party unity — almost daring his colleagues to put
+forward the alternative proposal for a temporary speaker.
+
+“We’ve been at this two weeks,” Jordan said at the Capitol. “American people deserve to have their government functioning.”
+
+But as the roll call got under way, he lost more than he gained, picking up three backers but adding more detractors. No further votes were scheduled.
+</item 2>
+
+<item 3>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+No further votes were scheduled.
+
+The holdouts added to a surprisingly large and politically diverse group of 20 Republicans who had rejected Jordan’s nomination the day before, many resenting
+the hardball tactics seeking to enforce support, and viewing the Ohio congressman as too extreme for a central seat of U.S. power.
+
+With Republicans in majority control of the House, 221-212, Jordan must pick up most of his GOP foes to win. Wednesday’s tally, with 199 Republicans voting for
+Jordan and 212 for Democratic leader Hakeem Jeffries of New York, left no candidate with a clear majority, as the 22 Republicans voted for someone else.
+
+One new Jordan opponent, Rep. Vern Buchanan of Florida, explained his vote, “I think it’s time to move on.”
+
+Bipartisan groups of lawmakers have been floating ways to operate the House by giving greater power to McHenry or another temporary speaker. The House had never
+ousted its speaker before McCarthy, and McHenry could tap the temporary powers that were created after the Sept.
+</item 3>
+
+<item 4>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Republican Rep. Jim Jordan failed again Wednesday on a crucial second ballot to become House speaker, the hard-fighting ally of Donald Trump losing even more
+GOP colleagues who are refusing to give him the gavel.
+
+Next steps were highly uncertain as angry, frustrated Republicans looked at other options. A bipartisan group of lawmakers floated an extraordinary plan — to
+give the interim speaker-pro-tempore, Rep. Patrick McHenry, R-N.C., more power to reopen the immobilized House and temporarily conduct routine business.
+
+What was clear was that Jordan’s path to become House speaker was almost certainly lost. He was opposed by 22 Republicans, two more than he lost in first round
+voting the day before.
+
+“We’ll keep talking to members, keep working on it,” Jordan, a founding member of the hard-right Freedom Caucus, said after the vote, vowing to stay in the
+race.
+
+The House came to another abrupt standstill, stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden
+ouster of Kevin McCarthy.
+</item 4>
+
+<item 5>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+A closed-door meeting Thursday to regroup grew heated at times with Republican factions blaming one another for sending their majority into chaos, lawmakers
+said.
+
+Elevating McHenry to an expanded speaker’s role could be a possible off-ramp for the crisis, but it would not be as politically simple as it might seem.
+
+Republicans are loath to partner with the Democrats in a bipartisan way on the arrangement, and it’s highly unlikely Republicans could agree to give McHenry
+more powers on their own, since their hard-liners don’t like it.
+
+McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more
+than two weeks ago.
+
+To win over GOP colleagues, Jordan had relied on backing from Trump, the party’s front-runner in the 2024 election, and groups pressuring rank-and-file
+lawmakers for the vote. But they were not enough and in fact backfired on some.
+
+Jordan has been a top Trump ally, particularly during the Jan.
+</item 5>
+
+<item 6>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+“He doesn’t have the votes to be speaker,” Rep. Carlos Gimenez, R-Fla., said after a late Thursday meeting when Jordan sought to hear detractors out and shore
+up support.
+
+The holdouts want “nothing” from Jordan, Gimenez said, adding that some of the lawmakers in the meeting simply called on Jordan to drop out of the race.
+
+One extraordinary idea, to give the interim speaker pro tempore, Rep. Patrick McHenry, more powers for the next several months to at least bring the House back
+into session and conduct crucial business, was swiftly rejected by Jordan’s own ultra-conservative allies.
+
+A “betrayal,” said Rep. Jim Banks, R-Ind.
+
+Next steps were highly uncertain as angry, frustrated Republicans predict the House could essentially stay closed for the foreseeable future — perhaps until the
+mid-November deadline for Congress to approve funding or risk a federal government shutdown.
+
+“We’re trying to figure out if there’s a way we can get back with a Republican-only solution,” said veteran legislator Rep.
+</item 6>
+
+<item 7>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Republicans dropped Rep. Jim Jordan on Friday as their nominee for House speaker, making the decision during a closed-door session after the hard-edged ally of
+Donald Trump failed badly on a third ballot for the gavel.
+
+Afterward, Jordan said simply of his colleagues, “We put the question to them, they made a different decision.”
+
+The hard-charging Judiciary Committee chairman said House Republicans now need to come together and “figure out who our speaker is going to be.”
+
+The House impasse deepening into a full-blown crisis, Republicans have no realistic or workable plan to unite the fractured GOP majority, elect a new speaker
+and return to the work of Congress that has been languishing since hard-liners ousted Kevin McCarthy at the start of the month.
+
+Majority Leader Steve Scalise said they’re going “come back and start over” on Monday.
+
+Angry, frustrated Republicans who have been watching their majority control descend into chaos left the private session blaming one another for the divisions
+they have created.
+</item 7>
+
+<item 8>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Others are simply upset at the way the whole process has dragged out.
+
+They cast their ballots for McCarthy, Majority Leader Steve Scalise — who had been the party’s first nominee to replace McCarthy — and others, one vote even
+going to the retired Boehner.
+
+“Jim Jordan will be a great speaker,” Trump had said Tuesday said outside a courthouse in Manhattan, where he is facing business fraud charges. “I think he’s
+going to have the votes soon, if not today, over the next day or two.”
+
+Jordan has been a top Trump ally, particularly during the Jan. 6 Capitol attack by the former president’s backers who were trying to overturn the 2020 election
+he lost to Biden. Days later, Trump awarded Jordan a Medal of Freedom.
+
+The political climb has been steep for Jordan who is known more as a chaos agent than a skilled legislator, raising questions about how he would lead.
+</item 8>
+
+<item 9>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+11, 2001, terror attacks to ensure continuity of government.
+
+The novel concept of boosting the interim speaker’s role was gaining favor with a pair of high-profile Republicans: Former GOP speakers Newt Gingrich and John
+Boehner.
+
+Gingrich said while he likes Jordan, he has “no faith” the nominee can get much beyond the 200 votes he won in the first vote.
+
+“We can’t sit around and suck our thumbs and hope the world will wait until the House Republicans get their act together,” Gingrich told Fox News’ Sean Hannity
+on his show.
+
+Boehner reposted Gingrich’s views saying, “I agree,” on social media.
+
+The two men have deep experience with the subject. Both were chased to early retirement.
+
+“The Republicans are unable to function right now,” Jeffries said late Tuesday. “All options are on the table to end the Republican civil war,” he added
+Wednesday.
+
+In nominating Jordan, veteran Republican Rep. Tom Cole of Oklahoma said it was time to end the upheaval that he had warned against with McCarthy’s sudden
+ouster.
+</item 9>
+
+<item 10>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Next steps are highly uncertain as lawmakers start offering new ideas for a possible speaker. But it appears no one at present can win a GOP majority.
+
+“We’re in a very bad place right now,” McCarthy said earlier.
+
+In a floor vote Friday morning, Jordan’s third reach for the gavel, he lost 25 Republican colleagues, worse than he had fared earlier in the week, and far from
+the majority needed, as they reject his hardline approach.
+
+But after two failed votes, Jordan’s third attempt at the gavel essentially collapsed — in large part because more centrist Republicans are revolting over the
+nominee and the hardball tactics being used to win their votes. They have been bombarded with harassing phone calls and even reported death threats.
+
+Ahead of the vote, Jordan showed no signs of stepping aside, insisting at a Capitol press conference: “The American people are hungry for change.”
+
+But afterward Jordan told colleagues behind closed doors, “I tried my best,” according to one of his opponents, Rep. Don Bacon, R-Neb.
+</item 10>
+=== END ITEM id=2103f5d6fcb77293 ===
+
+=== ITEM id=59d2ffc0ebea0a8f ===
+Gold sentences and facts:
+Sentence 0: After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center.
+  Fact 0.0: Hockenson has had three limited practices this week.
+  Fact 0.1: The writer will trust that Hockenson is ready to go.
+  Fact 0.2: Hockenson continued to play through the ailment in Week 9.
+  Fact 0.3: Hockenson was a big part of the offense in Week 9.
+  Fact 0.4: Josh Dobbs was under center for the offense when Hockenson played in Week 9.
+Sentence 1: Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%.
+  Fact 1.0: Kincaid was a limited participant in practice on Wednesday.
+  Fact 1.1: Kincaid's limited practice participation was due to a shoulder injury.
+  Fact 1.2: It has been reported that Kincaid is likely to suit up on Saturday.
+  Fact 1.3: It has been reported that Kincaid is likely to play on Saturday at less than 100%.
+
+Retrieved items:
+<item 1>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Chase put a scare into the fantasy community on Wednesday when he was listed as a DNP, but after logging back-to-back limited practices, there is a lot more
+optimism heading into Sunday. With Tee Higgins (hamstring) already ruled out, Cincinnati will be hoping Chase can feel healthy enough to play when they host the
+Texans at 1 p.m. ET on Sunday.
+
+The Bengals, despite getting a win over the Bills last Sunday, are a beaten-down bunch. Their defense will also be without a prominent edge rusher, Sam Hubbard,
+complicating matters for a team hoping to stack wins as they compete for an AFC North crown. On the bright side, Joe Burrow appears to be finally healthy and
+should have no problems targeting Tyler Boyd, Trenton Irwin, and Andrei Iosivas in the passing game. If Chase does end up suiting up, fantasy owners should
+enjoy an even larger workload than the receiver already had.
+</item 1>
+
+<item 2>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Jefferson (hamstring) is officially listed as "questionable" for Sunday's game against the Saints. Kickoff is slated for 1 p.m. ET, but fantasy owners won't
+have to wait long for news on the star receiver. In order to be eligible to play, Jefferson will need to be activated by 4 p.m. ET on Saturday. Earlier in the
+week head coach Kevin O'Connell said that it would be "a little aggressive" for Jefferson to get back on the field this week. However, the receiver's three
+straight limited practices were enough for the team to at least weigh the decision, but thankfully, an early answer awaits.
+
+WEEK 10 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start 'em, sit 'em
+
+Jefferson's fantasy outlook is always through the roof, but it will be interesting to see if that changes with Josh Dobbs under center instead of Kirk Cousins.
+</item 2>
+
+<item 3>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+ET, according to ESPN's Jeremy Fowler. The receiver was limited in practice thanks to the toe injury that has plagued him since leaving Week 8's game against
+the Eagles, but barring a setback, he will return to action this weekend.
+
+The receiver was working his way into flex territory with a couple of good performances before picking up the injury. However, we wouldn't consider him to be
+worthy of a fantasy start this week unless you're in a bind. It's unclear whether Samuel will regain the same workload or if he'll be playing in limited action
+as he works his way back. Jamison Crowder emerged in Samuel's absence and Jahan Dotson has seen his production drastically increase, as well. The wait-and-see
+approach is the preferred one heading into Week 10.
+</item 3>
+
+<item 4>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning back the clocks last week, it now gets darker earlier for the foreseeable future. That darkness allows us to see the stars on a clear night, so
+it's only natural to wonder if the pass-catching stars will shine bright in Week 10 of the NFL season. We already know Tee Higgins and Nico Collins are OUT,
+while Justin Jefferson, Ja'Marr Chase, and T.J. Hockenson are among the other star pass-catchers beaten up heading into the week. Can we expect them on the
+field when the action kicks off Sunday?
+
+Below, we'll give you the latest news on these ailing pass-catchers and break down how their injuries could potentially affect the Week 10 fantasy landscape.
+
+WEEK 10 INJURY UPDATES: Early WRs | RBs
+
+Is Justin Jefferson playing Week 10?
+
+UPDATE: The Vikings will not activate Jefferson before Sunday's game and have officially ruled him OUT, according to NFL Network's Tom Pelissero.
+</item 4>
+
+<item 5>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+If he's out, Boyd is a must-start, and you can try one of Cincinnati's secondary receivers in deep leagues.
+
+WEEK 10 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is T.J. Hockenson playing Week 10?
+
+UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans.
+
+UPDATE 2: Hockenson is officially ACTIVE.
+
+Hockenson (ribs) is listed as "questionable" for Week 10, but he's already said he plans to play on Sunday. The tight end has dealt with his fair share of
+injury woes this season, however, he's yet to miss a game.
+</item 5>
+
+<item 6>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+Jaguars), and Dalton Kincaid (@ Chiefs) aren't far behind. LaPorta and Njoku both have great matchups against defenses that entered last week in the top 10 in
+fantasy points per game (FPPG) allowed to TEs, and we know what Kelce, Hockenson, and Kincaid do every week in PPR formats.
+
+George Kittle (vs. Seahawks) doesn't have a great matchup -- especially when you remember that he had just three catches for 19 yards against Seattle in Week 12
+-- but he remains a must-start given his high ceiling in any matchup.
+
+WEEK 14 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start-sit
+
+Who are the best fantasy TE sleepers, pickups, & streamers in Week 14?
+
+It can be tough to trust Taysom Hill (vs.
+</item 6>
+
+<item 7>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week
+9 as a big part of the offense with Josh Dobbs under center.
+
+As long as Hockenson is playing, he's not being benched in any fantasy format. The tight end projects as a top option at the position and remains the Vikings'
+leader in targets with 80 on the season. Dobbs enjoyed targeting the tight ends in Arizona and continued that trend in his Minnesota debut. The floor for
+Hockenson is equivalent to that of a rooftop bar.
+
+WEEK 10 DFS: DK lineup | FD lineup | Best values | Best stacks
+
+Is Curtis Samuel playing Week 10?
+
+UPDATE: Samuel is officially ACTIVE.
+
+Samuel (toe) is expected to play on Sunday when the Commanders take on the Seahawks at 4:25 p.m. ET, according to ESPN's Jeremy Fowler.
+</item 7>
+
+<item 8>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+In addition, K.J. Osborn (concussion) is also listed as "questionable," though his status steadily improved throughout the week from DNP on Wednesday to full
+practice on Friday. If Jefferson is back, he's a must-start. If Jefferson is out but Osborn returns, both Osborn and Jordan Addison are worth using.
+
+WEEK 10 PPR RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is Ja'Marr Chase playing Week 10?
+
+UPDATE: ESPN's Jeremy Fowler reported late Saturday that the Bengals are "hopeful" that Chase will play against Houston, but they won't know for sure until
+after a pre-game workout.
+
+UPDATE 2: Chase is officially ACTIVE.
+
+Chase (back) appears ready to take his status down to kickoff. According to The Athletic's Dianna Russini, the Bengals' star receiver will work out on Sunday
+morning and his status will be determined afterward.
+</item 8>
+
+<item 9>
+Bills vs. Chargers odds, props, predictions: Buffalo faces struggling L.A. with eyes on AFC playoff picture (Sporting News, 2023-12-21T19:35:54+00:00)
+However, the OVER/UNDER resting at 44 this week seems tantalizingly low. Buffalo has averaged 29 PPG in their last four, and with Stick throwing TDs but also
+turning the ball over at a high rate, that figure might be easily surpassed.
+
+Bill vs. Chargers props
+
+Two props for the Bills vs. Chargers Week 16 game worth considering:
+
+Dalton Kincaid UNDER receptions
+
+Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than
+100%. This prop suggestion centers completely on the inference that Kincaid suits up but takes part in less packages and plays than usual. With Buffalo likely
+to cruise, this isn’t a far-fetched chain of events to target.
+</item 9>
+
+<item 10>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+The wideout still has another hurdle to pass to be cleared to play on Sunday so his status is still very much up in the air.
+
+Falcons (-2) at Jets
+
+Atlanta is relatively healthy coming into this matchup. Hollins, who injured his ankle in Week 9, participated on a limited basis every day this week, which is
+encouraging for his prospects to play on Sunday. As for Hughes, he practiced fully all week after suffering a hand injury last weekend against the Saints.
+Linebacker Nate Landman (thigh) missed practice on Wednesday but will play vs. New York.
+
+Rodgers was once again limited in practice but, as expected, will not be activated this week and will be sidelined as he continues his recovery from a torn
+Achilles just a few months ago. Meanwhile, Cook popped up on the injury report due to a shoulder injury, but head coach Robert Saleh told reporters Friday that
+the back should be fine.
+</item 10>
+=== END ITEM id=59d2ffc0ebea0a8f ===
+
+=== ITEM id=8331a247910d4eb3 ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that 'all of that, all of it, was built on lies'.
+Sentence 1: And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+  Fact 1.0: Bankman-Fried left Jane Street.
+  Fact 1.1: Jane Street is a high-frequency trading firm.
+  Fact 1.2: Bankman-Fried, the former billionaire, got his start in finance at Jane Street after MIT.
+  Fact 1.3: Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.
+  Fact 1.4: Bankman-Fried later persuaded Yedidia to join him as a developer at FTX.
+Sentence 2: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 2.0: Bankman-Fried, known as SBF, has pleaded not guilty to some seven charges.
+  Fact 2.1: The charges are of fraud and conspiracy.
+Sentence 3: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 3.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 3.1: The defense argued that the FTX founder Bankman-Fried acted in good faith.
+  Fact 3.2: The defense argued that Bankman-Fried never meant to commit fraud or steal.
+  Fact 3.3: The defense argued that Bankman-Fried basically got in over his head.
+
+Retrieved items:
+<item 1>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 1>
+
+<item 2>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Whatever records the Southern District of New York has for the transactions will be shown.
+
+“What conversations happened between him and his co-conspirators that are now cooperating against him?”
+
+The second part is where all the drama is likely to come, says Christopher LaVigne, a litigation partner and co-chair of the cryptocurrency practice at the law
+firm Withers. Prosecutors have to connect those transactions to Bankman-Fried, show that he knew what he was doing was wrong, and prove that he lied about it
+anyway.
+
+“What was he saying to his parents and his other advisors about this?” LaVigne says. “What conversations happened between him and his co-conspirators that are
+now cooperating against him?”
+
+To further establish intent, the government can use Bankman-Fried’s own words. The indictment calls Bankman-Fried’s tweets in November 2022 “false and
+misleading.”
+
+“We had him going out directly to the internet,” LaVigne says.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 4>
+
+<item 5>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Assistant United States Attorney Nicolas Roos questions Gary Wang during Sam Bankman-Fried's fraud trial over the collapse of FTX, the bankrupt cryptocurrency
+exchange, at Federal Court in New York City, U.S., October 6, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+An $8 billion bug
+
+Adam Yedidia, who was the prosecution's second witness on Wednesday, continued his testimony on Thursday. Yedidia met Bankman-Fried in college at MIT, and the
+pair remained close friends. Yedidia, assuming a robotic posture on the stand, worked out of FTX's Hong Kong office from January to October of 2021 and then in
+the Bahamas until last year's collapse. In his testimony, he referred to a group Signal thread called "People of the House," referring to Bankman-Fried's $35
+million penthouse, where many employees lived.
+</item 5>
+
+<item 6>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Ellison is expected to take the stand under a similar arrangement.
+
+U.S. District Judge Lewis Kaplan presides as Gary Wang testifies during the fraud trial of Sam Bankman-Fried over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+Born in China, Wang moved to the U.S. at age 7, and grew up in Minnesota before going to the Massachusetts Institute of Technology to study math and computer
+science. He worked at Google after college. Wang, who first met Bankman-Fried during high school at a summer camp, owned 10% of Alameda, while his boss owned
+the other 90%. Wang told the court about the advantages that Alameda received by having code baked into FTX's software that allowed special access to the crypto
+exchange.
+</item 6>
+
+<item 7>
+The inside story of Dave Clark's tumultuous last days at Flexport (Cnbc | World Business News Leader, 2023-10-02T17:46:00+00:00)
+Fixing that was Clark's job. Petersen and Clark worked together as co-CEOs for the first six months. In March, Petersen transitioned to executive chairman. The
+co-CEO arrangement would free Petersen up to do what he loved – "getting beers with customers," in the words of two former Flexport employees. Clark, a
+self-described "builder at heart," was at the wheel. Among Clark's goals was to help Petersen prepare Flexport for an IPO, something the company had discussed
+doing within a two- to three-year window, according to a person familiar with the matter and documents viewed by CNBC. "There's a perfect complement of skill
+sets," Petersen told Forbes in June 2022. "Mine are much more creative, zero-to-one founder time, and Dave is the supreme executor and a legend in the supply
+chain world." Buying Deliverr was meant to be the first step in turning Flexport into a more full-scale logistics service for its customers.
+</item 7>
+
+<item 8>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+He could face up to 115 years in jail if convicted on all charges.
+
+The crypto industry as a whole suffered from FTX’s collapse, which was the first of many. BlockFi filed for Chapter 11 in November 2022, as did Genesis Global
+Trading in January.
+
+Where we are today
+
+Bankman-Fried will be represented by Cohen & Gresser, and Mark Cohen, a high-profile defense attorney and former federal prosecutor, will be the lead attorney.
+If that name sounds familiar, it might be because he also represented Ghislaine Maxwell in her sex trafficking trial related to Jeffrey Epstein. He requested an
+early release for Bankman-Fried but was denied.
+
+With the trial beginning, we’re witnessing how FTX’s story ends. But what’s on our mind is what happens to the investors and creditors affected by the collapse?
+And what happens to the billions in crypto assets tied up in legal proceedings?
+</item 8>
+
+<item 9>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Sam Bankman-Fried, the founder of bankrupt cryptocurrency exchange FTX, is seen during a hearing as a U.S judge revoked his bail, at a courthouse in New York,
+U.S., August 11, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+$65 billion line of credit
+
+For months, Bankman-Fried has known that Wang and Ellison, who were integral members of his personal and professional inner circles, had turned on him. Both
+pleaded guilty in December and have since been cooperating with the U.S. attorney's office in Manhattan. Wang's testimony, which stretched into Friday, was
+given under a cooperation agreement with the government. Ellison is expected to take the stand under a similar arrangement.
+
+U.S.
+</item 9>
+
+<item 10>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+As a result of today’s testimony, I am both more and less confused. I am clearer on what probably happened at FTX. What I don’t understand is why Gary Wang did
+it.
+
+Wang was the co-founder and chief technology officer of FTX, as well as the co-founder of Alameda Research. He owned only 10 percent of Alameda and 17 percent
+of FTX. He got a $200,000 a year salary, with no performance bonuses. (Okay, sure, at times he was a billionaire on paper.) By contrast, Bankman-Fried owned 90
+percent of Alameda and 65 percent of FTX.
+
+Yet Wang’s testimony suggests he took bizarre risks for his own relatively small share. Bankman-Fried didn’t code, so none of his fingerprints are on the
+technical changes that let FTX allegedly defraud its customers and investors. Meanwhile, Wang supervised the code behind a key prosecution claim: that Alameda
+Research was afforded secret, special privileges with FTX’s funds.
+</item 10>
+=== END ITEM id=8331a247910d4eb3 ===
+
+=== ITEM id=31b17138a9baa270 ===
+Gold sentences and facts:
+Sentence 0: With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them.
+  Fact 0.0: Inflation is down from its peak two summers ago.
+  Fact 0.1: Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates.
+  Fact 0.2: Wall Street is hopeful that the Federal Reserve could soon turn to cutting interest rates.
+Sentence 1: For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report.
+  Fact 1.0: Foreign-exchange strategists at Bank of America wrote in a BofA Global Research report.
+  Fact 1.1: The strategists wrote that for investors around the world, the Fed matters more than other central banks.
+  Fact 1.2: The strategists wrote that weak US data is the only game-changer for markets.
+Sentence 2: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 2.0: Postponements of such reports could complicate things for the Fed.
+  Fact 2.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+
+Retrieved items:
+<item 1>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 1>
+
+<item 2>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+Too much strength would give inflation more fuel, but too little would mean a recession.
+
+With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest
+rates and could soon turn to cutting them. That could help the economy avoid a recession and give a boost to all kinds of investment prices. Investors have been
+looking for a slowdown in the job market in particular. The hope is that it can cool more through employers cutting back on open positions than on employers
+laying off workers. Tuesday’s report showed that employers advertised just 8.7 million jobs on the last day of October, down by 617,000 from a month earlier. In
+the bond market, US Treasury yields continued to sag further from the heights they reached during late October. The yield on the 10-year Treasury fell to 4.18
+per cent from 4.26 per cent late on Monday, offering more breathing space for stocks and other markets.
+</item 2>
+
+<item 3>
+Graph query row:
+article: ASX to rise after interest rate hopes boost US shares
+title: None
+published_on: 2023-11-05T20:56:22+00:00
+publisher: The Sydney Morning Herald
+institution: Federal Reserve
+topics: ['financial markets', 'financial system', 'economy', 'bond market', 'interest rates', 'interest rate hopes', 'US shares', 'banking sector',
+'interest-rate trade', 'long-term bond yields', 'employment data', 'growth stocks', 'ASX', 'correction', 'Treasury yields', 'investments', 'job market', 'pay
+raises', 'US services industries', 'consumer confidence', '(+1 more)']
+</item 3>
+
+<item 4>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 4>
+
+<item 5>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 5>
+
+<item 6>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 6>
+
+<item 7>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 7>
+
+<item 8>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 8>
+
+<item 9>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+That growing understanding has sent yields in the bond market to their highest levels in more than a decade, which in turn has undercut prices for stocks and
+other investments. Treasury yields rose again on Tuesday following a mixed batch of reports on the economy. The yield on the 10-year Treasury edged up to 4.55
+per cent from 4.54 per cent late on Monday and is near its highest level since 2007. It’s up sharply from about 3.5 per cent in May and from 0.5 per cent about
+three years ago. One economic report on Tuesday showed confidence among consumers was weaker than economists expected. That’s concerning because strong spending
+by US households has been a bulwark keeping the economy out of a long-predicted recession.
+
+Besides high interest rates, a long list of other worries is also tugging at Wall Street. The most immediate is the threat of another US government shutdown as
+Capitol Hill threatens a stalemate that could shut off federal services across the country.
+</item 9>
+
+<item 10>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Infratil (down 3.6 per cent), Meridian Energy (down 2.7 per cent) and Resmed (down 2 per cent) were among the biggest large-cap decliners. The lowdown The
+Australian sharemarket shook off a positive lead from Wall Street on Wednesday after hotter-than-expected inflation data raised the prospect of another interest
+rate rise at the Reserve Bank’s next meeting, which would weigh on the equity market. Interest-rate sensitive sectors, including REITS and consumer companies,
+were among the weakest on the local bourse as investors digested the news.
+
+GSFM investment strategist Stephen Miller said the inflation data, taken with the October Reserve Bank board meeting minutes, which revealed the board had “low
+tolerance for a slower return of inflation to target than currently expected”, made the possibility of an interest rate rise from the central bank in November a
+“near certainty”. However, commodity prices supported mining companies as iron ore prices increased 2.9 per cent overnight, bolstering Australia’s iron ore
+giants.
+</item 10>
+=== END ITEM id=31b17138a9baa270 ===
+
+=== ITEM id=d7d2a7a55fe3f4ec ===
+Gold sentences and facts:
+Sentence 0: Because FTX had grown so much, he could no longer run both companies, he said.
+  Fact 0.0: FTX had grown so much.
+  Fact 0.1: Bankman-Fried said he could no longer run both companies because FTX had grown so much.
+Sentence 1: It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.
+  Fact 1.0: A woman said the decision was Bankman-Fried's.
+  Fact 1.1: A woman said the decision was Bankman-Fried's because he was the CEO of FTX.
+  Fact 1.2: Bankman-Fried was the CEO of FTX.
+Sentence 2: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 2.0: Bankman-Fried, known as SBF, has pleaded not guilty.
+  Fact 2.1: SBF has pleaded not guilty to some seven charges.
+  Fact 2.2: The seven charges against SBF are charges of fraud and conspiracy.
+Sentence 3: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 3.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 3.1: The defense argued that the FTX founder, Bankman-Fried, acted in good faith.
+  Fact 3.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 3.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 1>
+
+<item 2>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 4>
+
+<item 5>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 8>
+
+<item 9>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 9>
+
+<item 10>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 10>
+=== END ITEM id=d7d2a7a55fe3f4ec ===

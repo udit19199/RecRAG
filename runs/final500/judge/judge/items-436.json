@@ -1,0 +1,384 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "6d3f7a8d3ebf8bc6",
+   "gold": [
+    {
+     "sentence": "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.",
+     "facts": {
+      "0.0": "Stephen Reeder Donaldson was born on May 13, 1947.",
+      "0.1": "Stephen Reeder Donaldson is an American novelist.",
+      "0.2": "Stephen Reeder Donaldson writes fantasy novels.",
+      "0.3": "Stephen Reeder Donaldson writes science fiction novels.",
+      "0.4": "Stephen Reeder Donaldson writes mystery novels.",
+      "0.5": "Stephen Reeder Donaldson is most famous for \"The Chronicles of Thomas Covenant\".",
+      "0.6": "\"The Chronicles of Thomas Covenant\" is a ten-novel fantasy series.",
+      "0.7": "\"The Chronicles of Thomas Covenant\" is a series by Stephen Reeder Donaldson."
+     }
+    },
+    {
+     "sentence": "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels.",
+     "facts": {
+      "1.0": "Michael John Moorcock was born on 18 December 1939.",
+      "1.1": "Michael John Moorcock is an English writer.",
+      "1.2": "Michael John Moorcock is primarily a writer of science fiction.",
+      "1.3": "Michael John Moorcock is primarily a writer of fantasy.",
+      "1.4": "Michael John Moorcock has also published literary novels."
+     }
+    }
+   ],
+   "items": [
+    "Orson Scott Card\nOrson Scott Card (born August 24, 1951) is an American novelist, critic, public speaker, essayist, and columnist.\n\n He writes in several genres but is known best for science fiction.\n\n His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years.\n\n A feature film adaptation of \"Ender's Game\", which Card co-produced, was released in late October 2013 in Europe and on November 1, 2013, in North America.",
+    "The Chinese Agent\nThe Chinese Agent (1970) is a comic novel by Michael Moorcock.\n\n It is a revision of \"Somewhere in the Night\", which Moorcock published in 1966 under the pseudonym Bill Barclay.\n\n Although Moorcock is best known as the author of fantasy fiction and science fiction-based parables such as \"Behold the Man\" and \"The Dancers at the End of Time\", here he writes a light-hearted caper that parodies the spy novel genre.",
+    "Epic Pooh\n\"Epic Pooh\" is a 1978 article by the British science fiction writer Michael Moorcock, which reviews the field of epic fantasy, with a particular focus on epic fantasy written for children.\n\n In it Moorcock critiques J. R. R. Tolkien's \"The Lord of the Rings\" for its politically conservative assumptions and for being escapist literature.",
+    "Douglas Hill\nDouglas Arthur Hill (6 April 1935 – 21 June 2007) was a Canadian science fiction author, editor and reviewer.\n\n He was born in Brandon, Manitoba, the son of a railroad engineer, and was raised in Prince Albert, Saskatchewan.\n\n An avid science fiction reader from an early age, he studied English at the University of Saskatchewan (where he earned an Honours B.A. in 1957) and at the University of Toronto.\n\n He married fellow writer and U. of S. alumna Gail Robinson (writer) in 1958; they moved to Britain in 1959, where he worked as a freelance writer and editor for Aldus Books.\n\n In 1967–1968 he served as Assistant Editor of the controversial \"New Worlds\" science fiction magazine under Michael Moorcock.",
+    "Stephen R. Donaldson\nStephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.\n\n His work is characterized by psychological complexity, conceptual abstractness, moral bleakness, and the use of an arcane vocabulary, and has attracted critical praise for its \"imagination, vivid characterizations, and fast pace\".\n\n He earned his bachelor's degree from The College of Wooster and a Master's degree from Kent State University.\n\n He currently resides in New Mexico.",
+    "The Final Programme\nThe Final Programme is a novel by British science fiction and fantasy writer Michael Moorcock.\n\n Written in 1965 as the underground culture was beginning to emerge, it was not published for several years.\n\n Moorcock has stated that publishers at the time considered it was \"too freaky\".",
+    "Warlord of the Air\nThe Warlord of the Air is a 1971 British alternate history science fiction novel written by Michael Moorcock.\n\n It concerns the adventures of Oswald Bastable, an Edwardian era soldier stationed in India, and his adventures in an alternate universe, in his own future, wherein the First World War never happened.\n\n It is the first part of Moorcock's 'A Nomad of the Time Streams' trilogy and, in its use of speculative technology (such as airships) juxtaposed against an Edwardian setting, it is widely considered to be one of the first steampunk novels.\n\n The novel was first published by Ace Books as part of their Ace Science Fiction Specials series.",
+    "Michael Moorcock\nMichael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels.\n\n He is best known for his novels about the character Elric of Melniboné, a seminal influence on the field of fantasy in the 1960s and 1970s.",
+    "A Cure for Cancer\nA Cure for Cancer is a novel by British fantasy and science fiction writer Michael Moorcock, first published in London 1971 by Allison and Busby.\n\n The book is part of Moorcock's long-running Jerry Cornelius series.",
+    "Behold the Man (novel)\nBehold the Man (1969) is a science fiction novel by British writer Michael Moorcock.\n\n It originally appeared as a novella in a 1966 issue of \"New Worlds\"; later, Moorcock produced an expanded version which was first published in 1969 by Allison & Busby.\n\n The title derives from the Gospel of John, Chapter 19, Verse 5: \"Then Jesus came out, wearing the crown of thorns and the purple robe.\n\n And Pilate said to them Behold the Man.\""
+   ]
+  },
+  {
+   "id": "dad061991040b89d",
+   "gold": [
+    {
+     "sentence": "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+     "facts": {
+      "0.0": "And There's More is a comedy sketch show.",
+      "0.1": "And There's More stars Jimmy Cricket.",
+      "0.2": "And There's More was produced by Central Independent Television.",
+      "0.3": "And There's More was produced for ITV.",
+      "0.4": "And There's More was produced from 1985 till 1988."
+     }
+    },
+    {
+     "sentence": " He currently lives with his family in Rochdale, North West England.",
+     "facts": {
+      "1.0": "The person described in this passage currently lives with his family in Rochdale, North West England.",
+      "1.1": "The person described in this passage currently lives in Rochdale.",
+      "1.2": "Rochdale is in North West England."
+     }
+    }
+   ],
+   "items": [
+    "Standard Star Building\nThe Standard Star Building is a historic commercial structure located in the Downtown section of New Rochelle, Westchester County, New York.\n\n The building, designed by architect Lawrence J. Barnard, was completed in 1924 and is an architecturally significant example of the Italian Renaissance style in New Rochelle.\n\n Although it has been altered, these changes occurred only on the Le Count Place façade and the interior of the building.\n\n The original Standard Star building exterior remains largely unchanged.\n\n It is further historically significant for its association with a long-published New Rochelle newspaper covering life in New Rochelle.",
+    "Hotel Kenmore Hall\nHotel Kenmore Hall is a 22-story single room occupancy hotel located at 145 East 23rd Street in the Gramercy section of Manhattan, designed by architect Maurice Deutsch and constructed in 1927.\n\n Author Nathanael West lived and worked at the hotel as a night manager in the early years after the hotel opened; one of West's real-life experiences at the hotel inspired the incident between Romola Martin and Homer Simpson that would later appear in \"The Day of the Locust\" (1939).\n\n West allowed friends like Edmund Wilson, Erskine Caldwell, S. J. Perelman and Maxwell Bodenheim free room and meals.\n\n Dashiell Hammett finished \"The Maltese Falcon\" here",
+    "Bob Thomas (actor)\nBob Thomas (born March 1, 1954 in Appalachia, Virginia ) is a radio personality, actor, and writer.\n\n He was one of the top radio announcers in Knoxville, Tennessee for 25 years.\n\n As an actor, he has appeared in many films and hundreds of commercials.\n\n He wrote two episodes of the popular TV show \"Lizzie McGuire\".\n\n In 2004, his voice was heard as \"Slammin' Sammy\" in the film \"Friday Night Lights\".",
+    "Terry Ray (actor)\nHe wrote and starred in two more shows at the Dorothy Chandler Pavilion, one co-starring Amanda Bynes and the other Hilary Duff.\n\n<br><br>Terry is also the voice of the \"Gaydar Gun\", a spinoff toy from the film Gaydar.",
+    "Rubin Schron\nOther buildings he owns include the Monterey, a 521-unit rental multifamily building on Manhattan's Upper East Side; over the decades, Schron has also amassed a portfolio of Mitchell-Lama apartment buildings whose values have been skyrocketing to record values, after reverting to market rates when government subsidies expired.\n\n In 2007, he sold nearly 4,000 units of former Mitchell-Lama properties in five complexes in Harlem and on Roosevelt Island for $940 million.\n\n Schron, who practices Orthodox Judaism, has eight children and 50 grandchildren.\n\n He and his family have lived in the same single-family home in Brooklyn for many decades.",
+    "John Garabedian\nJohn H. Garabedian is an American radio personality and disc jockey born on December 20, 1941 (age 75).\n\n He is best known as the creator and former long-time host of \"Open House Party\".\n\n He has been involved in Massachusetts radio and television stations for over fifty years.\n\n Garabedian currently owns three homes, all in New England: one in Southborough, Massachusetts, another on Cape Cod, and a cabin-like home in Cabot, Vermont.",
+    "Terry Ray (actor)\nTerry Ray (born February 12, 1961) is an American actor, screenwriter, and producer.\n\n Some of his work includes \"Gaydar\" and \"Cost of Living\" (2009).\n\n Ray is the creator and writer of \"here!\n\n TV\"'s sitcom \"From Here on OUT\", the first original gay sitcom created by a gay network.\n\n Terry stars in the sitcom, along with Juliet Mills, Suzanne Whang and T.J. Hoban.\n\n<br><br>Terry Ray's 1987 appearance on Scrabble (game show) is noted as number 3 in the \"10 Great Gay Moments in Game Show History\", after Charles Nelson Reilly and Paul Lynde.\n\n In the same appearance, Terry was also named as one of the \"5 Weirdest Game Show Contestants Ever\", by Movieline.\n\n<br><br>Terry’s first professional writing job was the stage performance “Hollywood Goes Classical\" at the venerable Dorothy Chandler Pavilion starring Mickey Rooney, Michael York, Dean Jones, Rhonda Fleming and several other classic film stars.",
+    "And There's More\nAnd There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+    "Doug Grean\nDoug Grean is an American record producer, audio engineer, guitarist, based in Los Angeles.\n\n He has worked with artists Sheryl Crow, Ricki Lee Jones, Glen Campbell, Scott Weiland, Slash, Velvet Revolver, Stone Temple Pilots, The Crystal Method, Tim McGraw, Cyndi Lauper, Annabella Lwin (Bow Wow Wow), Corey Glover (Living Color), Camp Freddy, DJ Hurricane and John Taylor (Duran Duran).\n\n Grean was formerly the lead guitarist and touring musical director for Scott Weiland and the Wildabouts.\n\n Some of Grean's television appearances with Weiland include: VH1 Legends, Last Call with Carson Daly, The Tonight Show with Jay Leno, and the Grammy awards with Velvet Revolver as keyboardist, performing \"All Across the Universe\" with Stevie Wonder, Norah Jones, Bono, Steven Tyler, Brian Wilson, and Alison Krauss.",
+    "Richard Pleasance\nRichard Arnold Pleasance is an Australian rock musician and producer.\n\n He was a founding member of Boom Crash Opera on guitar, bass guitar, vocals and as a songwriter in 1985; they released three albums before Pleasance left in 1992.\n\n Their hit Australian Recording Industry Association (ARIA) singles, \"Great Wall\" (No. 5, 1986) and \"Onion Skin\" (No. 11, 1989) were co-written by Pleasance, who also co-produced their second album, \"These Here Are Crazy Times\" (No. 10, 1989).\n\n His debut solo release, \"Galleon\" received four nominations at the ARIA Music Awards for 1992.\n\n Pleasance composed the theme music for Australian television series, \"SeaChange\" (1998–2001), for 2006 feature film \"Kenny\" and more recently he composed the theme music for the prison drama series \"Wentworth\".\n\n Pleasance is married to Michelle and, as from May 2009, he was living in Hepburn Springs, Victoria where he has a recording studio."
+   ]
+  },
+  {
+   "id": "afa626ea20e4eb03",
+   "gold": [
+    {
+     "sentence": " Levitt & Sons developed the Monmouth Heights section from 1965-1969.",
+     "facts": {
+      "0.0": "Levitt & Sons developed the Monmouth Heights section from 1965 to 1969."
+     }
+    },
+    {
+     "sentence": " The company is most famous for having built the town of Levittown, New York.",
+     "facts": {
+      "1.0": "Levitt & Sons is most famous for having built the town of Levittown, New York."
+     }
+    }
+   ],
+   "items": [
+    "Newark Bay\nNewark Bay is a tidal bay at the confluence of the Passaic and Hackensack Rivers in northeastern New Jersey.\n\n It is home to the Port Newark-Elizabeth Marine Terminal, the largest container shipping facility in Port of New York and New Jersey, the third largest and one of the busiest in the United States.\n\n An estuary, it is periodically dredged to accommodate ocean-going ships.",
+    "Province of New Jersey\nThe Province of New Jersey was one of the Middle Colonies of Colonial America and became the U.S. state of New Jersey in 1776.\n\n The province had originally been settled by Europeans as part of New Netherland, but came under English rule after the surrender of Fort Amsterdam in 1664, becoming a proprietary colony.\n\n The English then renamed the province after the Isle of Jersey in the English Channel.\n\n The Dutch Republic reasserted control for a brief period in 1673–1674.\n\n After that it consisted of two political divisions, East Jersey and West Jersey, until they were united as a royal colony in 1702.\n\n The original boundaries of the province were slightly larger than the current state, extending into a part of the present state of New York, until the border was finalized in 1773.",
+    "HMS Monmouth\nSeven ships of the Royal Navy have been named HMS \"Monmouth\".\n\n Monmouth was the name of a castle and is now the name of a town in Wales; the name also recognises James Scott, 1st Duke of Monmouth, the \"Black Duke\".\n\n The first HMS \"Monmouth\" was named after the town but whilst the second one was being used the Monmouth Rebellion took place and this caused some concern to the crew.\n\n Since that time, all of \"Monmouth\"s have had their names painted in black and the name and the crest are covered because of the shame of the Duke of Monmouth's execution.\n\n Today the officers of the latest HMS \"Monmouth\" carry black handkerchiefs and the ship is known as the Black Duke.\n\n However the town of Monmouth still gives the freedom of the town to the ship's crew and talks of the \"enduring link\" between the town and the ship.",
+    "Riverton, New York\nRiverton, New York was a planned community built in 1973 in the town of Henrietta, New York, along the Genesee River.\n\n Riverton was seventh of the thirteen communities receiving Federal guarantee assistance from HUD as part of their New Communities Program created by the Urban Growth and New Community Development Act of 1970.\n\n $12 million was earmarked for the community.\n\n Riverton was supposed to encompass a 2335 acre land area bordered on the north by the New York State Thruway, on the west by the Genesee River, on the east by East River Rd., and on the south by the Rush-Henrietta town line, with some development continuing east along Erie Station Rd.\n\n Original plans called for construction to occur for a 16-year period and eventually house over 25,000 people, with the community including an 18-hole golf course, 12 swimming pools, 3 artificial lakes, a marina on the Genesee, and commercial and industrial centers.\n\n However, only a small portion of this was built along Scottsville-West Henrietta Rd.",
+    "Oakland Mills, New Jersey\nOakland Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The area is named for Oakland Mill, a mill along the Manalapan Brook operated by the Boo family.\n\n Some areas within the Manalapan Brook valley and surround forestland are preserved while the remainder of the area surrounding Oakland Mills has since been developed into housing developments.",
+    "Hanbys Corner, Delaware\nHanbys Corner is an unincorporated community in New Castle County, Delaware, United States.\n\n It is located at the intersection of Delaware Route 3 (Marsh Road) and Delaware Route 92 (Naamans Road), in Brandywine Hundred.\n\n The area is named for Richard G. Hanby, who first purchased the 125 acre parcel from the descendants of William Penn in 1753.\n\n His descendants included several notable figures in the local political scene including Samuel Winfield Hanby (1817-1892) who was elected as a State Representative in 1874, Jacob Klose Hanby (1839-1932) who was Samuel's son and was elected State Representative in 1904, Robert Johnson Hanby (1834-1898), who served in the 124th PA infantry during the Civil War and was elected State Senator in 1896, and Florence Wood Hanby (1870-1963), who was Robert's daughter-in-law and was the first woman elected to the Delaware House of Representatives in 1924.\n\n In addition Wayne Hanby and James Hanby have both served as Justices of the Peace for New Castle County.",
+    "Monmouth Heights at Marlboro, New Jersey\nMonmouth Heights at Marlboro is an unincorporated community located within Marlboro Township in Monmouth County, New Jersey, United States.\n\n The housing development was created in the 1960s by Levitt & Sons though some protests occurred by long-time residents of Marlboro Township at the time of its creation.\n\n The community is located along New Jersey Route 79 across the highway from Marlboro High School.",
+    "Taylors Mills, New Jersey\nTaylors Mills is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n The main road that runs through the area is named for the community, Taylors Mills Road.",
+    "Riverton, New York\nHowever, only a small portion of this was built along Scottsville-West Henrietta Rd.\n\n Created as part of the community were Riverton Knolls, a moderately priced townhouse subdivision, the Riverton Golf Club, a small 9-hole golf course, and the Riverton Park, which included a playground, baseball diamond, river front benches, walking trail, and a volleyball court.\n\n Also nestled in a bend in the Genesee was a 28 acre forested nature park.",
+    "Monmouth Heights at Manalapan, New Jersey\nMonmouth Heights at Manalapan is an unincorporated community located within Manalapan Township in Monmouth County, New Jersey, United States.\n\n Levitt & Sons developed the Monmouth Heights section from 1965-1969.\n\n Residents of the 685 homes in the development are required to join the Monmouth Heights Community Association, which provides pools and other amenities."
+   ]
+  },
+  {
+   "id": "34492ee2d29a1d18",
+   "gold": [
+    {
+     "sentence": "Bluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók.",
+     "facts": {
+      "0.0": "Bluebeard's Castle is a one-act opera.",
+      "0.1": "Bluebeard's Castle is by Hungarian composer Béla Bartók.",
+      "0.2": "The Hungarian title of Bluebeard's Castle is A kékszakállú herceg vára.",
+      "0.3": "Literally, the Hungarian title means The Blue-Bearded Duke's Castle."
+     }
+    },
+    {
+     "sentence": "Agrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani.",
+     "facts": {
+      "1.0": "Agrippina (HWV 6) is an opera seria.",
+      "1.1": "Agrippina (HWV 6) has three acts.",
+      "1.2": "Agrippina (HWV 6) is by George Frideric Handel.",
+      "1.3": "Agrippina (HWV 6) has a libretto by Cardinal Vincenzo Grimani."
+     }
+    }
+   ],
+   "items": [
+    "The Padlock\nThe Padlock is a two-act 'afterpiece' opera by Charles Dibdin.\n\n The text was by Isaac Bickerstaffe.\n\n It debuted in 1768 at the Drury Lane Theatre in London as a companion piece to \"The Earl of Warwick\".\n\n It partnered other plays before a run of six performances in tandem with \"The Fatal Discovery\" by John Home.\n\n \"The Padlock\" was a success, largely due to Dibdin's portrayal of Mungo, a blackface caricature of a black servant from the West Indies.\n\n The company took the production to the United States the next year, where a portrayal by Lewis Hallam, Jr. as Mungo met with even greater accolades.\n\n The libretto was first published in London in 1768 (?)\n\n and in Dublin in 1775.\n\n The play remained in regular circulation in the U.S. as late as 1843.\n\n It was revived by the Old Vic Company in London and on tour in the UK in 1979 in a new orchestration by Don Fraser and played in a double-bill with Garrick's \"Miss In Her Teens\".",
+    "Orfeo ed Euridice\nOrfeo ed Euridice (French version: Orphée et Eurydice ; English: \"Orpheus and Eurydice\") is an opera composed by Christoph Willibald Gluck based on the myth of Orpheus, set to a libretto by Ranieri de' Calzabigi.\n\n It belongs to the genre of the \"azione teatrale\", meaning an opera on a mythological subject with choruses and dancing.\n\n The piece was first performed at the Burgtheater in Vienna on 5 October 1762 in the presence of Empress Maria Theresa.\n\n \"Orfeo ed Euridice\" is the first of Gluck's \"reform\" operas, in which he attempted to replace the abstruse plots and overly complex music of \"opera seria\" with a \"noble simplicity\" in both the music and the drama.",
+    "Bluebeard's Castle\nBluebeard's Castle (Hungarian: A kékszakállú herceg vára ; literally: \"The Blue-Bearded Duke's Castle\") is a one-act opera by Hungarian composer Béla Bartók.\n\n The libretto was written by Béla Balázs, a poet and friend of the composer, and is written in Hungarian, based on the French literary tale \"La Barbe bleue\" by Charles Perrault.\n\n The opera lasts only a little over an hour and there are only two singing characters onstage: Bluebeard (\"Kékszakállú \"), and his new wife Judith (\"Judit \" ); the two have just eloped and Judith is coming home to Bluebeard's castle for the first time.",
+    "Armand Castelmary\nArmand Castelmary, real name Comte Armand de Castan, born Toulouse 16 August 1834, died New York City 10 February 1897, was a French operatic bass.\n\n He created roles in three major premieres at the Paris Opera – Don Diego in \"L'Africaine\" by Meyerbeer (1865), the Monk in Verdi's \"Don Carlos\" (1867), and Horatio in Ambroise Thomas's \"Hamlet\" (1868).\n\n Castelmary also appeared at opera houses in England and the United States, and died onstage at the Metropolitan Opera House, New York, during a performance of \"Martha\" by Friedrich von Flotow.",
+    "The Carp (opera)\nThe Carp is a one-act comic opera (styled \"a whimsicality\") with a libretto by Frank Desprez and music by Alfred Cellier.\n\n It was first produced at the Savoy Theatre from 13 February 1886 to 19 January 1887, as a companion piece to \"The Mikado\".\n\n It was then revived as companion to \"Ruddigore\" from 21 February 1887 to 5 November 1887.\n\n The piece also toured throughout 1888.",
+    "Daphne (opera)\nDaphne, Op.\n\n82, is an opera in one act by Richard Strauss, subtitled \"Bucolic Tragedy in One Act\".\n\n The German libretto was by Joseph Gregor.\n\n The opera is based loosely on the mythological figure Daphne from Ovid's \"Metamorphoses\" and includes elements taken from \"The Bacchae\" by Euripides.\n\n The opera premiered at the Semperoper in Dresden on 15 October 1938, originally intended as a double bill with Strauss' \"Friedenstag\", but as the scale of \"Daphne\" grew, that idea was abandoned.\n\n The conductor of the first performance was Karl Böhm, to whom the opera was dedicated.",
+    "Agrippina (opera)\nAgrippina (HWV 6) is an \"opera seria\" in three acts by George Frideric Handel with a libretto by Cardinal Vincenzo Grimani.\n\n Composed for the 1709–10 Venice \"Carnevale\" season, the opera tells the story of Agrippina, the mother of Nero, as she plots the downfall of the Roman Emperor Claudius and the installation of her son as emperor.\n\n Grimani's libretto, considered one of the best that Handel set, is an \"anti-heroic satirical comedy\", full of topical political allusions.\n\n Some analysts believe that it reflects Grimani's political and diplomatic rivalry with Pope Clement XI.",
+    "Bernhard Bötel\nHis stage repertoire included Belmonte in Wolfgang Amadeus Mozart's \"Die Entführung aus dem Serail\", Chapelou in Adolphe Adam's \"Le postillon de Lonjumeau\", Count Almaviva in Gioachino Rossini's \"The Barber of Seville\", Daniel in Franz Lehár's \"The Merry Widow\", the Duke of Mantua in Giuseppe Verdi's \"Rigoletto\", Gabriel von Eisenstein in Johann Strauss II's \"Die Fledermaus\", Indigo in Strauss' \"Indigo und die vierzig Räuber\", Jeník in Bedřich Smetana's \"The Bartered Bride\", Paolino in Domenico Cimarosa's \"Il matrimonio segreto\", Pâris in Jacques Offenbach's \"La belle Hélène\", Pietro in Franz von Suppé's \"Boccaccio\", and Wilhelm Meister in Ambroise Thomas' \"Mignon\".",
+    "Senza sangue\nSenza sangue (Without blood) an opera in one act by Péter Eötvös with a libretto by Mari Mezei.\n\n It is based on the second part of the novel of the same name by Alessandro Baricco and is intended to be performed jointly with Béla Bartók's one-act \"Bluebeard's Castle\".\n\n The concert première was given by the Cologne Philharmonic Orchestra on 1 May 2015.\n\n It was premièred in full on 15 May 2016 at the Festival d'Avignon.\n\n It is his tenth opera.\n\n Anne Sofie von Otter, who gave the New York première with the New York Philharmonic, said: \"“The piece is not at all easy for the two singers... [It’s] hard to find the pitch; you have to work it into the voice, unless of course you happen to have perfect pitch, which I don’t.\"",
+    "The Heiress (1786 play)\nThe Heiress is a comedy play by the British playwright and soldier John Burgoyne.\n\n The play debuted at the Drury Lane Theatre on 14 January 1786.\n\n It concerns the engagement of Lord Gayville to Miss Alscrip, a fashionable woman he believes to be an heiress.\n\n Gayville later discovers that the woman who really stands to inherit the fortune is his true love Miss Clifford.\n\n The play was an enormous success, running for 31 performances in its initial season and being revived again the following year.\n\n The play was initially anonymous, but Burgoyne was soon widely reported to be the author and he acknowledged this after the play's debut."
+   ]
+  },
+  {
+   "id": "e777bb0057f44e55",
+   "gold": [
+    {
+     "sentence": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".",
+     "facts": {
+      "0.0": "Alan Young was born Angus Young.",
+      "0.1": "Alan Young was born on November 19, 1919.",
+      "0.2": "Alan Young died on May 19, 2016.",
+      "0.3": "Alan Young was a British-born Canadian-American actor.",
+      "0.4": "Alan Young was a voice actor.",
+      "0.5": "Alan Young was a comedian.",
+      "0.6": "Alan Young was a radio and television host/personality.",
+      "0.7": "TV Guide called Alan Young \"The Charlie Chaplin of Television\"."
+     }
+    },
+    {
+     "sentence": " Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.",
+     "facts": {
+      "1.0": "Alan Young was the voice of Disney's Scrooge McDuck for over thirty years.",
+      "1.1": "Alan Young first voiced Scrooge McDuck in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983).",
+      "1.2": "Alan Young voiced Scrooge McDuck in various other films, TV series and video games.",
+      "1.3": "Alan Young voiced Scrooge McDuck until his death."
+     }
+    },
+    {
+     "sentence": " During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.",
+     "facts": {
+      "2.0": "During the 1940s and 1950s, Alan Young starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television.",
+      "2.1": "The television version of \"The Alan Young Show\" gained Alan Young two Emmy Awards in 1951."
+     }
+    },
+    {
+     "sentence": " The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.",
+     "facts": {
+      "3.0": "The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\".",
+      "3.1": "The cartoon stars Scrooge McDuck as Ebenezer Scrooge."
+     }
+    }
+   ],
+   "items": [
+    "Scrooge (1935 film)\nScrooge is a 1935 British fantasy film directed by Henry Edwards and starring Seymour Hicks, Donald Calthrop and Robert Cochran.\n\n Hicks appears as Ebenezer Scrooge, the miser who hates Christmas.\n\n It was the first sound version of the Charles Dickens classic \"A Christmas Carol\", not counting a 1928 short subject that now appears to be lost.\n\n Hicks had previously played the role of Scrooge on the stage many times beginning in 1901, and again in a 1913 British silent film version.",
+    "Alan Young\nAlan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".\n\n He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961–1966).\n\n Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.\n\n During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.\n\n He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film.",
+    "Scrooge, or, Marley's Ghost\nScrooge, or, Marley's Ghost is a 1901 British short silent drama film, directed by Walter R. Booth, featuring the miserly Ebenezer Scrooge confronted by Marley's ghost and given visions of Christmas past, present, and future, is the earliest known film adaptation of Charles Dickens's 1843 novel \"A Christmas Carol\".\n\n The film, \"although somewhat flat and stage-bound to modern eyes,\" according to Ewan Davidson of BFI Screenonline, \"was an ambitious undertaking at the time,\" as, \"not only did it attempt to tell an 80 page story in five minutes, but it featured impressive trick effects, superimposing Marley's face over the door knocker and the scenes from his youth over a black curtain in Scrooge's bedroom.\"",
+    "A Christmas Carol\nA Christmas Carol in Prose, Being a Ghost-Story of Christmas, commonly known as A Christmas Carol, is a novella by Charles Dickens, first published in London by Chapman & Hall in 1843; the first edition was illustrated by John Leech.\n\n \"A Christmas Carol\" tells the story of Ebenezer Scrooge, an old miser who is visited by the ghost of his former business partner Jacob Marley and the Ghosts of Christmas Past, Present and Yet to Come.\n\n After their visits Scrooge is transformed into a kinder, gentler man.",
+    "Scrooge (1913 film)\nScrooge is a 1913 British black and white silent film based on the 1843 novel \"A Christmas Carol\" by Charles Dickens.\n\n It starred Seymour Hicks as Ebenezer Scrooge.\n\n In the United States it was released in 1926 as \"Old Scrooge\".",
+    "Ebenezer (film)\nEbenezer is a 1998 Canadian made-for-television re-telling of Charles Dickens' classic \"A Christmas Carol\" with Jack Palance giving a performance as Ebenezer Scrooge, á la Western genre.\n\n After a half-century of screen presence, in one of Palance's final projects before his retirement.",
+    "Scar (Disney)\nScar is a fictional character who appears in Walt Disney Pictures' 32nd animated feature film \"The Lion King\" (1994).\n\n The character is voiced by English actor Jeremy Irons, while his singing voice is provided by both Irons and American actor Jim Cummings, the latter of whom was hired to replace Irons when the former damaged his singing voice.\n\n Subsequently, Scar makes minor appearances in the film's sequel \" \"(1998) and \"The Lion King 1½ \"(2004), in both of which he is voiced entirely by Cummings, as well as appearing in the Broadway musical adaptation of the film, in which the role of Scar was originated by American actor John Vickery.",
+    "A Christmas Carol (2009 film)\nA Christmas Carol is a 2009 American 3D computer animated motion-capture fantasy film written and directed by Robert Zemeckis.\n\n It is an adaptation of the Charles Dickens story of the same name and stars Jim Carrey in a multitude of roles, including Ebenezer Scrooge as a young, middle-aged, and old man, and the three ghosts who haunt Scrooge.\n\n The film also features supporting roles done by Gary Oldman, Colin Firth, Bob Hoskins, Robin Wright, and Cary Elwes.",
+    "Scrooge (1951 film)\nScrooge is a 1951 British fantasy drama film and an adaptation of Charles Dickens' \"A Christmas Carol\" (1843).\n\n It stars Alastair Sim as Ebenezer Scrooge, and was produced and directed by Brian Desmond Hurst, with a screenplay by Noel Langley.\n\n It was released as A Christmas Carol in the United States."
+   ]
+  },
+  {
+   "id": "73da6115c776c6d0",
+   "gold": [
+    {
+     "sentence": " It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme.",
+     "facts": {
+      "0.0": "The referenced piece plays during the opening sequence.",
+      "0.1": "Danny Elfman composed the piece in 1989.",
+      "0.2": "Danny Elfman composed the piece after Matt Groening approached him.",
+      "0.3": "Matt Groening is the series creator.",
+      "0.4": "Matt Groening requested a retro-style theme."
+     }
+    },
+    {
+     "sentence": " Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\".",
+     "facts": {
+      "1.0": "Clausen has scored or orchestrated music for more than 30 films and television shows.",
+      "1.1": "Clausen has scored or orchestrated music for 'Moonlighting'.",
+      "1.2": "Clausen has scored or orchestrated music for 'The Naked Gun'.",
+      "1.3": "Clausen has scored or orchestrated music for 'ALF'.",
+      "1.4": "Clausen has scored or orchestrated music for 'Ferris Bueller's Day Off'."
+     }
+    }
+   ],
+   "items": [
+    "Angelo Badalamenti\nAngelo Badalamenti (born March 22, 1937) is an American composer, best known for his work scoring films for director David Lynch, notably \"Blue Velvet\", the \"Twin Peaks\" saga (1990–1992, 2017), \"The Straight Story\" and \"Mulholland Drive\".\n\n Badalamenti received the 1990 Grammy Award for Best Pop Instrumental Performance for his \"\"Twin Peaks\" Theme\", and has received a Lifetime Achievement Award from the World Soundtrack Awards and the Henry Mancini Award from the American Society of Composers, Authors and Publishers.",
+    "The Godfather Part II (soundtrack)\nThe Godfather Part II is the soundtrack from the movie of the same name, released in 1974 by ABC, and 1991 on compact disc by MCA.\n\n The original score was composed by Nino Rota and conducted by Carmine Coppola, who also provided source music for the film.\n\n Rota expands upon two of the three main themes from the first film: \"The Godfather Waltz\" and \"Michael's Theme\", while \"The Love Theme\" from the first film makes a brief appearance during a flashback sequence (\"Remember Vito Andolini\").\n\n There are several new themes, including one for Kay (Diane Keaton), and two for young Vito (Robert De Niro): \"The Immigrant Theme\" and \"The Tarantella\", introduced in \"A New Carpet\".",
+    "Romeo and Juliet (1968 film soundtrack)\nThe soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.\n\n It was originally released as a vinyl record, containing nine entries, most notably the song \"What Is a Youth\", composed by Nino Rota, written by Eugene Walter and performed by Glen Weston.\n\n The music score won a Silver Ribbon award of the Italian National Syndicate of Film Journalists in 1968 and was nominated for two other awards (BAFTA Award for Best Film Music in 1968 and Golden Globe Award for Best Original Score in 1969).",
+    "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman.\n\n According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles.\n\n Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s.\n\n Elfman's \"The Batman Theme\" went on to become an iconic piece.\n\n It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed.\n\n Some parts of the Elfman score are also heard in \"\", \"\" and \"\".\n\n Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks.",
+    "The Simpsons Theme\n\"The Simpsons\" Theme\", also referred to as \"The Simpsons\" Main Title Theme\" in album releases, is the theme music of the animated television series \"The Simpsons\".\n\n It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme.\n\n The piece, which took 3 days, 2 hours, 48 minutes, and 19 seconds to create, has been noted by Elfman as the most popular of his career.\n\n The theme, as used for the opening sequence, was re-arranged during season 2, and the current arrangement by Alf Clausen was introduced at the beginning of the third season.",
+    "James Dooley (composer)\nJames Michael \"Jim\" Dooley (born August 22, 1976 in New York City, New York) is an American film score composer.\n\n Dooley studied music at New York University, majoring in music composition.\n\n After finishing the university he moved to Los Angeles, where he studied music with prolific film score composers Christopher Young, Elmer Bernstein and Leonard Rosenman.\n\n In 1999, he started working for Hans Zimmer as his chief technical assistant.\n\n He works in Santa Monica, in Hans Zimmer's film music studio Remote Control Productions (formerly \"Media Ventures\").\n\n He composed, arranged, and orchestrated music for films like \"\" and \"The Da Vinci Code\".\n\n He also composed music for \"inFAMOUS 2\", the Epic Mickey series and worked with Celldweller and Tarja Turunen.\n\n He released his debut album, \"Veiled Nation\", in 2013.",
+    "Alf Clausen\nAlf Heiberg Clausen (born March 28, 1941) is an American film and television composer.\n\n He is best known for his work scoring many episodes of \"The Simpsons\", of which he had been the sole composer between 1990 and 2017.\n\n Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\".",
+    "Disney's Adventures of the Gummi Bears\nThe show is well-remembered for its theme music, written by Michael and Patty Silversher and creation of \"gummiberry juice\" which was a type of magic potion, granting abilities, which allowed them to bounce away from their hunters.\n\n The theme song was performed by Joseph Williams, son of composer John Williams and one-time lead singer of Toto.",
+    "Diwa de Leon\nDiwa de Leon is a composer, arranger and musician based in Manila, Philippines.\n\n He makes music mainly for television shows, films, and stage productions.\n\n His most notable work is his arrangement of GMA Network's \"Survivor Philippines\" theme music.\n\n His songs included in \"Emir\".\n\n He won the Cinema One Originals Best Musical Score award for his work on the film \"Kolorete\" and Best Music Score for \"Kamera Obskura\" at the 8th Cinemalaya Independent Film Festival.\n\n He is also a founding member of the world music group Makiling.\n\n His first mainstream film project is Mamarazzi produced by Regal Films.",
+    "Michelangelo Sosnowitz\nMichelangelo Sosnowitz (born August 21, 1973) is an American music composer.\n\n His works include ballet, musical theater, electronic and popular music, as well as commercial, television and film.\n\n His feature film scores include A Novel Romance, winner Best Film at the NYC International Independent Film Festival, the Dan Fogler directorial debut Hysterical Psycho and the Deborah Kampmeier film Split.\n\n His original ballet 'Petrouchka' won Best Choreography at NYMF 2010.\n\n He wrote the opening theme music to The History Channel show Battles BC and original theme music for ENTV, Deadline Hollywood BlackTreeMedia and other PMC programming.\n\n He also wrote the score and theme music to the Colin Quinn Web series COP SHOW.\n\n Original Off-Broadway musicals include Crazy Head Space and Love in the MIddle Ages."
+   ]
+  },
+  {
+   "id": "8f2d54b0b97f9f8c",
+   "gold": [
+    {
+     "sentence": "The University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.",
+     "facts": {
+      "0.0": "The University of Arizona is a public research university.",
+      "0.1": "The University of Arizona is in Tucson, Arizona, United States.",
+      "0.2": "The University of Arizona is also referred to as U of A.",
+      "0.3": "The University of Arizona is also referred to as UA.",
+      "0.4": "The University of Arizona is also referred to as Arizona."
+     }
+    },
+    {
+     "sentence": "The Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana.",
+     "facts": {
+      "1.0": "The Presbyterian University College, Ghana is a partially private and public university.",
+      "1.1": "The Presbyterian University College, Ghana is located at Abetifi-Kwahu.",
+      "1.2": "Abetifi-Kwahu is in the Eastern Region of Ghana."
+     }
+    },
+    {
+     "sentence": " It is one of the new universities in Ghana granted accreditation by the National Accreditation Board.",
+     "facts": {
+      "2.0": "The Presbyterian University College, Ghana is one of the new universities in Ghana.",
+      "2.1": "The Presbyterian University College, Ghana was granted accreditation by the National Accreditation Board."
+     }
+    }
+   ],
+   "items": [
+    "Alpha Gamma\nAlpha Gamma (ΑΓ) was an American collegiate fraternity.\n\n It was founded at Cumberland University in Lebanon, Tennessee in 1867.\n\n About 21 chapters developed, with prominent chapters at Washington & Jefferson College, Trinity University, Mercersburg College, Southwestern Presbyterian University, Cumberland University, and the West Virginia University.\n\n The fraternity's badge consisted of a golden shield with a globe, six stars, and a pennant with \"ΑΓ.\"",
+    "University of Arizona\nThe University of Arizona (also referred to as U of A, UA, or Arizona) is a public research university in Tucson, Arizona, United States.\n\n Founded in 1885, the UA was the first university in the Arizona Territory.\n\n The university operates two medical schools (University of Arizona College of Medicine - Tucson and the University of Arizona College of Medicine - Phoenix) and is affiliated with the region's only academic medical centers (Banner - University Medical Center Tucson and Banner - University Medical Center Phoenix).\n\n The university is also home to the James E. Rogers College of Law and numerous other nationally ranked graduate and professional schools.\n\n During the 2016–2017 academic year, there was a total enrollment of 43,625 students, including 34,072 undergraduates The University of Arizona is governed by the Arizona Board of Regents.\n\n The University of Arizona is one of the elected members of the Association of American Universities (an organization of North America's premier research institutions) and is the only representative from the state of Arizona to this group.",
+    "Lydia Patterson Institute\nLydia Patterson Institute is a Methodist Christian college-preparatory school located in El Paso, Texas, United States.\n\n Founded in 1913, it offers programs for Spanish-speaking children, primarily from Juarez, to attend high school in the United States and attend an American undergraduate university.\n\n All high school classes are taught in English, and the school is accredited by the Southern Association of Colleges and Schools.",
+    "Syracuse Triad\nThe Syracuse Triad is the name given to the three women's sororities founded at Syracuse University.\n\n Alpha Phi was founded first in 1872 by 10 of the original 20 women admitted into Syracuse University.\n\n Gamma Phi Beta came along two years later in 1874 and with it came the term \"sorority,\" which was coined at the time of its founding.\n\n (Prior to that, women's Greek-letter organizations used the term \"women's fraternity,\" since no more appropriate term existed.)\n\n Alpha Gamma Delta completed the triad in 1904.",
+    "Presbyterian University College\nThe Presbyterian University College, Ghana is a partially private & public university located at Abetifi-Kwahu in the Eastern Region of Ghana.\n\n It is one of the new universities in Ghana granted accreditation by the National Accreditation Board.\n\n It was established by the Presbyterian Church of Ghana on 23 November 2003 and inaugurated on 27 March 2004 by the president of Ghana, John Agyekum Kufuor.",
+    "Graph query row:\norganization: Presbyterian University College, Ghana\nfounding_date: 23 November 2003",
+    "Gorgias Press\nGorgias Press is an academic publisher of books and journals covering a range of religious and language studies that include Syriac language, Eastern Christianity, Ancient Near East, Arabic and Islam, Early Christianity, Judaism, and more.\n\n Gorgias Press was founded in 2001 by George Kiraz, and is based in Piscataway, New Jersey.\n\n Authors include Sebastian Brock, Clinton Bennett, David C. Parker, Andrei Orlov, Iain Torrance, Philip Khuri Hitti, George Percy Badger, Ignatius Zakka I Iwas, Ignatius Afram I Barsoum, Ignatius Elias III, Carl Brockelmann, Aziz Suryal Atiya, and William Hatch.",
+    "Aaron McCreary\nAaron Monroe \"Mac\" McCreary (September 15, 1892 – ?)\n\n was an American football, basketball, and baseball player, coach, and college athletics administrator.\n\n He served as the head football coach at Tempe State Teachers College, known at Arizona State Teachers College by 1929 and now called Arizona State University, compiling a career college football record of 25–17–4.\n\n McCreary was also the head basketball coach at Tempe/Arizona State Teachers from 1923 to 1930 and at Arizona State Teacher's College of Flagstaff, now Northern Arizona University, amassing a career college basketball record of 140–149.\n\n In addition, he coached baseball at Tempe/Arizona State Teachers (1924–1926, 1928, 1930–1931) and at Arizona State Teacher's Flagstaff in 1959, tallying a career college baseball mark of 22–56–1.",
+    "Sanders–Brown Center on Aging\nThe Sanders–Brown Center on Aging at the University of Kentucky in Lexington, Kentucky, is responsible for research, education and service programs in aging.\n\n The program was founded in 1963 with the creation of the Council on Aging.\n\n In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.\n\n The center was named for the Browns and his then-business partner, (Col.) Harlan Sanders.\n\n The four-story brick and concrete structure fronts South Limestone at the edge of the medical campus.\n\n The complex features 32 research laboratories that employs more than 150.",
+    "Evangelical Presbyterian University College\nThe Evangelical Presbyterian University College was established in 2008 by the Evangelical Presbyterian Church, Ghana."
+   ]
+  },
+  {
+   "id": "14d9b5c1dceca9a6",
+   "gold": [
+    {
+     "sentence": "Baghdad ER is a documentary released by HBO on May 21, 2006.",
+     "facts": {
+      "0.0": "Baghdad ER is a documentary.",
+      "0.1": "Baghdad ER was released by HBO.",
+      "0.2": "Baghdad ER was released on May 21, 2006."
+     }
+    },
+    {
+     "sentence": "Olympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.",
+     "facts": {
+      "1.0": "Olympia is a documentary film.",
+      "1.1": "Olympia was released in 1938.",
+      "1.2": "Olympia is a German film.",
+      "1.3": "Olympia was written by Leni Riefenstahl.",
+      "1.4": "Olympia was directed by Leni Riefenstahl.",
+      "1.5": "Olympia was produced by Leni Riefenstahl.",
+      "1.6": "Olympia documents the 1936 Summer Olympics.",
+      "1.7": "The 1936 Summer Olympics were held in the Olympic Stadium in Berlin, Germany."
+     }
+    }
+   ],
+   "items": [
+    "Anatomy (film)\nAnatomy (German: \"Anatomie\" ) is a 2000 German horror film written and directed by Stefan Ruzowitzky that stars Franka Potente.\n\n A sequel, \"Anatomy 2\" (\"Anatomie 2\") was released in 2003.\n\n The film was a box-office success in Germany, and Columbia Pictures released the film's English-dubbed version in the United States theatrically.",
+    "List of accolades received by The Hurt Locker\n\"The Hurt Locker\" is a 2009 Iraq War film written by Mark Boal and directed by Kathryn Bigelow.\n\n The film premiered on September 4, 2008 at the 65th Venice International Film Festival, where it competed with \"The Wrestler\" for the Golden Lion award.\n\n It was released in Italy by Warner Bros.\n\n Pictures on October 10, 2008.\n\n Following a showing at the 33rd Toronto International Film Festival, Summit Entertainment picked the film up for distribution in the United States.\n\n \"The Hurt Locker\" was released in the United States on June 26, 2009, with a limited release at four theaters in Los Angeles and New York City.\n\n The film grossed over $145,000 on its opening weekend, averaging around $36,000 per theater.\n\n The following weekend, beginning July 3, the film grossed over $131,000 at nine theaters.\n\n It held the highest per-screen average of any movie playing theatrically in the United States for the first two weeks of its release, gradually moving into the top 20 chart.\n\n Summit Entertainment then released \"The Hurt Locker\" to more screens.",
+    "Kathryn Bigelow\nKathryn Ann Bigelow ( ; born November 27, 1951) is an American director, producer, and writer.\n\n Her films include the vampire Western horror film \"Near Dark\" (1987), the action crime film \"Point Break\" (1991), the science fiction action thriller \"Strange Days\" (1995), the mystery thriller \"The Weight of Water\" (2000), the submarine thriller \"\" (2002), the war film \"The Hurt Locker\" (2008), the action thriller war film \"Zero Dark Thirty\" (2012), the short film \"Last Days\" (2014), and the period crime drama \"Detroit\" (2017).\n\n \"The Hurt Locker\" won the 2009 Academy Award for Best Picture and the BAFTA Award for Best Film, and was nominated for the 2010 Golden Globe Award for Best Drama.\n\n She has also acted as producer and writer for many of her films.",
+    "Baghdad ER\nBaghdad ER is a documentary released by HBO on May 21, 2006.\n\n It shows the Iraq war from the perspective of a military hospital in Baghdad.\n\n It has some relatively disturbing scenes in it (e.g. amputations), therefore the U.S. Army is officially warning that military personnel watching it could experience symptoms of post-traumatic stress disorder (PTSD).",
+    "Matthew O'Neill (filmmaker)\nMatthew O'Neill is a documentary filmmaker best known for his work on the HBO film \"Baghdad ER\", for which he and co-creator Jon Alpert won three Emmy Awards.",
+    "Shamal Sabri\nHe has proven himself over and over as an important player in Kurdistan's developing film industry and eventually earned the position of Artistic Director of Duhok IFF in 2016.\n\n Shamal is the head of submission committee for films representing Iraq in the Asia Pacific Screen Awards.",
+    "Film genre\nA film genre is a motion picture category based on similarities in either the narrative elements or the emotional response to the film (namely, serious, comic, etc.).\n\n Most theories of film genre are borrowed from literary genre criticism.\n\n The basic genres include fiction and documentary, from which subgenres have emerged, such as docufiction and docudrama.\n\n Other subgenres include the courtroom and trial-focused drama known as the legal drama.\n\n Types of fiction which may seem unrelated can also be combined to form hybrid subgenres, such as the melding of horror and comedy in the \"Evil Dead\" films.\n\n Other popular combinations are the romantic comedy and the action comedy film.",
+    "In the Shadow of the Palms\nIn the Shadow of the Palms (2005) is a documentary produced and directed by the Australian filmmaker Wayne Coles-Janess.\n\n He filmed it in Iraq prior to, during and after the fall of Saddam Hussein after the United States invasion of 2003.\n\n An Arab-language film, it documents the changes in Iraqi society and the lives of ordinary Iraqis by focusing on a cross-section of individuals.",
+    "Baghdad Jewish Arabic\nBaghdad Jewish Arabic is the Arabic dialect spoken by the Jews of Baghdad and other towns of Southern Iraq.\n\n This dialect differs from the dialect spoken by the Jews in Northern Iraq, such as Mosul and 'Ana.\n\n The Baghdadi and Northern dialects may be regarded as subvarieties of Judeo-Iraqi Arabic.\n\n As with most Judeo-Arab communities, there are likely to be few, if any, speakers of the Judeo-Iraqi Arabic dialects who still reside within Iraq.\n\n Rather these dialects have been maintained or are facing critical endangerment within respective Judeo-Iraqi diasporas, namely those of Israel and the United States.\n\n In 2014, the film \"Farewell Baghdad\" (Arabic: مطير الحمام; Hebrew: מפריח היונים, lit.\n\n \"The Dove Flyer\"), which is performed mostly in Jewish Baghdadi Arabic dialect, became the first film to be almost completely performed in Judeo-Iraqi Arabic.",
+    "Olympia (1938 film)\nOlympia is a 1938 German documentary film written, directed and produced by Leni Riefenstahl, documenting the 1936 Summer Olympics, held in the Olympic Stadium in Berlin, Germany.\n\n The film was released in two parts: \"Olympia 1.\n\n Teil — Fest der Völker\" (Festival of Nations) and \"Olympia 2.\n\n Teil — Fest der Schönheit\" (Festival of Beauty).\n\n It was the first documentary feature film of the Olympic Games ever made.\n\n Many advanced motion picture techniques, which later became industry standards but which were groundbreaking at the time, were employed —including unusual camera angles, smash cuts, extreme close-ups, placing tracking shot rails within the bleachers, and the like.\n\n The techniques employed are almost universally admired, but the film is controversial due to its political context.\n\n Nevertheless, the film appears on many lists of the greatest films of all time, including \"Time\" magazine's \"All-Time 100 Movies.\""
+   ]
+  },
+  {
+   "id": "ed2a29ec953bfc4c",
+   "gold": [
+    {
+     "sentence": "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television.",
+     "facts": {
+      "0.0": "Frederick King Keller was born in 1954.",
+      "0.1": "Frederick King Keller was born in Buffalo, New York.",
+      "0.2": "Frederick King Keller is an American director.",
+      "0.3": "Frederick King Keller is an American producer.",
+      "0.4": "Frederick King Keller is an American screenwriter.",
+      "0.5": "Frederick King Keller works in film and television."
+     }
+    },
+    {
+     "sentence": "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter.",
+     "facts": {
+      "1.0": "Ian Schneider was born on October 3, 1992.",
+      "1.1": "Ian Schneider is an independent American film director.",
+      "1.2": "Ian Schneider is an American screenwriter."
+     }
+    }
+   ],
+   "items": [
+    "Ian Schneider is an independent American director and screenwriter. Mary Sweeney, a longtime David Lynch collaborator, edited and produced *Twin Peaks*, *Lost Highway*, *The Straight Story* and *Mulholland Drive*; she teaches at USC and chairs Film Independent. Angelo Badalamenti scored Lynch works and won a Grammy. Brian Ralston, Nancy Schreiber and John Bailey are established composers/cinematographers; Bailey led the Motion Picture Academy. Jon Paul Puno is",
+    "Kurt Voss\nKurt Voss (born Kurt Christopher Peter Wössner) is an American film director, screenwriter and musician-songwriter.\n\n Voss's credits include Will Smith's debut \"Where The Day Takes You\"; the Justin Theroux, Alyssa Milano and Ice T action film \"Below Utopia\"; actress Jaime Pressly's debut feature \"\", and rock and roll related films including \"Down and Out with the Dolls\" and \"Ghost on The Highway: A Portrait of Jeffrey Lee Pierce and The Gun Club\".",
+    "Klete Keller\nKlete D. Keller (born March 21, 1982) is an American former competition swimmer who won medals at the 2000 Summer Olympics and the 2004 Summer Olympics in the 400-meter freestyle and the 4×200-meter freestyle relay.\n\n In the 4×200-meter freestyle relay, Keller held off a charging Ian Thorpe in the anchor leg to win the race by 0.13 seconds.\n\n This was the first time Australia had been beaten in the event in over seven years.\n\n The American relay of Michael Phelps, Ryan Lochte, Peter Vanderkaay, and Keller are undefeated since the Athens games.\n\n Vanderkaay, Larsen Jensen, Erik Vendt, and Keller make up the core of the premier American mid-distance/distance freestyle swimmers.",
+    "The entries profile filmmakers, producers, performers, and artists: Tim Bedore is a Chicago-born comedian; Rogue One (2016) depicts rebels stealing Death Star plans; Frederick K. Keller, Peter Guber, Baltasar Kormákur, Steve Rash, Jonathan Kaplan, Kurt Voss, Jim Sharman, Barry Sandler, and Howard Rosenman are directors or producers. Other highlights include Titan A.E.’s commercial failure; Vito Russo’s documentary; Scott Free’s founding by the",
+    "Colby Keller\nColby Keller (born October 18, 1980) is an American visual artist, blogger, and pornographic film actor.\n\n His career in porn film started in 2004 at Sean Cody and has since expanded to include such studios as Cocksure Men, Randy Blue, Titan Men, Falcon, CockyBoys and Men.com.\n\n Keller has amassed a large fan base with both his films and his long-standing blog, \"The Big Shoe Diaries\".\n\n He has been nominated for a number of awards and in 2013, World of Wonder awarded him the WOWie Award for Best Blog.\n\n Keller is nominated for 8 2015 Grabby Awards.\n\n Keller has also appeared in the short, Zolushka, a queer retelling of Cinderella and the popular series Capitol Hill both by the cult filmmaker Wes Hurley.",
+    "Ian Schneider\nIan Schneider (born October 3, 1992), is an independent American film director and screenwriter.",
+    "John Bailey (cinematographer)\nJohn Ira Bailey, A.S.C. (born August 10, 1942) is an American cinematographer and film director best known for his collaborations with directors Paul Schrader, Lawrence Kasdan, Michael Apted, and Ken Kwapis.\n\n In August 2017, Bailey was elected President of the Academy of Motion Picture Arts and Sciences for a four-year term.",
+    "Frederick King Keller\nFrederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television.\n\n He is also credited under the names Frederick K. Keller, Fred K. Keller and Fred Keller.\n\n He is the son of actor/screenwriter .\n\n His father was a television pioneer who produced and directed the first weekly dramatic series seen on television.Besides acting and directing in theater his father also ran several art house movie theaters in Buffalo which the young Fred became intimately involved with and which formed the root of his cinematic education.",
+    "Allen Klein\nAllen Klein (December 18, 1931 July 4, 2009) was an American businessman, music publisher, writers' representative, filmmaker and record label executive, most noted for his tough persona and aggressive, innovative negotiation tactics, many of which established higher industry standards for compensating recording artists.\n\n He founded ABKCO Music & Records Incorporated.\n\n Klein revolutionized the income potential of recording artists, who previously had been routinely victimized by onerous record company contracts.\n\n He first scored massive monetary and contractual windfalls for Buddy Knox and Jimmy Bowen, one-hit rockabillies of the late 1950s, then parlayed his early successes into a position managing Sam Cooke, and eventually managed the Beatles and the Rolling Stones simultaneously, along with many other artists, becoming one of the most powerful individuals in the music industry during his era.",
+    "Dan Ouellette\nGiger and Beksinski, and he has been featured in magazines internationally.\n\n David Bowie commented while looking at Dan's art that he has noticed a strong influence of science fiction on contemporary art.\n\n Giger saw a different aspect, saying simply \"Very bony.\"\n\n He grew to adore the cinema of Fellini and later to marvel at Lynch's \"Eraserhead\".\n\n Rather than pursue a formal education in the fine arts he chose to study the craft of film making and after college he became a production designer working on feature films in New York City starting with his work as a production designer for Hal Hartley in 1990 with Trust and then, in 1992, with Simple Men."
+   ]
+  },
+  {
+   "id": "2575db95ea79dfeb",
+   "gold": [
+    {
+     "sentence": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.",
+     "facts": {
+      "0.0": "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed by Nino Rota.",
+      "0.1": "The soundtrack for the 1968 film \"Romeo and Juliet\" was conducted by Nino Rota."
+     }
+    },
+    {
+     "sentence": "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare.",
+     "facts": {
+      "1.0": "Romeo and Juliet is a 1968 British-Italian romance film.",
+      "1.1": "Romeo and Juliet is based on the tragic play of the same name.",
+      "1.2": "The play Romeo and Juliet was written between 1591 and 1595.",
+      "1.3": "The play Romeo and Juliet was written by William Shakespeare."
+     }
+    }
+   ],
+   "items": [
+    "The Godfather (soundtrack)\nThe Godfather is the soundtrack from the film of the same name, released in 1972 by Paramount Records, and in 1991 on compact disc by MCA.\n\n Unless noted, the cues were composed by Nino Rota and conducted by Carlo Savina (who was credited on the LP, but not the CD).\n\n The song \"I Have but One Heart\" is sung by Al Martino, who performed it in the film as character Johnny Fontane.",
+    "The Godfather Part II (soundtrack)\nThe Godfather Part II is the soundtrack from the movie of the same name, released in 1974 by ABC, and 1991 on compact disc by MCA.\n\n The original score was composed by Nino Rota and conducted by Carmine Coppola, who also provided source music for the film.\n\n Rota expands upon two of the three main themes from the first film: \"The Godfather Waltz\" and \"Michael's Theme\", while \"The Love Theme\" from the first film makes a brief appearance during a flashback sequence (\"Remember Vito Andolini\").\n\n There are several new themes, including one for Kay (Diane Keaton), and two for young Vito (Robert De Niro): \"The Immigrant Theme\" and \"The Tarantella\", introduced in \"A New Carpet\".",
+    "Giuseppe Verdi (film)\nGiuseppe Verdi is a 1938 Italian biographical film directed by Carmine Gallone and starring Fosco Giachetti, Gaby Morlay and Germana Paolieri.\n\n The film portrays the life of the composer Giuseppe Verdi (1813-1901).\n\n The casting of Giachetti as Verdi was intended to emphasise the composer's patriotism, as he had recently played patriotic roles in films such as \"The White Squadron\".\n\n The film was made at the Cinecittà Studios in Rome.\n\n The film is also known by the alternative title The Life of Giuseppe Verdi.",
+    "Romeo and Juliet (1968 film soundtrack)\nThe soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.\n\n It was originally released as a vinyl record, containing nine entries, most notably the song \"What Is a Youth\", composed by Nino Rota, written by Eugene Walter and performed by Glen Weston.\n\n The music score won a Silver Ribbon award of the Italian National Syndicate of Film Journalists in 1968 and was nominated for two other awards (BAFTA Award for Best Film Music in 1968 and Golden Globe Award for Best Original Score in 1969).",
+    "Il trittico\nIl trittico (\"The Triptych\") is the title of a collection of three one-act operas, \"Il tabarro\", \"Suor Angelica\", and \"Gianni Schicchi\", by Giacomo Puccini.\n\n The work received its world premiere at the Metropolitan Opera on 14 December 1918.",
+    "8½\n8½ (Italian title: Otto e mezzo ] ) is a 1963 semi-autobiographical comedy-drama film directed by Federico Fellini.\n\n Co-scripted by Fellini, Tullio Pinelli, Ennio Flaiano, and Brunello Rondi, it stars Marcello Mastroianni as Guido Anselmi, a famous Italian film director.\n\n Shot in black-and-white by cinematographer Gianni di Venanzo, the film features a soundtrack by Nino Rota with costume and set designs by Piero Gherardi.",
+    "Il cappello di paglia di Firenze\nIl cappello di paglia di Firenze (literally translated as \"The Florentine Straw Hat\" but usually titled in English language productions as \"The Italian Straw Hat\") is an opera by Nino Rota to an Italian-language libretto by the composer and Ernesta Rota, based on the play \"Le chapeau de paille d'Italie\" by Eugène Labiche and Marc Michel.",
+    "West Side Story (film)\nWest Side Story is a 1961 American musical romantic drama film directed by Robert Wise and Jerome Robbins.\n\n The film is an adaptation of the 1957 Broadway musical of the same name, which in turn was inspired by William Shakespeare's play \"Romeo and Juliet\".\n\n It stars Natalie Wood, Richard Beymer, Russ Tamblyn, Rita Moreno, and George Chakiris, and was photographed by Daniel L. Fapp, A.S.C., in Super Panavision 70.\n\n Released on October 18, 1961 through United Artists, the film received high praise from critics and viewers, and became the second highest grossing film of the year in the United States.\n\n The film was nominated for 11 Academy Awards and won 10, including Best Picture (as well as a special award for Robbins), becoming the record holder for the most wins for a movie musical.",
+    "Romeo and Juliet (1968 film)\nRomeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare.",
+    "Amarcord Nino Rota\nAmarcord Nino Rota is an album by various artists, recorded as a tribute to composer Nino Rota."
+   ]
+  }
+ ]
+}

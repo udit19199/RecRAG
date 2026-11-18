@@ -1,0 +1,62 @@
+[
+{"id": "d06de3ea41901243", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "seven counts of fraud and conspiracy"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "520fd4b16d9e631f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "stores’ opening and closing times on the holiday vary based on location"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "with the holiday falling on 23 November this year"}]}
+]},
+{"id": "c422dc313574b44a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}, {"item": 7, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}, {"item": 7, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "She specified that she isn’t trying to hide her relationship from the public eye"}]}
+]},
+{"id": "061f1718522d7d4d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "he told Fox News Digital"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house"}]}
+]},
+{"id": "2a1bbf8f7712c537", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "was told he didn't want investors as directors"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "but he did plan on having a board with experts"}]},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "9eafded7cc859f47", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]}
+]

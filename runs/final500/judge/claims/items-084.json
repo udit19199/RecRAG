@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae074aa5542993d6555eb54",
+   "sentences": [
+    "Ash Lieb (born 22 August 1982) is an Australian artist, writer and comedian, known for his surreal humour and art.",
+    "Helen Elswyth Thane Ricker Beebe (May 16, 1900 – July 31, 1984) was an American romance novelist."
+   ]
+  },
+  {
+   "id": "5a7633ad5542992db9473741",
+   "sentences": [
+    "The Seven Days Battles were a series of six major battles over the seven days from June 25 to July 1, 1862, near Richmond, Virginia, during the American Civil War.",
+    "The Battle of Manila (February 3, 1945 – March 3, 1945) was a major battle of the Philippine campaign of 1944-45, during the Second World War."
+   ]
+  },
+  {
+   "id": "multihop-rag-952",
+   "sentences": [
+    "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.",
+    "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."
+   ]
+  },
+  {
+   "id": "2876182999155230775",
+   "sentences": [
+    "The United States two - dollar bill ( $2 ) is a current denomination of U.S. currency . The third U.S. President ( 1801 -- 09 ) , Thomas Jefferson , is featured on the obverse of the note . The reverse features an engraving of the painting The Declaration of Independence by John Trumbull . Throughout the $2 bill 's pre-1929 life as a large - sized note , it was issued as a United States Note , National Bank Note , silver certificate , Treasury or `` Coin '' Note and Federal Reserve Bank Note . When U.S. currency was changed to its current size , the $2 bill was issued only as a United States Note . Production went on until 1966 , when the series was discontinued . Ten years passed before the $2 bill was reissued as a Federal Reserve Note with a new reverse design . Two - dollar bills are seldom seen in circulation as a result of banking policies with businesses which has resulted in low production numbers due to lack of demand . This comparative scarcity in circulation , coupled with a lack of public knowledge that the bill is still in production and circulation , has also inspired urban legends and occasionally has created problems for people trying to use the bill to make purchases ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2247",
+   "sentences": [
+    "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play.",
+    "During character creation, you must pick the otherworldy patron that you’ve decided to serve."
+   ]
+  },
+  {
+   "id": "5ab862f95542992aa3b8c8d4",
+   "sentences": [
+    "Jelena Janković (Serbian Cyrillic: Јелена Јанковић, ] , born 28 February 1985) is a Serbian professional tennis player.",
+    "Marat Mubinovich Safin (Russian: Мара́т Муби́нович Са́фин ; ] , Tatar: Марат Мөбин улы Сафин \"Marat Möbin uğlı Safin\" ; born 27 January 1980) is a Russian politician and retired professional tennis player."
+   ]
+  },
+  {
+   "id": "5195577413672736740",
+   "sentences": [
+    "Within eukaryotic cells , DNA is organized into long structures called chromosomes . During cell division these chromosomes are duplicated in the process of DNA replication , providing each cell its own complete set of chromosomes . Eukaryotic organisms ( animals , plants , fungi and protists ) store most of their DNA inside the cell nucleus and some of their DNA in organelles , such as mitochondria or chloroplasts . In contrast prokaryotes ( bacteria and archaea ) store their DNA only in the cytoplasm . Within the eukaryotic chromosomes , chromatin proteins such as histones compact and organize DNA . These compact structures guide the interactions between DNA and other proteins , helping control which parts of the DNA are transcribed .",
+    "Genomic DNA is tightly and orderly packed in the process called DNA condensation , to fit the small available volumes of the cell . In eukaryotes , DNA is located in the cell nucleus , with small amounts in mitochondria and chloroplasts . In prokaryotes , the DNA is held within an irregularly shaped body in the cytoplasm called the nucleoid . The genetic information in a genome is held within genes , and the complete set of this information in an organism is called its genotype . A gene is a unit of heredity and is a region of DNA that influences a particular characteristic in an organism . Genes contain an open reading frame that can be transcribed , and regulatory sequences such as promoters and enhancers , which control transcription of the open reading frame .",
+    "DNA usually occurs as linear chromosomes in eukaryotes , and circular chromosomes in prokaryotes . The set of chromosomes in a cell makes up its genome ; the human genome has approximately 3 billion base pairs of DNA arranged into 46 chromosomes . The information carried by DNA is held in the sequence of pieces of DNA called genes . Transmission of genetic information in genes is achieved via complementary base pairing . For example , in transcription , when a cell uses the information in a gene , the DNA sequence is copied into a complementary RNA sequence through the attraction between the DNA and the correct RNA nucleotides . Usually , this RNA copy is then used to make a matching protein sequence in a process called translation , which depends on the same interaction between RNA nucleotides . In alternative fashion , a cell may simply copy its genetic information in a process called DNA replication . The details of these functions are covered in other articles ; here the focus is on the interactions between DNA and other molecules that mediate the function of the genome ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1719",
+   "sentences": [
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.",
+    "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a8ec7cc5542995a26add518",
+   "sentences": [
+    "Popular Science (also known as PopSci) is an American bi-monthly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects.",
+    "Girlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective.",
+    " Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor.",
+    " \"Girlfriends\" magazine ceased publication in 2006."
+   ]
+  },
+  {
+   "id": "5ac2f1d1554299218029dba4",
+   "sentences": [
+    "Lithocarpus is a genus in the beech family Fagaceae, differing from \"Quercus\" in the erect spikes of insect-pollinated male flowers and the short styles with punctate stigmas on the female flowers.",
+    " It contains 17 species of shrubs and small trees that are native from southern Florida to Mexico and South America."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+[
+  {"id": "5ec6631b362be0e1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+  ]},
+  {"id": "6b7904eec7693771", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+  ]},
+  {"id": "18336bcffec77c09", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In recent months, Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "In recent months, Warner Music Group CEO Robert Kyncl"}, {"item": 7, "quote": "namely YouTube, where he was Chief Business Officer."}]},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "58815fd17fc1b9cc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Davidson said, “but the level of performance and how he could control a game and dominate a game in junior"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Davidson said, “but the level of performance and how he could control a game and dominate a game in junior"}, {"item": 8, "quote": "in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.3", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.4", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.5", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.6", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.7", "status": "contradicted", "evidence": [{"item": 2, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]}
+  ]},
+  {"id": "13a50660c61915bf", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4d75207bdbfbf63c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+  ]}
+]

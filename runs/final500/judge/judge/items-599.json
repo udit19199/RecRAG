@@ -1,0 +1,444 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You check whether retrieved text states the facts of gold evidence sentences.\n\nUse only the retrieved items. Do not use outside knowledge and do not reason\nyour way to a fact the text does not state; plain rewording, synonyms,\nabbreviations and different formatting are fine.\n\nFor every fact give one status:\n- stated: some item says it, with every specific matching (names, numbers,\n  dates, places, who did what, qualifiers).\n- contradicted: some item gives a different value for the same specific, such\n  as another year or another person.\n- missing: neither of the above.\nIf one item states the fact and another contradicts it, the status is contradicted.\n\nEvidence for stated or contradicted facts: copy one continuous passage from\none item, character for character, with no ellipses or edits, and give that\nitem's number. Never join separate words into a quote that does not appear as\nwritten; if the words are apart, quote the longer continuous passage that\ncontains them. A fact spread across items may take several quotes. The quotes\ntogether must contain the words that state every specific of the fact (who,\nwhat, numbers, dates, reasons); a quote that only sets the topic, or stops\nbefore the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a\nprogram, and a quote that does not appear there counts as missing.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"facts\": [{\"fact\": \"S.F\", \"status\": \"stated\", \"evidence\": [{\"item\": 3, \"quote\": \"...\"}]}, ...]}\nwhere \"S.F\" is the fact's label as given (sentence number, fact number).\nGive exactly one entry for every fact label of the item. Use only ids from\nthis file and do not skip any item.",
+ "items": [
+  {
+   "id": "c1fdbfeb3a465da7",
+   "gold": [
+    {
+     "sentence": "Aram Saroyan (born September 25, 1943) is an American poet, novelist, biographer, memoirist and playwright, who is especially known for his minimalist poetry, famous examples of which include the one-word poem \"lighght\" and a one-letter poem comprising a four-legged version of the letter \"m\".",
+     "facts": {
+      "0.0": "Aram Saroyan was born on September 25, 1943.",
+      "0.1": "Aram Saroyan is an American poet.",
+      "0.2": "Aram Saroyan is an American novelist.",
+      "0.3": "Aram Saroyan is an American biographer.",
+      "0.4": "Aram Saroyan is an American memoirist.",
+      "0.5": "Aram Saroyan is an American playwright.",
+      "0.6": "Aram Saroyan is especially known for his minimalist poetry.",
+      "0.7": "A famous example of Aram Saroyan's minimalist poetry is the one-word poem \"lighght\".",
+      "0.8": "A famous example of Aram Saroyan's minimalist poetry is a one-letter poem comprising a four-legged version of the letter \"m\"."
+     }
+    },
+    {
+     "sentence": "Dr. Edward Keonjian (14 August 1909 – 6 September 1999) was a prominent engineer, an early leader in the field of low-power electronics, the father of microelectronics.",
+     "facts": {
+      "1.0": "Dr. Edward Keonjian was born on 14 August 1909.",
+      "1.1": "Dr. Edward Keonjian died on 6 September 1999.",
+      "1.2": "Dr. Edward Keonjian was a prominent engineer.",
+      "1.3": "Dr. Edward Keonjian was an early leader in the field of low-power electronics.",
+      "1.4": "Dr. Edward Keonjian was the father of microelectronics."
+     }
+    }
+   ],
+   "items": [
+    "Edward Keonjian\nDr. Edward Keonjian (14 August 1909 – 6 September 1999) was a prominent engineer, an early leader in the field of low-power electronics, the father of microelectronics.\n\n In 1954 Keonjian designed the world's first solar-powered, pocket-sized radio transmitter.\n\n In 1959 Keonjian designed the first prototype of integrated circuit.\n\n In 1963 he organized the world's first international symposium on low-power electronics.\n\n Later on Keonjian collaborated with NASA astronaut Neil Armstrong as chief of failure analysis on the Apollo 11 project.",
+    "Edmund Mortimer, 2nd Baron Mortimer\nEdmund Mortimer, 2nd Lord Mortimer (1251 – 17 July 1304) was the second son and eventual heir of Roger Mortimer, 1st Baron Mortimer.\n\n His mother was Maud de Braose.\n\n As a younger son, Edmund had been intended for clerical or monastic life, and had been sent to study at Oxford University.",
+    "Edmund Mortimer, 5th Earl of March\nEdmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.\n\n A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II was deposed in favour of Henry IV.\n\n Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.\n\n Edmund Mortimer was the last Earl of March of the Mortimer family.",
+    "Edmund Mortimer (1302–1331)\nSir Edmund Mortimer (1302/1303 – 16 December 1331) was the eldest son of Roger Mortimer, 1st Earl of March and Joan de Geneville, 2nd Baroness Geneville.\n\n By his wife Elizabeth de Badlesmere he was the father of Roger Mortimer, 2nd Earl of March.\n\n Though Edmund survived his father by one year, he did not inherit his father's lands and titles as they were forfeited to the Crown and his son only reacquired them gradually.",
+    "Strawberry Saroyan\nStrawberry Saroyan (born 1970) is a journalist and author.\n\n The daughter of Aram Saroyan and granddaughter of playwright William Saroyan and actress Carol Matthau, she spent her childhood in Bolinas, California.\n\n She has a sister named Cream.\n\n She writes for the New York Times Style section and is the author of \"\".",
+    "Aram Saroyan\nAram Saroyan (born September 25, 1943) is an American poet, novelist, biographer, memoirist and playwright, who is especially known for his minimalist poetry, famous examples of which include the one-word poem \"lighght\" and a one-letter poem comprising a four-legged version of the letter \"m\".",
+    "My Name Is Aram\nMy Name is Aram is a book of short stories by William Saroyan first published in 1940.\n\n The stories detail the exploits of Aram Garoghlanian, a boy of Armenian descent growing up in Fresno, California, and the various members of his large family.\n\n This book is assigned reading in some schools.",
+    "Levan of Imereti\nLevan (Georgian: ლევანი ) (1573–1590), of the Bagrationi Dynasty, was a king of Imereti from 1585 to 1588.\n\n He succeeded on the death of his father, George II, in 1585 when he was twelve years old.\n\n With his ascend to the throne, Leon faced a revolt by his own uncle, Constantine, who defied the royal authority and took control of Upper Imereti.\n\n Leon made an alliance with the Mingrelian prince Mamia IV Dadiani, married his sister Marekhi, and forced Constantine to surrender in 1587.\n\n A year later, Imereti was invaded by Simon I, the resurgent king of Kartli in eastern Georgia, who sought to reunify all Georgian lands under his crown.\n\n Leon was forced to flee to the highland province of Lechkhumi, but was soon able to resume the throne after Simon had to return to Kartli.",
+    "Daron Malakian\nDaron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.\n\n He is best known as the guitarist, songwriter and second vocalist of the rock band System of a Down and as the lead vocalist, lead guitarist and songwriter of the band Scars on Broadway.\n\n Like the rest of the Hollywood-based band System of a Down, he is of Armenian ancestry, but he is the only member to have been born in the United States.\n\n Daron Malakian is known for his distinctive playing and is ranked 40th in Loudwire's list of \"Top 50 Hard Rock + Metal Guitarists Of All Time\" and #11 in MusicRadar's poll, \"The 20 Greatest Metal Guitarists Ever\".\n\n He is placed 30th in Guitar World's List of The 100 Greatest Heavy Metal Guitarists of All Time.",
+    "Ted Kooshian\nTed Kooshian (born October 8, 1961) is an American jazz pianist, keyboardist, and composer, who has performed with Aretha Franklin, Chuck Berry, Marvin Hamlisch, Sarah Brightman, Il Divo, and Blood, Sweat, and Tears.\n\n Kooshian has played in many Broadway pit orchestras, and has been a member of the Ed Palermo Big Band since 1994.\n\n Originally from San Jose, California, Kooshian has been performing since the 1980s."
+   ]
+  },
+  {
+   "id": "774d139130ee323e",
+   "gold": [
+    {
+     "sentence": "In the middle of 1984 a Brazilian company called Prológica, which made its own versions of 8 bits US computers, brought to the Brazilian market a new equipment for its personal computer series called \"CP\" (shorten of Personal Computer in Portuguese).",
+     "facts": {
+      "0.0": "In the middle of 1984, a Brazilian company called Prológica brought a new equipment to the Brazilian market",
+      "0.1": "Prológica made its own versions of 8 bits US computers",
+      "0.2": "The new equipment was for Prológica's personal computer series",
+      "0.3": "The new equipment was called \"CP\"",
+      "0.4": "CP is short for Personal Computer in Portuguese"
+     }
+    },
+    {
+     "sentence": "The Atari ST is a line of home computers from Atari Corporation and the successor to the Atari 8-bit family.",
+     "facts": {
+      "1.0": "The Atari ST is a line of home computers from Atari Corporation",
+      "1.1": "The Atari ST is the successor to the Atari 8-bit family"
+     }
+    },
+    {
+     "sentence": " The Atari ST is the first personal computer to come with a bitmapped color GUI, using a version of Digital Research's GEM released in February 1985.",
+     "facts": {
+      "2.0": "The Atari ST is the first personal computer to come with a bitmapped color GUI",
+      "2.1": "The Atari ST's bitmapped color GUI uses a version of Digital Research's GEM",
+      "2.2": "The version of Digital Research's GEM used by the Atari ST was released in February 1985"
+     }
+    }
+   ],
+   "items": [
+    "Megamax C\nMegamax C is a K&R implementation of C for the Atari ST, Apple IIgs, and Macintosh computers.\n\n Sold by Megamax, Inc., based in Richardson, Texas, the package includes a one-pass compiler, linker, editor, resource construction kit, and documentation.\n\n In the early days of the Atari ST, Megamax C was the primary competitor to the Alcyon C compiler from Digital Research which was included in the official developer kit from Atari.\n\n According to a review in \"Antic\" magazine, Megamax C compiled a small benchmark program six times faster than Digital Research's compiler.",
+    "DTACK Grounded\nDTACK Grounded was a computer hobbyist newsletter published from July 1981 to September 1985 by Hal W. Hardenberg.\n\n Subtitled \"The Journal of Simple 68000 Systems\", the newsletter was dedicated to the proposition that the Motorola 68000 CPU could be used to build simple fast computers.\n\n In 1981 this was a revolutionary idea.\n\n This was before 68000-based personal computers like the Apple Macintosh, Commodore Amiga, and Atari ST had been created.\n\n In 1981 Motorola was marketing the 68000 solely as a CPU for high-end Unix workstations.\n\n Hal believed that the 68000 could be used as a simple embedded microprocessor as well, and used the newsletter to explain how to do that.",
+    "Page 6\nPage 6 (subtitled \"Atari Users Magazine\", and later known as New Atari User) was an independent British publication aimed at users of Atari home computers.\n\n It was published between 1982 and 1998.\n\n The computer magazine supported both the Atari 8-bit family of computers (400/800/XL/XE) and the Atari ST range.",
+    "Atari Corporation\nAtari Corporation was an American manufacturer of computers and video game consoles from 1984 to 1996.\n\n Atari Corp. was founded in July 1984 when Warner Communications sold the home computing and game console divisions of Atari, Inc. to Jack Tramiel.\n\n Its chief products were the Atari ST, , Atari 7800, Atari Lynx, and Atari Jaguar.\n\n The company reverse merged with JTS Inc. in 1996, becoming a small division, which itself closed when JTS liquidated the IP to Hasbro Interactive in 1998.",
+    "ATASCII\nThe ATASCII character set, from ATARI Standard Code for Information Interchange\", alternatively ATARI ASCII\", is the variation on ASCII used in the Atari 8-bit family of home computers.\n\n The first of this family were the Atari 400 and 800, released in 1979, and later models were released throughout the 1980s.\n\n The last computer to use the ATASCII character set was the Atari XEGS which was released in 1987.\n\n The Atari ST family of computers used the different Atari ST character set.",
+    "XaAES\nFreeMint, MultiTOS, and a few more obscure OSes are all successors to TOS the proprietary operating system of the Atari ST computer.\n\n Later models of the ST Computer were called the TT and the Falcon.\n\n TOS stands for The Operating System or Tramiel Operating System, as Jack Tramiel was the owner of Atari.\n\n GEMDOS itself was a near clone of DOS, the IBM PC OS.\n\n This was most visible to users in the 8.3 character file naming system.\n\n Like all personal computer operating systems of the day, TOS was single tasking.\n\n GEM, the graphical user interface, was licensed from Digital Research and was not included in Apple's lawsuit against DR, thus the Macintosh like appearance and ways of doing things remained on Atari computers.\n\n As time went on, the big goal for the ST within and without Atari was to have a multitasking TOS.",
+    "Happy drives\nHappy drives are series of disk drive enhancements for the Atari 8-bit and Atari ST computer families produced by a small company Happy Computers.\n\n Happy Computers is most noted for the add-in boards for the Atari 810 and Atari 1050 disk drives, which achieved a tremendous speed improvement for reading and writing, and for the ability to \"back up\" floppies.\n\n Happy's products were among the most popular Atari computer add-ons.\n\n They were still in use and active in the aftermarket as of 2009.",
+    "Prológica CP-400\nIn the middle of 1984 a Brazilian company called Prológica, which made its own versions of 8 bits US computers, brought to the Brazilian market a new equipment for its personal computer series called \"CP\" (shorten of Personal Computer in Portuguese).",
+    "Atari ST\nThe Atari ST is a line of home computers from Atari Corporation and the successor to the Atari 8-bit family.\n\n The initial ST model, the 520ST, saw limited release in April-June 1985 and was widely available in July.\n\n The Atari ST is the first personal computer to come with a bitmapped color GUI, using a version of Digital Research's GEM released in February 1985.\n\n The 1040ST, released in 1986, is the first personal computer to ship with a megabyte of RAM in the base configuration and also the first with a cost-per-kilobyte of less than US$1.",
+    "ST/Amiga Format\nST Amiga Format was a computer magazine that covered the Atari ST and Amiga computers.\n\n It was published by Future plc to cover the ever growing market for the, then-new, 16-bit home computers.\n\n Issues were equally balanced with coverage for both Commodore Amiga and Atari ST systems.\n\n Issue 1 included a main feature 'ST or Amiga?\n\n The Choice is Yours', where the pros and cons for each machine was examined."
+   ]
+  },
+  {
+   "id": "5e17b20fa89ff98f",
+   "gold": [
+    {
+     "sentence": " He is mainly known for his spells at Real Sociedad where his offensive partnership with Nihat Kahveci was one of the best in Spain.",
+     "facts": {
+      "0.0": "He is mainly known for his spells at Real Sociedad.",
+      "0.1": "His offensive partnership with Nihat Kahveci at Real Sociedad was one of the best in Spain."
+     }
+    },
+    {
+     "sentence": "Nihat Kahveci (born 23 November 1979) is a Turkish former footballer who played as a forward.",
+     "facts": {
+      "1.0": "Nihat Kahveci was born on 23 November 1979.",
+      "1.1": "Nihat Kahveci is a Turkish former footballer.",
+      "1.2": "Nihat Kahveci played as a forward."
+     }
+    }
+   ],
+   "items": [
+    "Lippo Hertzka\nLippo Hertzka (19 November 1904 – 14 March 1951) was a Hungarian football player and manager.\n\n He played for Essener Turnerbund, MTK Budapest and Real Sociedad.\n\n After retiring, he coached seven teams, including Real Sociedad and Real Madrid, a team which he coached for 2 years (1930–1932) and led to an undefeated La Liga championship during the 1931-32 season, which meant the first La Liga title for the \"white\" squad.\n\n He also won two league titles in Portugal for Benfica.",
+    "Nihat Kahveci\nNihat Kahveci (born 23 November 1979) is a Turkish former footballer who played as a forward.",
+    "Ivan Toplak\nIvan Toplak (Serbian Cyrillic: Ивaн Toплaк; born September 21, 1931 in Belgrade) is a former Yugoslavian football player and manager.\n\n He earned 1 cap for Yugoslavia.\n\n He started his career at Branik in Maribor, where his family moved in 1943 from Belgrade.",
+    "C.D. Real Sociedad\nClub Deportivo Real Sociedad, commonly known as Real Sociedad (] ), is a Honduran football club based on Tocoa, Colón, Honduras.",
+    "2013–14 Real Sociedad season\nThe 2013–14 season was Real Sociedad's 67th season in La Liga.\n\n Real Sociedad finished 7th in the league and reached the semifinals of the Copa del Rey.\n\n The Basque failed to make it out of the group stages of the UEFA Champions League.",
+    "Darko Kovačević\nDarko Kovačević (] ; Serbian Cyrillic: ; born 18 November 1973) is a Serbian former footballer who played as a forward.\n\n He began his career in Serbia with Proleter Zrenjanin and subsequently played for Red Star Belgrade, with whom he won a Yugoslav League title and two Yugoslav Cups.\n\n His prolific performances earned him a move to Premier League side Sheffield Wednesday, although his time in England was less successful.\n\n He is mainly known for his spells at Real Sociedad where his offensive partnership with Nihat Kahveci was one of the best in Spain.\n\n Kovačević also had positive spells with Italian club Juventus and Greek side Olympiacos.\n\n At international level, he represented Yugoslavia at the 1998 FIFA World Cup and at UEFA Euro 2000.",
+    "Real Sociedad\nReal Sociedad de Fútbol, S.A.D., more commonly referred to as Real Sociedad (] ; \"Royal Society\") or La Real, is a Spanish football club based in the city of San Sebastián, Basque Country, founded on 7 September 1909.\n\n It plays its home matches at the 32,000-capacity Anoeta Stadium.\n\n Real Sociedad won the Liga title in 1980–81 and 1981–82, and last finished runners-up in 2002–03.\n\n The club has also won the Copa del Rey twice, in 1909 and 1987.\n\n It contests the Basque derby against rivals Athletic Bilbao.\n\n Real Sociedad were founder members of La Liga in 1928, and its longest spell in the top flight was for 40 seasons, from 1967 to 2007.",
+    "José Antonio Santamaría Mikel Vaqueriza\nJosé Antonio Santamaría Mikel Vaqueriza (born 16 March 1946 in San Sebastián, Guipúzcoa, Spain; died 19 January 1993) was a Spanish footballer.\n\n During his career as a professional footballer, Santamaría played for SD Eibar (1963 to 1964), Real Sociedad (1964 to 1967), Real Sociedad (1967 to 1971), Hercules CF (1971 to 1974) finishing his career at CE Sabadell FC (1974 to 1975).\n\n After retiring from football he had a career as an entrepreneur in the hospitality sector.\n\n He was killed in an attack committed by ETA in 1993.",
+    "Admir Čavalić\nAdmir Čavalić is the Director of Association \"Multi\", a non-profit organization dedicated to promoting libertarian ideals in Bosnia and Herzegovina.\n\n \"Multi\" is the first non-profit organization registered in Bosnia and Herzegovina that advocates libertarian ideas.\n\n Čavalić is the director of OPEN Fest, biggest libertarian festival in Europe.\n\n Čavalić also works at Faculty of Economics University of Tuzla, as an assistant teacher.\n\n Čavalić with Dženan Smajić wrote \"Islam and Free Market\" in 2014.\n\n The book, that was published in Bosnian, provides arguments for Islam's connection with the ideas of economic liberalism.\n\n Čavalić made first bosnian documentary about economics, titled \"Economy\".",
+    "Magnus Johansson was a Swedish defender, 1992 Olympian and one-cap international; Ivan Toplak was a Yugoslav player and manager with one cap. Canadian Ostap Steckiw scored on his sole international appearance and served in the Ukrainian Insurgent Army. Finnish Esko Malm played for and managed Haka and led Finland. Hungarian Lippo Hertzka coached Real Madrid to its first unbeaten La Liga title and won two Portuguese titles with Benfica. Spanish player José"
+   ]
+  },
+  {
+   "id": "44d1ac21c3ca34a2",
+   "gold": [
+    {
+     "sentence": "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".",
+     "facts": {
+      "0.0": "Alan Young was born Angus Young.",
+      "0.1": "Alan Young was born on November 19, 1919.",
+      "0.2": "Alan Young died on May 19, 2016.",
+      "0.3": "Alan Young was a British-born Canadian-American actor.",
+      "0.4": "Alan Young was a voice actor.",
+      "0.5": "Alan Young was a comedian.",
+      "0.6": "Alan Young was a radio and television host/personality.",
+      "0.7": "TV Guide called Alan Young \"The Charlie Chaplin of Television\"."
+     }
+    },
+    {
+     "sentence": " Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.",
+     "facts": {
+      "1.0": "Alan Young was the voice of Disney's Scrooge McDuck for over thirty years.",
+      "1.1": "Alan Young first voiced Scrooge McDuck in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983).",
+      "1.2": "Alan Young voiced Scrooge McDuck in various other films, TV series and video games.",
+      "1.3": "Alan Young voiced Scrooge McDuck until his death."
+     }
+    },
+    {
+     "sentence": " During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.",
+     "facts": {
+      "2.0": "During the 1940s and 1950s, Alan Young starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television.",
+      "2.1": "The television version of \"The Alan Young Show\" gained Alan Young two Emmy Awards in 1951."
+     }
+    },
+    {
+     "sentence": " The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.",
+     "facts": {
+      "3.0": "The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\".",
+      "3.1": "The cartoon stars Scrooge McDuck as Ebenezer Scrooge."
+     }
+    }
+   ],
+   "items": [
+    "Alan Young\nAlan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".\n\n He was best known for his role as naive Wilbur Post in the television comedy series \"Mister Ed\" (1961–1966).\n\n Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.\n\n During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.\n\n He also appeared in a number of feature films, starting from 1946, including the 1960 film \"The Time Machine\" and from the 1980s gaining a new generation of viewers appearing in numerous Walt Disney Productions films as both an actor and voice actor.",
+    "A Christmas Carol (2009 film)\nA Christmas Carol is a 2009 American 3D computer animated motion-capture fantasy film written and directed by Robert Zemeckis.\n\n It is an adaptation of the Charles Dickens story of the same name and stars Jim Carrey in a multitude of roles, including Ebenezer Scrooge as a young, middle-aged, and old man, and the three ghosts who haunt Scrooge.\n\n The film also features supporting roles done by Gary Oldman, Colin Firth, Bob Hoskins, Robin Wright, and Cary Elwes.",
+    "Scrooge (1913 film)\nScrooge is a 1913 British black and white silent film based on the 1843 novel \"A Christmas Carol\" by Charles Dickens.\n\n It starred Seymour Hicks as Ebenezer Scrooge.\n\n In the United States it was released in 1926 as \"Old Scrooge\".",
+    "Scrooge (1935 film)\nScrooge is a 1935 British fantasy film directed by Henry Edwards and starring Seymour Hicks, Donald Calthrop and Robert Cochran.\n\n Hicks appears as Ebenezer Scrooge, the miser who hates Christmas.\n\n It was the first sound version of the Charles Dickens classic \"A Christmas Carol\", not counting a 1928 short subject that now appears to be lost.\n\n Hicks had previously played the role of Scrooge on the stage many times beginning in 1901, and again in a 1913 British silent film version.",
+    "Ebenezer (film)\nEbenezer is a 1998 Canadian made-for-television re-telling of Charles Dickens' classic \"A Christmas Carol\" with Jack Palance giving a performance as Ebenezer Scrooge, á la Western genre.\n\n After a half-century of screen presence, in one of Palance's final projects before his retirement.",
+    "Mickey's Christmas Carol\nMickey's Christmas Carol is a 1983 American animated featurette produced by Walt Disney Productions and released by Buena Vista Distribution.\n\n It was directed and produced by Burny Mattinson.\n\n The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge.\n\n Many other Disney characters, primarily from the Mickey Mouse universe, \"Robin Hood\", and \"The Adventures of Ichabod and Mr. Toad\", were cast throughout the film.",
+    "Scar (Disney)\nScar is a fictional character who appears in Walt Disney Pictures' 32nd animated feature film \"The Lion King\" (1994).\n\n The character is voiced by English actor Jeremy Irons, while his singing voice is provided by both Irons and American actor Jim Cummings, the latter of whom was hired to replace Irons when the former damaged his singing voice.\n\n Subsequently, Scar makes minor appearances in the film's sequel \" \"(1998) and \"The Lion King 1½ \"(2004), in both of which he is voiced entirely by Cummings, as well as appearing in the Broadway musical adaptation of the film, in which the role of Scar was originated by American actor John Vickery.",
+    "Toy Story 3\nThe film features an ensemble voice cast with Tom Hanks, Tim Allen, Joan Cusack, Don Rickles, Wallace Shawn, John Ratzenberger, Estelle Harris, Jodi Benson, and John Morris reprising their roles from the previous films, along with Blake Clark as the voice of Slinky Dog (because Jim Varney died ten years before the release of the film) and Ned Beatty, Michael Keaton, Whoopi Goldberg, Timothy Dalton, Kristen Schaal, Bonnie Hunt, and Jeff Garlin voicing the new characters introduced in this film.",
+    "Scrooge, or, Marley's Ghost\nScrooge, or, Marley's Ghost is a 1901 British short silent drama film, directed by Walter R. Booth, featuring the miserly Ebenezer Scrooge confronted by Marley's ghost and given visions of Christmas past, present, and future, is the earliest known film adaptation of Charles Dickens's 1843 novel \"A Christmas Carol\".\n\n The film, \"although somewhat flat and stage-bound to modern eyes,\" according to Ewan Davidson of BFI Screenonline, \"was an ambitious undertaking at the time,\" as, \"not only did it attempt to tell an 80 page story in five minutes, but it featured impressive trick effects, superimposing Marley's face over the door knocker and the scenes from his youth over a black curtain in Scrooge's bedroom.\"",
+    "Scrooge (1951 film)\nScrooge is a 1951 British fantasy drama film and an adaptation of Charles Dickens' \"A Christmas Carol\" (1843).\n\n It stars Alastair Sim as Ebenezer Scrooge, and was produced and directed by Brian Desmond Hurst, with a screenplay by Noel Langley.\n\n It was released as A Christmas Carol in the United States."
+   ]
+  },
+  {
+   "id": "08bdc0a28a158cf1",
+   "gold": [
+    {
+     "sentence": "Toshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.",
+     "facts": {
+      "0.0": "Toshimitsu Deyama was born October 10, 1965 in Tateyama, Chiba.",
+      "0.1": "Toshimitsu Deyama's Japanese name is 出山利三.",
+      "0.2": "Toshimitsu Deyama's name is also written as Deyama Toshimitsu.",
+      "0.3": "Toshimitsu Deyama is known exclusively by his stage name Toshi.",
+      "0.4": "Toshimitsu Deyama is a Japanese singer and songwriter."
+     }
+    },
+    {
+     "sentence": " He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.",
+     "facts": {
+      "1.0": "Toshimitsu Deyama is best known as the lead vocalist of the heavy metal band X Japan.",
+      "1.1": "Toshimitsu Deyama is a co-founder of X Japan.",
+      "1.2": "X Japan disbanded in 1997."
+     }
+    },
+    {
+     "sentence": "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.",
+     "facts": {
+      "2.0": "Warrel Dane was born March 7, 1969.",
+      "2.1": "Warrel Dane is the lead singer of the American power metal band Sanctuary."
+     }
+    }
+   ],
+   "items": [
+    "Graph query row:\nperson: Toshimitsu Deyama\noccupation: ['singer', 'songwriter']\norganization: Sanctuary\nis_member: False\nrole: None\nperiod: None\nstatus: None",
+    "Nevermore\nNevermore is an American progressive metal band from Seattle, Washington, United States.\n\n Formed in 1991, they are known to incorporate elements from various styles such as power metal, modern hard rock, classic heavy metal and technical thrash metal.\n\n The band has been on hiatus since 2011, due to personal issues between the band members.\n\n In April 2015, lead singer Warrel Dane confirmed that Nevermore has not disbanded, and there is a possibility for them to continue in the next two years with another album.",
+    "Toshi (musician)\nToshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.\n\n He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.\n\n Toshi then went on to have an extensive solo career.\n\n In 2007, X Japan reunited and began an ongoing world tour in 2010.\n\n His distinctive, impassioned tenor vocals have been compared to those of Steve Perry.",
+    "The Halo Method\nThe Halo Method Is an American rock supergroup, formed in 2012 in Hollywood, California.\n\n It consisted of guitarist Ben Moody (We Are the Fallen, ex-Evanescence), drummer Miles McPherson, vocalist Lukas Rossi (ex-Rock Star Supernova, ex-Daylight Division) and bassist Josh Newell (ex-In This Moment).",
+    "Nevermore (album)\nNevermore is the eponymous debut studio album by American heavy metal band Nevermore, released on February 14, 1995 by Century Media Records.\n\n It was singer Warrel Dane and bassist Jim Sheppard's first release after departing from their previous band, Sanctuary, in 1994.\n\n Having recruited drummer Van Williams and former Sanctuary touring guitarist Jeff Loomis, they formed the band Nevermore and began anew.",
+    "Praises to the War Machine\nPraises to the War Machine is the debut and only solo release/album by heavy metal vocalist Warrel Dane from Nevermore, released on April 25, 2008.\n\n The album was produced by Peter Wichers, who was tapped by Dane to work on the album while Wichers was still a member of Soilwork.\n\n After leaving that band in 2007, Wichers co-wrote the album with Dane and played on eight of its tracks.\n\n Soilwork drummer Dirk Verbeuren and former Himsa guitarist Matt Wicklund also played on the album.\n\n Nevermore guitarist Jeff Loomis and the band's touring guitarist at the time Chris Broderick make guest appearances, along with James Murphy, who had performed on the Nevermore album \"This Godless Endeavor\".\n\n \"Praises to the War Machine\" includes two cover songs, The Sisters of Mercy's \"Lucretia My Reflection\" and \"Patterns\" by Paul Simon.\n\n Dane had previously covered a Simon song on Nevermore's album \"Dead Heart in a Dead World\".",
+    "Into the Mirror Live\nInto The Mirror Live / Black Reflections is live promotional EP of the band Sanctuary recorded on May 12, 1990 at The Country Club in Reseda, California, during their \"Into the Mirror Black\" tour.\n\n Approximately 1000 CD copies of this were made and less than 500 were ever distributed to radio stations and record stores.\n\n Because of contractual problems with Epic Records, the full version was never released for public consumption.\n\n Epic Records destroyed 500+ copies of this CD.\n\n Warrel Dane has stated on several occasions that he has the master tapes and copyrights of the full show and intended to have it finally released.\n\n To date that has not happened.\n\n This CD has been heavily pirated over the years as a 2-on-1 CD with the Satan's Host \"Metal From Hell\" album on the notorious Reborn Classics record label.",
+    "Sanctuary (band)\nSanctuary is an American heavy metal band founded in Seattle in 1985.\n\n They split up in 1992, but reformed 18 years later.\n\n The band consists of Warrel Dane (vocals), Lenny Rutledge (guitar), Nick Cordle (guitar), George Hernandez (bass), and Dave Budbill (drums).\n\n To date, they have released four studio albums and one live EP.",
+    "Graph query row:\nperson: Warrel Dane\noccupation: lead singer\norganization: Sanctuary\nis_member: True\nrole: None\nperiod: None\nstatus: None",
+    "Warrel Dane\nWarrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.\n\n He is also known as the former lead singer of currently inactive progressive metal band Nevermore.\n\n He is a natural baritone, though he was known for his high-pitched vocals with Serpent's Knight and on the first two Sanctuary albums.\n\n Later in his career, Dane became more notable for his distinctively deep, dramatic voice."
+   ]
+  },
+  {
+   "id": "bc41a82b100ce810",
+   "gold": [
+    {
+     "sentence": " One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+     "facts": {
+      "0.0": "Updike was one of only three writers to win the Pulitzer Prize for Fiction more than once.",
+      "0.1": "The other two writers who won the Pulitzer Prize for Fiction more than once were Booth Tarkington and William Faulkner.",
+      "0.2": "Updike published more than twenty novels during his career.",
+      "0.3": "Updike published more than a dozen short-story collections during his career.",
+      "0.4": "Updike published poetry during his career.",
+      "0.5": "Updike published art and literary criticism during his career.",
+      "0.6": "Updike published children's books during his career."
+     }
+    },
+    {
+     "sentence": " Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.",
+     "facts": {
+      "1.0": "Seventeen of Updike's novels were bestsellers.",
+      "1.1": "More than 100 million copies of Updike's books are in print."
+     }
+    }
+   ],
+   "items": [
+    "John Updike\nJohn Hoyer Updike (March 18, 1932 – January 27, 2009) was an American novelist, poet, short story writer, art critic, and literary critic.\n\n One of only three writers to win the Pulitzer Prize for Fiction more than once (the others were Booth Tarkington and William Faulkner), Updike published more than twenty novels, more than a dozen short-story collections, as well as poetry, art and literary criticism and children's books during his career.",
+    "Tom Clancy's Net Force Explorers: Gameprey\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "William H. Gass\nWilliam Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.\n\n He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.\n\n His 1995 novel \"The Tunnel\" received the American Book Award.\n\n His 2013 novel \"Middle C\" won the 2015 William Dean Howells Medal.",
+    "Tom Clancy's Net Force Explorers: Duel Identity\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: Safe House\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: High Wire\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: Deathworld\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Net Force Explorers: Death Match\nTom Clancy's Net Force Explorers or Net Force Explorers is a series of young adult novels created by Tom Clancy and Steve Pieczenik as a spin-off of the military fiction series Tom Clancy's Net Force.",
+    "Tom Clancy's Rainbow 6: Patriots\nTom Clancy's Rainbow 6: Patriots is a cancelled first-person shooter video game, part of the \"Tom Clancy's Rainbow Six\" series, announced on the cover of the December 2011 issue of \"Game Informer\".\n\n It was to be published by Ubisoft, and was developed by the company's Montreal studio, with additional development by Ubisoft Toronto and Red Storm Entertainment.\n\n Due to the death of Tom Clancy in October 2013, concern was raised that this game would become the last to bear his name.\n\n Ubisoft has since stated that they will continue putting Tom Clancy's name on future Tom Clancy titles out of respect for the late author.",
+    "Tom Clancy\nThomas Leo \"Tom\" Clancy Jr. (April 12, 1947 – October 1, 2013) was an American novelist best known for his technically detailed espionage and military-science story lines set during and after the Cold War.\n\n Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.\n\n His name was also used on movie scripts written by ghost writers, nonfiction books on military subjects, and video games.\n\n He was a part-owner of the Baltimore Orioles and vice-chairman of their community activities and public affairs committees."
+   ]
+  },
+  {
+   "id": "10ac3b90fa81e7a0",
+   "gold": [
+    {
+     "sentence": " He earned 1 cap under Jack Charlton for the Irish national team.",
+     "facts": {
+      "0.0": "The player earned 1 cap for the Irish national team.",
+      "0.1": "The player earned that cap under Jack Charlton."
+     }
+    },
+    {
+     "sentence": " He was part of the England team that won the 1966 World Cup.",
+     "facts": {
+      "1.0": "The player was part of the England team that won the 1966 World Cup.",
+      "1.1": "The England team won the 1966 World Cup."
+     }
+    }
+   ],
+   "items": [
+    "Jack Charlton\nJohn Charlton, OBE, DL (born 8 May 1935) is an English former footballer and manager who played as a defender.\n\n He was part of the England team that won the 1966 World Cup.\n\n He is the elder brother of former Manchester United forward Bobby Charlton, who was also a teammate in England's World Cup final victory.\n\n He spent his entire club career with Leeds United from 1950 to 1973, helping the club to the Second Division title (1963–64), First Division title (1968–69), FA Cup (1972), League Cup (1968), Charity Shield (1969), Inter-Cities Fairs Cup (1968 and 1971), as well as one other promotion from the Second Division (1955–56) and five second-place finishes in the First Division, two FA Cup final defeats and one Inter-Cities Fairs Cup final defeat.\n\n His 629 league and 762 total competitive appearances are club records.\n\n In 2006, Leeds United supporters voted Charlton into the club's greatest ever XI.",
+    "William McCourty\nWilliam McCourty (1884 – 10 December 1917) was an English professional footballer born in Morpeth, Northumberland, who played in the Football League for Birmingham.\n\n McCourty, a former coal miner who played at left half, joined Birmingham in May 1909.\n\n He made his debut in the Second Division on 13 September 1909, deputising for the injured Tommy Daykin in a home game against Glossop which finished as a 2–2 draw, and was never picked again, returning to non-league football the following year.",
+    "Clare Taylor\nClare Elizabeth Taylor MBE (born 22 May 1965) is an English sportswoman, the first woman to have played on a World Cup team in both cricket and football.\n\n She represented England at both cricket, as a member of the winning World Cup cricket team in 1993, and football (World Cup 1995).\n\n She was awarded the MBE in the Queen's Birthday Honours in 2000 for her services to women’s sport.\n\n Taylor attended Moor End High School and still has her name on the athletics records board.",
+    "1929–30 British Home Championship\nThe 1929-30 British Home Championship was an edition of the annual international football tournament played between the British Home Nations.\n\n 1930 was the year in which the tournament finally gained a serious rival as the premier international football competition, with the inception of the 1930 FIFA World Cup, held in Uruguay.\n\n The Home Nations were not however members of FIFA due to disputes over the growing professionalism in continental and South American football.\n\n As a result, they were not able to attend and indicated that even if they were invited they would have no interest in attending, deeming foreign opposition too weak for serious contest.\n\n It is interesting to speculate what would have happened had the Home Nations entered the tournament, especially as the tide of world football was changing against Britain.\n\n The England team, which dominated the 1930 championship, had lost to Spain the year before in the first defeat by a foreign football team, and in the same year they only managed draws with Germany and Austria.\n\n The Scottish side, which had won most of the previous ten championships, was likewise unprepared, only playing its first game outside the British Isles in 1929, and being heavily defeated on tour in 1931 by both the Austrians and the Italians.",
+    "World Soccer (magazine)\nWorld Soccer is an English language football magazine published by IPC Media.\n\n The magazine was established in 1960.\n\n It specialises in the international football scene.\n\n Its regular contributing writers include Brian Glanville, Sid Lowe and Tim Vickery.\n\n \"World Soccer\" is a member of the European Sports Magazines (ESM), an umbrella group of similar magazines printed in other languages.\n\n Other members include \"A Bola\", \"Don Balón\", \"Kicker\", \"La Gazzetta dello Sport\" and \"Sport Express\".\n\n The members of this group elect a European \"Team of the Month\" and a European \"Team of the Year\".",
+    "Billy Morgan (footballer, born 1891)\nWilliam Albert L. Morgan (3 November 1891 – after 1927) was an English professional footballer born in Old Hill, Cradley Heath, Staffordshire, who played either at outside left or inside left.\n\n He played for Birmingham, Coventry City and Crystal Palace in the Football League, and was capped once for a Football League representative side.",
+    "List of Liverpool F.C. players (1–24 appearances)\nLiverpool Football Club is an English association football club based in Liverpool, Merseyside.\n\n The club was formed in 1892 following a disagreement between the board of Everton and club president John Houlding, who owned the club's ground, Anfield.\n\n The disagreement between the two parties over rent resulted in Everton moving to Goodison Park from Anfield, which left Houlding with an empty stadium.\n\n Thus, he founded Liverpool F.C. to play in the empty stadium.\n\n Liverpool won the First Division title for the first time in 1901; since then, the club has won a further 17 league titles, along with seven FA Cups and eight Football League Cups.\n\n They have also been crowned champions of European football on five occasions by winning the European Cup/UEFA Champions League in 1977, 1978, 1981, 1984 and 2005.\n\n The club was one of 22 members of the Premier League when it was formed in 1992.\n\n They experienced the most successful period in their history under the management of Bob Paisley, who guided the team to 21 trophies in nine seasons.",
+    "Barry Rose\nBarry Michael Rose OBE, FRAM, FRSCM, Hon.D.Mus, Hon.FGCM, Hon FRCO, M.Univ., (Surrey), born 24 May 1934) is a choir trainer and organist.\n\n He is best known for founding the choir and the pattern of daily sung Worship at the new Guildford Cathedral in 1961, and later, on 29 July 1981, directing the music at the wedding of Charles, Prince of Wales and Diana, Princess of Wales formerly Lady Diana Frances Spencer, at St Paul's Cathedral in London.",
+    "Barry Murphy (footballer, born 1959)\nBarry Murphy (born 1 April 1959 in Dublin) was an Irish soccer player during the 1980s.\n\n He earned 1 cap under Jack Charlton for the Irish national team.",
+    "List of Liverpool F.C. managers\nLiverpool Football Club is an English association football club based in Liverpool, Merseyside.\n\n The club was formed in 1892 following a disagreement between the board of Everton and club president John Houlding, who owned the club's ground, Anfield.\n\n The disagreement between the two parties over rent resulted in Everton with is the best moving to Goodison Park from Anfield, which left Houlding with no tenant.\n\n Thus, he founded Liverpool F.C. to play in the empty stadium.\n\n Liverpool won the First Division title for the first time in 1901; since then, the club has won a further 17 league titles, along with seven FA Cups and eight Football League Cups.\n\n They have also been crowned champions of European football on five occasions by winning the European Cup/UEFA Champions League in 1977, 1978, 1981, 1984 and 2005.\n\n The club was one of 22 members of the Premier League when it was formed in 1992."
+   ]
+  },
+  {
+   "id": "aad59c204a7e51dd",
+   "gold": [
+    {
+     "sentence": "The presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.",
+     "facts": {
+      "0.0": "The presidency of Ronald Reagan began on January 20, 1981",
+      "0.1": "Ronald Reagan was inaugurated as President of the United States on January 20, 1981",
+      "0.2": "The presidency of Ronald Reagan ended on January 20, 1989"
+     }
+    },
+    {
+     "sentence": "George Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989.",
+     "facts": {
+      "1.0": "George Herbert Walker Bush was born June 12, 1924",
+      "1.1": "George Herbert Walker Bush is an American politician",
+      "1.2": "George Herbert Walker Bush was the 41st President of the United States from 1989 to 1993",
+      "1.3": "George Herbert Walker Bush was the 43rd Vice President of the United States from 1981 to 1989"
+     }
+    }
+   ],
+   "items": [
+    "Wendell Anderson\nWendell Richard \"Wendy\" Anderson (February 1, 1933 – July 17, 2016) was an American politician and the 33rd governor of Minnesota, serving from January 4, 1971, to December 29, 1976.\n\n In late 1976, he resigned as governor in order to be appointed to the U.S. Senate after Senator Walter Mondale was elected Vice President of the United States.\n\n Anderson served in the Senate from December 30, 1976, to December 29, 1978 (after losing the 1978 Senate election to Rudy Boschwitz, he resigned a few days before the end of his term to give Boschwitz seniority).",
+    "Second inauguration of Ronald Reagan\nThe second inauguration of Ronald Reagan as President of the United States was held privately on Sunday, January 20, 1985 in the Grand Foyer of the White House, and publicly the following day, January 21, 1985 at the United States Capitol in Washington, D.C. The inauguration marked the commencement of the second four-year term of Ronald Reagan as President and of George H. W. Bush as Vice President.",
+    "George H. W. Bush\nGeorge Herbert Walker Bush (born June 12, 1924) is an American politician who was the 41st President of the United States from 1989 to 1993 and the 43rd Vice President of the United States from 1981 to 1989.\n\n A member of the Republican Party, he was previously a congressman, ambassador, and Director of Central Intelligence.\n\n He is the oldest living former President and Vice President.\n\n Previously known as simply \"George Bush\", since 2001, Bush has often been referred to as \"George H. W. Bush\", \"Bush 41\", \"Bush the Elder\", or \"George Bush Senior\" to distinguish him from his eldest son, George W. Bush, the 43rd President of the United States.",
+    "Presidency of Ronald Reagan\nThe presidency of Ronald Reagan began on January 20, 1981, when Ronald Reagan was inaugurated as President of the United States, and ended on January 20, 1989.\n\n Reagan, a Republican, took office as the 40th United States president following a landslide win over Democratic incumbent President Jimmy Carter in the 1980 presidential election.\n\n Reagan was succeeded by his vice president, George H. W. Bush, who won the 1988 presidential election with Reagan's support.",
+    "Elliott Abrams\nElliott Abrams (born January 24, 1948) is a former American diplomat, lawyer and political scientist who served in foreign policy positions for Presidents Ronald Reagan and George W. Bush.\n\n Abrams was convicted of withholding information from Congress about the Iran–Contra affair while serving under Reagan, but was pardoned by President George H. W. Bush.",
+    "2012 Libertarian National Convention\nThe 2012 United States Libertarian National Convention, in which delegates of the Libertarian Party (LP) chose the party's nominees for President of the United States and Vice President of the United States in the 2012 general election, was held May 2–6, 2012 in Las Vegas, Nevada at the Red Rock Resort Spa and Casino.\n\n Former Governor of New Mexico Gary Johnson won the presidential nomination on the first ballot.\n\n Retired California state court judge Jim Gray won the vice-presidential nomination, also on the first ballot.\n\n The convention also chose to replace most of the Libertarian National Committee party officers and members-at-large.",
+    "Otto Reich\nOtto Juan Reich (born October 16, 1945), is an American former senior official in the administrations of Presidents Ronald Reagan, George H. W. Bush, and George W. Bush.\n\n Among other positions held, he has been the President's Special Envoy for the Western Hemisphere; Assistant Secretary of State for Western Hemisphere Affairs; United States Ambassador to Venezuela; and Assistant Administrator of the US Agency for International Development, a recess appointment.\n\n In 2003, Bush appointed him US Special Envoy to the Western Hemisphere.\n\n Since leaving the White House in 2004, he has headed his own international consulting firm, Otto Reich Associates, LLC, based in Washington, D.C..",
+    "Reagan Democrat\nA Reagan Democrat is a traditionally Democratic voter in the United States, referring especially to white working-class Rust Belt residents, who defected from their party to support Republican President Ronald Reagan in either or both of the 1980 and 1984 elections as well as Republican Presidents George H. W. Bush in the 1988 election and George W. Bush in either or both of the 2000 and 2004 elections.\n\n Part of this group also defected to Donald Trump, the Republican candidate in 2016, who won in Pennsylvania, Ohio, Michigan, Wisconsin, and Iowa, all states that voted for Reagan but went Democratic in 2008 and 2012.",
+    "First inauguration of Ronald Reagan\nThe first inauguration of Ronald Reagan as the 40th President of the United States was held on Tuesday, January 20, 1981, on the West Front of the United States Capitol in Washington, D.C..\n\n This was the first inauguration to be held on the building's west side.\n\n The inauguration marked the commencement of the first four-year term of Ronald Reagan as President and of George H. W. Bush as Vice President.\n\n Chief Justice Warren E. Burger administered the presidential oath of office to Reagan, who placed his hand upon a family Bible given to him by his mother, open to .\n\n Associate Justice Potter Stewart administered the vice presidential oath to Bush.",
+    "Ronald Reagan judicial appointment controversies\nDuring President Ronald Reagan's presidency, he nominated at least twelve people for various federal appellate judgeship who were not confirmed.\n\n In some cases, the nominations were not processed by the Democratic-controlled Senate Judiciary Committee before Reagan's presidency ended, while in other cases, nominees were rejected by the Senate Judiciary Committee or even blocked by unfriendly members of the Republican Party.\n\n Three of the nominees were renominated by Reagan's successor, President George H. W. Bush.\n\n Two of the nominees, Ferdinand Francis Fernandez and Guy G. Hurlbutt, were nominated after July 1, 1988, the traditional start date of the unofficial Thurmond Rule during a presidential election year.\n\n Eight of the twelve seats eventually were filled by appointees of President George H. W. Bush."
+   ]
+  },
+  {
+   "id": "53265237eac81cb4",
+   "gold": [
+    {
+     "sentence": "William Somerset Maugham CH ( ; 25 January 1874 – 16 December 1965), better known as W. Somerset Maugham, was a British playwright, novelist and short story writer.",
+     "facts": {
+      "0.0": "William Somerset Maugham was born 25 January 1874.",
+      "0.1": "William Somerset Maugham died 16 December 1965.",
+      "0.2": "William Somerset Maugham is better known as W. Somerset Maugham.",
+      "0.3": "William Somerset Maugham was British.",
+      "0.4": "William Somerset Maugham was a playwright.",
+      "0.5": "William Somerset Maugham was a novelist.",
+      "0.6": "William Somerset Maugham was a short story writer.",
+      "0.7": "William Somerset Maugham's name includes the post-nominal CH."
+     }
+    },
+    {
+     "sentence": " He was among the most popular writers of his era and reputedly the highest-paid author during the 1930s.",
+     "facts": {
+      "1.0": "W. Somerset Maugham was among the most popular writers of his era.",
+      "1.1": "W. Somerset Maugham was reputedly the highest-paid author during the 1930s."
+     }
+    },
+    {
+     "sentence": "Thomas Merton, O.C.S.O. (January 31, 1915 – December 10, 1968) was an American Catholic writer, theologian and mystic.",
+     "facts": {
+      "2.0": "Thomas Merton, O.C.S.O., was born January 31, 1915.",
+      "2.1": "Thomas Merton died December 10, 1968.",
+      "2.2": "Thomas Merton was an American Catholic writer.",
+      "2.3": "Thomas Merton was a theologian.",
+      "2.4": "Thomas Merton was a mystic."
+     }
+    },
+    {
+     "sentence": " In 1949, he was ordained to the priesthood and given the name Father Louis.",
+     "facts": {
+      "3.0": "In 1949, Thomas Merton was ordained to the priesthood.",
+      "3.1": "Thomas Merton was given the name Father Louis."
+     }
+    }
+   ],
+   "items": [
+    "W. Somerset Maugham\nWilliam Somerset Maugham CH ( ; 25 January 1874 – 16 December 1965), better known as W. Somerset Maugham, was a British playwright, novelist and short story writer.\n\n He was among the most popular writers of his era and reputedly the highest-paid author during the 1930s.",
+    "List of works about Thomas Merton\nThe following is a list of works about Thomas Merton, publications about Thomas Merton, the Trappist monk from Abbey of Gethsemani.\n\n The bibliography is organized into categories.\n\n A separate list of works by Thomas Merton is also available.",
+    "Thomas Merton\nThomas Merton, O.C.S.O. (January 31, 1915 – December 10, 1968) was an American Catholic writer, theologian and mystic.\n\n A Trappist monk of the Abbey of Gethsemani, Kentucky, he was a poet, social activist, and student of comparative religion.\n\n In 1949, he was ordained to the priesthood and given the name Father Louis.",
+    "Adam Fox\nAdam Fox (1883 – 1977), Canon, was the Dean of Divinity at Magdalen College, Oxford.\n\n He was one of the first members of the \"Inklings\", a literary group which also included C.S. Lewis and J.R.R. Tolkien.\n\n Between 1938 and 1942 he was Professor of Poetry.\n\n Later he became Canon of Westminster Abbey and he is buried there in Poet's Corner.\n\n He was also Warden (Headmaster) of the famous Radley College.",
+    "Trio (film)\nTrio (also known as W. Somerset Maugham's Trio) is a 1950 British anthology film based on three short stories by W. Somerset Maugham: \"The Verger\", \"Mr. Know-All\" and \"Sanatorium\".\n\n Ken Annakin directed \"The Verger\" and \"Mr. Know-All\", while Harold French was responsible for \"Sanatorium\".",
+    "William H. Gass\nWilliam Howard Gass (born July 30, 1924) is an American novelist, short-story writer, essayist, critic, and former philosophy professor.\n\n He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.\n\n His 1995 novel \"The Tunnel\" received the American Book Award.\n\n His 2013 novel \"Middle C\" won the 2015 William Dean Howells Medal.",
+    "International Thomas Merton Society\nThe International Thomas Merton Society, founded in 1987, is a learned society which studies the works of American Catholic writer and mystic Thomas Merton.\n\n It sponsors conferences and co-publishes a journal, \"The Merton Seasonal\".\n\n The society and the Thomas Merton Center are located at Bellarmine University in Louisville, Kentucky, U.S.A.",
+    "Thomas Merton Award\nThe Thomas Merton Award has been awarded since 1972 by the Thomas Merton Center for Peace and Social Justice in Pittsburgh, United States.\n\n It is named after Thomas Merton and is given annually to \"national and international individuals struggling for justice.\"",
+    "Robert Calder (writer)\nRobert Lorin Calder, a Canadian writer and professor, won the Governor General's Award for English-language non-fiction in 1989 for his \"Willie: The Life of W. Somerset Maugham\", a biography based on extensive archival work and interviews with surviving associates of Maugham, in particular Alan Searle.\n\n Unlike Ted Morgan, who had obtained permission from Maugham's executors to publish from Maugham's letters in his biography (1980), Calder was refused permission to do so by the Royal Literary Fund and had to rely on paraphrase in referencing Maugham's unpublished correspondence.",
+    "Somerset Maugham Award\nThe Somerset Maugham Award is a British literary prize given each May by the Society of Authors.\n\n It is awarded to the best writer or writers of a book published in the past year who is under the age of 35.\n\n The prize was instituted in 1947 by William Somerset Maugham and thus bears his name.\n\n The award is to be spent on foreign travel.\n\n The total fund for each year is £12,000."
+   ]
+  },
+  {
+   "id": "584c56d9b3d8fb35",
+   "gold": [
+    {
+     "sentence": " The group included: Alexander Bogdanov, Maxim Gorky, Anatoly Lunacharsky, Mikhail Pokrovsky, Grigory Aleksinsky, Stanislav Volski, and Martyn Liadov.",
+     "facts": {
+      "0.0": "The group included Alexander Bogdanov.",
+      "0.1": "The group included Maxim Gorky.",
+      "0.2": "The group included Anatoly Lunacharsky.",
+      "0.3": "The group included Mikhail Pokrovsky.",
+      "0.4": "The group included Grigory Aleksinsky.",
+      "0.5": "The group included Stanislav Volski.",
+      "0.6": "The group included Martyn Liadov."
+     }
+    },
+    {
+     "sentence": "Anatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875 – 26 December 1933) was a Russian Marxist revolutionary and the first Soviet People's Commissar of Education responsible for culture and education.",
+     "facts": {
+      "1.0": "Anatoly Vasilyevich Lunacharsky's Russian name is Анато́лий Васи́льевич Лунача́рский.",
+      "1.1": "Anatoly Vasilyevich Lunacharsky was born on 23 November 1875 (Old Style 11 November 1875).",
+      "1.2": "Anatoly Vasilyevich Lunacharsky died on 26 December 1933.",
+      "1.3": "Anatoly Vasilyevich Lunacharsky was a Russian Marxist revolutionary.",
+      "1.4": "Anatoly Vasilyevich Lunacharsky was the first Soviet People's Commissar of Education.",
+      "1.5": "Anatoly Vasilyevich Lunacharsky was responsible for culture and education as People's Commissar of Education."
+     }
+    }
+   ],
+   "items": [
+    "Anatoly Lunacharsky\nAnatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875 – 26 December 1933) was a Russian Marxist revolutionary and the first Soviet People's Commissar of Education responsible for culture and education.\n\n He was active as an art critic and journalist throughout his career.",
+    "You Fell Victim to a Fateful Struggle\nYou Fell Victim (Russian: \"Вы жертвою пали\"; \"Vy zhertvoiu pali\"), or You Fell Victim to a Fateful Struggle, is a Russian Marxist and revolutionary funeral march.\n\n It acted as the funeral dirge of the Russian revolutionary movement, among them the Bolsheviks.",
+    "Graph query row:\nperson: Anatoly Lunacharsky\nbirth_date: 23 November [O.S. 11 November] 1875\noccupation: ['Marxist revolutionary', \"Soviet People's Commissar of Education\", 'art critic', 'journalist']\nrelationship: MEMBER_OF\nrelated_entity: Vpered",
+    "Nikolay Speshnev\nNikolay Alexandrovich Speshnev (Russian: Николай Александрович Спе́шнев; 1821, Kursk - 1882, St. Petersburg) was a 19th-century Russian aristocrat and political activist, best known for his involvement with the pro-socialist literary discussion group the Petrashevsky Circle.\n\n He formed a secret revolutionary society from among the members of the circle, which included the young Fyodor Dostoevsky.\n\n After the government of Tsar Nicholas I arrested the members of the Petrashevsky Circle in 1849, Speshnev was interrogated, threatened with torture, and eventually sentenced, along with Dostoevsky, Petrashevsky and others, to execution by firing squad.\n\n The sentence was commuted to hard labour in Siberia, but the prisoners were only informed of this after enduring a mock execution.",
+    "Aleksandra Sokolovskaya\nAleksandra Lvovna Sokolovskaya (Russian: Александра Львовна Соколовская ; 1872 – c. 1938) was a Russian Marxist revolutionary and Leon Trotsky's first wife.\n\n She perished in the Great Purges no earlier than 1938.",
+    "Matvey Skobelev\nMatvey Ivanovich Skobelev (Russian: Матве́й Ива́нович Ско́белев ; November 9, 1885, Baku – July 29, 1938, Moscow) was a Russian Marxist revolutionary and politician.",
+    "Petrashevsky Circle\nThe Petrashevsky Circle was a Russian literary discussion group of progressive-minded commoner-intellectuals in St. Petersburg in the 1840s.\n\n It was organized by Mikhail Petrashevsky, a follower of the French utopian socialist Charles Fourier.\n\n Among the members were writers, teachers, students, minor government officials, and army officers.\n\n While differing in political views, most of them were opponents of the tsarist autocracy and Russian serfdom.\n\n Like that of the Lyubomudry group founded earlier in the century, the purpose of the circle was to discuss Western philosophy and literature that was officially banned by the Imperial government of Tsar Nicholas I.",
+    "Vladimir Bazarov\nVladimir Alexandrovich Bazarov ( Влади́мир Алекса́ндрович База́ров; 1874–1939) was a Russian Marxist revolutionary, journalist, philosopher, and economist, born Vladimir Alexandrovich Rudnev.\n\n Bazarov is best remembered as a pioneer in the development of economic planning in the Soviet Union.",
+    "Vpered\nVpered (\"Forward\" or \"Hasten\") (1909 - 1912) was an organization emanating from within the Russian Social Democratic Labour Party (Russian Social Democracy or RSDLP).\n\n The faction was gathered by Alexander Bogdanov (1873 - 1928) in December 1909.\n\n The group included: Alexander Bogdanov, Maxim Gorky, Anatoly Lunacharsky, Mikhail Pokrovsky, Grigory Aleksinsky, Stanislav Volski, and Martyn Liadov.\n\n Although Vpered emerged from the Bolshevik wing of Russian Social Democracy, the group was critical of Lenin.",
+    "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: Мартемья́н Ники́тич Рю́тин ) (1890–1937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party.\n\n Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform.\n\n Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair.\n\n He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies."
+   ]
+  },
+  {
+   "id": "facffa84d1381857",
+   "gold": [
+    {
+     "sentence": "Pinhead Gunpowder is an American punk rock band that formed in East Bay, California, in 1990.",
+     "facts": {
+      "0.0": "Pinhead Gunpowder is an American punk rock band.",
+      "0.1": "Pinhead Gunpowder formed in East Bay, California, in 1990."
+     }
+    },
+    {
+     "sentence": "Billie Joe Armstrong (born February 17, 1972) is an American musician, singer, songwriter and actor who is best known as the lead vocalist, primary songwriter, and guitarist of the punk rock band Green Day, which he co-founded with Mike Dirnt.",
+     "facts": {
+      "1.0": "Billie Joe Armstrong was born on February 17, 1972.",
+      "1.1": "Billie Joe Armstrong is an American musician, singer, songwriter and actor.",
+      "1.2": "Billie Joe Armstrong is best known as the lead vocalist, primary songwriter, and guitarist of the punk rock band Green Day.",
+      "1.3": "Billie Joe Armstrong co-founded Green Day with Mike Dirnt."
+     }
+    }
+   ],
+   "items": [
+    "Pinhead Gunpowder\nPinhead Gunpowder is an American punk rock band that formed in East Bay, California, in 1990.\n\n The band currently consists of Aaron Cometbus (drums, lyrics), Bill Schneider (bass), Billie Joe Armstrong (guitar, vocals) and Jason White (guitar, vocals).\n\n The band's name comes from a brand of \"high octane\" green tea served at the Arcata co-op and discovered by Aaron Cometbus during one of his many dumpster diving adventures.",
+    "Green Day related projects\nSince 1991, some members of punk band Green Day have branched out past their \"main band\" and have started other projects with other musicians and have released full-length albums and several EPs.\n\n Notable related projects of Green Day include Billie Joe Armstrong's Pinhead Gunpowder (which also featured Green Day's other guitarist Jason White), The Frustrators in which Mike Dirnt plays bass, and The Network which many speculate has all three members of Green Day, although under stagenames.",
+    "Jason White (musician)\nJason White (born November 11, 1973) is an American musician, best known as the current touring guitarist for the American punk rock band Green Day.\n\n He has played as a touring member of Green Day since 1999.\n\n However, in 2012, he was promoted to being an official member of the band before demoting himself back to his touring guitarist role in 2016.\n\n He is also the guitarist/vocalist for the Californian punk band Pinhead Gunpowder, lead guitarist/lead vocalist for California, and co-founder of Adeline Records alongside Billie Joe Armstrong.",
+    "Graph query row:\nperson: Billie Joe Armstrong\ngroup: Pinhead Gunpowder\ngroup_kind: punk rock band\nrole: None",
+    "Bill Schneider (musician)\nWilliam 'Bill' Schneider (born June 17) is an American musician.\n\n He has played bass in the punk rock band Pinhead Gunpowder since 1990, as well as providing vocals and writing the lyrics to the song \"Backyard Flames\".\n\n He has also been in many other bands such as The Influents, Monsula and Uranium 9v, Sawhorse and The Skinflutes.\n\n Bill was worked as bass tech during the Nimrod era for Mike Dirnt, Green Day's and as guitar tech on their albums \"Nimrod\" and \"Warning\", American Idiot, 21st Century Breakdown, Uno Dos Tres, Revolution Radio and was their day to day manager from 2003-2012 for their \"American Idiot\" and 21st Century Breakdown tours through Uno Dos Tres.\n\n He also owned \"Broken Guitars\", a guitar shop in Oakland, California with Billie Joe Armstrong.\n\n Bill Still works on the sidelines with the band as well as in the studio.",
+    "Billy Corgan\nWilliam Patrick \"Billy\" Corgan Jr. (born March 17, 1967) is an American musician, songwriter, producer, poet, and entrepreneur.\n\n He is best known as the lead singer, primary songwriter, guitarist, and sole permanent member of The Smashing Pumpkins.\n\n Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.\n\n Strong album sales and large-scale tours propelled the band's increasing fame in the 1990s until their break-up in 2000.\n\n Corgan started a new band called Zwan, and after their quick demise, he released a solo album (\"TheFutureEmbrace\") and a collection of poetry (\"Blinking with Fists\") before setting his sights on reforming Smashing Pumpkins.",
+    "Jimmy Chamberlin\nJames Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.\n\n He is best known as the drummer for the alternative rock band The Smashing Pumpkins.\n\n Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy Chamberlin Complex.\n\n In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer tour.\n\n He performed in the group Skysaw until 2012.\n\n He is currently active under the Jimmy Chamberlin Complex name.\n\n In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013–15 performances in the Chicago area.\n\n An EP by Catalano and Chamberlin \"Love Supreme Collective - EP\" was released on the 29th of July 2014.",
+    "Billie Joe Armstrong\nBillie Joe Armstrong (born February 17, 1972) is an American musician, singer, songwriter and actor who is best known as the lead vocalist, primary songwriter, and guitarist of the punk rock band Green Day, which he co-founded with Mike Dirnt.\n\n He is also a guitarist and vocalist for the punk rock band Pinhead Gunpowder and provides lead vocals for Green Day's side projects Foxboro Hot Tubs and The Network.",
+    "Pinhead Gunpowder (2008 EP)\nPinhead Gunpowder (also known by fans as the West Side Highway EP) is the second eponymously titled extended play by the American punk rock band Pinhead Gunpowder.\n\n It was released on August 19, 2008, through Recess Records, the group's first release on Recess.\n\n \"Pinhead Gunpowder\" marked the band's first new release in over 5 years.\n\n The first pressings of the extended play were on green and blue vinyl.\n\n All of the tracks were rereleased on the 2009 compilation \"Kick Over the Traces\".",
+    "Carry the Banner\nCarry the Banner is the third EP by the Berkeley, California-based punk rock band Pinhead Gunpowder.\n\n Originally released on 10\" vinyl in December 1994 through Too Many Records, the EP was reissued on CD by Lookout Records shortly after as the initial vinyl pressing sold out quickly.\n\n It was the group's first release to feature Jason White on guitar/vocals, replacing Sarah Kirsch, who left the band in 1994 due to differences with Billie Joe Armstrong after his main band Green Day signed to major label Reprise Records."
+   ]
+  }
+ ]
+}

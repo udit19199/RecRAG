@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a773d8955429966f1a36cc4",
+   "sentences": [
+    "The 1892 Auburn Tigers football team represented Auburn University in the 1892 college football season.",
+    " It was the first college football team fielded by the Agricultural and Mechanical College of Alabama, now known as Auburn University.",
+    " With more than 22,000 undergraduate students and a total enrollment of more than 28,000 with 1,260 faculty members, Auburn is the second largest university in Alabama."
+   ]
+  },
+  {
+   "id": "6766518966445775953",
+   "sentences": [
+    "Originally an ordinary man by the name of Nick Chopper ( the name first appearing in The Marvelous Land of Oz ) , the Tin Woodman used to make his living chopping down trees in the forests of Oz , as his father had before him . The Wicked Witch of the East enchanted his axe to prevent him from marrying his sweetheart , after being bribed by the lazy old woman who kept the Munchkin maiden as a servant , and did not wish to lose her . ( In a later book of the series , The Tin Woodman of Oz , the woman is said to be the Witch 's servant , and it is the Witch herself who decides to enchant Nick 's axe . ) The enchanted axe chopped off his limbs , one by one . Each time he lost a limb , Ku - Klip the tinsmith replaced it with a prosthetic limb made of tin . Finally , nothing was left of him but tin . However , Ku - Klip neglected to replace his heart . Once Nick Chopper was made entirely of tin , he was no longer able to love the lady he had fallen for .",
+    "In The Wonderful Wizard of Oz , Dorothy Gale befriends the Tin Woodman after they find him rusted in the forest , as he was caught in rain , and use his oil can to release him . He follows her to the Emerald City to get a heart from The Wizard . They are joined on their adventure by the Scarecrow and the Cowardly Lion . The Wizard sends Dorothy and her friends to the Winkie Country to kill the Wicked Witch of the West . The Tin Woodman 's axe proves useful in this journey , both for chopping wood to create a bridge or raft as needed , and for chopping the heads off animals that threaten the party . When the Winged monkeys are sent by the Witch of the West against the group , they throw the Tin Woodman from a great height , damaging him badly . However Winkie Tinsmiths are able to repair him after the death of the Witch .",
+    "His desire for a heart notably contrasts with the Scarecrow 's desire for brains , reflecting a common debate between the relative importance of the mind and the emotions . This occasions philosophical debate between the two friends as to why their own choices are superior ; neither convinces the other , and Dorothy , listening , is unable to decide which one is right . Symbolically , because they remain with Dorothy throughout her quest , she is provided with both and need not select . The Tin Woodman states unequivocally that he has neither heart nor brain , but cares nothing for the loss of his brain . Towards the end of the novel , though , Glinda praises his brain as not quite that of the Scarecrow 's ."
+   ]
+  },
+  {
+   "id": "5a8d7edc55429941ae14dfdc",
+   "sentences": [
+    "San Antonio International Airport (IATA: SAT, ICAO: KSAT, FAA LID: SAT) is an international airport located in San Antonio, Texas and serving the Greater San Antonio metropolitan area.",
+    "Yakutat Airport (IATA: YAK, ICAO: PAYA, FAA LID: YAK) is a state owned, public use airport located three nautical miles (6 km) southeast of the central business district of Yakutat, a city and borough in the U.S. state of Alaska which has no road access to the outside world."
+   ]
+  },
+  {
+   "id": "2545607965679456162",
+   "sentences": [
+    "The Eagles headed into their bye week with the best record in the NFL ( 8 -- 1 ) , and with Wentz leading the NFL MVP discussion with an NFL - leading 23 touchdowns to 5 interceptions . During their bye , the Eagles signed former Giants offensive tackle Will Beatty and former Saints linebacker Dannell Ellerbe to not only add depth but also players with Super Bowl experiences . Coming off of the bye week , the Philadelphia Eagles entered a Sunday night showdown with the defending NFC East champion Dallas Cowboys . The Eagles came out sluggish and trailed 9 -- 7 at the half . The team exploded in the second half though , rattling off 30 unanswered points to soundly defeat their rival by a final score of 37 -- 9 . The Eagles were rolling on a nine - game winning streak after a huge blowout win over the Chicago Bears . The Eagles traveled to Seattle in Week 13 in a huge Sunday Night showdown against Russell Wilson and the Seattle Seahawks . The Eagles struggled throughout the whole game , blowing many scoring opportunities and allowing Wilson to throw 3 touchdowns . The Eagles lost 24 -- 10 , ending their win streak . However , the Eagles bounced back in Week 14 win over the Los Angeles Rams in a tough 43 -- 35 win . However , Carson Wentz left the game in the third quarter with a knee injury . It was later found out that Wentz tore his ACL , ending his MVP caliber season . Backup Nick Foles would once again take over as starting quarterback . In Foles 's first start against the New York Giants , he would lead them back from a 20 -- 7 deficit and score 4 touchdowns and win the game 34 -- 29 . Foles struggled in the last two games of the season against the Oakland Raiders and the Dallas Cowboys , and threw a touchdown and 2 interceptions in that span . Despite this , the Eagles finished 13 -- 3 and secured the top seed in the NFC . The Eagles opened as the underdogs , the first time in history that a No. 1 seed has opened up the postseason as an underdog . Despite this , Foles would lead the Eagles past the Atlanta Falcons in the Divisional Round 15 -- 10 . In the next game Foles and the Eagles annihilated the Minnesota Vikings 38 -- 7 in the NFC Championship nicknamed the Minneapolis Massacre , mocking the Minneapolis Miracle from their previous playoff victory . Foles had his best game since week 15 and threw for 352 passing yards and 3 touchdowns including an impressive flea flicker touchdown pass . This win marked the franchise 's third Super Bowl appearance and a berth in Super Bowl LII for a 2005 rematch against Tom Brady and the New England Patriots .",
+    "Playoff record ( all - time ) : 22 -- 21 ( last appearance after beating New England Patriots in Super Bowl LII )"
+   ]
+  },
+  {
+   "id": "5ae4932855429970de88d9b8",
+   "sentences": [
+    " It is an annual event hosted by the Department of Urology at the University of Virginia, and the Charlottesville Track Club.",
+    "Panera Bread Company is an American chain of bakery-café fast casual restaurants in the United States and Canada."
+   ]
+  },
+  {
+   "id": "multihop-rag-547",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."
+   ]
+  },
+  {
+   "id": "multihop-rag-2216",
+   "sentences": [
+    "Epic, meanwhile, lost its antitrust battle with Apple and is now asking the Supreme Court to weigh in.",
+    "In recent years, Epic has sprinkled all sorts of zany mobility options onto its map, letting players fall through the sky, pilot biplanes or (our personal preference) roll in a giant hamster ball to get around faster.",
+    "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people.",
+    "Because while Google spent most of its first day attempting to explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog."
+   ]
+  },
+  {
+   "id": "-4482979425454794325",
+   "sentences": [
+    "The National Legal Aid & Defender Association ( NLADA ) is the oldest and largest national , nonprofit membership organization devoted to advocating equal justice for all Americans and was established in 1911 ."
+   ]
+  },
+  {
+   "id": "5ade8ad95542992fa25da7b8",
+   "sentences": [
+    "Talking Heads were an American rock band formed in 1975 in New York City and active until 1991.",
+    " is a surf rock group that formed in Auburn, Alabama, in the early 1990s and came to prominence over the following decade."
+   ]
+  },
+  {
+   "id": "5a8f55f9554299458435d5bd",
+   "sentences": [
+    "Willi Forst, born Wilhelm Anton Frohs (7 April 1903 – 11 August 1980) was an Austrian actor, screenwriter, film director, film producer and singer.",
+    "Elmer Clifton (March 14, 1890 – October 15, 1949) was an American writer, director and actor from the early silent days."
+   ]
+  }
+ ]
+}

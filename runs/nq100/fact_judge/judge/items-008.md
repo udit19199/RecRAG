@@ -1,0 +1,1775 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=f73069680fca846f ===
+Gold sentences and facts:
+Sentence 0: Name Age Hometown Boarded Destination Lifeboat Body Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and chauffeur , Mr. George Swane , 19 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 294 and cook , Miss Amelia Mary `` Mildred '' Brown 18 London , England , UK Southampton Montreal , Quebec , Canada 11 Allison , Mrs. Bessie Waldo ( née Daniels ) 25 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Sarah Daniels 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 8 Allison , Miss Helen Loraine Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Allison , Master Hudson Trevor 0.11 ! 11 mo . Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 11 and nurse , Miss Alice Catherine Cleaver 22 London , England , UK Southampton Montreal , Quebec , Canada 11 Anderson , Mr. Harry 47 New York City , New York , US Southampton New York City , New York , US Andrews , Miss Kornelia Theodosia 62 Hudson , New York , US Cherbourg Hudson , New York , US 10 Andrews , Mr. Thomas 39 Belfast , Ireland , UK Belfast New York City Appleton , Mrs. Charlotte Lane ( née Lamson ) 53 New York City Southampton New York City Artagaveytia , Mr. Ramon 71 Buenos Aires , Argentina Cherbourg New York City 22 Astor , Colonel John Jacob IV 47 New York City Cherbourg New York City 124 Astor , Mrs. Madeleine Talmage ( née Force ) 18 New York City Cherbourg New York City and maid , Miss Rosalie Bidois 46 New York City Cherbourg New York City and nurse , Miss Caroline Louise Endres 39 New York City Cherbourg New York City Aubart , Mrs. Léontine Pauline 24 Paris , France Cherbourg New York City 9 and maid , Miss Emma Sägesser 24 Paris , France Cherbourg New York City 9 Barkworth , Mr. Algernon Henry Wilson 47 Hessle , East Yorkshire , England , UK Southampton New York City Baumann , Mr. John D . 60 New York City Cherbourg New York City Baxter , Mrs. Hélène ( née de Lanaudière - Chaput ) 50 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Baxter , Mr. Quigg Edmond 24 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada Beattie , Mr. Thomson 36 Fergus , Ontario , Canada Southampton Fergus , Ontario , Canada 331 Beckwith , Mr. Richard Leonard 37 New York City Southampton New York City 5 Beckwith , Mrs. Sallie ( née Monypeny ) 46 New York City Southampton New York City 5 Behr , Mr. Karl Howell 26 New York City Cherbourg New York City 5 Birnbaum , Mr. Jakob 24 Antwerp , Belgium Cherbourg San Francisco , California , US 148 Bishop , Mr. Dickinson H. `` Dick '' 25 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Bishop , Mrs. Helen ( née Walton ) 19 Dowagiac , Michigan , US Cherbourg Dowagiac , Michigan , US 7 Björnström - Steffanson , Mr. Mauritz Håkan 28 Stockholm , Sweden Southampton Washington , D.C. , US Blackwell , Mr. Stephen Weart 45 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Blank , Mr. Henry 39 Glen Ridge , New Jersey , US Cherbourg Glen Ridge , New Jersey , US 7 Bonnell , Miss Elizabeth 61 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Bonnell , Miss Caroline 30 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Borebank , Mr. John James 42 London , England , UK Southampton Toronto , Ontario , Canada Bowerman , Miss Elsie Edith 22 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Brady , Mr. John Bertram 41 Pomeroy , Washington , US Southampton Pomeroy , Washington , US Brandeis , Mr. Emil 48 Omaha , Nebraska , US Cherbourg Omaha , Nebraska , US 208 Brereton , Mr. George Andrew ( alias George A. Brayton ) 37 Los Angeles , US Southampton Los Angeles , California , US 9 Brewe , Dr. Arthur Jackson 45 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US Brown , Mrs. Caroline Lane ( née Lamson ) 59 Belmont , Massachusetts , US Southampton Belmont , Massachusetts , US Brown , Mrs. Margaret ( née Tobin ) 44 Denver , Colorado , US Cherbourg Denver , Colorado , US 6 Bucknell , Mrs. Emma Eliza ( née Ward ) 59 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 and maid , Miss Albina Bazzani 36 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 8 Butt , Major Archibald Willingham 46 Washington , D.C. , US Southampton Washington , D.C. , US Calderhead , Mr. Edward Pennington 42 New York City Southampton New York City 5 Candee , Mrs. Helen Churchill ( née Hungerford ) 53 Washington , D.C. , US Cherbourg Washington , D.C. , US 6 Cardeza , Mrs. Charlotte Wardle ( née Drake ) 58 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and maid , Miss Annie Moore Ward 38 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Cardeza , Mr. Thomas Drake Martinez 36 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US and valet , Mr. Gustave J. Lesueur 35 Germantown , Pennsylvania , US Cherbourg Germantown , Pennsylvania , US Carlsson , Mr. Frans Olof 33 New York City Southampton New York City Carrau , Mr. Francisco M . 31 Montevideo , Uruguay Southampton Montevideo , Uruguay Carrau , Mr. José Pedro 17 Montevideo , Uruguay Southampton Montevideo , Uruguay Carter , Mr. William Ernest 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and valet , Mr. Alexander Cairns 28 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and chauffeur , Mr. Charles Augustus Aldworth 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Mrs. Lucile ( née Polk ) 36 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US and maid , Miss Auguste Serreplan 30 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Miss Lucile Polk 13 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Carter , Master William Thornton II 11 Bryn Mawr , Pennsylvania , US Southampton Bryn Mawr , Pennsylvania , US Case , Mr. Howard Brown 49 Ascot , Berkshire , England , UK Southampton Rochester , New York , US Cassebeer , Mrs. Eleanor Genevieve ( née Fosdick ) 36 New York City Cherbourg New York City 5 Cavendish , Mr. Tyrell William 36 London , England , UK Southampton New York City 172 Cavendish , Mrs. Julia Florence ( née Siegel ) 25 London , England , UK Southampton New York City 6 and maid , Miss Ellen `` Nellie '' Barber 26 London , England , UK Southampton New York City 6 Chaffee , Mr. Hubert Fuller 46 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chaffee , Mrs. Carrie Constance ( née Toogood ) 47 Amenia , North Dakota , US Southampton Amenia , North Dakota , US Chambers , Mr. Norman Campbell 27 New York City Southampton New York City 5 Chambers , Mrs. Bertha ( née Griggs ) 32 New York City Southampton New York City 5 Cherry , Miss Gladys 30 London , England , UK Southampton Vancouver , British Columbia , Canada 8 Chevré , Mr. Paul Romaine Marie Léonce 45 Paris , France Cherbourg Ottawa , Ontario , Canada 7 Chibnall , Mrs. Edith Martha Bowerman ( née Barber ) 48 St. Leonards - on - Sea , East Sussex , England , UK Southampton New York City 6 Chisholm , Mr. Roderick Robert Crispin 40 Belfast , Ireland , UK Belfast New York City Clark , Mr. Walter Miller 27 Los Angeles , California , US Cherbourg Los Angeles , California , US Clark , Mrs. Virginia Estelle ( née McDowell ) 26 Los Angeles , California , US Cherbourg Los Angeles , California , US Clifford , Mr. George Quincy 40 Stoughton , Massachusetts , US Southampton Stoughton , Massachusetts Colley , Mr. Edward Pomeroy 37 Dublin , Ireland , UK Southampton Vancouver , British Columbia , Canada Compton , Mrs. Mary Eliza ( née Ingersoll ) 64 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Miss Sara Rebecca 39 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US 14 Compton , Mr. Alexander Taylor Jr . 37 Lakewood , New Jersey , US Cherbourg Lakewood , New Jersey , US Cornell , Mrs. Malvina Helen ( née Lamson ) 55 New York City Southampton New York City Crafton , Mr. John Bertram 59 Roachdale , Indiana , US Southampton Roachdale , Indiana , US Crosby , Captain Edward 70 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 269 Crosby , Mrs. Catherine Elizabeth ( née Halstead ) 64 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Crosby , Miss Harriette Rebecca 39 Milwaukee , Wisconsin , US Southampton Milwaukee , Wisconsin , US 7 Cumings , Mr. John Bradley 39 New York City Cherbourg New York City Cumings , Mrs. Florence Briggs ( née Thayer ) 35 New York City Cherbourg New York , US Daly , Mr. Peter Dennis 51 Lima , Peru Southampton Lima , Peru Daniel , Mr. Robert Williams 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Davidson , Mr. Thornton 31 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Davidson , Mrs. Orian ( née Hays ) 27 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Dick , Mr. Albert Adrian 31 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dick , Mrs. Vera ( née Gillespie ) 17 Calgary , Alberta , Canada Southampton Calgary , Alberta , Canada Dineston , Mrs. Nancy May Bowles 28 London , England , UK Southampton New York City , USA Dineston , George Samuel 30 London , England , UK Southampton New York City , USA Dodge , Dr. Washington 52 San Francisco , California , US Southampton San Francisco , California , US 13 Dodge , Mrs. Ruth ( née Vidaver ) 34 San Francisco , California , US Southampton San Francisco , California , US 5 Dodge , Master Washington , Jr . San Francisco , California , US Southampton San Francisco , California , US 5 Douglas , Mr. Walter Donald 50 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US 62 Douglas , Mrs. Mahala ( née Dutton ) 48 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US and maid , Miss Berthe Leroy 27 Minneapolis , Minnesota , US Cherbourg Minneapolis , Minnesota , US Douglas , Mrs. Mary Hélène ( née Baxter ) 27 Montreal , Quebec , Canada Cherbourg Montreal , Quebec , Canada 6 Duff Gordon , Sir Cosmo Edmund 49 London , England , UK Cherbourg New York City Duff Gordon , Lucy Christiana , Lady ( née Sutherland ) 48 London , England , UK Cherbourg New York City and secretary , Miss Laura Mabel Francatelli 31 London , England , UK Cherbourg New York City Dulles , Mr. William Crothers 39 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 133 Eustis , Miss Elizabeth Mussey 54 Brookline , Massachusetts , US Cherbourg Brookline , Massachusetts , US Evans , Miss Edith Corse 36 New York City Cherbourg New York City Flegenheim , Mrs. Antoinette ( née Wendt ) 48 New York City Cherbourg New York City 7 Flynn , Mr. John Irwin 36 Brooklyn , New York , US Southampton Brooklyn , New York , US 5 Foreman , Mr. Benjamin Laventall 30 New York City Southampton New York City Fortune , Mr. Mark 64 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Fortune , Mrs. Mary ( née McDougald ) 60 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Ethel Flora 28 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Alice Elizabeth 24 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Miss Mabel Helen 23 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 10 Fortune , Mr. Charles Alexander 19 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Franklin , Mr. Thomas Parnham 37 London , England , UK Southampton New York City Frauenthal , Dr. Henry William 49 London , England , UK Southampton New York City 5 Frauenthal , Mrs. Clara ( née Heinsheimer ) 42 London , England , UK Southampton New York City 5 Frauenthal , Mr. Isaac Gerald 43 London , England , UK Southampton New York City 5 Frölicher , Mr. Maximilian Josef 60 Zürich , Switzerland Cherbourg New York City 5 Frölicher , Mrs. Margaretha Emerentia ( née Stehli ) 48 Zürich , Switzerland Cherbourg New York City 5 Frölicher - Stehli , Miss Hedwig Margaritha 22 Zürich , Switzerland Cherbourg New York City 5 Futrelle , Mr. Jacques Heath 37 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Futrelle , Mrs. Lily May ( née Peel ) 35 Scituate , Massachusetts , US Southampton Scituate , Massachusetts , US Gee , Mr. Arthur H . 47 St. Annes - on - Sea , Lancashire , England , UK Southampton Mexico City , Mexico 275 Gibson , Mrs. Pauline Caroline ( née Boeson ) 44 New York City Cherbourg New York City 7 Gibson , Miss Dorothy Winifred 22 New York City Cherbourg New York City 7 Goldenberg , Mr. Samuel L . 47 Paris , France Cherbourg New York City 5 Goldenberg , Mrs. Nella ( née Wiggins ) 40 Paris , France Cherbourg New York City 5 Goldschmidt , Mr. George B . 71 New York City Cherbourg New York City Gracie IV , Colonel Archibald 53 Washington , D.C. , US Southampton Washington , D.C. , US Graham , Mr. George Edward 38 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada 147 Graham , Mrs. Edith Ware ( née Junkins ) 59 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Graham , Miss Margaret Edith 19 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US and governess , Miss Elizabeth Weed Shutes 40 Greenwich , Connecticut , US Southampton Greenwich , Connecticut , US Greenfield , Mrs. Blanche ( née Strouse ) 45 New York City Cherbourg New York City 7 Greenfield , Mr. William Bertram 23 New York City Cherbourg New York City 7 Guggenheim , Mr. Benjamin 46 Paris , France Cherbourg New York City and valet , Mr. Victor Giglio 24 Paris , France Cherbourg New York City and chauffeur , Mr. René Pernot 39 Paris , France Cherbourg New York City Harder , Mr. George Achilles 25 New York City Cherbourg New York City 5 Harder , Mrs. Dorothy ( née Annan ) 21 New York City Cherbourg New York City 5 Harper , Mr. Henry Sleeper 48 New York City Cherbourg New York City and dragoman , Mr. Hammad Hassab 27 Cairo , Egypt Cherbourg New York City Harper , Mrs. Myna ( née Haxtun ) 49 New York City Cherbourg New York City Harris , Mr. Henry Birkhardt 45 New York City Southampton New York City Harris , Mrs. Irene ( née Wallach ) 35 New York City Southampton New York City Hawksford , Mr. Walter James 45 Kingston , Surrey , England , UK Southampton New York City Hays , Mr. Charles Melville 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 307 and clerk , Mr. Vivian Ponsonby Payne 22 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Mrs. Clara Jennings ( née Grigg ) 52 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada and maid , Miss Mary Anne Perreault 33 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Hays , Miss Margaret Bechstein 24 New York City Cherbourg New York City 7 Head , Mr. Christopher 42 Chelsea , London , England , UK Southampton New York City Hilliard , Mr. Herbert Henry 44 Brighton , Massachusetts , US Southampton Brighton , Massachusetts , US Hipkins , Mr. William Edward 55 Birmingham , West Midlands , England , UK Southampton New York City Hippach , Mrs. Ida Sophia ( née Fischer ) 44 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hippach , Miss Jean Gertrude 17 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Hogeboom , Mrs. Anna Louisa ( née Andrews ) 51 Hudson , New York , US Cherbourg Hudson , New York , US 10 Holverson , Mr. Alexander Oskar 42 New York City Southampton New York City 38 Holverson , Mrs. Mary Aline ( née Towner ) 35 New York City Southampton New York City 8 Homer , Mr. Harry ( alias E. Haven ) 40 Indianapolis , Indiana , US Southampton Indianapolis , Indiana , US 15 Hoyt , Mr. Frederick Maxfield 35 New York City Southampton Stamford , Connecticut , US Hoyt , Mrs. Jane Anne ( née Forby ) 31 New York City Southampton Stamford , Connecticut , US Hoyt , Mr. William Fisher 42 New York City Cherbourg New York City 14 Isham , Miss Ann Elizabeth 50 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Ismay , Mr. Joseph Bruce 49 Liverpool , Merseyside , England , UK Southampton New York City and valet , Mr. John Richard Fry 39 Liverpool , Merseyside , England , UK Southampton New York City and secretary , Mr. William Henry Harrison 45 Wallasey , Merseyside , England , UK Southampton New York City 110 Johnson , Mrs. Madeline Eliza ( née Austin ) 40 London , England , UK Southampton New York , New York , US 6 Johnson ( later changed to Langston ) , Mr. Samuel James 10 London , England , UK Southampton New York , New York , US Jones , Mr. Charles Cresson 46 Bennington , Vermont , US Southampton Bennington , Vermont , US 80 Julian , Mr. Henry Forbes 50 Torquay , Devon , England , UK Southampton San Francisco , US Kent , Mr. Edward Austin 58 Buffalo , New York , US Cherbourg Buffalo , New York , US 258 Kenyon , Mr. Frederick R . 41 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US Kenyon , Mrs. Marion ( née Stauffer ) 31 Pittsburgh , Pennsylvania , US Southampton Pittsburgh , Pennsylvania , US 8 Kimball , Mr. Edwin Nelson Jr . 42 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Kimball , Mrs. Gertrude ( née Parsons ) 45 Boston , Massachusetts , US Southampton Boston , Massachusetts , US 5 Klaber , Mr. Herman 45 Portland , Oregon , US Southampton Portland , Oregon , US Langston , Ms. Maxine Jane 25 Duncansville , Pennsylvania , US Southampton Duncansivlle , Pennsylvania , US Lambert - Williams , Mr. Fletcher Fellows 43 London , England , UK Southampton Newark , New Jersey , US Leader , Dr. Alice ( née Farnham ) 49 New York City Southampton New York City 8 Leslie , Lucy Noël Martha , Countess of Rothes ( née Dyer - Edwardes ) 27 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 and maid , Miss Roberta Elizabeth Mary `` Cissy '' Maioni 20 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 8 Lewy , Mr. Ervin G . 31 Chicago , Illinois , US Cherbourg Chicago , Illinois , US Lindeberg - Lind , Mr. Erik Gustav ( alias Edward Lingrey ) 42 Jordanstorp , Södermanland , Sweden Southampton New York City Lindström , Mrs. Sigrid ( née Posse ) 55 Stockholm , Sweden Cherbourg New York City 6 Lines , Mrs. Elizabeth Lindsey ( née James ) 50 Paris , France Cherbourg Hanover , New Hampshire , US 9 Lines , Miss Mary Conover 16 Paris , France Cherbourg Hanover , New Hampshire , US 9 Long , Mr. Milton Clyde 29 Springfield , Massachusetts , US Southampton Springfield , Massachusetts , US 126 Longley , Miss Gretchen Fiske 21 Hudson , New York , US Cherbourg Hudson , New York , US 10 Loring , Mr. Joseph Holland 30 London , England , UK Southampton New York City Madill , Miss Georgette Alexandra 16 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Maguire , Mr. John Edward 30 Brockton , Massachusetts , US Southampton Brockton , Massachusetts , US Maréchal , Mr. Pierre , Sr . 28 Paris , France Cherbourg New York City 7 Marvin , Mr. Daniel Warner 18 New York City Southampton New York City Marvin , Mrs. Mary Graham Carmichael ( née Farquarson ) 18 New York City Southampton New York City 10 Mayné , Miss Bertha Antonine 24 Brussels , Belgium Cherbourg Montreal , Quebec , Canada 6 McCaffry , Mr. Thomas Francis 46 Vancouver , British Columbia , Canada Southampton Vancouver , British Columbia , Canada 292 McCarthy , Mr. Timothy J . 54 Dorchester , Massachusetts , US Southampton Dorchester , Massachusetts , US 175 McGough , Mr. James Robert 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 7 Meyer , Mr. Edgar Joseph 28 New York City Cherbourg New York City Meyer , Mrs. Leila ( née Saks ) 25 New York City Cherbourg New York City 6 Millet , Mr. Francis Davis 65 East Bridgewater , Massachusetts , US Cherbourg East Bridgewater , Massachusetts , US 249 Minahan , Dr. William Edward 44 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 230 Minahan , Mrs. Lillian E. ( née Thorpe ) 37 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Minahan , Miss Daisy E . 33 Fond du Lac , Wisconsin , US Southampton Fond du Lac , Wisconsin , US 14 Mock , Mr. Philipp Edmund 30 New York City Cherbourg New York City 11 Molson , Mr. Harry Markland 55 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada Moore , Mr. Clarence Bloomfield 47 Washington , D.C. , US Southampton Washington , D.C. , US and valet , Mr. Charles Henry Harrington 37 Washington , D.C. , US Southampton Washington , D.C. , US Natsch , Mr. Charles 36 Brooklyn , New York , US Cherbourg Brooklyn , New York , US Newell , Mr. Arthur Webster 58 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 122 Newell , Miss Madeleine 31 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newell , Miss Marjorie Anne 23 Lexington , Massachusetts , US Cherbourg Lexington , Massachusetts , US 6 Newsom , Miss Helen Monypeny 19 New York City Southampton New York City 5 Nicholson , Mr. Arthur Ernest 64 Shanklin , Isle of Wight , England , UK Southampton New York City 263 Nourney , Mr. Alfred 20 Cologne , German Empire Cherbourg New York City 7 Omont , Mr. Alfred Fernand 29 Le Havre , France Cherbourg New York City 7 Ostby , Mr. Engelhart Cornelius 64 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 234 Ostby , Miss Helene Ragnhild 22 Providence , Rhode Island , US Southampton Providence , Rhode Island , US 5 Ovies y Rodriguez , Mr. Servando José Florentino 36 Havana , Cuba Cherbourg Havana , Cuba 189 Parr , Mr. William Henry Marsh 29 Belfast , Ireland , UK Belfast New York City Partner , Mr. Austin 40 Tolworth , London , England , UK Southampton Toronto , Ontario , Canada 166 Pears , Mr. Thomas Clinton 29 Isleworth , London , England , UK Southampton New York City Pears , Mrs. Edith ( née Wearne ) 22 Isleworth , London , England , UK Southampton New York City 8 Peñasco y Castellana , Mr. Victor 24 Madrid , Spain Cherbourg New York City Peñasco y Castellana , Mrs. Maria Josefa ( née Perez de Soto y Vallejo ) 22 Madrid , Spain Cherbourg New York City 8 and maid , Doña Fermina Oliva y Ocana 39 Madrid , Spain Cherbourg New York City 8 Peuchen , Major Arthur Godfrey 52 Toronto , Ontario , Canada Southampton Toronto , Ontario , Canada 6 Porter , Mr. Walter Chamberlain 46 Worcester , Massachusetts , US Southampton Worcester , Massachusetts , US 207 Potter , Mrs. Lily Alexenia ( née Wilson ) 56 Philadelphia , Pennsylvania , US Cherbourg Philadelphia , Pennsylvania , US 7 Reuchlin , The Honourable Mr. Johan George 38 Rotterdam , The Netherlands Southampton New York City Rheims , Mr. George Alexander Lucien 36 Paris , France Southampton New York City Robert , Mrs. Elisabeth Walton ( née McMillan ) 43 St. Louis , Missouri , US Southampton St. Louis , Missouri , US and maid , Miss Emilie Kreuchen 29 St. Louis , Missouri , US Southampton St. Louis , Missouri , US Roebling , Mr. Washington Augustus II 31 Trenton , New Jersey , US Southampton Trenton , New Jersey , US Romaine , Mr. Charles Hallance ( alias C. Rolmane ) 45 New York City Southampton New York City 9 Rood , Mr. Hugh Roscoe 38 Seattle , Washington , US Southampton Seattle , Washington , US Rosenbaum , Miss Edith Louise 34 Paris , France Cherbourg Cincinnati , Ohio , US 11 Rosenshine , Mr. George ( alias George Thorne ) 46 New York City Cherbourg New York City 16 Ross , Mr. John Hugo 36 Winnipeg , Manitoba , Canada Southampton Winnipeg , Manitoba , Canada Rothschild , Mr. Martin 46 New York City Cherbourg New York City Rothschild , Mrs. Elizabeth Jane Anne ( née Barrett ) 54 New York City Cherbourg New York City 6 Rowe , Mr. Alfred G . 59 Liverpool , Merseyside , England , UK Southampton New York City 109 Ryerson , Mr. Arthur Larned 61 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Mrs. Emily Maria ( née Borie ) 48 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and maid , Miss Victorine Chaudanson 36 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Susan Parker `` Suzette '' 21 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Miss Emily Borie 18 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Ryerson , Master John Borie `` Jack '' 13 Cooperstown , New York , US Cherbourg Cooperstown , New York , US and governess , Miss Grace Scott Bowen 45 Cooperstown , New York , US Cherbourg Cooperstown , New York , US Saalfeld , Mr. Adolphe 47 Manchester , England , UK Southampton New York City Salomon , Mr. Abraham Lincoln 43 New York City Cherbourg New York City Schabert , Mrs. Emma ( née Mock ) 35 Hamburg , German Empire Southampton New York City 11 Seward , Mr. Frederic Kimber 34 New York City Southampton New York City 7 Silverthorne , Mr. Spencer Victor 35 St. Louis , Missouri , US Southampton St. Louis , Missouri , US 5 Silvey , Mr. William Baird 50 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US Silvey , Mrs. Alice ( née Munger ) 39 Duluth , Minnesota , US Cherbourg Duluth , Minnesota , US 11 Simonius - Blumer , Colonel Alfons 56 Basel , Switzerland Southampton New York City Sloper , Mr. William Thompson 28 New Britain , Connecticut , US Southampton New Britain , Connecticut , US 7 Smart , Mr. John Montgomery 56 Kildale , North Yorkshire , England , UK Southampton New York City Smith , Mr. James Clinch 56 Paris , France Cherbourg Long Island , New York , US Smith , Mr. Lucien Philip 24 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US Smith , Mrs. Mary Eloise ( née Hughes ) 18 Huntington , West Virginia , US Cherbourg Huntington , West Virginia , US 6 Smith , Mr. Richard William 57 Streatham , London , England , UK Southampton New York City Snyder , Mr. John Pillsbury 24 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Snyder , Mrs. Nellie ( née Stevenson ) 23 Minneapolis , Minnesota , US Southampton Minneapolis , Minnesota , US 7 Spedden , Mr. Frederic Oakley 45 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Mrs. Margaretta Corning ( née Stone ) 39 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and maid , Miss Helen Alice Wilson 31 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spedden , Master Robert Douglas 6 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US and nurse , Miss Elizabeth Margaret Burns 41 Tuxedo Park , New York , US Cherbourg Tuxedo Park , New York , US Spencer , Mr. William Augustus 57 New York City Cherbourg New York City Spencer , Mrs. Marie Eugénie ( née Demougeot ) 45 New York City Cherbourg New York City 6 and maid , Miss Eugenie Elise Lurette 59 New York City Cherbourg New York City 6 Stähelin - Maeglin , Dr. Max 32 Basel , Switzerland Southampton New York City Stead , Mr. William Thomas 62 London , England , UK Southampton New York City Stengel , Mr. Charles Emil Henry 54 Newark , New Jersey , US Cherbourg Newark , New Jersey , US Stengel , Mrs. Annie May ( née Morris ) 44 Newark , New Jersey , US Cherbourg Newark , New Jersey , US 5 Stephenson , Mrs. Martha ( née Eustis ) 52 Paris , France Cherbourg Haverford , Pennsylvania , US Stewart , Mr. Albert A . 54 Cincinnati , Ohio , US Cherbourg Gallipolis , Ohio , US Stone , Mrs. Martha Evelyn ( née Stevens ) 62 New York City Southampton New York City 6 and maid , Miss Amelie `` Amelia '' Icard 38 New York City Southampton New York City 6 Straus , Mr. Isidor 67 New York City Southampton New York City 96 and valet , Mr. John Farthing 57 New York City Southampton New York City Straus , Mrs. Rosalie Ida ( née Blun ) 63 New York City Southampton New York City and maid , Miss Ellen Bird 31 New York City Southampton New York City 8 Sutton , Mr. Frederick 61 Haddonfield , New Jersey , US Southampton Haddonfield , New Jersey , US 46 Swift , Mrs. Margaret Welles ( née Barron ) 46 New York City Southampton New York City 8 Taussig , Mr. Emil 52 New York City Southampton New York City Taussig , Mrs. Tillie ( née Mandelbaum ) 39 New York City Southampton New York City 8 Taussig , Miss Ruth 18 New York City Southampton New York City 8 Taylor , Mr. Elmer Zebley 48 London , England , UK Southampton East Orange , New Jersey , US 5 Taylor , Mrs. Juliet Cummins ( née Wright ) 48 London , England , UK Southampton East Orange , New Jersey , US 5 Thayer , Mr. John Borland II 49 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mrs. Marian Longsteth ( née Morris ) 39 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US and maid , Miss Margaret Fleming 42 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thayer , Mr. John Borland `` Jack '' III 17 Haverford , Pennsylvania , US Cherbourg Haverford , Pennsylvania , US Thorne , Mrs. Gertrude Maybelle ( née McMinn ) 37 New York City , New York , US Cherbourg New York City , New York , US Tucker , Mr. Gilbert Milligan Jr . 31 Albany , New York , US Cherbourg Albany , New York , US 7 Uruchurtu , Don Manuel E . 40 Mexico City , Mexico Cherbourg Mexico City , Mexico Van der Hoef , Mr. Wyckoff 61 Brooklyn , New York , US Belfast Brooklyn , New York , US 245 Walker , Mr. William Anderson 48 East Orange , New Jersey , US Southampton East Orange , New Jersey , US Warren , Mr. Frank Manley 63 Portland , Oregon , US Cherbourg Portland , Oregon , US Warren , Mrs. Anna Sophia ( née Atkinson ) 60 Portland , Oregon , US Cherbourg Portland , Oregon , US 5 Weir , Colonel John 59 New York City Southampton New York City White , Mr. Percival Wayland 54 Brunswick , Maine , US Southampton Brunswick , Maine , US White , Mr. Richard Frasar 21 Brunswick , Maine , US Southampton Brunswick , Maine , US 169 White , Mrs. Ella ( née Holmes ) 55 New York City Cherbourg New York City 8 and maid , Miss Amelia Mayo `` Nellie '' Bessette 39 New York City Cherbourg New York City 8 and manservant , Mr. Sante Righini 22 New York City Cherbourg New York City 232 Wick , Colonel George Dennick 58 Youngstown , Ohio , US Southampton Youngstown , Ohio , US Wick , Mrs. Mary ( née Hitchcock ) 45 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Wick , Miss Mary Natalie 31 Youngstown , Ohio , US Southampton Youngstown , Ohio , US 8 Widener , Mr. George Dunton 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and valet , Mr. Edwin Herbert Keeping 33 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US 45 Widener , Mrs. Eleanor ( née Elkins ) 50 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US and maid , Miss Amalie Henriette `` Emily '' Gieger 35 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Widener , Mr. Harry Elkins 27 Philadelphia , Pennsylvania , US Southampton Philadelphia , Pennsylvania , US Willard , Miss Constance 21 Duluth , Minnesota , US Southampton Duluth , Minnesota , US 8 Williams , Mr. Charles Duane 51 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Williams , Mr. Richard Norris II 21 Geneva , Switzerland Cherbourg Radnor , Pennsylvania , US Woolner , Mr. Hugh 45 London , England , UK Southampton New York City Wright , Mr. George 62 Halifax , Nova Scotia , Canada Southampton Halifax , Nova Scotia , Canada Young , Miss Marie Grice 36 New York City Cherbourg New York City 8
+  Fact 0.0: Miss Elizabeth Walton Allen was 29 years old and from St. Louis, Missouri, US.
+  Fact 0.1: Elizabeth Walton Allen boarded at Southampton and was headed to St. Louis, Missouri, US.
+  Fact 0.2: Hudson Joshua Creighton Allison, Mr., was 30 years old and from Montreal, Quebec, Canada.
+  Fact 0.3: Hudson Joshua Creighton Allison boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.4: Hudson Joshua Creighton Allison has 135 in the lifeboat/body column.
+  Fact 0.5: George Swane was listed as a chauffeur, traveling with the passenger listed before him.
+  Fact 0.6: George Swane was 19 years old and from Montreal, Quebec, Canada.
+  Fact 0.7: George Swane boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.8: George Swane has 294 in the lifeboat/body column.
+  Fact 0.9: Amelia Mary 'Mildred' Brown was listed as a cook, traveling with the passenger listed before her.
+  Fact 0.10: Amelia Mary 'Mildred' Brown was 18 years old and from London, England, UK.
+  Fact 0.11: Amelia Mary 'Mildred' Brown boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.12: Amelia Mary 'Mildred' Brown has 11 in the lifeboat/body column.
+  Fact 0.13: Mrs. Bessie Waldo Allison (née Daniels) was 25 years old and from Montreal, Quebec, Canada.
+  Fact 0.14: Bessie Waldo Allison boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.15: Sarah Daniels was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.16: Sarah Daniels was 33 years old and from Montreal, Quebec, Canada.
+  Fact 0.17: Sarah Daniels boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.18: Sarah Daniels has 8 in the lifeboat/body column.
+  Fact 0.19: Miss Helen Loraine Allison boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.20: Master Hudson Trevor Allison was listed as 0.11 years old (11 mo.) and from Montreal, Quebec, Canada.
+  Fact 0.21: Master Hudson Trevor Allison boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.22: Master Hudson Trevor Allison has 11 in the lifeboat/body column.
+  Fact 0.23: Alice Catherine Cleaver was listed as a nurse, traveling with the passenger listed before her.
+  Fact 0.24: Alice Catherine Cleaver was 22 years old and from London, England, UK.
+  Fact 0.25: Alice Catherine Cleaver boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.26: Alice Catherine Cleaver has 11 in the lifeboat/body column.
+  Fact 0.27: Mr. Harry Anderson was 47 years old and from New York City, New York, US.
+  Fact 0.28: Harry Anderson boarded at Southampton and was headed to New York City, New York, US.
+  Fact 0.29: Miss Kornelia Theodosia Andrews was 62 years old and from Hudson, New York, US.
+  Fact 0.30: Kornelia Theodosia Andrews boarded at Cherbourg and was headed to Hudson, New York, US.
+  Fact 0.31: Kornelia Theodosia Andrews has 10 in the lifeboat/body column.
+  Fact 0.32: Mr. Thomas Andrews was 39 years old and from Belfast, Ireland, UK.
+  Fact 0.33: Thomas Andrews boarded at Belfast and was headed to New York City.
+  Fact 0.34: Mrs. Charlotte Lane Appleton (née Lamson) was 53 years old and from New York City.
+  Fact 0.35: Charlotte Lane Appleton boarded at Southampton and was headed to New York City.
+  Fact 0.36: Mr. Ramon Artagaveytia was 71 years old and from Buenos Aires, Argentina.
+  Fact 0.37: Ramon Artagaveytia boarded at Cherbourg and was headed to New York City.
+  Fact 0.38: Ramon Artagaveytia has 22 in the lifeboat/body column.
+  Fact 0.39: Colonel John Jacob Astor IV was 47 years old and from New York City.
+  Fact 0.40: John Jacob Astor IV boarded at Cherbourg and was headed to New York City.
+  Fact 0.41: John Jacob Astor IV has 124 in the lifeboat/body column.
+  Fact 0.42: Mrs. Madeleine Talmage Astor (née Force) was 18 years old and from New York City.
+  Fact 0.43: Madeleine Talmage Astor boarded at Cherbourg and was headed to New York City.
+  Fact 0.44: Rosalie Bidois was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.45: Rosalie Bidois was 46 years old and from New York City.
+  Fact 0.46: Rosalie Bidois boarded at Cherbourg and was headed to New York City.
+  Fact 0.47: Caroline Louise Endres was listed as a nurse, traveling with the passenger listed before her.
+  Fact 0.48: Caroline Louise Endres was 39 years old and from New York City.
+  Fact 0.49: Caroline Louise Endres boarded at Cherbourg and was headed to New York City.
+  Fact 0.50: Mrs. Léontine Pauline Aubart was 24 years old and from Paris, France.
+  Fact 0.51: Léontine Pauline Aubart boarded at Cherbourg and was headed to New York City.
+  Fact 0.52: Léontine Pauline Aubart has 9 in the lifeboat/body column.
+  Fact 0.53: Emma Sägesser was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.54: Emma Sägesser was 24 years old and from Paris, France.
+  Fact 0.55: Emma Sägesser boarded at Cherbourg and was headed to New York City.
+  Fact 0.56: Emma Sägesser has 9 in the lifeboat/body column.
+  Fact 0.57: Mr. Algernon Henry Wilson Barkworth was 47 years old and from Hessle, East Yorkshire, England, UK.
+  Fact 0.58: Algernon Henry Wilson Barkworth boarded at Southampton and was headed to New York City.
+  Fact 0.59: Mr. John D. Baumann was 60 years old and from New York City.
+  Fact 0.60: John D. Baumann boarded at Cherbourg and was headed to New York City.
+  Fact 0.61: Mrs. Hélène Baxter (née de Lanaudière-Chaput) was 50 years old and from Montreal, Quebec, Canada.
+  Fact 0.62: Hélène Baxter boarded at Cherbourg and was headed to Montreal, Quebec, Canada.
+  Fact 0.63: Hélène Baxter has 6 in the lifeboat/body column.
+  Fact 0.64: Mr. Quigg Edmond Baxter was 24 years old and from Montreal, Quebec, Canada.
+  Fact 0.65: Quigg Edmond Baxter boarded at Cherbourg and was headed to Montreal, Quebec, Canada.
+  Fact 0.66: Mr. Thomson Beattie was 36 years old and from Fergus, Ontario, Canada.
+  Fact 0.67: Thomson Beattie boarded at Southampton and was headed to Fergus, Ontario, Canada.
+  Fact 0.68: Thomson Beattie has 331 in the lifeboat/body column.
+  Fact 0.69: Mr. Richard Leonard Beckwith was 37 years old and from New York City.
+  Fact 0.70: Richard Leonard Beckwith boarded at Southampton and was headed to New York City.
+  Fact 0.71: Richard Leonard Beckwith has 5 in the lifeboat/body column.
+  Fact 0.72: Mrs. Sallie Beckwith (née Monypeny) was 46 years old and from New York City.
+  Fact 0.73: Sallie Beckwith boarded at Southampton and was headed to New York City.
+  Fact 0.74: Sallie Beckwith has 5 in the lifeboat/body column.
+  Fact 0.75: Mr. Karl Howell Behr was 26 years old and from New York City.
+  Fact 0.76: Karl Howell Behr boarded at Cherbourg and was headed to New York City.
+  Fact 0.77: Karl Howell Behr has 5 in the lifeboat/body column.
+  Fact 0.78: Mr. Jakob Birnbaum was 24 years old and from Antwerp, Belgium.
+  Fact 0.79: Jakob Birnbaum boarded at Cherbourg and was headed to San Francisco, California, US.
+  Fact 0.80: Jakob Birnbaum has 148 in the lifeboat/body column.
+  Fact 0.81: Mr. Dickinson H. 'Dick' Bishop was 25 years old and from Dowagiac, Michigan, US.
+  Fact 0.82: Dickinson H. 'Dick' Bishop boarded at Cherbourg and was headed to Dowagiac, Michigan, US.
+  Fact 0.83: Dickinson H. 'Dick' Bishop has 7 in the lifeboat/body column.
+  Fact 0.84: Mrs. Helen Walton Bishop was 19 years old and from Dowagiac, Michigan, US.
+  Fact 0.85: Helen Walton Bishop boarded at Cherbourg and was headed to Dowagiac, Michigan, US.
+  Fact 0.86: Helen Walton Bishop has 7 in the lifeboat/body column.
+  Fact 0.87: Mr. Mauritz Håkan Björnström-Steffanson was 28 years old and from Stockholm, Sweden.
+  Fact 0.88: Mauritz Håkan Björnström-Steffanson boarded at Southampton and was headed to Washington, D.C., US.
+  Fact 0.89: Mr. Stephen Weart Blackwell was 45 years old and from Trenton, New Jersey, US.
+  Fact 0.90: Stephen Weart Blackwell boarded at Southampton and was headed to Trenton, New Jersey, US.
+  Fact 0.91: Mr. Henry Blank was 39 years old and from Glen Ridge, New Jersey, US.
+  Fact 0.92: Henry Blank boarded at Cherbourg and was headed to Glen Ridge, New Jersey, US.
+  Fact 0.93: Henry Blank has 7 in the lifeboat/body column.
+  Fact 0.94: Miss Elizabeth Bonnell was 61 years old and from Youngstown, Ohio, US.
+  Fact 0.95: Elizabeth Bonnell boarded at Southampton and was headed to Youngstown, Ohio, US.
+  Fact 0.96: Elizabeth Bonnell has 8 in the lifeboat/body column.
+  Fact 0.97: Miss Caroline Bonnell was 30 years old and from Youngstown, Ohio, US.
+  Fact 0.98: Caroline Bonnell boarded at Southampton and was headed to Youngstown, Ohio, US.
+  Fact 0.99: Caroline Bonnell has 8 in the lifeboat/body column.
+  Fact 0.100: Mr. John James Borebank was 42 years old and from London, England, UK.
+  Fact 0.101: John James Borebank boarded at Southampton and was headed to Toronto, Ontario, Canada.
+  Fact 0.102: Miss Elsie Edith Bowerman was 22 years old and from St. Leonards-on-Sea, East Sussex, England, UK.
+  Fact 0.103: Elsie Edith Bowerman boarded at Southampton and was headed to New York City.
+  Fact 0.104: Elsie Edith Bowerman has 6 in the lifeboat/body column.
+  Fact 0.105: Mr. John Bertram Brady was 41 years old and from Pomeroy, Washington, US.
+  Fact 0.106: John Bertram Brady boarded at Southampton and was headed to Pomeroy, Washington, US.
+  Fact 0.107: Mr. Emil Brandeis was 48 years old and from Omaha, Nebraska, US.
+  Fact 0.108: Emil Brandeis boarded at Cherbourg and was headed to Omaha, Nebraska, US.
+  Fact 0.109: Emil Brandeis has 208 in the lifeboat/body column.
+  Fact 0.110: Mr. George Andrew Brereton, also listed as George A. Brayton, was 37 years old and from Los Angeles, US.
+  Fact 0.111: George Andrew Brereton boarded at Southampton and was headed to Los Angeles, California, US.
+  Fact 0.112: George Andrew Brereton has 9 in the lifeboat/body column.
+  Fact 0.113: Dr. Arthur Jackson Brewe was 45 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.114: Arthur Jackson Brewe boarded at Cherbourg and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.115: Mrs. Caroline Lane Brown (née Lamson) was 59 years old and from Belmont, Massachusetts, US.
+  Fact 0.116: Caroline Lane Brown boarded at Southampton and was headed to Belmont, Massachusetts, US.
+  Fact 0.117: Mrs. Margaret Brown (née Tobin) was 44 years old and from Denver, Colorado, US.
+  Fact 0.118: Margaret Brown boarded at Cherbourg and was headed to Denver, Colorado, US.
+  Fact 0.119: Margaret Brown has 6 in the lifeboat/body column.
+  Fact 0.120: Mrs. Emma Eliza Bucknell (née Ward) was 59 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.121: Emma Eliza Bucknell boarded at Cherbourg and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.122: Emma Eliza Bucknell has 8 in the lifeboat/body column.
+  Fact 0.123: Albina Bazzani was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.124: Albina Bazzani was 36 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.125: Albina Bazzani boarded at Cherbourg and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.126: Albina Bazzani has 8 in the lifeboat/body column.
+  Fact 0.127: Major Archibald Willingham Butt was 46 years old and from Washington, D.C., US.
+  Fact 0.128: Archibald Willingham Butt boarded at Southampton and was headed to Washington, D.C., US.
+  Fact 0.129: Mr. Edward Pennington Calderhead was 42 years old and from New York City.
+  Fact 0.130: Edward Pennington Calderhead boarded at Southampton and was headed to New York City.
+  Fact 0.131: Edward Pennington Calderhead has 5 in the lifeboat/body column.
+  Fact 0.132: Mrs. Helen Churchill Candee (née Hungerford) was 53 years old and from Washington, D.C., US.
+  Fact 0.133: Helen Churchill Candee boarded at Cherbourg and was headed to Washington, D.C., US.
+  Fact 0.134: Helen Churchill Candee has 6 in the lifeboat/body column.
+  Fact 0.135: Mrs. Charlotte Wardle Cardeza (née Drake) was 58 years old and from Germantown, Pennsylvania, US.
+  Fact 0.136: Charlotte Wardle Cardeza boarded at Cherbourg and was headed to Germantown, Pennsylvania, US.
+  Fact 0.137: Annie Moore Ward was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.138: Annie Moore Ward was 38 years old and from Germantown, Pennsylvania, US.
+  Fact 0.139: Annie Moore Ward boarded at Cherbourg and was headed to Germantown, Pennsylvania, US.
+  Fact 0.140: Mr. Thomas Drake Martinez Cardeza was 36 years old and from Germantown, Pennsylvania, US.
+  Fact 0.141: Thomas Drake Martinez Cardeza boarded at Cherbourg and was headed to Germantown, Pennsylvania, US.
+  Fact 0.142: Gustave J. Lesueur was listed as a valet, traveling with the passenger listed before him.
+  Fact 0.143: Gustave J. Lesueur was 35 years old and from Germantown, Pennsylvania, US.
+  Fact 0.144: Gustave J. Lesueur boarded at Cherbourg and was headed to Germantown, Pennsylvania, US.
+  Fact 0.145: Mr. Frans Olof Carlsson was 33 years old and from New York City.
+  Fact 0.146: Frans Olof Carlsson boarded at Southampton and was headed to New York City.
+  Fact 0.147: Mr. Francisco M. Carrau was 31 years old and from Montevideo, Uruguay.
+  Fact 0.148: Francisco M. Carrau boarded at Southampton and was headed to Montevideo, Uruguay.
+  Fact 0.149: Mr. José Pedro Carrau was 17 years old and from Montevideo, Uruguay.
+  Fact 0.150: José Pedro Carrau boarded at Southampton and was headed to Montevideo, Uruguay.
+  Fact 0.151: Mr. William Ernest Carter was 36 years old and from Bryn Mawr, Pennsylvania, US.
+  Fact 0.152: William Ernest Carter boarded at Southampton and was headed to Bryn Mawr, Pennsylvania, US.
+  Fact 0.153: Alexander Cairns was listed as a valet, traveling with the passenger listed before him.
+  Fact 0.154: Alexander Cairns was 28 years old and from Bryn Mawr, Pennsylvania, US.
+  Fact 0.155: Alexander Cairns boarded at Southampton and was headed to Bryn Mawr, Pennsylvania, US.
+  Fact 0.156: Charles Augustus Aldworth was listed as a chauffeur, traveling with the passenger listed before him.
+  Fact 0.157: Charles Augustus Aldworth was 30 years old and from Bryn Mawr, Pennsylvania, US.
+  Fact 0.158: Charles Augustus Aldworth boarded at Southampton and was headed to Bryn Mawr, Pennsylvania, US.
+  Fact 0.159: Mrs. Lucile Carter (née Polk) was 36 years old and from Bryn Mawr, Pennsylvania, US.
+  Fact 0.160: Lucile Carter boarded at Southampton and was headed to Bryn Mawr, Pennsylvania, US.
+  Fact 0.161: Auguste Serreplan was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.162: Auguste Serreplan was 30 years old and from Bryn Mawr, Pennsylvania, US.
+  Fact 0.163: Auguste Serreplan boarded at Southampton and was headed to Bryn Mawr, Pennsylvania, US.
+  Fact 0.164: Miss Lucile Polk Carter was 13 years old and from Bryn Mawr, Pennsylvania, US.
+  Fact 0.165: Lucile Polk Carter boarded at Southampton and was headed to Bryn Mawr, Pennsylvania, US.
+  Fact 0.166: Master William Thornton Carter II was 11 years old and from Bryn Mawr, Pennsylvania, US.
+  Fact 0.167: William Thornton Carter II boarded at Southampton and was headed to Bryn Mawr, Pennsylvania, US.
+  Fact 0.168: Mr. Howard Brown Case was 49 years old and from Ascot, Berkshire, England, UK.
+  Fact 0.169: Howard Brown Case boarded at Southampton and was headed to Rochester, New York, US.
+  Fact 0.170: Mrs. Eleanor Genevieve Cassebeer (née Fosdick) was 36 years old and from New York City.
+  Fact 0.171: Eleanor Genevieve Cassebeer boarded at Cherbourg and was headed to New York City.
+  Fact 0.172: Eleanor Genevieve Cassebeer has 5 in the lifeboat/body column.
+  Fact 0.173: Mr. Tyrell William Cavendish was 36 years old and from London, England, UK.
+  Fact 0.174: Tyrell William Cavendish boarded at Southampton and was headed to New York City.
+  Fact 0.175: Tyrell William Cavendish has 172 in the lifeboat/body column.
+  Fact 0.176: Mrs. Julia Florence Cavendish (née Siegel) was 25 years old and from London, England, UK.
+  Fact 0.177: Julia Florence Cavendish boarded at Southampton and was headed to New York City.
+  Fact 0.178: Julia Florence Cavendish has 6 in the lifeboat/body column.
+  Fact 0.179: Ellen 'Nellie' Barber was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.180: Ellen 'Nellie' Barber was 26 years old and from London, England, UK.
+  Fact 0.181: Ellen 'Nellie' Barber boarded at Southampton and was headed to New York City.
+  Fact 0.182: Ellen 'Nellie' Barber has 6 in the lifeboat/body column.
+  Fact 0.183: Mr. Hubert Fuller Chaffee was 46 years old and from Amenia, North Dakota, US.
+  Fact 0.184: Hubert Fuller Chaffee boarded at Southampton and was headed to Amenia, North Dakota, US.
+  Fact 0.185: Mrs. Carrie Constance Chaffee (née Toogood) was 47 years old and from Amenia, North Dakota, US.
+  Fact 0.186: Carrie Constance Chaffee boarded at Southampton and was headed to Amenia, North Dakota, US.
+  Fact 0.187: Mr. Norman Campbell Chambers was 27 years old and from New York City.
+  Fact 0.188: Norman Campbell Chambers boarded at Southampton and was headed to New York City.
+  Fact 0.189: Norman Campbell Chambers has 5 in the lifeboat/body column.
+  Fact 0.190: Mrs. Bertha Chambers (née Griggs) was 32 years old and from New York City.
+  Fact 0.191: Bertha Chambers boarded at Southampton and was headed to New York City.
+  Fact 0.192: Bertha Chambers has 5 in the lifeboat/body column.
+  Fact 0.193: Miss Gladys Cherry was 30 years old and from London, England, UK.
+  Fact 0.194: Gladys Cherry boarded at Southampton and was headed to Vancouver, British Columbia, Canada.
+  Fact 0.195: Gladys Cherry has 8 in the lifeboat/body column.
+  Fact 0.196: Mr. Paul Romaine Marie Léonce Chevré was 45 years old and from Paris, France.
+  Fact 0.197: Paul Romaine Marie Léonce Chevré boarded at Cherbourg and was headed to Ottawa, Ontario, Canada.
+  Fact 0.198: Paul Romaine Marie Léonce Chevré has 7 in the lifeboat/body column.
+  Fact 0.199: Mrs. Edith Martha Bowerman Chibnall (née Barber) was 48 years old and from St. Leonards-on-Sea, East Sussex, England, UK.
+  Fact 0.200: Edith Martha Bowerman Chibnall boarded at Southampton and was headed to New York City.
+  Fact 0.201: Edith Martha Bowerman Chibnall has 6 in the lifeboat/body column.
+  Fact 0.202: Mr. Roderick Robert Crispin Chisholm was 40 years old and from Belfast, Ireland, UK.
+  Fact 0.203: Roderick Robert Crispin Chisholm boarded at Belfast and was headed to New York City.
+  Fact 0.204: Mr. Walter Miller Clark was 27 years old and from Los Angeles, California, US.
+  Fact 0.205: Walter Miller Clark boarded at Cherbourg and was headed to Los Angeles, California, US.
+  Fact 0.206: Mrs. Virginia Estelle Clark (née McDowell) was 26 years old and from Los Angeles, California, US.
+  Fact 0.207: Virginia Estelle Clark boarded at Cherbourg and was headed to Los Angeles, California, US.
+  Fact 0.208: Mr. George Quincy Clifford was 40 years old and from Stoughton, Massachusetts, US.
+  Fact 0.209: George Quincy Clifford boarded at Southampton and was headed to Stoughton, Massachusetts.
+  Fact 0.210: Mr. Edward Pomeroy Colley was 37 years old and from Dublin, Ireland, UK.
+  Fact 0.211: Edward Pomeroy Colley boarded at Southampton and was headed to Vancouver, British Columbia, Canada.
+  Fact 0.212: Mrs. Mary Eliza Compton (née Ingersoll) was 64 years old and from Lakewood, New Jersey, US.
+  Fact 0.213: Mary Eliza Compton boarded at Cherbourg and was headed to Lakewood, New Jersey, US.
+  Fact 0.214: Mary Eliza Compton has 14 in the lifeboat/body column.
+  Fact 0.215: Miss Sara Rebecca Compton was 39 years old and from Lakewood, New Jersey, US.
+  Fact 0.216: Sara Rebecca Compton boarded at Cherbourg and was headed to Lakewood, New Jersey, US.
+  Fact 0.217: Sara Rebecca Compton has 14 in the lifeboat/body column.
+  Fact 0.218: Mr. Alexander Taylor Compton Jr. was 37 years old and from Lakewood, New Jersey, US.
+  Fact 0.219: Alexander Taylor Compton Jr. boarded at Cherbourg and was headed to Lakewood, New Jersey, US.
+  Fact 0.220: Mrs. Malvina Helen Cornell (née Lamson) was 55 years old and from New York City.
+  Fact 0.221: Malvina Helen Cornell boarded at Southampton and was headed to New York City.
+  Fact 0.222: Mr. John Bertram Crafton was 59 years old and from Roachdale, Indiana, US.
+  Fact 0.223: John Bertram Crafton boarded at Southampton and was headed to Roachdale, Indiana, US.
+  Fact 0.224: Captain Edward Crosby was 70 years old and from Milwaukee, Wisconsin, US.
+  Fact 0.225: Edward Crosby boarded at Southampton and was headed to Milwaukee, Wisconsin, US.
+  Fact 0.226: Edward Crosby has 269 in the lifeboat/body column.
+  Fact 0.227: Mrs. Catherine Elizabeth Crosby (née Halstead) was 64 years old and from Milwaukee, Wisconsin, US.
+  Fact 0.228: Catherine Elizabeth Crosby boarded at Southampton and was headed to Milwaukee, Wisconsin, US.
+  Fact 0.229: Catherine Elizabeth Crosby has 7 in the lifeboat/body column.
+  Fact 0.230: Miss Harriette Rebecca Crosby was 39 years old and from Milwaukee, Wisconsin, US.
+  Fact 0.231: Harriette Rebecca Crosby boarded at Southampton and was headed to Milwaukee, Wisconsin, US.
+  Fact 0.232: Harriette Rebecca Crosby has 7 in the lifeboat/body column.
+  Fact 0.233: Mr. John Bradley Cumings was 39 years old and from New York City.
+  Fact 0.234: John Bradley Cumings boarded at Cherbourg and was headed to New York City.
+  Fact 0.235: Mrs. Florence Briggs Cumings (née Thayer) was 35 years old and from New York City.
+  Fact 0.236: Florence Briggs Cumings boarded at Cherbourg and was headed to New York, US.
+  Fact 0.237: Mr. Peter Dennis Daly was 51 years old and from Lima, Peru.
+  Fact 0.238: Peter Dennis Daly boarded at Southampton and was headed to Lima, Peru.
+  Fact 0.239: Mr. Robert Williams Daniel was 27 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.240: Robert Williams Daniel boarded at Southampton and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.241: Mr. Thornton Davidson was 31 years old and from Montreal, Quebec, Canada.
+  Fact 0.242: Thornton Davidson boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.243: Mrs. Orian Davidson (née Hays) was 27 years old and from Montreal, Quebec, Canada.
+  Fact 0.244: Orian Davidson boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.245: Mr. Albert Adrian Dick was 31 years old and from Calgary, Alberta, Canada.
+  Fact 0.246: Albert Adrian Dick boarded at Southampton and was headed to Calgary, Alberta, Canada.
+  Fact 0.247: Mrs. Vera Dick (née Gillespie) was 17 years old and from Calgary, Alberta, Canada.
+  Fact 0.248: Vera Dick boarded at Southampton and was headed to Calgary, Alberta, Canada.
+  Fact 0.249: Mrs. Nancy May Bowles Dineston was 28 years old and from London, England, UK.
+  Fact 0.250: Nancy May Bowles Dineston boarded at Southampton and was headed to New York City, USA.
+  Fact 0.251: George Samuel Dineston was 30 years old and from London, England, UK.
+  Fact 0.252: George Samuel Dineston boarded at Southampton and was headed to New York City, USA.
+  Fact 0.253: Dr. Washington Dodge was 52 years old and from San Francisco, California, US.
+  Fact 0.254: Washington Dodge boarded at Southampton and was headed to San Francisco, California, US.
+  Fact 0.255: Washington Dodge has 13 in the lifeboat/body column.
+  Fact 0.256: Mrs. Ruth Dodge (née Vidaver) was 34 years old and from San Francisco, California, US.
+  Fact 0.257: Ruth Dodge boarded at Southampton and was headed to San Francisco, California, US.
+  Fact 0.258: Ruth Dodge has 5 in the lifeboat/body column.
+  Fact 0.259: Master Washington Dodge Jr. was from San Francisco, California, US.
+  Fact 0.260: Master Washington Dodge Jr. boarded at Southampton and was headed to San Francisco, California, US.
+  Fact 0.261: Master Washington Dodge Jr. has 5 in the lifeboat/body column.
+  Fact 0.262: Mr. Walter Donald Douglas was 50 years old and from Minneapolis, Minnesota, US.
+  Fact 0.263: Walter Donald Douglas boarded at Cherbourg and was headed to Minneapolis, Minnesota, US.
+  Fact 0.264: Walter Donald Douglas has 62 in the lifeboat/body column.
+  Fact 0.265: Mrs. Mahala Douglas (née Dutton) was 48 years old and from Minneapolis, Minnesota, US.
+  Fact 0.266: Mahala Douglas boarded at Cherbourg and was headed to Minneapolis, Minnesota, US.
+  Fact 0.267: Berthe Leroy was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.268: Berthe Leroy was 27 years old and from Minneapolis, Minnesota, US.
+  Fact 0.269: Berthe Leroy boarded at Cherbourg and was headed to Minneapolis, Minnesota, US.
+  Fact 0.270: Mrs. Mary Hélène Douglas (née Baxter) was 27 years old and from Montreal, Quebec, Canada.
+  Fact 0.271: Mary Hélène Douglas boarded at Cherbourg and was headed to Montreal, Quebec, Canada.
+  Fact 0.272: Mary Hélène Douglas has 6 in the lifeboat/body column.
+  Fact 0.273: Sir Cosmo Edmund Duff Gordon was 49 years old and from London, England, UK.
+  Fact 0.274: Cosmo Edmund Duff Gordon boarded at Cherbourg and was headed to New York City.
+  Fact 0.275: Lucy Christiana Duff Gordon, Lady (née Sutherland), was 48 years old and from London, England, UK.
+  Fact 0.276: Lucy Christiana Duff Gordon boarded at Cherbourg and was headed to New York City.
+  Fact 0.277: Laura Mabel Francatelli was listed as a secretary, traveling with the passenger listed before her.
+  Fact 0.278: Laura Mabel Francatelli was 31 years old and from London, England, UK.
+  Fact 0.279: Laura Mabel Francatelli boarded at Cherbourg and was headed to New York City.
+  Fact 0.280: Mr. William Crothers Dulles was 39 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.281: William Crothers Dulles boarded at Cherbourg and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.282: William Crothers Dulles has 133 in the lifeboat/body column.
+  Fact 0.283: Miss Elizabeth Mussey Eustis was 54 years old and from Brookline, Massachusetts, US.
+  Fact 0.284: Elizabeth Mussey Eustis boarded at Cherbourg and was headed to Brookline, Massachusetts, US.
+  Fact 0.285: Miss Edith Corse Evans was 36 years old and from New York City.
+  Fact 0.286: Edith Corse Evans boarded at Cherbourg and was headed to New York City.
+  Fact 0.287: Mrs. Antoinette Flegenheim (née Wendt) was 48 years old and from New York City.
+  Fact 0.288: Antoinette Flegenheim boarded at Cherbourg and was headed to New York City.
+  Fact 0.289: Antoinette Flegenheim has 7 in the lifeboat/body column.
+  Fact 0.290: Mr. John Irwin Flynn was 36 years old and from Brooklyn, New York, US.
+  Fact 0.291: John Irwin Flynn boarded at Southampton and was headed to Brooklyn, New York, US.
+  Fact 0.292: John Irwin Flynn has 5 in the lifeboat/body column.
+  Fact 0.293: Mr. Benjamin Laventall Foreman was 30 years old and from New York City.
+  Fact 0.294: Benjamin Laventall Foreman boarded at Southampton and was headed to New York City.
+  Fact 0.295: Mr. Mark Fortune was 64 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.296: Mark Fortune boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.297: Mrs. Mary Fortune (née McDougald) was 60 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.298: Mary Fortune boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.299: Mary Fortune has 10 in the lifeboat/body column.
+  Fact 0.300: Miss Ethel Flora Fortune was 28 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.301: Ethel Flora Fortune boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.302: Ethel Flora Fortune has 10 in the lifeboat/body column.
+  Fact 0.303: Miss Alice Elizabeth Fortune was 24 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.304: Alice Elizabeth Fortune boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.305: Alice Elizabeth Fortune has 10 in the lifeboat/body column.
+  Fact 0.306: Miss Mabel Helen Fortune was 23 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.307: Mabel Helen Fortune boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.308: Mabel Helen Fortune has 10 in the lifeboat/body column.
+  Fact 0.309: Mr. Charles Alexander Fortune was 19 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.310: Charles Alexander Fortune boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.311: Mr. Thomas Parnham Franklin was 37 years old and from London, England, UK.
+  Fact 0.312: Thomas Parnham Franklin boarded at Southampton and was headed to New York City.
+  Fact 0.313: Dr. Henry William Frauenthal was 49 years old and from London, England, UK.
+  Fact 0.314: Henry William Frauenthal boarded at Southampton and was headed to New York City.
+  Fact 0.315: Henry William Frauenthal has 5 in the lifeboat/body column.
+  Fact 0.316: Mrs. Clara Frauenthal (née Heinsheimer) was 42 years old and from London, England, UK.
+  Fact 0.317: Clara Frauenthal boarded at Southampton and was headed to New York City.
+  Fact 0.318: Clara Frauenthal has 5 in the lifeboat/body column.
+  Fact 0.319: Mr. Isaac Gerald Frauenthal was 43 years old and from London, England, UK.
+  Fact 0.320: Isaac Gerald Frauenthal boarded at Southampton and was headed to New York City.
+  Fact 0.321: Isaac Gerald Frauenthal has 5 in the lifeboat/body column.
+  Fact 0.322: Mr. Maximilian Josef Frölicher was 60 years old and from Zürich, Switzerland.
+  Fact 0.323: Maximilian Josef Frölicher boarded at Cherbourg and was headed to New York City.
+  Fact 0.324: Maximilian Josef Frölicher has 5 in the lifeboat/body column.
+  Fact 0.325: Mrs. Margaretha Emerentia Frölicher (née Stehli) was 48 years old and from Zürich, Switzerland.
+  Fact 0.326: Margaretha Emerentia Frölicher boarded at Cherbourg and was headed to New York City.
+  Fact 0.327: Margaretha Emerentia Frölicher has 5 in the lifeboat/body column.
+  Fact 0.328: Miss Hedwig Margaritha Frölicher-Stehli was 22 years old and from Zürich, Switzerland.
+  Fact 0.329: Hedwig Margaritha Frölicher-Stehli boarded at Cherbourg and was headed to New York City.
+  Fact 0.330: Hedwig Margaritha Frölicher-Stehli has 5 in the lifeboat/body column.
+  Fact 0.331: Mr. Jacques Heath Futrelle was 37 years old and from Scituate, Massachusetts, US.
+  Fact 0.332: Jacques Heath Futrelle boarded at Southampton and was headed to Scituate, Massachusetts, US.
+  Fact 0.333: Mrs. Lily May Futrelle (née Peel) was 35 years old and from Scituate, Massachusetts, US.
+  Fact 0.334: Lily May Futrelle boarded at Southampton and was headed to Scituate, Massachusetts, US.
+  Fact 0.335: Mr. Arthur H. Gee was 47 years old and from St. Annes-on-Sea, Lancashire, England, UK.
+  Fact 0.336: Arthur H. Gee boarded at Southampton and was headed to Mexico City, Mexico.
+  Fact 0.337: Arthur H. Gee has 275 in the lifeboat/body column.
+  Fact 0.338: Mrs. Pauline Caroline Gibson (née Boeson) was 44 years old and from New York City.
+  Fact 0.339: Pauline Caroline Gibson boarded at Cherbourg and was headed to New York City.
+  Fact 0.340: Pauline Caroline Gibson has 7 in the lifeboat/body column.
+  Fact 0.341: Miss Dorothy Winifred Gibson was 22 years old and from New York City.
+  Fact 0.342: Dorothy Winifred Gibson boarded at Cherbourg and was headed to New York City.
+  Fact 0.343: Dorothy Winifred Gibson has 7 in the lifeboat/body column.
+  Fact 0.344: Mr. Samuel L. Goldenberg was 47 years old and from Paris, France.
+  Fact 0.345: Samuel L. Goldenberg boarded at Cherbourg and was headed to New York City.
+  Fact 0.346: Samuel L. Goldenberg has 5 in the lifeboat/body column.
+  Fact 0.347: Mrs. Nella Goldenberg (née Wiggins) was 40 years old and from Paris, France.
+  Fact 0.348: Nella Goldenberg boarded at Cherbourg and was headed to New York City.
+  Fact 0.349: Nella Goldenberg has 5 in the lifeboat/body column.
+  Fact 0.350: Mr. George B. Goldschmidt was 71 years old and from New York City.
+  Fact 0.351: George B. Goldschmidt boarded at Cherbourg and was headed to New York City.
+  Fact 0.352: Colonel Archibald Gracie IV was 53 years old and from Washington, D.C., US.
+  Fact 0.353: Archibald Gracie IV boarded at Southampton and was headed to Washington, D.C., US.
+  Fact 0.354: Mr. George Edward Graham was 38 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.355: George Edward Graham boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.356: George Edward Graham has 147 in the lifeboat/body column.
+  Fact 0.357: Mrs. Edith Ware Graham (née Junkins) was 59 years old and from Greenwich, Connecticut, US.
+  Fact 0.358: Edith Ware Graham boarded at Southampton and was headed to Greenwich, Connecticut, US.
+  Fact 0.359: Miss Margaret Edith Graham was 19 years old and from Greenwich, Connecticut, US.
+  Fact 0.360: Margaret Edith Graham boarded at Southampton and was headed to Greenwich, Connecticut, US.
+  Fact 0.361: Elizabeth Weed Shutes was listed as a governess, traveling with the passenger listed before her.
+  Fact 0.362: Elizabeth Weed Shutes was 40 years old and from Greenwich, Connecticut, US.
+  Fact 0.363: Elizabeth Weed Shutes boarded at Southampton and was headed to Greenwich, Connecticut, US.
+  Fact 0.364: Mrs. Blanche Greenfield (née Strouse) was 45 years old and from New York City.
+  Fact 0.365: Blanche Greenfield boarded at Cherbourg and was headed to New York City.
+  Fact 0.366: Blanche Greenfield has 7 in the lifeboat/body column.
+  Fact 0.367: Mr. William Bertram Greenfield was 23 years old and from New York City.
+  Fact 0.368: William Bertram Greenfield boarded at Cherbourg and was headed to New York City.
+  Fact 0.369: William Bertram Greenfield has 7 in the lifeboat/body column.
+  Fact 0.370: Mr. Benjamin Guggenheim was 46 years old and from Paris, France.
+  Fact 0.371: Benjamin Guggenheim boarded at Cherbourg and was headed to New York City.
+  Fact 0.372: Victor Giglio was listed as a valet, traveling with the passenger listed before him.
+  Fact 0.373: Victor Giglio was 24 years old and from Paris, France.
+  Fact 0.374: Victor Giglio boarded at Cherbourg and was headed to New York City.
+  Fact 0.375: René Pernot was listed as a chauffeur, traveling with the passenger listed before him.
+  Fact 0.376: René Pernot was 39 years old and from Paris, France.
+  Fact 0.377: René Pernot boarded at Cherbourg and was headed to New York City.
+  Fact 0.378: Mr. George Achilles Harder was 25 years old and from New York City.
+  Fact 0.379: George Achilles Harder boarded at Cherbourg and was headed to New York City.
+  Fact 0.380: George Achilles Harder has 5 in the lifeboat/body column.
+  Fact 0.381: Mrs. Dorothy Harder (née Annan) was 21 years old and from New York City.
+  Fact 0.382: Dorothy Harder boarded at Cherbourg and was headed to New York City.
+  Fact 0.383: Dorothy Harder has 5 in the lifeboat/body column.
+  Fact 0.384: Mr. Henry Sleeper Harper was 48 years old and from New York City.
+  Fact 0.385: Henry Sleeper Harper boarded at Cherbourg and was headed to New York City.
+  Fact 0.386: Hammad Hassab was listed as a dragoman, traveling with the passenger listed before him.
+  Fact 0.387: Hammad Hassab was 27 years old and from Cairo, Egypt.
+  Fact 0.388: Hammad Hassab boarded at Cherbourg and was headed to New York City.
+  Fact 0.389: Mrs. Myna Harper (née Haxtun) was 49 years old and from New York City.
+  Fact 0.390: Myna Harper boarded at Cherbourg and was headed to New York City.
+  Fact 0.391: Mr. Henry Birkhardt Harris was 45 years old and from New York City.
+  Fact 0.392: Henry Birkhardt Harris boarded at Southampton and was headed to New York City.
+  Fact 0.393: Mrs. Irene Harris (née Wallach) was 35 years old and from New York City.
+  Fact 0.394: Irene Harris boarded at Southampton and was headed to New York City.
+  Fact 0.395: Mr. Walter James Hawksford was 45 years old and from Kingston, Surrey, England, UK.
+  Fact 0.396: Walter James Hawksford boarded at Southampton and was headed to New York City.
+  Fact 0.397: Mr. Charles Melville Hays was 55 years old and from Montreal, Quebec, Canada.
+  Fact 0.398: Charles Melville Hays boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.399: Charles Melville Hays has 307 in the lifeboat/body column.
+  Fact 0.400: Vivian Ponsonby Payne was listed as a clerk, traveling with the passenger listed before him.
+  Fact 0.401: Vivian Ponsonby Payne was 22 years old and from Montreal, Quebec, Canada.
+  Fact 0.402: Vivian Ponsonby Payne boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.403: Mrs. Clara Jennings Hays (née Grigg) was 52 years old and from Montreal, Quebec, Canada.
+  Fact 0.404: Clara Jennings Hays boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.405: Mary Anne Perreault was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.406: Mary Anne Perreault was 33 years old and from Montreal, Quebec, Canada.
+  Fact 0.407: Mary Anne Perreault boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.408: Miss Margaret Bechstein Hays was 24 years old and from New York City.
+  Fact 0.409: Margaret Bechstein Hays boarded at Cherbourg and was headed to New York City.
+  Fact 0.410: Margaret Bechstein Hays has 7 in the lifeboat/body column.
+  Fact 0.411: Mr. Christopher Head was 42 years old and from Chelsea, London, England, UK.
+  Fact 0.412: Christopher Head boarded at Southampton and was headed to New York City.
+  Fact 0.413: Mr. Herbert Henry Hilliard was 44 years old and from Brighton, Massachusetts, US.
+  Fact 0.414: Herbert Henry Hilliard boarded at Southampton and was headed to Brighton, Massachusetts, US.
+  Fact 0.415: Mr. William Edward Hipkins was 55 years old and from Birmingham, West Midlands, England, UK.
+  Fact 0.416: William Edward Hipkins boarded at Southampton and was headed to New York City.
+  Fact 0.417: Mrs. Ida Sophia Hippach (née Fischer) was 44 years old and from Chicago, Illinois, US.
+  Fact 0.418: Ida Sophia Hippach boarded at Cherbourg and was headed to Chicago, Illinois, US.
+  Fact 0.419: Miss Jean Gertrude Hippach was 17 years old and from Chicago, Illinois, US.
+  Fact 0.420: Jean Gertrude Hippach boarded at Cherbourg and was headed to Chicago, Illinois, US.
+  Fact 0.421: Mrs. Anna Louisa Hogeboom (née Andrews) was 51 years old and from Hudson, New York, US.
+  Fact 0.422: Anna Louisa Hogeboom boarded at Cherbourg and was headed to Hudson, New York, US.
+  Fact 0.423: Anna Louisa Hogeboom has 10 in the lifeboat/body column.
+  Fact 0.424: Mr. Alexander Oskar Holverson was 42 years old and from New York City.
+  Fact 0.425: Alexander Oskar Holverson boarded at Southampton and was headed to New York City.
+  Fact 0.426: Alexander Oskar Holverson has 38 in the lifeboat/body column.
+  Fact 0.427: Mrs. Mary Aline Holverson (née Towner) was 35 years old and from New York City.
+  Fact 0.428: Mary Aline Holverson boarded at Southampton and was headed to New York City.
+  Fact 0.429: Mary Aline Holverson has 8 in the lifeboat/body column.
+  Fact 0.430: Mr. Harry Homer, also listed as E. Haven, was 40 years old and from Indianapolis, Indiana, US.
+  Fact 0.431: Harry Homer boarded at Southampton and was headed to Indianapolis, Indiana, US.
+  Fact 0.432: Harry Homer has 15 in the lifeboat/body column.
+  Fact 0.433: Mr. Frederick Maxfield Hoyt was 35 years old and from New York City.
+  Fact 0.434: Frederick Maxfield Hoyt boarded at Southampton and was headed to Stamford, Connecticut, US.
+  Fact 0.435: Mrs. Jane Anne Hoyt (née Forby) was 31 years old and from New York City.
+  Fact 0.436: Jane Anne Hoyt boarded at Southampton and was headed to Stamford, Connecticut, US.
+  Fact 0.437: Mr. William Fisher Hoyt was 42 years old and from New York City.
+  Fact 0.438: William Fisher Hoyt boarded at Cherbourg and was headed to New York City.
+  Fact 0.439: William Fisher Hoyt has 14 in the lifeboat/body column.
+  Fact 0.440: Miss Ann Elizabeth Isham was 50 years old and from Chicago, Illinois, US.
+  Fact 0.441: Ann Elizabeth Isham boarded at Cherbourg and was headed to Chicago, Illinois, US.
+  Fact 0.442: Mr. Joseph Bruce Ismay was 49 years old and from Liverpool, Merseyside, England, UK.
+  Fact 0.443: Joseph Bruce Ismay boarded at Southampton and was headed to New York City.
+  Fact 0.444: John Richard Fry was listed as a valet, traveling with the passenger listed before him.
+  Fact 0.445: John Richard Fry was 39 years old and from Liverpool, Merseyside, England, UK.
+  Fact 0.446: John Richard Fry boarded at Southampton and was headed to New York City.
+  Fact 0.447: William Henry Harrison was listed as a secretary, traveling with the passenger listed before him.
+  Fact 0.448: William Henry Harrison was 45 years old and from Wallasey, Merseyside, England, UK.
+  Fact 0.449: William Henry Harrison boarded at Southampton and was headed to New York City.
+  Fact 0.450: William Henry Harrison has 110 in the lifeboat/body column.
+  Fact 0.451: Mrs. Madeline Eliza Johnson (née Austin) was 40 years old and from London, England, UK.
+  Fact 0.452: Madeline Eliza Johnson boarded at Southampton and was headed to New York, New York, US.
+  Fact 0.453: Madeline Eliza Johnson has 6 in the lifeboat/body column.
+  Fact 0.454: Mr. Samuel James Johnson, later changed to Langston, was 10 years old and from London, England, UK.
+  Fact 0.455: Samuel James Johnson boarded at Southampton and was headed to New York, New York, US.
+  Fact 0.456: Mr. Charles Cresson Jones was 46 years old and from Bennington, Vermont, US.
+  Fact 0.457: Charles Cresson Jones boarded at Southampton and was headed to Bennington, Vermont, US.
+  Fact 0.458: Charles Cresson Jones has 80 in the lifeboat/body column.
+  Fact 0.459: Mr. Henry Forbes Julian was 50 years old and from Torquay, Devon, England, UK.
+  Fact 0.460: Henry Forbes Julian boarded at Southampton and was headed to San Francisco, US.
+  Fact 0.461: Mr. Edward Austin Kent was 58 years old and from Buffalo, New York, US.
+  Fact 0.462: Edward Austin Kent boarded at Cherbourg and was headed to Buffalo, New York, US.
+  Fact 0.463: Edward Austin Kent has 258 in the lifeboat/body column.
+  Fact 0.464: Mr. Frederick R. Kenyon was 41 years old and from Pittsburgh, Pennsylvania, US.
+  Fact 0.465: Frederick R. Kenyon boarded at Southampton and was headed to Pittsburgh, Pennsylvania, US.
+  Fact 0.466: Mrs. Marion Kenyon (née Stauffer) was 31 years old and from Pittsburgh, Pennsylvania, US.
+  Fact 0.467: Marion Kenyon boarded at Southampton and was headed to Pittsburgh, Pennsylvania, US.
+  Fact 0.468: Marion Kenyon has 8 in the lifeboat/body column.
+  Fact 0.469: Mr. Edwin Nelson Kimball Jr. was 42 years old and from Boston, Massachusetts, US.
+  Fact 0.470: Edwin Nelson Kimball Jr. boarded at Southampton and was headed to Boston, Massachusetts, US.
+  Fact 0.471: Edwin Nelson Kimball Jr. has 5 in the lifeboat/body column.
+  Fact 0.472: Mrs. Gertrude Kimball (née Parsons) was 45 years old and from Boston, Massachusetts, US.
+  Fact 0.473: Gertrude Kimball boarded at Southampton and was headed to Boston, Massachusetts, US.
+  Fact 0.474: Gertrude Kimball has 5 in the lifeboat/body column.
+  Fact 0.475: Mr. Herman Klaber was 45 years old and from Portland, Oregon, US.
+  Fact 0.476: Herman Klaber boarded at Southampton and was headed to Portland, Oregon, US.
+  Fact 0.477: Ms. Maxine Jane Langston was 25 years old and from Duncansville, Pennsylvania, US.
+  Fact 0.478: Maxine Jane Langston boarded at Southampton and was headed to Duncansivlle, Pennsylvania (as spelled in the source).
+  Fact 0.479: Mr. Fletcher Fellows Lambert-Williams was 43 years old and from London, England, UK.
+  Fact 0.480: Fletcher Fellows Lambert-Williams boarded at Southampton and was headed to Newark, New Jersey, US.
+  Fact 0.481: Dr. Alice Leader (née Farnham) was 49 years old and from New York City.
+  Fact 0.482: Alice Leader boarded at Southampton and was headed to New York City.
+  Fact 0.483: Alice Leader has 8 in the lifeboat/body column.
+  Fact 0.484: Lucy Noël Martha Leslie, Countess of Rothes (née Dyer-Edwardes), was 27 years old and from Vancouver, British Columbia, Canada.
+  Fact 0.485: Lucy Noël Martha Leslie boarded at Southampton and was headed to Vancouver, British Columbia, Canada.
+  Fact 0.486: Lucy Noël Martha Leslie has 8 in the lifeboat/body column.
+  Fact 0.487: Roberta Elizabeth Mary 'Cissy' Maioni was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.488: Roberta Elizabeth Mary 'Cissy' Maioni was 20 years old and from Vancouver, British Columbia, Canada.
+  Fact 0.489: Roberta Elizabeth Mary 'Cissy' Maioni boarded at Southampton and was headed to Vancouver, British Columbia, Canada.
+  Fact 0.490: Roberta Elizabeth Mary 'Cissy' Maioni has 8 in the lifeboat/body column.
+  Fact 0.491: Mr. Ervin G. Lewy was 31 years old and from Chicago, Illinois, US.
+  Fact 0.492: Ervin G. Lewy boarded at Cherbourg and was headed to Chicago, Illinois, US.
+  Fact 0.493: Mr. Erik Gustav Lindeberg-Lind, also listed as Edward Lingrey, was 42 years old and from Jordanstorp, Södermanland, Sweden.
+  Fact 0.494: Erik Gustav Lindeberg-Lind boarded at Southampton and was headed to New York City.
+  Fact 0.495: Mrs. Sigrid Lindström (née Posse) was 55 years old and from Stockholm, Sweden.
+  Fact 0.496: Sigrid Lindström boarded at Cherbourg and was headed to New York City.
+  Fact 0.497: Sigrid Lindström has 6 in the lifeboat/body column.
+  Fact 0.498: Mrs. Elizabeth Lindsey Lines (née James) was 50 years old and from Paris, France.
+  Fact 0.499: Elizabeth Lindsey Lines boarded at Cherbourg and was headed to Hanover, New Hampshire, US.
+  Fact 0.500: Elizabeth Lindsey Lines has 9 in the lifeboat/body column.
+  Fact 0.501: Miss Mary Conover Lines was 16 years old and from Paris, France.
+  Fact 0.502: Mary Conover Lines boarded at Cherbourg and was headed to Hanover, New Hampshire, US.
+  Fact 0.503: Mary Conover Lines has 9 in the lifeboat/body column.
+  Fact 0.504: Mr. Milton Clyde Long was 29 years old and from Springfield, Massachusetts, US.
+  Fact 0.505: Milton Clyde Long boarded at Southampton and was headed to Springfield, Massachusetts, US.
+  Fact 0.506: Milton Clyde Long has 126 in the lifeboat/body column.
+  Fact 0.507: Miss Gretchen Fiske Longley was 21 years old and from Hudson, New York, US.
+  Fact 0.508: Gretchen Fiske Longley boarded at Cherbourg and was headed to Hudson, New York, US.
+  Fact 0.509: Gretchen Fiske Longley has 10 in the lifeboat/body column.
+  Fact 0.510: Mr. Joseph Holland Loring was 30 years old and from London, England, UK.
+  Fact 0.511: Joseph Holland Loring boarded at Southampton and was headed to New York City.
+  Fact 0.512: Miss Georgette Alexandra Madill was 16 years old and from St. Louis, Missouri, US.
+  Fact 0.513: Georgette Alexandra Madill boarded at Southampton and was headed to St. Louis, Missouri, US.
+  Fact 0.514: Mr. John Edward Maguire was 30 years old and from Brockton, Massachusetts, US.
+  Fact 0.515: John Edward Maguire boarded at Southampton and was headed to Brockton, Massachusetts, US.
+  Fact 0.516: Mr. Pierre Maréchal Sr. was 28 years old and from Paris, France.
+  Fact 0.517: Pierre Maréchal Sr. boarded at Cherbourg and was headed to New York City.
+  Fact 0.518: Pierre Maréchal Sr. has 7 in the lifeboat/body column.
+  Fact 0.519: Mr. Daniel Warner Marvin was 18 years old and from New York City.
+  Fact 0.520: Daniel Warner Marvin boarded at Southampton and was headed to New York City.
+  Fact 0.521: Mrs. Mary Graham Carmichael Marvin (née Farquarson) was 18 years old and from New York City.
+  Fact 0.522: Mary Graham Carmichael Marvin boarded at Southampton and was headed to New York City.
+  Fact 0.523: Mary Graham Carmichael Marvin has 10 in the lifeboat/body column.
+  Fact 0.524: Miss Bertha Antonine Mayné was 24 years old and from Brussels, Belgium.
+  Fact 0.525: Bertha Antonine Mayné boarded at Cherbourg and was headed to Montreal, Quebec, Canada.
+  Fact 0.526: Bertha Antonine Mayné has 6 in the lifeboat/body column.
+  Fact 0.527: Mr. Thomas Francis McCaffry was 46 years old and from Vancouver, British Columbia, Canada.
+  Fact 0.528: Thomas Francis McCaffry boarded at Southampton and was headed to Vancouver, British Columbia, Canada.
+  Fact 0.529: Thomas Francis McCaffry has 292 in the lifeboat/body column.
+  Fact 0.530: Mr. Timothy J. McCarthy was 54 years old and from Dorchester, Massachusetts, US.
+  Fact 0.531: Timothy J. McCarthy boarded at Southampton and was headed to Dorchester, Massachusetts, US.
+  Fact 0.532: Timothy J. McCarthy has 175 in the lifeboat/body column.
+  Fact 0.533: Mr. James Robert McGough was 35 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.534: James Robert McGough boarded at Southampton and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.535: James Robert McGough has 7 in the lifeboat/body column.
+  Fact 0.536: Mr. Edgar Joseph Meyer was 28 years old and from New York City.
+  Fact 0.537: Edgar Joseph Meyer boarded at Cherbourg and was headed to New York City.
+  Fact 0.538: Mrs. Leila Meyer (née Saks) was 25 years old and from New York City.
+  Fact 0.539: Leila Meyer boarded at Cherbourg and was headed to New York City.
+  Fact 0.540: Leila Meyer has 6 in the lifeboat/body column.
+  Fact 0.541: Mr. Francis Davis Millet was 65 years old and from East Bridgewater, Massachusetts, US.
+  Fact 0.542: Francis Davis Millet boarded at Cherbourg and was headed to East Bridgewater, Massachusetts, US.
+  Fact 0.543: Francis Davis Millet has 249 in the lifeboat/body column.
+  Fact 0.544: Dr. William Edward Minahan was 44 years old and from Fond du Lac, Wisconsin, US.
+  Fact 0.545: William Edward Minahan boarded at Southampton and was headed to Fond du Lac, Wisconsin, US.
+  Fact 0.546: William Edward Minahan has 230 in the lifeboat/body column.
+  Fact 0.547: Mrs. Lillian E. Minahan (née Thorpe) was 37 years old and from Fond du Lac, Wisconsin, US.
+  Fact 0.548: Lillian E. Minahan boarded at Southampton and was headed to Fond du Lac, Wisconsin, US.
+  Fact 0.549: Lillian E. Minahan has 14 in the lifeboat/body column.
+  Fact 0.550: Miss Daisy E. Minahan was 33 years old and from Fond du Lac, Wisconsin, US.
+  Fact 0.551: Daisy E. Minahan boarded at Southampton and was headed to Fond du Lac, Wisconsin, US.
+  Fact 0.552: Daisy E. Minahan has 14 in the lifeboat/body column.
+  Fact 0.553: Mr. Philipp Edmund Mock was 30 years old and from New York City.
+  Fact 0.554: Philipp Edmund Mock boarded at Cherbourg and was headed to New York City.
+  Fact 0.555: Philipp Edmund Mock has 11 in the lifeboat/body column.
+  Fact 0.556: Mr. Harry Markland Molson was 55 years old and from Montreal, Quebec, Canada.
+  Fact 0.557: Harry Markland Molson boarded at Southampton and was headed to Montreal, Quebec, Canada.
+  Fact 0.558: Mr. Clarence Bloomfield Moore was 47 years old and from Washington, D.C., US.
+  Fact 0.559: Clarence Bloomfield Moore boarded at Southampton and was headed to Washington, D.C., US.
+  Fact 0.560: Charles Henry Harrington was listed as a valet, traveling with the passenger listed before him.
+  Fact 0.561: Charles Henry Harrington was 37 years old and from Washington, D.C., US.
+  Fact 0.562: Charles Henry Harrington boarded at Southampton and was headed to Washington, D.C., US.
+  Fact 0.563: Mr. Charles Natsch was 36 years old and from Brooklyn, New York, US.
+  Fact 0.564: Charles Natsch boarded at Cherbourg and was headed to Brooklyn, New York, US.
+  Fact 0.565: Mr. Arthur Webster Newell was 58 years old and from Lexington, Massachusetts, US.
+  Fact 0.566: Arthur Webster Newell boarded at Cherbourg and was headed to Lexington, Massachusetts, US.
+  Fact 0.567: Arthur Webster Newell has 122 in the lifeboat/body column.
+  Fact 0.568: Miss Madeleine Newell was 31 years old and from Lexington, Massachusetts, US.
+  Fact 0.569: Madeleine Newell boarded at Cherbourg and was headed to Lexington, Massachusetts, US.
+  Fact 0.570: Madeleine Newell has 6 in the lifeboat/body column.
+  Fact 0.571: Miss Marjorie Anne Newell was 23 years old and from Lexington, Massachusetts, US.
+  Fact 0.572: Marjorie Anne Newell boarded at Cherbourg and was headed to Lexington, Massachusetts, US.
+  Fact 0.573: Marjorie Anne Newell has 6 in the lifeboat/body column.
+  Fact 0.574: Miss Helen Monypeny Newsom was 19 years old and from New York City.
+  Fact 0.575: Helen Monypeny Newsom boarded at Southampton and was headed to New York City.
+  Fact 0.576: Helen Monypeny Newsom has 5 in the lifeboat/body column.
+  Fact 0.577: Mr. Arthur Ernest Nicholson was 64 years old and from Shanklin, Isle of Wight, England, UK.
+  Fact 0.578: Arthur Ernest Nicholson boarded at Southampton and was headed to New York City.
+  Fact 0.579: Arthur Ernest Nicholson has 263 in the lifeboat/body column.
+  Fact 0.580: Mr. Alfred Nourney was 20 years old and from Cologne, German Empire.
+  Fact 0.581: Alfred Nourney boarded at Cherbourg and was headed to New York City.
+  Fact 0.582: Alfred Nourney has 7 in the lifeboat/body column.
+  Fact 0.583: Mr. Alfred Fernand Omont was 29 years old and from Le Havre, France.
+  Fact 0.584: Alfred Fernand Omont boarded at Cherbourg and was headed to New York City.
+  Fact 0.585: Alfred Fernand Omont has 7 in the lifeboat/body column.
+  Fact 0.586: Mr. Engelhart Cornelius Ostby was 64 years old and from Providence, Rhode Island, US.
+  Fact 0.587: Engelhart Cornelius Ostby boarded at Southampton and was headed to Providence, Rhode Island, US.
+  Fact 0.588: Engelhart Cornelius Ostby has 234 in the lifeboat/body column.
+  Fact 0.589: Miss Helene Ragnhild Ostby was 22 years old and from Providence, Rhode Island, US.
+  Fact 0.590: Helene Ragnhild Ostby boarded at Southampton and was headed to Providence, Rhode Island, US.
+  Fact 0.591: Helene Ragnhild Ostby has 5 in the lifeboat/body column.
+  Fact 0.592: Mr. Servando José Florentino Ovies y Rodriguez was 36 years old and from Havana, Cuba.
+  Fact 0.593: Servando José Florentino Ovies y Rodriguez boarded at Cherbourg and was headed to Havana, Cuba.
+  Fact 0.594: Servando José Florentino Ovies y Rodriguez has 189 in the lifeboat/body column.
+  Fact 0.595: Mr. William Henry Marsh Parr was 29 years old and from Belfast, Ireland, UK.
+  Fact 0.596: William Henry Marsh Parr boarded at Belfast and was headed to New York City.
+  Fact 0.597: Mr. Austin Partner was 40 years old and from Tolworth, London, England, UK.
+  Fact 0.598: Austin Partner boarded at Southampton and was headed to Toronto, Ontario, Canada.
+  Fact 0.599: Austin Partner has 166 in the lifeboat/body column.
+  Fact 0.600: Mr. Thomas Clinton Pears was 29 years old and from Isleworth, London, England, UK.
+  Fact 0.601: Thomas Clinton Pears boarded at Southampton and was headed to New York City.
+  Fact 0.602: Mrs. Edith Pears (née Wearne) was 22 years old and from Isleworth, London, England, UK.
+  Fact 0.603: Edith Pears boarded at Southampton and was headed to New York City.
+  Fact 0.604: Edith Pears has 8 in the lifeboat/body column.
+  Fact 0.605: Mr. Victor Peñasco y Castellana was 24 years old and from Madrid, Spain.
+  Fact 0.606: Victor Peñasco y Castellana boarded at Cherbourg and was headed to New York City.
+  Fact 0.607: Mrs. Maria Josefa Peñasco y Castellana (née Perez de Soto y Vallejo) was 22 years old and from Madrid, Spain.
+  Fact 0.608: Maria Josefa Peñasco y Castellana boarded at Cherbourg and was headed to New York City.
+  Fact 0.609: Maria Josefa Peñasco y Castellana has 8 in the lifeboat/body column.
+  Fact 0.610: Doña Fermina Oliva y Ocana was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.611: Doña Fermina Oliva y Ocana was 39 years old and from Madrid, Spain.
+  Fact 0.612: Doña Fermina Oliva y Ocana boarded at Cherbourg and was headed to New York City.
+  Fact 0.613: Doña Fermina Oliva y Ocana has 8 in the lifeboat/body column.
+  Fact 0.614: Major Arthur Godfrey Peuchen was 52 years old and from Toronto, Ontario, Canada.
+  Fact 0.615: Arthur Godfrey Peuchen boarded at Southampton and was headed to Toronto, Ontario, Canada.
+  Fact 0.616: Arthur Godfrey Peuchen has 6 in the lifeboat/body column.
+  Fact 0.617: Mr. Walter Chamberlain Porter was 46 years old and from Worcester, Massachusetts, US.
+  Fact 0.618: Walter Chamberlain Porter boarded at Southampton and was headed to Worcester, Massachusetts, US.
+  Fact 0.619: Walter Chamberlain Porter has 207 in the lifeboat/body column.
+  Fact 0.620: Mrs. Lily Alexenia Potter (née Wilson) was 56 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.621: Lily Alexenia Potter boarded at Cherbourg and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.622: Lily Alexenia Potter has 7 in the lifeboat/body column.
+  Fact 0.623: The Honourable Mr. Johan George Reuchlin was 38 years old and from Rotterdam, The Netherlands.
+  Fact 0.624: Johan George Reuchlin boarded at Southampton and was headed to New York City.
+  Fact 0.625: Mr. George Alexander Lucien Rheims was 36 years old and from Paris, France.
+  Fact 0.626: George Alexander Lucien Rheims boarded at Southampton and was headed to New York City.
+  Fact 0.627: Mrs. Elisabeth Walton Robert (née McMillan) was 43 years old and from St. Louis, Missouri, US.
+  Fact 0.628: Elisabeth Walton Robert boarded at Southampton and was headed to St. Louis, Missouri, US.
+  Fact 0.629: Emilie Kreuchen was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.630: Emilie Kreuchen was 29 years old and from St. Louis, Missouri, US.
+  Fact 0.631: Emilie Kreuchen boarded at Southampton and was headed to St. Louis, Missouri, US.
+  Fact 0.632: Mr. Washington Augustus Roebling II was 31 years old and from Trenton, New Jersey, US.
+  Fact 0.633: Washington Augustus Roebling II boarded at Southampton and was headed to Trenton, New Jersey, US.
+  Fact 0.634: Mr. Charles Hallance Romaine, also listed as C. Rolmane, was 45 years old and from New York City.
+  Fact 0.635: Charles Hallance Romaine boarded at Southampton and was headed to New York City.
+  Fact 0.636: Charles Hallance Romaine has 9 in the lifeboat/body column.
+  Fact 0.637: Mr. Hugh Roscoe Rood was 38 years old and from Seattle, Washington, US.
+  Fact 0.638: Hugh Roscoe Rood boarded at Southampton and was headed to Seattle, Washington, US.
+  Fact 0.639: Miss Edith Louise Rosenbaum was 34 years old and from Paris, France.
+  Fact 0.640: Edith Louise Rosenbaum boarded at Cherbourg and was headed to Cincinnati, Ohio, US.
+  Fact 0.641: Edith Louise Rosenbaum has 11 in the lifeboat/body column.
+  Fact 0.642: Mr. George Rosenshine, also listed as George Thorne, was 46 years old and from New York City.
+  Fact 0.643: George Rosenshine boarded at Cherbourg and was headed to New York City.
+  Fact 0.644: George Rosenshine has 16 in the lifeboat/body column.
+  Fact 0.645: Mr. John Hugo Ross was 36 years old and from Winnipeg, Manitoba, Canada.
+  Fact 0.646: John Hugo Ross boarded at Southampton and was headed to Winnipeg, Manitoba, Canada.
+  Fact 0.647: Mr. Martin Rothschild was 46 years old and from New York City.
+  Fact 0.648: Martin Rothschild boarded at Cherbourg and was headed to New York City.
+  Fact 0.649: Mrs. Elizabeth Jane Anne Rothschild (née Barrett) was 54 years old and from New York City.
+  Fact 0.650: Elizabeth Jane Anne Rothschild boarded at Cherbourg and was headed to New York City.
+  Fact 0.651: Elizabeth Jane Anne Rothschild has 6 in the lifeboat/body column.
+  Fact 0.652: Mr. Alfred G. Rowe was 59 years old and from Liverpool, Merseyside, England, UK.
+  Fact 0.653: Alfred G. Rowe boarded at Southampton and was headed to New York City.
+  Fact 0.654: Alfred G. Rowe has 109 in the lifeboat/body column.
+  Fact 0.655: Mr. Arthur Larned Ryerson was 61 years old and from Cooperstown, New York, US.
+  Fact 0.656: Arthur Larned Ryerson boarded at Cherbourg and was headed to Cooperstown, New York, US.
+  Fact 0.657: Mrs. Emily Maria Ryerson (née Borie) was 48 years old and from Cooperstown, New York, US.
+  Fact 0.658: Emily Maria Ryerson boarded at Cherbourg and was headed to Cooperstown, New York, US.
+  Fact 0.659: Victorine Chaudanson was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.660: Victorine Chaudanson was 36 years old and from Cooperstown, New York, US.
+  Fact 0.661: Victorine Chaudanson boarded at Cherbourg and was headed to Cooperstown, New York, US.
+  Fact 0.662: Miss Susan Parker 'Suzette' Ryerson was 21 years old and from Cooperstown, New York, US.
+  Fact 0.663: Susan Parker 'Suzette' Ryerson boarded at Cherbourg and was headed to Cooperstown, New York, US.
+  Fact 0.664: Miss Emily Borie Ryerson was 18 years old and from Cooperstown, New York, US.
+  Fact 0.665: Emily Borie Ryerson boarded at Cherbourg and was headed to Cooperstown, New York, US.
+  Fact 0.666: Master John Borie 'Jack' Ryerson was 13 years old and from Cooperstown, New York, US.
+  Fact 0.667: John Borie 'Jack' Ryerson boarded at Cherbourg and was headed to Cooperstown, New York, US.
+  Fact 0.668: Grace Scott Bowen was listed as a governess, traveling with the passenger listed before her.
+  Fact 0.669: Grace Scott Bowen was 45 years old and from Cooperstown, New York, US.
+  Fact 0.670: Grace Scott Bowen boarded at Cherbourg and was headed to Cooperstown, New York, US.
+  Fact 0.671: Mr. Adolphe Saalfeld was 47 years old and from Manchester, England, UK.
+  Fact 0.672: Adolphe Saalfeld boarded at Southampton and was headed to New York City.
+  Fact 0.673: Mr. Abraham Lincoln Salomon was 43 years old and from New York City.
+  Fact 0.674: Abraham Lincoln Salomon boarded at Cherbourg and was headed to New York City.
+  Fact 0.675: Mrs. Emma Schabert (née Mock) was 35 years old and from Hamburg, German Empire.
+  Fact 0.676: Emma Schabert boarded at Southampton and was headed to New York City.
+  Fact 0.677: Emma Schabert has 11 in the lifeboat/body column.
+  Fact 0.678: Mr. Frederic Kimber Seward was 34 years old and from New York City.
+  Fact 0.679: Frederic Kimber Seward boarded at Southampton and was headed to New York City.
+  Fact 0.680: Frederic Kimber Seward has 7 in the lifeboat/body column.
+  Fact 0.681: Mr. Spencer Victor Silverthorne was 35 years old and from St. Louis, Missouri, US.
+  Fact 0.682: Spencer Victor Silverthorne boarded at Southampton and was headed to St. Louis, Missouri, US.
+  Fact 0.683: Spencer Victor Silverthorne has 5 in the lifeboat/body column.
+  Fact 0.684: Mr. William Baird Silvey was 50 years old and from Duluth, Minnesota, US.
+  Fact 0.685: William Baird Silvey boarded at Cherbourg and was headed to Duluth, Minnesota, US.
+  Fact 0.686: Mrs. Alice Silvey (née Munger) was 39 years old and from Duluth, Minnesota, US.
+  Fact 0.687: Alice Silvey boarded at Cherbourg and was headed to Duluth, Minnesota, US.
+  Fact 0.688: Alice Silvey has 11 in the lifeboat/body column.
+  Fact 0.689: Colonel Alfons Simonius-Blumer was 56 years old and from Basel, Switzerland.
+  Fact 0.690: Alfons Simonius-Blumer boarded at Southampton and was headed to New York City.
+  Fact 0.691: Mr. William Thompson Sloper was 28 years old and from New Britain, Connecticut, US.
+  Fact 0.692: William Thompson Sloper boarded at Southampton and was headed to New Britain, Connecticut, US.
+  Fact 0.693: William Thompson Sloper has 7 in the lifeboat/body column.
+  Fact 0.694: Mr. John Montgomery Smart was 56 years old and from Kildale, North Yorkshire, England, UK.
+  Fact 0.695: John Montgomery Smart boarded at Southampton and was headed to New York City.
+  Fact 0.696: Mr. James Clinch Smith was 56 years old and from Paris, France.
+  Fact 0.697: James Clinch Smith boarded at Cherbourg and was headed to Long Island, New York, US.
+  Fact 0.698: Mr. Lucien Philip Smith was 24 years old and from Huntington, West Virginia, US.
+  Fact 0.699: Lucien Philip Smith boarded at Cherbourg and was headed to Huntington, West Virginia, US.
+  Fact 0.700: Mrs. Mary Eloise Smith (née Hughes) was 18 years old and from Huntington, West Virginia, US.
+  Fact 0.701: Mary Eloise Smith boarded at Cherbourg and was headed to Huntington, West Virginia, US.
+  Fact 0.702: Mary Eloise Smith has 6 in the lifeboat/body column.
+  Fact 0.703: Mr. Richard William Smith was 57 years old and from Streatham, London, England, UK.
+  Fact 0.704: Richard William Smith boarded at Southampton and was headed to New York City.
+  Fact 0.705: Mr. John Pillsbury Snyder was 24 years old and from Minneapolis, Minnesota, US.
+  Fact 0.706: John Pillsbury Snyder boarded at Southampton and was headed to Minneapolis, Minnesota, US.
+  Fact 0.707: John Pillsbury Snyder has 7 in the lifeboat/body column.
+  Fact 0.708: Mrs. Nellie Snyder (née Stevenson) was 23 years old and from Minneapolis, Minnesota, US.
+  Fact 0.709: Nellie Snyder boarded at Southampton and was headed to Minneapolis, Minnesota, US.
+  Fact 0.710: Nellie Snyder has 7 in the lifeboat/body column.
+  Fact 0.711: Mr. Frederic Oakley Spedden was 45 years old and from Tuxedo Park, New York, US.
+  Fact 0.712: Frederic Oakley Spedden boarded at Cherbourg and was headed to Tuxedo Park, New York, US.
+  Fact 0.713: Mrs. Margaretta Corning Spedden (née Stone) was 39 years old and from Tuxedo Park, New York, US.
+  Fact 0.714: Margaretta Corning Spedden boarded at Cherbourg and was headed to Tuxedo Park, New York, US.
+  Fact 0.715: Helen Alice Wilson was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.716: Helen Alice Wilson was 31 years old and from Tuxedo Park, New York, US.
+  Fact 0.717: Helen Alice Wilson boarded at Cherbourg and was headed to Tuxedo Park, New York, US.
+  Fact 0.718: Master Robert Douglas Spedden was 6 years old and from Tuxedo Park, New York, US.
+  Fact 0.719: Robert Douglas Spedden boarded at Cherbourg and was headed to Tuxedo Park, New York, US.
+  Fact 0.720: Elizabeth Margaret Burns was listed as a nurse, traveling with the passenger listed before her.
+  Fact 0.721: Elizabeth Margaret Burns was 41 years old and from Tuxedo Park, New York, US.
+  Fact 0.722: Elizabeth Margaret Burns boarded at Cherbourg and was headed to Tuxedo Park, New York, US.
+  Fact 0.723: Mr. William Augustus Spencer was 57 years old and from New York City.
+  Fact 0.724: William Augustus Spencer boarded at Cherbourg and was headed to New York City.
+  Fact 0.725: Mrs. Marie Eugénie Spencer (née Demougeot) was 45 years old and from New York City.
+  Fact 0.726: Marie Eugénie Spencer boarded at Cherbourg and was headed to New York City.
+  Fact 0.727: Marie Eugénie Spencer has 6 in the lifeboat/body column.
+  Fact 0.728: Eugenie Elise Lurette was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.729: Eugenie Elise Lurette was 59 years old and from New York City.
+  Fact 0.730: Eugenie Elise Lurette boarded at Cherbourg and was headed to New York City.
+  Fact 0.731: Eugenie Elise Lurette has 6 in the lifeboat/body column.
+  Fact 0.732: Dr. Max Stähelin-Maeglin was 32 years old and from Basel, Switzerland.
+  Fact 0.733: Max Stähelin-Maeglin boarded at Southampton and was headed to New York City.
+  Fact 0.734: Mr. William Thomas Stead was 62 years old and from London, England, UK.
+  Fact 0.735: William Thomas Stead boarded at Southampton and was headed to New York City.
+  Fact 0.736: Mr. Charles Emil Henry Stengel was 54 years old and from Newark, New Jersey, US.
+  Fact 0.737: Charles Emil Henry Stengel boarded at Cherbourg and was headed to Newark, New Jersey, US.
+  Fact 0.738: Mrs. Annie May Stengel (née Morris) was 44 years old and from Newark, New Jersey, US.
+  Fact 0.739: Annie May Stengel boarded at Cherbourg and was headed to Newark, New Jersey, US.
+  Fact 0.740: Annie May Stengel has 5 in the lifeboat/body column.
+  Fact 0.741: Mrs. Martha Stephenson (née Eustis) was 52 years old and from Paris, France.
+  Fact 0.742: Martha Stephenson boarded at Cherbourg and was headed to Haverford, Pennsylvania, US.
+  Fact 0.743: Mr. Albert A. Stewart was 54 years old and from Cincinnati, Ohio, US.
+  Fact 0.744: Albert A. Stewart boarded at Cherbourg and was headed to Gallipolis, Ohio, US.
+  Fact 0.745: Mrs. Martha Evelyn Stone (née Stevens) was 62 years old and from New York City.
+  Fact 0.746: Martha Evelyn Stone boarded at Southampton and was headed to New York City.
+  Fact 0.747: Martha Evelyn Stone has 6 in the lifeboat/body column.
+  Fact 0.748: Amelie 'Amelia' Icard was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.749: Amelie 'Amelia' Icard was 38 years old and from New York City.
+  Fact 0.750: Amelie 'Amelia' Icard boarded at Southampton and was headed to New York City.
+  Fact 0.751: Amelie 'Amelia' Icard has 6 in the lifeboat/body column.
+  Fact 0.752: Mr. Isidor Straus was 67 years old and from New York City.
+  Fact 0.753: Isidor Straus boarded at Southampton and was headed to New York City.
+  Fact 0.754: Isidor Straus has 96 in the lifeboat/body column.
+  Fact 0.755: John Farthing was listed as a valet, traveling with the passenger listed before him.
+  Fact 0.756: John Farthing was 57 years old and from New York City.
+  Fact 0.757: John Farthing boarded at Southampton and was headed to New York City.
+  Fact 0.758: Mrs. Rosalie Ida Straus (née Blun) was 63 years old and from New York City.
+  Fact 0.759: Rosalie Ida Straus boarded at Southampton and was headed to New York City.
+  Fact 0.760: Ellen Bird was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.761: Ellen Bird was 31 years old and from New York City.
+  Fact 0.762: Ellen Bird boarded at Southampton and was headed to New York City.
+  Fact 0.763: Ellen Bird has 8 in the lifeboat/body column.
+  Fact 0.764: Mr. Frederick Sutton was 61 years old and from Haddonfield, New Jersey, US.
+  Fact 0.765: Frederick Sutton boarded at Southampton and was headed to Haddonfield, New Jersey, US.
+  Fact 0.766: Frederick Sutton has 46 in the lifeboat/body column.
+  Fact 0.767: Mrs. Margaret Welles Swift (née Barron) was 46 years old and from New York City.
+  Fact 0.768: Margaret Welles Swift boarded at Southampton and was headed to New York City.
+  Fact 0.769: Margaret Welles Swift has 8 in the lifeboat/body column.
+  Fact 0.770: Mr. Emil Taussig was 52 years old and from New York City.
+  Fact 0.771: Emil Taussig boarded at Southampton and was headed to New York City.
+  Fact 0.772: Mrs. Tillie Taussig (née Mandelbaum) was 39 years old and from New York City.
+  Fact 0.773: Tillie Taussig boarded at Southampton and was headed to New York City.
+  Fact 0.774: Tillie Taussig has 8 in the lifeboat/body column.
+  Fact 0.775: Miss Ruth Taussig was 18 years old and from New York City.
+  Fact 0.776: Ruth Taussig boarded at Southampton and was headed to New York City.
+  Fact 0.777: Ruth Taussig has 8 in the lifeboat/body column.
+  Fact 0.778: Mr. Elmer Zebley Taylor was 48 years old and from London, England, UK.
+  Fact 0.779: Elmer Zebley Taylor boarded at Southampton and was headed to East Orange, New Jersey, US.
+  Fact 0.780: Elmer Zebley Taylor has 5 in the lifeboat/body column.
+  Fact 0.781: Mrs. Juliet Cummins Taylor (née Wright) was 48 years old and from London, England, UK.
+  Fact 0.782: Juliet Cummins Taylor boarded at Southampton and was headed to East Orange, New Jersey, US.
+  Fact 0.783: Juliet Cummins Taylor has 5 in the lifeboat/body column.
+  Fact 0.784: Mr. John Borland Thayer II was 49 years old and from Haverford, Pennsylvania, US.
+  Fact 0.785: John Borland Thayer II boarded at Cherbourg and was headed to Haverford, Pennsylvania, US.
+  Fact 0.786: Mrs. Marian Longsteth Thayer (née Morris) was 39 years old and from Haverford, Pennsylvania, US.
+  Fact 0.787: Marian Longsteth Thayer boarded at Cherbourg and was headed to Haverford, Pennsylvania, US.
+  Fact 0.788: Margaret Fleming was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.789: Margaret Fleming was 42 years old and from Haverford, Pennsylvania, US.
+  Fact 0.790: Margaret Fleming boarded at Cherbourg and was headed to Haverford, Pennsylvania, US.
+  Fact 0.791: Mr. John Borland 'Jack' Thayer III was 17 years old and from Haverford, Pennsylvania, US.
+  Fact 0.792: John Borland 'Jack' Thayer III boarded at Cherbourg and was headed to Haverford, Pennsylvania, US.
+  Fact 0.793: Mrs. Gertrude Maybelle Thorne (née McMinn) was 37 years old and from New York City, New York, US.
+  Fact 0.794: Gertrude Maybelle Thorne boarded at Cherbourg and was headed to New York City, New York, US.
+  Fact 0.795: Mr. Gilbert Milligan Tucker Jr. was 31 years old and from Albany, New York, US.
+  Fact 0.796: Gilbert Milligan Tucker Jr. boarded at Cherbourg and was headed to Albany, New York, US.
+  Fact 0.797: Gilbert Milligan Tucker Jr. has 7 in the lifeboat/body column.
+  Fact 0.798: Don Manuel E. Uruchurtu was 40 years old and from Mexico City, Mexico.
+  Fact 0.799: Manuel E. Uruchurtu boarded at Cherbourg and was headed to Mexico City, Mexico.
+  Fact 0.800: Mr. Wyckoff Van der Hoef was 61 years old and from Brooklyn, New York, US.
+  Fact 0.801: Wyckoff Van der Hoef boarded at Belfast and was headed to Brooklyn, New York, US.
+  Fact 0.802: Wyckoff Van der Hoef has 245 in the lifeboat/body column.
+  Fact 0.803: Mr. William Anderson Walker was 48 years old and from East Orange, New Jersey, US.
+  Fact 0.804: William Anderson Walker boarded at Southampton and was headed to East Orange, New Jersey, US.
+  Fact 0.805: Mr. Frank Manley Warren was 63 years old and from Portland, Oregon, US.
+  Fact 0.806: Frank Manley Warren boarded at Cherbourg and was headed to Portland, Oregon, US.
+  Fact 0.807: Mrs. Anna Sophia Warren (née Atkinson) was 60 years old and from Portland, Oregon, US.
+  Fact 0.808: Anna Sophia Warren boarded at Cherbourg and was headed to Portland, Oregon, US.
+  Fact 0.809: Anna Sophia Warren has 5 in the lifeboat/body column.
+  Fact 0.810: Colonel John Weir was 59 years old and from New York City.
+  Fact 0.811: John Weir boarded at Southampton and was headed to New York City.
+  Fact 0.812: Mr. Percival Wayland White was 54 years old and from Brunswick, Maine, US.
+  Fact 0.813: Percival Wayland White boarded at Southampton and was headed to Brunswick, Maine, US.
+  Fact 0.814: Mr. Richard Frasar White was 21 years old and from Brunswick, Maine, US.
+  Fact 0.815: Richard Frasar White boarded at Southampton and was headed to Brunswick, Maine, US.
+  Fact 0.816: Richard Frasar White has 169 in the lifeboat/body column.
+  Fact 0.817: Mrs. Ella White (née Holmes) was 55 years old and from New York City.
+  Fact 0.818: Ella White boarded at Cherbourg and was headed to New York City.
+  Fact 0.819: Ella White has 8 in the lifeboat/body column.
+  Fact 0.820: Amelia Mayo 'Nellie' Bessette was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.821: Amelia Mayo 'Nellie' Bessette was 39 years old and from New York City.
+  Fact 0.822: Amelia Mayo 'Nellie' Bessette boarded at Cherbourg and was headed to New York City.
+  Fact 0.823: Amelia Mayo 'Nellie' Bessette has 8 in the lifeboat/body column.
+  Fact 0.824: Sante Righini was listed as a manservant, traveling with the passenger listed before him.
+  Fact 0.825: Sante Righini was 22 years old and from New York City.
+  Fact 0.826: Sante Righini boarded at Cherbourg and was headed to New York City.
+  Fact 0.827: Sante Righini has 232 in the lifeboat/body column.
+  Fact 0.828: Colonel George Dennick Wick was 58 years old and from Youngstown, Ohio, US.
+  Fact 0.829: George Dennick Wick boarded at Southampton and was headed to Youngstown, Ohio, US.
+  Fact 0.830: Mrs. Mary Wick (née Hitchcock) was 45 years old and from Youngstown, Ohio, US.
+  Fact 0.831: Mary Wick boarded at Southampton and was headed to Youngstown, Ohio, US.
+  Fact 0.832: Mary Wick has 8 in the lifeboat/body column.
+  Fact 0.833: Miss Mary Natalie Wick was 31 years old and from Youngstown, Ohio, US.
+  Fact 0.834: Mary Natalie Wick boarded at Southampton and was headed to Youngstown, Ohio, US.
+  Fact 0.835: Mary Natalie Wick has 8 in the lifeboat/body column.
+  Fact 0.836: Mr. George Dunton Widener was 50 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.837: George Dunton Widener boarded at Southampton and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.838: Edwin Herbert Keeping was listed as a valet, traveling with the passenger listed before him.
+  Fact 0.839: Edwin Herbert Keeping was 33 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.840: Edwin Herbert Keeping boarded at Southampton and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.841: Edwin Herbert Keeping has 45 in the lifeboat/body column.
+  Fact 0.842: Mrs. Eleanor Widener (née Elkins) was 50 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.843: Eleanor Widener boarded at Southampton and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.844: Amalie Henriette 'Emily' Gieger was listed as a maid, traveling with the passenger listed before her.
+  Fact 0.845: Amalie Henriette 'Emily' Gieger was 35 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.846: Amalie Henriette 'Emily' Gieger boarded at Southampton and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.847: Mr. Harry Elkins Widener was 27 years old and from Philadelphia, Pennsylvania, US.
+  Fact 0.848: Harry Elkins Widener boarded at Southampton and was headed to Philadelphia, Pennsylvania, US.
+  Fact 0.849: Miss Constance Willard was 21 years old and from Duluth, Minnesota, US.
+  Fact 0.850: Constance Willard boarded at Southampton and was headed to Duluth, Minnesota, US.
+  Fact 0.851: Constance Willard has 8 in the lifeboat/body column.
+  Fact 0.852: Mr. Charles Duane Williams was 51 years old and from Geneva, Switzerland.
+  Fact 0.853: Charles Duane Williams boarded at Cherbourg and was headed to Radnor, Pennsylvania, US.
+  Fact 0.854: Mr. Richard Norris Williams II was 21 years old and from Geneva, Switzerland.
+  Fact 0.855: Richard Norris Williams II boarded at Cherbourg and was headed to Radnor, Pennsylvania, US.
+  Fact 0.856: Mr. Hugh Woolner was 45 years old and from London, England, UK.
+  Fact 0.857: Hugh Woolner boarded at Southampton and was headed to New York City.
+  Fact 0.858: Mr. George Wright was 62 years old and from Halifax, Nova Scotia, Canada.
+  Fact 0.859: George Wright boarded at Southampton and was headed to Halifax, Nova Scotia, Canada.
+  Fact 0.860: Miss Marie Grice Young was 36 years old and from New York City.
+  Fact 0.861: Marie Grice Young boarded at Cherbourg and was headed to New York City.
+  Fact 0.862: Marie Grice Young has 8 in the lifeboat/body column.
+
+Retrieved items:
+<item 1>
+Passengers of the RMS Titanic
+Frank M. Warren , Sr . George Dennick Wick George Dunton Widener Harry Elkins Widener Duane Williams George Henry Wright Roderick Chisholm Survivors ( last
+living ) Rhoda Abbott Trevor Allison Lillian Asplund Madeleine Astor Ruth Becker Lawrence Beesley Karl Behr Dickinson Bishop Mauritz Håkan Björnström -
+Steffansson Elsie Bowerman Francis Browne Margaret `` Molly '' Brown Daniel Buckley Alden Caldwell Helen Churchill Candee Charlotte Drake Cardeza Lucile Carter
+Gladys Cherry Millvina Dean Margaret Devaney Sir Cosmo Duff - Gordon Lucy , Lady Duff - Gordon Ethel Flora Fortune Dorothy Gibson Archibald Gracie IV Frank John
+William Goldsmith Edith Haisman Henry S. Harper Eva Hart Margaret Bechstein Hays Masabumi Hosono J. Bruce Ismay Eleanor Ileen Johnson Louise Laroche Louise Kink
+Margaret Mannion Michel Marcel Navratil Alfred Nourney Arthur Godfrey Peuchen Winnifred Quick Marjorie Newell Robb Edith Rosenbaum Noël Leslie ,
+</item 1>
+
+<item 2>
+Passengers of the RMS Titanic
+Of the 711 passengers and crew rescued by the Carpathia , six , including first class passenger William F. Hoyt , either died in a lifeboat during the night or
+on board the Carpathia the next morning , and were buried at sea . In the days following the sinking , several ships sailed to the disaster area to recover
+victims ' bodies . The White Star Line chartered the cable ship Mackay - Bennett from Halifax , Nova Scotia to retrieve bodies . Three other ships followed in
+the search : the cable ship Minia , the lighthouse supply ship Montmagny and the sealing vessel Algerine . Each ship left with embalming supplies , undertakers
+, and clergy . Upon recovery , each body retrieved by the Mackay - Bennett was numbered and given as detailed a description as possible to help aid in
+identification . The physical appearance of each body -- height , weight , age , hair and eye colour , visible birthmarks , scars or tattoos , was catalogued
+and any personal effects on the bodies were gathered and placed in small canvas bags corresponding to their number .
+</item 2>
+
+<item 3>
+Passengers of the RMS Titanic
+1 British inquiry US inquiry Wreck of Titanic Maritime Memorial Act Deck officers Edward J. Smith ( Captain ) Henry Tingle Wilde ( Chief Officer ) William
+McMaster Murdoch ( First Officer ) Charles H. Lightoller ( Second Officer ) Herbert Pitman ( Third Officer ) Joseph G. Boxhall ( Fourth Officer ) Harold G. Lowe
+( Fifth Officer ) James Paul Moody ( Sixth Officer ) Joseph Bell ( Machine Room Manager ) Crew members Frederick Barrett Harold Bride William Denton Cox Sid
+Daniels Alfred Frank Evans Frederick Fleet Luigi Gatti Robert Hichens Violet Jessop Charles Joughin Reginald Lee Evelyn Marsden William Mintram Jack Phillips
+George Symons Passengers Fatalities Allison family Thomas Andrews John Jacob Astor IV David John Bowen Archibald Butt Thomas Byles Walter Donald Douglas Edith
+Corse Evans Annie Funk Jacques Futrelle Sidney Leslie Goodwin Benjamin Guggenheim John Harper Wallace Hartley Charles Melville Hays Edward Austin Kent Joseph
+Philippe Lemercier Laroche Francis Davis Millet Harry Markland Molson Michel Navratil Eino Viljami Panula W.T. Stead Ida Straus Isidor Straus John Borland
+Thayer Jr . Frank M. Warren , Sr .
+</item 3>
+
+<item 4>
+Passengers of the RMS Titanic
+ISBN 978 - 0 - 14 - 004757 - 8 . Jump up ^ `` Passenger List and Survivors of Steamship Titanic '' . United States Senate Inquiry. 30 July 1912 . Retrieved 15
+July 2011 . Jump up ^ Hall , Wayne ( 1986 ) . `` Social Class and Survival on the SS Titanic '' ( PDF ) . Social Science & Medicine . 22 ( 6 ) : 687 -- 690 .
+Jump up ^ Barratt , Nick ( 2009 ) . Lost Voices From the Titanic : The Definitive Oral History . London : Random House . p. 93 . ISBN 978 - 1 - 84809 - 151 - 1
+. Jump up ^ Howells , Richard ( 1999 ) . The Myth of the Titanic . United Kingdom : MacMillan Press . p. 18 . ISBN 978 - 0 - 333 - 72597 - 9 .
+</item 4>
+
+<item 5>
+Passengers of the RMS Titanic
+Victims whose remains were recovered after the sinking are listed with a superscript next to the body number , indicating the recovery vessel : MB -- CS Mackay
+- Bennett ( bodies 1 -- 306 ) M -- CS Minia ( bodies 307 -- 323 ) MM -- CGS Montmagny ( bodies 326 -- 329 ) A -- SS Algerine ( body 330 ) O -- RMS Oceanic (
+bodies 331 -- 333 ) I -- SS Ilford ( body 334 ) OT -- SS Ottawa ( body 335 ) Numbers 324 and 325 were unused , and the six bodies buried at sea by the Carpathia
+also went unnumbered . First class ( edit ) Name Age Hometown Boarded Destination Lifeboat Body Allen , Miss Elizabeth Walton 29 St. Louis , Missouri , US
+Southampton St. Louis , Missouri , US Allison , Mr. Hudson Joshua Creighton 30 Montreal , Quebec , Canada Southampton Montreal , Quebec , Canada 135 and
+chauffeur , Mr.
+</item 5>
+
+<item 6>
+Passengers of the RMS Titanic
+Although several people managed to reach this lifeboat , three died during the night . When Fifth Officer Harold Lowe and six crewmen returned to the wreck site
+after the sinking with an empty lifeboat to pick up survivors , they rescued surviving passengers from Collapsible A , but left the three dead bodies in the
+boat : Thomson Beattie , a first - class passenger , and two crew members , a fireman and a seaman . After their retrieval from Collapsible A by Oceanic , the
+bodies were buried at sea . Passenger list ( edit ) Breakdown of casualties according to the British Board of Trade report ( click for detail ) The following is
+a full list of known passengers who sailed on the maiden voyage of the RMS Titanic . Included in this list are the nine - member Guarantee Group and the eight
+members of the ship 's band , listed as both passengers and crew . They are also included in the list of crew members on board RMS Titanic . Passengers are
+colour - coded , indicating whether they were saved or perished . The passenger did not survive The passenger survived Survivors are listed with the lifeboat
+from which they were known to be rescued .
+</item 6>
+
+<item 7>
+Passengers of the RMS Titanic
+( Halifax ) Related Ships RMS Olympic RMS Carpathia HMHS Britannic CS Mackay - Bennett SS Californian Replica Titanic Titanic II Others White Star Line Titanic
+Historical Society Encyclopedia Titanica Halomonas titanicae Women and children first SOS Robert Ballard Last remaining survivors of the RMS Titanic disaster
+2000 -- 2009 Millvina Dean ( 1912 -- 2009 ) Barbara West ( 1911 -- 2007 ) Lillian Asplund ( 1906 -- 2006 ) Winnifred Quick ( 1904 -- 2002 ) Michel Navratil (
+1908 -- 2001 ) 1995 -- 1999 Eleanor Johnson ( 1910 -- 1998 ) Louise Laroche ( 1910 -- 1998 ) Edith Brown ( 1896 -- 1997 ) Eva Hart ( 1905 -- 1996 ) Beatrice
+Sandström ( 1910 -- 1995 ) 1990 -- 1994 Robertha `` Bertha '' Watt ( 1899 -- 1993 ) Ellen Shine ( 1891 -- 1993 ) Marjorie Newell ( 1889 -- 1992 ) Louise
+</item 7>
+
+<item 8>
+Passengers of the RMS Titanic
+Jump up ^ Brewster , Hugh ; Coulter , Laurie ( 1998 ) . 882 1 / 2 Amazing Answers To Your Questions About The Titanic . Scholastic Paperbacks . p. 18 . ISBN 978
+- 0 - 8117 - 1814 - 1 . Jump up ^ I Survived the Titanic : Ruth Becker Jump up ^ `` Whitaker Centre -- ' ' Titanic Artifact Exhibit : Ministry Through Tragedy '
+' '' ( PDF ) . Archived from the original ( PDF ) on 4 July 2011 . Retrieved 6 July 2011 . Jump up ^ `` Fr Thomas Roussel Davids Byles '' . Encyclopedia
+Titanica . Retrieved 15 July 2011 . Jump up ^ `` Pastor John Harper and the Titanic Story '' . Harper Memorial Baptist Church . Archived from the original on 17
+April 2012 . Retrieved 2 April 2012 . Jump up ^ `` Lawrence Beesley -- Celebrated Titanic Survivor '' . Bygonederbyshire.co.uk . Retrieved 6 July 2011 .
+</item 8>
+
+<item 9>
+Passengers of the RMS Titanic
+Jump up ^ William Hoyt was pulled alive from the water , and onto Lifeboat 14 , and thus is counted among the occupants of this boat ; Hoyt , however , died
+during the night and his body was buried at sea by the sailors on board the Carpathia Jump up ^ `` One Victim Legally Dead '' . The New York Times . 27 April
+1912 . p. 4 < ! None > Jump up ^ Marion Kenyon was pregnant while on board the Titanic . She delivered a stillborn child sometime in 1912 . Jump up ^ `` Miss
+Roberta Elizabeth Mary Maioni '' . Encyclopedia-titanica.org . Retrieved 6 July 2011 . Jump up ^ Mary Marvin was pregnant while on board the Titanic . She gave
+birth to a daughter , Margaret , sometime in 1912 . Jump up ^ Traveled using alias : Baron Alfred von Drachstedt ; transferred from second to first class Jump
+up ^ ( 2013 ) Alfred Nourney ( ref : # 220 ) Encyclopedia Titanica , ( accessed 17 December 2013 ) Jump up ^ Eloise Smith was pregnant while on board the
+Titanic .
+</item 9>
+
+<item 10>
+Passengers of the RMS Titanic
+Collapsible B floated away from the ship upside down , while Collapsible A became half - filled with water after the supports for its canvas sides were broken
+in the fall from the roof of the officers ' quarters . There were arguments in some of the lifeboats about going back to pick up people in the water , but many
+survivors were afraid of being swamped by people trying to climb into the lifeboat or being pulled down by the suction from the sinking Titanic , though it
+turned out that there had been very little suction . At 2 : 20 am , Titanic herself sank . A small number of passengers and crew were able to make their way to
+the two unlaunched collapsible boats , surviving for several hours ( some still clinging to the overturned Collapsible B) until they were rescued by Fifth
+Officer Harold Lowe . The RMS Carpathia arriving at Pier 54 with Titanic survivors . At 4 : 10 am , the RMS Carpathia arrived at the site of the sinking and
+began rescuing survivors . By 8 : 30 am , she picked up the last lifeboat with survivors and left the area at 08 : 50 bound for Pier 54 in New York City .
+</item 10>
+=== END ITEM id=f73069680fca846f ===
+
+=== ITEM id=21e9c01f96ce7a40 ===
+Gold sentences and facts:
+Sentence 0: Vaugier appeared in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist ) .
+  Fact 0.0: Vaugier appeared in Need for Speed: Carbon as Nikki.
+  Fact 0.1: Nikki is the girlfriend of the antagonist in Need for Speed: Carbon.
+  Fact 0.2: Nikki is the love interest of the protagonist in Need for Speed: Carbon.
+Sentence 1: Year Title Role Notes 2006 Need for Speed : Carbon Nikki Voice , Mo - Cap , & Likeness 2015 Dying Light Jade Mo - Cap 2015 Hellraid Maine , The Female Kin Voice
+  Fact 1.0: The filmography lists a 2006 entry for Need for Speed: Carbon, role Nikki, with notes Voice, Mo-Cap, and Likeness.
+  Fact 1.1: The filmography lists a 2015 entry for Dying Light, role Jade, with note Mo-Cap.
+  Fact 1.2: The filmography lists a 2015 entry for Hellraid, role Maine, The Female Kin, with note Voice.
+
+Retrieved items:
+<item 1>
+Emmanuelle Vaugier
+Helen Bryce Recurring role ; 9 episodes 2003 The Handler Angie Episode 1.11 : `` Off the Edge '' Call Me : The Rise and Fall of Heidi Fleiss Lauren TV movie
+North Shore Melinda Lindsey Kellogg Episode 1.12 : `` Bellport '' ; Episode 1.13 : `` Leverage '' Veronica Mars Monica Hadwin Greenblatt Episode 1.10 : `` An
+Echolls Family Christmas '' 2004 -- 05 One Tree Hill Nicki Recurring role ; 10 episodes 2005 Cerberus Dr. Samantha Gaines TV movie 2005 Andromeda Maura Episode
+5.21 : `` The Heart of the Journey ( Part 1 ) '' ; Episode 5.22 : `` The Heart of the Journey ( Part 2 ) '' 2005 Love , Inc . Girl Episode 1.06 : `` Amen ''
+2005 Painkiller Jane Capt . Jane Elizabeth Browning TV movie 2005 -- 15 Two and a Half Men Mia Recurring role ; 12 episodes 2006 Monk Pat - Juror No. 12 Episode
+4.16 : `` Mr.
+</item 1>
+
+<item 2>
+Emmanuelle Vaugier
+Alexandra `` Nightingale '' Morgan 2005 Saw II Addison Corday 2007 Unearthed Sheriff Annie Flynn 2007 Saw IV Addison Corday 2008 Blonde and Blonder Cat 2008
+Bachelor Party 2 : The Last Temptation Eva Direct to video 2008 Far Cry Valerie Cardinal 2009 Dolan 's Cadillac Elizabeth Mirrors 2 Elizabeth Reigns Direct to
+video Hysteria Jennifer A Nanny for Christmas Ally Leeds 2011 Where the Road Meets the Sun Lisa 2011 French Immersion Jennifer Yates 2012 Stolen Child Amanda
+Direct to video 2013 Absolute Deception Rebecca 2013 Susie 's Hope Donna Smith Lawrence 2014 Teen Lust Shelley 2014 Saul : The Journey to Damascus Mary
+Magdalene 2015 My Stepdaughter Jill 2016 Destruction : Los Angeles Margot Taylor Television ( edit ) Year Title Role Notes 1995 A Family Divided Rosalie Frank
+TV movie 1995 Highlander : The Series Maria Alcobar Episode 4.10 : `` Chivalry '' Madison Noella D'Angelo Recurring role ;
+</item 2>
+
+<item 3>
+Emmanuelle Vaugier
+In 2005 , she also played the title character in the Painkiller Jane television movie for the Sci Fi Channel . She first became noticed by the science fiction
+community when she portrayed Dr. Helen Bryce , the love interest of Lex Luthor , on the WB 's hit drama Smallville in 2002 -- 2003 . Vaugier had a recurring
+role from 2006 -- 2009 on the CBS show CSI : NY as Detective Jessica Angell . She left the show after the fifth season due to budget cuts . Vaugier appeared in
+two episodes of the Fox series Human Target as FBI agent Emma Barnes , who is first introduced to the show on January 26 , 2010 , in the episode `` Embassy Row
+'' . Vaugier also had a recurring role on the Syfy series Lost Girl as The Morrigan , the leader of the Dark Fae . Film ( edit ) Vaugier appeared as Addison in
+Saw II and Saw IV . In the Canadian film Unearthed , she played Annie , the sheriff of a small rural desert town . She appeared in the film 40 Days and 40
+Nights , which starred Josh Hartnett .
+</item 3>
+
+<item 4>
+Emmanuelle Vaugier
+In feature films , Vaugier has appeared alongside Michael Caine and Robert Duvall in Secondhand Lions . She appeared as Addison Corday in Saw II and IV , and
+had a supporting role in the Josh Hartnett film 40 Days and 40 Nights . Contents ( hide ) 1 Early life 2 Career 2.1 Television 2.2 Film 2.3 Games 3 Filmography
+3.1 Film 3.2 Television 3.3 Video Games 4 References 5 External links Early life ( edit ) Vaugier was born in Vancouver , British Columbia , the daughter of
+French immigrants . She grew up in a Roman Catholic , French - speaking household , and is fluent in French . She divides her time between Los Angeles and
+Vancouver . She attended Crofton House School , a girls private school , for 10 years until she transferred to Magee Secondary School , which offers a flexible
+academic program for professional and pre-professional student athletes , artists and musicians ( SPARTS ) , for the last two years of high school . She has an
+older brother , Jason Vaugier .
+</item 4>
+
+<item 5>
+Emmanuelle Vaugier
+She has an older brother , Jason Vaugier . Career ( edit ) Television ( edit ) Vaugier played the role of young , upstart model Maria Alcobar in a 1996 episode
+of Highlander : The Series . In 2004 , she played Lindsey Kellogg on the short - lived Fox Television series North Shore . She has also had guest - star spots
+on Veronica Mars , Supernatural , The Outer Limits , Higher Ground , Andromeda , and Charmed . She also appeared in the Emmy Award nominated miniseries The
+Beach Boys : An American Family where she portrayed Mike Love 's wife , Suzanne . Vaugier also completed a starring role in MOW Veiled Truth for the Lifetime
+Network . She is also known for her role during the first two seasons of One Tree Hill , as Nicki , Jake 's ( Bryan Greenberg ) ex-girlfriend and mother to
+their child , Jenny . From 2005 - 2015 , Vaugier guest starred in Twelve episodes of CBS 's hit sitcom Two and a Half Men as Mia , a ballet teacher with whom
+Charlie Harper fell in love and almost married .
+</item 5>
+
+<item 6>
+Emmanuelle Vaugier
+12 Episode 4.16 : `` Mr. Monk Gets Jury Duty '' 2006 Veiled Truth ( aka What Comes Around ) Carolyn TV movie 2006 Masters of Horror Kim Episode 2.05 : ``
+Pro-Life '' 2006 -- 09 CSI : NY Det . Jessica Angell Recurring role ; 25 episodes 2007 Supernatural Madison Episode 2.17 : `` Heart '' 2007 Big Shots Wanda
+Barnes Episode 1.04 : `` Three 's a Crowd '' 2009 Reverse Angle Eve Pretson TV movie A Trace of Danger Kate TV movie Human Target Emma Barnes Episode 1.03 : ``
+Embassy Row '' ; Episode 1.08 : `` Baptiste '' 2010 -- 11 Covert Affairs Liza Hearn Recurring role ; 7 episodes Hawaii Five - 0 Erica Raines Episode 1.09 : ``
+Po'ipu '' 2010 -- 15 Lost Girl The Morrigan / Evony Fleurette Marquise Recurring role ; 18 episodes 2011 R.L.
+</item 6>
+
+<item 7>
+Emmanuelle Vaugier
+She is the girlfriend of the antagonist in the game ( love interest of the protagonist ) . Filmography ( edit ) Film ( edit ) Year Title Role Notes 1998
+Hysteria Veronica Bloom 1999 Shapeshifter Anika 1999 The Fear : Resurrection Jennifer 2000 My 5 Wives Sarah 2000 The Sculptress Sylvie 2001 Mindstorm Tracy
+Wellman 2001 Wishmaster 3 : Beyond the Gates of Hell Elinor Smith Direct to video 2001 Ripper Andrea `` Andy '' Carter 2001 Suddenly Naked Lupe Martinez 2002 40
+Days and 40 Nights Susie 2003 Secondhand Lions Jasmine 2003 Water 's Edge Rae Butler 2005 House of the Dead II Dr.
+</item 7>
+
+<item 8>
+Emmanuelle Vaugier
+10 : `` Chivalry '' Madison Noella D'Angelo Recurring role ; 9 episodes The Halfback of Notre Dame Esmerelda TV movie Home Song Cheerleader TV movie The Limbic
+Region Jennifer Lucca - age 21 TV movie 1997 Breaker High Monette Episode 1.11 : `` Chateau L'Feet J'mae '' 1997 Police Academy : The Series Sally Episode 1.03
+`` Put Down That Nose '' 1997 Ninja Turtles : The Next Mutation Episode 1.12 : `` Turtles ' Night Out '' 1998 First Wave Esther Episode 1.07 : `` Lungfish ''
+1998 Dead Man 's Gun Rose Harris Episode 2.10 : `` The Pinkerton '' 1998 -- 99 The Outer Limits Shal ; Lisa Dobkins Episode 4.08 : `` Rite of Passage '' ;
+Episode 5.05 : `` The Other Side '' 1999 Viper Mitzi / Olga Episode 3.11 : `` Best Seller '' 1999 Assault on Death Mountain French Woman TV movie 1999 Seven
+Days Princess Lisette D'Arcy Episode 2.
+</item 8>
+
+<item 9>
+Emmanuelle Vaugier
+She appeared in the film 40 Days and 40 Nights , which starred Josh Hartnett . She had starring roles in Suddenly Naked , in which she plays a Latin pop
+sensation ; the TV - movie Mindstorm , a science - fiction thriller ; and Ripper , a psychological thriller about students who mysteriously disappear after
+enrolling in a class about serial killers . She stars also in the sequel to Mirrors , which is directed by Victor Garcia . Maxim magazine featured her on the
+cover of the February 2006 issue in the United States . Three months later , she landed spot # 31 on their annual Hot 100 list . Games ( edit ) Vaugier appeared
+in Need for Speed : Carbon as Nikki . She is the girlfriend of the antagonist in the game ( love interest of the protagonist ) .
+</item 9>
+
+<item 10>
+Emmanuelle Vaugier
+Stine 's The Haunting Hour Abigail Episode 1.06 : `` The Red Dress '' 2011 Killer Mountain Kate TV movie 2012 It 's Christmas , Carol ! Carol Huffman TV movie
+2013 The Mentalist Melissa Enfield Episode 5.16 : `` There Will Be Blood '' 2013 Clara 's Deadly Secret Helen TV movie 2013 Hidden Away Alexandra Cole /
+Stephanie Bennett TV movie 2015 My Stepdaughter Jill TV movie 2015 Mistresses Niko Recurring role ; 6 episodes 2016 Love In Paradise Heather Twain TV movie 2016
+Stranger in the House Jade TV movie 2016 His Double Life Linda TV movie 2016 Love in the Vineyard ( Heart Felt ) Molly TV movie 2017 Rogue Regan Recurring role
+; 7 episodes 2017 Washed Away Gabrielle Video Games ( edit ) Year Title Role Notes 2006 Need for Speed : Carbon Nikki Voice , Mo - Cap , & Likeness 2015 Dying
+Light Jade Mo - Cap 2015 Hellraid Maine , The Female Kin Voice References ( edit ) Jump up ^ `` Archived copy '' .
+</item 10>
+=== END ITEM id=21e9c01f96ce7a40 ===
+
+=== ITEM id=a8a3cc7c4f764708 ===
+Gold sentences and facts:
+Sentence 0: Spike , occasionally referred to as Butch or Killer , is a stern but occasionally dumb American bulldog who is particularly disapproving of cats , but a softie when it comes to mice ( though in his debut appearance , Dog Trouble , Spike goes after both Tom and Jerry ) , and later , his son Tyke . In the shorts Jerry would often try to get Tom in trouble with Spike making him a shoo - in for a beating from the bulldog . Spike has a few weaknesses that Tom tries to capitalize upon : his possessiveness about his bone and his ticklishness . He made his first appearance in the 1942 Tom and Jerry cartoon Dog Trouble , and his first speaking role was in 1944 's The Bodyguard , where he was voiced by Billy Bletcher up until 1949 , from which point he was voiced by Daws Butler . Unlike his father Spike , Tyke does not speak . He only communicates by yapping , whimpering , growling , facial expressions and wagging his tail . In Tom and Jerry Kids , Tyke does have a speaking role in the program and is the first time that viewers were able to hear Tyke speak . Spike is very protective towards his son and gets very angry at Tom if Tyke is bothered or harmed . Although Tyke has spoken in Tom and Jerry Kids , he has laughed in one Tom and Jerry short . After Daws Butler , Maurice LaMarche , Frank Welker , John DiMaggio , Michael Donovan , Phil LaMarr and currently Rick Zieff would all perform Spike 's voice . Tyke 's vocal effects are provided by Frank Welker and speaking roles by Patric Zimmerman .
+  Fact 0.0: Spike is occasionally referred to as Butch or Killer.
+  Fact 0.1: Spike is a stern but occasionally dumb American bulldog.
+  Fact 0.2: Spike is particularly disapproving of cats.
+  Fact 0.3: Spike is a softie when it comes to mice.
+  Fact 0.4: In his debut appearance, Dog Trouble, Spike goes after both Tom and Jerry.
+  Fact 0.5: Spike has a son named Tyke.
+  Fact 0.6: In the shorts, Jerry would often try to get Tom in trouble with Spike.
+  Fact 0.7: Spike makes Tom a shoo-in for a beating from the bulldog.
+  Fact 0.8: Spike has a few weaknesses that Tom tries to capitalize upon.
+  Fact 0.9: Spike's first weakness is his possessiveness about his bone.
+  Fact 0.10: Spike's second weakness is his ticklishness.
+  Fact 0.11: Spike made his first appearance in the 1942 Tom and Jerry cartoon Dog Trouble.
+  Fact 0.12: Spike's first speaking role was in 1944's The Bodyguard.
+  Fact 0.13: Billy Bletcher voiced Spike in The Bodyguard and continued until 1949.
+  Fact 0.14: From 1949, Daws Butler voiced Spike.
+  Fact 0.15: Tyke, unlike his father Spike, does not speak.
+  Fact 0.16: Tyke only communicates by yapping, whimpering, growling, facial expressions, and wagging his tail.
+  Fact 0.17: In Tom and Jerry Kids, Tyke has a speaking role.
+  Fact 0.18: Tom and Jerry Kids is the first time viewers were able to hear Tyke speak.
+  Fact 0.19: Spike is very protective towards his son Tyke.
+  Fact 0.20: Spike gets very angry at Tom if Tyke is bothered or harmed.
+  Fact 0.21: Although Tyke has spoken in Tom and Jerry Kids, Tyke has laughed in one Tom and Jerry short.
+  Fact 0.22: Maurice LaMarche performed Spike's voice after Daws Butler.
+  Fact 0.23: Frank Welker performed Spike's voice after Daws Butler.
+  Fact 0.24: John DiMaggio performed Spike's voice after Daws Butler.
+  Fact 0.25: Michael Donovan performed Spike's voice after Daws Butler.
+  Fact 0.26: Phil LaMarr performed Spike's voice after Daws Butler.
+  Fact 0.27: Rick Zieff currently performs Spike's voice.
+  Fact 0.28: Frank Welker provides Tyke's vocal effects.
+  Fact 0.29: Patric Zimmerman provides Tyke's speaking roles.
+
+Retrieved items:
+<item 1>
+List of Tom and Jerry characters
+The most frequent love interest of Tom 's is Toodles Galore , who never has any dialogue in the cartoons . Despite five shorts ending with a depiction of Tom 's
+apparent death , his demise is never permanent ; he even reads about his own death in a flashback in Jerry 's Diary . He appears to die in explosions in Mouse
+Trouble ( after which he is seen in heaven ) , Yankee Doodle Mouse and in Safety Second , while in The Two Mouseketeers he is guillotined offscreen . Hanna -
+Barbera era ( edit ) The following characters were introduced in the theatrical shorts that were directed by William Hanna and Joseph Barbera . Spike and Tyke (
+edit ) Main article : Spike and Tyke ( characters ) Spike , occasionally referred to as Butch or Killer , is a stern but occasionally dumb American bulldog who
+is particularly disapproving of cats , but a softie when it comes to mice ( though in his debut appearance , Dog Trouble , Spike goes after both Tom and Jerry )
+, and later , his son Tyke .
+</item 1>
+
+<item 2>
+List of Tom and Jerry characters
+In Tom and Jerry : Spy Quest , they are seen working for Doctor Zin . They also make an appearance in Tom and Jerry : Willy Wonka and the Chocolate Factory .
+They were named after the Warner Bros. 1943 short Tin Pan Alley Cats . Tin is voiced by Greg Ellis , Pan by Jess Harnell and Alley by Richard McGonagle . Butch
+( dog ) ( edit ) Main article : Butch Dog ( Tex Avery ) Butch ( Originally known as Spike , until renamed as Butch to avoid confusion with Spike from the Tom
+and Jerry cartoons ) is the name of another bulldog from Tex Avery 's shorts in the 1940s and 1950s . He was one of the main antagonists in Droopy shorts (
+although he was replaced by Hanna - Barbera 's Spike in the 1980s ) and also had a series of his own . He appears in a number of movies e.g. Tom and Jerry and
+the Wizard of Oz and Tom and Jerry : The Magic Ring . References ( edit ) Jump up ^ Deitch , Gene ( 2015 ) .
+</item 2>
+
+<item 3>
+List of Tom and Jerry characters
+( as a ticking time bomb set by Tom ) . Toots ( edit ) Toots is the name given to three different characters that have appeared infrequently . The first of
+these is a fluffy beige cat who appears in Puss n ' Toots and The Mouse Comes to Dinner , the latter being her only speaking role . She also has a cameo in
+Smitten Kitten . This version of Toots also appeared in some 1940s Tom and Jerry comics . Toots is also a different cat by the same name who appears in The Zoot
+Cat and in the Tom and Jerry Tales episode `` Kitty Cat Blues . '' She has occasionally and erroneously been referred to as `` Sheikie , '' but this is actually
+Tom 's nickname , as seen on a gift card in the cartoon . Finally Toots is the name of a mouse who serves as Jerry 's love interest in Blue Cat Blues . King of
+France ( edit ) In some of the mouseketeer series of cartoons , Tom serves the king of France . This is an obvious reference to Louis XVI of France , who is
+shown as an extremely short - tempered and cruel monarch .
+</item 3>
+
+<item 4>
+List of Tom and Jerry characters
+References ( edit ) Jump up ^ Deitch , Gene ( 2015 ) . Tom and Jerry ... and Gene in Tom and Jerry : The Gene Deitch Collection ( DVD ) . 20th Century Fox . Tom
+and Jerry Characters Tom Cat Jerry Mouse Butch Nibbles Spike and Tyke Mammy Two Shoes Theatrical releases Tom and Jerry ( shorts ) Spike and Tyke ( shorts ) The
+Movie Cameos Anchors Aweigh Dangerous When Wet DVD releases of shorts Spotlight Collection Golden Collection Chuck Jones Collection Classic Collection Deluxe
+Anniversary Collection Gene Deitch Collection Television series Show ( 1975 ) Comedy Show Kids Show episodes Tales Show ( 2014 ) episodes Television specials
+Hanna - Barbera 's 50th : A Yabba Dabba Doo Celebration The Mansion Cat Santa 's Little Helpers Direct - to - video films The Magic Ring Blast Off to Mars The
+Fast and the Furry Shiver Me Whiskers A Nutcracker Tale Meet Sherlock Holmes The Wizard of Oz Robin Hood and His Merry Mouse Giant Adventure The Lost Dragon Spy
+Quest Back to Oz Willy Wonka and the Chocolate Factory Other formats Video games Soundtrack Related William Hanna Joseph Barbera Scott Bradley Hanna - Barbera
+Founders William Hanna
+</item 4>
+
+<item 5>
+List of Tom and Jerry characters
+Trojan Dog ' in Tom and Jerry Comedy Show ) and movies thereafter . In his first appearance , the mad scientist is the owner of Jerry ( who is also his
+assistant ) and has numerous cats trapped in a prison . When Jerry picks an orange cat named Lightning , the other cats flee in terror as the scientist pulls
+him out for his latest experiment . He switches the mind of the orange cat with that of a bulldog and presents him as his present to Jerry . Thin lady ( edit )
+An unnamed thin white lady became Tom 's owner in Buddies Thicker Than Water . Gene Deitch opted not to use Mammy 's character in his shorts , as he felt a ``
+stereotypical black housekeep '' character `` did n't work in a modern context . '' Chuck Jones would also use her in The Unshrinkable Jerry Mouse and in the
+re-animated version of Saturday Evening Puss . She also appeared in the movie Tom and Jerry : The Fast and the Furry . Like many other early human characters ,
+her face was never shown .
+</item 5>
+
+<item 6>
+List of Tom and Jerry characters
+`` Tom '' is a generic name for a male cat . He is usually but not always , portrayed as living a comfortable , or even pampered life , while Jerry ( named ``
+Jinx '' in his debut appearance ) is a small , brown , house mouse who always lives in close proximity to Tom . Despite being very energetic , determined and
+much larger , Tom is no match for Jerry 's wits . Jerry also possesses surprising strength for his size , approximately the equivalent of Tom 's , lifting items
+such as anvils with relative ease and withstanding considerable impacts . Although cats typically chase mice to consume them , it is quite rare for Tom to
+actually try to consume Jerry . Most of his attempts are just to torment or humiliate Jerry , sometimes in revenge , and sometimes to obtain a reward from a
+human for catching Jerry . By the final `` fade - out '' of each cartoon , Jerry usually emerges triumphant , while Tom is shown as the loser . However , other
+results may be reached . On rare occasions , Tom triumphs , usually when Jerry becomes the aggressor or when he pushes Tom a little too far .
+</item 6>
+
+<item 7>
+List of Tom and Jerry characters
+He is based on the character from Robin Hood tales . Yvonne jockalong ( edit ) Love interest to both Tom and Jerry , she appears in Sky Bunny and The Tennis
+Menace . Sergeant farce ( edit ) A police officer who appears in See Dr. Jackal and Hide and in The Police Kitten where he is the superior officer to both Tom
+and Jerry . Alley Cat Gang ( edit ) The Tom and Jerry Comedy Show ( edit ) The following characters were introduced in the television series The Tom and Jerry
+Comedy Show . Droopy ( edit ) Main article : Droopy Dog A Basset Hound often with a miserable look on his face , originally introduced in the Tex Avery shorts
+of the 1940s . He first made a poster cameo in Matinee Mouse . He also appeared in the Droopy and Dripple segments of Tom and Jerry Kids . He is sometimes an
+adversary of Spike . He would also appear in Tom and Jerry Tales and would appear in the direct - to - video films .
+</item 7>
+
+<item 8>
+List of Tom and Jerry characters
+This backfired and left Mechano with a black face , while crying in frustration . He sneaks back and promptly shoots Tom , who attempts to shoot Mechano back
+for his insubordination . However , the shot came out on the wrong end and Tom faints leaving Mechano laughing himself silly . He also appeared in the Tom and
+Jerry Tales episode `` Tin Cat of Tomorrow '' where he is named Verminator 7000 . Mechano ( called `` Robot Cat '' ) also appeared as a fighter in the video
+game , War of the Whiskers , and was voiced by Dee Bradley Baker . The St. Bernard ( edit ) The St. Bernard is a dog who first appeared in Puttin ' on the Dog
+and then again in The A-Tom - Inable Snowman . Unlike other dogs in the series , he is not hostile to cats and even attends Tom medically . Eagle ( edit ) Eagle
+is an Eagle that tries to steal Jerry for food from Tom .
+</item 8>
+
+<item 9>
+List of Tom and Jerry characters
+Like many other early human characters , her face was never shown . Chuck Jones era ( edit ) The following characters were introduced in the theatrical shorts
+that were produced by Chuck Jones in the 1960s . Tiny bulldog ( edit ) This nameless mouse - sized bulldog , designed similarly to Spike the Bulldog , is Jerry
+'s pet dog companion in only two shorts : The Cat 's Me - Ouch and Purr - Chance to Dream . His role is similar to Spike in cartoons such as The Bodyguard , Fit
+To Be Tied , and Much Ado About Mousing , which is to defend Jerry against Tom . He is presumably the oldest son of Spike before Tyke , and this could be
+identified by his looks and personality that is similar to his father Spike . Unlike Spike and Tyke he has a big bite ( similar to those of Looney Tunes '
+Tasmanian Devil ) . Porpoise ( edit ) A shark who tries to eat Tom and Jerry . He appears in Cannery Rodent , Puss ' n ' Boats , Filet Meow and Surf - Bored Cat
+.
+</item 9>
+
+<item 10>
+List of Tom and Jerry characters
+His bigger role was in Timid Tabby where he finally overcomes his fear . He also appeared in Tom and Jerry Kids where his fear seems to have re-instated even
+though he pretended it has not ( his name was changed to Tim in that short ) . Fluff , Muff and Puff ( edit ) Fluff , Muff and Puff are a trio of brown , black
+and orange kittens that first appeared in Heavenly Puss as adorable kittens - who were murdered by drowning - in a cameo role ( that happened in Tom 's dream )
+. They also appeared in Triplet Trouble as cute but extremely mischievous kittens . They also appeared in The Tom and Jerry Show . Chérie ( edit ) Chérie is a
+brown / grey female mouse who serves as Jerry 's love interest . She first appeared at the end of Springtime for Thomas , and then later in Smitten Kitten ,
+Touché , Pussy Cat ! ( only cartoon where she has an identical twin ) , Tom and Chérie ( the first cartoon where she is named ) and The Mouse from H.U.N.G.E.R.
+( as a ticking time bomb set by Tom ) .
+</item 10>
+=== END ITEM id=a8a3cc7c4f764708 ===
+
+=== ITEM id=d6a430a7bdd03b9e ===
+Gold sentences and facts:
+Sentence 0: The official music video for the song was directed by P.R. Brown and produced by Steve Lamar . The video was filmed along the Californian coast at The Inn at Newport Ranch , a resort and cattle ranch to the north of San Francisco . It features Brown and his duet partner Lauren Alaina singing along the coast . It was released on May 14 , 2017 . An earlier lyric video was first released on May 4 , 2017 , and shows Brown and Alaina cruising down a road .
+  Fact 0.0: The official music video for the song was directed by P.R. Brown.
+  Fact 0.1: The official music video for the song was produced by Steve Lamar.
+  Fact 0.2: The video was filmed along the Californian coast.
+  Fact 0.3: The video was filmed at The Inn at Newport Ranch.
+  Fact 0.4: The Inn at Newport Ranch is a resort and cattle ranch.
+  Fact 0.5: The Inn at Newport Ranch is north of San Francisco.
+  Fact 0.6: The music video features P.R. Brown and his duet partner Lauren Alaina singing along the coast.
+  Fact 0.7: The official music video was released on May 14, 2017.
+  Fact 0.8: An earlier lyric video for the song was first released on May 4, 2017.
+  Fact 0.9: The earlier lyric video shows P.R. Brown and Lauren Alaina cruising down a road.
+
+Retrieved items:
+<item 1>
+What Ifs
+The song was released with the album through RCA Nashville and was serviced to radio as the third single on February 6 , 2017 . Contents ( hide ) 1 Background 2
+Composition 3 Commercial performance 4 Music video 5 Chart performance 5.1 Weekly charts 5.2 Year - end charts 6 Certifications and sales 7 References
+Background ( edit ) The song was written by Brown with Matthew McGinn and Jordan Schmidt . The song is about a couple where the question `` what if '' is asked
+repeatedly about what would happen in their relationship . It features a duet with Lauren Alaina , a school friend from Lakeview - Fort Oglethorpe High School
+when he was living in Fort Oglethorpe , Georgia . According to Brown , the song was initially not intended to be a duet , he said : `` Once we decided on adding
+a woman to `` What Ifs , '' I knew that I wanted Lauren to sing it , and , of course , she killed it . ''
+</item 1>
+
+<item 2>
+What Ifs
+Music Canada . Retrieved February 8 , 2018 . Preceded by `` Body Like a Back Road '' by Sam Hunt Billboard Hot Country Songs number - one single October 21 --
+November 11 , 2017 Succeeded by `` When It Rains It Pours '' by Luke Combs Preceded by `` All the Pretty Girls '' by Kenny Chesney Billboard Country Airplay
+number - one single October 28 , 2017 Kane Brown Studio albums Kane Brown ( 2016 ) EPs Closer ( 2015 ) Chapter 1 ( 2016 ) Singles `` Do n't Go City on Me '' ``
+Used to Love You Sober '' `` What Ifs '' `` Heaven '' Lauren Alaina Studio albums Wildflower Road Less Traveled EPs Lauren Alaina Singles `` Like My Mother Does
+'' `` Georgia Peaches '' `` Eighteen Inches '' `` Barefoot and Buckwild '' `` Next Boyfriend '' `` Road Less Traveled '' `` Doin ' Fine '' Other singles `` My
+Grown Up Christmas List '' `` What Ifs '' Retrieved from `` https://en.wikipedia.org/w/index.
+</item 2>
+
+<item 3>
+What Ifs
+Jump up ^ `` Kane Brown Chart History ( Canada Country ) '' . Billboard . Retrieved November 14 , 2017 . Jump up ^ `` Kane Brown Chart History ( Hot 100 ) '' .
+Billboard . Retrieved October 24 , 2017 . Jump up ^ `` Kane Brown Chart History ( Country Airplay ) '' . Billboard . Retrieved October 17 , 2017 . Jump up ^ ``
+Kane Brown Chart History ( Hot Country Songs ) '' . Billboard . Retrieved October 10 , 2017 . Jump up ^ `` Country Airplay Songs -- Year - End 2017 '' .
+Billboard . Retrieved December 18 , 2017 . Jump up ^ `` Hot Country Songs -- Year - End 2017 '' . Billboard . Retrieved December 18 , 2017 . Jump up ^ `` Hot
+100 Songs -- Year - End 2017 '' . Billboard . Retrieved December 12 , 2017 . Jump up ^ `` Canadian single certifications -- Kane Brown -- What Ifs '' . Music
+Canada .
+</item 3>
+
+<item 4>
+What Ifs
+It features Brown and his duet partner Lauren Alaina singing along the coast . It was released on May 14 , 2017 . An earlier lyric video was first released on
+May 4 , 2017 , and shows Brown and Alaina cruising down a road . Chart performance ( edit ) Weekly charts ( edit ) Chart ( 2017 ) Peak position Canada (
+Canadian Hot 100 ) 45 Canada Country ( Billboard ) US Billboard Hot 100 26 US Country Airplay ( Billboard ) US Hot Country Songs ( Billboard ) Year - end charts
+( edit ) Chart ( 2017 ) Position US Billboard Country Airplay 7 US Billboard Hot Country Songs US Billboard Hot 100 72 Certifications and sales ( edit ) Region
+Certification Certified units / Sales Canada ( Music Canada ) Platinum 80,000 United States ( RIAA ) Platinum 679,000 sales figures based on certification alone
+shipments figures based on certification alone References ( edit ) Jump up ^ Dukes , Billy ( January 24 , 2017 ) . `` Kane Brown ( Feat . Lauren Alaina ) , '
+What Ifs ' ( Listen ) '' . Taste of Country .
+</item 4>
+
+<item 5>
+What Ifs
+The song is the first No. 1 on the chart for both Brown and Alaina . The following week , for charts dated October 28 , 2017 , `` What Ifs '' stayed at number
+one , as well as topping the Country Airplay and Country Streaming Songs charts . Together with the release of the deluxe edition of the album which also
+reached number on Top Country Albums , and another number one for a new track `` Heaven '' on digital sales , Brown became the first artist to have simultaneous
+number ones on all five main country charts . The song was certified Platinum by the RIAA on October 2 , 2017 . It was the third most - consumed country song of
+2017 , with 1,551,000 including streams ( 599,000 in pure sale ) sold in the year . It has sold 679,000 copies in the US as of March 2018 . Music video ( edit )
+The official music video for the song was directed by P.R. Brown and produced by Steve Lamar . The video was filmed along the Californian coast at The Inn at
+Newport Ranch , a resort and cattle ranch to the north of San Francisco .
+</item 5>
+
+<item 6>
+What Ifs
+According to Brown , another song was going to be used in the album , however , he was asked so much about `` What Ifs '' on social media that it was then
+decided that the song should be included in the album . Composition ( edit ) The song is in the key of G minor with a moderately fast tempo of approximately 126
+beats per minute . It follows the chord progression Gm - B ♭ - F. Brown 's vocals range from F - B ♭ . Commercial performance ( edit ) The song sold 6,000
+downloads in the US the week the album was released on December 2 , 2016 , allowing it to chart at number 37 on the US Billboard Hot Country Songs chart . The
+song first entered the US Billboard Country Airplay chart for the week of March 4 , 2017 at number 60 . It reached No. 1 on Hot Country Songs in October 2017 ,
+ending the record breaking 34 - week reign of Sam Hunt 's `` Body Like a Back Road '' . The song is the first No. 1 on the chart for both Brown and Alaina .
+</item 6>
+
+<item 7>
+What Ifs
+Jump up ^ Bjorke , Matt ( January 3 , 2018 ) . `` Top 30 Country Digital Singles Chart : January 3 , 2018 '' . Roughstock . Retrieved January 14 , 2017 . ^ Jump
+up to : Bjorke , Matt ( March 6 , 2018 ) . `` The Top 30 Digital Country Singles : March 5 , 2018 '' . Roughstock . Retrieved March 11 , 2018 . Jump up ^ ``
+Watch Kane Brown , Lauren Alaina 's Picturesque ' What Ifs ' Video '' . Rolling Stone . May 15 , 2017 . Jump up ^ Kimble , Lindsay ( May 4 , 2017 ) . `` From
+Middle School Chorus to Nashville , Kane Brown and Lauren Alaina Team Up for Duet ' What Ifs ' '' . Jump up ^ `` Kane Brown Chart History ( Canadian Hot 100 )
+'' . Billboard . Retrieved October 24 , 2017 . Jump up ^ `` Kane Brown Chart History ( Canada Country ) '' . Billboard .
+</item 7>
+
+<item 8>
+What Ifs
+Taste of Country . ^ Jump up to : Konicki , Lisa ( February 8 , 2017 ) . `` Kane Brown 's Current Single , `` What Ifs , '' With Lauren Alaina Almost Did n't
+Make The Album `` . Nash Country Daily . Jump up ^ Freeman , Jon ( December 2 , 2016 ) . `` Kane Brown on Personal New Album , Why He Wo n't Sing First Hit :
+Ram Report '' . Rolling Stone . ^ Jump up to : Asker , Jim ( October 17 , 2017 ) . `` Kane Brown Becomes First Artist To Simultaneously Lead Five Country Charts
+'' . Billboard . Jump up ^ `` ' What Ifs ' sheet music '' . MusicNotes.com . Retrieved 5 February 2018 . Jump up ^ Bjorke , Matt ( December 13 , 2016 ) . `` Top
+30 Digital Country Singles Chart : December 13 , 2016 '' . Roughstock . Retrieved February 5 , 2017 . Jump up ^ `` Country Airplay '' . Billboard .
+</item 8>
+
+<item 9>
+What Ifs
+What Ifs - wikipedia What Ifs Jump to : navigation , search `` What Ifs '' Single by Kane Brown featuring Lauren Alaina from the album Kane Brown Released
+February 6 , 2017 ( 2017 - 02 - 06 ) Format Digital download Genre Country Length 3 : 08 Label RCA Nashville Songwriter ( s ) Kane Brown Matthew McGinn Jordan
+Schmidt Producer ( s ) Dann Huff Kane Brown singles chronology `` Thunder in the Rain '' ( 2016 ) `` What Ifs '' ( 2017 ) `` Heaven '' ( 2017 ) `` Thunder in
+the Rain '' ( 2016 ) `` What Ifs '' ( 2017 ) `` Heaven '' ( 2017 ) Lauren Alaina singles chronology `` Road Less Traveled '' ( 2016 ) Road Less Traveled 2016 ``
+What Ifs '' ( 2017 ) What Ifs2017 `` Doin ' Fine '' ( 2017 ) Doin ' Fine 2017 `` What Ifs '' is a song recorded by American country music singer Kane Brown
+featuring Lauren Alaina for his self - titled debut album .
+</item 9>
+
+<item 10>
+What Ifs
+wikipedia.org/w/index.php?title=What_Ifs&oldid=838232791 '' Categories : 2016 songs 2017 singles Kane Brown songs Lauren Alaina songs RCA Records Nashville
+singles Vocal duets Song recordings produced by Dann Huff Songs written by Jordan Schmidt Billboard Hot Country Songs number - one singles Hidden categories :
+Music infoboxes with deprecated parameters Articles with hAudio microformats Singlechart usages for Canada Singlechart called without song Singlechart usages
+for Billboardcanadacountry Singlechart usages for Billboardhot100 Singlechart usages for Billboardcountryairplay Singlechart usages for Billboardcountrysongs
+Certification Table Entry usages for Canada Certification Table Entry usages for United States Talk Contents About Wikipedia Español Edit links This page was
+last edited on 25 April 2018 , at 18 : 59 . About Wikipedia
+</item 10>
+=== END ITEM id=d6a430a7bdd03b9e ===
+
+=== ITEM id=773de399906c1b30 ===
+Gold sentences and facts:
+Sentence 0: Nigeria is the largest oil and gas producer in Africa . Crude oil from the delta basin comes in two types : light , and comparatively heavy -- the lighter around 36 gravity and the heavier , 20 -- 25 gravity . Both types are paraffinic and low in sulfur .
+  Fact 0.0: Nigeria is the largest oil and gas producer in Africa.
+  Fact 0.1: Crude oil from the delta basin comes in two types: light and comparatively heavy.
+  Fact 0.2: The lighter crude oil from the delta basin is around 36 gravity.
+  Fact 0.3: The heavier crude oil from the delta basin is 20 to 25 gravity.
+  Fact 0.4: Both types of crude oil from the delta basin are paraffinic.
+  Fact 0.5: Both types of crude oil from the delta basin are low in sulfur.
+
+Retrieved items:
+<item 1>
+Petroleum industry in Nigeria
+The main reasons underlying this trend are that some Gulf Coast refiners have reduced Nigerian imports in favor of domestically - produced crude , and that two
+refineries in the U.S. East Coast , which were significant buyers of Nigerian crude , were idled in late 2011 . As a result , Nigerian crude as a share of total
+United States imports has fallen to 5 percent in the first half of 2012 , down from 10 and 11 percent in the first half of 2011 and 2010 , respectively ,
+according to the International Energy Agency . According to the CIA World Factbook , Nigeria 's main export partners are the United States , India , Brazil ,
+Spain , France and the Netherlands . Shell has been working in Nigeria since 1936 , and currently dominates gas production in the country , as the Niger Delta ,
+which contains most of Nigeria 's gas resources , also houses most of Shell 's hydrocarbon assets . History and politics ( edit ) See also : History of Nigeria
+and Niger Delta An Ethno - linguistic map of Nigeria .
+</item 1>
+
+<item 2>
+Petroleum industry in Nigeria
+Petroleum industry in Nigeria - wikipedia Petroleum industry in Nigeria Jump to : navigation , search Nigeria is the largest oil and gas producer in Africa .
+Crude oil from the delta basin comes in two types : light , and comparatively heavy -- the lighter around 36 gravity and the heavier , 20 -- 25 gravity . Both
+types are paraffinic and low in sulfur . The gates of the oil refinery in Port Harcourt Contents ( hide ) 1 History of oil exploration 2 Production and
+exploration 2.1 Offshore 2.2 Natural gas 2.3 Downstream 3 Current manufacturing 4 History and politics 4.1 Colonial legacy ( 1800s -- 1960s ) 4.2 Implications
+and causes of civil war ( 1966 -- 1970 ) 4.3 Industry nationalisation ( 1970 -- 1979 ) 4.4 Attempted democracy and debt ( 1979 -- 1983 ) 4.5 Return to military
+rule and electoral annulment ( 1983 -- 1993 ) 4.6 An environment of crisis ( 1993 -- present ) 5 Operating agreements 5.
+</item 2>
+
+<item 3>
+Petroleum industry in Nigeria
+Though Nigeria is a major oil exporter , it imports most of its gasoline , and when fuel subsidies were lifted in January 2012 , fuel increased from roughly
+$1.70 per gallon to $3.50 . Nigeria produces a form of oil ideal for the United States , has huge reserves , and has increased its production to 2.8 million
+barrels ( 450,000 m ) of oil a day . But this , some say , is all a resource curse that is hurting Nigeria and disadvantaging her people . Oil theft ( edit ) A
+report analysing the effect of oil theft in Nigeria revealed in July 2013 that Nigeria lost $10.9 billion in potential oil revenues between 2009 and 2011 .
+Environmental impact ( edit ) See also : Environmental issues in Nigeria Map of vegetation in Nigeria The Niger Delta comprises 70,000 square kilometres (
+27,000 square miles ) of wetlands formed primarily by sediment deposition . Home to more than 20 million people and 40 different ethnic groups , this floodplain
+makes up 7.5 % of Nigeria 's total land mass . It is the largest wetland and maintains the third - largest drainage area in Africa .
+</item 3>
+
+<item 4>
+Petroleum industry in Nigeria
+By contrast , the Yoruba , the Igbo and the Efik in the south had regularly experienced contact with Europeans since at least the 16th century . A minority of
+southerners converted to Christianity even prior to the establishment of permanent British control , but the majority followed traditional indigenous religions
+, worshipping myriad deities with vast domains spanning both cosmic and terrestrial spheres . Coastal Nigerians established thriving trade both regionally and
+abroad , fashioning the coast into a hub for products like palm oil , a good sought after by rapidly industrialising Europe , while also serving as key source
+for the slave trade prior to its international banning ( the region came to be known as the Slave Coast as a result ) . The Niger Delta region , which is
+roughly synonymous with the Niger Delta province in location and the contemporary heart of the petroleum industry , is and was a zone of dense cultural
+diversity and is currently inhabited by roughly forty ethnic groups speaking an estimated 250 dialects . Some of the more relevant ethnic groups in the western
+part of the Niger Delta region include the Ijaw , Itsekiri , and Ogoni .
+</item 4>
+
+<item 5>
+Petroleum industry in Nigeria
+Mobil operates primarily out of the Qua Iboe Terminal in Akwa Ibom State , while Chevron owns the Escravos Terminal located in Delta State and has a storage
+capacity of 3.6 million barrels ( 570,000 m ) . Agip operates the Brass Terminal in Brass , a town 113 kilometres ( 70 miles ) southwest of Port Harcourt and
+has a storage capacity of 3,558,000 barrels ( 565,700 m ) . Texaco operates the Pennington Terminal . Offshore ( edit ) Oil companies in Africa investigate
+offshore production as an alternative area of production . Deepwater production mainly involves underwater drilling that exists 400 metres ( 1,300 ft ) or more
+below the surface of the water . By expanding to deep water drilling the possible sources for finding new oil reserves is expanded . Through the introduction of
+deep water drilling 50 % more oil is extracted than before the new forms of retrieving the oil . Angola and Nigeria are the largest oil producers in Africa . In
+Nigeria , the deepwater sector still has a large avenue to expand and develop .
+</item 5>
+
+<item 6>
+Petroleum industry in Nigeria
+Offshore spills , which are usually much greater in scale , contaminate coastal environments and cause a decline in local fishing production . Nigerian
+regulations are weak and rarely enforced allowing oil companies , in essence , to self - regulate . Natural gas flaring ( edit ) See also main article :
+Environmental issues in the Niger Delta Nigeria flares more natural gas associated with oil extraction than any other country , with estimates suggesting that
+of the 99,000,000 m ( 3.5 × 10 ^ cu ft ) of associated gas ( AG ) produced annually , 71,000,000 m ( 2.5 × 10 ^ cu ft ) , or about 70 % is wasted via flaring .
+Statistical data associated with gas flaring is notoriously unreliable , but AG wasted during flaring is estimated to cost Nigeria US $2.5 billion on a yearly
+basis . Companies operating in Nigeria harvest natural gas for commercial purposes , however prefer to extract it gas from deposits where it is found in
+isolation as non-associated gas . It is costly to separate commercially viable associated gas from oil , hence gas flaring to increase crude production .
+</item 6>
+
+<item 7>
+Petroleum industry in Nigeria
+The most productive region of the nation is the coastal Niger Delta Basin in the Niger Delta or `` South - south '' region which encompasses 78 of the 159 oil
+fields . Most of Nigeria 's oil fields are small and scattered , and as of 1990 , these small unproductive fields accounted for 62.1 % of all Nigerian
+production . This contrasts with the sixteen largest fields which produced 37.9 % of Nigeria 's petroleum at that time . As a result of the numerous small
+fields , an extensive and well - developed pipeline network has been engineered to transport the crude oil . Also because of the lack of highly productive
+fields , money from the jointly operated ( with the federal government ) companies is constantly directed towards petroleum exploration and production . Nigeria
+'s petroleum is classified mostly as `` light '' and `` sweet '' , as the oil is largely free of sulphur . Nigeria is the largest producer of sweet oil in OPEC
+. This sweet oil is similar in composition to petroleum extracted from the North Sea . This crude oil is known as `` Bonny light '' .
+</item 7>
+
+<item 8>
+Petroleum industry in Nigeria
+Retrieved 4 December 2012 . Retrieved 26 November 2012 Jump up ^ U.S. Energy Information Administration ( U.S. EIA ) , `` Nigeria Country Analysis Brief , ''
+December 1997 . Jump up ^ http://www.oilandgascouncil.com/expert_insight_articles/review-nigeria-oil-gas-industry Jump up ^ Environmental Resources Managers Ltd
+, Niger Delta Environmental Survey Final Report Phase I ; Volume I : Environmental and Socio - Economic Characteristics ( Lagos : Niger Delta Environmental
+Survey , September 1997 ) ^ Jump up to : Nigeria : The Political Economy of Oil ISBN 0 - 19 - 730014 - 6 ( Khan , Ahmad ) Jump up ^ US Shuts its Door on Nigeria
+'s Oil Exports ( ThisDayLive.com ) ^ Jump up to : Nigerian Crude and Gas Industry ( NigeriaBusinessInfo.com ) ^ Jump up to : McLennan , James ; Stewart Williams
+( Feb 2005 ) . Deepwater Africa reaches turning point . Oil & Gas Journal . Vol. 103 , 6 ; ABI / INFORM Global . pg. 18 Jump up ^ Khadija Sharife .
+</item 8>
+
+<item 9>
+Petroleum industry in Nigeria
+Additionally , Nigerian government officials have remained majority shareholders in the profits created by the production of Nigerian oil , leading to
+government capturing of nearly all oil production , and citizens are not seeing socioeconomic benefits , and insist that oil companies should compensate people
+. Production and exploration ( edit ) Satellite image of Niger Delta As of 2000 , oil and gas exports accounted for more than 98 % of export earnings and about
+83 % of federal government revenue , as well as generating more than 14 % of its GDP . It also provides 95 % of foreign exchange earnings , and about 65 % of
+government budgetary revenues . Nigeria 's proven oil reserves are estimated by the United States Energy Information Administration ( EIA ) at between 16 and 22
+billion barrels ( 2.5 × 10 and 3.5 × 10 m ) , but other sources claim there could be as much as 35.3 billion barrels ( 5.61 × 10 m ) . Its reserves make Nigeria
+the tenth most petroleum - rich nation , and by the far the most affluent in Africa .
+</item 9>
+
+<item 10>
+Petroleum industry in Nigeria
+An open - air market for illegal crude oil operates off the Niger Delta , called the Togo Triangle . Natural gas ( edit ) Natural gas reserves are well over
+5,300 km ( 187 × 10 ^ cu ft ) , the gas reserves are three times as substantial as the crude oil reserves . The biggest natural gas initiative is the Nigerian
+Liquified Natural Gas Company , which is operated jointly by several companies and the state . It began exploration and production in 1999 . Chevron is also
+attempting to create the Escravos Gas Utilization project which will be capable of producing 4,500,000 m ( 160 × 10 ^ cu ft ) per day . gas reserves . In 2008 ,
+the government prepared a Gas Master Plan that was intended to promote natural gas production and encourage the supply of natural gas to domestic power stations
+so as to help alleviate the country 's electricity shortages . There is also an export gas pipeline , known as the West African Gas Pipeline , in the works but
+has encountered numerous setbacks . The pipeline would allow for transportation of natural gas to Benin , Ghana , Togo , and Cote d'Ivoire .
+</item 10>
+=== END ITEM id=773de399906c1b30 ===
+
+=== ITEM id=768a463747fdedc9 ===
+Gold sentences and facts:
+Sentence 0: Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants .
+  Fact 0.0: Barbara Eden plays Stella Johnson.
+  Fact 0.1: Stella Johnson is a widowed cosmetics salesperson.
+  Fact 0.2: Stella Johnson has a young daughter.
+  Fact 0.3: Stella Johnson's joie de vivre angers most of the powerful people in town.
+  Fact 0.4: Stella Johnson's joie de vivre angers most of the powerful people on the Parent Teachers Association board.
+  Fact 0.5: Stella Johnson's principles anger most of the powerful people in town.
+  Fact 0.6: Stella Johnson's principles anger most of the powerful people on the Parent Teachers Association board.
+  Fact 0.7: Stella Johnson's individuality angers most of the powerful people in town.
+  Fact 0.8: Stella Johnson's individuality angers most of the powerful people on the Parent Teachers Association board.
+  Fact 0.9: Stella Johnson inevitably becomes PTA president.
+  Fact 0.10: Stella Johnson becomes PTA president after embarrassing Flora.
+  Fact 0.11: Flora is the snobby former President of the PTA.
+  Fact 0.12: Stella Johnson embarrasses Flora and Flora's equally snobby friends.
+  Fact 0.13: Ronny Cox plays Willis 'Will' Newton.
+  Fact 0.14: Will Newton is a wealthy member of the PTA.
+  Fact 0.15: Will Newton does not agree with Flora and her snobby allies.
+  Fact 0.16: Will Newton is in love with Stella Johnson.
+  Fact 0.17: Will Newton and Stella Johnson get married at the end of the movie.
+  Fact 0.18: Nanette Fabray plays Alice Finley.
+  Fact 0.19: Alice Finley is Stella Johnson's best friend.
+  Fact 0.20: Alice Finley is Stella Johnson's co-conspirator against the snobs of Harper Valley.
+  Fact 0.21: Alice Finley owns and operates the La Moderne Beauty Shop.
+  Fact 0.22: Louis Nye plays Kirby Baker.
+  Fact 0.23: Kirby Baker is a local real estate agent.
+  Fact 0.24: Kirby Baker is allied with Flora and her friends.
+  Fact 0.25: Kirby Baker is notorious for being a lecherous playboy.
+  Fact 0.26: Kirby Baker is infamous for impregnating his secretaries.
+  Fact 0.27: Gladys Wilmot is one of Kirby Baker's secretaries.
+  Fact 0.28: Gladys Wilmot left town to see an abortionist in Cincinnati.
+  Fact 0.29: As part of a plan to discredit Stella Johnson, Kirby Baker tries to foreclose on Stella Johnson's house.
+  Fact 0.30: Kirby Baker's attempt to foreclose on Stella Johnson's house infuriates Stella Johnson.
+  Fact 0.31: Kirby Baker gets arrested and jailed for attacking Myrna Wong.
+  Fact 0.32: Myrna Wong is a friend of Stella Johnson.
+  Fact 0.33: Myrna Wong rebuffs Kirby Baker's advances.
+  Fact 0.34: Myrna Wong throws Kirby Baker by use of martial arts.
+  Fact 0.35: Myrna Wong destroys Kirby Baker's office.
+  Fact 0.36: John Fiedler plays Bobby Taylor.
+  Fact 0.37: Bobby Taylor is a man on the PTA.
+  Fact 0.38: Bobby Taylor lusts after Stella Johnson.
+  Fact 0.39: Bobby Taylor is overly dominated by his wife, Holly Taylor.
+  Fact 0.40: Bobby Taylor is open to allowing Stella Johnson to speak.
+  Fact 0.41: Bobby Taylor is not above having a fellow PTA board member kidnapped to commit election fraud.
+  Fact 0.42: Bobby Taylor was arrested for indecent exposure after being set up by Stella Johnson.
+  Fact 0.43: Ron Masak plays Herbie Maddox.
+  Fact 0.44: Herbie Maddox is the head bartender at Kelly's bar.
+  Fact 0.45: Herbie Maddox is Stella Johnson's ally against Flora and her friends.
+  Fact 0.46: Herbie Maddox has a crush on Stella Johnson.
+  Fact 0.47: Herbie Maddox is one of Stella Johnson's friends.
+  Fact 0.48: Clint Howard plays Corley.
+  Fact 0.49: Corley is a young delivery person.
+  Fact 0.50: Corley works for the local florist shop.
+  Fact 0.51: Corley brings Stella Johnson flowers from Will Newton.
+  Fact 0.52: Susan Swift plays Dee Johnson.
+  Fact 0.53: Dee Johnson is Stella Johnson's 14-year-old daughter.
+  Fact 0.54: Dee Johnson is threatened with expulsion from school if her mother does not conform to the way the PTA wants her to behave.
+  Fact 0.55: Dee Johnson has a hand in assisting her mother Stella Johnson and Alice Finley with one of their revenge schemes.
+  Fact 0.56: Dee Johnson loses her braces.
+  Fact 0.57: Dee Johnson gets a makeover.
+  Fact 0.58: Dee Johnson ends up with a boyfriend, Carlyle.
+  Fact 0.59: Pat Paulsen plays Otis Harper.
+  Fact 0.60: Otis Harper is the descendant of the founding family of Harper Valley.
+  Fact 0.61: Otis Harper is a PTA member who is allied with Flora and her friends.
+  Fact 0.62: Otis Harper has a tendency to drink all the time.
+  Fact 0.63: Otis Harper's drinking annoys his wife, Bertha Harper.
+  Fact 0.64: A stampede of elephants, painted pink, stormed through Otis Harper's house.
+  Fact 0.65: The stampede of pink elephants destroyed Otis Harper's house.
+  Fact 0.66: Amzie Strickland plays Shirley Thompson.
+  Fact 0.67: Shirley Thompson is a member of the PTA board.
+  Fact 0.68: Shirley Thompson tends to drink a lot of gin.
+  Fact 0.69: Shirley Thompson is allied with Flora and her friends.
+  Fact 0.70: Shirley Thompson is one of four PTA members spared any retribution from Stella Johnson.
+  Fact 0.71: The other three PTA members spared any retribution from Stella Johnson are Will, Skeeter, and Holly Taylor.
+  Fact 0.72: Shirley Thompson was seen as the most sympathetic member of the PTA board.
+  Fact 0.73: Shirley Thompson tended to be more manipulated than manipulative.
+  Fact 0.74: It was never revealed whether Shirley Thompson retained her seat on the PTA.
+  Fact 0.75: It is presumed that Shirley Thompson became more sympathetic towards Stella Johnson.
+  Fact 0.76: Shirley Thompson was seen waving goodbye at Olive as Olive was being arrested.
+  Fact 0.77: Bob Hastings plays Skeeter Duggan.
+  Fact 0.78: Skeeter Duggan is a member of the PTA board.
+  Fact 0.79: Skeeter Duggan is the town's Notary public.
+  Fact 0.80: Skeeter Duggan is sympathetic to Stella Johnson.
+  Fact 0.81: Skeeter Duggan is kidnapped by Dutch and Tex at Flora Simpson-Reilly's orders.
+  Fact 0.82: Audrey Christie plays Flora Simpson-Reilly.
+  Fact 0.83: Flora Simpson-Reilly is the movie's main antagonist.
+  Fact 0.84: Flora Simpson-Reilly is the pompous and extremely snobbish president of the PTA board.
+  Fact 0.85: Flora Simpson-Reilly thoroughly despises Stella Johnson.
+  Fact 0.86: Flora Simpson-Reilly despises all that Stella Johnson stands for.
+  Fact 0.87: Stella Johnson defeats Flora Simpson-Reilly for president at the end of the movie.
+  Fact 0.88: Flora Simpson-Reilly is desperate to retain her power and prestige in the community.
+  Fact 0.89: Flora Simpson-Reilly has Skeeter Duggan, a fellow PTA member, kidnapped so that she and her allies can commit election fraud.
+  Fact 0.90: Flora Simpson-Reilly is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon.
+  Fact 0.91: Molly Dodd plays Olive Glover.
+  Fact 0.92: Olive Glover is the recording secretary of the PTA.
+  Fact 0.93: Olive Glover is a gambling addict.
+  Fact 0.94: Olive Glover is clearly the most corrupt member of the PTA board.
+  Fact 0.95: Olive Glover is clearly the most vindictive member of the PTA board.
+  Fact 0.96: Olive Glover has a load of hay and horse manure dumped on top of her.
+  Fact 0.97: Olive Glover is eventually arrested for embezzlement, after the hay and manure are dumped on her.
+  Fact 0.98: Olive Glover initially angers Stella Johnson by sending her a letter denouncing her.
+  Fact 0.99: Olive Glover tries to get Mavis arrested for embezzlement.
+  Fact 0.100: Mavis is Dee Johnson's friend.
+  Fact 0.101: Fay DeWitt plays Willamae Jones.
+  Fact 0.102: Willamae Jones is a snide biology teacher at the junior high school.
+  Fact 0.103: Willamae Jones is also a member of the PTA.
+  Fact 0.104: Willamae Jones makes no secret that she favors the Reilly twins.
+  Fact 0.105: Willamae Jones favors the Reilly twins due to the connections between her and Flora.
+  Fact 0.106: Willamae Jones is notorious for being a nymphomaniac.
+  Fact 0.107: Willamae Jones hides her nymphomania under a prim-and-proper facade.
+  Fact 0.108: Willamae Jones is caught in flagrante delicto with Barney Crunk on film.
+  Fact 0.109: Barney Crunk is the town's mailman.
+  Fact 0.110: DeVera Marcus plays Holly Taylor.
+  Fact 0.111: Holly Taylor is Bobby Taylor's obviously overbearing wife.
+  Fact 0.112: Holly Taylor tends to drink a lot when Bobby Taylor is out of town.
+  Fact 0.113: Holly Taylor does not approve of Bobby Taylor's lusting.
+  Fact 0.114: Holly Taylor does not approve of anything else Bobby Taylor does.
+  Fact 0.115: The Holly Taylor character in the movie is different from the character in the song.
+  Fact 0.116: The character in the song 'seems to use a lot of ice whenever (her husband)'s away', implying adultery with the iceman.
+  Fact 0.117: Holly Taylor has ties to Flora and her scheming friends.
+  Fact 0.118: Holly Taylor, like Shirley Thompson, is spared any retribution from Stella Johnson.
+  Fact 0.119: Holly Taylor is spared retribution because Stella Johnson refuses to date Bobby Taylor.
+  Fact 0.120: Louise Foley plays Mavis.
+  Fact 0.121: Mavis is Dee Johnson's best friend.
+  Fact 0.122: Mavis is nearly framed for a crime she did not commit by Olive Glover.
+  Fact 0.123: Olive Glover is vindictive.
+  Fact 0.124: Brian Cook plays Carlyle.
+  Fact 0.125: Carlyle is a popular track star.
+  Fact 0.126: Carlyle chooses Dee Johnson after she gets a makeover.
+  Fact 0.127: Carlyle's choice of Dee Johnson angers Bettina Reilly.
+  Fact 0.128: Laura Teige plays Bettina Reilly.
+  Fact 0.129: Bettina Reilly is one of Flora's twin granddaughters.
+  Fact 0.130: Bettina Reilly wants to be with Carlyle.
+  Fact 0.131: Bettina Reilly is jealous when Carlyle chooses Dee over her.
+  Fact 0.132: Bettina Reilly tends to be as snotty as her grandmother, Flora.
+  Fact 0.133: Jan Teige plays Edwina Reilly.
+  Fact 0.134: Edwina Reilly is Bettina Reilly's twin sister.
+  Fact 0.135: Edwina Reilly is just as snotty as Bettina Reilly.
+  Fact 0.136: Irene Yah-Ling Sun plays Myrna Wong.
+  Fact 0.137: Myrna Wong is a friend of Stella Johnson.
+  Fact 0.138: Myrna Wong is a judo expert.
+  Fact 0.139: Myrna Wong is assaulted by Kirby Baker.
+  Fact 0.140: Myrna Wong led Kirby Baker on before he assaulted her.
+  Fact 0.141: Myrna Wong destroys Kirby Baker and his office in retaliation.
+  Fact 0.142: Myrna Wong has Kirby Baker sent to jail for assault.
+  Fact 0.143: Tobias Anderson plays Barney Crunk, nicknamed 'Cranky'.
+  Fact 0.144: Barney Crunk is the town's nosy mailman.
+  Fact 0.145: Barney Crunk had the bad habit of peeking in everyone's mail.
+  Fact 0.146: Barney Crunk is caught in flagrante delicto on film with Willamae Jones.
+  Fact 0.147: Royce D. Applegate plays Dutch.
+  Fact 0.148: Dutch is one of two kidnappers.
+  Fact 0.149: Dutch abducts Skeeter Duggan at Flora Simpson-Reilly's orders.
+  Fact 0.150: J.J. Barry plays Tex.
+  Fact 0.151: Tex is the mastermind of the kidnap plot.
+  Fact 0.152: The kidnap plot is meant to get Skeeter Duggan out of the way so Flora Simpson-Reilly and her friends could commit election fraud.
+  Fact 0.153: Tex is arrested.
+  Fact 0.154: Dutch is arrested.
+  Fact 0.155: Dutch is Tex's accomplice.
+  Fact 0.156: Tex and Dutch rat out Flora and her friends on their scheme.
+  Fact 0.157: Pitt Herbert plays Henry Reilly.
+  Fact 0.158: Henry Reilly is Flora's overly dominated husband.
+  Fact 0.159: Henry Reilly is the grandfather of Edwina and Bettina.
+  Fact 0.160: Henry Reilly is wealthy.
+  Fact 0.161: Henry Reilly is very weak-willed.
+  Fact 0.162: Henry Reilly is known for acquiescing to his wife's schemes.
+  Fact 0.163: Arlen Stuart plays Bertha Harper.
+  Fact 0.164: Bertha Harper is the wife of Otis Harper.
+  Fact 0.165: Bertha Harper gets annoyed by Otis Harper's continual drinking.
+  Fact 0.166: Bertha Harper is terrified when her house is destroyed by pink-painted elephants.
+
+Retrieved items:
+<item 1>
+Harper Valley PTA (film)
+The letter denounces her for her not following the societal mores of the day and the community and further stating that if she does not change her ways more to
+the board 's liking , Dee will be punished for her mother 's `` sins '' by being expelled from school . Infuriated by the board 's supposed superiority and
+their glaring hypocrisy , Stella storms to the PTA meeting being held that day , and proceeds to tell most of the PTA members off by exposing their hidden
+skeletons for the town to see . After her house is TP'ed ( Toilet - Papered ) and a rock with a vile note attached is thrown through her window in retaliation ,
+Stella prepares to get even with those who would want her driven out of town . She teams up with her friends , beautician Alice Finley and bartender Herbie
+Maddox , and ( along with Dee 's help ) wreaks hilarious and justified revenge on six of the hypocritical PTA members , with methods including : 1 ) tricking a
+married male board member who has repeatedly tried to date Stella into a disastrous rendezvous , 2 ) embarrassing Mrs.
+</item 1>
+
+<item 2>
+Harper Valley PTA (film)
+Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use
+and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 2>
+
+<item 3>
+Harper Valley PTA (film)
+The film starred Barbara Eden , Nanette Fabray , Ronny Cox , Louis Nye and Susan Swift , directed by Richard Bennett , and was mainly released to drive - in
+theaters throughout the summer of 1978 . The film has a cult following in fans of the original song . The film 's promotional tagline is : `` The song was
+scandalous . The movie is hilarious ! '' Contents ( hide ) 1 Plot 2 Cast and characters 3 Production and release 3.1 Filming 3.2 Release 4 Soundtrack 5
+Television series 6 References 7 External links Plot ( edit ) Stella Johnson is a beautiful widowed single mother who lives in the town of Harper Valley , Ohio
+. She sells cosmetics door - to - door for the fictitious AngelGlo Cosmetics and is not afraid to enjoy life . Her fourteen - year - old daughter , Dee , is a
+student at Harper Valley Junior High School . After leaving school , Dee brings her mother a letter from the school 's Parent Teacher Association board , which
+is led by the pompous and snobbish Flora Simpson - Reilly .
+</item 3>
+
+<item 4>
+Harper Valley PTA (film)
+Side 1 `` Harper Valley PTA '' -- performed by Jeannie C. Riley `` Dee 's Visit '' ( instrumental ) -- performed by Nelson Riddle `` Mr. Harper '' -- performed
+by Barbara Eden `` Alice 's Place '' ( instrumental ) -- performed by Nelson Riddle `` High School Confidential '' -- performed by Jerry Lee Lewis `` Willie Mae
+'' ( instrumental ) -- performed by Nelson Riddle Side 2 `` Harper Valley PTA '' ( instrumental ) -- performed by Nelson Riddle `` Widow Jones '' -- performed
+by Barbara Eden `` Twin Tune '' ( instrumental ) -- performed by Nelson Riddle `` Ballad of a Teenage Queen '' -- performed by Johnny Cash `` Ice Cream Disco ''
+( instrumental ) -- performed by Nelson Riddle `` Whatever Happened to Charlie Brown '' -- performed by Rita Remington & Carol Channing `` Ending ( Reprise :
+Harper Valley PTA ) '' ( instrumental ) -- performed by Nelson Riddle Television series ( edit ) Main article : Harper Valley PTA ( TV series ) In 1981 , Harper
+Valley PTA was made into a television sitcom ( created by Sherwood Schwartz ) which aired on NBC from January 1981 to May 1982 .
+</item 4>
+
+<item 5>
+Harper Valley PTA (film)
+He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who
+tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others
+) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being
+manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she
+was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is
+sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main
+antagonist .
+</item 5>
+
+<item 6>
+Harper Valley PTA (film)
+He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson -
+Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could
+commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry
+Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to
+his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her
+house is destroyed by pink - painted elephants .
+</item 6>
+
+<item 7>
+Harper Valley PTA (film)
+He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally
+against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the
+local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion
+from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge
+schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family
+of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a
+stampede of elephants , painted pink , stormed through his house , destroying it .
+</item 7>
+
+<item 8>
+Harper Valley PTA (film)
+The film grossed over $2 million its opening weekend , $5.8 million in its first three weeks and over $16 million after twelve weeks . The film opened in Los
+Angeles on August 2 , 1978 and in New York City on January 12 , 1979 . Soundtrack ( edit ) Harper Valley PTA : Original Soundtrack Recording Soundtrack album by
+various artists Released June 1978 Recorded Singleton Sound Studios Nashville , Tennessee Genre Soundtrack Length 29 : 50 Label Plantation Records Producer
+Shelby S. Singleton , Jr . Singles from Harper Valley PTA `` Harper Valley PTA ( re-issue ) '' Released : July 1978 In June 1978 , a soundtrack album was
+released on vinyl , cassette and 8 - track tape by Plantation Records . To promote the film 's release and its soundtrack , the title song by Jeannie C. Riley
+was re-issued as a single . The album made its compact disc premiere through Varèse Sarabande on October 27 , 2017 .
+</item 8>
+
+<item 9>
+Harper Valley PTA (film)
+She is terrified when her house is destroyed by pink - painted elephants . Production and release ( edit ) Filming ( edit ) Harper Valley PTA was filmed in
+twenty - seven days from October 3 , 1977 to December 8 , 1977 . It was filmed on location for one week in the town of Lebanon , Ohio and then continued in Los
+Angeles , California . The track meet scene was filmed at Simi Valley High School On October 31 , 1977 , production ceased temporarily when Nanette Fabray was
+knocked to the ground by a spooked elephant while shooting a scene involving pink elephants in the Hancock Park neighborhood of Los Angeles , California ; she
+suffered a severe concussion , bruises and back sprains and was taken to Cedars - Sinai Medical Center where her condition was reported as serious but stable .
+Following her recovery , filming resumed on November 30 . Release ( edit ) Harper Valley PTA opened in six theaters in Lebanon , Cincinnati and Dayton , Ohio on
+May 23 , 1978 in accordance with executive producer Phil Borack 's plan to release the film first in smaller markets , where regional success could encourage
+exhibitors in bigger cities to book the film .
+</item 9>
+
+<item 10>
+Harper Valley PTA (film)
+Harper Valley PTA ( film ) - wikipedia Harper Valley PTA ( film ) Jump to : navigation , search Harper Valley PTA Theatrical release poster Directed by Richard
+Bennett Produced by George Edwards Written by George Edwards Barry Schneider Starring Barbara Eden Nanette Fabray Ronny Cox Louis Nye Susan Swift Pat Paulsen
+Music by Nelson Riddle Cinematography Willy Kurant Edited by Michael Economou Distributed by April Fools Productions Release date May 23 , 1978 ( 1978 - 05 - 23
+) ( Midwest ) June 2 , 1978 ( 1978 - 06 - 02 ) ( Canada ) August 2 , 1978 ( 1978 - 08 - 02 ) ( Los Angeles ) January 12 , 1979 ( 1979 - 01 - 12 ) ( New York
+City ) Running time 93 minutes Country United States Language English Budget $1 million Box office $25 million ( USA ) Harper Valley PTA is a 1978 American
+comedy film inspired by the popular 1968 country song `` Harper Valley PTA '' written by Tom T. Hall and performed by country singer Jeannie C. Riley .
+</item 10>
+=== END ITEM id=768a463747fdedc9 ===

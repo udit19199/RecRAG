@@ -1,0 +1,783 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=15bea25906f85c43 ===
+Gold sentences and facts:
+Sentence 0: The official music video for the song was directed by P.R. Brown and produced by Steve Lamar . The video was filmed along the Californian coast at The Inn at Newport Ranch , a resort and cattle ranch to the north of San Francisco . It features Brown and his duet partner Lauren Alaina singing along the coast . It was released on May 14 , 2017 . An earlier lyric video was first released on May 4 , 2017 , and shows Brown and Alaina cruising down a road .
+  Fact 0.0: The official music video for the song was directed by P.R. Brown.
+  Fact 0.1: The official music video for the song was produced by Steve Lamar.
+  Fact 0.2: The video was filmed along the Californian coast at The Inn at Newport Ranch.
+  Fact 0.3: The Inn at Newport Ranch is a resort and cattle ranch.
+  Fact 0.4: The Inn at Newport Ranch is north of San Francisco.
+  Fact 0.5: The video features Brown and his duet partner Lauren Alaina singing along the coast.
+  Fact 0.6: The video was released on May 14, 2017.
+  Fact 0.7: An earlier lyric video was first released on May 4, 2017.
+  Fact 0.8: The earlier lyric video shows Brown and Alaina cruising down a road.
+
+Retrieved items:
+<item 1>
+What Ifs
+The song was released with the album through RCA Nashville and was serviced to radio as the third single on February 6 , 2017 . Contents ( hide ) 1 Background 2
+Composition 3 Commercial performance 4 Music video 5 Chart performance 5.1 Weekly charts 5.2 Year - end charts 6 Certifications and sales 7 References
+Background ( edit ) The song was written by Brown with Matthew McGinn and Jordan Schmidt . The song is about a couple where the question `` what if '' is asked
+repeatedly about what would happen in their relationship . It features a duet with Lauren Alaina , a school friend from Lakeview - Fort Oglethorpe High School
+when he was living in Fort Oglethorpe , Georgia . According to Brown , the song was initially not intended to be a duet , he said : `` Once we decided on adding
+a woman to `` What Ifs , '' I knew that I wanted Lauren to sing it , and , of course , she killed it . ''
+</item 1>
+
+<item 2>
+What Ifs
+Music Canada . Retrieved February 8 , 2018 . Preceded by `` Body Like a Back Road '' by Sam Hunt Billboard Hot Country Songs number - one single October 21 --
+November 11 , 2017 Succeeded by `` When It Rains It Pours '' by Luke Combs Preceded by `` All the Pretty Girls '' by Kenny Chesney Billboard Country Airplay
+number - one single October 28 , 2017 Kane Brown Studio albums Kane Brown ( 2016 ) EPs Closer ( 2015 ) Chapter 1 ( 2016 ) Singles `` Do n't Go City on Me '' ``
+Used to Love You Sober '' `` What Ifs '' `` Heaven '' Lauren Alaina Studio albums Wildflower Road Less Traveled EPs Lauren Alaina Singles `` Like My Mother Does
+'' `` Georgia Peaches '' `` Eighteen Inches '' `` Barefoot and Buckwild '' `` Next Boyfriend '' `` Road Less Traveled '' `` Doin ' Fine '' Other singles `` My
+Grown Up Christmas List '' `` What Ifs '' Retrieved from `` https://en.wikipedia.org/w/index.
+</item 2>
+
+<item 3>
+I Am Not a Robot
+The music video starts with an unfocused view of headlights on a road . It zooms out to show Diamandis with white painted hair , and a white dress with one
+feathered sleeve , on the Hollywood Walk of Fame . Diamandis walks down the street while singing the song , and blurred - face bystanders around her make way ,
+stare , or go their way . Near the end , the camera shows Diamandis 's white heels and white paint on her legs . At the end , Diamandis laughs , the camera
+follows her , and reveals the camera crew and the window of a shop .
+</item 3>
+
+<item 4>
+What Ifs
+It features Brown and his duet partner Lauren Alaina singing along the coast . It was released on May 14 , 2017 . An earlier lyric video was first released on
+May 4 , 2017 , and shows Brown and Alaina cruising down a road . Chart performance ( edit ) Weekly charts ( edit ) Chart ( 2017 ) Peak position Canada (
+Canadian Hot 100 ) 45 Canada Country ( Billboard ) US Billboard Hot 100 26 US Country Airplay ( Billboard ) US Hot Country Songs ( Billboard ) Year - end charts
+( edit ) Chart ( 2017 ) Position US Billboard Country Airplay 7 US Billboard Hot Country Songs US Billboard Hot 100 72 Certifications and sales ( edit ) Region
+Certification Certified units / Sales Canada ( Music Canada ) Platinum 80,000 United States ( RIAA ) Platinum 679,000 sales figures based on certification alone
+shipments figures based on certification alone References ( edit ) Jump up ^ Dukes , Billy ( January 24 , 2017 ) . `` Kane Brown ( Feat . Lauren Alaina ) , '
+What Ifs ' ( Listen ) '' . Taste of Country .
+</item 4>
+
+<item 5>
+What Ifs
+The song is the first No. 1 on the chart for both Brown and Alaina . The following week , for charts dated October 28 , 2017 , `` What Ifs '' stayed at number
+one , as well as topping the Country Airplay and Country Streaming Songs charts . Together with the release of the deluxe edition of the album which also
+reached number on Top Country Albums , and another number one for a new track `` Heaven '' on digital sales , Brown became the first artist to have simultaneous
+number ones on all five main country charts . The song was certified Platinum by the RIAA on October 2 , 2017 . It was the third most - consumed country song of
+2017 , with 1,551,000 including streams ( 599,000 in pure sale ) sold in the year . It has sold 679,000 copies in the US as of March 2018 . Music video ( edit )
+The official music video for the song was directed by P.R. Brown and produced by Steve Lamar . The video was filmed along the Californian coast at The Inn at
+Newport Ranch , a resort and cattle ranch to the north of San Francisco .
+</item 5>
+
+<item 6>
+What Ifs
+According to Brown , another song was going to be used in the album , however , he was asked so much about `` What Ifs '' on social media that it was then
+decided that the song should be included in the album . Composition ( edit ) The song is in the key of G minor with a moderately fast tempo of approximately 126
+beats per minute . It follows the chord progression Gm - B ♭ - F. Brown 's vocals range from F - B ♭ . Commercial performance ( edit ) The song sold 6,000
+downloads in the US the week the album was released on December 2 , 2016 , allowing it to chart at number 37 on the US Billboard Hot Country Songs chart . The
+song first entered the US Billboard Country Airplay chart for the week of March 4 , 2017 at number 60 . It reached No. 1 on Hot Country Songs in October 2017 ,
+ending the record breaking 34 - week reign of Sam Hunt 's `` Body Like a Back Road '' . The song is the first No. 1 on the chart for both Brown and Alaina .
+</item 6>
+
+<item 7>
+What Ifs
+Jump up ^ Bjorke , Matt ( January 3 , 2018 ) . `` Top 30 Country Digital Singles Chart : January 3 , 2018 '' . Roughstock . Retrieved January 14 , 2017 . ^ Jump
+up to : Bjorke , Matt ( March 6 , 2018 ) . `` The Top 30 Digital Country Singles : March 5 , 2018 '' . Roughstock . Retrieved March 11 , 2018 . Jump up ^ ``
+Watch Kane Brown , Lauren Alaina 's Picturesque ' What Ifs ' Video '' . Rolling Stone . May 15 , 2017 . Jump up ^ Kimble , Lindsay ( May 4 , 2017 ) . `` From
+Middle School Chorus to Nashville , Kane Brown and Lauren Alaina Team Up for Duet ' What Ifs ' '' . Jump up ^ `` Kane Brown Chart History ( Canadian Hot 100 )
+'' . Billboard . Retrieved October 24 , 2017 . Jump up ^ `` Kane Brown Chart History ( Canada Country ) '' . Billboard .
+</item 7>
+
+<item 8>
+What Ifs
+Jump up ^ `` Kane Brown Chart History ( Canada Country ) '' . Billboard . Retrieved November 14 , 2017 . Jump up ^ `` Kane Brown Chart History ( Hot 100 ) '' .
+Billboard . Retrieved October 24 , 2017 . Jump up ^ `` Kane Brown Chart History ( Country Airplay ) '' . Billboard . Retrieved October 17 , 2017 . Jump up ^ ``
+Kane Brown Chart History ( Hot Country Songs ) '' . Billboard . Retrieved October 10 , 2017 . Jump up ^ `` Country Airplay Songs -- Year - End 2017 '' .
+Billboard . Retrieved December 18 , 2017 . Jump up ^ `` Hot Country Songs -- Year - End 2017 '' . Billboard . Retrieved December 18 , 2017 . Jump up ^ `` Hot
+100 Songs -- Year - End 2017 '' . Billboard . Retrieved December 12 , 2017 . Jump up ^ `` Canadian single certifications -- Kane Brown -- What Ifs '' . Music
+Canada .
+</item 8>
+
+<item 9>
+What Ifs
+What Ifs - wikipedia What Ifs Jump to : navigation , search `` What Ifs '' Single by Kane Brown featuring Lauren Alaina from the album Kane Brown Released
+February 6 , 2017 ( 2017 - 02 - 06 ) Format Digital download Genre Country Length 3 : 08 Label RCA Nashville Songwriter ( s ) Kane Brown Matthew McGinn Jordan
+Schmidt Producer ( s ) Dann Huff Kane Brown singles chronology `` Thunder in the Rain '' ( 2016 ) `` What Ifs '' ( 2017 ) `` Heaven '' ( 2017 ) `` Thunder in
+the Rain '' ( 2016 ) `` What Ifs '' ( 2017 ) `` Heaven '' ( 2017 ) Lauren Alaina singles chronology `` Road Less Traveled '' ( 2016 ) Road Less Traveled 2016 ``
+What Ifs '' ( 2017 ) What Ifs2017 `` Doin ' Fine '' ( 2017 ) Doin ' Fine 2017 `` What Ifs '' is a song recorded by American country music singer Kane Brown
+featuring Lauren Alaina for his self - titled debut album .
+</item 9>
+
+<item 10>
+What Ifs
+wikipedia.org/w/index.php?title=What_Ifs&oldid=838232791 '' Categories : 2016 songs 2017 singles Kane Brown songs Lauren Alaina songs RCA Records Nashville
+singles Vocal duets Song recordings produced by Dann Huff Songs written by Jordan Schmidt Billboard Hot Country Songs number - one singles Hidden categories :
+Music infoboxes with deprecated parameters Articles with hAudio microformats Singlechart usages for Canada Singlechart called without song Singlechart usages
+for Billboardcanadacountry Singlechart usages for Billboardhot100 Singlechart usages for Billboardcountryairplay Singlechart usages for Billboardcountrysongs
+Certification Table Entry usages for Canada Certification Table Entry usages for United States Talk Contents About Wikipedia Español Edit links This page was
+last edited on 25 April 2018 , at 18 : 59 . About Wikipedia
+</item 10>
+=== END ITEM id=15bea25906f85c43 ===
+
+=== ITEM id=3ddf3b083c602950 ===
+Gold sentences and facts:
+Sentence 0: It houses the temporal lobes of the brain and the pituitary gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of the temporal bone .
+  Fact 0.0: The structure houses the temporal lobes of the brain and the pituitary gland.
+  Fact 0.1: A middle fossa craniotomy is one means to surgically remove acoustic neuromas.
+  Fact 0.2: Acoustic neuromas are also called vestibular schwannomas.
+  Fact 0.3: Acoustic neuromas grow within the internal auditory canal of the temporal bone.
+
+Retrieved items:
+<item 1>
+Middle cranial fossa
+It is traversed by the squamosal , sphenoparietal , sphenosquamosal , and sphenopetrosal sutures . It houses the temporal lobes of the brain and the pituitary
+gland . A middle fossa craniotomy is one means to surgically remove acoustic neuromas ( vestibular schwannoma ) growing within the internal auditory canal of
+the temporal bone . Middle cranial fossa surgical anatomy as demonstrated in a right cadaver temporal bone by Dr Jack M Kartush - view from above . Contents (
+hide ) 1 Middle part 2 Lateral parts 3 See also 4 References 5 Additional images 6 External links Middle part ( edit ) The middle part of the fossa presents ,
+in front , the chiasmatic groove and tuberculum sellae ; the chiasmatic groove ends on either side at the optic foramen , which transmits the optic nerve and
+ophthalmic artery to the orbital cavity . Behind the optic foramen the anterior clinoid process is directed backward and medialward and gives attachment to the
+tentorium cerebelli .
+</item 1>
+
+<item 2>
+Middle cranial fossa
+IV , V1 , VI ) to Pterygopalatine fossa : foramen rotundum ( CN - V2 ) pterygoid canal to Infratemporal fossa : foramen ovale ( CN - V3 ) foramen spinosum /
+carotid canal other : foramen lacerum hiatus for greater petrosal nerve hiatus for lesser petrosal nerve sphenoidal emissary foramen Posterior cranial fossa
+internal auditory meatus / facial canal / stylomastoid foramen ( CN - VII , VIII ) jugular foramen ( CN - IX , X ,
+</item 2>
+
+<item 3>
+Middle cranial fossa
+Lateral to the foramen ovale is the foramen spinosum , for the passage of the middle meningeal vessels , and a recurrent branch from the mandibular nerve .
+Medial to the foramen ovale is the foramen lacerum ; in the fresh state the lower part of this aperture is filled up by a layer of fibrocartilage , while its
+upper and inner parts transmit the internal carotid artery surrounded by a plexus of sympathetic nerves . The nerve of the pterygoid canal and a meningeal
+branch from the ascending pharyngeal artery pierce the layer of fibrocartilage .
+</item 3>
+
+<item 4>
+Middle cranial fossa
+Middle cranial fossa - wikipedia Middle cranial fossa Jump to : navigation , search Middle cranial fossa Base of the skull . Upper surface . ( Middle cranial
+fossa is the centermost of the three indentations , in pink and yellow . ) Details Identifiers Latin fossa cranii media TA A02. 1.00. 049 FMA 54369 Anatomical
+terminology ( edit on Wikidata ) The middle cranial fossa , deeper than the anterior cranial fossa , is narrow medially and widens laterally to the sides of the
+skull . It is separated from the posterior fossa by the clivus and the petrous crest . It is bounded in front by the posterior margins of the lesser wings of
+the sphenoid bone , the anterior clinoid processes , and the ridge forming the anterior margin of the chiasmatic groove ; behind , by the superior angles of the
+petrous portions of the temporal bones and the dorsum sellæ ; laterally by the temporal squamæ , sphenoidal angles of the parietals , and greater wings of the
+sphenoid .
+</item 4>
+
+<item 5>
+Middle cranial fossa
+Behind the tuberculum sellæ is a deep depression , the sella turcica , containing the fossa hypophyseos , which lodges the hypophysis , and presents on its
+anterior wall the middle clinoid processes . The sella turcica is bounded posteriorly by a quadrilateral plate of bone , the dorsum sellae , the upper angles of
+which are surmounted by the posterior clinoid processes : these afford attachment to the tentorium cerebelli , and below each is a notch for the abducent nerve
+. On either side of the sella turcica is the carotid groove , which is broad , shallow , and curved somewhat like the italic letter f . It begins behind at the
+foramen lacerum , and ends on the medial side of the anterior clinoid process , where it is sometimes converted into a foramen ( carotico - clinoid ) by the
+union of the anterior with the middle clinoid process ; posteriorly , it is bounded laterally by the lingula . This groove lodges the cavernous sinus and the
+internal carotid artery , the latter being surrounded by a plexus of sympathetic nerves .
+</item 5>
+
+<item 6>
+Middle cranial fossa
+Lateral parts ( edit ) The lateral parts of the middle fossa are of considerable depth , and support the temporal lobes of the brain . They are marked by
+depressions for the brain convolutions and traversed by furrows for the anterior and posterior branches of the middle meningeal vessels . These furrows begin
+near the foramen spinosum , and the anterior runs forward and upward to the sphenoidal angle of the parietal , where it is sometimes converted into a bony canal
+; the posterior runs lateralward and backward across the temporal squama and passes on to the parietal near the middle of its lower border . The following
+apertures are also to be seen . In front is the superior orbital fissure , bounded above by the small wing , below , by the great wing , and medially , by the
+body of the sphenoid ; it is usually completed laterally by the orbital plate of the frontal bone .
+</item 6>
+
+<item 7>
+Middle cranial fossa
+wikipedia.org/w/index.php?title=Middle_cranial_fossa&oldid=808415657 '' Categories : Wikipedia articles incorporating text from the 20th edition of Gray 's
+Anatomy ( 1918 ) Skull Hidden categories : Medicine infobox template using GraySubject or GrayPage Talk Contents About Wikipedia Deutsch فارسی Polski Edit links
+This page was last edited on 2 November 2017 , at 18 : 54 . Text is available under the Creative Commons Attribution - ShareAlike License ; additional terms may
+apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the Wikimedia Foundation , Inc. , a
+non-profit organization . About Wikipedia
+</item 7>
+
+<item 8>
+Middle cranial fossa
+It transmits to the orbital cavity the oculomotor , the trochlear , the ophthalmic division of the trigeminal , and the abducent nerves , some filaments from
+the cavernous plexus of the sympathetic , and the orbital branch of the middle meningeal artery ; and from the orbital cavity a recurrent branch from the
+lacrimal artery to the dura mater , and the ophthalmic veins . Behind the medial end of the superior orbital fissure is the foramen rotundum , for the passage
+of the maxillary nerve . Behind and lateral to the foramen rotundum is the foramen ovale , which transmits the mandibular nerve , the accessory meningeal artery
+, and the lesser superficial petrosal nerve . Medial to the foramen ovale is the foramen Vesalii , which varies in size in different individuals , and is often
+absent ; when present , it opens below at the lateral side of the scaphoid fossa , and transmits a small vein .
+</item 8>
+
+<item 9>
+Middle cranial fossa
+On the anterior surface of the petrous portion of the temporal bone are seen the eminence caused by the projection of the superior semicircular canal ; in front
+of and a little lateral to this a depression corresponding to the roof of the tympanic cavity ; the groove leading to the hiatus of the facial canal , for the
+transmission of the greater superficial petrosal nerve and the petrosal branch of the middle meningeal artery ; beneath it , the smaller groove , for the
+passage of the lesser superficial petrosal nerve ; and , near the apex of the bone , the depression for the semilunar ganglion and the orifice of the carotid
+canal . See also ( edit ) Anterior cranial fossa Posterior cranial fossa References ( edit ) This article incorporates text in the public domain from the 20th
+edition of Gray 's Anatomy ( 1918 ) Jump up ^ Mancall , Elliott L. ; Brock , David G. , eds. ( 2011 ) . `` Cranial Fossae '' . Gray 's Clinical Anatomy .
+Elsevier Health Sciences . p. 154 . ISBN 9781437735802 .
+</item 9>
+
+<item 10>
+Middle cranial fossa
+p. 154 . ISBN 9781437735802 . Additional images ( edit ) Middle cranial fossa at human foetus Base of skull Middle cranial fossa Middle cranial fossa Middle
+cranial fossa External links ( edit ) Wikimedia Commons has media related to Middle cranial fossa . Anatomy photo : 22 : os - 0802 at the SUNY Downstate Medical
+Center Compound structures of skull Neurocranium Calvaria Diploë Asterion Pterion Stephanion Inion Bregma Lambda Fossae anterior middle posterior cranial cavity
+Base of skull Fontanelle anterior posterior sphenoidal mastoid Facial skeleton Nasion Gonion Both dacryon zygomatic arch temporal fossa infratemporal fossa
+pterygomaxillary fissure pterygopalatine fossa Foramina of the skull ( and canals , fissures , meatus , and hiatus ) Anterior cranial fossa to Orbit : ethmoidal
+foramina anterior posterior to Nasal cavity : olfactory foramina ( CN - I ) foramen cecum Middle cranial fossa to Orbit : optic canal ( CN - II ) superior
+orbital fissure ( CN - III ,
+</item 10>
+=== END ITEM id=3ddf3b083c602950 ===
+
+=== ITEM id=336f3a0938092c94 ===
+Gold sentences and facts:
+Sentence 0: The Director of the United States Mint is the head of the United States Mint . The position is currently vacant . Since January 20 , 2017 , the senior career official at the Mint has been Acting Principal Deputy Director David Motl .
+  Fact 0.0: The Director of the United States Mint is the head of the United States Mint.
+  Fact 0.1: The position of Director of the United States Mint is currently vacant.
+  Fact 0.2: Since January 20, 2017, the senior career official at the Mint has been David Motl.
+  Fact 0.3: David Motl is the Acting Principal Deputy Director.
+Sentence 1: Name Assumed Office Left Office President Appointed By David Rittenhouse April 1792 June 1795 George Washington Henry William de Saussure July 1795 October 1795 Elias Boudinot October 1795 July 1805 Robert Patterson January 1806 July 1824 Thomas Jefferson Samuel Moore July 1824 July 1835 James Monroe Robert M. Patterson May 1835 July 1851 Andrew Jackson George Nicholas Eckert July 1851 April 1853 Millard Fillmore Thomas M. Pettit April 1853 May 1853 Franklin Pierce James Ross Snowden June 1853 May 1861 James Pollock May 1861 September 1866 Abraham Lincoln William Millward October 1866 April 1867 Andrew Johnson Henry Linderman April 1867 May 1869 James Pollock May 1869 March 1873 Ulysses S. Grant Henry Linderman April 1873 December 1878 Horatio C. Burchard February 1879 June 1885 Rutherford B. Hayes James P. Kimball July 1885 October 1889 Grover Cleveland Edward O. Leech October 1889 May 1893 Benjamin Harrison Robert E. Preston November 1893 February 1898 Grover Cleveland George E. Roberts February 1898 July 1907 William McKinley Frank A. Leach September 1907 August 1909 Theodore Roosevelt A. Piatt Andrew November 1909 June 1910 William Howard Taft George E. Roberts July 1910 November 1914 Robert W. Woolley March 1915 July 1916 Woodrow Wilson F.H. von Engelken September 1916 March 1917 Raymond T. Baker March 1917 March 1922 Frank Edgar Scobey March 1922 September 1923 Warren G. Harding Robert J. Grant November 1923 May 1933 Calvin Coolidge Nellie Tayloe Ross May 1933 April 1953 Franklin D. Roosevelt William H. Brett July 1954 January 1961 Dwight D. Eisenhower Eva Adams October 1961 August 1969 John F. Kennedy Mary Brooks September 1969 February 1977 Richard Nixon Stella Hackel Sims November 1977 April 1981 Jimmy Carter Donna Pope July 1981 August 1991 Ronald Reagan David J. Ryder September 1992 November 1993 George H.W. Bush Philip N. Diehl June 1994 March 2000 Bill Clinton Jay W. Johnson May 2000 August 2001 Henrietta H. Fore August 2001 August 2005 George W. Bush Edmund C. Moy September 2006 January 2011 David J. Ryder April 2018 Incumbent Donald Trump
+  Fact 1.0: David Rittenhouse held the office of Director of the Mint from April 1792 to June 1795, appointed by George Washington.
+  Fact 1.1: Henry William de Saussure held the office from July 1795 to October 1795.
+  Fact 1.2: Elias Boudinot held the office from October 1795 to July 1805.
+  Fact 1.3: Robert Patterson held the office from January 1806 to July 1824, appointed by Thomas Jefferson.
+  Fact 1.4: Samuel Moore held the office from July 1824 to July 1835, appointed by James Monroe.
+  Fact 1.5: Robert M. Patterson held the office from May 1835 to July 1851, appointed by Andrew Jackson.
+  Fact 1.6: George Nicholas Eckert held the office from July 1851 to April 1853, appointed by Millard Fillmore.
+  Fact 1.7: Thomas M. Pettit held the office from April 1853 to May 1853, appointed by Franklin Pierce.
+  Fact 1.8: James Ross Snowden held the office from June 1853 to May 1861.
+  Fact 1.9: James Pollock held the office from May 1861 to September 1866, appointed by Abraham Lincoln.
+  Fact 1.10: William Millward held the office from October 1866 to April 1867, appointed by Andrew Johnson.
+  Fact 1.11: Henry Linderman held the office from April 1867 to May 1869.
+  Fact 1.12: James Pollock held the office from May 1869 to March 1873, appointed by Ulysses S. Grant.
+  Fact 1.13: Henry Linderman held the office from April 1873 to December 1878.
+  Fact 1.14: Horatio C. Burchard held the office from February 1879 to June 1885, appointed by Rutherford B. Hayes.
+  Fact 1.15: James P. Kimball held the office from July 1885 to October 1889, appointed by Grover Cleveland.
+  Fact 1.16: Edward O. Leech held the office from October 1889 to May 1893, appointed by Benjamin Harrison.
+  Fact 1.17: Robert E. Preston held the office from November 1893 to February 1898, appointed by Grover Cleveland.
+  Fact 1.18: George E. Roberts held the office from February 1898 to July 1907, appointed by William McKinley.
+  Fact 1.19: Frank A. Leach held the office from September 1907 to August 1909, appointed by Theodore Roosevelt.
+  Fact 1.20: A. Piatt Andrew held the office from November 1909 to June 1910.
+  Fact 1.21: George E. Roberts held the office from July 1910 to November 1914, appointed by William Howard Taft.
+  Fact 1.22: Robert W. Woolley held the office from March 1915 to July 1916, appointed by Woodrow Wilson.
+  Fact 1.23: F.H. von Engelken held the office from September 1916 to March 1917.
+  Fact 1.24: Raymond T. Baker held the office from March 1917 to March 1922.
+  Fact 1.25: Frank Edgar Scobey held the office from March 1922 to September 1923, appointed by Warren G. Harding.
+  Fact 1.26: Robert J. Grant held the office from November 1923 to May 1933, appointed by Calvin Coolidge.
+  Fact 1.27: Nellie Tayloe Ross held the office from May 1933 to April 1953, appointed by Franklin D. Roosevelt.
+  Fact 1.28: William H. Brett held the office from July 1954 to January 1961, appointed by Dwight D. Eisenhower.
+  Fact 1.29: Eva Adams held the office from October 1961 to August 1969, appointed by John F. Kennedy.
+  Fact 1.30: Mary Brooks held the office from September 1969 to February 1977, appointed by Richard Nixon.
+  Fact 1.31: Stella Hackel Sims held the office from November 1977 to April 1981, appointed by Jimmy Carter.
+  Fact 1.32: Donna Pope held the office from July 1981 to August 1991, appointed by Ronald Reagan.
+  Fact 1.33: David J. Ryder held the office from September 1992 to November 1993, appointed by George H.W. Bush.
+  Fact 1.34: Philip N. Diehl held the office from June 1994 to March 2000, appointed by Bill Clinton.
+  Fact 1.35: Jay W. Johnson held the office from May 2000 to August 2001.
+  Fact 1.36: Henrietta H. Fore held the office from August 2001 to August 2005, appointed by George W. Bush.
+  Fact 1.37: Edmund C. Moy held the office from September 2006 to January 2011.
+  Fact 1.38: David J. Ryder has held the office since April 2018, appointed by Donald Trump.
+
+Retrieved items:
+<item 1>
+Director of the United States Mint
+US Mint . Retrieved 13 April 2017 . Retrieved from `` https://en.wikipedia.org/w/index.php?title=Director_of_the_United_States_Mint&oldid=836791366 ''
+Categories : Directors of the United States Mint United States Department of the Treasury 1792 establishments in the United States Talk About Wikipedia Add
+links This page was last edited on 16 April 2018 , at 21 : 26 . About Wikipedia
+</item 1>
+
+<item 2>
+Director of the United States Mint
+Director of the United States Mint - wikipedia Director of the United States Mint Jump to : navigation , search Seal of the United States Mint . The Director of
+the United States Mint is the head of the United States Mint . The position is currently vacant . Since January 20 , 2017 , the senior career official at the
+Mint has been Acting Principal Deputy Director David Motl . The office of Director has existed since the creation of the Mint by the Coinage Act of 1792 .
+Initially appointed serving at the pleasure of the President of the United States , the Coinage Act of 1873 specified a five - year term for Directors . The
+Director operates with general directions provided by the United States Secretary of the Treasury . Since the resignation of Edmund C. Moy in 2011 the mint has
+been without an official director . Initially Matthew Rhett Jeppson was nominated by US President Barack Obama to become the mint 's 39th director and was given
+the temporary title of principal deputy director , however the nomination was never confirmed by the Senate . Jeppson stepped down as principal deputy director
+in January 2017 , being replaced by Acting Principal Deputy Director David Motl .
+</item 2>
+
+<item 3>
+United States two-dollar bill
+dollar U.S. Mint Philadelphia San Francisco Denver West Point Bureau of Engraving and Printing Mutilated currency Current coinage Penny ( 1 ¢ ) Nickel ( 5 ¢ )
+Dime ( 10 ¢ ) Quarter ( 25 ¢ ) Half dollar ( 50 ¢ ) Dollar ( $1 ) Bullion coinage America the Beautiful Silver Bullion Coins American Buffalo American Gold
+Eagle American Platinum Eagle American Silver Eagle American Palladium Eagle Current paper money $1 $2 $5 $10 $20 $50 $100 See also Bicentennial coinage
+Commemoratives Early Commemoratives Modern Commemoratives Confederate dollar Large denominations Obsolete denominations Promotional fake denominations
+Counterfeit United States currency Mill Coin production In God We Trust E pluribus unum Annuit cœptis Nicknames Replacement banknote Sales tax token Retrieved
+from `` https://en.wikipedia.org/w/index.
+</item 3>
+
+<item 4>
+Director of the United States Mint
+Woolley March 1915 July 1916 Woodrow Wilson F.H. von Engelken September 1916 March 1917 Raymond T. Baker March 1917 March 1922 Frank Edgar Scobey March 1922
+September 1923 Warren G. Harding Robert J. Grant November 1923 May 1933 Calvin Coolidge Nellie Tayloe Ross May 1933 April 1953 Franklin D. Roosevelt William H.
+Brett July 1954 January 1961 Dwight D. Eisenhower Eva Adams October 1961 August 1969 John F. Kennedy Mary Brooks September 1969 February 1977 Richard Nixon
+Stella Hackel Sims November 1977 April 1981 Jimmy Carter Donna Pope July 1981 August 1991 Ronald Reagan David J. Ryder September 1992 November 1993 George H.W.
+</item 4>
+
+<item 5>
+Director of the United States Mint
+List of Directors of the United States Mint ( edit ) Name Assumed Office Left Office President Appointed By David Rittenhouse April 1792 June 1795 George
+Washington Henry William de Saussure July 1795 October 1795 Elias Boudinot October 1795 July 1805 Robert Patterson January 1806 July 1824 Thomas Jefferson
+Samuel Moore July 1824 July 1835 James Monroe Robert M. Patterson May 1835 July 1851 Andrew Jackson George Nicholas Eckert July 1851 April 1853 Millard Fillmore
+Thomas M. Pettit April 1853 May 1853 Franklin Pierce James Ross Snowden June 1853 May 1861 James Pollock May 1861 September 1866 Abraham Lincoln William
+Millward October 1866 April 1867 Andrew Johnson Henry Linderman April 1867 May 1869 James Pollock May 1869 March 1873 Ulysses S. Grant Henry Linderman April
+1873 December 1878 Horatio C. Burchard February 1879 June 1885 Rutherford B. Hayes James P. Kimball July 1885 October 1889 Grover Cleveland Edward O.
+</item 5>
+
+<item 6>
+Vice President of the United States
+Senate vice presidential bust collection In fiction Presidents actors Vice Presidents actors Candidates Line of succession U.S. Government Portal Biography
+Portal Presidents of the United States Presidential line of succession in the United States of America Vice President ( Mike Pence ) Speaker of the House of
+Representatives ( Paul Ryan ) President pro tempore of the Senate ( Orrin Hatch ) Secretary of State ( Mike Pompeo ) Secretary of the Treasury ( Steven Mnuchin
+) Secretary of Defense ( Jim Mattis ) Attorney General ( Jeff Sessions ) Secretary of the Interior ( Ryan Zinke ) Secretary of Agriculture ( Sonny Perdue )
+Secretary of Commerce ( Wilbur Ross ) Secretary of Labor ( Alex Acosta ) Secretary of Health and Human Services ( Alex Azar ) Secretary of Housing and Urban
+Development ( Ben Carson ) Secretary of Transportation ( Elaine Chao ) Secretary of Energy ( Rick Perry ) Secretary of Education ( Betsy DeVos ) Secretary of
+Veterans Affairs ( Robert Wilkie ) Secretary of Homeland Security ( Kirstjen Nielsen ) Jump up ^ Although Elaine Chao is the current Secretary of Transportation
+, she is not a natural - born citizen ( acquired U.S. citizenship by naturalization ) and thus ineligible for the presidency .
+</item 6>
+
+<item 7>
+Director of the United States Mint
+Hayes James P. Kimball July 1885 October 1889 Grover Cleveland Edward O. Leech October 1889 May 1893 Benjamin Harrison Robert E. Preston November 1893 February
+1898 Grover Cleveland George E. Roberts February 1898 July 1907 William McKinley Frank A. Leach September 1907 August 1909 Theodore Roosevelt A. Piatt Andrew
+November 1909 June 1910 William Howard Taft George E. Roberts July 1910 November 1914 Robert W. Woolley March 1915 July 1916 Woodrow Wilson F.H.
+</item 7>
+
+<item 8>
+United States two-dollar bill
+In 1891 the reverse of the Series of 1890 Treasury Note was redesigned because the treasury felt that it was too `` busy '' which would make it too easy to
+counterfeit . More open space was incorporated into the new design . In 1896 , the `` Educational Series '' Silver Certificate was issued . The entire obverse
+of the note was covered in artwork with an allegorical figure of science presenting steam and electricity to commerce and manufacture . The reverse of the note
+featured portraits of Robert Fulton and Samuel F.B. Morse surrounded by an ornate design that occupied almost the entire note . By 1899 , however , The $2
+Silver Certificate was redesigned with a small portrait of George Washington surrounded by allegorical figures representing agriculture and mechanics . Robert
+Fulton and Samuel Morse depicted on the reverse of the 1896 $2 ' Educational Series '' Silver Certificate . The final design of the United States ' silver
+certificate series featuring George Washington , printed in 1899 . The only large - sized , Federal Reserve Note - like $2 bill was issued in 1918 as a Federal
+Reserve Bank Note .
+</item 8>
+
+<item 9>
+Director of the United States Mint
+Bush Philip N. Diehl June 1994 March 2000 Bill Clinton Jay W. Johnson May 2000 August 2001 Henrietta H. Fore August 2001 August 2005 George W. Bush Edmund C.
+Moy September 2006 January 2011 David J. Ryder April 2018 Incumbent Donald Trump References ( edit ) Jump up ^ About the Mint at usmint.gov ( retrieved 20 April
+2015 ) . Jump up ^ Gilkes , Paul ( 23 January 2017 ) . `` Rhett Jeppson leaves U.S. Mint as principal deputy director '' . coinworld.com . Retrieved 13 April
+2017 . Jump up ^ `` Director 's Office '' . US Mint . Retrieved 13 April 2017 .
+</item 9>
+
+<item 10>
+Large denominations of United States currency
+dollar U.S. Mint Philadelphia San Francisco Denver West Point Bureau of Engraving and Printing Mutilated currency Current coinage Penny ( 1 ¢ ) Nickel ( 5 ¢ )
+Dime ( 10 ¢ ) Quarter ( 25 ¢ ) Half dollar ( 50 ¢ ) Dollar ( $1 ) Bullion coinage America the Beautiful Silver Bullion Coins American Buffalo American Gold
+Eagle American Platinum Eagle American Silver Eagle American Palladium Eagle Current paper money $1 $2 $5 $10 $20 $50 $100 See also Bicentennial coinage
+Commemoratives Early Commemoratives Modern Commemoratives Confederate dollar Large denominations Obsolete denominations Promotional fake denominations
+Counterfeit United States currency Mill Coin production In God We Trust E pluribus unum Annuit cœptis Nicknames Replacement banknote Sales tax token ( hide )
+Obsolete United States currency and coinage Topics United States coinage United States dollar History of the United States dollar Coins Half cent ( 1793 -- 1857
+) Fugio Cent ( 1787 ) Large cent ( 1793 -- 1857 ;
+</item 10>
+=== END ITEM id=336f3a0938092c94 ===
+
+=== ITEM id=3ef9c114ad082c25 ===
+Gold sentences and facts:
+Sentence 0: Geoffrey Dyson Palmer , OBE ( born 4 June 1927 ) is an English actor known for his roles in British television sitcoms playing Jimmy Anderson in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) , Ben Parkinson in Butterflies ( 1978 -- 83 ) and Lionel Hardcastle in As Time Goes By ( 1992 -- 2005 ) . His film appearances include A Fish Called Wanda ( 1988 ) , The Madness of King George ( 1994 ) , Mrs. Brown ( 1997 ) , and Tomorrow Never Dies ( 1997 ) .
+  Fact 0.0: Geoffrey Dyson Palmer, OBE, was born on 4 June 1927.
+  Fact 0.1: Geoffrey Dyson Palmer holds the OBE honour.
+  Fact 0.2: Geoffrey Dyson Palmer is an English actor.
+  Fact 0.3: Geoffrey Dyson Palmer is known for his roles in British television sitcoms.
+  Fact 0.4: Geoffrey Dyson Palmer played Jimmy Anderson in The Fall and Rise of Reginald Perrin, which aired from 1976 to 1979.
+  Fact 0.5: Geoffrey Dyson Palmer played Ben Parkinson in Butterflies, which aired from 1978 to 1983.
+  Fact 0.6: Geoffrey Dyson Palmer played Lionel Hardcastle in As Time Goes By, which aired from 1992 to 2005.
+  Fact 0.7: Geoffrey Dyson Palmer's film appearances include A Fish Called Wanda (1988).
+  Fact 0.8: Geoffrey Dyson Palmer's film appearances include The Madness of King George (1994).
+  Fact 0.9: Geoffrey Dyson Palmer's film appearances include Mrs. Brown (1997).
+  Fact 0.10: Geoffrey Dyson Palmer's film appearances include Tomorrow Never Dies (1997).
+
+Retrieved items:
+<item 1>
+Robbie Coltrane
+Conway `` A Matter of Principle '' 1982 Sin on Saturday 1982 Five Go Mad in Dorset Female shopkeeper / Male gypsy Season 1 , Episode 1 of The Comic Strip
+Presents Are You Being Served Dynamite - truck driver on CB Radio `` Calling All Customers '' Alfresco various 1984 The Young Ones Doctor in Episode `` Bambi ''
+, Bouncer in Episode `` Oil '' Blackadder the Third Samuel Johnson `` Ink and Incapability '' Tutti Frutti Danny McGlone Nominated -- British Academy Television
+Award for Best Actor 1988 Blackadder 's Christmas Carol The Spirit of Christmas 1989 The Robbie Coltrane Special LWT comedy Special 1990 Danny Champion of the
+World Victor Hazell 1991 Screen One Psychiatrist Liam Kane `` Alive And Kicking '' 1993 The Legend of Lochnagar The old man TV film , voice 1993 -- 1995 2006
+Cracker Dr.
+</item 1>
+
+<item 2>
+Geoffrey Palmer (actor)
+Terence `` A Surfeit of H2O '' ( 1965 ) as Martin Smythe The Saint : `` The Rough Diamonds '' ( 1963 ) as Pete Ferguson Gideon 's Way ( TV Series ) `` The Alibi
+Man '' ( 1965 ) as Jeff Grant The Baron : `` Masquerade '' ( 1966 ) as Anstruther `` The Killing '' ( 1966 ) as Anstuther The Wednesday Play : Cathy Come Home (
+1966 ) as Property Agent Mrs Thursday ( 1966 ) as Henry Baxter Doctor Who : Doctor Who and the Silurians ( 1970 ) as Masters The Mutants ( 1972 ) as
+Administrator `` Voyage of the Damned '' ( 2007 ) as Captain Hardaker Colditz ( 1972 ) as Doc The Fall and Rise of Reginald Perrin ( 1976 -- 1979 ) as Jimmy
+Anderson Butterflies ( 1978 -- 1983 ) as Ben Parkinson The Professionals ( 1978 ) as Sinclair in `` Where The Jungle Ends '' Fawlty Towers : `` The Kipper and
+the Corpse '' ( 1979 ) as Dr.
+</item 2>
+
+<item 3>
+Gina Tognoni
+Watros ( 1998 ) Susan Lucci ( 1999 ) Susan Flannery ( 2000 ) Martha Byrne ( 2001 ) Susan Flannery ( 2002 ) Susan Flannery ( 2003 ) Michelle Stafford ( 2004 )
+Erika Slezak ( 2005 ) Kim Zimmer ( 2006 ) Maura West ( 2007 ) Jeanne Cooper ( 2008 ) Susan Haskell ( 2009 ) Maura West ( 2010 ) Laura Wright ( 2011 ) Heather
+Tom ( 2012 ) Heather Tom ( 2013 ) Eileen Davidson ( 2014 ) Maura West ( 2015 ) Mary Beth Evans ( 2016 ) Gina Tognoni ( 2017 ) Daytime Emmy Award for Outstanding
+Supporting Actress in a Drama Series Suzanne Rogers ( 1979 ) Francesca James ( 1980 ) Jane Elliot ( 1981 ) Dorothy Lyman ( 1982 ) Louise Shaffer ( 1983 ) Judi
+Evans ( 1984 ) Beth Maitland ( 1985 ) Leann Hunley ( 1986 ) Kathleen Noone ( 1987 ) Ellen Wheeler ( 1988 ) Nancy
+</item 3>
+
+<item 4>
+Robbie Coltrane
+South Atlantic Raiders GLC : The Carnage Continues ... The Pope Must Die Detectives on the Edge of a Nervous Breakdown Churchill : The Hollywood Years The Hunt
+for Tony Blair Related articles Bad News Bad News ( album ) Bootleg 20th Century Coyote French and Saunders BAFTA TV Award for Best Actor Paul Rogers ( 1955 )
+Peter Cushing ( 1956 ) Michael Gough ( 1957 ) Michael Hordern ( 1958 ) Donald Pleasence ( 1959 ) Patrick McGoohan ( 1960 ) Lee Montague ( 1961 ) Rupert Davies (
+1962 ) Harry H. Corbett ( 1963 ) Alan Badel ( 1964 ) Patrick Wymark ( 1965 ) Alan Badel ( 1966 ) Warren Mitchell ( 1967 ) Eric Porter ( 1968 ) Roy Dotrice (
+1969 ) Edward Woodward ( 1970 ) Keith Michell ( 1971 ) John Le Mesurier ( 1972 ) Anthony Hopkins ( 1973 ) Frank Finlay ( 1974 ) Peter Barkworth ( 1975 ) John
+Hurt ( 1976 ) Derek Jacobi (
+</item 4>
+
+<item 5>
+Robbie Coltrane
+Sgt . Troy 1985 Defence of the Realm Leo McAskey 1986 Caravaggio Scipione 1986 Mona Lisa Thomas Eat the Rich Jeremy 1988 Fruit Machine , The The Fruit Machine
+Annabelle 1989 Henry V Falstaff 1989 Bert Rigby , You 're a Fool Sid Trample 1989 Let It Ride Ticket Seller 1989 Danny , the Champion of the World Victor Hazell
+1989 Slipstream Montclaire 1990 Midnight Breaks Fat 1990 Nuns on the Run Charlie McManus / Sister Inviolata 1990 Perfectly Normal Alonzo Turner 1991 Pope Must
+Die , The The Pope Must Die The Pope 1991 Triple Bogey on a Par Five Hole Steffano Baccardi Oh , What a Night Todd Nominated -- Genie Award for Best Performance
+by an Actor in a Supporting Role 1993 Boswell & Johnson 's Tour of the Western Isles Dr. Samuel Johnson 1993 Adventures of Huck Finn , The The Adventures of
+Huck Finn Duke 1995 GoldenEye Valentin Dmitrovich Zukovsky 1997 Buddy Dr.
+</item 5>
+
+<item 6>
+Geoffrey Palmer (actor)
+as Field Marshal Douglas Haig Inspector Morse : `` The Infernal Serpent '' ( 1990 ) as Matthew Copley - Barnes Bergerac ( 1990 ) `` Roots of Evil '' as Nigel
+Carter As Time Goes By ( 1992 -- 2005 ) as Lionel Hardcastle The Legacy of Reginald Perrin ( 1996 ) as Jimmy Anderson Alice Through the Looking Glass ( 1998 )
+as White King The Savages ( 2001 ) as Donald The 1940s House ( 2001 ) as Narrator Absolute Power ( 2003 ) as Lord Harcourt Grumpy Old Men ( 2003 -- 2004 , 2006
+) as Narrator He Knew He Was Right ( 2004 ) as Sir Marmaduke Rowley Grumpy Old Holidays ( 2006 ) as Narrator Ashes to Ashes : `` Episode 8 '' ( 2008 ) ; as Lord
+Scarman The Long Walk to Finchley ( 2008 ) ;
+</item 6>
+
+<item 7>
+Geoffrey Palmer (actor)
+Geoffrey Palmer ( actor ) - wikipedia Geoffrey Palmer ( actor ) Jump to : navigation , search Geoffrey Palmer OBE Palmer performing at A Breath of Fresh Air ,
+June 2008 ( 1927 - 06 - 04 ) 4 June 1927 ( age 90 ) London , England Occupation Actor Years active 1958 -- present Spouse ( s ) Sally Green ( m . 1963 )
+Children 2 , including Charles Palmer Geoffrey Dyson Palmer , OBE ( born 4 June 1927 ) is an English actor known for his roles in British television sitcoms
+playing Jimmy Anderson in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) , Ben Parkinson in Butterflies ( 1978 -- 83 ) and Lionel Hardcastle in As Time
+Goes By ( 1992 -- 2005 ) . His film appearances include A Fish Called Wanda ( 1988 ) , The Madness of King George ( 1994 ) , Mrs. Brown ( 1997 ) , and Tomorrow
+Never Dies ( 1997 ) .
+</item 7>
+
+<item 8>
+Geoffrey Palmer (actor)
+as Lord Scarman The Long Walk to Finchley ( 2008 ) ; as John Crowder Agatha Christie 's Poirot : `` The Clocks '' ( 2009 ) as Vice Admiral Hamling Grandpa in My
+Pocket `` Captain Dumbletwit 's Toughest Mission Yet ! '' ( 2010 ) as Grandad Gillbert Rev `` Christmas Special '' Series 2 , episode 7 ( 2011 ) as Martin Henry
+IV , Part II ( 2012 ) ; as Lord Chief Justice Royal Variety Performance ( 2014 ) ; as the announcer ( voice - only ) Film ( edit ) A Prize of Arms ( 1962 ) as
+Cpl . Myers Incident at Midnight ( 1963 ) as Dr. Tanfield Ring of Spies ( 1964 ) as Police Officer ( uncredited ) Cast a Giant Shadow ( 1966 ) as David (
+uncredited ) O Lucky Man !
+</item 8>
+
+<item 9>
+Geoffrey Palmer (actor)
+Two sitcom roles brought him attention in the 1970s : the hapless brother - in - law of Reggie Perrin in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) ,
+and the phlegmatic Ben Parkinson in Carla Lane 's Butterflies ( 1978 -- 83 ) . He has continued to appear in productions written by Perrin creator David Nobbs ,
+the latest being the radio comedy The Maltby Collection . He starred opposite Judi Dench for over a decade in the BBC situation comedy As Time Goes By ( 1992 --
+2005 ) . During this time he also appeared with Dench in other productions , including the James Bond film Tomorrow Never Dies , in which he portrayed Admiral
+Roebuck , and Mrs. Brown , playing Sir Henry Ponsonby to Dench 's Queen Victoria . He played Doctor Price in the Fawlty Towers episode `` The Kipper and the
+Corpse '' , determined to get breakfast amidst the confusion caused by the death of a guest and Basil 's inept way of handling the emergency .
+</item 9>
+
+<item 10>
+Graph query row:
+portrayedBy: Geoffrey Palmer
+character: Lionel Hardcastle
+work: As Time Goes By
+relationship: RELATED_TO
+relationshipDetail: None
+fact: None
+</item 10>
+=== END ITEM id=3ef9c114ad082c25 ===
+
+=== ITEM id=6bbbbb8e4fd03dd5 ===
+Gold sentences and facts:
+Sentence 0: As a technique for drawing , the closest predecesor to the pencil was Silverpoint until in 1565 ( some sources say as early as 1500 ) , a large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite in Borrowdale parish , Cumbria , England . This particular deposit of graphite was extremely pure and solid , and it could easily be sawn into sticks . It remains the only large - scale deposit of graphite ever found in this solid form . Chemistry was in its infancy and the substance was thought to be a form of lead . Consequently , it was called plumbago ( Latin for `` lead ore '' ) . Because the pencil core is still referred to as `` lead '' , or a `` lead '' , many people have the misconception that the graphite in the pencil is lead , and the black core of pencils is still referred to as lead , even though it never contained the element lead . The words for pencil in German ( bleistift ) , Irish ( peann luaidhe ) , Arabic ( قلم رصاص qalam raṣāṣ ) , and some other languages literally mean lead pen .
+  Fact 0.0: Before the pencil, the closest predecessor as a drawing technique was Silverpoint, until 1565 (some sources say as early as 1500).
+  Fact 0.1: A large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite.
+  Fact 0.2: The Grey Knotts graphite deposit is in Borrowdale parish, Cumbria, England.
+  Fact 0.3: The graphite deposit at Grey Knotts was extremely pure and solid.
+  Fact 0.4: The graphite deposit at Grey Knotts could easily be sawn into sticks.
+  Fact 0.5: The Grey Knotts graphite deposit remains the only large-scale deposit of graphite ever found in this solid form.
+  Fact 0.6: Chemistry was in its infancy when the graphite was found.
+  Fact 0.7: The substance was thought to be a form of lead.
+  Fact 0.8: The substance was called plumbago, Latin for 'lead ore'.
+  Fact 0.9: The pencil core is still referred to as 'lead' or 'a lead'.
+  Fact 0.10: Many people have the misconception that the graphite in the pencil is lead.
+  Fact 0.11: The black core of pencils is still referred to as lead.
+  Fact 0.12: The black core of pencils never contained the element lead.
+  Fact 0.13: The German word for pencil, bleistift, literally means lead pen.
+  Fact 0.14: The Irish word for pencil, peann luaidhe, literally means lead pen.
+  Fact 0.15: The Arabic word for pencil, قلم رصاص (qalam raṣāṣ), literally means lead pen.
+  Fact 0.16: Some other languages also use words for pencil that literally mean lead pen.
+
+Retrieved items:
+<item 1>
+Pencil
+This method of manufacture , which had been earlier discovered by the Austrian Joseph Hardtmuth , the founder of the Koh - I - Noor in 1790 , remains in use .
+In 1802 , the production of graphite leads from graphite and clay was patented by the Koh - I - Noor company in Vienna . In England , pencils continued to be
+made from whole sawn graphite . Henry Bessemer 's first successful invention ( 1838 ) was a method of compressing graphite powder into solid graphite thus
+allowing the waste from sawing to be reused . The pencil in america Pencil , perhaps made by Henry David Thoreau , in the Concord Museum Pencil manufacturing .
+The top sequence shows the old method that required pieces of graphite to be cut to size ; the lower sequence is the new , current method using rods of graphite
+and clay . American colonists imported pencils from Europe until after the American Revolution . Benjamin Franklin advertised pencils for sale in his
+Pennsylvania Gazette in 1729 , and George Washington used a three - inch pencil when he surveyed the Ohio Territory in 1762 .
+</item 1>
+
+<item 2>
+Pencil
+Retrieved 23 July 2009 . Jump up ^ `` Pencils , paint and pottery can give you lead poisoning '' . Life . 73 ( 1 ) : 46 . 7 July 1972 . Jump up ^ `` The HB
+Graphite Grading Scale '' . Pencils.com . Archived from the original on 21 March 2012 . Retrieved 14 March 2012 . Jump up ^ Petroski , 1990 , `` Appendix A Jump
+up ^ `` Staedtler Pencil , video '' . Archived from the original on 21 January 2013 . Retrieved 23 July 2009 . Staedtler.com Jump up ^ Petroski , 1990 Jump up ^
+`` Derwent Manufacturing Process '' . Pencils.co.uk . Archived from the original on 17 May 2013 . Retrieved 23 July 2009 . Jump up ^ `` Archived copy '' .
+Archived from the original on 6 February 2017 . Retrieved 5 February 2017 .
+</item 2>
+
+<item 3>
+Pencil
+Because graphite is soft , it requires some form of encasement . Graphite sticks were initially wrapped in string or sheepskin for stability . England would
+enjoy a monopoly on the production of pencils until a method of reconstituting the graphite powder was found in 1662 in Italy . However , the distinctively
+square English pencils continued to be made with sticks cut from natural graphite into the 1860s . The town of Keswick , near the original findings of block
+graphite , still manufactures pencils , the factory also being the location of the Cumberland Pencil Museum . The meaning of `` graphite writing implement ''
+apparently evolved late in the 16th century . Wood holders added Palomino Blackwing 602 pencils Around 1560 , an Italian couple named Simonio and Lyndiana
+Bernacotti made what are likely the first blueprints for the modern , wood - encased carpentry pencil . Their version was a flat , oval , more compact type of
+pencil . Their concept involved the hollowing out of a stick of juniper wood .
+</item 3>
+
+<item 4>
+Pencil
+Consequently , it was called plumbago ( Latin for `` lead ore '' ) . Because the pencil core is still referred to as `` lead '' , or a `` lead '' , many people
+have the misconception that the graphite in the pencil is lead , and the black core of pencils is still referred to as lead , even though it never contained the
+element lead . The words for pencil in German ( bleistift ) , Irish ( peann luaidhe ) , Arabic ( قلم رصاص qalam raṣāṣ ) , and some other languages literally
+mean lead pen . The value of graphite would soon be realised to be enormous , mainly because it could be used to line the moulds for cannonballs ; the mines
+were taken over by the Crown and were guarded . When sufficient stores of graphite had been accumulated , the mines were flooded to prevent theft until more was
+required . The usefulness of graphite for pencils was discovered as well , but graphite for pencils had to be smuggled . The news of the usefulness of these
+early pencils spread far and wide , attracting the attention of artists all over the known world . Because graphite is soft , it requires some form of
+encasement .
+</item 4>
+
+<item 5>
+Pencil
+Joseph Dixon , an inventor and entrepreneur involved with the Tantiusques granite mine in Sturbridge , Massachusetts , developed a means to mass - produce
+pencils . By 1870 , The Joseph Dixon Crucible Company was the world 's largest dealer and consumer of graphite and later became the contemporary Dixon
+Ticonderoga pencil and art supplies company . By the end of the 19th century , over 240,000 pencils were used each day in the US . The favoured timber for
+pencils was Red Cedar as it was aromatic and did not splinter when sharpened . In the early 20th century supplies of Red Cedar were dwindling so that pencil
+manufacturers were forced to recycle the wood from cedar fences and barns to maintain supply . One effect of this was that `` during World War II rotary pencil
+sharpeners were outlawed in Britain because they wasted so much scarce lead and wood , and pencils had to be sharpened in the more conservative manner -- with
+knives . '' It was soon discovered that Incense cedar , when dyed and perfumed to resemble Red Cedar , was a suitable alternative and most pencils today are
+made from this timber which is grown in managed forests .
+</item 5>
+
+<item 6>
+Pencil
+Archived from the original on 5 March 2016 . Retrieved 5 October 2015 . Jump up ^ Bennett , Howard J. ( 26 November 2014 ) . `` Ever wondered about the lead in
+pencils ? '' . The Washington Post . ISSN 0190 - 8286 . Archived from the original on 6 November 2015 . Retrieved 5 October 2015 . Jump up ^ `` Pencil
+swallowing : MedlinePlus Medical Encyclopedia '' . www.nlm.nih.gov . Archived from the original on 6 October 2015 . Retrieved 5 October 2015 . Jump up ^ ``
+graphite pencils The Weekend Historian '' . umeshmadan.wordpress.com . Archived from the original on 7 October 2015 . Retrieved 5 October 2015 . Jump up ^ ``
+Origins of the Pencil ( Circa 1500 -- 1565 ) : HistoryofInformation.com '' . www.historyofinformation.com . Retrieved 2016 - 10 - 29 .
+</item 6>
+
+<item 7>
+Pencil
+Though the archetypal pencil was an artist 's brush , the stylus , a thin metal stick used for scratching in papyrus or wax tablets , was used extensively by
+the Romans and for palm - leaf manuscripts . Discovery of graphite deposit As a technique for drawing , the closest predecesor to the pencil was Silverpoint
+until in 1565 ( some sources say as early as 1500 ) , a large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite in
+Borrowdale parish , Cumbria , England . This particular deposit of graphite was extremely pure and solid , and it could easily be sawn into sticks . It remains
+the only large - scale deposit of graphite ever found in this solid form . Chemistry was in its infancy and the substance was thought to be a form of lead .
+Consequently , it was called plumbago ( Latin for `` lead ore '' ) .
+</item 7>
+
+<item 8>
+Pencil
+Their concept involved the hollowing out of a stick of juniper wood . Shortly thereafter , a superior technique was discovered : two wooden halves were carved ,
+a graphite stick inserted , and the halves then glued together -- essentially the same method in use to this day . New pencils from graphite powder , and
+graphite and clay The first attempt to manufacture graphite sticks from powdered graphite was in Nuremberg , Germany , in 1662 . It used a mixture of graphite ,
+sulphur , and antimony . English and German pencils were not available to the French during the Napoleonic Wars ; France , under naval blockade imposed by Great
+Britain , was unable to import the pure graphite sticks from the British Grey Knotts mines -- the only known source in the world . France was also unable to
+import the inferior German graphite pencil substitute . It took the efforts of an officer in Napoleon 's army to change this . In 1795 , Nicolas - Jacques Conté
+discovered a method of mixing powdered graphite with clay and forming the mixture into rods that were then fired in a kiln . By varying the ratio of graphite to
+clay , the hardness of the graphite rod could also be varied .
+</item 8>
+
+<item 9>
+Pencil
+Contents ( hide ) 1 History 1.1 Camel 's hair pencil 1.2 Discovery of graphite deposit 1.3 Wood holders added 1.4 New pencils from graphite powder , and
+graphite and clay 1.5 The pencil in America 1.6 Eraser attached 1.7 Pencil extenders 2 Types 2.1 By marking material 2.2 By use 2.3 By shape 2.4 By size 2.5 By
+manufacture 3 Health 4 Manufacture 5 Grading and classification 5.1 Pencil hardness test 6 External colour and shape of pencils 7 Notable pencil users 8
+Manufacturers 9 See also 10 References 11 Bibliography 12 Further reading 13 External links History Old Soviet colored pencils with box ( circa 1959 ) Camel 's
+hair pencil Pencil , from Old French pincel , from Latin penicillus a `` little tail '' ( see penis ; pincellus is Latin from the post-classical period )
+originally referred to an artist 's fine brush of camel hair , also used for writing before modern lead or chalk pencils .
+</item 9>
+
+<item 10>
+Pencil
+Manufacture The lead of the pencil is a mix of finely ground graphite and clay powders . Before the two substances are mixed , they are separately cleaned of
+foreign matter and dried in a manner that creates large square cakes . Once the cakes have fully dried , the graphite and the clay squares are mixed together
+using water . The amount of clay content added to the graphite depends on the intended pencil hardness ( lower proportions of clay makes the core softer ) , and
+the amount of time spent on grinding the mixture determines the quality of the lead . The mixture is then shaped into long spaghetti - like strings ,
+straightened , dried , cut , and then tempered in a kiln . The resulting strings are dipped in oil or molten wax , which seeps into the tiny holes of the
+material and allows for the smooth writing ability of the pencil . A juniper or incense - cedar plank with several long parallel grooves is cut to fashion a ``
+slat , '' and the graphite / clay strings are inserted into the grooves . Another grooved plank is glued on top , and the whole assembly is then cut into
+individual pencils , which are then varnished or painted .
+</item 10>
+=== END ITEM id=6bbbbb8e4fd03dd5 ===
+
+=== ITEM id=1c809f4550395812 ===
+Gold sentences and facts:
+Sentence 0: A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is called the ear . ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has one vertex .
+  Fact 0.0: A main vertical stroke is called a stem.
+  Fact 0.1: The letter m has three stems: the left stem, the middle stem, and the right stem.
+  Fact 0.2: The central stroke of an s is called the spine.
+  Fact 0.3: When a stroke is part of a lowercase letter and rises above the height of an x (called the x height), it is called an ascender.
+  Fact 0.4: The letters with ascenders are b, d, f, h, k, and l.
+  Fact 0.5: A stroke which drops below the baseline is called a descender.
+  Fact 0.6: The letters with descenders are g, j, p, q, and y.
+  Fact 0.7: An arching stroke is called a shoulder, as in the top of an R.
+  Fact 0.8: An arching stroke is sometimes just called an arch, as in h, n, and m.
+  Fact 0.9: A closed curved stroke is called a bowl, as in b, d, o, p, q, D, O, P, and Q.
+  Fact 0.10: The letter B has two bowls.
+  Fact 0.11: A trailing outstroke, as in j, y, J, Q, and R, is called a tail.
+  Fact 0.12: The inferior diagonal stroke in K is called a leg.
+  Fact 0.13: A short horizontal stroke, as in the center of e and f and the middle stroke of E and F, is called a bar.
+  Fact 0.14: When strokes connect, as in A and H, or cross, as in t, the stroke is also known as a crossbar.
+  Fact 0.15: A longer horizontal stroke at the top or bottom, as in E and T, is called an arm.
+  Fact 0.16: The bottom of the two-story g is called a loop.
+  Fact 0.17: The very short stroke at the top of the two-story g is called the ear.
+  Fact 0.18: The letters i and j each have a dot, jot, or tittle.
+  Fact 0.19: Angles of strokes are called apices if at the top.
+  Fact 0.20: Angles of strokes are called vertices if at the bottom.
+  Fact 0.21: The letter w has one apex and two vertices.
+  Fact 0.22: The letter v has one vertex.
+
+Retrieved items:
+<item 1>
+Church Fathers
+549 ) Jump up ^ Herbermann , Charles , ed. ( 1913 ) . `` Tertullian '' . Catholic Encyclopedia . New York : Robert Appleton Company . Jump up ^ A History of
+Christian Thought , Paul Tillich , Touchstone Books , 1972 . ISBN 0 - 671 - 21426 - 8 ( p. 43 ) Jump up ^ To Autolycus , Book 2 , chapter XV Jump up ^ Known in
+Latin and Low Franconian as Ambrosius , in Italian as Ambrogio and in Lombard as Ambroeus . Jump up ^ Cross , F.L. , ed . The Oxford Dictionary of the Christian
+Church . New York : Oxford University Press . 2005 , article Platonism Jump up ^ Pope St. Gregory I at about.com Jump up ^ Karim , Cyril Aphrem ( December 2004
+) . Symbols of the cross in the writings of the early Syriac Fathers . Gorgias Press LLC . p. 3 . ISBN 978 - 1 - 59333 - 230 - 3 .
+</item 1>
+
+<item 2>
+Typeface anatomy
+Harper Design , 2013 . ^ Jump up to : Dean , Paul ( 27 March 2008 ) . `` eXtreme Type Terminology . Part 2 : Anatomy of a Letterform '' . I Love Typography .
+Further reading ( edit ) Gaskell , Philip ( January 1976 ) . `` A nomenclature for the letterforms of roman type '' . Visible Language . 10 ( 1 ) : 41 -- 51 .
+External links ( edit ) Wikimedia Commons has media related to Examples of typography terms . Armannsson , Sigurdur ( 6 July 2009 ) . `` Wallpaper : Font
+Anatomy '' . Font.is . Full - size image ( 1920 × 1200 ) Dean , Paul ( 2008 ) . eXtreme Type Terminology -- Part 1 , Part 2 , Part 3 , Part 4 and Part 5 Devroye
+, Luc . `` Hoefler & Frere - Jones '' . Retrieved 21 January 2015 . Frere - Jones , Tobias . `` Typeface Mechanics : 001 '' . Frere - Jones Type .
+</item 2>
+
+<item 3>
+Typeface anatomy
+The central stroke of an s is called the spine . When the stroke is part of a lowercase and rises above the height of an x ( called the x height ) , it is
+called an ascender . Letters with ascenders are bdfhkl . A stroke which drops below the baseline is a descender . Letters with descenders are gjpqy . An arching
+stroke is called a shoulder as in the top of an R or sometimes just an arch , as in hnm . A closed curved stroke is called a bowl in bdopq DOPQ ; B has two
+bowls . A trailing outstroke , as in jy JQR is called a tail . The inferior diagonal stroke in K is called leg . A short horizontal stroke , as in the center of
+ef and the middle stroke of EF , is called a bar . When the strokes connect as in A and H or cross strokes as in t is also known as crossbar . A longer
+horizontal stroke at the top or bottom , as in ET , is called an arm . The bottom of the two - story g is called a loop ; the very short stroke at the top is
+called the ear .
+</item 3>
+
+<item 4>
+Typeface anatomy
+`` Typeface Mechanics : 001 '' . Frere - Jones Type . Retrieved 17 April 2016 . Frere - Jones , Tobias . `` Typeface Mechanics : 002 '' . Frere - Jones Type .
+Retrieved 17 April 2016 . Coles , Stephen . `` The Anatomy of Type '' . Blog for Coles ' 2012 book The Anatomy of Type : A Graphic Guide to 100 Typefaces . ``
+Glossary '' . FontShop . Monotype . ( hide ) Typography terminology Page Canons of page construction Column Even working Margin Page numbering Pagination Pull
+quote Recto and verso Paragraph Alignment Justification Leading River Sentence spacing Widows and orphans Character Typeface anatomy Counter Diacritics Dingbat
+Glyph Initial Kerning Letter - spacing Ligature Subscript and superscript Swash Text figures Tittle Capitalization ALL CAPS Camel Case Letter case Petite caps
+Small caps Visual distinction Italics Oblique Bold Color Underline Blackboard bold Blackletter Infɑnt Vertical aspects Ascender Baseline Cap height Descender
+Median Overshoot x-height Classifications Roman type Antiqua ( old style ) Didone ( modern ) Sans - serif Script Serif Slab serif Transitional Reverse
+</item 4>
+
+<item 5>
+Typeface anatomy
+The close counter in e is also named eye . Angles of white space , as in w , are corners ( w has three corners ) ; the term is not used for angles of strokes .
+The small corner formed by a serif , whether curved or angular , is called the serif bracket . Proportions ( edit ) A subtle change in proportion impacts weight
+, perception , measure , and legibility . The letterform height compared to its stroke width modifies the aspect ; this slight change in weight sometimes helps
+to create emphasis . The disparity between thick and thin strokes , known as stress , alters optical perception . As an example , the initial san serif
+typefaces used a constantly thin stroke . The technological advances allow drawing thinner strokes . Condense type occupies less space than expanded type , then
+the text written on a page can be reduced to half a page. The capline and x-height ratio improve or decrease word legibility . Metal type era ( edit ) During
+the late metal type period , many fonts ( particularly in American typefounding ) were issued to `` common line '' . This meant that they were made to
+standardised proportions , so that fonts of different typefaces could be mixed with no difficulty .
+</item 5>
+
+<item 6>
+Typeface anatomy
+This made it possible to mix typefaces from completely different genres such as sans - serifs and serifs and have the cap height , baseline and linespacing
+match perfectly , something not possible with most digital fonts . It even allowed mixing of different sizes of type with a consistent baseline . It however had
+the disadvantage of often forcing typefaces to be issued with cropped descenders compared to historical typefaces , to allow tight linespacing . A `` script
+line '' or `` art line '' was used for more delicate fonts with long descenders . Titling capitals , meanwhile , were issued taking up the whole space of the
+metal type area , with no room for descenders . See also ( edit ) Type design Type foundry Typography Typesetting References ( edit ) Jump up ^ Studer , Anton (
+29 February 2016 ) . `` Is What I See What I Get ? -- Math & Optics in Type Design '' . Typographica . Retrieved 17 April 2016 . ^ Jump up to : Carter , Bob ;
+Day , Ben ; Meggs , Philip ( 2007 ) . Typographic Design : Form and Communication .
+</item 6>
+
+<item 7>
+Typeface anatomy
+ij each have a dot , jot , or tittle . Angles of strokes are called apices if at the top and vertices if at the bottom . w has one apex and two vertices ; v has
+one vertex . The font shown in the example is stressed : strokes have varying widths . In this example , the stroke at the top of the g is thinner at the top
+and bottom than on the sides -- a vertical stress . Terminals ( edit ) The terminals ( ends ) of instrokes and outstrokes often end in serif or sans - serif . A
+seriffed terminal may be described as a wedge , bulbous , teardrop , slab , etc. , depending on the design of the type . Sorting typefaces can be practical
+based on its look . A clue feature is to define the serif style . Some designs also have spurs , which are smaller than serifs and appear on angles rather than
+at a terminal , as on e or G . Space ( edit ) Areas of negative space ( white space ) formed by straight or curved strokes are called counters . Closed counters
+are found in abdegopq ABDOPQR , and open counters in acefhmnrstu .
+</item 7>
+
+<item 8>
+Typeface anatomy
+Typeface Anatomy - wikipedia Typeface Anatomy Jump to : navigation , search Typographic parts of a glyph : 1 ) x-height ; 2 ) ascender line ; 3 ) apex ; 4 )
+baseline ; 5 ) ascender ; 6 ) crossbar ; 7 ) stem ; 8 ) serif ; 9 ) leg ; 10 ) bowl ; 11 ) counter ; 12 ) collar / link / neck ; 13 ) loop ; 14 ) ear ; 15 ) tie
+; 16 ) horizontal bar ; 17 ) arm ; 18 ) vertical bar ; 19 ) cap height ; 20 ) descender line . Typeface anatomy describes the graphic elements that make up
+printed letters in a typeface . Contents ( hide ) 1 Strokes 2 Terminals 3 Space 4 Proportions 5 Metal type era 6 See also 7 References 8 Further reading 9
+External links Strokes ( edit ) The strokes are the components of a letterform . Strokes may be straight , as in klvwxz , or curved , as in cos . If straight ,
+they may be horizontal , vertical , or diagonal ; if curved , open or closed .
+</item 8>
+
+<item 9>
+The Curse of Oak Island
+They find a carving of a multi-armed cross and offer an unsupported theory that it is a representation of the `` Tree of Life '' and that it is the same as
+Nolan 's Cross on the island . A theory is presented that the cave carving may represent an `` earlier version '' of the `` Tree of Life '' . Based on the
+information discovered in France , the team concludes that the Oak Island swamp should be excavated again . 54 10 `` The Signs Of A Cross '' January 16 , 2018 (
+2018 - 01 - 16 ) 3.34 Eight pages of what is alleged to be a transcript of an incomplete log of an unnamed ship are presented . It is claimed , without any
+evidence , that the log is from a French ship which participated in the Duc d'Anville Nova Scotia expedition of 1746 . More wood , a bone and a metal spike are
+brought up from a borehole in the money pit area . The shaft excavation reaches an obstruction at 170 feet . A small lead cross is found at Smith 's Cove .
+</item 9>
+
+<item 10>
+Typeface anatomy
+Typographers also speak of an instroke , where one starts writing the letter , as at the top of acf , and an outstroke , where the pen leaves off , as at the
+bottom of cejkty . Typefaces are born from the struggle between rules and results . Squeezing a square about 1 % helps it look more like a square ; to appear
+the same height as a square , a circle must be measurably taller . The two strokes in an X are n't the same thickness , nor are their parallel edges actually
+parallel ; the vertical stems of a lowercase alphabet are thinner than those of its capitals ; the ascender on ad is n't the same length as the descender on ap
+, and so on . For the rational mind , type design can be a maddening game of drawing things differently in order to make them appear the same . Hoefler & Frere
+- Jones A main vertical stroke is called a stem . The letter m has three , the left , middle , and right stems . The central stroke of an s is called the spine
+.
+</item 10>
+=== END ITEM id=1c809f4550395812 ===

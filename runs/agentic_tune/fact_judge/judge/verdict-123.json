@@ -1,0 +1,44 @@
+[
+  {
+    "id": "7980a4625d146c05",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "51e98837a6fb456f",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Under American Todd Boehly’s co-ownership"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there"}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there"}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 6, "quote": "CBS Sports holding WSL rights"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "051ff100143f6d8c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "according to three people familiar with the matter"}]}
+    ]
+  }
+]

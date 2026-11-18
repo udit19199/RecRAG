@@ -1,0 +1,581 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "d3b4ed29c9b0908c",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Across multiple locations, including Lagos, Siberia, and Wakanda."
+  },
+  {
+   "id": "77c8c4f5ec78527d",
+   "kind": "answer",
+   "question": "who warned europe to stay out of the americas",
+   "gold_answers": [
+    "Roosevelt Corollary",
+    "Monroe Doctrine"
+   ],
+   "model_answer": "The United States"
+  },
+  {
+   "id": "5f4a7a02a9a7913b",
+   "kind": "answer",
+   "question": "who sang go tell it on the mountain",
+   "gold_answers": [
+    "`` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :"
+   ],
+   "model_answer": "It’s a traditional spiritual recorded by many artists."
+  },
+  {
+   "id": "8166e8217c4eba1c",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "More jobs, income, skills and freedom; but hukou restrictions, low wages, job insecurity and reduced labor productivity."
+  },
+  {
+   "id": "0316c0173133baaf",
+   "kind": "answer",
+   "question": "when does karev die in grey's anatomy",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "He doesn’t die in the provided context."
+  },
+  {
+   "id": "f2a9d847e0f6e08e",
+   "kind": "answer",
+   "question": "what is step 1 of the 12 step program",
+   "gold_answers": [
+    "We admitted we were powerless over alcohol—that our lives had become unmanageable.",
+    "We admitted we were powerless over alcohol—that our lives had become unmanageable"
+   ],
+   "model_answer": "Admitted we were powerless over alcohol—that our lives had become unmanageable."
+  },
+  {
+   "id": "d7771f4d76e3557f",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Patriots besieged Boston and seized local governments; some Quebec and Montreal colonists supported the rebellion against Britain."
+  },
+  {
+   "id": "acbf884ebdf3be60",
+   "kind": "answer",
+   "question": "where is the hotel in the movie the shining",
+   "gold_answers": [
+    "In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 ."
+   ],
+   "model_answer": "Timberline Lodge, Oregon (exteriors)"
+  },
+  {
+   "id": "88a674113165e242",
+   "kind": "answer",
+   "question": "who do the characters represent in 8 mile",
+   "gold_answers": [
+    "loosely on Eminem"
+   ],
+   "model_answer": "Jimmy “B-Rabbit” represents Eminem."
+  },
+  {
+   "id": "da1f404b254320d4",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "After his four daughters drowned in the 1873 Ville du Havre shipwreck, Horatio Spafford wrote “It Is Well with My Soul,” expressing faith amid grief."
+  },
+  {
+   "id": "3142e7bcbed428d5",
+   "kind": "answer",
+   "question": "what kind of fish live in the salton sea",
+   "gold_answers": [
+    "tilapia"
+   ],
+   "model_answer": "Tilapia, corvina, and sargo."
+  },
+  {
+   "id": "fe25c6dcee853ad7",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They promoted westward settlement by guiding emigrants and offering land for free or at low cost."
+  },
+  {
+   "id": "8135a76f8aff21b2",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "In the U.S., estimates range from about $157,410 to $389,670 through age 18."
+  },
+  {
+   "id": "001f6c98cf420c97",
+   "kind": "answer",
+   "question": "where does the story the great gatsby take place",
+   "gold_answers": [
+    "the fictional town of West Egg on prosperous Long Island",
+    "Long Island of 1922"
+   ],
+   "model_answer": "West Egg on Long Island, New York."
+  },
+  {
+   "id": "4bf144ef228b0838",
+   "kind": "answer",
+   "question": "what was one effect of the camp david accords 1977",
+   "gold_answers": [
+    "The time that has elapsed since the Camp David Accords has left no doubt as to their enormous ramifications on Middle Eastern politics . Most notably , the perception of Egypt within the Arab world changed . With the most powerful of the Arab militaries and a history of leadership in the Arab world under Nasser , Egypt had more leverage than any of the other Arab states to advance Arab interests . Egypt was subsequently suspended from the Arab League from 1979 until 1989 ."
+   ],
+   "model_answer": "Normalization of relations between Egypt and Israel."
+  },
+  {
+   "id": "c83726c6c1c9b7fc",
+   "kind": "answer",
+   "question": "where does the formation of atp take place",
+   "gold_answers": [
+    "mitochondrial membrane in eukaryotes",
+    "plasma membrane in bacteria",
+    "thylakoid membrane",
+    "inner mitochondrial membrane"
+   ],
+   "model_answer": "At ATP synthase’s catalytic sites, facing the mitochondrial matrix."
+  },
+  {
+   "id": "0a6bb0161d763af6",
+   "kind": "answer",
+   "question": "what was one effect of the camp david accords 1977",
+   "gold_answers": [
+    "The time that has elapsed since the Camp David Accords has left no doubt as to their enormous ramifications on Middle Eastern politics . Most notably , the perception of Egypt within the Arab world changed . With the most powerful of the Arab militaries and a history of leadership in the Arab world under Nasser , Egypt had more leverage than any of the other Arab states to advance Arab interests . Egypt was subsequently suspended from the Arab League from 1979 until 1989 ."
+   ],
+   "model_answer": "Egypt was suspended from the Arab League from 1979 to 1989."
+  },
+  {
+   "id": "b3b5b725105645c4",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "They laid siege to Boston and expelled royal officials from the colonies."
+  },
+  {
+   "id": "d156b7b9e8eb444e",
+   "kind": "answer",
+   "question": "who wants a heart in the wizard of oz",
+   "gold_answers": [
+    "the Tin Woodman",
+    "Tin Woodman"
+   ],
+   "model_answer": "The Tin Man"
+  },
+  {
+   "id": "54de9b949cb4fa31",
+   "kind": "answer",
+   "question": "what are the parts of a domain name called",
+   "gold_answers": [
+    "top-level domain",
+    "subdomain",
+    "hostname"
+   ],
+   "model_answer": "Labels"
+  },
+  {
+   "id": "1a4dd98c20e550e5",
+   "kind": "answer",
+   "question": "when was the worlds first laptop computer introduced in the market and by whom",
+   "gold_answers": [
+    "The portable micro computer the “Portal\" of the French company R2E Micral CCMC officially appeared in September 1980",
+    "September 1980",
+    "R2E Micral CCMC"
+   ],
+   "model_answer": "1983, by GRiD Systems with the GRiD Compass 1101."
+  },
+  {
+   "id": "220cd6f54d3230ce",
+   "kind": "answer",
+   "question": "the beatles sgt pepper's lonely hearts club band",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "1967 Beatles album"
+  },
+  {
+   "id": "75e0ed4a723e96dc",
+   "kind": "answer",
+   "question": "who has hosted the most fifa world cups",
+   "gold_answers": [
+    "Mexico, Italy, France, Germany (West Germany until shortly after the 1990 World Cup) and Brazil have hosted the event on two occasions",
+    "Mexico",
+    "Italy",
+    "France",
+    "Germany",
+    "Brazil"
+   ],
+   "model_answer": "Italy, Mexico, France, and Brazil (twice each)"
+  },
+  {
+   "id": "bfb7d0869efae3d3",
+   "kind": "answer",
+   "question": "which organization is the major voice of the legal profession",
+   "gold_answers": [
+    "National Legal Aid & Defender Association"
+   ],
+   "model_answer": "American Bar Association"
+  },
+  {
+   "id": "73ae502d3193f232",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A poor couple sacrifice their prized possessions to buy each other Christmas gifts, showing the depth of their love."
+  },
+  {
+   "id": "8ff547f5a1dfff36",
+   "kind": "answer",
+   "question": "who wrote there's a guy works down the chip shop lyrics",
+   "gold_answers": [
+    "Kirsty MacColl",
+    "Philip Rambow",
+    "Kirsty MacColl/Philip Rambow"
+   ],
+   "model_answer": "Kirsty MacColl and Philip Rambow"
+  },
+  {
+   "id": "3ab3bd31d59916e4",
+   "kind": "answer",
+   "question": "with which regions does australia have historical ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Britain and Ireland (Europe)"
+  },
+  {
+   "id": "a0e7e0a1114cb0d0",
+   "kind": "answer",
+   "question": "when does the little couples new season start",
+   "gold_answers": [
+    "September 19, 2017"
+   ],
+   "model_answer": "January 5, 2016\n"
+  },
+  {
+   "id": "8e7e4dabccaf68bb",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Disagreements over the 1824 election and federal policies split the party into Jacksonian Democrats and National Republicans."
+  },
+  {
+   "id": "bc000df94b131412",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mercantilism and commercial agriculture were expanding."
+  },
+  {
+   "id": "787e1d504d05b294",
+   "kind": "answer",
+   "question": "i-o psychologists study our behavior on the job by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Surveys, experiments, quasi-experiments, and observational studies"
+  },
+  {
+   "id": "03e0ba72a44f2b7d",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Civil rights rulings, Cold War tensions, and major political and technological events."
+  },
+  {
+   "id": "471c99488eb7f048",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A poor couple’s selfless Christmas gifts for each other."
+  },
+  {
+   "id": "31425afc19f57dd1",
+   "kind": "answer",
+   "question": "what is earth's magnetic field responsible for",
+   "gold_answers": [
+    "deflect most of the solar wind, whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation"
+   ],
+   "model_answer": "Shielding Earth from solar wind and cosmic rays, helping protect its atmosphere and ozone layer."
+  },
+  {
+   "id": "c48b7af87428997d",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "An energetic, feel-good nostalgia trip packed with Steps’ greatest hits."
+  },
+  {
+   "id": "c232065f47d0235b",
+   "kind": "answer",
+   "question": "who was toot toot in the green mile",
+   "gold_answers": [
+    "A trustee",
+    "trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards",
+    "A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards"
+   ],
+   "model_answer": "A longtime inmate at Cold Mountain Penitentiary, played by Harry Dean Stanton."
+  },
+  {
+   "id": "76f49702e7d6dd08",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "The disputed 1824 election and factional disagreements."
+  },
+  {
+   "id": "548468a7046b074a",
+   "kind": "answer",
+   "question": "what is the total eclipse of the heart video about",
+   "gold_answers": [
+    "The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir ."
+   ],
+   "model_answer": "A gothic schoolboy fantasy about a woman longing for love."
+  },
+  {
+   "id": "bdd223a3a084fdcf",
+   "kind": "answer",
+   "question": "where is australia’s closest french speaking country",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "New Caledonia, northeast of Australia."
+  },
+  {
+   "id": "aad96c06cf504a53",
+   "kind": "answer",
+   "question": "when is the rock n roll hall of fame",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "September 1, 1995"
+  },
+  {
+   "id": "0d5b56863594fe85",
+   "kind": "answer",
+   "question": "who has the rights to alice in wonderland",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The original story is in the public domain."
+  },
+  {
+   "id": "3b7cc72c14c8a208",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "BAFTAs, Saturn Award for costume design, BMI Film Music Award, Phoenix Film Critics Society Award, National Movie Awards, Empire Awards, and the series’ Michael Balcon and AFI Special Awards."
+  },
+  {
+   "id": "f0c3962b458114fd",
+   "kind": "answer",
+   "question": "what was the relationship between japan’s emperors and military leaders",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Military leaders pledged loyalty to the emperor and reported directly to him."
+  },
+  {
+   "id": "fc1ff44b6165cd2b",
+   "kind": "answer",
+   "question": "what network is showing the monday night football game",
+   "gold_answers": [
+    "ESPN"
+   ],
+   "model_answer": "ESPN (and ABC)"
+  },
+  {
+   "id": "55c9ecaadd8f98e6",
+   "kind": "answer",
+   "question": "what platform is sandringham line at flinders st",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Platform 12"
+  },
+  {
+   "id": "68e333e331c5fb14",
+   "kind": "answer",
+   "question": "what are the importance of rigor mortis in meat processing",
+   "gold_answers": [
+    "rigor mortis and its resolution partially determine the tenderness of meat",
+    "tenderness of meat"
+   ],
+   "model_answer": "It affects meat tenderness and helps guide prevention of cold shortening."
+  },
+  {
+   "id": "bfc1b237df59c8bc",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "The Niger Delta region of Nigeria, especially its coastal basin."
+  },
+  {
+   "id": "16bf094eb2b4c99a",
+   "kind": "answer",
+   "question": "which of the following statistical quantities are measures of central tendency",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mean, median, and mode"
+  },
+  {
+   "id": "d53942fac917b543",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "Episode 4, “Not Fade Away”: Under military quarantine, tensions rise as Madison investigates the deadly secrets behind the Safe Zone."
+  },
+  {
+   "id": "37bf4d5d68d19468",
+   "kind": "answer",
+   "question": "2014 election results in andhra pradesh district wise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "TDP 102, YSRCP 67, BJP 4, Independents 2 seats (175 total)."
+  },
+  {
+   "id": "b3d91f8f6c3798d3",
+   "kind": "answer",
+   "question": "disease of the light sensitive innermost layer of the eyeball",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Retinopathy"
+  },
+  {
+   "id": "61c0d8261cc59799",
+   "kind": "answer",
+   "question": "who are the faces of the postcode lottery",
+   "gold_answers": [
+    "People 's Postcode Lottery has a number of celebrity `` ambassadors '' . In March 2018 , these included David Attenborough , Clare Balding , Brian Blessed , Judi Dench , Shobna Gulati , Tim Healy , Stephen Jardine , Ellen MacArthur , Aggie MacKenzie , Carey Mulligan , John Stapleton and Emma Thompson . Fiona Phillips became an ambassador for People 's Postcode Lottery at the end of 2012 , leading the organisation 's DRTV campaigns ."
+   ],
+   "model_answer": "Celebrity ambassadors including David Attenborough, Judi Dench, Emma Thompson, and Brian Blessed."
+  },
+  {
+   "id": "19883421f36cbf4a",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "India’s major crops include rice, wheat, pulses, cotton, sugarcane, oilseeds, fruits, and vegetables; the country is among the world’s leading agricultural producers."
+  },
+  {
+   "id": "bb0b0b37ed5c6f2b",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "Three months later."
+  },
+  {
+   "id": "3c697b4739fdf8c6",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Indian Agricultural Crops: Rice, wheat, pulses, sugarcane, oilseeds, cotton, tea, and horticultural crops, grown across diverse regions with productivity shaped by monsoons, irrigation, and modern farming."
+  },
+  {
+   "id": "85ebf9c4074f26ff",
+   "kind": "answer",
+   "question": "where do they grow hops in the us",
+   "gold_answers": [
+    "the Yakima (Washington) and Willamette (Oregon) valleys",
+    "western Canyon County, Idaho",
+    "the leading potato-growing states in the United States",
+    "western Canyon County, Idaho (including the communities of Parma, Wilder, Greenleaf, and Notus)",
+    "Washington",
+    "Oregon",
+    "Idaho",
+    "Yakima (Washington)",
+    "Willamette (Oregon)"
+   ],
+   "model_answer": "Washington, Oregon, and Idaho; historically also New York and California."
+  },
+  {
+   "id": "bd1700cd1b6c0677",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Battleaxe, Battlestar, Batwing, Baymax, Beast, Bishop, Bantam, and Broadband"
+  },
+  {
+   "id": "b6654a6d8d476549",
+   "kind": "answer",
+   "question": "when are centrally acting skeletal muscle relaxants used",
+   "gold_answers": [
+    "to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions",
+    "to alleviate musculoskeletal pain and spasms",
+    "to reduce spasticity in a variety of neurological conditions"
+   ],
+   "model_answer": "To relieve musculoskeletal pain and spasms, and reduce neurological spasticity."
+  },
+  {
+   "id": "6d143b91a7b5f5d9",
+   "kind": "answer",
+   "question": "where does the formation of atp take place",
+   "gold_answers": [
+    "mitochondrial membrane in eukaryotes",
+    "plasma membrane in bacteria",
+    "thylakoid membrane",
+    "inner mitochondrial membrane"
+   ],
+   "model_answer": "At ATP synthase’s F₁ catalytic sites."
+  },
+  {
+   "id": "24426c82e545f983",
+   "kind": "answer",
+   "question": "who was the league of nations made up of",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Member states, with 58 nations at its peak."
+  }
+ ],
+ "evidence": []
+}

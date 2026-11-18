@@ -1,0 +1,581 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "264067a73f93a7eb",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Built-in Windows security software that protects against viruses, malware, and other threats."
+  },
+  {
+   "id": "9ac172ea672ac905",
+   "kind": "answer",
+   "question": "what is the meaning of the name sinead",
+   "gold_answers": [
+    "God forgave/God gratified"
+   ],
+   "model_answer": "God forgave\n"
+  },
+  {
+   "id": "f682736f5587955e",
+   "kind": "answer",
+   "question": "when is the next episode of flash airing",
+   "gold_answers": [
+    "May 8, 2018"
+   ],
+   "model_answer": "The series has ended; no next episode is scheduled."
+  },
+  {
+   "id": "b3bcb4a63f66c770",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy, Annabeth, and Tyson rescue Grover and retrieve the Golden Fleece, thwarting Luke’s plot and restoring Camp Half-Blood’s protective tree."
+  },
+  {
+   "id": "152daa081103fb0e",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "Episode 18, “The Font of Dragon Fire” (March 8, 2004)"
+  },
+  {
+   "id": "975a541118a8162d",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, a woman from Paul Spector’s past."
+  },
+  {
+   "id": "18617a1d20c1ce6c",
+   "kind": "answer",
+   "question": "when is the last time the philadelphia won the superbowl",
+   "gold_answers": [
+    "Super Bowl LII,",
+    "2017"
+   ],
+   "model_answer": "February 4, 2018"
+  },
+  {
+   "id": "6b97ca70185c9da7",
+   "kind": "answer",
+   "question": "who sings the song it ain't me",
+   "gold_answers": [
+    "Selena Gomez",
+    "American singer Selena Gomez"
+   ],
+   "model_answer": "Selena Gomez and Kygo"
+  },
+  {
+   "id": "5f9b7f9d447c9003",
+   "kind": "answer",
+   "question": "british forces retreated when they saw how strong american defenses were",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes, they withdrew under cover of darkness."
+  },
+  {
+   "id": "25a87ee97eed0f78",
+   "kind": "answer",
+   "question": "who played mark on the show the rifleman",
+   "gold_answers": [
+    "John Ernest Crawford"
+   ],
+   "model_answer": "Johnny Crawford"
+  },
+  {
+   "id": "29a7aa56d813f00f",
+   "kind": "answer",
+   "question": "how does the romanesque bust reliquary reflect another culture's influence",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It draws on ancient Roman portraiture."
+  },
+  {
+   "id": "f16864845b412b3d",
+   "kind": "answer",
+   "question": "what are the zords in the power rangers movie",
+   "gold_answers": [
+    "animal-themed Ninja Zords"
+   ],
+   "model_answer": "The Rangers’ animal-themed Ninja Zords and Ivan Ooze’s Ecto-Morphicons."
+  },
+  {
+   "id": "10a09548e3482764",
+   "kind": "answer",
+   "question": "cast of hawaii five o season 8 episode 9",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Alex O’Loughlin, Scott Caan, Ian Anthony Dale, Meaghan Rath, Beulah Koale, Jorge Garcia, Chi McBride, Taylor Wily, Dennis Chun, and Kimee Balmilero."
+  },
+  {
+   "id": "35d68ac34b472b16",
+   "kind": "answer",
+   "question": "what is the temperature in the south pole right now",
+   "gold_answers": [
+    "( hide ) Climate data for The South Pole Month Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Year Record high ° C ( ° F ) − 14.4 ( 6.1 ) − 20.6 ( − 5.1 ) − 26.7 ( − 16.1 ) − 27.8 ( − 18 ) − 25.1 ( − 13.2 ) − 28.8 ( − 19.8 ) − 33.9 ( − 29 ) − 32.8 ( − 27 ) − 29.3 ( − 20.7 ) − 25.1 ( − 13.2 ) − 18.9 ( − 2 ) − 12.3 ( 9.9 ) − 12.3 ( 9.9 ) Average high ° C ( ° F ) − 26.0 ( − 14.8 ) − 37.9 ( − 36.2 ) − 49.6 ( − 57.3 ) − 53.0 ( − 63.4 ) − 53.6 ( − 64.5 ) − 54.5 ( − 66.1 ) − 55.2 ( − 67.4 ) − 54.9 ( − 66.8 ) − 54.4 ( − 65.9 ) − 48.4 ( − 55.1 ) − 36.2 ( − 33.2 ) − 26.3 ( − 15.3 ) − 45.8 ( − 50.4 ) Daily mean ° C ( ° F ) − 28.4 ( − 19.1 ) − 40.9 ( − 41.6 ) − 53.7 ( − 64.7 ) − 57.8 ( − 72 ) − 58.0 ( − 72.4 ) − 58.9 ( − 74 ) − 59.8 ( − 75.6 ) − 59.7 ( − 75.5 ) − 59.1 ( − 74.4 ) − 51.6 ( − 60.9 ) − 38.2 ( − 36.8 ) − 28.0 ( − 18.4 ) − 49.5 ( − 57.1 ) Average low ° C ( ° F ) − 29.6 ( − 21.3 ) − 43.1 ( − 45.6 ) − 56.8 ( − 70.2 ) − 60.9 ( − 77.6 ) − 61.5 ( − 78.7 ) − 62.8 ( − 81 ) − 63.4 ( − 82.1 ) − 63.2 ( − 81.8 ) − 61.7 ( − 79.1 ) − 54.3 ( − 65.7 ) − 40.1 ( − 40.2 ) − 29.1 ( − 20.4 ) − 52.2 ( − 62 ) Record low ° C ( ° F ) − 41.1 ( − 42 ) − 58.9 ( − 74 ) − 71.1 ( − 96 ) − 75.0 ( − 103 ) − 78.3 ( − 108.9 ) − 82.8 ( − 117 ) − 80.6 ( − 113.1 ) − 79.3 ( − 110.7 ) − 79.4 ( − 110.9 ) − 72.0 ( − 97.6 ) − 55.0 ( − 67 ) − 41.1 ( − 42 ) − 82.8 ( − 117 ) Average precipitation mm ( inches ) 0.3 ( 0.012 ) 0.6 ( 0.024 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) 0.2 ( 0.008 ) 0.1 ( 0.004 ) Trace Trace 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.1 ( 0.004 ) 0.3 ( 0.012 ) 2.3 ( 0.091 ) Average precipitation days ( ≥ 0.1 mm ) 0.2 0.3 0.2 0.0 0.2 0.1 0.0 0.0 0.1 0.1 0.1 0.3 1.6 Average snowy days 22.0 19.6 13.6 11.4 17.2 17.3 18.2 17.5 11.7 16.7 16.9 20.6 203.0 Mean monthly sunshine hours 406.1 497.2 195.3 0.0 0.0 0.0 0.0 0.0 34.1 390.6 558.0 616.9 2,698.2 Mean daily sunshine hours 13.1 17.6 6.3 0.0 0.0 0.0 0.0 0.0 1.1 12.6 18.6 19.9 7.4 Source # 1 : Pogoda.ru.net ( temperatures , 1981 -- 2010 , extremes 1957 -- present ) Source # 2 : Deutscher Wetterdienst ( precipitation 1957 -- 1988 and sun 1978 -- 1993 ) , NOAA ( snowy days data , 1961 -- 1988 )"
+   ],
+   "model_answer": "I can’t access live weather data."
+  },
+  {
+   "id": "cb7f3c0e7d88bd93",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "Offshore West Africa, especially the Niger Delta and Gulf of Guinea."
+  },
+  {
+   "id": "ffd93d010f99dcc2",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Agricultural Crops Grown in India: Major crops include rice, wheat, pulses, oilseeds, sugarcane, tea, cotton, and horticultural crops. Their cultivation varies by region and depends on climate, irrigation, and monsoon rainfall."
+  },
+  {
+   "id": "36c037f36ba1f218",
+   "kind": "answer",
+   "question": "where is gall bladder situated in human body",
+   "gold_answers": [
+    "beneath the liver"
+   ],
+   "model_answer": "Beneath the liver, on the right side of the abdomen."
+  },
+  {
+   "id": "37705b163022f7fc",
+   "kind": "answer",
+   "question": "who was toot toot in the green mile",
+   "gold_answers": [
+    "A trustee",
+    "trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards",
+    "A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards"
+   ],
+   "model_answer": "Toot-Toot was a prison guard played by Harry Dean Stanton."
+  },
+  {
+   "id": "32883ca1bcc844d3",
+   "kind": "answer",
+   "question": "what kind of fish live in the salton sea",
+   "gold_answers": [
+    "tilapia"
+   ],
+   "model_answer": "Tilapia and desert pupfish."
+  },
+  {
+   "id": "225a0d6db4e470bb",
+   "kind": "answer",
+   "question": "how many stores do zara have in the uk",
+   "gold_answers": [
+    "Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24 Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5 Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia : 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1",
+    "United Kingdom : 64",
+    "Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1 Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1 Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1 Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24 Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5 Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia : 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1 Oceania Australia : 19 New Zealand : 1"
+   ],
+   "model_answer": "Around 70 stores."
+  },
+  {
+   "id": "e93c818633d766b8",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Major crops in India: rice, wheat, pulses, cotton, sugarcane, groundnuts, fruits, vegetables, spices, and tea."
+  },
+  {
+   "id": "3e96d81524fcd4dc",
+   "kind": "answer",
+   "question": "the object in the mirror are closer than it appears",
+   "gold_answers": [
+    "The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem ."
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "9197b12598e13a82",
+   "kind": "answer",
+   "question": "7 deadly sins signs of a holy war",
+   "gold_answers": [
+    "No . Title Original air date `` The Dark Dream Begins '' `` Kuroki Yume no Hajimari '' ( 黒き 夢 の はじまり ) August 28 , 2016 Elizabeth Liones goes to the Boar Hat , where all her friends are still asleep following the festival . After Elizabeth is greeted by Hawk outside , Meliodas introduces her to a meat pie made with vegetables that looks like Hawk , but it turns out to be unfit for human consumption . Meliodas has the idea of using pork as the main ingredient , which causes Hawk to make haste out of the bar . Meliodas comes up with a contest for his friends , in which he will obey any order for a day from whoever catches Hawk first . However , Hawk manages to outsmart them due to his small size . Hawk returns to the Boar Hat and eats food scraps made by Ban , who is declared the winner as a result . At night , Meliodas takes Elizabeth back to the palace while also assuring that his purpose in life is to protect her . Meliodas then goes to the catacombs to see the Horn of Cernunnos . When the goddess vessel taunts him for his reputation as a demon , Meliodas destroys the Horn of Cernunnos in retaliation . `` Our Fighting Festival '' `` Futari no Ken'ka Matsuri '' ( 二 人 の 喧嘩 祭り ) September 4 , 2016 Ban walks up to a mountaintop to finally settle matters with Meliodas , but the former is surprised to see Elizabeth and Hawk as well as the other members of the Seven Deadly Sins and the Holy Knights as part of an audience . Merlin casts a gigantic cubic barrier around Meliodas and Ban in order for the spectators to safely watch the fight . Meanwhile , King and Hauser have their own fight to win the attention of Diane . Ban initiates a brutal attack on Meliodas that somehow weakens most of the spectators . The fight ends in a stalemate after the two of them exchange rapid punches that cause the barrier to break . They remain friends and head back down to the Boar Hat for a drink . `` In Pursuit of First Love '' `` Hatsukoi o Oikakete '' ( 初恋 を 追いかけ て ) September 11 , 2016 King still hesitates to confess his feelings for Diane . Meanwhile , Diane leaves the Boar Hat and heads to a construction site in town , recalling the devastating collateral damage she caused due to her immense size . The construction workers there apologize to her and thank her for saving the kingdom . When King comes to see Diane , the two decide to play a game of tag across town . Outside a church , a wedding ceremony is interrupted by a demon , in which Diane and King combine their skills in defeating the demon . King asks Diane if she regained her memories , and she answers him with a kiss on his cheek . The moment is ruined when a brick suddenly falls on his head , and he later wakes up next to her , having forgotten what they did during the day . `` The Shape of Love '' `` Ai no Katachi '' ( 愛 の かたち ) September 18 , 2016 Merlin agrees to be a waitress at the Boar Hat , but first she wants Meliodas and Gowther to follow Gilthunder to find out if he is being stalked by someone . Meanwhile , Gilthunder , Hauser and Griamore are each hit with falling debris in the streets , unaware of the situation . Gowther is distracted by a boy named Pelliot , who asks him to retrieve a fat cat off a roof . Since Gowther reminds Pelliot of his mother , who recently passed away , Gowther transforms into Pelliot 's mother for a moment and disappears when Pelliot 's father finds Pelliot . Meliodas finds Gilthunder , Hauser and Griamore at a restaurant , where he purposely spills coffee to expose Vivian , revealed as the stalker . Merlin punishes Vivian by planting a cursed ring on her finger , which will bring pain to her each time the curse is activated , and Merlin explains that the Ten Commandments are the highest class in the demon race . At the Boar Hat , Merlin quits her job as a waitress , while Hawk and Gowther fill in for the position , much to the guys ' dismay ."
+   ],
+   "model_answer": "A 2016 special series of The Seven Deadly Sins."
+  },
+  {
+   "id": "84791ed02f979d63",
+   "kind": "answer",
+   "question": "spanky and our gang sunday will never be the same lyrics",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Sorry, I can’t provide the lyrics, but I can summarize the song."
+  },
+  {
+   "id": "159a439659863093",
+   "kind": "answer",
+   "question": "what is the job of justice of the peace",
+   "gold_answers": [
+    "a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace.",
+    "dispense summary justice",
+    "deal with local administrative applications in common law jurisdictions"
+   ],
+   "model_answer": "Presides over minor legal matters and performs civil duties such as officiating marriages."
+  },
+  {
+   "id": "3ce0facc4e4053da",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Equal state representation in the Senate and proportional representation in the House of Representatives."
+  },
+  {
+   "id": "2c8539b060660a8d",
+   "kind": "answer",
+   "question": "when are centrally acting skeletal muscle relaxants used",
+   "gold_answers": [
+    "to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions",
+    "to alleviate musculoskeletal pain and spasms",
+    "to reduce spasticity in a variety of neurological conditions"
+   ],
+   "model_answer": "To relieve musculoskeletal pain and spasms and reduce spasticity in neurological conditions."
+  },
+  {
+   "id": "dd6daaeb5b384c94",
+   "kind": "answer",
+   "question": "describe the impact of the crisis at little rock on the american government",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Federal enforcement of school desegregation, including Eisenhower’s deployment of troops."
+  },
+  {
+   "id": "b7ca72333871825d",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $234,900 through age 18 (in 2011 dollars)."
+  },
+  {
+   "id": "de626641d0c0c367",
+   "kind": "answer",
+   "question": "where is a pulse generator most commonly found in a car",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Inside the distributor."
+  },
+  {
+   "id": "8be4e20d473be60d",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dance is purposeful human movement with aesthetic or symbolic value; its main kinds are theatrical/performance dance and participatory/social dance."
+  },
+  {
+   "id": "ec122e4c8293972c",
+   "kind": "answer",
+   "question": "when is last time the astros won the world series",
+   "gold_answers": [
+    "2017"
+   ],
+   "model_answer": "2022"
+  },
+  {
+   "id": "2d0ac421f3fda00b",
+   "kind": "answer",
+   "question": "when was the first building built in dubai",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "1979"
+  },
+  {
+   "id": "acd0db54774af8b7",
+   "kind": "answer",
+   "question": "it took 130 years for the human population to double from 1 billion to 2 billion",
+   "gold_answers": [
+    "Starting at 500 million Population ( in billions ) 0.5 8 Year 1500 1804 1927 2024 Years elapsed 304 123 47 50"
+   ],
+   "model_answer": "No—123 years."
+  },
+  {
+   "id": "5d134c185b28db02",
+   "kind": "answer",
+   "question": "where is the country music hall of fame located",
+   "gold_answers": [
+    "Nashville, Tennessee"
+   ],
+   "model_answer": "Nashville, Tennessee, USA"
+  },
+  {
+   "id": "225319805fe65f4b",
+   "kind": "answer",
+   "question": "when did the 5 day work week begin",
+   "gold_answers": [
+    "1908",
+    "1940",
+    "In 1908"
+   ],
+   "model_answer": "1908 in the United States"
+  },
+  {
+   "id": "53cff78133d411ea",
+   "kind": "answer",
+   "question": "when does the new season of law and order svu come on",
+   "gold_answers": [
+    "September 27, 2017"
+   ],
+   "model_answer": "October 2, 2025."
+  },
+  {
+   "id": "58d63475928c784e",
+   "kind": "answer",
+   "question": "when is the next scandal episode coming out",
+   "gold_answers": [
+    "February 1, 2018"
+   ],
+   "model_answer": "No new episode is scheduled."
+  },
+  {
+   "id": "058fc62560393b97",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through device drivers and the kernel, which manage hardware input and output."
+  },
+  {
+   "id": "286ffd6de65191e3",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "Madison discovers the National Guard is killing civilians in the Safe Zone, while tensions rise under military rule."
+  },
+  {
+   "id": "09ea3f2ca2d75170",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "A spiritual song about seeking freedom and deliverance, with water symbolizing baptism and escape from slavery."
+  },
+  {
+   "id": "588e87a9fafd9f0a",
+   "kind": "answer",
+   "question": "who was kat slater's sisters in eastenders",
+   "gold_answers": [
+    "Lynne",
+    "Little Mo",
+    "Zoe"
+   ],
+   "model_answer": "Lynne Slater, Little Mo Mitchell, and Belinda Peacock"
+  },
+  {
+   "id": "04fc063529559cdc",
+   "kind": "answer",
+   "question": "when did hawaii become a state and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "August 21, 1959, after Congress passed the Admission Act and 94.3% of voters approved statehood."
+  },
+  {
+   "id": "ada4da64a93efcdf",
+   "kind": "answer",
+   "question": "which apostle spoke at the council of jerusalem",
+   "gold_answers": [
+    "James",
+    "Simon Peter",
+    "Barnabas",
+    "Paul"
+   ],
+   "model_answer": "Simon Peter, Paul, Barnabas, and James."
+  },
+  {
+   "id": "d9f97c0d51ed92a9",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spafford wrote “It Is Well with My Soul” while sailing over the place where his four daughters died in the Ville du Havre shipwreck."
+  },
+  {
+   "id": "f67d528c4d729b4d",
+   "kind": "answer",
+   "question": "lynyrd skynyrd last of a dying breed album",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Lynyrd Skynyrd’s fourteenth studio album, released in 2012."
+  },
+  {
+   "id": "2a773dc3c9eec8db",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A carefree celebration of life, love, and joy."
+  },
+  {
+   "id": "5fe5ee955d7495a8",
+   "kind": "answer",
+   "question": "who was on the first season of dwts",
+   "gold_answers": [
+    "Trista Sutter",
+    "Evander Holyfield",
+    "Rachel Hunter",
+    "Joey McIntyre",
+    "John O'Hurley",
+    "Kelly Monaco"
+   ],
+   "model_answer": "Kelly Monaco, John O’Hurley, Joey McIntyre, Rachel Hunter, Evander Holyfield, and Trista Rehn"
+  },
+  {
+   "id": "c527053e191b8c31",
+   "kind": "answer",
+   "question": "why does prince edward island have red sand",
+   "gold_answers": [
+    "sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air"
+   ],
+   "model_answer": "Iron-rich sand oxidizes when exposed to air."
+  },
+  {
+   "id": "3c9c128a83564307",
+   "kind": "answer",
+   "question": "where does the brain get its energy from",
+   "gold_answers": [
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar),[73] but ketones provide a major alternative source, together with contributions from medium chain fatty acids (caprylic[78] and heptanoic[79] acids), lactate,[80] acetate,[81] and possibly amino acids",
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar)"
+   ],
+   "model_answer": "Primarily from oxygen-dependent metabolism of glucose."
+  },
+  {
+   "id": "626d13485bd53a35",
+   "kind": "answer",
+   "question": "where do they grow hops in the us",
+   "gold_answers": [
+    "the Yakima (Washington) and Willamette (Oregon) valleys",
+    "western Canyon County, Idaho",
+    "the leading potato-growing states in the United States",
+    "western Canyon County, Idaho (including the communities of Parma, Wilder, Greenleaf, and Notus)",
+    "Washington",
+    "Oregon",
+    "Idaho",
+    "Yakima (Washington)",
+    "Willamette (Oregon)"
+   ],
+   "model_answer": "Primarily in Washington, Oregon, and Idaho."
+  },
+  {
+   "id": "55d205cedcb3a8f7",
+   "kind": "answer",
+   "question": "alison krauss now that i've found you album",
+   "gold_answers": [
+    "`` Baby , Now That I 've Found You '' ( Tony Macaulay , John MacLeod ) -- 3 : 49 ( Previously Unreleased ) `` Oh , Atlanta '' ( Mick Ralphs ) -- 4 : 41 ( Previously Unreleased ) `` Broadway '' ( Sidney & Suzanne Cox ) -- 3 : 57 ( Previously Unreleased ) `` Every Time You Say Goodbye '' ( John Pennell ) -- 3 : 13 ( From the Album `` Every Time You Say Goodbye '' by Alison Krauss & Union Station ) `` Tonight I 'll Be Lonely Too '' ( Sidney Cox ) -- 3 : 25 ( From the Album `` I 've Got That Old Feeling '' by Alison Krauss ) `` Teardrops Will Kiss the Morning Dew '' ( Paul Craft ) -- 3 : 38 ( From the Album `` Two Highways '' by Alison Krauss & Union Station ) `` Sleep On '' ( Nelson Mandrell ) -- 2 : 23 ( From the Album `` Too Late to Cry '' by Alison Krauss ) `` When God Dips His Pen of Love in My Heart '' ( Cleavant Derricks ) -- 2 : 26 ( From the Album `` Everybody 's Reaching Out for Someone '' by The Cox Family ) `` I Will '' ( John Lennon , Paul McCartney ) -- 4 : 04 ( From the Album `` Within Reach '' by Tony Furtado ) `` I Do n't Believe You 've Met My Baby '' ( Autry Inman ) -- 3 : 10 ( From the Album `` Slide Rule '' by Jerry Douglas ) `` In the Palm of Your Hand '' ( Ron Block ) -- 3 : 24 ( From the Album `` I Know Who Holds Tomorrow '' by Alison Krauss & The Cox Family ) `` When You Say Nothing at All '' ( Paul Overstreet , Don Schlitz ) -- 4 : 21 ( From the Album `` Keith Whitley : A Tribute Album '' performed by Alison Krauss & Union Station )"
+   ],
+   "model_answer": "Now That I’ve Found You: A Collection (1995)"
+  },
+  {
+   "id": "e0cbaab39de853f0",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Stone-tool making, including Oldowan flakes and Acheulean handaxes and cleavers, and control of fire."
+  },
+  {
+   "id": "0209bbdce08c31cd",
+   "kind": "answer",
+   "question": "what do the films mean in high castle",
+   "gold_answers": [
+    "The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities",
+    "as-yet-unknown purpose"
+   ],
+   "model_answer": "Newsreels depicting alternative realities."
+  },
+  {
+   "id": "8ee6bfd28e557a95",
+   "kind": "answer",
+   "question": "what is the total eclipse of the heart video about",
+   "gold_answers": [
+    "The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir ."
+   ],
+   "model_answer": "Bonnie Tyler dreams of young men at a boys’ boarding school, where they dance, take part in school activities, and sing in a choir."
+  },
+  {
+   "id": "8eb072666cdd04bf",
+   "kind": "answer",
+   "question": "yadav caste belongs to which category in andhra pradesh",
+   "gold_answers": [
+    "Yadava ( Golla )"
+   ],
+   "model_answer": "Backward Classes (BC)"
+  },
+  {
+   "id": "4feb322d44b412d1",
+   "kind": "answer",
+   "question": "when are two events said to be independent",
+   "gold_answers": [
+    "if the occurrence of one does not affect the probability of occurrence of the other",
+    "if the occurrence of one does not affect the probability of occurrence of the other."
+   ],
+   "model_answer": "When P(A ∩ B) = P(A)P(B)."
+  },
+  {
+   "id": "60dd7dbf1be1a8f8",
+   "kind": "answer",
+   "question": "who occupied the holy land after the 8th crusade",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Mamluks of Egypt"
+  },
+  {
+   "id": "3e7e16e5040fc543",
+   "kind": "answer",
+   "question": "what is the weight of a honda fit",
+   "gold_answers": [
+    "1,020–1,080 kg"
+   ],
+   "model_answer": "About 2,500–2,700 lb curb weight."
+  },
+  {
+   "id": "b61cbeeea08c8f87",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The U.S. saw major civil rights, Cold War, and political events, including Brown v. Board and the Army–McCarthy hearings."
+  }
+ ],
+ "evidence": []
+}

@@ -1,0 +1,70 @@
+[
+{"id": "ec7a5fd0bfe15089", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "how Google tried to have Chrome preinstalled on iPhones"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "20b52573f01509f4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "5dd47c6e866cf981", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "President Ferdinand Marcos, Jr."}, {"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]},
+{"id": "cb48331c5ecf4101", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "It could, though, mean some sort of progress"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "if the Manchester born Ratcliffe follows through"}, {"item": 10, "quote": "between Oldham-born Ratcliffe, who had previously offered"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "if the Manchester born Ratcliffe follows through with his vision to revolutionise the club"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "3c25400e7d125b0a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Their 0-3 and 1-4 starts are distant memories"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "(zero completions of 20-plus yards from tight ends)"}]}
+]},
+{"id": "d6f1573f5cd869af", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "And if the Braves let this be the story of their series"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "the new show steps its game up considerably"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity"}]}
+]}
+]

@@ -1,0 +1,733 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=25cdf76b5c1488bd ===
+Gold sentences and facts:
+Sentence 0: The previous department issued firearm for CHP officers is the Smith & Wesson Model 4006 TSW in . 40 S&W . As of August 2017 , the department has begun replacing the 4006 TSW with the Smith & Wesson M&P in . 40 S&W . Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12 ‐ gauge shotgun and a Sig Sauer M400 rifle in 5.56 mm . Less Lethal options for officers include OC Pepper Spray and the PR - 24 Side Handle Baton . The ASP Expandable Straight Baton is authorized as an optional piece of equipment for officers completing their probationary year . Additionally , officers are authorized to carry the TASER X2 Defender . In early 2009 , officers have been allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols .
+  Fact 0.0: The previous department-issued firearm for CHP officers is the Smith & Wesson Model 4006 TSW in .40 S&W.
+  Fact 0.1: As of August 2017, the CHP department has begun replacing the Smith & Wesson 4006 TSW with the Smith & Wesson M&P in .40 S&W.
+  Fact 0.2: Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12-gauge shotgun.
+  Fact 0.3: Each CHP patrol vehicle is equipped with a Sig Sauer M400 rifle in 5.56 mm.
+  Fact 0.4: Less lethal options for CHP officers include OC Pepper Spray.
+  Fact 0.5: Less lethal options for CHP officers include the PR-24 Side Handle Baton.
+  Fact 0.6: The ASP Expandable Straight Baton is authorized as an optional piece of equipment for CHP officers completing their probationary year.
+  Fact 0.7: CHP officers are authorized to carry the TASER X2 Defender.
+  Fact 0.8: In early 2009, CHP officers were allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols.
+
+Retrieved items:
+<item 1>
+California Highway Patrol
+Early motorcycles used included Indian , Harley - Davidson and Henderson manufactured bikes during the 1920s and 30s ; though by 1941 the main manufacturers
+used at the training academy were Harley - Davidson and Indian . In the 1970s CHP decided to renew their Harleys fleet and tested many motorcycles such as Honda
+750 four , Suzuki 850 , Moto Guzzi and finally Kawasaki Z900 and then 1000C1 made famous in CHiPs . In 1998 CHP began using the BMW R1100RT - P , with features
+including a helmet interface for communications , two batteries , and a top speed of 130 miles per hour ( 210 km / h ) . Vehicles ( edit ) California Highway
+Patrol cruiser on display at Public Safety Day in Lakewood , California . The Department of General Services is responsible for selecting a vehicle based on
+price , performance and payload capacity for the CHP . The bid specifications require a pursuit - rated , rear - wheel drive or all - wheel drive that can carry
+at least 1,500 pounds , the approximate weight of four officers , their equipment , and the police vehicle equipment .
+</item 1>
+
+<item 2>
+California Highway Patrol
+Vehicles ( edit ) This section needs expansion . You can help by adding to it . ( September 2013 ) Origins ( edit ) When motor vehicles in California were first
+seen as needing legislation , law enforcement agencies began to patrol using motorcycles , cars and trucks . Motorcycle officers in 1920 Fresno , started a
+group to assist each other and promote road safety - the Joaquin Valley Traffic Officer 's Association - led by Harry Wilson who they elected as president .
+They renamed themselves the California Association of Highway Patrolmen in 1921 , and became the California Highway Patrol in 1927 under the auspices of the
+Department of Motor Vehicles . Motorcycles ( edit ) A motorcycle sergeant on the San Tomas Expressway near Benton Avenue in Santa Clara , California . Through
+the public competitive bidding process , the Harley - Davidson motorcycle was selected as the primary enforcement motorcycle for the California Highway Patrol
+in 2013 . These replacement enforcement motorcycles will replenish the Department 's aging motorcycle fleet . In a cost - saving move , the CHP previously
+deferred the purchase of replacement motorcycles and has not purchased enforcement motorcycles since January 14 , 2011 .
+</item 2>
+
+<item 3>
+California Highway Patrol
+Weapons ( edit ) This section needs additional citations for verification . Please help improve this article by adding citations to reliable sources . Unsourced
+material may be challenged and removed . ( September 2014 ) ( Learn how and when to remove this template message ) The previous department issued firearm for
+CHP officers is the Smith & Wesson Model 4006 TSW in . 40 S&W . As of August 2017 , the department has begun replacing the 4006 TSW with the Smith & Wesson M&P
+in . 40 S&W . Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12 ‐ gauge shotgun and a Sig Sauer M400 rifle in 5.56 mm . Less Lethal
+options for officers include OC Pepper Spray and the PR - 24 Side Handle Baton . The ASP Expandable Straight Baton is authorized as an optional piece of
+equipment for officers completing their probationary year . Additionally , officers are authorized to carry the TASER X2 Defender . In early 2009 , officers
+have been allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols .
+</item 3>
+
+<item 4>
+California Highway Patrol
+Contents ( hide ) 1 Highway patrol duties 2 Special responsibilities 3 Pay and pensions 4 Organization 4.1 Hierarchy 4.2 Field Organization 5 Rank structure 6
+Traditions 7 Seven points of the CHP badge 8 Code of honor 9 Fallen officers 10 Mexico Liaison Unit 11 Scandals 11.1 Officer Peyer Scandal 11.2 Newhall incident
+12 Mergers 13 Weapons 14 Vehicles 14.1 Origins 14.2 Motorcycles 14.3 Vehicles 14.4 Aircraft 15 Rogue officers 15.1 George Gwaltney 15.2 Craig Peyer 16 Media
+references 17 Programs 17.1 Youth programs 17.2 Vehicle Theft Recognition and Awards Program 17.3 Other Programs 18 Origins of the California Highway Patrol 's
+name 19 See also 20 References 20.1 Further reading 21 External links Highway Patrol duties ( edit ) The agency has jurisdiction over all California state
+routes ( including all freeways and expressways ) , U.S. Highways , Interstate Highways and all public roads in unincorporated and incorporated parts of a
+county .
+</item 4>
+
+<item 5>
+California Highway Patrol
+Legal jurisdiction As per operations jurisdiction Governing body California State Legislature Constituting instrument Senate Bill 869 Headquarters Sacramento ,
+California Officers 7,608 ( as of 2016 ) Civilians 3,276 ( as of 2014 ) Commissioner responsible Warren Stanley Parent agency California State Transportation
+Agency ( CALSTA ) Facilities Commands 8 Field Divisions 16 Commercial Enforcement Facilities 103 Area Offices Patrol cars Ford Explorer - based Police
+Interceptor Utility Vehicle Dodge Charger - Police Ford Crown Victoria - Police Planes Cessna 206 Website http://www.chp.ca.gov http://www.chpcareers.com The
+California Highway Patrol ( CHP ) is a law enforcement agency of the state of California . The primary mission of the CHP is to ensure safety and enforce
+traffic laws on all California highways and county roads in unincorporated areas . The CHP promotes traffic safety by inspecting commercial vehicles , as well
+as inspecting and certifying school buses , ambulances , and other specialized vehicles . The California State Legislature established the California Highway
+Patrol as a branch of the Division of Motor Vehicles in the Department of Public Works , with legislation signed by Governor C. C. Young on August 14 , 1929 .
+</item 5>
+
+<item 6>
+California Highway Patrol
+Cold weather and utility uniforms are dark blue . California Highway Patrol campaign hat . Leather gear is black with brass snaps and buckles . Standard traffic
+enforcement patrol vehicles are required by state law to have a white door with , in the case of the CHP , a star . The CHP operates traditional black and white
+as well as all - white patrol vehicles . The California Highway Patrol is one of the few organizations to continue to use the older toll - free `` Zenith 1 ‐
+2000 '' number . With the falling cost of telephone area code 800 and 888 numbers , most organizations have chosen to switch to one of the newer numbers and
+discontinue use of the Zenith service , which requires operator assistance . The CHP 's traditions include its own radio codes , widely adopted by local
+agencies . The most important is 11 ‐ 99 , which signifies that an officer needs emergency assistance or that an officer is down . In 1981 a charitable
+foundation called the 11 ‐ 99 Foundation was founded to provide benefits and scholarships to officers and their families .
+</item 6>
+
+<item 7>
+California Highway Patrol
+As of July 2013 , CHP had not purchased patrol vehicles since January 2011 and their fleet was rapidly aging . On average , CHP patrol vehicles are driven
+33,000 miles per year . Half of their 2,153 - vehicle fleet had over 100,000 miles as of June 2013 . After 100,000 miles the warranty on CHP vehicles expires ,
+forcing CHP to pay for maintenance costs . In July 2013 , the CHP was authorized to purchase up to 751 new vehicles to begin replacing its aging fleet ,
+starting with cars that have the highest mileage . Through a public , competitive bidding process , the Ford Police Interceptor Utility Vehicle ( Explorer ) was
+selected as the new enforcement vehicle for the CHP in 2013 . The Ford Police Interceptor Utility Vehicle is All Wheel Drive and powered by a V6 , 3.7 Liter
+engine . It is a Flex Fuel vehicle that can use gasoline or E85 and gets 16 mpg city and 21 mpg highway . Several Dodge Charger Police Packages were also
+purchased for testing . The Ford Crown Victoria Police Interceptor averaged 16 mpg city and 24 mpg highway .
+</item 7>
+
+<item 8>
+California Highway Patrol
+California Highway Patrol - wikipedia California Highway Patrol Jump to : navigation , search This article is about the California Highway Patrol ( CHP ) . For
+the California State Police ( CSP ) , see California State Police . California Highway Patrol CHP Patch CHP Door Shield CHP Badge CHP Logo Abbreviation CHP
+Motto Safety , Service , and Security Agency overview Formed August 14 , 1929 ; 88 years ago ( 1929 - 08 - 14 ) Employees 10,551 ( as of 2014 ) Annual budget $2
+billion ( as of 2014 ) Jurisdictional structure Operations jurisdiction California , ( ( U.S. ) ) Map of California Highway Patrol 's jurisdiction . Size
+163,696 square miles ( 423,970 km ) Population 39,536,653 ( 2017 est . )
+</item 8>
+
+<item 9>
+California Highway Patrol
+This is because of their ability to carry a larger `` basic load '' of normal issue equipment , equipment that may be only in a few cars , and / or not carried
+by patrol cars at all , in a more urban setting . Aircraft ( edit ) CHP AS 350 B3 in flight . The CHP utilizes both helicopters and fixed - wing aircraft . In
+2017 the fleet consisted of : 15 Airbus Helicopters ( Eurocopter ) AS350B3 Squirrels 11 Cessna T206H Turbo Stationairs 4 Gippsaero GA8 TC - 320 Airvans 2 Hughes
+( MD500 ) 369Ds 1 Cessna 182S Skylane 1 Raytheon ( Beechcraft ) B300 Super King Air Rogue officers ( edit ) George Gwaltney ( edit ) A former officer from
+Barstow , was convicted on May 10 , 1984 , in federal court , for the on ‐ duty rape and slaying of 23 - year - old Robin Bishop on January 11 , 1982 .
+</item 9>
+
+<item 10>
+California Highway Patrol
+ESPN March 6 2008 Jump up ^ Game - warden shortage is about to get worse San Francisco Chronicle September 23 2007 Archived February 15 , 2012 , at the Wayback
+Machine . Jump up ^ Lots of ocean , but few game wardens ! Sacramento Bee August 23 2007 Archived August 21 , 2007 , at the Wayback Machine . Jump up ^ Oregon
+State Police Fish and Wildlife Division Archived 2012 - 07 - 31 at the Wayback Machine . Jump up ^ Division of Alaska Wildlife Troopers Jump up ^
+http://smith-wessonforum.com/showthread.php?t=525162 ^ Jump up to : Mattos , Rick ( 2008 ) . California Highway Patrol . Charleston , SC : Arcadia Pub . ISBN
+9780738556208 . Retrieved 2013 - 09 - 01 . Jump up ^ Carpenter , Susan ( 25 June 2013 ) . `` BMW 's R1200RT - P : Big , bad and packing heat '' . Los Angeles
+Times . Retrieved 1 September 2013 .
+</item 10>
+=== END ITEM id=25cdf76b5c1488bd ===
+
+=== ITEM id=7d1000f33f6bc387 ===
+Gold sentences and facts:
+Sentence 0: Ladies ' singles at the XXIII Olympic Winter Games Venue Gangneung Ice Arena Gangneung , South Korea Dates 21 -- 23 February Competitors 30 from 20 nations Winning score 239.57 Medalists 01 ! Alina Zagitova Olympic Athletes from Russia 02 ! Evgenia Medvedeva Olympic Athletes from Russia 03 ! Kaetlyn Osmond Canada ← 2014 2022 →
+  Fact 0.0: The Ladies' singles event was held at the XXIII Olympic Winter Games.
+  Fact 0.1: The Ladies' singles event was held at the Gangneung Ice Arena in Gangneung, South Korea.
+  Fact 0.2: The Ladies' singles event was held on 21 to 23 February.
+  Fact 0.3: The Ladies' singles event had 30 competitors from 20 nations.
+  Fact 0.4: The winning score in the Ladies' singles event was 239.57.
+  Fact 0.5: Alina Zagitova of Olympic Athletes from Russia was the first-place medalist.
+  Fact 0.6: Evgenia Medvedeva of Olympic Athletes from Russia was the second-place medalist.
+  Fact 0.7: Kaetlyn Osmond of Canada was the third-place medalist.
+  Fact 0.8: The navigation links point to the previous event in 2014 and the next event in 2022.
+Sentence 1: The ladies ' single figure skating competition of the 2018 Winter Olympics was held at the Gangneung Ice Arena in Gangneung , South Korea . The short program was held on 21 February , and the free skating was held on 23 February .
+  Fact 1.0: The ladies' single figure skating competition was held at the 2018 Winter Olympics.
+  Fact 1.1: The ladies' single figure skating competition was held at the Gangneung Ice Arena in Gangneung, South Korea.
+  Fact 1.2: The short program was held on 21 February.
+  Fact 1.3: The free skating was held on 23 February.
+
+Retrieved items:
+<item 1>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Pyeongchang 2018 Olympic Organizing Committee for the 2018 Winter Olympics . Retrieved 26 December 2017 . ^ Jump up to : `` Schedule '' . Retrieved 6 January
+2018 . Jump up ^ Start list ^ Jump up to : Bieler , Des ; Janes , Chelsea ( 21 February 2018 ) . `` Alina Zagitova tops Russian teammate Evgenia Medvedeva 's
+world - record short program score '' . The Washington Post . ISSN 0190 - 8286 . Retrieved 21 February 2018 . ^ Jump up to : `` Russia 's Zagitova beats
+Medvedeva 's short program world record at Olympics '' . TASS. 21 February 2018 . Retrieved 21 February 2018 . Jump up ^ `` Qualification Systems for XXIII
+Olympic Winter Games , PyeongChang 2018 , Figure skating '' . International Skating Union ( ISU ) . 17 May 2016 . Retrieved 20 January 2018 .
+</item 1>
+
+<item 2>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+97 20 23 Ivett Tóth Hungary 150.43 53.22 23 97.21 23 24 Isadora Williams Brazil 144.18 55.74 17 88.44 24 Did not advance to free skating 25 Larkyn Austman
+Canada N / A 51.42 25 N / A N / A 26 Diāna Ņikitina Latvia N / A 51.12 26 N / A N / A 27 Giada Russo Italy N / A 50.88 27 N / A N / A 28 Anita Östlund Sweden N
+/ A 49.14 28 N / A N / A 29 Anna Khnychenkova Ukraine N / A 47.59 29 N / A N / A 30 Aiza Mambekova Kazakhstan N / A 44.40 30 N / A N / A References ( edit )
+Jump up ^ `` Venues '' . www.pyeongchang2018.com/ . Pyeongchang 2018 Olympic Organizing Committee for the 2018 Winter Olympics .
+</item 2>
+
+<item 3>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Fleming ( USA ) 1972 : Trixi Schuba ( AUT ) 1976 : Dorothy Hamill ( USA ) 1980 : Anett Pötzsch ( GDR ) 1984 : Katarina Witt ( GDR ) 1988 : Katarina Witt ( GDR )
+1992 : Kristi Yamaguchi ( USA ) 1994 : Oksana Baiul ( UKR ) 1998 : Tara Lipinski ( USA ) 2002 : Sarah Hughes ( USA ) 2006 : Shizuka Arakawa ( JPN ) 2010 : Yuna
+Kim ( KOR ) 2014 : Adelina Sotnikova ( RUS ) 2018 : Alina Zagitova ( OAR ) Record scores in figure skating Combined total ( Total ) Short program ( SP ) Free
+skating ( FS ) Short dance ( SD ) Free dance ( FD ) Juniors ( J ) Men Total : Yuzuru Hanyu 330.43 SP : Yuzuru Hanyu 112.72 FS : Yuzuru Hanyu 223.
+</item 3>
+
+<item 4>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+S. Classic Lombardia Trophy Autumn Classic Ondrej Nepela Trophy Nebelhorn Trophy Finlandia Trophy Minsk - Arena Ice Star Warsaw Cup Tallinn Trophy Golden Spin
+of Zagreb Junior internationals ISU Junior Grand Prix Junior Grand Prix Final National championships Canada China Germany Japan Russia South Korea United States
+Retrieved from `` https://en.wikipedia.org/w/index.php?title=Figure_skating_at_the_2018_Winter_Olympics_ -- _Ladies % 27_singles&oldid = 827594424 '' Categories
+: Figure skating at the 2018 Winter Olympics Women 's events at the 2018 Winter Olympics Talk Contents About Wikipedia Čeština Deutsch Français 한국어 Italiano
+Magyar Nederlands Norsk Polski Português Română Русский Suomi Türkçe Українська 中文 7 more Edit links This page was last edited on 25 February 2018 , at 17 : 06
+. About Wikipedia
+</item 4>
+
+<item 5>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+21 49.82 50.39 6.32 6.29 6.21 6.39 6.29 - 3.00 6 24 Isadora Williams Brazil 88.44 38.39 51.05 6.43 6.18 6.36 6.43 6.50 - 1.00 12 * Evgenia Medvedeva finished at
+higher place due to better program component score Overall ( edit ) The skaters were ranked according to their overall score . TP - Total points ; SP - Short
+program ; FS - Free skating Rank Name Nation Total points SP FS 01 ! Alina Zagitova Olympic Athletes from Russia 239.57 82.92 156.65 02 ! Evgenia Medvedeva
+Olympic Athletes from Russia 238.26 81.61 156.65 03 ! Kaetlyn Osmond Canada 231.02 78.87 152.15 Satoko Miyahara Japan 222.38 75.94 146.44 5 Carolina Kostner
+Italy 212.
+</item 5>
+
+<item 6>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Contents ( hide ) 1 Records 2 Qualification 3 Schedule 4 Results 4.1 Short program 4.2 Free skating 4.3 Overall 5 References Records ( edit ) See also : World
+and Olympic records set at the 2018 Winter Olympics For a complete list of figure skating records , see list of highest scores in figure skating . The following
+new best scores were set during this competition : Component Skaters Score Date Ref Short program Evgenia Medvedeva ( OAR ) 81.61 21 February 2018 Alina
+Zagitova ( OAR ) 82.92 The Olympic Athletes from Russia set two subsequent world records in the short program on February 21 , with Evgenia Medvedeva scoring
+81.61 and then Alina Zagitova scoring 82.92 ten minutes later . Qualification ( edit ) Main article : Figure skating at the 2018 Winter Olympics --
+Qualification A total of 30 skaters qualified to compete in the event , with each country allowed to only enter a maximum of three .
+</item 6>
+
+<item 7>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+24 quotas were handed out during the 2017 World Figure Skating Championships and the remaining six were given out at the 2017 CS Nebelhorn Trophy . Each country
+decided the entry of its teams , and athletes winning the quota were not necessarily granted the right to compete . All athletes competing must have met the
+minimum total elements score , which does not include component scores . For the short program this was 20.00 and the free skate 36.00 . Schedule ( edit ) All
+times are ( UTC + 9 ) . Date Time Round 21 February 10 : 00 Short program 23 February 10 : 00 Free skating Results ( edit ) Short program ( edit ) The short
+program was held on 21 February . Pl . Name Nation TSS TES PCS SS TR PE CH IN Ded StN Alina Zagitova Olympic Athletes from Russia 82.92 WR 45.30 37.62 9.36 9.18
+9.64 9.43 9.43 0.00 28 Evgenia Medvedeva Olympic Athletes from Russia 81.61 43.
+</item 7>
+
+<item 8>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+Figure skating at the 2018 Winter Olympics -- ladies ' singles - wikipedia Figure skating at the 2018 Winter Olympics -- ladies ' singles Jump to : navigation ,
+search Ladies ' singles at the XXIII Olympic Winter Games Venue Gangneung Ice Arena Gangneung , South Korea Dates 21 -- 23 February Competitors 30 from 20
+nations Winning score 239.57 Medalists 01 ! Alina Zagitova Olympic Athletes from Russia 02 ! Evgenia Medvedeva Olympic Athletes from Russia 03 ! Kaetlyn Osmond
+Canada ← 2014 2022 → Figure skating at the 2018 Winter Olympics Qualification Singles men ladies Pairs mixed Ice dancing mixed Team event mixed The ladies '
+single figure skating competition of the 2018 Winter Olympics was held at the Gangneung Ice Arena in Gangneung , South Korea . The short program was held on 21
+February , and the free skating was held on 23 February .
+</item 8>
+
+<item 9>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+TES - Technical Element Score ; PCS - Program Component Score SS - Skating Skills ; TR - Transitions ; PE - Performance / Execution CH - Choreography ; IN -
+Interpretation ; Ded - Deduction ; StN - Starting Number Free skating ( edit ) The free skating was held on 23 February . Pl . Name Nation TSS TES PCS SS TR PE
+CH IN Ded StN Evgenia Medvedeva Olympic Athletes from Russia * 156.65 * 79.18 * 77.47 * 9.57 9.43 9.82 9.71 9.89 0.00 24 Alina Zagitova Olympic Athletes from
+Russia * 156.65 * 81.62 * 75.03 * 9.32 9.21 9.61 9.29 9.46 0.00 22 Kaetlyn Osmond Canada 152.15 76.50 75.65 9.50 9.21 9.57 9.39 9.61 0.00 23 Satoko Miyahara
+Japan 146.
+</item 9>
+
+<item 10>
+Figure skating at the 2018 Winter Olympics – Ladies' singles
+17 May 2016 . Retrieved 20 January 2018 . Jump up ^ `` Extract from ISU Communication 2097 '' . www.iceskating.org.uk/ . National Ice Skating Association ( UK )
+. Retrieved 20 January 2018 . Jump up ^ Short program results Jump up ^ Free skating results Jump up ^ Final results Olympic champions in figure skating --
+Ladies ' singles 1908 : Madge Syers ( GBR ) 1920 : Magda Julin ( SWE ) 1924 : Herma Szabo ( AUT ) 1928 : Sonja Henie ( NOR ) 1932 : Sonja Henie ( NOR ) 1936 :
+Sonja Henie ( NOR ) 1948 : Barbara Ann Scott ( CAN ) 1952 : Jeannette Altwegg ( GBR ) 1956 : Tenley Albright ( USA ) 1960 : Carol Heiss ( USA ) 1964 : Sjoukje
+Dijkstra ( NED ) 1968 : Peggy Fleming ( USA ) 1972 : Trixi Schuba ( AUT ) 1976 : Dorothy
+</item 10>
+=== END ITEM id=7d1000f33f6bc387 ===
+
+=== ITEM id=51a74022c2def205 ===
+Gold sentences and facts:
+Sentence 0: The Earth 's magnetic field serves to deflect most of the solar wind , whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation . One stripping mechanism is for gas to be caught in bubbles of magnetic field , which are ripped off by solar winds . Calculations of the loss of carbon dioxide from the atmosphere of Mars , resulting from scavenging of ions by the solar wind , indicate that the dissipation of the magnetic field of Mars caused a near total loss of its atmosphere .
+  Fact 0.0: The Earth's magnetic field serves to deflect most of the solar wind.
+  Fact 0.1: The solar wind's charged particles would otherwise strip away the ozone layer.
+  Fact 0.2: The ozone layer protects the Earth from harmful ultraviolet radiation.
+  Fact 0.3: One stripping mechanism is for gas to be caught in bubbles of magnetic field.
+  Fact 0.4: The bubbles of magnetic field are ripped off by solar winds.
+  Fact 0.5: Calculations of the loss of carbon dioxide from the atmosphere of Mars result from scavenging of ions by the solar wind.
+  Fact 0.6: The calculations indicate that the dissipation of the magnetic field of Mars caused a near total loss of the atmosphere of Mars.
+
+Retrieved items:
+<item 1>
+Earth’s magnetic field is generated by a geodynamo: convection of molten iron in the outer core, driven by heat escaping from the core. The geomagnetic poles
+are opposite in polarity to the geographic names and usually lie near the geographic poles, though they slowly wander. Every few hundred thousand years on
+average, the field reverses and the magnetic poles switch places. Reversals recorded in rocks help scientists study past magnetic fields and plate tectonics.
+The magnetosphere is the region
+</item 1>
+
+<item 2>
+Earth's magnetic field
+However the process is complex , and computer models that reproduce some of its features have only been developed in the last few decades . Earth 's core and
+the geodynamo ( edit ) A schematic illustrating the relationship between motion of conducting fluid , organized into rolls by the Coriolis force , and the
+magnetic field the motion generates . The Earth and most of the planets in the Solar System , as well as the Sun and other stars , all generate magnetic fields
+through the motion of electrically conducting fluids . The Earth 's field originates in its core . This is a region of iron alloys extending to about 3400 km (
+the radius of the Earth is 6370 km ) . It is divided into a solid inner core , with a radius of 1220 km , and a liquid outer core . The motion of the liquid in
+the outer core is driven by heat flow from the inner core , which is about 6,000 K ( 5,730 ° C ; 10,340 ° F ) , to the core - mantle boundary , which is about
+3,800 K ( 3,530 ° C ; 6,380 ° F ) .
+</item 2>
+
+<item 3>
+Earth's magnetic field
+Earth 's magnetic field - wikipedia Earth 's magnetic field Jump to : navigation , search Computer simulation of the Earth 's field in a period of normal
+polarity between reversals . The lines represent magnetic field lines , blue when the field points towards the center and yellow when away . The rotation axis
+of the Earth is centered and vertical . The dense clusters of lines are within the Earth 's core . Earth 's magnetic field , is also known as the geomagnetic
+field , is the magnetic field that extends from the Earth 's interior out into space , where it meets the solar wind , a stream of charged particles emanating
+from the Sun . Its magnitude at the Earth 's surface ranges from 25 to 65 microteslas ( 0.25 to 0.65 gauss ) . Roughly speaking it is the field of a magnetic
+dipole currently tilted at an angle of about 11 degrees with respect to Earth 's rotational axis , as if there were a bar magnet placed at that angle at the
+center of the Earth .
+</item 3>
+
+<item 4>
+Earth's magnetic field
+The pattern of flow is organized by the rotation of the Earth and the presence of the solid inner core . The mechanism by which the Earth generates a magnetic
+field is known as a dynamo . The magnetic field is generated by a feedback loop : current loops generate magnetic fields ( Ampère 's circuital law ) ; a
+changing magnetic field generates an electric field ( Faraday 's law ) ; and the electric and magnetic fields exert a force on the charges that are flowing in
+currents ( the Lorentz force ) .
+</item 4>
+
+<item 5>
+Earth’s magnetic field extends tens of thousands of kilometers into space, shielding the atmosphere from solar-wind particles and cosmic rays and helping
+preserve the ozone layer. Sun-driven ionospheric currents cause daily changes, deflecting surface fields by up to about 1°; typical strength variations are 25
+nT daily and 1 nT over seconds. Measured since Gauss in 1832, the field has weakened roughly 10% in 150 years. Satellite measurements have mapped its structure
+and revealed
+</item 5>
+
+<item 6>
+Earth’s magnetic field is predominantly dipolar, accounting for 80–90% of the field in most places. Magnet poles were historically named using Earth’s field: a
+magnet’s north pole points toward Earth’s North Magnetic Pole, which is physically a magnetic south pole because the field points downward there. Magnetic poles
+can be defined locally by vertical field direction: inclination is +90° downward at the North Magnetic Pole and −90° upward at the South Magnetic Pole.
+</item 6>
+
+<item 7>
+Earth's magnetic field
+Reversals also provide the basis for magnetostratigraphy , a way of dating rocks and sediments . The field also magnetizes the crust , and magnetic anomalies
+can be used to search for deposits of metal ores . Humans have used compasses for direction finding since the 11th century A.D. and for navigation since the
+12th century . Although the magnetic declination does shift with time , this wandering is slow enough that a simple compass remains useful for navigation .
+Using magnetoception various other organisms , ranging from some types of bacteria to pigeons , use the Earth 's magnetic field for orientation and navigation .
+Main characteristics ( edit ) Description ( edit ) At any location , the Earth 's magnetic field can be represented by a three - dimensional vector . A typical
+procedure for measuring its direction is to use a compass to determine the direction of magnetic North . Its angle relative to true North is the declination ( D
+) or variation . Facing magnetic North , the angle the field makes with the horizontal is the inclination ( I ) or magnetic dip . The intensity ( F ) of the
+field is proportional to the force it exerts on a magnet .
+</item 7>
+
+<item 8>
+Earth's magnetic field
+It extends several tens of thousands of kilometers into space , protecting the Earth from the charged particles of the solar wind and cosmic rays that would
+otherwise strip away the upper atmosphere , including the ozone layer that protects the Earth from harmful ultraviolet radiation . Contents ( hide ) 1
+Importance 2 Main characteristics 2.1 Description 2.1. 1 Intensity 2.1. 2 Inclination 2.1. 3 Declination 2.2 Geographical variation 2.3 Dipolar approximation
+2.4 Magnetic poles 3 Magnetosphere 4 Time dependence 4.1 Short - term variations 4.2 Secular variation 4.3 Magnetic field reversals 4.4 Earliest appearance 4.5
+Future 5 Physical origin 5.1 Earth 's core and the geodynamo 5.1. 1 Numerical models 5.2 Currents in the ionosphere and magnetosphere 6 Measurement and analysis
+6.1 Detection 6.2 Crustal magnetic anomalies 6.3 Statistical models 6.3. 1 Spherical harmonics 6.3. 1.1 Radial dependence 6.3.
+</item 8>
+
+<item 9>
+Earth’s magnetic field is generated by a dynamo: Earth’s rotation and solid inner core organize fluid flow, while a feedback loop sustains currents and magnetic
+fields. Current loops create magnetic fields (Ampère’s law); changing magnetic fields induce electric fields (Faraday’s law); and electric and magnetic fields
+exert Lorentz forces on moving charges.
+</item 9>
+
+<item 10>
+Earth's magnetic field
+1.1 Radial dependence 6.3. 2 Global models 7 Biomagnetism 8 See also 9 References 10 Further reading 11 External links Importance ( edit ) The Earth 's magnetic
+field serves to deflect most of the solar wind , whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful
+ultraviolet radiation . One stripping mechanism is for gas to be caught in bubbles of magnetic field , which are ripped off by solar winds . Calculations of the
+loss of carbon dioxide from the atmosphere of Mars , resulting from scavenging of ions by the solar wind , indicate that the dissipation of the magnetic field
+of Mars caused a near total loss of its atmosphere . The study of past magnetic field of the Earth is known as paleomagnetism . The polarity of the Earth 's
+magnetic field is recorded in igneous rocks , and reversals of the field are thus detectable as `` stripes '' centered on mid-ocean ridges where the sea floor
+is spreading , while the stability of the geomagnetic poles between reversals has allowed paleomagnetists to track the past motion of continents .
+</item 10>
+=== END ITEM id=51a74022c2def205 ===
+
+=== ITEM id=ac9c821ce6e24b8e ===
+Gold sentences and facts:
+Sentence 0: In 1908 , the first five - day workweek in the United States was instituted by a New England cotton mill so that Jewish workers would not have to work on the Sabbath from sundown Friday to sundown Saturday . In 1926 , Henry Ford began shutting down his automotive factories for all of Saturday and Sunday . In 1929 , the Amalgamated Clothing Workers of America Union was the first union to demand a five - day workweek and receive it . After that , the rest of the United States slowly followed , but it was not until 1940 , when a provision of the 1938 Fair Labor Standards Act mandating a maximum 40 - hour workweek went into effect , that the two - day weekend was adopted nationwide .
+  Fact 0.0: In 1908, the first five-day workweek in the United States was instituted by a New England cotton mill.
+  Fact 0.1: The New England cotton mill instituted the five-day workweek so that Jewish workers would not have to work on the Sabbath from sundown Friday to sundown Saturday.
+  Fact 0.2: In 1926, Henry Ford began shutting down his automotive factories for all of Saturday and Sunday.
+  Fact 0.3: In 1929, the Amalgamated Clothing Workers of America Union was the first union to demand a five-day workweek.
+  Fact 0.4: In 1929, the Amalgamated Clothing Workers of America Union received a five-day workweek.
+  Fact 0.5: After that, the rest of the United States slowly followed.
+  Fact 0.6: The two-day weekend was not adopted nationwide until 1940.
+  Fact 0.7: The two-day weekend was adopted nationwide in 1940, when a provision of the 1938 Fair Labor Standards Act mandating a maximum 40-hour workweek went into effect.
+
+Retrieved items:
+<item 1>
+Workweek and weekend
+In some Christian traditions , Sunday is the `` day of rest and worship '' . Jewish Shabbat or Biblical Sabbath lasts from sunset on Friday to the fall of full
+darkness on Saturday ; as a result , the weekend in Israel is observed on Friday -- Saturday . Some Muslim - majority countries historically had a Thursday --
+Friday or Friday -- Saturday weekend ; however , recently many such countries have shifted from Thursday -- Friday to Friday -- Saturday , or to Saturday --
+Sunday . The Christian Sabbath was just one day each week , but the preceding day ( the Jewish Sabbath ) came to be taken as a holiday as well in the twentieth
+century . This shift has been accompanied by a reduction in the total number of hours worked per week , following changes in employer expectations . The present
+- day concept of the ' week - end ' first arose in the industrial north of Britain in the early part of nineteenth century and was originally a voluntary
+arrangement between factory owners and workers allowing Saturday afternoon off from 2pm in agreement that staff would be available for work sober and refreshed
+on Monday morning . The Amalgamated Clothing Workers of America Union was the first to successfully demand a five - day work week in 1929 .
+</item 1>
+
+<item 2>
+Workweek and weekend
+A series of workweek reforms in the mid-to - late 2000s and early 2010s brought much of the Arab World in synchronization with the majority of countries around
+the world , in terms of working hours , the length of the workweek , and the days of the weekend . The International Labour Organization ( ILO ) currently
+defines a workweek exceeding 48 hours as excessive . A 2007 study by the ILO found that at least 614.2 million people around the world were working excessive
+hours . Length ( edit ) This day planner chart ( which can be used for any months ) shows the workweek days as white boxes and the weekend days as light blue -
+coloured boxes . Actual workweek lengths have been falling in the developed world . Every reduction of the length of the workweek has been accompanied by an
+increase in real per - capita income . In the United States , the workweek length reduced slowly from before the Civil War to the turn of the 20th century . A
+rapid reduction took place from 1900 to 1920 , especially between 1913 and 1919 , when weekly hours fell by about eight percent .
+</item 2>
+
+<item 3>
+Graph query row:
+entity: New England cotton mill
+connections: [{'context': None, 'fact': None, 'relation': None, 'relationship': None, 'type': 'FROM_CHUNK'}, {'context': None, 'fact': None, 'relation': None,
+'relationship': None, 'type': 'FROM_CHUNK'}, {'context': None, 'fact': None, 'relation': None, 'relationship': None, 'type': 'RELATED_TO'}, {'context': None,
+'fact': None, 'relation': None, 'relationship': None, 'type': 'RELATED_TO'}]
+dates: [{'date': '1908', 'name': 'Institution of the first five-day workweek in the United States'}]
+</item 3>
+
+<item 4>
+Workweek and weekend
+A number of provinces and municipalities across China , including Hebei , Jiangxi and Chongqing , have issued new policies , calling on companies to create 2.5
+- day weekends . Under the plan , government institutions , state - owned companies , joint - ventures and privately held companies are to be given incentives
+to allow their workers to take off at noon on Friday before coming back to the office on Monday . Hong Kong ( edit ) In Hong Kong , a typical working week for
+local enterprises begins on Monday and ends at 1pm on Saturday , although most employees have alternate Saturdays off . After the introduction of the five - day
+working week for the majority of government departments in 2006 , most multinational enterprises and large local companies followed suit , extended the working
+day from 9am to 6pm so as to adopt a five - day work week . Despite the aforementioned official hours , many employees work overtime , and in the case of the
+financial industry in particular , working 12 - hour days on a chronic basis is not uncommon . Most commercial establishments in the retail sector such as
+restaurants , shops and cinemas , as well as public venues such as museums and libraries are open on Saturdays , Sundays and most public holidays .
+</item 4>
+
+<item 5>
+Workweek and weekend
+In 1926 , Henry Ford standardized on a five - day workweek , instead of the prevalent six days , without reducing employees ' pay . Hours worked stabilized at
+about 49 per week during the 1920s , and during the Great Depression fell below 40 . During the Depression , President Herbert Hoover called for a reduction in
+work hours in lieu of layoffs . Later , President Franklin Roosevelt signed the Fair Labor Standards Act of 1938 , which established a five - day , 40 - hour
+workweek for many workers . The proportion of people working very long weeks has since risen , and the full - time employment of women has increased
+dramatically . The New Economics Foundation has recommended moving to a 21 - hour standard workweek to address problems with unemployment , high carbon
+emissions , low well - being , entrenched inequalities , overworking , family care , and the general lack of free time . The Center for Economic and Policy
+Research states that reducing the length of the work week would slow climate change and have other environmental benefits . Around the world ( edit ) (
+Countries listed alphabetically . Some countries have Saturday a normal school day .
+</item 5>
+
+<item 6>
+Workweek and weekend
+Of the remaining 50 % , 23 % have taken steps to reform their 6 - day workweek through such measures as reducing the working week from 6 days to 5.5 days .
+United states ( edit ) The standard working week in the United States begins on Monday and ends on Friday , 40 hours per week , with Saturday and Sunday being
+weekend days . However , in practice , only 42 % of employees work 40 - hour weeks . The average workweek for full - time employees is 47 hours . Most stores
+are open for business on Saturday and often on Sunday as well , except in a few places where prohibited by law ( see Blue law ) . Increasingly , employers are
+offering compressed work schedules to employees . Some government and corporate employees now work a 9 / 80 work schedule ( 80 hours over 9 days during a two -
+week period ) -- commonly 9 hour days Monday to Thursday , 8 hours on one Friday , and off the following Friday . Jobs in healthcare , law enforcement ,
+transportation , retail , and other service positions commonly require employees to work on the weekend or to do shift work .
+</item 6>
+
+<item 7>
+Workweek and weekend
+1 Soviet Union 3.17 Singapore 3.18 South Africa 3.19 Thailand 3.20 United States 3.21 Vietnam 4 See also 5 References History ( edit ) Part of a series on
+Organised labour Labour movement ( show ) Timeline New Unionism Proletariat Social Movement Unionism Socialism Syndicalism Anarcho - syndicalism Labour rights (
+hide ) Child labour Eight - hour day Five - day work week Annual leave Collective bargaining Minimum wage Occupational safety and health Trade unions ( show )
+Trade unions by country Trade union federations International comparisons ITUC IWA WFTU Strike action ( show ) Chronological list of strikes General strike
+Secondary action Sitdown strike Work - to - rule Labour parties ( show ) Australian British Dutch Irish Israeli New Zealand Norwegian List of Labour parties
+Academic disciplines ( show ) Industrial relations Labour economics Labour history Labour law This section needs expansion . You can help by adding to it . (
+September 2013 ) A continuous seven - day cycle that runs throughout history paying no attention whatsoever to the phases of the moon , having a fixed day of
+rest , was probably first practiced in Judaism , dated to the 6th century BC at the latest .
+</item 7>
+
+<item 8>
+Workweek and weekend
+In 1908 , the first five - day workweek in the United States was instituted by a New England cotton mill so that Jewish workers would not have to work on the
+Sabbath from sundown Friday to sundown Saturday . In 1926 , Henry Ford began shutting down his automotive factories for all of Saturday and Sunday . In 1929 ,
+the Amalgamated Clothing Workers of America Union was the first union to demand a five - day workweek and receive it . After that , the rest of the United
+States slowly followed , but it was not until 1940 , when a provision of the 1938 Fair Labor Standards Act mandating a maximum 40 - hour workweek went into
+effect , that the two - day weekend was adopted nationwide . Over the succeeding decades , particularly in the 1940s , 1950s , and 1960s , an increasing number
+of countries adopted either a Friday -- Saturday or Saturday -- Sunday weekend to harmonize with international markets .
+</item 8>
+
+<item 9>
+Workweek and weekend
+( February 4 , 2010 ) `` Shorter Workweek in a Tough Economy '' Archived November 28 , 2016 , at the Wayback Machine . Wisconsin Employment Law Letter (
+hrhero.com ) Jump up ^ Rones et al. ( 1997 ) `` Trends in Hours of Work since the Mid-1970s '' Archived June 24 , 2016 , at the Wayback Machine . Monthly Labor
+Review 120 ( 3 ) : 3 -- 12 Jump up ^ Coote , Anna ; Franklin , Jane ; Simms , Andrew ( February 2010 ) . `` 21 hours : Why a shorter working week can help us
+all to flourish in the 21st century '' ( PDF ) . London : New Economics Foundation . ISBN 978 - 1 - 904882 - 70 - 1 . Archived from the original ( PDF ) on 9
+February 2016 . Retrieved 18 October 2016 . Jump up ^ Stuart , H.
+</item 9>
+
+<item 10>
+Workweek and weekend
+Retrieved 18 October 2016 . Jump up ^ Stuart , H. ( January 7 , 2012 ) `` Cut the working week to a maximum of 20 hours , urge top economists '' Archived
+November 20 , 2012 , at the Wayback Machine . The Guardian Jump up ^ Schachter , H. ( February 10 , 2012 ) `` Save the world with a 3 - day work week ''
+Archived May 5 , 2016 , at the Wayback Machine . Globe and Mail Jump up ^ Baker , D. ( January 27 , 2009 ) `` Pass the stimulus -- then help shorten the work
+week '' Archived March 4 , 2016 , at the Wayback Machine . New York Daily News Jump up ^ Abate , T. ( July 11 , 2010 ) `` Get to Work : Want more jobs ? Shorten
+the workweek '' Archived July 12 , 2010 , at the Wayback Machine .
+</item 10>
+=== END ITEM id=ac9c821ce6e24b8e ===
+
+=== ITEM id=788c754013b7e5ab ===
+Gold sentences and facts:
+Sentence 0: A board of directors is a recognized group of people who jointly oversee the activities of an organization , which can be either a for - profit business , nonprofit organization , or a government agency . Such a board 's powers , duties , and responsibilities are determined by government regulations ( including the jurisdiction 's corporations law ) and the organization 's own constitution and bylaws . These authorities may specify the number of members of the board , how they are to be chosen , and how often they are to meet .
+  Fact 0.0: A board of directors is a recognized group of people.
+  Fact 0.1: A board of directors jointly oversees the activities of an organization.
+  Fact 0.2: An organization overseen by a board of directors can be a for-profit business, a nonprofit organization, or a government agency.
+  Fact 0.3: A board's powers, duties, and responsibilities are determined by government regulations, including the jurisdiction's corporations law.
+  Fact 0.4: A board's powers, duties, and responsibilities are determined by the organization's own constitution and bylaws.
+  Fact 0.5: The authorities over a board may specify the number of members of the board.
+  Fact 0.6: The authorities over a board may specify how board members are chosen.
+  Fact 0.7: The authorities over a board may specify how often the board is to meet.
+
+Retrieved items:
+<item 1>
+A board of directors jointly oversees an organization, with its powers and responsibilities set by law and the organization’s constitution or bylaws. Boards
+serve businesses, nonprofits, government agencies, and membership organizations; authority and accountability vary. Members may be elected, appointed, or ex
+officio, and bylaws generally govern their terms and removal. In public companies, shareholders elect directors, who act as fiduciaries representing them and
+form the corporation’s highest management authority.
+</item 1>
+
+<item 2>
+Board of directors
+Although in 2002 the New York Stock Exchange and the NASDAQ required that nominating committees consist of independent directors as a condition of listing ,
+nomination committees have historically received input from management in their selections even when the CEO does not have a position on the board . Shareholder
+nominations can only occur at the general meeting itself or through the prohibitively expensive process of mailing out ballots separately ; in May 2009 the SEC
+proposed a new rule allowing shareholders meeting certain criteria to add nominees to the proxy statement . In practice for publicly traded companies , the
+managers ( inside directors ) who are purportedly accountable to the board of directors have historically played a major role in selecting and nominating the
+directors who are voted on by the shareholders , in which case more `` gray outsider directors '' ( independent directors with conflicts of interest ) are
+nominated and elected . Directors may also leave office by resignation or death . In some legal systems , directors may also be removed by a resolution of the
+remaining directors ( in some countries they may only do so `` with cause '' ; in others the power is unrestricted ) .
+</item 2>
+
+<item 3>
+A board of directors governs an organization by setting broad policies and strategic objectives, appointing, supporting, reviewing, and potentially dismissing
+the chief executive, approving budgets, securing financial resources, overseeing senior-management compensation, and reporting performance to stakeholders. In
+corporations with dispersed ownership, boards often nominate directors, creating self-perpetuation; in non-stock organizations without voting members, the board
+may be the supreme authority and select its own members. Legal duties vary by organization and jurisdiction. The board typically elects a
+</item 3>
+
+<item 4>
+Board of directors
+Board of directors - wikipedia Board of directors Jump to : navigation , search `` Board Room '' and `` Board of Trustees '' redirect here . For other uses ,
+see Board Room ( disambiguation ) and Board of Trustees ( disambiguation ) . A meeting of a board of directors of the Leipzig -- Dresden Railway Company in 1852
+A board of directors is a recognized group of people who jointly oversee the activities of an organization , which can be either a for - profit business ,
+nonprofit organization , or a government agency . Such a board 's powers , duties , and responsibilities are determined by government regulations ( including
+the jurisdiction 's corporations law ) and the organization 's own constitution and bylaws . These authorities may specify the number of members of the board ,
+how they are to be chosen , and how often they are to meet . In an organization with voting members , the board is accountable to , and might be subordinate to
+, the organization 's full membership , which usually vote for the members of the board . In a stock corporation , non-executive directors are voted for by the
+shareholders and the board is the highest authority in the management of the corporation .
+</item 4>
+
+<item 5>
+Board of directors
+This ensures a distinction between management by the executive board and governance by the supervisory board and allows for clear lines of authority . The aim
+is to prevent a conflict of interest and too much power being concentrated in the hands of one person . There is a strong parallel here with the structure of
+government , which tends to separate the political cabinet from the management civil service . In the United States , the board of directors ( elected by the
+shareholders ) is often equivalent to the supervisory board , while the executive board may often be known as the executive committee ( operating committee or
+executive council ) , composed of the CEO and their direct reports ( other C - level officers , division / subsidiary heads ) . History ( edit ) The meeting
+room of the Heren XVII ( nl ) , the Dutch East India Company 's board of directors , in the Oost - Indisch Huis ( Amsterdam ) . The Dutch East India Company (
+VOC ) is often considered by many to be an early pioneering model of the modern corporation . In 1610 , the company established its administrative center ( the
+VOC 's second headquarters ) in Batavia with a Governor - General in charge , as the company 's de facto chief executive .
+</item 5>
+
+<item 6>
+Board of directors
+crisis Sales Security Service Strategic Supply chain Systems administrator Talent Technology Organization ( show ) Architecture Behavior Communication Culture
+Conflict Development Engineering Hierarchy Patterns Space Structure Trade ( show ) Business analysis Business ethics Business plan Business judgment rule
+Consumer behaviour Business operations International business Business model International trade Business process Business statistics Business and economics
+portal Typical duties of boards of directors include : governing the organization by establishing broad policies and setting out strategic objectives ;
+selecting , appointing , supporting and reviewing the performance of the chief executive ( of which the titles vary from organization to organization ; the
+chief executive may be titled chief executive officer , president or executive director ) ; terminating the chief executive ; ensuring the availability of
+adequate financial resources ; approving annual budgets ; accounting to the stakeholders for the organization 's performance ; setting the salaries ,
+compensation and benefits of senior management ; The legal responsibilities of boards and board members vary with the nature of the organization , and between
+jurisdictions . For companies with publicly trading stock , these responsibilities are typically much more rigorous and complex than for those of other types .
+Typically , the board chooses one of its members to be the chairman ( more usually now called the `` chair '' or `` chairperson '' ) , who holds whatever title
+is specified in the bylaws or articles of association .
+</item 6>
+
+<item 7>
+Board of directors
+However , in membership organizations , the members elect the president of the organization and the president becomes the chair of the board , unless the bylaws
+say otherwise . Directors ( edit ) The directors of an organization are the persons who are members of its board . Several specific terms categorize directors
+by the presence or absence of their other relationships to the organization . Inside director ( edit ) An inside director is a director who is also an employee
+, officer , chief executive , major shareholder , or someone similarly connected to the organization . Inside directors represent the interests of the entity 's
+stakeholders , and often have special knowledge of its inner workings , its financial or market position , and so on .
+</item 7>
+
+<item 8>
+Board of directors
+The setup of a board of directors vary widely across organizations and may include provisions that are applicable to corporations , in which the `` shareholders
+'' are the members of the organization . A difference may be that the membership elects the officers of the organization , such as the president and the
+secretary , and the officers become members of the board in addition to the directors and retain those duties on the board . The directors may also be
+classified as officers in this situation . There may also be ex-officio members of the board , or persons who are members due to another position that they hold
+. These ex-officio members have all the same rights as the other board members . Members of the board may be removed before their term is complete . Details on
+how they can be removed are usually provided in the bylaws . If the bylaws do not contain such details , the section on disciplinary procedures in Robert 's
+Rules of Order may be used . Corporations ( edit ) In a publicly held company , directors are elected to represent and are legally obligated as fiduciaries to
+represent owners of the company -- the shareholders / stockholders .
+</item 8>
+
+<item 9>
+Board of directors
+The board of directors appoints the chief executive officer of the corporation and sets out the overall strategic direction . In corporations with dispersed
+ownership , the identification and nomination of directors ( that shareholders vote for or against ) are often done by the board itself , leading to a high
+degree of self - perpetuation . In a non-stock corporation with no general voting membership , the board is the supreme governing body of the institution ; its
+members are sometimes chosen by the board itself . Contents ( hide ) 1 Terminology 2 Roles 3 Directors 3.1 Inside director 3.2 Outside director 3.3 Terminology
+4 Process and structure 4.1 Board meetings 4.2 Size 5 Non-corporate boards 5.1 Membership organizations 6 Corporations 6.1 Governance 6.2 Two - tier system 6.3
+History 6.4 Election and removal 6.5 Exercise of powers 6.6 Duties 6.6. 1 `` Proper purpose '' 6.6. 2 `` Unfettered discretion '' 6.6. 3 `` Conflict of duty and
+interest '' 6.6.
+</item 9>
+
+<item 10>
+Board of directors
+According to Investopedia , some analysts think the ideal size is seven . State law may specify a minimum number of directors , maximum number of directors ,
+and qualifications for directors ( e.g. whether board members must be individuals or may be business entities ) . Committees ( edit ) While a board may have
+several committees , two -- the compensation committee and audit committee -- are critical and must be made up of at least three independent directors and no
+inside directors . Other common committees in boards are nominating and governance . Compensation ( edit ) Directors of Fortune 500 companies received median
+pay of $234,000 in 2011 . Directorship is a part - time job . A recent National Association of Corporate Directors study found directors averaging just 4.3
+hours a week on board work . Surveys indicate that about 20 % of nonprofit foundations pay their board members , and 2 % of American nonprofit organizations do
+. 80 % of nonprofit organizations require board members to personally contribute to the organization , as BoardSource recommends . This percentage has increased
+in recent years .
+</item 10>
+=== END ITEM id=788c754013b7e5ab ===
+
+=== ITEM id=85156c16ad24f710 ===
+Gold sentences and facts:
+Sentence 0: In 1980 , The Shining became the basis for a film adaptation directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel . The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 .
+  Fact 0.0: The Shining became the basis for a film adaptation in 1980.
+  Fact 0.1: The Shining film adaptation was directed by Stanley Kubrick.
+  Fact 0.2: Kubrick's vision for the movie differed from Stephen King's significantly in many ways.
+  Fact 0.3: Kubrick's vision differed from King's in the portrayal of the Overlook Hotel.
+  Fact 0.4: The exteriors of Kubrick's Overlook were supplied by the Timberline Lodge.
+  Fact 0.5: The Timberline Lodge is on the slopes of Mt. Hood in Oregon.
+  Fact 0.6: Inspiration for the interior sets of the Kubrick film came from the 1927 Ahwahnee Hotel in Yosemite National Park.
+  Fact 0.7: The interior sets were erected at Elstree Studios in England.
+  Fact 0.8: The management of the Timberline Lodge was fearful that guests would refuse to stay in their Room 217 if it were featured in a horror movie.
+  Fact 0.9: The management of the Timberline Lodge insisted that Kubrick change the haunted room in the film to Room 237.
+
+Retrieved items:
+<item 1>
+The Stanley Hotel
+- Roe Emery Maurice L. Albertson , Civil Engineer at CSU Maxwell Abbell , Chicago real estate investor 1995 -- present - Grand Heritage Hotel Group See also (
+edit ) Freelan Oscar Stanley The Shining ( novel ) The Shining ( film ) The Shining ( miniseries ) Colonial Revival Architecture Estes Park , CO National
+Register of Historic Places listings in Larimer County , Colorado References ( edit ) ^ Jump up to : National Park Service ( 2008 - 04 - 15 ) . `` National
+Register Information System '' . National Register of Historic Places . National Park Service . ^ Jump up to : `` Rocky Mountain Legends '' .
+LegendsOfAmerica.com . Missing or empty url = ( help ) ; access - date = requires url = ( help ) ^ Jump up to : `` Rocky Mountain National Park - Culture '' .
+US-Parks.com . Retrieved 2007 - 05 - 10 . Jump up ^ Turkewitz , Julie ( 3 September 2015 ) . `` Hotel That Inspired ' The Shining ' Builds on Its Eerie Appeal
+'' . New York Times . Retrieved 17 September 2015 .
+</item 1>
+
+<item 2>
+The Stanley Hotel
+That night , according to King , `` I dreamed of my three - year - old son running through the corridors , looking back over his shoulder , eyes wide ,
+screaming . He was being chased by a fire - hose . I woke up with a tremendous jerk , sweating all over , within an inch of falling out of bed . I got up , lit
+a cigarette , sat in a chair looking out the window at the Rockies , and by the time the cigarette was done , I had the bones of The Shining firmly set in my
+mind . '' The Shining was published in 1977 and became the third great success of King 's career after Carrie and ' Salem 's Lot . The Overlook Hotel - the
+fictional hotel in King 's book inspired by the Stanley - is an evil entity haunted by its many victims . Room 217 of the Overlook features prominently in the
+novel , having been the room where King spent the night at the Stanley . This is the room on the second floor in the center of the west wing with a balcony
+overlooking the south terrace . Room 217 remains the hotel 's most requested accommodation .
+</item 2>
+
+<item 3>
+The Stanley Hotel
+Room 217 remains the hotel 's most requested accommodation . Film location and arts venue ( edit ) In 1980 , The Shining became the basis for a film adaptation
+directed by Stanley Kubrick . Kubrick 's vision for the movie differed from King 's significantly in many ways , including the portrayal of the Overlook Hotel .
+The exteriors of Kubrick 's Overlook were supplied by the Timberline Lodge on the slopes of Mt . Hood in Oregon . Inspiration for the interior sets ( erected at
+Elstree Studios in England ) came from the 1927 Ahwahnee Hotel in Yosemite National Park . The management of the Timberline Lodge , fearful that guests would
+refuse to stay in their Room 217 if it were featured in a horror movie , insisted that Kubrick change the haunted room in the film to Room 237 . In 1997 The
+Shining TV series was produced , with the Stanley Hotel as the primary shooting location . A playhouse version of the main building which adorned the lawn of
+the Overlook Hotel in the series can be viewed in the basement of the Stanley .
+</item 3>
+
+<item 4>
+The Stanley Hotel
+Contents ( hide ) 1 History 2 Gallery 3 Architecture 3.1 Main Building 3.2 Concert Hall 3.3 The Lodge 3.4 The Hedge Maze 4 The Shining 5 Film location and arts
+venue 6 Haunted reputation 7 Famous Guests 8 Ownership History 9 See also 10 References 11 External links History ( edit ) In 1903 , the Yankee steam - powered
+car inventor Freelan Oscar Stanley ( 1849 - 1940 ) was stricken with a life - threatening resurgence of tuberculosis . The most highly recommended treatment of
+the day was fresh , dry air with lots of sunlight and a hearty diet . Therefore , like many `` lungers '' of his day , Stanley resolved to take the curative air
+of Rocky Mountain Colorado . He and Flora arrived in Denver in March and , in June , decided to spend the rest of the summer in the mountains , in Estes Park .
+Over the course of the season , Stanley 's health improved dramatically . Impressed by the beauty of the valley and grateful for his recovery , he decided to
+return every year .
+</item 4>
+
+<item 5>
+The Stanley Hotel
+Stanley holding one of his violins . The sculpture was installed and dedicated on September 29 , 2016 . They used another hotel to film the outside shots and
+the Stanley for inside shots . The Shining ( edit ) Cover of The Shining , first edition , 1977 On October 30 , 1974 , horror writer Stephen King and his wife
+Tabitha spent one night at the Stanley Hotel during their one year of residency in Boulder , Colorado . They were driving through Estes Park as night approached
+when they happened upon the Stanley Hotel . They decided to book a room and , upon checking in , discovered that they were the only overnight guests . `` They
+were just getting ready to close for the season , and we found ourselves the only guests in the place -- with all those long , empty corridors . '' He and his
+wife were served dinner in an empty dining room accompanied by canned orchestral music . `` Except for our table all the chairs were up on the tables . So the
+music is echoing down the hall , and , I mean , it was like God had put me there to hear that and see those things . ''
+</item 5>
+
+<item 6>
+The 142-room Stanley Hotel in Estes Park, Colorado, was built by steam-car inventor Freelan Oscar Stanley and opened July 4, 1909, as a luxury resort. Its
+Colonial Revival buildings, near Rocky Mountain National Park, are listed on the National Register of Historic Places. Stephen King’s 1974 stay in Room 217
+inspired the Overlook Hotel in *The Shining*. The hotel later hosted the 1997 miniseries and now offers lodging, dining,
+</item 6>
+
+<item 7>
+The Stanley Hotel
+The hedge maze ( edit ) In 2015 , the open area in front of the hotel , originally a driveway for Stanley Steamers and a promenade for guests to enjoy mountain
+views , was replaced with a hedge maze . This non-historic feature was added to evoke the hotel 's connection to The Shining . Although a hedge maze features
+prominently in Stanley Kubrick 's version of The Shining , no such feature can be found in Stephen King 's novel . The lawn of the Overlook Hotel , as King
+imagined it , was adorned with topiary animals and it was set that way for the shooting of the miniseries in 1996 . Historically , neither feature existed at
+the Stanley . The design was the result of a competition , chosen from amongst 300 entrants from across the globe . The winning submission was designed by New
+York architect Mairim Dallaryan Standing . In 2016 , John Cullen , owner of the Stanley Hotel , announced a competition for a sculpture to be the centerpiece of
+the terrace in front of the hotel . Sculptors Sutton Betti and Daniel Glanz won the competition with a sculpture of F.O.
+</item 7>
+
+<item 8>
+The Stanley Hotel
+Famous guests ( edit ) The Stanley Hotel has hosted the following persons of note : 1934 - Erich Fromm , the German psychoanalyst 1936 - Gov. Alf Landon ( R ,
+Kansas ) : opponent to Franklin Delano Roosevelt 's re-election 1974 - Stephen King , author who was inspired to write The Shining from his stay in room 217
+1976 - Bob Dylan & Joan Baez , classic rock icons during the Rolling Thunder Revue tour 1994 - HM Emperor Akihito of Japan with consort and crown prince , on a
+state visit to the US Ownership History ( edit ) 1908 - 26 - Freelan Oscar Stanley 1926 - 29 - The Stanley Corporation 1929 - 30 - Freelan Oscar Stanley 1930 -
+?
+</item 8>
+
+<item 9>
+The Stanley Hotel
+Approximately five miles from the entrance to Rocky Mountain National Park , the Stanley offers panoramic views of Lake Estes , the Rockies and especially Long
+'s Peak . It was built by Freelan Oscar Stanley of Stanley Steamer fame and opened on July 4 , 1909 , catering to the American upper class at the turn of the
+century . The hotel and its surrounding structures are listed on the National Register of Historic Places . The Stanley Hotel hosted the horror novelist Stephen
+King , serving as inspiration for the Overlook Hotel in his 1977 bestseller The Shining and its 1980 film adaption of the same name , as well as the location
+for the 1997 miniseries . Today , it includes a restaurant , spa , and bed - and - breakfast and provides guided tours which feature the history and alleged
+paranormal activity of the site .
+</item 9>
+
+<item 10>
+The Stanley Hotel
+The Hotel has also been used as a filming location for other movies and TV shows ; most notably , as the fictional `` Hotel Danbury '' of Aspen , CO , in the
+1994 film Dumb and Dumber . From 2013 to 2015 , the hotel property hosted the Stanley Film Festival , an independent horror film festival operated by the Denver
+Film Society , held in early May . The festival featured screenings , panels , student competitions , audience awards and receptions . The Stanley Film Festival
+was put on hiatus in 2016 , and canceled for 2017 . The historic Stanley Concert Hall serves as venue for various musical groups such as country - punk band
+Murder By Death which has performed a Shining - themed series of concerts in the space . Haunted reputation ( edit ) Despite a peaceful early history , in the
+years following the publication of The Shining , The Stanley Hotel has gained a reputation among paranormal investigators for frequent activity . The hotel
+offers guided `` Ghost Tours '' to guests and visitors which feature spaces reputed to be exceptionally active . The hotel has also served as a location for
+numerous paranormal investigation shows such as Ghost Hunters and Ghost Adventures .
+</item 10>
+=== END ITEM id=85156c16ad24f710 ===

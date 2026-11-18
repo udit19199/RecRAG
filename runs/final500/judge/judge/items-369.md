@@ -1,0 +1,1023 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=6df440d9b04c306d ===
+Gold sentences and facts:
+Sentence 0: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 0.0: The standout testimony in the second week of the trial came from Caroline Ellison.
+  Fact 0.1: Caroline Ellison is the former CEO of Alameda Research.
+  Fact 0.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 0.3: Caroline Ellison claimed she took the $14 billion to repay debts to lenders.
+  Fact 0.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 0.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 1: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 1.0: Rehn declared to the jury that "all of that, all of it, was built on lies."
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve power.
+  Fact 2.3: The prosecution said Bankman-Fried committed fraud to achieve influence.
+  Fact 2.4: The defense countered that the FTX founder acted in good faith.
+  Fact 2.5: The defense countered that the FTX founder never meant to commit fraud.
+  Fact 2.6: The defense countered that the FTX founder never meant to steal.
+  Fact 2.7: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Ellison is expected to take the stand under a similar arrangement.
+
+U.S. District Judge Lewis Kaplan presides as Gary Wang testifies during the fraud trial of Sam Bankman-Fried over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+Born in China, Wang moved to the U.S. at age 7, and grew up in Minnesota before going to the Massachusetts Institute of Technology to study math and computer
+science. He worked at Google after college. Wang, who first met Bankman-Fried during high school at a summer camp, owned 10% of Alameda, while his boss owned
+the other 90%. Wang told the court about the advantages that Alameda received by having code baked into FTX's software that allowed special access to the crypto
+exchange.
+</item 1>
+
+<item 2>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 5>
+
+<item 6>
+Binance to pay $4.3B in fines and CEO ‘CZ’ to step down, plead guilty to anti-money laundering charges (TechCrunch, 2023-11-21T17:34:32+00:00)
+The DOJ charges against Binance come over five months after the U.S. Securities and Exchange Commission accused the exchange and Zhao of lying to regulators
+about its operations, filing 13 charges against the defendants in the federal case. Zhao and Binance were allegedly “intimately involved” in directing the
+trading entity’s business operations and providing crypto-related services to the Binance.US platform, which claims it’s an independent exchange in the SEC
+filing.
+
+In late March the U.S. CFTC also filed a suit against Binance, Zhao and its Chief Compliance Officer Samuel Lim for allegedly breaking trading and derivatives
+rules.
+
+Binance has made headlines this past year for a range of reasons, including Zhao’s comments contributing to the collapse of FTX, which was once one of its top
+competitors. In April, Binance.US, its American sister company, broke off its $1.3 billion deal to buy crypto broker Voyager Digital’s assets due to a “hostile
+and uncertain regulatory climate.”
+</item 6>
+
+<item 7>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Assistant United States Attorney Nicolas Roos questions Gary Wang during Sam Bankman-Fried's fraud trial over the collapse of FTX, the bankrupt cryptocurrency
+exchange, at Federal Court in New York City, U.S., October 6, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+An $8 billion bug
+
+Adam Yedidia, who was the prosecution's second witness on Wednesday, continued his testimony on Thursday. Yedidia met Bankman-Fried in college at MIT, and the
+pair remained close friends. Yedidia, assuming a robotic posture on the stand, worked out of FTX's Hong Kong office from January to October of 2021 and then in
+the Bahamas until last year's collapse. In his testimony, he referred to a group Signal thread called "People of the House," referring to Bankman-Fried's $35
+million penthouse, where many employees lived.
+</item 7>
+
+<item 8>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+As a result of today’s testimony, I am both more and less confused. I am clearer on what probably happened at FTX. What I don’t understand is why Gary Wang did
+it.
+
+Wang was the co-founder and chief technology officer of FTX, as well as the co-founder of Alameda Research. He owned only 10 percent of Alameda and 17 percent
+of FTX. He got a $200,000 a year salary, with no performance bonuses. (Okay, sure, at times he was a billionaire on paper.) By contrast, Bankman-Fried owned 90
+percent of Alameda and 65 percent of FTX.
+
+Yet Wang’s testimony suggests he took bizarre risks for his own relatively small share. Bankman-Fried didn’t code, so none of his fingerprints are on the
+technical changes that let FTX allegedly defraud its customers and investors. Meanwhile, Wang supervised the code behind a key prosecution claim: that Alameda
+Research was afforded secret, special privileges with FTX’s funds.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+But telling your side of the story opens you to a great many questions you might not want to answer on cross-examination. I have watched a lot of crosses. This
+was the nastiest I think I’ve ever seen.
+
+The charges in this case hinge on conspiracy and intentional deceit. Just losing $8 billion is not a crime, though it is very embarrassing. (Even losing $900
+million is very embarrassing because people will make jokes about it forever!) But if Bankman-Fried lied to customers and lenders about what he was doing and
+how safe FTX was, that’s a crime.
+
+Establishing that would have been enough, but Sassoon also managed to get in some flourishes about Bankman-Fried’s relationships to Bahamian power. For
+instance, she asked him if he’d made comments about paying off the Bahamian national debt. (You will be shocked, shocked to discover he didn’t recall.)
+</item 9>
+
+<item 10>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 10>
+=== END ITEM id=6df440d9b04c306d ===
+
+=== ITEM id=3d21cb9572dc2850 ===
+Gold sentences and facts:
+Sentence 0: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 0.0: The highly anticipated criminal trial for Sam Bankman-Fried started on Tuesday.
+  Fact 0.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 0.2: The trial is to determine whether Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 1: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 1.0: Rehn declared to the jury that all of that, all of it, was built on lies.
+Sentence 2: And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+  Fact 2.0: Bankman-Fried left Jane Street.
+  Fact 2.1: Jane Street is a high-frequency trading firm.
+  Fact 2.2: The former billionaire got his start in finance at Jane Street, after MIT.
+  Fact 2.3: Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.
+  Fact 2.4: After the Alameda role, Bankman-Fried persuaded Yedidia to join him as a developer at FTX.
+Sentence 3: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 3.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 3.1: The defense countered that the FTX founder acted in good faith.
+  Fact 3.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 3.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 2>
+
+<item 3>
+The Verge’s trial coverage portrays FTX as an alleged fraud from its founding: prosecutors said Bankman-Fried secretly gave Alameda unlimited access to customer
+funds while publicly denying preferential treatment. Cooperating insiders Wang, Singh, Ellison, and Yedidia described code privileges, doctored accounts, and
+misuse of deposits; expert testimony traced billions to loans, investments, real estate, insiders, and political causes. The collapse devastated customers and
+Bankman-Fried’s friends and family, many now
+</item 3>
+
+<item 4>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 7>
+
+<item 8>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 8>
+
+<item 9>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 10>
+=== END ITEM id=3d21cb9572dc2850 ===
+
+=== ITEM id=c0ee55fa15896256 ===
+Gold sentences and facts:
+Sentence 0: It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end.
+  Fact 0.0: It would seem that the All Blacks are playing for themselves as much as anyone.
+  Fact 0.1: The Springboks play for their country.
+  Fact 0.2: A generation of players and leaders will call time on their international careers at week's end.
+Sentence 1: The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.
+  Fact 1.0: The Springboks took a 12-3 lead.
+  Fact 1.1: The Springboks took the 12-3 lead after 34 minutes.
+  Fact 1.2: The 12-3 lead came when the All Blacks once again failed to release on their goal line.
+Sentence 2: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 2.0: The preceding situation (named 'It' in this sentence) comes despite Argentina knocking over the All Blacks last year in Christchurch.
+  Fact 2.1: The preceding situation also comes despite a maiden defeat in 2020 in Sydney.
+  Fact 2.2: There was a maiden defeat in 2020 in Sydney.
+
+Retrieved items:
+<item 1>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 1>
+
+<item 2>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 2>
+
+<item 3>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“To inspire is not about results, it’s not just one player who played well; no, it’s about our behaviour in general, our ability to be ready to come back from
+difficult times and seizing our opportunities.
+
+“There are not a lot of opportunities in life – us playing in a semi-final is even rarer and we want to have no regrets.”
+</item 3>
+
+<item 4>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Ian Foster, who made two changes to his starting side and three in total, was forced to defend his centre’s actions while twisting the knife into Sexton’s
+finish.
+
+“It happens on most sporting parks when tensions are high and a lot at stake,” Foster said.
+
+“Unfortunately recently it’s also included players saying a few things to referees. Is it right for the game? I don’t know. You don’t hear a lot of players
+complaining about it.”
+
+Advertisement
+
+Captain Sam Cane added: “It’s players’ different personalities and emotions running high in those moments. There’s always people who have different tactics but
+it’s always just left out there.”
+
+Foster recalled Sam Whitelock to the starting side in the only change to the pack.
+
+Whitelock, whose breakdown penalty win after 37 phases denied Ireland a match-winning penalty, has been recalled and will partner Scott Barrett in the
+second-row. Brodie Retallick will come off the bench.
+</item 4>
+
+<item 5>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 5>
+
+<item 6>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The All Blacks will experience a changing of the guard next season.
+
+Indeed, the All Blacks’ social media channels described the team selection for the World Cup final as the “Last Dance”.
+
+2015 World Cup winner Dane Coles will call time on his career, while his tight-five teammates Brodie Retallick and Sam Whitelock, who is bidding to become the
+first player to win the Webb Ellis Cup for a third time, will head overseas.
+
+Fellow World Cup winners Aaron Smith and Beauden Barrett will also head to Japan.
+
+Coles, who was labelled by Samisoni Taukei’aho as a “Grandad” type figure in the All Blacks, has even been denied the chance of a farewell send-off after
+missing selection.
+
+Advertisement
+
+“Yeah, tough,” said coach Ian Foster of the conversation with the 36-year-old around leaving him out.
+</item 6>
+
+<item 7>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“There were a few tears and I think that’s awesome to see, players showing vulnerability, just opening up about how much this tour and this sort of game means.
+
+
+
+“There were some (people) saying this is probably one of the most important games of All Blacks history. (The) All Blacks went through a bit of a hard path to
+get here, media, friends, family even criticising us and all that, and we stuck together. We weren’t even said to be in the final and now look at us, we’re
+here.
+
+Advertisement
+
+“Different players take it differently and some of the older players probably were hit a little bit harder and it was good to see just a bit of emotion and the
+want from them. Seeing that gives all the other players an extra two, three per cent to think ‘OK, we are going to the well and we’ve got to give it our all’.”
+
+The All Blacks will experience a changing of the guard next season.
+</item 7>
+
+<item 8>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“It’s the life of this business, it’s a tough game. It’s tough when you’re trying to get your performance right. It’s a tough game when people around you see
+things differently, but we’ve learned a lot about ourselves.
+
+“We take massive pride in the jersey and making sure we reach the levels we want to. The rest of that is probably a conversation for another day.
+
+“It hasn’t altered our vision of where we want this team to be. I know we’ve surprised a few people but I don’t think we’ve surprised ourselves.”
+</item 8>
+
+<item 9>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 9>
+
+<item 10>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“We don’t want to talk too much about post-game stuff, but that was a tough one, probably the toughest I have had as a coach. He took it the way I expected him
+to. He’s a champion.”
+
+Papali’i said the All Blacks were intent on sending their leaders out on a high.
+
+“There’s a few leaders in the team, it’s going to be their last game in the jersey, so it’s a big game for us and even the other players that are staying,
+knowing that we want to send those boys out on a high,” he said.
+
+“How much they put into the jersey. We are standing on their…what’s that quote? It’s standing on the shoulders of giants.”
+
+The generational change isn’t just occurring on the field but off it, too.
+
+Advertisement
+
+Foster will depart the All Blacks set up after 12 years, the last four as head coach.
+</item 10>
+=== END ITEM id=c0ee55fa15896256 ===
+
+=== ITEM id=5fd1445bfbf7be68 ===
+Gold sentences and facts:
+Sentence 0: As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.
+  Fact 0.0: Harris is also the preferred goal-line back.
+  Fact 0.1: Harris scored in three of those games.
+Sentence 1: The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman.
+  Fact 1.0: The Wildcats scored a touchdown on their first drive.
+  Fact 1.1: The Wildcats' first drive was a seven play drive.
+  Fact 1.2: The Wildcats' first drive covered 61 yards.
+  Fact 1.3: The Wildcats' first-drive touchdown came thanks to a 25-yard dash.
+  Fact 1.4: The 25-yard dash was followed by a dive into the end zone.
+  Fact 1.5: Running back Jonah Coleman dove into the end zone.
+
+Retrieved items:
+<item 1>
+Sporting News’ Week 14 running-back rankings place several players in the mid-to-lower tiers, including Jerome Ford, Alexander Mattison, Najee Harris, James
+Cook, Zack Moss and Keaton Mitchell. In PPR, Jaylen Warren remains ahead of Harris, but Harris is a confident start and high-ceiling RB2: he’s running well,
+contributes as a receiver and should get screens and checkdowns with Kenny Pickett out. Keaton Mitchell is highlighted as a potential
+</item 1>
+
+<item 2>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Eagles
+
+15 Kyren Williams, Rams @ Ravens
+
+16 Joe Mixon, Bengals vs. Colts
+
+17 Javonte Williams, Broncos @ Chargers
+
+18 Derrick Henry, Titans @ Dolphins
+
+19 D'Andre Swift, Eagles @ Cowboys
+
+20 Jaylen Warren, Steelers vs. Patriots
+
+21 Alexander Mattison, Vikings @ Raiders
+
+22 Jerome Ford, Browns vs. Jaguars
+
+23 Kenneth Walker III, Seahawks
+
+24 Najee Harris, Steelers vs. Patriots
+
+25 James Cook, Bills @ Chiefs
+
+26 Zack Moss, Colts @ Bengals
+
+27 Keaton Mitchell, Ravens vs. Rams
+
+28 AJ Dillon, Packers @ Giants
+
+29 Ezekiel Elliott, Patriots @ Steelers
+
+30 Aaron Jones, Packers @ Giants
+
+31 Jerick McKinnon, Chiefs @ Bills
+
+32 Tyjae Spears, Titans @ Dolphins
+
+33 Gus Edwards, Ravens vs. Rams
+
+34 Dameon Pierce, Texans @ Jets
+
+35 Roschon Johnson, Bears vs.
+</item 2>
+
+<item 3>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+We still like Jaylen Warren better overall, but you can confidently take Najee Harris (vs. Patriots) out of the doghouse for good. Harris has been running with
+purpose, and his role in the passing game continues to make him a high-ceiling RB2 in a run-first offense that will be without Kenny Pickett (ankle) this week.
+New England might be banged up, but it's still a tough D to get chunk yardage against through the air. Look for Harris to see lots of screens and dump-downs in
+a rough-and-tumble Thursday night game in Pittsburgh.
+
+We love Baltimore's Keaton Mitchell (vs. Rams) and think he has the potential to smash Los Angeles at home this week.
+</item 3>
+
+<item 4>
+Week 5: Sit Najee Harris against Baltimore. Despite improved efficiency (4.3 yards per carry, strong explosive-run and tackle-avoidance rates), he has no
+touchdowns and little goal-line opportunity on a Steelers offense starved of red-zone plays. The Ravens allow 4.0 yards per carry and no RB rushing touchdowns.
+Harris remains a low-end option; consider higher-upside alternatives. Rhamondre Stevenson has received at least 16 touches every game but has yet to reach
+</item 4>
+
+<item 5>
+The Nov. 17, 2023 CBS Sports mock draft projected Cincinnati taking Florida State WR Keon Coleman (No. 18) to replace likely-departing Tee Higgins with a
+big-play target. New Orleans would select Ohio State edge JT Tuimoloau (No. 19) as Cam Jordan’s eventual successor. Arizona would add Penn State edge Chop
+Robinson (No. 20), and Minnesota would draft LSU QB Jayden Daniels (No. 21) amid uncertainty over Kirk
+</item 5>
+
+<item 6>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+Patriots
+
+22 Jerome Ford, Browns vs. Jaguars
+
+23 Alexander Mattison, Vikings @ Raiders
+
+24 Najee Harris, Steelers vs. Patriots
+
+25 Ezekiel Elliott, Patriots @ Steelers
+
+26 Gus Edwards, Ravens vs. Rams
+
+27 James Cook, Bills @ Chiefs
+
+28 Zack Moss, Colts @ Bengals
+
+29 Keaton Mitchell, Ravens vs. Rams
+
+30 AJ Dillon, Packers @ Giants
+
+31 Dameon Pierce, Texans @ Jets
+
+32 Aaron Jones, Packers @ Giants
+
+33 Clyde Edwards-Helaire, Chiefs vs. BIlls
+
+34 Jerick McKinnon, Chiefs vs. Bills
+
+35 Roschon Johnson, Bears vs. Lions
+
+36 Tyjae Spears, Titans @ Dolphins
+
+37 Kareem Hunt, Browns vs. Jaguars
+
+38 Tyler Allgeier, Falcons vs. Buccaneers
+
+39 Chuba Hubbard, Panthers @ Saints
+
+40 D'Onta Foreman, Bears vs.
+</item 6>
+
+<item 7>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+At least all of them went to his wideouts. All were in the red zone, none were on deep throws and none were on WR screens.
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline Najee Harris RB PIT Pittsburgh • #22
+
+Age: 25 • Experience: 3 yrs. Weekly Breakdown MATCHUP vs BAL BAL -4 O/U 38 OPP VS RB 12th PROJ PTS 9.3 RB RNK 30th YTD Stats RUYDS 210 REC 4 REYDS 34 TD 0
+FPTS/G 7.1 The Steelers' lack of scoring opportunities really crushes the upside for Harris, who admittedly has improved this season and could be on his way to
+being a reliable RB2. The Ravens have been pretty good against the run but they can give up some numbers. Harris is a volume-based back who is at best a low-end
+starting option given everything that's going on.
+</item 7>
+
+<item 8>
+Sporting News’ Week 12 advice highlighted Rhamondre Stevenson as a sleeper after 231 scrimmage yards and a touchdown over two games, and urged starting Kyren
+Williams once activated from injured reserve against a weak Cardinals defense. Derrick Henry remained startable against Carolina, but his recent 64 yards on 23
+touches warranted caution; Tyjae Spears was suggested as insurance. Week 12 and 14 ranking excerpts list several low-ranked backs, including Jamaal Williams,
+Samaje Perine,
+</item 8>
+
+<item 9>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+TOUCHDOWNS: Harris has zero. Somehow it gets worse: He has one carry inside the 15-yard line. The Steelers have run the second-fewest red-zone plays (18, one
+more than New England) and second-fewest plays inside the 5-yard line (two, one more than New England). The Steelers have played four games! This is nuts.
+
+RAVENS: Have yet to allow a rushing score to a running back this year. They've been otherwise solid against RBs, holding them to 4.0 yards per carry on the
+season and roughly league-average in other metrics including missed tackles (15).
+</item 9>
+
+<item 10>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+I'd rather start Breece Hall, Rhamondre Stevenson, Dameon Pierce and Jaleel McLaughlin (if Javonte Williams sits out).
+
+LAST WEEK: Harris had his first game with over 100 total yards against the Texans and averaged 5.1 yards per rush, just shy of the season-high he technically
+had on six carries against the 49ers in Week 1. A 32-yard reception helped him cross the triple-digit barrier.
+
+HARRIS: This might shock you, but Harris is averaging 4.3 yards per run this year with a 12.2% explosive run rate. Would you believe the explosive run rate,
+which reflects the frequency of his 12-plus-yard runs, is fifth-best among 44 qualifying running backs?! He's also 13th in avoided tackle rate and top-10 in
+yards after contact per carry at 3.53.
+
+TOUCHDOWNS: Harris has zero.
+</item 10>
+=== END ITEM id=5fd1445bfbf7be68 ===
+
+=== ITEM id=9c469e10f85fe258 ===
+Gold sentences and facts:
+Sentence 0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 0.0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.1: Israel is reportedly preparing for a ground invasion.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Ortal says the understandings Israel reached with Hamas in 2012 were made to stop the fighting.
+  Fact 1.1: Ortal says the understandings Israel reached with Hamas in 2012 were made to get life back to normal as quickly as possible.
+Sentence 2: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 2.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 1>
+
+<item 2>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Published by Globes, Israel business news - en.globes.co.il - on November 5, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 3>
+
+<item 4>
+"There are no sacred numbers" (Globes English | Israel Business Arena, 2023-10-12T18:50:29+00:00)
+The first week of fighting in the bitter war in Israel’s south is almost over, with the financial markets trying to gauge the damage that the Israeli economy
+will sustain. Clearly, we are talking about a very significant event, but the fog of war makes it hard to estimate its full consequences. The main index on the
+Tel Aviv Stock Exchange, the Tel Aviv 35, fell 6.4% over the week.
+
+Prof. Leo Leiderman, chief economic adviser at Bank Hapoalim and a professor of economics at Tel Aviv University, sets out for "Globes" his proposals for
+rehabilitating the economy and repairing the damage that the war will cause.
+
+What has been going through your mind in these first days of the war?
+
+"What most preoccupies me is not the economy but concern for the families of the soldiers, the wounded, and the captives, and solidarity with them. I have four
+relatives from Kibbutz Nir Oz who are still missing, and we have no information about them.
+</item 4>
+
+<item 5>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 5>
+
+<item 6>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+The world can ill-afford another full-fledged war, when economies are already battling high inflation and interest rates, an ongoing Russia-Ukraine war and now,
+a slowing China. This is precisely why many countries are trying to restrict any escalation in the ongoing Israel-Hamas conflict. The non-escaltion of the
+current hostilities seems to be the base case presumed by the Indian stock market presently, going by the market movement in the last week.
+
+The US treasury secretary also stated that the current conflict is not likely to significantly impact global economic outlook. History too shows that the these
+conflicts tend to have limited impact on markets. We studied the history of conflicts between Israel and Hamas, and found that these tend to have limited impact
+on global financial markets, across crude oil, US 10-year yields, US equities and market volatility (see charts).
+
+However, as far as trade goes, there may be some impact. In 2022-23, Israel’s share in exports from India stood at 1.87 per cent.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 7>
+
+<item 8>
+"There are no sacred numbers" (Globes English | Israel Business Arena, 2023-10-12T18:50:29+00:00)
+We have a great deal of information about loss of growth and product in various episodes in the past, such as the Yom Kippur War, the Lebanon War, two
+intifadas, various military operations, and the Covid pandemic.
+
+"We see this is a completely different episode, however. This is a new situation that has no precedent as far as the damage to the economy is concerned. There’s
+a whole spectrum of possible scenarios, from a short war on the southern front only, to the nightmare scenario of a prolonged war with additional sectors
+involved. We are only in the fifth day of the war, and it’s to be hoped that the picture will start to become clearer."
+
+Which industries will be hit by the war?
+
+"A substantial decline can be expected in private consumption, particularly of services. This is not just because of the damage to output and income, but also
+for psychological reasons. Distress, uncertainty, the possibility of prolonged reserve duty by some of the public - all these things will affect consumer
+sentiment.
+</item 8>
+
+<item 9>
+Office rents in Israel stay firm - for now (Globes English | Israel Business Arena, 2023-12-03T15:15:32+00:00)
+After Covid, there was talk about what would happen and whether people would return to work and in the end everyone returned to work from the office. I am
+optimistic about the office market in the future."
+
+Published by Globes, Israel business news - en.globes.co.il - on December 3, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 9>
+
+<item 10>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 10>
+=== END ITEM id=9c469e10f85fe258 ===
+
+=== ITEM id=28b141b111bd904c ===
+Gold sentences and facts:
+Sentence 0: It has also decided to make Beeper Mini free for the time being, given how “chaotic” things have been over the past few days.
+  Fact 0.0: The party referred to as 'it' has decided to make Beeper Mini free for the time being.
+  Fact 0.1: Things have been "chaotic" over the past few days.
+  Fact 0.2: The decision to make Beeper Mini free was made given how "chaotic" things have been over the past few days.
+Sentence 1: In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down.
+  Fact 1.0: Beeper Mini will be free for the time being.
+  Fact 1.1: Beeper's status is unstable.
+  Fact 1.2: Apple has attempted to shut Beeper Mini down.
+  Fact 1.3: Beeper Mini is free because of the unstable nature of Beeper's status and Apple's attempts at shutting it down.
+Sentence 2: Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say.
+  Fact 2.0: Beeper Mini was made possible because the team behind the app reverse-engineered the iMessage protocol.
+  Fact 2.1: The team behind the app says it has managed to reverse-engineer the iMessage protocol.
+
+Retrieved items:
+<item 1>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+It’s $1.99/mo, not $2.99/mo; 12/6/23, 2:33 PM ET added “[sent it]” to clarify that the Beeper app does not look like an iPhone app.
+</item 1>
+
+<item 2>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+The original Beeper app had 50,000 sign-ups in the first week and now has around 100,000 testers in a closed beta. That app, which spans mobile and desktop,
+supports RCS (via Beeper’s open source bridge). Beeper Mini will be able to send and receive SMS and RCS soon. The earlier Beeper will now transition to become
+rebranded as “Beeper Cloud” as the iMessage-only Beeper Mini goes to launch. Over time, Beeper Mini will add the other networks back into the platform, as well
+as SMS and RCS, and Beeper Cloud will be sunset. At that point, Beeper Mini will become known as just Beeper once again.
+
+Beeper Mini is competitively priced at $1.99 per month, with a seven-day free trial, compared with $15 per month for the recently acquired competitor Texts.com
+bought by Automattic.
+</item 2>
+
+<item 3>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+Full-res photos and other features like tapbacks and typing indicators also worked. When the Android phone’s battery died, however, the texts reverted to green
+bubbles and did not make it to Beeper’s app — they went to Google Messages instead.
+
+The company is also hoping to gain trust by building in public, with 50-plus projects that it’s published to GitHub with the open source code that goes into the
+app. Plus, the founders themselves are known individuals with a history of building promising tech, including the Pebble smartwatch.
+
+Founded in 2020, Beeper comes from former Y Combinator partner Eric Migicovsky and CTO Brad Murray, previously of wholesale marketplace startup Faire and
+Fitbit. The co-founders met at Pebble, the smartwatch company Migicovsky founded, building out the hardware brand that was later acquired by Fitbit.
+
+Migicovsky said he was inspired to build Beeper out of a personal need as a lifelong Android user.
+</item 3>
+
+<item 4>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+And when you send a message, you’re actually sending a message to the Mac Mini, which then forwards it to iMessage,” he explains. “Beeper Mini is a native
+implementation of the iMessage protocol.”
+
+Beeper does not have access to the contents of users’ messages, the company claims. And unlike the recently paused efforts by Sunbird, which had been trying to
+solve the same problem, messages are not sent in clear text.
+
+Instead, the message you send from an Android phone using Beeper Mini is end-to-end encrypted to the recipient, the startup says. It’s encrypted on the device
+before it leaves the app. Encryption keys are exclusively stored on your phone within the Android filesystem, similar to other apps like Signal and WhatsApp.
+The app doesn’t connect to any servers at Beeper itself, only to Apple servers, the way a “real” iMessage text would.
+</item 4>
+
+<item 5>
+Beeper Mini is back in operation after Apple’s attempt to shut it down (TechCrunch, 2023-12-11T18:08:48+00:00)
+Beeper Mini, the app bringing blue bubble iMessage texts to Android users, is back in operation on Monday after a long weekend that saw Apple putting an end to
+Beeper’s services, claiming it was a security risk. Now, the startup behind the new app says it has resumed functioning, but hasn’t disclosed how that’s been
+made possible. In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down.
+
+Founded by former Pebble smartwatch founder Eric Migicovsky, Beeper had originally been working on an app that aggregated all of a user’s chat apps into a
+single interface. However, upon the discovery of new technology that allowed it to reverse-engineer the iMessage protocol, it set out to build a new app called
+Beeper Mini that solely focused on bringing iMessage chats to Android users for $1.99 per month. That included support for high-quality photos and videos,
+tapback reactions, typing indicators, read receipts and more.
+</item 5>
+
+<item 6>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+The push to bring iMessage to Android users today adds a new contender. A startup called Beeper, which had been working on a multi-platform messaging
+aggregator, is now launching a new app called Beeper Mini which will allow Android users to send and receive end-to-end encrypted iMessage chats for just $1.99
+per month. Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say.
+
+“That’s the big breakthrough,” explains Beeper co-founder and CEO Eric Migicovsky, previously the founder of smartwatch startup Pebble. “We’re not actually a
+middleman anymore. The research that we’ve done is actually reverse-engineering the iMessage protocol, down to the lowest layer of the protocol. So Beeper Mini
+doesn’t use a Mac server as a relay like all the other apps — they have a Mac Mini in a data center somewhere.
+</item 6>
+
+<item 7>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+Initially, Beeper launched a multi-network chat app that supported around 15 different networks, including WhatsApp, Messenger, Telegram, Signal, Slack,
+Instagram, LinkedIn, Discord, Google Chat, Android SMS, iMessage and others.
+
+“Until I started Beeper, I didn’t really understand this whole iMessage thing. I didn’t really understand why people loved it so much,” Migicovsky says. “I
+think one of the reasons is that it’s so deeply built into iOS, that it’s second nature for you as an iPhone user. When you want to get in touch with someone,
+you open the Messages app.”
+
+His experience with messaging had differed, though, having lived in Europe and Asia at times, where he collected friends across a wider network of applications.
+He didn’t understand the draw that iMessage had in the U.S. in particular, as he was simply left out of friends’ iMessage chats for being the friend with a
+green bubble.
+</item 7>
+
+<item 8>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+The company is publishing those results on its blog along with a detailed, more technical description of how Beeper Mini works.
+
+For example, the team explains here how it needed to build a new service, called Beeper Push Notification service (BPNs), to make the service work:
+
+A persistent connection to APNs is needed to be notified of new incoming messages in real-time. On an iPhone, an APNs connection is maintained by the operating
+system, and connected at all times. In Beeper Mini, the connection can only be maintained when the app is running, since Android does not support APNs natively.
+
+To work around this limitation, the team built BPNs to connect to Apple’s servers on the user’s behalf when the app isn’t running.
+
+In tests, Beeper Mini worked as described, able to send iMessage texts from an older Android phone on Google Fi’s wireless network with its own phone number
+(not associated with an Apple ID) to an iPhone 15 Pro Max with a different phone number that is associated with an Apple ID.
+</item 8>
+
+<item 9>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+That means that Beeper Mini can function as a true iMessage client, supporting high-resolution photos and videos, threads, replies, read receipts, direct
+messages and group chats, tapback emoji reactions, editing and unsending messages, as well as support for stickers, GIFs, voice notes and more. Not yet
+supported are features like live location sharing, message effects and support for FaceTime audio and video calls. Users will not need an Apple ID to use Beeper
+Mini.
+
+“It’s a full-blown iMessage app,” Migicovsky says. “For all intents and purposes, Beeper Mini looks like an iPhone [sent it].”
+
+Apple, then, may not be able to simply block Beeper Mini texts automatically if it wanted to take action against the company, though the co-founder admits how
+Apple will react is still uncertain.
+
+However, he points to a provision in copyright law, The Digital Millennium Copyright Act (DMCA 1201 F), which says that reverse-engineering for the purposes of
+interoperability is protected.
+</item 9>
+
+<item 10>
+Beeper reversed engineered iMessage to bring blue bubble texts to Android users (TechCrunch, 2023-12-05T15:00:57+00:00)
+That won’t necessarily prevent Apple from sending Beeper legal a Cease and Desist, of course. Apple previously sued spyware maker NSO Group to block it from
+using Apple’s services, and it could likely make a legal case here, as well, if it chose to. What may hold it at bay is the Digital Markets App (DMA), a law in
+Europe that says big tech companies will have to have an interoperable interface for their chat networks. There are also stirrings of antitrust efforts in the
+U.S., where Apple is under federal scrutiny, which could make for bad timing to target Beeper, too.
+
+But to be fully trusted, Beeper Mini will need to be audited by a third party — something it has not yet done. In addition, Beeper uses certificate pinning,
+which makes network traffic analysis more difficult to perform in order to verify its claims. The company says its external audit is still “in progress” but it
+has performed an internal audit.
+</item 10>
+=== END ITEM id=28b141b111bd904c ===

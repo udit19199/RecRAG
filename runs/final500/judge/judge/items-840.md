@@ -1,0 +1,733 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ff2281d4e0dba9e1 ===
+Gold sentences and facts:
+Sentence 0: The Pan-American Highway is a network of roads measuring about 30,000 kilometres ( 19,000 mi ) in total length . Except for a rainforest break of approximately 160 km ( 100 mi ) , called the Darién Gap , the road links almost all of the Pacific coastal countries of the Americas in a connected highway system . According to Guinness World Records , the Pan-American Highway is the world 's longest `` motorable road '' . However , because of the Darién Gap , it is not possible to cross between South America and Central America with conventional highway vehicles . Without an all - terrain vehicle , it is necessary to circumnavigate this terrestrial stretch by sea .
+  Fact 0.0: The Pan-American Highway is a network of roads.
+  Fact 0.1: The Pan-American Highway measures about 30,000 kilometres (19,000 mi) in total length.
+  Fact 0.2: The Pan-American Highway has a rainforest break of approximately 160 km (100 mi).
+  Fact 0.3: The rainforest break of the Pan-American Highway is called the Darién Gap.
+  Fact 0.4: Apart from the Darién Gap, the Pan-American Highway links almost all of the Pacific coastal countries of the Americas.
+  Fact 0.5: The Pan-American Highway links those countries in a connected highway system.
+  Fact 0.6: According to Guinness World Records, the Pan-American Highway is the world's longest 'motorable road'.
+  Fact 0.7: Because of the Darién Gap, it is not possible to cross between South America and Central America with conventional highway vehicles.
+  Fact 0.8: Without an all-terrain vehicle, it is necessary to go around the terrestrial stretch of the Darién Gap by sea.
+
+Retrieved items:
+<item 1>
+Pan-American Highway
+Contents ( hide ) 1 Development and construction 2 Countries served 3 Hemispheric overview 4 Northern section 4.1 Alaska , Canada and the contiguous 48 states
+of the United States 4.2 Mexico 4.3 Central America 5 Darién Gap 6 Southern section 6.1 Colombia and Venezuela 6.2 Ecuador , Peru , Chile , Argentina and
+Paraguay 6.3 Brazil and Uruguay 6.4 Guyana , Suriname and French Guyana 7 West Indies section 8 Art and culture 9 Photo gallery 10 See also 11 References 12
+Sources 13 External links Development and construction ( edit ) The concept of an overland route from one tip of the Americas to the other was originally
+proposed at the First Pan-American Conference in 1889 as a railroad ; however , this proposal was never realized . The idea of building a highway emerged at the
+Fifth International Conference of American States in 1923 . The first conference regarding construction of the highway occurred on October 5 , 1925 .
+</item 1>
+
+<item 2>
+Pan-American Highway
+They barely succeeded in thrashing a passage through the extreme terrain . In 1979 a team led by Mark Smith drove standard production CJ7 - model Jeeps from
+South to North , traversing the Gap - with difficulty . In June 1984 , Loren and Patty Upton took 741 days slogging , winching , chopping and digging their way
+through the inhospitable jungles of the Darién Gap . One proposed option to bridge the gap is a short ferry link from Colombia to a new ferry port in Panama ,
+with an extension of the existing Panama highway that would complete the highway without violating these environmental concerns . Southern section ( edit ) Main
+article : Pan-American Highway ( South America ) A Vía PanAm shield sign is sometimes found on routes in South American countries ( such as Chile ) associated
+with the Pan-American Highway . Sculpture of a native man standing at the entrance of Fusagasugá , Colombia , over the Highway 40 . Colombia and Venezuela (
+edit ) The southern part of the highway begins in northwestern Colombia , from where it follows Colombia Highway 62 to Medellín .
+</item 2>
+
+<item 3>
+Pan-American Highway
+Panamericana -- Pan American Highway -- in Pichincha , Ecuador , near Cashapamba Panamericana -- northern Peru near Pacasmayo Panamericana near Puerto De Lomas
+, Peru Panamericana in the Atacama Desert northern Chile GMC Suburban traveled all of the Pan-American Highway . Patagonia , Chile . Panamericana - Pan American
+Highway - in the Cordillera de los Andes , southern Ecuador , near to Catacocha , 2500m / 8000 ft Elev . National Route 7 -- Pan-American Highway in Junín ,
+Buenos Aires , Argentina See also ( edit ) CANAMEX Corridor Continental 1 Trans - Siberian Highway Buenos Aires References ( edit ) Jump up ^ French : Route /
+Autoroute Panaméricaine / Transaméricaine , Portuguese : Rodovia / Auto - estrada Pan-americana , Spanish : Autopista / Carretera / Ruta Panamericana Jump up ^
+`` A Gap in the Andes : Image of the Day '' . earthobservatory.nasa.gov. 2015 - 04 - 02 .
+</item 3>
+
+<item 4>
+Pan-American Highway
+An additional route only partially complete is Interstate 69 which will eventually run northeasterly from the same Laredo border crossing to the Windsor -
+Quebec City Corridor in Canada , the only NAFTA country where no official routes for the Pan-American Highway System have yet been defined . Northern section (
+edit ) Alaska , Canada and the contiguous 48 States of the United States ( edit ) Interstate 35 in the U.S. state of Iowa . I - 35 is a de facto branch of the
+Pan-American Highway In Canada , no particular road has been officially or unofficially designated as the Pan-American Highway ( the National Highway System ,
+which includes but is not limited to the Trans - Canada Highway , is the country 's only official interprovincial highway system ) . However , some unofficial
+claims have been made based on routes that are a natural extension of several key American highways that reach the Canada -- US border . British Columbia
+Highway 97 and Highway 2 to Alberta both pick up where the southern end of the Alaska highway leaves off . Highway 97 becomes U.S. Route 97 at the Canada -- US
+border and eventually ends at Interstate 5 in northern California .
+</item 4>
+
+<item 5>
+Pan-American Highway
+The Independent ( UK ) . Retrieved 3 August 2010 . Sources ( edit ) Plan Federal Highway System , New York Times May 15 , 1932 page XX7 Reported from the Motor
+World , New York Times January 26 , 1936 page XX6 Hemisphere Road is Nearer Reality , New York Times January 7 , 1953 page 58 1997 -- 98 AAA Caribbean , Central
+America and South America map Popular Mechanics , March 1943 , Longest Road In The World External links ( edit ) Media related to Pan-American Highway at
+Wikimedia Commons Pan-American Highway travel guide from Wikivoyage Geographic data related to Pan-American Highway at OpenStreetMap Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Pan-American_Highway&oldid=838034809 '' Categories : Pan-American Highway Hidden categories : Articles containing
+French - language text Articles containing Portuguese - language text Articles containing Spanish - language text Webarchive template wayback links CS1 Spanish
+- language sources ( es ) All articles with dead external links Articles with dead external links from March 2018 Articles with permanently dead external links
+Pages using div col with deprecated parameters All articles with unsourced statements Articles with
+</item 5>
+
+<item 6>
+Pan-American Highway
+Travelers would then be able to ferry from Key West to Havana , drive to the eastern tip of Cuba , ferry to Haiti , drive through Haiti and the Dominican
+Republic , and ferry again to Puerto Rico . Included in this system would also be a ferry from the western tip of Cuba to the Yucatán Peninsula . Mexico has
+already surveyed a route which will run across the Yucatán , Campeche , and Chiapas to San Cristobal de Las Casas , on the Pan American Highway . ( `` The Pan
+American Highway System '' by Travel Division Pan American Union , Washington D.C. October 1947 ) Art and culture ( edit ) Travel writer Tim Cahill wrote a book
+, Road Fever , about his record - setting 24 - day drive from Ushuaia in the Argentine province of Tierra del Fuego to Prudhoe Bay in the U.S. state of Alaska
+with professional long - distance driver Garry Sowerby , much of their route following the Pan-American Highway . In the British motoring show Top Gear , the
+presenters drove on a section of the road in their off - road vehicles in the Bolivian Special .
+</item 6>
+
+<item 7>
+Pan-American Highway
+Pan-American Highway - wikipedia Pan-American Highway Jump to : navigation , search `` Panamericana '' redirects here . For the film , see Panamericana ( film )
+. Not to be confused with CANAMEX Corridor . The Pan-American Highway from Prudhoe Bay , U.S.A. to Quellón , Chile and Ushuaia , Argentina , with official and
+unofficial routes shown in South America , and a few selected unofficial routes shown through the United States and Canada as they existed in the early 1960 's
+. In 1966 the new U.S. Interstate highway system brought official status to most previously unofficial routes in the lower 48 states . The Pan-American Highway
+is a network of roads measuring about 30,000 kilometres ( 19,000 mi ) in total length . Except for a rainforest break of approximately 160 km ( 100 mi ) ,
+called the Darién Gap , the road links almost all of the Pacific coastal countries of the Americas in a connected highway system . According to Guinness World
+Records , the Pan-American Highway is the world 's longest `` motorable road '' .
+</item 7>
+
+<item 8>
+Pan-American Highway
+The road had formerly ended at Cañita , Panama , 110 miles ( 180 km ) north of its current end . United States government funding was particularly significant
+to complete the high - level Bridge of the Americas over the Panama Canal , during the years when the canal was administered by the United States . Belize was
+supposedly included in the route at one time , after it switched to driving on the right . Prior to independence , as British Honduras , it was the only Central
+American country to drive on the left side of the road . Darién Gap ( edit ) Map of the Darién Gap and the break in the Pan-American Highway between Yaviza ,
+Panama and Turbo , Colombia Main article : Darién Gap The Pan-American Highway is interrupted between Panama and Colombia by a 100 km ( 60 mi ) stretch of
+marshland known as the Darién Gap . The highway terminates at Turbo , Colombia and Yaviza , Panama . Because of swamps , marshes , and rivers , construction
+would be very expensive . Efforts have been made for decades to eliminate the gap in the Pan-American highway , but have been controversial .
+</item 8>
+
+<item 9>
+Pan-American Highway
+In 2003 , Kevin Sanders , a long - distance rider , broke the Guinness World Record for the fastest traversal of the highway by motorcycle in 34 days . Photo
+gallery ( edit ) The northern end of the Pan-American Highway at Deadhorse , Alaska Interstate 25 ( Pan-American Freeway ) approaching the Big I interchange in
+Albuquerque , New Mexico , USA Pan-American Highway through San Martin , El Salvador . Another view of the Pan-American Highway in El Salvador . Pan-American
+Highway in El Salvador between Lourdes and Santa Ana ; this flat 1.5 km long straight section can be used as an airstrip and it was used during El Salvador
+Civil War . Highway in Guanacaste , Costa Rica ( going towards the Nicaraguan border , still many kilometres away . ) Pan-American Highway in Tres Rios , Costa
+Rica , right before the toll plaza ( about 337 more km to go until the Panamanian border ) .
+</item 9>
+
+<item 10>
+Pan-American Highway
+The first conference regarding construction of the highway occurred on October 5 , 1925 . Finally , on July 29 , 1937 , Argentina , Bolivia , Chile , Colombia ,
+Costa Rica , El Salvador , Guatemala , Honduras , Mexico , Nicaragua , Panama , Peru , Canada , and the United States signed the Convention on the Pan-American
+Highway , whereby they agreed to speedy construction , by all adequate means . In 1950 , Mexico became the first Latin American country to complete its portion
+of the highway . Countries served ( edit ) Map of the Alaska Highway portion ( in red ) of the Pan-American Highway system . The Northern Pan-American Highway
+travels through 9 countries : Canada ( unofficial ) United States ( interstate system official ) Mexico Guatemala El Salvador Honduras Nicaragua Costa Rica
+Panama The Southern Pan-American Highway travels through 8 countries : Suriname Guyana Venezuela Colombia Ecuador Peru Chile Argentina Important spurs also lead
+into 4 countries : Bolivia Brazil Paraguay Uruguay Hemispheric overview ( edit ) The Pan-American Highway system is physically mostly complete and extends in de
+facto terms from Prudhoe Bay , Alaska , in North America to the lower reaches of South America .
+</item 10>
+=== END ITEM id=ff2281d4e0dba9e1 ===
+
+=== ITEM id=8ea4f1b1413886a0 ===
+Gold sentences and facts:
+Sentence 0: Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995
+  Fact 0.0: Mumbai has the Marathi name मुंबई.
+  Fact 0.1: Mumbai was previously named Bombay.
+  Fact 0.2: Mumbai was renamed in 1995.
+
+Retrieved items:
+<item 1>
+Renaming of cities in India
+Madhya Bharat → Madhya Pradesh ( 1 November 1959 ) Madras State → Tamil Nadu ( 14 January 1969 ) Mysore State → Karnataka ( 1 November 1973 ) Uttaranchal →
+Uttarakhand ( 1 January 2007 ) Orissa → Odisha ( 4 November 2011 ) Cities ( edit ) Notable city names that were officially changed by legislation after
+independence include : Jabalpur ( Hindi : जबलपुर ) , from Jubbulpore , respelled in 1947 Jajmau ( Hindi : जाजमऊ ) , from Jajesmow , respelled in 1948 Kanpur (
+Hindi : कानपुर ) , from Cawnpore , respelled in 1948 Vadodara ( Gujarati : વડોદરા ) , from Baroda , respelled in 1974 Thiruvananthapuram ( Malayalam :
+തിരുവനന്തപുരം ) , from Trivandrum ,
+</item 1>
+
+<item 2>
+Renaming of cities in India
+from Bangalore , respelled in 2007 Belagavi from Belgaum in 2014 Tumakuru from Tumkur in 2014 Hubballi from Hubli in 2014 Shivamogga from Shimoga in 2014
+Hosapete from Hospet in 2014 Mysuru from Mysore in 2014 Kalaburagi from Gulbarga in 2014 Chikkamagaluru from Chikmagalur Vijapura from Bijapur in 2014 Ballari
+from Bellary in 2014 Mangaluru from Mangalore in 2014 Rajahmahendravaram from Rajahmundry in 2015 Gurugram from Gurgaon in 2016 For others , by state order ,
+see list of renamed Indian cities and states . Alappuzha , from Alleppey Guwahati ( Assamese : গুৱাহাটী ) , from Gauhati Indore , from Indhur Kanchipuram from
+Kāñci - pura And Conjevaram Kannur , from Cannanore Kollam ,
+</item 2>
+
+<item 3>
+Renaming of cities in India
+Realignment of the official Indian English name to an alternative local name ( edit ) Aside from changes to the official English spellings of local names there
+have also been renaming proposals to realign the official name , hence the English name with an alternative local name . Ethnically sensitive examples include
+the proposals by the Bharatiya Janata Party ( 1990 , 2001 ) to rename Ahmedabad to Karnavati and Allahabad to Prayag . These two proposals are changes from the
+Muslim ( or Mughal ) name to a Hindu native name . These can be represented as a change from Urdu language to Hindi language , but since the two languages are
+variants of Hindustani the proposal is effectively a cultural and ethno - religious proposal rather than a linguistic one . Adoption of name changes in India
+and overseas ( edit ) Official name changes naturally take place quickly if not immediately in official government sources . Adoption may be slower among the
+media in India and abroad , and among Indian authors . Important examples ( edit ) Main article : List of renamed places in India States ( edit ) Travancore -
+Cochin → Kerala ( 1 November 1956 ) .
+</item 3>
+
+<item 4>
+Renaming of cities in India
+Jump up ^ Calcutta : A Cultural and Literary History - Page 3 Krishna Dutta - 2003 `` nationalist stance , like Bombay , which changed its name to Mumbai , or
+Madras , which has become the unrecognisable Chennai , Calcutta has preferred a comparatively minor name change , which frankly is a bit of a multicultural
+mishmash . '' Jump up ^ `` David Rumsey : Geographical Searching with MapRank Search ( beta ) '' . Rumsey.mapranksearch.com . Retrieved 2012 - 08 - 15 . Jump up
+^ Beam , Christopher ( 2006 - 07 - 12 ) . `` How Bombay became Mumbai . - Slate Magazine '' . Slate.com . Retrieved 2012 - 08 - 15 .
+</item 4>
+
+<item 5>
+Renaming of cities in India
+from Trivandrum , respelled in 1991 Mumbai ( Marathi : मुंबई ) , from Bombay , renamed in 1995 Kochi ( Malayalam : കൊച്ചി ) , from Cochin , respelled in 1996
+Chennai ( Tamil : சென்னை ) , from Madras , renamed in 1996 Kolkata ( Bengali : কলকাতা ) , from Calcutta , respelled in 2001 Kadapa ( Telugu : కడప ) , from
+Cuddapah , respelled in 2005 Puducherry ( Tamil : புதுச்சேரி ) , from Pondicherry , renamed in 2006 Bengaluru ( Kannada : ಬೆಂಗಳೂರು ) , from Bangalore ,
+</item 5>
+
+<item 6>
+Renaming of cities in India
+Renaming of cities in India - Wikipedia Renaming of cities in India Jump to : navigation , search The renaming of cities in India started in 1947 following the
+end of the British imperial period . Several changes were politically controversial , and not all proposed changes were implemented . Each had to be approved by
+the central government in New Delhi . The renaming of states and territories in India has also taken place , but until recently with actual substantial name
+changes in both local language and in English such as the old British state name of Travancore - Cochin to Kerala ( 1956 ) . The most notable recent exceptions
+are Indian English spelling - changes of Orissa to Odisha ( March 2011 ) and the Union Territory of Pondicherry ( which includes the City of Pondicherry ) to
+Puducherry .
+</item 6>
+
+<item 7>
+Renaming of cities in India
+It is an indigenizing toponymic '' Jump up ^ Reserve Bank of India 's instructions for banks & banking operations Reserve Bank of India 2001 Page 713 `` The new
+name `` Mumbai '' should be reflected in both English and Hindi and the change in name is to be brought about in all official communications , name plates ,
+sign boards , office seals , rubber stamps , etc . '' Jump up ^ Perveez Mody The Intimate State : Love - Marriage and the Law in Delhi Page 59 - 2008 ``
+Throughout this book , I refer to India 's commercial capital as Bombay rather than Mumbai ... I am well aware of the name - change effected by an Act of the
+Indian Parliament in 1997 that made the city officially ' Mumbai ' ... It is the same convention I adopt when referring to Calcutta rather than Kolkata . ''
+Jump up ^ Pingali Sailaja Indian English Page 16 2009 `` Bombay is now called Mumbai , Madras is now Chennai and Calcutta is Kolkata , in an attempt to
+de-anglicise them . In this work , the earlier names are retained since these names were used during the period that we mostly cover . ''
+</item 7>
+
+<item 8>
+Renaming of cities in India
+The name changes are not without controversy among Indians . In several instances , the name change represents a struggle between a cosmopolitan elite and a
+local , regional - language populace over defining the city in ways that go far beyond a simple change of name . '' Jump up ^ Steven I. Wilkinson Votes and
+Violence : Electoral Competition and Ethnic Riots in India 2006 Page 23 `` The BJP proposed in 1990 and 2001 that Ahmedabad be renamed `` Karnavati . '' Hindu ,
+June 1 1 , 2001 . Similar proposals have been made to rename Allahabad `` Prayag . '' Jump up ^ Cosmopolitanism - Page 73 Carol A. Breckenridge , Sheldon
+Pollock , Homi K. Bhabha - 2002 `` In one sense , the decision to officialise the name Mumbai is part of a widespread Indian pattern of replacing names
+associated with colonial rule with names associated with local , national , and regional heroes .
+</item 8>
+
+<item 9>
+Renaming of cities in India
+In the early years after Indian independence , many name changes were effected in northern India for English spellings of Hindi place names that had simply been
+romanised inconsistently by the British administration -- such as the British spelling `` Jubbulpore , '' renamed `` Jabalpur '' ( जबलपुर ) among the first
+changes in 1947 . These changes did not generate significant controversy . More recent and high - profile changes -- including renaming such major cities as
+Calcutta to Kolkata -- have generated greater controversy . Since independence , such changes have typically been enacted officially by legislation at local or
+national Indian government level , and may or may not then be adopted by the Indian media , particularly the influential Indian press . In the case of smaller
+towns and districts which were less notable outside and inside India , and where a well known English name ( or exonym ) could not be said to exist , older
+spellings used under British India may not have had any specific legislation other than changes in practice on the romanisation of indigenous Indian language
+names .
+</item 9>
+
+<item 10>
+Renaming of cities in India
+For example , the change of Madras ( Tamil : மதராஸ் Madras ) to Chennai ( Tamil : சென்னை Chennai ) was reflected in many of India 's languages , and
+incidentally in English , while the Tamil endonym had always been Chennai and remained unaffected by the change . Renaming in English ( edit ) Change in
+official English spelling ( edit ) The renaming of cities is often specifically from English to Indian English in connection with that dialect 's internal
+reforms . In other words , the city itself is not actually renamed in the local language , and the local name ( or endonym ) in the indigenous languages of
+India does not change , but the official spelling in Indian English is amended . An example is the change from English `` Calcutta '' to English `` Kolkata ''
+-- the local Bengali name ( কলকাতা Kôlkata ) did not change . Such changes in English spelling may be in order to better reflect a more accurate phonetic
+transliteration of the local name , or may be for other reasons .
+</item 10>
+=== END ITEM id=8ea4f1b1413886a0 ===
+
+=== ITEM id=d42da425b93f527d ===
+Gold sentences and facts:
+Sentence 0: Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value .
+  Fact 0.0: Costs are associated with particular goods using one of several formulas.
+  Fact 0.1: The formulas include specific identification.
+  Fact 0.2: The formulas include first-in first-out (FIFO).
+  Fact 0.3: The formulas include average cost.
+  Fact 0.4: Costs include all costs of purchase.
+  Fact 0.5: Costs include all costs of conversion.
+  Fact 0.6: Costs include other costs that are incurred in bringing the inventories to their present location and condition.
+  Fact 0.7: Costs of goods made by businesses include material.
+  Fact 0.8: Costs of goods made by businesses include labor.
+  Fact 0.9: Costs of goods made by businesses include allocated overhead.
+  Fact 0.10: Costs of goods which are not yet sold are deferred as costs of inventory.
+  Fact 0.11: Costs of goods which are not yet sold are deferred until the inventory is sold.
+  Fact 0.12: Costs of goods which are not yet sold are deferred until the inventory is written down in value.
+
+Retrieved items:
+<item 1>
+Cost of goods sold
+Determining costs requires keeping records of goods or materials purchased and any discounts on such purchase . In addition , if the goods are modified , the
+business must determine the costs incurred in modifying the goods . Such modification costs include labor , supplies or additional material , supervision ,
+quality control and use of equipment . Principles for determining costs may be easily stated , but application in practice is often difficult due to a variety
+of considerations in the allocation of costs . Cost of goods sold may also reflect adjustments . Among the potential adjustments are decline in value of the
+goods ( i.e. , lower market value than cost ) , obsolescence , damage , etc . When multiple goods are bought or made , it may be necessary to identify which
+costs relate to which particular goods sold . This may be done using an identification convention , such as specific identification of the goods , first - in -
+first - out ( FIFO ) , or average cost . Alternative systems may be used in some countries , such as last - in - first - out ( LIFO ) , gross profit method ,
+retail method , or combinations of these .
+</item 1>
+
+<item 2>
+Cost of goods sold (COGS) is the carrying cost of products sold during a period. It includes purchase or production costs—materials, direct labor, freight, and
+allocated factory overhead—while unsold costs remain in inventory until sale or write-down. Costs are assigned using specific identification, FIFO, average
+cost, or (where permitted) LIFO and other methods, affecting the timing of reported profit and inventory values. Inventory may be written down for damage,
+obsolescence, or lower market value
+</item 2>
+
+<item 3>
+Cost of goods sold
+U.S. Internal Revenue Service Publication 334 , Tax Guide for Small Business , pages 27 -- 29 . U.S. Financial Accounting Standards Board ASC 330 . ( hide )
+Accounting Type Financial accounting Cost accounting Statements Balance sheet Income statement Cash flow statement Terms Revenue Cost of goods sold Operating
+expenses Capital expenditure Depreciation Gross profit Net profit Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Cost_of_goods_sold&oldid=834402233 '' Categories : Inventory Accounting terminology Costs Sales Hidden categories :
+All articles with dead external links Articles with dead external links from April 2018 Webarchive template wayback links Talk Contents About Wikipedia Deutsch
+فارسی Bahasa Indonesia עברית Lietuvių 日本 語 Polski Русский Українська 中文 3 more Edit links This page was last edited on 5 April 2018 , at 14 : 57 . Text is
+available under the Creative Commons Attribution - ShareAlike License ; additional terms may apply . By using this site , you agree to the Terms of Use and
+Privacy Policy .
+</item 3>
+
+<item 4>
+Cost of goods sold
+Cost of goods sold may be the same or different for accounting and tax purposes , depending on the rules of the particular jurisdiction . Certain expenses are
+included in COGS . Expenses that are included in COGS can not be deducted again as a business expense . COGS expenses include : The cost of products or raw
+materials , including freight or shipping charges ; The cost of storing products the business sells ; Direct labor costs for workers who produce the products ;
+and Factory overhead expenses . Depreciation Importance of inventories ( edit ) Inventories have a significant effect on profits . A business that makes or buys
+goods to sell must keep track of inventories of goods under all accounting and income tax rules . An example illustrates why . Fred buys auto parts and resells
+them . In 2008 , Fred buys $100 worth of parts . He sells parts for $80 that he bought for $30 , and has $70 worth of parts left . In 2009 , he sells the
+remainder of the parts for $180 . If he keeps track of inventory , his profit in 2008 is $50 , and his profit in 2009 is $110 , or $160 in total .
+</item 4>
+
+<item 5>
+Cost of goods sold
+If he deducted all the costs in 2008 , he would have a loss of $20 in 2008 and a profit of $180 in 2009 . The total is the same , but the timing is much
+different . Most countries ' accounting and income tax rules ( if the country has an income tax ) require the use of inventories for all businesses that
+regularly sell goods they have made or bought . Cost of goods for resale ( edit ) Cost of goods purchased for resale includes purchase price as well as all
+other costs of acquisitions , excluding any discounts . Additional costs may include freight paid to acquire the goods , customs duties , sales or use taxes not
+recoverable paid on materials used , and fees paid for acquisition . For financial reporting purposes such period costs as purchasing department , warehouse ,
+and other operating expenses are usually not treated as part of inventory or cost of goods sold . For U.S. income tax purposes , some of these period costs must
+be capitalized as part of inventory . Costs of selling , packing , and shipping goods to customers are treated as operating expenses related to the sale . Both
+International and U.S.
+</item 5>
+
+<item 6>
+Cost of goods sold
+Both International and U.S. accounting standards require that certain abnormal costs , such as those associated with idle capacity , must be treated as expenses
+rather than part of inventory . Discounts that must be deducted from the costs of purchased inventory are the following : Trade discounts ( reduction in the
+price of goods that a manufacturer or wholesaler provides to a retailer ) - includes a discount that is always allowed , regardless of the time of payment .
+Manufacturer 's rebates -- is based on the dealer 's purchases during the year . Cash discounts ( a reduction in the invoice price that the seller provides if
+the dealer pays immediately or within a specified time ) -- it may reduce COGS , or it may be treated separately as gross income . Value added tax is generally
+not treated as part of cost of goods sold if it may be used as an input credit or otherwise recoverable from the taxing authority . Cost of goods made by the
+business ( edit ) The cost of goods produced in the business should include all costs of production . The key components of cost generally include : Parts , raw
+materials and supplies used , Labor , including associated costs such as payroll taxes and benefits , and Overhead of the business allocable to production .
+</item 6>
+
+<item 7>
+Cost of goods sold
+Other methods may be used to associate overhead costs with particular goods produced . Overhead rates may be standard rates , in which case there may be
+variances , or may be adjusted for each set of goods produced . Identification conventions ( edit ) In some cases , the cost of goods sold may be identified
+with the item sold . Ordinarily , however , the identity of goods is lost between the time of purchase or manufacture and the time of sale . Determining which
+goods have been sold , and the cost of those goods , requires either identifying the goods or using a convention to assume which goods were sold . This may be
+referred to as a cost flow assumption or inventory identification assumption or convention . The following methods are available in many jurisdictions for
+associating costs with goods sold and goods still on hand : Specific identification . Under this method , particular items are identified , and costs are
+tracked with respect to each item . This may require considerable recordkeeping . This method can not be used where the goods or items are indistinguishable or
+fungible . Average cost . The average cost method relies on average unit cost to calculate cost of units sold and ending inventory .
+</item 7>
+
+<item 8>
+Cost of goods sold
+Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average
+cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and
+condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are
+deferred as costs of inventory until the inventory is sold or written down in value . Contents ( hide ) 1 Overview 2 Importance of inventories 3 Cost of goods
+for resale 4 Cost of goods made by the business 5 Identification conventions 6 Example 7 Write - downs and allowances 8 Alternative views 9 Other terms 10 See
+also 11 References 12 Further reading 12.1 Formal guidance Overview ( edit ) Many businesses sell goods that they have bought or produced . When the goods are
+bought or produced , the costs associated with such goods are capitalized as part of inventory ( or stock ) of goods . These costs are treated as an expense in
+the period the business recognizes income from sale of the goods .
+</item 8>
+
+<item 9>
+Cost of goods sold
+Cost of goods sold - wikipedia Cost of goods sold Jump to : navigation , search Accounting Historical cost Constant purchasing power Management Tax Major types
+( show ) Auditing Cost Forensic Financial Fund Governmental Management Social Tax Key concepts ( show ) Accounting period Accrual Constant purchasing power
+Economic entity Fair value Going concern Historical cost Matching principle Materiality Revenue recognition Unit of account Selected accounts ( show ) Assets
+Cash Cost of goods sold Depreciation / Amortization Equity Expenses Goodwill Liabilities Profit Revenue Accounting standards ( show ) Generally - accepted
+principles Generally - accepted auditing standards Convergence International Financial Reporting Standards International Standards on Auditing Management
+Accounting Principles Financial statements ( show ) Annual report Balance sheet Cash - flow Equity Income Management discussion Notes to the financial
+statements Bookkeeping ( show ) Bank reconciliation Debits and credits Double - entry system FIFO and LIFO Journal Ledger / General ledger T accounts Trial
+balance Auditing ( show ) Financial Internal Firms Report People and organizations ( show ) Accountants Accounting organizations Luca Pacioli Development ( show
+) History Research Positive accounting Sarbanes -- Oxley Act Business portal Cost of goods sold ( COGS ) refers to the carrying value of goods sold during a
+particular period .
+</item 9>
+
+<item 10>
+Cost of goods sold
+Most businesses make more than one of a particular item . Thus , costs are incurred for multiple items rather than a particular item sold . Determining how much
+of each of these components to allocate to particular goods requires either tracking the particular costs or making some allocations of costs . Parts and raw
+materials are often tracked to particular sets ( e.g. , batches or production runs ) of goods , then allocated to each item . Labor costs include direct labor
+and indirect labor . Direct labor costs are the wages paid to those employees who spend all their time working directly on the product being manufactured .
+Indirect labor costs are the wages paid to other factory employees involved in production . Costs of payroll taxes and fringe benefits are generally included in
+labor costs , but may be treated as overhead costs . Labor costs may be allocated to an item or set of items based on timekeeping records . Costs of materials
+include direct raw materials , as well as supplies and indirect materials . Where non-incidental amounts of supplies are maintained , the taxpayer must keep
+inventories of the supplies for income tax purposes , charging them to expense or cost of goods sold as used rather than as purchased .
+</item 10>
+=== END ITEM id=d42da425b93f527d ===
+
+=== ITEM id=e6cf6e2604b77f3d ===
+Gold sentences and facts:
+Sentence 0: The nineteenth season of Law & Order : Special Victims Unit premiered on September 27 , 2017 .
+  Fact 0.0: The nineteenth season of Law & Order: Special Victims Unit premiered.
+  Fact 0.1: The nineteenth season of Law & Order: Special Victims Unit premiered on September 27, 2017.
+
+Retrieved items:
+<item 1>
+Law & Order: Special Victims Unit
+ET for the first nine episodes , from September 20 through November 29 , 1999 . It was then shifted to Friday nights at 10 p.m. ET on January 7 , 2000 , and
+remained in that time slot through the end of season four on May 16 , 2003 . Beginning with the season five premiere on September 23 , 2003 , SVU moved to
+Tuesday nights at 10 : 00 p.m. ET . NBC airs repeats on Saturday nights at varying times and previous episodes are shown on the USA Network on varying days in
+marathon blocks With the season eleven premiere on September 23 , 2009 , the series vacated its Tuesday 10 p.m. ET slot because NBC began a prime - time
+weeknight Jay Leno series . The new time slot became Wednesday nights at 9 : 00 p.m. ET on NBC , with CTV still airing SVU on Tuesdays at 10 : 00 in Canada .
+After the 2010 Winter Olympics on March 3 , 2010 , the time slot for SVU changed again to Wednesdays at 10 p.m.
+</item 1>
+
+<item 2>
+Law & Order: Special Victims Unit
+1999 ( 1999 - 09 - 20 ) -- present Chronology Related shows Law & Order franchise External links Website Law & Order : Special Victims Unit ( often abbreviated
+to Law & Order : SVU or just SVU ) is an American police procedural , legal , crime drama television series set in New York City , where it is also primarily
+produced . In the style of the original Law & Order , episodes are often `` ripped from the headlines '' or loosely based on real crimes that have received
+media attention . Created by Dick Wolf , the series premiered on NBC on September 20 , 1999 , as the second series in Wolf 's successful Law & Order franchise .
+Law & Order : Special Victims Unit has been nominated for and won numerous awards , including the 2006 Emmy for Outstanding Lead Actress in a Drama Series for
+Mariska Hargitay , the first , and to date only , Emmy to be received by a regular on any Law & Order series . It is the current longest running scripted
+non-animated U.S.
+</item 2>
+
+<item 3>
+Law & Order: Special Victims Unit
+56 7.30 15 24 September 25 , 2013 ( 2013 - 09 - 25 ) 9.58 May 21 , 2014 ( 2014 - 05 - 21 ) 6.39 2013 -- 14 No. 46 8.18 16 23 September 24 , 2014 ( 2014 - 09 -
+24 ) 10.07 May 20 , 2015 ( 2015 - 05 - 20 ) 6.96 2014 -- 15 No. 52 8.71 17 23 September 23 , 2015 ( 2015 - 09 - 23 ) 8.27 May 25 , 2016 ( 2016 - 05 - 25 ) 7.19
+2015 -- 16 No.
+</item 3>
+
+<item 4>
+Law & Order: Special Victims Unit
+2012 ( 2012 - 09 - 26 ) May 22 , 2013 ( 2013 - 05 - 22 ) N / A N / A 15 24 September 25 , 2013 ( 2013 - 09 - 25 ) May 21 , 2014 ( 2014 - 05 - 21 ) N / A N / A
+16 23 September 24 , 2014 ( 2014 - 09 - 24 ) May 20 , 2015 ( 2015 - 05 - 20 ) N / A N / A 17 23 September 23 , 2015 ( 2015 - 09 - 23 ) May 25 , 2016 ( 2016 - 05
+- 25 ) N / A N / A 18 21 September 21 , 2016 ( 2016 - 09 - 21 ) May 24 , 2017 ( 2017 - 05 - 24 ) N / A N / A 19 24 September 27 ,
+</item 4>
+
+<item 5>
+Law & Order: Special Victims Unit
+July 7 , 2014 . Retrieved July 14 , 2014 . Jump up ^ `` Top TV Shows For 1999 -- 2000 Season '' . Variety . Retrieved February 12 , 2012 . Jump up ^ `` Law &
+Order : Special Victims Unit -- Series -- Episode List -- Season 2 '' . TV Tango . Retrieved June 10 , 2012 . Jump up ^ `` SpotVault -- Law & Order : SVU ( NBC
+) -- 2000 -- 01 '' . Spot Vault . December 9 , 2011 . Retrieved March 4 , 2012 . Jump up ^ `` The Bitter End '' . Entertainment Weekly Published in issue No.
+598 June 1 , 2001 . June 1 , 2001 . Retrieved February 12 , 2010 . Jump up ^ `` Law & Order : Special Victims Unit -- Series -- Episode List -- Season 3 '' . TV
+Tango . Retrieved June 10 , 2012 .
+</item 5>
+
+<item 6>
+Law & Order: Special Victims Unit
+; least in Colorado and Utah '' . Note : Each U.S. network television season starts in late September and ends in late May ( with the exception of the second
+and tenth season ) , which coincides with the completion of May sweeps . Season Time slot ( ET ) Episodes First aired Last aired TV season Rank Viewers ( in
+millions ) Date Viewers ( in millions ) Date Viewers ( in millions ) Monday 9 : 00 pm ( Episodes 1 -- 9 ) Friday 10 : 00 pm ( Episodes 10 -- 22 ) 22 September
+20 , 1999 ( 1999 - 09 - 20 ) 18.43 May 19 , 2000 ( 2000 - 05 - 19 ) 15.11 1999 -- 2000 No. 33 12.18 Friday 10 : 00 pm 21 October 20 , 2000 ( 2000 - 10 - 20 )
+13.20 May 11 , 2001 ( 2001 - 05 - 11 ) 15.06 2000 -- 01 No.
+</item 6>
+
+<item 7>
+Law & Order: Special Victims Unit
+2017 ( 2017 - 09 - 27 ) TBA TBA TBA Reception ( edit ) U.S. television Ratings ( edit ) Law & Order : Special Victims Unit premiered on Monday , September 20 ,
+1999 . After nine episodes , the show was moved to Friday nights , where it found its audience and following its first and second seasons became a Top 20 -
+overall show , overcoming the `` Friday night death slot '' phenomenon . Beginning with the season five , the show aired on Tuesdays to compete with CBS '
+Judging Amy and ABC 's NYPD Blue . In its later years , Law & Order : Special Victims Unit consistently outperformed Law & Order in the Nielsen ratings for
+first run episodes until the latter 's cancellation in 2010 . In 2016 , a New York Times study of the 50 TV shows with the most Facebook Likes found that SVU 's
+popularity was `` atypical : generally slightly more popular in rural areas and the Black Belt , but largely restricted to the eastern half of the country . It
+'s most popular in Albany , N.Y. ; least in Colorado and Utah '' .
+</item 7>
+
+<item 8>
+Law & Order: Special Victims Unit
+On May 12 , 2017 , the series was renewed for a nineteenth season , which premiered on September 27 , 2017 . As of January 17 , 2018 , Law & Order : Special
+Victims Unit has aired 421 original episodes . Contents ( hide ) 1 Production 1.1 History and development 1.1. 1 Executive producers 1.2 Filming 1.3 Broadcast
+history 1.4 Russian adaptation 2 Casting 2.1 Salaries 3 Cast and characters 4 Series overview 5 Episodes 6 Reception 6.1 U.S. television ratings 6.2 Awards and
+honors 7 Broadcast and streaming 7.1 Syndication 8 International broadcast 9 References 9.1 Notes 9.2 Bibliography 10 External links Production ( edit ) History
+and development ( edit ) The idea for Law & Order : Special . Victims Unit originated with the 1986 `` preppie murder '' case of Robert Chambers , who strangled
+Jennifer Levin , a woman he dated whom he later killed during what he claimed was consensual `` rough sex '' in Manhattan 's Central Park .
+</item 8>
+
+<item 9>
+Law & Order: Special Victims Unit
+The first episode , `` Payback '' , premiered on NBC on September 20 , 1999 . Executive producers ( edit ) Executive producer Neal Baer left Law & Order : SVU
+as showrunner at the end of season twelve , after eleven years ( seasons 2 -- 12 ) on the show , in order to sign a three - year deal with CBS Studios . Baer
+was replaced by former Law & Order : Criminal Intent showrunner Warren Leight . In March 2015 , it was announced that Warren Leight signed a three - year deal
+with Sony Pictures Television , that will allow him to work on SVU one more season , its seventeenth . Leight joined the show in season thirteen . It was
+announced on March 10 , 2016 that original Law & Order veteran producer Rick Eid would take Leight 's place as showrunner starting in season 18 . Creator Dick
+Wolf commented to The Hollywood Reporter , `` I 'm extremely pleased that Rick had decided to rejoin the family and hope that he will be here for years to come
+. ''
+</item 9>
+
+<item 10>
+Law & Order: Special Victims Unit
+ET , where it stayed until the twelfth season . In the 12th season , SVU moved back to 9 : 00 p.m. to lead in the newest Law & Order spinoff , Law & Order : LA
+, until it was pulled from the network in January 2011 to be retooled . SVU moved back to 10 : 00 p.m. on January 12 , 2011 , until the end of the 13th season .
+With season 14 , SVU moved back to 9 : 00 p.m. after a two - hour season premiere event on September 26 , 2012 , a position the show has held since . Russian
+adaptation ( edit ) In 2007 , the Russian production company Studio 2B purchased the rights to create an adaptation of Law & Order : Special Victims Unit for
+Russian television . Titled Закон и порядок : отдел оперативных расследований ( Law & Order : Division of Field Investigation ) , the series stars Alisa Bogart
+as Major Olga Bobrova .
+</item 10>
+=== END ITEM id=e6cf6e2604b77f3d ===
+
+=== ITEM id=453647063e2f40da ===
+Gold sentences and facts:
+Sentence 0: A muscle relaxant is a drug that affects skeletal muscle function and decreases the muscle tone . It may be used to alleviate symptoms such as muscle spasms , pain , and hyperreflexia . The term `` muscle relaxant '' is used to refer to two major therapeutic groups : neuromuscular blockers and spasmolytics . Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate and have no central nervous system ( CNS ) activity . They are often used during surgical procedures and in intensive care and emergency medicine to cause temporary paralysis . Spasmolytics , also known as `` centrally acting '' muscle relaxants , are used to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions . While both neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants , the term is commonly used to refer to spasmolytics only .
+  Fact 0.0: A muscle relaxant is a drug that affects skeletal muscle function.
+  Fact 0.1: A muscle relaxant decreases muscle tone.
+  Fact 0.2: A muscle relaxant may be used to alleviate muscle spasms.
+  Fact 0.3: A muscle relaxant may be used to alleviate pain.
+  Fact 0.4: A muscle relaxant may be used to alleviate hyperreflexia.
+  Fact 0.5: The term 'muscle relaxant' is used to refer to two major therapeutic groups.
+  Fact 0.6: The two major therapeutic groups referred to by 'muscle relaxant' are neuromuscular blockers and spasmolytics.
+  Fact 0.7: Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate.
+  Fact 0.8: Neuromuscular blockers have no central nervous system (CNS) activity.
+  Fact 0.9: Neuromuscular blockers are often used during surgical procedures.
+  Fact 0.10: Neuromuscular blockers are often used in intensive care and emergency medicine.
+  Fact 0.11: Neuromuscular blockers are used to cause temporary paralysis.
+  Fact 0.12: Spasmolytics are also known as 'centrally acting' muscle relaxants.
+  Fact 0.13: Spasmolytics are used to alleviate musculoskeletal pain and spasms.
+  Fact 0.14: Spasmolytics are used to reduce spasticity in a variety of neurological conditions.
+  Fact 0.15: Neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants.
+  Fact 0.16: The term 'muscle relaxant' is commonly used to refer to spasmolytics only.
+
+Retrieved items:
+<item 1>
+Muscle relaxant
+Eur. J. Neurosci. 12 ( 2 ) : 701 -- 14 . doi : 10.1046 / j. 1460 - 9568.2000. 00955. x . PMID 10712650 . Jump up ^ Young RR , Wiegner AW ( 1987 ) . ``
+Spasticity '' . Clin. Orthop . Relat . Res. 219 : 50 -- 62 . PMID 3581584 . Jump up ^ `` The Effects of Muscle Relaxant Drugs Are Powerful '' . Retrieved 2010 -
+07 - 09 . Jump up ^ `` Cyclobenzaprine - Oral '' . Retrieved 2010 - 07 - 09 . Jump up ^ `` Carisoprodolx '' . Retrieved 2010 - 07 - 09 . Jump up ^ `` Side
+Effects of Metaxalone -- for the Consumer '' . Retrieved 2010 - 07 - 09 . Jump up ^ `` Precautions '' . Retrieved 2010 - 07 - 09 .
+</item 1>
+
+<item 2>
+Muscle relaxant
+Chemical diagram of pancuronium , with red lines indicating the two acetylcholine `` molecules '' in the structure Spasmolytics ( edit ) Main article :
+antispasmodic A view of the spinal cord and skeletal muscle showing the action of various muscle relaxants -- black lines ending in arrow heads represent
+chemicals or actions that enhance the target of the lines , blue lines ending in squares represent chemicals or actions that inhibition the target of the line
+The generation of the neuronal signals in motor neurons that cause muscle contractions are dependent on the balance of synaptic excitation and inhibition the
+motor neuron receives . Spasmolytic agents generally work by either enhancing the level of inhibition , or reducing the level of excitation . Inhibition is
+enhanced by mimicking or enhancing the actions of endogenous inhibitory substances , such as GABA . Terminology ( edit ) Because they may act at the level of
+the cortex , brain stem or spinal cord , or all three areas , they have traditionally been referred to as `` centrally acting '' muscle relaxants . However , it
+is now known not every agent in this class has CNS activity ( e.g. dantrolene ) , so this name is inaccurate .
+</item 2>
+
+<item 3>
+Muscle relaxant
+Other skeletal muscle relaxants of that type used around the world come from a number of drug categories and other drugs used primarily for this indication
+include orphenadrine ( anticholinergic ) , chlorzoxazone , tizanidine ( clonidine relative ) , diazepam , tetrazepam and other benzodiazepines , mephenoxalone ,
+methocarbamol , dantrolene , baclofen , Drugs once but no longer or very rarely used to relax skeletal muscles include meprobamate , barbiturates , methaqualone
+, glutethimide and the like ; some subcategories of opioids have muscle relaxant properties , and some are marketed in combination drugs with skeletal and / or
+smooth muscle relaxants such as whole opium products , some ketobemidone , piritramide and fentanyl preparations and Equagesic . Neuromuscular blockers ( edit )
+Detailed view of a neuromuscular junction : 1 . Presynaptic terminal 2 . Sarcolemma 3 . Synaptic vesicle 4 . Nicotinic acetylcholine receptor 5 .
+</item 3>
+
+<item 4>
+Muscle relaxant
+Contents ( hide ) 1 History 2 Neuromuscular blockers 3 Spasmolytics 3.1 Terminology 3.2 Clinical use 3.3 Mechanism 4 Side effects 5 See also 6 References 7
+External links History ( edit ) The earliest known use of muscle relaxant drugs was by natives of the Amazon Basin in South America who used poison - tipped
+arrows that produced death by skeletal muscle paralysis . This was first documented in the 16th century , when European explorers encountered it . This poison ,
+known today as curare , led to some of the earliest scientific studies in pharmacology . Its active ingredient , tubocurarine , as well as many synthetic
+derivatives , played a significant role in scientific experiments to determine the function of acetylcholine in neuromuscular transmission . By 1943 ,
+neuromuscular blocking drugs became established as muscle relaxants in the practice of anesthesia and surgery . The U.S. Food and Drug Administration ( FDA )
+approved the use of carisoprodol in 1959 , metaxalone in August 1962 , and cyclobenzaprine in August 1977 .
+</item 4>
+
+<item 5>
+Muscle relaxant
+PMID 17909209 . ^ Jump up to : van Tulder MW , Touray T , Furlan AD , Solway S , Bouter LM ( 2003 ) . Van Tulder , Maurits W , ed . `` Muscle relaxants for
+non-specific low back pain '' . Cochrane Database Syst Rev ( 2 ) : CD004252 . doi : 10.1002 / 14651858. CD004252 . PMID 12804507 . CS1 maint : Multiple names :
+authors list ( link ) ^ Jump up to : Beebe FA , Barkin RL , Barkin S ( 2005 ) . `` A clinical and pharmacologic review of skeletal muscle relaxants for
+musculoskeletal conditions '' . Am J Ther. 12 ( 2 ) : 151 -- 71 . doi : 10.1097 / 01. mjt. 0000134786.50087. d8 . PMID 15767833 . Jump up ^ See , S. ; Ginzburg
+, R. ( Feb 2008 ) . `` Skeletal muscle relaxants '' .
+</item 5>
+
+<item 6>
+Muscle relaxant
+dantrolene ) , so this name is inaccurate . Most sources still use the term `` centrally acting muscle relaxant '' . According to MeSH , dantrolene is usually
+classified as a centrally acting muscle relaxant . The World Health Organization , in its ATC , uses the term `` centrally acting agents '' , but adds a
+distinct category of `` directly acting agents '' , for dantrolene . Use of this terminology dates back to at least 1973 . The term `` spasmolytic '' is also
+considered a synonym for antispasmodic . Clinical use ( edit ) Spasmolytics such as carisoprodol , cyclobenzaprine , metaxalone , and methocarbamol are commonly
+prescribed for low back pain or neck pain , fibromyalgia , tension headaches and myofascial pain syndrome . However , they are not recommended as first - line
+agents ; in acute low back pain , they are not more effective than paracetamol or nonsteroidal anti-inflammatory drugs ( NSAIDs ) , and in fibromyalgia they are
+not more effective than antidepressants .
+</item 6>
+
+<item 7>
+Muscle relaxant
+Retrieved 2010 - 07 - 09 . External links ( edit ) Skeletal Muscle Relaxants at the US National Library of Medicine Medical Subject Headings ( MeSH ) Skeletal
+muscle relaxants ( M03 ) Peripherally acting ( primarily antinicotinic , NMJ block ) Non-depolarizing Curare alkaloids Alcuronium Dimethyltubocurarine
+Tubocurarine 4 ° ammonium agents ultra-short duration : Gantacurium short duration : Mivacurium Chandonium intermediate duration : Atracurium Cisatracurium
+Fazadinium Rocuronium Vecuronium long duration : Doxacurium Dimethyltubocurarine Pancuronium Pipecuronium Laudexium Gallamine unsorted : Hexafluronium (
+Hexafluorenium ) Depolarizing Choline derivatives : Suxamethonium ( Succinylcholine ) Polyalkylene derivatives : Hexamethonium ACh release inhibitors Botulinum
+toxin Centrally acting Carbamic acid esters Carisoprodol Cyclarbamate Difebarbamate Febarbamate Meprobamate Phenprobamate Styramate Tybamate
+</item 7>
+
+<item 8>
+Muscle relaxant
+Muscle relaxant - wikipedia Muscle relaxant Jump to : navigation , search This article is about skeletal muscle relaxants . For information on smooth muscle
+relaxants , see Antispasmodic . A muscle relaxant is a drug that affects skeletal muscle function and decreases the muscle tone . It may be used to alleviate
+symptoms such as muscle spasms , pain , and hyperreflexia . The term `` muscle relaxant '' is used to refer to two major therapeutic groups : neuromuscular
+blockers and spasmolytics . Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate and have no central nervous system ( CNS
+) activity . They are often used during surgical procedures and in intensive care and emergency medicine to cause temporary paralysis . Spasmolytics , also
+known as `` centrally acting '' muscle relaxants , are used to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological
+conditions . While both neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants , the term is commonly used to refer to
+spasmolytics only .
+</item 8>
+
+<item 9>
+Muscle relaxant
+( Feb 2008 ) . `` Skeletal muscle relaxants '' . Pharmacotherapy. 28 ( 2 ) : 207 -- 13 . doi : 10.1592 / phco. 28.2. 207 . PMID 18225966 . Jump up ^ `` When Are
+Muscle Relaxers Prescribed For Arthritis Patients ? '' . Retrieved 2010 - 07 - 09 . Jump up ^ MedlinePlus Encyclopedia Tension Headache Jump up ^ `` Muscle
+Relaxants '' . Retrieved 2010 - 07 - 09 . Jump up ^ Rang , H.P. ; Dale , M.M. ( 1991 ) . `` Drugs Used in Treating Motor Disorders '' . Pharmacology ( 2nd ed .
+) . Churchill Livingston . pp. 684 -- 705 . ISBN 044304483X . Jump up ^ Standaert , D.G. ; Young , A.B. ( 2001 ) . `` Treatment Of Central Nervous System
+Degerative Disorders '' . In Goodman , L.S.
+</item 9>
+
+<item 10>
+Muscle relaxant
+Mayo Clinic . Last Updated : April 1 , 2007 . Retrieved on September 19 , 2007 . ^ Jump up to : Miller , R.D. ( 1998 ) . `` Skeletal Muscle Relaxants '' . In
+Katzung , B.G. Basic & Clinical Pharmacology ( 7th ed . ) . Appleton & Lange . pp. 434 -- 449 . ISBN 0 - 8385 - 0565 - 1 . Jump up ^ Bowman WC ( January 2006 )
+. `` Neuromuscular block '' . Br. J. Pharmacol. 147 Suppl 1 : S277 -- 86 . doi : 10.1038 / sj. bjp. 0706404 . PMC 1760749 . PMID 16402115 . Jump up ^ `` Brief
+History '' . Retrieved 2010 - 07 - 09 . Jump up ^ `` Brief History '' . Retrieved 2010 - 07 - 09 . Jump up ^ Craig , C.R. ; Stitzel , R.E.
+</item 10>
+=== END ITEM id=453647063e2f40da ===
+
+=== ITEM id=9b9701d57ab835cd ===
+Gold sentences and facts:
+Sentence 0: The Uralic languages ( / jʊəˈrælɪk / ; sometimes called Uralian languages / jʊəˈreɪliən / ) form a language family of 38 languages spoken by approximately 25 million people , predominantly in Northern Eurasia . The Uralic languages with the most native speakers are Hungarian , Finnish , and Estonian , which are the official languages of Hungary , Finland , and Estonia , respectively , and of the European Union . Other Uralic languages with significant numbers of speakers are Erzya , Moksha , Mari , Udmurt , and Komi , which are officially recognized languages in various regions of Russia .
+  Fact 0.0: The Uralic languages form a language family.
+  Fact 0.1: The Uralic languages are sometimes called Uralian languages.
+  Fact 0.2: The Uralic language family has 38 languages.
+  Fact 0.3: The Uralic languages are spoken by approximately 25 million people.
+  Fact 0.4: The Uralic languages are spoken predominantly in Northern Eurasia.
+  Fact 0.5: Hungarian, Finnish, and Estonian are the Uralic languages with the most native speakers.
+  Fact 0.6: Hungarian is the official language of Hungary.
+  Fact 0.7: Finnish is the official language of Finland.
+  Fact 0.8: Estonian is the official language of Estonia.
+  Fact 0.9: Hungarian, Finnish, and Estonian are official languages of the European Union.
+  Fact 0.10: Erzya, Moksha, Mari, Udmurt, and Komi are other Uralic languages with significant numbers of speakers.
+  Fact 0.11: Erzya, Moksha, Mari, Udmurt, and Komi are officially recognized languages in various regions of Russia.
+
+Retrieved items:
+<item 1>
+Uralic languages
+The internal structure of the Uralic family has been debated since the family was first proposed . Doubts about the validity of most of the proposed higher -
+order branchings ( grouping the nine undisputed families ) are becoming more common . A traditional classification of the Uralic languages has existed since the
+late 19th century . It has enjoyed frequent adaptation in whole or in part in encyclopedias , handbooks , and overviews of the Uralic family . Donner 's model
+is as follows : Ugric ( Ugrian ) Hungarian Ob - Ugric ( Ob Ugrian ) Khanty Mansi Finno - Permic ( Permian - Finnic ) Permic Finno - Volgaic ( Finno - Cheremisic
+, Finno - Mari ) Volga - Finnic Mari Mordvinic Finno - Lappic ( Finno - Saamic , Finno - Samic ) Sami Finnic At Donner 's time , the Samoyedic languages were
+still poorly known , and he was not able to address their position .
+</item 1>
+
+<item 2>
+A global classification of language families, organized by region, covering Africa, Europe and Asia, New Guinea and the Pacific, Australia, North America,
+Mesoamerica, and South America. It lists many families, isolates, and sign-language groups, with uncertain affiliations marked “?” and extinct languages marked
+“†.” Uralic is detailed into Finnic, Sami, Mordvinic, Mari, Permic, Ugric, Samoyedic, and extinct or poorly att
+</item 2>
+
+<item 3>
+Uralic languages
+The Finno - Permic grouping still holds some support , though the arrangement of its subgroups is a matter of some dispute . Mordvinic is commonly seen as
+particularly closely related to or part of Finno - Samic . The term Volgaic ( or Volga - Finnic ) was used to denote a branch previously believed to include
+Mari , Mordvinic and a number of the extinct languages , but it is now obsolete and considered a geographic classification rather than a linguistic one . Within
+Ugric , uniting Mansi with Hungarian rather than Khanty has been a competing hypothesis to Ob - Ugric . Lexical isoglosses ( edit ) Lexicostatistics has been
+used in defense of the traditional family tree . A recent re-evaluation of the evidence however fails to find support for Finno - Ugric and Ugric , suggesting
+four lexically distinct branches ( Finno - Permic , Hungarian , Ob - Ugric and Samoyedic ) . One alternate proposal for a family tree , with emphasis on the
+development of numerals , is as follows : Uralic ( * kektä `` 2 '' ,
+</item 3>
+
+<item 4>
+Uralic languages
+The Uralic languages with the most native speakers are Hungarian , Finnish , and Estonian , which are the official languages of Hungary , Finland , and Estonia
+, respectively , and of the European Union . Other Uralic languages with significant numbers of speakers are Erzya , Moksha , Mari , Udmurt , and Komi , which
+are officially recognized languages in various regions of Russia . The name `` Uralic '' derives from the fact that the areas where the languages are spoken are
+found on both sides of the Ural Mountains . Also , the original homeland ( Urheimat ) is commonly hypothesized to be in the vicinity of the Urals . Finno -
+Ugric is sometimes used as a synonym for Uralic , though Finno - Ugric is widely understood to exclude the Samoyedic languages . Scholars who do not accept the
+traditional notion that Samoyedic split first from the rest of the Uralic family may treat the terms as synonymous .
+</item 4>
+
+<item 5>
+Uralic languages
+Classification ( edit ) Relative numbers of speakers of Uralic languages Hungarian 56 % Finnish 20 % Estonian 4.2 % Erzya 2.8 % Moksha 2.5 % Mari 2 % Udmurt 1.9
+% Komi 1.6 % Other 8.9 % The Uralic family comprises nine undisputed groups with no consensus classification between them . ( Some of the proposals are listed
+in the next section . ) An agnostic approach treats them as separate branches . Obsolete or native names are displayed in italics .
+</item 5>
+
+<item 6>
+Uralic languages
+Obsolete or native names are displayed in italics . Finnic ( Fennic , Baltic Finnic , Balto - Finnic , Balto - Fennic ) Hungarian ( Magyar ) Khanty ( Ostyak ,
+Handi , Hantõ ) Mansi ( Vogul ) Mari ( Cheremis ) Mordvinic ( Mordvin , Mordvinian ) Permic ( Permian ) Sami ( Saami , Samic , Saamic , Lappic , Lappish )
+Samoyedic ( Samoyed ) There is also historical evidence of a number of extinct languages of uncertain affiliation : Merya Muromian Meshcherian ( until 16th
+century ? ) Traces of Finno - Ugric substrata , especially in toponymy , in the northern part of European Russia have been proposed as evidence for even more
+extinct Uralic languages . Traditional classification ( edit ) All Uralic languages are thought to have descended , through independent processes of language
+change , from Proto - Uralic . The internal structure of the Uralic family has been debated since the family was first proposed .
+</item 6>
+
+<item 7>
+Uralic languages
+and refined in Viitso ( 2000 ) : Finno - Ugric Saamic -- Fennic ( consonant gradation ) Saamic Fennic Eastern Finno - Ugric Mordva ( node ) Mari Permian --
+Ugric ( * δ > * l ) Permian Ugric ( * s * š * ś > * ɬ * ɬ * s ) Hungarian Khanty Mansi The grouping of the four bottom - level branches remains to some degree
+open to interpretation , with competing models of Finno - Saamic vs. Eastern Finno - Ugric ( Mari , Mordvinic , Permic - Ugric ; * k > ɣ between vowels ,
+degemination of stops ) and Finno - Volgaic ( Finno - Saamic , Mari , Mordvinic ; * δ́ > δ between vowels ) vs. Permic - Ugric . Viitso finds no evidence for a
+Finno - Permic grouping .
+</item 7>
+
+<item 8>
+Uralic languages
+All of these hypotheses are minority views at the present time in Uralic studies . Other comparisons ( edit ) See also : Alternative theories of the Hungarian
+language relations Various unorthodox comparisons have been advanced such as Finno - Basque , Hungarian - Etruscan , and Cal - Ugrian . These are considered at
+best spurious fringe - theories by specialists . See also ( edit ) Finland portal Hungary portal Languages portal Uralic peoples Finno - Ugric peoples Notes (
+edit ) Jump up ^ Hammarström , Harald ; Forkel , Robert ; Haspelmath , Martin , eds. ( 2017 ) . `` Uralic '' . Glottolog 3.0 . Jena , Germany : Max Planck
+Institute for the Science of Human History . Jump up ^ Simons , Gary F. ; Fenning , Charles F. `` Uralic '' . Ethnologue . SIL International . Retrieved 14
+February 2018 . Jump up ^ Tommola , Hannu ( 2010 ) . `` Finnish among the Finno - Ugrian languages '' . Mood in the Languages of Europe .
+</item 8>
+
+<item 9>
+Uralic languages
+Mutual intelligibility ( edit ) The Estonian philologist Mall Hellam proposed cognate sentences that she asserted to be mutually intelligible among the three
+most widely spoken Uralic languages : Finnish , Estonian , and Hungarian : Estonian : Elav kala ujub vee all . Finnish : Elävä kala ui veden alla . Hungarian :
+Eleven hal úszik a víz alatt . English : A live fish is swimming underwater . However , linguist Geoffrey Pullum reports that neither Finns nor Hungarians could
+understand the other language 's version of the sentence . Comparison ( edit ) No Uralic language has exactly the idealized typological profile of the family .
+</item 9>
+
+<item 10>
+The Uralic family comprises 38 languages spoken by about 25 million people across Northern Eurasia, especially northern and eastern Europe and northern Asia.
+Hungarian, Finnish, and Estonian are its largest languages and official in their respective countries and the EU; other notable languages include Erzya, Moksha,
+Mari, Udmurt, and Komi. Its nine commonly recognized groups include Finnic, Sami, Hungarian, Khanty, Mansi, Mari, Mordvinic
+</item 10>
+=== END ITEM id=9b9701d57ab835cd ===

@@ -1,0 +1,985 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 7 items.
+
+=== ITEM id=6121948f904cf6e5 ===
+Gold sentences and facts:
+Sentence 0: Only Mexico , Italy , France , Germany ( West Germany until shortly after the 1990 World Cup ) and Brazil have hosted the event on two occasions . Mexico City 's Estadio Azteca and Rio de Janeiro 's Maracanã are the only venues ever to have hosted two FIFA World Cup finals . Only the 2002 FIFA World Cup had more than one host , being split between Japan and South Korea .
+  Fact 0.0: Only Mexico has hosted the event on two occasions.
+  Fact 0.1: Only Italy has hosted the event on two occasions.
+  Fact 0.2: Only France has hosted the event on two occasions.
+  Fact 0.3: Only Germany has hosted the event on two occasions.
+  Fact 0.4: Only Brazil has hosted the event on two occasions.
+  Fact 0.5: Germany's hosting covers West Germany until shortly after the 1990 World Cup.
+  Fact 0.6: Mexico City's Estadio Azteca is one of the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.7: Rio de Janeiro's Maracanã is one of the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.8: Estadio Azteca and the Maracanã are the only venues ever to have hosted two FIFA World Cup finals.
+  Fact 0.9: Only the 2002 FIFA World Cup had more than one host.
+  Fact 0.10: The 2002 FIFA World Cup was split between Japan and South Korea.
+
+Retrieved items:
+<item 1>
+FIFA World Cup hosts
+1 Accusations of bribery 21 2026 FIFA World Cup 22 2030 FIFA World Cup 23 2034 FIFA World Cup 24 Total bids by country 25 Host country performances 26
+References 27 External links List of hosts ( edit ) Year Host Continent Winner 1930 Uruguay South America Uruguay 1934 Italy Europe Italy 1938 France Europe
+Italy 1942 Cancelled due to World War II 1946 Cancelled due to World War II 1950 Brazil South America Uruguay 1954 Switzerland Europe West Germany 1958 Sweden
+Europe Brazil 1962 Chile South America Brazil 1966 England Europe England 1970 Mexico North America Brazil West Germany Europe West Germany 1978 Argentina South
+America Argentina 1982 Spain Europe Italy 1986 Mexico North America Argentina 1990 Italy Europe West Germany 1994 United States North America Brazil 1998 France
+Europe France 2002 South Korea / Japan Asia Brazil 2006 Germany Europe Italy South Africa Africa Spain 2014 Brazil South America Germany 2018 Russia Europe 2022
+Qatar Asia 2026 TBD 2030 TBD 1930 FIFA World Cup ( edit ) Main article : 1930 FIFA World Cup Bids : Hungary Italy
+</item 1>
+
+<item 2>
+FIFA World Cup hosts
+Contents ( hide ) 1 List of hosts 2 1930 FIFA World Cup 3 1934 FIFA World Cup 4 1938 FIFA World Cup 5 Cancelled FIFA World Cups 1942 and 1946 6 1950 and 1954
+FIFA World Cups 6.1 1949 bid 6.2 1951 bid 7 1958 FIFA World Cup 8 1962 FIFA World Cup 9 1966 FIFA World Cup 10 1970 FIFA World Cup 11 1974 , 1978 , 1982 FIFA
+World Cups 11.1 1974 results 11.2 1978 results 11.3 1982 results 12 1986 FIFA World Cup 13 1990 FIFA World Cup 14 1994 FIFA World Cup 15 1998 FIFA World Cup 16
+2002 FIFA World Cup 17 2006 FIFA World Cup 17.1 Controversy 18 2010 FIFA World Cup 18.1 Controversy 19 2014 FIFA World Cup 20 2018 and 2022 FIFA World Cups 20.1
+Accusations of bribery 21
+</item 2>
+
+<item 3>
+FIFA World Cup hosts
+Both Argentina and Uruguay thus boycotted the tournament . The first tournament following World War II , held in Brazil in 1950 , had three teams withdraw due
+to either financial problems or disagreements with the organization . To avoid any future boycotts or controversy , FIFA began a pattern of alternation between
+the Americas and Europe , which continued until the 2002 FIFA World Cup in Asia . The system evolved so that the host country is now chosen in a vote by FIFA 's
+Council ( former Executive Committee ) . This is done under an exhaustive ballot system . The decision is currently made roughly seven years in advance of the
+tournament , though the hosts for the 2022 tournament were chosen at the same time as those for the 2018 tournament . Only Mexico , Italy , France , Germany (
+West Germany until shortly after the 1990 World Cup ) and Brazil have hosted the event on two occasions . Mexico City 's Estadio Azteca and Rio de Janeiro 's
+Maracanã are the only venues ever to have hosted two FIFA World Cup finals . Only the 2002 FIFA World Cup had more than one host , being split between Japan and
+South Korea .
+</item 3>
+
+<item 4>
+FIFA World Cup hosts
+FIFA World Cup bids 1930 Hungary Italy Netherlands Spain Sweden Uruguay 1934 Italy Sweden 1938 Argentina France Germany 1942 Brazil Germany 1946 None 1950
+Brazil 1954 Switzerland 1958 Sweden 1962 Argentina Chile West Germany 1966 England West Germany Spain 1970 Argentina Mexico Italy Netherlands Spain West Germany
+1978 Argentina Mexico 1982 Spain West Germany 1986 Canada Colombia Mexico United States 1990 Austria England France Greece Italy Soviet Union West Germany
+Yugoslavia 1994 Brazil Morocco United States 1998 France Morocco Switzerland 2002 Japan -- South Korea Mexico 2006 Brazil England Germany Morocco South Africa
+Egypt Libya -- Tunisia Morocco Nigeria South Africa 2014 Brazil Colombia 2018 Belgium -- Netherlands England Portugal -- Spain Russia 2022 Australia Japan Qatar
+South Korea United States 2026 Canada -- Mexico -- United States Morocco 2030 Argentina -- Paraguay -- Uruguay England Notes : Bold entries are those chosen as
+hosts Event cancelled due to World War II Colombia withdrew after being award event , which was re-awarded to Mexico Retrieved from ``
+https://en.wikipedia.org/w/index.
+</item 4>
+
+<item 5>
+FIFA World Cup hosts
+1962 , 1966 , 1974 , 1982 , 2006 Argentina 5 1938 , 1962 , 1970 , 1978 , 2030 Mexico 1970 , 1978 , 1986 , 2002 , 2026 Morocco 1994 , 1998 , 2006 , 2010 , 2026
+Spain 1930 , 1966 , 1974 , 1982 , 2018 Brazil 1950 , 1994 , 2006 , 2014 England 1966 , 1990 , 2006 , 2018 United States 1986 , 1994 , 2022 , 2026 Italy 1930 ,
+1934 , 1990 Japan 1970 , 2002 , 2022 Canada 1986 , 2026 Chile 1962 , 2014 Colombia 1986 , 2014 France 1938 , 1998 Netherlands 1930 , 2018 Russia 1990 , 2018
+South Africa 2006 , 2010 South Korea 2002 , 2022 Switzerland 1954 ,
+</item 5>
+
+<item 6>
+FIFA World Cup hosts
+1938 Brazil 1950 Switzerland 1954 Sweden 1958 Chile 1962 England 1966 Mexico 1970 West Germany 1974 Argentina 1978 Spain 1982 Mexico 1986 Italy 1990 United
+States 1994 France 1998 South Korea / Japan 2002 Germany 2006 South Africa 2010 Brazil 2014 Russia 2018 Qatar 2022 2026 2030 2034 Qualification 1930 1934 1938
+1950 1954 1958 1962 1966 1970 1978 1982 1986 1990 1994 1998 2002 2006 2014 2018 Finals 1930 1934 1938 1950 1954 1958 1962 1966 1970 1978 1982 1986 1990 1994
+1998 2002 2006 2014 2018 Squads 1930 1934 1938 1950 1954 1958 1962 1966 1970 1978 1982 1986
+</item 6>
+
+<item 7>
+FIFA World Cup hosts
+FIFA World Cup hosts - wikipedia FIFA World Cup hosts Jump to : navigation , search Map of FIFA World Cup final hosts , 1930 -- 2014 . Dark green : twice ;
+middle green : once ; light green : planned until 2022 Sixteen countries have been FIFA World Cup hosts in the competition 's twenty tournaments since the
+inaugural World Cup in 1930 . The organization at first awarded hosting to countries at meetings of FIFA 's congress . The choice of location was controversial
+in the earliest tournaments , given the three - week boat journey between South America and Europe , the two centers of strength in football at the time . The
+decision to hold the first cup in Uruguay , for example , led to only four European nations competing . The next two World Cups were both held in Europe . The
+decision to hold the second of these , the 1938 FIFA World Cup , in France was controversial , as the South American countries had been led to understand that
+the World Cup would rotate between the two continents . Both Argentina and Uruguay thus boycotted the tournament .
+</item 7>
+
+<item 8>
+FIFA World Cup hosts
+( PDF ) . PricewaterhouseCoopers . May 2010 . pp. 6 -- 7 . Retrieved 2 August 2014 . Jump up ^ Smallwood , John ( 11 June 2014 ) . `` Ultimate home field
+advantage : Host nation luck '' . Philadelphia Daily News . Retrieved 2 August 2014 . External links ( edit ) FIFA World Cup Host Announcement Decision ( PDF )
+FIFA World Cup hosts 1930 : Uruguay 1934 : Italy 1938 : France 1950 : Brazil 1954 : Switzerland 1958 : Sweden 1962 : Chile 1966 : England 1970 : Mexico 1974 :
+West Germany 1978 : Argentina 1982 : Spain 1986 : Mexico 1990 : Italy 1994 : United States 1998 : France 2002 : South Korea & Japan 2006 : Germany 2010 : South
+Africa 2014 : Brazil 2018 : Russia 2022 : Qatar FIFA World Cup Tournaments Uruguay 1930 Italy 1934 France 1938 Brazil 1950 Switzerland 1954 Sweden 1958 Chile
+1962 England
+</item 8>
+
+<item 9>
+FIFA World Cup hosts
+The vote was held in Zürich ( for the third straight time ) on 4 July 1988 . The United States won the bid by receiving a little over half of the votes by the
+Exco members . Results : United States , 10 votes Morocco , 7 votes Brazil , 2 votes Chile withdrew 1998 FIFA World Cup ( edit ) Main article : 1998 FIFA World
+Cup Bids : England France Germany Morocco Switzerland This vote was held in Zürich for the fourth straight time on 1 July 1992 . Only one round of voting was
+required to have France assume the hosting job over Morocco . Result : France , 12 votes Morocco , 7 votes Switzerland withdrew England withdrew Germany
+withdrew 2002 FIFA World Cup ( edit ) Main article : 2002 FIFA World Cup Bids : South Korea / Japan Mexico On 31 May 1996 , the hosting selection meeting was
+held in Zürich for the fifth straight time . A joint bid was formed between Japan and South Korea , and the bid was `` voted by acclamation '' , an oral vote
+without ballots . The first joint bid of the World Cup was approved , edging out Mexico .
+</item 9>
+
+<item 10>
+FIFA World Cup hosts
+^ Jump up to : Joint bid by Libya and Tunisia . Host country performances ( edit ) Further information : National team appearances in the FIFA World Cup It is
+widely considered that home advantage is common in the World Cup , with the host team usually performing above average . Of the eight countries that have won
+the tournament , only Brazil and Spain were not champions at home , and both England and France had their only titles as hosts . Further , Sweden got to its
+only final as hosts of the 1958 tournament , and only the Swedes and Brazilians finished as runner - up in home soil . The host country reached the semi-finals
+thirteen times in twenty tournaments , and both Chile and South Korea had their only finishes on the top four at home . Only South Africa in 2010 managed to not
+go past the group stage . # Performance Team Year Pld Win % GF GA GD GD / M GF / M Champion Uruguay 1930 0 0 100 % 15 12 3.8 Champion France 1998 7 6 0 93 % 15
+13 1.9 2.
+</item 10>
+=== END ITEM id=6121948f904cf6e5 ===
+
+=== ITEM id=b8139ea74e8fc64c ===
+Gold sentences and facts:
+Sentence 0: Bay of Montevideo
+  Fact 0.0: Bay of Montevideo
+
+Retrieved items:
+<item 1>
+Dead Sea
+New Caledonia Solomon Islands ( archipelago ) Vanuatu Kula Gulf Australia Capital Country Eastern Australia Lake Eyre basin Murray -- Darling basin Northern
+Australia Nullarbor Plain Outback Southern Australia Maralinga Sunraysia Great Victoria Desert Gulf of Carpentaria Gulf St Vincent Lefevre Peninsula Fleurieu
+Peninsula Yorke Peninsula Eyre Peninsula Mornington Peninsula Bellarine Peninsula Mount Henry Peninsula Melanesia Islands Region Bismarck Archipelago Solomon
+Islands Archipelago Fiji New Caledonia Papua New Guinea Vanuatu Micronesia Caroline Islands Federated States of Micronesia Palau Guam Kiribati Marshall Islands
+Nauru Northern Mariana Islands Wake Island Polynesia Easter Island Hawaiian Islands Cook Islands French Polynesia Austral Islands Gambier Islands Marquesas
+Islands Society Islands Tuamotu Kermadec Islands Mangareva Islands Samoa Tokelau Tonga Tuvalu Ring of Fire Regions of South America East Amazon basin Atlantic
+Forest Caatinga Cerrado North Caribbean South America West Indies Los Llanos The Guianas Amazon basin Amazon rainforest Gulf of Paria Paria Peninsula Paraguaná
+Peninsula Orinoco Delta South Tierra del Fuego Patagonia Pampas Pantanal Gran
+</item 1>
+
+<item 2>
+FIFA World Cup hosts
+Under FIFA rules as of 2017 , the 2030 World Cup can not be held in Asia ( AFC ) because the Asian Football Confederation is excluded from the bidding following
+the selection of Qatar in 2022 . Also in June 2017 , UEFA 's president Aleksander Čeferin stated that Europe ( UEFA ) will definitely fight for its right to
+host the 2030 World Cup . The Uruguay -- Argentina bid would coincide with the centennial anniversary of the first FIFA World Cup final , and the bicentennial
+of the first Constitution of Uruguay . The Uruguay - Argentina bid was officially confirmed on 29 July 2017 . Paraguay is aiming for joining the bid , but this
+is not confirmed or discarded yet . The efforts for the inclusion of Paraguay in the bid caused discomfort in the Uruguayan Football Association , and Wilmar
+Valdéz ( AUF president ) accused some insistence of the Conmebol although it is not official that Paraguay joins the event . Chile also wants to organize the
+World Cup with Uruguay and Argentina . A joint bid was announced by the Argentine Football Association and the Uruguayan Football Association on 29 July 2017 .
+</item 2>
+
+<item 3>
+Sub-Saharan Africa
+Peninsula Bellarine Peninsula Mount Henry Peninsula Melanesia Islands Region Bismarck Archipelago Solomon Islands Archipelago Fiji New Caledonia Papua New
+Guinea Vanuatu Micronesia Caroline Islands Federated States of Micronesia Palau Guam Kiribati Marshall Islands Nauru Northern Mariana Islands Wake Island
+Polynesia Easter Island Hawaiian Islands Cook Islands French Polynesia Austral Islands Gambier Islands Marquesas Islands Society Islands Tuamotu Kermadec
+Islands Mangareva Islands Samoa Tokelau Tonga Tuvalu Ring of Fire Regions of South America East Amazon basin Atlantic Forest Caatinga Cerrado North Caribbean
+South America West Indies Los Llanos The Guianas Amazon basin Amazon rainforest Gulf of Paria Paria Peninsula Paraguaná Peninsula Orinoco Delta South Tierra del
+Fuego Patagonia Pampas Pantanal Gran Chaco Chiquitano dry forests Valdes Peninsula West Andes Tropical Andes Wet Andes Dry Andes Pariacaca mountain range
+Altiplano Atacama Desert Latin Hispanic American Cordillera Ring of Fire LAC Polar regions Antarctic Antarctic Peninsula East Antarctica West Antarctica Eklund
+Islands Ecozone Extreme points Islands Arctic Arctic Alaska British Arctic Territories Canadian Arctic
+</item 3>
+
+<item 4>
+FIFA World Cup hosts
+Retrieved 14 January 2017 . Jump up ^ `` UEFA will ' fight ' for Europe 's right to host 2030 World Cup '' . Retrieved 2 June 2017 . ^ Jump up to : Molestia en
+Uruguay por video de Conmebol ( in Spanish ) Jump up ^ ElPais . `` Chile no se rinde con ser sede '' ( in Spanish ) . Retrieved 15 March 2018 . Jump up ^ Dudko
+, James ( 29 July 2017 ) . `` Argentina , Uruguay Announce Bid to Host 2030 FIFA World Cup '' . Bleacher Report . Turner Broadcasting System . Jump up ^ Gadd ,
+Mick ( 1 September 2017 ) . `` Lionel Messi and Luis Suarez campaign for Uruguay and Argentina 's 2030 World Cup bid before 0 - 0 draw '' . Daily Mirror . Jump
+up ^ `` Es oficial : Paraguay se suma a la candidatura de Argentina y Uruguay para el Mundial 2030 '' ( It 's official : Paraguay adds itself to the Argentina
+and Uruguay bid ) ( in Spanish ) .
+</item 4>
+
+<item 5>
+Category:Bodies of water of Uruguay
+Category : Bodies of water of Uruguay - wikipedia Help Category : Bodies of water of Uruguay Jump to : navigation , search Wikimedia Commons has media related
+to Bodies of water in Uruguay . This category has the following 4 subcategories , out of 4 total . ► Bays of Uruguay ‎ ( 1 P ) ► Lakes of Uruguay ‎ ( 5 P ) ►
+Rivers of Uruguay ‎ ( 2 C , 35 P ) ► Springs of Uruguay ‎ ( 1 P ) Pages in category `` Bodies of water of Uruguay '' This category contains only the following
+page . This list may not reflect recent changes ( learn more ) . Bay of Montevideo Retrieved from ``
+https://en.wikipedia.org/w/index.php?title=Category:Bodies_of_water_of_Uruguay&oldid=756422847 '' Categories : Landforms of Uruguay Bodies of water by country
+Water in Uruguay Bodies of water of South America by country Talk Help About Wikipedia Azərbaycanca Deutsch فارسی 한국어 Magyar Português Türkçe اردو Edit links
+This page was last edited on 24 December 2016 , at 03 : 52 . About Wikipedia
+</item 5>
+
+<item 6>
+Dead Sea
+Peninsula Orinoco Delta South Tierra del Fuego Patagonia Pampas Pantanal Gran Chaco Chiquitano dry forests Valdes Peninsula West Andes Tropical Andes Wet Andes
+Dry Andes Pariacaca mountain range Altiplano Atacama Desert Latin Hispanic American Cordillera Ring of Fire LAC Polar regions Antarctic Antarctic Peninsula East
+Antarctica West Antarctica Eklund Islands Ecozone Extreme points Islands Arctic Arctic Alaska British Arctic Territories Canadian Arctic Archipelago Finnmark
+Greenland Northern Canada Northwest Territories Nunavik Nunavut Russian Arctic Sakha Sápmi Yukon North American Arctic Earth 's oceans and seas Arctic Ocean
+Amundsen Gulf Barents Sea Beaufort Sea Chukchi Sea East Siberian Sea Greenland Sea Gulf of Boothia Kara Sea Laptev Sea Lincoln Sea Prince Gustav Adolf Sea
+Pechora Sea Queen Victoria Sea Wandel Sea White Sea Atlantic Ocean Adriatic Sea Aegean Sea Alboran Sea Archipelago Sea Argentine Sea Baffin Bay Balearic Sea
+Baltic Sea Bay of Biscay Bay of Bothnia Bay of Campeche Bay of Fundy Black Sea Bothnian Sea Caribbean Sea Celtic Sea English Channel Foxe Basin Greenland Sea
+Gulf of Bothnia Gulf of
+</item 6>
+
+<item 7>
+FIFA World Cup hosts
+The original bid logo for the Uruguay - Argentina World Cup Bid . Confirmed 2030 bids : CONMEBOL : Uruguay / Argentina / Paraguay : Uruguay -- Argentina --
+Paraguay 2030 FIFA World Cup bid Expressed interest in bidding : UEFA : England : England 2030 FIFA World Cup bid 2034 FIFA World Cup ( edit ) Main article :
+2034 FIFA World Cup The first bid for the 2034 FIFA World Cup has been proposed as a collective bid by the members of the Association of Southeast Asian Nations
+. The idea of a combined ASEAN bid had been mooted as early as January 2011 , when the Football Association of Singapore 's then - President , Zainudin Nordin ,
+said in a statement that the proposal had been made at an ASEAN Foreign Ministers meeting . In 2013 , Nordin and Special Olympics Malaysia President , Datuk
+Mohamed Feisol Hassan , recalled the idea for ASEAN to jointly host a World Cup . Under FIFA rules as of 2017 , the 2030 World Cup can not be held in Asia ( AFC
+) as Asian Football Confederation members are excluded from the bidding following the selection of Qatar in 2022 .
+</item 7>
+
+<item 8>
+Cuban War of Independence
+) Jamaica ( 1655 ) Canary Islands ( 1657 ) Jamaica ( 1657 ) Jamaica ( 1658 ) North America ( 1702 -- 13 ) Chiloé ( 1712 ) Bahamas ( 1720 ) Banda Oriental ( 1735
+-- 37 ) North America ( 1739 -- 48 ) Sacramento ( 1762 -- 63 ) Cuba ( 1762 ) Nicaragua ( 1762 ) Philippines ( 1762 ) Sacramento ( 1776 -- 77 ) North America (
+1779 -- 83 ) Americas ( 1796 -- 1808 ) Río de la Plata ( 1806 -- 07 ) Ecuador ( 1809 ) Peru ( 1811 -- 24 ) Bolivia ( 1809 -- 25 ) Florida ( 1810 ) Paraguay (
+1810 -- 11 ) Argentina ( 1810 -- 18 ) Mexico ( 1810 -- 21 ) Chile ( 1810 -- 26 ) El Salvador ( 1811 ) Uruguay ( 1811 ) Venezuela ( 1811 -- 23 ) Colombia ( 1815
+-- 16 ) Colombia ( 1819 -- 20 ) Ecuador (
+</item 8>
+
+<item 9>
+Pan-American Highway
+Other branches probably exist across the center of South America . Almost all Pan-American sections in Gran Buenos Aires are modern and fast main highways West
+Access to Buenos Aires Brazil and Uruguay ( edit ) A continuation of the Pan-American Highway to the Brazilian cities of São Paulo and Rio de Janeiro uses a
+ferry from Buenos Aires to Colonia in Uruguay and Uruguay Highway 1 to Montevideo . Uruguay Highway 9 and Brazil Highway 471 route to near Pelotas , from where
+Brazil Highway 116 leads to Brazilian main cities . Guyana , Suriname and French Guyana ( edit ) The highway does not have official segments to Belize , Guyana
+, Suriname and French Guiana , nor to any of the island nations in the Americas . However , highways from Venezuela link to Brazilian Trans - Amazonian highway
+that provides a southwest entrance to Guyana , route to the coast , and follow a coastal route through Suriname to French Guiana . West Indies section ( edit )
+Plans have been discussed for including the West Indies in the Pan American Highway system . According to these , a system of ferries would be established to
+connect terminal points of the highway .
+</item 9>
+
+<item 10>
+Pan-American Highway
+In Chile , the highway follows Chile Route 5 south to a point north of Santiago ( Llaillay ) , where the highway splits into two parts , one of which goes
+through Chilean territory to Puerto Montt , where it splits again , to Quellón on Chiloé Island , and to its continuation as the Carretera Austral . The other
+part goes east along Chile Route 60 , which becomes Argentina National Route 7 at the Argentinian border and continues to Buenos Aires , the end of the main
+highway . The highway network also continues south of Buenos Aires along Argentina National Route 3 towards the city of Ushuaia in Tierra del Fuego . Another
+branch , from Buenos Aires to Asunción in Paraguay , heads out of Buenos Aires on Argentina National Route 9 . It switches to Argentina National Route 11 at
+Rosario , which crosses the border with Paraguay right at Asunción . Other branches probably exist across the center of South America .
+</item 10>
+=== END ITEM id=b8139ea74e8fc64c ===
+
+=== ITEM id=fc5727307b2f424e ===
+Gold sentences and facts:
+Sentence 0: Year Rank Player Team Points 1992 1st Abedi Pele Marseille -- 1993 1st Rashidi Yekini Vitória de Setúbal -- 1994 1st Emmanuel Amunike Sporting CP 48 2nd George Weah Paris Saint - Germain 44 Rashidi Yekini Olympiacos 1995 1st George Weah Milan -- 2nd Emmanuel Amunike Sporting CP -- 3rd Daniel Amokachi Everton -- 1st Nwankwo Kanu Internazionale -- 2nd George Weah Milan -- 3rd Daniel Amokachi Beşiktaş -- 1st Victor Ikpeba Monaco 56 2nd Japhet N'Doram Monaco 40 3rd Taribo West Internazionale 35 1998 1st Mustapha Hadji Deportivo La Coruña 76 2nd Jay - Jay Okocha Paris Saint - Germain 74 3rd Sunday Oliseh Ajax 58 1999 1st Nwankwo Kanu Arsenal 46 2nd Samuel Kuffour Bayern Munich 44 3rd Ibrahima Bakayoko Marseille 42 2000 1st Patrick M'Boma Parma 123 2nd Lauren Mallorca 36 3rd Samuel Eto'o Mallorca 29 1st El Hadji Diouf Lens 93 2nd Samuel Kuffour Bayern Munich 66 3rd Samuel Eto'o Mallorca 34 2002 1st El Hadji Diouf Liverpool 93 2nd Papa Bouba Diop Lens 46 3rd Mido Ajax 42 2003 1st Samuel Eto'o Mallorca -- 2nd Didier Drogba Marseille -- 3rd Jay - Jay Okocha Bolton Wanderers -- 1st Samuel Eto'o Barcelona 116 2nd Didier Drogba Chelsea 90 3rd Jay - Jay Okocha Bolton Wanderers 68 2005 1st Samuel Eto'o Barcelona 108 2nd Didier Drogba Chelsea 106 3rd Michael Essien Chelsea 50 2006 1st Didier Drogba Chelsea 79 2nd Samuel Eto'o Barcelona 76 3rd Michael Essien Chelsea 36 2007 1st Frédéric Kanouté Sevilla -- 2nd Michael Essien Chelsea -- 3rd Didier Drogba Chelsea -- 2008 1st Emmanuel Adebayor Arsenal 74 2nd Mohamed Aboutrika Al - Ahly 53 3rd Michael Essien Chelsea 36 2009 1st Didier Drogba Chelsea 92 2nd Samuel Eto'o Internazionale 69 3rd Michael Essien Chelsea 43 1st Samuel Eto'o Internazionale -- 2nd Asamoah Gyan Sunderland -- 3rd Didier Drogba Chelsea -- 2011 1st Yaya Touré Manchester City -- 2nd Seydou Keita Barcelona -- 3rd André Ayew Marseille -- 2012 1st Yaya Touré Manchester City -- 2nd Didier Drogba Shanghai Shenhua -- 3rd Alex Song Barcelona -- 2013 1st Yaya Touré Manchester City 373 2nd John Obi Mikel Chelsea 265 3rd Didier Drogba Galatasaray 236 2014 1st Yaya Touré Manchester City 175 2nd Pierre - Emerick Aubameyang Borussia Dortmund 120 3rd Vincent Enyeama Lille 105 2015 1st Pierre - Emerick Aubameyang Borussia Dortmund 143 2nd Yaya Touré Manchester City 136 3rd André Ayew Swansea City 112 2016 1st Riyad Mahrez Leicester City 361 2nd Pierre - Emerick Aubameyang Borussia Dortmund 313 3rd Sadio Mané Liverpool 186 2017 1st Mohamed Salah Liverpool 625 2nd Sadio Mané Liverpool 507 3rd Pierre - Emerick Aubameyang Borussia Dortmund 311
+  Fact 0.0: In 1992, Abedi Pele of Marseille ranked 1st with no points listed.
+  Fact 0.1: In 1993, Rashidi Yekini of Vitória de Setúbal ranked 1st with no points listed.
+  Fact 0.2: In 1994, Emmanuel Amunike of Sporting CP ranked 1st with 48 points.
+  Fact 0.3: In 1994, George Weah of Paris Saint-Germain ranked 2nd with 44 points.
+  Fact 0.4: In 1994, Rashidi Yekini of Olympiacos is listed with no rank shown.
+  Fact 0.5: In 1995, George Weah of Milan ranked 1st with no points listed.
+  Fact 0.6: In 1995, Emmanuel Amunike of Sporting CP ranked 2nd with no points listed.
+  Fact 0.7: In 1995, Daniel Amokachi of Everton ranked 3rd with no points listed.
+  Fact 0.8: In an entry with no year label, Nwankwo Kanu of Internazionale ranked 1st with no points listed.
+  Fact 0.9: In an entry with no year label, George Weah of Milan ranked 2nd with no points listed.
+  Fact 0.10: In an entry with no year label, Daniel Amokachi of Beşiktaş ranked 3rd with no points listed.
+  Fact 0.11: In an entry with no year label, Victor Ikpeba of Monaco ranked 1st with 56 points.
+  Fact 0.12: In an entry with no year label, Japhet N'Doram of Monaco ranked 2nd with 40 points.
+  Fact 0.13: In an entry with no year label, Taribo West of Internazionale ranked 3rd with 35 points.
+  Fact 0.14: In 1998, Mustapha Hadji of Deportivo La Coruña ranked 1st with 76 points.
+  Fact 0.15: In 1998, Jay-Jay Okocha of Paris Saint-Germain ranked 2nd with 74 points.
+  Fact 0.16: In 1998, Sunday Oliseh of Ajax ranked 3rd with 58 points.
+  Fact 0.17: In 1999, Nwankwo Kanu of Arsenal ranked 1st with 46 points.
+  Fact 0.18: In 1999, Samuel Kuffour of Bayern Munich ranked 2nd with 44 points.
+  Fact 0.19: In 1999, Ibrahima Bakayoko of Marseille ranked 3rd with 42 points.
+  Fact 0.20: In 2000, Patrick M'Boma of Parma ranked 1st with 123 points.
+  Fact 0.21: In 2000, Lauren of Mallorca ranked 2nd with 36 points.
+  Fact 0.22: In 2000, Samuel Eto'o of Mallorca ranked 3rd with 29 points.
+  Fact 0.23: In an entry with no year label, El Hadji Diouf of Lens ranked 1st with 93 points.
+  Fact 0.24: In an entry with no year label, Samuel Kuffour of Bayern Munich ranked 2nd with 66 points.
+  Fact 0.25: In an entry with no year label, Samuel Eto'o of Mallorca ranked 3rd with 34 points.
+  Fact 0.26: In 2002, El Hadji Diouf of Liverpool ranked 1st with 93 points.
+  Fact 0.27: In 2002, Papa Bouba Diop of Lens ranked 2nd with 46 points.
+  Fact 0.28: In 2002, Mido of Ajax ranked 3rd with 42 points.
+  Fact 0.29: In 2003, Samuel Eto'o of Mallorca ranked 1st with no points listed.
+  Fact 0.30: In 2003, Didier Drogba of Marseille ranked 2nd with no points listed.
+  Fact 0.31: In 2003, Jay-Jay Okocha of Bolton Wanderers ranked 3rd with no points listed.
+  Fact 0.32: In an entry with no year label, Samuel Eto'o of Barcelona ranked 1st with 116 points.
+  Fact 0.33: In an entry with no year label, Didier Drogba of Chelsea ranked 2nd with 90 points.
+  Fact 0.34: In an entry with no year label, Jay-Jay Okocha of Bolton Wanderers ranked 3rd with 68 points.
+  Fact 0.35: In 2005, Samuel Eto'o of Barcelona ranked 1st with 108 points.
+  Fact 0.36: In 2005, Didier Drogba of Chelsea ranked 2nd with 106 points.
+  Fact 0.37: In 2005, Michael Essien of Chelsea ranked 3rd with 50 points.
+  Fact 0.38: In 2006, Didier Drogba of Chelsea ranked 1st with 79 points.
+  Fact 0.39: In 2006, Samuel Eto'o of Barcelona ranked 2nd with 76 points.
+  Fact 0.40: In 2006, Michael Essien of Chelsea ranked 3rd with 36 points.
+  Fact 0.41: In 2007, Frédéric Kanouté of Sevilla ranked 1st with no points listed.
+  Fact 0.42: In 2007, Michael Essien of Chelsea ranked 2nd with no points listed.
+  Fact 0.43: In 2007, Didier Drogba of Chelsea ranked 3rd with no points listed.
+  Fact 0.44: In 2008, Emmanuel Adebayor of Arsenal ranked 1st with 74 points.
+  Fact 0.45: In 2008, Mohamed Aboutrika of Al-Ahly ranked 2nd with 53 points.
+  Fact 0.46: In 2008, Michael Essien of Chelsea ranked 3rd with 36 points.
+  Fact 0.47: In 2009, Didier Drogba of Chelsea ranked 1st with 92 points.
+  Fact 0.48: In 2009, Samuel Eto'o of Internazionale ranked 2nd with 69 points.
+  Fact 0.49: In 2009, Michael Essien of Chelsea ranked 3rd with 43 points.
+  Fact 0.50: In an entry with no year label, Samuel Eto'o of Internazionale ranked 1st with no points listed.
+  Fact 0.51: In an entry with no year label, Asamoah Gyan of Sunderland ranked 2nd with no points listed.
+  Fact 0.52: In an entry with no year label, Didier Drogba of Chelsea ranked 3rd with no points listed.
+  Fact 0.53: In 2011, Yaya Touré of Manchester City ranked 1st with no points listed.
+  Fact 0.54: In 2011, Seydou Keita of Barcelona ranked 2nd with no points listed.
+  Fact 0.55: In 2011, André Ayew of Marseille ranked 3rd with no points listed.
+  Fact 0.56: In 2012, Yaya Touré of Manchester City ranked 1st with no points listed.
+  Fact 0.57: In 2012, Didier Drogba of Shanghai Shenhua ranked 2nd with no points listed.
+  Fact 0.58: In 2012, Alex Song of Barcelona ranked 3rd with no points listed.
+  Fact 0.59: In 2013, Yaya Touré of Manchester City ranked 1st with 373 points.
+  Fact 0.60: In 2013, John Obi Mikel of Chelsea ranked 2nd with 265 points.
+  Fact 0.61: In 2013, Didier Drogba of Galatasaray ranked 3rd with 236 points.
+  Fact 0.62: In 2014, Yaya Touré of Manchester City ranked 1st with 175 points.
+  Fact 0.63: In 2014, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 2nd with 120 points.
+  Fact 0.64: In 2014, Vincent Enyeama of Lille ranked 3rd with 105 points.
+  Fact 0.65: In 2015, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 1st with 143 points.
+  Fact 0.66: In 2015, Yaya Touré of Manchester City ranked 2nd with 136 points.
+  Fact 0.67: In 2015, André Ayew of Swansea City ranked 3rd with 112 points.
+  Fact 0.68: In 2016, Riyad Mahrez of Leicester City ranked 1st with 361 points.
+  Fact 0.69: In 2016, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 2nd with 313 points.
+  Fact 0.70: In 2016, Sadio Mané of Liverpool ranked 3rd with 186 points.
+  Fact 0.71: In 2017, Mohamed Salah of Liverpool ranked 1st with 625 points.
+  Fact 0.72: In 2017, Sadio Mané of Liverpool ranked 2nd with 507 points.
+  Fact 0.73: In 2017, Pierre-Emerick Aubameyang of Borussia Dortmund ranked 3rd with 311 points.
+
+Retrieved items:
+<item 1>
+African Footballer of the Year
+Chelsea 265 3rd Didier Drogba Galatasaray 236 2014 1st Yaya Touré Manchester City 175 2nd Pierre - Emerick Aubameyang Borussia Dortmund 120 3rd Vincent Enyeama
+Lille 105 2015 1st Pierre - Emerick Aubameyang Borussia Dortmund 143 2nd Yaya Touré Manchester City 136 3rd André Ayew Swansea City 112 2016 1st Riyad Mahrez
+Leicester City 361 2nd Pierre - Emerick Aubameyang Borussia Dortmund 313 3rd Sadio Mané Liverpool 186 2017 1st Mohamed Salah Liverpool 625 2nd Sadio Mané
+Liverpool 507 3rd Pierre - Emerick Aubameyang Borussia Dortmund 311 Wins By Country ( edit ) Nation Winners Runners - up Third places Cameroon 11 8 11 Ivory
+Coast 8 6 7 Ghana 6 7 7 Nigeria 5 6 7 Morocco 0 Algeria 5 Liberia -- Egypt Mali -- Senegal Guinea DR Congo -- Gabon Zambia -- Togo -- Tunisia -- -- Congo -- --
+Chad -- -- Wins
+</item 1>
+
+<item 2>
+African Footballer of the Year
+Club -- -- El Mokawloon -- -- Sunderland -- -- Girondins Bordeaux -- -- FC Mulhouse -- -- Hearts of Oak -- -- FC Sion -- -- Aydınspor -- -- JS Kabylie -- --
+Bolton Wanderers -- -- Everton FC -- -- Ajax Amsterdam -- -- Ismaily SC -- -- Zamalek SC -- AS Cannes -- -- Stade Lavallois -- -- Lille OSC -- -- Stade Rennais
+-- -- Olympiacos -- -- Horoya AC -- -- PSV Eindhoven -- -- OC Agaza -- -- Beşiktaş -- -- Galatasaray -- -- Swansea City -- -- See also ( edit ) BBC African
+Footballer of the Year African Women Footballer of the Year FIFA World Player of the Year CAF Awards References ( edit ) Jump up ^ `` African Player of the Year
+1993 '' . Rsssf.com. 2001 - 01 - 05 . Retrieved 2014 - 01 - 09 . Jump up ^ `` African Player of the Year 1994 '' . Rsssf.com. 2001 - 01 - 05 .
+</item 2>
+
+<item 3>
+African Footballer of the Year
+Odegbami Shooting Stars 41 3rd Théophile Abega Canon Yaoundé 18 1981 1st Lakhdar Belloumi GC Mascara 78 2nd Thomas N'Kono Canon Yaoundé 54 3rd Ali Fergani JS
+Kabylie 26 1982 1st Thomas N'Kono Espanyol 83 2nd Salah Assad Mulhouse 54 3rd Lakhdar Belloumi GC Mascara 36 1st Mahmoud El Khatib Al Ahly 98 2nd Opoku Nti
+Asante Kotoko 89 3rd Rafiou Moutairou OC Agaza 19 1984 1st Théophile Abega Toulouse 124 2nd Joseph - Antoine Bell El Mokawloon 65 Ibrahim Youssef Zamalek 1985
+1st Mohamed Timoumi AS FAR 113 2nd Rabah Madjer Porto 45 3rd Ibrahim Youssef Zamalek 39 1986 1st Ezzaki Badou Mallorca 125 2nd Aziz Bouderbala Sion 88 3rd
+</item 3>
+
+<item 4>
+African Footballer of the Year
+African Footballer of the Year - wikipedia African Footballer of the Year Jump to : navigation , search The African Footballer of the Year award , presented to
+the best African footballer each year , has been conferred by the Confederation of African Football ( CAF ) since 1992 . An earlier African Footballer of the
+Year Golden Ball award was given out between 1970 and 1994 by France Football magazine . The changes resulted in parallel Golden Ball awards given out to Abedi
+Pele and George Weah in 1993 and 1994 by the magazine although the CAF sponsored awards for those years were won respectively by Rashidi Yekini and Emmanuel
+Amuneke , as well as two awards given to Abedi Pelé in 1992 . France Football discontinued the election from 1995 after the European Ballon d'Or -- also awarded
+by the magazine -- had been opened to all players in the European leagues . On 2 February 2008 , Sevilla 's Frédéric Kanouté was named the 2007 African
+Footballer of the Year .
+</item 4>
+
+<item 5>
+African Footballer of the Year
+Cannes 52 1992 1st Abedi Pele Marseille 198 2nd George Weah Paris Saint - Germain 161 3rd Tony Yeboah Eintracht Frankfurt 64 1993 1st Abedi Pele Marseille 119
+2nd Tony Yeboah Eintracht Frankfurt 117 3rd Rashidi Yekini Vitória de Setúbal 104 1994 1st George Weah Paris Saint - Germain 148 2nd Emmanuel Amunike Sporting
+CP 133 3rd Daniel Amokachi Everton 99 CAF award ( 1992 -- present ) ( edit ) Samuel Eto'o won the award four times . Yaya Touré won the award four consecutive
+times from 2011 to 2014 . Pierre - Emerick Aubameyang was the first player from Gabon to win the award in 2015 . Mohamed Salah is the latest player to win the
+award in 2017 . Year Rank Player Team Points 1992 1st Abedi Pele Marseille -- 1993 1st Rashidi Yekini Vitória de Setúbal -- 1994 1st
+</item 5>
+
+<item 6>
+African Footballer of the Year
+Zamalek 28 1st Ahmed Faras Mohammédia 28 2nd Roger Milla Tonnerre Yaoundé 24 Mamadou Aliou Kéïta Hafia 1976 1st Roger Milla Tonnerre Yaoundé 33 2nd Papa Camara
+Hafia 32 3rd Ali Bencheikh MC Alger 27 1977 1st Tarak Dhiab Espérance Tunis 45 2nd Papa Camara Hafia 33 3rd Segun Odegbami Shooting Stars 29 1978 1st Karim
+Abdul Razak Asante Kotoko 58 2nd Ali Bencheikh MC Alger 33 3rd Thomas N'Kono Canon Yaoundé 29 1979 1st Thomas N'Kono Canon Yaoundé 55 2nd Adolf Armah Hearts of
+Oak 23 3rd Kerfalla Bangoura Horoya 15 1980 1st Jean Manga - Onguéné Canon Yaoundé 64 2nd Segun Odegbami Shooting Stars 41 3rd Théophile Abega Canon Yaoundé
+</item 6>
+
+<item 7>
+African Footballer of the Year
+Keïta 1971 : Sunday 1972 : Souleymane 1973 : Bwanga 1974 : Moukila 1975 : Faras 1976 : Milla 1977 : Dhiab 1978 : Abdul Razak 1979 : N'Kono 1980 : Manga -
+Onguéné 1981 : Belloumi 1982 : N'Kono 1983 : El Khatib 1984 : Abega 1985 : Timoumi 1986 : Zaki 1987 : Madjer 1988 : Bwalya 1989 : Weah 1990 : Milla 1991 : Abedi
+Pele 1992 : Abedi Pele 1993 : Abedi Pele 1994 : Weah CAF award 1992 : Abedi Pele 1993 : Yekini 1994 : Amunike 1995 : Weah 1996 : Kanu 1997 : Ikpeba 1998 : Hadji
+1999 : Kanu 2000 : M'Boma 2001 : Diouf 2002 :
+</item 7>
+
+<item 8>
+African Footballer of the Year
+Retrieved 2016 - 09 - 29 . Jump up ^ Kanoute named Africa 's best Jump up ^ Furious Drogba Slams CAF Over Kanoute Award And Pulls Out Football in Africa ( CAF )
+National competitions Men Africa Cup of Nations African Nations Championship Africa Futsal Cup of Nations Africa Beach Soccer Cup of Nations Women Africa Women
+Cup of Nations Women 's Olympic Qualifying Tournament African Games Youth competitions Men U-23 Cup of Nations U-20 Cup of Nations U-17 Cup of Nations African
+Games Women U-20 Cup for Women U-17 Cup for Women Club competitions Current Champions League Confederation Cup Super Cup Defunct CAF Cup Cup Winners ' Cup Afro
+- Asian Championship Lists and awards African Footballer of the Year African Women 's Footballer of the Year CAF Awards CAF 5 - Year Ranking List of African
+national football team managers Sub-regions Northern Africa UNAF Western Africa WAFU Central Africa UNIFFAC Eastern Africa CECAFA Southern Africa COSAFA
+CAFOnline.com African Footballer of the Year France Football award 1970 : Keïta 1971 : Sunday 1972 : Souleymane 1973 :
+</item 8>
+
+<item 9>
+African Footballer of the Year
+DR Congo -- Gabon Zambia -- Togo -- Tunisia -- -- Congo -- -- Chad -- -- Wins By Club ( edit ) Club Winners Runners - up Third places Olympique Marseille
+Manchester City -- Chelsea 6 AS Monaco Barcelona Asante Kotoko -- Canon Yaoundé RCD Mallorca Inter Milan Liverpool Arsenal -- -- Paris SG -- Hafia Conacry TP
+Mazembe -- Borussia Dortmund -- Sporting CP -- Al Ahly FC Porto Tonnerre Yaoundé -- RC Lens -- Milan -- Sporting CP -- GC Mascara -- Vitória de Setúbal --
+Cercle Brugge -- -- CARA Brazzaville -- -- Leicester City -- -- AS Saint - Étienne -- -- Toulouse FC -- -- Parma -- -- FAR Rabat -- -- SCC Mohammédia -- -- JS
+Saint - Pierroise -- -- Deportivo de La Coruña -- -- Espanyol -- -- Sevilla -- -- Espérance ST -- -- Bayern Munich -- -- MC Alger -- ASEC Mimosas -- Montpellier
+-- Eintracht Frankfurt -- Shooting Stars -- Shanghai Shenhua -- -- Vita Club -- -- El Mokawloon -- -- Sunderland -- -- Girondins Bordeaux -- -- FC
+</item 9>
+
+<item 10>
+African Footballer of the Year
+It had already been replaced by an official award given out by the Confederation of African Football since 1992 . Year Rank Player Team Points 1970 1st Salif
+Keïta Saint - Étienne 54 2nd Laurent Pokou ASEC Abidjan 28 Ali Abo Greisha Ismaily 1971 1st Ibrahim Sunday Asante Kotoko 29 2nd Robert Mensah Asante Kotoko 15
+3rd François Ndoumbé Canon Yaoundé 13 1972 1st Chérif Souleymane Hafia 21 2nd Bwanga Tshimen TP Mazembe 16 3rd Petit Sory Hafia 14 1973 1st Bwanga Tshimen TP
+Mazembe 49 2nd Kazadi Mwamba TP Mazembe 44 3rd Laurent Pokou ASEC Abidjan 41 1st Paul Moukila CARA Brazzaville 57 2nd Lobilo Boba Vita Club 32 3rd Hassan
+Shehata Zamalek 28 1st Ahmed Faras Mohammédia 28 2nd
+</item 10>
+=== END ITEM id=fc5727307b2f424e ===
+
+=== ITEM id=48e9fbf41261fde4 ===
+Gold sentences and facts:
+Sentence 0: Sports - related costs for the Summer Games since 1960 is on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars . Severe cost overruns made the 2014 Winter Olympics the most expensive Olympics in history ; with Russian politician Boris Nemtsov citing allegations of corruption among government officials , and Allison Stewart of the Saïd Business School at Oxford citing tight relationships between the government and construction firms . While originally budgeted at US $12 billion , the budget expanded to US $51 billion , surpassing the estimated $44 billion cost of the 2008 Summer Olympics in Beijing , making Sochi the most expensive Olympics in history .
+  Fact 0.0: Sports-related costs for the Summer Games since 1960 are on average USD 5.2 billion.
+  Fact 0.1: Sports-related costs for the Winter Games are on average USD 3.1 billion.
+Sentence 1: Host City Year Final Operating Budget Total Costs Taxpayer Contribution Profit / Loss Year Debt Paid Off Notes Athens Summer Olympics 1896 3,740,000 ₯ Donations by George Averoff of 1,000,000 ₯ covered potential losses London Summer Olympics 1908 US $394,000 est . £ 6,377 Chamonix Winter Olympics 1924 3,500,000 ₣ 2,000,000 ₣ Paris Summer Olympics 1924 5,496,610 ₣ Amsterdam Summer Olympics 1928 $1,183,000 $18,000 St. Moritz Winter Olympics 1928 CHF 706,000 CHF104 , 800 Los Angeles Summer Olympics 1932 $1,000,000 Berlin Summer Olympics 1936 $30,000,000 London Summer Olympics 1948 £ 761,688 £ 29,000 Helsinki Summer Olympics 1952 1,580,000,000 mk 49,000,000 mk Melbourne Summer Olympics 1956 A £ 5,400,000 A £ 300,000 Tokyo Summer Olympics 1964 US $ 72,000,000 Mexico City Summer Olympics 1968 US $ 176,000,000 Munich Summer Olympics 1972 1,972,000,000 DM Montreal Summer Olympics 1976 CDN $ 207,000,000 CDN $ 1,410,000,000 CDN $ 990,000,000 2006 A special tobacco tax was introduced in May 1976 to fund the loss Lake Placid Winter Olympics 1980 US $ 49,000,000 US $ 169,000,000 Moscow Summer Olympics 1980 US $ 231,000,000 US $ 1,350,000,000 USD $1,190,000,000 deficit This was the year that The United States and 64 other Nations boycotted due to the Soviet invasion of Afghanistan . Sarajevo Winter Olympics 1984 US $ 55,400,000 US $ 110,900,000 US $10,000,000 The first Olympics since 1948 to make a profit Los Angeles Summer Olympics 1984 US $ 320,000,000 US $ 413,000,000 $75,000,000 US $250,000,000 1984 The first Summer Olympics since 1932 to make a profit Calgary Winter Olympics 1988 CDN $ 438,000,000 CDN $ 899,000,000 CDN $ 425,000,000 CDN $ 32,000,000 1988 Seoul Summer Olympics 1988 USD $4,000,000,000 US $300,000,000 1988 A record profit for a government - run Olympiad Barcelona Summer Olympics 1992 US $ 850,000,000 US $ 9,300,000,000 US $10,000,000 1992 Operating costs were put at 9.1 % of the total cost . The vast majority of spending was to improve infrastructure . Albertville Winter Olympics 1992 USD $1,200,000,000 on infrastructure USD $67,000,000 Lillehammer Winter Olympics US $ 1,100,000,000 US $ 250,000,000 Atlanta Summer Olympics US $ 1,800,000,000 US $ 609,000,000 US $ 19,000,000 Despite the profit , Atlanta 's heavy reliance on corporate sponsorship drew criticism of commercialization Nagano Winter Olympics 1998 ~ US $ 10,000,000,000 in new infrastructure Net loss Estimated 2015 The full cost of the Nagano Olympics is unknown , due to Nagano Olympic Bid Committee vice-secretary general Sumikazu Yamaguchi ordering accounting documents burned Sydney Summer Olympics 2000 A $ 6,600,000,000 A $ 3,000,000,000 ( A $ 363 , 5000 , 000 borne by the public ) A $ 2,050,000,000 USD $2,100,000,000 loss 2000 Salt Lake City Winter Olympics 2002 US $ 2,000,000,000 US $ 1,200,000,000 US $ 600,000,000 US $ 101,000,000 2002 Additional security costs were incurred in the wake of the September 11 attacks Athens Summer Olympics US $ 15,000,000,000 US $ 9,000,000,000 US $ 6,200,000,000 US $ 14,500,000,000 The cost of the 2004 Athens Summer Games has been cited as a contributor to the Greek government - debt crisis . Many of the venues lie vacant and rotting ; the Independent newspaper reports as many as 21 out of 22 are unused . Turin Winter Olympics 2006 US $ 700,000,000 USD $3,200,000 The Italian government created a lottery game to cover its financial losses . Beijing Summer Olympics 2008 US $ 44,000,000,000 CNY 1,000,000,000 ( US $ 146,000,000 ) 2008 Vancouver Winter Olympics CDN $ 1,700,000,000 ( US $ 1,260,000,000 ) US $ 6,400,000,000 US $ 2,300,000,000 CDN $ 1,900,000 Included in the total US $ 6,400,000,000 cost are the $1,000,000,000 for security , $2,500,000,000 for transportation extensions and upgrades , and $900,000,000 for the new Vancouver Convention Centre ( An additional $554,000,000 was spent by the city including a portion on the Olympic Village ) . London Summer Olympics 2012 US $ 10,400,000,000 US $ 14,600,000,000 US $ 4,400,000,000 GBP £ nil 2012 Additional costs include $90 million for converting the Olympic Stadium ( London ) to a football venue Sochi Winter Olympics 2014 US $ 51,000,000,000 US $ 53,150,000 The most expensive Olympic Games in history , surpassing the previous record set by the 2008 Beijing Summer Olympic Games . Rio de Janeiro Summer Olympics 2016 US $ 13,100,000,000 US $ 11.6 billion Pyeongchang Winter Olympics 2018 US $ 12,900,000,000 Tokyo Summer Olympics 2020 Beijing Winter Olympics 2022 Paris Summer Olympics 2024 TBA 2026 Winter Olympics 2026 Los Angeles Summer Olympics 2028 TBA 2032
+  Fact 1.0: The Athens Summer Olympics of 1896 had a final figure of 3,740,000 ₯.
+  Fact 1.1: Donations by George Averoff of 1,000,000 ₯ covered potential losses at the Athens Summer Olympics of 1896.
+  Fact 1.2: The London Summer Olympics of 1908 had an estimated figure of US $394,000.
+  Fact 1.3: The London Summer Olympics of 1908 had a figure of £ 6,377.
+  Fact 1.4: The Chamonix Winter Olympics of 1924 had a figure of 3,500,000 ₣.
+  Fact 1.5: The Chamonix Winter Olympics of 1924 had a figure of 2,000,000 ₣.
+  Fact 1.6: The Paris Summer Olympics of 1924 had a figure of 5,496,610 ₣.
+  Fact 1.7: The Amsterdam Summer Olympics of 1928 had figures of $1,183,000 and $18,000.
+  Fact 1.8: The St. Moritz Winter Olympics of 1928 had figures of CHF 706,000 and CHF 104,800.
+  Fact 1.9: The Los Angeles Summer Olympics of 1932 had a figure of $1,000,000.
+  Fact 1.10: The Berlin Summer Olympics of 1936 had a figure of $30,000,000.
+  Fact 1.11: The London Summer Olympics of 1948 had figures of £ 761,688 and £ 29,000.
+  Fact 1.12: The Helsinki Summer Olympics of 1952 had figures of 1,580,000,000 mk and 49,000,000 mk.
+  Fact 1.13: The Melbourne Summer Olympics of 1956 had figures of A £ 5,400,000 and A £ 300,000.
+  Fact 1.14: The Tokyo Summer Olympics of 1964 had a figure of US $ 72,000,000.
+  Fact 1.15: The Mexico City Summer Olympics of 1968 had a figure of US $ 176,000,000.
+  Fact 1.16: The Munich Summer Olympics of 1972 had a figure of 1,972,000,000 DM.
+  Fact 1.17: The Montreal Summer Olympics of 1976 had figures of CDN $ 207,000,000, CDN $ 1,410,000,000 and CDN $ 990,000,000.
+  Fact 1.18: The Montreal Summer Olympics had its debt paid off in 2006.
+  Fact 1.19: A special tobacco tax was introduced in May 1976 to fund the Montreal Olympics loss.
+  Fact 1.20: The Lake Placid Winter Olympics of 1980 had figures of US $ 49,000,000 and US $ 169,000,000.
+  Fact 1.21: The Moscow Summer Olympics of 1980 had figures of US $ 231,000,000 and US $ 1,350,000,000.
+  Fact 1.22: The Moscow Summer Olympics of 1980 had a USD $1,190,000,000 deficit.
+  Fact 1.23: The year 1980 was the year the United States and 64 other nations boycotted the Moscow Olympics due to the Soviet invasion of Afghanistan.
+  Fact 1.24: The Sarajevo Winter Olympics of 1984 had figures of US $ 55,400,000, US $ 110,900,000 and US $10,000,000.
+  Fact 1.25: The Sarajevo Winter Olympics of 1984 was the first Olympics since 1948 to make a profit.
+  Fact 1.26: The Los Angeles Summer Olympics of 1984 had figures of US $ 320,000,000, US $ 413,000,000, $75,000,000 and US $250,000,000.
+  Fact 1.27: The Los Angeles Summer Olympics of 1984 was the first Summer Olympics since 1932 to make a profit.
+  Fact 1.28: The Calgary Winter Olympics of 1988 had figures of CDN $ 438,000,000, CDN $ 899,000,000, CDN $ 425,000,000 and CDN $ 32,000,000.
+  Fact 1.29: The Calgary Winter Olympics had its debt paid off in 1988.
+  Fact 1.30: The Seoul Summer Olympics of 1988 had figures of USD $4,000,000,000 and US $300,000,000.
+  Fact 1.31: The Seoul Summer Olympics of 1988 was a record profit for a government-run Olympiad.
+  Fact 1.32: The Barcelona Summer Olympics of 1992 had figures of US $ 850,000,000, US $ 9,300,000,000 and US $10,000,000.
+  Fact 1.33: The Barcelona Summer Olympics had its debt paid off in 1992.
+  Fact 1.34: Operating costs at the Barcelona Summer Olympics were 9.1 % of the total cost.
+  Fact 1.35: The vast majority of Barcelona Summer Olympics spending was to improve infrastructure.
+  Fact 1.36: The Albertville Winter Olympics of 1992 had a figure of USD $1,200,000,000 on infrastructure.
+  Fact 1.37: The Albertville Winter Olympics of 1992 had a figure of USD $67,000,000.
+  Fact 1.38: The Lillehammer Winter Olympics had figures of US $ 1,100,000,000 and US $ 250,000,000.
+  Fact 1.39: The Atlanta Summer Olympics had figures of US $ 1,800,000,000, US $ 609,000,000 and US $ 19,000,000.
+  Fact 1.40: Despite the profit, Atlanta's heavy reliance on corporate sponsorship drew criticism of commercialization.
+  Fact 1.41: The Nagano Winter Olympics of 1998 had about US $ 10,000,000,000 spent on new infrastructure.
+  Fact 1.42: The Nagano Winter Olympics had a net loss, with its debt paid off estimated for 2015.
+  Fact 1.43: The full cost of the Nagano Olympics is unknown.
+  Fact 1.44: The full cost of the Nagano Olympics is unknown because Nagano Olympic Bid Committee vice-secretary general Sumikazu Yamaguchi ordered accounting documents burned.
+  Fact 1.45: The Sydney Summer Olympics of 2000 had figures of A $ 6,600,000,000, A $ 3,000,000,000, A $ 363,5000,000 borne by the public, and A $ 2,050,000,000.
+  Fact 1.46: The Sydney Summer Olympics of 2000 had a USD $2,100,000,000 loss.
+  Fact 1.47: The Sydney Summer Olympics had its debt paid off in 2000.
+  Fact 1.48: The Salt Lake City Winter Olympics of 2002 had figures of US $ 2,000,000,000, US $ 1,200,000,000, US $ 600,000,000 and US $ 101,000,000.
+  Fact 1.49: The Salt Lake City Winter Olympics had its debt paid off in 2002.
+  Fact 1.50: Additional security costs were incurred for the Salt Lake City Winter Olympics in the wake of the September 11 attacks.
+  Fact 1.51: The Athens Summer Olympics of 2004 had figures of US $ 15,000,000,000, US $ 9,000,000,000, US $ 6,200,000,000 and US $ 14,500,000,000.
+  Fact 1.52: The cost of the 2004 Athens Summer Games has been cited as a contributor to the Greek government debt crisis.
+  Fact 1.53: Many of the Athens 2004 venues lie vacant and rotting.
+  Fact 1.54: The Independent newspaper reports as many as 21 out of 22 Athens 2004 venues are unused.
+  Fact 1.55: The Turin Winter Olympics of 2006 had figures of US $ 700,000,000 and USD $3,200,000.
+  Fact 1.56: The Italian government created a lottery game to cover its financial losses from the Turin Winter Olympics.
+  Fact 1.57: The Beijing Summer Olympics of 2008 had figures of US $ 44,000,000,000 and CNY 1,000,000,000 (US $ 146,000,000).
+  Fact 1.58: The Beijing Summer Olympics had its debt paid off in 2008.
+  Fact 1.59: The Vancouver Winter Olympics had figures of CDN $ 1,700,000,000 (US $ 1,260,000,000), US $ 6,400,000,000 and US $ 2,300,000,000.
+  Fact 1.60: The Vancouver Winter Olympics row includes the figure CDN $ 1,900,000.
+  Fact 1.61: The total US $ 6,400,000,000 cost of the Vancouver Winter Olympics includes $1,000,000,000 for security.
+  Fact 1.62: The total US $ 6,400,000,000 cost of the Vancouver Winter Olympics includes $2,500,000,000 for transportation extensions and upgrades.
+  Fact 1.63: The total US $ 6,400,000,000 cost of the Vancouver Winter Olympics includes $900,000,000 for the new Vancouver Convention Centre.
+  Fact 1.64: An additional $554,000,000 was spent by the city of Vancouver, including a portion on the Olympic Village.
+  Fact 1.65: The London Summer Olympics of 2012 had figures of US $ 10,400,000,000, US $ 14,600,000,000 and US $ 4,400,000,000.
+  Fact 1.66: The London Summer Olympics of 2012 had GBP £ nil listed.
+  Fact 1.67: Additional costs of the London 2012 Olympics include $90 million for converting the Olympic Stadium (London) to a football venue.
+  Fact 1.68: The Sochi Winter Olympics of 2014 had figures of US $ 51,000,000,000 and US $ 53,150,000.
+  Fact 1.69: The Sochi Winter Olympics of 2014 were the most expensive Olympic Games in history.
+  Fact 1.70: The Sochi Winter Olympics of 2014 surpassed the previous record set by the 2008 Beijing Summer Olympic Games.
+  Fact 1.71: The Rio de Janeiro Summer Olympics of 2016 had figures of US $ 13,100,000,000 and US $ 11.6 billion.
+  Fact 1.72: The Pyeongchang Winter Olympics of 2018 had a figure of US $ 12,900,000,000.
+  Fact 1.73: The table lists the Tokyo Summer Olympics of 2020, the Beijing Winter Olympics of 2022, the Paris Summer Olympics of 2024 and the 2026 Winter Olympics.
+  Fact 1.74: The table contains TBA entries alongside the 2020 to 2032 Games.
+  Fact 1.75: The table lists the Los Angeles Summer Olympics of 2028 and the 2032 Olympics.
+
+Retrieved items:
+<item 1>
+Cost of the Olympic Games
+London Summer Olympics 2012 US $ 10,400,000,000 US $ 14,600,000,000 US $ 4,400,000,000 GBP £ nil 2012 Additional costs include $90 million for converting the
+Olympic Stadium ( London ) to a football venue Sochi Winter Olympics 2014 US $ 51,000,000,000 US $ 53,150,000 The most expensive Olympic Games in history ,
+surpassing the previous record set by the 2008 Beijing Summer Olympic Games . Rio de Janeiro Summer Olympics 2016 US $ 13,100,000,000 US $ 11.6 billion
+Pyeongchang Winter Olympics 2018 US $ 12,900,000,000 Tokyo Summer Olympics 2020 Beijing Winter Olympics 2022 Paris Summer Olympics 2024 TBA 2026 Winter Olympics
+2026 Los Angeles Summer Olympics 2028 TBA 2032 See also ( edit ) List of megaprojects References ( edit ) Jump up ^ Bennetts , Marc ( 19 January 2014 ) .
+</item 1>
+
+<item 2>
+Cost of the Olympic Games
+000,000,000 US $ 1,200,000,000 US $ 600,000,000 US $ 101,000,000 2002 Additional security costs were incurred in the wake of the September 11 attacks Athens
+Summer Olympics US $ 15,000,000,000 US $ 9,000,000,000 US $ 6,200,000,000 US $ 14,500,000,000 The cost of the 2004 Athens Summer Games has been cited as a
+contributor to the Greek government - debt crisis . Many of the venues lie vacant and rotting ; the Independent newspaper reports as many as 21 out of 22 are
+unused . Turin Winter Olympics 2006 US $ 700,000,000 USD $3,200,000 The Italian government created a lottery game to cover its financial losses .
+</item 2>
+
+<item 3>
+Cost of the Olympic Games
+Cost of the Olympic Games - wikipedia Cost of the Olympic Games Jump to : navigation , search This article possibly contains original research . Please improve
+it by verifying the claims made and adding inline citations . Statements consisting only of original research should be removed . ( February 2018 ) ( Learn how
+and when to remove this template message ) Sports - related costs for the Summer Games since 1960 is on average USD 5.2 billion and for the Winter Games USD 3.1
+billion dollars . Severe cost overruns made the 2014 Winter Olympics the most expensive Olympics in history ; with Russian politician Boris Nemtsov citing
+allegations of corruption among government officials , and Allison Stewart of the Saïd Business School at Oxford citing tight relationships between the
+government and construction firms . While originally budgeted at US $12 billion , the budget expanded to US $51 billion , surpassing the estimated $44 billion
+cost of the 2008 Summer Olympics in Beijing , making Sochi the most expensive Olympics in history . The table below is listing the not so hard costs of the
+Games .
+</item 3>
+
+<item 4>
+Cost of the Olympic Games
+Jump up ^ `` Olympic Cities : Booms and Busts '' . Cnbc.com. 2012 - 01 - 19 . Retrieved 2014 - 02 - 07 . Jump up ^ `` Turin Winter Olympics 2006 - 2014 - 02 -
+06 - CIPRA : Living in the Alps '' . Retrieved 2014 - 02 - 12 . Jump up ^ `` Olympic Cities : Booms and Busts '' . Cnbc.com. 2012 - 01 - 19 . Retrieved 2014 -
+02 - 07 . Jump up ^ `` Beijing Olympics to cost China 44,000,000,000 dollars - 2008 - 06 - 08 - Pravda News '' . Retrieved 2014 - 02 - 12 . Jump up ^ `` Beijing
+Olympics ' profit exceeds 1b yuan '' . Jump up ^ `` Olympics cost B.C. $925 M '' . CBC Sports . July 9 , 2010 . Retrieved February 4 , 2013 .
+</item 4>
+
+<item 5>
+Cost of the Olympic Games
+2002 - 09 - 18 . Retrieved 2010 - 02 - 13 . Jump up ^ `` As Olympic glow fades , Athens Questions $15,000,000,000 Cost - 2008 - 07 - 21 - The Christian Science
+Monitor '' . Retrieved 2010 - 02 - 13 . Jump up ^ `` How the 2004 Olympics Triggered Greece 's Decline - 2012 - 08 - 02 - Bloomberg Business '' . Retrieved 2014
+- 02 - 12 . Jump up ^ `` Olympics ' may cost Greece dear ' - 2004 - 06 - 02 - BBC NEWS '' . BBC News . 2004 - 06 - 02 . Retrieved 2014 - 02 - 12 . Jump up ^
+Schlotterbeck , Bianca ( 19 January 2012 ) . `` Athens , Greece ( Summer , 2004 ) '' . Olympic Cities : Booms and Busts . CNBC . Retrieved 13 February 2013 .
+Jump up ^ `` Olympic Cities : Booms and Busts '' .
+</item 5>
+
+<item 6>
+Cost of the Olympic Games
+Retrieved 2014 - 02 - 12 . Jump up ^ `` Sydney 2000 - Auditor Slams Costs '' . Archived from the original on 2005 - 02 - 07 . Jump up ^ `` Hosting the Olympics
+: cash cow or money pit ? '' . Retrieved 2012 - 12 - 17 . Jump up ^ Roberts , Selena ( 2002 - 02 - 04 ) . `` IOC 's Rogge Steps into the Cold - Feb 4 , 2002 -
+The New York Times '' . Retrieved 2010 - 02 - 13 . Jump up ^ `` Olympics budget nearly $2,000,000,000 - Dec 11 , 2001 - Sports Illustrated '' . CNN . 2001 - 12
+- 11 . Retrieved 2014 - 02 - 12 . Jump up ^ `` Mitt Romney 's Olympic history in the spotlight '' . The Daily Telegraph ( Sydney ) . 28 July 2012 . Jump up ^ ``
+Salt Lake Tops Forecast - 2002 - 09 - 18 - The New York Times '' .
+</item 6>
+
+<item 7>
+Cost of the Olympic Games
+Moritz Winter Olympics 1928 CHF 706,000 CHF104 , 800 Los Angeles Summer Olympics 1932 $1,000,000 Berlin Summer Olympics 1936 $30,000,000 London Summer Olympics
+1948 £ 761,688 £ 29,000 Helsinki Summer Olympics 1952 1,580,000,000 mk 49,000,000 mk Melbourne Summer Olympics 1956 A £ 5,400,000 A £ 300,000 Tokyo Summer
+Olympics 1964 US $ 72,000,000 Mexico City Summer Olympics 1968 US $ 176,000,000 Munich Summer Olympics 1972 1,972,000,000 DM Montreal Summer Olympics 1976 CDN $
+207,000,000 CDN $ 1,410,000,000 CDN $ 990,000,000 2006 A special tobacco tax was introduced in May 1976 to fund the loss Lake Placid Winter Olympics 1980 US $
+49,000,000 US $ 169,000,000 Moscow Summer Olympics 1980 US $ 231,000,000 US $ 1,350,000,000 USD $1,
+</item 7>
+
+<item 8>
+Cost of the Olympic Games
+International Olympic Committee . Retrieved 2014 - 02 - 13 . ^ Jump up to : `` Official Report of the XXII Olympiad Moscow 1980 '' ( PDF ) . International
+Olympic Committee . 1981 . Retrieved 2014 - 02 - 13 . ^ Jump up to : `` FINAL REPORT published by the Organising Committee of the XlVth Winter Olympic Games
+1984 at Sarajevo '' ( PDF ) . ^ Jump up to : `` Official Report of the Games of the XXIIIrd Olympiad Los Angeles , 1984 '' ( PDF ) . International Olympic
+Committee . 1985 . Retrieved 2014 - 02 - 13 . ^ Jump up to : Julia Campbell . `` Cost to Host Olympic Games Skyrockets '' . ABC News . Retrieved August 6 , 2013
+. ^ Jump up to : `` Olympic Cities : Booms and Busts '' . Cnbc.com. 2012 - 01 - 19 . Retrieved 2014 - 02 - 07 .
+</item 8>
+
+<item 9>
+Cost of the Olympic Games
+Retrieved 2014 - 02 - 07 . ^ Jump up to : Nina Berglund . `` Lillehammer marks OL anniversary '' . News In English . Retrieved February 7 , 2014 . compared to
+the NOK 8,500,000,000 spent on Lillehammer ^ Jump up to : `` Exchange rate , US dollar ( USD ) '' . Norges Bank . Retrieved February 7 , 2014 . January 1994
+7.5109 ^ Jump up to : Schlotterbeck , Bianca ( 19 January 2012 ) . `` Nagano , Japan ( Winter 1998 ) '' . Olympic Cities : Booms and Busts . CNBC . Retrieved 13
+February 2013 . Jump up ^ Craig , David ( 2009 ) . Squandered . Constable & Robinson Limited . p. 300 . ISBN 9781849011617 . Jump up ^ `` Olympic glory at any
+price ? - John Madden & James Giesecke - 26 Jul 2012 , Business Spectator '' .
+</item 9>
+
+<item 10>
+Cost of the Olympic Games
+Beijing Summer Olympics 2008 US $ 44,000,000,000 CNY 1,000,000,000 ( US $ 146,000,000 ) 2008 Vancouver Winter Olympics CDN $ 1,700,000,000 ( US $ 1,260,000,000
+) US $ 6,400,000,000 US $ 2,300,000,000 CDN $ 1,900,000 Included in the total US $ 6,400,000,000 cost are the $1,000,000,000 for security , $2,500,000,000 for
+transportation extensions and upgrades , and $900,000,000 for the new Vancouver Convention Centre ( An additional $554,000,000 was spent by the city including a
+portion on the Olympic Village ) .
+</item 10>
+=== END ITEM id=48e9fbf41261fde4 ===
+
+=== ITEM id=f2d36b0a299ee17d ===
+Gold sentences and facts:
+Sentence 0: Gina Tognoni / toʊnˈjoʊni / ( born November 28 , 1973 ) is an American actress , best known for her work with American daytime soap operas . Her most notable performances include Kelly Cramer on One Life to Live and Dinah Marler on Guiding Light . She is currently starring as Phyllis Summers on The Young and the Restless .
+  Fact 0.0: Gina Tognoni was born on November 28, 1973.
+  Fact 0.1: Gina Tognoni is an American actress.
+  Fact 0.2: Gina Tognoni is best known for her work with American daytime soap operas.
+  Fact 0.3: Gina Tognoni's most notable performances include Kelly Cramer on One Life to Live.
+  Fact 0.4: Gina Tognoni's most notable performances include Dinah Marler on Guiding Light.
+  Fact 0.5: Gina Tognoni is currently starring as Phyllis Summers on The Young and the Restless.
+Sentence 1: Gina Tognoni ( 1973 - 11 - 28 ) November 28 , 1973 ( age 44 ) St. Louis , Missouri , U.S. Occupation Actress businesswoman Years active 1995 -- present Television Guiding Light ( 2004 -- 2009 ) One Life to Live ( 1995 -- 2001 , 2002 , 2010 -- 2011 ) The Young and the Restless ( 2014 -- present ) Spouse ( s ) Joseph Chiarello ( m . 2009 )
+  Fact 1.0: Gina Tognoni was born on November 28, 1973.
+  Fact 1.1: Gina Tognoni is age 44.
+  Fact 1.2: Gina Tognoni was born in St. Louis, Missouri, U.S.
+  Fact 1.3: Gina Tognoni's occupations are actress and businesswoman.
+  Fact 1.4: Gina Tognoni's years active are 1995 to present.
+  Fact 1.5: Gina Tognoni was on Guiding Light from 2004 to 2009.
+  Fact 1.6: Gina Tognoni was on One Life to Live from 1995 to 2001, in 2002, and from 2010 to 2011.
+  Fact 1.7: Gina Tognoni was on The Young and the Restless from 2014 to present.
+  Fact 1.8: Gina Tognoni's spouse is Joseph Chiarello.
+  Fact 1.9: Gina Tognoni married Joseph Chiarello in 2009.
+
+Retrieved items:
+<item 1>
+Sheila Carter
+( 1991 -- 92 ) Eric Forrester ( 1993 -- 95 ) James Warwick ( 1997 -- 98 ) Sons Ryder Callahan Daughters Mary Carter Warwick Diana Carter Daisy Carter
+Granddaughters Lucy Romalotti Sheila Carter is a fictional character from The Young and the Restless and The Bold and the Beautiful , American soap operas on
+the CBS network . Created by William J. Bell , the role was introduced in 1990 -- by Edward J. Scott -- under the portrayal of Kimberlin Brown , who portrayed
+the role for many intervals on both soaps until 2006 . That same year , Michelle Stafford took over the role , after Sheila had plastic surgery to look like
+Phyllis Summers . Brown returned to the role of Sheila on The Bold and the Beautiful , beginning on June 9 , 2017 . Sheila is known as a villain . A significant
+portion of Sheila 's history on both soaps revolves around her long - running conflict with Lauren Fenmore , whom she has attempted to kill on multiple
+occasions .
+</item 1>
+
+<item 2>
+Sheila Carter
+CBS.com . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Wednesday , 11th January 2006 '' . CBS.com . Retrieved 16 September 2012 .
+Jump up ^ `` The Young and the Restless : Thursday , 28th December 2006 '' . CBS.com . Retrieved 16 September 2012 . Jump up ^ `` Michelle Stafford Playing
+Sheila Carter on The Young and the Restless '' . She Knows Soaps . Retrieved 16 September 2012 . Jump up ^ Kimberlin Brown ( 2007 ) . KB Interview Nov 2007 .
+KOUS News . Retrieved 16 September 2012 . Jump up ^ `` The Young and the Restless : Friday , 9th February 2007 '' . CBS.com . Retrieved 16 September 2012 . Jump
+up ^ Kerr , Luke ( 28 August 2009 ) . `` Could Kimberlin Brown Return to B&B ? '' . Daytime Confidential . Retrieved 16 September 2012 .
+</item 2>
+
+<item 3>
+Gina Tognoni
+Gina Tognoni - wikipedia Gina Tognoni Jump to : navigation , search Gina Tognoni ( 1973 - 11 - 28 ) November 28 , 1973 ( age 44 ) St. Louis , Missouri , U.S.
+Occupation Actress businesswoman Years active 1995 -- present Television Guiding Light ( 2004 -- 2009 ) One Life to Live ( 1995 -- 2001 , 2002 , 2010 -- 2011 )
+The Young and the Restless ( 2014 -- present ) Spouse ( s ) Joseph Chiarello ( m . 2009 ) Gina Tognoni / toʊnˈjoʊni / ( born November 28 , 1973 ) is an American
+actress , best known for her work with American daytime soap operas . Her most notable performances include Kelly Cramer on One Life to Live and Dinah Marler on
+Guiding Light . She is currently starring as Phyllis Summers on The Young and the Restless .
+</item 3>
+
+<item 4>
+Gina Tognoni
+( 2009 - 06 - 08 ) . `` Gina Tognoni close to deciding on her post-GL career '' . SoapCentral . Retrieved June 28 , 2012 . Jump up ^ `` AMC and OLTL Canceled ''
+. Soap Opera Digest . Soapoperadigest.com. 2011 - 04 - 14 . Retrieved June 28 , 2012 . Jump up ^ Kroll , Dan J. ( 2011 - 06 - 07 ) . `` Gina Tognoni , Tom
+Degnan exiting OLTL this summer '' . SoapCentral . Retrieved June 28 , 2012 . Jump up ^ Fairman , Michael ( 2011 - 05 - 31 ) . `` Is Gina Tognoni headed out of
+One Life to Live early ? '' . Michael Fairman On - Air On - Soaps . Retrieved June 28 , 2012 . Jump up ^ SOD ( May 22 , 2014 ) . `` GINA TOGNONI IS Y&R 'S NEW
+PHYLLIS ! '' . Soap Opera Digest .
+</item 4>
+
+<item 5>
+Sheila Carter
+Despite being a regular cast member on The Bold and the Beautiful , Brown returned to The Young and the Restless for several guest appearances beginning on
+October 27 , 1992 . Brown departed on November 5 , 1992 , and reappeared for one episode on December 23 , 1992 . She continued making appearance from January 7
+to 14 , 1993 , February 19 , 1993 , to March 2 , 1993 , October 11 , 1993 , October 19 to 27 , 1993 , January 12 , 1994 , and February 28 , 1995 , until March 2
+, 1995 . In July 2005 , after a 10 - year absence from The Young and the Restless , it was announced that Brown was to reprise the role . At the time , Brown
+had been appearing on ABC 's One Life to Live as Paige Miller , and Brown reportedly opted to leave the role when ABC was unable to match the financial terms of
+a contract offered to her by CBS . She returned on August 5 , 2005 , and her run ended on January 11 , 2006 .
+</item 5>
+
+<item 6>
+Gina Tognoni
+She is currently starring as Phyllis Summers on The Young and the Restless . Contents ( hide ) 1 Career 2 Personal life 3 Filmography 4 Awards and nominations 5
+References 6 External links Career ( edit ) Tognoni is known for her roles on daytime television soap operas . In 1995 , she made her soap debut as Kelly Cramer
+in ABC 's One Life to Live . She appeared on the show until 2001 . In April 2001 , it was announced that Tognoni , after six years with the show , had decided
+not to renew her contract with the series . Tognoni returned to daytime television as Dinah Marler on CBS 's Guiding Light in July 2004 , and won her first
+Daytime Emmy Award for Outstanding Supporting Actress in a Drama Series in 2006 for her work on the show . In 2007 , she was nominated again in the same
+category but lost to Genie Francis . She won her second Emmy in 2008 , becoming only the second actress to be a repeat winner in the Supporting Actress category
+.
+</item 6>
+
+<item 7>
+Sheila Carter
+However , that December , the character returned , though not portrayed by Brown , but by Michelle Stafford , who in addition portrayed Phyllis Summers . For
+the reason of Brown not returning to the role , the actress said : `` I had a bad accident last year , and when they wanted me back in November , I really could
+n't go at that time , and that 's why I came back looking like somebody else . '' Stafford only portrayed the role for two months until February 9 , 2007 , when
+Sheila was shot by her longtime enemy Lauren Fenmore and presumed dead . In 2009 , reports speculated that Brown would reprise the role again on The Bold and
+the Beautiful , which was followed by more rumors speculating a return to The Young and the Restless . `` I actually got a call from ( B&B head writer and
+executive producer ) Brad Bell a while back asking if I 'd be interested in coming back , and I said , ' Sure ! ' The thing with daytime is that the storylines
+are ( written ) so far in advance , you just never know when ( you might be needed ) , '' Brown said at the time .
+</item 7>
+
+<item 8>
+Graph query row:
+person: Gina Tognoni
+date_of_birth: November 28, 1973
+relationship: RELATED_TO
+connected_to: Phyllis Summers
+</item 8>
+
+<item 9>
+Gina Tognoni
+In 2009 , after CBS canceled Guiding Light , Tognoni returned to her role as Kelly Cramer on One Life to Live . Also it was reported that Tognoni was in talks
+with several soaps for her post-Guiding Light gig . Following the April 2011 cancelation of One Life to Live and All My Children , it was announced that Tognoni
+and co-star Tom Degnan , who was portraying Joey Buchanan at the time , would exit the series before its January 2012 finale . In addition to her career on
+soaps , Tognoni had guest - starring roles in Law & Order : Special Victims Unit and The Sopranos , and co-starred in a number of television shows and
+independent films . On May 22 , 2014 , it was announced that Tognoni was cast as Phyllis Summers in CBS 's The Young and the Restless , replacing Michelle
+Stafford . Tognoni made her debut on August 11 , 2014 . Personal Life ( edit ) Tognoni was born in St. Louis , Missouri .
+</item 9>
+
+<item 10>
+Gina Tognoni
+. Soap Opera Digest . American Media , Inc . Retrieved May 22 , 2014 . Jump up ^ Logan , Michael ( May 22 , 2014 ) . `` Exclusive : Gina Tognoni Joins The Young
+and the Restless '' . TV Guide . CBS Interactive . Retrieved May 22 , 2014 . Jump up ^ `` Gina Tognoni : Biography '' . TV Guide . Retrieved 7 October 2014 .
+Jump up ^ `` Ellen DeGeneres repeats sweep of Daytime Emmys '' . Kentucky New Era . Los Angeles : Taylor W. Hayes . Associated Press . May 1 , 2006 . p. 8 .
+Retrieved May 6 , 2013 . Jump up ^ Bonawitz , Amy ( February 11 , 2009 ) . `` 34th Annual Daytime Emmy Winners '' . New York City : CBS News . Archived from the
+original on June 28 , 2013 . Retrieved January 8 , 2013 . Jump up ^ Silverman , Stephen M.
+</item 10>
+=== END ITEM id=f2d36b0a299ee17d ===
+
+=== ITEM id=1cdadf6fc7bb1adf ===
+Gold sentences and facts:
+Sentence 0: Texas Bowl Academy Sports + Outdoors Texas Bowl Stadium NRG Stadium Location Houston , Texas Operated 2006 -- present Conference tie - ins Big 12 , SEC Previous conference tie - ins Big East / C - USA / MWC ( alternating years ) ( 2006 -- 2009 ) Big Ten ( 2010 -- 2013 ) Payout US $ 3 million per team ( as of 2015 ) Preceded by Houston Bowl Sponsors Meineke Car Care ( 2011 -- 2012 ) AdvoCare ( 2014 -- 2016 ) Academy Sports + Outdoors ( 2017 - present ) Former names Texas Bowl ( 2006 -- 2010 ) Meineke Car Care Bowl of Texas ( 2011 -- 2012 ) Texas Bowl ( 2013 ) AdvoCare V100 Texas Bowl ( 2014 -- 2016 ) 2016 matchup Texas A&M vs. Kansas State ( Kansas State 33 -- 28 ) 2017 matchup Missouri vs Texas ( Texas 33 -- 16 )
+  Fact 0.0: The Texas Bowl is also called Texas Bowl Academy Sports + Outdoors Texas Bowl Stadium.
+  Fact 0.1: The Texas Bowl is held at NRG Stadium.
+  Fact 0.2: The Texas Bowl is located in Houston, Texas.
+  Fact 0.3: The Texas Bowl has operated from 2006 to the present.
+  Fact 0.4: The Texas Bowl's conference tie-ins are the Big 12 and the SEC.
+  Fact 0.5: The Texas Bowl's previous conference tie-ins were the Big East, C-USA and MWC (alternating years) from 2006 to 2009.
+  Fact 0.6: The Texas Bowl's previous conference tie-in was the Big Ten from 2010 to 2013.
+  Fact 0.7: The Texas Bowl's payout is US $3 million per team as of 2015.
+  Fact 0.8: The Texas Bowl was preceded by the Houston Bowl.
+  Fact 0.9: Meineke Car Care sponsored the Texas Bowl from 2011 to 2012.
+  Fact 0.10: AdvoCare sponsored the Texas Bowl from 2014 to 2016.
+  Fact 0.11: Academy Sports + Outdoors has sponsored the Texas Bowl since 2017.
+  Fact 0.12: A former name of the Texas Bowl was 'Texas Bowl' from 2006 to 2010.
+  Fact 0.13: A former name of the Texas Bowl was 'Meineke Car Care Bowl of Texas' from 2011 to 2012.
+  Fact 0.14: A former name of the Texas Bowl was 'Texas Bowl' in 2013.
+  Fact 0.15: A former name of the Texas Bowl was 'AdvoCare V100 Texas Bowl' from 2014 to 2016.
+  Fact 0.16: The 2016 Texas Bowl matchup was Texas A&M vs. Kansas State, which Kansas State won 33-28.
+  Fact 0.17: The 2017 Texas Bowl matchup was Missouri vs Texas, which Texas won 33-16.
+
+Retrieved items:
+<item 1>
+Texas Bowl
+Kansas State ( Kansas State 33 -- 28 ) 2017 matchup Missouri vs Texas ( Texas 33 -- 16 ) The Texas Bowl , officially the Academy Sports + Outdoors Texas Bowl
+for sponsorship purposes , is a post-season NCAA - sanctioned Division I FBS college football bowl game first held in 2006 in Houston , Texas . The bowl
+replaced the defunct Houston Bowl , which played annually from 2000 to 2005 , and before that the Bluebonnet Bowl , the first bowl game in Houston , played from
+1959 through 1987 . From 2011 to 2012 , the game was sponsored by Meineke Car Care and officially known as the Meineke Car Care Bowl of Texas . The game was
+then officially the AdvoCare V100 Texas Bowl from 2014 to 2016 , with AdvoCare as the title sponsor . Since 2017 , the game has been sponsored by Academy Sports
++ Outdoors .
+</item 1>
+
+<item 2>
+Texas Bowl
+November 15 , 2017 . Jump up ^ Murphy , Austin ; Wetzel , Dan ( 15 November 2010 ) . `` Does It Matter ? '' . Sports Illustrated . p. 47 . External links ( edit
+) Official Website Texas Bowl 2006 2007 2008 2009 2011 2012 2013 2014 2015 2016 2017 NRG Stadium ( 2006 -- present ) Broadcasters Previous Bowls Bluebonnet Bowl
+Houston Bowl NCAA Division I FBS bowl games College Football Playoff Championship Game Cotton Fiesta Orange Peach Rose Sugar Other bowl games Alamo Arizona
+Armed Forces Bahamas Belk Birmingham Boca Raton Cactus Camellia Camping World Citrus Cure Dollar General Famous Idaho Potato Foster Farms Frisco Gasparilla
+Hawaii Heart of Dallas Holiday Independence Las Vegas Liberty Military Music City New Mexico New Orleans Outback Pinstripe Quick Lane Sun TaxSlayer Texas All -
+Star games East -- West Shrine Game NFLPA Collegiate Bowl Senior Bowl Retrieved from `` https://en.wikipedia.org/w/index.
+</item 2>
+
+<item 3>
+Texas Bowl
+Texas Bowl - wikipedia Texas Bowl Jump to : navigation , search `` AdvoCare V100 Bowl '' and `` AdvoCare Bowl '' redirect here . For the bowl game that AdvoCare
+previously sponsored ( 2009 -- 13 ) , see Independence Bowl . Texas Bowl Academy Sports + Outdoors Texas Bowl Stadium NRG Stadium Location Houston , Texas
+Operated 2006 -- present Conference tie - ins Big 12 , SEC Previous conference tie - ins Big East / C - USA / MWC ( alternating years ) ( 2006 -- 2009 ) Big Ten
+( 2010 -- 2013 ) Payout US $ 3 million per team ( as of 2015 ) Preceded by Houston Bowl Sponsors Meineke Car Care ( 2011 -- 2012 ) AdvoCare ( 2014 -- 2016 )
+Academy Sports + Outdoors ( 2017 - present ) Former names Texas Bowl ( 2006 -- 2010 ) Meineke Car Care Bowl of Texas ( 2011 -- 2012 ) Texas Bowl ( 2013 )
+AdvoCare V100 Texas Bowl ( 2014 -- 2016 ) 2016 matchup Texas A&M vs.
+</item 3>
+
+<item 4>
+The Texas Bowl is an NCAA Division I FBS postseason game held at NRG Stadium in Houston since 2006, replacing the Houston Bowl (and following Houston’s
+Bluebonnet Bowl). Its current sponsor is Academy Sports + Outdoors; previous sponsors included Meineke Car Care and AdvoCare. Big 12 and SEC teams hold current
+tie-ins; earlier affiliations included the Big East, Conference USA, Mountain West, and Big Ten. The listed payout was $3 million per team in
+</item 4>
+
+<item 5>
+Texas Bowl
+Rank Conference Appearances Wins Losses Pct . Big 12 9 5 . 444 T2 SEC . 500 T2 Big Ten . 250 C - USA . 500 T5 ACC 0 1.000 T5 Big East 0 1.000 T5 Independents 0
+1.000 T5 Mountain West 0 1.000 T5 MAC 0 . 000 Jump up ^ Rutgers ( 2006 ) appeared as a member of the Big East . Following the 2013 split of the original Big
+East along football lines , the FBS schools reorganized as the new American Athletic Conference , which retains the charter of the original Big East . Jump up ^
+Navy ( 2009 ) See also ( edit ) List of college bowl games List of Texas Bowl broadcasters References ( edit ) Jump up ^ `` College Bowl Game Payouts '' .
+statisticbrain.com. 2015 . Jump up ^ Duarte , Joseph ( 18 April 2006 ) . `` Houston Bowl in jeopardy '' . Houston Chronicle . Retrieved 29 December 2015 . Jump
+up ^ `` NFL Network gets bowl game in Houston '' .
+</item 5>
+
+<item 6>
+Texas Bowl
+In 2007 , TCU took the place of the Big 12 team when Kansas and Oklahoma were put into the BCS , and Houston , a `` home team , '' represented C - USA . The
+conferences would receive $612,500 each as per the rules of the agreements as usually , the Big East ( or Big 12 ) would have received $750,000 for playing and
+C - USA would have received a $500,000 stipend for their team playing . Issues ( edit ) According to Sports Illustrated , in 2008 the bowl required Western
+Michigan University to purchase 11,000 tickets at full price in order to accept the invitation to play in the bowl . The university was only able to sell 548
+tickets at that price , forcing it to accept a $462,535 loss , before travel expenses , to pay for the privilege of playing in the bowl . Game results ( edit )
+Season Date Time ( CST ) Teams Attendance TV 2006 December 28 7 : 00 PM Rutgers 37 Kansas State 10 52,210 NFL Network 2007 December 28 7 : 00 PM TCU 20 Houston
+13 62,
+</item 6>
+
+<item 7>
+Texas Bowl
+It was also announced on December 30 , 2009 , that ESPN Plus would take over as part owner and operator of the game , while Lone Star Sports and Entertainment
+will maintain a stake in the bowl , and would be carried on ESPN . Sponsors ( edit ) On April 12 , 2011 , ESPN announced Meineke Car Care signed a three - year
+title sponsorship deal beginning in 2011 , changing name of the bowl to the Meineke Car Care Bowl of Texas . On February 12 , 2014 , it was announced that
+AdvoCare will be the title sponsor for the bowl game . That sponsorship concluded after the 2016 game . On November 15 , 2017 , Academy Sports + Outdoors became
+the new title sponsor of the bowl . Conference tie - ins ( edit ) On May 17 , 2007 , it was announced Conference USA would have a team in the 2007 Texas Bowl .
+The Texas Bowl has a rotating commitment with the Big East Conference and Conference USA for 2006 -- 09 while the Big 12 Conference will have a team in all four
+of those games .
+</item 7>
+
+<item 8>
+Texas Bowl
+097 2008 December 30 7 : 00 PM Rice 38 Western Michigan 14 58,880 2009 December 31 2 : 30 PM Navy 35 Missouri 13 69,441 ESPN December 29 5 : 00 PM Illinois 38
+Baylor 14 68,211 2011 December 31 11 : 00 AM Texas A&M 33 Northwestern 22 68,395 2012 December 28 8 : 00 PM Texas Tech 34 Minnesota 31 50,386 2013 December 27 5
+: 00 PM Syracuse 21 Minnesota 17 32,327 2014 December 29 8 : 00 PM Arkansas 31 Texas 7 71,115 2015 December 29 8 : 00 PM LSU 56 Texas Tech 27 71,307 2016
+December 28 8 : 00 PM Kansas State 33 Texas A&M 28 68,412 2017 December 27 8 : 00 PM Texas 33 Missouri 16 67,
+</item 8>
+
+<item 9>
+Texas Bowl
+wikipedia.org/w/index.php?title=Texas_Bowl&oldid=817734724 '' Categories : College football bowls Texas Bowl American football in Texas Annual events in Texas
+Annual sporting events in the United States Sports competitions in Texas Sports in Houston Recurring sporting events established in 2006 Talk Contents About
+Wikipedia Français Edit links This page was last edited on 30 December 2017 , at 07 : 17 . Text is available under the Creative Commons Attribution - ShareAlike
+License ; additional terms may apply . By using this site , you agree to the Terms of Use and Privacy Policy . Wikipedia ® is a registered trademark of the
+Wikimedia Foundation , Inc. , a non-profit organization . About Wikipedia
+</item 9>
+
+<item 10>
+Texas Bowl
+Since 2017 , the game has been sponsored by Academy Sports + Outdoors . Contents ( hide ) 1 History 1.1 Replacing the Houston Bowl 1.2 Texas Bowl introduction
+1.3 Sponsors 1.4 Conference tie - ins 1.5 Issues 2 Game results 3 MVPs 4 Most appearances 5 Appearances by conference 6 See also 7 References 8 External links
+History ( edit ) Replacing the Houston Bowl ( edit ) Speculation surfaced questioning the long - term survival of the former Houston Bowl . The three - year
+contract with EV1.net expired on December 31 , 2005 , leaving the bowl game without a title sponsor . A college football official told the Houston Chronicle
+that the bowl was in danger of ceasing operations , as a result of the game losing its title sponsor and because the Houston Bowl still owed roughly $600,000 to
+the Big 12 and Mountain West conferences following the 2005 game . However , the NCAA approved Lone Star Sports & Entertainment , a division of the Houston
+Texans , who also play in Reliant Stadium , to take over game management .
+</item 10>
+=== END ITEM id=1cdadf6fc7bb1adf ===
+
+=== ITEM id=3f7d171b9152b298 ===
+Gold sentences and facts:
+Sentence 0: The 2017 -- 18 NBA season is the 72nd season of the National Basketball Association ( NBA ) . The regular season began on October 17 , 2017 , earlier than previous seasons to reduce the number of `` back - to - back '' games teams are scheduled to play , with the 2017 Eastern Conference champion ( and Finals runner -- up ) Cleveland Cavaliers hosting a game against the Boston Celtics at Quicken Loans Arena in Cleveland , Ohio Christmas games were played on December 25 , 2017 . The 2018 NBA All - Star Game was played on February 18 , 2018 , at the Staples Center in Los Angeles , California . LeBron James of the Cleveland Cavaliers was named the All - Star Game Most Valuable Player . The regular season ended on April 11 , 2018 and the playoffs began on April 14 , 2018 .
+  Fact 0.0: The 2017-18 NBA season is the 72nd season of the National Basketball Association (NBA).
+  Fact 0.1: The 2017-18 NBA regular season began on October 17, 2017.
+  Fact 0.2: The 2017-18 NBA regular season began earlier than previous seasons.
+  Fact 0.3: The earlier start of the 2017-18 season was meant to reduce the number of 'back-to-back' games teams are scheduled to play.
+  Fact 0.4: The 2017 Eastern Conference champion Cleveland Cavaliers, who were also Finals runner-up, hosted a game against the Boston Celtics at Quicken Loans Arena in Cleveland, Ohio.
+  Fact 0.5: Christmas games were played on December 25, 2017.
+  Fact 0.6: The 2018 NBA All-Star Game was played on February 18, 2018.
+  Fact 0.7: The 2018 NBA All-Star Game was played at the Staples Center in Los Angeles, California.
+  Fact 0.8: LeBron James of the Cleveland Cavaliers was named the All-Star Game Most Valuable Player.
+  Fact 0.9: The 2017-18 NBA regular season ended on April 11, 2018.
+  Fact 0.10: The 2017-18 NBA playoffs began on April 14, 2018.
+Sentence 1: 2017 -- 18 NBA season League National Basketball Association Sport Basketball Duration October 17 , 2017 -- April 11 , 2018 April 14 -- May 28 , 2018 ( Playoffs ) May 31 -- June 17 , 2018 ( Finals ) Number of games 82 Number of teams 30 TV partner ( s ) ABC , TNT , ESPN , NBA TV Draft Top draft pick Markelle Fultz Picked by Philadelphia 76ers Regular season Top seed Houston Rockets Top scorer James Harden ( Houston ) Playoffs Finals NBA seasons ← 2016 -- 17 2018 -- 19 →
+  Fact 1.0: The league of the 2017-18 NBA season is the National Basketball Association.
+  Fact 1.1: The sport of the 2017-18 NBA season is basketball.
+  Fact 1.2: The 2017-18 NBA regular season ran from October 17, 2017 to April 11, 2018.
+  Fact 1.3: The 2017-18 NBA playoffs ran from April 14 to May 28, 2018.
+  Fact 1.4: The 2017-18 NBA Finals ran from May 31 to June 17, 2018.
+  Fact 1.5: The 2017-18 NBA season had 82 games.
+  Fact 1.6: The 2017-18 NBA season had 30 teams.
+  Fact 1.7: ABC, TNT, ESPN and NBA TV were the TV partners of the 2017-18 NBA season.
+  Fact 1.8: Markelle Fultz was the top draft pick, picked by the Philadelphia 76ers.
+  Fact 1.9: The Houston Rockets were the top seed in the 2017-18 NBA regular season.
+  Fact 1.10: James Harden of the Houston Rockets was the top scorer of the 2017-18 NBA season.
+  Fact 1.11: The 2016-17 season is the season before the 2017-18 NBA season.
+  Fact 1.12: The 2018-19 season is the season after the 2017-18 NBA season.
+
+Retrieved items:
+<item 1>
+2017–18 NBA season
+NBA.com . Turner Sports Interactive , Inc . February 13 , 2016 . Retrieved June 21 , 2017 . Jump up ^ `` A first look at the NBA 's refreshed logo '' . NBA.com.
+6 July 2017 . Retrieved 12 July 2017 . Jump up ^ Feldman , Dan . `` NBA moves up trade deadline , reduces timeouts '' . sports.yahoo.com . Yahoo ! Sports .
+Retrieved 12 July 2017 . Jump up ^ Ward - Henninger , Colin . `` NBA moves trade deadline to before All - Star Game , reduces amount of timeouts '' .
+CBSSports.com . CBS Sports . Retrieved 12 July 2017 . Jump up ^ Brown , Maury . `` NBA Makes Sweeping Pace - Of - Play Changes ; MLB Likely Next '' . Forbes.com
+. Forbes . Retrieved 12 July 2017 . Jump up ^ Dauster , Rob ( April 27 , 2017 ) . `` D - League salaries , two - way contracts increase NBA Draft early entries
+'' .
+</item 1>
+
+<item 2>
+2017–18 NBA season
+The regular season began on October 17 , 2017 , earlier than previous seasons to reduce the number of `` back - to - back '' games teams are scheduled to play ,
+with the 2017 Eastern Conference champion ( and Finals runner -- up ) Cleveland Cavaliers hosting a game against the Boston Celtics at Quicken Loans Arena in
+Cleveland , Ohio Christmas games were played on December 25 , 2017 . The 2018 NBA All - Star Game was played on February 18 , 2018 , at the Staples Center in
+Los Angeles , California . LeBron James of the Cleveland Cavaliers was named the All - Star Game Most Valuable Player . The regular season ended on April 11 ,
+2018 and the playoffs began on April 14 , 2018 . Contents ( hide ) 1 Transactions 1.1 Retirement 1.2 In - season trades 1.3 Free agency 1.4 Coaching changes
+1.4. 1 Off - season 1.4. 2 In - season 2 Preseason 2.1 International games 3 Regular season 3.1 By conference 3.1.
+</item 2>
+
+<item 3>
+2017–18 NBA season
+92 1992 -- 93 1993 -- 94 1994 -- 95 1995 -- 96 1996 -- 97 1997 -- 98 1998 -- 99 2000s 1999 -- 00 2000 -- 01 2001 -- 02 2002 -- 03 2003 -- 04 2004 -- 05 2005 --
+06 2006 -- 07 2007 -- 08 2008 -- 09 2010s 2009 -- 10 2010 -- 11 2011 -- 12 2012 -- 13 2013 -- 14 2014 -- 15 2015 -- 16 2016 -- 17 2017 -- 18 2018 -- 19 2017 --
+18 NBA season by team Draft Summer League All - Star Game Playoffs Finals Transactions G League Eastern Atlantic Boston Brooklyn New York Philadelphia Toronto
+Central Chicago Cleveland Detroit Indiana Milwaukee Southeast Atlanta Charlotte Miami Orlando Washington Western Northwest Denver Minnesota Oklahoma City
+Portland Utah Pacific Golden State L.A. Clippers L.A.
+</item 3>
+
+<item 4>
+2017–18 NBA season
+573 18.0 82 9 Denver Nuggets 46 36 . 561 19.0 82 10 Los Angeles Clippers 42 40 . 512 23.0 82 11 Los Angeles Lakers 35 47 . 427 30.0 82 12 Sacramento Kings 27 55
+. 329 38.0 82 13 Dallas Mavericks 24 58 . 293 41.0 82 14 Memphis Grizzlies 22 60 . 268 43.0 82 15 Phoenix Suns 21 61 . 256 44.0 82 Notes z -- Clinched home
+court advantage for the entire playoffs c -- Clinched home court advantage for the conference playoffs y -- Clinched division title x -- Clinched playoff spot *
+-- Division leader Tiebreakers ( edit ) Eastern Conference Miami clinched # 6 seed over Milwaukee based on head - to - head sweep ( 3 -- 0 ) .
+</item 4>
+
+<item 5>
+2017–18 NBA season
+2017 -- 18 NBA season - wikipedia 2017 -- 18 NBA season Jump to : navigation , search 2017 -- 18 NBA season League National Basketball Association Sport
+Basketball Duration October 17 , 2017 -- April 11 , 2018 April 14 -- May 28 , 2018 ( Playoffs ) May 31 -- June 17 , 2018 ( Finals ) Number of games 82 Number of
+teams 30 TV partner ( s ) ABC , TNT , ESPN , NBA TV Draft Top draft pick Markelle Fultz Picked by Philadelphia 76ers Regular season Top seed Houston Rockets Top
+scorer James Harden ( Houston ) Playoffs Finals NBA seasons ← 2016 -- 17 2018 -- 19 → The 2017 -- 18 NBA season is the 72nd season of the National Basketball
+Association ( NBA ) .
+</item 5>
+
+<item 6>
+2017–18 NBA season
+-- 57 1957 -- 58 1958 -- 59 1960s 1959 -- 60 1960 -- 61 1961 -- 62 1962 -- 63 1963 -- 64 1964 -- 65 1965 -- 66 1966 -- 67 1967 -- 68 1968 -- 69 1970s 1969 -- 70
+1970 -- 71 1971 -- 72 1972 -- 73 1973 -- 74 1974 -- 75 1975 -- 76 1976 -- 77 1977 -- 78 1978 -- 79 1980s 1979 -- 80 1980 -- 81 1981 -- 82 1982 -- 83 1983 -- 84
+1984 -- 85 1985 -- 86 1986 -- 87 1987 -- 88 1988 -- 89 1990s 1989 -- 90 1990 -- 91 1991 -- 92 1992 -- 93 1993 -- 94 1994 -- 95
+</item 6>
+
+<item 7>
+2017–18 NBA season
+NBA.com . September 28 , 2017 . Retrieved September 29 , 2017 . Jump up ^ Helin , Kurt ( September 28 , 2017 ) . `` NBA owners pass lottery reform , new rules
+on resting players '' . ProBasketballTalk . Retrieved September 29 , 2017 . Jump up ^ `` No more East vs. West as NBA revamps All - Star Game format '' .
+NBA.com . Retrieved October 3 , 2017 . Jump up ^ `` Boston Celtics ' Gordon Hayward suffers fractured ankle in season opener '' . NBA.com . Retrieved October 18
+, 2017 . Jump up ^ `` Ben Simmons did something even LeBron ( or anyone else in NBA history ) has n't matched '' . Newsweek.com. 8 November 2017 . Retrieved
+November 8 , 2017 . Jump up ^ `` Kings set record for most points scored before a starter scores vs. Thunder '' . clutchpoints.com . Retrieved November 8 , 2017
+.
+</item 7>
+
+<item 8>
+2017–18 NBA season
+Africa 2017 Playoffs List Finals Champions History Predecessors BAA NBL ABA Merger Criticisms and controversies 2007 Tim Donaghy betting scandal Lockouts
+Seasons Records regular season post-season All - Star Game Win - loss records Personalities Players Current rosters Foreign players Race and ethnicity First
+overall draft picks Highest paid Retired numbers Banned or suspended NBPA Head coaches Current Player - coaches Champions Foreign coaches NBCA Owners Referees
+Awards and honors Larry O'Brien Trophy NBA Awards NBA MVP Finals MVP All - Star Game MVP Hall of Fame Members NBA Silver Anniversary Team NBA 35th Anniversary
+Team 50 Greatest Players Others Arenas Business Collective bargaining agreement Salary cap NBA Store Culture Cheerleading Mascots Dress code G League Midwest
+Division Media TV NBA TV Rivalries Teams Defunct Expansion Relocated Timeline WNBA Basketball in the United States Category Portal 2017 -- 18 season Retrieved
+from `` https://en.wikipedia.org/w/index.
+</item 8>
+
+<item 9>
+2017–18 NBA season
+The regular season started eight days earlier than the previous season . This move by the NBA aims for fewer `` back - to - back '' games , even fewer than the
+previous season which had already reached an all - time low to help address teams that are `` resting '' their superstars . The NBA decreased the maximum number
+of timeouts in a regulation game from 18 to 14 . The three team timeouts during the last two minutes of the game were also decreased to two per team in the last
+three minutes to improve the flow and pace of the game . The trade deadline was moved from four days after the NBA All - Star Game to ten days before it , so
+teams can settle their rosters before the All - Star break . Free - throw shooters will be assessed a delay - of - game violation if they venture outside of the
+three - point line in between attempts . The NBA also added two - way contracted players , signifying an increasing partnership between the NBA and the newly
+branded NBA G League . Referees can now assess dangerous closeouts of defenders to jump shooters with little space to land for a technical or a flagrant foul .
+</item 9>
+
+<item 10>
+2017–18 NBA season
+Denver Minnesota Oklahoma City Portland Utah Pacific Golden State L.A. Clippers L.A. Lakers Phoenix Sacramento Southwest Dallas Houston Memphis New Orleans San
+Antonio National Basketball Association Eastern Conference Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central
+Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington
+Wizards Western Conference Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors
+Los Angeles Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San
+Antonio Spurs Annual events Draft Eligibility Summer League Christmas Day All - Star Weekend Game Global Games Africa 2015 ,
+</item 10>
+=== END ITEM id=3f7d171b9152b298 ===
