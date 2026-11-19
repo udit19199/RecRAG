@@ -1,0 +1,81 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "1645082526444833311",
+   "sentences": [
+    "Published Serialized in The National Era for ten months , beginning with the June 5 , 1851 issue . Published as a book in two volumes on March 20 , 1852 , John P. Jewett and Company .",
+    "Uncle Tom 's Cabin first appeared as a 40 - week serial in The National Era , an abolitionist periodical , starting with the June 5 , 1851 , issue . It was originally intended as a shorter narrative that would run for only a few weeks . Stowe expanded the story significantly , however , and it was instantly popular , such that several protests were sent to the Era office when she missed an issue . Because of the story 's popularity , the publisher John P. Jewett contacted Stowe about turning the serial into a book . While Stowe questioned if anyone would read Uncle Tom 's Cabin in book form , she eventually consented to the request .",
+    "Uncle Tom 's Cabin Uncle Tom 's Cabin , Boston edition Author Harriet Beecher Stowe Original title Uncle Tom 's Cabin ; or , Life Among the Lowly Illustrator Hammatt Billings ( 1st edition ) Country United States Language English Genre Novel Published Serialized in The National Era for ten months , beginning with the June 5 , 1851 issue . Published as a book in two volumes on March 20 , 1852 , John P. Jewett and Company . Followed by A Key to Uncle Tom 's Cabin ( 1853 )"
+   ]
+  },
+  {
+   "id": "multihop-rag-490",
+   "sentences": [
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5adec53655429975fa854f87",
+   "sentences": [
+    "Kim Dong-jun (hangul: 김동준; hanja: 金桐俊; born February 11, 1992) is a South Korean singer and actor.",
+    "Charlie Harper (born David Charles Perez, 25 May 1944, Hackney, London) is a British singer and songwriter."
+   ]
+  },
+  {
+   "id": "7413826602347108802",
+   "sentences": [
+    "No . overall No. in season Title Directed by Written by Original air date Prod . code U.S. viewers ( millions ) 70 `` The Flash Reborn '' Glen Winter Story by : Andrew Kreisberg Teleplay by : Todd Helbing & Eric Wallace October 10 , 2017 ( 2017 - 10 - 10 ) T27. 13401 2.84 71 `` Mixed Signals '' Alexandra La Roche Jonathan Butler & Gabriel Garza October 17 , 2017 ( 2017 - 10 - 17 ) T27. 13402 2.54 72 `` Luck Be a Lady '' Armen V. Kevorkian Sam Chalsen & Judalina Neira October 24 , 2017 ( 2017 - 10 - 24 ) T27. 13403 2.62 73 `` Elongated Journey Into Night '' Tom Cavanagh Sterling Gates & Thomas Pound October 31 , 2017 ( 2017 - 10 - 31 ) T27. 13404 1.99 74 5 `` Girls Night Out '' Laura Belsey Lauren Certo & Kristen Kim November 7 , 2017 ( 2017 - 11 - 07 ) T27. 13405 2.38 75 6 `` When Harry Met Harry ... '' Brent Crowell Jonathan Butler & Gabriel Garza November 14 , 2017 ( 2017 - 11 - 14 ) T27. 13406 2.46 76 7 `` Therefore I Am '' David McWhirter Eric Wallace & Thomas Pound November 21 , 2017 ( 2017 - 11 - 21 ) T27. 13407 2.20 77 8 `` Crisis on Earth - X , Part 3 '' Dermott Downs Story by : Andrew Kreisberg & Marc Guggenheim Teleplay by : Todd Helbing November 28 , 2017 ( 2017 - 11 - 28 ) T27. 13408 2.82 78 9 `` Do n't Run '' Stefan Pleszczynski Sam Chalsen & Judalina Neira December 5 , 2017 ( 2017 - 12 - 05 ) T27. 13409 2.22 79 10 `` The Trial of The Flash '' Philip Chipera Lauren Certo & Kristen Kim January 16 , 2018 ( 2018 - 01 - 16 ) T27. 13410 2.51 80 11 `` The Elongated Knight Rises '' Alexandra La Roche Sterling Gates & Thomas Pound January 23 , 2018 ( 2018 - 01 - 23 ) T27. 13411 2.12 81 12 `` Honey , I Shrunk Team Flash '' Chris Peppe Sam Chalsen & Judalina Neira January 30 , 2018 ( 2018 - 01 - 30 ) T27. 13412 2.60 82 13 `` True Colors '' Tara Nicole Weyr Jonathan Butler & Gabriel Garza February 6 , 2018 ( 2018 - 02 - 06 ) T27. 13413 2.28 83 14 `` Subject 9 '' Ralph Hemecker Mike Alber & Gabe Snyder February 27 , 2018 ( 2018 - 02 - 27 ) T27. 13414 2.12 84 15 `` Enter Flashtime '' Gregory Smith Todd Helbing & Sterling Gates March 6 , 2018 ( 2018 - 03 - 06 ) T27. 13415 2.04 85 16 `` Run , Iris , Run '' Harry Jierjian Eric Wallace March 13 , 2018 ( 2018 - 03 - 13 ) T27. 13416 2.09 86 17 `` Null and Annoyed '' Kevin Smith Lauren Certo & Kristen Kim April 10 , 2018 ( 2018 - 04 - 10 ) T27. 13417 1.82 87 18 `` Lose Yourself '' Hanelle Culpepper Jonathan Butler & Gabriel Garza April 17 , 2018 ( 2018 - 04 - 17 ) T27. 13418 1.88 88 19 `` Fury Rogue '' Rachel Talalay Joshua V. Gilbert & Jeff Hersh April 24 , 2018 ( 2018 - 04 - 24 ) TBA 1.90 89 20 `` Therefore She Is '' Rob J. Greenlea Sterling Gates & Thomas Pound May 1 , 2018 ( 2018 - 05 - 01 ) TBA TBD 90 21 `` Harry and the Harrisons '' Kevin Mock Judalina Neira & Lauren Certo May 8 , 2018 ( 2018 - 05 - 08 ) TBA TBD 91 22 `` Think Fast '' Viet Nguyen Sam Chalsen & Kristen Kim May 15 , 2018 ( 2018 - 05 - 15 ) TBA TBD 92 23 `` We Are the Flash '' TBA TBA May 22 , 2018 ( 2018 - 05 - 22 ) TBA TBD"
+   ]
+  },
+  {
+   "id": "5ab28c89554299340b525513",
+   "sentences": [
+    "Karl Hermann Frank (24 January 1898 – 22 May 1946) was a prominent Sudeten German Nazi official in Czechoslovakia prior to and during World War II and an SS-\"Obergruppenführer\".",
+    " Until April 1942, it was the highest commissioned SS rank, inferior only to \"Reichsführer-SS\" (Heinrich Himmler or RFSS, which was the internal SS-abbreviation for Himmler) Translated as \"senior group leader\", the rank of \"Obergruppenführer\" was senior to \"Gruppenführer\"."
+   ]
+  },
+  {
+   "id": "5a85b2895542994c784ddb49",
+   "sentences": [
+    "Bank Street () is a short street in Central, Hong Kong.",
+    " It links Des Voeux Road Central to Queen's Road Central.",
+    " It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+    "HSBC Main Building () is a headquarters building of The Hongkong and Shanghai Banking Corporation, which is today a wholly owned subsidiary of London-based HSBC Holdings."
+   ]
+  },
+  {
+   "id": "multihop-rag-1424",
+   "sentences": [
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5ae2120e5542997283cd23ad",
+   "sentences": [
+    "Distortion Mirrors is an English alternative rock band, based in Leeds, West Yorkshire, England, and who was formed in 2011.",
+    "OK Go is an American rock band originally from Chicago, Illinois, now based in Los Angeles, California."
+   ]
+  },
+  {
+   "id": "multihop-rag-1086",
+   "sentences": [
+    "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators.",
+    "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."
+   ]
+  },
+  {
+   "id": "5ae54c085542992663a4f1c4",
+   "sentences": [
+    " Game included wild boar, and red, fallow and roe deer.",
+    " This common species is native to western Eurasia, but has been introduced to Antigua & Barbuda, Argentina, South Africa, Fernando Pó, São Tomé, Madagascar, Mauritius, Mayotte, Réunion, Seychelles, Comoro Islands, Morocco, Algeria, Tunisia, Cyprus, Israel, Cape Verde, Lebanon, Australia, New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ]
+  }
+ ]
+}

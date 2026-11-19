@@ -1,0 +1,42 @@
+[
+{"id": "06c3cb117ab3d133", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "103f5e8019899542", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "640672c7af41c9db", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+]},
+{"id": "5e57abcfca1146df", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "They promised “invest[ment] in the AI-powered technology”"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]}
+]},
+{"id": "19fd9c4727cf2413", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,"}]}
+]}
+]

@@ -1,0 +1,46 @@
+[
+ {"id": "5a835e215542992ef85e2296", "sentences": [
+   ["Pinus is the sole genus in the subfamily Pinoideae."],
+   ["The Plant List was compiled by the Royal Botanic Gardens, Kew and the Missouri Botanical Garden.", "The Plant List accepts 126 species names of pines as current.", "The Plant List includes 35 unresolved species of pines.", "The Plant List includes many more synonyms."],
+   ["The genus is sometimes considered to have only two species, B. monosperma and B. superba.", "The genus is sometimes expanded to include four or five species."]
+ ]},
+ {"id": "8221988726104372475", "sentences": [
+   ["On 19 February 2007, Disney lost a court case in Los Angeles.", "That court ruled that Disney's misguided claims to dispute the licensing agreements with Slesinger, Inc. were unjustified.", "A federal ruling of 28 September 2009 was again from Judge Florence-Marie Cooper.", "The federal ruling of 28 September 2009 determined that the Slesinger family had granted all trademark and copyright rights to Disney.", "Disney must pay royalties for all future use of the characters.", "Both parties have expressed satisfaction with the outcome."]
+ ]},
+ {"id": "multihop-rag-2345", "sentences": [
+   ["It is a good time to start checking off a gift list now.", "Black Friday and Cyber Monday come around next month.", "Checking off the gift list now means the reader won't be pressed for time or funds when Black Friday and Cyber Monday come around."],
+   ["Alev said one of the hardest things is that resentment can build up if you feel you need to buy gifts for your family and can barely make your student loan payments.", "Alev said people should bring things up."]
+ ]},
+ {"id": "multihop-rag-1350", "sentences": [
+   ["The criminal trial of Sam Bankman-Fried started on a Tuesday.", "The criminal trial of Sam Bankman-Fried was highly anticipated.", "Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.", "The trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy."],
+   ["Bankman-Fried left Jane Street.", "Jane Street is a high-frequency trading firm.", "Bankman-Fried is a former billionaire.", "Bankman-Fried got his start in finance at Jane Street after MIT.", "Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.", "Bankman-Fried persuaded Yedidia to join him as a developer at FTX after Alameda."],
+   ["The decision was Bankman-Fried's, according to a female speaker.", "The decision was Bankman-Fried's because he was the CEO of FTX."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense countered that the FTX founder acted in good faith.", "The defense said the FTX founder never meant to commit fraud or steal.", "The defense said the FTX founder basically got in over his head."]
+ ]},
+ {"id": "5a7b24fe55429931da12c9f7", "sentences": [
+   ["German Spitz is used to refer to a breed of dog.", "German Spitz is used to refer to a category or type of dog."],
+   ["Several modern breeds have been developed from the German Spitz.", "These modern breeds are either registered as separate breeds.", "These modern breeds are either registered as varieties of German Spitz."],
+   ["The term was used to designate springer type spaniels that were neither Sussex nor Clumber Spaniels.", "Attempts were made to use the term to specify a breed that would later become known as the English Springer Spaniel."]
+ ]},
+ {"id": "5a88651b55429938390d3f45", "sentences": [
+   ["Bluebeard's Castle is a one-act opera.", "Bluebeard's Castle is by Hungarian composer Béla Bartók.", "The Hungarian title of Bluebeard's Castle is A kékszakállú herceg vára.", "Literally, the Hungarian title means The Blue-Bearded Duke's Castle."],
+   ["Agrippina (HWV 6) is an opera seria.", "Agrippina (HWV 6) has three acts.", "Agrippina (HWV 6) is by George Frideric Handel.", "Agrippina (HWV 6) has a libretto by Cardinal Vincenzo Grimani."]
+ ]},
+ {"id": "multihop-rag-2014", "sentences": [
+   ["Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.", "Caroline Ellison is the CEO of Alameda.", "Bankman-Fried used Caroline Ellison as a front.", "According to the government, Bankman-Fried had secret access to customer money, both cash and crypto."],
+   ["The second week of the trial's standout testimony came from Caroline Ellison.", "Caroline Ellison is Alameda Research's former CEO.", "Caroline Ellison claimed she took $14 billion from customers.", "Caroline Ellison claimed the $14 billion was used to repay debts to lenders.", "Caroline Ellison claimed she used customers as a line of credit.", "Caroline Ellison claimed she did this under the instruction of SBF."]
+ ]},
+ {"id": "5adcf3e35542994ed6169c3a", "sentences": [
+   ["Dean Mills Reservoir is a small water reservoir.", "Dean Mills Reservoir is north of the town of Bolton, Greater Manchester.", "Dean Mills Reservoir is located high on the slopes of Winter Hill."],
+   ["Dean Mills Reservoir is located on Rivington Moor, Chorley.", "Dean Mills Reservoir is 1496 ft high."]
+ ]},
+ {"id": "6728482020797819238", "sentences": [
+   ["The cover shows the first tankōbon volume featuring Kōsei Arima and Kaori Miyazono.", "The title is 四 月 は 君 の 嘘 (Shigatsu wa Kimi no Uso).", "The manga Shigatsu wa Kimi no Uso is written by Naoshi Arakawa.", "The manga is published by Kodansha, with English publisher Kodansha Comics.", "The manga has the Shōnen demographic and was serialized in Monthly Shōnen Magazine.", "The manga's original run was April 6, 2011 to February 6, 2015.", "The manga has 11 volumes.", "The anime television series is directed by Kyōhei Ishiguro.", "The anime television series is written by Takao Yoshioka.", "The anime television series has music by Masaru Yokoyama.", "The anime television series is by studio A-1 Pictures.", "The anime is licensed by Madman Entertainment and Aniplex of America Anime Limited.", "The anime's original network is Fuji TV (Noitamina).", "The anime's original run was October 9, 2014 to March 19, 2015.", "The anime has 22 episodes.", "The light novel Your Lie in April - A Six Person Etude is written by Yui Tokiumi.", "The light novel is published by Kodansha, with English publisher Vertical.", "The light novel was published November 17, 2014.", "The manga Shigatsu wa Kimi no Uso: Coda is written by Naoshi Arakawa.", "The manga Shigatsu wa Kimi no Uso: Coda has the Shōnen demographic.", "The manga Shigatsu wa Kimi no Uso: Coda's original run was February 25, 2015 to October 28, 2015.", "The original video animation Moments is directed by Kazuya Iwata.", "The original video animation Moments is written by Takao Yoshioka.", "The original video animation Moments has music by Masaru Yokoyama.", "The original video animation Moments is by studio A-1 Pictures.", "The original video animation Moments was released May 15, 2015.", "The original video animation Moments has a runtime of 23 minutes.", "There is a live-action film titled Your Lie in April."]
+ ]},
+ {"id": "5ab9988b554299131ca4238e", "sentences": [
+   ["Innocence is a 2013 American horror drama film.", "Innocence was directed by Hilary Brougher.", "Hilary Brougher co-wrote Innocence with Tristine Skyler."],
+   ["The movie Innocence stars Sophie Curtis.", "The movie Innocence stars Kelly Reilly.", "The movie Innocence stars Graham Phillips.", "The movie Innocence stars Linus Roache.", "The movie Innocence stars Sarah Sutherland.", "The movie Innocence stars Stephanie March."],
+   ["Stephanie Caroline March was born on 23, 1974.", "Stephanie Caroline March is an American actress."],
+   ["Stephanie March is best known for her role as Alexandra Cabot.", "The role of Alexandra Cabot was in a long-running NBC series."]
+ ]}
+]

@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8782f25542996e4f308818",
+   "sentences": [
+    " The tour accompanied the release of the piano-based album \"In the Running\" and featured pared-back versions of his hits, album tracks, and The Beatles cover \"Come Together\".",
+    " The song reached the top of the charts in the United States and peaked at No. 4 in the United Kingdom."
+   ]
+  },
+  {
+   "id": "5a8d4cf35542994ba4e3dc5f",
+   "sentences": [
+    " Programming is simulcast on WANH (91.5 FM) in Meredith, serving the Lakes Region.",
+    " The area comprises all of Belknap County, the southern portion of Carroll County, the eastern portion of Grafton County, and the northern portions of Strafford County and Merrimack County."
+   ]
+  },
+  {
+   "id": "5a7b40cd5542995eb53be8d4",
+   "sentences": [
+    "Guitar World is a monthly music magazine devoted to guitarists, published since July 1980.",
+    "Golf Digest is a monthly golf magazine published by Condé Nast Publications in the United States.",
+    " The magazine started in 1950, and was sold to The New York Times Company in 1969.",
+    " The headquarters of \"Golf Digest\" is in Des Moines, Iowa."
+   ]
+  },
+  {
+   "id": "-4874015616517210900",
+   "sentences": [
+    "Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1774",
+   "sentences": [
+    "10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.",
+    "7:06 p.m. – Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run."
+   ]
+  },
+  {
+   "id": "multihop-rag-1756",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1120",
+   "sentences": [
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-1891",
+   "sentences": [
+    "Research shows that even a small reduction in sleep has been shown to impact your immune system, however.",
+    "“This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."
+   ]
+  },
+  {
+   "id": "multihop-rag-513",
+   "sentences": [
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "-12824711872448438",
+   "sentences": [
+    "The concept was developed by Georges Auguste Escoffier . This structured team system delegates responsibilities to different individuals who specialize in certain tasks in the kitchen ."
+   ]
+  }
+ ]
+}

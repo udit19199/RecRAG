@@ -1,0 +1,74 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a7dbc175542995ed0d1666b",
+   "sentences": [
+    " The group included: Alexander Bogdanov, Maxim Gorky, Anatoly Lunacharsky, Mikhail Pokrovsky, Grigory Aleksinsky, Stanislav Volski, and Martyn Liadov.",
+    "Anatoly Vasilyevich Lunacharsky (Russian: Анато́лий Васи́льевич Лунача́рский , , 23 November [O.S. 11 November] 1875 – 26 December 1933) was a Russian Marxist revolutionary and the first Soviet People's Commissar of Education responsible for culture and education."
+   ]
+  },
+  {
+   "id": "-6431068926886690087",
+   "sentences": [
+    "Urdu lyrics كشورِ حسين شاد باد ‬ پاک سرزمین شاد باد ‬ ارضِ پاکستان ! ‏ ‬ تُو نشانِ عزمِ عالی شان ‬ مرکزِ یقین شاد باد ‬ قوّتِ اُخوّتِ عوام ‬ پاک سرزمین کا نظام ‬ پائنده تابنده باد ! ‏ ‬ قوم ، ملک ، سلطنت ‬ شاد باد منزلِ مراد ‬ رہبرِ ترقّی و کمال ‬ پرچمِ ستاره و ہلال ‬ جانِ استقبال ! ‏ ‬ ترجمانِ ماضی ، شانِ حال ‬ سایۂ خدائے ذوالجلال ‬ Transliteration ( ALA - LC ) Translation ( poetical ) Translation ( literal ) Pāk sarzamīn shād bād Kishwar - i ḥasīn shād bād Tū nishān - i ʿazm - i ʿālī shān Arẓ - i Pākistān ! Markaz - i yaqīn shād bād May the holy land , stay glad ; Beautious realm , stay glad . Thou , the sign of high resolve -- O Land of Pakistan ! Citadel of faith , stay glad . Blessed be the sacred land , Happy be the bounteous realm . Thou symbol of high resolve , O Land of Pakistan ! Blessed be the citadel of faith . Pāk sarzamīn kā niz̤ām Quwwat - i Ukhuwwat - i ʿawām Qaum , mulk , salt̤anat Pāyindah tābindah bād ! Shād bād manzil - i murād Order of the holy land , Power of fraternity of the populace ; The nation , country , and domain ; Ever luminous remain ! The cherished goal , stay glad . The order of this sacred land , The might of the brotherhood of the people , May the nation , the country , and the state , Shine in glory everlasting ! Blessed be the goal of our ambition . Parcam - i sitārah o - hilāl Rahbar - i taraqqī o - kamāl Tarjumān - i māẓī , shān - i ḥāl Jān - i istiqbāl ! Sāyah - yi Khudā - yi Ẕū l - jalāl Flag with the star and crescent , The leader of progress and ascent , Dragoman of past , the pride of present ; Soul of the future ! Shadow of the God of grandeur . The flag of the crescent and star , Leads the way to progress and perfection , Interpreter of our past , glory of our present , inspiration for our future ! Shade of God , the Glorious and Mighty ."
+   ]
+  },
+  {
+   "id": "-4187551720360968088",
+   "sentences": [
+    "Driver Seasons Entries Podiums Percentage Michael Schumacher 1991 -- 2006 , 2010 -- 2012 308 155 7001503200000000000 ♠ 50.32 % Lewis Hamilton 2007 -- 2018 211 119 7001564000000000000 ♠ 56.40 % Alain Prost 1980 -- 1991 , 1993 202 106 7001524800000099999 ♠ 52.48 % Sebastian Vettel 2007 -- 2018 202 101 7001500000000000000 ♠ 50.00 % 5 Fernando Alonso 2001 , 2003 -- 2018 296 97 7001327700000000000 ♠ 32.77 % 6 Kimi Räikkönen 2001 -- 2009 , 2012 -- 2018 276 93 7001337000000000000 ♠ 33.70 % 7 Ayrton Senna 1984 -- 1994 162 80 7001493800000000000 ♠ 49.38 % 8 Rubens Barrichello 1993 -- 2011 326 68 7001208600000000000 ♠ 20.86 % 9 David Coulthard 1994 -- 2008 247 62 7001251000000000000 ♠ 25.10 % 10 Nelson Piquet 1978 -- 1991 207 60 7001289900000000000 ♠ 28.99 % Source :"
+   ]
+  },
+  {
+   "id": "multihop-rag-1117",
+   "sentences": [
+    "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd.",
+    "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."
+   ]
+  },
+  {
+   "id": "-51011525148659082",
+   "sentences": [
+    "In healthy adults , there are two normal heart sounds , often described as a lub and a dub ( or dup ) , that occur in sequence with each heartbeat . These are the first heart sound ( S ) and second heart sound ( S ) , produced by the closing of the atrioventricular valves and semilunar valves , respectively . In addition to these normal sounds , a variety of other sounds may be present including heart murmurs , adventitious sounds , and gallop rhythms S and S ."
+   ]
+  },
+  {
+   "id": "5adc2ae5554299438c868d64",
+   "sentences": [
+    "Yucca is a genus of perennial shrubs and trees in the family Asparagaceae, subfamily Agavoideae.",
+    "Rodgersia is a genus of flowering plants in the Saxifragaceae family.",
+    " \"Rodgersia\" are herbaceous perennials originating from east Asia."
+   ]
+  },
+  {
+   "id": "5a8459aa5542996488c2e51e",
+   "sentences": [
+    " His American superior, General Dwight D. Eisenhower, wrote that he was \"blunt, at times to the point of rudeness\".",
+    "Dwight David \"Ike\" Eisenhower ( ; October 14, 1890 – March 28, 1969) was an American politician and Army general who served as the 34th President of the United States from 1953 until 1961."
+   ]
+  },
+  {
+   "id": "5a728f745542991f9a20c4e6",
+   "sentences": [
+    " It was launched in March 1994 by Millivres Ltd, under the editorship of Frances Williams and is now published by Twin Media Group, which is owned by Silke Bader and Linda Riley.",
+    "Elle is a worldwide lifestyle magazine of French origin that focuses on fashion, beauty, health, and entertainment.",
+    " \"Elle\" is also the world's best-selling fashion magazine.",
+    " It was founded by Pierre Lazareff and his wife Hélène Gordon in 1945."
+   ]
+  },
+  {
+   "id": "-9199561147097898525",
+   "sentences": [
+    "When leaving work in Idaho 's Snake River Valley , Billy Colman sees a pack of dogs attacking a stray coonhound . He takes the stray home to feed it . Once it has rested , Billy sets it free , knowing that it will return home ."
+   ]
+  },
+  {
+   "id": "-232899194860976791",
+   "sentences": [
+    "In the 12th century , luxury increased and bedsteads were made of wood much decorated with inlaid , carved , and painted ornamentation . They also used folding beds , which served as couches by day and had cushions covered with silk laid upon leather . At night a linen sheet was spread and pillows placed , while silk - covered skins served as coverlets . The Carolingian manuscripts show metal bedsteads much higher at the head than at the feet , and this shape continued in use until the 13th century in France , many cushions being added to raise the body to a sloping position . In 12th - century manuscripts , the bedsteads appear much richer , with inlays , carving , and painting , and with embroidered coverlets and mattresses in harmony . Curtains were hung above the bed and a small hanging lamp is often shown ."
+   ]
+  }
+ ]
+}

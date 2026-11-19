@@ -1,0 +1,77 @@
+[
+  {
+    "id": "5ae6fee3554299572ea54670",
+    "sentences": [
+      ["The person finished second in voting for the Heisman Trophy in 1956.", "Paul Hornung finished first in that Heisman Trophy voting in 1956."],
+      ["Paul Vernon Hornung was born on December 23, 1935.", "Paul Vernon Hornung is nicknamed \"The Golden Boy\".", "Paul Vernon Hornung is a former professional American football player.", "Paul Vernon Hornung is a Hall of Fame running back.", "Paul Vernon Hornung played for the Green Bay Packers of the National Football League (NFL).", "Paul Vernon Hornung played for the Green Bay Packers from 1957 to 1966.", "Paul Vernon Hornung won four NFL titles.", "Paul Vernon Hornung won the first Super Bowl."]
+    ]
+  },
+  {
+    "id": "multihop-rag-1520",
+    "sentences": [
+      ["The Justice Department is focused on the deals Google makes.", "The deals Google makes include deals with Apple, Samsung, Mozilla, and many others.", "The Justice Department is focused on these deals to ensure Google is the default search engine on practically every platform."],
+      ["The last roundup reported how Google spent $26.3 billion in 2021 making Google the default search engine across platforms.", "The last roundup reported how Google tried to have Chrome preinstalled on iPhones."]
+    ]
+  },
+  {
+    "id": "multihop-rag-1129",
+    "sentences": [
+      ["Bankman-Fried used Caroline Ellison as a front.", "Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.", "Caroline Ellison is the CEO of Alameda.", "Bankman-Fried had \"secret access\" to customer money, both cash and crypto.", "The government claimed this."],
+      ["Before his fall, Bankman-Fried presented himself as the Good Boy of crypto.", "Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry."],
+      ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+    ]
+  },
+  {
+    "id": "multihop-rag-2343",
+    "sentences": [
+      ["This point will probably come up later in the trial.", "Epic chose to focus more on painting Google as the bad guy on day one.", "Epic chose to focus on this simply, on day one."],
+      ["The woman admits she may have misinterpreted the evidence.", "The woman maintains that Google manipulates Search to maximise ad revenue."],
+      ["The case was filed by the Arkansas-based publisher Helena World Chronicle.", "The case argues that Google \"siphons off\" news publishers' content.", "The case argues that Google siphons off news publishers' readers.", "The case argues that Google siphons off news publishers' ad revenue.", "The case argues this happens through anticompetitive means."]
+    ]
+  },
+  {
+    "id": "5a75eca555429976ec32bca8",
+    "sentences": [
+      ["The Nassau Herald is a weekly newspaper.", "The Nassau Herald serves the Five Towns communities of Nassau County.", "The Five Towns communities of Nassau County are Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood, and Atlantic Beach."],
+      ["Lawrence is a village.", "Lawrence is in Nassau County, New York, United States."],
+      ["As of the 2010 United States Census, the population of the village of Lawrence was 6,483."]
+    ]
+  },
+  {
+    "id": "5a7145d55542994082a3e73c",
+    "sentences": [
+      ["Sigmund Werner Paul Jähn was born on 13 February 1937.", "Sigmund Werner Paul Jähn is a German cosmonaut.", "Sigmund Werner Paul Jähn is a pilot.", "In 1978 Sigmund Werner Paul Jähn became the first East German to fly in space.", "In 1978 Sigmund Werner Paul Jähn became the first German native to fly in space.", "The 1978 flight by Sigmund Werner Paul Jähn was part of the Soviet Union's Interkosmos programme."],
+      ["Arne Christer Fuglesang was born on March 18, 1957.", "Arne Christer Fuglesang was born in Stockholm.", "Arne Christer Fuglesang is a Swedish physicist.", "Arne Christer Fuglesang is an ESA astronaut."],
+      ["Arne Christer Fuglesang was first launched aboard the STS-116 Space Shuttle mission.", "That launch was on December 10, 2006, at 01:47 GMT.", "Arne Christer Fuglesang became the first Swedish citizen in space."]
+    ]
+  },
+  {
+    "id": "5a8241a855429940e5e1a819",
+    "sentences": [
+      ["The Sports Museum is also known as The Sports Museum of New England.", "The Sports Museum is a non-profit museum.", "The Sports Museum is currently located in the TD Garden.", "The TD Garden is in Boston, Massachusetts."],
+      ["TD Garden is often called Boston Garden.", "TD Garden is often called \"The Garden\".", "TD Garden is a multi-purpose arena.", "TD Garden is in Boston, Massachusetts."],
+      ["TD Garden opened in 1995.", "TD Garden opened as a replacement for the original Boston Garden.", "TD Garden has been known as Shawmut Center.", "TD Garden has been known as FleetCenter.", "TD Garden has been known as TD Banknorth Garden."]
+    ]
+  },
+  {
+    "id": "761079737280110147",
+    "sentences": [
+      ["The theory is generally associated with Hirschman.", "Hirschman presented a complete theoretical formulation of the strategy.", "Underdeveloped countries display common characteristics.", "Underdeveloped countries have low levels of GNI per capita.", "Underdeveloped countries have slow GNI per capita growth.", "Underdeveloped countries have large income inequalities.", "Underdeveloped countries have widespread poverty.", "Underdeveloped countries have low levels of productivity.", "Underdeveloped countries have great dependence on agriculture.", "Underdeveloped countries have a backward industrial structure.", "Underdeveloped countries have a high proportion of consumption and low savings.", "Underdeveloped countries have high rates of population growth and dependency burdens.", "Underdeveloped countries have high unemployment and underemployment.", "Underdeveloped countries have technological backwardness.", "Underdeveloped countries have dualism, meaning both traditional and modern sectors exist.", "In a less-developed country, these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources.", "In a less-developed country, a lack of investors and entrepreneurs means cash flows cannot be directed into various sectors that influence balanced economic growth."]
+    ]
+  },
+  {
+    "id": "multihop-rag-1083",
+    "sentences": [
+      ["Rehn declared to the jury.", "Rehn declared to the jury that all of that, all of it, was built on lies."],
+      ["Binance has made headlines this past year for a range of reasons.", "Binance has made headlines this past year including because of Zhao's comments.", "Zhao's comments contributed to the collapse of FTX.", "FTX was once one of Binance's top competitors."]
+    ]
+  },
+  {
+    "id": "5ae763aa5542995703ce8c09",
+    "sentences": [
+      ["William Dwight Schultz was born on November 24, 1947.", "William Dwight Schultz is an American actor.", "William Dwight Schultz is an American voice artist."],
+      ["William Dwight Schultz is well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series.", "William Dwight Schultz is well known in animation as Chef Mung Daal in the children's cartoon \"Chowder\".", "William Dwight Schultz is well known in animation as Eddie the Squirrel in \"CatDog\"."],
+      ["Chowder is an American animated television series.", "Chowder was created by C. H. Greenblatt.", "Chowder was created for Cartoon Network."]
+    ]
+  }
+]

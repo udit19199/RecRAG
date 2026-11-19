@@ -1,0 +1,869 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=eeae947d3010e3c3 ===
+Gold sentences and facts:
+Sentence 0: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 0.0: Sportsbooks are also gathering this information.
+  Fact 0.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+Sentence 1: If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability.
+  Fact 1.0: Sportsbooks might adjust the odds to balance their liability if a significant amount of money is placed on one team or participant.
+
+Retrieved items:
+<item 1>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other side to get it that way.
+
+That’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like
+an injury or roster move. It’ll be difficult for you to find value in that case.
+
+But when a line moves or odds change because of betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right
+there.
+
+Line shopping is a tool to help you spot changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.
+
+Choose a side, shop around at online sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable
+to your viewpoint.
+
+See more: What is a parlay bet?
+</item 1>
+
+<item 2>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 2>
+
+<item 3>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck with a push instead of a
+profit.
+
+What is the Vegas line?
+
+Las Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is copying a line, it’s usually copying the Vegas line. Most
+online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all lines in every major sport.
+
+If those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take advantage when sportsbooks stray
+from the Vegas line.
+
+Why do the lines move?
+
+It’s worth reiterating that sportsbooks want an equal amount of money bet on each side of every bet. When that happens, they earn the small profit built into
+the odds without concern about who wins or loses.
+</item 3>
+
+<item 4>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+This includes your initial $10 wager, along with a profit of $15.30.
+
+It's essential to note that this calculation gives you the total payout, not just your earnings. If you're keen on tracking your profits from betting, remember
+to subtract your original stake from the payout to get an accurate figure.
+
+Why do moneyline odds change?
+
+Lines at the best sports betting apps change quickly due to two primary reasons:
+
+Public betting
+
+New information
+
+Before setting odds for an event, oddsmakers gather extensive data. Once they finalize the odds, they release them to the public.
+
+As a bettor, you can bet immediately or wait for potential shifts in the odds, although predicting these shifts is challenging.
+
+For instance, when examining odds for the next Super Bowl champion released shortly after the previous Super Bowl, these odds are based mostly on the recently
+concluded season.
+
+As the new season approaches and teams make changes, odds adjust based on perceived championship chances. As games progress, lines continue to evolve based on
+team performances.
+
+Public betting can also sway lines.
+</item 4>
+
+<item 5>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Moreover, information and public perception play a role. If a piece of news or a prevailing sentiment starts to gain traction about a particular team's
+increased chances of winning, this can influence how people bet, leading sportsbooks to adjust their lines accordingly.
+
+Point spread odds can and do change based on a combination of actual betting patterns, unexpected events, and shifts in public perception. Savvy bettors keep a
+close eye on these line moves, as they can offer insights into where the value lies in a particular bet.
+</item 5>
+
+<item 6>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 6>
+
+<item 7>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 7>
+
+<item 8>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+That means checking the posted lines and odds for the same bets at different sportsbooks.
+
+You can do this for moneylines, point spreads, totals bets, prop bets, and more. Finding the best line or better odds on any bet is like finding money.
+
+You can shop around using multiple sportsbook apps on your phone or live odds feeds like the one above. Pick a side, then use the drop-down menus and tabs to
+find the odds and lines for that bet.
+
+Finally, bet when you see an opportunity at better odds or an improved line compared to the competition.
+
+Line shopping for futures
+
+People tend to bet futures at their favorite online sportsbook. However, shopping for better odds on any future bet is worth your time. Most game lines are
+similar at different sportsbooks, but the odds in futures markets can vary significantly.
+
+Sportsbooks sometimes have higher liabilities for specific teams and offer better odds on others to lay that off. Timing is everything.
+
+Get it right, and you can easily take advantage of changes in different futures markets due to liability.
+</item 8>
+
+<item 9>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, the only way to find these opportunities is shopping lines.
+
+See more: NFL futures bets
+
+Can I get a better line or odds after I’ve already bet?
+
+When you bet, you lock in the odds or line as currently posted. If they change, for better or worse, you’re stuck with the odds from when you wagered.
+
+That’s precisely why you should go line shopping before you bet. Of course, if significant changes occur, you can take more action at the improved odds or more
+favorable line.
+
+Is line shopping worth my time?
+
+Because it can provide you the opportunity to lay less, win more, and improve your chances, line shopping is certainly worth your time. Plus, it doesn’t have to
+take up all that much of it.
+
+Use the live odds feed above to do a basic survey. You’ll find it takes just seconds to compare lines and odds. Plus, download and install multiple licensed
+online sportsbook apps on your phone, and you can do a more thorough shop in just a few minutes.
+</item 9>
+
+<item 10>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Line shopping is the key that unlocks the best odds and lines at top sports betting sites.
+
+The process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is quite often better odds
+and improved lines.
+
+What is line shopping, and why is it worth your time? Find the answers below in our complete guide to line shopping.
+
+How do sportsbooks set odds and lines?
+
+The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.
+
+Other sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics,
+statistics, injury and roster news, performance, matchup data, and more to develop the lines and odds.
+
+Betting lines and odds are then subject to change based on the betting public’s reaction and any additional information that comes to light ahead of the game.
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+</item 10>
+=== END ITEM id=eeae947d3010e3c3 ===
+
+=== ITEM id=5a710b6b0cc040d0 ===
+Gold sentences and facts:
+Sentence 0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.
+  Fact 0.0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.
+  Fact 0.1: Huang said Bankman-Fried was told that he did not want investors as directors.
+  Fact 0.2: Huang said Bankman-Fried did plan on having a board with experts.
+Sentence 1: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 1.0: The second week of the trial's standout testimony came from Caroline Ellison.
+  Fact 1.1: Caroline Ellison is the former CEO of Alameda Research.
+  Fact 1.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 1.3: Caroline Ellison claimed she used the $14 billion to repay debts to lenders.
+  Fact 1.4: Caroline Ellison claimed she used customers' funds as a line of credit under the instruction of Bankman-Fried (SBF).
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder, Bankman-Fried, acted in good faith.
+  Fact 2.2: The defense said Bankman-Fried never meant to commit fraud or steal.
+  Fact 2.3: The defense said Bankman-Fried basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 1>
+
+<item 2>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 2>
+
+<item 3>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 3>
+
+<item 4>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+regulators and government officials, many of whom he donated to.
+
+Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+
+But in early November 2022, that all changed.
+
+FTX’s collapse
+
+Concerns surrounding FTX’s liquidity grew after CoinDesk published a copy of Alameda’s balance sheet, showing the firm held $14.6 billion in assets and $8
+billion in liabilities as of June 30, 2022.
+
+But there was a problem: The report showed Alameda’s largest asset was $3.66 billion of “unlocked FTT” and $2.16 billion of “FTT collateral.” FTT was the token
+behind FTX.
+
+The balance sheet showed that the $5.82 billion in FTT tokens that Alameda owned was 193% higher than the total FTT market cap, which was about $3 billion at
+the time.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+We have some inkling of what the government will be arguing thanks to the filings prosecutors are making in this case. They argue that Bankman-Fried lied about
+consumer protection and that Bankman-Fried’s statements that FTX was “avoiding or managing conflicts of interest” and that “as a general principle FTX
+segregates customer assets from its own assets across our platforms” were lies, in a superseding indictment filed August 14th.
+
+The indictment also says that there were special features in FTX’s code that “permitted Alameda to spend and withdraw unlimited amounts of money from FTX,”
+which were created at Bankman-Fried’s direction. That effectively exempted Alameda from the kinds of risk management other customers faced. At the same time,
+the government alleges, “Bankman-Fried publicly and repeatedly asserted that Alameda did not have privileged access to FTX.”
+</item 5>
+
+<item 6>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+He, like many of SBF’s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical “legal justification” for
+the use of billions in consumer funds just days before FTX filed for bankruptcy.
+
+Robert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately
+resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a
+relationship, he testified that Third Point would not have invested in FTX in the first place.
+
+And earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he
+uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.
+</item 6>
+
+<item 7>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Read a recap of the prosecution and defense’s full arguments here.
+
+FTX’s co-founder and CTO Gary Wang testified Thursday on the extent to which Alameda Research was used for whatever purposes he and SBF saw fit. The crypto
+trading firm, according to Wang, pulled funding directly from FTX customers, whose transactions would be funneled toward Alameda and then directed elsewhere.
+
+Check here for our rundown of Wang’s testimony so far, resulting from a guilty plea in December 2022.
+
+Thursday also brought in testimony from Matt Huang, co-founder and managing partner at crypto investment firm Paradigm. That firm invested $278 million in FTX
+across 2021 and 2022, and is part of a class-action lawsuit accusing it and others of defrauding customers by promoting FTX.
+
+His testimony centered around being left uninformed about FTX’s utilization of customer money to keep the Alameda Research afloat, a practice that Huang says
+would have halted his involvement.
+</item 7>
+
+<item 8>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 8>
+
+<item 9>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 9>
+
+<item 10>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 10>
+=== END ITEM id=5a710b6b0cc040d0 ===
+
+=== ITEM id=2f872c177d4ee1db ===
+Gold sentences and facts:
+Sentence 0: Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.
+  Fact 0.0: Epic will also suggest that Google hid items from discovery by allowing executives and employees to have 'off the record' chats.
+  Fact 0.1: Google will counter this, saying it has provided the court with thousands of chat logs.
+  Fact 0.2: Google says it has provided the court with millions of documents.
+Sentence 1: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 1.0: Google did not release the full model, Gemini Ultra.
+  Fact 1.1: Google released only a 'lite' version called Gemini Pro.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that this happens through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 1>
+
+<item 2>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+As an example, Epic will point to Activision Blizzard, the owner of King.com and maker of Candy Crush and Call of Duty, as one developer that wanted to go the
+route of opening its own app store. Google and Activision Blizzard then entered into a three-year agreement in January 2020, worth approximately $360 million,
+to keep the developer on Google Play, Epic will argue.
+
+Google, however, will characterize this program as a way to incentivize developers to launch their apps on Android at the same time as they launch on iOS and
+plans to dispute Epic’s claims that it prevented developers from opening their own app stores.
+
+Android allows sideloading
+
+Google will make note that, unlike Apple, it also allows apps to be sideloaded on Android devices — something Epic takes advantage of today. It will note this
+process is streamlined and helps keep users safe.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 3>
+
+<item 4>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 4>
+
+<item 5>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Match may have settled its antitrust lawsuit with Google last week, but Fortnite maker Epic Games is still set to go to trial with the tech giant today,
+November 6, in hopes of convincing a jury that Google engages in anticompetitive behavior with regard to its Android app store, Google Play, and its commission
+structure. This case will differ slightly from Epic’s battle with Apple on the same topic because, this time, Epic can’t allege there’s no other way to load
+apps onto Android devices, as it could with Apple, because Android does allow for sideloading apps. Though Epic will suggest Google makes that process
+cumbersome, the bulk of its arguments will center around what it believes are anticompetitive agreements between Google and device manufacturers and developers.
+
+The precedent Epic’s case will rely on is a Microsoft case where courts found Microsoft to have a monopoly over the operating system and were abusing it, making
+it hard for users to download alternative browsers, like Netscape, on Windows devices.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 6>
+
+<item 7>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 7>
+
+<item 8>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+“Android’s choice and flexibility work well for consumers and developers of all sizes. We look forward to making our case in court as we fight to keep our users
+safe from harm, partner with developers to grow their businesses, and keep the Android ecosystem thriving and healthy for everyone,” reads a Google blog post by
+Wilson White, VP, Government Affairs & Public Policy.
+
+Epic’s lawsuit originally involved Match and several U.S. attorneys general, but Google reached a settlement with the latter last month and with Match last
+week. Epic will now fight the antitrust battle on its own. The lawsuit, held in the U.S. District Court in California’s Northern District, will include
+testimony from a number of Google and Android execs, including CEO Sundar Pichai, and Epic Games CEO Tim Sweeney, as well as Apple, Netflix and other Android
+developers.
+
+Google is also involved in another antitrust lawsuit with the Department of Justice over its alleged search monopoly.
+</item 8>
+
+<item 9>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 9>
+
+<item 10>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 10>
+=== END ITEM id=2f872c177d4ee1db ===
+
+=== ITEM id=7939a5547110353f ===
+Gold sentences and facts:
+Sentence 0: If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+  Fact 0.0: If the debt continues to rise more than the economy, risks will increase.
+  Fact 0.1: If the debt continues to rise more than the economy, the government may 'crowd out' private investment.
+  Fact 0.2: The government may crowd out private investment as it competes with the private sector for funds to service its debt.
+Sentence 1: And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+  Fact 1.0: President Ferdinand Marcos, Jr. said 'We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%'.
+  Fact 1.1: President Ferdinand Marcos, Jr. said the Philippines' debt-to-GDP ratio of about 63% is a little high for the country and is not ideal.
+  Fact 1.2: President Ferdinand Marcos, Jr. said this to members of the US-ASEAN Business Council who visited Malacañang.
+  Fact 1.3: ABS-CBN reported this on Aug. 9, 2023.
+
+Retrieved items:
+<item 1>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+the government borrows money either from foreign sources or from the domestic capital market which increases the debt stock of the NG and its debt servicing
+requirements; b.) the government borrows money from the Bangko Sentral ng Pilipinas; or, c.) the government withdraws funds from its cash balances in the
+Treasury. Historically, National Government expenditures have always exceeded total revenues resulting in annual budget deficits, the DBM declared. “Thus, the
+National Government had to resort to borrowing to cover said deficits which resulted in the ballooning of foreign and domestic debts,” the budget office
+admitted.
+
+“However, in 1994, the government broke the deficit trend by posting a budget surplus of P16 billion through an aggressive privatization and revenue generation
+program and a prudent expenditure program. Since then, the government has been exerting efforts to maintain the surplus budget policy. The surplus budget policy
+is important to encourage economic growth,” the DBM said.
+</item 1>
+
+<item 2>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+For this, the economy must grow its per capita income above the threshold set by the World Bank, which means a gross national income (GNI) per capita of at
+least $4,466. In 2022, the Philippines achieved a GNI per capita of $3,950.
+
+The second is to lower the poverty level from 18.1% in 2021 to single digits by 2028 — the end of the term of the current administration. Both indicators
+require high growth rates. For the next year through 2028, the government pencils the growth rate between 6.5% and 8%.
+
+Growth is expected to be investment-led with the implementation of structural changes such as the Corporate Recovery and Tax Incentives for Enterprises (CREATE)
+law, which lowered the corporate income tax rate, and the amendments to the Public Service Act (PSA), Foreign Investment Act (FIA), and Retail Trade
+Liberalization Act (RTLA), which further liberalized the economy. The new legislation is expected to attract more local and foreign investment, especially in
+the liberalized sectors.
+</item 2>
+
+<item 3>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+To this end, the first goal of the PDP is social transformation which includes, among others, sustained expenditure on social services, mainly education,
+health, and social protection.
+
+The first two goals of the PDP help attain the developmental objectives of efficiency and equity, which rest on the pillars of sustainability and resilience.
+The third fosters societal resilience: an enabling environment encompassing institutions, macroeconomic stability, and the physical and natural environment.
+
+Institutions are vital to economic acceleration, which is why the government’s steps to enhance the ease of doing business are most welcome. Infrastructure
+development also enables an economy to sustain higher levels of growth, which, in turn, catalyzes yet more investment. The Public-Private Partnership (PPP) Act
+is up for the signature of President Marcos and, if approved, is expected to further enhance the business atmosphere in mobilizing private resources for
+infrastructure development.
+
+The government aims to sustain its infrastructure program at 5-6% of GDP through 2028 amid a six-year medium-term fiscal framework.
+</item 3>
+
+<item 4>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+The National Government plans to raise more revenue to finance the country’s socio-economic needs, largely through a progressive and simplified tax system, more
+efficient and effective tax collection measures through digitalization and, to some extent, from policy measures such as value-added tax on digital service
+providers and excise tax on sweetened beverages and junk food.
+
+Achieving fiscal stability presupposes the sustainability of fiscal policy, and fiscal stability helps “crowd in” private investment.
+
+PRICE STABILITY AND INFLATION
+
+In his second State of the Nation Address (SONA), President Ferdinand Marcos, Jr. singled out inflation as the country’s most pressing problem. In the first
+nine months of 2023, inflation averaged 6.6% — far above the upper end of the target range of 2-4% set by the BSP. If left unchecked, inflation could undermine
+growth. Not only does this increase costs to organizations, but it also sets in motion second-round effects as workers start demanding higher wages,
+consequently increasing business costs and discouraging investments.
+</item 4>
+
+<item 5>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+But traditional politicians (called “trapo” in the Philippines) might have it in their hearts to think about the country and the welfare of future generations.
+
+How many generations will pay for the monstrous debt incurred for the dubious objectives and vanities of some today?
+
+Amelia H. C. Ylagan is a doctor of Business Administration from the University of the Philippines.
+
+ahcylagan@yahoo.com
+</item 5>
+
+<item 6>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+During the Congressional budget hearing, Finance Secretary Benjamin Diokno optimistically provided updates on the government’s fiscal and revenue collection
+performances and presented sources of funding for the national budget. Tax revenue is projected to increase from P3.5 trillion in 2023 to P6.5 trillion in 2028,
+while non-tax revenues are expected to decline from P191 billion in 2023 to P184 billion in 2028, Diokno told the Philippine News Agency (pna.gov.ph, Aug. 10).
+
+Diokno said the Finance department aims to gradually reduce net financing or new debt from P1.42 trillion in 2022 to P1.22 trillion in 2024, which will help
+bring the country’s debt-to-GDP ratio to almost below 60% by 2025. And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%
+and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr.
+</item 6>
+
+<item 7>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+This plan gradually narrows the deficit to 3% of GDP by 2028, down from 7.3% in 2022, such that the debt-to-GDP ratio is reduced from nearly 61% in 2022 to a
+more sustainable level of at most 53% by 2028.
+
+DEBT MANAGEMENT
+
+The National Government’s debt was less than 40% before the pandemic struck. It expended much of its fiscal space combatting the pandemic, incurring debt and
+large budget deficits. While the current 61% debt-to-GDP ratio may be manageable for an emerging economy like the Philippines for some time, the country may not
+have the fiscal space to respond to another potential domestic or external shock. If the debt continues to rise more than the economy, risks will increase, and
+the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+
+The planned fiscal consolidation entails harmonizing the revenue needs with the promotion of investment through the structure and administration of the reformed
+incentive system.
+</item 7>
+
+<item 8>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+
+Whom are we to believe, but inflation — which independently says it as it is.
+
+“While inflation in the Philippines has been on a downward trend since January, the country needs to achieve a 3.7% average inflation rate for the next five
+months for the country to hit the BSP’s forecast of 5.5% inflation for 2023, Assistant National Statistician Rachel Lacsa said (Ibid.). Some economists say that
+deficit budgets and the remedies — monetary (borrowings increasing money supply) and fiscal (like raising taxes) increase inflation, and stubborn inflation
+further entrenches structural deficits in the system. It is a vicious cycle.”
+
+National budgets might not be innocent of political agendas (call them plans and programs) that can divert money from the proper socio-economic goals of
+equilibrium as a balanced budget might work towards.
+</item 8>
+
+<item 9>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+Inflation is partly driven by supply-side issues and the government is allocating more resources to the agriculture sector to boost production. Mr. Marcos also
+mentioned that the National Government had distributed 28,000 new tools and machinery to farmers. An additional 600 km of farm-to-market roads were laid down to
+support the 14 million hectares of farmland, enhancing farmer access to markets. In addition, he signed Executive Order No. 28 in May, forming the Inter-Agency
+Committee on Inflation and Market Outlook, which is tasked to keep inflation within government targets and boost the economy.
+
+ENHANCING CLIMATE RESILIENCE
+
+While price stability and fiscal sustainability are important macroeconomic issues, environmental sustainability is increasingly gaining importance. Climate
+change uncertainties and challenges need to be managed and both the Philippine government and the private sector are hard-pressed to deliver their commitments
+to addressing them. Despite climate change risks, the Philippines has the opportunity to position itself as a prime destination of foreign investments against
+climate change or environmental, social, and governance (ESG) investments.
+</item 9>
+
+<item 10>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+Why then, do we have a deficit budget for 2024?
+
+The national budget for 2024 is at P5.768 trillion, 9.5% higher than the current (2023) budget of P5.268 trillion. Observers note that this first budget fully
+prepared by the current administration accounts for 21.7% of gross domestic product (GDP). The 2024 expenditure program is higher by P499.6 billion or a
+year-on-year growth rate of 9.5% as compared to the 2023 level of P5.268 trillion. The P5.768-trillion budget, to be supported mainly by P3.5-trillion tax
+revenues (based on 2023 tax revenue projections), would mean a budget deficit of some P2.268 trillion, to be funded by additional borrowings. This could
+increase government debt from the current P14.24 trillion (as of July) to P16+ trillion by the end of 2024.
+</item 10>
+=== END ITEM id=7939a5547110353f ===
+
+=== ITEM id=2a8a575c43fb8d39 ===
+Gold sentences and facts:
+Sentence 0: Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+  Fact 0.0: Kenneth Walker III plays for the Seahawks.
+  Fact 0.1: Kenneth Walker III took four carries against the Rams.
+  Fact 0.2: Kenneth Walker III took four carries against the Rams before leaving.
+  Fact 0.3: Kenneth Walker III left with an oblique injury.
+Sentence 1: Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries.
+  Fact 1.0: Entering Week 12, Tee Higgins failed to suit up due to a nagging hamstring injury.
+  Fact 1.1: Entering Week 12, Noah Brown failed to suit up due to a nagging knee injury.
+  Fact 1.2: Entering Week 12, Treylon Burks failed to suit up due to a nagging concussion.
+  Fact 1.3: Entering Week 12, Kadarius Toney failed to suit up due to a nagging ankle injury.
+  Fact 1.4: Entering Week 12, Kadarius Toney failed to suit up due to a nagging hip injury.
+
+Retrieved items:
+<item 1>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Geno Smith's struggles complicate their fantasy prospects, as well.
+
+What are the biggest WR injuries in Week 13?
+
+Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging
+injuries. For now, we've placed Higgins and Brown in our Week 13 list and omitted Burks and Toney. We'll also be eyeing the Chargers' Josh Palmer (knee), who's
+eligible to come off the IR this week but probably won't suit up against New England.
+
+Last week, the most notable WRs to exit their respective games with injuries include Chris Olave (concussion), Amari Cooper (ribs), Demario Douglas
+(concussion), and Rashid Shaheed (thigh). We've left all four WRs out of our initial Week 13 list but will closely monitor their teams' injury reports to gauge
+their playing prospects.
+</item 1>
+
+<item 2>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Smith did return, however, for the final drive of the game in the losing effort. Head coach Pete Carroll said that Smith will "make it back." When asked if that
+means for Thursday's matchup against San Francisco, the coach said, "I would think so."
+
+Sam Howell (Commanders) received medical attention on the sidelines after enduring several hard hits to the upper body on a touchdown run against the Giants. He
+was quickly cleared of a potential concussion, however, and remained in the game. Veteran journeyman Jacoby Brissett is Washington's backup.
+
+RB
+
+Aaron Jones (Packers) suited up against the Chargers despite a lingering hamstring issue, only to manage just five carries before suffering a knee injury. The
+former Pro Bowler needed help to leave the field and was then carted to the locker room, replaced by A.J. Dillon.
+</item 2>
+
+<item 3>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Week 11 of the 2023 NFL season has provided plenty of drama, from the Bears hanging with the Lions to the Giants getting a rebound from emergency quarterback
+Tommy DeVito. But the latest round of regular-season action has also brought another wave of unfortunate injuries. Here's a roundup of the latest big names to
+go down around the league:
+
+QB
+
+C.J. Stroud (Texans) left for a single play against the Cardinals after absorbing a hard hit, with backup Davis Mills entering in relief. Stroud did not receive
+an injury designation, however, and returned after a quick check-in from trainers.
+
+Geno Smith (Seahawks) suffered an injury to his throwing arm after guiding a 16-7 lead over the Rams, showing frustration while trying to stretch the arm after
+a hit from Aaron Donald. Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left
+in the third quarter.
+</item 3>
+
+<item 4>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+He was seen walking on the sidelines shortly afterward but ruled doubtful to return. Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing
+yards on the year, replaced Walker as Seattle's top ball carrier. Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an
+"oblique strain that was legit" and could miss time.
+
+D'Onta Foreman (Bears) remained a headliner of Chicago's backfield against the Lions, even with Khalil Herbert back from injured reserve, but managed just 14
+yards on the ground before suffering an ankle injury. He walked off with a limp and attempted to run on the sidelines but did not return to the field after the
+Bears ruled him questionable.
+
+Pick Six Newsletter Crafted By The Best NFL Experts Get the day's big stories + fun stuff you love like mock drafts, picks and power rankings.
+</item 4>
+
+<item 5>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+I agree to receive the "Pick Six Newsletter" and marketing communications, updates, special offers (including partner offers), and other information from CBS
+Sports and the Paramount family of companies. By pressing sign up, I confirm that I have read and agree to the Terms of Use and acknowledge Paramount's Privacy
+Policy See All Newsletters Please check the opt-in box to acknowledge that you would like to subscribe. Thanks for signing up! Keep an eye on your inbox. Sorry!
+There was an error processing your subscription.
+
+WR
+
+Tyreek Hill (Dolphins) briefly left Miami's game against the Raiders while nursing a hand injury and was ruled questionable to return, but he took the field
+again soon afterward, securing seven catches for 80 yards and a score before halftime. Hill has left multiple games this year, only to return in all of them.
+
+Cooper Kupp (Rams) had just a single catch against the Seahawks before suffering an ankle injury while blocking.
+</item 5>
+
+<item 6>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+They weren't awful against Dallas last week on a per-touch basis, but neither finished with more than 12 touches. Even worse, no Carolina back has enjoyed a
+60-yard rushing game since Oct. 15. Bad offensive line, negative game scripts, awful coaching — it's all bad, man!
+
+What are the biggest RB injuries in Week 12?
+
+Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11 that the ever-hip Pete Carroll referred to as "legit." KW3 has a better
+chance of missing multiple weeks than he does at suiting up for Seattle's Thanksgiving Day game against Fred Warner and the 49ers. If Zach Charbonnet somehow
+finds himself on your waiver wire, an early Merry Christmas to you if you have the FAAB or a high waiver priority.
+
+The hits just keep on coming for the Packers' Aaron Jones, who suffered a knee injury but seems to have at least caught a break in the sense that he didn't tear
+his ACL.
+</item 6>
+
+<item 7>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+DB
+
+Talanoa Hufanga (49ers), who emerged as a ballhawk for San Francisco's secondary in 2022, left early against the Buccaneers with a knee injury. Coach Kyle
+Shanahan confirmed to reporters on Monday that the All-Pro suffered a season-ending ACL tear.
+</item 7>
+
+<item 8>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Bengals at Jaguars (-8.5), Monday
+
+Bengals : CB Cam Taylor-Britt (quad/ankle), D'Ante Smith (knee), Jay Tufele (illness) OUT
+
+: CB Cam Taylor-Britt (quad/ankle), D'Ante Smith (knee), Jay Tufele (illness) OUT Jaguars: CB Tyson Campbell (hamstring), RB Travis Etienne (ribs), TE Brenton
+Strange (foot), TE Luke Farrell (toe) QUESTIONABLE
+
+The Bengals got good news on the injury front ahead of Monday's game against the Jaguars. Wide receiver Tee Higgins (hamstring/ankle) and linebacker Logan
+Wilson (ankle/foot) are set to play, according to head coach Zac Taylor. Higgins and Wilson were full participants in practice. Cornerback Cam Taylor-Britt hurt
+his foot in practice and is out.
+</item 8>
+
+<item 9>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 9>
+
+<item 10>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for
+further evaluation in the locker room. He was ruled questionable to return. NFL Media reported on Monday that Kupp suffered a low ankle sprain and will be
+evaluated going forward.
+
+Darius Slayton (Giants) had a big impact against the Commanders, hauling in a deep score from Tommy DeVito, before exiting with an arm injury. He was ruled out
+for the remainder of the contest halfway through the third quarter.
+
+EDGE
+
+Joey Bosa (Chargers) appeared to injure his right leg or foot while held in a block during a first-quarter pass-rushing attempt against the Packers. He limped
+to the sidelines and was carted to the locker room, then ruled questionable to return.
+</item 10>
+=== END ITEM id=2a8a575c43fb8d39 ===

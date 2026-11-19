@@ -1,0 +1,73 @@
+[
+{"id": "f3616c0c7bd7aba2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "according to Mark Cohen, one of his lawyers."}, {"item": 10, "quote": "a nerdy startup founder who acted in “good faith,”"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "d1d6154ffc87e025", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]}
+]},
+{"id": "a220ac8ea83bbb6f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "4fcf5625253b2382", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.7", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "39158fa8f89bd1c8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 4, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 4, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "ea5db458824a3cc6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}]},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]}
+]}
+]

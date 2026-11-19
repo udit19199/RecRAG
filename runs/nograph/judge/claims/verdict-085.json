@@ -1,0 +1,75 @@
+[
+  {
+    "id": "5a8cc08455429941ae14deea",
+    "sentences": [
+      ["The described act consists of a duet.", "Dave Hemingway is a vocalist featured in the duet.", "Briana Corrigan is a vocalist featured in the duet."],
+      ["Briana Corrigan was born on 30 May 1965.", "Briana Corrigan is a Northern Irish singer."]
+    ]
+  },
+  {
+    "id": "5a8a3dd55542995153361360",
+    "sentences": [
+      ["Sir Nicholas Robert Hytner was born on 7 May 1956.", "Sir Nicholas Robert Hytner is an English theatre director.", "Sir Nicholas Robert Hytner is an English film director.", "Sir Nicholas Robert Hytner is an English film producer."],
+      ["Maya Deren was born on April 29, 1917.", "Maya Deren died on October 13, 1961.", "Maya Deren was born Eleanora Derenkowskaia.", "The birth name Eleanora Derenkowskaia is given in Russian as Элеоно́ра Деренко́вская.", "Maya Deren was a Russian-American filmmaker.", "Maya Deren was one of the most important American experimental filmmakers in the 1940s and 1950s.", "Maya Deren was one of the most important American entrepreneurial promoters of the avant-garde in the 1940s and 1950s."],
+      ["Maya Deren was also a choreographer.", "Maya Deren was also a dancer.", "Maya Deren was also a film theorist.", "Maya Deren was also a poet.", "Maya Deren was also a lecturer.", "Maya Deren was also a writer.", "Maya Deren was also a photographer."]
+    ]
+  },
+  {
+    "id": "multihop-rag-2391",
+    "sentences": [
+      ["The team in question wants more than three points.", "It is still early enough in the game.", "The team in question absolutely could settle for a field goal if the game got to that point."],
+      ["At 11:03 p.m., the Vikings are using their two timeouts.", "There isn't much the Vikings will be able to do once the situation reaches fourth down."],
+      ["Josh Dobbs is a new player on the Vikings.", "Josh Dobbs keeps producing the same offensive results the Vikings enjoyed with Kirk Cousins.", "Josh Dobbs's results have come with more help from the running game under Kevin O'Connell.", "Josh Dobbs's results have come with more help from the overall defense under Brian Flores."]
+    ]
+  },
+  {
+    "id": "multihop-rag-2233",
+    "sentences": [
+      ["Automakers are building ever-more sophisticated digital platforms into future generations of cars and other vehicles.", "Technology companies are building ever-more sophisticated digital platforms into future generations of cars and other vehicles."],
+      ["The speaker says the industry now has software, robotics, AI, and similar technology.", "Car companies need to embrace software, robotics, AI, and similar technology."]
+    ]
+  },
+  {
+    "id": "2471210292422908873",
+    "sentences": [
+      ["The music video for 'Total Eclipse of the Heart' was directed by Russell Mulcahy.", "The music video for 'Total Eclipse of the Heart' was filmed on location at the Holloway Sanatorium.", "The Holloway Sanatorium is a large Victorian Gothic hospital.", "The Holloway Sanatorium is near Virginia Water, Surrey, England.", "The music video features Bonnie Tyler.", "In the music video, Bonnie Tyler is clad in white.", "In the music video, Bonnie Tyler is dreaming or fantasizing about her students in a boys' boarding school.", "In the music video, young men are seen dancing.", "In the music video, young men are seen participating in various school activities.", "In the music video, young men are seen singing in a choir."]
+    ]
+  },
+  {
+    "id": "5abd259d55429924427fcf1a",
+    "sentences": [
+      ["Dictyosperma is a monotypic genus of flowering plant.", "Dictyosperma is in the palm family.", "Dictyosperma is found in the Mascarene Islands in the Indian Ocean.", "Dictyosperma is found in Mauritius.", "Dictyosperma is found in Réunion.", "Dictyosperma is found in Rodrigues."],
+      ["The genus Huernia is in the family Apocynaceae.", "The genus Huernia is in the subfamily Asclepiadoideae.", "The genus Huernia consists of stem succulents.", "The stem succulents of the genus Huernia are from Eastern Africa.", "The stem succulents of the genus Huernia are from Southern Africa.", "The genus Huernia was first described as a genus in 1810."]
+    ]
+  },
+  {
+    "id": "multihop-rag-1317",
+    "sentences": [
+      ["The victory has the Swans challenging for a top-eight spot.", "The Swans are challenging for a top-eight spot alongside teams such as Gold Coast.", "The Swans are challenging for a top-eight spot alongside teams such as Geelong.", "The Swans are challenging for a top-eight spot alongside teams such as Collingwood.", "The Swans are challenging for a top-eight spot alongside teams such as St Kilda.", "The Swans are challenging for a top-eight spot alongside teams such as Carlton."],
+      ["Only 0.4 of a percentage point separates Sydney in ninth place and St Kilda in eighth place.", "Sydney is in ninth place.", "St Kilda is in eighth place.", "The win assured the Swans of retaking eighth spot."],
+      ["A speaker, referred to as 'she', said the following quote.", "The speaker's team has put a lot of work into sourcing some wonderful food offerings.", "The speaker's team has put a lot of work into sourcing entertainment for kids.", "The speaker's team has put a lot of work into sourcing activities for kids.", "The speaker's team has had a local focus in promoting its games."]
+    ]
+  },
+  {
+    "id": "5a81b92a5542995ce29dcc52",
+    "sentences": [
+      ["The University of Delaware is colloquially called 'UD'.", "The University of Delaware is the largest university in Delaware."],
+      ["The University of Debrecen's Hungarian name is 'Debreceni Egyetem'.", "The University of Debrecen is a university.", "The University of Debrecen is located in Debrecen, Hungary."]
+    ]
+  },
+  {
+    "id": "multihop-rag-483",
+    "sentences": [
+      ["On October 12, 2023, Israel warned 1.1 million Gaza residents to leave for the southern region.", "The warned Gaza residents were in the northern section of the enclave.", "Israel issued the warning in advance of a potential ground invasion."],
+      ["Another user said that no one can carry out such a major attack against Israel without intelligence support."]
+    ]
+  },
+  {
+    "id": "multihop-rag-2440",
+    "sentences": [
+      ["The agreement also meant that Apple never switched to a Google competitor.", "The agreement also meant that Apple never allowed users to choose their browser when setting up their iPhones."],
+      ["Apple has already indicated that it plans to appeal.", "Appealing is a lengthy process.", "Appealing can take around 18 months."],
+      ["The party described uses its own store.", "The party described uses its own payments.", "The party described forces developers to all have the same terms.", "The party described forces OEMs to all have the same terms.", "The party described forces carriers to all have the same terms."]
+    ]
+  }
+]

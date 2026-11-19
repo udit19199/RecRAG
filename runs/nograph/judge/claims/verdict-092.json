@@ -1,0 +1,46 @@
+[
+ {"id": "multihop-rag-976", "sentences": [
+  ["Hockenson has had three limited practices this week.", "The writer will trust that Hockenson is ready to go.", "Hockenson continued to play through the ailment in Week 9.", "Hockenson was a big part of the offense in Week 9.", "Josh Dobbs was under center for the offense when Hockenson played in Week 9."],
+  ["Kincaid was a limited participant in practice on Wednesday.", "Kincaid's limited practice participation was due to a shoulder injury.", "It has been reported that Kincaid is likely to suit up on Saturday.", "It has been reported that Kincaid is likely to play on Saturday at less than 100%."]
+ ]},
+ {"id": "5a87868c5542996e4f308828", "sentences": [
+  ["The company began in 1995.", "The company began as the merger of two take-and-bake pizza companies.", "One of the merged companies was Papa Aldo's Pizza.", "Papa Aldo's Pizza was founded in 1981.", "The other merged company was Murphy's Pizza.", "Murphy's Pizza was founded in 1981."],
+  ["Gino's Pizza and Spaghetti is a restaurant chain.", "Gino's Pizza and Spaghetti has 40 locations.", "Most of Gino's Pizza and Spaghetti's locations are within the U.S. state of West Virginia."],
+  ["The company was founded by Kenney Grant.", "The company was founded in 1961."]
+ ]},
+ {"id": "5a7b5af7554299042af8f752", "sentences": [
+  ["The Data Universal Numbering System is abbreviated as DUNS or D-U-N-S.", "The Data Universal Numbering System is a proprietary system.", "The Data Universal Numbering System is developed by Dun & Bradstreet (D&B).", "The Data Universal Numbering System is regulated by Dun & Bradstreet (D&B).", "The Data Universal Numbering System assigns a unique numeric identifier to a single business entity.", "The unique numeric identifier is referred to as a DUNS number."],
+  ["Dun & Bradstreet is often referred to as D&B.", "The company's database contains more than 265 million business records.", "The company's database contains business records worldwide."]
+ ]},
+ {"id": "5a8b2ccf55429971feec4665", "sentences": [
+  ["Summer Magic is a 1963 Walt Disney Productions film.", "Summer Magic stars Hayley Mills.", "Summer Magic stars Burl Ives.", "Summer Magic stars Dorothy McGuire.", "Summer Magic is a story about a Boston widow and her children.", "In Summer Magic, the Boston widow and her children take up residence in a small town in Maine."],
+  ["Around the World in 80 Days is a 2004 American film.", "Around the World in 80 Days is an action-adventure comedy family film.", "Around the World in 80 Days is based on Jules Verne's novel of the same name."]
+ ]},
+ {"id": "7029908801940506034", "sentences": [
+  ["We admitted we were powerless over alcohol.", "We admitted our lives had become unmanageable.", "We came to believe that a Power greater than ourselves could restore us to sanity.", "We made a decision to turn our will and our lives over to the care of God as we understood Him.", "We made a searching and fearless moral inventory of ourselves.", "We admitted to God, to ourselves, and to another human being the exact nature of our wrongs.", "We were entirely ready to have God remove all these defects of character.", "We humbly asked God to remove our shortcomings.", "We made a list of all persons we had harmed.", "We became willing to make amends to all persons we had harmed.", "We made direct amends to such people wherever possible, except when to do so would injure them or others.", "We continued to take personal inventory.", "When we were wrong, we promptly admitted it.", "We sought through prayer and meditation to improve our conscious contact with God as we understood Him.", "We prayed only for knowledge of God's will for us.", "We prayed only for the power to carry out God's will for us.", "Having had a spiritual awakening as the result of these steps, we tried to carry this message to alcoholics.", "We tried to practice these principles in all our affairs."],
+  ["We admitted we were powerless over alcohol.", "We admitted our lives had become unmanageable."]
+ ]},
+ {"id": "5a8230af554299676cceb227", "sentences": [
+  ["Enrico Cocozza was born on 6 November 1921.", "Enrico Cocozza died on 27 December 1997.", "Enrico Cocozza was a Scottish filmmaker.", "Enrico Cocozza won many film awards during the 1940s and 1950s."],
+  ["A film was nominated for the Academy Award for Best Foreign Language Film.", "The film whose title is quoted in this fragment was nominated for the Academy Award for Best Foreign Language Film."]
+ ]},
+ {"id": "multihop-rag-358", "sentences": [
+  ["The criminal trial for Sam Bankman-Fried was highly anticipated.", "Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.", "The criminal trial for Sam Bankman-Fried started Tuesday.", "The trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy."],
+  ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.", "The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.", "The defense countered that the FTX founder acted in good faith.", "The defense said the FTX founder never meant to commit fraud or steal.", "The defense said the FTX founder basically got in over his head."]
+ ]},
+ {"id": "5a8a575a554299515336136e", "sentences": [
+  ["Rynella is an unincorporated community.", "Rynella is in Iberia Parish, Louisiana.", "Rynella consists of a few residential dwellings.", "Rynella has a volunteer fire department.", "The residential dwellings and the volunteer fire department are along Highway 329.", "Highway 329 is also known as the Avery Island Highway."],
+  ["The name Rynella allegedly is an acronym.", "The acronym derives from the last two letters of the first names of three local women.", "The three local women are Rosema, Pauli, and Lei McIlhenny.", "The acronym uses the letters RY from Rosema, NE from Pauli, and LA from Lei.", "Someone eventually added an extra L to the resulting word."],
+  ["The three women were daughters of Edward Avery McIlhenny.", "Edward Avery McIlhenny was a noted Louisiana conservationist.", "Edward Avery McIlhenny presided over McIlhenny Company.", "McIlhenny Company is the maker of Tabasco brand pepper sauce.", "McIlhenny Company is at nearby Avery Island."],
+  ["Tabasco sauce is a brand of hot sauce.", "Tabasco sauce is made exclusively from tabasco peppers.", "The tabasco pepper is Capsicum frutescens var. tabasco."],
+  ["Tabasco sauce is made with vinegar.", "Tabasco sauce is made with salt."]
+ ]},
+ {"id": "-7855437198803764135", "sentences": [
+  ["Late in the 20th century, lithium became an important component of battery electrolytes.", "Late in the 20th century, lithium became an important component of battery electrodes.", "Lithium became an important battery component because of its high electrode potential.", "Lithium has a low atomic mass.", "Because of its low atomic mass, lithium has a high charge-to-weight ratio.", "Because of its low atomic mass, lithium has a high power-to-weight ratio.", "A typical lithium-ion battery can generate approximately 3 volts per cell.", "Lead-acid batteries generate 2.1 volts.", "Zinc-carbon cells generate 1.5 volts.", "Lithium-ion batteries are rechargeable.", "Lithium-ion batteries have a high energy density.", "Lithium-ion batteries should not be confused with lithium batteries.", "Lithium batteries are disposable (primary) batteries.", "Lithium batteries have lithium or its compounds as the anode.", "Other rechargeable batteries that use lithium include the lithium-ion polymer battery.", "Other rechargeable batteries that use lithium include the lithium iron phosphate battery.", "Other rechargeable batteries that use lithium include the nanowire battery."],
+  ["Lithium and its compounds have several industrial applications.", "Lithium and its compounds are used in heat-resistant glass and ceramics.", "Lithium and its compounds are used in lithium grease lubricants.", "Lithium and its compounds are used as flux additives for iron, steel and aluminium production.", "Lithium and its compounds are used in lithium batteries.", "Lithium and its compounds are used in lithium-ion batteries.", "These uses consume more than three quarters of lithium production."]
+ ]},
+ {"id": "5ae4bcfc55429913cc2044eb", "sentences": [
+  ["Leitneria floridana is also called corkwood.", "Leitneria floridana is the sole species in the genus Leitneria.", "Leitneria floridana is a deciduous dioecious shrub or small tree.", "Leitneria floridana is found only in the southeastern United States states of Arkansas, Florida, Georgia, Missouri and Texas."],
+  ["Tricyrtis is a genus of Asian flowering plants.", "Tricyrtis is in the lily family.", "Tricyrtis has approximately 20 known species."]
+ ]}
+]

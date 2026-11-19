@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ade17d255429939a52fe80e",
+   "sentences": [
+    "The Wire Fox Terrier is a breed of dog, one of many terrier breeds.",
+    "The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type."
+   ]
+  },
+  {
+   "id": "5a893fc855429951533612f0",
+   "sentences": [
+    " The breed is used for hunting in packs and descends from the old Hound of Saintonge type of large hunting dog.",
+    "The Kritikos Lagonikos (Cretan Hound) (Greek:Kρητικός Λαγωνικός) is a hunting breed of dog from the island of Crete, in Greece."
+   ]
+  },
+  {
+   "id": "5a779fd95542997042120ab5",
+   "sentences": [
+    "The 1997 European Athletics Junior Championships were held in Ljubljana, Slovenia on July 24–27.",
+    "Ljubljana (] , ] ; also known by other, historical names) is the capital and largest city of Slovenia."
+   ]
+  },
+  {
+   "id": "multihop-rag-815",
+   "sentences": [
+    "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years.",
+    "Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy."
+   ]
+  },
+  {
+   "id": "multihop-rag-1449",
+   "sentences": [
+    "\"Taylor Swift likes that Travis Kelce 'pursued her' and the two are having a 'great time getting to know each other,'\" a source told Entertainment Tonight.",
+    "In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.",
+    "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating."
+   ]
+  },
+  {
+   "id": "-4340755100872459608",
+   "sentences": [
+    "Health or vitality is an attribute assigned to entities , such as the player character , enemies and objects within a role - playing or video game , that indicates its state in combat . Health is usually measured in hit points or health points , shortened to HP . When the HP of a player character reaches zero , the player may lose a life or their character might become incapacitated or die . When the HP of an enemy reaches zero , it may be defeated or die and the player is usually rewarded in some way ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1912",
+   "sentences": [
+    "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.",
+    "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."
+   ]
+  },
+  {
+   "id": "3551294051380047804",
+   "sentences": [
+    "Bruce Willis as John McClane Jai Courtney as John `` Jack '' McClane , Jr . Sebastian Koch as Yuri Komarov Yuliya Snigir as Irina Komarova Sergei Kolesnikov as Viktor Chagarin Radivoje Bukvić as Alik Mary Elizabeth Winstead as Lucy McClane"
+   ]
+  },
+  {
+   "id": "5ae6152d5542996de7b71b38",
+   "sentences": [
+    "Dr. Seuss' The Cat in the Hat is a 2003 American family comedy film directed by Bo Welch.",
+    "Robert W. \"Bo\" Welch III (born November 30, 1951) is an American production designer and director."
+   ]
+  },
+  {
+   "id": "multihop-rag-1625",
+   "sentences": [
+    "Over the next six months Google’s report states it has no additional measures planned for YouTube.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  }
+ ]
+}

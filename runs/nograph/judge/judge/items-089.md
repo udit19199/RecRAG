@@ -1,0 +1,783 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=15c9f84dd62795e4 ===
+Gold sentences and facts:
+Sentence 0: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 0.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 0.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 0.2: The case argues that Google siphons off news publishers' readers.
+  Fact 0.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 0.4: The case argues that Google does this through anticompetitive means.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed an article for not meeting its standards.
+  Fact 1.1: The article was shared widely on social media.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The degree to which the article was shared and boosted shows how willing people are to accept foul play on Google's part.
+
+Retrieved items:
+<item 1>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 8>
+
+<item 9>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 10>
+=== END ITEM id=15c9f84dd62795e4 ===
+
+=== ITEM id=78cc8275245a29ba ===
+Gold sentences and facts:
+Sentence 0: For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report.
+  Fact 0.0: Investors around the world consider the Fed to matter more than other central banks.
+  Fact 0.1: Foreign-exchange strategists at Bank of America say weak US data is the only game-changer for markets.
+  Fact 0.2: The Bank of America foreign-exchange strategists wrote this in a BofA Global Research report.
+Sentence 1: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 1.0: Postponements of such reports could complicate things for the Fed.
+  Fact 1.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+
+Retrieved items:
+<item 1>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+It’s again near its highest level since 2007.
+
+Loading Treasury bonds are seen as some of the safest investments possible, and when they pay higher yields, investors are less likely to pay high prices for
+stocks and other riskier investments. That’s a big reason why the S&P 500 dropped 4.9 per cent in September to drag what had been a big gain for the year down
+to 11.7 per cent. Treasury yields have been climbing sharply as Wall Street accepts a new normal where the Federal Reserve is likely to keep interest rates high
+for longer. The Fed is trying to push still-high inflation down to its target, and its main tool of high interest rates does that by trying to slow the economy
+and hurting prices for investments. The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut
+interest rates next year by less than it earlier expected.
+</item 1>
+
+<item 2>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 2>
+
+<item 3>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 3>
+
+<item 4>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 4>
+
+<item 5>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 5>
+
+<item 6>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 6>
+
+<item 7>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 7>
+
+<item 8>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 8>
+
+<item 9>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 9>
+
+<item 10>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 10>
+=== END ITEM id=78cc8275245a29ba ===
+
+=== ITEM id=b3e56130e391a869 ===
+Gold sentences and facts:
+Sentence 0: We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.
+  Fact 0.0: People identify with the superhero's struggles.
+  Fact 0.1: People identify with the superhero's little glimmers of connection and triumph.
+  Fact 0.2: Identifying with the superhero makes the superhero the perfect superhero for Thanksgiving.
+Sentence 1: Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends.
+  Fact 1.0: Thanksgiving is a holiday.
+  Fact 1.1: The food is arguably the main component of Thanksgiving day.
+  Fact 1.2: Thanksgiving is a beloved time of year.
+  Fact 1.3: Americans come together during Thanksgiving to celebrate what they are thankful for.
+  Fact 1.4: Americans celebrate what they are thankful for with family or with friends during Thanksgiving.
+
+Retrieved items:
+<item 1>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 1>
+
+<item 2>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Aunt May has just gotten out of the hospital, and even noted jerk “Flash” Thompson has given Peter hell for how awful he’s been acting.
+
+Peter, attempting to make things right, opts to cook the Thanksgiving meal all by himself, but mostly succeeds in ruining the kitchen. No worries — Gwen Stacy
+and her father, along with a recuperating Aunt May and her doctor, all help out, and the episode concludes with a pleasant dinner. There are no big turns or
+twists, aside from Aunt May revealing that she’s publishing a cookbook. It’s just simple, earned solace in a life marked by chaos. Peter even gets a kiss from
+Gwen on his porch, a sequence conducted with a John Hughes sense of satisfying romantic flair.
+
+Various Spider-Man comics have also dabbled in seeing what Thanksgiving looks like when you’re young and arachnid-themed, but real life has associated
+Spider-Man with the holiday, too. Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade.
+</item 2>
+
+<item 3>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Sure, everyone in that room is trying to hold things together. Mary Jane wants to impress Norman, Harry wants to impress Norman and Mary Jane, Peter loves Mary
+Jane but doesn’t dare hurt Harry, and Aunt May is finishing what’s presumably a dope turkey, in an attempt to care for all of them.
+
+It’s the trying that counts: Life can be hard, weird, and cruel, but while sitting down for a meal with our nearest and dearest, maybe for at least a little
+while, we won’t need to have it all figured out.
+
+Not all Spider-Man Thanksgiving dinners end up falling apart, and some succeed in reminding Peter that he isn’t alone. The first season of The Spectacular
+Spider-Man ends with a bang: One of Peter’s closest pals, Eddie Brock, has become Venom, and has threatened everyone Peter holds dear. This comes just after
+Peter himself was infected by the symbiote, and went through the now-iconic throes of pushing everyone away.
+</item 3>
+
+<item 4>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feeding friends and family is perhaps one of the most humane acts we can pursue. It’s less about the spirit of giving, and more about admitting that people
+have innate, basic needs, like food and social comfort, and that those needs are best fulfilled when people work in tandem. Honestly, we should try to do it
+more on every other day of the year: The number of people volunteering to help feed the homeless and families in need peaks around November and December, but
+that energy needs to be carried through the preceding 10 months, too.
+
+Spider-Man represents these needs, even though very few of us have to balance photojournalist work, a fraught dating life, and pummeling Dr. Octopus. Peter
+Parker is often the most financially strapped among his Avengers buddies, and frequently the loneliest, too. Those are recognizable traits among many young
+people, even those without radioactive-spider powers. When you’re growing up and trying to figure out the world, it’s easy to feel lost and isolated.
+</item 4>
+
+<item 5>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Marvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were
+essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable
+to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.
+
+But Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic.
+We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving. And Spider-Man
+writers know it.
+
+Thanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding
+friends and family is perhaps one of the most humane acts we can pursue.
+</item 5>
+
+<item 6>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade. Other Marvel characters have appeared on floats, but only
+Spider-Man has been inflated to 80 feet and pulled through the Upper West Side. (That also makes him the only Marvel character to have his head horrifically
+torn open by a tree branch.)
+
+From his first comic book appearance, Spider-Man has been a reminder that life is hard and complicated, and being a superhero doesn’t preclude anyone from
+experiencing ordinary frustrations, setbacks, and confusion. But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers
+that the holiday is about the hope of mutual connection, support, and nurturing. Even if the girl of your dreams is out of reach and the Green Goblin is on your
+case, a table, some friends, and Aunt May’s rad turkey might just make everything better for a little while.
+</item 6>
+
+<item 7>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Americans started preparing their Thanksgiving menus weeks ago, with the requisite turkeys and stuffing ingredients likely already purchased for the holiday,
+which is celebrated this year on Thursday 23 November.
+
+Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are
+thankful for, either with family or friends.
+
+In America, Thanksgiving is a cultural holiday that symbolises peace, thankfulness, and the beginning of the holiday season.
+
+What is Thanksgiving and where did it come from?
+</item 7>
+
+<item 8>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While the winter holidays are still weeks away, you could use your Friendsgiving to host your annual gift exchanges.
+
+For example, many friend groups in the US have opted for the budget-friendly activity of Secret Santa, where each person is randomly assigned someone to give a
+gift to. During the exchange, you then reveal to your pal that you’re their “secret Santa,” before giving them their present.
+</item 8>
+
+<item 9>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feelings of loneliness spike during the holidays, meaning that there’s a good chance you’ll feel even more like Peter Parker when late November rolls
+around.
+
+It’s what makes the Thanksgiving scene in the 2002 Spider-Man film so engaging. That whole movie is an exercise in heart-on-your-sleeve sweetness. Everyone
+who’s seen it knows the Thanksgiving dinner rapidly descends into chaos, with Norman Osborn ominously sticking his fingers into Aunt May’s sweet-potato
+casserole, figuring out Spider-Man’s secret identity, and delivering a grossly sexist diatribe to his son Harry, leaving Harry and Mary Jane at odds with each
+other. Aunt May and Peter clearly wind up with a ton of leftovers after everyone else storms out.
+
+But for Peter, who’s just lost his Uncle Ben and has been facing the initial trials of being Spider-Man, there’s a nice moment of personal respite at the
+opening of that scene, where he walks into a room where he knows he’s loved, bearing an offering of cranberry sauce,.
+</item 9>
+
+<item 10>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 10>
+=== END ITEM id=b3e56130e391a869 ===
+
+=== ITEM id=4879448be79e0e11 ===
+Gold sentences and facts:
+Sentence 0: “The company’s approach also raises concerns regarding the GDPR,” Pachl further noted.
+  Fact 0.0: The company's approach raises concerns regarding the GDPR.
+  Fact 0.1: Pachl further noted this.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift back to the app stores the burden of monitoring teens' social media usage.
+  Fact 1.1: Meta wants to shift back to parents the burden of monitoring teens' social media usage.
+Sentence 2: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 2.0: Al Saadi said that her frustration with Meta is common among Palestinians.
+  Fact 2.1: Al Saadi said that her frustration with Meta is common among Palestinians in occupied territories.
+  Fact 2.2: Al Saadi said that her frustration with Meta is common among Palestinians across the diaspora.
+
+Retrieved items:
+<item 1>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+At the recommendation of its Oversight Board, Meta conducted a third-party due diligence report about the platform’s moderation during the May 2021 conflict.
+The report found that Arabic content was flagged as potentially violating at significantly higher rates than Hebrew content was, and was more likely to be
+erroneously removed. The report noted that Meta’s moderation system may not be as precise for Arabic content as it was for Hebrew content, because the latter is
+a “more standardized language,” and suggested that reviewers may lack the linguistic and cultural competence to understand less common Arabic dialects like
+Palestinian Arabic.
+
+Has anything improved?
+
+Meta committed to implementing policy changes based on the report’s recommendations, such as updating its keywords associated with dangerous organizations,
+disclosing government requests to remove content and launching a hostile speech classifier for Hebrew content. Abukhater added that Meta has improved its
+response to harassment, at least in comparison to other social media platforms like X (formerly Twitter).
+</item 1>
+
+<item 2>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Most recently, Instagram users accused Meta of “shadowbanning” their Stories about Palestine.
+
+It’s the latest in a lengthy history of incidents on Meta platforms that reflect an inherent bias against Palestinian users in its processes, as documented by
+years of complaints from both inside and outside the company. The company may not intentionally suppress specific communities, but its moderation practices
+often disproportionately affect Palestinian users.
+
+For instance, Meta struggles to navigate the cultural and linguistic nuances of Arabic, a language with over 25 dialects, and has been criticized for neglecting
+to adequately diversify its language resources. The company’s black-and-white policies often preclude it from effectively moderating any nuanced topic, like
+content that discusses violence without condoning it. Advocacy groups have also raised concerns that Meta’s partnerships with government agencies, such as the
+Israeli Cyber Unit, politically influence the platform’s policy decisions.
+</item 2>
+
+<item 3>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents. In a blog post published today, Meta’s
+global head of Safety, Antigone Davis, argues that parents should be responsible for approving their teens’ app downloads and staked Meta’s position in
+supporting federal legislation that would require parental approval for app downloads for users under the age of 16.
+
+Guiding its reasoning, Meta pointed to recent Pew research that indicated that 81% of U.S. adults were in favor of requiring parental consent for teens to
+create social media accounts. While this may speak to popular opinion around parental sentiment, it doesn’t mean that parents have thought through who should be
+responsible for preventing or allowing teens’ access to social media, or how those apps should operate to protect teens.
+
+A coalition of 42 states and D.C. are currently suing Meta over its harms to teens and young users, in part referencing findings from Meta whistleblower Frances
+Haugen.
+</item 3>
+
+<item 4>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices Instagram users suspect Meta of shadowbanning content about
+Palestine. The platform has a history of inherent bias.
+
+Earlier this year, Palestinian-American filmmaker Khitam Jabr posted a handful of Reels about her family’s trip to the West Bank. In the short travel vlogs,
+Jabr shared snippets of Palestinian culture, from eating decadent meals to dancing at her niece’s wedding.
+
+“I hadn’t been in a decade, so it’s just like, life abroad,” Jabr told TechCrunch.
+
+“I would get [anti-Palestine] comments,” she recalled. “And I couldn’t respond [to them] or use my account for 24 hours. I wasn’t even posting anything about
+the occupation. But fast forward to now and the same shit’s happening.”
+
+In the aftermath of Hamas’ attack on Israelis, Israel’s retaliatory airstrikes and total blockade — cutting access to electricity, water and vital supplies —
+have devastated Gaza.
+</item 4>
+
+<item 5>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+During the last violent outbreak between Hamas and Israel in 2021, a report commissioned by Meta and conducted by a third party concluded that the company’s
+actions had an “adverse human rights impact” on Palestinian users’ right to freedom of expression and political participation.
+
+Meta communications director Andy Stone declined to comment on the record, and pointed TechCrunch to Meta’s newsroom post about the conflict, which was updated
+on Oct. 18 with a statement addressing the shadowbanning claims.
+
+“Our policies are designed to keep people safe on our apps while giving everyone a voice,” the post stated. “We apply these policies equally around the world
+and there is no truth to the suggestion that we are deliberately suppressing voice … We can make errors and that is why there is an appeals process for people
+to tell us when they think we have made the wrong decision, so we can look into it.”
+
+The belief that Meta shadowbans, or limits the visibility of, content about Palestine is not new.
+</item 5>
+
+<item 6>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Although harassment and abuse are still rampant on Instagram and Facebook, he said, the company has been responsive to suspending accounts with patterns of
+targeting other users.
+
+The company has also made more contact with regional Palestinian organizations since 2021, York added, but it’s been slow to implement recommendations from EFF
+and other advocacy groups. It’s “very clear” that Meta is not putting the same resources behind Arabic and other non-English languages, York said, compared to
+the attention Meta gives to countries that have the most regulatory pressure. Moderation of English and other European languages tends to be more comprehensive,
+for example, because the EU enforces the Digital Services Act.
+
+In Meta’s response to the report, Miranda Sissons, the company’s director of human rights, said that Meta was “assessing the feasibility” of reviewing Arabic
+content by dialect. Sissons said that the company has “large and diverse teams” who understand “local cultural context across the region,” including in
+Palestine.
+</item 6>
+
+<item 7>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“And so I think that is what is the most problematic right now about that particular rule, and the way that it’s enforced.”
+
+Over the 13 days leading up to the ceasefire between Hamas and Israel, 7amleh documented more than 500 reports of Palestinian “digital rights violations,”
+including the removal and restriction of content, hashtags and accounts related to the conflict.
+
+Meta blamed some of the instances of perceived censorship to technical issues, like one that prevented users in Palestine and Colombia from posting Instagram
+Stories. It attributed others to human error, like blocking the hashtag for Al-Aqsa Mosque, the holy site where Israeli police clashed with Ramadan worshippers,
+because it was mistaken for a terrorist organization. The company also blocked journalists in Gaza from WhatsApp without explanation.
+
+The same month, a group of Facebook employees filed internal complaints accusing the company of bias against Arab and Muslim users. In internal posts obtained
+by BuzzFeed News, an employee attributed the bias to “years and years of implementing policies that just don’t scale globally.”
+</item 7>
+
+<item 8>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“It feeds into the bias against Palestinian narrative genuinely. It really takes the balance against Palestinians in a situation where there’s a huge asymmetry
+of power.”
+
+A history of suppression
+
+Content about Palestine is disproportionately scrutinized, as demonstrated during the last severe violent outbreak between Hamas and Israel two years ago. Amid
+the violence following the May 2021 court ruling to evict Palestinian families from Sheikh Jarrah, a neighborhood in occupied East Jerusalem, users across
+Facebook and Instagram accused Meta of taking down posts and suspending accounts that voiced support for Palestinians.
+
+The digital rights nonprofit Electronic Frontier Foundation (EFF) described Meta’s actions in 2021 as “systemic censorship of Palestinian voices.” In its 2022
+report of Palestinian digital rights, 7amleh said that Meta is “still the most restricting company” compared to other social media giants in the extent of its
+moderation of the Palestinian digital space.
+</item 8>
+
+<item 9>
+Meta to offer ad-free subscription in Europe in bid to keep tracking other users (TechCrunch, 2023-10-30T13:52:00+00:00)
+(And on that front, Norway’s DPA, which has a local ban order on Meta’s tracking ads, told us it’s concerned about the subscription plan, saying it has doubts
+as to whether it would constitute valid consent.)
+
+As well as needing to comply with the GDPR, which delineates the qualities necessary for consent to be legal (such as that it is specific, informed and freely
+given), Meta is now also subject to the pan-EU Digital Services Act (DSA) — which also sets conditions on larger platforms when it comes to tracking and
+profiling people for ads. So it won’t just be data protection authorities making a call on whether Meta’s subscription or tracking offer flies; the European
+Commission is responsible for oversight of very large online platforms’ DSA compliance.
+
+Meta has also been designated as a so-called gatekeeper, under the DSA’s sister regulation, the Digital Markets Act (DMA) — which also puts some limits on use
+of people’s data for ads. The Commission is the sole enforcer of the DMA.
+</item 9>
+
+<item 10>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Meta forbids support of terrorist organizations, like most social media companies based in the U.S., but struggles to moderate content around it, from user
+discourse to journalistic updates. This policy, along with the company’s partnership with Israel to monitor posts that incite violence, complicates things for
+Palestinians living under Hamas’ governance. As EFF points out, something as simple as Hamas’ flag in the background of an image can result in a strike.
+
+Jillian York, the director for international freedom of expression for EFF, blames automation and decisions made by “minimally trained humans” for the
+inconsistency. Meta’s zero tolerance policy and imprecise enforcement often suppress content from or about conflict zones, she said. The site’s moderation
+issues have negatively affected multiple non-English speaking regions, including Libya, Syria and Ukraine.
+
+“These rules can prevent people from sharing documentation of human rights violations, documentation of war crimes, even just news about what’s happening on the
+ground,” York continued.
+</item 10>
+=== END ITEM id=4879448be79e0e11 ===
+
+=== ITEM id=05b2c7d450a3538f ===
+Gold sentences and facts:
+Sentence 0: But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource.
+  Fact 0.0: By the age of 16, the person described is public property.
+  Fact 0.1: By the age of 16, the person described is incapable of going outside without being mobbed.
+  Fact 0.2: By the age of 16, the person described's love of singing and dancing is now a lucrative resource.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker described it as almost a very strange, subtle clue to the media.
+  Fact 1.1: The clue signals that the media does not know everything that happened in that relationship.
+  Fact 1.2: The speaker says something really major and traumatic could have happened to her that the media does not know about.
+  Fact 1.3: The speaker told NPR this.
+
+Retrieved items:
+<item 1>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+In an interview withWSJ Magazine published on 20 November, Kelce described how much he admires Swift’s skills as a musician. “I’ve never been a man of words.
+Being around her, seeing how smart Taylor is, has been f***ing mind-blowing. I’m learning every day,” he explained.
+
+Although he acknowledged the public attention his personal life has received because he’s “never dated anyone with that kind of aura around them,” Kelce
+specified that he’s not letting the media affect his relationship.
+
+“But at the same time, I’m not running away from any of it,” he said. “The scrutiny she gets, how much she has a magnifying glass on her, every single day,
+paparazzi outside her house, outside every restaurant she goes to, after every flight she gets off, and she’s just living, enjoying life.
+
+“When she acts like that I better not be the one acting all strange.”
+</item 1>
+
+<item 2>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 3>
+
+<item 4>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+It's so weird to look back on that - you've got heaping piles of discarded songs that I really loved when I wrote them and I still love now.
+
+"I just need each album to have its own sound and if it doesn't fit that sound, it doesn't matter if it's a great song to me."
+</item 4>
+
+<item 5>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+As the restrictions get tighter, Britney acts out – and ends up legally denied her freedom for 13 years, under a conservatorship controlled by her father.
+
+Her body felt like public property
+
+From day one, Britney’s body is made fair game. Between the videos for her debut single, Baby, One More Time and Sometimes, the media noted her changing
+physique and concluded that the 16-year-old must have had breast implants – rather than simply going through puberty. She notices that talkshow hosts ask her
+about her chest, while her boyfriend Justin Timberlake gets asked serious questions about his music. It’s one of many pressures that ultimately push her to
+breaking point, and when she writes about shaving her head in a salon in 2007, she frames it as a “fuck you” to the impossible beauty standards she felt forced
+to live up to: “I’d smiled politely while TV show hosts leered at my breasts, while American parents said I was destroying their children by wearing a crop
+top.”
+</item 5>
+
+<item 6>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+All proceeds from the track are donated to New York City's Public Schools.
+
+Image source, Getty Images Image caption, The original version of 1989 won three Grammy Awards, including Album of the Year
+
+2) Blank Space
+
+Pretty much the perfect Taylor Swift song, Blank Space takes every horrible rumour that was being spread about her love life, and amplifies it with satirical
+relish.
+
+"In the last couple of years the media have had a wonderful fixation on painting me as the psycho serial dater girl," she told the Grammy Museum. "Every article
+was like, 'Here's Taylor Swift standing near some guy. WATCH OUT GUY!'
+
+"My first reaction was to be like, 'That's a bummer. This isn't fun for me'.
+</item 6>
+
+<item 7>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 7>
+
+<item 8>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+She has never really known freedom
+
+As a child, Britney escaped her difficult home life – her alcoholic father often rowing with her mother – into the outdoors, which “gave me a sense of aliveness
+and danger”, she writes. Performing also makes her feel invincible. But by the age of 16, she is public property – incapable of going outside without being
+mobbed, and her love of singing and dancing now a lucrative resource.
+
+By the time of her second album, she wants for so little: skinny-dipping with her dancers after playing Rock in Rio in January 2001 is one of her happiest
+memories. “It was a taste of rebellion and freedom, but I was just having fun and being a 19-year-old,” she writes.
+</item 8>
+
+<item 9>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+In interviews, Taylor delighted in revealing this was based on a true story.
+
+"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something
+really major and traumatic happen to me and they don't know about it," she told NPR.
+
+In her Rolling Stone cover story, Taylor said the crash actually occurred on a snowmobile "with an ex who lost control and wrecked it so badly that she saw her
+life flash before her eyes".
+
+That prompted speculation the track was also about Styles: The couple had gone skiing with Justin Bieber and Selena Gomez in late 2012.
+
+The lyrics also reference their identical aeroplane necklaces and a December break-up, which ties in with the "Sad Taylor on a boat" meme.
+
+But the singer steadfastly refuses to name names: "The fact that I've never confirmed who those songs are about makes me feel like there is still one card I'm
+holding," she told GQ.
+</item 9>
+
+<item 10>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+The conservatorship stripped me of my womanhood, made me into a child.” It’s hard to explain, she says, “how quickly I could vacillate between being a little
+girl and being a teenager and being a woman, because of the way they had robbed me of my freedom … They wanted me to be wild onstage, the way they told me to
+be, and to be a robot the rest of the time.”
+
+Music seems to have become an afterthought
+
+Early on, Britney writes, she loved making music. She told the producer Max Martin that she wanted to sound more R&B than straight pop; she listened to Tainted
+Love the night before recording Baby, One More Time and stayed up late so that she would sound as gravelly and “fried” as Marc Almond. She was a studio
+perfectionist who would stay in the booth for hours, and the school setting and uniforms of the Baby video were her idea.
+</item 10>
+=== END ITEM id=05b2c7d450a3538f ===

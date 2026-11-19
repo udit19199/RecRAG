@@ -1,0 +1,183 @@
+[
+  {
+    "id": "-7156311873296217154",
+    "sentences": [
+      [
+        "Drawing is one of the major forms of expression within the visual arts.",
+        "Drawing is generally concerned with the marking of lines and areas of tone onto paper or other material.",
+        "In drawing, the accurate representation of the visual world is expressed upon a plane surface.",
+        "Traditional drawings were monochrome, or at least had little colour.",
+        "Modern colored-pencil drawings may approach or cross a boundary between drawing and painting.",
+        "In Western terminology, drawing is distinct from painting.",
+        "Drawing and painting can employ similar media even though they are distinct tasks.",
+        "Dry media normally associated with drawing, such as chalk, may be used in pastel paintings.",
+        "Drawing may be done with a liquid medium applied with brushes or pens.",
+        "Similar supports can serve both drawing and painting.",
+        "Painting generally involves the application of liquid paint onto prepared canvas or panels.",
+        "Sometimes an underdrawing is drawn first on the same support that is later painted."
+      ]
+    ]
+  },
+  {
+    "id": "3400990959340670350",
+    "sentences": [
+      [
+        "The speech 'A Time for Choosing' is also known as 'The Speech'.",
+        "The speech 'A Time for Choosing' is a televised campaign speech.",
+        "Ronald Reagan delivers the address 'A Time for Choosing' in support of Barry Goldwater.",
+        "The speech launches Reagan to national prominence.",
+        "The speech is dated October 27, 1964.",
+        "The speech runs 29 minutes and 33 seconds.",
+        "The speech was held in Los Angeles County, California, U.S.",
+        "The participant in the speech is Ronald Reagan.",
+        "A video clip, audio, and a transcript of the speech are available on a website."
+      ],
+      [
+        "Many versions of the speech exist.",
+        "The speech was altered over many weeks.",
+        "Contrary to popular belief, the speech was not given at the 1964 Republican National Convention in San Francisco, California, as a nomination speech for presidential candidate Barry Goldwater.",
+        "Richard Nixon gave the nomination speech for Goldwater at the 1964 Republican National Convention.",
+        "Reagan campaigned for Goldwater.",
+        "Reagan did not use 'A Time for Choosing' until October 27, 1964.",
+        "On October 27, 1964, the speech was part of a pre-recorded television program called Rendezvous with Destiny.",
+        "In his autobiography, An American Life, Reagan recalled going to bed that night hoping he had not let Barry down."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-884",
+    "sentences": [
+      [
+        "A speaker said that they all found themselves at home looking at the people they worked with, the people they went out for drinks with, and the people in their extended family on a computer screen.",
+        "The speaker told Fox News Digital this."
+      ],
+      [
+        "The speaker used to play the game in person.",
+        "Since the pandemic, the speaker runs the game virtually online from their house."
+      ]
+    ]
+  },
+  {
+    "id": "5a8aed1755429950cd6afbf1",
+    "sentences": [
+      [
+        "Fastbacks were a punk rock band.",
+        "Fastbacks were from Seattle, Washington."
+      ],
+      [
+        "Local Natives is an American indie rock band.",
+        "Local Natives was previously known as Cavil at Rest.",
+        "Local Natives is based in Silver Lake, Los Angeles, California, United States."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1197",
+    "sentences": [
+      [
+        "Epic will also suggest that Google hid items from discovery by allowing executives and employees to have 'off the record' chats.",
+        "Google will counter this, saying it has provided the court with thousands of chat logs.",
+        "Google says it has provided the court with millions of documents."
+      ],
+      [
+        "Google did not release the full model, Gemini Ultra.",
+        "Google released only a 'lite' version called Gemini Pro."
+      ],
+      [
+        "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+        "The case argues that Google 'siphons off' news publishers' content.",
+        "The case argues that Google siphons off news publishers' readers.",
+        "The case argues that Google siphons off news publishers' ad revenue.",
+        "The case argues that this happens through anticompetitive means."
+      ]
+    ]
+  },
+  {
+    "id": "8678345068092193884",
+    "sentences": [
+      [
+        "'Knightfall' is a 1993-1994 Batman story arc published by DC Comics.",
+        "Knightfall consists of a trilogy of storylines that ran from 1993 to 1994.",
+        "The trilogy consists of 'Knightfall', 'Knightquest', and 'KnightsEnd'.",
+        "The story takes place over approximately six months.",
+        "Bruce Wayne (Batman) suffers burnout.",
+        "Bruce Wayne (Batman) is systematically assaulted and crippled by a 'super steroid'-enhanced genius named Bane.",
+        "Wayne is replaced as Batman by an apprentice named Jean-Paul Valley (a.k.a. Azrael).",
+        "Jean-Paul Valley becomes increasingly violent and unstable.",
+        "Jean-Paul Valley tarnishes Batman's reputation.",
+        "Eventually, Wayne is healed through paranormal means.",
+        "Eventually, Wayne reclaims his role as Batman."
+      ]
+    ]
+  },
+  {
+    "id": "5a75fbe855429976ec32bcde",
+    "sentences": [
+      [
+        "War/Dance is a 2007 American documentary film.",
+        "War/Dance was written by Sean Fine and Andrea Nix Fine.",
+        "War/Dance was directed by Sean Fine and Andrea Nix Fine.",
+        "War/Dance was produced by Shine Global's Susan MacLaury.",
+        "Susan MacLaury is a professor at Kean University.",
+        "War/Dance was produced by Albie Hecht."
+      ],
+      [
+        "The Sorrow and the Pity is a documentary film.",
+        "The Sorrow and the Pity's French title is Le Chagrin et la Pitié.",
+        "The Sorrow and the Pity is in two parts.",
+        "The Sorrow and the Pity was released in 1969.",
+        "The Sorrow and the Pity was made by Marcel Ophüls.",
+        "The Sorrow and the Pity is about the collaboration between the Vichy government and Nazi Germany.",
+        "That collaboration occurred during World War II."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1926",
+    "sentences": [
+      [
+        "The timestamp is 13 Dec 2023, 00:58 GMT.",
+        "It is the 12th over.",
+        "West Indies were 102 for 4 wickets.",
+        "Hope had 26 runs and Hetmyer had 1 run.",
+        "In that over there was just a single and a wicket.",
+        "Shai Hope could not break the legspin shackles."
+      ],
+      [
+        "The timestamp is 6 days ago, 22:54 GMT.",
+        "It is the 16th over.",
+        "West Indies were 112 for 4 wickets.",
+        "Hope had 29 runs and Powell had 8 runs.",
+        "Hope is playing an exemplary innings.",
+        "Hope opens the face to steer Rehan for his first boundary."
+      ]
+    ]
+  },
+  {
+    "id": "4390525747986386908",
+    "sentences": [
+      [
+        "Taron Egerton plays Johnny.",
+        "Johnny is a teenage gorilla.",
+        "Johnny wants to sing.",
+        "Johnny's father would rather have him follow his criminal footsteps."
+      ]
+    ]
+  },
+  {
+    "id": "-125564053796187750",
+    "sentences": [
+      [
+        "The coastline of the island consists of a combination of long beaches, dunes, red sandstone cliffs, salt water marshes, and numerous bays and harbours.",
+        "The beaches, dunes, and sandstone cliffs consist of sedimentary rock and other material with a high iron concentration.",
+        "That iron concentration oxidizes upon exposure to air.",
+        "The geological properties of a white silica sand found at Basin Head are unique in the province.",
+        "The sand grains at Basin Head cause a scrubbing noise as they rub against each other when walked on.",
+        "Large dune fields on the north shore can be found on barrier islands at the entrances to various bays and harbours.",
+        "The magnificent sand dunes at Greenwich are of particular significance.",
+        "The shifting, parabolic dune system at Greenwich is home to a variety of birds and rare plants.",
+        "The shifting, parabolic dune system at Greenwich is also a site of significant archeological interest."
+      ]
+    ]
+  }
+]

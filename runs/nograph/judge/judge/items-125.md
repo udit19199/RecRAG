@@ -1,0 +1,931 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=a1eda01b1fe6bdaf ===
+Gold sentences and facts:
+Sentence 0: Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve.
+  Fact 0.0: Inflation is expected to fade eventually.
+  Fact 0.1: The Fed is expected to cut interest rates as inflation fades.
+  Fact 0.2: Eventually, housing affordability will improve.
+Sentence 1: While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse.
+  Fact 1.0: Some economic factors are stronger today than they were during the GFC.
+  Fact 1.1: Housing affordability is undeniably worse than it was during the GFC.
+
+Retrieved items:
+<item 1>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+The average 30-year fixed mortgage rate, the most common type of mortgage in the U.S., has soared from 3.8% in March 2022 to over 7.5% today as a result. This,
+in turn, has slowed mortgage purchase applications and caused home sales to plummet, just as it did in the ’80s; but home prices, echoing the dynamic of that
+era, have yet to collapse.
+
+One of the key reasons for the resilience of the housing market in both of these periods is demographics. “Noticeably, demographics were favorable back then,
+with baby boomers having entered the prime homebuying age,” Park and her team wrote Thursday, arguing millennials are in a similar position today. “Some sales
+activity should be supported by millennials reaching the prime homebuying age, and single-family building permits have steadily held up. This can help the
+housing market retain some of its momentum without falling apart.”
+</item 1>
+
+<item 2>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+And while we haven’t seen home sales activity levels this low since the 2000s, the housing market more closely mimics that of the ’80s, according to a report
+published this week by Fortune 500 financial services company First American.
+
+“Today’s housing market isn’t anything like the housing market of the mid-2000s,” First American’s Fleming wrote in a Tuesday report titled “1980s Déjà Vu for
+the Housing Market.” “The housing market today is not overbuilt, nor is it driven by loose lending standards, subprime mortgages, or homeowners who are highly
+leveraged.”
+
+While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse.
+
+“While housing and more generally consumer fundamentals are in a much stronger position today, affordability for the incremental buyer is worse than it was at
+the peak in 2006 before the crash,” Roger Ashworth, a managing director at Goldman Sachs, wrote in a credit strategy research paper released last week.
+</item 2>
+
+<item 3>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+housing market set off the dominoes that became the Great Financial Crisis that defined a whole decade economically—and in some ways, our current predicament.
+
+In 2010, the last time existing home sales were so low, the global economy was on life support and the Fed slashed interest rates down to zero to revive the
+flatlining patient—fueling an “everything bubble” that inflated all kinds of assets along the way, not the least, housing. The zero-rate regime persisted until
+the highest inflation in 40 years surprised many economists and prompted the massive series of rate hikes that have brought us to the once-unthinkable 8%
+mortgage.
+
+Some onlookers saw what was coming, for instance Zillow, which warned in May that housing would enter a “deep freeze” if the debt limit standoff failed to
+resolve and America defaulted, as that would send mortgage rates up to 8%. Of course, the default was averted, but here we have arrived at 8% mortgage rates
+anyway.
+</item 3>
+
+<item 4>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+Housing market pessimists have been sounding the alarm for years about a pending crash in the U.S. residential real estate market. Even before the Federal
+Reserve began hiking interest rates to fight inflation last year, pushing mortgage rates to a 23-year high this month, years of surging home prices left some
+experts warning that the housing market was a massive bubble ready to pop.
+
+However, despite a widely bearish outlook in the industry, most real estate veterans have avoided arguing that home prices will drop like they did during the
+2008 crash that kicked off the Global Financial Crisis (GFC). And so far, that’s been a wise decision.
+
+It took until June 2022 for national home prices to peak, even as mortgage rates soared and purchase applications plummeted amid the Fed’s first interest rate
+hikes. And while prices fell more than 5% from that peak by January of this year, they returned to a record high in July.
+</item 4>
+
+<item 5>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+Indeed, existing-home sales prices topped $306,000, a 5% increase since the year began, according to the Case-Shiller U.S. National Home Price Index.
+
+“As has been the case throughout this year, limited inventory and low housing affordability continue to hamper home sales,” NAR chief economist Lawrence Yun
+said in a statement. “The Federal Reserve simply cannot keep raising interest rates in light of softening inflation and weakening job gains.” The Fed has raised
+rates several times this year, with Chair Jerome Powell arming his “higher for longer” stance.
+
+Declining housing inventory levels also contribute to the drop in housing transactions. Housing inventory is down 8.1% from this time last year, according to
+NAR. Some real-estate experts and economists argue that housing affordability is even worse now than during 2008, when a damaging downturn in the U.S.
+</item 5>
+
+<item 6>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+And he’s not hopeful we’ll see home prices drop anytime soon: “Absent any negative shocks to the broader economy that would either boost excess supply of homes
+on the market or fuel an uptick in unemployment, we continue to expect home prices to rise at a slow pace.” In fact, he predicts we’ll see home prices rise by
+1.8% by the end of the year, with a 3.5% increase by the end of 2024.
+
+Looking at more recent housing inventory data makes the issue even more stark. Between September 2018 and September 2023, the average number of homes on the
+market dropped a whopping 60% to fewer than 700,000 active listings, according to Realtor.com.
+
+“Unlike the turn of the millennium, house prices today are rising alongside mortgage rates, primarily due to low inventory,” Sam Khater, Freddie Mac’s chief
+economist, said in a statement released Sept. 29.
+</item 6>
+
+<item 7>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+Park and her team noted that there are no “noticeable signs” of excess housing development today like there were back then, and households aren’t nearly as
+burdened by mortgage debt. Household mortgage debt represented roughly 65% of U.S. consumers’ disposable income in the second quarter, compared to 100% before
+the GFC. And the ratio of Americans’ mortgage debt to their real estate assets—also called loan-to-value—was just 27% in the second quarter, compared to over
+40% in 2008 and roughly 50% in 2010, Bank of America’s data shows.
+
+New legislation was also enacted since the GFC to help prevent worst-case scenarios in the housing market. One of the most obvious effects of these new laws is
+that there are far fewer risky adjustable-rate mortgages today.
+</item 7>
+
+<item 8>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+Plus, the raising of interest rates in an effort to combat inflation is strikingly similar to the ’80s. Back then, Fed Chair Paul Volcker fought inflation
+through aggressive interest rate hikes, with the average 30-year fixed mortgage peaking at about 18% by late 1981. Sound familiar? Current Fed Chair Jerome
+Powell has set the tone for the most aggressive global hiking of rates in the modern era. And in due course, this week, mortgage rates hit 8%, the highest
+they’ve been in more than 20 years.
+
+All things considered, home sales activity also plummeted from 1978 to 1982. Existing-home sales dropped 50% during that period, according to the Office of
+Policy Development and Research.
+</item 8>
+
+<item 9>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+The rise in the consumer price index peaked at around 14% in 1980 before then–Fed Chair Paul Volcker’s hawkish policies sent mortgage rates to 18% in a year’s
+time, cooling inflation, but sparking a recession. This caused a serious downturn in the housing market in which home sales and building levels cratered.
+However, national home prices actually remained stable.
+
+At the start of Volcker’s term as Fed chair in August 1979, the median U.S. home sales price was $64,700. And even after a near doubling of mortgage rates, that
+figure rose to $69,400 by the second quarter of 1981.
+
+Over the past 18 months, the Fed’s current chair, Jerome Powell, has been following a very similar game plan to Volcker’s, raising interest rates aggressively
+to quash inflation.
+</item 9>
+
+<item 10>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+This can help the housing market retain some of its momentum without falling apart.”
+
+Bank of America economists believe that low inventory of existing homes for sale combined with solid home sales to millennials could help put a “floor beneath
+home prices,” but that doesn’t mean there won’t be some near-term pain due to higher mortgage rates.
+
+“With rates likely staying higher for longer, we are cautious of potential turbulence ahead,” the group warned. Bank of America has previously forecast 0% home
+price growth and falling home sales for the full year 2023, but it didn’t offer a new prediction in its latest note.
+
+Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve. “At that stage, we should see a more stable and
+healthy housing market,” Park and her team wrote. “Until then, hang tight, it may be a bumpy ride.”
+
+This article has been updated to correct a mistaken term used to refer to Jeseo Park.
+</item 10>
+=== END ITEM id=a1eda01b1fe6bdaf ===
+
+=== ITEM id=07ee77d082d0ad59 ===
+Gold sentences and facts:
+Sentence 0: The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy.
+  Fact 0.0: The guidance lays out ways to use AI responsibly in the courts.
+  Fact 0.1: The guidance says courts should be aware of potential bias when using AI.
+  Fact 0.2: The guidance says courts should uphold privacy when using AI.
+Sentence 1: They promised “invest[ment] in the AI-powered technology” that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse” .
+  Fact 1.0: The party referred to as 'they' promised investment in the AI-powered technology.
+  Fact 1.1: The AI-powered technology would, among other things, help YouTube protect its community of viewers, creators, artists and songwriters.
+  Fact 1.2: The AI-powered technology would help YouTube protect its community from trademark and copyright abuse.
+
+Retrieved items:
+<item 1>
+Sony Music has issued nearly 10,000 deepfake takedowns… and other things we learned from Dennis Kooker’s speech about AI (Music Business Worldwide,
+2023-11-30T21:28:03+00:00)
+Senior political figures in Washington are becoming increasingly interested in the impact of AI on the law.
+
+On Wednesday (November 29), US Senate Majority Leader Chuck Schumer held an Artificial Intelligence (AI) Insight Forum to discuss the importance and role of
+creative copyright and intellectual property in the development of AI.
+
+Dennis Kooker, Sony Music Entertainment‘s President of Global Digital Business & US Sales, delivered a speech at the Forum, outlining the major music company’s
+position on AI and copyright law.
+
+Kooker’s public statements on the topic arrive a week after MBW pointed out that there was a notable lack of endorsement from SME, and its artists, of YouTube‘s
+new experimental AI project called ‘Dream Track’ that lets creators clone the vocals of successful musicians.
+
+The initial cohort of stars involved in the project, as we noted last week, include recording artists signed to Warner Music Group and Universal Music Group –
+or labels within each of those two majors, but no Sony Music artists.
+</item 1>
+
+<item 2>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+Yet something conspicuous is not on there: any endorsement whatsoever from the world’s second-biggest recording company, Sony Music Entertainment, or its
+artists.
+
+Why is Sony missing?
+
+MBW understands that Sony Music (the recorded music arm of Sony Music Group) has, like Universal and Warner, been in discussions for months with YouTube over
+potentially licensing the ‘Dream Track’ experiment.
+
+During this period of discussion, YouTube has made a number of positive announcements regarding the biggest issue for any rightsholder regarding AI-driven voice
+replication of artists: their ability to police it.
+
+In August, YouTube and Universal Music Group jointly announced that the video platform was launching an ‘AI Music Incubator’ – a program by which new tools and
+innovations will be developed at YouTube in close conjunction with artists and the music biz.
+</item 2>
+
+<item 3>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+And it was an incredible new revenue stream for everyone. AI is that with new super tools.”
+
+Kyncl was referring to YouTube’s Content ID system, which scours uploaded videos for copyrighted content (video and audio), then offers the copyright owner the
+option to monetize that video, or to request that it be taken down. The innovative system has essentially allowed YouTube users to upload content without paying
+much attention to copyright, while ensuring that copyright owners are paid.
+
+When it comes to the proliferation of AI, “we need to approach it with the same thoughtfulness, and we have to make sure that artists have a choice,” Kyncl
+added.
+
+And he made it clear that, in his view, simply rejecting AI and fighting against it is not an option.
+
+“You have to embrace technology, because it’s not like you can put technology in a bottle. The genie is not going back.”
+</item 3>
+
+<item 4>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+Sir Lucian Grainge, Chairman and CEO of Universal Music Group, said of UMG’s decision to offer a limited license to ‘Dream Track’: “We have a fundamental
+responsibility to our artists to ensure the digital ecosystem evolves to protect them and their work against unauthorized exploitation, including by generative
+AI platforms.
+
+“At the same time, we must help artists achieve their greatest creative and commercial potential – in part by providing them access to the kind of opportunities
+and cutting-edge creative tools made possible by AI.”
+
+“We have a fundamental responsibility to our artists to ensure the digital ecosystem evolves to protect them and their work against unauthorized exploitation,
+including by generative AI platforms.
+</item 4>
+
+<item 5>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+To progress this ‘incubator’, YouTube said it was working behind the scenes with a number of UMG-affiliated artists;
+
+and jointly announced that the video platform was launching an – a program by which new tools and innovations will be developed at YouTube in close conjunction
+with artists and the music biz. To progress this ‘incubator’, YouTube said it was working behind the scenes with a number of UMG-affiliated artists; Also in
+August, YouTube publicly committed to three principles/pledges behind its development of music-based generative AI tools . These pledges promised “appropriate
+protections… for music partners who decide to participate” in said tools. They promised “invest[ment] in the AI-powered technology” that, amongst other things,
+would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse” .
+</item 5>
+
+<item 6>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+This all seemed to hint at a desire to build a ‘Content ID’-style system on YouTube to control and police content made by cloning artists’ voices;
+
+publicly committed to three principles/pledges behind its development of music-based . These pledges promised in said tools. They promised that, amongst other
+things, would help YouTube . This all seemed to hint at a desire to build a on YouTube to control and police content made by cloning artists’ voices; Then,
+earlier this month, YouTube announced it was developing a specific system for music partners that allowed them to request the removal of content on its platform
+that “mimics an artist’s unique singing or rapping voice”.
+
+Evidently, all of this was enough for Universal Music Group and Warner Music Group to dip their toe into the ‘Dream Track’ experiment – though not without
+caution.
+</item 6>
+
+<item 7>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+YouTube says it paid out over USD $6 billion to music rightsholders in the year to end of June 2022, with around $2 billion of that coming just from ads on
+user-generated content.)
+
+However, the October US Copyright Office filing from Google has definitely put the cat amongst the pigeons at Sony Music HQ. As we’re sure it has at the other
+two major record companies.
+
+“Any prohibition or limitation on the use of copyrighted materials for purposes of Al training would undermine the purpose of copyright and foreclose the many
+opportunities that come with this technology.” Google filing with the US Copyright Office, October 30
+
+Witness Universal Music Group’s own filing with the US Copyright Office on the topic of AI. It couldn’t offer a starker contrast to Google’s assertion that
+“prohibition or limitation on the use of copyrighted materials for purposes of Al training would undermine the purpose of copyright and foreclose the many
+opportunities that come with this technology”.
+</item 7>
+
+<item 8>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+More broadly, you might ponder a bigger question.
+
+When the day comes that YouTube asks the world’s biggest superstars to wholeheartedly embrace ‘Dream Track’, will Google’s recent US Copyright Office filing
+give said superstars – and their record companies – pause for thought?
+
+JKBX (pronounced "Jukebox") unlocks shared value from things people love by offering consumers access to music as an asset class — it calls them Royalty Shares.
+In short: JKBX makes it possible for you to invest in music the same way you invest in stocks and other securities.Music Business Worldwide
+</item 8>
+
+<item 9>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+To be fair to Google, its submission does make note of the importance of US copyright law, including when applied to generative AI, striking “the right balance
+between the legitimate interests of rightsholders and the equally legitimate interests of the public and succeeding generations of creators”.
+
+Yet it could clearly be argued that Google’s take on copyright “harvesting” by generative AI models sits in odd contrast to the copyright-related reassurances
+that YouTube has been careful to make to the music industry during the pre-development, development, and trial launch of ‘Dream Track’.
+
+A final thought…
+
+MBW’s sources close to Sony Music were keen to point out that the company’s general ongoing relationship with YouTube and YouTube Music is a harmonious one.
+
+(YouTube is, after all, now the second largest commercial partner of the major record companies – with a stated ambition to catch up with Spotify in the years
+ahead.
+</item 9>
+
+<item 10>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+are now allowed to use ChatGPT in legal rulings
+
+The U.K. Judicial Office issued guidance that permits judges to use ChatGPT, along with other AI tools, to write legal rulings and perform court duties. The
+guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy.
+
+OpenAI makes repeating words “forever” a violation of its terms of service after Google DeepMind test
+
+Following an experiment by Google DeepMind researchers that led ChatGPT to repeat portions of its training data, OpenAI has flagged asking ChatGPT to repeat
+specific words “forever” as a violation of its terms of service.
+
+Lawmakers in Brazil enact an ordinance written by ChatGPT
+
+City lawmakers in Brazil enacted a piece of legislation written entirely by ChatGPT without even knowing. Weeks after the bill was passed, Porto Alegre
+councilman Ramiro Rosário admitted that he used ChatGPT to write the proposal, and did not tell fellow council members until after the fact.
+</item 10>
+=== END ITEM id=07ee77d082d0ad59 ===
+
+=== ITEM id=907d981db72c1d86 ===
+Gold sentences and facts:
+Sentence 0: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 0.0: Google's public documentation says Google uses three categories to rank results that are local to a searcher.
+  Fact 0.1: The three categories are relevance, distance and prominence.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The article's last roundup reported how Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 1.1: The article's last roundup reported how Google tried to have Chrome preinstalled on iPhones.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 6>
+
+<item 7>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 8>
+
+<item 9>
+The restaurant nearest Google (The Verge, 2023-10-26T13:00:00+00:00)
+Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence. To improve local
+ranking, Google encourages businesses to provide a trove of information on their profile. Owners should have basics like updated hours of operation and accurate
+location details, but they should also respond to reviews, add photos, and even post individual items in stock to their Google page.
+
+“I don’t think they’re really great marketing campaigns”
+
+The prominence measure in Maps includes data from the web — links to the business, how the business ranks in traditional search, and press coverage, for
+example. In this way, SEO impacts how a business appears in local search results, and news articles and links are one way Google tries to determine the
+relevance of a page. (It’s why reporters’ inboxes are overrun with spammy requests to buy “guest posts” on our sites from marketers.)
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 10>
+=== END ITEM id=907d981db72c1d86 ===
+
+=== ITEM id=815c928f3010f46c ===
+Gold sentences and facts:
+Sentence 0: You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform.
+  Fact 0.0: Value can be found in player and team props.
+  Fact 0.1: Value in player and team props can be found by gathering information from multiple sources.
+  Fact 0.2: Value in player and team props can be found by tracking how players and their teammates perform.
+Sentence 1: These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects.
+  Fact 1.0: Props can be team prop bets.
+  Fact 1.1: Props can be individual player prop bets.
+  Fact 1.2: A prop bet can be on which team is winning at halftime.
+  Fact 1.3: A prop bet can be on the total number of receptions a player collects.
+
+Retrieved items:
+<item 1>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Remember that some of the best players in the NBA were once on the bench for most games until small increases in their playing time gave them a chance to shine.
+
+Shop for the best lines: This tip applies to every bet you make. Using multiple sportsbook accounts lets you find the best odds for every NBA prop bet. Even the
+smallest differences, like one sportsbook having odds at +125 and another at +135, can make a difference in your profit. By shopping for the best lines, you can
+make smarter bets and find the best value.
+
+Related Pages:
+</item 1>
+
+<item 2>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+In the NBA, prop bets deal with both players and teams.
+
+Some examples of NBA player props are:
+
+How many points a player will score
+
+Number of rebounds a player will have
+
+How many assists a player will get
+
+Rebounds and assists combined
+
+Points, rebounds, and assists combined
+
+How many steals a player will get
+
+Number of three-pointers made
+
+Some examples of NBA team props include:
+
+Which team will reach 10 points first
+
+Which team will have the highest-scoring period
+
+Which team will score first
+
+Which team will win the first half
+
+Which team will win the second half
+
+Will there be a fourth-quarter comeback victory
+
+All of the best sports betting sites have their selection of prop bets for each NBA game, so shop around to find the sportsbooks that best suit your needs.
+
+How to bet on NBA props
+
+The first step to betting on NBA props is opening an account at an online sportsbook. The process is simple, free, and doesn’t take very long.
+</item 2>
+
+<item 3>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+The NBA is one of the most popular sports to bet on in the US. NBA prop bets are an easy way to jump into basketball betting.
+
+Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props to give you plenty of variety.
+
+Below, we look at betting NBA props at the best NBA betting sites and share some key information to make informed bets.
+
+What are NBA props?
+
+A prop bet is a side wager on an aspect of a game that usually doesn’t tie directly to the result. In the NBA, prop bets deal with both players and teams.
+</item 3>
+
+<item 4>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+You’ll often come across NBA team prop bets that are based on a team’s points, such as the first team to reach 20 points, the first team to score in a game, or
+whether the total points by both teams in a contest will end up being odd or even.
+
+Team props, also known as “game props,” don’t rely on individual players but rather on the team as a whole. Player props, on the other hand, are driven by
+individual performance.
+
+These individual props are focused on statistical milestones during a game. The most popular bets typically focus on points, rebounds, assists, and three-point
+field goals. You can also bet on combination wagers, such as points and rebounds together.
+
+In most cases, you can bet on traditional statistics for the five starters on each team.
+
+See more:
+
+Tips for betting on NBA props
+
+Every bettor should develop their strategies, but we do have three tips you can use for NBA props.
+</item 4>
+
+<item 5>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+Michigan
+
+The game will take place at the Rose Bowl in Pasadena, CA. Kickoff is scheduled for 5 p.m. ET and the game will be broadcast on ESPN.
+
+For more on the opening lines for the Rose Bowl click here! Interested in Touchdown props? Click here!
+
+Allstate Sugar Bowl: Texas vs. Washington
+
+The game will take place at the Caesars Superdome in New Orleans, LA. Kickoff is scheduled for 8:45 p.m. ET and the game will be broadcast on ESPN.
+
+For more on the Sugar Bowl opening lines click here! For more on Sugar Bowl TD props click here!
+
+College Football Playoff National Championship odds
+
+Here are the latest odds to win the college football national title. If you see odds you like, click them to visit the corresponding sportsbook, open an
+account, and start betting.
+
+What bets can I make on the CFP and bowl games?
+</item 5>
+
+<item 6>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Use most of your budget on more stable bet types, such as moneylines, spreads, or totals. Focus only a small percentage of your bankroll on props.
+
+We wouldn’t recommend using prop bets as your main bet type when building your strategy. Use most of your budget on more stable bet types, such as moneylines,
+spreads, or totals. Focus only a small percentage of your bankroll on props. Exotic props are a guessing game: When large events like the Super Bowl roll
+around, you’ll be inundated with exotic and entertaining prop bets. These are almost impossible to research, and pure guessing isn’t good for anyone’s bankroll
+or betting strategy.
+
+Prop bet examples for major sports
+
+Every major sport with odds at the best sports betting apps will have prop bets. Below, we give examples of prop bets you might find when betting on major
+American sports.
+
+NBA prop bets
+
+The NBA offers a wide range of prop bets. They vary from player to team bets and lean heavily on the statistical side of the game.
+</item 6>
+
+<item 7>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 7>
+
+<item 8>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+Consider them side bets made with the sportsbook about events or statistical milestones that happen in the game.
+
+These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects. Consider them
+side bets made with the sportsbook about events or statistical milestones that happen in the game. Bowl game parlays: Parlays are multi-leg bets on a single bet
+slip. All parts of the parlay must be successful for the bet to win. These offer larger payouts, but the chances of winning compared with those of an individual
+bet are greatly reduced.
+
+How to bet on college football bowl games
+
+Betting on NCAA football bowl games has never been easier, thanks to online betting sites sprouting up across the country.
+
+Create an account with any of the best sports betting apps to start betting. It’s a quick process. Below, we outline the steps for opening your own account.
+</item 8>
+
+<item 9>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+They vary from player to team bets and lean heavily on the statistical side of the game. Some NBA prop examples include:
+
+How many points a player will score
+
+Number of assists or three-pointers a player will have
+
+Which player will score the first basket of a game
+
+You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team
+will score in the game.
+
+See more: NBA prop bets
+
+NFL prop bets
+
+The National Football League is the king of sports betting, and NFL betting sites have no qualms about showcasing every kind of possible bet type for it.
+
+Bettors will find many prop bet opportunities, especially for the Super Bowl. During the regular season, one of the most popular prop bet options includes the
+“anytime touchdown scorer” bet, where you can wager on a player to score a TD at any point in the game. Other prop bets can be focused on the team or even both
+teams.
+</item 9>
+
+<item 10>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Accept the terms and conditions: Before finalizing your account information, you must accept the sportsbook’s terms and conditions. We recommend you read
+through these to understand the rules your sportsbook will enforce regarding bets, especially for the sports you intend to wager on. The terms and conditions
+are also available on the sportsbook website for you to read at any point.
+
+Get your bonus: At this point, you can accept your welcome bonus. Be sure to read through the bonus requirements before accepting anything. If a bonus code is
+needed, which you can find on our website, this is where you will input it during the registration process.
+
+Make a deposit: Now that you’ve signed up for an account, you can start funding your bankroll by making a deposit. Most legal sportsbooks have a variety of ways
+you can add funds to your account, such as through your bank or an e-wallet.
+
+Start betting: Go to the basketball section of your sportsbook and select the NBA.
+</item 10>
+=== END ITEM id=815c928f3010f46c ===
+
+=== ITEM id=19d2699368376b2d ===
+Gold sentences and facts:
+Sentence 0: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 0.0: In the last roundup, it was reported that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 0.1: In the last roundup, it was reported that Google tried to have Chrome preinstalled on iPhones.
+Sentence 1: When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+  Fact 1.0: Google's search head Prabhakar Raghavan testified in court on October 28.
+  Fact 1.1: Prabhakar Raghavan revealed in his testimony that Google paid $26.3 billion in 2021.
+  Fact 1.2: Google paid the $26.3 billion in 2021 to multiple browsers, phones and platforms.
+  Fact 1.3: Google's 2021 payments included payments to companies including Apple, Samsung and Mozilla.
+  Fact 1.4: The Verge reports this account.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content, their readers and ad revenue.
+  Fact 2.2: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 1>
+
+<item 2>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Quick backstory: Yahoo inked a deal with Mozilla way back in 2014 to pay the browser maker $375 million annually to be the default search engine on Firefox. At
+the time, Google was offering $276 million, said Baker. Reader, that was a bad deal.
+
+“I felt strongly that Yahoo was not delivering the search experience we needed and had contracted for,” she said, according to Bloomberg. The executive said
+Yahoo had promised to reduce the number of ads and offer less user tracking, but ended up gradually serving users more ads anyway.
+
+“The number of users who stayed with Firefox declined noticeably during the years when Yahoo was the default,” said Baker.
+
+Baker, who was providing a recorded deposition for Google’s defense, noted that Mozilla’s users apparently wanted and expected Google.
+
+However, that is not the full story. Yahoo was already well behind Google in terms of search technology at that point.
+</item 2>
+
+<item 3>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 3>
+
+<item 4>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 4>
+
+<item 5>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+In response, Google enacted a plan, which execs dubbed “Go Big in Europe,” to enhance search results in France and Germany in 2019 and 2020 with more local
+content: news, post-game soccer video highlights, information on local television options for streaming, and pronunciation practice for different language. The
+aim was to incentivize users to click on Google’s home screen, rather than the competition’s.
+
+That revelation effectively supports the Justice Department’s argument that Google, without the push of competition, has little incentive to improve its
+products, a classic consequence in a monopoly.
+
+Mozilla digs in on Google’s supremacy in search
+
+Interestingly, on November 1 Mozilla CEO Mitchell Baker provided a defense of Google’s quality as a search engine, even in “competitive” environments.
+Specifically, Baker recounted how, Mozilla “failed” when it switched Firefox’s default search engine from Google to Yahoo.
+</item 6>
+
+<item 7>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Yahoo was already well behind Google in terms of search technology at that point. But also, Firefox was very well behind Chrome, which ended 2014 with nearly
+50% market share and ended 2017 (when Google got prime default search position on Firefox) at nearly 65% of all web browser usage on desktop: and mobile is even
+more skewed to Chrome. In other words, the number of Firefox users might have been declining for other reasons, although pushing the blame on Yahoo certainly
+works in Google’s favor here!
+
+The trial continues…
+</item 7>
+
+<item 8>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 8>
+
+<item 9>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 9>
+
+<item 10>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Now, onto the roundup!
+
+A window into Google’s most popular search queries
+
+Judge Amit Mehta ruled to make a list public that provides a glimpse of which search terms make Google the most money. The list of popular search terms ordered
+by revenue includes 20 terms that were lucrative for the week of September 22, 2018. Information like revenue per search term, how many queries each of those
+terms got, along with a separate list of popular search terms ordered by queries (not revenue), were all redacted. The list we can see is as follows:
+
+iPhone 8
+
+iPhone 8 plus
+
+Auto insurance
+
+Car insurance
+
+Cheap flights
+
+Car insurance quotes
+
+DirecTV
+
+Online colleges
+
+AT&T
+
+Hulu
+
+iPhone
+
+Uber
+
+Spectrum
+
+Comcast
+
+Xfinity
+
+Insurance quotes
+
+Free credit report
+
+Cheap car insurance
+
+AARP
+
+LifeLock
+
+There is, in reality, little surprise here.
+</item 10>
+=== END ITEM id=19d2699368376b2d ===

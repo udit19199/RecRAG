@@ -1,0 +1,78 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-2497",
+   "sentences": [
+    "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together.",
+    "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."
+   ]
+  },
+  {
+   "id": "7761896900514914630",
+   "sentences": [
+    "`` Like a Boss '' is a song written and recorded by comedy hip hop troupe The Lonely Island for their debut studio album Incredibad . The song is a parody of the first official single from Slim Thug 's first album Already Platinum , also named `` Like a Boss '' . The song had multiple versions , including an audio - only that did not have the celebrity interviewer and a clean version that was produced in both audio and video . In 2011 it was also subject to a lawsuit from the producers of the song who claimed they never received proper compensation for their work ."
+   ]
+  },
+  {
+   "id": "5ac09d265542992a796ded39",
+   "sentences": [
+    "Erving Goffman (11 June 1922 – 19 November 1982) was a Canadian-American sociologist and writer, considered by some \"the most influential American sociologist of the twentieth century\".",
+    " In 2007 he was listed by \"The Times Higher Education Guide\" as the sixth most-cited author in the humanities and social sciences, behind Anthony Giddens, Pierre Bourdieu and Michel Foucault, and ahead of Jürgen Habermas.",
+    "Paul-Michel Foucault (15 October 1926 – 25 June 1984), generally known as Michel Foucault (] ), was a French philosopher, historian of ideas, social theorist, and literary critic."
+   ]
+  },
+  {
+   "id": "-7299076255108845857",
+   "sentences": [
+    "The Sentencing Reform Act , part of the Comprehensive Crime Control Act of 1984 , was a U.S. federal statute intended to increase consistency in United States federal sentencing . It established the United States Sentencing Commission . It also abolished federal parole , except for persons convicted under federal law before November 1 , 1987 , persons convicted under District of Columbia law , `` transfer treaty '' inmates , persons who violated military law who are in federal civilian prisons , and persons who are defendants in state cases and who are under the U.S. Marshals Service Witness Protection Program ."
+   ]
+  },
+  {
+   "id": "5ae612f3554299546bf83065",
+   "sentences": [
+    "Inner Secrets is the ninth studio album by Santana.",
+    "Carlos Santana    (born July 20, 1947) is a Mexican and American musician who first became famous in the late 1960s and early 1970s with his band, Santana, which pioneered a fusion of rock and Latin American music."
+   ]
+  },
+  {
+   "id": "multihop-rag-382",
+   "sentences": [
+    "At its first developer conference last week, Altman was the main speaker showcasing a vision for a future of AI agents that could help people with a variety of tasks.",
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.",
+    "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "5a738b855542992d56e7e363",
+   "sentences": [
+    "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States.",
+    " Founded in 1861, it is the longest continuously operating hospital in the District."
+   ]
+  },
+  {
+   "id": "5abbcfaf5542993f40c73ba9",
+   "sentences": [
+    " At the 2002 Commonwealth Games she won a silver medal with Sara Petersen in the women's doubles, and a bronze medal in the mixed team.",
+    "The 2002 Commonwealth Games, officially known as the XVII Commonwealth Games and commonly known as Manchester 2002 were held in Manchester, England, from 25 July to 4 August 2002."
+   ]
+  },
+  {
+   "id": "5ac2546a554299636651997b",
+   "sentences": [
+    " They have produced two studio albums and an EP.",
+    "Motion City Soundtrack was an American rock band that formed in Minneapolis, Minnesota in 1997.",
+    " Over the course of their nearly twenty-year career, the group toured heavily and released six studio albums, the majority on independent label Epitaph Records."
+   ]
+  },
+  {
+   "id": "5abdff775542993f32c2a082",
+   "sentences": [
+    "Big Fish is a musical with music and lyrics by Andrew Lippa and a book by John August.",
+    " He is a resident artist at the Ars Nova Theater in New York City."
+   ]
+  }
+ ]
+}

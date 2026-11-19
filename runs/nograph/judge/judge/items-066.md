@@ -1,0 +1,1026 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c28387b802498b68 ===
+Gold sentences and facts:
+Sentence 0: Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1 FPTS/G 11.4 The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia in Week 4.
+  Fact 0.0: The matchup is at ATL, and the betting line is ATL -2.5.
+  Fact 0.1: The over/under is 42.5.
+  Fact 0.2: The opponent's ranking against wide receivers is 6th.
+  Fact 0.3: The projected points are 12.1.
+  Fact 0.4: The WR rank is 37th.
+  Fact 0.5: Year-to-date receptions are 25.
+  Fact 0.6: Year-to-date targets are 31.
+  Fact 0.7: Year-to-date receiving yards are 261.
+  Fact 0.8: Year-to-date touchdowns are 1.
+  Fact 0.9: Fantasy points per game are 11.4.
+  Fact 0.10: The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2.
+  Fact 0.11: The only two games McLaurin posted good numbers in were Washington's 34-31 overtime loss to Philadelphia in Week 4.
+Sentence 1: Again, don't expect a massive game because the running game, defense, and special teams will have plenty of success in another big victory.
+  Fact 1.0: The writer says readers should not expect a massive game.
+  Fact 1.1: The running game will have plenty of success in another big victory.
+  Fact 1.2: The defense will have plenty of success in another big victory.
+  Fact 1.3: The special teams will have plenty of success in another big victory.
+
+Retrieved items:
+<item 1>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Start 'em 10.0-7.00 6.99 - 5.01 5.00 - 0 Sit 'em
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline Terry McLaurin WR WAS Washington • #17
+
+Age: 28 • Experience: 5 yrs. Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1
+FPTS/G 11.4 The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia
+in Week 4. This matchup has an over/under of 42.5 points, tied for fourth-lowest of the week.
+</item 1>
+
+<item 2>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+PURDY: Has hit at least 20 Fantasy points in 8 of his 9 regular-season starts, and it really should be 9 for 9 because of that first touchdown that was ruled a
+lateral back in Week 2. If you include the two playoff games he completed, Purdy has delivered at least 20 in 9 of 11 games. And in 5 of those 9 he hit at least
+23 Fantasy points including each of his past two games.
+
+COWBOYS: Dallas' defense lost top cornerback Trevon Diggs and they're still red hot. They lead the league in pass rush pressure rate this season (55.6%) and
+they're in the top-10 in blitz rate (31.9%). It's that pressure that's helped the Cowboys rank in the top-five in completion rate allowed (57.4%), passing
+touchdowns allowed (two) and missed tackles on pass plays (just five, that's best in football).
+</item 2>
+
+<item 3>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Jerry Jones said earlier in the week that Sunday night's game would show him how the Cowboys stack up against the NFL's best.
+
+The answer? Not very well.
+
+Everything that could go wrong for Dallas on Sunday did go wrong, in a game that confirmed a 49ers team that ended the Cowboys' season in each of the last two
+years remains a level above its NFC counterpart.
+
+The 49ers carved up Dallas' defense on the opening drive, and that was a sign of what was to come. Brock Purdy threw four touchdowns in the 42-10 rout,
+including three to George Kittle. Christian McCaffrey scored a touchdown for a 14th consecutive game as all of San Francisco's offensive weapons got involved.
+
+MORE: Comparing stats for NFC stars Nick Bosa, Micah Parsons
+
+Defensively, the 49ers were relentless. Nobody had a larger impact than Fred Warner, who finished the night with an interception, sack and forced fumble in a
+swarming performance.
+</item 3>
+
+<item 4>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Tack on the ascending secondary the Falcons seem to have and the Commanders' diffusion of targets and McLaurin is at best a low-end flex. I'd rather roll the
+dice on Drake London, Tyler Lockett or Garrett Wilson.
+
+LAST WEEK: Hopeful that his target edge over his teammates would keep growing, and even in a favorable game script where the Commanders were trailing by three
+scores before halftime, McLaurin only saw five targets against the Bears' heavy zone coverage.
+
+FILM: On the 10 third-down routes McLaurin ran last week, he drew extra coverage on four of them, got open on two of them (Howell threw elsewhere) and was a
+decoy on Curtis Samuel's touchdown. What happened? Sam Howell was getting rid of the ball quickly and to shorter distances as the Bears were getting some
+pressure on him. By the end of the game McLaurin's body language seemed dispirited.
+</item 4>
+
+<item 5>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The 49ers knocked the Cowboys out of the playoffs in both of the last two seasons, so a win for Dallas on Sunday could be helpful just from a psychological
+standpoint.
+</item 5>
+
+<item 6>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+On the flip side, three of the four quarterbacks Chicago faced found three touchdowns on their limited throws.
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Terry McLaurin WR WAS Washington • #17
+
+Age: 28 • Experience: 5 yrs. Weekly Breakdown MATCHUP vs CHI WAS -6 O/U 44.5 OPP VS WR 19th PROJ PTS 15.2 WR RNK 21st YTD Stats REC 21 TAR 26 REYDS 212 TD 1
+FPTS/G 12.1 The Commanders may wish to win this one with a big dose of the run game (Brian Robinson is a must-start), but if the Bears put up any offense at
+all, McLaurin will be in position to put up nice numbers. He's a low-end WR2 worth the nod over George Pickens, Zay Flowers, Drake London and Jahan Dotson.
+</item 6>
+
+<item 7>
+Prisco's Week 12 NFL picks: Jaguars beat Texans in AFC South battle, Saints get key divisional win vs. Falcons (CBSSports.com, 2023-11-23T21:30:38+00:00)
+Dak Prescott plays well again. Cowboys roll.
+
+Pick: Cowboys 32, Commanders 16 (Result: Cowboys 45-10)
+
+Thursday, 8:20 p.m. ET (NBC, fubo)
+
+This is a huge division game for two teams that have had a good rivalry over the past decade. The Seahawks are coming off a bad loss to the Rams, while the
+49ers are coming off two dominant victories. Geno Smith is banged up, so his health is key. The 49ers have the look of a Super team again. They show it here.
+
+Pick: 49ers 28, Seahawks 19 (Result: 49ers 31-13)
+
+Friday, 3 p.m. ET (Amazon Prime Video)
+
+This Friday game the day after Thanksgiving isn't what it was expected to be with the Jets being an offensive disaster.
+</item 7>
+
+<item 8>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The Cowboys' offense looked very much like it did in last season's playoff exit -- uncomfortable and out of sorts. Dallas was sluggish through the first half of
+the game, and the night unraveled quickly when Dak Prescott threw three interceptions in the second half. It got out of hand so quickly that Sam Darnold entered
+the game for the 49ers with more than 12 minutes remaining.
+
+For Prescott and the Cowboys, questions about whether they can get over the hump against the class of the NFC will persist. While their wins have been dominant,
+Dallas already sits two games behind the Eagles in the NFC East.
+
+The 49ers are rolling right along, with all of their major offensive weapons now healthy and the defense living up to its billing as well. San Francisco, now
+5-0, doesn't face a team with a winning record until Week 10, though the Browns, Vikings and Bengals are far from automatic wins for Kyle Shanahan's team.
+</item 8>
+
+<item 9>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+PAST THREE WEEKS: McLaurin has led all Commanders wide receivers in targets and all Commanders players in receptions. He's the No. 1 guy, and his big Week 4
+game (8-86-0 with an offensive fumble recovery for a touchdown) would have been even bigger if Sam Howell had better ball placement on a deep pass McLaurin was
+open for.
+
+BEARS: Are expected to play again without top outside cornerback Jaylon Johnson and safety Eddie Jackson. Not that those two absences led to a bonanza from
+Broncos receivers; Russell Wilson spread the ball around. But if McLaurin remains the target leader then he'll have the best shot at a big game. Rookies Tyrique
+Stevenson and Terell Smith figure to line up across from McLaurin the most.
+</item 9>
+
+<item 10>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Not allowing even a field goal is a huge win for Dallas.
+
+8:56 p.m. — The 49ers are excelling on third down early in this game, and Purdy flips it to Kyle Juszczyk to keep the Niners' drive alive on 3rd & 1.
+
+8:54 p.m. — Now Kearse lines up offsides... That extends the drive for the 49ers, who aren't moving as freely as they were on that opening drive.
+
+8:50 p.m. — Jayron Kearse comes through with the Cowboys' first sack of the night, but Deebo Samuel makes up 11 of the 12 yards San Francisco needs on the next
+play.
+
+8:46 p.m. — There's the first catch of the night for Lamb, but he doesn't get the first down and Dak Prescott is sacked by Nick Bosa to quickly end the drive.
+This 49ers defense has picked up right where it left off against the Cowboys in January.
+</item 10>
+=== END ITEM id=c28387b802498b68 ===
+
+=== ITEM id=80df2046fd327e25 ===
+Gold sentences and facts:
+Sentence 0: While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it.
+  Fact 0.0: Ramaswamy's Republican colleagues have largely shunned TikTok.
+  Fact 0.1: Ramaswamy is presenting himself as one of the Cool Politicians.
+  Fact 0.2: The Cool Politicians are politicians who will actually use TikTok.
+Sentence 1: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist.
+  Fact 1.0: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok.
+  Fact 1.1: Audiences have started to resist artists making their songs trend on TikTok.
+
+Retrieved items:
+<item 1>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“Luminate’s findings prove what we had long known: that TikTok is the driving force behind music discovery in the industry, and that TikTok users are active,
+engaged and highly valuable drivers of music industry revenues.”
+
+The new study is part of an ongoing effort by TikTok to highlight its growing role in the development of global music culture. Last year, TikTok released a
+report asserting that 13 out of the 14 songs to reach number on the US Billboard Hot 100 in 2022 were driven by viral trends on TikTok.
+
+The data clearly shows why TikTok has focused so heavily on developing music-related services, to the point that one could be forgiven for thinking the company
+plans to reinvent itself as a part of the music industry.
+
+Last year, TikTok launched SoundOn, its own music distribution service, which has partnered with Believe-owned distro company TuneCore and Downtown
+Holdings-owned B2B tech and services company FUGA.
+</item 1>
+
+<item 2>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“This preference, combined with the high volume of music discovery and sharing activity on TikTok, can be harnessed to grow a fanbase without borders and has
+helped to launch global artists from genres such as Reggaeton, Afrobeats and K-Pop.”
+
+The report added: “TikTok users‘ interest in international music is evident in their music streaming preferences. Compared to the average music listener across
+each market, this audience is more likely to indicate that ‘access to music by global artists’ is an extremely important factor when selecting a music streaming
+service.”
+
+“TikTok is already famous for being the launchpad for creating viral hits and breaking new artists, but we wanted to understand how TikTok and its users impact
+the music industry more broadly,” Ole Obermann, TikTok’s Global Head of Music, said in a statement.
+</item 2>
+
+<item 3>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+MBW’s Stat Of The Week is a series in which we highlight a data point that deserves the attention of the global music industry. Stat Of the Week is supported by
+Cinq Music Group , a technology-driven record label, distribution, and rights management company.
+
+TikTok is in the process of reinventing itself as both a partner to music companies, and a competitor to streaming and distribution services.
+
+Now, a new market analysis sheds some light on why the ByteDance-owned short video platform has focused so intensely on expanding its services in the music
+world, with the firm reporting to be a major driver of music consumption and spending.
+
+While that may not come as a surprise to those who’ve noted the overlap between TikTok and music culture, the numbers in the analysis shine a light on the scale
+of TikTok’s influence.
+
+According to the analysis, commissioned by TikTok and carried out by US market monitor Luminate, 62% of US TikTok users pay for a music streaming service,
+compared to 43% of all consumers.
+</item 3>
+
+<item 4>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Only the occasional tweets. Meet @Vivek Ramaswamy ♬ original sound – GenosPicks
+
+Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in
+Ramaswamy’s favor, though.
+
+His account, which has amassed over 50,000 followers in the weeks since he joined, has been barraged with comments either criticizing his positions or trolling
+him. He’s been the butt of Gen Z’s relentless comments about getting off to his content (the top comments on his videos are consistently jokes about edging). He
+also incited the wrath of witchtok creators, who filmed themselves casting hexes upon him and other conservatives.
+
+Ramaswamy is raking in TikTok engagement — even if it’s not how he intended — but Democrats are still dominating the Republican party in digital strategy.
+Ocasio-Cortez’s Instagram Stories garnered her nationwide popularity when she campaigned in 2018, reaching further than her local constituency.
+</item 4>
+
+<item 5>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Brand Twitter tends to turn fun trends into advertising opportunities, taking organic community interactions and spitting out contrived versions clearly made to
+go viral. It may be grating, but in this case, it’s working in Minaj’s favor. This week, everyone wants to go to Gag City.
+</item 5>
+
+<item 6>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“Gen Z does not put up with bullshit,” Henry said. “That’s so much of what platforms like TikTok and Twitch cater to, and why they thrive on those platforms,
+because you can just pull out your phone and be talking while you’re getting ready with the worst angle possible. Republicans in general, it goes against so
+much of how they act otherwise and young people know that.”
+
+Ramaswamy’s TikTok strategy is puzzling; he appears to be trying to replicate the success of previous candidates who became social media stars over the course
+of their campaigns, but his TikTok presence conflicts with his own stances on social media and young voters. His communications director, Tricia McLaughlin, did
+not immediately respond to TechCrunch’s request for comment.
+
+Like many of his Republican colleagues, Ramaswamy has accused TikTok of being a threat to national security, and during a town hall days before he launched his
+account, described the platform as “digital fentanyl” from China.
+</item 6>
+
+<item 7>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+A similar pattern was found in the four other countries they study looked at.
+
+The study also found that the TikTok audience can be an effective marketing tool for artists, as TikTok users, in particular, are considerably more likely to
+discover and share music than overall social media and short video platform (SFV) users.
+
+In the UK, TikTok users were 108% more likely to discover and share music than other social media users, while in Germany, they were 100% more likely. US TikTok
+users were 71% more likely to discover and share music.
+
+“In doing so, TikTok users help both emerging and established artists to reach new audiences,” the Luminate report stated.
+
+The study found that TikTok’s platform appears to be a major driver of the glocalization of music – the trend of local artists, performing in local languages,
+being elevated to a regional or global platform.
+
+“TikTok users have a stronger preference for international music than the average music listener,” the report said.
+</item 7>
+
+<item 8>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Nicki Minaj is an artist who’s been embroiled in controversy throughout her career, from posting bad takes about COVID vaccines to defending her husband Kenneth
+Petty, a convicted sex offender. She may be a brilliant artist, but her problematic history makes her far from the family-friendly public figure that brands are
+more likely to endorse.
+
+But with Gag City, Minaj has brands doing all of her marketing for her. “Pink Friday 2” is an artistic marvel in itself (though I am probably biased), but the
+free promotion that it’s been getting as a viral meme is particularly astounding. Artists have spent the last few years trying to drum up engagement for their
+work by making their songs trend on TikTok, which audiences have started to resist. Gag City doesn’t bank on being the viral song of the summer to drive
+streaming numbers — the bit is removed enough for non-stans to enjoy it, while still revolving around the album it’s promoting.
+</item 8>
+
+<item 9>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+The same month, it struck a deal with Distrokid to have indie artists upload their music to TikTok Music and to Capcut, TikTok’s video editing software, as well
+as to TikTok’s Commercial Music Library, which offers a catalog of music for brands to use in their TikTok ads.
+
+Meanwhile, TikTok parent ByteDance has launched an AI music-making app, and most recently, TikTok unveiled the “Add to Music App” feature, which enables TikTok
+users to save music they’ve discovered directly to their Apple Music, Amazon Music (Prime or Unlimited) or Spotify accounts.
+
+These new partnerships indicate that TikTok is moving away from what at times appeared to be a trying relationship with the music industry. In one notable
+incident, TikTok disabled the use of copyrighted music for users in Australia, in what the platform described as an experiment, and what many observers saw as a
+hardball tactic in its licensing negotiations with music rights holders.
+</item 9>
+
+<item 10>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 10>
+=== END ITEM id=80df2046fd327e25 ===
+
+=== ITEM id=c34ed2bcac13e29f ===
+Gold sentences and facts:
+Sentence 0: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 0.0: The parties in question receive other benefits from Android
+  Fact 0.1: Google could solve this problem today if it wanted to
+Sentence 1: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 1.0: It will attempt to argue that Google restrains competition within two separate markets
+  Fact 1.1: One of the two markets is the distribution of apps to Android users
+  Fact 1.2: The other market is the market for payment processing solutions for content inside Android apps
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle
+  Fact 2.1: The case argues that Google siphons off news publishers' content
+  Fact 2.2: The case argues that Google siphons off news publishers' readers
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue
+  Fact 2.4: The case argues that Google does this through anticompetitive means
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 1>
+
+<item 2>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 2>
+
+<item 3>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 3>
+
+<item 4>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 5>
+
+<item 6>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+That sounds fascinating, but if I don’t care about Fortnite or rich companies suing each other, what’s in it for me?
+
+The future of Google’s app store could depend on this trial — both Epic and Google agree on that. Epic wants to break up Google’s alleged monopoly on Android
+app stores and payment methods, so developers aren’t stuck paying the “Google Tax” or passing that fee along to you.
+
+But if Epic wins — according to Google, anyhow — it could make Android phones less safe by dismantling basic protections against sideloaded apps, and damage
+Android’s ability to compete with the iPhone because it (arguably) can’t run a competitive app store by giving it away for free.
+
+Or maybe you just want juicy dirt on both companies? More on that later!
+
+What exactly is Epic claiming?
+
+Epic argues that Google makes it so difficult for developers and users to get around its Android app store, and that app store’s standard fees, that it’s
+created an illegal monopoly that unjustly enriches Google while artificially driving up app prices because other stores can’t compete.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 8>
+
+<item 9>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+I did like Pomerantz’s commonsense argument that Google can’t possibly have a monopoly on Android app stores when “every single Samsung phone comes with two app
+stores right on the homescreen,” which continued:
+
+When they show these charts that show all these downloads from Play and not from the Galaxy Store, that’s what the Samsung phone users are choosing. They’re
+touching Play. Nothing’s keeping them from touching the Galaxy Store; it’s just what works for them.
+
+I called Google “comparatively open” earlier, and that openness will likely be heavily debated in the weeks to come. Epic promised to “show that Google has
+closed off each and every other option” to the Play Store during this trial. But Google points to the simple fact that it allows alternate app channels at all —
+something Android rival iOS doesn’t.
+
+Pomerantz boasted that over a billion people have gone through the process Epic portrays as needlessly onerous to get apps outside the Play Store.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 10>
+=== END ITEM id=c34ed2bcac13e29f ===
+
+=== ITEM id=eba9d45bc4f0af19 ===
+Gold sentences and facts:
+Sentence 0: The official details have not been reported, though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal.
+  Fact 0.0: The official details have not been reported.
+  Fact 0.1: The report indicated the deal will shatter Mike Trout's record 12-year, $426.5 million deal.
+Sentence 1: According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club.
+  Fact 1.0: According to ESPN's Jeff Passan, the deal is for $42 million.
+  Fact 1.1: According to ESPN's Jeff Passan, the deal is over three years.
+  Fact 1.2: According to ESPN's Jeff Passan, the deal includes a club option for a fourth year.
+  Fact 1.3: According to ESPN's Jeff Passan, the deal includes an opt out after his second season with the club.
+
+Retrieved items:
+<item 1>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Instead, the Royals will hope the veteran Smith, who had solid underlying numbers in 2023, can serve as a reliable late-inning arm after both Scott Barlow and
+Aroldis Chapman were traded before the deadline this past season.
+
+Shohei Ohtani agrees to mega contract with Dodgers
+
+Date: Saturday, Dec. 9
+
+Source: Shohei Ohtani, Jeff Passan
+
+Two-time MVP Shohei Ohtani announced on Instagram that he is signing with the Los Angeles Dodgers, spurning the Blue Jays and remaining in the city where he
+became a sensation with the Angels.
+
+ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual
+value.
+
+Ohtani joins a Dodgers lineup that already features two former MVPs in Mookie Betts and Freddie Freeman, both of whom were NL MVP finalists in 2023.
+</item 1>
+
+<item 2>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+'Money's great, but winning's better'
+
+Date: Nov. 21
+
+Source: Max Scherzer, Rangers pitcher on Foul Territory
+
+OK, so this isn't necessarily a rumor, but an example of how much players would love for Ohtani to join their team. Scherzer was a guest on Foul Territory on
+Monday.
+
+"Money's great, but winning's better."
+
+
+
+Max Scherzer shares his pitch for Shohei Ohtani to join the @Rangers 🏆
+
+
+
+▶️ https://t.co/6KoSRqSgk2 pic.twitter.com/PHW2jHWj6C — Foul Territory (@FoulTerritoryTV) November 20, 2023
+
+Maybe Ohtani won’t sign quite so soon after all
+
+Date: Nov.
+</item 2>
+
+<item 3>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Imagine a lineup consisting of Ohtani, Ronald Acuna Jr., Ozzie Albies, Austin Riley and Matt Olson?
+
+Sources: Braves are among the teams still engaged with Shohei Ohtani’s camp, as I reported in this @MLBNetwork segment. @MLB pic.twitter.com/lP4lISzttN — Jon
+Morosi (@jonmorosi) December 4, 2023
+
+Ohtani has already received several $500+ million offers
+
+Date: Dec. 3
+
+Source: Jon Heyman, NY Post
+
+It's no surprise the bidding for Ohtani is heating up, with the star expected to sign soon. And New York Post's Jon Heyman reported Ohtani has already received
+several deals that have topped $500 million, which could mean he winds up being the first $600 million player in MLB history. He added there are believed to be
+five teams in the running for Ohtani.
+</item 3>
+
+<item 4>
+M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers (The New York Times, 2023-12-09T22:04:02+00:00)
+(Photo: Michael Owens / Getty Images)
+
+Ohtani is committed to being a starting pitcher. If he cannot stay healthy enough for that role, he could aid his new team as a reliever. He closed the final
+game of the World Baseball Classic, securing the crown for Japan by striking out Trout. His four-seam fastball averaged nearly 97 mph in 2023; the velocity of
+the pitch figures to improve in short bursts.
+
+Advertisement
+
+Even if Ohtani never pitches again, his value as a hitter is immense. In 1920, his first season exclusively as a hitter, Ruth led the American League in homers,
+on-base percentage and slugging percentage. In 2023, while still making 23 starts with a 3.14 ERA, Ohtani led the American League in the same three categories
+as Ruth. He swatted 44 homers with a career-best 1.066 OPS. He did this while making starts and dealing with a torn ligament in his elbow.
+</item 4>
+
+<item 5>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Here's the latest on Ohtani's free agency pursuits.
+
+MORE: Projecting Shohei Ohtani's contract in free agency
+
+Shohei Ohtani news: Latest updates, rumors for MLB free agency
+
+Ohtani agrees to 10-year, $700 million deal with Dodgers
+
+Date: Saturday, Dec. 9
+
+Shohei Ohtani announced Saturday that he has agreed to a contract with the Dodgers. It's a colossal 10-year, $700 million deal with "significant deferrals," so
+while Los Angeles won't pay him $70 million per year, the franchise will be paying him beyond those 10 seasons.
+
+While rumors connected Ohtani to the Blue Jays on Friday, it's the Dodgers who hand him a record-shattering contract and pair the two-time MVP with two former
+MVPs in Mookie Betts and Freddie Freeman.
+
+Ohtani not headed to Toronto, at his home in Southern California
+
+Date: Friday, Dec.
+</item 5>
+
+<item 6>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+20
+
+Source: Ken Rosenthal, The Athletic
+
+Buried at the bottom of Rosenthal’s piece on what an Ohtani contract might look like — incentives, opt-outs and all sorts of stuff — is this little bit of
+reporting:
+
+An agreement at the winter meetings in Nashville the first week of December would be the ideal outcome for MLB, but not necessarily for Ohtani. He perhaps will
+be better off waiting for the signing of Japanese righty Yoshinobu Yamamoto, who is expected to be posted for free agency as soon as Monday, triggering a 45-day
+window for teams to negotiate with him. Losing out on the 25-year-old Yamamoto, who could command more than $200 million, might put certain teams on tilt,
+improving the landscape for Ohtani.
+
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov.
+</item 6>
+
+<item 7>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+The Giants are considered to be an unknown.
+
+In addition to the teams, Passan also reported Ohtani is expecting a contract somewhere between $550 and $600 million, which would be the largest guaranteed
+contract in North American sports.
+
+Blue Jays could alter roster with Ohtani signing
+
+Date: Nov. 30
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays are one of the teams believed to still be among the strongest in the mix for Ohtani. The New York Post's Jon Heyman reported there could be some
+changes if Ohtani signs with the Blue Jays, however, reporting that some rivals believe Bo Bichette and Vladimir Guerrero Jr. could hit the trade block if
+Toronto lands the star.
+
+Trading the two infielders might seem counterproductive to signing Ohtani in the first place. Those two would be the biggest supporting bats in the lineup
+around Ohtani.
+</item 7>
+
+<item 8>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+11
+
+Source: Fabian Ardaya, The Athletic
+
+According to The Athletic, Ohtani will defer a whopping $680 million of his $700 million contract from the Dodgers, receiving only $2 million per year.
+
+While it's important to note the deal will still count as $46 million annually toward the luxury tax thresholds for Los Angeles, Ohtani is still giving the
+organization much more flexibility than expected over the course of the deal.
+
+The two-time MVP will receive $68 million per year, without interest, from 2034-43, making the present-day value of the contract much less than it originally
+appeared.
+
+MORE: Complete breakdown of Shohei Ohtani's Dodgers contract, by the minute
+
+Giants reportedly meet with Yamamoto
+
+Date: Monday, Dec. 11
+
+Source: Buster Olney, ESPN
+
+ESPN's Buster Olney reports the Giants met with Japanese ace Yoshinobu Yamamoto on Sunday, Dec. 10.
+</item 8>
+
+<item 9>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+The Athletic's Ken Rosenthal reported Gurriel has re-signed a contract with the Diamondbacks.
+
+According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with
+the club.
+
+Yamamoto dines with Mets owner
+
+Date: Sunday, Dec. 17
+
+Source: Joel Sherman, New York Post
+
+The Mets continued their strong push for the top free agent available, Yoshinobu Yamamoto, by hosting the Japanese pitcher for dinner Saturday night at team
+owner Steve Cohen's Connecticut home. Cohen and other top Mets officials previously flew to Japan to meet with Yamamoto on his home turf, so this is at least
+the second time the key players have met face-to-face.
+
+Sherman reports the bidding process for the 25-year-old "is supposed to intensify this week," with the Yankees, Dodgers, Giants, Red Sox, Phillies and Blue Jays
+also in the mix.
+</item 9>
+
+<item 10>
+M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers (The New York Times, 2023-12-09T22:04:02+00:00)
+Shohei Ohtani’s singular pursuit of history, one man’s quest to rewrite the baseball world’s understanding of what is possible, reached another summit on
+Saturday when he agreed to the largest contract in the annals of major North American team sports, a 10-year, $700 million contract with the Los Angeles
+Dodgers, his agency CAA announced.
+
+Advertisement
+
+Ohtani announced his decision on Instagram. The deal ends years of feverish speculation about Ohtani’s future. Ohtani, a 29-year-old two-way sensation, has
+captivated the industry since he left Japan for Major League Baseball heading into the 2018 season. He has done things that appeared impossible in the modern
+era, feats that harkened back to Babe Ruth. As he traveled the country with the Los Angeles Angels this past summer, fans serenaded him with recruiting pitches.
+When he entered free agency, a dozen teams lined up, curious to see if they could meet his eye.
+</item 10>
+=== END ITEM id=eba9d45bc4f0af19 ===
+
+=== ITEM id=fc714d5e53e9658d ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: Google makes deals with Apple.
+  Fact 0.2: Google makes deals with Samsung.
+  Fact 0.3: Google makes deals with Mozilla.
+  Fact 0.4: Google makes deals with many others.
+  Fact 0.5: The Justice Department focuses on these deals to ensure Google is the default search engine on practically every platform.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: In the last roundup, the writers learned that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 1.1: In the last roundup, the writers learned that Google tried to have Chrome preinstalled on iPhones.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 1>
+
+<item 2>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 2>
+
+<item 3>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 3>
+
+<item 4>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 4>
+
+<item 5>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 5>
+
+<item 6>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“We try to get people up and running as fast as possible.”
+
+Cue acknowledged that the ISA didn’t allow Apple to offer users a choice of search engines during setup but also said he wouldn’t want to do that anyway. “We
+try to get people up and running as fast as possible,” he said. “Setup is just critical stuff.” Showing people a bunch of search engines they’ve never heard of
+would just be a bad user experience, he argued; even Cue couldn’t remember the names of some of the alternatives to Google. “We make Google be the default
+search engine,” he said, “because we’ve always thought it was the best. We pick the best one and let users easily change it.” (“Easily” is a persistent point of
+contention in this trial — DuckDuckGo’s CEO, who testified last week, claimed it takes “too many steps” to switch.)
+
+As for the privacy pop-ups? This is where Bellshaw began to press on how exactly Apple decided Google had the best product.
+</item 8>
+
+<item 9>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 10>
+=== END ITEM id=fc714d5e53e9658d ===
+
+=== ITEM id=ea3517f8c5e1a1d9 ===
+Gold sentences and facts:
+Sentence 0: For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together.
+  Fact 0.0: Bayern have their own flaws.
+  Fact 0.1: Bayern are basically a good version of whatever Manchester United are attempting to piece together.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United put in a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+Photograph: Adam Vaughan/EPA
+
+They held the ball nicely, probed in neat, clipped, mannered attacks. A lot seemed to hinge on how desperately Bayern felt the need to twist that scalpel,
+whether they could really be bothered to take this thing to the wall. United defended well. Their waves of pressing drew waves of applause. Everyone here seemed
+to be trying.
+
+But with 58 minutes gone Copenhagen scored and United’s hopes began to slip beneath the waves. Just over 10 minutes later Bayern made it 1-0 in Manchester.
+Kingsley Coman got it, granted a huge expanse of time and space in front of the United goal, enough to set himself, as though taking a penalty, and belt the
+ball into the corner. The moment was made by a delightfully sneaky round‑the‑corner pass from Kane. After all that pressure, all that tender hope, it looked a
+bit like a training goal.
+</item 1>
+
+<item 2>
+Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe (TalkSport,
+2023-11-29T23:40:49+00:00)
+United now have to beat Bayern Munich and hope Galatasaray draw with FC Copenhagen on the final matchday to progress, and it's the third time in the Champions
+League this season that they have been in a winning position and then failed to emerge victorious.
+
+Eight points have been dropped when they've been in the lead, and no other team has suffered a worse fate this term.
+
+Captain Fernandes appears to be fed up of their inability to hold onto results as he told TNT Sports: "Every time we concede a goal we had many chances to score
+again.
+
+"I think at the end of the game we had like four chances to score a goal but we have to get our heads up and understand that sometimes it's about finding
+another pass, finding the player that is free.
+
+"Trying to get the best one in the best position and take the chance ourselves, we have to look for the team first and after, for ourselves."
+</item 2>
+
+<item 3>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+This is the current reality for United. They obviously have many more issues than the goalkeeper – as illustrated by the goal itself – but a strange season for
+Ten Hag’s primary signing only continues. United’s problems meanwhile combined. There were so many errors leading to the goal, to go with all of those that have
+characterised this entire European campaign.
+
+That can now be talked about definitively, since it has been decisively ended. It is a low but just part of a decade of disappointment in the competition that
+has seen this club rise to its most emotional heights.
+
+This game never threatened to do that. United never threatened at all. They’d been involved in so many ludicrously chaotic matches that the biggest of all ended
+up being a non-event.
+</item 3>
+
+<item 4>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+Harry Kane, for so long billed as a potential United player, didn’t score but did set it up.
+
+This game showed one reason why he is at Germany’s biggest club rather than England’s. His side are through with ease, among the favourites for the competition
+even if they do look lacking in a few areas.
+
+Harry Kane’s assist was another reminder of what could have been for United (PA)
+
+Not that you could judge from this game. It was almost a kickabout for them.
+
+Bayern were still having more of the ball and the attacks. This was another tension for Ten Hag to overcome on the night. United were playing in quite a
+controlled way when they were going to eventually have to go for it, but Bayern were still getting through that with relative ease.
+
+It meant the team almost looked like they were in two minds, to go with how thoughts were always going to be in Copenhagen. The news came through shortly before
+the hour that Lukas Lerager had scored for the Danish side, although it didn’t really change the atmosphere or the energy.
+</item 4>
+
+<item 5>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+We remember Onana also diving out of the way of the ball in Istanbul. Casemiro’s red card, lost leads in Manchester, Marcus Rashford unfairly convicted of a
+venomous stamp in Copenhagen, when frankly, he’s just not that kind of semi-interested footballer.
+
+And yet with both group games blank at half-time United were still just one goal away here from going through to the last 16, which really would have made for
+an excellent punchline. It wasn’t to be. For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together.
+Kimmich‑Goretzka‑Musiala is an A grade version of Amrabat‑McTominay‑Fernandes. Manuel Neuer is the thing Onana is trying so earnestly to be. Bayern actually did
+go ahead and sign Harry Kane.
+
+Harry Kane (centre) and his Bayern Munich teammates applaud fans after their Champions League victory at Old Trafford.
+</item 5>
+
+<item 6>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+The performance this season was so bad that they find themselves out of Europe altogether as the bottom team in the group, although some at the club might find
+solace from that. There wasn’t much else. The second place they aimed for has instead gone to Copenhagen, a club with a fraction of United’s budget. That is
+where the damage was done.
+
+While that meant there was only ever a slim hope of going through – and the Danish side’s victory over Galatasaray ensured any win would be irrelevant – the
+club’s rich legacy in this competition was built on such defiance. There was absolutely none of it here.
+
+There was nothing much at all. Where was the energy? Where was the intensity? The Stretford End eventually implored United to “attack attack attack” but the
+complete absence of any such impulses eventually left some of the stadium booing the side off at the end.
+</item 6>
+
+<item 7>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+With United out of Europe, there are questions about Erik ten Hag’s ability to coach the team (AFP via Getty Images)
+
+These are not the sounds we are used to hearing after that Champions League theme. Something does stir when the anthem is played at Old Trafford amid the
+lights. Well, for most, that is, except the players.
+
+This is why there are growing questions for Erik ten Hag himself, even if everyone is constantly keen to put it in a wider context.
+
+Manchester United should not be performing like this on what is supposed to be the classic European night at Old Trafford. This just reminded that all they are
+going to have for some time are their memories.
+
+It was another utterly forgettable display.
+
+Bayern, already through but perhaps looking to make a point after their own 5-1 defeat to Eintracht Frankfurt, didn’t even need to step it up to win. They were
+quite low-intensity themselves, Kingsley Coman’s winning goal coming from the forward almost walking through the middle of their team.
+</item 7>
+
+<item 8>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+Sign up to Miguel Delaney’s Reading the Game newsletter sent straight to your inbox for free Sign up to Miguel’s Delaney’s free weekly newsletter Please enter a
+valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our
+privacy notice Thanks for signing up to the
+
+Football email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich was how
+grimly routine it all felt.
+
+Manchester United, one of the grandest and richest names in this competition, have again gone out of the Champions League at the group stage. It is the third
+time it has happened since Sir Alex Ferguson, meaning it’s their most common round of exit in that period.
+</item 8>
+
+<item 9>
+Manchester United face Galatasaray with high hopes but bad memories (The Guardian, 2023-11-27T22:30:42+00:00)
+The match on Wednesday is not a knockout game but in truth the scenario is not much different. Defeat against Galatasaray would again end United’s Champions
+League’s campaign prematurely while a win, assuming Copenhagen lose against Bayern Munich, would put qualifying for the latter stages back in their hands.
+United will face the same atmosphere as they did 30 years ago because the home fans know victory would turn their subsequent trip to Denmark into a potential
+shootout for who goes through with Bayern, with the achievement of knocking out a club with the storied history of United only adding to the pleasure.
+
+In 1993 everyone was on a learning curve at United. It was their first return to Europe’s top table after an absence of 24 years. Much of the squad had won the
+European Cup Winners’ Cup in 1990‑91 but this was a clear step up.
+</item 9>
+
+<item 10>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+It was already a drab game, with a muted crowd.
+
+It didn’t help that Bruno Fernandes blazed United’s best opportunity over the bar after good work from Aaron Wan Bissaka. It looked like it was going to be one
+of those games. It certainly wasn’t one of those big European nights at Old Trafford.
+
+On 71 minutes, Bayern managed what they had been half-heartedly threatening all game. They also did it at near walking pace. Kingsley Coman had weaved his way
+through the centre, for the ball to eventually be worked to Harry Kane. The English forward clipped an artful ball back through for Coman who finished
+emphatically.
+
+Kingsley Coman’s goal ensured Manchester United were knocked out of Europe (PA)
+
+It was almost too easy for him. Why did Andre Onana stay so close to his line? If that sounds like the set-up for a joke… well, you can write your own
+punchline.
+
+This is the current reality for United.
+</item 10>
+=== END ITEM id=ea3517f8c5e1a1d9 ===

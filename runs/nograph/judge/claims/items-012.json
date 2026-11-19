@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ab5dcb95542992aa134a3b3",
+   "sentences": [
+    "Toshimitsu Deyama (出山利三 , Deyama Toshimitsu , born October 10, 1965 in Tateyama, Chiba) , known exclusively by his stage name Toshi, is a Japanese singer and songwriter.",
+    " He is best known as the lead vocalist and a co-founder of the heavy metal band X Japan, which disbanded in 1997.",
+    "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary."
+   ]
+  },
+  {
+   "id": "5a726b0f5542997f827839be",
+   "sentences": [
+    "Samantha Cristoforetti (] ; born 26 April 1977 in Milan) is an Italian European Space Agency astronaut, Italian Air Force pilot and engineer.",
+    "Jean-Loup Jacques Marie Chrétien (born 20 August 1938) is a French retired \"Général de Brigade\" (brigadier general) in the \"Armée de l'Air\" (French air force), and a former CNES spationaut."
+   ]
+  },
+  {
+   "id": "-7542049149965399830",
+   "sentences": [
+    "A third series was confirmed to be in production by writer Simon Nye at the BFI and Radio Times Television Festival on 8 April 2017 . He described the third series as having `` some exotic new animals '' , and that production would begin in three weeks ' time , upon Keeley Hawes 's arrival in Corfu for filming . It will be set in 1937 ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2514",
+   "sentences": [
+    "“I’m here until the end,” she said in her press conference on Friday.",
+    "He has been out of work since his Blues tenure came to a close back in April, but it would be a hard sell to fans after his time with the London club went so poorly."
+   ]
+  },
+  {
+   "id": "multihop-rag-941",
+   "sentences": [
+    "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.",
+    "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators.",
+    "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."
+   ]
+  },
+  {
+   "id": "multihop-rag-2129",
+   "sentences": [
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a80b9e85542992bc0c4a7ed",
+   "sentences": [
+    "The skogsrå , (Forest Rå), \"Skogsfrun\" (The Mistress of the Forest), \"Skogssnuvan\", \"Skogsnymfen\" (Forest Nymph), \"Råndan\" (the Rå) or \"huldra\", was a mythical creature of the forest, or Rå, in Swedish folklore.",
+    "A hulder is a seductive forest creature found in Scandinavian folklore."
+   ]
+  },
+  {
+   "id": "multihop-rag-2396",
+   "sentences": [
+    "“Users’ natural behavior for search is to follow the path of least resistance, i.e.",
+    "“We make Google be the default search engine,” he said, “because we’ve always thought it was the best."
+   ]
+  },
+  {
+   "id": "5a75f0bf5542994ccc91866b",
+   "sentences": [
+    "Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.",
+    "Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter."
+   ]
+  },
+  {
+   "id": "379105892306760499",
+   "sentences": [
+    "ABO and Rh blood type distribution by country ( population averages ) Country Population O+ A+ B+ AB+ O − A − B − AB − Argentina 44,270,440 45.4 % 34.26 % 8.59 % 2.64 % 8.4 % 0.44 % 0.21 % 0.06 % Armenia 2,931,568 29.0 % 46.3 % 12.0 % 5.6 % 2.0 % 3.7 % 1.0 % 0.4 % Australia 24,642,693 40.0 % 31.0 % 8.0 % 2.0 % 9.0 % 7.0 % 2.0 % 1.0 % Austria 8,592,470 30.0 % 33.0 % 12.0 % 6.0 % 7.0 % 8.0 % 3.0 % 1.0 % Bahrain 1,418,695 48.48 % 19.35 % 22.61 % 3.67 % 3.27 % 1.33 % 1.04 % 0.25 % Bangladesh 164,833,667 31.18 % 21.44 % 34.58 % 8.85 % 1.39 % 0.96 % 0.96 % 0.64 % Belgium 11,444,053 38.0 % 34.0 % 8.6 % 4.1 % 7.0 % 6.0 % 1.5 % 0.8 % Bolivia 11,053,376 51.53 % 29.45 % 10.11 % 1.15 % 4.39 % 2.73 % 0.54 % 0.1 % Bosnia and Herzegovina 3,792,730 31.0 % 36.0 % 12.0 % 6.0 % 5.0 % 7.0 % 2.0 % 1.0 % Brazil 211,248,418 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0 % 2.0 % 0.5 % Bulgaria 7,045,097 28.0 % 37.0 % 13.0 % 7.0 % 5.0 % 7.0 % 2.0 % 1.0 % Cambodia 16,077,172 46.7 % 27.2 % 18.5 % 4.9 % 1.3 % 0.8 % 0.5 % 0.1 % Cameroon 24,515,533 42.8 % 38.8 % 12.0 % 3.3 % 1.4 % 1.2 % 0.4 % 0.1 % Canada 36,627,140 39.0 % 36.0 % 7.6 % 2.5 % 7.0 % 6.0 % 1.4 % 0.5 % Chile 18,314,060 85.5 % 8.7 % 3.35 % 1.0 % 1.2 % 0.1 % 0.05 % 0.1 % China 1,388,251,023 47.7 % 27.8 % 18.9 % 5.0 % 0.28 % 0.19 % 0.1 % 0.03 % Colombia 49,069,267 61.3 % 26.11 % 2.28 % 1.47 % 5.13 % 2.7 % 0.7 % 0.31 % Côte d'Ivoire 23,869,656 46.5 % 22.5 % 22.5 % 4.3 % 2.0 % 1.0 % 1.0 % 0.2 % Croatia 4,207,355 29.0 % 36.0 % 15.0 % 5.0 % 5.0 % 6.0 % 3.0 % 1.0 % Cuba 11,486,750 45.8 % 33.5 % 10.2 % 2.9 % 3.6 % 2.8 % 1.0 % 0.2 % Cyprus 1,189,395 35.22 % 40.35 % 11.11 % 4.72 % 3.85 % 3.48 % 0.87 % 0.40 % Czech Republic 10,555,152 27.0 % 36.0 % 15.0 % 7.0 % 5.0 % 6.0 % 3.0 % 1.0 % Denmark 5,711,902 35.0 % 37.0 % 8.0 % 4.0 % 6.0 % 7.0 % 2.0 % 1.0 % Dominican Republic 10,766,932 46.2 % 26.4 % 16.9 % 3.1 % 3.7 % 2.1 % 1.4 % 0.2 % Ecuador 16,665,756 75.0 % 14.0 % 7.1 % 0.5 % 2.38 % 0.7 % 0.3 % 0.02 % Egypt 95,220,838 52.0 % 24.0 % 12.4 % 3.8 % 5.0 % 2.0 % 0.6 % 0.2 % El Salvador 6,171,483 62.0 % 23.0 % 11.0 % 1.0 % 1.0 % 1.0 % 0.7 % 0.3 % Estonia 1,305,745 29.5 % 30.8 % 20.7 % 6.3 % 4.3 % 4.5 % 3.0 % 0.9 % Ethiopia 104,352,727 39.0 % 28.0 % 21.0 % 5.0 % 3.0 % 2.0 % 1.0 % 1.0 % Finland 5,541,328 27.0 % 38.0 % 15.0 % 7.0 % 4.0 % 6.0 % 2.0 % 1.0 % France 64,939,560 36.0 % 37.0 % 9.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Germany 80,635,980 35.0 % 37.0 % 9.0 % 4.0 % 6.0 % 6.0 % 2.0 % 1.0 % Greece 10,892,849 37.4 % 32.9 % 11.0 % 3.7 % 7.0 % 5.0 % 2.0 % 1.0 % Guinea 13,291,741 46.88 % 21.64 % 22.86 % 4.52 % 2.0 % 0.9 % 1.0 % 0.2 % Honduras 9,348,898 57.5 % 27.0 % 7.8 % 2.5 % 2.7 % 1.7 % 0.6 % 0.2 % Hong Kong 7,402,115 41.5 % 26.13 % 25.34 % 6.35 % 0.32 % 0.17 % 0.14 % 0.05 % Hungary 9,787,801 27.0 % 33.0 % 16.0 % 8.0 % 5.0 % 7.0 % 3.0 % 1.0 % Iceland 334,311 47.6 % 26.4 % 9.3 % 1.6 % 8.4 % 4.6 % 1.7 % 0.4 % India 1,342,561,902 27.85 % 20.8 % 38.14 % 8.93 % 1.43 % 0.57 % 1.79 % 0.49 % Indonesia 263,519,317 36.82 % 25.87 % 28.85 % 7.96 % 0.18 % 0.13 % 0.15 % 0.04 % Iran 80,982,137 33.5 % 27.0 % 22.2 % 7.0 % 4.0 % 3.0 % 2.5 % 0.8 % Iraq 38,657,787 32.1 % 25.0 % 25.6 % 7.4 % 3.6 % 2.7 % 2.7 % 0.9 % Ireland 4,749,263 47.0 % 26.0 % 9.0 % 2.0 % 8.0 % 5.0 % 2.0 % 1.0 % Israel 8,323,659 32.0 % 34.0 % 17.0 % 7.0 % 3.0 % 4.0 % 2.0 % 1.0 % Italy 59,797,969 39.0 % 36.0 % 7.5 % 2.5 % 7.0 % 6.0 % 1.5 % 0.5 % Jamaica 2,813,316 47.0 % 23.0 % 20.0 % 3.0 % 3.5 % 2.0 % 1.0 % 0.5 % Japan 126,044,340 29.9 % 39.8 % 19.9 % 9.9 % 0.15 % 0.2 % 0.1 % 0.05 % Kenya 48,470,780 45.6 % 25.2 % 21.28 % 4.2 % 1.8 % 1.0 % 0.9 % 0.02 % Latvia 1,944,122 30.6 % 31.0 % 17.0 % 6.0 % 5.4 % 6.0 % 3.0 % 1.0 % Lebanon 6,039,438 38.4 % 32.3 % 9.5 % 3.2 % 7.7 % 6.5 % 1.7 % 0.7 % Libya 6,408,990 42.64 % 28.86 % 11.19 % 4.5 % 6.26 % 4.24 % 1.64 % 0.67 % Lithuania 2,827,573 36.0 % 33.0 % 11.0 % 4.0 % 7.0 % 6.0 % 2.0 % 1.0 % Luxemburg 587,297 35.0 % 37.0 % 9.0 % 4.0 % 6.0 % 6.0 % 2.0 % 1.0 % Macao 606,413 41.5 % 26.1 % 25.4 % 6.3 % 0.33 % 0.17 % 0.15 % 0.05 % Macedonia 2,083,690 30.0 % 34.0 % 15.0 % 6.0 % 5.0 % 6.0 % 3.0 % 1.0 % Malaysia 31,165,480 34.32 % 30.35 % 27.37 % 7.46 % 0.17 % 0.15 % 0.14 % 0.04 % Mauritania 4,266,765 46.3 % 26.68 % 17.47 % 3.85 % 2.8 % 1.6 % 1.1 % 0.2 % Mauritius 1,267,303 38.3 % 26.0 % 25.0 % 6.7 % 1.7 % 1.0 % 1.0 % 0.3 % Mexico 130,227,836 55.79 % 29.9 % 8.0 % 1.63 % 2.7 % 1.5 % 0.4 % 0.08 % Mongolia 3,052,044 55.4 % 27.7 % 10.9 % 4.96 % 0.6 % 0.3 % 0.1 % 0.04 % Myanmar 53,507,932 35.7 % 23.8 % 32.7 % 6.95 % 0.3 % 0.2 % 0.3 % 0.05 % Nepal 29,188,100 35.2 % 28.3 % 27.1 % 8.6 % 0.3 % 0.2 % 0.2 % 0.1 % Netherlands 17,033,012 39.5 % 35.0 % 6.7 % 2.5 % 7.5 % 7.0 % 1.3 % 0.5 % New Zealand 4,604,996 38.0 % 32.0 % 9.0 % 3.0 % 9.0 % 6.0 % 2.0 % 1.0 % Nigeria 191,851,411 51.3 % 22.4 % 20.7 % 2.6 % 1.6 % 0.7 % 0.6 % 0.1 % Norway 5,330,986 33.0 % 41.5 % 6.8 % 3.4 % 6.0 % 7.5 % 1.2 % 0.6 % North Korea 25,432,033 27.15 % 31.08 % 30.15 % 11.32 % 0.08 % 0.1 % 0.1 % 0.03 % Pakistan 180,440,005 24.63 % 20.6 % 34.40 % 9.52 % 4.17 % 2.66 % 3.57 % 0.45 % Papua New Guinea 7,952,511 48.0 % 37.2 % 9.6 % 2.8 % 1.0 % 0.8 % 0.4 % 0.2 % Peru 32,167,717 70.0 % 18.4 % 7.8 % 1.6 % 1.4 % 0.5 % 0.28 % 0.02 % Philippines 103,801,747 36.9 % 28.9 % 26.9 % 6.97 % 0.1 % 0.1 % 0.1 % 0.03 % Poland 38,563,480 31.0 % 32.0 % 15.0 % 7.0 % 6.0 % 6.0 % 2.0 % 1.0 % Portugal 10,264,672 36.3 % 40.0 % 6.6 % 2.9 % 6.0 % 6.6 % 1.1 % 0.5 % Republic of Moldova 4,043,722 28.5 % 31.8 % 17.6 % 7.0 % 5.0 % 6.0 % 3.0 % 1.1 % Romania 19,237,087 28.0 % 37.0 % 14.0 % 7.0 % 5.0 % 6.0 % 2.0 % 1.0 % Russia 143,374,801 28.0 % 30.0 % 20.0 % 7.0 % 4.9 % 5.8 % 3.2 % 1.1 % Saudi Arabia 32,744,532 47.8 % 23.9 % 17.0 % 4.0 % 4.0 % 2.0 % 1.0 % 0.3 % Serbia 8,776,827 31.92 % 35.28 % 12.6 % 4.2 % 6.08 % 6.72 % 2.4 % 0.8 % Singapore 5,784,819 43.6 % 23.9 % 24.4 % 6.0 % 0.9 % 0.7 % 0.4 % 0.1 % Slovakia 5,432,265 27.2 % 35.7 % 15.3 % 6.8 % 4.8 % 6.3 % 2.7 % 1.2 % Slovenia 2,071,258 31.0 % 33.0 % 12.0 % 6.0 % 7.0 % 7.0 % 3.0 % 1.0 % South Africa 55,437,815 39.0 % 32.0 % 12.0 % 3.0 % 6.0 % 5.0 % 2.0 % 1.0 % South Korea 50,748,307 27.9 % 33.87 % 26.92 % 10.98 % 0.1 % 0.13 % 0.08 % 0.02 % Spain 46,070,163 36.0 % 34.0 % 8.0 % 2.5 % 9.0 % 8.0 % 2.0 % 0.5 % Sudan 40,827,975 48.0 % 27.7 % 15.2 % 2.8 % 3.5 % 1.8 % 0.8 % 0.2 % Sweden 9,920,843 32.0 % 37.0 % 10.0 % 5.0 % 6.0 % 7.0 % 2.0 % 1.0 % Switzerland 8,454,321 35.0 % 40.0 % 7.0 % 3.0 % 6.0 % 7.0 % 1.0 % 1.0 % Syria 18,920,698 43.0 % 30.0 % 14.0 % 3.7 % 5.0 % 3.0 % 1.0 % 0.3 % Taiwan 23,234,936 43.9 % 25.9 % 23.9 % 6.0 % 0.17 % 0.1 % 0.01 % 0.02 % Thailand 68,298,027 40.8 % 16.9 % 36.8 % 4.97 % 0.2 % 0.1 % 0.2 % 0.03 % Turkey 80,420,065 29.8 % 37.8 % 14.2 % 7.2 % 3.9 % 4.7 % 1.6 % 0.8 % Uganda 43,276,492 43.7 % 39.0 % 10.7 % 3.9 % 1.3 % 1.0 % 0.3 % 0.1 % Ukraine 44,404,078 32.0 % 34.0 % 15.0 % 5.0 % 5.0 % 6.0 % 2.0 % 1.0 % United Arab Emirates 3,398,017 44.1 % 21.9 % 20.9 % 4.3 % 4.3 % 2.1 % 2.0 % 0.4 % United Kingdom 65,512,375 37.0 % 35.0 % 8.0 % 3.0 % 7.0 % 7.0 % 2.0 % 1.0 % United States 326,481,533 37.4 % 35.7 % 8.5 % 3.4 % 6.6 % 6.3 % 1.5 % 0.6 % Venezuela 32,011,082 58.5 % 28.3 % 5.3 % 1.8 % 3.5 % 1.7 % 0.7 % 0.2 % Vietnam 95,414,640 41.7 % 21.9 % 30.8 % 4.98 % 0.3 % 0.1 % 0.2 % 0.02 % Zimbabwe 16,642,880 63.3 % 18.5 % 14.6 % 0.99 % 1.7 % 0.5 % 0.4 % 0.01 % World 6,635,281,257 38.67 % 27.42 % 22.02 % 5.88 % 2.55 % 1.99 % 1.11 % 0.36 %"
+   ]
+  }
+ ]
+}

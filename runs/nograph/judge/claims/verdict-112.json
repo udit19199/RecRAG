@@ -1,0 +1,284 @@
+[
+ {
+  "id": "1645082526444833311",
+  "sentences": [
+   [
+    "Uncle Tom's Cabin was serialized in The National Era for ten months.",
+    "The serialization of Uncle Tom's Cabin in The National Era began with the June 5, 1851 issue.",
+    "Uncle Tom's Cabin was published as a book in two volumes on March 20, 1852.",
+    "The book edition of Uncle Tom's Cabin was published by John P. Jewett and Company."
+   ],
+   [
+    "Uncle Tom's Cabin first appeared as a 40-week serial in The National Era.",
+    "The National Era was an abolitionist periodical.",
+    "The serial started with the June 5, 1851 issue.",
+    "Uncle Tom's Cabin was originally intended as a shorter narrative that would run for only a few weeks.",
+    "Harriet Beecher Stowe expanded the story significantly.",
+    "The expanded story was instantly popular.",
+    "Several protests were sent to the National Era office when Stowe missed an issue.",
+    "The publisher John P. Jewett contacted Stowe about turning the serial into a book because of the story's popularity.",
+    "Stowe questioned whether anyone would read Uncle Tom's Cabin in book form.",
+    "Stowe eventually consented to the request to publish the story as a book."
+   ],
+   [
+    "The infobox author of Uncle Tom's Cabin is Harriet Beecher Stowe.",
+    "The original title of Uncle Tom's Cabin is Uncle Tom's Cabin; or, Life Among the Lowly.",
+    "The illustrator of the 1st edition of Uncle Tom's Cabin is Hammatt Billings.",
+    "Uncle Tom's Cabin is from the United States.",
+    "Uncle Tom's Cabin is written in English.",
+    "Uncle Tom's Cabin is a novel.",
+    "Uncle Tom's Cabin was serialized in The National Era for ten months, beginning with the June 5, 1851 issue.",
+    "Uncle Tom's Cabin was published as a book in two volumes on March 20, 1852, by John P. Jewett and Company.",
+    "Uncle Tom's Cabin is followed by A Key to Uncle Tom's Cabin (1853).",
+    "The infobox includes an image of the Boston edition of Uncle Tom's Cabin."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-490",
+  "sentences": [
+   [
+    "SBF, as he is known, has pleaded not guilty to some seven charges.",
+    "The charges SBF pleaded not guilty to are charges of fraud and conspiracy."
+   ],
+   [
+    "Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money.",
+    "The question asked whether Bankman-Fried had been told about that money in words or in substance.",
+    "Bankman-Fried did not admit he had been told about that money until Judge Lewis Kaplan intervened."
+   ],
+   [
+    "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+    "The defense argued that the FTX founder acted in good faith.",
+    "The defense argued that the FTX founder never meant to commit fraud or steal.",
+    "The defense argued that the FTX founder basically got in over his head."
+   ]
+  ]
+ },
+ {
+  "id": "5adec53655429975fa854f87",
+  "sentences": [
+   [
+    "Kim Dong-jun's Hangul name is 김동준.",
+    "Kim Dong-jun's Hanja name is 金桐俊.",
+    "Kim Dong-jun was born February 11, 1992.",
+    "Kim Dong-jun is a South Korean singer.",
+    "Kim Dong-jun is a South Korean actor."
+   ],
+   [
+    "Charlie Harper was born David Charles Perez.",
+    "Charlie Harper was born on 25 May 1944.",
+    "Charlie Harper was born in Hackney, London.",
+    "Charlie Harper is a British singer.",
+    "Charlie Harper is a British songwriter."
+   ]
+  ]
+ },
+ {
+  "id": "7413826602347108802",
+  "sentences": [
+   [
+    "Episode 70 overall is titled The Flash Reborn.",
+    "The Flash Reborn was directed by Glen Winter.",
+    "The Flash Reborn had story by Andrew Kreisberg and teleplay by Todd Helbing and Eric Wallace.",
+    "The Flash Reborn aired October 10, 2017, with production code T27.13401 and 2.84 million U.S. viewers.",
+    "Episode 71 overall is titled Mixed Signals.",
+    "Mixed Signals was directed by Alexandra La Roche.",
+    "Mixed Signals was written by Jonathan Butler and Gabriel Garza.",
+    "Mixed Signals aired October 17, 2017, with production code T27.13402 and 2.54 million U.S. viewers.",
+    "Episode 72 overall is titled Luck Be a Lady.",
+    "Luck Be a Lady was directed by Armen V. Kevorkian.",
+    "Luck Be a Lady was written by Sam Chalsen and Judalina Neira.",
+    "Luck Be a Lady aired October 24, 2017, with production code T27.13403 and 2.62 million U.S. viewers.",
+    "Episode 73 overall is titled Elongated Journey Into Night.",
+    "Elongated Journey Into Night was directed by Tom Cavanagh.",
+    "Elongated Journey Into Night was written by Sterling Gates and Thomas Pound.",
+    "Elongated Journey Into Night aired October 31, 2017, with production code T27.13404 and 1.99 million U.S. viewers.",
+    "Episode 74 overall is episode 5 of its season and is titled Girls Night Out.",
+    "Girls Night Out was directed by Laura Belsey.",
+    "Girls Night Out was written by Lauren Certo and Kristen Kim.",
+    "Girls Night Out aired November 7, 2017, with production code T27.13405 and 2.38 million U.S. viewers.",
+    "Episode 75 overall is episode 6 of its season and is titled When Harry Met Harry ...",
+    "When Harry Met Harry ... was directed by Brent Crowell.",
+    "When Harry Met Harry ... was written by Jonathan Butler and Gabriel Garza.",
+    "When Harry Met Harry ... aired November 14, 2017, with production code T27.13406 and 2.46 million U.S. viewers.",
+    "Episode 76 overall is episode 7 of its season and is titled Therefore I Am.",
+    "Therefore I Am was directed by David McWhirter.",
+    "Therefore I Am was written by Eric Wallace and Thomas Pound.",
+    "Therefore I Am aired November 21, 2017, with production code T27.13407 and 2.20 million U.S. viewers.",
+    "Episode 77 overall is episode 8 of its season and is titled Crisis on Earth - X, Part 3.",
+    "Crisis on Earth - X, Part 3 was directed by Dermott Downs.",
+    "Crisis on Earth - X, Part 3 had story by Andrew Kreisberg and Marc Guggenheim and teleplay by Todd Helbing.",
+    "Crisis on Earth - X, Part 3 aired November 28, 2017, with production code T27.13408 and 2.82 million U.S. viewers.",
+    "Episode 78 overall is episode 9 of its season and is titled Don't Run.",
+    "Don't Run was directed by Stefan Pleszczynski.",
+    "Don't Run was written by Sam Chalsen and Judalina Neira.",
+    "Don't Run aired December 5, 2017, with production code T27.13409 and 2.22 million U.S. viewers.",
+    "Episode 79 overall is episode 10 of its season and is titled The Trial of The Flash.",
+    "The Trial of The Flash was directed by Philip Chipera.",
+    "The Trial of The Flash was written by Lauren Certo and Kristen Kim.",
+    "The Trial of The Flash aired January 16, 2018, with production code T27.13410 and 2.51 million U.S. viewers.",
+    "Episode 80 overall is episode 11 of its season and is titled The Elongated Knight Rises.",
+    "The Elongated Knight Rises was directed by Alexandra La Roche.",
+    "The Elongated Knight Rises was written by Sterling Gates and Thomas Pound.",
+    "The Elongated Knight Rises aired January 23, 2018, with production code T27.13411 and 2.12 million U.S. viewers.",
+    "Episode 81 overall is episode 12 of its season and is titled Honey, I Shrunk Team Flash.",
+    "Honey, I Shrunk Team Flash was directed by Chris Peppe.",
+    "Honey, I Shrunk Team Flash was written by Sam Chalsen and Judalina Neira.",
+    "Honey, I Shrunk Team Flash aired January 30, 2018, with production code T27.13412 and 2.60 million U.S. viewers.",
+    "Episode 82 overall is episode 13 of its season and is titled True Colors.",
+    "True Colors was directed by Tara Nicole Weyr.",
+    "True Colors was written by Jonathan Butler and Gabriel Garza.",
+    "True Colors aired February 6, 2018, with production code T27.13413 and 2.28 million U.S. viewers.",
+    "Episode 83 overall is episode 14 of its season and is titled Subject 9.",
+    "Subject 9 was directed by Ralph Hemecker.",
+    "Subject 9 was written by Mike Alber and Gabe Snyder.",
+    "Subject 9 aired February 27, 2018, with production code T27.13414 and 2.12 million U.S. viewers.",
+    "Episode 84 overall is episode 15 of its season and is titled Enter Flashtime.",
+    "Enter Flashtime was directed by Gregory Smith.",
+    "Enter Flashtime was written by Todd Helbing and Sterling Gates.",
+    "Enter Flashtime aired March 6, 2018, with production code T27.13415 and 2.04 million U.S. viewers.",
+    "Episode 85 overall is episode 16 of its season and is titled Run, Iris, Run.",
+    "Run, Iris, Run was directed by Harry Jierjian.",
+    "Run, Iris, Run was written by Eric Wallace.",
+    "Run, Iris, Run aired March 13, 2018, with production code T27.13416 and 2.09 million U.S. viewers.",
+    "Episode 86 overall is episode 17 of its season and is titled Null and Annoyed.",
+    "Null and Annoyed was directed by Kevin Smith.",
+    "Null and Annoyed was written by Lauren Certo and Kristen Kim.",
+    "Null and Annoyed aired April 10, 2018, with production code T27.13417 and 1.82 million U.S. viewers.",
+    "Episode 87 overall is episode 18 of its season and is titled Lose Yourself.",
+    "Lose Yourself was directed by Hanelle Culpepper.",
+    "Lose Yourself was written by Jonathan Butler and Gabriel Garza.",
+    "Lose Yourself aired April 17, 2018, with production code T27.13418 and 1.88 million U.S. viewers.",
+    "Episode 88 overall is episode 19 of its season and is titled Fury Rogue.",
+    "Fury Rogue was directed by Rachel Talalay.",
+    "Fury Rogue was written by Joshua V. Gilbert and Jeff Hersh.",
+    "Fury Rogue aired April 24, 2018, with production code TBA and 1.90 million U.S. viewers.",
+    "Episode 89 overall is episode 20 of its season and is titled Therefore She Is.",
+    "Therefore She Is was directed by Rob J. Greenlea.",
+    "Therefore She Is was written by Sterling Gates and Thomas Pound.",
+    "Therefore She Is aired May 1, 2018, with production code TBA and viewer count TBD.",
+    "Episode 90 overall is episode 21 of its season and is titled Harry and the Harrisons.",
+    "Harry and the Harrisons was directed by Kevin Mock.",
+    "Harry and the Harrisons was written by Judalina Neira and Lauren Certo.",
+    "Harry and the Harrisons aired May 8, 2018, with production code TBA and viewer count TBD.",
+    "Episode 91 overall is episode 22 of its season and is titled Think Fast.",
+    "Think Fast was directed by Viet Nguyen.",
+    "Think Fast was written by Sam Chalsen and Kristen Kim.",
+    "Think Fast aired May 15, 2018, with production code TBA and viewer count TBD.",
+    "Episode 92 overall is episode 23 of its season and is titled We Are the Flash.",
+    "The director and writers of We Are the Flash are listed as TBA.",
+    "We Are the Flash aired May 22, 2018, with production code TBA and viewer count TBD."
+   ]
+  ]
+ },
+ {
+  "id": "5ab28c89554299340b525513",
+  "sentences": [
+   [
+    "Karl Hermann Frank's life dates are 24 January 1898 to 22 May 1946.",
+    "Karl Hermann Frank was a prominent Sudeten German Nazi official in Czechoslovakia.",
+    "Karl Hermann Frank was a Nazi official in Czechoslovakia prior to World War II.",
+    "Karl Hermann Frank was a Nazi official in Czechoslovakia during World War II.",
+    "Karl Hermann Frank was an SS-Obergruppenführer."
+   ],
+   [
+    "Until April 1942, the Obergruppenführer rank was the highest commissioned SS rank.",
+    "Until April 1942, the Obergruppenführer rank was inferior only to Reichsführer-SS.",
+    "Reichsführer-SS was the SS rank held by Heinrich Himmler.",
+    "RFSS was the internal SS abbreviation for Himmler.",
+    "Obergruppenführer translates as senior group leader.",
+    "The rank of Obergruppenführer was senior to Gruppenführer."
+   ]
+  ]
+ },
+ {
+  "id": "5a85b2895542994c784ddb49",
+  "sentences": [
+   [
+    "Bank Street is a short street.",
+    "Bank Street is located in Central, Hong Kong."
+   ],
+   [
+    "Bank Street links Des Voeux Road Central to Queen's Road Central."
+   ],
+   [
+    "Bank Street is named after its location between the HSBC Building and the Bank of China Building.",
+    "The HSBC Building was the former headquarters of HSBC.",
+    "The Bank of China Building was the former headquarters of Bank of China (Hong Kong)."
+   ],
+   [
+    "HSBC Main Building is a headquarters building of The Hongkong and Shanghai Banking Corporation.",
+    "The Hongkong and Shanghai Banking Corporation is today a wholly owned subsidiary of London-based HSBC Holdings."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-1424",
+  "sentences": [
+   [
+    "FTX had grown so much.",
+    "The quoted speaker said they could no longer run both companies because FTX had grown so much."
+   ],
+   [
+    "The quoted speaker, a woman, said the decision was Bankman-Fried's.",
+    "Bankman-Fried was the CEO of FTX, according to the speaker."
+   ],
+   [
+    "Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money.",
+    "The question asked whether Bankman-Fried had been told about that money in words or in substance.",
+    "Bankman-Fried did not admit he had been told about that money until Judge Lewis Kaplan intervened."
+   ],
+   [
+    "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+    "The defense argued that the FTX founder acted in good faith.",
+    "The defense argued that the FTX founder never meant to commit fraud or steal.",
+    "The defense argued that the FTX founder basically got in over his head."
+   ]
+  ]
+ },
+ {
+  "id": "5ae2120e5542997283cd23ad",
+  "sentences": [
+   [
+    "Distortion Mirrors is an English alternative rock band.",
+    "Distortion Mirrors is based in Leeds, West Yorkshire, England.",
+    "Distortion Mirrors was formed in 2011."
+   ],
+   [
+    "OK Go is an American rock band.",
+    "OK Go was originally from Chicago, Illinois.",
+    "OK Go is now based in Los Angeles, California."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-1086",
+  "sentences": [
+   [
+    "The upcoming suspension would be Harbaugh's second suspension of the season.",
+    "The Wolverines self-imposed a three-game ban on Harbaugh to start the season.",
+    "The self-imposed ban was amid an NCAA investigation.",
+    "The NCAA investigation found that Harbaugh lied to investigators."
+   ],
+   [
+    "Harbaugh reportedly watched the game from the team hotel.",
+    "The leading piece of drama is returning now."
+   ]
+  ]
+ },
+ {
+  "id": "5ae54c085542992663a4f1c4",
+  "sentences": [
+   [
+    "Game included wild boar.",
+    "Game included red deer.",
+    "Game included fallow deer.",
+    "Game included roe deer."
+   ],
+   [
+    "The common species is native to western Eurasia.",
+    "The common species has been introduced to Antigua & Barbuda, Argentina, South Africa, Fernando Pó, São Tomé, Madagascar, Mauritius, Mayotte, Réunion, Seychelles, Comoro Islands, Morocco, Algeria, Tunisia, Cyprus, Israel, Cape Verde, Lebanon, Australia, New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ]
+  ]
+ }
+]

@@ -1,0 +1,50 @@
+[
+{"id": "e113919d08dd50a9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google."}, {"item": 3, "quote": "She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "42144a324a028803", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "f23ec3e1162d1e4a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "and is reportedly preparing for a ground invasion."}]}
+]},
+{"id": "ac5ca36f93ea3bc1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at all."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "They argue that Bankman-Fried lied about consumer protection and that Bankman-Fried’s statements that FTX was “avoiding or managing conflicts of interest” and that “as a general principle FTX segregates customer assets from its own assets across our platforms” were lies"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "9b33b4838a2fbc08", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+]}
+]

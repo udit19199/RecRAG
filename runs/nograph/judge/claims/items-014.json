@@ -1,0 +1,81 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1700",
+   "sentences": [
+    "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago.",
+    "Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives."
+   ]
+  },
+  {
+   "id": "5abcd19c5542993a06baf971",
+   "sentences": [
+    " The first edition was written by J. Eric Holmes based on Gary Gygax and Dave Arneson's original work.",
+    "John Eric Holmes M.D. (February 16, 1930 – March 20, 2010) was an associate professor of neurology at the University of Southern California School of Medicine, an author and promoter of fantasy role-playing games, a noted fan and enthusiast of Edgar Rice Burroughs, and an American writer of non-fiction, fantasy and science fiction."
+   ]
+  },
+  {
+   "id": "5ab465095542991751b4d75a",
+   "sentences": [
+    "\"For the sedan variant of the car, see Volvo S40.\"",
+    "The Volvo S40 is a compact luxury car marketed and produced by the Swedish manufacturer Volvo Cars from 1995 to 2012 across two generations."
+   ]
+  },
+  {
+   "id": "-6965315175406025099",
+   "sentences": [
+    "The Philadelphia Eagles are a professional American football franchise based in Philadelphia , Pennsylvania . The Eagles compete in the National Football League ( NFL ) as a member club of the league 's National Football Conference ( NFC ) East division . They are Super Bowl champions , having won Super Bowl LII , their fourth NFL title , after winning in 1948 , 1949 , and 1960 .",
+    "Philadelphia Eagles Current season Established July 8 , 1933 ; 84 years ago ( July 8 , 1933 ) First season : 1933 Play in Lincoln Financial Field Philadelphia , Pennsylvania Headquartered in the NovaCare Complex Philadelphia , Pennsylvania Logo Wordmark League / conference affiliations National Football League ( 1933 -- present ) Eastern Division ( 1933 -- 1949 ) American Conference ( 1950 -- 1952 ) Eastern Conference ( 1953 -- 1969 ) Capitol Division ( 1967 -- 1969 ) National Football Conference ( 1970 -- present ) NFC East ( 1970 -- present ) Current uniform Team colors Midnight green , Silver , Black , White Fight song Fly , Eagles Fly Mascot Swoop Personnel Owner ( s ) Jeffrey Lurie Christina Weiss Lurie Chairman Jeffrey Lurie CEO Jeffrey Lurie President Don Smolenski General manager Howie Roseman Head coach Doug Pederson Team history Philadelphia Eagles ( 1933 -- 1942 ; 1944 -- present ) Phil - Pitt `` Steagles '' ( 1943 ) Team nicknames The Birds Championships League championships ( 4 ) NFL championships ( pre-1970 AFL -- NFL merger ) ( 3 ) 1948 , 1949 , 1960 Super Bowl championships ( 1 ) 2017 ( LII ) Conference championships ( 4 ) NFL Eastern : 1960 NFC : 1980 , 2004 , 2017 Division championships ( 13 ) NFL East : 1947 , 1948 , 1949 NFC East : 1980 , 1988 , 2001 , 2002 , 2003 , 2004 , 2006 , 2010 , 2013 , 2017 Playoff appearances ( 25 ) NFL : 1947 , 1948 , 1949 , 1960 , 1978 , 1979 , 1980 , 1981 , 1988 , 1989 , 1990 , 1992 , 1995 , 1996 , 2000 , 2001 , 2002 , 2003 , 2004 , 2006 , 2008 , 2009 , 2010 , 2013 , 2017 Home fields Baker Bowl ( 1933 -- 1935 ) Philadelphia Municipal Stadium ( 1936 -- 1939 , 1941 ) Connie Mack Stadium ( 1940 , 1942 -- 1957 ) Franklin Field ( 1958 -- 1970 ) Veterans Stadium ( 1971 -- 2002 ) Lincoln Financial Field ( 2003 -- present )"
+   ]
+  },
+  {
+   "id": "multihop-rag-549",
+   "sentences": [
+    "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5ae1fced5542997283cd230e",
+   "sentences": [
+    " He has written three novels, three collections of short stories, a collection of novellas, and seven volumes of essays, three of which have won National Book Critics Circle Award prizes and one of which, \"A Temple of Texts\" (2006), won the Truman Capote Award for Literary Criticism.",
+    "Naguib Mahfouz (Arabic: نجيب محفوظ‎ ‎ \"Nagīb Maḥfūẓ \", ] ; December 11, 1911 – August 30, 2006) was an Egyptian writer who won the 1988 Nobel Prize for Literature."
+   ]
+  },
+  {
+   "id": "5a7e31c055429934daa2fbee",
+   "sentences": [
+    "Rivermaya is a Filipino rock band.",
+    "Kodaline ( ) are an Irish band."
+   ]
+  },
+  {
+   "id": "multihop-rag-2240",
+   "sentences": [
+    "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.",
+    "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible.",
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+   ]
+  },
+  {
+   "id": "multihop-rag-2434",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-651",
+   "sentences": [
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  }
+ ]
+}

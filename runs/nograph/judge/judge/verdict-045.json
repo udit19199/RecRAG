@@ -1,0 +1,57 @@
+[
+{"id": "62ab8c7697a18900", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "never meant to commit fraud or steal"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "basically got in over his head"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "9835f46bf1480e8e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "e0d20f2e4b99f51a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Wired removed the article for not meeting its standards"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "it was shared on social media and boosted in write-ups at other outlets"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "boosted in write-ups at other outlets"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part"}]}
+]},
+{"id": "5a205b334eb96595", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "2077858c7e14be59", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In America, Thanksgiving is a cultural holiday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Apart from the food - arguably the main component of the day"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "the holiday is a beloved time of year when Americans come together"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Americans come together to celebrate what they are thankful for, either with family or friends"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "celebrate what they are thankful for, either with family or friends"}]}
+]}
+]

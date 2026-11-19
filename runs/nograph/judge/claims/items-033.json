@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ab71b5c5542991d3222377e",
+   "sentences": [
+    " The area along Northern Boulevard is well known for its high-end premium open-air shopping center, the Americana Manhasset.",
+    "International fashion designer labels and luxury goods companies—Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada—maintain a total of more than 60 retail stores and restaurants on a 220000 sqft site surrounded by gardens designed by Oheme van Sweden."
+   ]
+  },
+  {
+   "id": "multihop-rag-854",
+   "sentences": [
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a80c79155429938b61421da",
+   "sentences": [
+    "\"Moho House\" is the twenty first episode of the twenty-eighth season of the animated television series \"The Simpsons\", and the 617th episode of the series overall.",
+    " On May 4, 2015, Fox announced that \"The Simpsons\" had been renewed for season 28."
+   ]
+  },
+  {
+   "id": "multihop-rag-2141",
+   "sentences": [
+    "While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it.",
+    "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."
+   ]
+  },
+  {
+   "id": "5a900b575542995b44242099",
+   "sentences": [
+    "Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.",
+    " Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style.",
+    " He also directed dark comedies, children's movies, and historical pictures."
+   ]
+  },
+  {
+   "id": "5abaad5855429901930fa88f",
+   "sentences": [
+    " He won three singles titles and 26 doubles, including Australian Open 1978 (with Wojtek Fibak) and Australian Open 1980 and 1981, Roland Garros 1986 and also a runner-up in Australian Open 1985, all of them partnering fellow countryman Mark Edmondson.",
+    " In his career, he won nine doubles titles, but no singles titles."
+   ]
+  },
+  {
+   "id": "5a7a9b9a5542990198eaf160",
+   "sentences": [
+    " The album includes collaborations with Popcaan, Zhu, Leikeli47, Dreezy, Flume and Pell.",
+    "Steven Zhu (born 1989), known professionally as Zhu ( or ), is a Chinese American electronic musician and singer who has been active since the beginning of 2014, signed to Mind of a Genius Records and Columbia Records."
+   ]
+  },
+  {
+   "id": "multihop-rag-574",
+   "sentences": [
+    "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things.",
+    "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."
+   ]
+  },
+  {
+   "id": "multihop-rag-434",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2415",
+   "sentences": [
+    "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.",
+    "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.",
+    "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+   ]
+  }
+ ]
+}

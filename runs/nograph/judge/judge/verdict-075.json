@@ -1,0 +1,68 @@
+[
+  {"id": "a811633fe1c4c37e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "fec1c3c4c5893de8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The company did accomplish that goal"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "d9b5d9a43e741fc5", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud"}, {"item": 10, "quote": "Bankman-Fried, the founder of FTX and Alameda Research, is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy charges."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer funds."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d331ef6e68d46e39", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Justice Department is focused on the deals Google makes"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]}
+  ]},
+  {"id": "f6837eadcece00a8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Buckeyes settled for a 52-yard field goal late in the first half"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Buckeyes settled for a 52-yard field goal late in the first half, which Jayden Fielding missed wide left."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+  ]},
+  {"id": "c304fec91b090513", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]}
+]

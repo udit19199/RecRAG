@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8cc08455429941ae14deea",
+   "sentences": [
+    " It consists of a duet featuring vocalists Dave Hemingway and Briana Corrigan.",
+    "Briana Corrigan (born 30 May 1965) is a Northern Irish singer."
+   ]
+  },
+  {
+   "id": "5a8a3dd55542995153361360",
+   "sentences": [
+    "Sir Nicholas Robert Hytner (born 7 May 1956) is an English theatre director, film director, and film producer.",
+    "Maya Deren (April 29, 1917 – October 13, 1961), born Eleanora Derenkowskaia (Russian: Элеоно́ра Деренко́вская ), was a Russian-American filmmaker and one of the most important American experimental filmmakers and entrepreneurial promoters of the avant-garde in the 1940s and 1950s.",
+    " Deren was also a choreographer, dancer, film theorist, poet, lecturer, writer and photographer."
+   ]
+  },
+  {
+   "id": "multihop-rag-2391",
+   "sentences": [
+    "They want more than three points, but it's early enough that they absolutely could settle for a field goal if it got to that point.",
+    "11:03 p.m. — The Vikings are using their two timeouts, but there isn't much they'll be able to do once this hits fourth down.",
+    "The new man on the Vikings, Josh Dobbs, keeps producing the same results they were enjoying offensively with Kirk Cousins, thanks to more help from the running game for Kevin O'Connell and the defense overall under Brian Flores."
+   ]
+  },
+  {
+   "id": "multihop-rag-2233",
+   "sentences": [
+    "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles.",
+    "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."
+   ]
+  },
+  {
+   "id": "2471210292422908873",
+   "sentences": [
+    "The music video for `` Total Eclipse of the Heart '' was directed by Russell Mulcahy and was filmed on location at the Holloway Sanatorium , a large Victorian Gothic hospital near Virginia Water , Surrey , England . The video features Bonnie Tyler clad in white , dreaming or fantasizing about her students in a boys ' boarding school . Young men are seen dancing and participating in various school activities and singing in a choir ."
+   ]
+  },
+  {
+   "id": "5abd259d55429924427fcf1a",
+   "sentences": [
+    "Dictyosperma is a monotypic genus of flowering plant in the palm family found in the Mascarene Islands in the Indian Ocean (Mauritius, Réunion and Rodrigues).",
+    "The genus Huernia (family Apocynaceae, subfamily Asclepiadoideae) consists of stem succulents from Eastern and Southern Africa, first described as a genus in 1810."
+   ]
+  },
+  {
+   "id": "multihop-rag-1317",
+   "sentences": [
+    "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton.",
+    "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot.",
+    "“Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."
+   ]
+  },
+  {
+   "id": "5a81b92a5542995ce29dcc52",
+   "sentences": [
+    "The University of Delaware (colloquially \"UD\") is the largest university in Delaware.",
+    "The University of Debrecen (Hungarian: \"Debreceni Egyetem\" ) is a university located in Debrecen, Hungary."
+   ]
+  },
+  {
+   "id": "multihop-rag-483",
+   "sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.",
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+   ]
+  },
+  {
+   "id": "multihop-rag-2440",
+   "sentences": [
+    "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.",
+    "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months.",
+    "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."
+   ]
+  }
+ ]
+}

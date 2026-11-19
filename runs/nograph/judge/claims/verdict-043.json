@@ -1,0 +1,43 @@
+[
+ {"id": "5a874e9b554299211dda2bd3", "sentences": [
+   ["She was the daughter of the American Consul in London.", "She was the first First Lady to be born outside the United States.", "She was the first First Lady to be born outside areas that were later to become part of the United States.", "Such areas include the Thirteen Colonies.", "The distinction of being the first First Lady born outside these areas was not replicated for 192 years.", "Melania Trump replicated this distinction 192 years later."],
+   ["Before marrying future President Donald Trump in 2005, she worked as a fashion model.", "By 2016, she considered herself a 'full-time mom.'"]
+ ]},
+ {"id": "5a7d1e685542995ed0d165f7", "sentences": [
+   ["Her personal best throw is 58.87 metres.", "She achieved her personal best throw at the 2002 Asian Games.", "The 2002 Asian Games were held in Busan."],
+   ["A total of 460 athletes took part in the competition.", "The athletes comprised 281 men and 179 women.", "The athletes came from 39 nations."]
+ ]},
+ {"id": "5ac4f9db55429924173fb532", "sentences": [
+   ["Tritonia, also called flame freesia, is a genus of flowering plants.", "Tritonia belongs to the iris family.", "Tritonia was first described as a genus in 1802."],
+   ["Phyteuma is a genus of flowering plants.", "Phyteuma is in the family Campanulaceae.", "Phyteuma is native to Europe.", "Phyteuma is native to Morocco."]
+ ]},
+ {"id": "5a82817555429954d2e2eb5a", "sentences": [
+   ["The work is the third installment of the 'Naked' series.", "'Naked Killer' is a work in the 'Naked' series released in 1992.", "'Naked Weapon' is a work in the 'Naked' series released in 2002."],
+   ["Naked Weapon is also titled 赤裸特工.", "Naked Weapon is a 2002 film.", "Naked Weapon is a Hong Kong film.", "Naked Weapon is an action-thriller film.", "Naked Weapon was directed by action choreographer Tony Ching.", "Naked Weapon stars Maggie Q.", "Naked Weapon stars Anya Wu.", "Naked Weapon stars Daniel Wu."]
+ ]},
+ {"id": "4556891214981292730", "sentences": [
+   ["The Rhine-Herne Canal (German: Rhein-Herne-Kanal) is a transportation canal.", "The Rhine-Herne Canal is 45.6 kilometres long (28.3 miles).", "The Rhine-Herne Canal is in the Ruhr area of North Rhine-Westphalia, Germany.", "The Rhine-Herne Canal has five canal locks.", "The canal was built over a period of eight years, from 5 April 1906 to 14 July 1914.", "The canal connects the harbour in Duisburg on the Rhine with the Dortmund-Ems Canal near Henrichenburg.", "The Duisburg harbour is at coordinates 51°26′59″N 6°46′1″E.", "The Henrichenburg end is at coordinates 51°37′1″N 7°19′19″E.", "The canal follows the valley of the Emscher.", "The canal was widened in the 1980s.", "The Rhein-Herne canal ship was designed specifically for this canal.", "The Rhein-Herne canal ship normally has a capacity of about 1300 to 1350 tons.", "The Rhein-Herne canal ship has a maximum draft of 2.50 metres (8.2 ft).", "The Rhein-Herne canal ship has a length of approximately 80 metres (260 ft).", "The Rhein-Herne canal ship has a maximum beam of 9.50 metres (31.2 ft)."]
+ ]},
+ {"id": "multihop-rag-503", "sentences": [
+   ["The full model, Gemini Ultra, was not released.", "Only a 'lite' version called Gemini Pro was released."],
+   ["Google's public documentation says Google uses three categories to rank results.", "The three categories are relevance, distance, and prominence.", "The categories rank results that are local to a searcher."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content.", "The case argues that Google siphons off news publishers' readers.", "The case argues that Google siphons off news publishers' ad revenue.", "The case argues these actions are anticompetitive means."]
+ ]},
+ {"id": "-5461288669893101361", "sentences": [
+   ["A noteworthy example of a trabeated system is in Volubilis.", "The Volubilis trabeated example is from the Roman era.", "In Volubilis, one side of the Decumanus Maximus is lined with trabeated elements.", "In Volubilis, the opposite side of the roadway is designed in arched style."]
+ ]},
+ {"id": "multihop-rag-961", "sentences": [
+   ["The process also involves the European Commission.", "The European Commission helps facilitate dialogue.", "The European Commission helps assess issues.", "The European Commission helps bring pressure to bear on unfair practices."],
+   ["The speaker continues to work through the process with the European Commission.", "The speaker is focused on addressing the European Commission's questions.", "The speaker is focused on addressing any identified concerns at this stage."],
+   ["The earlier actions were focused on concerns about the spread of illegal content.", "The earlier actions were focused on concerns about disinformation.", "The illegal content and disinformation are related to the Israel-Hamas war."]
+ ]},
+ {"id": "multihop-rag-707", "sentences": [
+   ["It is true that the Warriors received glowing grades from draft analysts.", "The glowing grades followed the Warriors' selections of Kuminga.", "Kuminga came out of the G-League Ignite program.", "The Warriors selected Kuminga at No. (the sentence is cut off, so the pick number is not given)."],
+   ["To win a bet on the Warriors, the Warriors need to win by 10 or more points."]
+ ]},
+ {"id": "-6216202368088666946", "sentences": [
+   ["Bart Cummings has 12 Melbourne Cup wins.", "Bart Cummings won the Melbourne Cup in 1965.", "Bart Cummings won the Melbourne Cup in 1966.", "Bart Cummings won the Melbourne Cup in 1967.", "Bart Cummings won the Melbourne Cup in 1974.", "Bart Cummings won the Melbourne Cup in 1975.", "Bart Cummings won the Melbourne Cup in 1977.", "Bart Cummings won the Melbourne Cup in 1979.", "Bart Cummings won the Melbourne Cup in 1990.", "Bart Cummings won the Melbourne Cup in 1991.", "Bart Cummings won the Melbourne Cup in 1996.", "Bart Cummings won the Melbourne Cup in 1999.", "Bart Cummings won the Melbourne Cup in 2008."],
+   ["Bart Cummings has 12 Melbourne Cup wins.", "Bart Cummings won the Melbourne Cup in 1965.", "Bart Cummings won the Melbourne Cup in 1966.", "Bart Cummings won the Melbourne Cup in 1967.", "Bart Cummings won the Melbourne Cup in 1974.", "Bart Cummings won the Melbourne Cup in 1975.", "Bart Cummings won the Melbourne Cup in 1977.", "Bart Cummings won the Melbourne Cup in 1979.", "Bart Cummings won the Melbourne Cup in 1990.", "Bart Cummings won the Melbourne Cup in 1991.", "Bart Cummings won the Melbourne Cup in 1996.", "Bart Cummings won the Melbourne Cup in 1999.", "Bart Cummings won the Melbourne Cup in 2008.", "Etienne de Mestre has 5 Melbourne Cup wins.", "Etienne de Mestre won the Melbourne Cup in 1861.", "Etienne de Mestre won the Melbourne Cup in 1862.", "Etienne de Mestre won the Melbourne Cup in 1867.", "Etienne de Mestre won the Melbourne Cup in 1877.", "Etienne de Mestre won the Melbourne Cup in 1878.", "Lee Freedman has 5 Melbourne Cup wins.", "Lee Freedman won the Melbourne Cup in 1989.", "Lee Freedman won the Melbourne Cup in 1992.", "Lee Freedman won the Melbourne Cup in 1995.", "Lee Freedman won the Melbourne Cup in 2004.", "Lee Freedman won the Melbourne Cup in 2005."],
+   ["In 1877, the trainer Etienne de Mestre won his fourth Melbourne Cup.", "In 1877, Etienne de Mestre won with Chester.", "Chester was owned by Hon. James White.", "In 1878, as in previous years, Etienne de Mestre fielded more than one horse.", "Etienne de Mestre entered the favourite Firebell in 1878.", "Firebell was owned by W.S. Cox.", "Firebell finished last in 1878.", "Etienne de Mestre entered Chester in 1878.", "Chester was owned by Hon. James White.", "Chester was the previous year's winner.", "Chester fell in 1878.", "Etienne de Mestre entered Calamia in 1878.", "Calamia was owned by Etienne de Mestre.", "Calamia was less fancied.", "Calamia won easily by two lengths in 1878.", "First prize in 1878 was £1,790.", "The crowd in 1878 was 80,000.", "There were 30 starters in 1878.", "De Mestre's 1878 win with Calamia brought to 5 the number of Melbourne Cups he had won.", "De Mestre's record of 5 Melbourne Cups was not matched for nearly 100 years.", "Bart Cummings won his fifth Melbourne Cup in 1975.", "Bart Cummings is regarded as the best Australian horse trainer of all time.", "Bart Cummings went on to win 12 Melbourne Cups, up to 2008."]
+ ]}
+]

@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-6560319052930436991",
+   "sentences": [
+    "After their plane crashes in the woods , Dr. Meredith Grey ( Ellen Pompeo ) , Dr. Lexie Grey ( Chyler Leigh ) , Dr. Cristina Yang ( Sandra Oh ) , Dr. Arizona Robbins ( Jessica Capshaw ) , Dr. Derek Shepherd ( Patrick Dempsey ) , and Dr. Mark Sloan ( Eric Dane ) desperately fight to stay alive . Meredith is relatively unscathed , while the rest have serious injuries : the pilot , Jerry ( James LeGros ) , has a major spine injury , and Yang dislocates her arm . Robbins ' femur is broken and sticking through the skin , Sloan has serious internal injuries ; though initially adrenaline keeps him on his feet . Shepherd is sucked out the side of the plane and awakens alone in the wood ; his mangled hand having been pushed through the door of the plane . However , none are in as bad shape as Lexie , who is crushed under a piece of the plane . While Meredith searches for Shepherd , Yang and Sloan try to move the debris off Lexie . Eventually , the two realize that they can not save her , so Sloan holds her hand while she dies , telling her that he loves her . As Sloan tells her of the life the two were meant to have together , Lexie dies with a smile on her face just as Meredith and Yang are approaching .",
+    "`` Flight '' is the twenty - fourth and final episode of the eighth season of the American television medical drama Grey 's Anatomy , and the show 's 172nd episode overall . It was written by series creator Shonda Rhimes , and directed by Rob Corn . The episode was originally broadcast on the American Broadcasting Company ( ABC ) in the United States on May 17 , 2012 . In the episode , six doctors from Seattle Grace Mercy West Hospital who are victims of an aviation accident fight to stay alive , but Dr. Lexie Grey ( Chyler Leigh ) ultimately dies . Other storylines occur in Seattle where Dr. Richard Webber ( James Pickens , Jr . ) plans his annual dinner for the departing residents , Dr. Owen Hunt ( Kevin McKidd ) fires Dr. Teddy Altman ( Kim Raver ) , and Dr. Miranda Bailey ( Chandra Wilson ) gets engaged ."
+   ]
+  },
+  {
+   "id": "5a74d7685542996c70cfae0a",
+   "sentences": [
+    "Old Smokey is a euphemistic name given to the state prison electric chair in New Jersey, which is on display at the New Jersey State Police Museum.",
+    " The chair's most notorious victim was Richard Hauptmann, the man executed in the chair after being found guilty of abducting and killing Charles Augustus Lindbergh, Jr. in 1932, the 20-month-old son of famous aviators Charles Lindbergh and Anne Morrow Lindbergh \"(see Lindbergh kidnapping)\".",
+    " The Lindbergh kidnapping became known as \"The Crime of the Century\"."
+   ]
+  },
+  {
+   "id": "2352051038192309240",
+   "sentences": [
+    "Brain tissue consumes a large amount of energy in proportion to its volume , so large brains place severe metabolic demands on animals . The need to limit body weight in order , for example , to fly , has apparently led to selection for a reduction of brain size in some species , such as bats . Most of the brain 's energy consumption goes into sustaining the electric charge ( membrane potential ) of neurons . Most vertebrate species devote between 2 % and 8 % of basal metabolism to the brain . In primates , however , the percentage is much higher -- in humans it rises to 20 -- 25 % . The energy consumption of the brain does not vary greatly over time , but active regions of the cerebral cortex consume somewhat more energy than inactive regions ; this forms the basis for the functional brain imaging methods PET , fMRI , and NIRS . The brain typically gets most of its energy from oxygen - dependent metabolism of glucose ( i.e. , blood sugar ) , but ketones provide a major alternative source , together with contributions from medium chain fatty acids ( caprylic and heptanoic acids ) , lactate , acetate , and possibly amino acids ."
+   ]
+  },
+  {
+   "id": "5ab96c93554299743d22eb63",
+   "sentences": [
+    " It has an area of 1208 km2 and had a population of 600,000 in 2003.",
+    "Ezhou () is a prefecture-level city in eastern Hubei Province, China.",
+    " As of the 2010 census, the city had a population of 1,048,668, of which 668,727 lived in the core Echeng District.",
+    " The Ezhou - Huanggang built-up (\"or metro\") area was home to 1,035,496 inhabitants from the Echeng and Huangzhou, Huanggang Districts."
+   ]
+  },
+  {
+   "id": "3971602566853823038",
+   "sentences": [
+    "The Quebec Winter Carnival or the Carnaval de Québec is a pre-Lenten festival held in Quebec City . After being held intermittently since 1894 , the Carnaval de Québec has been celebrated annually since 1955 . That year Bonhomme Carnaval , the mascot of the festival , made his first appearance . Up to one million people attended the Carnaval de Québec in 2006 making it the largest winter festival in the world ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1409",
+   "sentences": [
+    "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward.",
+    "MLB Network's Jon Morosi reports the superstar is \"likely to decide on a team within the next week,\" according to a source."
+   ]
+  },
+  {
+   "id": "5adf3c155542993a75d2643a",
+   "sentences": [
+    "Heavenly Creatures is a 1994 New Zealand psychological drama directed by Peter Jackson, from a screenplay he co-wrote with his partner, Fran Walsh, about the notorious 1954 Parker–Hulme murder case in Christchurch, New Zealand.",
+    " The main premise deals with the relationship between two teenage girls, Pauline Parker and Juliet Hulme, who murder Parker's mother.",
+    "Anne Perry (born 28 October 1938 as Juliet Marion Hulme) is an English author of historical detective fiction, best known for her Thomas Pitt and William Monk series."
+   ]
+  },
+  {
+   "id": "-4092499579855624350",
+   "sentences": [
+    "Rose Stagg ( Valene Kane ) , a woman who had a sexual relationship with Paul whilst at university . During a night of passion , Paul tried to strangle her to death . As the Belfast Strangler comes to the attention of the public , Stagg notices the similarities and contacts her close friend Reed Smith . Her husband was unaware the attack had taken place . She is later kidnapped and held captive by Spector . She is later found unconscious in a car trunk . During series three , Stagg reveals that her sexual relationship with Paul was entirely consensual , and that , during sex , he strangled her so aggressively she had to be revived .",
+    "Actor Character Series 1 Series 2 Series 3 Total Appearances 5 6 7 8 9 10 11 12 13 14 15 16 17 Gillian Anderson DSI Stella Gibson 17 Jamie Dornan Paul Spector 17 John Lynch ACC Jim Burns 17 Aisling Franciosi Katie Benedetto N / A 16 Bronagh Waugh Sally Ann Spector N / A 15 Niamh McGrady PC Danielle Ferrington N / A N / A 15 Stuart Graham DCI Matthew Eastwood N / A N / A N / A 13 Bronágh Taggart DC Gail McNally N / A 12 Valene Kane Rose Stagg N / A N / A N / A N / A 11 Emmett J. Scanlan DC Glen Martin N / A N / A N / A 10 Archie Panjabi Prof. Reed Smith N / A N / A 9 Richard Clements DC Rick Turner N / A N / A N / A N / A 9 Colin Morgan DS Tom Anderson N / A 9 Karen Hassan Annie Brawley N / A N / A N / A N / A 8 Jonjo O'Neill Tom Stagg N / A N / A N / A 7 Nick Lee Ned Callan N / A N / A N / A 6 Brian Milligan James Tyler N / A N / A N / A 6 Seainin Brennan Liz Tyler N / A N / A N / A N / A 5 Ben Peel DS James Olson N / A N / A 5 Ian McElhinney Morgan Monroe N / A N / A 5 Aidan McArdle Sean Healy N / A 5 Ruth Bradley Wallace N / A 5 Michael McElhatton DI Rob Breedlove N / A Frank McCusker DCI Garrett Brink N / A N / A Aisling Bea Kiera Sheridan N / A N / A Barry Ward Dr. Patrick Spencer N / A N / A Krister Henriksson Dr. August Larson N / A Laura Donnelly Sarah Kay N / A N / A Richard Coyle Dr. Joe O'Donnell N / A N / A N / A Denise Gough Dr. Alison Walden N / A N / A Seán McGinley Fr . Peter Jensen N / A N / A Genevieve O'Reilly DCI Joan Kinkead N / A N / A Martin McCann David Alvarez N / A N / A"
+   ]
+  },
+  {
+   "id": "5a80b322554299485f5986c8",
+   "sentences": [
+    "\"White People Renovating Houses\" is the first episode in the twenty-first season of the American animated television series \"South Park\".",
+    " It is the 278th episode of the series overall, and first aired on Comedy Central in the United States on September 13, 2017.",
+    "The twenty-first season of the American animated sitcom \"South Park\" premiered on Comedy Central on September 13, 2017, and will contain ten episodes."
+   ]
+  },
+  {
+   "id": "5a7385c45542992d56e7e359",
+   "sentences": [
+    "Doris May Lessing, CH (\"née\" Tayler; 22 October 1919  – 17 November 2013) was a British novelist, poet, playwright, librettist, biographer and short story writer.",
+    "Philip Kindred Dick (December 16, 1928 – March 2, 1982) was an American writer notable for publishing works of science fiction."
+   ]
+  }
+ ]
+}

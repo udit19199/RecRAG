@@ -1,0 +1,119 @@
+[
+ {"id": "-1182093724333869887", "sentences": [
+   ["Gina Tognoni was born on November 28, 1973.",
+    "Gina Tognoni is an American actress.",
+    "Gina Tognoni is best known for her work with American daytime soap operas.",
+    "Gina Tognoni's most notable performances include Kelly Cramer on One Life to Live.",
+    "Gina Tognoni's most notable performances include Dinah Marler on Guiding Light.",
+    "Gina Tognoni is currently starring as Phyllis Summers on The Young and the Restless."],
+   ["Gina Tognoni was born on November 28, 1973.",
+    "Gina Tognoni is age 44.",
+    "Gina Tognoni was born in St. Louis, Missouri, U.S.",
+    "Gina Tognoni's occupations are actress and businesswoman.",
+    "Gina Tognoni's years active are 1995 to present.",
+    "Gina Tognoni was on Guiding Light from 2004 to 2009.",
+    "Gina Tognoni was on One Life to Live from 1995 to 2001, in 2002, and from 2010 to 2011.",
+    "Gina Tognoni was on The Young and the Restless from 2014 to present.",
+    "Gina Tognoni's spouse is Joseph Chiarello.",
+    "Gina Tognoni married Joseph Chiarello in 2009."]
+ ]},
+ {"id": "5a83041355429966c78a6ae8", "sentences": [
+   ["The person described has been involved in numerous television projects.",
+    "The person described has worked on television projects as a director.",
+    "The person described has worked on television projects as a writer.",
+    "The person described has worked on television projects as a producer.",
+    "The person described has worked on television projects as an animator."],
+   ["Bela Gaal was born on 2 January 1893.",
+    "Bela Gaal died on 18 February 1945.",
+    "Bela Gaal was a Hungarian film director."]
+ ]},
+ {"id": "multihop-rag-2042", "sentences": [
+   ["Inflation is expected to fade eventually.",
+    "The Fed is expected to cut interest rates as inflation fades.",
+    "Eventually, housing affordability will improve."],
+   ["Some economic factors are stronger today than they were during the GFC.",
+    "Housing affordability is undeniably worse than it was during the GFC."]
+ ]},
+ {"id": "5a85d4ad5542997175ce2050", "sentences": [
+   ["James David Sharman was born on 12 March 1945.",
+    "James David Sharman is the son of boxing tent entrepreneur Jimmy Sharman.",
+    "James David Sharman is an Australian director.",
+    "James David Sharman is an Australian writer for film and stage.",
+    "James David Sharman has more than 70 productions to his credit."],
+   ["Ava Marie DuVernay was born on August 24, 1972.",
+    "Ava Marie DuVernay is an American director.",
+    "Ava Marie DuVernay is an American screenwriter.",
+    "Ava Marie DuVernay is an American film marketer.",
+    "Ava Marie DuVernay is an American film distributor."]
+ ]},
+ {"id": "-7897846385260632865", "sentences": [
+   ["The 2018 Winter Olympics are officially known as the XXIII Olympic Winter Games.",
+    "The French name of the 2018 Winter Olympics is Les XXIIIemes Jeux olympiques d'hiver.",
+    "The Hangul name of the 2018 Winter Olympics is 제 23 회 동계 올림픽.",
+    "The Revised Romanization name of the 2018 Winter Olympics is Je - isipsamhoe Donggye Ollimpik.",
+    "The 2018 Winter Olympics are commonly known as PyeongChang 2018.",
+    "The 2018 Winter Olympics is a major international multi-sport event.",
+    "The 2018 Winter Olympics is scheduled to take place from 9 to 25 February 2018.",
+    "The 2018 Winter Olympics is scheduled to take place in Pyeongchang County, South Korea."],
+   ["The XXIII Olympic Winter Games have host city Pyeongchang, South Korea.",
+    "The motto of the XXIII Olympic Winter Games is Passion. Connected.",
+    "The Korean motto of the XXIII Olympic Winter Games is 하나 된 열정 (Hanadoen Yeoljeong).",
+    "An estimated 90 nations are participating in the XXIII Olympic Winter Games.",
+    "The XXIII Olympic Winter Games have 102 events in 7 sports with 15 disciplines.",
+    "The opening ceremony of the XXIII Olympic Winter Games is on 9 February.",
+    "The page states the opening ceremony of the XXIII Olympic Winter Games is 31 days from now.",
+    "The closing ceremony of the XXIII Olympic Winter Games is on 25 February.",
+    "The stadium of the XXIII Olympic Winter Games is Pyeongchang Olympic Stadium.",
+    "The navigation box lists Sochi 2014 and Beijing 2022 as Winter Games.",
+    "The navigation box lists Rio de Janeiro 2016 and Tokyo 2020 as Summer Games."]
+ ]},
+ {"id": "5adfecd755429942ec259b90", "sentences": [
+   ["The person described has written a column for Fortune magazine for more than twenty years.",
+    "The person described spent a decade at Esquire before writing for Fortune."],
+   ["The described publication was founded in 1933.",
+    "The described publication flourished during the Great Depression.",
+    "The described publication flourished under the guidance of founders Arnold Gingrich, David A. Smart, and Henry L. Jackson."]
+ ]},
+ {"id": "multihop-rag-1884", "sentences": [
+   ["Pachl further noted that the company's approach raises concerns regarding the GDPR."],
+   ["Meta wants to shift the burden of monitoring teens' social media usage to the app stores.",
+    "Meta wants to shift the burden of monitoring teens' social media usage to parents."],
+   ["The attorneys general of 42 states obtained documentation.",
+    "In one respect at least, the documentation obtained by the attorneys general is quite specific.",
+    "AG Rob Bonta of California said the documentation is damning."],
+   ["Al Saadi said her frustration with Meta is common among Palestinians.",
+    "Al Saadi's frustration with Meta is common among Palestinians in occupied territories.",
+    "Al Saadi's frustration with Meta is common among Palestinians across the diaspora."]
+ ]},
+ {"id": "5a7a276d5542996c55b2dd27", "sentences": [
+   ["Charles Hastings Judd was a Colonel.",
+    "Charles Hastings Judd was born on September 8, 1835.",
+    "Charles Hastings Judd died on April 18, 1890.",
+    "Charles Hastings Judd was an American businessman.",
+    "Charles Hastings Judd was an American rancher.",
+    "Charles Hastings Judd was an American courtier.",
+    "Charles Hastings Judd was an American politician of the Kingdom of Hawaii.",
+    "Charles Hastings Judd was a businessman, rancher, courtier and politician of the Kingdom of Hawaii."],
+   ["Charles Hastings Judd served as Chamberlain to King Kalakaua.",
+    "Charles Hastings Judd served as Colonel of the military staff of King Kalakaua.",
+    "Charles Hastings Judd traveled with King Kalakaua on his 1881 world tour."],
+   ["Kalakaua was born on November 16, 1836.",
+    "Kalakaua died on January 20, 1891.",
+    "Kalakaua was born David La'amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kalakaua.",
+    "Kalakaua is sometimes called The Merrie Monarch.",
+    "Kalakaua was the last king of the Kingdom of Hawaii.",
+    "Kalakaua was the second-to-last monarch of the Kingdom of Hawaii."]
+ ]},
+ {"id": "multihop-rag-1739", "sentences": [
+   ["Halloween is not the only holiday on the horizon.",
+    "October is drawing to a close."],
+   ["The reader may be in a new relationship this holiday season.",
+    "The reader may be faced with the opportunity to introduce their significant other to their family this holiday season."]
+ ]},
+ {"id": "5a8460d5554299123d8c2229", "sentences": [
+   ["The person described is the main vocalist of the boy group Highlight."],
+   ["The person described was a trainee at S.M. Entertainment's Starlight Academy during her middle school years.",
+    "The person described debuted as a member of Girls' Generation, the girl group of S.M. Entertainment, in 2007.",
+    "The person described debuted in Girls' Generation after her trainee years."]
+ ]}
+]

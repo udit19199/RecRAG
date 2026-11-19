@@ -1,0 +1,85 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-891",
+   "sentences": [
+    "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively.",
+    "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."
+   ]
+  },
+  {
+   "id": "multihop-rag-1433",
+   "sentences": [
+    "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.",
+    "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-583",
+   "sentences": [
+    "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club.",
+    "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."
+   ]
+  },
+  {
+   "id": "5a846c005542990548d0b2b3",
+   "sentences": [
+    "Samsung Galaxy S7 and Samsung Galaxy S7 Edge are Android smartphones manufactured and marketed by Samsung Electronics.",
+    " The S7 series serves as the successor to the Galaxy S6, S6 Edge and S6 Edge+ released in 2015.",
+    "Samsung Galaxy S6, Samsung Galaxy S6 Edge, and Samsung Galaxy S6 Edge+ are Android smartphones manufactured and marketed by Samsung Electronics.",
+    " The S6 line serves as a successor to the Galaxy S5.",
+    " The S6 and S6 Edge smartphones were officially unveiled in the first \"Samsung Unpacked 2015\" event at Mobile World Congress on 1 March 2015, while the bigger S6 Edge+ was officially unveiled together with the Samsung Galaxy Note 5 in the second \"Samsung Unpacked 2015\" event at New York on 13 August 2015."
+   ]
+  },
+  {
+   "id": "5ab6369655429953192ad2a1",
+   "sentences": [
+    "Eucryphia is a small genus of trees and large shrubs native to the south temperate regions of South America and coastal eastern Australia.",
+    " Sometimes placed in a family of their own, the Eucryphiaceae, more recent classifications place them in the Cunoniaceae.",
+    " There are seven species, two in South America and five in Australia, and several named hybrids.",
+    "Lepidozamia is a genus of two species of cycad, both endemic to Australia."
+   ]
+  },
+  {
+   "id": "-5338001223369450437",
+   "sentences": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ]
+  },
+  {
+   "id": "5ae3e84b5542996836b02bf0",
+   "sentences": [
+    "Brainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.",
+    "Salt Lake City International Airport (IATA: SLC, ICAO: KSLC, FAA LID: SLC) is a civil-military airport located about 4 miles west of Downtown Salt Lake City, Utah in the United States."
+   ]
+  },
+  {
+   "id": "multihop-rag-2022",
+   "sentences": [
+    "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth.",
+    "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results, especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."
+   ]
+  },
+  {
+   "id": "5ac4a5de5542995c82c4ad6e",
+   "sentences": [
+    "Pago Pago International Airport (IATA: PPG, ICAO: NSTU, FAA LID: PPG) , also known as Tafuna Airport, is a public airport located 7 miles (11.3 km) southwest of the central business district of Pago Pago, in the village and plains of Tafuna on the island of Tutuila in American Samoa, an unincorporated territory of the United States.",
+    "Hoonah Airport (IATA: HNH, ICAO: PAOH, FAA LID: HNH) is a state-owned public-use airport located one nautical mile (2 km) southeast of the central business district of Hoonah, Alaska."
+   ]
+  },
+  {
+   "id": "multihop-rag-2293",
+   "sentences": [
+    "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  }
+ ]
+}

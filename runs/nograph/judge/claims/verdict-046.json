@@ -1,0 +1,183 @@
+[
+ {"id": "4480034477137973992", "sentences": [[
+  "The gymnosperms are a group of seed-producing plants.",
+  "Gymnosperms include conifers, cycads, Ginkgo, and gnetophytes.",
+  "The term gymnosperm comes from the Greek composite word γυμνόσπερμος.",
+  "The Greek word γυμνός (gymnos) means naked.",
+  "The Greek word σπέρμα (sperma) means seed.",
+  "The term gymnosperm means naked seeds.",
+  "The name gymnosperm is based on the unenclosed condition of gymnosperm seeds.",
+  "Gymnosperm ovules are called ovules in their unfertilized state.",
+  "Gymnosperm seeds are not encased.",
+  "The seeds and ovules of flowering plants (angiosperms) are enclosed within an ovary.",
+  "Gymnosperm seeds develop either on the surface of scales or leaves.",
+  "The scales or leaves on which gymnosperm seeds develop are often modified to form cones.",
+  "Gymnosperm seeds can also be solitary, as in Yew, Torreya, and Ginkgo."
+ ]]},
+ {"id": "multihop-rag-2226", "sentences": [
+  [
+   "A man revealed that he made a friendship bracelet.",
+   "Friendship bracelets are a fan tradition at Taylor Swift's concerts.",
+   "The friendship bracelet had his number on it.",
+   "He made the friendship bracelet to give to Swift.",
+   "The friendship bracelet seemingly expressed his interest in Swift."
+  ],
+  [
+   "The man later invited Swift to one of his games on his podcast.",
+   "Swift is the Anti-Hero singer.",
+   "The game was at Arrowhead Stadium.",
+   "Swift accepted the invitation on 24 September.",
+   "Swift famously accepted the invitation."
+  ],
+  [
+   "Swift has shared that she has nothing to hide.",
+   "Swift is in a new relationship with Kelce."
+  ]
+ ]},
+ {"id": "multihop-rag-628", "sentences": [
+  [
+   "He has produced at a high level.",
+   "His play has been instrumental in the Vikings turning things around.",
+   "The Vikings had a 1-4 start."
+  ],
+  [
+   "The team under discussion has seen the fourth-lowest ADOT from tight ends.",
+   "The ADOT from tight ends is 5.0 yards per target.",
+   "Teams seem to know they will not be able to succeed on downfield shots against the team under discussion.",
+   "The team under discussion has had zero completions of 20-plus yards from tight ends."
+  ]
+ ]},
+ {"id": "5ac156d05542994ab5c67ce9", "sentences": [
+  [
+   "Cars 2 is a film.",
+   "Cars 2 was released in 2011.",
+   "Cars 2 is American.",
+   "Cars 2 is computer-animated.",
+   "Cars 2 is an action comedy spy film.",
+   "Cars 2 was produced by Pixar Animation Studios.",
+   "Cars 2 was produced for Walt Disney Pictures."
+  ],
+  [
+   "Lin-Manuel Miranda was born January 16, 1980.",
+   "Lin-Manuel Miranda is American.",
+   "Lin-Manuel Miranda is a composer, lyricist, playwright, and actor.",
+   "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical Hamilton.",
+   "Lin-Manuel Miranda is best known for creating and starring in the Broadway musical In the Heights."
+  ],
+  [
+   "Lin-Manuel Miranda co-wrote the songs for Disney's Moana soundtrack.",
+   "The Moana soundtrack is from 2016.",
+   "Lin-Manuel Miranda is set to star in Disney's upcoming film Mary Poppins Returns."
+  ]
+ ]},
+ {"id": "6038338714916455398", "sentences": [
+  [
+   "The first mention of the expression Apostles' Creed occurs in a letter of AD 390.",
+   "The letter was from a synod in Milan.",
+   "The expression Apostles' Creed may have been associated with a belief.",
+   "The belief was widely accepted in the 4th century.",
+   "The belief was that, under the inspiration of the Holy Spirit, each of the Twelve Apostles contributed an article of a creed."
+  ],
+  [
+   "The title Symbolum Apostolicum (Symbol or Creed of the Apostles) appears for the first time in a letter.",
+   "The letter was probably written by Ambrose.",
+   "The letter was from a Council in Milan to Pope Siricius.",
+   "The letter dates to about AD 390.",
+   "The letter says: Let them give credit to the Creed of the Apostles, which the Roman Church has always kept and preserved undefiled.",
+   "What existed at that time was not what is now known as the Apostles' Creed.",
+   "What existed at that time was a shorter statement of belief.",
+   "That shorter statement did not include the phrase maker of heaven and earth, for instance.",
+   "The phrase maker of heaven and earth may have been inserted only in the 7th century."
+  ]
+ ]},
+ {"id": "-4222512069603517522", "sentences": [
+  [
+   "The Pakistani National Assembly is the lower house of the bicameral Majlis-e-Shura.",
+   "The Urdu name of the Pakistani National Assembly is Qaumī Asimbli'e Pākistān.",
+   "The Majlis-e-Shura also comprises the President of Pakistan.",
+   "The Majlis-e-Shura also comprises the Senate, which is the upper house.",
+   "The National Assembly convenes at Parliament House in Islamabad.",
+   "The Senate convenes at Parliament House in Islamabad.",
+   "The National Assembly is a democratically elected body.",
+   "The National Assembly has a total of 332 members.",
+   "The members of the National Assembly are referred to as Members of the National Assembly (MNAs).",
+   "272 members of the National Assembly are directly elected.",
+   "70 members of the National Assembly hold reserved seats for women and religious minorities.",
+   "A political party must secure 172 seats to obtain a majority.",
+   "A political party must secure 172 seats to preserve a majority."
+  ]
+ ]},
+ {"id": "multihop-rag-2153", "sentences": [
+  [
+   "The Wallabies had a World Cup flop.",
+   "The Queensland Rugby Union reaffirmed its position.",
+   "The Queensland Rugby Union is committed to moving to a centralised high-performance model.",
+   "The Queensland Rugby Union will not follow the NSW Waratahs by handing over the keys to Rugby Australia."
+  ],
+  [
+   "A person will be tasked with integrating the programs.",
+   "RA is trying to centralise all of the Super Rugby's high-performance programs."
+  ]
+ ]},
+ {"id": "5a76387d554299109176e6ba", "sentences": [
+  [
+   "Am Rong was born in 1929.",
+   "Am Rong died in May 1975.",
+   "Am Rong was Cambodian.",
+   "Am Rong was a soldier.",
+   "Am Rong was a filmmaker.",
+   "Am Rong acted as a spokesman on military matters for the Khmer Republic.",
+   "Am Rong acted as a spokesman during the Cambodian Civil War."
+  ],
+  [
+   "Ava Marie DuVernay was born August 24, 1972.",
+   "Ava Marie DuVernay is American.",
+   "Ava Marie DuVernay is a director.",
+   "Ava Marie DuVernay is a screenwriter.",
+   "Ava Marie DuVernay is a film marketer.",
+   "Ava Marie DuVernay is a film distributor."
+  ]
+ ]},
+ {"id": "5a7ced4355429909bec76895", "sentences": [
+  [
+   "Gasland is a documentary.",
+   "Gasland is from 2010.",
+   "Gasland is American.",
+   "Gasland was written by Josh Fox.",
+   "Gasland was directed by Josh Fox."
+  ],
+  [
+   "To Shoot an Elephant is a 2009 documentary film.",
+   "To Shoot an Elephant is about the 2008-2009 Gaza War.",
+   "To Shoot an Elephant was directed by Alberto Arce.",
+   "To Shoot an Elephant was directed by Mohammad Rujailahk."
+  ]
+ ]},
+ {"id": "5adbe0df554299438c868cc0", "sentences": [
+  [
+   "William Somerset Maugham was born 25 January 1874.",
+   "William Somerset Maugham died 16 December 1965.",
+   "William Somerset Maugham is better known as W. Somerset Maugham.",
+   "William Somerset Maugham was British.",
+   "William Somerset Maugham was a playwright.",
+   "William Somerset Maugham was a novelist.",
+   "William Somerset Maugham was a short story writer.",
+   "William Somerset Maugham's name includes the post-nominal CH."
+  ],
+  [
+   "W. Somerset Maugham was among the most popular writers of his era.",
+   "W. Somerset Maugham was reputedly the highest-paid author during the 1930s."
+  ],
+  [
+   "Thomas Merton, O.C.S.O., was born January 31, 1915.",
+   "Thomas Merton died December 10, 1968.",
+   "Thomas Merton was an American Catholic writer.",
+   "Thomas Merton was a theologian.",
+   "Thomas Merton was a mystic."
+  ],
+  [
+   "In 1949, Thomas Merton was ordained to the priesthood.",
+   "Thomas Merton was given the name Father Louis."
+  ]
+ ]}
+]

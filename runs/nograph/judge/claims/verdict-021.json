@@ -1,0 +1,49 @@
+[
+ {"id": "multihop-rag-1927", "sentences": [
+   ["The criminal trial of Sam Bankman-Fried was highly anticipated.", "Sam Bankman-Fried is the former CEO of FTX.", "FTX is a crypto exchange that is bankrupt.", "The criminal trial of Sam Bankman-Fried started on a Tuesday.", "The criminal trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy."],
+   ["Sam Bankman-Fried was compared to Warren Buffet.", "Many people called Sam Bankman-Fried the white horse of crypto.", "TechCrunch never called Sam Bankman-Fried the white horse of crypto."],
+   ["Sam Bankman-Fried, known as SBF, has pleaded not guilty.", "Sam Bankman-Fried has pleaded not guilty to some seven charges of fraud and conspiracy."],
+   ["The prosecution portrayed Sam Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-1749", "sentences": [
+   ["This is not the first time Jada has opened up about her long-term commitment to her husband."],
+   ["Jada praised her children for how they helped her grow.", "Jada said: 'My children, they're little gurus.'"],
+   ["Jada and Will have two children.", "Jada and Will's children are Jaden, who is 25, and Willow, who is 22.", "Jada praised her children for being her 'little gurus' throughout this time.", "Jada's children taught her 'a deep sense of self-acceptance'."]
+ ]},
+ {"id": "5adcfbf45542990d50227d86", "sentences": [
+   ["'Into Dust' is a song by the American duo Mazzy Star.", "'Into Dust' appears as the ninth track on the second album of Mazzy Star.", "The second album of Mazzy Star is 'So Tonight That I Might See'."],
+   ["Mazzy Star is an American alternative rock band.", "Mazzy Star was formed in Santa Monica, California, in 1989.", "Mazzy Star was formed from the group Opal.", "Opal was a collaboration of guitarist David Roback and bassist Kendra Smith."]
+ ]},
+ {"id": "5a84b6e15542991dd0999daa", "sentences": [
+   ["Mulled wine is a beverage.", "Mulled wine is usually made with red wine.", "Mulled wine is usually made with various mulling spices.", "Mulled wine is sometimes made with raisins."],
+   ["Mulled wine is served hot or warm.", "Mulled wine is alcoholic.", "There are non-alcoholic versions of mulled wine."],
+   ["Blue Lagoon is a popular summer cocktail.", "Blue Lagoon features blue Curaçao."]
+ ]},
+ {"id": "multihop-rag-1095", "sentences": [
+   ["Sequoia Capital is an investor in FTX.", "Sequoia Capital published a profile of FTX that has since been deleted.", "The now-deleted Sequoia Capital profile says FTX was founded because of Bankman-Fried's frustration with other exchanges.", "Bankman-Fried was frustrated with other exchanges when he was running Alameda Research.", "Alameda Research is the crypto trading firm of Bankman-Fried."],
+   ["Risk management is a crucial part of the business.", "Risk officers exist to identify the business's potential risks.", "Risk officers exist to monitor the business's potential risks.", "Risk officers exist to mitigate the business's potential risks."],
+   ["Binance has made headlines this past year for a range of reasons.", "Zhao's comments contributed to the collapse of FTX.", "FTX was once one of the top competitors of Binance."],
+   ["Liquidation is a way for FTX to manage risk.", "FTX uses liquidation when people were engaging in risky bets on its platform."]
+ ]},
+ {"id": "multihop-rag-865", "sentences": [
+   ["This sentence follows the heading 'Love Story'.", "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday.", "Swift was cheering on No."],
+   ["The game is taking place at Arrowhead Stadium.", "Swift has performed at Arrowhead Stadium.", "Swift has attended a game at Arrowhead Stadium before."],
+   ["Swift has shared that she has nothing to hide.", "Swift has a new relationship with Kelce.", "Swift has said she has nothing to hide in her new relationship with Kelce."]
+ ]},
+ {"id": "5a7652435542992d0ec060a5", "sentences": [
+   ["Pietro Alessandro Gaspare Scarlatti was born on 2 May 1660.", "Pietro Alessandro Gaspare Scarlatti died on 22 October 1725.", "Pietro Alessandro Gaspare Scarlatti was an Italian Baroque composer.", "Pietro Alessandro Gaspare Scarlatti was especially famous for his operas.", "Pietro Alessandro Gaspare Scarlatti was especially famous for his chamber cantatas."],
+   ["The Russian name of Pyotr Ilyich Tchaikovsky is Пётр Ильи́ч Чайко́вский.", "Pyotr Ilyich Tchaikovsky was born on 25 April/7 May 1840.", "Pyotr Ilyich Tchaikovsky died on 25 October/6 November 1893.", "Pyotr Ilyich Tchaikovsky is often anglicized as Peter Ilich Tchaikovsky.", "Pyotr Ilyich Tchaikovsky was a Russian composer of the romantic period.", "Some works by Pyotr Ilyich Tchaikovsky are among the most popular music in the classical repertoire."],
+   ["Tchaikovsky was the first Russian composer whose music made a lasting impression internationally.", "The international impression of Tchaikovsky's music was bolstered by his appearances as a guest conductor.", "Tchaikovsky appeared as a guest conductor in Europe.", "Tchaikovsky appeared as a guest conductor in the United States."]
+ ]},
+ {"id": "4839853516523677080", "sentences": [
+   ["A muscle relaxant is a drug that affects skeletal muscle function.", "A muscle relaxant decreases muscle tone.", "A muscle relaxant may be used to alleviate muscle spasms.", "A muscle relaxant may be used to alleviate pain.", "A muscle relaxant may be used to alleviate hyperreflexia.", "The term 'muscle relaxant' is used to refer to two major therapeutic groups.", "The two major therapeutic groups referred to by 'muscle relaxant' are neuromuscular blockers and spasmolytics.", "Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate.", "Neuromuscular blockers have no central nervous system (CNS) activity.", "Neuromuscular blockers are often used during surgical procedures.", "Neuromuscular blockers are often used in intensive care and emergency medicine.", "Neuromuscular blockers are used to cause temporary paralysis.", "Spasmolytics are also known as 'centrally acting' muscle relaxants.", "Spasmolytics are used to alleviate musculoskeletal pain and spasms.", "Spasmolytics are used to reduce spasticity in a variety of neurological conditions.", "Neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants.", "The term 'muscle relaxant' is commonly used to refer to spasmolytics only."]
+ ]},
+ {"id": "5ac2758b55429963665199c3", "sentences": [
+   ["Nicolae Titulescu was born on March 4, 1882.", "Nicolae Titulescu died on March 17, 1941.", "Nicolae Titulescu was a well-known Romanian diplomat.", "Nicolae Titulescu was at various times a government minister.", "Nicolae Titulescu was at various times finance minister.", "Nicolae Titulescu was at various times foreign minister.", "Nicolae Titulescu served for two terms as President of the General Assembly of the League of Nations.", "Nicolae Titulescu's two terms as President of the General Assembly of the League of Nations are dated 1930–32."],
+   ["The League of Nations is abbreviated as LN in English.", "The League of Nations is abbreviated as SDN or SdN in French.", "The French name of the League of Nations is 'La Société des Nations'.", "The League of Nations was an intergovernmental organisation.", "The League of Nations was founded on 10 January 1920.", "The League of Nations was founded as a result of the Paris Peace Conference.", "The Paris Peace Conference ended the First World War."]
+ ]},
+ {"id": "5ae55d1e55429960a22e02cb", "sentences": [
+   ["The event was broadcast live on BBC One.", "Graham Norton hosted the event."],
+   ["Graham William Walker was born on 4 April 1963.", "Graham William Walker is better known as Graham Norton.", "Graham Norton is an Irish television presenter.", "Graham Norton is an Irish radio presenter.", "Graham Norton is an Irish DJ.", "Graham Norton is an Irish comedian.", "Graham Norton is an Irish actor.", "Graham Norton is an Irish writer."]
+ ]}
+]

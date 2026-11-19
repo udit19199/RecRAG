@@ -1,0 +1,1027 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=e70185bef5ed7696 ===
+Gold sentences and facts:
+Sentence 0: In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.
+  Fact 0.0: A year has passed since Altman catapulted ChatGPT to global fame.
+  Fact 0.1: Altman has become Silicon Valley's sought-after voice on the promise of artificial intelligence.
+  Fact 0.2: Altman has become Silicon Valley's sought-after voice on the potential dangers of artificial intelligence.
+  Fact 0.3: Altman's sudden exit was mostly unexplained.
+  Fact 0.4: Altman's exit brought uncertainty to the industry's future.
+Sentence 1: This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.
+  Fact 1.0: The piece covers this week's topics.
+  Fact 1.1: Sam Altman is backing a teen's AI startup.
+  Fact 1.2: Google held a hardware event.
+  Fact 1.3: First impressions of the Pixel 8 Pro are covered.
+  Fact 1.4: Flexport drama is covered.
+  Fact 1.5: The ongoing FTX fallout is covered.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The board's language is a basis for the prevailing theory.
+  Fact 2.1: The way giant tech companies work is a basis for the prevailing theory.
+  Fact 2.2: The prevailing theory currently floating around is based on the board's language and how giant tech companies work.
+
+Retrieved items:
+<item 1>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman also co-founded Worldcoin, a biometric and cryptocurrency project that’s been scanning people’s eyeballs with the goal of creating a vast digital
+identity and financial network.
+
+___
+
+Associated Press business writers Haleluya Hadero in New York, Kelvin Chan in London and Michael Liedtke and David Hamilton in San Francisco contributed to this
+report.
+</item 1>
+
+<item 2>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 2>
+
+<item 3>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s
+board after an apparent vote of no confidence. Its exact wording in a release issued this afternoon: Altman’s “departure follows a deliberative review process
+by the board, which concluded that he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+What the hell is happening at the most hyped company in the world?! Here are some totally speculative theories that occurred to us and others around the web.
+
+1. Did Altman circumvent the board in a major deal?
+
+Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now. “Not consistently candid” is
+a very diplomatic way of saying Altman lied.
+</item 3>
+
+<item 4>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Any significant snafu in that department would reflect on her, as well as Altman.
+
+5. Perhaps a difference of AI ethics or philosophy?
+
+Altman is a proud techno-optimist, and often speaks fondly of the possibilities of AGI, or artificial general intelligence, a theoretical software system that
+achieves human-like intellect and versatility.
+
+The board’s statement pointedly includes that “OpenAI was deliberately structured to advance our mission: to ensure that artificial general intelligence
+benefits all humanity” and that new leadership was necessary. It’s possible that Sam’s zeal for AGI, even absent a secret project or agreement, led to a major
+rift between him and the board.
+
+It’s been obvious to all that Altman took the company in a much more corporate direction from its origins, changing its legal status and aggressively pursuing
+enterprise and consumer applications. That doesn’t sound a lot like the “mission” the board wants to advance.
+</item 4>
+
+<item 5>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He was recruited in 2014 to take lead of the startup incubator YCombinator.
+
+“Sam is one of the smartest people I know, and understands startups better than perhaps anyone I know, including myself,” read YCombinator co-founder Paul
+Graham’s 2014 announcement that Altman would become its president. Graham said at the time that Altman was “one of those rare people who manage to be both
+fearsomely effective and yet fundamentally benevolent.”
+
+OpenAI started out as a nonprofit when it launched with financial backing from Tesla CEO Elon Musk and others. Its stated aims were to “advance digital
+intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return.”
+
+That changed in 2018 when it incorporated a for-profit business Open AI LP, and shifted nearly all its staff into the business, not long after releasing its
+first generation of the GPT large language model for mimicking human writing.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 6>
+
+<item 7>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He’s sat with multiple heads of state to discuss AI’s potential and perils. Just Thursday, he took part in a CEO summit at the Asia-Pacific Economic Cooperation
+conference in San Francisco, where OpenAI is based.
+
+He predicted AI will prove to be “the greatest leap forward of any of the big technological revolutions we’ve had so far.” He also acknowledged the need for
+guardrails, calling attention to the existential dangers future AI could pose.
+
+Some computer scientists have criticized that focus on far-off risks as distracting from the real-world limitations and harms of current AI products. The U.S.
+Federal Trade Commission has launched an investigation into whether OpenAI violated consumer protection laws by scraping public data and publishing false
+information through its chatbot.
+</item 7>
+
+<item 8>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+The Information, speaking to three sources formerly with the company, reports that they no longer expect the sale — led by Thrive Capital — to happen, or, if it
+does, to come with a lesser valuation because of the recent turn of events.
+
+Altman planning new venture
+
+Altman has been telling investors that he’s planning to launch a new venture, according to The Information. Brockman is expected to join the effort — whatever
+form it takes. (Possibly an AI chip startup.)
+
+i love you all. today was a weird experience in many ways. but one unexpected one is that it has been sorta like reading your own eulogy while you’re still
+alive. the outpouring of love is awesome. one takeaway: go tell your friends how great you think they are.
+</item 8>
+
+<item 9>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 9>
+
+<item 10>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 10>
+=== END ITEM id=e70185bef5ed7696 ===
+
+=== ITEM id=db519a93d486d426 ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that 'all of that, all of it, was built on lies.'
+Sentence 1: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 1.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 1.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 1.2: Caroline Ellison is the CEO of Alameda.
+  Fact 1.3: The government claimed Bankman-Fried had 'secret access' to customer money.
+  Fact 1.4: The government claimed the customer money was both cash and crypto.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve great power.
+  Fact 2.3: The prosecution said Bankman-Fried committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that the FTX founder acted in good faith.
+  Fact 2.5: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.6: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 3>
+
+<item 4>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said. Besides telling her about his presidential chances, he also told her that
+if there was a coin flip where tails destroyed the world and heads made the world twice as good, he’d flip the coin. He called this being “risk-neutral,” which
+seems like a fancy way of saying he was a gambling addict.
+
+She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022. The goal, Bankman-Fried told her, was to
+“optically” separate Alameda Research and FTX. “The whole time we were dating, he was my boss at work,” she said. They broke up because she wanted more from the
+relationship; Bankman-Fried was distant and not paying enough attention to her.
+</item 8>
+
+<item 9>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 9>
+
+<item 10>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 10>
+=== END ITEM id=db519a93d486d426 ===
+
+=== ITEM id=08b9065e9d73041a ===
+Gold sentences and facts:
+Sentence 0: Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts.
+  Fact 0.0: The Supreme Court decided last week that it would hear the pair of cases.
+  Fact 0.1: The pair of cases revolve around Republicans crafting state-specific laws.
+  Fact 0.2: The state-specific laws order platforms to keep their hands off of some social media posts.
+Sentence 1: Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation.
+  Fact 1.0: Under Musk, Twitter has prioritized free speech.
+  Fact 1.1: Twitter is now called X.
+  Fact 1.2: Under Musk, free speech on Twitter is managed by crowdsourced-based moderation.
+
+Retrieved items:
+<item 1>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+“Thanks to the First Amendment, Florida and Texas cannot force websites or social media apps to host hateful content, misinformation and spam, as their deeply
+misguided laws would require,” Oregon Senator Ron Wyden, who co-authored Section 230, a law that protects social media companies’ content moderation decisions,
+told TechCrunch. “… A ruling in favor of the Texas and Florida laws would create utter chaos, and make many sites worthless to regular users who want to watch a
+funny video or see family photos.”
+
+NetChoice President Steve DelBianco also warned that allowing the state laws to go into effect would unleash “a tidal wave of offensive content and hate speech
+crashing onto users, creators, and advertisers” that would force Americans to wade through “racial epithets, aggressive homophobia, pornographic material,
+beheadings, or other gruesome content” just to use social apps.
+</item 1>
+
+<item 2>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+“They’re in the same ballpark, the sentiment is the same,” Barrett said. “Republican lawmakers in each state believe that — and said explicitly in the course of
+debating and passing these laws — that ‘Silicon Valley oligarchs’… are ideological liberals, and they are censoring people in our states who are conservative,
+and we are hereby ordering them to stop doing that.”
+
+How could the Supreme Court decision affect social media companies?
+
+If the court finds that social media companies don’t have a First Amendment right to curate the kinds of content that they allow, social platforms could look
+very different, at least in states that are trying to limit their moderation powers. After years of slow progress on misinformation — and worrisome backsliding
+on platforms like Elon Musk’s X — the Supreme Court’s decision could upend that process, sowing chaos online in the process.
+</item 2>
+
+<item 3>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+What does this have to do with the First Amendment?
+
+The case revolves around First Amendment rights — but, counterintuitively, it’s the rights of social media companies that are in question, not the rights of
+their users.
+
+“The question here is: Do social media companies have a First Amendment protected right to exercise what you might call editorial judgment?”
+
+“These cases are about the First Amendment and how the First Amendment applies to social media companies. And then more specifically, what the First Amendment
+has to say about content moderation, which is obviously a subset, although a really big and important subset of what social media companies do,” Barrett said.
+
+“The question here is: Do social media companies have a First Amendment protected right to exercise what you might call editorial judgment — or what you also
+might call content moderation — in sorting out what expression does and does not appear on the platforms that they own? So it’s just not clear right now what
+precisely the First Amendment says about that question.”
+
+Are the Texas and Florida laws identical?
+</item 3>
+
+<item 4>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+To explain the Supreme Court’s decision to wade into these issues — and what happens next — TechCrunch spoke to Paul Barrett, NYU adjunct law professor and
+Deputy Director of NYU Stern’s Center for Business and Human Rights.
+
+Why is the Supreme Court involved?
+
+These cases actually started in Florida and Texas a few years ago before wending their way to the Supreme Court this year. In those two states, Republican
+lawmakers passed parallel laws to control how social media companies operate. In Florida, Governor Ron DeSantis signed Senate Bill 7072 into law in May 2021. In
+Texas, House Bill 20 made it through the state legislature and was signed by Governor Greg Abbott in September 2021.
+
+“The reason why these cases are in front of the Supreme Court is actually relatively simple: Florida and Texas were more or less the first out of the gate in
+imposing this type of restriction on social media companies,” Barrett explained.
+</item 4>
+
+<item 5>
+The UK just laid out new rules for the internet — it only gets harder from here (The Verge, 2023-11-09T00:01:00+00:00)
+Ofcom recommends these platforms implement policies like not allowing strangers to send direct messages to children, using hash matching to detect and remove
+CSAM, maintaining content and search moderation teams, and offering ways for users to report harmful content.
+
+Large tech platforms already follow many of these practices, but Ofcom hopes to see them implemented more consistently. “We think they represent best practice
+of what’s out there, but it’s not necessarily applied across the board,” Whitehead says. “Some firms are applying it sporadically but not necessarily
+systematically, and so we think there is a great benefit for a more wholesale, widespread adoption.”
+
+There’s also one big outlier: the platform known as X (formerly Twitter). The UK’s efforts with the legislation long predate Elon Musk’s acquisition of Twitter,
+but it was passed as he fired large swaths of its trust and safety teams and presided over a loosening of moderation standards, which could put X at odds with
+regulators.
+</item 5>
+
+<item 6>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+“So when the industry sued the states under the First Amendment, these were the first cases that were litigated, so they went up through the court system.”
+
+Both laws made their way through the lower courts after tech industry group NetChoice and the Computer and Communications Industry Association (CCIA) issued
+legal challenges against them. That path was complicated and contradictory, which is part of how the case landed in the Supreme Court’s lap:
+
+In both cases, you had federal trial judges who entered injunctions blocking the laws on constitutional grounds. And then you had two different federal
+appellate courts — in the case of Florida, the Eleventh Circuit, in the case of Texas, the Fifth Circuit. The two appellate courts clashed… and there was an
+explicit conflict between the two federal appellate courts. And that type of conflict is one of the bases that the US Supreme Court uses for deciding when to
+take cases.
+
+What does this have to do with the First Amendment?
+</item 6>
+
+<item 7>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation. Its policies have resulted in increased hate speech
+and toxic content on the platform, some studies have shown.
+
+Mozilla believes there’s a better way forward and, more importantly, that now is exactly the right time to invest in that path. And, as a wholly owned
+subsidiary of a nonprofit, the company says it’s not motivated by generating earnings for shareholders or returning a VC investment, allowing it to progress
+with a collaborative approach where it takes in input from a lot of different voices.
+
+In an interview with TechCrunch, Mozilla Senior Director of Content Carolyn O’Hara explained why Mozilla has taken an interest in the fediverse and Mastodon,
+specifically, and how it expects to experiment in the months ahead.
+</item 7>
+
+<item 8>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+What’s at stake in the Supreme Court’s landmark social media case The court will wade into First Amendment questions with major implications for platforms
+
+The Supreme Court is poised to decide whether a pair of state laws are allowed to reshape the ability of social media companies to control what does — and
+doesn’t — appear on their platforms.
+
+Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to
+keep their hands off of some social media posts. Since the early days of the Trump administration, Republicans have accused social media companies of
+deliberately suppressing conservative viewpoints.
+
+While research has not supported these claims, researchers have demonstrated that conservative social media users are disproportionately exposed to political
+misinformation, a phenomenon that could explain anecdotal claims of ideologically lopsided enforcement on social platforms.
+
+Whether animated by those perceived differences or the political perks of accusing social platforms of anti-conservative bias, conservative lawmakers in Florida
+and Texas passed laws to restrict how those companies are allowed to moderate content.
+</item 8>
+
+<item 9>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Aside from forcing platforms to allow some forms of content that would otherwise be disallowed, these laws also seek to force social media companies to provide
+users with individualized explanations when their content is removed or restricted. Because this process is largely conducted algorithmically now — generally
+with light human intervention or oversight — social media companies might need to reimagine their content moderation systems or hire way more humans to respond
+to these incidents. Those kind of adjustments would likely be costly and difficult to scale.
+
+“As you can imagine, that can get kind of onerous when you’re taking down millions and millions of pieces of content a day, and much of that activity of the
+vast majority of it is currently being done automatically,” Barrett said. “The idea that a human being would have to go back and explain each time something
+came down would be quite a challenge.”
+</item 9>
+
+<item 10>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Are the Texas and Florida laws identical?
+
+The two laws — HB 20 in Texas and SB 7072 in Florida — are very similar in their origins and intentions, but diverge slightly in how they seek to restrict
+social media platforms.
+
+In both instances, a provision of the state law instructed social media companies to stop removing certain kinds of content. In Texas, the law told social media
+companies that they could no longer remove or demonetize content based on the “viewpoint represented in the user’s expression.” In Florida, the law would stop
+social media companies from banning political candidates or removing or restricting their content. The laws have a few other provisions, but the idea is that
+conservative politicians in those states want to regulate how tech companies interact with political content.
+
+“They’re in the same ballpark, the sentiment is the same,” Barrett said.
+</item 10>
+=== END ITEM id=08b9065e9d73041a ===
+
+=== ITEM id=04fb2f506ec3f458 ===
+Gold sentences and facts:
+Sentence 0: Here's your chance to claim $5,000+ in bonuses as a new user from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, and BetRivers.
+  Fact 0.0: The reader has a chance to claim $5,000+ in bonuses as a new user.
+  Fact 0.1: A new user can claim bonuses from Caesars Sportsbook.
+  Fact 0.2: A new user can claim bonuses from BetMGM.
+  Fact 0.3: A new user can claim bonuses from Bet365.
+  Fact 0.4: A new user can claim bonuses from FanDuel.
+  Fact 0.5: A new user can claim bonuses from DraftKings.
+  Fact 0.6: A new user can claim bonuses from BetRivers.
+Sentence 1: Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus.
+  Fact 1.0: The reader can collect a welcome bonus.
+  Fact 1.1: A new customer receives a welcome bonus.
+
+Retrieved items:
+<item 1>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+DraftKings | BetMGM vs. FanDuel | Caesars vs. BetMGM
+</item 1>
+
+<item 2>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Use Bet365 bonus code VATSN in Virginia or NJTSN in New Jersey.
+
+Claim here: Bet365 bonus code TSNCO for promo of your choice
+
+FanDuel promo code for Bet any $5 moneyline, Get $150 in bonus bets if your team wins in CBK game
+
+FanDuel has a new offer when using our exclusive FanDuel promo code link. Bet $5 on any moneyline, and Get $150 in bonus bets if your team wins!
+
+It's important to note that there are no odds restrictions, so it'd be prudent to bet a big favorite over an outmatched underdog on the CBK schedule. You need
+to win the wager to receive $150 in bonus bets.
+</item 2>
+
+<item 3>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+That means wagering requirements are attached, and payouts don't include the stake.
+
+Odds boosts
+
+You’ll receive better than the usual odds on specific bets. Daily odds boosts are available, but provide no value if the boosted bet isn't a winner.
+
+Bet insurance
+
+Get a refund if you lose a specific bet or your parlay comes up one leg short. Sportsbooks will limit the size of the refund you can claim, and most refunds are
+bonus bets or site credit, not cash. That means wagering requirements are attached, and payouts don't include the stake.
+
+Bet & get bonuses
+
+Here, you’ll get a bonus when you place a specific bet. Most bet & get bonuses are bonus bets or site credit. That means wagering requirements are attached, and
+payouts don't include the stake.
+
+App-only offers
+
+Place a specific bet with one of the best sports betting apps to receive a bonus. This won’t be available on the sportsbook website.
+</item 3>
+
+<item 4>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Winning wagers with Bonus Bets award the winnings only and not the bet amounts.
+
+FanDuel Sportsbook welcome offer pros and cons
+
+Pros
+
+Unlike other offers, you don’t have to risk much of your own money to receive the bonus — just $5 to get $200 in Bonus Bets
+
+Also unlike other offers, it doesn’t matter if your initial wager wins or loses, you get the bonus either way
+
+You don’t have to use your Bonus Bets all at once (unless you want to), as you can divide up how you use the Bonus Bets any way you like
+
+Cons
+
+You can’t just withdraw the Bonus Bets, but you have to wager them
+
+You only have a week to use all $200 of your Bonus Bets
+
+If you win with Bonus Bets, you only get the winnings and not the wager amounts back
+
+What is the welcome offer at FanDuel Sportsbook VT?
+
+Those signing up at FanDuel Sportsbook Vermont by Jan.
+</item 4>
+
+<item 5>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Start by clicking on our exclusive DraftKings promo code link
+
+Register as a new user by supplying personal info including your name, email, last four of your SSN#, and mailing address
+
+Deposit $5 to activate $50 bonus bet
+
+Bet $5 and Get $150 in bonus bets
+
+To max out DraftKings' deposit match at $1,000, make a minimum deposit of $5,000 and meet the 25X playthrough requirement.
+
+Claim here: DraftKings promo code for $1,200 in bonus bets
+
+BetRivers promo code SPORTSRIV unlocks 2nd chance bet for CBK games including Duke vs. Arkansas
+
+The BetRivers promo code SPORTSRIV gives new users a 2nd chance bet up to $500 depending on your state.
+
+If your first bet settles as a loss, BetRivers will refund your account in bonus bets.
+</item 5>
+
+<item 6>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Here are more details on the offer explaining how each part of the DraftKings Sportsbook welcome offer works:
+
+Sign up for a DraftKings Sportsbook account via the links on this page .
+
+. Make a first deposit of at least $5 and get a $50 Bonus Bet .
+
+and get a . When you make your first deposit, DraftKings will give you a 20% deposit match bonus worth up to $1,000 in Bonus Bets . Be aware this bonus comes
+with a 25x wagering requirement .
+
+worth up to . Be aware this bonus comes with a . Finally, when you place an initial bet of at least $5 , you get $150 more in Bonus Bets delivered as eight $25
+Bonus Bets that you’ll have seven days to use.
+
+, you get delivered as eight $25 Bonus Bets that you’ll have seven days to use. If you go for the full deposit match bonus, you can receive as much as $1,200 in
+Bonus Bets all told.
+</item 6>
+
+<item 7>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+There’s also the BetMGM Rewards program for added benefits.
+
+Here’s how that welcome offer works at BetMGM Sportsbook:
+
+Start by entering the bonus code SPORTSPICK when you create your BetMGM Sportsbook account.
+
+when you create your BetMGM Sportsbook account. Deposit at least $10 .
+
+. Make a first bet and if you lose get back the equivalent amount in Bonus Bets up to $1,500 within 24 hours of the bet being settled.
+
+within 24 hours of the bet being settled. For losing bets up to $50, you receive the Bonus Bet as a single bet . If you bet more than $50 and lose, you’ll get
+your refund (up to $1,500) in five Bonus Bets divided equally (20% each).
+
+. If you bet more than $50 and lose, you’ll get your refund (up to $1,500) in divided equally (20% each). You’ll have seven days to use your Bonus Bet(s).
+
+to use your Bonus Bet(s).
+</item 7>
+
+<item 8>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+The promo codes on this page get you the best bonuses available. When you plug in the code during registration, the sportsbook knows we sent you and gives you
+the bonus we negotiated for you.
+
+Are these promo codes for regular customers, too?
+
+The promo codes on this page are for new customers only. Once you’ve got an account with a sportsbook, you can take advantage of other bonus offers and ongoing
+promos.
+
+Related Pages:
+</item 8>
+
+<item 9>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+into your FanDuel account and place a qualifying . Whether your bet wins or loses, you receive $200 in Bonus Bets .
+
+. You can use your Bonus Bets in whatever increments you like, but you have to use your Bonus Bets within seven days or they will expire.
+
+or they will expire. Winning wagers with Bonus Bets award the winnings only and not the bet amounts.
+</item 9>
+
+<item 10>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+This offer requires a minimum $10 deposit, but you can deposit up to the amount of your first bet to $1,500 to maximize your potential winnings. If your first
+bet on the app loses, BetMGM will refund your account with bonus bets in the amount of the original wager up to $1,500.
+
+The extra $50 bonus bet offer is not available in Washington D.C., Kentucky, Mississippi, Nevada, New York, Puerto Rico and Ontario. Customers in those areas
+can use BetMGM bonus code SPORTSPICK for the $1,500 First Bet offer.
+</item 10>
+=== END ITEM id=04fb2f506ec3f458 ===
+
+=== ITEM id=5ce2eb02c5f43f0d ===
+Gold sentences and facts:
+Sentence 0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 0.0: Israel stopped allowing deliveries of food to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.1: Israel stopped allowing deliveries of fuel to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.2: Israel stopped allowing deliveries of other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.3: Israel is reportedly preparing for a ground invasion.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Israel reached understandings with Hamas in 2012.
+  Fact 1.1: The understandings were made to stop the fighting, according to Ortal.
+  Fact 1.2: The understandings were made to get life back to normal as quickly as possible, according to Ortal.
+Sentence 2: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 2.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Shiloh, which is currently subordinate to the Ministry of Defense, was established following State Comptroller reports about the lack of coordination and
+synchronization between the Ministry of Defense and the IDF units; and lead a new border defense concept based on sensors and other technologies for gathering
+intelligence and thwarting infiltration; strengthening the Air Force in the form of additional aircraft and armaments; and strengthening the operational end of
+the regular front units.
+
+All this, while at the same time closing down armored battalions and consolidating helicopter squadrons. Ground force technological capabilities were also
+addressed, such as improved coordination between the infantry and air forces in air-to-ground actions, or identifying terrorists and weapons in an urban
+environment. However, there is a problem at the outset, says, Prof. Eviatar Matania of Tel Aviv University School of Political Sciences, Government and
+International Affairs, and founder and first director general of the Israel National Cyber Directorate: a large gap between the technology and the officers
+expected to implement it as part of the security concept.
+</item 1>
+
+<item 2>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Published by Globes, Israel business news - en.globes.co.il - on November 5, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+The US had put stock in Israeli intelligence regarding Hamas in recent years and hadn’t monitored it independently.
+
+The human factor
+
+The technological concept is, of course, not limited to the border fence, or to intelligence, and is not just a product of Operation Protective Edge. For years,
+the IDF has been praising the ethos of a small and smart army, implicitly if not explicitly. In recent years, it has publicized countless technological projects
+and present itself as a high-tech army: establishing a technological division, called Shiloh, to coordinate the development of technologies for all branches of
+the army, and with the Directorate of Defense Research & Development (IMOD DDR&D or MAFAT).
+</item 3>
+
+<item 4>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 4>
+
+<item 5>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 5>
+
+<item 6>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Israel's security concept was updated by Dan Meridor and Lt. Col. Ron Eldadi, with the addition of a fourth component, defense, to the three components of
+Israel’s traditional national security doctrine as determined by Ben-Gurion: deterrence, warning, and decisive victory, leading to the development of systems
+such as the Iron Dome, and David's Sling (formerly called Magic Wand)."
+
+But, emphasizes Matania, "The IDF senior officers aren’t technologically savvy as a whole, some see these systems as black boxes, and don't always understand
+their advantages and disadvantages. At the West Point or Annapolis military academies, it's customary to teach technological subjects as well, because they
+understand that the military profession today requires a basic understanding of the field. The correct way to integrate technology with security is to implement
+it as part of an operational concept, not as a single component, and to assume that it is not perfect, but has vulnerabilities, and may suffer from system
+failures.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 7>
+
+<item 8>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+On Saturday, October 7, for example, suspicious movement in Gaza convinced the Shin Bet head to send a special team to the southern border, but he was unable to
+convince the top IDF echelons to prepare accordingly. To handle those weak signals, Eiland claims, one must use "scenario theory", meaning, taking into account
+scenarios that have a low probability of occurring, but with devastating results should they occur, and the simple way to prepare for them.
+
+Eiland explains: "You detect certain noises on Friday night, but conclude that the probability of an attack is low, let's say only 10%. Those who act only on
+the probability do not consider the question: if this attack happens - will you be able to live with yourself for eliminating this threat? There’s also a third
+consideration, which is ease of effort: what is the effort required of me to prepare for this unlikely but dangerous scenario?
+</item 8>
+
+<item 9>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 9>
+
+<item 10>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 10>
+=== END ITEM id=5ce2eb02c5f43f0d ===
+
+=== ITEM id=5eb44e17e6b6ea0c ===
+Gold sentences and facts:
+Sentence 0: While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.
+  Fact 0.0: Altman is not trained as an AI engineer.
+  Fact 0.1: Altman is now 38 years old.
+  Fact 0.2: Altman has been seen as a Silicon Valley wunderkind since his early 20s.
+Sentence 1: Altman has been telling investors that he’s planning to launch a new venture, according to The Information.
+  Fact 1.0: Altman has been telling investors that he is planning to launch a new venture.
+  Fact 1.1: The information about Altman's planned new venture comes from The Information.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The theory is based on the board's language.
+  Fact 2.1: The theory is based on the way these giant tech companies work.
+  Fact 2.2: The theory is the prevailing theory floating around right now.
+
+Retrieved items:
+<item 1>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Or what if, and again this is purely speculation, Altman has been secretly pursuing an internal project, perhaps at significant cost, against the advice of the
+board and without the necessary safety measures that probably should accompany such research? It sounds a little wild, but firing your CEO like this is also a
+little wild.
+
+Some kind of major mismatch in the financial department could be cause for dismissal, but it’s hard to imagine what Altman could have kept from the board and
+CTO that would be so damning.
+
+There’s also the possibility that Altman was making personal investments in a way that the board disagreed with. With OpenAI poised to be a kingmaker in the
+field, he would certainly be in a position of power. One would think that, as an ideologically driven person already rich beyond belief and at the head of the
+world’s leading AI company, Altman would have risen beyond having to do this kind of side deal, or at the very least that scrutiny on him and those close to him
+would prevent them. But one can never be sure.
+
+4.
+</item 1>
+
+<item 2>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He said OpenAI still has a “deep bench of technical leaders” but its next executives will have to steer it through the challenges of scaling the business and
+meeting the expectations of regulators and society.
+
+Forrester analyst Rowan Curran speculated that Altman’s departure, “while sudden,” did not likely reflect deeper business problems.
+
+“This seems to be a case of an executive transition that was about issues with the individual in question, and not with the underlying technology or business,”
+Curran said.
+
+Altman has a number of possible next steps. Even while running OpenAI, he placed large bets on several other ambitious projects.
+
+Among them are Helion Energy, for developing fusion reactors that could produce prodigious amounts of energy from the hydrogen in seawater, and Retro
+Biosciences, which aims to add 10 years to the human lifespan using biotechnology.
+</item 2>
+
+<item 3>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman posted Friday on X: “i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved
+working with such talented people. will have more to say about what’s next later.”
+
+The Associated Press and OpenAI have a licensing and technology agreement allowing OpenAI access to part of the AP’s text archives.
+
+Altman helped start OpenAI as a nonprofit research laboratory in 2015. But it was ChatGPT’s explosion into public consciousness that thrust Altman into the
+spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media. On a world tour this year, he was mobbed by
+a crowd of adoring fans at an event in London.
+
+He’s sat with multiple heads of state to discuss AI’s potential and perils.
+</item 3>
+
+<item 4>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 4>
+
+<item 5>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s
+board after an apparent vote of no confidence. Its exact wording in a release issued this afternoon: Altman’s “departure follows a deliberative review process
+by the board, which concluded that he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+What the hell is happening at the most hyped company in the world?! Here are some totally speculative theories that occurred to us and others around the web.
+
+1. Did Altman circumvent the board in a major deal?
+
+Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now. “Not consistently candid” is
+a very diplomatic way of saying Altman lied.
+</item 5>
+
+<item 6>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Any significant snafu in that department would reflect on her, as well as Altman.
+
+5. Perhaps a difference of AI ethics or philosophy?
+
+Altman is a proud techno-optimist, and often speaks fondly of the possibilities of AGI, or artificial general intelligence, a theoretical software system that
+achieves human-like intellect and versatility.
+
+The board’s statement pointedly includes that “OpenAI was deliberately structured to advance our mission: to ensure that artificial general intelligence
+benefits all humanity” and that new leadership was necessary. It’s possible that Sam’s zeal for AGI, even absent a secret project or agreement, led to a major
+rift between him and the board.
+
+It’s been obvious to all that Altman took the company in a much more corporate direction from its origins, changing its legal status and aggressively pursuing
+enterprise and consumer applications. That doesn’t sound a lot like the “mission” the board wants to advance.
+</item 6>
+
+<item 7>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+2. Do they disagree on long-term strategy?
+
+Despite being the hottest tech company in the world right now and everyone talking about ChatGPT, OpenAI isn’t exactly a sound business. It’s shoveling money
+into the furnace as fast as it can by serving, by all accounts, a fantastically expensive product at bargain-bin prices.
+
+That’s all well and good for a year or two, but at some point that strategy changes from a growth hack to an existential liability. Could Altman and the board
+have had irreconcilable differences on where that point lies?
+
+This doesn’t seem so likely. The company has been very deliberately pursuing this very publicly, confidently and on a long-term basis. Altman and the board seem
+to be in sync on this, at least for the present.
+
+3. Do the numbers not add up?
+
+On the other hand, could OpenAI be losing even more money than Altman admitted or projected? It seems impossible, but the costs of running this operation have
+no precedent, nor really does the operation itself.
+</item 7>
+
+<item 8>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+The Information, speaking to three sources formerly with the company, reports that they no longer expect the sale — led by Thrive Capital — to happen, or, if it
+does, to come with a lesser valuation because of the recent turn of events.
+
+Altman planning new venture
+
+Altman has been telling investors that he’s planning to launch a new venture, according to The Information. Brockman is expected to join the effort — whatever
+form it takes. (Possibly an AI chip startup.)
+
+i love you all. today was a weird experience in many ways. but one unexpected one is that it has been sorta like reading your own eulogy while you’re still
+alive. the outpouring of love is awesome. one takeaway: go tell your friends how great you think they are.
+</item 8>
+
+<item 9>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+“Not consistently candid” is a very diplomatic way of saying Altman lied.
+
+It’s possible that Altman — and potentially OpenAI President Greg Brockman, who stepped down as chairman simultaneously, then resigned — wanted to make a bold
+move that he knew the board would not like. It’s not uncommon for these deals to be hammered out quietly in smoke- (or vape-) filled rooms and then presented as
+a fait accompli, but if it was controversial enough and the board found out about these maneuvers, it could be fuel for an ouster.
+
+But what kind of deal would be big and dangerous enough for a summary dismissal of the CEO and famous face of the company? The man was onstage two weeks ago; I
+just talked with him! What could have happened since then?
+
+Few would be shocked if Microsoft, which is deeply, deeply embedded in OpenAI as an investor and customer, is a factor here. Could Altman have been working with
+— or against — OpenAI’s patron in secret?
+</item 9>
+
+<item 10>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+But later on X, formerly Twitter, Brockman posted a message he sent to OpenAI employees in which he wrote, “based on today’s news, i quit.”
+
+In another X post on Friday night, Brockman said Altman was asked to join a video meeting at noon Friday with the company’s board members, minus Brockman,
+during which OpenAI co-founder and Chief Scientist Ilya Sutskever informed Altman he was being fired.
+
+“Sam and I are shocked and saddened by what the board did today,” Brockman wrote, adding that he was informed of his removal from the board in a separate call
+with Sutskever a short time later.
+
+OpenAI declined to answer questions on what Altman’s alleged lack of candor was about. The statement said his behavior was hindering the board’s ability to
+exercise its responsibilities.
+
+Altman posted Friday on X: “i loved my time at openai.
+</item 10>
+=== END ITEM id=5eb44e17e6b6ea0c ===

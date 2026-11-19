@@ -1,0 +1,995 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c4f70ed07788cc44 ===
+Gold sentences and facts:
+Sentence 0: The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury.
+  Fact 0.0: The winger came firing out of the gate.
+  Fact 0.1: The outlook has changed for the Devils in recent days.
+  Fact 0.2: The Devils lost the superstar center Hughes to injury.
+  Fact 0.3: The outlook for the Devils changed after they lost Hughes to injury.
+Sentence 1: Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville.
+  Fact 1.0: Hamlin had to depend much on his weaker arm.
+  Fact 1.1: Hamlin stayed in contention for the championship four race.
+  Fact 1.2: Hamlin stayed in contention until the final race in Martinsville.
+
+Retrieved items:
+<item 1>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+The 43-year-old dominated the first round of the playoffs and was the driver to watch out for. He eventually won his first playoff race in Bristol and cruised
+to the next round. However, Hamlin revealed recently that a shoulder injury prevented him from being at the best of his abilities as the playoffs progressed.
+Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville.
+
+He secured three wins, 14 top-fives, and 19 top-10 finishes in 2023. He also led a whopping 998 laps, which makes his omission from Autosport’s list seem
+unjustified. He finished 5th in the final standings and was one of the most consistent and best performers of the 2023 NASCAR season. From the looks of it, a
+championship trophy would have surely put him in the upper echelons of Autosport’s Top 50.
+
+3.
+</item 1>
+
+<item 2>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+Mandatory Credit: Gary A. Vasquez-USA TODAY Sports
+
+While his on-track expertise was one of the notable points in 2023, his off-track antics didn’t go unnoticed either. Ross Chastain was clouded in controversy
+after a fistfight with Noah Gragson and on-track altercations with Denny Hamlin and Kyle Larson. While his cutthroat racing style appeased the fans, his driving
+skills didn’t waver either.
+
+ADVERTISEMENT Article continues below this ad
+
+Chastain scored two wins, ten 1op-5s, and 14 top-tens, while leading 640 laps in 2023. He also led the NASCAR Cup Series standings for seven weeks and had a
+career-best 28 lead lap finishes. Overall, Ross Chastain has been one of the most resilient NASCAR drivers of 2023 and deserves a mention among NASCAR’s very
+best.
+</item 2>
+
+<item 3>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+USA Today via Reuters Jul 30, 2023; Richmond, Virginia, USA; NASCAR Cup Series driver Chris Buescher (17) celebrates in Victory Lane after winning the Cook Out
+400 at Richmond Raceway. Mandatory Credit: Amber Searls-USA TODAY Sports
+
+Overall, he has been one of the season’s standout performers and displayed incredible grit and consistency throughout the year. His performances in 2023 make a
+strong case for a place in the best 50 drivers of the year.
+
+2. Denny Hamlin
+
+Finding a fan of Denny Hamlin in the NASCAR fandom is a tough task. Continuously surrounded by controversy, Joe Gibbs Racing‘s #11 Toyota Camry driver has been
+subject to a lot of criticism. However, his ability as a race car driver has never been in doubt. As the season entered its decisive phase of the playoffs, it
+seemed like 2023 would be the year Hamlin’s championship drought finally ended.
+</item 3>
+
+<item 4>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+Since Brad Keselowski arrived in 2022, the team has continued evolving on and off the track. While Keselowski has certainly instilled his experience and winning
+mentality within the team, he failed to produce a race win in 2023. Instead, it was Chris Buescher who outshone the Cup Series veteran with his best-ever season
+in NASCAR’s premier competition.
+
+Chris Buescher ended his season with three wins, nine top-5s, and 17 top-tens. Two of his three wins in 2023 came in succession at Richmond and Michigan.
+Buescher continued his dream run in the Cup Series playoffs and eventually finished 7th in the final standings. The #17 Ford Mustang driver could not, however,
+secure a win in the Round of 8 and did not have enough points to make a case for the championship four race at Phoenix.
+</item 4>
+
+<item 5>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+3. Christopher Bell
+
+As unfortunate as Denny Hamlin was, his JGR teammate Christopher Bell must have felt hard done by after an impressive season. The #20 Toyota Camry driver
+progressed to the championship race for a second successive season. However, a cruel twist of fate waited for him in the season finale at Phoenix Raceway, as he
+was forced to retire early from the biggest race of his career with a broken brake rotor.
+
+via Imago NASCAR, Motorsport, USA Food City Dirt Race Apr 9, 2023 Bristol, Tennessee, USA NASCAR Cup Series driver Christopher Bell 20 wins the Food City Dirt
+Race at the Bristol Motor Speedway Dirt Course. Bristol Bristol Motor Speedway Dirt Course Tennessee USA, EDITORIAL USE ONLY PUBLICATIONxINxGERxSUIxAUTxONLY
+Copyright: xRandyxSartinx 20230409_lbm_bs1_024
+
+Bell’s 2023 season has gone under the radar.
+</item 5>
+
+<item 6>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+Two more drivers to have featured in the 2023 NASCAR season and Autosport’s Top 50 Drivers are Supercars racers Shane van Gisbergen and Brodie Kostecki. While
+the pair battled for the championship in the Australian racing circuit, they also raced at the Indianapolis road course race earlier this season. SVG had
+earlier created history by winning in his NASCAR debut at the inaugural Chicago Street Race.
+
+ADVERTISEMENT Article continues below this ad
+
+These are some major exclusions that could have been featured in Autosport’s annual list. At the same time, motorsports is a vast field with elite competitions
+taking place the world over. Some fan favorites are bound to be left out.
+</item 6>
+
+<item 7>
+Best NHL prop bets tonight: Artemi Panarin, Cale Makar highlight top parlay picks for Rangers-Red Wings, Devils-Avalanche (Sporting News,
+2023-11-07T22:09:00+00:00)
+The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury. Hughes
+went down after slamming into the boards against the Blues, forcing New Jersey to change things on the fly. The changes have directly impacted Bratt, who was
+featured on the top line alongside Hughes. With fellow center Hischier also out with an injury, leaving the Devils fairly weak down the middle and trusting
+Michael McLeod to hold down the fort in between Bratt and Tyler Toffoli. As a result, Bratt has been held without an assist in each of the last two games for a
+team that's missing a key contributor on offense. And it'll need him to look to score rather than play the role of playmaker. Until the Devils figure things
+out, we can't trust this team to do anything positive in the offensive zone.
+
+Win BIG with SuperDraft!
+</item 7>
+
+<item 8>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+He also led 470 laps throughout the season and recorded his best-ever finish in the Cup Series. Reddick was among the dark horses for the 2023 NASCAR Cup Series
+title and certainly held the potential to win the competition.
+
+5. Ross Chastain
+
+Ross Chastain‘s performance in 2023 was one of the many positives for Trackhouse Racing this season. The 30-year-old Floridian created history in the season
+finale by becoming the first non-championship driver to win the Championship 4 race since the introduction of the new playoff system in 2014. Driving the #1
+Chevrolet Camaro, the “Melon Man” equaled his career-best tally of two wins in a season after victories in Nashville and Phoenix.
+
+USA Today via Reuters Nov 5, 2023; Avondale, Arizona, USA; NASCAR Cup Series driver Ross Chastain (1) celebrates his race victory following the Cup Series
+Championship race at Phoenix Raceway.
+</item 8>
+
+<item 9>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+Autosport has revealed its annual list of the 2023’s Top 50 drivers. The renowned motorsports publishing brand has continued the tradition since 2002, and every
+year, the announcement creates some suspense within the racing community. Highlighting the 50 standout performers in motorsports for the year, Autosport has
+included several NASCAR drivers in the prestigious list.
+
+America’s Favorite Video Today
+
+William Byron leads the list of NASCAR drivers with a 12th-place ranking as Kyle Larson and 2023 Cup Series champion Ryan Blaney join him. The scarcity of
+NASCAR drivers in the rankings has raised some eyebrows. With the year producing numerous cases of NASCAR drivers standing out with their consistency and skills
+behind the steering wheel, let us look at some of the major exclusions from Autosport’s Top 50 Drivers of 2023.
+
+1. Chris Buescher
+
+ADVERTISEMENT Article continues below this ad
+
+RFK Racing found a fresh breath of motivation this year.
+</item 9>
+
+<item 10>
+Major NASCAR Snubs as Autosport Releases the Top 50 Motorsport Drivers in 2023 (Essentially Sports, 2023-12-21T23:41:30+00:00)
+The team had two drivers in the Cup Series playoffs for the first time since its inception. One of the major reasons behind its success in 2023 is #45 Toyota
+Camry driver Tyler Reddick.
+
+Alongside team owner Denny Hamlin, Tyler Reddick was the pick of the drivers in the first round of the NASCAR playoffs. The 27-year-old California native
+showcased his road course prowess with a win at COTA earlier this year. Carrying the momentum to the playoffs, Reddick won in Kansas in the Round of 16 to gain
+more traction for his championship push. He also had one of the best average starting positions among the drivers, with an average of 10.167, despite having
+only two poles to his name.
+
+Watch This Story: NASCAR legend Kevin Harvick’s unexpected EV confession
+
+Tyler Reddick finished sixth in the final standings and ended the season with two wins, ten top-5s, and 16 top-10s.
+</item 10>
+=== END ITEM id=c4f70ed07788cc44 ===
+
+=== ITEM id=f39ee1b9543448a0 ===
+Gold sentences and facts:
+Sentence 0: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 0.0: The second week of the trial had standout testimony.
+  Fact 0.1: The standout testimony of the second week came from Alameda Research's former CEO Caroline Ellison.
+  Fact 0.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 0.3: Caroline Ellison claimed she used the $14 billion to repay debts to lenders.
+  Fact 0.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 0.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 1: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 1.0: SBF is the name by which he is known.
+  Fact 1.1: SBF has pleaded not guilty to some seven charges of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 1>
+
+<item 2>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Sam Bankman-Fried, the founder of bankrupt cryptocurrency exchange FTX, is seen during a hearing as a U.S judge revoked his bail, at a courthouse in New York,
+U.S., August 11, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+$65 billion line of credit
+
+For months, Bankman-Fried has known that Wang and Ellison, who were integral members of his personal and professional inner circles, had turned on him. Both
+pleaded guilty in December and have since been cooperating with the U.S. attorney's office in Manhattan. Wang's testimony, which stretched into Friday, was
+given under a cooperation agreement with the government. Ellison is expected to take the stand under a similar arrangement.
+
+U.S.
+</item 2>
+
+<item 3>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 3>
+
+<item 4>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+He, like many of SBF’s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical “legal justification” for
+the use of billions in consumer funds just days before FTX filed for bankruptcy.
+
+Robert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately
+resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a
+relationship, he testified that Third Point would not have invested in FTX in the first place.
+
+And earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he
+uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.
+</item 4>
+
+<item 5>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+I’ve got some shitty ex-boyfriends, but none of them made me the CEO of their sin-eater hedge fund while refusing to give me equity and bragging about how there
+was a 5 percent chance they’d become the president of the United States, you know? Absolutely counting my blessings after Caroline Ellison’s first day on the
+stand. I wonder how many of the nine women on the jury are doing the same.
+
+Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX. She’s already pleaded guilty to criminal charges
+stemming from one of the worst romantic relationships I’ve ever heard of, and her testimony was widely anticipated before the trial. Today, that took the form
+of discussing a damning spreadsheet — one she prepared for her ex and boss Sam Bankman-Fried, now the defendant in a criminal fraud trial.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy.
+</item 7>
+
+<item 8>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 8>
+
+<item 9>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 9>
+
+<item 10>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Much of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make
+investments or direct funding toward political causes and charities.
+
+SBF trial: What we learned in week two
+
+The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to
+repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX
+Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.
+
+And though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in
+frozen trading accounts.
+
+SBF trial: What we learned in the week one
+
+As expected, the opening statements in the SBF trial were spicy.
+</item 10>
+=== END ITEM id=f39ee1b9543448a0 ===
+
+=== ITEM id=ff11bab8088a8330 ===
+Gold sentences and facts:
+Sentence 0: At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.
+  Fact 0.0: At the time, the music video for the song featured a woman with blonde hair.
+  Fact 0.1: The music video sparked rumours that he and Spears broke up.
+  Fact 0.2: The rumours said the breakup happened because Spears allegedly cheated on him.
+Sentence 1: Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight.
+  Fact 1.0: Danis’s first press conference for the Logan Paul fight hints towards the breakup.
+  Fact 1.1: Danis held a first press conference for the Logan Paul fight.
+
+Retrieved items:
+<item 1>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+At the time, the name that popped up the most was 2-0 Dillon Danis. So, when he shared the screenshot of the FaceTime with Danis’s ex-girlfriend, the fans
+started drawing connections.
+
+Paul somehow found the model’s number and sent her a FaceTime request. Many started to believe that Montano was having an affair and cheating on her
+then-boyfriend Danis. Paul posted two stories. In the first one, he wrote, “Aye [Dillon Danis], come get your girl back.” And then in the second one, he took
+another hit at the fighter by writing, “Can’t wait to see you soon.” So this begs the question, is it true? Was Paul actually involved in an affair with
+Savannah Montano?
+
+Did Jake Paul and Savannah Montano hook up?
+
+This callout didn’t help much, as Jake Paul never could finalize his fight with Dillon Danis.
+</item 1>
+
+<item 2>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+They haven’t made any claims of breakup and have been silent about their relationship with each other. The only things that have changed are Savannah’s
+Instagram feed. She has stopped posting pictures with Danis, which were quite prevalent back in 2020. Also, another thing that hints towards their breakup is
+Danis’s first press conference for the Logan Paul fight.
+
+ADVERTISEMENT Article continues below this ad
+
+During the fight, Logan Paul brought up the topic of Montano, when Danis pointedly mentioned their breakup. Paul said, “Yo you’ve been so salty ever since
+Savannah rejected your a** to go hook up with real athletes. You don’t gotta take that s**t out on me because my brother hooked up with your ex.” Danis scoffed
+at Maverick’s claim and clapped back, “At least I got rid of the sl*t, you’re marrying one.”
+</item 2>
+
+<item 3>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+Savannah, how you doing? What’s good?” However, Montano completely denied any relation with the Influencer boxer whatsoever. She responded to Paul’s stories
+through a video and gave her side of the story.
+
+She said, “I’m dead confused at some of you guys going, ‘Oh, but why did you answer his call?’ As if I have his f**king number saved in my phone! It was
+literally a random number. You can literally see in the video, I’m like, ‘Who is this?’” So she denied the accusations of hooking up with Paul and even felt
+disgusted by the speculations.
+
+However, her current relationship status is unknown. Even three years later, many followers are still not convinced about her breakup with Dillon Danis.
+
+Dillon Danis and Savannah Montano breakup reality
+
+As of now, it’s not completely clear whether the couple is still together or not.
+</item 3>
+
+<item 4>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+ADVERTISEMENT Article continues below this ad
+
+So, this tells the fans that Danis is no longer together with Montano. Anyway, the fans could look out for her attendance at Danis’s first-ever boxing debut on
+October 14 at the AO Arena, Manchester. Although there were rumors about Danis pulling out, it seems the fight is still going to take place. So, her presence at
+Danis’s ringside may make things even more complicated. What are your thoughts about this? Are they still together? Tell us in the comments section.
+
+Watch This Story: Dillon Danis’s Relationship with His Wife
+</item 4>
+
+<item 5>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Justin Timberlake: 1998 to 2002
+
+(Getty Images)
+
+Spears’ first highly public relationship was with her co-star in the Mickey Mouse Club, Justin Timberlake. The pair made many appearances together while dating,
+including the iconic moment Spears and Timberlake wore matching, all-denim outfits to the American Music Awards in 2001.
+
+They broke up in 2002, shortly after Timberlake and his boy band NSYNC released their hit tune, “Cry Me a River”. At the time, the music video for the song –
+which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.
+
+Although the former couple never acknowledged the breakup rumours, the 2021 Framing Britney documentary addressed some of the public scrutiny that Spears faced
+during the 2000s. Following the documentary’s release, Timberlake came under criticism for the way he acted following his breakup with Spears.
+</item 5>
+
+<item 6>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+They made their relationship Instagram official in 2017 and went on to support each other through different milestones - including the 29th annual GLAAD Media
+Awards, where Spears accepted the Vanguard Award for her work promoting equality and acceptance.
+
+In April 2022, Spears announced she was pregnant with her and Asghari’s first child together, and her third child. However, the following month, she said in a
+statement posted to Instagram that she had suffered a miscarriage. The couple wrote: “We have lost our miracle baby.”
+
+That June, they held their lavish nuptials at her home in California with a star-studded guest list, which included Selena Gomez, Paris Hilton, Drew Barrymore,
+and Donatella Versace - who designed Spears’ wedding dress.
+
+In August, months after Asghari shut down speculation about getting a divorce, TMZ claimed that he had confronted Spears about rumours she cheated on him.
+</item 6>
+
+<item 7>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+At the time, her representative also confirmed to People: “Yes, she’s single.”
+
+The news of the breakup came asTMZ alleged that Lucado had cheated on Spears, with claims that her father had purchased a video of the infidelity incident. The
+publication later alleged that Lucado denied the cheating allegations, with claims that he was seeing the other woman while he and Spears were broken up.
+
+Despite their seemingly rocky history, Lucado showed his support for his ex in a 2016 interview with theNew York Times about her conservatorship. Speaking to
+the publication, he said: “If anyone knew the real Britney, they would know that she would rather be remembered for being the great mother she is rather than
+the artist she is.”
+
+The publication also noted that Lucado denied the infidelity claims from Spears’ father, before he added: “And if anyone could see her interactions with her
+kids, they would know that there is no need for a conservatorship over Britney’s personal life.”
+</item 7>
+
+<item 8>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+Even Logan addressed the topic of Montano and Jake during their first press conference. So, who is this girl? What’s the actual story here?
+
+Who is Dillon Danis’ ex-girlfriend often linked with Jake Paul?
+
+ADVERTISEMENT Article continues below this ad
+
+Savannah Montano was quite a trending name back in 2020, and that was mostly because of her relationship with the Bellator MMA fighter, Dillon Danis. Montano is
+a successful Instagram model, with around 1.6 million followers on her social media. The couple turned a lot of heads during their relationship, sharing some
+NSFW steamy pictures and videos for their fans.
+
+Despite their controversial relationship, Montano also gained some attention after Jake Paul used her to call out Dillon Danis for a fight. After knocking out
+the ex-NBA star, Nate Robinson, ‘The Problem Child’, was on the hunt to find his next opponent.
+</item 8>
+
+<item 9>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+In her forthcoming memoir, The Woman in Me, Britney Spears is expected to reflect on some of the most pivotal moments in her life, including her relationships.
+
+Over the years, the pop star’s love life has continued to make headlines. Most recently, her ex-husband Sam Asghari filed for divorce after only 14 months of
+marriage.
+</item 9>
+
+<item 10>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+Instead, he ended up taking the fight against the former Olympic MMA artist, Ben Askren in 2021. He again won the fight by a knockout, while many fans still
+thought that Danis was smart to not respond to the Youtuber-turned-boxer. Still, Paul tried his best to involve Montano in their non-existent tussle.
+
+via Getty TAMPA, FLORIDA – DECEMBER 18: Jake Paul fights Tyron Woddley during a rematch of an eight-round cruiserweight bout at the Amalie Arena on December 18,
+2021 in Tampa, Florida. (Photo by Mike Ehrmann/Getty Images)
+
+Besides the Instagram Stories, Jake Paul also told TMZ, about the entanglement with Savannah Montano. He said, “Dillon, I know you’re watching this … Just
+remember you’re still a bitch and I hooked up with your girlfriend. Savannah, how you doing? What’s good?”
+</item 10>
+=== END ITEM id=ff11bab8088a8330 ===
+
+=== ITEM id=7a07fa022bae8f12 ===
+Gold sentences and facts:
+Sentence 0: In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4.
+  Fact 0.0: In blog posts and press materials, Google touted Gemini's superior architecture.
+  Fact 0.1: In blog posts and press materials, Google touted Gemini's superior capabilities.
+  Fact 0.2: Google claimed that Gemini meets or exceeds the performance of other leading gen AI models.
+  Fact 0.3: OpenAI's GPT-4 is one of the other leading gen AI models Google compared Gemini to.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: This point will probably come up later in the trial.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy on day one.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 1>
+
+<item 2>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 2>
+
+<item 3>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Both Epic and Google spent a long, long time on subtle lines of questioning. You really had to read between the lines to see that Epic was trying to make a
+point about how Google’s 70/30 revenue split is probably based on an arbitrary decision Valve made two decades ago with Steam or how Google was trying to make a
+point that Epic, too, likely believed that an app store provides more value than just payment processing and maybe deserves more money.
+</item 3>
+
+<item 4>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 4>
+
+<item 5>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Or at least it was worse, before they were destroyed.”
+
+The best Google could do in response was to plant its own feeble seed with the jury, too: “Is Epic using the chats to distract me from all the evidence I do
+see?”
+
+“It’s true that Google could have automatically saved all chats for all relevant employees, but just because Google didn’t save some chats didn’t mean it
+violated antitrust laws,” Pomerantz argued.
+
+Epic’s opening statements seemed to paint a clearer picture for the jury than those from Google. But things got complicated for both parties when the first two
+witnesses — Epic Games Store head Steve Allison and Yoga Buddhi CEO Benjamin Simon, who also appeared in the earlier Epic v. Apple trial — took the stand.
+
+Both Epic and Google spent a long, long time on subtle lines of questioning.
+</item 5>
+
+<item 6>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+This week, Google took the wraps off of Gemini, its new flagship generative AI model meant to power a range of products and services including Bard, Google’s
+ChatGPT competitor. In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds
+the performance of other leading gen AI models like OpenAI’s GPT-4.
+
+But the anecdotal evidence suggests otherwise.
+
+A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday, and it didn’t take long before users began voicing their frustrations with it on X
+(formerly Twitter).
+
+The model fails to get basic facts right, like 2023 Oscar winners:
+
+I'm extremely disappointed with Gemini Pro on Bard. It still give very, very bad results to questions that shouldn't be hard anymore with RAG. A simple question
+like this with a simple answer like this, and it still got it WRONG.
+</item 6>
+
+<item 7>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Could Google actually lose?
+
+When I walked into the courtroom on Monday morning, it seemed impossible. If Epic couldn’t prove Apple’s walled iOS garden is a monopoly, how could the
+comparatively open Google do worse against the windmill-tilting Fortnite developer?
+
+But now that both sides have made their opening arguments to a jury, I’m not quite as sure. Because while Google spent most of its first day attempting to
+explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog.
+
+Epic lead attorney Gary Bornstein was tasked with making the case that Android functions as an unlawful monopoly. He did so by basically calling Google a bully
+and a cheat that “bribes” or “blocks” any attempt to compete with Android’s Google Play store. The result? A status quo where the vast, vast majority of Android
+app installs are from Google Play, with only a tiny sliver attributable to the Galaxy Store that comes preinstalled on every Samsung phone.
+</item 7>
+
+<item 8>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+showed that Epic knew it was breaking bad at the time it did the deed.
+
+But Epic mentioned Project Liberty in its own opening statement — so, by that point, it had already been an hour since it admitted it intentionally broke
+Google’s rules. “Epic decided to stand up because that’s what you do to a bully,” Bornstein told the jury.
+
+“All we know is whatever is in the destroyed chats, as bad as the documents are, is worse.”
+
+And it’s possible no examination will be able to take the stink off one of Google’s ugliest moves: the one where Google employees up to and including CEO Sundar
+Pichai were caught setting sensitive chats to auto-delete to keep them out of a court’s hands. The court has already decided Google should be sanctioned in some
+way for making potential evidence disappear, and Bornstein used it to plant persistent seeds of doubt in the minds of jury members. “All we know is whatever is
+in the destroyed chats, as bad as the documents are, is worse.
+</item 8>
+
+<item 9>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Google spent its 45 minutes attempting to explain that its dominance over the Android app market isn’t anything nefarious but simply the natural outcome of
+Google fiercely competing with the iPhone and its iOS App Store, where Google would like the court to believe that competition truly lies.
+
+If Google can convince the jury of that, it could be a winning argument in the case — because obviously, Google doesn’t have a monopoly on app stores or phones
+in general. “You cannot separate the quality of a phone from the quality of the apps in its app store, and that means Google and Apple compete against each
+other,” began Google lead attorney Glenn Pomerantz.
+
+But Google wound up spending much of its opening statement attempting to explain away its seemingly bad behavior as normal business practices and didn’t always
+succeed out of the gate.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 10>
+=== END ITEM id=7a07fa022bae8f12 ===
+
+=== ITEM id=9b8a6d15c11a9be0 ===
+Gold sentences and facts:
+Sentence 0: On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.
+  Fact 0.0: On Oct. 12, 2023, Israel warned Gaza residents.
+  Fact 0.1: The warning was given to 1.1 million Gaza residents.
+  Fact 0.2: The warned residents were in the northern section of the enclave.
+  Fact 0.3: The warning told the residents to leave for the southern region.
+  Fact 0.4: The warning was given in advance of a potential ground invasion.
+Sentence 1: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 1.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+The second objective, at the same time, is to exact an… pic.twitter.com/MzKs7tfv4M — Benjamin Netanyahu - בנימין נתניהו (@netanyahu) October 7, 2023
+
+Reacting to this, however, a user said that knowing the proficiency of the Mossad he found the idea of a "surprise attack" to be a willing lie.
+
+Well, you got the war you wanted Beni...at what cost of Israeli lives you don't care. Knowing the proficiency of the Mossad I find the idea of a "surprise
+attack"to be a willing lie on your side of this. https://t.co/35qRvgBJt2 — timm (@timmainsson) October 7, 2023
+
+Ben Muasya, a journalist, said that Mossad is overrated.
+</item 1>
+
+<item 2>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 2>
+
+<item 3>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+International aid groups are warning that they cannot deliver food and other basic services to people in the Gaza Strip and that a “dire” humanitarian crisis is
+set to worsen.
+
+International aid groups provide food and other means of support to about 63% of people in Gaza.
+
+Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground
+invasion.
+
+On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential
+ground invasion.
+
+I am a scholar of peace and conflict economics and a former World Bank consultant, including during the 2014 war between Hamas and Israel.
+</item 3>
+
+<item 4>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas' surprise attack on Israel has shocked many who are now questioning the country's famed intelligence agency Mossad, which is known for its
+intelligence-gathering capability. For some, the belief that Mossad was among the best in the spying world was shattered today when Hamas carried out the
+biggest coordinated attack in Israel and captured some territory in southern Israel. It is not the attack that has surprised people but the scale at which Hamas
+operated and got control of some military bases and soldiers.
+
+Also Read: Israel at war: Hamas cells, military compounds destroyed, US backs Tel Aviv; all you need to know
+
+Younis Tirawi, who reports on Palestinian Affairs, said that Hamas militants had taken over Sderot police HQ and armored vehicles in the town. An analyst wrote
+that some of the images coming out of Sderot over the last few hours were reaching degrees of horror "that I don't really think I can use words to properly
+describe.
+</item 4>
+
+<item 5>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"How come they never knew Hamas militants planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate heavily? We wait to see how it goes
+but it will be messy."
+
+Mossad is overated how comes they never knew this Hamas militants and had planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate
+heavily?We wait to see how it goes but it will be messy. pic.twitter.com/W5vpoylus2 — Ben Muasya. (@muasya_ben) October 7, 2023
+
+Another user said that no one can carry out such a major attack against Israel without intelligence support. "Who gave Hamas Intelligence? It was as if the
+entire Israeli army and the Mossad were asleep."
+</item 5>
+
+<item 6>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 6>
+
+<item 7>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Truly disturbing acts of terror directed at civilians".
+
+Some of the images coming out of Sderot over the last few hours are reaching degrees of horror that I dont really think I can use words to properly describe.
+Truly disturbing acts of terror directed at civilians. — OSINTtechnical (@Osinttechnical) October 7, 2023
+
+Commenting on the coordinated attack, Rania Khalek, a journalist, said that the strategic planning that must have gone into this against "one of the most
+high-tech occupation and surveillance systems in the world" will be studied by many. "The Israelis must be totally losing it right now."
+</item 7>
+
+<item 8>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 8>
+
+<item 9>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+BHARAT is not immune to #terrorism and internal enemies @HMOIndia @PMOIndia @AmitShah — Dr. Jaswant Gandhi 🇮🇳 (@JaswantDr) October 7, 2023
+
+However, some speculated that Mossad knew what was going to happen but let Hamas make a mistake so that Israel could launch a ferocious attack on it. "Mossad
+was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, but they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful," a user said.
+
+#Mossad was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 10>
+=== END ITEM id=9b8a6d15c11a9be0 ===
+
+=== ITEM id=bad66afb6fa8205f ===
+Gold sentences and facts:
+Sentence 0: On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.
+  Fact 0.0: On October 12, 2023, Israel warned 1.1 million Gaza residents to leave for the southern region.
+  Fact 0.1: The warned Gaza residents were in the northern section of the enclave.
+  Fact 0.2: Israel issued the warning in advance of a potential ground invasion.
+Sentence 1: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 1.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 1>
+
+<item 2>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"How come they never knew Hamas militants planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate heavily? We wait to see how it goes
+but it will be messy."
+
+Mossad is overated how comes they never knew this Hamas militants and had planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate
+heavily?We wait to see how it goes but it will be messy. pic.twitter.com/W5vpoylus2 — Ben Muasya. (@muasya_ben) October 7, 2023
+
+Another user said that no one can carry out such a major attack against Israel without intelligence support. "Who gave Hamas Intelligence? It was as if the
+entire Israeli army and the Mossad were asleep."
+</item 2>
+
+<item 3>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+The second objective, at the same time, is to exact an… pic.twitter.com/MzKs7tfv4M — Benjamin Netanyahu - בנימין נתניהו (@netanyahu) October 7, 2023
+
+Reacting to this, however, a user said that knowing the proficiency of the Mossad he found the idea of a "surprise attack" to be a willing lie.
+
+Well, you got the war you wanted Beni...at what cost of Israeli lives you don't care. Knowing the proficiency of the Mossad I find the idea of a "surprise
+attack"to be a willing lie on your side of this. https://t.co/35qRvgBJt2 — timm (@timmainsson) October 7, 2023
+
+Ben Muasya, a journalist, said that Mossad is overrated.
+</item 3>
+
+<item 4>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+International aid groups are warning that they cannot deliver food and other basic services to people in the Gaza Strip and that a “dire” humanitarian crisis is
+set to worsen.
+
+International aid groups provide food and other means of support to about 63% of people in Gaza.
+
+Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground
+invasion.
+
+On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential
+ground invasion.
+
+I am a scholar of peace and conflict economics and a former World Bank consultant, including during the 2014 war between Hamas and Israel.
+</item 4>
+
+<item 5>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas' surprise attack on Israel has shocked many who are now questioning the country's famed intelligence agency Mossad, which is known for its
+intelligence-gathering capability. For some, the belief that Mossad was among the best in the spying world was shattered today when Hamas carried out the
+biggest coordinated attack in Israel and captured some territory in southern Israel. It is not the attack that has surprised people but the scale at which Hamas
+operated and got control of some military bases and soldiers.
+
+Also Read: Israel at war: Hamas cells, military compounds destroyed, US backs Tel Aviv; all you need to know
+
+Younis Tirawi, who reports on Palestinian Affairs, said that Hamas militants had taken over Sderot police HQ and armored vehicles in the town. An analyst wrote
+that some of the images coming out of Sderot over the last few hours were reaching degrees of horror "that I don't really think I can use words to properly
+describe.
+</item 5>
+
+<item 6>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 7>
+
+<item 8>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 8>
+
+<item 9>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+Some Republican politicians have said that UNRWA has “cozied up” to Hamas. And an internal UNRWA ethics committee has accused top staff at the agency of “sexual
+misconduct, nepotism, retaliation … and other abuses of authority” that created a toxic work environment.
+
+Meanwhile, since the war between Israel and Hamas began on Oct. 8, more than 1,500 Gazans have been killed and more than 5,300 injured, while Hamas attacks have
+killed more than 1,300 people in Israel and injured about 3,200 others.
+
+International aid groups and European Union officials have called for a humanitarian corridor to be set up in Gaza – meaning a protected path specifically for
+civilians, aid workers and necessary basic items to pass through safely back and forth from Gaza to Israel and Egypt. So far, there are no clear plans for such
+a protected pathway.
+
+Topher L. McDougal is Professor of Economic Development & Peacebuilding, University of San Diego.
+</item 9>
+
+<item 10>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+BHARAT is not immune to #terrorism and internal enemies @HMOIndia @PMOIndia @AmitShah — Dr. Jaswant Gandhi 🇮🇳 (@JaswantDr) October 7, 2023
+
+However, some speculated that Mossad knew what was going to happen but let Hamas make a mistake so that Israel could launch a ferocious attack on it. "Mossad
+was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, but they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful," a user said.
+
+#Mossad was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful
+</item 10>
+=== END ITEM id=bad66afb6fa8205f ===

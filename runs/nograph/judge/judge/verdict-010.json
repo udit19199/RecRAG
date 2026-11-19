@@ -1,0 +1,44 @@
+[
+{"id": "8d5a887313c79c67", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "after he was appointed to the role after the unprecedented ouster of McCarthy"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "the unprecedented ouster of McCarthy"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "the unprecedented ouster of McCarthy more than two weeks ago."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy."}, {"item": 4, "quote": "since hard-liners ousted Kevin McCarthy at the start of the month."}]}
+]},
+{"id": "bfa08fab808c2601", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "6PPD-quinone, which was identified in late 2020"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]},
+{"id": "a1d32bfa0fb6472c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "fa2856b2e032951c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+]},
+{"id": "9dbbc89f21105418", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}, {"item": 6, "quote": "the fast-moving and bloody events unfolding in Israel and Gaza"}]}
+]}
+]

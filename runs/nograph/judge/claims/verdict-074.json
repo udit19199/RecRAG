@@ -1,0 +1,171 @@
+[
+  {"id": "-7799443462247366740", "sentences": [[
+    "Rogue, as a young woman, permanently absorbed the superhuman powers of Carol Danvers.",
+    "Rogue, as a young woman, permanently absorbed the psyche of Carol Danvers.",
+    "Carol Danvers is the original Ms. Marvel.",
+    "Rogue's absorption gave Rogue superhuman strength.",
+    "Rogue's absorption gave Rogue superhuman stamina.",
+    "Rogue's absorption gave Rogue superhuman durability.",
+    "Rogue's absorption gave Rogue superhuman reflexes.",
+    "Rogue's absorption gave Rogue superhuman speed.",
+    "Rogue's absorption gave Rogue a 7th sense.",
+    "Rogue was able to repel bullets.",
+    "Rogue was able to fly at sub-sonic speeds.",
+    "Rogue's ability to fly at sub-sonic speeds was much like Ms. Marvel's.",
+    "Rogue possessed an amalgamated mutant human/Kree physiology.",
+    "Rogue's amalgamated mutant human/Kree physiology made Rogue resistant to most toxins.",
+    "Rogue's amalgamated mutant human/Kree physiology made Rogue resistant to most poisons.",
+    "The added effect of Rogue's amalgamated physiology was that Rogue was virtually invulnerable."
+  ]]},
+  {"id": "5ae66d515542992ae0d16346", "sentences": [
+    [
+      "\"I'll Keep the Lovelight Burning\" is a popular song.",
+      "\"I'll Keep the Lovelight Burning\" was written in 1942.",
+      "\"I'll Keep the Lovelight Burning\" was written by Harry Tobias.",
+      "\"I'll Keep the Lovelight Burning\" was written by Nick Kenny.",
+      "\"I'll Keep the Lovelight Burning\" was written by Harold Levey.",
+      "\"I'll Keep the Lovelight Burning\" was popularized by Patti Page.",
+      "Patti Page popularized \"I'll Keep the Lovelight Burning\" in 1949."
+    ],
+    [
+      "Clara Ann Fowler's date range is November 8, 1927 to January 1, 2013.",
+      "Clara Ann Fowler is known by the professional name Patti Page.",
+      "Patti Page was an American singer.",
+      "Patti Page was a singer of traditional pop music.",
+      "Patti Page was a singer of country music."
+    ]
+  ]},
+  {"id": "multihop-rag-706", "sentences": [
+    [
+      "The recent comments of the person referred to as 'his' come after Jada made major revelations about their marriage in her memoir.",
+      "Jada's memoir included revelations that Jada and Will have been separated for seven years.",
+      "Jada and Will have been separated for seven years."
+    ],
+    [
+      "Outsiders are not fully aware of the \"heavy-duty work\" that Jada and Will have done throughout their marriage.",
+      "Jada and Will have done \"heavy-duty work\" throughout their marriage."
+    ],
+    [
+      "Jada explained this at the time of the 2022 Academy Awards.",
+      "Will slapped Chris Rock at the 2022 Academy Awards.",
+      "At the time of the 2022 Academy Awards, Jada and Will had been separated for six years."
+    ],
+    [
+      "There was a 2018 episode of Jada's Facebook Watch series, Red Table Talk.",
+      "In a 2018 episode of Red Table Talk, Jada doubled down on her stance about divorce.",
+      "In that 2018 episode, Jada recalled the hard conversation she had with Will about divorce.",
+      "The hard conversation between Jada and Will about divorce took place before they got married."
+    ]
+  ]},
+  {"id": "multihop-rag-1507", "sentences": [
+    [
+      "The reader has a chance to claim $5,000+ in bonuses as a new user.",
+      "A new user can claim bonuses from Caesars Sportsbook.",
+      "A new user can claim bonuses from BetMGM.",
+      "A new user can claim bonuses from Bet365.",
+      "A new user can claim bonuses from FanDuel.",
+      "A new user can claim bonuses from DraftKings.",
+      "A new user can claim bonuses from BetRivers."
+    ],
+    [
+      "The reader can collect a welcome bonus.",
+      "A new customer receives a welcome bonus."
+    ]
+  ]},
+  {"id": "multihop-rag-750", "sentences": [
+    [
+      "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme.",
+      "Inside the Big Ten, the alleged Michigan sign-stealing scheme has been more than just a curiosity."
+    ],
+    [
+      "It is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons.",
+      "The in-person scouting and sign-stealing are alleged violations.",
+      "The alleged violations are now on the Big Ten record.",
+      "Knowing the alleged violations are on the Big Ten record will be a tough stain to erase."
+    ]
+  ]},
+  {"id": "3587867296617760276", "sentences": [
+    [
+      "The uvea is the vascular middle layer of the eye.",
+      "The uvea is traditionally divided into three areas.",
+      "The three areas of the uvea are divided from front to back."
+    ]
+  ]},
+  {"id": "5a76c98855429972597f13d0", "sentences": [
+    [
+      "The Long–Allen Bridge is a truss bridge.",
+      "The Long–Allen Bridge is in Shreveport, Louisiana.",
+      "The Long–Allen Bridge is named for Louisiana governor Huey Long.",
+      "The Long–Allen Bridge is named for Louisiana governor Oscar K. Allen."
+    ],
+    [
+      "The Long–Allen Bridge opened in 1933.",
+      "The Long–Allen Bridge carries U.S. Route 80 across the Red River."
+    ],
+    [
+      "U.S. Route 80 (US 80) is an east–west United States Numbered Highway.",
+      "Much of U.S. Route 80 was once part of the early auto trail known as the Dixie Overland Highway."
+    ],
+    [
+      "The eastern terminus of U.S. Route 80 is in Tybee Island, Georgia.",
+      "The eastern terminus of U.S. Route 80 is at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street.",
+      "The eastern terminus of U.S. Route 80 is near the Atlantic Ocean."
+    ]
+  ]},
+  {"id": "multihop-rag-1817", "sentences": [
+    [
+      "The party referred to as 'it' has decided to make Beeper Mini free for the time being.",
+      "Things have been \"chaotic\" over the past few days.",
+      "The decision to make Beeper Mini free was made given how \"chaotic\" things have been over the past few days."
+    ],
+    [
+      "Beeper Mini will be free for the time being.",
+      "Beeper's status is unstable.",
+      "Apple has attempted to shut Beeper Mini down.",
+      "Beeper Mini is free because of the unstable nature of Beeper's status and Apple's attempts at shutting it down."
+    ],
+    [
+      "Beeper Mini was made possible because the team behind the app reverse-engineered the iMessage protocol.",
+      "The team behind the app says it has managed to reverse-engineer the iMessage protocol."
+    ]
+  ]},
+  {"id": "5a72af155542992359bc316c", "sentences": [
+    [
+      "The actor referred to as 'He' is best known for the role of Dan Rydell on \"Sports Night.\"",
+      "The actor referred to as 'He' is best known for the role of Will Gardner on \"The Good Wife.\"",
+      "The role of Will Gardner on \"The Good Wife\" earned the actor two Primetime Emmy Award nominations.",
+      "The actor referred to as 'He' is best known for his early work as Knox Overstreet in \"Dead Poets Society.\""
+    ],
+    [
+      "Dead Poets Society is a 1989 American drama film.",
+      "Dead Poets Society was directed by Peter Weir.",
+      "Dead Poets Society was written by Tom Schulman.",
+      "Dead Poets Society stars Robin Williams."
+    ],
+    [
+      "Dead Poets Society is set in 1959.",
+      "Dead Poets Society is set at the fictional elite conservative Vermont boarding school Welton Academy.",
+      "Dead Poets Society tells the story of an English teacher.",
+      "The English teacher in Dead Poets Society inspires his students through his teaching of poetry."
+    ]
+  ]},
+  {"id": "5ab439f055429942dd415eef", "sentences": [
+    [
+      "Albany International Airport has the IATA code ALB.",
+      "Albany International Airport has the ICAO code KALB.",
+      "Albany International Airport has the FAA LID ALB.",
+      "Albany International Airport is a public airport.",
+      "Albany International Airport is seven miles (11 km) northwest of Albany.",
+      "Albany International Airport is in Albany County, New York, United States."
+    ],
+    [
+      "Dane County Regional Airport (DCRA) has the IATA code MSN.",
+      "Dane County Regional Airport (DCRA) has the ICAO code KMSN.",
+      "Dane County Regional Airport (DCRA) has the FAA LID MSN.",
+      "Dane County Regional Airport is also known as Truax Field.",
+      "Dane County Regional Airport is a civil-military airport.",
+      "Dane County Regional Airport is located six miles northeast of downtown Madison.",
+      "Madison is the capital of Wisconsin."
+    ]
+  ]}
+]

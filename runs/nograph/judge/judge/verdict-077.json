@@ -1,0 +1,77 @@
+[
+  {
+    "id": "921b8c8d79c4b3c5",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "as the Springboks play for their country"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "the generation of players and leaders that will call time on their international careers at week’s end."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+    ]
+  },
+  {
+    "id": "90ad1fa485e3d6b2",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "a9ce6918a24973b8",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+    ]
+  },
+  {
+    "id": "4e55175ee809cc4f",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 6, "quote": "On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 8, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+    ]
+  },
+  {
+    "id": "8361cf7cb6f1ec2a",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "As for her children, Jada praised them for how they’ve helped her grow."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "My children, they’re little gurus."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The pair have been married since 1997 and share son Jaden, 25, and daughter Willow, 22."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The pair have been married since 1997 and share son Jaden, 25, and daughter Willow, 22."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "They’ve taught me a deep sense of self-acceptance,"}]}
+    ]
+  },
+  {
+    "id": "cbb08fb00954e8d8",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  }
+]

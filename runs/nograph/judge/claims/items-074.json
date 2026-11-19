@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-7799443462247366740",
+   "sentences": [
+    "As a young woman , Rogue permanently absorbed the superhuman powers and the psyche of Carol Danvers , the original Ms. Marvel . This provided her with superhuman strength , stamina , durability , reflexes , speed and a 7th sense . She was able to repel bullets and fly at sub-sonic speeds , much like Ms. Marvel could . In addition , she possessed an amalgamated mutant human / Kree physiology that rendered her resistant to most toxins and poisons , with the added effect of making her virtually invulnerable ."
+   ]
+  },
+  {
+   "id": "5ae66d515542992ae0d16346",
+   "sentences": [
+    "\"I'll Keep the Lovelight Burning\" is a popular song written in 1942 by Harry Tobias, Nick Kenny, and Harold Levey, popularized by Patti Page in 1949.",
+    "Clara Ann Fowler (November 8, 1927 – January 1, 2013), known by her professional name Patti Page, was an American singer of traditional pop music and country music."
+   ]
+  },
+  {
+   "id": "multihop-rag-706",
+   "sentences": [
+    "His recent comments come after Jada made major revelations about their marriage in her memoir, including how she and Will have been separated for seven years.",
+    "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage.",
+    "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years.",
+    "During a 2018 episode of her Facebook Watch series, Red Table Talk, Jada doubled down on her stance about divorce, as she recalled the the hard conversation she had with Will about the topic before they got married."
+   ]
+  },
+  {
+   "id": "multihop-rag-1507",
+   "sentences": [
+    "Here's your chance to claim $5,000+ in bonuses as a new user from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, and BetRivers.",
+    "Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus."
+   ]
+  },
+  {
+   "id": "multihop-rag-750",
+   "sentences": [
+    "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity.",
+    "While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough stain to erase knowing those violations are now on the Big Ten record."
+   ]
+  },
+  {
+   "id": "3587867296617760276",
+   "sentences": [
+    "The uvea is the vascular middle layer of the eye . It is traditionally divided into three areas , from front to back , the :"
+   ]
+  },
+  {
+   "id": "5a76c98855429972597f13d0",
+   "sentences": [
+    "The Long–Allen Bridge is a truss bridge in Shreveport, Louisiana, named for Louisiana governors Huey Long and Oscar K. Allen.",
+    " Opened in 1933, it carries U.S. Route 80 across the Red River.",
+    "U.S. Route 80 (US 80) is an east–west United States Numbered Highway, much of which was once part of the early auto trail known as the Dixie Overland Highway.",
+    " The highway's eastern terminus is in Tybee Island, Georgia, at the intersection of Butler Avenue, Inlet Avenue, and Tybrisa Street, near the Atlantic Ocean."
+   ]
+  },
+  {
+   "id": "multihop-rag-1817",
+   "sentences": [
+    "It has also decided to make Beeper Mini free for the time being, given how “chaotic” things have been over the past few days.",
+    "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down.",
+    "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol, they say."
+   ]
+  },
+  {
+   "id": "5a72af155542992359bc316c",
+   "sentences": [
+    " He is best known for the roles of Dan Rydell on \"Sports Night;\" Will Gardner on \"The Good Wife\", which earned him two Primetime Emmy Award nominations; and his early work as Knox Overstreet in \"Dead Poets Society\".",
+    "Dead Poets Society is a 1989 American drama film directed by Peter Weir, written by Tom Schulman, and starring Robin Williams.",
+    " Set in 1959 at the fictional elite conservative Vermont boarding school Welton Academy, it tells the story of an English teacher who inspires his students through his teaching of poetry."
+   ]
+  },
+  {
+   "id": "5ab439f055429942dd415eef",
+   "sentences": [
+    "Albany International Airport (IATA: ALB, ICAO: KALB, FAA LID: ALB) is a public airport seven miles (11 km) northwest of Albany, in Albany County, New York, United States.",
+    "Dane County Regional Airport (DCRA) (IATA: MSN, ICAO: KMSN, FAA LID: MSN) (Truax Field) is a civil-military airport located six miles northeast of downtown Madison, the capital of Wisconsin."
+   ]
+  }
+ ]
+}

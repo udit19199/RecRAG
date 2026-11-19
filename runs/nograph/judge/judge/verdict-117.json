@@ -1,0 +1,50 @@
+[
+{"id": "cb139eda5e117e89", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "db141bb715e6fd2e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "If a significant majority of bettors are placing their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing the betting action."}, {"item": 6, "quote": "Bookmakers adjust the line to balance the action and protect themselves from potential losses."}]}
+]},
+{"id": "6abb374ee7760e2e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}, {"item": 7, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}, {"item": 7, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]}
+]},
+{"id": "e4c2d1bad895024d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "b727579462895c6d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 5, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]}
+]

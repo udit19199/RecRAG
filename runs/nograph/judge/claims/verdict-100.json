@@ -1,0 +1,46 @@
+[
+ {"id": "-1851146794181763603", "sentences": [
+   ["Christopher Jones was the captain of the Mayflower.", "Christopher Jones was about age 50.", "Christopher Jones was from Harwich, a seaport in Essex, England.", "Harwich was also the port of Christopher Jones's ship, the Mayflower.", "Christopher Jones and the Mayflower were veterans of the European cargo business.", "Christopher Jones and the Mayflower often carried wine to England.", "Neither Christopher Jones nor the Mayflower had ever crossed the Atlantic.", "By June 1620, Christopher Jones and the Mayflower had been hired for the Pilgrims' voyage by their business agents in London.", "Thomas Weston of the Merchant Adventurers was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.", "Robert Cushman was one of the business agents in London who hired the Mayflower for the Pilgrims' voyage.", "There is a historical marker in London honoring the Mayflower.", "There is a historical marker in London honoring Captain Jones."],
+   ["Captain Jones became master of the Mayflower 11 years before the Pilgrims' voyage.", "Captain Jones sailed the Mayflower cross-Channel taking English woolens to France.", "Captain Jones sailed the Mayflower bringing French wine to London.", "Captain Jones also transported hats, hemp, Spanish salt, hops, and vinegar to Norway.", "Captain Jones may have taken the Mayflower whaling in the North Atlantic in the Greenland area.", "The Mayflower had traveled to Mediterranean ports.", "The Mayflower was owned by Christopher Nichols, Robert Child, Thomas Short, and Christopher Jones.", "Christopher Jones was the ship's master.", "In 1620, Christopher Jones still owned a quarter share in the Mayflower.", "In 1620, Robert Child still owned a quarter share in the Mayflower.", "Thomas Weston chartered the Mayflower from Jones and Child in the summer of 1620 to undertake the Pilgrim voyage.", "Weston had a significant role in the Mayflower voyage due to his membership in the Company of Merchant Adventurers.", "Thomas Weston eventually traveled to the Plymouth Colony himself."],
+   ["The cabin for Master Christopher Jones was aft on the main deck in the stern.", "The cabin for Master Christopher Jones measured about ten by seven feet (3 m × 2.1 m).", "The steerage room was forward of the cabin.", "The steerage room housed a whipstaff (tiller extension) for sailing control.", "The whipstaff was not a wheel, unlike in later ships.", "The ship's compass was also in the same area as the steerage room.", "The ship probably also had berths for the ship's officers in the steerage room area.", "The capstan was forward of the steerage room.", "The capstan was a vertical axle used to pull in ropes or cables.", "The forecastle space was far forward on the main deck, just aft of the bow.", "The ship's cook prepared meals for the crew in the forecastle space.", "The ship's sailors may also have slept in the forecastle space."]
+ ]},
+ {"id": "multihop-rag-1669", "sentences": [
+   ["The guide is a Diablo 4 guide.", "The guide gathers the best Diablo 4 Sorcerer builds for season 2.", "The guide simplifies the best Diablo 4 Sorcerer builds for season 2."],
+   ["The guide is a Diablo 4 guide.", "The guide gathers the best Diablo 4 Barbarian builds for season 2.", "The guide simplifies the best Diablo 4 Barbarian builds for season 2."]
+ ]},
+ {"id": "8268392025144002146", "sentences": [
+   ["Lynne is the eldest of the Slater sisters.", "Lynne arrives in Albert Square in 2000.", "Lynne arrives in Albert Square with her family.", "Lynne's father is Charlie, played by Derek Martin.", "Lynne's sister Kat is played by Jessie Wallace.", "Lynne's sister Little Mo is played by Kacey Ainsworth.", "Lynne's sister Zoe is played by Michelle Ryan.", "Lynne's grandmother is Mo, played by Laila Morse.", "Unlike Little Mo and Zoe, Lynne is aware that Zoe is in fact Kat's daughter.", "Lynne helps keep the family secret that Zoe is Kat's daughter until Kat reveals the truth to Zoe."]
+ ]},
+ {"id": "-5670674709553776773", "sentences": [
+   ["The Proud Family is a soundtrack album.", "The Proud Family soundtrack album is for the show of the same name.", "The album combines original tunes by the characters in the show.", "The album combines popular hits by popular music artists such as Alicia Keys, Jhené Aiko, India Arie, and Solange Knowles & Destiny's Child.", "Solange Knowles & Destiny's Child perform the theme song.", "The album combines classic soul music from artists such as Aretha Franklin and The O'Jays."]
+ ]},
+ {"id": "-5916339609229387906", "sentences": [
+   ["The soma (cell body) of each pseudounipolar neuron is located within a dorsal root ganglion."],
+   ["The axon leaves the cell body.", "The axon leaves the dorsal root ganglion.", "The axon goes into the dorsal root.", "In the dorsal root, the axon splits into two branches."],
+   ["The central branch of the axon goes to the posterior (dorsal) horn of the spinal cord.", "The central branch forms synapses with other neurons."],
+   ["The peripheral branch travels through the distal dorsal root.", "The peripheral branch travels into the spinal nerve.", "The peripheral branch travels all the way until skin, joint, and muscle."]
+ ]},
+ {"id": "multihop-rag-2329", "sentences": [
+   ["It comes despite Argentina knocking over the All Blacks last year in Christchurch.", "It comes despite a maiden defeat in 2020 in Sydney."],
+   ["The All Blacks had their chances.", "The All Blacks' usual safe handling was a feature throughout the World Cup.", "The All Blacks lost their first game of the World Cup to France.", "The All Blacks' usual safe handling evaded them against the Springboks' blitz defence.", "The match took place in wet conditions."]
+ ]},
+ {"id": "5a75321555429916b0164290", "sentences": [
+   ["He spent some time in general practice.", "He became a Lecturer in animal behaviour at De Montfort University.", "He became a Senior Lecturer in animal behaviour at De Montfort University.", "He became a Principal Lecturer in animal behaviour at De Montfort University.", "He subsequently moved to the University of Lincoln.", "He has been Head of the Department of Biological Sciences at the University of Lincoln."],
+   ["People who have earned a Doctor of Philosophy degree may, in most jurisdictions, use the title 'Doctor'.", "The title 'Doctor' is often abbreviated 'Dr'.", "In non-English speaking countries, people with a Doctor of Philosophy degree may use variants such as 'Dr. phil.'"]
+ ]},
+ {"id": "multihop-rag-1831", "sentences": [
+   ["Depending on which one you get, it might come with USB ports.", "The USB ports let you charge multiple devices in one outlet."],
+   ["The device has a 10,000-mAh capacity.", "WIRED contributor Simon Hill says the device charged his iPhone 14 Pro once.", "Simon Hill says the device then delivered an additional 64 percent to his iPhone 14 Pro the second time.", "Simon Hill says the device tapped out before the second charge was finished."]
+ ]},
+ {"id": "multihop-rag-268", "sentences": [
+   ["Google compared the performance of Gemini Pro to GPT-3.5.", "GPT-3.5 is the predecessor of GPT-4.", "GPT-3.5 is a model that is around a year old."],
+   ["She admits that she may have misinterpreted the evidence.", "She maintains that Google manipulates Search to maximise ad revenue."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.", "The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.", "The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-860", "sentences": [
+   ["This will probably come up later in the trial.", "Epic chose to focus more on simply painting Google as the bad guy on day one."],
+   ["The Justice Department is focused on the deals Google makes.", "Google makes deals with Apple.", "Google makes deals with Samsung.", "Google makes deals with Mozilla.", "Google makes deals with many others.", "The deals are meant to ensure Google is the default search engine on practically every platform."],
+   ["Google compared the performance of Gemini Pro to GPT-3.5.", "GPT-3.5 is the predecessor of GPT-4.", "GPT-3.5 is a model that is around a year old."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content through anticompetitive means.", "The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.", "The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means."]
+ ]}
+]

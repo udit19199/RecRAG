@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1128",
+   "sentences": [
+    "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a88f7855542993b751ca8da",
+   "sentences": [
+    " During his early career, Cage starred in a variety of films such as \"Valley Girl\" (1983), \"Racing with the Moon\" (1984), \"Birdy\" (1984), \"Peggy Sue Got Married\" (1986), \"Raising Arizona\" (1987), \"Moonstruck\" (1987), \"Vampire's Kiss\" (1989), \"Wild at Heart\" (1990), \"Fire Birds\" (1990), \"Honeymoon in Vegas\" (1992), and \"Red Rock West\" (1993).",
+    "Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.",
+    " It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage)."
+   ]
+  },
+  {
+   "id": "-1684803496582863909",
+   "sentences": [
+    "A UCC - 1 financing statement ( an abbreviation for Uniform Commercial Code - 1 ) is a legal form that a creditor files to give notice that it has or may have an interest in the personal property of a debtor ( a person who owes a debt to the creditor as typically specified in the agreement creating the debt ) . This form is filed in order to `` perfect '' a creditor 's security interest by giving public notice that there is a right to take possession of and sell certain assets for repayment of a specific debt with a certain priority . Such notices of sale are often found in the local newspapers . Once the form has been filed , the creditor establishes a relative priority with other creditors of the debtor . This process is also called `` perfecting the security interest '' in the property , and this type of loan is a secured loan . A financing statement may also be filed in the real estate records by a lessor of fixtures to establish the priority of the lessor 's rights against a holder of a mortgage or other lien on the real property . The creditor 's rights against the debtor and the lessor 's rights against the lessee are based on the credit documents and the lease , respectively , and not the financing statement .",
+    "The financing statement is generally filed with the office of the state secretary of state , in the state where the debtor is located - for an individual , the state where the debtor resides , for most kinds of business organizations the state of incorporation or organization . Many states have a state agency that operates under the secretary of state , which is tasked with overseeing business organizations and activities , including receipt of financing statements . However , an exception exists if the collateral is something that is tied to a particular piece of real property , such as timber , mineral rights , or fixtures . In that case , the filing must be made in the county where the property is located , usually in the recording office or county court , because that is where third parties are most likely to search for such record ."
+   ]
+  },
+  {
+   "id": "-8362897406923373409",
+   "sentences": [
+    "The phrase `` objects in ( the ) mirror are closer than they appear '' is a safety warning that is required to be engraved on passenger side mirrors of motor vehicles in the USA , Canada , Nepal , India and Saudi Arabia . It is present because while these mirrors ' convexity gives them a useful field of view , it also makes objects appear smaller . Since smaller - appearing objects seem farther away than they actually are , a driver might make a maneuver such as a lane change assuming an adjacent vehicle is a safe distance behind , when in fact it is quite a bit closer . The warning serves as a reminder to the driver of this potential problem ."
+   ]
+  },
+  {
+   "id": "5a8bc1b85542997f31a41db8",
+   "sentences": [
+    "Milium (vernacular name milletgrass) is a genus of Eurasian, North American, and North African plants in the grass family.",
+    "Eucommia is a genus of small trees now native to China, with a fossil record that shows a much wider distribution.",
+    " The single living species, \"Eucommia ulmoides\", is near threatened in the wild, but is widely cultivated in China for its bark, and is highly valued in herbology such as traditional Chinese medicine."
+   ]
+  },
+  {
+   "id": "5ae4ec1e5542990ba0bbb19b",
+   "sentences": [
+    "The Bears and I is a 1974 American drama film directed by Bernard McEveety and written by John Whedon.",
+    " The film was released on July 31, 1974, by Buena Vista Distribution.",
+    "Oceans (French: Océans ) is a 2009 French nature documentary film directed, produced, co-written, and narrated by Jacques Perrin, with Jacques Cluzaud as co-director."
+   ]
+  },
+  {
+   "id": "multihop-rag-563",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2183",
+   "sentences": [
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "397204824317594616",
+   "sentences": [
+    "Downton Abbey is a British period drama television series created by Julian Fellowes and co-produced by Carnival Films and Masterpiece . It first aired on ITV in the United Kingdom on 26 September 2010 , and on PBS in the United States on 9 January 2011 , as part of the Masterpiece Classic anthology . Six series have been made , the sixth airing in the autumn of 2015 in the UK and Ireland , and in January 2016 in the United States . On 26 March 2015 , the sixth series was confirmed to be the final series , with the final episode airing in the UK on 25 December 2015 on ITV . During the course of the programme , 52 episodes of Downton Abbey aired over six series ."
+   ]
+  },
+  {
+   "id": "multihop-rag-255",
+   "sentences": [
+    "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15).",
+    "Second-last of ten on the table after a fourth abject loss in barely three weeks, this time by eight wickets and nearly 25 overs to spare against Sri Lanka having been bowled out for a miserable 156 in Bengaluru, the 2019 champions are now only mathematically a chance of scraping through to the semi-finals."
+   ]
+  }
+ ]
+}

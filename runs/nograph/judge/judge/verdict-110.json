@@ -1,0 +1,69 @@
+[
+{"id": "4638ff6e7344ac5c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}, {"item": 1, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "24cb89cbb93ff6e6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}]},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]}
+]},
+{"id": "07172dca46c0b653", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "This matchup has an over/under of 42.5 points, tied for fourth-lowest of the week."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "OPP VS WR 6th"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "PROJ PTS 12.1"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "WR RNK 37th"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 3, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 3, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+{"fact": "0.9", "status": "stated", "evidence": [{"item": 3, "quote": "FPTS/G 11.4"}]},
+{"fact": "0.10", "status": "stated", "evidence": [{"item": 3, "quote": "The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2"}]},
+{"fact": "0.11", "status": "stated", "evidence": [{"item": 3, "quote": "Washington's 34-31 OT loss to Philadelphia in Week 4."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "a8a0d705b98408ee", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+]},
+{"id": "799404c70fa85f96", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "6cb1a44db184b9d1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]}
+]}
+]

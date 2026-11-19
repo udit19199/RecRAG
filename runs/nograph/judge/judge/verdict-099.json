@@ -1,0 +1,42 @@
+[
+  {"id": "a51d6321217d31e2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+  ]},
+  {"id": "e523f33d803967a1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+  ]},
+  {"id": "349b8f7f474e9277", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+  ]},
+  {"id": "842be6d3e2d11f15", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In his letter to Musk, Breton writes that the EU has “indications” that X is being used to disseminate illegal content and disinformation in the EU” following"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "over illegal content and disinformation following Hamas attacks"}]}
+  ]},
+  {"id": "77f344de8fd56ffc", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+  ]}
+]

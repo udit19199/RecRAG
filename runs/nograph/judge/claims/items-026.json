@@ -1,0 +1,74 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-1114133849011983215",
+   "sentences": [
+    "Roger Federer was the defending champion and successfully defended his title , defeating Marin Čilić in the final , 6 -- 2 , 6 -- 7 , 6 -- 3 , 3 -- 6 , 6 -- 1 . It was Federer 's 20th Grand Slam singles title and record - equalling sixth Australian Open men 's singles title ( tied with Roy Emerson and Novak Djokovic ) . With the win , Federer became the first male player to win at least six titles at two Grand Slam tournaments ( six at the Australian Open and eight at Wimbledon ) . Federer became the oldest man to win a Grand Slam singles title in the Open era since Ken Rosewall in 1972 . The time span between Federer 's first Grand slam glory at Wimbledon and this latest , almost 15 years , is an Open era record in the men 's singles field . This was also the 10th time that Federer has defended a Grand Slam title , with the previous time being at the 2008 US Open . Čilić became the first Croatian player to reach a singles final at the Australian Open .",
+    "Men 's Singles 2018 Australian Open Champion Roger Federer Runner - up Marin Čilić Final score 6 -- 2 , 6 -- 7 , 6 -- 3 , 3 -- 6 , 6 -- 1 Details Draw 128 ( 16 Q / 8 WC ) Seeds 32 Events Singles men women boys girls Doubles men women mixed boys girls Legends men women mixed WC Singles men women quad WC Doubles men women quad ← 2017 Australian Open 2019 →"
+   ]
+  },
+  {
+   "id": "5a8e27d45542995a26add46a",
+   "sentences": [
+    " She is married to Scott Stapp, former frontman of the band Creed, and current frontman for the band Art of Anarchy.",
+    " The band's third album, \"Weathered\", was released in 2001 with Tremonti handling bass before the band disbanded in 2004 due to increasing tension between members."
+   ]
+  },
+  {
+   "id": "-8074993547733090370",
+   "sentences": [
+    "Diary of a Wimpy Kid : The Getaway Author Jeff Kinney Country United States Language English Series Diary of a Wimpy Kid Genre Children 's novel Graphic Novel Publisher Amulet Books ( US ) Puffin Books ( UK ) Publication date November 7 , 2017 ( Worldwide ) Media type Print ( hardcover ) Pages 217 story pages ( 224 altogether ) ISBN 978 - 1 - 4197 - 2545 - 6 Preceded by Double Down"
+   ]
+  },
+  {
+   "id": "multihop-rag-2351",
+   "sentences": [
+    "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said.",
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "-1330515253963834494",
+   "sentences": [
+    "It was confirmed on 25 January 2018 , that Dancing on Ice had been recommissioned for an eleventh series to air in 2019 ."
+   ]
+  },
+  {
+   "id": "-461258131989129967",
+   "sentences": [
+    "Nigeria is the largest oil and gas producer in Africa . Crude oil from the delta basin comes in two types : light , and comparatively heavy -- the lighter around 36 gravity and the heavier , 20 -- 25 gravity . Both types are paraffinic and low in sulfur ."
+   ]
+  },
+  {
+   "id": "5adf043b5542993a75d263d4",
+   "sentences": [
+    " It features former GOP representative Joe Scarborough providing both enterprise reporting and discussion on the news of the day in a panel format with co-hosts Mika Brzezinski and Willie Geist.",
+    "Charles Joseph Scarborough ( ; born April 9, 1963) is an American cable news and talk radio host."
+   ]
+  },
+  {
+   "id": "5ab9b4a555429970cfb8eb75",
+   "sentences": [
+    "Rick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States.",
+    "Grand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota."
+   ]
+  },
+  {
+   "id": "5a86fde6554299211dda2b7f",
+   "sentences": [
+    "Pramod Bhasin stepped down as President and CEO of Genpact, India's largest business process outsourcing (BPO) company, becoming non-executive Vice Chairman in 2011.",
+    "Genpact is a global business process management and services and IT corporation with key offices in New York City, United States."
+   ]
+  },
+  {
+   "id": "5a884adb5542996e4f308938",
+   "sentences": [
+    "Eryngium is a genus of flowering plants in the family Apiaceae.",
+    "Arnebia is a genus of flowering plants in the family Boraginaceae."
+   ]
+  }
+ ]
+}

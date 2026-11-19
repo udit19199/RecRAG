@@ -1,0 +1,59 @@
+[
+  {"id": "c4f70ed07788cc44", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The winger came firing out of the gate"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]}
+  ]},
+  {"id": "f39ee1b9543448a0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}, {"item": 7, "quote": "is on trial for seven counts of wire fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "ff11bab8088a8330", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song"}, {"item": 5, "quote": "which featured a woman with blonde hair"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song"}, {"item": 5, "quote": "sparked rumours that he and Spears broke up"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Danis’s first press conference for the Logan Paul fight"}]}
+  ]},
+  {"id": "7a07fa022bae8f12", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "But while this will probably come up later in the trial"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "9b8a6d15c11a9be0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "bad66afb6fa8205f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]}
+]

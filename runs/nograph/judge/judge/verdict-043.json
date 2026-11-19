@@ -1,0 +1,46 @@
+[
+  {"id": "4b67dfff61d21162", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1f982fdaac3f3f2c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "a247ec95978d08ed", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d25604b69cd1a659", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]}
+  ]},
+  {"id": "ad94ca178585c0dc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+  ]}
+]

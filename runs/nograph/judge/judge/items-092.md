@@ -1,0 +1,1048 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=11cea3e92f32fa70 ===
+Gold sentences and facts:
+Sentence 0: If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+  Fact 0.0: If the debt continues to rise more than the economy, risks will increase.
+  Fact 0.1: The government may 'crowd out' private investment.
+  Fact 0.2: The government competes with the private sector for funds to service its debt.
+Sentence 1: And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+  Fact 1.0: President Ferdinand Marcos, Jr. said the Philippines worries about its debt-to-GDP ratio.
+  Fact 1.1: President Ferdinand Marcos, Jr. said the Philippines' debt-to-GDP ratio is about 63%.
+  Fact 1.2: President Ferdinand Marcos, Jr. said that 63% debt-to-GDP ratio is a little high for the Philippines and not ideal.
+  Fact 1.3: President Ferdinand Marcos, Jr. said this to members of the US-ASEAN Business Council who visited Malacañang.
+  Fact 1.4: The statement is reported by ABS-CBN on Aug. 9, 2023.
+
+Retrieved items:
+<item 1>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+But traditional politicians (called “trapo” in the Philippines) might have it in their hearts to think about the country and the welfare of future generations.
+
+How many generations will pay for the monstrous debt incurred for the dubious objectives and vanities of some today?
+
+Amelia H. C. Ylagan is a doctor of Business Administration from the University of the Philippines.
+
+ahcylagan@yahoo.com
+</item 1>
+
+<item 2>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The surplus budget policy is important to encourage economic growth,” the DBM said.
+
+The exhortations of the national budget managers must be quoted word for word to educate the non-economists and questioning common people about how a surplus
+budget is necessary versus a deficit budget:
+
+“The less the government borrow from the public, the lesser the pressure on interest and inflation rates and the more funds are made available in the financial
+market. Such funds may be used by businessmen to build factories, hire workers, buy equipment and open more employment opportunities. By keeping more funds in
+the hands of the private sector rather than competing for credit, the government helps make financing available for families who want to own homes, buy cars, or
+support their children’s education. The government also needs to generate a budget surplus to repay the huge debt it has accumulated over the years. The
+reduction of the national budget debt will correspondingly lessen government’s requirements for interest and principal payments. This becomes important
+particularly during periods of rising interest rates and unstable exchange rates” (dbm.gov.ph).
+</item 2>
+
+<item 3>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+the government borrows money either from foreign sources or from the domestic capital market which increases the debt stock of the NG and its debt servicing
+requirements; b.) the government borrows money from the Bangko Sentral ng Pilipinas; or, c.) the government withdraws funds from its cash balances in the
+Treasury. Historically, National Government expenditures have always exceeded total revenues resulting in annual budget deficits, the DBM declared. “Thus, the
+National Government had to resort to borrowing to cover said deficits which resulted in the ballooning of foreign and domestic debts,” the budget office
+admitted.
+
+“However, in 1994, the government broke the deficit trend by posting a budget surplus of P16 billion through an aggressive privatization and revenue generation
+program and a prudent expenditure program. Since then, the government has been exerting efforts to maintain the surplus budget policy. The surplus budget policy
+is important to encourage economic growth,” the DBM said.
+</item 3>
+
+<item 4>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+During the Congressional budget hearing, Finance Secretary Benjamin Diokno optimistically provided updates on the government’s fiscal and revenue collection
+performances and presented sources of funding for the national budget. Tax revenue is projected to increase from P3.5 trillion in 2023 to P6.5 trillion in 2028,
+while non-tax revenues are expected to decline from P191 billion in 2023 to P184 billion in 2028, Diokno told the Philippine News Agency (pna.gov.ph, Aug. 10).
+
+Diokno said the Finance department aims to gradually reduce net financing or new debt from P1.42 trillion in 2022 to P1.22 trillion in 2024, which will help
+bring the country’s debt-to-GDP ratio to almost below 60% by 2025. And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%
+and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr.
+</item 4>
+
+<item 5>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+Why then, do we have a deficit budget for 2024?
+
+The national budget for 2024 is at P5.768 trillion, 9.5% higher than the current (2023) budget of P5.268 trillion. Observers note that this first budget fully
+prepared by the current administration accounts for 21.7% of gross domestic product (GDP). The 2024 expenditure program is higher by P499.6 billion or a
+year-on-year growth rate of 9.5% as compared to the 2023 level of P5.268 trillion. The P5.768-trillion budget, to be supported mainly by P3.5-trillion tax
+revenues (based on 2023 tax revenue projections), would mean a budget deficit of some P2.268 trillion, to be funded by additional borrowings. This could
+increase government debt from the current P14.24 trillion (as of July) to P16+ trillion by the end of 2024.
+</item 5>
+
+<item 6>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+The National Government plans to raise more revenue to finance the country’s socio-economic needs, largely through a progressive and simplified tax system, more
+efficient and effective tax collection measures through digitalization and, to some extent, from policy measures such as value-added tax on digital service
+providers and excise tax on sweetened beverages and junk food.
+
+Achieving fiscal stability presupposes the sustainability of fiscal policy, and fiscal stability helps “crowd in” private investment.
+
+PRICE STABILITY AND INFLATION
+
+In his second State of the Nation Address (SONA), President Ferdinand Marcos, Jr. singled out inflation as the country’s most pressing problem. In the first
+nine months of 2023, inflation averaged 6.6% — far above the upper end of the target range of 2-4% set by the BSP. If left unchecked, inflation could undermine
+growth. Not only does this increase costs to organizations, but it also sets in motion second-round effects as workers start demanding higher wages,
+consequently increasing business costs and discouraging investments.
+</item 6>
+
+<item 7>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+
+Whom are we to believe, but inflation — which independently says it as it is.
+
+“While inflation in the Philippines has been on a downward trend since January, the country needs to achieve a 3.7% average inflation rate for the next five
+months for the country to hit the BSP’s forecast of 5.5% inflation for 2023, Assistant National Statistician Rachel Lacsa said (Ibid.). Some economists say that
+deficit budgets and the remedies — monetary (borrowings increasing money supply) and fiscal (like raising taxes) increase inflation, and stubborn inflation
+further entrenches structural deficits in the system. It is a vicious cycle.”
+
+National budgets might not be innocent of political agendas (call them plans and programs) that can divert money from the proper socio-economic goals of
+equilibrium as a balanced budget might work towards.
+</item 7>
+
+<item 8>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+For this, the economy must grow its per capita income above the threshold set by the World Bank, which means a gross national income (GNI) per capita of at
+least $4,466. In 2022, the Philippines achieved a GNI per capita of $3,950.
+
+The second is to lower the poverty level from 18.1% in 2021 to single digits by 2028 — the end of the term of the current administration. Both indicators
+require high growth rates. For the next year through 2028, the government pencils the growth rate between 6.5% and 8%.
+
+Growth is expected to be investment-led with the implementation of structural changes such as the Corporate Recovery and Tax Incentives for Enterprises (CREATE)
+law, which lowered the corporate income tax rate, and the amendments to the Public Service Act (PSA), Foreign Investment Act (FIA), and Retail Trade
+Liberalization Act (RTLA), which further liberalized the economy. The new legislation is expected to attract more local and foreign investment, especially in
+the liberalized sectors.
+</item 8>
+
+<item 9>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+This plan gradually narrows the deficit to 3% of GDP by 2028, down from 7.3% in 2022, such that the debt-to-GDP ratio is reduced from nearly 61% in 2022 to a
+more sustainable level of at most 53% by 2028.
+
+DEBT MANAGEMENT
+
+The National Government’s debt was less than 40% before the pandemic struck. It expended much of its fiscal space combatting the pandemic, incurring debt and
+large budget deficits. While the current 61% debt-to-GDP ratio may be manageable for an emerging economy like the Philippines for some time, the country may not
+have the fiscal space to respond to another potential domestic or external shock. If the debt continues to rise more than the economy, risks will increase, and
+the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+
+The planned fiscal consolidation entails harmonizing the revenue needs with the promotion of investment through the structure and administration of the reformed
+incentive system.
+</item 9>
+
+<item 10>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The Department of Budget and Management (DBM) defines the government budget as “the financial plan of the government…which shows what its resources are, and how
+they will be generated and used over the fiscal period. It refers to the income, expenditures and sources of borrowings of the National Government (NG) that are
+used to achieve national objectives, strategies and programs.”
+
+Section 22, Article VII of the Constitution states that: “The President shall submit to the Congress within 30 days from the opening of every regular session,
+as the basis of the general appropriation bill, a budget of expenditures and sources of financing including receipts from existing and proposed revenue
+measures.”
+
+The National Government (NG) budget is the totality of the budgets of all government entities, namely the National Government, the non-financial
+government-owned and -controlled corporations (which usually includes only the 14 major GOCCs), government financial institutions (GFIs), local government units
+(LGUs), the social security institutions (the Government Service Insurance System or GSIS, the Social Security System or SSS, the military pensions, PhilHealth,
+etc.
+</item 10>
+=== END ITEM id=11cea3e92f32fa70 ===
+
+=== ITEM id=d8fee024f6f06e90 ===
+Gold sentences and facts:
+Sentence 0: It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club.
+  Fact 0.0: It could mean some sort of progress.
+  Fact 0.1: Ratcliffe was born in Manchester.
+  Fact 0.2: Ratcliffe has a vision to revolutionise the club.
+  Fact 0.3: The progress would happen if Ratcliffe follows through with his vision.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United gave a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+That raises doubts over the future of current sporting director John Murtough and chief executive Richard Arnold, although manager Erik ten Hag is believed to
+be on a solid footing despite United’s poor start to the season.
+
+Expect Sir Dave Brailsford, the mastermind behind Team GB’s cycling success at the London 2012 Olympics and director of sport for Ratcliffe’s company INEOS, to
+have a prominent role in any reshuffle.
+
+Ratcliffe also has ambitious plans to upgrade Old Trafford and turn it into a 90,000-seat stadium.
+
+He wants the deal ratified in time for the January transfer window, however due to FFP concerns, there is no guarantees United will be able to spend big.
+
+Despite the fact he turns 71 a day before the board meeting, it appears Ratcliffe’s plans centre around long-term stability and success rather than a short-term
+turnaround in United’s fortunes.
+</item 1>
+
+<item 2>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+5 Ratcliffe already owns Nice in France and Lausanne in Switzerland Credit: AFP
+
+Initially it was hoped the bidding process would be concluded in time for the summer transfer window, but the longer it dragged on, prompting several
+large-scale protests from United fans, the more apparent it became that Joel and Avram were reluctant sellers, as revealed by talkSPORT in March.
+
+Sheikh Jassim’s public statement promising to restore United ‘to former glories’ was also seen as thinly-veiled swipe at the Glazers, which did not help his
+negotiating hand.
+
+The Qatari banker’s patience finally snapped and his withdrawal from the bidding process at the end of last week has left the pathway clear for Ratcliffe to
+complete what he has always viewed as his dream purchase.
+
+WHAT ARE THE NEXT STEPS FOR RATCLIFFE?
+
+talkSPORT understands Ratcliffe, having originally wanted a much larger up-front stake, has an agreement in principle to buy a 25 per cent share in United.
+</item 2>
+
+<item 3>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+Photograph: Michael Regan/Getty Images
+
+Ensuring a working relationship with the Glazers
+
+For paying an overpriced £1.3bn for his 25% Ratcliffe obtains a major element of control but still the Glazers remain majority owners. The 71-year-old oversees
+football policy but these do not exist in a vacuum given that the commercial side affects this and vice versa. Ratcliffe accepts Manchester United have an
+impressive revenue-based model that makes the club akin to a cash machine but he is not enamoured of how the money generated is invested – primarily in the
+squad. What happens then, for example, if Ten Hag wants a new midfield ace, Ratcliffe agrees but the Glazers cite a downturn in income and thus seek to block
+the signing?
+</item 3>
+
+<item 4>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+No family member has given a press conference or interview during their 18-year tenure. Ratcliffe has arrived on a ticket of, partly, being the local lad made
+good (Failsworth, where he was born, is next to Newton Heath, United’s birthplace) so if he proves as silent as the Americans then this will be: a) poor PR; and
+b) just plain poor. Football fans can be classed as the most loyal citizens of any society but even the faith of United enthusiasts has been stretched by the
+cold relationship created by the Glazers’ stance regarding communication. A tap-in, then, for Ratcliffe is to remedy this by opening and maintaining a regular
+line into supporters.
+
+The Glazer family have little relationship with the Manchester United fans – something Ratcliffe would do well to avoid.
+</item 4>
+
+<item 5>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+As and when it does get as far as a vote, Ratcliffe can be confident it will be ratified seeing as half of the 12-strong board are members of the Glazer family
+and in the event of a split vote, Joel and Avram as co-chairmen will have the deciding say.
+
+Even once the final deal is agreed, it is likely to take at least a couple of months for Ratcliffe to pass the Premier League’s owners and directors test, which
+has been made more stringent since Portsmouth became the first top-flight side to go into administration in 2010.
+
+5 Ratcliffe, one of Britain's wealthiest men, previously tried to buy Chelsea
+
+WHAT DOES THE FUTURE LOOK LIKE UNDER RATCLIFFE’S INEOS GROUP?
+
+Ratcliffe is demanding an executive role and overall control of day-to-day football matters and plans to appoint his own sporting director, with former
+Tottenham and Southampton transfer guru Paul Mitchell one of the main names in the frame.
+</item 5>
+
+<item 6>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+5 Joel and Avram Glazer put the Red Devils up for sale in November 2022 Credit: AFP
+
+5 United supporters are desperate to see the Glazers depart Old Trafford Credit: Twitter
+
+The fact the Glazers will remain in situ has not gone down well with supporters, but this is seen as the first step to Ratcliffe eventually removing the
+Americans and taking overall control.
+
+The exact timescale as to when that happens remains vague and how much it will cost Ratcliffe overall could depend on United’s sporting and commercial success
+in the coming seasons.
+
+Thursday’s board meeting was pre-arranged and while it is expected that Ratcliffe’s proposal will discussed in detail, sources close to United have indicated to
+talkSPORT that it is far from guaranteed it will be put to a vote with several details still to be thrashed out.
+</item 6>
+
+<item 7>
+Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)
+Galatasaray knew that if they beat Copenhagen at Parken they would go through but Lukas Lerager scored the only goal in a 1-0 win for the hosts
+
+Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's
+side.
+
+Results
+
+Date Fixture/Result Sept. 20 Galatasaray 2-2 FC Copenhagen Sept. 20 Bayern Munich 4-3 Manchester United Oct. 3 Manchester United 2-3 Galatasaray Oct. 3 FC
+Copenhagen 1-2 Bayern Munich Oct. 24 Galatasaray 1-3 Bayern Munich Oct. 24 Manchester United 1-0 FC Copenhagen Nov. 8 Bayern Munich 2-1 Galatasaray Nov. 8 FC
+Copenhagen 4-3 Manchester United Nov. 29 Galatasaray 3-3 Manchester United Nov.
+</item 7>
+
+<item 8>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+In November, it will have been a year since the deeply unpopular Glazer family left Manchester United fans rejoicing by announcing they were open to offers for
+England’s most iconic football club.
+
+Eleven months on and the saga that, at times has resembled an X-Factor style judges houses audition, may finally be coming to an end as British petrochemicals
+billionaire Sir Jim Ratcliffe closes in on a partial takeover.
+
+5 Sir Jim Ratcliffe has an offer on the table for 25 per cent stake of Manchester United Credit: AFP
+
+Ratcliffe’s £1.3billion offer for a 25 per stake in the club he has supported since childhood will be high on the agenda when United’s board of directors meet
+on Thursday, but how did we get to this point, what happens next and what could the future look like at Old Trafford?
+</item 8>
+
+<item 9>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+The manager’s future
+
+Erik ten Hag’s team are treading water at precisely the wrong moment: as Sir Jim Ratcliffe takes charge of Manchester United’s sporting department before making
+sweeping changes in the posts that will directly affect the manager. Richard Arnold has left despite officially staying until the end of the year and into his
+role may come Jean-Claude Blanc, the CEO of Ratcliffe’s Ineos Sport, as the man Ten Hag reports to. Ten Hag’s line manager may change too, as Ratcliffe
+considers whether a new football director is required, a position held by John Murtough. Ten Hag may have a first clue of his status in Ratcliffe’s new empire
+if he is sounded out for his view of a prime factor in his ability to coach and manage the side to success: United’s transfer policy. This leads us to Murtough
+…
+
+Will Murtough survive?
+
+The football director has no plans to depart but whether he remains in situ may be a matter for Ratcliffe.
+</item 9>
+
+<item 10>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+Sign up to Miguel Delaney’s Reading the Game newsletter sent straight to your inbox for free Sign up to Miguel’s Delaney’s free weekly newsletter Please enter a
+valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our
+privacy notice Thanks for signing up to the
+
+Football email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich was how
+grimly routine it all felt.
+
+Manchester United, one of the grandest and richest names in this competition, have again gone out of the Champions League at the group stage. It is the third
+time it has happened since Sir Alex Ferguson, meaning it’s their most common round of exit in that period.
+</item 10>
+=== END ITEM id=d8fee024f6f06e90 ===
+
+=== ITEM id=7c5e4c39ebc401b4 ===
+Gold sentences and facts:
+Sentence 0: Not only has he produced at a high level, but his play has been instrumental in the Vikings turning things around after a 1-4 start.
+  Fact 0.0: He has produced at a high level.
+  Fact 0.1: His play has been instrumental in the Vikings turning things around.
+  Fact 0.2: The Vikings had a 1-4 start.
+Sentence 1: But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends).
+  Fact 1.0: The team under discussion has seen the fourth-lowest ADOT from tight ends.
+  Fact 1.1: The ADOT from tight ends is 5.0 yards per target.
+  Fact 1.2: Teams seem to know they will not be able to succeed on downfield shots against the team under discussion.
+  Fact 1.3: The team under discussion has had zero completions of 20-plus yards from tight ends.
+
+Retrieved items:
+<item 1>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+And Edwards follows it up with the Bears 3rd INT of the game ‼️
+
+
+
+📺: #CHIvsMIN on ESPN/ABC
+
+📱: Stream on #NFLPlus https://t.co/J5tLNJHyh1 pic.twitter.com/2d4C1s2O09 — NFL (@NFL) November 28, 2023
+
+10:06 p.m. — After a hold by Jaylon Johnson gifts the Vikings a first down, they still can't capitalize. Ty Chandler can't make T.J. Edwards miss on third down,
+so Minnesota will go for it on fourth down.
+
+10:02 p.m. — The running game is working, the passing game is not for the Vikings. Mattison has 19 yards three plays into this drive for Minnesota.
+
+Bears 6, Vikings 3
+
+9:58 p.m.
+</item 1>
+
+<item 2>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+The Bears defense comes up big with a 4th down stop
+
+
+
+📺: #CHIvsMIN on ESPN/ABC
+
+📱: Stream on #NFLPlus https://t.co/J5tLNJHyh1 pic.twitter.com/yndUqwgIbf — NFL (@NFL) November 28, 2023
+
+9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.
+
+9:46 p.m. — Alexander Mattison has drawn the ire of Vikings fans all season, but he just got Minnesota's second half of to a booming start with a 21-yard run.
+
+End of first half: Bears 3, Vikings 3
+
+9:32 p.m. FIELD GOAL — Greg Joseph drills it from 34 yards out, and this mess of a game is all tied at three entering the half.
+
+9:30 p.m.
+</item 2>
+
+<item 3>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+When it mattered most, though, Fields was poised and sealed the Bears' first win over an NFC North opponent since 2021.
+
+While Chicago's hopes are still extraordinarily distant at 4-8, the Vikings saw their playoff chances take a hit on Monday night. Minnesota (6-6) dropped to the
+No. 7 seed in the NFC with the loss, with the Packers, Rams and Saints all just a half-game behind in the wild-card race. While a win would have put the Vikings
+in position to compete for the division crown down the stretch, just holding onto a playoff spot will now be a battle for Kevin O'Connell's squad.
+
+MORE: Latest updates on Justin Jefferson's return date
+
+The Sporting News tracked live updates from the "Monday Night Football" game between the Bears and Vikings. Check out all of the key moments you might have
+missed.
+
+Bears vs.
+</item 3>
+
+<item 4>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+— Dobbs is nearly intercepted by Jaylon Johnson (again) on third down. The last turnover wasn't Dobbs' fault, but this one should've been a pick. The Bears'
+defense is all over the Vikings tonight, and Minnesota can't get out of its own way.
+
+9:13 p.m. — Addison, trying to make up for the drop that turned into an interception, looks like he goes for 17 yards, but replay shows his knee was clearly
+down. It becomes a much smaller 4-yard gain.
+
+9:09 p.m. — Fields comes under pressure on third down and misses D.J. Moore. He's starting to miss these receivers after a hot start. Somehow, the Vikings will
+have a chance to tie this game or take a lead before halftime.
+
+9:04 p.m. — Dobbs is picked off again!
+</item 4>
+
+<item 5>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+MORE: Inside the Cowboys historic offensive explosion vs. Giants
+
+11. Seattle Seahawks 6-3 (13)
+
+The Seahawks needed every ounce of their offense around Geno Smith to rally to beat the Commanders, but the get-well performance worked well for him, Kenneth
+Walker and the wide receivers. The defense could be more consistent.
+
+12. Minnesota Vikings 6-4 (14)
+
+The new man on the Vikings, Josh Dobbs, keeps producing the same results they were enjoying offensively with Kirk Cousins, thanks to more help from the running
+game for Kevin O'Connell and the defense overall under Brian Flores. Their 0-3 and 1-4 starts are distant memories as the Vikings look for a sixth straight win
+in Week 11 vs. Denver.
+
+13. Houston Texans 5-4 (16)
+
+The Texans are looking great with C.J. Stroud leading their offense and now they've found some running game, too.
+</item 5>
+
+<item 6>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+LAST WEEK: Total disaster. In a gamescript that actually gave Minnesota a chance to -- gasp! -- run the ball, Kirk Cousins barely threw the ball and Addison
+went catchless on one target. There was also a major reduction in snaps played, down to 58%. His season-low was 56% from Week 1.
+
+MATCHUP: With the Vikings capable of running the ball, the offense went with heavier formations. Backup tight end Josh Oliver played about as many snaps as he
+did in Week 1 and third tight end Johnny Mundt saw a season-high 17% of snaps. Week 4 was the first time all year the Vikings DIDN'T throw the ball on at least
+69% of their snaps.
+
+THIRD MAN: Last week did affirm that Addison may actually be the No. 3 wide receiver in the offense behind Justin Jefferson and K.J.
+</item 6>
+
+<item 7>
+Vikings vs. Broncos live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-11-19T23:00:04+00:00)
+Broncos 3, Vikings 0
+
+8:30 p.m.: FIELD GOAL — Will Lutz buries a 31-yarder to get the Broncos on the board. The Vikings' defense held strong after the turnover. LB Danielle Hunter
+came up with a timely sack to force a 3rd & 15 and the Broncos couldn't convert.
+
+8:26 p.m.: FUMBLE! Vikings QB Joshua Dobbs attempted to pick up a first down on 3rd & 1 and he was absolutely popped by SS Kareem Jackson. LB Baron Browning
+pried the ball loose as Dobbs was hit and the Broncos recovered the fumble, taking over at Minnesota's 30.
+
+8:24 p.m.: The Vikings received to start the game and after a touchback on the opening kick, we are underway!
+
+Pregame
+
+8:21 p.m.: Broncos legend Peyton Manning shows some love to Vikings star WR Justin Jefferson ahead of the game.
+</item 7>
+
+<item 8>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+In an effort not to overwork their backs, who won't have it easy against the Vikings, Kmet could handle more short-area throws than normal. His ADOT over the
+past two games has been 7.64, which isn't far from his season average of 6.69.
+
+VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards), even keeping a lid on Travis Kelce last week (6.7 yards per catch). But they've also
+seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero
+completions of 20-plus yards from tight ends). These numbers are tough but if Kmet gets the target volume we've seen him have over the past couple of weeks he
+can still put up palatable numbers. And, tight ends have scored three times in the Vikings past three games.
+</item 8>
+
+<item 9>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+8:00 p.m. — Will the Josh Dobbs show continue tonight? He’s had good command of the Vikings’ offense in three games since a trade out of Arizona, flashing an
+especially strong connection with T.J. Hockenson.
+
+7:45 p.m. — It’s 15 degrees in Minnesota with a feels like of 2, so the roof will come in handy tonight at U.S. Bank Stadium.
+
+7:25 p.m. — Vikings legend Adrian Peterson is in the building to watch his former team.
+
+7:17 p.m. — The Bears enter tonight with the No. 1 and No. 4 picks in the 2024 NFL Draft, and they'll remain in those slots with or without a loss thanks to the
+strength of schedule tiebreaker.
+
+7:10 p.m. — Heading into Week 13, tonight's game is the difference between the No. 6 and No. 7 seed for the Vikings.
+</item 9>
+
+<item 10>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+9:30 p.m. — The Bears' defense has suddenly morphed back into an elite unit on these last two plays, forcing intentional grounding by Dobbs and pressuring him
+heavily on the following play. It's 3rd & 24 for the Vikings, who might just settle for a gain of a few yards to set up the field goal.
+
+9:27 p.m. — Another first down by K.J. Osborn drives the Vikings into Bears territory, and the Vikings suddenly find themselves 13 yards from the end zone after
+Kyler Gordon is called for interfering with T.J. Hockenson. The Vikings have a chance to take the lead with 38 seconds on the clock.
+
+9:25 p.m. — What an effort by Brandon Powell to turn around and make a 28-yard grab while falling to the ground. That's the biggest offensive play of the night
+for the Vikings.
+
+A perfect catch from Brandon Powell on a perfect pass
+</item 10>
+=== END ITEM id=7c5e4c39ebc401b4 ===
+
+=== ITEM id=e3da62602e502241 ===
+Gold sentences and facts:
+Sentence 0: "And if the Braves let this be the story of their series, that's on them.
+  Fact 0.0: A quoted speaker says that if the Braves let this be the story of their series, that is on the Braves.
+Sentence 1: But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity.
+  Fact 1.0: Nocturne could have easily settled and coasted on classic Castlevania vibes.
+  Fact 1.1: The new Nocturne show steps its game up considerably.
+  Fact 1.2: The new Nocturne show uses the Castlevania franchise's iconic lore.
+  Fact 1.3: The new Nocturne show uses the franchise's iconic lore to challenge the viewer's understanding of what it truly means to fight for freedom, equality, and fraternity.
+
+Retrieved items:
+<item 1>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+Part of / The best entertainment of 2023
+
+Netflix’s first Castlevania animated series excelled by balancing its quiet, beautifully performed moments of human drama with explosive and artful action set
+pieces dazzling enough to evoke the feeling of playing Konami’s classic side-scroller for the first time. Despite the first show’s strengths, its regular issues
+with pacing and effectively cultivating characters from season to season made the idea of Netflix keeping the vampiric daddy issues ball rolling with
+Castlevania: Nocturne — a new spinoff series from executive producer Clive Bradley and co-directors Sam Deats and Adam Deats — a dubious one.
+
+Nocturne both looks and feels a lot like its predecessor in terms of its focus on a tortured scion waging war against machiavellian, bloodsucking ghouls who
+fancy themselves undead gods who walk among mortal livestock.
+</item 1>
+
+<item 2>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+It had been reported Monday night when the Braves beat the Phillies in Game 2 of the NLDS, ending on a critical base-running play involving Bryce Harper, that
+Atlanta shortstop Orlando Arcia taunted about the Phillies' star in the clubhouse after the game.
+
+That report wound up generating plenty of controversy.
+
+Fox Sports' Jake Mintz, one of the two brothers that runs the popular Cespedes Family BBQ account, reported that Arcia had been celebrating after Atlanta's 5-4
+win by saying "Atta boy Harper" in the Braves' clubhouse, jeering at the fact that Harper was doubled off on the basepaths after an outstanding catch by Michael
+Harris in center field and an impressive relay to get Harper at first to end the game.
+
+The comments wound up coming back to bite the Braves two days later, with Harper homering twice — staring down Arcia after each — as he powered the Phillies to
+the 10-2 Game 3 win.
+</item 2>
+
+<item 3>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But in all the bloodshed, Nocturne still finds the time to make its characters (and by extension, you) think about what it means to slaughter technically
+innocent people for a genuinely noble cause. That beat isn’t entirely original, and Nocturne’s mindful about leaning on it too hard as it begins to weave
+Annette and Edouard’s stories together with Richter and Maria’s in France. Still, it creates a resonance between the show’s action and the concepts it’s
+tackling that makes the season as a whole work beautifully.
+
+Image: Netflix
+
+Occasionally, there are moments where the fluid dreaminess of Nocturne’s overall art direction butts up against the show’s application of 3D animation to make
+certain pivotal moments pop. It can be jarring when traditionally animated characters who were just popping in and out of view using tricks of the eye suddenly
+turn to the camera with deeper faces accented by flat shadows that weren’t there a second before.
+</item 3>
+
+<item 4>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+It’s a war between undead ghouls like Drolta Tzuentes (Elarica Johnson) manipulating mortals from the shadows, selfish humans like a power-hungry Abbot
+(​​Richard Dormer), and agitators like summoner Maria (Pixie) who want to dismantle the entire oppressive system of power that makes France a formidable global
+presence.
+
+Image: Netflix
+
+Narratively, Nocturne’s focus on another brooding Belmont and its depiction of late-18th-century France as a country overrun by literally vampiric aristocrats
+drunk on the promise of a new messiah make the new series feel true to the essence of Castlevania. What makes Nocturne’s deep dive into this alternate history a
+worthwhile watch, though, is the way it presents France not just as a crumbling monarchy in the throes of a heroic social uprising but also as a colonial nation
+whose pivot to democracy at home can’t be divorced from its history of committing unfathomable atrocities abroad.
+</item 4>
+
+<item 5>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s
+iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity.
+
+Set in the late 18th century during the thick of the French Revolution, Castlevania: Nocturne picks up hundreds of years after the events of Netflix’s first
+Castlevania series as demon slayer Richter Belmont (Edward Bluemel) makes his way to France in search of vengeance and vampires. Like his distant holy
+whip-wielding ancestor Trevor, Richter’s innate talents for magic make him perfectly suited for getting into the family business, and being raised by his
+formidable warrior mother Julia (Sophie Skelton) instills in him a profound sense of pride in the work they do.
+
+Image: Netflix
+
+Together, Richter’s raw potential and Julia’s tutelage make him uniquely powerful even from a young age.
+</item 5>
+
+<item 6>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+As strong and different as the season starts, by its last two episodes, Nocturne does start to feel a bit like it’s rehashing moments from the first show — if
+not in exact form, then in terms of how neatly it brings its plotlines to a close. None of that’s enough to keep the show from hitting all the right notes,
+however, and by the time you hit the finale, there’s a solid chance you’ll already be hoping for more.
+</item 6>
+
+<item 7>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+The only difference was that Janes did not name the player.
+
+The reporting of Arcia's comments proved to be divisive across the baseball community. Among the most prominent to call out Mintz was Rizzo. The "High Heat"
+co-host said she was irritated by "bloggers or podcasters" going into the clubhouse and "ruining it for the rest of us" when "some jackoff comes in at the end
+of the season that gets a credential, God only knows why." She called the clubhouse "a sacred place" and defended the players who were upset by the reporting of
+Arcia's comments, before she called Mintz out by name.
+
+MORE: Every time Nick Castellanos has interrupted a somber moment with a home run
+
+"First of all, this guy, Jake Mintz, that's not even a reporter," Rizzo said. "That's taking away from true reporters and true journalists.
+</item 7>
+
+<item 8>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+She said that reporters abstaining from writing on his comments would be akin to "protecting players from themselves."
+
+She also went on to say that what Arcia said wasn't a slur or hateful, and added the only reason anyone was concerned about it was because "they know it would
+motivate Harper to beat [the Braves]. Which implies the Braves do not feel they can handle a motivated Bryce Harper and are willing to suggest that is why they
+lost the other day."
+
+"I didn't say something sooner because I thought this was overblown," Janes continued. "And frankly, I thought it wouldn't help. But I am genuinely disgusted by
+the way some media members are acting like a reporter was in the wrong for this. He wasn't.
+
+"And if the Braves let this be the story of their series, that's on them. Win and it goes away. Period."
+</item 8>
+
+<item 9>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+Nocturne reworks a number of Castlevania’s classic supporting characters like Maria — who fights using reimagined versions of the Four Sacred Beasts — and
+empathic singer Edouard (Sydney James Harcourt) to brilliant effect. But out of all the show’s old but new faces, ferrokinetic Vodoun practitioner Annette
+(Thuso Mbedu) stands out because of how strongly the show introduces her as a woman whose Haitian identity is what makes her able to understand the situation
+over in France with an exacting kind of clarity.
+
+It’s through Annette and the show’s exploration of Afro Caribbean syncretism that Nocturne expands the boundaries of Castlevania’s magical mythology, which is
+touched on heavily throughout the season’s eight episodes. Small nods to the video games and gnarly beheadings abound, particularly in the Powerhouse
+Animation-produced show’s bigger hyperkinetic brawls between its heroes and hordes of horrific creatures.
+</item 9>
+
+<item 10>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But despite all of Julia’s skill with her family’s deadly heirloom, Castlevania: Nocturne’s world is one teeming with vampires even centuries after Dracula has
+seemingly been destroyed, and the series opens at a devastating moment in Richter’s past that leaves him orphaned and unable to access his magic.
+
+Though Nocturne takes place in the same continuity as the previous Castlevania show, it also uses major pieces of lore from Konami’s Castlevania: Rondo of Blood
+and Symphony of the Night games to tell a riveting story about the inherent hypocrisies baked into the historic record of colonial nations embracing democratic
+revolution.
+
+Here, the French Revolution isn’t just a transformative period of social unrest between moneyed elites and impoverished peasants fed up with their subjugation.
+</item 10>
+=== END ITEM id=e3da62602e502241 ===
+
+=== ITEM id=f146f343b638c143 ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances.
+  Fact 0.2: Whether bets are refunded depends on the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook adjusts when odds change for a legitimate reason.
+  Fact 1.2: An injury is an example of a legitimate reason for a line or odds change.
+  Fact 1.3: A roster move is an example of a legitimate reason for a line or odds change.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Either way, the line shopping strategy is designed to help you maximize your potential return.
+
+NBA live betting
+
+Thanks to the increased popularity of online sports betting apps, in-game betting has exploded nationwide. Also known as live betting, in-game betting allows
+you to bet on a game while it’s unfolding.
+
+The action is fast, and the odds are constantly shifting, making for a new way to enjoy the flow of a game while still staying engaged as a bettor.
+
+Depending on the sportsbook, there is usually a strong variety of live betting opportunities. You’ll find game and player prop bets like whether the next bucket
+will be worth one, two, or three points.
+
+You can bet on the team leading at the end of the current quarter or on whether there will be a comeback victory. You can even boil live betting down to the
+results of the next possession.
+
+The most popular sportsbook apps, such as DraftKings, FanDuel, and BetMGM, offer NBA in-game betting, though each has its lines and betting opportunities.
+</item 1>
+
+<item 2>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 2>
+
+<item 3>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other side to get it that way.
+
+That’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like
+an injury or roster move. It’ll be difficult for you to find value in that case.
+
+But when a line moves or odds change because of betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right
+there.
+
+Line shopping is a tool to help you spot changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.
+
+Choose a side, shop around at online sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable
+to your viewpoint.
+
+See more: What is a parlay bet?
+</item 3>
+
+<item 4>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+</item 4>
+
+<item 5>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 5>
+
+<item 6>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 6>
+
+<item 7>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Ensure the site has a responsible gaming section.
+
+The overall user experience should be smooth and hassle-free.
+
+Safety and Security:
+
+Top NBA betting sites prioritize users' safety.
+
+Ensure your personal information is secure.
+
+Some sportsbooks excel in ensuring cybersecurity; always go for those with solid reputations.
+
+How to find the best NBA lines
+
+Not all sportsbook betting odds are created equal. If you're willing to put in some legwork, you can shop for the best NBA lines to maximize your potential
+return.
+
+Movement in the odds depends on multiple factors, including team news, injuries, public betting, recent play, and even the number of games a team plays in a
+row.
+
+Oddsmakers use all the available information to craft their lines, and you can find value in shopping around for the most favorable lines and odds.
+
+You can use our NBA odds page (see link above) to find the best lines for your prospective bet, or you can open accounts at multiple sportsbooks and do the
+shopping yourself.
+</item 7>
+
+<item 8>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 8>
+
+<item 9>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 9>
+
+<item 10>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+This includes your initial $10 wager, along with a profit of $15.30.
+
+It's essential to note that this calculation gives you the total payout, not just your earnings. If you're keen on tracking your profits from betting, remember
+to subtract your original stake from the payout to get an accurate figure.
+
+Why do moneyline odds change?
+
+Lines at the best sports betting apps change quickly due to two primary reasons:
+
+Public betting
+
+New information
+
+Before setting odds for an event, oddsmakers gather extensive data. Once they finalize the odds, they release them to the public.
+
+As a bettor, you can bet immediately or wait for potential shifts in the odds, although predicting these shifts is challenging.
+
+For instance, when examining odds for the next Super Bowl champion released shortly after the previous Super Bowl, these odds are based mostly on the recently
+concluded season.
+
+As the new season approaches and teams make changes, odds adjust based on perceived championship chances. As games progress, lines continue to evolve based on
+team performances.
+
+Public betting can also sway lines.
+</item 10>
+=== END ITEM id=f146f343b638c143 ===
+
+=== ITEM id=f31d2838e3c710e6 ===
+Gold sentences and facts:
+Sentence 0: Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+  Fact 0.0: Kenneth Walker III plays for the Seahawks.
+  Fact 0.1: Kenneth Walker III took four carries against the Rams.
+  Fact 0.2: Kenneth Walker III left the game with an oblique injury.
+Sentence 1: And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland.
+  Fact 1.0: Klopp has a new worry.
+  Fact 1.1: The Reds are without Andy Robertson.
+  Fact 1.2: Andy Robertson is a left-back.
+  Fact 1.3: Andy Robertson suffered a shoulder injury.
+  Fact 1.4: Andy Robertson suffered the shoulder injury while on international duty with Scotland.
+
+Retrieved items:
+<item 1>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for
+further evaluation in the locker room. He was ruled questionable to return. NFL Media reported on Monday that Kupp suffered a low ankle sprain and will be
+evaluated going forward.
+
+Darius Slayton (Giants) had a big impact against the Commanders, hauling in a deep score from Tommy DeVito, before exiting with an arm injury. He was ruled out
+for the remainder of the contest halfway through the third quarter.
+
+EDGE
+
+Joey Bosa (Chargers) appeared to injure his right leg or foot while held in a block during a first-quarter pass-rushing attempt against the Packers. He limped
+to the sidelines and was carted to the locker room, then ruled questionable to return.
+</item 1>
+
+<item 2>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang
+
+As the Premier League returns with a Saturday packed full of huge matches, talkSPORT gets the action started at Anfield.
+
+But that's not all there is, with a Rugby World Cup semi-final, a London derby and a packed UFC card among the other offerings.
+
+9 Merseyside derbies are never dull and talkSPORT has the first one of the season live Credit: Getty
+
+9 Everton are starting to look much better after a rocky start Credit: Getty
+
+Here, talkSPORT runs through what is an epic day of sport.
+
+Merseyside derby
+
+Liverpool are sitting in a comfortable fourth place in the Premier League table having picked up five wins out of their opening eight games.
+
+The bad news for Jurgen Klopp is that the Reds lost to Tottenham and only managed a draw with Brighton just before the international break.
+</item 2>
+
+<item 3>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 3>
+
+<item 4>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland.
+
+His absence could open up a gap in their defence for Everton to exploit.
+
+The Toffees were winless in their first five games, but have since picked up two much-needed wins.
+
+But Everton are up against the odds, having won just one out of the last 25 previous Merseyside derbies.
+
+Liverpool vs Everton is live on talkSPORT at 12:30pm on October 21
+
+9 Sean Dyche's side go into the Merseyside derby as heavy underdogs Credit: Getty
+
+Crystal Palace look to end Newcastle's building momentum
+
+The Magpies have been on an impressive run of form across all competitions, knocking last year's treble winners Manchester City out the Carabao Cup while
+defeating Paris Saint-Germain 4-1 in the Champions League.
+
+But Crystal Palace proved to be an unbeatable obstacle for Newcastle last season.
+</item 4>
+
+<item 5>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+I agree to receive the "Pick Six Newsletter" and marketing communications, updates, special offers (including partner offers), and other information from CBS
+Sports and the Paramount family of companies. By pressing sign up, I confirm that I have read and agree to the Terms of Use and acknowledge Paramount's Privacy
+Policy See All Newsletters Please check the opt-in box to acknowledge that you would like to subscribe. Thanks for signing up! Keep an eye on your inbox. Sorry!
+There was an error processing your subscription.
+
+WR
+
+Tyreek Hill (Dolphins) briefly left Miami's game against the Raiders while nursing a hand injury and was ruled questionable to return, but he took the field
+again soon afterward, securing seven catches for 80 yards and a score before halftime. Hill has left multiple games this year, only to return in all of them.
+
+Cooper Kupp (Rams) had just a single catch against the Seahawks before suffering an ankle injury while blocking.
+</item 5>
+
+<item 6>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Week 11 of the 2023 NFL season has provided plenty of drama, from the Bears hanging with the Lions to the Giants getting a rebound from emergency quarterback
+Tommy DeVito. But the latest round of regular-season action has also brought another wave of unfortunate injuries. Here's a roundup of the latest big names to
+go down around the league:
+
+QB
+
+C.J. Stroud (Texans) left for a single play against the Cardinals after absorbing a hard hit, with backup Davis Mills entering in relief. Stroud did not receive
+an injury designation, however, and returned after a quick check-in from trainers.
+
+Geno Smith (Seahawks) suffered an injury to his throwing arm after guiding a 16-7 lead over the Rams, showing frustration while trying to stretch the arm after
+a hit from Aaron Donald. Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left
+in the third quarter.
+</item 6>
+
+<item 7>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+DB
+
+Talanoa Hufanga (49ers), who emerged as a ballhawk for San Francisco's secondary in 2022, left early against the Buccaneers with a knee injury. Coach Kyle
+Shanahan confirmed to reporters on Monday that the All-Pro suffered a season-ending ACL tear.
+</item 7>
+
+<item 8>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+They weren't awful against Dallas last week on a per-touch basis, but neither finished with more than 12 touches. Even worse, no Carolina back has enjoyed a
+60-yard rushing game since Oct. 15. Bad offensive line, negative game scripts, awful coaching — it's all bad, man!
+
+What are the biggest RB injuries in Week 12?
+
+Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11 that the ever-hip Pete Carroll referred to as "legit." KW3 has a better
+chance of missing multiple weeks than he does at suiting up for Seattle's Thanksgiving Day game against Fred Warner and the 49ers. If Zach Charbonnet somehow
+finds himself on your waiver wire, an early Merry Christmas to you if you have the FAAB or a high waiver priority.
+
+The hits just keep on coming for the Packers' Aaron Jones, who suffered a knee injury but seems to have at least caught a break in the sense that he didn't tear
+his ACL.
+</item 8>
+
+<item 9>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Smith did return, however, for the final drive of the game in the losing effort. Head coach Pete Carroll said that Smith will "make it back." When asked if that
+means for Thursday's matchup against San Francisco, the coach said, "I would think so."
+
+Sam Howell (Commanders) received medical attention on the sidelines after enduring several hard hits to the upper body on a touchdown run against the Giants. He
+was quickly cleared of a potential concussion, however, and remained in the game. Veteran journeyman Jacoby Brissett is Washington's backup.
+
+RB
+
+Aaron Jones (Packers) suited up against the Chargers despite a lingering hamstring issue, only to manage just five carries before suffering a knee injury. The
+former Pro Bowler needed help to leave the field and was then carted to the locker room, replaced by A.J. Dillon.
+</item 9>
+
+<item 10>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+He was seen walking on the sidelines shortly afterward but ruled doubtful to return. Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing
+yards on the year, replaced Walker as Seattle's top ball carrier. Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an
+"oblique strain that was legit" and could miss time.
+
+D'Onta Foreman (Bears) remained a headliner of Chicago's backfield against the Lions, even with Khalil Herbert back from injured reserve, but managed just 14
+yards on the ground before suffering an ankle injury. He walked off with a limp and attempted to run on the sidelines but did not return to the field after the
+Bears ruled him questionable.
+
+Pick Six Newsletter Crafted By The Best NFL Experts Get the day's big stories + fun stuff you love like mock drafts, picks and power rankings.
+</item 10>
+=== END ITEM id=f31d2838e3c710e6 ===

@@ -1,0 +1,75 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "595996307760943345",
+   "sentences": [
+    "Beijing ( / beɪˈdʒɪŋ / ; Mandarin : ( pèi. tɕíŋ ) ( listen ) ) , formerly romanized as Peking , is the capital of the People 's Republic of China , the world 's second most populous city proper , and most populous capital city . The city , located in northern China , is governed as a direct - controlled municipality under the national government with 16 urban , suburban , and rural districts . Beijing Municipality is surrounded by Hebei Province with the exception of neighboring Tianjin Municipality to the southeast ; together the three divisions form the Jingjinji metropolitan region and the national capital region of China .",
+    "Over the past 3,000 years , the city of Beijing has had numerous other names . The name Beijing , which means `` Northern Capital '' ( from the Chinese characters 北 for north and 京 for capital ) , was applied to the city in 1403 during the Ming dynasty to distinguish the city from Nanjing ( the `` Southern Capital '' ) . The English spelling is based on the pinyin romanization of the two characters as they are pronounced in Standard Mandarin . An older English spelling , Peking , is the postal romanization of the same two characters as they are pronounced in Chinese dialects spoken in the southern port towns first visited by European traders and missionaries . Those dialects preserve the Middle Chinese pronunciation of 京 as kjaeng , prior to a phonetic shift in the northern dialects to the modern pronunciation . Although Peking is no longer the common name for the city , some of the city 's older locations and facilities , such as Beijing Capital International Airport , with IATA Code PEK , and Peking University , still use the former romanization ."
+   ]
+  },
+  {
+   "id": "-3429928405660073272",
+   "sentences": [
+    "Adobe Flash Player Original author ( s ) FutureWave Macromedia Developer ( s ) Adobe Systems Initial release 1996 ; 22 years ago ( 1996 ) Stable release ( s ) ( ± ) Windows , macOS , Linux , Chrome OS 28.0. 0.137 / January 9 , 2018 ; 16 days ago ( 2018 - 01 - 09 ) Android 4.0. x 11.1. 115.81 / September 10 , 2013 ; 4 years ago ( 2013 - 09 - 10 ) Android 2. x and 3. x 11.1. 111.73 / September 10 , 2013 ; 4 years ago ( 2013 - 09 - 10 ) Solaris 11.2. 202.223 / March 28 , 2012 ; 5 years ago ( 2012 - 03 - 28 ) Preview release ( s ) ( ± ) Windows , macOS , Linux , Chrome OS 28.0. 0.152 Beta / January 24 , 2018 ; 1 day ago ( 2018 - 01 - 24 ) Written in C++ Operating system Windows , macOS , Linux , Chrome OS , Solaris , BlackBerry Tablet OS , Android , and Pocket PC Platform Web browsers and ActiveX - based software Available in Chinese Simplified , Chinese Traditional , English , French , German , Italian , Japanese , Polish , Russian , Spanish , Korean , and Turkish Type Run - time environment , Media player , and Browser extension License Freeware Website www.adobe.com/products/flashplayer.html",
+    "Availability on desktop operating systems Platform Latest version Browser support Windows XP and later Windows Server 2003 and later 28.0. 0.137 Firefox , Chrome , Chromium , Safari , Opera , Internet Explorer , Microsoft Edge Windows 2000 11.1. 102.55 ? Windows 98 and ME 9.0. 115.0 ? Windows 95 and NT 4 7.0. 14.0 ? Mac OS X 10.6 or later 28.0. 0.137 Firefox , Chrome , Chromium , Safari , Opera Mac OS X 10.5 10.3. 183.90 ? Classic Mac OS , PowerPC 7.0. 14.0 ? Classic Mac OS , 68k 5.0 ? Linux 28.0. 0.137 Firefox , Chrome , Chromium , Opera Solaris 11.2. 202.223 ?"
+   ]
+  },
+  {
+   "id": "5ab29956554299194fa9342d",
+   "sentences": [
+    "Batman is a 1989 American superhero film directed by Tim Burton and produced by Jon Peters and Peter Guber, based on the DC Comics character of the same name.",
+    " He is Chairman and CEO of Mandalay Entertainment."
+   ]
+  },
+  {
+   "id": "2485791396969793161",
+   "sentences": [
+    "`` The Joker '' Cover of the 1973 single Single by Steve Miller Band from the album The Joker B - side `` ' see track listings ' '' Released October 1973 Format 7 '' Single , 12 '' single , Cassette single ( Original Releases ) , CD single and Digital download ( Post Releases ) . Genre Rock , blues rock , southern rock Length 4 : 26 ( Album version ) ; 3 : 35 ( 7 '' version / Radio edit ) and 6 : 20 ( Extended version ) Label Capitol Records ; EMI - Odeon ; London Records , Parlophone Records , EMI Bovema , Odeon Records . Songwriter ( s ) Eddie Curtis , Ahmet Ertegün , Steve Miller Producer ( s ) Steve Miller Steve Miller Band singles chronology `` Fandango '' ( 1972 ) `` The Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash '' ( 1974 ) `` Fandango '' ( 1972 ) `` The Joker '' ( 1973 ) `` Your Cash Ai n't Nothin ' But Trash '' ( 1974 ) `` Take the Money and Run '' / `` The Joker '' ( 1983 , double A-side , live ) Cover of the 1983 live single Steve Miller Band singles chronology `` Living in the U.S.A. '' ( live ) ( 1983 ) String Module Error : Match not found1983 `` Take the Money and Run '' ( live ) / `` The Joker '' ( live ) ( 1983 ) String Module Error : Match not found1983 `` Shangri - La '' ( 1984 ) Shangri - La1984 `` The Joker '' ( 1990 , reissue ) Cover of the 1990 reissue Steve Miller Band singles chronology `` Ya Ya '' ( 1988 ) Ya Ya1988 `` The Joker '' ( 1990 ) The Joker1990 `` Wide River '' ( 1993 ) Wide River1993",
+    "`` The Joker '' is a song by the Steve Miller Band from their 1973 album The Joker . It is one of two Steve Miller Band songs that feature the nonce word `` pompatus '' . The song topped the US Billboard Hot 100 in early 1974 ."
+   ]
+  },
+  {
+   "id": "-8592961744787992719",
+   "sentences": [
+    "All I Want for Christmas Is You , a Night of Joy and Festivity is the first concert residency by American singer Mariah Carey . Performed annually at the Beacon Theatre in Manhattan , New York , the residency began on December 15 , 2014 , and will conclude on December 22 , 2017 , after completing six legs and thirty - four shows . Billboard revealed that the six dates had sold out with a total of 16,196 tickets while grossing $1.5 million during the first leg of the residency . The main set list for the show encompassed songs from Merry Christmas and Merry Christmas II You , with additional non-holiday tracks . The show also included `` a cast of forty , including a gospel choir , a clutch of carolers , several acrobats and a hyperactive round of kid singer / dancers . ''"
+   ]
+  },
+  {
+   "id": "5adf099a5542992d7e9f927f",
+   "sentences": [
+    "Brunswick Golden Isles Airport (IATA: BQK, ICAO: KBQK, FAA LID: BQK) , previously known as Glynco Jetport, is a county-owned public-use airport located five nautical miles (9 km) north of the central business district of Brunswick, a city in Glynn County, Georgia, United States.",
+    "Lafayette Regional Airport (IATA: LFT, ICAO: KLFT, FAA LID: LFT) is a public airport two miles (4 km) southeast of Lafayette, in Lafayette Parish, Louisiana, United States."
+   ]
+  },
+  {
+   "id": "5abe731255429965af743f0e",
+   "sentences": [
+    "Matthew Arnold \"Matt\" Thiessen (born August 12, 1980) is a Canadian-American musician, singer and songwriter known for being co-founder, lead singer, guitarist, pianist, and primary songwriter for the Christian rock band Relient K.",
+    "George Thorogood (born February 24, 1950) is an American musician, singer and songwriter from Wilmington, Delaware."
+   ]
+  },
+  {
+   "id": "5adbe27c55429947ff173854",
+   "sentences": [
+    "Dalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick.",
+    "California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States."
+   ]
+  },
+  {
+   "id": "1002962494655967639",
+   "sentences": [
+    "From September 1947 , Toyota 's small - sized vehicles were sold under the name `` Toyopet '' ( トヨペット ) . The first vehicle sold under this name was the Toyopet SA , but it also included vehicles such as the Toyopet SB light truck , Toyopet Stout light truck , Toyopet Crown , Toyopet Master , and the Toyopet Corona . The word `` Toyopet ( Japanese article ) '' was a nickname given to the Toyota SA due to its small size , as the result of a naming contest the Toyota Company organized in 1947 . However , when Toyota eventually entered the American market in 1957 with the Crown , the name was not well received due to connotations of toys and pets . The name was soon dropped for the American market , but continued in other markets until the mid-1960s ."
+   ]
+  },
+  {
+   "id": "multihop-rag-850",
+   "sentences": [
+    "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said.",
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  }
+ ]
+}

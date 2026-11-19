@@ -1,0 +1,71 @@
+[
+ {
+  "id": "5a8e0d04554299068b959e3a",
+  "sentences": [
+   ["Haringey Heartlands is an urban regeneration project.", "Haringey Heartlands is currently ongoing.", "Haringey Heartlands is in the London Borough of Haringey.", "The London Borough of Haringey is in north London, England."],
+   ["The Mall Wood Green is a large shopping centre.", "The Mall Wood Green is a residential complex.", "The Mall Wood Green is in Wood Green, north London."]
+  ]
+ },
+ {
+  "id": "-7008368888638493698",
+  "sentences": [
+   ["The Country Music Hall of Fame and Museum is in Nashville, Tennessee.", "The Country Music Hall of Fame and Museum is one of the world's largest museums dedicated to the preservation and interpretation of American vernacular music.", "The Country Music Hall of Fame and Museum is one of the world's largest research centers dedicated to the preservation and interpretation of American vernacular music.", "The Country Music Hall of Fame and Museum was chartered in 1964.", "The Country Music Hall of Fame and Museum has amassed one of the world's most extensive musical collections."],
+   ["The Country Music Hall of Fame and Museum was established in 1961.", "The Country Music Hall of Fame and Museum is located at 222 5th Ave S, Nashville, Tennessee 37203.", "The type of the Country Music Hall of Fame and Museum is Hall of fame.", "The Country Music Hall of Fame and Museum had 1.1 million visitors in 2015.", "The director of the Country Music Hall of Fame and Museum is Kyle Young.", "The website of the Country Music Hall of Fame and Museum is www.countrymusichalloffame.org."]
+  ]
+ },
+ {
+  "id": "-5412703064874788739",
+  "sentences": [
+   ["Draft lotteries were conducted again in 1970 for men born in 1951.", "Draft lotteries were conducted from 1971 to 1975 for men born from 1952 to 1956.", "The draft numbers issued in 1972 were never used the next year to call men for induction into service.", "The last call for induction was on December 7.", "Authority to induct expired on June 30, 1973."],
+   ["On December 1, 1969, the Selective Service System of the United States conducted two lotteries.", "The 1969 lotteries determined the order of call to military service in the Vietnam War.", "The 1969 lotteries were for men born from 1944 to 1950.", "The 1969 lotteries occurred during a period of conscription from just before World War II to 1973.", "The 1969 lotteries were the first time a lottery system had been used to select men for military service since 1942."]
+  ]
+ },
+ {
+  "id": "5a77671255429966f1a36d21",
+  "sentences": [
+   ["There is no optimal strategy involved in the game.", "Play in the game entirely rests upon a random drawing of the cards."],
+   ["Diplomacy is a strategic board game.", "Diplomacy was created by Allan B. Calhamer.", "Diplomacy was created in 1954.", "Diplomacy was released commercially in 1959."],
+   ["Diplomacy's main distinctions from most board wargames include its negotiation phases.", "In Diplomacy's negotiation phases, players spend much of their time forming and betraying alliances with other players.", "In Diplomacy's negotiation phases, players spend much of their time forming beneficial strategies.", "Diplomacy's main distinctions from most board wargames include the absence of dice and other game elements that produce random effects."]
+  ]
+ },
+ {
+  "id": "7005697705009934957",
+  "sentences": [
+   ["'It Ai n't Me' is a song by Norwegian DJ Kygo and American singer Selena Gomez.", "'It Ai n't Me' was released by Interscope Records, Sony and Ultra on 17 February 2017.", "'It Ai n't Me' was the lead single from Kygo's first EP, Stargazing.", "'It Ai n't Me' was written by Kygo, Selena Gomez, Andrew Watt, Brian Lee and Ali Tamposi.", "'It Ai n't Me' was produced by Kygo, Andrew Watt, Ben Rice and Louis Bell.", "'It Ai n't Me' is a dance-pop, electropop and tropical house song.", "'It Ai n't Me' comprises an acoustic guitar line.", "'It Ai n't Me' has a build-drop arrangement in its chorus.", "The chorus of 'It Ai n't Me' features pulsing piano notes, bass, synthesizers, finger-snap claps and pan flute melodies.", "Selena Gomez sings the track in a husky tone.", "In the chorus of 'It Ai n't Me', Selena Gomez's vocals are reduced to recurring syllables.", "The lyrics of 'It Ai n't Me' are nostalgic.", "The lyrics of 'It Ai n't Me' narrate a past relationship ruined by alcoholism and partying too often."]
+  ]
+ },
+ {
+  "id": "966261456620232361",
+  "sentences": [
+   ["Hoyt Axton performed the song to the group.", "Two of the three main vocalists, Danny Hutton and Cory Wells, rejected the song.", "Chuck Negron felt that the band needed a 'silly song' to help bring the band back together as a working unit.", "Chuck Negron also felt that the song was not even close to the band's best record.", "Chuck Negron also felt that the song might have been one of the band's most honest."],
+   ["Members of Three Dog Night have described the song as a 'kid's song'.", "Members of Three Dog Night have described the song as a 'silly song'.", "The song topped the main singles charts in North America.", "The song was certified gold by the RIAA.", "The song has since been covered by multiple artists."]
+  ]
+ },
+ {
+  "id": "5a796c805542990784727805",
+  "sentences": [
+   ["The person described in this sentence was the brother of Alfred Jodl.", "Alfred Jodl was Chief of the Operations Staff of the OKW."],
+   ["Alfred Josef Ferdinand Jodl lived from 10 May 1890 to 16 October 1946.", "Alfred Jodl was a German general.", "Alfred Jodl was a war criminal during World War II.", "Alfred Jodl served as Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht)."]
+  ]
+ },
+ {
+  "id": "4627523927977896713",
+  "sentences": [
+   ["Corporation tax was originally introduced as a classical tax system.", "Under the classical system, companies were subject to tax on their profits.", "Under the classical system, companies' shareholders were also liable to income tax on the dividends they received.", "The first major amendment to corporation tax moved it to a dividend imputation system in 1973.", "Under the 1973 dividend imputation system, an individual receiving a dividend became entitled to an income tax credit representing the corporation tax already paid by the company paying the dividend.", "The classical system was reintroduced in 1999.", "The 1999 reintroduction of the classical system came with the abolition of advance corporation tax.", "The 1999 reintroduction of the classical system came with the abolition of repayable dividend tax credits.", "Another change saw the single main rate of tax split into three.", "Tax competition between jurisdictions reduced the main corporate tax rate from 28% in 2008-2010.", "Tax competition between jurisdictions reduced the main corporate tax rate to a flat rate of 20% as of April 2015."]
+  ]
+ },
+ {
+  "id": "multihop-rag-1613",
+  "sentences": [
+   ["The speaker said, 'Hopefully we can go one better this year.'", "The speaker recalled the 2-0 defeat by Canada in 2022."],
+   ["The Swans had a winless campaign in 2022.", "The Swans are led by ex-Collingwood player Chloe Molloy.", "The Swans have been competitive this season."]
+  ]
+ },
+ {
+  "id": "1728824774090737582",
+  "sentences": [
+   ["'Rip It Up' was a 1983 single by Scottish post-punk band Orange Juice.", "'Rip It Up' was the second single released from Orange Juice's 1982 album of the same name.", "'Rip It Up' became Orange Juice's only UK top 40 success.", "'Rip It Up' reached no. 8 in the chart.", "'Rip It Up' signalled a departure from the sound of the band's earlier singles.", "'Rip It Up' had Chic-influenced guitars.", "'Rip It Up' used a synthesiser to create a more disco-oriented sound."],
+   ["'Rip It Up' is a single by Orange Juice from the album Rip It Up.", "The B-side of 'Rip It Up' is 'Snake Charmer'.", "The B-side of 'Rip It Up' is 'A Sad Lament'.", "'Rip It Up' was released in February 1983.", "'Rip It Up' was released in 7-inch and 12-inch formats.", "'Rip It Up' was recorded at Berwick Street Studios, London.", "'Rip It Up' is in the post-punk genre.", "'Rip It Up' was released on the Polydor label.", "'Rip It Up' was songwritten by Edwyn Collins.", "'Rip It Up' was produced by Martin Hayles.", "Orange Juice's singles chronology lists 'I Ca n't Help Myself' (1982), 'Rip It Up' (1983) and 'Flesh of My Flesh' (1983)."]
+  ]
+ }
+]

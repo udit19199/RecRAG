@@ -1,0 +1,72 @@
+[
+  {"id": "08db37fa78f55115", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "a15c46556638a65b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]}
+  ]},
+  {"id": "143339f9bdcba1a0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season."}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "aafe44b6857683c7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may have misinterpreted the evidence"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "f1242e9cefbfda0b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."}]}
+  ]},
+  {"id": "e9d2789d8e1efc13", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+  ]}
+]

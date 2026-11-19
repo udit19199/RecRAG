@@ -1,0 +1,82 @@
+[
+ {
+  "id": "5a8e341c5542995085b373d6",
+  "sentences": [
+   ["Hou Hsiao-hsien was born on 8 April 1947.", "Hou Hsiao-hsien is a Taiwanese film director.", "Hou Hsiao-hsien is a Taiwanese screenwriter.", "Hou Hsiao-hsien is a Taiwanese producer.", "Hou Hsiao-hsien is a Taiwanese actor."],
+   ["Hou Hsiao-hsien is a leading figure in world cinema.", "Hou Hsiao-hsien is a leading figure in Taiwan's New Wave cinema movement.", "Hou Hsiao-hsien is an auteur."],
+   ["Hou Hsiao-hsien won the Golden Lion at the Venice Film Festival in 1989.", "Hou Hsiao-hsien won the Golden Lion for his film \"A City of Sadness\" (1989).", "Hou Hsiao-hsien won the Best Director award at the Cannes Film Festival in 2015.", "Hou Hsiao-hsien won the Best Director award at Cannes for his film \"The Assassin\" (2015)."],
+   ["\"The Puppetmaster\" (1993) is a highly regarded work by Hou Hsiao-hsien.", "\"Flowers of Shanghai\" (1998) is a highly regarded work by Hou Hsiao-hsien."],
+   ["Kenny Ortega (Kenneth John Ortega) was born on April 18, 1950.", "Kenny Ortega is an American producer.", "Kenny Ortega is an American director.", "Kenny Ortega is an American choreographer."],
+   ["Kenny Ortega is best known for directing \"Hocus Pocus\".", "Kenny Ortega is best known for directing the \"High School Musical\" trilogy.", "Kenny Ortega is best known for directing \"Descendants\".", "Kenny Ortega is best known for directing Michael Jackson's \"This Is It\" concerts."]
+  ]
+ },
+ {
+  "id": "5a7652785542992db9473760",
+  "sentences": [
+   ["Vladimir Petrovich Danilevich (Russian: Владимир Петрович Данилевич) was born on 4 September 1924.", "Vladimir Petrovich Danilevich died on 9 October 2001.", "Vladimir Petrovich Danilevich was a well-known Soviet animator.", "Vladimir Petrovich Danilevich was a well-known Russian animator.", "Vladimir Petrovich Danilevich successfully worked as a film director.", "Vladimir Petrovich Danilevich successfully worked as a screenwriter.", "Vladimir Petrovich Danilevich successfully worked as an art director.", "Vladimir Petrovich Danilevich successfully worked as an animator."],
+   ["Wolfgang Becker was born on 22 June 1954.", "Wolfgang Becker is a German film director.", "Wolfgang Becker is a German writer."],
+   ["Wolfgang Becker is best known to the international audience for his work \"Good Bye Lenin!\"."],
+   ["\"Good Bye Lenin!\" is from 2003."]
+  ]
+ },
+ {
+  "id": "multihop-rag-1858",
+  "sentences": [
+   ["The U.S. will travel to GEODIS Park in Nashville, Tennessee on October 17.", "The U.S. will play a friendly against Ghana at GEODIS Park."],
+   ["Milton Doyle is a fellow import.", "Majok Deng is a fellow import.", "Milton Doyle scored 17 for Tasmania.", "Majok Deng scored 17 for Tasmania.", "Tasmania recorded their second win over Sydney this season.", "Tasmania's second win over Sydney this season came in as many attempts as the team made this season."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2079",
+  "sentences": [
+   ["Google unveiled new hardware.", "Google held its annual hardware event this week.", "Google is a search and consumer tech giant.", "At its annual hardware event, Google showed off what it has been working on."],
+   ["Wired removed the article for not meeting its standards.", "The article was shared widely on social media.", "The article was boosted in write-ups at other outlets.", "The extent to which the article was shared and boosted shows how willing people are to accept foul play on Google's part."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google \"siphons off\" news publishers' content.", "The case argues that Google \"siphons off\" news publishers' readers.", "The case argues that Google \"siphons off\" news publishers' ad revenue.", "The case argues that Google obtains these through anticompetitive means."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2125",
+  "sentences": [
+   ["Valve has announced a new Steam Deck.", "The announcement of the new Steam Deck was a surprise.", "The writing outlet has already reviewed the new Steam Deck."],
+   ["Valve made a number of minor physical upgrades with its new Steam Deck iteration.", "The minor physical upgrades were made alongside big improvements."],
+   ["Griffais explained that it is important to Valve that developers do not need to \"split their attention\" between different performance targets.", "Griffais said this is important to Valve for now."],
+   ["The Steam Deck OLED will go on sale on November 16 at 1pm ET.", "Valve has Steam Deck OLED units ready to ship on November 16."]
+  ]
+ },
+ {
+  "id": "multihop-rag-1667",
+  "sentences": [
+   ["A speaker said that he was the richest person in the world under 30.", "The speaker said he was going to spend his wealth to save humanity from extinction."],
+   ["Rehn declared to the jury that \"all of that, all of it, was built on lies.\""],
+   ["The prosecution painted Bankman-Fried as someone who knowingly committed fraud.", "The prosecution said Bankman-Fried committed fraud to achieve great wealth.", "The prosecution said Bankman-Fried committed fraud to achieve power.", "The prosecution said Bankman-Fried committed fraud to achieve influence.", "The defense countered that the FTX founder acted in good faith.", "The defense countered that the FTX founder never meant to commit fraud.", "The defense countered that the FTX founder never meant to steal.", "The defense countered that the FTX founder basically got in over his head."]
+  ]
+ },
+ {
+  "id": "5abd4f2e5542993062266c4b",
+  "sentences": [
+   ["Stephanocereus is a genus of cactus.", "Stephanocereus is from Brazil.", "Stephanocereus is related to \"Arrojadoa\"."],
+   ["The plants in this sentence are mostly liana-forming.", "The plants in this sentence are found in the Old World tropics.", "The plants in this sentence range from South China, Indonesia, Malaysia and the Philippines.", "The plants in this sentence range westward to Madagascar, with two species there.", "The plants in this sentence range westward to the Seychelles, with one species there.", "The plants in this sentence range southward to Australia, with three species there.", "The plants in this sentence range southward to New Caledonia, with one species there.", "The plants in this sentence range northward to India, with one species there.", "The plants in this sentence range northward to Sri Lanka, with one species there."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2126",
+  "sentences": [
+   ["Value can be found in player and team props.", "Value in player and team props can be found by gathering information from multiple sources.", "Value in player and team props can be found by tracking how players and their teammates perform."],
+   ["Props can be team prop bets.", "Props can be individual player prop bets.", "A prop bet can be on which team is winning at halftime.", "A prop bet can be on the total number of receptions a player collects."]
+  ]
+ },
+ {
+  "id": "multihop-rag-2456",
+  "sentences": [
+   ["The standout testimony in the second week of the trial came from Caroline Ellison.", "Caroline Ellison is the former CEO of Alameda Research.", "Caroline Ellison claimed she took $14 billion from customers.", "Caroline Ellison claimed she took the $14 billion to repay debts to lenders.", "Caroline Ellison claimed she used customers as a line of credit.", "Caroline Ellison claimed she did this under the instruction of SBF."],
+   ["Rehn declared to the jury that \"all of that, all of it, was built on lies.\""],
+   ["The prosecution painted Bankman-Fried as someone who knowingly committed fraud.", "The prosecution said Bankman-Fried committed fraud to achieve great wealth.", "The prosecution said Bankman-Fried committed fraud to achieve power.", "The prosecution said Bankman-Fried committed fraud to achieve influence.", "The defense countered that the FTX founder acted in good faith.", "The defense countered that the FTX founder never meant to commit fraud.", "The defense countered that the FTX founder never meant to steal.", "The defense countered that the FTX founder basically got in over his head."]
+  ]
+ },
+ {
+  "id": "-6378089928409183337",
+  "sentences": [
+   ["The previous department-issued firearm for CHP officers is the Smith & Wesson Model 4006 TSW in .40 S&W.", "As of August 2017, the CHP department has begun replacing the Smith & Wesson 4006 TSW with the Smith & Wesson M&P in .40 S&W.", "Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12-gauge shotgun.", "Each CHP patrol vehicle is equipped with a Sig Sauer M400 rifle in 5.56 mm.", "Less lethal options for CHP officers include OC Pepper Spray.", "Less lethal options for CHP officers include the PR-24 Side Handle Baton.", "The ASP Expandable Straight Baton is authorized as an optional piece of equipment for CHP officers completing their probationary year.", "CHP officers are authorized to carry the TASER X2 Defender.", "In early 2009, CHP officers were allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols."]
+  ]
+ }
+]

@@ -1,0 +1,58 @@
+[
+{"id": "cfe4a008328fdc4c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "but was actually footage from a video game."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "posts identified as false have been spotted circulating on X"}, {"item": 2, "quote": "a clip that purported to show"}, {"item": 2, "quote": "Hamas missile attacks on Israel but was actually footage from a video game."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]}
+]},
+{"id": "3050e1c0f2eb3a44", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly"}, {"item": 3, "quote": "committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "never meant to commit fraud"}, {"item": 3, "quote": "or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "basically got in over his head."}]}
+]},
+{"id": "f9312937c9366d4c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "central bankers will have to adjust their policies"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "hold rates higher for longer"}, {"item": 5, "quote": "than anticipated."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "46adce00dc50ae4e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "54b6c73f383257f8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "England and South Africa face off in the 2023 Rugby World Cup's second semi-final"}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "2e3a51e7746bae80", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

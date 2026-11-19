@@ -1,0 +1,53 @@
+[
+  {"id": "6bfb4f630efa6031", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "is reportedly preparing for a ground invasion."}]}
+  ]},
+  {"id": "4d01d12204c52f35", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "5ca9cf486abcf7a9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The first of these is the fact that tech companies continue to see huge pressure on their valuations."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+  ]},
+  {"id": "9d1d1d948dffd59a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "ahead of a verdict and potential sentencing for seven counts tied to fraud and money laundering."}, {"item": 7, "quote": "has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "2aaa6e98ad3a6997", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

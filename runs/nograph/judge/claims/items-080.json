@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a711c535542994082a3e59b",
+   "sentences": [
+    "The Albanian Coalition \"Perspective\" is an Albanian political party in Montenegro.",
+    "Albanians in Montenegro (, Albanian: \"Shqiptarët e Malit të Zi\" ) constitute 4.91% of the county's total population."
+   ]
+  },
+  {
+   "id": "5a734bb65542994cef4bc50f",
+   "sentences": [
+    " The early years of the company were dedicated to issuing recordings by jazz pianist Dave Brubeck, who was also one of its investors, but the label is known more for its recordings of comedian Lenny Bruce, jazz musician Vince Guaraldi, and the rock band Creedence Clearwater Revival.",
+    "Vincent Anthony Guaraldi (July 17, 1928 – February 6, 1976), born Vincent Anthony Dellaglio, was an American jazz pianist noted for his innovative compositions and arrangements and for composing music for animated television adaptations of the \"Peanuts\" comic strip, as well as his performances on piano as a member of Cal Tjader's late 50s ensemble and his own solo career which included the radio hit \"Cast Your Fate to the Wind\"."
+   ]
+  },
+  {
+   "id": "multihop-rag-2135",
+   "sentences": [
+    "“There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic,” said an Anthropic spokesperson, Sally Aldous.",
+    "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "multihop-rag-2408",
+   "sentences": [
+    "Tyreek Hill had two touchdowns among his 157 receiving yards to help the Miami Dolphins rout the Washington Commanders (4-9).",
+    "• Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games.",
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."
+   ]
+  },
+  {
+   "id": "2879480778972019439",
+   "sentences": [
+    "Chance 's friend Pat Wheeler ( Ward Bond ) and his wagon train of supplies stop in town , with a young gunslinger , Colorado Ryan ( Ricky Nelson ) , riding guard . Inside the jail , Stumpy ( Walter Brennan ) , Chance 's game - legged deputy , keeps watch over the jail and Joe , who knows that Stumpy holds an old grudge against Joe 's wealthy and powerful brother . Joe warns his jailers that Nathan Burdette will not like how his brother is being treated .",
+    "Walter Brennan as Stumpy"
+   ]
+  },
+  {
+   "id": "-429491976516694064",
+   "sentences": [
+    "Arthur `` The President '' Flanders -- An inmate on death row , convicted of killing his father in an insurance - fraud scheme . His sentence is commuted to life imprisonment , but he is later murdered by an unknown inmate in the prison laundry . Arlen `` The Chief '' Bitterbuck -- A Washita Cherokee death - row inmate , convicted of killing a man in a drunken brawl over a pair of boots . His execution is the first of three mentioned in Paul 's story . Janice Edgecombe -- Paul Edgecombe 's wife . Dies in a bus accident on the way to her grandchild 's graduation in 1956 . Hal Moores -- The warden at Cold Mountain Penitentiary . Melinda Moores -- Warden Moores 's wife , who is dying of a brain tumor and is cured by John Coffey . She eventually dies of a heart attack ten years later . Curtis Anderson -- The assistant warden . Dean Stanton -- A guard on E Block who is strangled and nearly killed by William Wharton . A father of young children , he takes no part in the taking of John Coffey to Melinda Moores due to the risk of losing his job . He applies for relocation to C Block after John Coffey 's death , where he is murdered by an inmate 4 months later . Harry Terwilliger -- One of the main guards on E Block along with his friends Paul Edgecombe , Brutus Howell and Dean Stanton . He eventually dies of cancer , long after John Coffey 's execution . Bill Dodge -- A `` floater '' guard on E Block ( not permanently assigned there ) . Jack Van Hay -- A guard who is part of the execution team . He operates the switch room . Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards . Burt Hammersmith -- A reporter who wrote on the Detterick twins ' murders and John Coffey 's trial . Despite believing himself to be an `` Enlightenment '' man , he displays prejudice in his stance on `` Negroes '' and tries to convince Paul of John Coffey 's guilt . Elaine Connelly -- A friend of Paul in the present - day nursing home where he tells his story . She is later revealed to be the grandmother of the Speaker of the Georgia House of Representatives , using this position to scare Brad Dolan from harassing Paul . Homer Cribus -- The Sheriff of Trapingus County , where the murders of the Detterick twins took place . Despite playing no part in apprehending John Coffey , he later shows up at the execution . An outspoken Baptist with strong racial prejudice and immensely overweight , he later succumbs to a heart attack while having sex with a 17 - year - old African American in his office . Rob McGee -- The Deputy Sheriff of Trapingus County , who led the search party which found John Coffey . While displaying strong doubt about Coffey 's guilt after being shown signs of innocence by Paul Edgecombe , he is still powerless to call for an appeal as he is subordinate to Sheriff Cribus , whom he allegedly hopes to succeed . Brad Dolan -- A malicious nursing home employee who harasses Paul Edgecombe . Paul strongly compares him to Percy Wetmore , and several times mistakes him for Percy , despite the latter dying in 1965 . Kathe and Cora Detterick -- The two young girls whom John Coffey was convicted of raping and murdering . Killed by William Wharton . Klaus and Marjorie Detterick -- The parents of Kathe and Cora .",
+    "Toot - Toot -- A trustee who stands in for the condemned during execution rehearsals and sells snacks to prisoners and guards ."
+   ]
+  },
+  {
+   "id": "5ae81032554299540e5a572a",
+   "sentences": [
+    " It covers an area of 1,383 sqkm south east of Melbourne, stretching from outer suburban Pakenham through rural areas to the coast at Inverloch and Phillip Island.",
+    " It includes the towns of Bass, Cape Patterson, Corinella, Cowes, Grantville, Inverloch, Kilcunda, Koo Wee Rup, Lang Lang, Rhyll, San Remo, Ventnor, Wonthaggi, and part of suburban Pakenham.",
+    "Pakenham is a satellite suburb of Melbourne on the edge of the West Gippsland region of Victoria, Australia, 56 km south-east of Melbourne's Central Business District, located within the Shire of Cardinia local government area."
+   ]
+  },
+  {
+   "id": "5ac18b585542994ab5c67d76",
+   "sentences": [
+    "Steve Rash is an American film director and producer best known for directing such films as \"The Buddy Holly Story\", \"Can't Buy Me Love\", \"Queens Logic\", \"\" and \"\".",
+    "Can't Buy Me Love is a 1987 American teen romantic comedy feature film starring Patrick Dempsey and Amanda Peterson in a story about a nerd at a high school in Tucson, Arizona who gives a cheerleader $1,000 to pretend to be his girlfriend for a month."
+   ]
+  },
+  {
+   "id": "5a8f7c9a55429918e830d239",
+   "sentences": [
+    " He played three seasons for the Philadelphia Eagles (1940) and the Pittsburgh Steelers (1941–1942).",
+    " He was drafted by the Philadelphia Eagles in the second round of the 2008 NFL Draft, and played for the Washington Redskins for three seasons after his departure from the Eagles."
+   ]
+  },
+  {
+   "id": "multihop-rag-387",
+   "sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  }
+ ]
+}

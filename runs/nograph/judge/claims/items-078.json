@@ -1,0 +1,83 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1888",
+   "sentences": [
+    "Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue.",
+    "Because of that experience, Bankman-Fried suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug.",
+    "It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."
+   ]
+  },
+  {
+   "id": "5a83ab355542990548d0b218",
+   "sentences": [
+    "Paola Suárez (born 23 June 1976) is a retired professional tennis player from Argentina.",
+    " She was one of the most prominent women's doubles players throughout the early and mid-2000s, winning eight Grand Slam titles, all of them with Virginia Ruano Pascual, and holding the No. 1 doubles ranking for 87 non-consecutive weeks.",
+    " He reached a career high singles ranking of 274 in July 2011, but is much better known as a leading doubles player with a huge serve."
+   ]
+  },
+  {
+   "id": "5ae5415055429908b63265b7",
+   "sentences": [
+    " It has its offices in New Roc City in New Rochelle, New York.",
+    "New Roc City, also known as New Rochelle Center, is an entertainment, retail and residential complex in the Downtown section of the city of New Rochelle in Westchester County, New York."
+   ]
+  },
+  {
+   "id": "multihop-rag-1802",
+   "sentences": [
+    "Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ]
+  },
+  {
+   "id": "4398207059107866695",
+   "sentences": [
+    "Duncan 's diagnosis was publicly confirmed during a CDC news conference the same day . That evening , Duncan reported feeling better and requested to watch a movie . The following morning , Duncan was breathing rapidly and complaining of `` pain all over '' . By the afternoon , however , he was able to eat , and the doctor noted that he was feeling better . The next day , October 3 , Duncan again reported feeling abdominal pain . That evening , the hospital contacted Chimerix , a biotechnology company developing Brincidofovir to combat the disease . The next day , Duncan 's organs were failing , and he was intubated to help him breathe . In the afternoon , the hospital began administering Brincidofovir . Nurses Nina Pham and Amber Joy Vinson continued to care for Duncan around the clock . On October 7 , the hospital reported that Duncan 's condition was improving . However , Duncan died at 7 : 51 a.m. on October 8 , becoming the first person to die in the United States of Ebola virus disease and the index patient for the later infections of nurses Pham and Vinson .",
+    "In December 2014 , Ebola virus cases in the United States occurred due to four laboratory - confirmed cases of Ebola virus disease ( commonly known as `` Ebola '' ) in the United States . Eleven cases have been reported , including these four cases and seven cases medically evacuated from other countries ; the first was reported in September 2014 . Nine of the people contracted the disease outside the US and traveled into the country , either as regular airline passengers or as medical evacuees ; of those nine , two died . Two people have contracted Ebola in the United States . Both were nurses who treated an Ebola patient ; both have recovered .",
+    "On September 30 , 2014 , the CDC announced that Thomas Eric Duncan , a reportedly 42 - year - old ( later corrected by CDC reports as a 45 - year - old ) Liberian national visiting the United States from Liberia , had been diagnosed with Ebola in Dallas , Texas . Duncan , who had been visiting family in Dallas , was treated at Texas Health Presbyterian Hospital Dallas . By October 4 , Duncan 's condition had deteriorated from `` serious but stable '' to `` critical '' . On October 8 , Duncan died of Ebola. The other three cases diagnosed in the United States as of October 2014 were :",
+    "Ebola virus disease in the U.S. Map of Ebola cases and infrastructure throughout the U.S. Cases contracted in the U.S. Cases first diagnosed in U.S. Cases evacuated to U.S. from other countries 7 Total cases 11 Deaths Recoveries from Ebola 9 Active cases 0"
+   ]
+  },
+  {
+   "id": "5ab2861b554299449642c8df",
+   "sentences": [
+    "Emmitt H. Ford (December 13, 1943 – November 10, 2014) was an American politician from Tennessee.",
+    " He was also an uncle of former United States Congressman Harold Ford Jr.",
+    " He is the son of former Congressman Harold Ford Sr., who held the same seat for 22 years."
+   ]
+  },
+  {
+   "id": "multihop-rag-1333",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1994",
+   "sentences": [
+    "Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1 FPTS/G 11.4 The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia in Week 4.",
+    "Again, don't expect a massive game because the running game, defense, and special teams will have plenty of success in another big victory."
+   ]
+  },
+  {
+   "id": "5a7a27ce5542996c55b2dd28",
+   "sentences": [
+    "The Korean War (in South Korean Hangul: 한국전쟁 ; Hanja: 韓國戰爭 ; RR: \"Hanguk Jeonjaeng \" , \"Korean War\"; in North Korean Chosŏn'gŭl: 조국해방전쟁 ; Hancha: 祖國解放戰爭 ; MR: \"Choguk haebang chǒnjaeng \" , \"Fatherland Liberation War\"; 25 June 1950 – 27 July 1953) was a war between North Korea (with the support of China and the Soviet Union) and South Korea (with the principal support of the United States).",
+    "The Western Allied invasion of Germany was coordinated by the Western Allies during the final months of hostilities in the European theatre of World War II.",
+    " The Allied invasion of Germany started with the Western Allies crossing the Rhine River in March 1945 before fanning out and overrunning all of western Germany from the Baltic in the north to Austria in the south before the Germans surrendered on 8 May 1945."
+   ]
+  },
+  {
+   "id": "-3738762685792121994",
+   "sentences": [
+    "Year Film Nominees 2001 ( 74th ) Shrek Aron Warner Jimmy Neutron : Boy Genius Steve Oedekerk and John A. Davis Monsters , Inc . Pete Docter and John Lasseter 2002 ( 75th ) Spirited Away Hayao Miyazaki Ice Age Chris Wedge Lilo & Stitch Chris Sanders Spirit : Stallion of the Cimarron Jeffrey Katzenberg Treasure Planet Ron Clements 2003 ( 76th ) Finding Nemo Andrew Stanton Brother Bear Aaron Blaise and Robert Walker The Triplets of Belleville Sylvain Chomet ( 77th ) The Incredibles Brad Bird Shark Tale Bill Damaschke Shrek 2 Andrew Adamson 2005 ( 78th ) Wallace & Gromit : The Curse of the Were - Rabbit Nick Park and Steve Box Howl 's Moving Castle Hayao Miyazaki Corpse Bride Mike Johnson and Tim Burton 2006 ( 79th ) Happy Feet George Miller Cars John Lasseter Monster House Gil Kenan 2007 ( 80th ) Ratatouille Brad Bird Persepolis Marjane Satrapi and Vincent Paronnaud Surf 's Up Ash Brannon and Chris Buck 2008 ( 81st ) WALL - E Andrew Stanton Bolt Chris Williams and Byron Howard Kung Fu Panda John Stevenson and Mark Osborne 2009 ( 82nd ) Up Pete Docter Coraline Henry Selick Fantastic Mr. Fox Wes Anderson The Princess and the Frog John Musker and Ron Clements The Secret of Kells Tomm Moore"
+   ]
+  }
+ ]
+}

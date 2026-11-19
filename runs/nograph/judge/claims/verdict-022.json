@@ -1,0 +1,258 @@
+[
+ {
+  "id": "multihop-rag-1716",
+  "sentences": [
+   [
+    "Megan says she does not have as many followers on Twitch as she does on her YouTube channel.",
+    "Megan says there are elements of Twitch she prefers to YouTube.",
+    "Megan prefers Twitch to YouTube for the ability to be herself.",
+    "Megan prefers Twitch to YouTube for the ability to engage with fans more closely."
+   ],
+   [
+    "The decision to change the revenue split also came out of a decision to prioritize ad revenue."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-199",
+  "sentences": [
+   [
+    "Hope has been rising on Wall Street recently.",
+    "The hope on Wall Street is that the US economy is slowing from its recent hot pace.",
+    "The hope on Wall Street is that the US economy is slowing by just the right amount."
+   ],
+   [
+    "A shutdown would drag on the US economy.",
+    "A shutdown would raise the risk of a recession.",
+    "Financial markets have held up relatively well through past shutdowns."
+   ]
+  ]
+ },
+ {
+  "id": "5a85b2d95542997b5ce40028",
+  "sentences": [
+   [
+    "Eenasul Fateh was born on 3 April 1959.",
+    "Eenasul Fateh's Bengali name is ঈনাসুল ফাতেহ.",
+    "Eenasul Fateh is also known by his stage name Aladin.",
+    "Eenasul Fateh is a Bangladeshi-British cultural practitioner.",
+    "Eenasul Fateh is a magician.",
+    "Eenasul Fateh is a live artist.",
+    "Eenasul Fateh is a former international management consultant."
+   ],
+   [
+    "Management consulting is the practice of helping organizations improve their performance.",
+    "Management consulting operates primarily through the analysis of existing organizational problems.",
+    "Management consulting operates primarily through the development of plans for improvement."
+   ]
+  ]
+ },
+ {
+  "id": "-7816789034233739974",
+  "sentences": [
+   [
+    "The Rolling Stones performed at Summerfest in Milwaukee in 2015.",
+    "The photo shows, from left to right, Charlie Watts, Ronnie Wood, Mick Jagger and Keith Richards.",
+    "The Rolling Stones have origin London, England.",
+    "The Rolling Stones' genres are rock and blues.",
+    "The Rolling Stones have been active from 1962 to the present.",
+    "The Rolling Stones' labels include Decca, London, Rolling Stones, Virgin, ABKCO, Interscope, and Polydor.",
+    "The Rolling Stones' associated acts include The New Barbarians, Billy Preston, Faces, The Pretty Things, John Mayall & the Bluesbreakers, and Bill Wyman's Rhythm Kings.",
+    "The Rolling Stones' website is rollingstones.com.",
+    "The current members of the Rolling Stones are Mick Jagger, Keith Richards, Charlie Watts, and Ronnie Wood.",
+    "The past members of the Rolling Stones include Brian Jones, Ian Stewart, Dick Taylor, Bill Wyman, and Mick Taylor."
+   ],
+   [
+    "Mick Jagger plays vocals, harmonica, rhythm guitar, percussion, and keyboards, and has been active from 1962 to the present.",
+    "Keith Richards plays rhythm and lead guitar, bass guitar, and vocals, and has been active from 1962 to the present.",
+    "Charlie Watts plays drums and percussion, and has been active from 1963 to the present.",
+    "Ronnie Wood plays lead and rhythm guitar, bass guitar, and backing vocals, and has been active from 1975 to the present."
+   ],
+   [
+    "The Rolling Stones are an English rock band.",
+    "The Rolling Stones were formed in London, England in 1962.",
+    "The first stable line-up of the Rolling Stones consisted of Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts, and Ian Stewart.",
+    "Brian Jones played guitar and harmonica in the first stable line-up.",
+    "Mick Jagger was the lead vocalist in the first stable line-up.",
+    "Keith Richards played guitar and backing vocals in the first stable line-up.",
+    "Bill Wyman played bass in the first stable line-up.",
+    "Charlie Watts played drums in the first stable line-up.",
+    "Ian Stewart played piano in the first stable line-up.",
+    "Ian Stewart was removed from the official line-up in 1963.",
+    "Ian Stewart continued as a touring member of the Rolling Stones until his death in 1985.",
+    "Brian Jones left the Rolling Stones less than a month before his death in 1969.",
+    "Mick Taylor replaced Brian Jones in the band.",
+    "Mick Taylor remained in the band until 1974.",
+    "Ronnie Wood took Mick Taylor's place in 1975 after Taylor left the band.",
+    "Ronnie Wood has been on guitar in tandem with Keith Richards ever since 1975.",
+    "Darryl Jones joined the Rolling Stones as their touring bassist after Bill Wyman's departure in 1993.",
+    "Bill Wyman departed from the Rolling Stones in 1993.",
+    "Nicky Hopkins was a touring keyboardist for the Rolling Stones from 1967 to 1982.",
+    "Ian McLagan was a touring keyboardist for the Rolling Stones from 1978 to 1981.",
+    "Billy Preston was a touring keyboardist for the Rolling Stones through the mid-1970s.",
+    "Chuck Leavell has been a touring keyboardist for the Rolling Stones since 1982.",
+    "The band was first led by Brian Jones.",
+    "Jagger and Richards became the band's songwriters.",
+    "Jagger and Richards assumed leadership of the band when Brian Jones was dealing with personal troubles and legal issues."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2008",
+  "sentences": [
+   [
+    "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies.",
+    "In this innovation cycle, there is a strong need for technologists and designers to be in the process together."
+   ],
+   [
+    "Ric Lipson is a partner at Stufish.",
+    "Ric Lipson collaborated on the U2 project for Sphere.",
+    "Es Devlin, an artist, collaborated with Ric Lipson on the U2 project for Sphere.",
+    "Brian Eno, a producer, collaborated with Ric Lipson on the U2 project for Sphere."
+   ]
+  ]
+ },
+ {
+  "id": "1404052427196543739",
+  "sentences": [
+   [
+    "The current phrasing of the tree-falling question appears to have originated in the 1910 book Physics.",
+    "The 1910 book Physics was written by Charles Riborg Mann and George Ransom Twiss.",
+    "The question \"When a tree falls in a lonely forest, and no animal is near by to hear it, does it make a sound? Why?\" is posed along with many other questions to quiz readers on the contents of the chapter.",
+    "The tree-falling question is posed from a purely physical point of view."
+   ],
+   [
+    "Philosopher George Berkeley wrote A Treatise Concerning the Principles of Human Knowledge, published in 1710.",
+    "In A Treatise Concerning the Principles of Human Knowledge, Berkeley proposes a passage that begins \"But, say you, surely there is nothing easier than for me to imagine trees, for instance, in a park ... and nobody by to perceive them.\"",
+    "The passage quoted from Berkeley's treatise continues \"The objects of sense exist only when they are perceived; the trees therefore are in the garden ... no longer than while there is somebody by to perceive them.\"",
+    "The quote from section 45 of Berkeley's treatise is arguably a statement of an objection to Berkeley's view, not a proclamation of it.",
+    "Berkeley never actually wrote about the tree-falling question."
+   ]
+  ]
+ },
+ {
+  "id": "5ab2958a554299449642c911",
+  "sentences": [
+   [
+    "3:10 to Yuma is a 2007 American Western film.",
+    "3:10 to Yuma was directed by James Mangold.",
+    "3:10 to Yuma was produced by Cathy Konrad.",
+    "Russell Crowe and Christian Bale star in the lead roles of 3:10 to Yuma.",
+    "Peter Fonda, Gretchen Mol, Ben Foster, Dallas Roberts, Alan Tudyk, Vinessa Shaw, and Logan Lerman have supporting performances in 3:10 to Yuma."
+   ],
+   [
+    "Alan Wray Tudyk was born on March 16, 1971.",
+    "Alan Tudyk is an American actor.",
+    "Alan Tudyk is an American voice actor.",
+    "Alan Tudyk is known for playing Hoban \"Wash\" Washburne in the space western television series \"Firefly\" and in the movie \"Serenity\".",
+    "Alan Tudyk is known for playing Alpha in the science fiction TV series \"Dollhouse\".",
+    "Alan Tudyk is known for playing Tucker McGee in \"Tucker & Dale vs. Evil\".",
+    "Alan Tudyk is known for playing Steve the Pirate in \"\" (the title is missing from the source sentence).",
+    "Alan Tudyk is known for playing Wat in \"A Knight's Tale\"."
+   ]
+  ]
+ },
+ {
+  "id": "1033762063117474533",
+  "sentences": [
+   [
+    "The book became an instant hit.",
+    "The online version of the book received about 20 million views as of 2009.",
+    "Many online readers requested a printed version of the book.",
+    "Kinney agreed to a printed version of the book.",
+    "Diary of a Wimpy Kid was published in April 2007.",
+    "To date, twelve Wimpy Kid books have been released.",
+    "To date, one do-it-yourself Wimpy Kid book has been released.",
+    "To date, two Wimpy Kid movie diaries have been released.",
+    "In April 2009, TIME named Kinney one of The World's Most Influential People."
+   ],
+   [
+    "Diary of a Wimpy Kid was released on April 1, 2007, with ISBN 978-0-8109-9313-6.",
+    "The introduction to the Diary of a Wimpy Kid series introduces the protagonist Greg Heffley, his best friend Rowley, his middle school problems, Halloween, and the Cheese Touch.",
+    "Rodrick Rules was released on February 1, 2008, with ISBN 978-0-8109-9473-7.",
+    "In Rodrick Rules, Greg must stop Rodrick from revealing the secrets that happened last summer.",
+    "The Last Straw was released on January 13, 2009, with ISBN 978-0-8109-7068-7.",
+    "In The Last Straw, when Greg's father threatens to send Greg to a military academy, Greg must find a way to prevent this.",
+    "Dog Days was released on October 12, 2009, with ISBN 978-0-8109-8391-5.",
+    "In Dog Days, summer is here, but the family does not have much money to go to the beach, so it might not be the best summer ever.",
+    "The Ugly Truth was released on November 9, 2010, with ISBN 978-0-8109-8491-2.",
+    "In The Ugly Truth, Greg is growing up and will have to face the challenges of this period, like changing dentists and a school lock-in.",
+    "Cabin Fever was released on November 15, 2011, with ISBN 978-1-4197-0223-5.",
+    "In Cabin Fever, the family is stranded in the house as snow begins to fall.",
+    "The Third Wheel was released on November 13, 2012, with ISBN 978-1-4197-0584-7.",
+    "In The Third Wheel, the Valentine's Day dance is coming up and Greg has no one to go with.",
+    "In The Third Wheel, things turn around when Michael Sampson, Abigail's date, will not be going.",
+    "Hard Luck was released on November 5, 2013, with ISBN 978-1-4197-1132-9.",
+    "In Hard Luck, Greg's friend count is dropping as Rowley now has a girlfriend, named Abigail.",
+    "Hard Luck continues the story from The Third Wheel.",
+    "The Long Haul was released on November 4, 2014, with ISBN 978-1-4197-1189-3.",
+    "In The Long Haul, this is the family's second summer trip, and it is a road trip.",
+    "Old School was released on November 3, 2015, with ISBN 978-1-4197-1701-7.",
+    "In Old School, the neighborhood is going to cut electricity for the weekend.",
+    "In Old School, the family's car has a fender bender, which forces Greg to go on the farm trip.",
+    "Old School asks whether Greg will survive the electricity-free days.",
+    "Double Down was released on November 1, 2016, with ISBN 978-1-4197-2344-5.",
+    "In Double Down, Greg's mom wants him to do something other than video games, so he makes a movie in collaboration with Rowley.",
+    "In Double Down, Greg joins the music program.",
+    "The Getaway was released on November 7, 2017, with ISBN 978-1-4197-2545-6.",
+    "In The Getaway, instead of celebrating the holidays at home, Greg and his family head on a tropical vacation to a resort.",
+    "In The Getaway, what first starts as a relaxing trip later turns into a Christmas nightmare.",
+    "The Getaway asks whether Greg will be able to turn the vacation around."
+   ],
+   [
+    "The logo of the Diary of a Wimpy Kid series appears on the book covers, blogs, web comic, and films.",
+    "The Diary of a Wimpy Kid series includes the books Rodrick Rules, The Last Straw, Dog Days, The Ugly Truth, Cabin Fever, The Third Wheel, Hard Luck, The Long Haul, Old School, Double Down, and The Getaway.",
+    "The Diary of a Wimpy Kid series was written by Jeff Kinney.",
+    "The Diary of a Wimpy Kid series is from the United States.",
+    "The Diary of a Wimpy Kid series is in English.",
+    "The Diary of a Wimpy Kid series is in the realistic fiction genre.",
+    "The Diary of a Wimpy Kid series is published by Scholastic Publishing, Amulet Books, and Puffin Books.",
+    "The Diary of a Wimpy Kid series was published from April 1, 2007 to the present.",
+    "The Diary of a Wimpy Kid series is available in print (hardback and paperback), as an audiobook, and as an e-book."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-677",
+  "sentences": [
+   [
+    "Epic chose to focus on simply painting Google as the bad guy on day one.",
+    "Epic's focus on painting Google as the bad guy happened on day one of the trial.",
+    "The issue of painting Google as the bad guy will probably come up later in the trial."
+   ],
+   [
+    "Epic will attempt to argue that Google restrains competition within two separate markets.",
+    "One of the two markets is the distribution of apps to Android users.",
+    "The other market is the market for payment processing solutions for content inside Android apps."
+   ],
+   [
+    "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+    "The case argues that Google \"siphons off\" news publishers' content through anticompetitive means.",
+    "The case argues that Google siphons off news publishers' readers through anticompetitive means.",
+    "The case argues that Google siphons off news publishers' ad revenue through anticompetitive means."
+   ]
+  ]
+ },
+ {
+  "id": "5adff4a555429925eb1afb91",
+  "sentences": [
+   [
+    "Wilmington International Airport has the IATA code ILM.",
+    "Wilmington International Airport has the ICAO code KILM.",
+    "Wilmington International Airport has the FAA LID ILM.",
+    "Wilmington International Airport is a public airport.",
+    "Wilmington International Airport is located just north of Wilmington, North Carolina.",
+    "Wilmington International Airport is located in unincorporated Wrightsboro, Cape Fear Township, New Hanover County."
+   ],
+   [
+    "Texarkana Regional Airport has the IATA code TXK.",
+    "Texarkana Regional Airport has the ICAO code KTXK.",
+    "Texarkana Regional Airport has the FAA LID TXK.",
+    "Texarkana Regional Airport is also known as Webb Field.",
+    "Texarkana Regional Airport is a public use airport.",
+    "Texarkana Regional Airport is located three nautical miles (6 km) northeast of the central business district of Texarkana.",
+    "Texarkana is a city in Miller County, Arkansas, United States."
+   ]
+  ]
+ }
+]

@@ -1,0 +1,81 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae6fee3554299572ea54670",
+   "sentences": [
+    " He finished second to Paul Hornung in voting for the Heisman Trophy in 1956.",
+    "Paul Vernon Hornung (born December 23, 1935), nicknamed \"The Golden Boy\", is a former professional American football player, a Hall of Fame running back for the Green Bay Packers of the National Football League (NFL) from 1957 to 1966, winning four NFL titles and the first Super Bowl."
+   ]
+  },
+  {
+   "id": "multihop-rag-1520",
+   "sentences": [
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+   ]
+  },
+  {
+   "id": "multihop-rag-1129",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2343",
+   "sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a75eca555429976ec32bca8",
+   "sentences": [
+    "The Nassau Herald is a weekly newspaper serving the Five Towns communities of Nassau County – Lawrence, Woodmere, Hewlett, Cedarhurst, Inwood and Atlantic Beach.",
+    "Lawrence is a village in Nassau County, New York in the United States.",
+    " As of the 2010 United States Census, the village population was 6,483."
+   ]
+  },
+  {
+   "id": "5a7145d55542994082a3e73c",
+   "sentences": [
+    "Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.",
+    "Arne Christer Fuglesang (] ) (born March 18, 1957 in Stockholm) is a Swedish physicist and an ESA astronaut.",
+    " He was first launched aboard the STS-116 Space Shuttle mission on December 10, 2006, at 01:47 GMT, making him the first Swedish citizen in space."
+   ]
+  },
+  {
+   "id": "5a8241a855429940e5e1a819",
+   "sentences": [
+    "The Sports Museum (also known as The Sports Museum of New England) is a non-profit museum currently located in the TD Garden in Boston, Massachusetts.",
+    "TD Garden, often called Boston Garden and \"The Garden\", is a multi-purpose arena in Boston, Massachusetts.",
+    " It opened in 1995 as a replacement for the original Boston Garden and has been known as Shawmut Center, FleetCenter, and TD Banknorth Garden."
+   ]
+  },
+  {
+   "id": "761079737280110147",
+   "sentences": [
+    "The theory is generally associated with Hirschman . He presented a complete theoretical formulation of the strategy . Underdeveloped countries display common characteristics : low levels of GNI per capita and slow GNI per capita growth , large income inequalities and widespread poverty , low levels of productivity , great dependence on agriculture , a backward industrial structure , a high proportion of consumption and low savings , high rates of population growth and dependency burdens , high unemployment and underemployment , technological backwardness and dualism ( existence of both traditional and modern sectors ) . In a less - developed country , these characteristics lead to scarce resources or inadequate infrastructure to exploit these resources . With a lack of investors and entrepreneurs , cash flows can not be directed into various sectors that influence balanced economic growth ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1083",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "Binance has made headlines this past year for a range of reasons, including Zhao’s comments contributing to the collapse of FTX, which was once one of its top competitors."
+   ]
+  },
+  {
+   "id": "5ae763aa5542995703ce8c09",
+   "sentences": [
+    "William Dwight Schultz (born November 24, 1947) is an American actor and voice artist.",
+    " He is also well known in animation as the mad scientist Dr. Animo in the \"Ben 10\" series, Chef Mung Daal in the children's cartoon \"Chowder\", and Eddie the Squirrel in \"CatDog\".",
+    "Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network."
+   ]
+  }
+ ]
+}

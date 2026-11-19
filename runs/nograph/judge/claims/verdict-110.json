@@ -1,0 +1,441 @@
+[
+  {
+    "id": "7983190845818424390",
+    "sentences": [
+      [
+        "Queen Elizabeth II is the sovereign.",
+        "Charles, Prince of Wales, is the heir apparent to the sovereign, Queen Elizabeth II.",
+        "Charles, Prince of Wales, is the eldest son of Queen Elizabeth II.",
+        "Prince William, Duke of Cambridge, is next in line for succession after Charles, Prince of Wales.",
+        "Prince William is the elder son of the Prince of Wales.",
+        "Prince George is third in line for succession.",
+        "Prince George is the eldest child of the Duke of Cambridge.",
+        "Princess Charlotte follows Prince George in the line of succession.",
+        "Princess Charlotte is the sister of Prince George.",
+        "Prince Louis is the younger brother of Prince George.",
+        "Prince Henry of Wales is sixth in line for succession.",
+        "Prince Henry of Wales is the younger son of the Prince of Wales.",
+        "Any of the first six in line to the throne who marries without the sovereign's consent would be disqualified from succession."
+      ]
+    ]
+  },
+  {
+    "id": "5adf53dc5542995534e8c791",
+    "sentences": [
+      [
+        "Sir Ridley Scott was born on 30 November 1937.",
+        "Sir Ridley Scott is English.",
+        "Sir Ridley Scott is a film director.",
+        "Sir Ridley Scott is a film producer."
+      ],
+      [
+        "Ridley Scott had a commercial breakthrough with the science-fiction horror film Alien, released in 1979.",
+        "Ridley Scott's best known works include the neo-noir dystopian science fiction film Blade Runner, released in 1982.",
+        "Ridley Scott's best known works include the historical drama Gladiator, released in 2000.",
+        "Gladiator won the Best Picture Oscar.",
+        "Ridley Scott's best known works include the science fiction film The Martian, released in 2015."
+      ],
+      [
+        "Ridley Scott was a collaborator of D.W. Griffith.",
+        "Ridley Scott appeared in The Birth of a Nation, released in 1915.",
+        "Ridley Scott appeared in Intolerance, released in 1916.",
+        "Ridley Scott gave up acting in 1917.",
+        "Ridley Scott gave up acting to concentrate on work behind the camera.",
+        "Griffith was a mentor of Ridley Scott.",
+        "Joseph Henabery was a mentor of Ridley Scott."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1182",
+    "sentences": [
+      [
+        "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.",
+        "Huang said Bankman-Fried was told that he did not want investors as directors.",
+        "Huang said Bankman-Fried did plan on having a board with experts."
+      ],
+      [
+        "The second week of the trial's standout testimony came from Caroline Ellison.",
+        "Caroline Ellison is the former CEO of Alameda Research.",
+        "Caroline Ellison claimed she took $14 billion from customers.",
+        "Caroline Ellison claimed she used the $14 billion to repay debts to lenders.",
+        "Caroline Ellison claimed she used customers' funds as a line of credit under the instruction of Bankman-Fried (SBF)."
+      ],
+      [
+        "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+        "The defense countered that the FTX founder, Bankman-Fried, acted in good faith.",
+        "The defense said Bankman-Fried never meant to commit fraud or steal.",
+        "The defense said Bankman-Fried basically got in over his head."
+      ]
+    ]
+  },
+  {
+    "id": "6034599695278533930",
+    "sentences": [
+      [
+        "Nintendo claims that the design of the Wii U Pro Controller is an enhanced version of the Classic Controller.",
+        "Nintendo claims that the Wii U Pro Controller offers a richer experience.",
+        "Certain games with flexible control schemes are compatible with the Classic Controller.",
+        "Call of Duty: Black Ops II is a game with a flexible control scheme that is compatible with the Classic Controller.",
+        "Trine 2: Director's Cut is a game with a flexible control scheme that is compatible with the Classic Controller.",
+        "The Wii U Pro Controller is not compatible with previous-generation Wii games."
+      ],
+      [
+        "The Wii U Pro Controller is a video game controller.",
+        "The Wii U Pro Controller is produced by Nintendo.",
+        "The Wii U Pro Controller is made for the Wii U video game console."
+      ],
+      [
+        "The Wii U Pro Controller functions as a secondary controller for the Wii U.",
+        "The Wii U Pro Controller was released for the console.",
+        "The Wii U Pro Controller is available separately.",
+        "The Wii U console can be connected to up to four Wii U Pro Controllers at one time.",
+        "Super Smash Bros. for Wii U allows the use of more than four controllers.",
+        "The Wii U Pro Controller has standard analog sticks.",
+        "The Wii U Pro Controller has face buttons, like more traditional controllers.",
+        "The Wii U Pro Controller has digital triggers, not analog triggers.",
+        "The Wii U GamePad has digital triggers.",
+        "The Classic Controller Pro has digital triggers.",
+        "Unlike the DualShock 4 and the Xbox One Controller, the Wii U Pro Controller has digital triggers."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-2438",
+    "sentences": [
+      [
+        "Rehn declared to the jury that 'all of that, all of it, was built on lies.'"
+      ],
+      [
+        "Bankman-Fried left Jane Street.",
+        "Jane Street is a high-frequency trading firm.",
+        "Bankman-Fried was a former billionaire.",
+        "Bankman-Fried got his start in finance at Jane Street.",
+        "Bankman-Fried got his start in finance after MIT.",
+        "After leaving Jane Street, Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.",
+        "Bankman-Fried later persuaded Yedidia to join him as a developer at FTX."
+      ],
+      [
+        "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+        "The defense countered that the FTX founder, Bankman-Fried, acted in good faith.",
+        "The defense said Bankman-Fried never meant to commit fraud or steal.",
+        "The defense said Bankman-Fried basically got in over his head."
+      ]
+    ]
+  },
+  {
+    "id": "-5775387077145633620",
+    "sentences": [
+      [
+        "Philippe Petit is French.",
+        "Philippe Petit was born on 13 August 1949.",
+        "Philippe Petit is a high-wire artist.",
+        "Philippe Petit gained fame for his high-wire walk between the Twin Towers of the World Trade Center in New York City.",
+        "Philippe Petit's Twin Towers walk took place on the morning of 7 August 1974.",
+        "Philippe Petit made a high-wire walk between the Notre Dame cathedral in Paris in 1971."
+      ],
+      [
+        "Philippe Petit's feat was unauthorized.",
+        "Philippe Petit's feat took place 400 metres (1,000 feet) above the ground.",
+        "Philippe Petit referred to the feat as 'le coup'.",
+        "Philippe Petit rigged a 200-kilogram (440-pound) cable.",
+        "Philippe Petit used a custom-made balancing pole.",
+        "The balancing pole was 8 metres (30 feet) long.",
+        "The balancing pole weighed 25 kilograms (55 pounds)."
+      ],
+      [
+        "Philippe Petit performed for 45 minutes.",
+        "Philippe Petit made eight passes along the wire."
+      ],
+      [
+        "Philippe Petit celebrated his 25th birthday the following week."
+      ],
+      [
+        "All charges against Philippe Petit were dismissed.",
+        "The charges were dismissed in exchange for Philippe Petit doing a performance in Central Park for children."
+      ]
+    ]
+  },
+  {
+    "id": "-5670136654288025028",
+    "sentences": [
+      [
+        "A. planci has a very wide Indo-Pacific distribution.",
+        "A. planci is perhaps most common in Australia.",
+        "A. planci can occur at tropical and subtropical latitudes from the Red Sea.",
+        "A. planci can occur at tropical and subtropical latitudes from the east African coast.",
+        "A. planci can occur across the Indian Ocean.",
+        "A. planci can occur across the Pacific Ocean to the west coast of Central America.",
+        "A. planci occurs where coral reefs or hard coral communities occur in this region."
+      ]
+    ]
+  },
+  {
+    "id": "5ab42b24554299753aec5a43",
+    "sentences": [
+      [
+        "Operation Lighthouse was the name given to a failed experimental launch.",
+        "The Operation Lighthouse launch involved four Aggregate 3 liquid-fuel rockets.",
+        "Wernher von Braun conducted the Operation Lighthouse launch.",
+        "Walter Dornberger conducted the Operation Lighthouse launch.",
+        "The Operation Lighthouse launch took place on the German island of Greifswalder Oie.",
+        "The Operation Lighthouse launch took place in December 1937."
+      ],
+      [
+        "Major-General Dr. Walter Robert Dornberger was born on 6 September 1895.",
+        "Walter Robert Dornberger died on 27 June 1980.",
+        "Walter Robert Dornberger was a German Army artillery officer.",
+        "Walter Robert Dornberger's career spanned World War I.",
+        "Walter Robert Dornberger's career spanned World War II."
+      ]
+    ]
+  },
+  {
+    "id": "5a778b1e55429949eeb29ee3",
+    "sentences": [
+      [
+        "The Nashville Tribute Band is a Mormon music group.",
+        "The Nashville Tribute Band was founded by Jason Deere.",
+        "The Nashville Tribute Band was founded by Dan Truman.",
+        "Dan Truman is the pianist of the popular country group Diamond Rio."
+      ],
+      [
+        "Diamond Rio is an American country music band.",
+        "Diamond Rio is a Christian country music band."
+      ],
+      [
+        "Diamond Rio was founded in 1982.",
+        "Diamond Rio was founded as an attraction for the Opryland USA theme park in Nashville, Tennessee.",
+        "Diamond Rio was originally known as the Grizzly River Boys.",
+        "Diamond Rio was later known as the Tennessee River Boys."
+      ]
+    ]
+  },
+  {
+    "id": "-2127231695293633439",
+    "sentences": [
+      [
+        "Robert Walpole, 1st Earl of Orford, was MP for King's Lynn and lived from 1676 to 1745.",
+        "Robert Walpole was Prime Minister from 4 April 1721 to 11 February 1742, for 20 years and 314 days.",
+        "Robert Walpole was a Whig.",
+        "Spencer Compton, 1st Earl of Wilmington, lived from 1673 to 1743.",
+        "Spencer Compton was Prime Minister from 16 February 1742 to 2 July 1743, for 1 year and 137 days.",
+        "Spencer Compton was a Whig.",
+        "Henry Pelham was MP for Sussex and lived from 1694 to 1754.",
+        "Henry Pelham was Prime Minister from 27 August 1743 to 6 March 1754, for 10 years and 192 days.",
+        "Henry Pelham was a Whig.",
+        "Thomas Pelham-Holles, 1st Duke of Newcastle, lived from 1693 to 1768.",
+        "Thomas Pelham-Holles was Prime Minister from 16 March 1754 to 16 November 1756, for 2 years and 246 days.",
+        "Thomas Pelham-Holles was a Whig.",
+        "William Cavendish, 4th Duke of Devonshire, lived from 1720 to 1764.",
+        "William Cavendish was Prime Minister from 16 November 1756 to 25 June 1757, for 222 days.",
+        "William Cavendish's ministry was a caretaker ministry in 1757.",
+        "William Cavendish was a Whig.",
+        "Thomas Pelham-Holles was Prime Minister again from 2 July 1757 to 26 May 1762, for 4 years and 329 days.",
+        "Thomas Pelham-Holles was a Whig in his second term.",
+        "John Stuart, 3rd Earl of Bute, lived from 1713 to 1792.",
+        "John Stuart was Prime Minister from 26 May 1762 to 8 April 1763, for 318 days.",
+        "John Stuart was a Tory.",
+        "George Grenville was MP for Buckingham and lived from 1712 to 1770.",
+        "George Grenville was Prime Minister from 16 April 1763 to 13 July 1765, for 2 years and 89 days.",
+        "George Grenville was a Whig, in the Grenvillite faction.",
+        "Charles Watson-Wentworth, 2nd Marquess of Rockingham, lived from 1730 to 1782.",
+        "Charles Watson-Wentworth was Prime Minister from 13 July 1765 to 30 July 1766, for 1 year and 18 days.",
+        "Charles Watson-Wentworth was a Whig, in the Rockinghamite faction.",
+        "William Pitt, 1st Earl of Chatham, was MP for Bath and lived from 1708 to 1778.",
+        "William Pitt, 1st Earl of Chatham, was Prime Minister from 30 July 1766 to 14 October 1768, for 2 years and 77 days.",
+        "William Pitt, 1st Earl of Chatham, was a Whig, in the Chathamite faction.",
+        "Augustus FitzRoy, 3rd Duke of Grafton, lived from 1735 to 1811.",
+        "Augustus FitzRoy was Prime Minister from 14 October 1768 to 28 January 1770, for 1 year and 107 days.",
+        "Augustus FitzRoy was a Whig, in the Chathamite faction.",
+        "Frederick North, Lord North, was MP for Banbury and lived from 1732 to 1792.",
+        "Frederick North was Prime Minister from 28 January 1770 to 22 March 1782, for 12 years and 54 days.",
+        "Frederick North was a Tory, in the Northite faction.",
+        "Charles Watson-Wentworth was Prime Minister again from 27 March 1782 to 1 July 1782, for 97 days.",
+        "Charles Watson-Wentworth was a Whig in his second term, in the Rockinghamite faction.",
+        "William Petty, 2nd Earl of Shelburne, lived from 1737 to 1805.",
+        "William Petty was Prime Minister from 4 July 1782 to 2 April 1783, for 273 days.",
+        "William Petty was a Whig, in the Chathamite faction.",
+        "William Cavendish-Bentinck, 3rd Duke of Portland, lived from 1738 to 1809.",
+        "William Cavendish-Bentinck was Prime Minister from 2 April 1783 to 19 December 1783, for 262 days.",
+        "William Cavendish-Bentinck was a Whig.",
+        "William Pitt the Younger was MP for Appleby and Cambridge University, and lived from 1759 to 1806.",
+        "William Pitt the Younger was Prime Minister from 19 December 1783 to 14 March 1801, for 17 years and 86 days.",
+        "William Pitt the Younger was a Tory, in the Pittite faction.",
+        "Henry Addington was MP for Devizes and lived from 1757 to 1844.",
+        "Henry Addington was Prime Minister from 17 March 1801 to 10 May 1804, for 3 years and 55 days.",
+        "Henry Addington was a Tory, in the Pittite faction.",
+        "William Pitt the Younger was Prime Minister again from 10 May 1804 to 23 January 1806, for 1 year and 259 days.",
+        "William Pitt the Younger was a Tory, in the Pittite faction, in his second term.",
+        "William Grenville, 1st Baron Grenville, lived from 1759 to 1834.",
+        "William Grenville was Prime Minister from 11 February 1806 to 31 March 1807, for 1 year and 49 days.",
+        "William Grenville was a Whig, in the All the Talents ministry.",
+        "William Cavendish-Bentinck was Prime Minister again from 31 March 1807 to 4 October 1809, for 2 years and 188 days.",
+        "William Cavendish-Bentinck was a Tory, in the Pittite faction, in his second term.",
+        "Spencer Perceval was MP for Northampton and lived from 1762 to 1812.",
+        "Spencer Perceval was Prime Minister from 4 October 1809 to 11 May 1812, for 2 years and 221 days.",
+        "Spencer Perceval was a Tory, in the Pittite faction.",
+        "Robert Jenkinson, 2nd Earl of Liverpool, lived from 1770 to 1828.",
+        "Robert Jenkinson was Prime Minister from 8 June 1812 to 9 April 1827, for 14 years and 306 days.",
+        "Robert Jenkinson was a Tory, in the Pittite faction.",
+        "George Canning was MP for Seaford and lived from 1770 to 1827.",
+        "George Canning was Prime Minister from 10 April 1827 to 8 August 1827, for 121 days.",
+        "George Canning was a Tory, in the Canningite faction.",
+        "Frederick John Robinson, 1st Viscount Goderich, lived from 1782 to 1859.",
+        "Frederick John Robinson was Prime Minister from 31 August 1827 to 21 January 1828, for 144 days.",
+        "Frederick John Robinson was a Tory, in the Canningite faction.",
+        "Arthur Wellesley, 1st Duke of Wellington, lived from 1769 to 1852.",
+        "Arthur Wellesley was Prime Minister from 22 January 1828 to 16 November 1830, for 2 years and 299 days.",
+        "Arthur Wellesley was a Tory.",
+        "Charles Grey, 2nd Earl Grey, lived from 1764 to 1845.",
+        "Charles Grey was Prime Minister from 22 November 1830 to 9 July 1834, for 3 years and 230 days.",
+        "Charles Grey was a Whig.",
+        "William Lamb, 2nd Viscount Melbourne, lived from 1779 to 1848.",
+        "William Lamb was Prime Minister from 16 July 1834 to 14 November 1834, for 122 days.",
+        "William Lamb was a Whig.",
+        "Arthur Wellesley was Prime Minister again from 14 November 1834 to 10 December 1834, for 27 days.",
+        "Arthur Wellesley's second term was a caretaker ministry, and he was a Tory.",
+        "Robert Peel was MP for Tamworth and lived from 1788 to 1850.",
+        "Robert Peel was Prime Minister from 10 December 1834 to 8 April 1835, for 120 days.",
+        "Robert Peel was a Conservative.",
+        "William Lamb was Prime Minister again from 18 April 1835 to 30 August 1841, for 6 years and 135 days.",
+        "William Lamb was a Whig in his second term.",
+        "Robert Peel was Prime Minister again from 30 August 1841 to 29 June 1846, for 4 years and 304 days.",
+        "Robert Peel was a Conservative in his second term.",
+        "Lord John Russell was MP for the City of London and lived from 1792 to 1878.",
+        "Lord John Russell was Prime Minister from 30 June 1846 to 21 February 1852, for 5 years and 237 days.",
+        "Lord John Russell was a Whig.",
+        "Edward Smith-Stanley, 14th Earl of Derby, lived from 1799 to 1869.",
+        "Edward Smith-Stanley was Prime Minister from 23 February 1852 to 17 December 1852, for 299 days.",
+        "Edward Smith-Stanley was a Conservative.",
+        "George Hamilton-Gordon, 4th Earl of Aberdeen, lived from 1784 to 1860.",
+        "George Hamilton-Gordon was Prime Minister from 19 December 1852 to 30 January 1855, for 2 years and 43 days.",
+        "George Hamilton-Gordon was a Peelite.",
+        "Henry John Temple, 3rd Viscount Palmerston, was MP for Tiverton and lived from 1784 to 1865.",
+        "Henry John Temple was Prime Minister from 6 February 1855 to 19 February 1858, for 3 years and 14 days.",
+        "Henry John Temple was a Whig.",
+        "Edward Smith-Stanley was Prime Minister again from 20 February 1858 to 11 June 1859, for 1 year and 112 days.",
+        "Edward Smith-Stanley was a Conservative in his second term.",
+        "Henry John Temple was Prime Minister again from 12 June 1859 to 18 October 1865, for 6 years and 129 days.",
+        "Henry John Temple was a Liberal in his second term.",
+        "John Russell, 1st Earl Russell, lived from 1792 to 1878.",
+        "John Russell, 1st Earl Russell, was Prime Minister from 29 October 1865 to 26 June 1866, for 241 days.",
+        "John Russell, 1st Earl Russell, was a Liberal.",
+        "Edward Smith-Stanley was Prime Minister again from 28 June 1866 to 25 February 1868, for 1 year and 243 days.",
+        "Edward Smith-Stanley was a Conservative in his third term.",
+        "Benjamin Disraeli was MP for Buckinghamshire and lived from 1804 to 1881.",
+        "Benjamin Disraeli was Prime Minister from 27 February 1868 to 1 December 1868, for 279 days.",
+        "Benjamin Disraeli was a Conservative.",
+        "William Ewart Gladstone was MP for Greenwich and lived from 1809 to 1898.",
+        "William Ewart Gladstone was Prime Minister from 3 December 1868 to 17 February 1874, for 5 years and 77 days.",
+        "William Ewart Gladstone was a Liberal.",
+        "Benjamin Disraeli, 1st Earl of Beaconsfield, was Prime Minister again from 20 February 1874 to 21 April 1880, for 6 years and 62 days.",
+        "Benjamin Disraeli was a Conservative in his second term.",
+        "William Ewart Gladstone was MP for Midlothian and was Prime Minister again from 23 April 1880 to 9 June 1885, for 5 years and 48 days.",
+        "William Ewart Gladstone was a Liberal in his second term.",
+        "Robert Gascoyne-Cecil, 3rd Marquess of Salisbury, lived from 1830 to 1903.",
+        "Robert Gascoyne-Cecil was Prime Minister from 23 June 1885 to 28 January 1886, for 220 days.",
+        "Robert Gascoyne-Cecil was a Conservative.",
+        "William Ewart Gladstone was Prime Minister again from 1 February 1886 to 20 July 1886, for 170 days.",
+        "William Ewart Gladstone was a Liberal in his third term.",
+        "Robert Gascoyne-Cecil was Prime Minister again from 25 July 1886 to 11 August 1892, for 6 years and 18 days.",
+        "Robert Gascoyne-Cecil was a Conservative in his second term.",
+        "William Ewart Gladstone was Prime Minister again from 15 August 1892 to 2 March 1894, for 1 year and 200 days.",
+        "William Ewart Gladstone was a Liberal in his fourth term.",
+        "Archibald Primrose, 5th Earl of Rosebery, lived from 1847 to 1929.",
+        "Archibald Primrose was Prime Minister from 5 March 1894 to 22 June 1895, for 1 year and 110 days.",
+        "Archibald Primrose was a Liberal.",
+        "Robert Gascoyne-Cecil was Prime Minister again from 25 June 1895 to 11 July 1902, for 7 years and 17 days.",
+        "Robert Gascoyne-Cecil's third term was labelled Con. and Lib. U. in the table.",
+        "Arthur Balfour was MP for Manchester East and lived from 1848 to 1930.",
+        "Arthur Balfour was Prime Minister from 11 July 1902 to 5 December 1905, for 3 years and 148 days.",
+        "Arthur Balfour was a Conservative.",
+        "Henry Campbell-Bannerman was MP for Stirling Burghs and lived from 1836 to 1908.",
+        "Henry Campbell-Bannerman was Prime Minister from 5 December 1905 to 7 April 1908, for 2 years and 125 days.",
+        "Henry Campbell-Bannerman was a Liberal.",
+        "Herbert Henry Asquith was MP for East Fife and lived from 1852 to 1928.",
+        "Herbert Henry Asquith was Prime Minister from 7 April 1908 to 5 December 1916, for 8 years and 243 days.",
+        "Herbert Henry Asquith was a Liberal.",
+        "David Lloyd George was MP for Caernarvon Boroughs and lived from 1863 to 1945.",
+        "David Lloyd George was Prime Minister from 6 December 1916 to 19 October 1922, for 5 years and 318 days.",
+        "David Lloyd George was a Liberal.",
+        "Bonar Law was MP for Glasgow Central and lived from 1858 to 1923.",
+        "Bonar Law was Prime Minister from 23 October 1922 to 20 May 1923, for 210 days.",
+        "Bonar Law was a Conservative.",
+        "Stanley Baldwin was MP for Bewdley and lived from 1867 to 1947.",
+        "Stanley Baldwin was Prime Minister from 23 May 1923 to 16 January 1924, for 239 days.",
+        "Stanley Baldwin was a Conservative.",
+        "Ramsay MacDonald was MP for Aberavon and lived from 1866 to 1937.",
+        "Ramsay MacDonald was Prime Minister from 22 January 1924 to 4 November 1924, for 288 days.",
+        "Ramsay MacDonald was a Labour politician.",
+        "Stanley Baldwin was Prime Minister again from 4 November 1924 to 5 June 1929, for 4 years and 214 days.",
+        "Stanley Baldwin was a Conservative in his second term.",
+        "Ramsay MacDonald was MP for Seaham and was Prime Minister again from 5 June 1929 to 7 June 1935, for 6 years and 3 days.",
+        "Ramsay MacDonald was a Labour politician in his second term.",
+        "Stanley Baldwin was Prime Minister again from 7 June 1935 to 28 May 1937, for 1 year and 356 days.",
+        "Stanley Baldwin was a Conservative in his third term.",
+        "Neville Chamberlain was MP for Birmingham Edgbaston and lived from 1869 to 1940.",
+        "Neville Chamberlain was Prime Minister from 28 May 1937 to 10 May 1940, for 2 years and 349 days.",
+        "Neville Chamberlain was a Conservative.",
+        "Winston Churchill was MP for Epping and lived from 1874 to 1965.",
+        "Winston Churchill was Prime Minister from 10 May 1940 to 26 July 1945, for 5 years and 78 days.",
+        "Winston Churchill was a Conservative.",
+        "Clement Attlee was MP for Limehouse and Walthamstow West and lived from 1883 to 1967.",
+        "Clement Attlee was Prime Minister from 26 July 1945 to 26 October 1951, for 6 years and 93 days.",
+        "Clement Attlee was a Labour politician.",
+        "Winston Churchill was MP for Woodford and was Prime Minister again from 26 October 1951 to 6 April 1955, for 3 years and 163 days.",
+        "Winston Churchill was a Conservative in his second term.",
+        "Anthony Eden was MP for Warwick and Leamington and lived from 1897 to 1977.",
+        "Anthony Eden was Prime Minister from 6 April 1955 to 10 January 1957, for 1 year and 280 days.",
+        "Anthony Eden was a Conservative.",
+        "Harold Macmillan was MP for Bromley and lived from 1894 to 1986.",
+        "Harold Macmillan was Prime Minister from 10 January 1957 to 19 October 1963, for 6 years and 283 days.",
+        "Harold Macmillan was a Conservative.",
+        "Alec Douglas-Home was MP for Kinross and Western Perthshire and lived from 1903 to 1995.",
+        "Alec Douglas-Home was Prime Minister from 19 October 1963 to 16 October 1964, for 364 days.",
+        "Alec Douglas-Home was a Conservative, in the Scottish Unionist faction.",
+        "Harold Wilson was MP for Huyton and lived from 1916 to 1995.",
+        "Harold Wilson was Prime Minister from 16 October 1964 to 19 June 1970, for 5 years and 247 days.",
+        "Harold Wilson was a Labour politician.",
+        "Edward Heath was MP for Bexley and Sidcup and lived from 1916 to 2005.",
+        "Edward Heath was Prime Minister from 19 June 1970 to 4 March 1970, as the table lists it, for 3 years and 259 days.",
+        "Edward Heath was a Conservative.",
+        "Harold Wilson was Prime Minister again from 4 March to 5 April 1976, for 2 years and 33 days.",
+        "Harold Wilson was a Labour politician in his second term.",
+        "James Callaghan was MP for Cardiff South East and lived from 1912 to 2005.",
+        "James Callaghan was Prime Minister from 5 April 1976 to 4 May 1979, for 3 years and 30 days.",
+        "James Callaghan was a Labour politician.",
+        "Margaret Thatcher was MP for Finchley and lived from 1925 to 2013.",
+        "Margaret Thatcher was Prime Minister from 4 May 1979 to 28 November 1990, for 11 years and 209 days.",
+        "Margaret Thatcher was a Conservative.",
+        "John Major was MP for Huntingdon and was born in 1943.",
+        "John Major was Prime Minister from 28 November 1990 to 2 May 1997, for 6 years and 156 days.",
+        "John Major was a Conservative.",
+        "Tony Blair was MP for Sedgefield and was born in 1953.",
+        "Tony Blair was Prime Minister from 2 May 1997 to 27 June 2007, for 10 years and 57 days.",
+        "Tony Blair was a Labour politician.",
+        "Gordon Brown was MP for Kirkcaldy and Cowdenbeath and was born in 1951.",
+        "Gordon Brown was Prime Minister from 27 June 2007 to 11 May (the year is not shown in the table), for 2 years and 319 days.",
+        "Gordon Brown was a Labour politician.",
+        "David Cameron was MP for Witney and was born in 1966.",
+        "David Cameron was Prime Minister from 11 May (the year is not shown in the table) to 13 July 2016, for 6 years and 64 days.",
+        "David Cameron was a Conservative, in a coalition with the Liberal Democrats.",
+        "Theresa May was MP for Maidenhead and was born in 1956.",
+        "Theresa May has been Prime Minister since 13 July 2016.",
+        "Theresa May's term was 1 year and 193 days as of the table.",
+        "Theresa May was a Conservative.",
+        "The monarch Elizabeth II reigned from 1952 to the present.",
+        "The monarch George I reigned from 1714 to 1727.",
+        "The monarch George II reigned from 1727 to 1760.",
+        "The monarch George III reigned from 1760 to 1820.",
+        "The monarch George IV reigned from 1820 to 1830.",
+        "The monarch William IV reigned from 1830 to 1837.",
+        "The monarch Victoria reigned from 1837 to 1901.",
+        "The monarch Edward VII reigned from 1901 to 1910.",
+        "The monarch George V reigned from 1910 to 1936.",
+        "The monarch Edward VIII reigned in 1936.",
+        "The monarch George VI reigned from 1936 to 1952."
+      ]
+    ]
+  }
+]

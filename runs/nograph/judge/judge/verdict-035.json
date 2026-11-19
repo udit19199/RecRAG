@@ -1,0 +1,59 @@
+[
+{"id": "ee74c0f001ad124f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "e4250e7b6208a717", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "it might come with USB ports so you can charge multiple devices in one outlet."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]}
+]},
+{"id": "942a8d92548726be", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "e55d1dcdd8b78a79", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]}
+]},
+{"id": "6511a1edb4eb7dc4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]}
+]},
+{"id": "d33a256963185254", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Google unveils the Pixel 8"}, {"item": 7, "quote": "newly unveiled Pixel 8 Pro"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

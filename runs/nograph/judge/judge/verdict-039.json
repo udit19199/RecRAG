@@ -1,0 +1,64 @@
+[
+  {"id": "7cb5fcfbe3f8b85e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "81fb0b8267f17c90", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "and is reportedly preparing for a ground invasion."}]}
+  ]},
+  {"id": "3cb7a8bed29cec67", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "that they don't know everything that happened in that relationship"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "and I can have something really major and traumatic happen to me and they don't know about it"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "she told NPR."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+  ]},
+  {"id": "b7372f96d1932e88", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "This week was Google’s annual hardware event"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "abdfa1576fa84c0c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "160cc44595eb2994", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]}
+]

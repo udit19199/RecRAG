@@ -1,0 +1,43 @@
+[
+ {"id": "multihop-rag-1287", "sentences": [
+   ["The Bears' defense is all over the Vikings tonight.", "Minnesota cannot get out of its own way."],
+   ["Week 4 was the first time all year the Vikings did not throw the ball on at least 69% of their snaps."],
+   ["At 11:03 p.m., the Vikings are using their two timeouts.", "There is not much the Vikings will be able to do once this hits fourth down."],
+   ["Josh Dobbs is the new man on the Vikings.", "Josh Dobbs keeps producing the same offensive results the Vikings enjoyed with Kirk Cousins.", "Josh Dobbs's results have more help from the running game under Kevin O'Connell.", "Josh Dobbs's results have more help from the defense overall under Brian Flores."]
+ ]},
+ {"id": "5a8c90db554299653c1aa0bf", "sentences": [
+   ["888 7th Avenue is a 628 ft (191 m) tall modern-style office skyscraper.", "888 7th Avenue is in Midtown Manhattan.", "888 7th Avenue was completed in 1969.", "888 7th Avenue has 46 floors."],
+   ["200 West Street is the global headquarters of the Goldman Sachs investment banking firm."],
+   ["The building is 749 ft tall.", "The building has 44 stories.", "The building is located on West Street.", "The building is located between Vesey Street and Murray Street.", "The building is in Lower Manhattan."]
+ ]},
+ {"id": "-6800766892221135307", "sentences": [
+   ["The optic chiasm is also called the optic chiasma.", "The name optic chiasm comes from the Greek word chiasma, meaning crossing.", "The name optic chiasm comes from the Greek word chiazo, meaning to mark with an X.", "The name optic chiasm is after the Greek letter chi.", "The optic chiasm is the part of the brain where the optic nerves partially cross.", "The optic chiasm is located at the bottom of the brain.", "The optic chiasm is located immediately below the hypothalamus.", "The optic chiasm is found in all vertebrates.", "In cyclostomes (lampreys and hagfishes), the optic chiasm is located within the brain."]
+ ]},
+ {"id": "6302295099297652599", "sentences": [
+   ["Surface Pro 4 is backward compatible with the Type Cover accessory of Surface Pro 3.", "The Type Cover is an attachable keyboard that doubles as a screen protector.", "The Surface Pro 4 Type Cover has been announced with a fingerprint ID sensor.", "The Surface Pro 4 Type Cover has been announced without a fingerprint ID sensor.", "The new Type Cover is thinner than its predecessor.", "The new Type Cover is lighter than its predecessor.", "The new Type Cover has improved magnetic stability for lap use.", "The new Type Cover has a mechanical keyboard with improved key spacing.", "The new Type Cover has a larger touchpad."]
+ ]},
+ {"id": "5abc7bc45542993a06baf8ef", "sentences": [
+   ["Cassiope is a genus of 9 to 12 small shrubby species.", "Cassiope is in the family Ericaceae."],
+   ["Deutzia is a genus of about 60 species of flowering plants.", "Deutzia is in the family Hydrangeaceae.", "Deutzia is native to eastern Asia.", "Deutzia is native to central Asia.", "Deutzia is native from the Himalayas east to Japan and the Philippines.", "Deutzia is native to Central America.", "Deutzia is also native to Europe."]
+ ]},
+ {"id": "-7876533033876892996", "sentences": [
+   ["In Moulmein, the narrator is a police officer.", "The narrator is Orwell.", "Orwell writes in the first person.", "The narrator is a police officer during a period of intense anti-European sentiment.", "The narrator's intellectual sympathies lie with the Burmese.", "The narrator's official role makes him a symbol of the oppressive imperial power.", "The narrator is subjected to constant baiting and jeering by the local people.", "The narrator is subjected to this baiting because of his role as a symbol of imperial power."],
+   ["The essay describes the experience of the English narrator.", "The narrator is possibly Orwell himself.", "The narrator is called upon to shoot an aggressive elephant.", "The narrator is working as a police officer in Burma when he is called upon to shoot the elephant.", "The locals expect the narrator to shoot the elephant.", "The narrator shoots the elephant against his better judgment.", "The narrator's anguish is increased by the elephant's slow and painful death.", "The story is regarded as a metaphor for British imperialism.", "The story is regarded as a metaphor for Orwell's view that when the white man turns tyrant it is his own freedom that he destroys."]
+ ]},
+ {"id": "5758694170037504500", "sentences": [
+   ["The Gift of the Magi is a short story.", "The Gift of the Magi was written by O. Henry.", "O. Henry is a pen name for William Sydney Porter.", "The Gift of the Magi is about a young husband and wife.", "The husband and wife deal with the challenge of buying secret Christmas gifts for each other with very little money.", "The Gift of the Magi is a sentimental story with a moral lesson about gift-giving.", "The Gift of the Magi has been a popular story for adaptation.", "The Gift of the Magi has been especially popular for presentation at Christmas time.", "The plot of The Gift of the Magi is well-known.", "The twist ending of The Gift of the Magi is well-known.", "The ending of The Gift of the Magi is generally considered an example of comic irony.", "The Gift of the Magi was allegedly written at Pete's Tavern on Irving Place in New York City."]
+ ]},
+ {"id": "5a82a1ae55429954d2e2eb89", "sentences": [
+   ["Aspidistra is a genus of flowering plants.", "Aspidistra is in the family Asparagaceae.", "Aspidistra is in the subfamily Nolinoideae.", "Aspidistra is native to eastern Asia.", "Aspidistra is native to southeastern Asia.", "Aspidistra is particularly native to China.", "Aspidistra is particularly native to Vietnam."],
+   ["Cyrtanthus is a genus of perennial plants.", "Cyrtanthus is a genus of herbaceous plants.", "Cyrtanthus is a genus of bulbous plants.", "Cyrtanthus is in the family Amaryllidaceae.", "Cyrtanthus is in the subfamily Amaryllidoideae."]
+ ]},
+ {"id": "5a80e468554299260e20a1a9", "sentences": [
+   ["Suzanne N.J. 'Susie' Chun Oakland is a Democratic member of the Hawaii Senate.", "Suzanne N.J. 'Susie' Chun Oakland represents the 13th District.", "Suzanne N.J. 'Susie' Chun Oakland has represented the 13th District since 1996."],
+   ["Suzanne N.J. 'Susie' Chun Oakland was previously a member of the Hawaii House of Representatives.", "Suzanne N.J. 'Susie' Chun Oakland was a member of the Hawaii House of Representatives from 1990 to 1996."],
+   ["The lower chamber of the Hawaii legislature is the Hawaiʻi House of Representatives."]
+ ]},
+ {"id": "5ab97d0a5542996be202051e", "sentences": [
+   ["John André lived from 2 May 1750 to 2 October 1780.", "John André was a British Army officer.", "John André was hanged as a spy by the Continental Army during the American Revolutionary War.", "John André was hanged for assisting Benedict Arnold's attempted surrender of the fort at West Point, New York, to the British."],
+   ["Benedict Arnold lived from January 14, 1741 (Old Style: January 3, 1740) to June 14, 1801.", "Benedict Arnold was a general during the American Revolutionary War.", "Benedict Arnold fought for the American Continental Army.", "Benedict Arnold later defected to the British Army."]
+ ]}
+]

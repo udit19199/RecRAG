@@ -1,0 +1,53 @@
+[
+  {"id": "d86567385df9b7ee", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."}]}
+  ]},
+  {"id": "8d4b9a3eae0121d2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+  ]},
+  {"id": "98670ebdfeea209d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]}
+  ]},
+  {"id": "b6015e3a539b5bf7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f7db09efbda1efe7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Love Story This finally brings us to the"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "By the time I went to that first game, we were a couple."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "abd8f458542cc0de", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]}
+]

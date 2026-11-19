@@ -1,0 +1,76 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "511925173790467566",
+   "sentences": [
+    "In negotiation theory , the best alternative to a negotiated agreement or BATNA is the most advantageous alternative course of action a party can take if negotiations fail and an agreement can not be reached . BATNA is the key focus and the driving force behind a successful negotiator . A party should generally not accept a worse resolution than its BATNA . Care should be taken , however , to ensure that deals are accurately valued , taking into account all considerations , such as relationship value , time value of money and the likelihood that the other party will live up to their side of the bargain . These other considerations are often difficult to value , since they are frequently based on uncertain or qualitative considerations , rather than easily measurable and quantifiable factors ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1844",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5ab72a025542992aa3b8c7b8",
+   "sentences": [
+    "A Summer in the Cage is a 2007 documentary film about a man's experiences with bipolar disorder.",
+    "American Hardcore: The History of American Punk Rock 1980-1986 is a documentary directed by Paul Rachman and written by Steven Blush."
+   ]
+  },
+  {
+   "id": "194354691346962376",
+   "sentences": [
+    "The Nightmare Before Christmas originated in a poem written by Tim Burton in 1982 , while he was working as an animator at Walt Disney Feature Animation . With the success of Vincent in the same year , Walt Disney Studios began to consider developing The Nightmare Before Christmas as either a short film or 30 - minute television special . Over the years , Burton 's thoughts regularly returned to the project , and in 1990 , he made a development deal with Disney . Production started in July 1991 in San Francisco ; Disney released the film through its Touchstone Pictures banner because the studio believed the film would be `` too dark and scary for kids '' ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1170",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."
+   ]
+  },
+  {
+   "id": "5a75447b55429974ef308cbf",
+   "sentences": [
+    "The Battle of Okinawa (Japanese: 沖縄戦 , Hepburn: Okinawa-sen ) (Okinawan: 沖縄戦 , \"Uchinaa ikusa \" ), codenamed Operation Iceberg, was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army and included the largest amphibious assault in the Pacific War during World War II, the April 1, 1945, invasion of Okinawa itself.",
+    "Operation Diadem, also referred to as the Fourth Battle of Monte Cassino or, in Canada, the Battle of the Liri Valley, was an offensive operation undertaken by the Allies of World War II (U.S. Fifth Army and British Eighth Army in May 1944, as part of the Italian Campaign of World War II."
+   ]
+  },
+  {
+   "id": "5abd05e655429965836004f1",
+   "sentences": [
+    "Haunted is the second album by American singer-songwriter Poe, released in 2000 (see 2000 in music) after a five-year hiatus from her debut album \"Hello\" in 1995.",
+    " The self-produced album was created as a tribute to her father, and counterpart to her brother Mark Z. Danielewski's novel \"House of Leaves\".",
+    " A bestseller, it has been translated into a number of languages, and is followed by a companion piece, \"The Whalestoe Letters\"."
+   ]
+  },
+  {
+   "id": "5ae12bcc5542997b2ef7d11a",
+   "sentences": [
+    "Edward Benjamin Britten, Baron Britten {'1': \", '2': \", '3': \", '4': \"} (22 November 1913 – 4 December 1976) was an English composer, conductor and pianist.",
+    "Béla Viktor János Bartók ( ; ] ; 25 March 1881 – 26 September 1945) was a Hungarian composer, pianist and an ethnomusicologist."
+   ]
+  },
+  {
+   "id": "multihop-rag-2477",
+   "sentences": [
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.",
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."
+   ]
+  },
+  {
+   "id": "5ab870ee5542990e739ec8f6",
+   "sentences": [
+    " It is a companion book to \"A Wrinkle in Time\", and part of the Time Quintet.",
+    "The Time Quintet is a fantasy/science fiction series of five young adult novels written by Madeleine L'Engle."
+   ]
+  }
+ ]
+}

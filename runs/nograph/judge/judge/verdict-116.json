@@ -1,0 +1,69 @@
+[
+  {"id": "6dffd169043178d5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "OFFICIAL: Jim Harbaugh suspended for the remaining three regular season games."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b1ccd9b3ee45706a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]}
+  ]},
+  {"id": "18f9c37c336a49e9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Announcing the opening of a “formal proceeding” today, the European Commission said the investigation will look at whether the social networking platform may"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Commission said it is looking at X’s compliance with the DSA across a number of areas — including with regard to its policies and practices regarding notices on illegal content; complaint handling; risk assessment and measures to mitigate the risks identified."}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+  ]},
+  {"id": "24f9e37a1cf6f03a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1c127c0a9033e83a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "39d894817df0095a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+  ]}
+]

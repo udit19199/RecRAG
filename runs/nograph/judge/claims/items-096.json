@@ -1,0 +1,75 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8e0d04554299068b959e3a",
+   "sentences": [
+    "Haringey Heartlands is a currently ongoing urban regeneration project in the London Borough of Haringey, in north London, England.",
+    "The Mall Wood Green is a large shopping centre and residential complex in Wood Green, north London."
+   ]
+  },
+  {
+   "id": "-7008368888638493698",
+   "sentences": [
+    "The Country Music Hall of Fame and Museum in Nashville , Tennessee , is one of the world 's largest museums and research centers dedicated to the preservation and interpretation of American vernacular music . Chartered in 1964 , the museum has amassed one of the world 's most extensive musical collections .",
+    "Country Music Hall of Fame and Museum Established 1961 ( 1961 ) Location 222 5th Ave S Nashville , Tennessee 37203 Type Hall of fame Visitors 1.1 million in 2015 Director Kyle Young Website www.countrymusichalloffame.org"
+   ]
+  },
+  {
+   "id": "-5412703064874788739",
+   "sentences": [
+    "Draft lotteries were conducted again in 1970 ( for those born in 1951 ) and from 1971 to 1975 ( for 1952 to 1956 births ) . The draft numbers issued in 1972 were never used the next year to call for induction into service , because the last call was December 7 and authority to induct expired on June 30 , 1973 .",
+    "On December 1 , 1969 , the Selective Service System of the United States conducted two lotteries to determine the order of call to military service in the Vietnam War for men born from 1944 to 1950 . These lotteries occurred during a period of conscription from just before World War II to 1973 . It was the first time a lottery system had been used to select men for military service since 1942 ."
+   ]
+  },
+  {
+   "id": "5a77671255429966f1a36d21",
+   "sentences": [
+    " There is no optimal strategy involved as play entirely rests upon a random drawing of the cards.",
+    "Diplomacy is a strategic board game created by Allan B. Calhamer in 1954 and released commercially in 1959.",
+    " Its main distinctions from most board wargames are its negotiation phases (players spend much of their time forming and betraying alliances with other players and forming beneficial strategies) and the absence of dice and other game elements that produce random effects."
+   ]
+  },
+  {
+   "id": "7005697705009934957",
+   "sentences": [
+    "`` It Ai n't Me '' is a song by Norwegian DJ Kygo and American singer Selena Gomez . It was released by Interscope Records , Sony and Ultra on 17 February 2017 as the lead single from Kygo 's first EP , Stargazing . The song was written by Kygo , Gomez , Andrew Watt , Brian Lee and Ali Tamposi . It was produced by Kygo , Watt , Ben Rice and Louis Bell . A dance - pop , electropop and tropical house song , `` It Ai n't Me '' comprises an acoustic guitar line , and a build - drop arrangement in its chorus featuring pulsing piano notes , bass , synthesizers , finger - snap claps and pan flute melodies . Gomez sings the track in a husky tone , while in the chorus her vocals are reduced to recurring syllables . The lyrics are nostalgic and narrate a past relationship ruined by alcoholism and partying too often ."
+   ]
+  },
+  {
+   "id": "966261456620232361",
+   "sentences": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ]
+  },
+  {
+   "id": "5a796c805542990784727805",
+   "sentences": [
+    " He was the brother of Alfred Jodl, Chief of the Operations Staff of the OKW.",
+    "Alfred Josef Ferdinand Jodl (   ; 10 May 1890 – 16 October 1946) was a German general and war criminal during World War II, who served as the Chief of the Operations Staff of the Armed Forces High Command (Oberkommando der Wehrmacht)."
+   ]
+  },
+  {
+   "id": "4627523927977896713",
+   "sentences": [
+    "Originally introduced as a classical tax system , in which companies were subject to tax on their profits and companies ' shareholders were also liable to income tax on the dividends that they received , the first major amendment to corporation tax saw it move to a dividend imputation system in 1973 , under which an individual receiving a dividend became entitled to an income tax credit representing the corporation tax already paid by the company paying the dividend . The classical system was reintroduced in 1999 , with the abolition of advance corporation tax and of repayable dividend tax credits . Another change saw the single main rate of tax split into three . Tax competition between jurisdictions reduced the main corporate tax rate from 28 % in 2008 - 2010 to a flat rate of 20 % as of April 2015 ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1613",
+   "sentences": [
+    "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022.",
+    "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."
+   ]
+  },
+  {
+   "id": "1728824774090737582",
+   "sentences": [
+    "`` Rip It Up '' was a 1983 single by Scottish post-punk band Orange Juice . It was the second single to be released from their 1982 album of the same name . The song became the band 's only UK top 40 success , reaching no . 8 in the chart . `` Rip It Up '' signalled a departure from the sound of the band 's earlier singles , with Chic - influenced guitars and using a synthesiser to create a more disco - oriented sound .",
+    "`` Rip It Up '' Single by Orange Juice from the album Rip It Up B - side `` Snake Charmer '' `` A Sad Lament '' Released February 1983 Format 7 '' 12 '' Recorded Berwick Street Studios , London Genre Post-punk Label Polydor Songwriter ( s ) Edwyn Collins Producer ( s ) Martin Hayles Orange Juice singles chronology `` I Ca n't Help Myself '' ( 1982 ) `` Rip It Up '' ( 1983 ) `` Flesh of My Flesh '' ( 1983 ) `` I Ca n't Help Myself '' ( 1982 ) `` Rip It Up '' ( 1983 ) `` Flesh of My Flesh '' ( 1983 )"
+   ]
+  }
+ ]
+}

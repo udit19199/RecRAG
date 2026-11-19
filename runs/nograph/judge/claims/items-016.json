@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-446",
+   "sentences": [
+    "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran.",
+    "Altman has been telling investors that he’s planning to launch a new venture, according to The Information.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "multihop-rag-304",
+   "sentences": [
+    "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location.",
+    "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."
+   ]
+  },
+  {
+   "id": "5ae1412a55429920d523434c",
+   "sentences": [
+    "In the middle of 1984 a Brazilian company called Prológica, which made its own versions of 8 bits US computers, brought to the Brazilian market a new equipment for its personal computer series called \"CP\" (shorten of Personal Computer in Portuguese).",
+    "The Atari ST is a line of home computers from Atari Corporation and the successor to the Atari 8-bit family.",
+    " The Atari ST is the first personal computer to come with a bitmapped color GUI, using a version of Digital Research's GEM released in February 1985."
+   ]
+  },
+  {
+   "id": "-5202826780373179694",
+   "sentences": [
+    "Prior to 1940 the term `` jeep '' had been used as U.S. Army slang for new recruits or vehicles , but the World War II `` jeep '' that went into production in 1941 specifically tied the name to this light military 4x4 , arguably making them the oldest four - wheel drive mass - production vehicles now known as SUVs . The Jeep became the primary light 4 - wheel - drive vehicle of the United States Army and the Allies during World War II , as well as the postwar period . The term became common worldwide in the wake of the war . Doug Stewart noted : `` The spartan , cramped , and unstintingly functional jeep became the ubiquitous World War II four - wheeled personification of Yankee ingenuity and cocky , can - do determination . ''",
+    "At least two Jeep models ( the CJ - 5 and the SJ Wagoneer ) enjoyed extraordinary three - decade production runs of a single body generation . Jeeps have since the war inspired a number of other light utility vehicles , such as the Land Rover . Many Jeep variants serving similar military and civilian roles have since been designed in other nations . In lowercase the term `` jeep '' continues to be used as a generic term for vehicles inspired by the Jeep that are suitable for use on rough terrain .",
+    "Jeep 's current product range consists solely of sport utility vehicles and off - road vehicles , but has also included pickup trucks in the past . Some of Jeep 's vehicles , such as the Grand Cherokee and the Wagoneer , reach into the luxury segment . Jeep sold 1.4 million SUVs globally in 2016 , up from 500,000 in 2008 , two - thirds of which in North America , and was Fiat - Chrysler 's best selling brand in the U.S. during the first half of 2017 . In the U.S. alone , over 2400 dealerships hold franchise rights to sell Jeep - branded vehicles , and if Jeep were spun off into a separate company , it is estimated to be worth between $22 and $33.5 billion -- slightly more than all of FCA ( US ) ."
+   ]
+  },
+  {
+   "id": "5ab6f0c25542995eadef00ea",
+   "sentences": [
+    "Buried Country is a highly regarded documentary film, book and soundtrack album and now also a stageshow as well.",
+    "South of the Border is a 2009 American documentary film directed by Oliver Stone."
+   ]
+  },
+  {
+   "id": "multihop-rag-2279",
+   "sentences": [
+    "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a761e855542994ccc9186e0",
+   "sentences": [
+    "Catcha Lake is a Canadian lake located in the central part of Nova Scotia's Halifax Regional Municipality.",
+    "The Hedley Mascot Mine was a gold mine in Hedley, British Columbia, Canada."
+   ]
+  },
+  {
+   "id": "6821570137676147296",
+   "sentences": [
+    "Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes .",
+    "St. Theodosius Russian Orthodox Cathedral , in the Tremont neighborhood of Cleveland , Ohio . The name plaque is clearly visible in one scene . Lemko Hall , Cleveland , Ohio . Also located in Tremont , the wedding banquet was filmed here . The name is clearly visible in one scene . U.S. Steel Central Furnaces in Cleveland , Ohio . Opening sequence steel mill scenes . Patpong , Bangkok , Thailand , the area used to represent Saigon 's red light district . Sai Yok , Kanchanaburi Province , Thailand Mount Baker - Snoqualmie National Forest and Nooksack Falls in the North Cascades range of , Washington , deer hunting scenes . Steubenville , Ohio , for some mill and neighborhood shots . Struthers , Ohio , for external house and long - range road shots . Also including , the town 's bowling alley is the Bowladrome Lanes , located at 56 State Street , Struthers , Ohio . Weirton , West Virginia , for mill and trailer shots . River Kwai , Thailand , Prison camp and initial Russian roulette scene ."
+   ]
+  },
+  {
+   "id": "5350383719875421584",
+   "sentences": [
+    "Cousins Bo ( Seann William Scott ) , Luke ( Johnny Knoxville ) , and Daisy Duke ( Jessica Simpson ) run a moonshine business for their Uncle Jesse ( Willie Nelson ) in Hazzard County , Georgia . The cousins ' primary mode of transportation is an orange 1969 Dodge Charger that the boys affectionately refer to as the `` General Lee '' . Along the way , the family is tormented by corrupt Hazzard County Commissioner Jefferson Davis Hogg , widely known as `` Boss Hogg '' ( Burt Reynolds ) , and his willing but dimwitted henchman , Sheriff Rosco P. Coltrane ( M.C. Gainey ) .",
+    "Jessica Simpson as Daisy Duke"
+   ]
+  },
+  {
+   "id": "5ac079e9554299294b218fff",
+   "sentences": [
+    "Rosyth Dockyard is a large naval dockyard on the Firth of Forth at Rosyth, Fife, Scotland, owned by Babcock Marine, which formerly undertook refitting of Royal Navy surface vessels and submarines.",
+    "The \"Queen Elizabeth\" class is a class of two aircraft carriers of the United Kingdom's Royal Navy."
+   ]
+  }
+ ]
+}

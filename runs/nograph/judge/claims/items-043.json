@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a874e9b554299211dda2bd3",
+   "sentences": [
+    " The daughter of the American Consul in London, she was the first First Lady to be born outside the United States, or outside areas that were later to become part of the United States, such as the Thirteen Colonies – a distinction that would not be replicated until 192 years later by Melania Trump.",
+    " Before marrying future President Donald Trump in 2005, she worked as a fashion model; by 2016 she considered herself a \"full-time mom.\""
+   ]
+  },
+  {
+   "id": "5a7d1e685542995ed0d165f7",
+   "sentences": [
+    " Her personal best throw is 58.87 metres, achieved at the 2002 Asian Games in Busan.",
+    " A total of 460 athletes (comprising 281 men and 179 women) from 39 nations took part in the competition."
+   ]
+  },
+  {
+   "id": "5ac4f9db55429924173fb532",
+   "sentences": [
+    "Tritonia (flame freesia) is a genus of flowering plants in the iris family first described as a genus in 1802.",
+    "Phyteuma is a genus of flowering plants in the family Campanulaceae, native to Europe and Morocco."
+   ]
+  },
+  {
+   "id": "5a82817555429954d2e2eb5a",
+   "sentences": [
+    " It is the third installment of the \"Naked\" series \"Naked Killer\" (1992) and \"Naked Weapon\" (2002).",
+    "Naked Weapon (赤裸特工) is a 2002 Hong Kong action-thriller film directed by action choreographer Tony Ching and starring Maggie Q, Anya Wu and Daniel Wu."
+   ]
+  },
+  {
+   "id": "4556891214981292730",
+   "sentences": [
+    "The Rhine -- Herne Canal ( German : Rhein - Herne - Kanal ) is a 45.6 - kilometre - long ( 28.3 mi ) transportation canal in the Ruhr area of North Rhine - Westphalia , Germany , with five canal locks . The canal was built over a period of eight years ( 5 April 1906 - 14 July 1914 ) and connects the harbour in Duisburg on the Rhine ( 51 ° 26 ′ 59 '' N 6 ° 46 ′ 1 '' E ﻿ / ﻿ 51.44972 ° N 6.76694 ° E ﻿ / 51.44972 ; 6.76694 ) with the Dortmund - Ems Canal near Henrichenburg ( 51 ° 37 ′ 1 '' N 7 ° 19 ′ 19 '' E ﻿ / ﻿ 51.61694 ° N 7.32194 ° E ﻿ / 51.61694 ; 7.32194 ) , following the valley of the Emscher . It was widened in the 1980s . The Rhein - Herne canal ship was designed specifically for this canal ; normally of about 1300 -- 1350 ton capacity , it has a maximum draft of 2.50 metres ( 8.2 ft ) , a length of approximately 80 metres ( 260 ft ) , and maximum beam of 9.50 metres ( 31.2 ft ) ."
+   ]
+  },
+  {
+   "id": "multihop-rag-503",
+   "sentences": [
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.",
+    "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "-5461288669893101361",
+   "sentences": [
+    "A noteworthy example of a trabeated system is in Volubilis , from the Roman era , where one side of the Decumanus Maximus is lined with trabeated elements , while the opposite side of the roadway is designed in arched style ."
+   ]
+  },
+  {
+   "id": "multihop-rag-961",
+   "sentences": [
+    "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ]
+  },
+  {
+   "id": "multihop-rag-707",
+   "sentences": [
+    "It’s true that the Warriors received glowing grades from draft analysts following their selections of Kuminga, out of the G-League Ignite program, at No.",
+    "To win a bet on the Warriors, they need to win by 10 or more points."
+   ]
+  },
+  {
+   "id": "-6216202368088666946",
+   "sentences": [
+    "12 -- Bart Cummings ( 1965 , 1966 , 1967 , 1974 , 1975 , 1977 , 1979 , 1990 , 1991 , 1996 , 1999 , 2008 )",
+    "12 -- Bart Cummings ( 1965 , 1966 , 1967 , 1974 , 1975 , 1977 , 1979 , 1990 , 1991 , 1996 , 1999 , 2008 ) 5 -- Etienne de Mestre ( 1861 , 1862 , 1867 , 1877 , 1878 ) 5 -- Lee Freedman ( 1989 , 1992 , 1995 , 2004 , 2005 )",
+    "1877 is also the year that the trainer Etienne de Mestre won his fourth Melbourne Cup with Chester owned by Hon . James White . In 1878 , as in previous years De Mestre fielded more than one horse . He entered the favourite Firebell ( owned by W.S. Cox ) who finished last , Chester ( owned by Hon . James White ) the previous year 's winner who fell , and Calamia ( owned by de Mestre ) who , though less fancied , won easily by two lengths . First prize was £ 1,790 , the crowd was 80,000 and there were 30 starters . De Mestre 's 1878 win with Calamia brought to 5 the number of Melbourne Cups he had won . This record was not to be matched for nearly 100 years when the trainer Bart Cummings won his fifth Melbourne Cup in 1975 . Bart Cummings , regarded as the best Australian horse trainer of all time , went on to win 12 Melbourne Cups to 2008 ."
+   ]
+  }
+ ]
+}

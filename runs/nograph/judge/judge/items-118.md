@@ -1,0 +1,834 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=ae79829512eb46cb ===
+Gold sentences and facts:
+Sentence 0: Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+  Fact 0.0: Kenneth Walker III plays for the Seahawks.
+  Fact 0.1: Kenneth Walker III took four carries against the Rams.
+  Fact 0.2: Kenneth Walker III took four carries against the Rams before leaving.
+  Fact 0.3: Kenneth Walker III left with an oblique injury.
+Sentence 1: Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries.
+  Fact 1.0: Entering Week 12, Tee Higgins failed to suit up due to a nagging hamstring injury.
+  Fact 1.1: Entering Week 12, Noah Brown failed to suit up due to a nagging knee injury.
+  Fact 1.2: Entering Week 12, Treylon Burks failed to suit up due to a nagging concussion.
+  Fact 1.3: Entering Week 12, Kadarius Toney failed to suit up due to a nagging ankle injury.
+  Fact 1.4: Entering Week 12, Kadarius Toney failed to suit up due to a nagging hip injury.
+
+Retrieved items:
+<item 1>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Geno Smith's struggles complicate their fantasy prospects, as well.
+
+What are the biggest WR injuries in Week 13?
+
+Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging
+injuries. For now, we've placed Higgins and Brown in our Week 13 list and omitted Burks and Toney. We'll also be eyeing the Chargers' Josh Palmer (knee), who's
+eligible to come off the IR this week but probably won't suit up against New England.
+
+Last week, the most notable WRs to exit their respective games with injuries include Chris Olave (concussion), Amari Cooper (ribs), Demario Douglas
+(concussion), and Rashid Shaheed (thigh). We've left all four WRs out of our initial Week 13 list but will closely monitor their teams' injury reports to gauge
+their playing prospects.
+</item 1>
+
+<item 2>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Week 11 of the 2023 NFL season has provided plenty of drama, from the Bears hanging with the Lions to the Giants getting a rebound from emergency quarterback
+Tommy DeVito. But the latest round of regular-season action has also brought another wave of unfortunate injuries. Here's a roundup of the latest big names to
+go down around the league:
+
+QB
+
+C.J. Stroud (Texans) left for a single play against the Cardinals after absorbing a hard hit, with backup Davis Mills entering in relief. Stroud did not receive
+an injury designation, however, and returned after a quick check-in from trainers.
+
+Geno Smith (Seahawks) suffered an injury to his throwing arm after guiding a 16-7 lead over the Rams, showing frustration while trying to stretch the arm after
+a hit from Aaron Donald. Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left
+in the third quarter.
+</item 2>
+
+<item 3>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Bengals at Jaguars (-8.5), Monday
+
+Bengals : CB Cam Taylor-Britt (quad/ankle), D'Ante Smith (knee), Jay Tufele (illness) OUT
+
+: CB Cam Taylor-Britt (quad/ankle), D'Ante Smith (knee), Jay Tufele (illness) OUT Jaguars: CB Tyson Campbell (hamstring), RB Travis Etienne (ribs), TE Brenton
+Strange (foot), TE Luke Farrell (toe) QUESTIONABLE
+
+The Bengals got good news on the injury front ahead of Monday's game against the Jaguars. Wide receiver Tee Higgins (hamstring/ankle) and linebacker Logan
+Wilson (ankle/foot) are set to play, according to head coach Zac Taylor. Higgins and Wilson were full participants in practice. Cornerback Cam Taylor-Britt hurt
+his foot in practice and is out.
+</item 3>
+
+<item 4>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+He was seen walking on the sidelines shortly afterward but ruled doubtful to return. Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing
+yards on the year, replaced Walker as Seattle's top ball carrier. Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an
+"oblique strain that was legit" and could miss time.
+
+D'Onta Foreman (Bears) remained a headliner of Chicago's backfield against the Lions, even with Khalil Herbert back from injured reserve, but managed just 14
+yards on the ground before suffering an ankle injury. He walked off with a limp and attempted to run on the sidelines but did not return to the field after the
+Bears ruled him questionable.
+
+Pick Six Newsletter Crafted By The Best NFL Experts Get the day's big stories + fun stuff you love like mock drafts, picks and power rankings.
+</item 4>
+
+<item 5>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Smith did return, however, for the final drive of the game in the losing effort. Head coach Pete Carroll said that Smith will "make it back." When asked if that
+means for Thursday's matchup against San Francisco, the coach said, "I would think so."
+
+Sam Howell (Commanders) received medical attention on the sidelines after enduring several hard hits to the upper body on a touchdown run against the Giants. He
+was quickly cleared of a potential concussion, however, and remained in the game. Veteran journeyman Jacoby Brissett is Washington's backup.
+
+RB
+
+Aaron Jones (Packers) suited up against the Chargers despite a lingering hamstring issue, only to manage just five carries before suffering a knee injury. The
+former Pro Bowler needed help to leave the field and was then carted to the locker room, replaced by A.J. Dillon.
+</item 5>
+
+<item 6>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Cardinals at Steelers (-5.5)
+
+Despite missing the entire week of practice, the Cardinals are holding out hope for Brown to play by listing him as questionable. McBride is also questionable
+after being limited on Thursday and Friday, but told reporters that he's "good to go."
+
+Pittsburgh has listed Adams as its lone player with a game designation to wrap up the week. Safety Minkah Fitzpatrick (hamstring) practiced fully throughout the
+week, carries no designation, and told reporters Friday that he will play this weekend.
+
+Colts (-1) at Titans
+
+Colts : CB JuJu Brents (quad), RB Jonathan Taylor (thumb) OUT
+
+: CB JuJu Brents (quad), RB Jonathan Taylor (thumb) OUT Titans: WR Treylon Burks (concussion) QUESTIONABLE
+
+Indianapolis ruled out Brents and Taylor after they both missed the entire week of practice.
+</item 6>
+
+<item 7>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+DB
+
+Talanoa Hufanga (49ers), who emerged as a ballhawk for San Francisco's secondary in 2022, left early against the Buccaneers with a knee injury. Coach Kyle
+Shanahan confirmed to reporters on Monday that the All-Pro suffered a season-ending ACL tear.
+</item 7>
+
+<item 8>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+I agree to receive the "Pick Six Newsletter" and marketing communications, updates, special offers (including partner offers), and other information from CBS
+Sports and the Paramount family of companies. By pressing sign up, I confirm that I have read and agree to the Terms of Use and acknowledge Paramount's Privacy
+Policy See All Newsletters Please check the opt-in box to acknowledge that you would like to subscribe. Thanks for signing up! Keep an eye on your inbox. Sorry!
+There was an error processing your subscription.
+
+WR
+
+Tyreek Hill (Dolphins) briefly left Miami's game against the Raiders while nursing a hand injury and was ruled questionable to return, but he took the field
+again soon afterward, securing seven catches for 80 yards and a score before halftime. Hill has left multiple games this year, only to return in all of them.
+
+Cooper Kupp (Rams) had just a single catch against the Seahawks before suffering an ankle injury while blocking.
+</item 8>
+
+<item 9>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 9>
+
+<item 10>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for
+further evaluation in the locker room. He was ruled questionable to return. NFL Media reported on Monday that Kupp suffered a low ankle sprain and will be
+evaluated going forward.
+
+Darius Slayton (Giants) had a big impact against the Commanders, hauling in a deep score from Tommy DeVito, before exiting with an arm injury. He was ruled out
+for the remainder of the contest halfway through the third quarter.
+
+EDGE
+
+Joey Bosa (Chargers) appeared to injure his right leg or foot while held in a block during a first-quarter pass-rushing attempt against the Packers. He limped
+to the sidelines and was carted to the locker room, then ruled questionable to return.
+</item 10>
+=== END ITEM id=ae79829512eb46cb ===
+
+=== ITEM id=b6f12db47a006c37 ===
+Gold sentences and facts:
+Sentence 0: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 0.0: Al Saadi said her frustration with Meta is common among Palestinians.
+  Fact 0.1: Al Saadi said her frustration with Meta is common among Palestinians in occupied territories.
+  Fact 0.2: Al Saadi said her frustration with Meta is common among Palestinians across the diaspora.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores.
+  Fact 1.1: Meta wants to shift the burden of monitoring social media usage among teens back to parents.
+
+Retrieved items:
+<item 1>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Meta forbids support of terrorist organizations, like most social media companies based in the U.S., but struggles to moderate content around it, from user
+discourse to journalistic updates. This policy, along with the company’s partnership with Israel to monitor posts that incite violence, complicates things for
+Palestinians living under Hamas’ governance. As EFF points out, something as simple as Hamas’ flag in the background of an image can result in a strike.
+
+Jillian York, the director for international freedom of expression for EFF, blames automation and decisions made by “minimally trained humans” for the
+inconsistency. Meta’s zero tolerance policy and imprecise enforcement often suppress content from or about conflict zones, she said. The site’s moderation
+issues have negatively affected multiple non-English speaking regions, including Libya, Syria and Ukraine.
+
+“These rules can prevent people from sharing documentation of human rights violations, documentation of war crimes, even just news about what’s happening on the
+ground,” York continued.
+</item 1>
+
+<item 2>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+At the recommendation of its Oversight Board, Meta conducted a third-party due diligence report about the platform’s moderation during the May 2021 conflict.
+The report found that Arabic content was flagged as potentially violating at significantly higher rates than Hebrew content was, and was more likely to be
+erroneously removed. The report noted that Meta’s moderation system may not be as precise for Arabic content as it was for Hebrew content, because the latter is
+a “more standardized language,” and suggested that reviewers may lack the linguistic and cultural competence to understand less common Arabic dialects like
+Palestinian Arabic.
+
+Has anything improved?
+
+Meta committed to implementing policy changes based on the report’s recommendations, such as updating its keywords associated with dangerous organizations,
+disclosing government requests to remove content and launching a hostile speech classifier for Hebrew content. Abukhater added that Meta has improved its
+response to harassment, at least in comparison to other social media platforms like X (formerly Twitter).
+</item 2>
+
+<item 3>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+During the last violent outbreak between Hamas and Israel in 2021, a report commissioned by Meta and conducted by a third party concluded that the company’s
+actions had an “adverse human rights impact” on Palestinian users’ right to freedom of expression and political participation.
+
+Meta communications director Andy Stone declined to comment on the record, and pointed TechCrunch to Meta’s newsroom post about the conflict, which was updated
+on Oct. 18 with a statement addressing the shadowbanning claims.
+
+“Our policies are designed to keep people safe on our apps while giving everyone a voice,” the post stated. “We apply these policies equally around the world
+and there is no truth to the suggestion that we are deliberately suppressing voice … We can make errors and that is why there is an appeals process for people
+to tell us when they think we have made the wrong decision, so we can look into it.”
+
+The belief that Meta shadowbans, or limits the visibility of, content about Palestine is not new.
+</item 3>
+
+<item 4>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“It feeds into the bias against Palestinian narrative genuinely. It really takes the balance against Palestinians in a situation where there’s a huge asymmetry
+of power.”
+
+A history of suppression
+
+Content about Palestine is disproportionately scrutinized, as demonstrated during the last severe violent outbreak between Hamas and Israel two years ago. Amid
+the violence following the May 2021 court ruling to evict Palestinian families from Sheikh Jarrah, a neighborhood in occupied East Jerusalem, users across
+Facebook and Instagram accused Meta of taking down posts and suspending accounts that voiced support for Palestinians.
+
+The digital rights nonprofit Electronic Frontier Foundation (EFF) described Meta’s actions in 2021 as “systemic censorship of Palestinian voices.” In its 2022
+report of Palestinian digital rights, 7amleh said that Meta is “still the most restricting company” compared to other social media giants in the extent of its
+moderation of the Palestinian digital space.
+</item 4>
+
+<item 5>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Most recently, Instagram users accused Meta of “shadowbanning” their Stories about Palestine.
+
+It’s the latest in a lengthy history of incidents on Meta platforms that reflect an inherent bias against Palestinian users in its processes, as documented by
+years of complaints from both inside and outside the company. The company may not intentionally suppress specific communities, but its moderation practices
+often disproportionately affect Palestinian users.
+
+For instance, Meta struggles to navigate the cultural and linguistic nuances of Arabic, a language with over 25 dialects, and has been criticized for neglecting
+to adequately diversify its language resources. The company’s black-and-white policies often preclude it from effectively moderating any nuanced topic, like
+content that discusses violence without condoning it. Advocacy groups have also raised concerns that Meta’s partnerships with government agencies, such as the
+Israeli Cyber Unit, politically influence the platform’s policy decisions.
+</item 5>
+
+<item 6>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“And so I think that is what is the most problematic right now about that particular rule, and the way that it’s enforced.”
+
+Over the 13 days leading up to the ceasefire between Hamas and Israel, 7amleh documented more than 500 reports of Palestinian “digital rights violations,”
+including the removal and restriction of content, hashtags and accounts related to the conflict.
+
+Meta blamed some of the instances of perceived censorship to technical issues, like one that prevented users in Palestine and Colombia from posting Instagram
+Stories. It attributed others to human error, like blocking the hashtag for Al-Aqsa Mosque, the holy site where Israeli police clashed with Ramadan worshippers,
+because it was mistaken for a terrorist organization. The company also blocked journalists in Gaza from WhatsApp without explanation.
+
+The same month, a group of Facebook employees filed internal complaints accusing the company of bias against Arab and Muslim users. In internal posts obtained
+by BuzzFeed News, an employee attributed the bias to “years and years of implementing policies that just don’t scale globally.”
+</item 6>
+
+<item 7>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents. In a blog post published today, Meta’s
+global head of Safety, Antigone Davis, argues that parents should be responsible for approving their teens’ app downloads and staked Meta’s position in
+supporting federal legislation that would require parental approval for app downloads for users under the age of 16.
+
+Guiding its reasoning, Meta pointed to recent Pew research that indicated that 81% of U.S. adults were in favor of requiring parental consent for teens to
+create social media accounts. While this may speak to popular opinion around parental sentiment, it doesn’t mean that parents have thought through who should be
+responsible for preventing or allowing teens’ access to social media, or how those apps should operate to protect teens.
+
+A coalition of 42 states and D.C. are currently suing Meta over its harms to teens and young users, in part referencing findings from Meta whistleblower Frances
+Haugen.
+</item 7>
+
+<item 8>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Although harassment and abuse are still rampant on Instagram and Facebook, he said, the company has been responsive to suspending accounts with patterns of
+targeting other users.
+
+The company has also made more contact with regional Palestinian organizations since 2021, York added, but it’s been slow to implement recommendations from EFF
+and other advocacy groups. It’s “very clear” that Meta is not putting the same resources behind Arabic and other non-English languages, York said, compared to
+the attention Meta gives to countries that have the most regulatory pressure. Moderation of English and other European languages tends to be more comprehensive,
+for example, because the EU enforces the Digital Services Act.
+
+In Meta’s response to the report, Miranda Sissons, the company’s director of human rights, said that Meta was “assessing the feasibility” of reviewing Arabic
+content by dialect. Sissons said that the company has “large and diverse teams” who understand “local cultural context across the region,” including in
+Palestine.
+</item 8>
+
+<item 9>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“As if there’s better moderation for those languages, and more careless moderation for Arabic content.”
+
+Stone declined to comment on allegations of Meta disproportionately flagging Arabic news content, instead directing TechCrunch to the updated newsroom post —
+which did not directly address the allegations.
+
+And as the Intercept reported, Instagram and Facebook are flagging images of the al-Ahli Hospital, claiming that the content violates Meta’s Community
+Guidelines on nudity or sexual activity.
+
+The Community Guidelines are enforced inconsistently, particularly when it comes to content related to Palestine. Al Saadi recently tried to report a comment
+that said she should be “raped” and “burned alive” — left in response to her comment on a CNN post about the conflict — but in screenshots reviewed by
+TechCrunch, Instagram said that it didn’t violate the platform’s Community Guidelines against violence or dangerous organizations.
+
+“The restrictions on content, especially the content that relates to Palestine, is heavily politicized,” Abukhater said. “It feeds into the bias against
+Palestinian narrative genuinely.
+</item 9>
+
+<item 10>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices Instagram users suspect Meta of shadowbanning content about
+Palestine. The platform has a history of inherent bias.
+
+Earlier this year, Palestinian-American filmmaker Khitam Jabr posted a handful of Reels about her family’s trip to the West Bank. In the short travel vlogs,
+Jabr shared snippets of Palestinian culture, from eating decadent meals to dancing at her niece’s wedding.
+
+“I hadn’t been in a decade, so it’s just like, life abroad,” Jabr told TechCrunch.
+
+“I would get [anti-Palestine] comments,” she recalled. “And I couldn’t respond [to them] or use my account for 24 hours. I wasn’t even posting anything about
+the occupation. But fast forward to now and the same shit’s happening.”
+
+In the aftermath of Hamas’ attack on Israelis, Israel’s retaliatory airstrikes and total blockade — cutting access to electricity, water and vital supplies —
+have devastated Gaza.
+</item 10>
+=== END ITEM id=b6f12db47a006c37 ===
+
+=== ITEM id=1b250c8647c2b28e ===
+Gold sentences and facts:
+Sentence 0: But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds.
+  Fact 0.0: The speaker thinks that people will look back and see that the past year is a really important turning point for the role social media plays in people's lives.
+  Fact 0.1: The speaker adds this.
+Sentence 1: The Goellers are now seeking support again, launching the "Save Lucas" campaign across social media.
+  Fact 1.0: The Goellers are now seeking support again.
+  Fact 1.1: The Goellers are launching the 'Save Lucas' campaign.
+  Fact 1.2: The 'Save Lucas' campaign runs across social media.
+
+Retrieved items:
+<item 1>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+For Pebble, that’s certainly true. It was a perfect storm of competition, X’s continued traction, the lack of a native app, a brand that didn’t resonate and a
+space that was maybe a little too safe to be as addictive and as fun as the original.
+
+With Pebble’s winddown, being announced to users today at 9 AM PT, early adopters will have the option of exporting their Pebble archive as a zip file that
+loads a mini web page showcasing all their old posts. Pebble won’t be directing users back to X however, or any other social network.
+
+As for where the founders will now hang out?
+
+“I don’t know. Maybe LinkedIn,” Cselle jokes.
+
+Pebble is also returning a small amount of the funds left over to its investors, more as a courtesy to show financial responsibility. The Pebble website will be
+shut down on November 1st and there aren’t further plans for the IP at this time.
+</item 1>
+
+<item 2>
+Pittsburgh boy, 10, needs second liver transplant to save his life: ‘Only possible through love’ (FOX News - Health, 2023-12-09T16:31:40+00:00)
+Dr. George Mazariegos, chief of pediatric transplantation at UPMC Children's Hospital of Pittsburgh, said Lucas is experiencing some of the more subtle changes
+of liver failure.
+
+PIG HEART RECIPIENT'S ‘LAST WISH’ WAS TO HELP DOCTORS LEARN FROM PROCEDURE, DYING MAN SAID: ‘WE WILL MISS HIM'
+
+"Those include not being able to grow normally and not getting the proper levels of oxygen to his body and brain, because the blood is being shunted away from
+the liver," he told Fox News Digital.
+
+"Those are important and potentially life-threatening complications."
+
+As of now, Lucas is still at home and "managing his symptoms," Mazeriegos said, but the doctor emphasized the importance of his receiving a timely transplant
+before further complications occur.
+
+next Image 1 of 2
+
+prev Image 2 of 2
+
+The Goellers are now seeking support again, launching the "Save Lucas" campaign across social media.
+</item 2>
+
+<item 3>
+Pittsburgh boy, 10, needs second liver transplant to save his life: ‘Only possible through love’ (FOX News - Health, 2023-12-09T16:31:40+00:00)
+God told me to start a Facebook page for him, and at the time I really wasn't into social media."
+
+That page led to a viral national campaign — complete with local news stories and donated billboards — that attracted the attention of a Nebraska family.
+
+ARKANSAS MILITARY VETERAN RECEIVES WORLD’S FIRST WHOLE-EYE AND PARTIAL-FACE TRANSPLANT
+
+And in July of that year, at UPMC Children’s Hospital of Pittsburgh, little 2-year-old Lucas received the liver of 3-year-old Olivia Swedberg, who had passed
+away a day earlier of brain cancer .
+
+"I'm in awe when someone can take their suffering and turn it into something beautiful by donating and giving someone a second chance," said Goeller.
+
+After that first transplant, her young son made a "miraculous recovery," Goeller said.
+</item 3>
+
+<item 4>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+The founders don’t regret their experience building Pebble, even though it didn’t turn out as they hoped, they said.
+
+Says Cselle, “One thing that I learned is that there’s absolutely an audience that wants to see a new kind of Twitter-like platform built and will ask for the
+features that Twitter has.” He suspects the team might stay together to work on something new after Pebble wraps, taking the learnings from Pebble with them.
+That includes better communicating to users what great content should look like on a platform, and how they can win.
+
+“We’re at an inflection point in social media,” says Oh. “We had one hypothesis with T2 and Pebble. It obviously didn’t pan out the way that we wanted it to.
+But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds.
+</item 4>
+
+<item 5>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+To that end, Pebble’s founding team included co-founder Sarah Oh, Twitter’s former human rights advisor.
+
+Pebble continues to believe its approach to moderation was correct, even if it was not ultimately a factor in driving growth.
+
+“We came in with a particular angle: kinder, safer. Trust and safety. And I think our approach to moderation that we did have on the site did work,” says
+Cselle, adding that Pebble didn’t have some of the issues other federated platforms faced. For example, TechCrunch reported that Bluesky earlier this year had
+strained its relationship with Black users, as it failed to crack down on bigotry on the site. Later, users on Bluesky were even creating usernames with racial
+slurs, and yet the platform didn’t issue a public apology. Pebble never faced any such controversies.
+
+But it may have positioned itself a little too far into the “kindness” territory, the founders now believe.
+</item 5>
+
+<item 6>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+“We were really seized by people saying they wanted something that felt safer, where they could speak openly without dogpiling,” says Oh. “And so we were
+confident that was an important thing to hit. Are there other things that are equally important and a great user experience? Yes.”
+
+“Twitter is you have real people…saying real things,” Oh continues. “At the expense of using a word that’s overused, ‘authentic.’ And our theory was always if
+you can create a space where people really feel like they can let down their hair, then you would get that authentic content. We didn’t quite get there,” she
+admits.
+
+Cselle agrees, noting that, perhaps, Pebble should have opened up enough space for disagreement to happen, while still drawing a hard line on the most
+disagreeable parts of running a Twitter-like platform.
+
+“I think we could have maybe moved a little bit further towards that,” he says. “There’s a lot of nice things that are said on Pebble, but maybe not enough
+breaking news.
+</item 6>
+
+<item 7>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+“I think Threads and others have encountered this as well,” adds Pebble co-founder and CTO Michael Greer, previously Discord engineering head. “The durability
+of the network effect of Twitter is stronger than anticipated,” he says.
+
+Despite these challenges, Pebble initially had decent retention. By week four, it was seeing retention rates of 30%, in fact. Its invite list was also working,
+as 60% of people who received a Pebble invite converted to become users. In addition, some 10,000 users arrived at that list from early press, like TechCrunch’s
+coverage of its first outside funding — a $1.1 million angel round that included investors like former Google VP Bradley Horowitz, Android co-founder Rich Miner
+and the former CEO of Wikipedia, Katherine Maher. Data from Similarweb indicates the Pebble website topped 99,300 visits last month, indicating repeat usage.
+
+The company’s hypothesis was that consumers were hungry for a Twitter alternative that prioritized trust, safety and moderation from the start.
+</item 7>
+
+<item 8>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+Not enough conversation.”
+
+There were other things that may have hurt Pebble’s traction, too, including its lack of a native mobile app. As T2, the startup prioritized building for the
+web to be agile and more flexible, but lost out on the opportunities for discovery driven by the app stores. Notes Greer, “that might have been a mistake.”
+
+In retrospect, Cselle also questions if the rebranding from T2 to Pebble may have been an issue.
+
+“I’m wondering if the Pebble rebrand had actually softened the value prop[position] because T2 just encapsulated it so much — that it was really duplicative [of
+Twitter],” he says.
+
+Like most startup shutdowns, the answer as to “why” is not any one thing but a combination of factors. For Pebble, that’s certainly true.
+</item 8>
+
+<item 9>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+The grip Twitter, now called X, has on the market may be stronger than some believed. Unfortunately, that’s led to the first casualty among Twitter
+alternatives, as the startup Pebble (formerly T2), is shutting down. The would-be X rival had grown a small but engaged community on its microblogging service
+that aimed to dupe Twitter’s features, from its verification systems to functionality like DMs. But the company says they’ve run out of time to make Pebble
+happen — the app maxed out at 3,000 daily active users, out of 20,000 registered users. That daily user figure fell to 1,000 daily users following its
+rebranding from T2.
+
+In part, the sizable competition coming from other Twitter rivals was to blame, says co-founder and CEO Gabor Cselle, who had exits to Google and Twitter prior
+to starting Pebble.
+
+“I think the competitive landscape evolved faster than we had thought,” he explains.
+</item 9>
+
+<item 10>
+Pittsburgh boy, 10, needs second liver transplant to save his life: ‘Only possible through love’ (FOX News - Health, 2023-12-09T16:31:40+00:00)
+And the city of Pittsburgh has rallied once more behind the family, with newly donated billboards and media campaigns.
+
+"We're trying to not only save Lucas, but also to build organ donation awareness for both deceased and living donors," said Goeller.
+
+ULTIMATE FATHER’S DAY GIFT: SON DONATES KIDNEY TO SAVE HIS DAD’S LIFE
+
+"We want it to really sink into hearts around the world because it's so important."
+
+Despite his challenges, young Lucas Goeller remains positive, active and upbeat, continuing to enjoy his love of the outdoors and hunting with his father and
+his three brothers, aged 12, 8, and 4.
+
+"He's always filled with so much joy," his mother said. "We get our strength from him. He encourages all of us to continue to look at the positives in life."
+
+The ideal living donor for Lucas is someone with type O blood, aged 20 to 49, with a BMI below 30.
+</item 10>
+=== END ITEM id=1b250c8647c2b28e ===
+
+=== ITEM id=9696ac4f4bd54991 ===
+Gold sentences and facts:
+Sentence 0: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 0.0: Google's public documentation says Google uses three categories to rank results that are local to a searcher.
+  Fact 0.1: The three categories Google's public documentation names for ranking local results are relevance, distance, and prominence.
+Sentence 1: She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.
+  Fact 1.0: A woman admits she may have misinterpreted the evidence.
+  Fact 1.1: The woman maintains that Google manipulates Search to maximise ad revenue.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google "siphons off" news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google "siphons off" news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google "siphons off" news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 2>
+
+<item 3>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Some critics, including Megan Grey, contend that Google uses semantic keyword matching to make searches less precise on purpose, which widens the pool of
+content served and increases auctions for its ads. The quality tests, then, would ensure that the systems were still returning results that were justifiably
+related to the input.
+</item 3>
+
+<item 4>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+But Google denies pushing users towards the most monetisable subjects.
+
+Similarly, it’s also pretty common to see people complaining on the internet with some variation of “Google Search was a lot better 10 years ago”, which could
+absolutely be true. But it would be a stretch to assume that’s because of the company’s monetisation practices, when there’s a much simpler explanation. In
+2013, people were creating around 9 ZB of data every year (that’s nine zettabytes, or nine trillion gigabytes), which Google had to index constantly, whereas in
+2023 it’s more like 120 ZB. And not a whole lot of that is static websites like it was a decade ago, it’s live information that may be nested within various
+services and apps. What really happens when we search? Google has published extensive information about its Search procedures, so it’s not difficult to get its
+own take on what happens in the background when you send off a query.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 6>
+
+<item 7>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+the list of blue links in search results that are not sponsored. “Ad keyword matching is a long-standing and well-known process that is designed to connect
+people to relevant ads. A separate process, which has nothing to do with ads, is used to match organic results to a query,” he said. “It’s no secret that Google
+Search looks beyond the specific words in a query to better understand their meaning ... If you make a spelling mistake, or search for a term that’s not on a
+page but where the page has a close synonym, or if you aren’t even sure exactly how to search for something, our meaning matching systems help.” It is true that
+some search queries result in more ads than others, and what ads you get can vary wildly depending on your request, which is the result of the keyword matching
+Google uses to sell ads. But Google denies pushing users towards the most monetisable subjects.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 8>
+
+<item 9>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 10>
+=== END ITEM id=9696ac4f4bd54991 ===
+
+=== ITEM id=6fdbd3f4d9c53439 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: Google makes deals with Apple.
+  Fact 0.2: Google makes deals with Samsung.
+  Fact 0.3: Google makes deals with Mozilla.
+  Fact 0.4: Google makes deals with many others.
+  Fact 0.5: The deals are meant to ensure Google is the default search engine on practically every platform.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The Google deals will probably come up later in the trial.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy on day one.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google siphons off news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 3>
+
+<item 4>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 4>
+
+<item 5>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 10>
+=== END ITEM id=6fdbd3f4d9c53439 ===

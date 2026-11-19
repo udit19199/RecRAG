@@ -1,0 +1,75 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a71278c5542994082a3e5e2",
+   "sentences": [
+    " He has produced songs for prominent artists such as Justin Bieber, Monica, Britney Spears, Usher, Keri Hilson, T.I., Nelly Furtado, Kevin Cossom, Ciara, Mariah Carey, Timbaland, Madonna, J. Cole, Kanye West, Whitney Houston, Missy Elliott, M.I.A., Justin Timberlake, JoJo, Joe Jonas, Simple Plan, The Clutch, Pink, T-Pain, Diddy, Meek Mill, Björk and Duran Duran.",
+    " Raised in Fayetteville, North Carolina, Cole initially gained recognition as a rapper following the release of his debut mixtape, \"The Come Up\", in early 2007."
+   ]
+  },
+  {
+   "id": "5ab9cfe655429970cfb8ebaf",
+   "sentences": [
+    " Players compete in races on tracks inspired by attractions such as the Haunted Mansion, Pirates of the Caribbean, Space Mountain and Big Thunder Mountain Railroad to acquire missing parts for the park's fireworks machine, which was accidentally destroyed by Chip 'n' Dale while they were gathering acorns.",
+    " Opened on January 15, 1975, Space Mountain is the oldest operating roller coaster in the state of Florida, and is the original version of the iconic attraction that has since been replicated at all of The Walt Disney Company's Magic Kingdom-style theme parks worldwide, except for the Shanghai Disneyland Resort."
+   ]
+  },
+  {
+   "id": "multihop-rag-522",
+   "sentences": [
+    "Hundreds of women have filed lawsuits against Uber claiming the company hasn’t done enough to prevent instances of sexual assault by drivers.",
+    "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."
+   ]
+  },
+  {
+   "id": "5abd5b0355429933744ab789",
+   "sentences": [
+    " The title and cover are an homage to the Beatles album, 926 East McLemore Avenue being the address of the Stax Studios in Memphis, as Abbey Road was for EMI Studios in London, which was soon renamed Abbey Road Studios.",
+    " This road is best known for the Abbey Road Studios and the 1969 album, \"Abbey Road\", by The Beatles."
+   ]
+  },
+  {
+   "id": "multihop-rag-2096",
+   "sentences": [
+    "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.",
+    "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."
+   ]
+  },
+  {
+   "id": "multihop-rag-1065",
+   "sentences": [
+    "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform.",
+    "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."
+   ]
+  },
+  {
+   "id": "-8726864419641142603",
+   "sentences": [
+    "Other applications are short - circuit - proof extra-low voltage transformers for toys or doorbell installations ."
+   ]
+  },
+  {
+   "id": "5ae765185542995703ce8c0f",
+   "sentences": [
+    " In the category of pornographic websites, it was surpassed in the rankings by competitor sites xHamster, XVideos, and Pornhub, as well as the adult webcam site LiveJasmin.",
+    "XVideos is the world's largest pornographic video sharing and viewing website."
+   ]
+  },
+  {
+   "id": "5a8b3af455429971feec467b",
+   "sentences": [
+    "Blinding Edge Pictures is an American film production company, founded in 2000 by M. Night Shyamalan, which is known for producing films written and directed by Shyamalan like \"Unbreakable\" (2000), \"Signs\" (2002), \"The Village\" (2004), \"The Happening\" (2008), \"After Earth\" (2013), \"The Visit\" (2015) and \"Split\" (2017).",
+    "Unbreakable is a 2000 American superhero thriller film written, produced, and directed by M. Night Shyamalan, and starring Bruce Willis and Samuel L. Jackson, alongside Robin Wright and Spencer Treat Clark."
+   ]
+  },
+  {
+   "id": "-1354328871737756266",
+   "sentences": [
+    "Natural Born Killers Theatrical release poster Directed by Oliver Stone Produced by Jane Hamsher Don Murphy Clayton Townsend Screenplay by Richard Rutowski Oliver Stone David Veloz Story by Quentin Tarantino Starring Woody Harrelson Juliette Lewis Robert Downey , Jr . Tommy Lee Jones Tom Sizemore Cinematography Robert Richardson Edited by Hank Corwin Brian Berdan Production company Regency Enterprises Distributed by Warner Bros . Release date August 26 , 1994 ( 1994 - 08 - 26 ) Running time 119 minutes Country United States Language English Japanese Navajo Budget $34 million Box office $50.3 million",
+    "Natural Born Killers is a 1994 American satirical black comedy crime film directed by Oliver Stone and starring Woody Harrelson , Juliette Lewis , Robert Downey Jr. , Tom Sizemore , and Tommy Lee Jones . The film was released in the United States on August 26 , 1994 . The film tells the story of two victims of traumatic childhoods who became lovers and mass murderers , and are irresponsibly glorified by the mass media ."
+   ]
+  }
+ ]
+}

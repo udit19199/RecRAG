@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-1851146794181763603",
+   "sentences": [
+    "Captain : Christopher Jones . About age 50 , of Harwich , a seaport in Essex , England , which was also the port of his ship Mayflower . He and his ship were veterans of the European cargo business , often carrying wine to England , but neither had ever crossed the Atlantic . By June 1620 , he and the Mayflower had been hired for the Pilgrims voyage by their business agents in London , Thomas Weston of the Merchant Adventurers and Robert Cushman . Historical marker in London honoring the Mayflower and Captain Jones .",
+    "Captain Jones became master of the Mayflower 11 years prior to the Pilgrims ' voyage , sailing the ship cross-Channel taking English woolens to France and bringing French wine to London . In addition , he had also transported hats , hemp , Spanish salt , hops , and vinegar to Norway , and may have taken the Mayflower whaling in the North Atlantic in the Greenland area . She had traveled to Mediterranean ports , being then owned by Christopher Nichols , Robert Child , Thomas Short , and Christopher Jones , the ship 's master . In 1620 , Jones and Robert Child still owned their quarter shares in the ship , and it was from them that Thomas Weston chartered her in the summer of 1620 to undertake the Pilgrim voyage . Weston had a significant role in the Mayflower voyage , due to his membership in the Company of Merchant Adventurers , and he eventually traveled to the Plymouth Colony himself .",
+    "Aft on the main deck in the stern was the cabin for Master Christopher Jones , measuring about ten by seven feet ( 3 m × 2.1 m ) . Forward of that was the steerage room , which housed a whipstaff ( tiller extension ) for sailing control ; not a wheel , as in later ships . Also here was the ship 's compass and probably also berths for the ship 's officers . Forward of the steerage room was the capstan , a vertical axle used to pull in ropes or cables . Far forward on the main deck , just aft of the bow , was the forecastle space where the ship 's cook prepared meals for the crew ; it may also have been where the ship 's sailors slept ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1669",
+   "sentences": [
+    "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2.",
+    "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."
+   ]
+  },
+  {
+   "id": "8268392025144002146",
+   "sentences": [
+    "Lynne is the eldest of the Slater sisters and she arrives in Albert Square in 2000 with her family : father Charlie ( Derek Martin ) ; sisters Kat ( Jessie Wallace ) , Little Mo ( Kacey Ainsworth ) and Zoe ( Michelle Ryan ) , and grandmother Mo ( Laila Morse ) . Unlike Little Mo and Zoe , Lynne is aware that Zoe is in fact Kat 's daughter and helps keep the family secret until Kat reveals the truth to Zoe ."
+   ]
+  },
+  {
+   "id": "-5670674709553776773",
+   "sentences": [
+    "The Proud Family is a soundtrack album for the show of the same name . A combination of both original tunes by the characters in the show , popular hits by popular music artists such as Alicia Keys , Jhené Aiko , India Arie , and Solange Knowles & Destiny 's Child ( who perform the theme song ) , and classic soul music from artists such as Aretha Franklin and The O'Jays ."
+   ]
+  },
+  {
+   "id": "-5916339609229387906",
+   "sentences": [
+    "The soma ( cell body ) of each pseudounipolar neuron is located within a dorsal root ganglion . The axon leaves the cell body ( and out of the dorsal root ganglion ) into the dorsal root , where it splits into two branches . The central branch goes to the posterior ( dorsal ) horn of the spinal cord , where it forms synapses with other neurons . The peripheral branch travels through the distal dorsal root into the spinal nerve all the way until skin , joint , and muscle ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2329",
+   "sentences": [
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.",
+    "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."
+   ]
+  },
+  {
+   "id": "5a75321555429916b0164290",
+   "sentences": [
+    " After some time spent in general practice, he became a Lecturer, Senior Lecturer and Principal Lecturer in animal behaviour at De Montfort University, and subsequently the University of Lincoln, where he has been Head of the Department of Biological Sciences.",
+    " Individuals who have earned a Doctor of Philosophy degree may, in most jurisdictions, use the title of \"Doctor\" (often abbreviated \"Dr\") or, in non-English speaking countries, variants such as \"Dr. phil.\""
+   ]
+  },
+  {
+   "id": "multihop-rag-1831",
+   "sentences": [
+    "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet.",
+    "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."
+   ]
+  },
+  {
+   "id": "multihop-rag-268",
+   "sentences": [
+    "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-860",
+   "sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1073 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=03ab3d953b34f206 ===
+Gold sentences and facts:
+Sentence 0: Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran.
+  Fact 0.0: Altman's exit is indeed shocking
+  Fact 0.1: Altman has been the face of generative AI technology
+  Fact 0.2: Arun Chandrasekaran, a Gartner analyst, said this
+Sentence 1: Altman has been telling investors that he’s planning to launch a new venture, according to The Information.
+  Fact 1.0: Altman has been telling investors that he is planning to launch a new venture
+  Fact 1.1: The Information is the source of this report
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The prevailing theory is based on the board's language
+  Fact 2.1: The prevailing theory is based on the way giant tech companies work
+  Fact 2.2: The prevailing theory is floating around right now
+
+Retrieved items:
+<item 1>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Later Monday, that number climbed to over 650.
+
+Altman and Brockman considering return
+
+As reported by The Verge, Altman’s move to Microsoft isn’t a done deal — and both Altman and Brockman are still open to returning to OpenAI. That is, if the
+remaining board members who initially fired him step aside.
+
+OpenAI board considers merger
+
+OpenAI’s board of directors approached Dario Amodei, the co-founder and CEO of rival large-language model developer Anthropic, about a potential merger of the
+two companies, The Information reports. The approach was part of an effort by OpenAI to persuade Amodei to replace Altman as CEO — but Amodei quickly turned
+down the CEO offer.
+
+—
+
+November 19
+
+Altman to meet at OpenAI HQ
+
+According to The Information, Altman is expected to meet at OpenAI’s San Francisco headquarters as executives at OpenAI push to have him reinstated as CEO.
+</item 1>
+
+<item 2>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+We are collaborating to figure out the details. Thank you so much for your patience through this. — OpenAI (@OpenAI) November 22, 2023
+
+Altman also posted about the new deal, giving some insight into the roller coaster that we’ve all been riding since his firing was revealed Friday. In his
+words, his decision to join Microsoft on Sunday “was the best path for me and the team.” Since then, the new board’s composition and Microsoft’s support appear
+to have been enough to bring him back to the AI company he co-founded.
+
+Altman and board in talks
+
+OpenAI’s board of directors is reportedly in talks with Sam Altman, ex-Y Combinator president and an OpenAI co-founder, to return to OpenAI as CEO as soon as
+this week.
+</item 2>
+
+<item 3>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 3>
+
+<item 4>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI, the company behind viral AI hits like
+ChatGPT, GPT-4 and DALL-E 3, by OpenAI’s board of directors. Then, the company’s longtime president and co-founder, Greg Brockman, resigned — as did three
+senior OpenAI researchers. And the fallout continues.
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+It’s a fast-moving situation that we’re still trying to get to the bottom of. No doubt more will become clear as time goes on. To make it easier to follow all
+that’s happened in the meantime, though, we’ve put together a timeline; we’ll do our best to keep it current.
+</item 4>
+
+<item 5>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+The Information, speaking to three sources formerly with the company, reports that they no longer expect the sale — led by Thrive Capital — to happen, or, if it
+does, to come with a lesser valuation because of the recent turn of events.
+
+Altman planning new venture
+
+Altman has been telling investors that he’s planning to launch a new venture, according to The Information. Brockman is expected to join the effort — whatever
+form it takes. (Possibly an AI chip startup.)
+
+i love you all. today was a weird experience in many ways. but one unexpected one is that it has been sorta like reading your own eulogy while you’re still
+alive. the outpouring of love is awesome. one takeaway: go tell your friends how great you think they are.
+</item 5>
+
+<item 6>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Sam Altman has been fired from OpenAI, Inc., the 501(c)(3) nonprofit that acts as the governing body for OpenAI, the AI startup behind ChatGPT, DALL-E 3, GPT-4
+and other highly capable generative AI systems. He’ll both leave the company’s board of directors and step down as CEO.
+
+In a post on OpenAI’s official blog, the company writes that Altman’s departure follows a “deliberative review process by the board” that concluded that Altman
+“wasn’t consistently candid in his communications” with other board members, “hindering its ability to exercise its responsibilities.”
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+“The board no longer has confidence in [Altman’s] ability to continue leading OpenAI,” the blog post reads.
+</item 6>
+
+<item 7>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+But later on X, formerly Twitter, Brockman posted a message he sent to OpenAI employees in which he wrote, “based on today’s news, i quit.”
+
+In another X post on Friday night, Brockman said Altman was asked to join a video meeting at noon Friday with the company’s board members, minus Brockman,
+during which OpenAI co-founder and Chief Scientist Ilya Sutskever informed Altman he was being fired.
+
+“Sam and I are shocked and saddened by what the board did today,” Brockman wrote, adding that he was informed of his removal from the board in a separate call
+with Sutskever a short time later.
+
+OpenAI declined to answer questions on what Altman’s alleged lack of candor was about. The statement said his behavior was hindering the board’s ability to
+exercise its responsibilities.
+
+Altman posted Friday on X: “i loved my time at openai.
+</item 7>
+
+<item 8>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 8>
+
+<item 9>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Altman has a long history steering OpenAI. After co-founding the company alongside Peter Thiel, LinkedIn cofounder Reid Hoffman and others, Altman, who formerly
+headed startup accelerator Y Combinator and also holds a seat on the board at Worldcoin, the ambitious cryptocurrency project, initially served as a co-chair of
+OpenAI alongside Elon Musk. Musk left in 2018 to avoid a conflict of interest with Tesla.
+
+Altman over the past several months played an active role in attempting to shape regulators’ responses to AI, appearing at U.S. congressional hearings and
+meeting personally with world leaders including President Joe Biden, German Chancellor Olaf Scholz and French President Emmanuel Macron, among others, on an
+international policy tour.
+
+More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+I've never met someone who has supported and lifted up more people around them than him. Couldn't be a prouder brother.
+</item 9>
+
+<item 10>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Confirmation Sam Altman will not return as OpenAI’s CEO
+
+A number of investors and OpenAI employees tried to bring back Altman after his sudden firing by the company’s board, but following a weekend of negotiations,
+it was confirmed that Altman would not return to OpenAI and new leadership would take hold. What this means for ChatGPT’s future, and for the OpenAI Dev Day
+announcements, remains to be seen.
+
+Sam Altman ousted as OpenAI’s CEO
+
+Sam Altman has been fired from OpenAI. He will leave the company’s board and step down as CEO, with OpenAI’s chief technology officer Mira Murati stepping in as
+interim CEO. In a blog post from OpenAI, the company writes that the board “no longer has confidence in [Altman’s] ability to continue leading OpenAI.”
+
+In a statement on X, Altman said working at OpenAI “was transformative” for him and “hopefully the world.”
+</item 10>
+=== END ITEM id=03ab3d953b34f206 ===
+
+=== ITEM id=71eec44f79bf507d ===
+Gold sentences and facts:
+Sentence 0: Likely with the sole intent of keeping Messi fit in that time off, and the added bonus of raking in significant cash, Inter Miami scheduled a two-match tour of China in early November after their regular season concluded.
+  Fact 0.0: Inter Miami scheduled a two-match tour of China in early November.
+  Fact 0.1: The China tour was scheduled after Inter Miami's regular season concluded.
+  Fact 0.2: The likely sole intent of the China tour was keeping Messi fit during that time off.
+  Fact 0.3: The China tour had the added bonus of raking in significant cash.
+Sentence 1: Eventually, Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge, and the defeat coupled with CF Montreal’s big 4-1 victory over Portland means Inter Miami are officially out of the postseason running.
+  Fact 1.0: Alvaro Barreal scored a goal in the 78th minute.
+  Fact 1.1: Barreal's 78th-minute goal ended any hope Inter Miami had of completing a stunning playoff charge.
+  Fact 1.2: Inter Miami's defeat, together with CF Montreal's 4-1 victory over Portland, means Inter Miami are officially out of the postseason running.
+Sentence 2: Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time.
+  Fact 2.0: Lionel Messi's arrival at Inter Miami has brought a craze for fans to get a glimpse of him.
+  Fact 2.1: Lionel Messi is one of the sport's most talented players of all time.
+  Fact 2.2: Lionel Messi is one of the sport's most legendary players of all time.
+
+Retrieved items:
+<item 1>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+1 hour 30 mins to kick: As if Inter Miami's predicament tonight wasn't difficult enough, requiring a victory to keep their playoff hopes alive, it will have to
+come against the best team in Major League Soccer through the 2023 regular season.
+
+FC Cincinnati won the Supporters' Shield as the regular season champion, confirmed on Wednesday despite suffering defeat. It's been an exceptional season for
+the club, and they won't stop here just because they have nothing tangible left to gain over the final few matches.
+
+Campeones!!! 🏆⚽️🏆 2023 supporters’ shield winners 🟠🔵 pic.twitter.com/96ckfHkKEp — Santiago Arias (@santiagoarias13) October 7, 2023
+
+1 hour 45 mins to kick: It's Fan Appreciation Night at DRV PNK Stadium, where they're giving out Inter Miami bucket hats to the first few fans through the
+gates.
+</item 1>
+
+<item 2>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Inter Miami were in simply too big of a hole in the MLS playoff race, one which even Lionel Messi couldn’t drag them out of.
+
+With two matches remaining in the season, Inter Miami have been officially eliminated from the MLS playoff race, with Supporters’ Shield winners FC Cincinnati
+dealing the deathblow with a 1-0 victory at DRV PNK Stadium.
+
+The match had every hallmark of what made Inter Miami a flawed side when Lionel Messi arrived. Inter Miami utterly dominated the first half, but could not find
+the breakthrough, instead hitting the woodwork three separate times in the opening half-hour and four overall in the match. On the other end, Drake Callender
+was nothing short of sensational in goal, but even his heroics were just not enough to stymie the electric counter-attack that FC Cincinnati possess.
+</item 2>
+
+<item 3>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+The cheapest season ticket for Inter Miami in 2024 is $867, which works out to $51 per match across the 17 home games in the upcoming MLS season. Meanwhile, a
+seat in the West Reserved section, which puts a fan in the upper deck near the middle of the pitch, is now priced at a whopping $140 per match.
+
+According to Telemundo, this makes Inter Miami one of the most expensive tickets in the entire world. The cheapest Barcelona season ticket, for example, can be
+had for $377 for the season. Even while their prices are muted thanks to the next few seasons being played outside the under-construction Camp Nou, they are
+still just 25% cheaper than tickets to Barcelona's famed home ground.
+
+One of Europe's most expensive tickets can be found at Tottenham, thanks in part to the brand new state-of-the-art Tottenham Hotspur Stadium, and even then its
+cheapest ticket is around $974, while its most expensive package comes out to $2,498 for the year.
+</item 3>
+
+<item 4>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all
+time.
+
+Along with that skyrocketing attention comes a leap in prices, and sadly the club seems to be passing that cost on to the supporters.
+
+In 2024, Inter Miami will sport some of the world's most expensive tickets, rivaling the prices of Champions League giants such as Barcelona, Arsenal, and other
+massive clubs around Europe, while dwarfing other MLS ticket packages.
+
+While Fox Sports reported the club has an extensive waiting list for 2024 season tickets, the massive increase in price could push out many of the team's most
+dedicated supporters who have been with the team since its inception in 2020, causing massive turnover in the fanbase.
+
+A reminder that for most clubs, season-ticket packages include only home league matches, and while members usually get first access to purchase tickets for
+knockout competitions, those all come at an additional cost.
+</item 4>
+
+<item 5>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+That's nice and all, but the best way to appreciate the fans would be to not price out the loyal supporters from season tickets next year. Instead, Inter Miami
+has jacked 2024 membership rates to put the club amongst some of the most expensive tickets in not just MLS, but the world.
+
+While there will certainly be folks who can afford those high-demand tickets, many of those individuals won't be the same fans who have supported the club from
+its inception in 2020. This means Inter Miami have chosen to secure maximum profit at the expense of its fanbase, and a high turnover amongst the regular
+in-person support from this season to next is likely.
+</item 5>
+
+<item 6>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+The most expensive premium packages at Inter Miami in 2024, which will run supporters over $45,000, dwarf any of the most luxurious tickets in the Premier
+League. The most expensive season ticket in the EPL can be found at Fulham, where the Craven Cottage luxury booths are valued at $3,620. Barcelona's most
+expensive season ticket is $1,826 for the full year.
+
+The National Football League (NFL), the most popular sport in the United States by a massive margin, boasted an average ticket price of $112 in 2022, while the
+average NBA ticket price was $94 that year.
+
+These prices also dwarf many other clubs in Major League Soccer. Orlando City SC, one of Inter Miami's chief in-state rivals, have their cheapest season ticket
+available for just $324 in 2024, over half the cost of any Inter Miami season ticket, while their most expensive premium ticket costs $2,898.
+</item 6>
+
+<item 7>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+Meanwhile, another nearby rival, Atlanta United, will feature its cheapest season ticket for $605 in 2024, or just $525 for founding members.
+
+Inter Miami season-ticket glitch causes scare
+
+Already, price increases have Inter Miami season ticket holders on edge, but a computer glitch saw supporters fed an even bigger scare.
+
+Mike Ryan, a Miami local who regularly appears on the radio program The Dan LeBatard Show, posted on social media his shock when he received a 2024 renewal for
+$30,600 for his two seats, which in 2023 cost just $6,802. Ryan then posted a follow-up a few hours later that stated he was contacted by Inter Miami
+representatives who indicated that pricing was incorrect thanks to a computer glitch that sent supporters quotes for additional seats they did not actually
+have.
+</item 7>
+
+<item 8>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+Still, Ryan's follow-up indicated that his error quote was doubled in price over the actual cost, which still leaves his seats increasing from around $6,800 to
+a whopping $15,300 for two seats, an increase of 125% year-on-year.
+</item 8>
+
+<item 9>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+Code Section Price 2 Mid Loge $45,900 3 North Loge $42,840 4 South Loge $42,840 5 Midfield Club $7,650 6 East Field Seats $13,005 A Northwest Prime $5,440 B
+Northwest Midfield $4,420 C West Sideline $2,720 D West Reserved $2,380 E East Midfield $2,635 F East Upper Midfield $2,125 G East Sideline $1,955 H East
+Reserved $1,360 I North Goaline $1,054 J South Goaline $1,020 K South Stand $867 L North Stand Reserved $884
+
+Inter Miami season tickets among most expensive in world for 2024
+
+With the Inter Miami season-ticket cost increasing by a huge margin over its own pricing model from 2023 to 2024, the club now boasts some of the most expensive
+seats in world football, also rivaling that of other major sports in the U.S.
+</item 9>
+
+<item 10>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+Inter Miami season tickets: Prices for 2024
+
+The pricing structure for 2024 represents an enormous increase over the 2023 costs. The cheapest season ticket in 2023 was $485, but that will jump all the way
+to $884, which is an increase of 78.8%. There is a discount for fans who renew by October 7.
+
+Meanwhile, a season ticket in the lower-level midfield club area, which includes upscale food and beverage options, cost $3,600 in 2023 but will now run $7,650
+for the 2024 season, an increase of 113%, more than doubling year-over-year.
+
+Inter Miami 2024 season ticket prices
+
+Prices below courtesy of Inter Miami season ticketing release via the Miami Herald on September 28, 2023. Sections 2 through B are considered "premium" seating,
+while C through L are considered "standard."
+</item 10>
+=== END ITEM id=71eec44f79bf507d ===
+
+=== ITEM id=b97ef23452026155 ===
+Gold sentences and facts:
+Sentence 0: In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.
+  Fact 0.0: A year has passed since Altman catapulted ChatGPT to global fame.
+  Fact 0.1: Altman has become Silicon Valley's sought-after voice on the promise of artificial intelligence.
+  Fact 0.2: Altman has become Silicon Valley's sought-after voice on the potential dangers of artificial intelligence.
+  Fact 0.3: Altman's sudden exit was mostly unexplained.
+  Fact 0.4: Altman's exit brought uncertainty to the industry's future.
+Sentence 1: This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.
+  Fact 1.0: The piece covers this week's topics.
+  Fact 1.1: Sam Altman is backing a teen's AI startup.
+  Fact 1.2: Google held a hardware event.
+  Fact 1.3: First impressions of the Pixel 8 Pro are covered.
+  Fact 1.4: Flexport drama is covered.
+  Fact 1.5: The ongoing FTX fallout is covered.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The board's language is a basis for the prevailing theory.
+  Fact 2.1: The way giant tech companies work is a basis for the prevailing theory.
+  Fact 2.2: The prevailing theory currently floating around is based on the board's language and how giant tech companies work.
+
+Retrieved items:
+<item 1>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Altman has a long history steering OpenAI. After co-founding the company alongside Peter Thiel, LinkedIn cofounder Reid Hoffman and others, Altman, who formerly
+headed startup accelerator Y Combinator and also holds a seat on the board at Worldcoin, the ambitious cryptocurrency project, initially served as a co-chair of
+OpenAI alongside Elon Musk. Musk left in 2018 to avoid a conflict of interest with Tesla.
+
+Altman over the past several months played an active role in attempting to shape regulators’ responses to AI, appearing at U.S. congressional hearings and
+meeting personally with world leaders including President Joe Biden, German Chancellor Olaf Scholz and French President Emmanuel Macron, among others, on an
+international policy tour.
+
+More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+I've never met someone who has supported and lifted up more people around them than him. Couldn't be a prouder brother.
+</item 1>
+
+<item 2>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 2>
+
+<item 3>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Sam Altman has been fired from OpenAI, Inc., the 501(c)(3) nonprofit that acts as the governing body for OpenAI, the AI startup behind ChatGPT, DALL-E 3, GPT-4
+and other highly capable generative AI systems. He’ll both leave the company’s board of directors and step down as CEO.
+
+In a post on OpenAI’s official blog, the company writes that Altman’s departure follows a “deliberative review process by the board” that concluded that Altman
+“wasn’t consistently candid in his communications” with other board members, “hindering its ability to exercise its responsibilities.”
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+“The board no longer has confidence in [Altman’s] ability to continue leading OpenAI,” the blog post reads.
+</item 3>
+
+<item 4>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Any significant snafu in that department would reflect on her, as well as Altman.
+
+5. Perhaps a difference of AI ethics or philosophy?
+
+Altman is a proud techno-optimist, and often speaks fondly of the possibilities of AGI, or artificial general intelligence, a theoretical software system that
+achieves human-like intellect and versatility.
+
+The board’s statement pointedly includes that “OpenAI was deliberately structured to advance our mission: to ensure that artificial general intelligence
+benefits all humanity” and that new leadership was necessary. It’s possible that Sam’s zeal for AGI, even absent a secret project or agreement, led to a major
+rift between him and the board.
+
+It’s been obvious to all that Altman took the company in a much more corporate direction from its origins, changing its legal status and aggressively pursuing
+enterprise and consumer applications. That doesn’t sound a lot like the “mission” the board wants to advance.
+</item 4>
+
+<item 5>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He was recruited in 2014 to take lead of the startup incubator YCombinator.
+
+“Sam is one of the smartest people I know, and understands startups better than perhaps anyone I know, including myself,” read YCombinator co-founder Paul
+Graham’s 2014 announcement that Altman would become its president. Graham said at the time that Altman was “one of those rare people who manage to be both
+fearsomely effective and yet fundamentally benevolent.”
+
+OpenAI started out as a nonprofit when it launched with financial backing from Tesla CEO Elon Musk and others. Its stated aims were to “advance digital
+intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return.”
+
+That changed in 2018 when it incorporated a for-profit business Open AI LP, and shifted nearly all its staff into the business, not long after releasing its
+first generation of the GPT large language model for mimicking human writing.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 6>
+
+<item 7>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman posted Friday on X: “i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved
+working with such talented people. will have more to say about what’s next later.”
+
+The Associated Press and OpenAI have a licensing and technology agreement allowing OpenAI access to part of the AP’s text archives.
+
+Altman helped start OpenAI as a nonprofit research laboratory in 2015. But it was ChatGPT’s explosion into public consciousness that thrust Altman into the
+spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media. On a world tour this year, he was mobbed by
+a crowd of adoring fans at an event in London.
+
+He’s sat with multiple heads of state to discuss AI’s potential and perils.
+</item 7>
+
+<item 8>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI, the company behind viral AI hits like
+ChatGPT, GPT-4 and DALL-E 3, by OpenAI’s board of directors. Then, the company’s longtime president and co-founder, Greg Brockman, resigned — as did three
+senior OpenAI researchers. And the fallout continues.
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+It’s a fast-moving situation that we’re still trying to get to the bottom of. No doubt more will become clear as time goes on. To make it easier to follow all
+that’s happened in the meantime, though, we’ve put together a timeline; we’ll do our best to keep it current.
+</item 8>
+
+<item 9>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 9>
+
+<item 10>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 10>
+=== END ITEM id=b97ef23452026155 ===
+
+=== ITEM id=7e4fd6a993ba072b ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that 'all of that, all of it, was built on lies.'
+Sentence 1: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 1.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 1.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 1.2: Caroline Ellison is the CEO of Alameda.
+  Fact 1.3: The government claimed Bankman-Fried had 'secret access' to customer money.
+  Fact 1.4: The government claimed the customer money was both cash and crypto.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve great power.
+  Fact 2.3: The prosecution said Bankman-Fried committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that the FTX founder acted in good faith.
+  Fact 2.5: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.6: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said. Besides telling her about his presidential chances, he also told her that
+if there was a coin flip where tails destroyed the world and heads made the world twice as good, he’d flip the coin. He called this being “risk-neutral,” which
+seems like a fancy way of saying he was a gambling addict.
+
+She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022. The goal, Bankman-Fried told her, was to
+“optically” separate Alameda Research and FTX. “The whole time we were dating, he was my boss at work,” she said. They broke up because she wanted more from the
+relationship; Bankman-Fried was distant and not paying enough attention to her.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 6>
+
+<item 7>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 8>
+
+<item 9>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 10>
+=== END ITEM id=7e4fd6a993ba072b ===
+
+=== ITEM id=75005986dc9cadd4 ===
+Gold sentences and facts:
+Sentence 0: Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts.
+  Fact 0.0: The Supreme Court decided last week that it would hear the pair of cases.
+  Fact 0.1: The pair of cases revolve around Republicans crafting state-specific laws.
+  Fact 0.2: The state-specific laws order platforms to keep their hands off of some social media posts.
+Sentence 1: Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation.
+  Fact 1.0: Under Musk, Twitter has prioritized free speech.
+  Fact 1.1: Twitter is now called X.
+  Fact 1.2: Under Musk, free speech on Twitter is managed by crowdsourced-based moderation.
+
+Retrieved items:
+<item 1>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+“Thanks to the First Amendment, Florida and Texas cannot force websites or social media apps to host hateful content, misinformation and spam, as their deeply
+misguided laws would require,” Oregon Senator Ron Wyden, who co-authored Section 230, a law that protects social media companies’ content moderation decisions,
+told TechCrunch. “… A ruling in favor of the Texas and Florida laws would create utter chaos, and make many sites worthless to regular users who want to watch a
+funny video or see family photos.”
+
+NetChoice President Steve DelBianco also warned that allowing the state laws to go into effect would unleash “a tidal wave of offensive content and hate speech
+crashing onto users, creators, and advertisers” that would force Americans to wade through “racial epithets, aggressive homophobia, pornographic material,
+beheadings, or other gruesome content” just to use social apps.
+</item 1>
+
+<item 2>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+What’s at stake in the Supreme Court’s landmark social media case The court will wade into First Amendment questions with major implications for platforms
+
+The Supreme Court is poised to decide whether a pair of state laws are allowed to reshape the ability of social media companies to control what does — and
+doesn’t — appear on their platforms.
+
+Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to
+keep their hands off of some social media posts. Since the early days of the Trump administration, Republicans have accused social media companies of
+deliberately suppressing conservative viewpoints.
+
+While research has not supported these claims, researchers have demonstrated that conservative social media users are disproportionately exposed to political
+misinformation, a phenomenon that could explain anecdotal claims of ideologically lopsided enforcement on social platforms.
+
+Whether animated by those perceived differences or the political perks of accusing social platforms of anti-conservative bias, conservative lawmakers in Florida
+and Texas passed laws to restrict how those companies are allowed to moderate content.
+</item 2>
+
+<item 3>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+What does this have to do with the First Amendment?
+
+The case revolves around First Amendment rights — but, counterintuitively, it’s the rights of social media companies that are in question, not the rights of
+their users.
+
+“The question here is: Do social media companies have a First Amendment protected right to exercise what you might call editorial judgment?”
+
+“These cases are about the First Amendment and how the First Amendment applies to social media companies. And then more specifically, what the First Amendment
+has to say about content moderation, which is obviously a subset, although a really big and important subset of what social media companies do,” Barrett said.
+
+“The question here is: Do social media companies have a First Amendment protected right to exercise what you might call editorial judgment — or what you also
+might call content moderation — in sorting out what expression does and does not appear on the platforms that they own? So it’s just not clear right now what
+precisely the First Amendment says about that question.”
+
+Are the Texas and Florida laws identical?
+</item 3>
+
+<item 4>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+To explain the Supreme Court’s decision to wade into these issues — and what happens next — TechCrunch spoke to Paul Barrett, NYU adjunct law professor and
+Deputy Director of NYU Stern’s Center for Business and Human Rights.
+
+Why is the Supreme Court involved?
+
+These cases actually started in Florida and Texas a few years ago before wending their way to the Supreme Court this year. In those two states, Republican
+lawmakers passed parallel laws to control how social media companies operate. In Florida, Governor Ron DeSantis signed Senate Bill 7072 into law in May 2021. In
+Texas, House Bill 20 made it through the state legislature and was signed by Governor Greg Abbott in September 2021.
+
+“The reason why these cases are in front of the Supreme Court is actually relatively simple: Florida and Texas were more or less the first out of the gate in
+imposing this type of restriction on social media companies,” Barrett explained.
+</item 4>
+
+<item 5>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Per the Commission, the EU’s investigation of X focuses on the following areas and issues:
+
+Compliance with DSA obligations related to countering the dissemination of illegal content in the EU — “ notably in relation to the risk assessment and
+mitigation measures adopted by X to counter the dissemination of illegal content in the EU, as well as the functioning of the notice and action mechanism for
+illegal content in the EU mandated by the DSA, including in light of X’s content moderation resources
+
+— “ The effectiveness of measures taken by X to combat info manipulation — with a focus on the effectiveness of its “Community Notes” system of crowdsourcing
+fact-checking to aggregated views of users, who may vote to label disputed tweets with additional context.
+</item 5>
+
+<item 6>
+The UK just laid out new rules for the internet — it only gets harder from here (The Verge, 2023-11-09T00:01:00+00:00)
+Ofcom recommends these platforms implement policies like not allowing strangers to send direct messages to children, using hash matching to detect and remove
+CSAM, maintaining content and search moderation teams, and offering ways for users to report harmful content.
+
+Large tech platforms already follow many of these practices, but Ofcom hopes to see them implemented more consistently. “We think they represent best practice
+of what’s out there, but it’s not necessarily applied across the board,” Whitehead says. “Some firms are applying it sporadically but not necessarily
+systematically, and so we think there is a great benefit for a more wholesale, widespread adoption.”
+
+There’s also one big outlier: the platform known as X (formerly Twitter). The UK’s efforts with the legislation long predate Elon Musk’s acquisition of Twitter,
+but it was passed as he fired large swaths of its trust and safety teams and presided over a loosening of moderation standards, which could put X at odds with
+regulators.
+</item 6>
+
+<item 7>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+“They’re in the same ballpark, the sentiment is the same,” Barrett said. “Republican lawmakers in each state believe that — and said explicitly in the course of
+debating and passing these laws — that ‘Silicon Valley oligarchs’… are ideological liberals, and they are censoring people in our states who are conservative,
+and we are hereby ordering them to stop doing that.”
+
+How could the Supreme Court decision affect social media companies?
+
+If the court finds that social media companies don’t have a First Amendment right to curate the kinds of content that they allow, social platforms could look
+very different, at least in states that are trying to limit their moderation powers. After years of slow progress on misinformation — and worrisome backsliding
+on platforms like Elon Musk’s X — the Supreme Court’s decision could upend that process, sowing chaos online in the process.
+</item 7>
+
+<item 8>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation. Its policies have resulted in increased hate speech
+and toxic content on the platform, some studies have shown.
+
+Mozilla believes there’s a better way forward and, more importantly, that now is exactly the right time to invest in that path. And, as a wholly owned
+subsidiary of a nonprofit, the company says it’s not motivated by generating earnings for shareholders or returning a VC investment, allowing it to progress
+with a collaborative approach where it takes in input from a lot of different voices.
+
+In an interview with TechCrunch, Mozilla Senior Director of Content Carolyn O’Hara explained why Mozilla has taken an interest in the fediverse and Mastodon,
+specifically, and how it expects to experiment in the months ahead.
+</item 8>
+
+<item 9>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Aside from forcing platforms to allow some forms of content that would otherwise be disallowed, these laws also seek to force social media companies to provide
+users with individualized explanations when their content is removed or restricted. Because this process is largely conducted algorithmically now — generally
+with light human intervention or oversight — social media companies might need to reimagine their content moderation systems or hire way more humans to respond
+to these incidents. Those kind of adjustments would likely be costly and difficult to scale.
+
+“As you can imagine, that can get kind of onerous when you’re taking down millions and millions of pieces of content a day, and much of that activity of the
+vast majority of it is currently being done automatically,” Barrett said. “The idea that a human being would have to go back and explain each time something
+came down would be quite a challenge.”
+</item 9>
+
+<item 10>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Are the Texas and Florida laws identical?
+
+The two laws — HB 20 in Texas and SB 7072 in Florida — are very similar in their origins and intentions, but diverge slightly in how they seek to restrict
+social media platforms.
+
+In both instances, a provision of the state law instructed social media companies to stop removing certain kinds of content. In Texas, the law told social media
+companies that they could no longer remove or demonetize content based on the “viewpoint represented in the user’s expression.” In Florida, the law would stop
+social media companies from banning political candidates or removing or restricting their content. The laws have a few other provisions, but the idea is that
+conservative politicians in those states want to regulate how tech companies interact with political content.
+
+“They’re in the same ballpark, the sentiment is the same,” Barrett said.
+</item 10>
+=== END ITEM id=75005986dc9cadd4 ===
+
+=== ITEM id=9e08d24168808dd3 ===
+Gold sentences and facts:
+Sentence 0: Here's your chance to claim $5,000+ in bonuses as a new user from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, and BetRivers.
+  Fact 0.0: The reader has a chance to claim $5,000+ in bonuses as a new user.
+  Fact 0.1: A new user can claim bonuses from Caesars Sportsbook.
+  Fact 0.2: A new user can claim bonuses from BetMGM.
+  Fact 0.3: A new user can claim bonuses from Bet365.
+  Fact 0.4: A new user can claim bonuses from FanDuel.
+  Fact 0.5: A new user can claim bonuses from DraftKings.
+  Fact 0.6: A new user can claim bonuses from BetRivers.
+Sentence 1: Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus.
+  Fact 1.0: The reader can collect a welcome bonus.
+  Fact 1.1: A new customer receives a welcome bonus.
+
+Retrieved items:
+<item 1>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Here are more details on the offer explaining how each part of the DraftKings Sportsbook welcome offer works:
+
+Sign up for a DraftKings Sportsbook account via the links on this page .
+
+. Make a first deposit of at least $5 and get a $50 Bonus Bet .
+
+and get a . When you make your first deposit, DraftKings will give you a 20% deposit match bonus worth up to $1,000 in Bonus Bets . Be aware this bonus comes
+with a 25x wagering requirement .
+
+worth up to . Be aware this bonus comes with a . Finally, when you place an initial bet of at least $5 , you get $150 more in Bonus Bets delivered as eight $25
+Bonus Bets that you’ll have seven days to use.
+
+, you get delivered as eight $25 Bonus Bets that you’ll have seven days to use. If you go for the full deposit match bonus, you can receive as much as $1,200 in
+Bonus Bets all told.
+</item 1>
+
+<item 2>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+In point spread betting, you’re wagering on the game with a spread factored in. The favorite must win by the point spread or more, while the underdog needs to
+either lose by fewer points than the spread or win the game outright. Bowl game totals: The totals bet, commonly known as the over/under, requires you to
+determine whether the combined score of both teams will end up over or under a predicted total. With this bet type, you’re not concerned with which team wins or
+loses the game.
+
+The totals bet, commonly known as the over/under, requires you to determine whether the combined score of both teams will end up over or under a predicted
+total. With this bet type, you’re not concerned with which team wins or loses the game. Bowl game props: These can be team or individual player prop bets, such
+as which team is winning at halftime or the total number of receptions a player collects.
+</item 2>
+
+<item 3>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+com Boca Raton Bowl: USF 45 Syracuse 0
+
+Union Home Mortgage Gasparilla Bowl: Georgia Tech 30 UCF 17
+
+76 Birmingham Bowl: Troy 10 Duke 17
+
+Camelia Bowl: Arkansas State 19 Northern Illinois 21
+
+Lockheed Martin Armed Forces Bowl: James Madison 21 Air Force 31
+
+Famous Idaho Potato Bowl: Georgia State 45 Utah State 22
+
+68 Ventures Bowl: South Alabama 59 Eastern Michigan 10
+
+SRS Distribution Las Vegas Bowl: Utah 7 Northwestern 14
+
+EasyPost Hawai’I Bowl: Coastal Carolina 24 San Jose State 14
+
+Quick Lane Bowl: Minnesota 30 Bowling Green 24
+
+SERVPRO First Responder Bowl: Texas State 45 Rice 21
+
+Guaranteed Rate Bowl: Kansas 49 UNLV 36
+
+CFP Semifinal odds
+
+Rose Bowl presented by Prudential: Alabama vs. Michigan
+
+The game will take place at the Rose Bowl in Pasadena, CA.
+</item 3>
+
+<item 4>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+College Bowl game results
+
+Favorites are 11-11 SU, 7-15 ATS.
+
+The Over is 13-9
+
+Myrtle Beach Bowl: Georgia Southern 21 Ohio 41
+
+Cricket Celebration Bowl: Howard 26 Florida A&M 30
+
+R+L Carriers New Orleans Bowl: Jacksonville State 34 Louisiana-Lafayette 31 (OT)
+
+Avocados From Mexico Cure Bowl: Miami (OH) 9 Appalachian State 13
+
+Isleta New Mexico Bowl: New Mexico State 10 Fresno State 37
+
+Starco Brands LA Bowl: UCLA 35 Boise State 22
+
+Radiance Technologies Independence Bowl: Cal 12 Texas Tech 34
+
+Famous Toastery Bowl: Western Kentucky 38 Old Dominion 35
+
+Scooter’s Coffee Frisco Bowl: UTSA 35 Marshall 17
+
+RoofClaim.
+</item 4>
+
+<item 5>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+It’s a quick process. Below, we outline the steps for opening your own account.
+
+Choose your sportsbook: If you’re not sure which sportsbook is the right fit for you, browse our reviews to see the pros and cons of each, as well as the
+current offerings for new customers. When you find the sportsbook that best suits your needs, simply click on a link from our site to visit the homepage of your
+chosen sportsbook. Register for an account: On the homepage, you’ll find a button that says “sign up” or “register.” Once you click that, you’ll be taken to a
+form for providing personal information such as your name, birth date, email address, and the last four digits of your Social Security number. You’ll also be
+required to accept the sportsbook terms and conditions, which we recommend you read. Collect your welcome bonus: As a new customer, you’ll receive a welcome
+bonus.
+</item 5>
+
+<item 6>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+What bets can I make on the CFP and bowl games?
+
+Because of football’s popularity at top online betting sites, most bowl games will feature expanded selections of betting markets. These are the common college
+football betting lines:
+
+Bowl game moneylines: The moneyline is the simplest bet you can make on a college football bowl game. Your only responsibility is to choose which team you
+believe will win. The favorites are indicated by negative odds, while the underdog will have positive odds.
+
+The moneyline is the simplest bet you can make on a college football bowl game. Your only responsibility is to choose which team you believe will win. The
+favorites are indicated by negative odds, while the underdog will have positive odds. Bowl game point spreads: In point spread betting, you’re wagering on the
+game with a spread factored in. The favorite must win by the point spread or more, while the underdog needs to either lose by fewer points than the spread or
+win the game outright.
+</item 6>
+
+<item 7>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+College Bowl odds are posted at the best college football betting sites. Along with game odds, sportsbooks will offer a wider variety of prop bets to match the
+hype surrounding College Bowl odds, the College Football Playoff, and National Championship games.
+
+Bowl season had been going the way of the underdog up until Tuesday’s triple header. All three favorites won straight up and ATS; the OVER was 3-0 on the day.
+
+Bettors could be seeing a new trend developing; we’ll find out Wednesday, starting with the Military Bowl at 2 p.m. ET. Let's review the odds for some of the
+upcoming games and the CFP Semifinals.
+
+Latest College Bowl odds
+
+Military Bowl Presented by GoBowling.com: Virginia Tech vs. Tulane
+
+The game will take place at the Navy-Marine Corps Memorial Stadium in Annapolis, MD. Kickoff is scheduled for 2 p.m. ET on Wednesday, Dec. 27.
+</item 7>
+
+<item 8>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+Consider them side bets made with the sportsbook about events or statistical milestones that happen in the game.
+
+These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects. Consider them
+side bets made with the sportsbook about events or statistical milestones that happen in the game. Bowl game parlays: Parlays are multi-leg bets on a single bet
+slip. All parts of the parlay must be successful for the bet to win. These offer larger payouts, but the chances of winning compared with those of an individual
+bet are greatly reduced.
+
+How to bet on college football bowl games
+
+Betting on NCAA football bowl games has never been easier, thanks to online betting sites sprouting up across the country.
+
+Create an account with any of the best sports betting apps to start betting. It’s a quick process. Below, we outline the steps for opening your own account.
+</item 8>
+
+<item 9>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+The promo codes on this page get you the best bonuses available. When you plug in the code during registration, the sportsbook knows we sent you and gives you
+the bonus we negotiated for you.
+
+Are these promo codes for regular customers, too?
+
+The promo codes on this page are for new customers only. Once you’ve got an account with a sportsbook, you can take advantage of other bonus offers and ongoing
+promos.
+
+Related Pages:
+</item 9>
+
+<item 10>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus. This varies from sportsbook to sportsbook, so do some homework before deciding
+where you want to register. Read through the playthrough requirements for any sports betting bonus or promo so you’re aware of any restrictions it may involve.
+Make a deposit: Now that you have an account, you need to fund it by making a deposit with the sportsbook. Online betting sites have a variety of ways you can
+fund your account or make withdrawals. Start betting: Now, you can place a bet. Simply click on a bet to add it to your bet slip, adjust how much you want to
+wager, and then finalize your bet.
+
+See more:
+
+What is the College Football Playoff?
+
+The College Football Playoff starts with the New Year’s Six bowl games, of which two act as semifinal games to determine which teams will play in the National
+Championship.
+</item 10>
+=== END ITEM id=9e08d24168808dd3 ===

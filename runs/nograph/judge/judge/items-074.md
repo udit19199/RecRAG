@@ -1,0 +1,872 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=e113919d08dd50a9 ===
+Gold sentences and facts:
+Sentence 0: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 0.0: Google's public documentation says Google uses three categories to rank results that are local to a searcher.
+  Fact 0.1: The three categories Google's public documentation names for ranking local results are relevance, distance, and prominence.
+Sentence 1: She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.
+  Fact 1.0: A woman admits she may have misinterpreted the evidence.
+  Fact 1.1: The woman maintains that Google manipulates Search to maximise ad revenue.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google "siphons off" news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google "siphons off" news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google "siphons off" news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 2>
+
+<item 3>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 4>
+
+<item 5>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 5>
+
+<item 6>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Looking back on all that had changed around what first attracted people to Google, from the introduction of ads to the efforts to keep users within the universe
+of Google products, this seemed to be the last straw.
+
+The second major reason why Google results feel different lately was, of course, SEO — specifically, the obnoxious-kid-refusing-to-behave-in-class kind of SEO.
+
+“SEO that goes against Google’s guidelines, it’s not new,” Ray explained. A decade ago, it used to be called “black hat” SEO, in comparison to the search
+engine-approved “white hat” tactics. And Google has, as Sullivan and many SEOs told me, gotten better over time at catching SEOs playing tricks on the
+algorithm.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 10>
+=== END ITEM id=e113919d08dd50a9 ===
+
+=== ITEM id=42144a324a028803 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: Google makes deals with Apple.
+  Fact 0.2: Google makes deals with Samsung.
+  Fact 0.3: Google makes deals with Mozilla.
+  Fact 0.4: Google makes deals with many others.
+  Fact 0.5: The deals are meant to ensure Google is the default search engine on practically every platform.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The Google deals will probably come up later in the trial.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy on day one.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google siphons off news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 3>
+
+<item 4>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 4>
+
+<item 5>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 5>
+
+<item 6>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 9>
+
+<item 10>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 10>
+=== END ITEM id=42144a324a028803 ===
+
+=== ITEM id=f23ec3e1162d1e4a ===
+Gold sentences and facts:
+Sentence 0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 0.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+Sentence 1: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 1.0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 1.1: Israel is reportedly preparing for a ground invasion.
+
+Retrieved items:
+<item 1>
+Israel’s startup ecosystem: down but not out (TechCrunch, 2023-10-13T19:10:07+00:00)
+The world is still coming to terms with Hamas’ deadly attacks on Israelis last weekend — and everything else that has unfolded so far in the aftermath,
+including the barrage of retaliation strikes on Gaza.
+
+Undoubtedly, the ramifications for the technology ecosystem pale in comparison to the human toll that the fighting is taking, on both sides. But when
+considering how the wider region will weather the destruction, and one day recover, it’s an important industry to consider. Please also read here about how this
+is playing out for Palestinians in Gaza and beyond. And a below, we show how a look at how the situation is playing out in the startup ecosystem in Israel sheds
+light on its impact to the country as a whole.
+
+In such a small country, just about everyone knows someone who was directly affected by the attacks, or someone involved in the subsequent defense and
+retaliation — and often all three.
+
+Technology is, without question, a giant part of Israel’s economy.
+</item 1>
+
+<item 2>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+With them and with the US, we established a kind of task force, which is not subject to any country or unifying body, countries that are working in
+coordination, and meet every few days to exchange intelligence, and advance the struggle."
+
+In general, following an appeal by IMPA to its counterparts around the world, there has been a dramatic increase in intelligence coming to Israel from abroad.
+"The amount of information doubled in the month of fighting, compared with the monthly average. Before the war, we received about 24 intelligence reports a
+month from parallel authorities, compared with 50 today."
+
+Countries around the world cooperating with Israel to fight terrorism sounds almost ideal, but it’s hard not to wonder where they were before.
+
+"Many countries felt this had nothing to do with them, that it wasn’t their struggle.
+</item 2>
+
+<item 3>
+Palestine’s growing tech industry has been literally blown apart by Israel’s war on Hamas (TechCrunch, 2023-10-14T07:46:27+00:00)
+Sturgill said that as well as the intensely difficult conditions in Gaza, which is being hit by Israeli missiles, the situation in Ramallah is “super tense. I
+feel like the situation is going to get significantly worse there over the coming weeks.”
+
+Iliana Montauk, co-founder and CEO of Manara — a social impact startup funded by Y Combinator, Seedcamp, Reid Hoffman, Eric Ries, Marc Benioff, Paul Graham, and
+Jessica Livingston, among others — told TechCrunch via email that connectivity has decreased significantly in the past 24 hours.
+
+“Though Gaza has been bombed many times before, this time is completely different for the tech sector for several reasons. Electricity was cut off to the entire
+[Gaza] strip. A significant amount of infrastructure has been bombed (including both ISPs and many tall apartment buildings that hold cell phone towers). Entire
+middle-class neighborhoods are being destroyed.”
+</item 3>
+
+<item 4>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+RELATED ARTICLES Tech experts battle to shut down Gaza financial pipeline
+
+"Overnight, we started receiving hundreds of reports about unusual activity by customers of financial institutions in the State of Israel," she says. Before
+October 7, IMPA received about 100 reports a day dealing with terror financing. That number jumped to about 1,000. "There is a 900% increase in reports on
+terror financing, and we don't waste time, everything happens very, very quickly. As we receive the information, we simultaneously pass it on to the operational
+professionals who locate the money pipelines, and block them. Some information will not necessarily lead to terror financing, but we don’t have time to waste.
+Bank CEOs call and draw our attention to the information they convey to us that warrants special attention."
+
+Has information from banks and financial institutions led to blocking the money pipeline for terrorism?
+
+"There was very high-quality intelligence that we passed on to the security agencies. We don't always know the results."
+</item 4>
+
+<item 5>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+This is a real-time deterrence," reveals IMPA director general Adv. Ilit Ostrovitch-Levi. "And then there was a domino effect. Following this blocking, more
+countries began to look around, and blocked funds intended for terror. All this information, which is now shared at an international level, leads to the closing
+of more and more Hamas funding pipelines, in real time. With worldwide cooperation, Israel’s security and enforcement authorities are thwarting the transfer of
+millions of dollars earmarked for terrorism, every day."
+
+Headed by Ostrovitch-Levi since May 2022, IMPA is an intelligence body that conducts the most complex of international economic investigations, and fights
+terror financing routinely. On October 7, Ostrovitch-Levi received a painful reminder of the vital importance of her work. "Already on that Saturday night, with
+Israeli under heavy rocket fire, we talked about preparing ourselves for the campaign we’re now entering, the fight against terror financing channels.
+</item 5>
+
+<item 6>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+Dozens of our staff have been called up to reserve duty, in large part managers working regularly in the fight against terror financing."
+
+Since then, most of IMPA’s work has focused on identifying and blocking the terror money pipelines. "We work very reactively - we see a fundraising campaign,
+try to deter it, and stop it from happening again. There are no breaks, because they are constantly active. It’s a daily struggle. Our analysts have been
+sitting on the social networks from day two of the war, just manually monitoring visible sources of information on these networks to locate fundraising
+campaigns for terrorist organizations operating in Gaza."
+
+Three days after the war began, IMPA also issued a call to all global regulated entities for increased vigilance towards terrorism financing campaigns in
+response to the ongoing war and state of emergency, and to report all activities that raise suspicion of terror support and terror financing, in an effective
+and immediate manner.
+</item 6>
+
+<item 7>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 7>
+
+<item 8>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+International aid groups are warning that they cannot deliver food and other basic services to people in the Gaza Strip and that a “dire” humanitarian crisis is
+set to worsen.
+
+International aid groups provide food and other means of support to about 63% of people in Gaza.
+
+Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground
+invasion.
+
+On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential
+ground invasion.
+
+I am a scholar of peace and conflict economics and a former World Bank consultant, including during the 2014 war between Hamas and Israel.
+</item 8>
+
+<item 9>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+Some Republican politicians have said that UNRWA has “cozied up” to Hamas. And an internal UNRWA ethics committee has accused top staff at the agency of “sexual
+misconduct, nepotism, retaliation … and other abuses of authority” that created a toxic work environment.
+
+Meanwhile, since the war between Israel and Hamas began on Oct. 8, more than 1,500 Gazans have been killed and more than 5,300 injured, while Hamas attacks have
+killed more than 1,300 people in Israel and injured about 3,200 others.
+
+International aid groups and European Union officials have called for a humanitarian corridor to be set up in Gaza – meaning a protected path specifically for
+civilians, aid workers and necessary basic items to pass through safely back and forth from Gaza to Israel and Egypt. So far, there are no clear plans for such
+a protected pathway.
+
+Topher L. McDougal is Professor of Economic Development & Peacebuilding, University of San Diego.
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 10>
+=== END ITEM id=f23ec3e1162d1e4a ===
+
+=== ITEM id=ac5ca36f93ea3bc1 ===
+Gold sentences and facts:
+Sentence 0: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 0.0: Judge Lewis Kaplan intervened and asked whether Bankman-Fried had ever been told by Yedidia about that money
+  Fact 0.1: The question asked whether Bankman-Fried had been told about that money in words or in substance
+  Fact 0.2: Bankman-Fried admitted he had been told about that money
+  Fact 0.3: Bankman-Fried admitted being told about that money only after Judge Lewis Kaplan's question
+Sentence 1: Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.
+  Fact 1.0: Before his fall, Bankman-Fried presented himself as the Good Boy of crypto
+  Fact 1.1: Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry, crypto
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud
+  Fact 2.1: The prosecution said the fraud was committed to achieve great wealth, power and influence
+  Fact 2.2: The defense argued that the FTX founder, Bankman-Fried, acted in good faith
+  Fact 2.3: The defense argued that Bankman-Fried never meant to commit fraud or steal
+  Fact 2.4: The defense argued that Bankman-Fried basically got in over his head
+
+Retrieved items:
+<item 1>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+We have some inkling of what the government will be arguing thanks to the filings prosecutors are making in this case. They argue that Bankman-Fried lied about
+consumer protection and that Bankman-Fried’s statements that FTX was “avoiding or managing conflicts of interest” and that “as a general principle FTX
+segregates customer assets from its own assets across our platforms” were lies, in a superseding indictment filed August 14th.
+
+The indictment also says that there were special features in FTX’s code that “permitted Alameda to spend and withdraw unlimited amounts of money from FTX,”
+which were created at Bankman-Fried’s direction. That effectively exempted Alameda from the kinds of risk management other customers faced. At the same time,
+the government alleges, “Bankman-Fried publicly and repeatedly asserted that Alameda did not have privileged access to FTX.”
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 3>
+
+<item 4>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+The one Wang said Alameda took to keep off FTX’s balance sheet? Yeah, so it was a totally innocent thing where what actually happened was that Bankman-Fried
+thought it was appropriate that Alameda take the position as a backstop liquidity provider, that’s all.
+
+In June 2022, Bankman-Fried heard about the account called “fiat@ftx” tracking how much money Alameda owed to FTX, he testified. He did not know what it was and
+did not bother to find out. He was busy! That was when Bankman-Fried directed Ellison to repay Alameda’s lenders, because he thought Alameda was good for it. He
+also gave BlockFi and Voyager, two crypto lenders, some capital infusions for good measure.
+
+He was “very surprised!”
+
+Remember that testimony Adam Yedidia gave about a conversation with Bankman-Fried in August 2022 about the enormous amount of money Alameda owed FTX? Well,
+Bankman-Fried remembers it differently.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 7>
+
+<item 8>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 8>
+
+<item 9>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 9>
+
+<item 10>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 10>
+=== END ITEM id=ac5ca36f93ea3bc1 ===
+
+=== ITEM id=9b33b4838a2fbc08 ===
+Gold sentences and facts:
+Sentence 0: The first of these is the fact that tech companies continue to see huge pressure on their valuations.
+  Fact 0.0: The first of these is that tech companies continue to see huge pressure on their valuations.
+Sentence 1: With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation.
+  Fact 1.0: The stock surged 10% this year.
+  Fact 1.1: Seeking Alpha's Quant Rating system suggests a Hold.
+  Fact 1.2: The Quant Rating system expresses concerns about valuation.
+
+Retrieved items:
+<item 1>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+The software development startup previously raised $35 million in a Series B funding in 2022.
+
+Bill
+
+Will cut around 15% of its workforce, the company announced December 5, and close its Sydney office to increase profitability.
+
+CourseHero
+
+Announced December 5 it eliminated 23 employees across engineering, operations and development.
+
+Pivo
+
+Shut down operations December 5. The Nigerian fintech startup previously raised $2 million in a seed round.
+
+Twilio
+
+Announced hundreds of job cuts December 4, amounting to 5% of the company’s workforce.
+
+Spotify
+
+Is eliminating about 1,500 jobs, the company announced December 4. This marks Spotify’s third round of layoffs this year.
+
+Bending Spoons
+
+Has laid off the entire staff of Filmic, the team behind popular video and photo-editing apps that Bending Spoons acquired in July.
+
+November 2023
+
+Zepz
+
+Cut 30 roles November 30 after the fintech unicorn eliminated 26% of its workforce earlier this year.
+</item 1>
+
+<item 2>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+100 Thieves
+
+Is reducing its workforce by 20%, CEO John Robinson announced November 2. The esports brand is spinning out its game studio as well as its energy drink brand,
+Juvee.
+
+OpenSpace
+
+Conducted a round of layoffs, CEO Jeevan Kalanithi announced November 2. The number of employees impacted by the layoffs has yet to be reported.
+
+Informatica
+
+Is laying off 10% of its global workforce, the cloud data management company announced in its Q3 results November 1.
+
+Splunk
+
+Is set to cut around 500 employees CEO Gary Steele said in a message to employees November 1 ahead of its planned acquisition by Cisco.
+
+October 2023
+
+Bungie
+
+Is laying off about 100 employees, CEO Pete Parsons announced 10/30. The Sony-owned game studio is also delaying two of its upcoming titles as a result.
+
+Karat
+
+Reportedly cut an estimated 10% of its workforce October 27 after the financial startup for creators raised a $70 million Series B round earlier this year.
+</item 2>
+
+<item 3>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+February 2023
+
+Twitter
+
+Announced on February 26, the company laid off more than 200 employees, including Esther Crawford, Haraldur Thorleifsson and Leah Culver. Since Musk took over
+Twitter in October last year, the company’s headcount has fallen by more than 70%.
+
+Poshmark
+
+Announced February 24, Poshmark confirmed with TechCrunch that less than 2% of its workforce was affected, primarily in the U.S. The company employs roughly
+800+ employees.
+
+Green Labs
+
+We do not have an exact figure of how many Green Labs plans to lay off its staff. Green Labs confirmed to TechCrunch that it is conducting a round of layoffs
+that could impact at least 50% of its workforce.
+
+Chipper Cash
+
+Announced on February 20, the African cross-border payments platform conducted a second round of layoffs just 10 weeks after it cut approximately 12.5% of its
+workforce. Chipper Cash relieved almost one-third of its workforce, about 100 employees.
+</item 3>
+
+<item 4>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The trend points toward a favorable environment for startups prioritizing growth over cash preservation.
+
+At the same time, we wouldn’t be surprised if WeWork ends up filing for bankruptcy (TC+). The company has been grappling with significant challenges. WeWork’s
+stock hit a new low, dropping over 47% after hours to just $1.21, which brings the company’s market cap down to a mere $121 million. This is a drastic fall from
+the $47 billion valuation it achieved after its SoftBank-led Series H round in early 2019.
+
+Hope for the best, prepare for the worst: Startup co-founders don’t always make it, and in her fantastic TC+ piece, Rebecca explores what you can do to prepare
+today, should a co-founder breakup be on your startup journey’s path.
+
+Bumper banking backing in Brazil: Brazilian startup QI Tech, a banking-as-a-service platform, has raised $200 million in a Series B funding round, marking the
+largest raise in Brazil this year across all sectors.
+</item 4>
+
+<item 5>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+Driven by a confluence of factors, from China’s crackdown on the tech industry to escalating U.S.-China tensions, some of these investors are now turning their
+gaze to opportunities abroad, tracing the footsteps of a new generation of Chinese-founded startups that are expanding overseas.
+
+Between a rock and a hard place
+
+Since their entry into China in the late 1990s, American venture capital firms, led by powerhouses like Sequoia Capital, IDG Capital and GGV, have played a
+major role in funding high-risk, high-reward startups in the country’s consumer internet sector. This two-decade-long mutually beneficial relationship, however,
+now hangs in the balance as changes at home and abroad diminish the pool of investment opportunities for outside financiers.
+
+In recent years, Beijing’s sweeping tech crackdowns have introduced a new sense of uncertainty to investors.
+</item 5>
+
+<item 6>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The latest funding round brings QI Tech’s total capital raised to $262 million.
+
+New Web Summit CEO appointed: Former Wikimedia Foundation CEO Katherine Maher has been appointed as the new CEO of Web Summit, following the controversial
+departure of its previous leader, Paddy Cosgrave. Maher’s appointment comes as the tech conference faces a challenge to rebuild relationships and trust within
+the tech community.
+
+Top reads on TechCrunch this week
+
+Shinier, smarter maps: Google is rolling out a variety of updates for Maps, incorporating AI technology to enhance user experience. The feature is currently
+available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.
+
+From stop-and-start to charging ahead: Over on TC+, Tim has had it with U.S. automakers hesitating on EVs, as Ford and GM are showing signs of backing away from
+their commitment to electric vehicles. Cowards.
+</item 6>
+
+<item 7>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+A comprehensive list of 2023 tech layoffs From major layoffs at Google, Amazon and Microsoft to small fintech startups and apps
+
+Last year’s techwide reckoning continues. The tech industry has seen more than 240,000 jobs lost in 2023, a total that’s already 50% higher than last year and
+growing. Earlier this year, mass workforce reductions were driven by the biggest names in tech like Google, Amazon, Microsoft, Yahoo, Meta and Zoom. Startups
+across many sectors also announced cutbacks through the first half of the year. And while tech layoffs slowed down in the summer and fall, it appears that cuts
+are ramping up yet again.
+
+Many economists have cautioned against fears of a recession, which would seem like a reason for optimism. But the momentum for a tech sector rebound has been
+slow to build, resulting in tech companies continuing to cut back on their workforces and pivot from a growth mindset to one based on efficiency in the face of
+stubborn market conditions.
+</item 7>
+
+<item 8>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+: Shield AI, a startup specializing in autonomous flying systems for the U.S. military, has raised $200 million in a new funding round, reaching a valuation of
+$2.7 billion.
+
+Eero grows up, with best-in-class Wi-Fi: Amazon’s Eero has launched its most advanced mesh Wi-Fi router yet, the Eero Max 7.
+
+Boksing claver: Danish startup Soundboks released its fourth-generation Bluetooth speaker that has been a hit in Europe’s festival scene but has yet to gain a
+strong foothold in the U.S. market.
+
+Highs and lows in the world of startups
+
+The current bear market in cloud stocks has led to a reversal of revenue multiples from earlier this year, making it difficult for late-stage startups to accrue
+value, Alex writes on TC+. However, early-stage startups that are growing rapidly may still be able to raise funds and demand for a better valuation. The trend
+points toward a favorable environment for startups prioritizing growth over cash preservation.
+</item 8>
+
+<item 9>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+But tracking these layoffs helps us to understand the impact on innovation, which companies are facing tough pressures and who is available to hire for the
+businesses lucky to be growing right now. Unfortunately, it also serves as a reminder of the deeply human impact of layoffs and how risk profiles could evolve
+from here.
+
+Below you’ll find a comprehensive list of all the known layoffs in tech that have occurred in 2023, to be updated monthly. If you have a tip on a layoff,
+contact us here. If you prefer to remain anonymous, you can contact us here.
+
+The running total of layoffs for 2023 based on full months to date is 224,503, according to Layoffs.fyi. Tech layoffs conducted to date this year currently
+exceed the total number of tech layoffs in 2022, according to the data in the tracker.
+
+Data visualization by Miranda Halpern, created with Flourish
+
+December 2023
+
+ShareChat
+
+Is cutting 15% of its workforce in a “strategic restructuring” effort for 2024.
+</item 9>
+
+<item 10>
+Earnings week ahead: DocuSign, NIO, Broadcom, GameStop and more (Seeking Alpha, 2023-12-03T13:02:00+00:00)
+(GTLB) is due to post its Q3 results after the market closes on Monday. With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a
+Hold, expressing concerns about valuation. This contrasts with Wall Street analysts, who advocate a Buy rating.
+
+Recently, Raymond James has rated the stock with a Market Perform rating, citing potential market exuberance and growth potential in fiscal 2025 due to a large
+total addressable market, healthy customers, and a value proposition favoring consolidation over fragmentation.
+
+On the other hand, Cantor Fitzgerald started coverage with an Overweight rating and a $55 price target, as the company anticipates benefits from product
+consolidation and the generative artificial intelligence wave.
+
+Consensus EPS Estimates: -$0.01
+
+Consensus Revenue Estimates: $141.04M
+
+Earnings Insight: GitLab has beaten EPS and revenue expectations in 8 straight quarters.
+</item 10>
+=== END ITEM id=9b33b4838a2fbc08 ===

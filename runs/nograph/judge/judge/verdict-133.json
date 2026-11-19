@@ -1,0 +1,43 @@
+[
+  {
+    "id": "020be79d701d7e59",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "all of that, all of it, was built on lies,” Rehn declared to the jury"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []},
+      {"fact": "1.5", "status": "missing", "evidence": []},
+      {"fact": "1.6", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith"}, {"item": 2, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}, {"item": 2, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+    ]
+  },
+  {
+    "id": "2aa84082b61257b0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "e82f6ac3cb13ceaf",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

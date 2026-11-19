@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5add95035542990dbb2f7e77",
+   "sentences": [
+    "Cherie Ann Currie (born November 30, 1959) is an American musician (instrumentalist, singer, songwriter), actress and artist.",
+    "Steve Augeri (born January 30, 1959) is an American rock singer best known for his work with Tall Stories, Tyketto, and Journey."
+   ]
+  },
+  {
+   "id": "multihop-rag-1222",
+   "sentences": [
+    "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).",
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1827",
+   "sentences": [
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.",
+    "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."
+   ]
+  },
+  {
+   "id": "5ab97cd0554299753720f81a",
+   "sentences": [
+    "Elizabeth Austin (born 1958) is an American writer living in Oak Park, Illinois.",
+    " She has also written for \"The Washington Monthly, Ladies Home Journal, Good Housekeeping, Self\", and \"Shape\".",
+    "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine."
+   ]
+  },
+  {
+   "id": "5a89e4585542992e4fca8454",
+   "sentences": [
+    " Reed, along with Mike Pringle and Johnny Bright, is one of the players most often mentioned as being the greatest running back in CFL history.",
+    "Johnny D. Bright (June 11, 1930 – December 14, 1983) was a professional Canadian football player in the Canadian Football League.",
+    " He played college football at Drake University."
+   ]
+  },
+  {
+   "id": "5ae056c755429945ae959319",
+   "sentences": [
+    " His television series credits include portraying Bret Maverick in \"Maverick\" (1957–1962) and \"Bret Maverick\" (1981–1982), Jim Rockford in \"The Rockford Files\" (1974–1980), and Jim Egan in \"8 Simple Rules\" (2003–2005).",
+    "The Notebook is a 2004 American romantic drama film directed by Nick Cassavetes and based on the 1996 novel of the same name by Nicholas Sparks."
+   ]
+  },
+  {
+   "id": "5ae39fb85542990afbd1e197",
+   "sentences": [
+    "Longkou (), formerly Huang County (), is a port city in northeastern Shandong province, China, facing the Bohai Sea to the north and the Laizhou Bay to the west.",
+    " The district faces East China Sea and is connected to Mawei district by the Min River."
+   ]
+  },
+  {
+   "id": "multihop-rag-1346",
+   "sentences": [
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a831af855429954d2e2ec1e",
+   "sentences": [
+    "Ex parte Young, 209 U.S. 123 (1908) , is a United States Supreme Court case that allows suits in federal courts against officials acting on behalf of states of the union to proceed despite the State's Sovereign immunity, when the State acted unconstitutionally.",
+    " The case was a test of the separation of church and state with respect to education."
+   ]
+  },
+  {
+   "id": "5ae4ad3155429913cc2044cb",
+   "sentences": [
+    " Editors are based in Silver Spring, Maryland and Seoul, Korea.",
+    " The magazine is headquartered in Baltimore, Maryland."
+   ]
+  }
+ ]
+}

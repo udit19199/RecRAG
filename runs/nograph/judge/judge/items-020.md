@@ -1,0 +1,1024 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=cfe4a008328fdc4c ===
+Gold sentences and facts:
+Sentence 0: A number of videos posted to X since the attacks have been identified as entirely unrelated to the conflict — including footage that was filmed last month in Egypt and even a clip from a video game that had been posted to the platform with a (false) claim it showed Hamas missile attacks on Israel.
+  Fact 0.0: A number of videos posted to X since the attacks have been identified as entirely unrelated to the conflict.
+  Fact 0.1: One unrelated video was filmed last month in Egypt.
+  Fact 0.2: Another unrelated item was a clip from a video game.
+  Fact 0.3: The video game clip was posted to X with a false claim that it showed Hamas missile attacks on Israel.
+Sentence 1: We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation.
+  Fact 1.0: The outlet reached out to the Commission with questions.
+  Fact 1.1: The questions ask how the Commission plans to respond to this latest analysis of X's role in spreading disinformation.
+
+Retrieved items:
+<item 1>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+It replied with an automated email reading: “Busy now, please check back later.”
+
+Update: X’s global government affairs account has posted a thread responding to the EU’s criticism in which it claims the data shows other social networking
+services saw greater changes in subscriber growth and total growth for pro-Kremlin accounts, and for engagement and volume; it also writes that: “More than 700
+unique Community Notes have appeared on posts related to the Ukraine conflict. Through Community Notes’ new ‘Notes on Media’ feature, which automatically
+matches notes on an image or video to other posts that contain matching media, these notes appeared on over 1,200 additional posts. These notes are in numerous
+languages and are written specifically for local audiences.”
+
+Back in April, X/Twitter was named as one of 19 larger platforms that face the strictest level of regulation under the EU’s DSA.
+</item 1>
+
+<item 2>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+They must also clearly communicate their T&Cs to users and be able to demonstrate proper enforcement.
+
+Larger platforms like X also have additional obligations to identify and mitigate systemic risks such as disinformation, gender-based violence or negative
+effects on the exercise of fundamental rights.
+
+Additionally, the regulation includes a “crisis response” mechanism (Article 36) which enables the Commission to adopt rapid-fire measures on larger platforms
+in situations of “serious threat”, such as war.
+
+Since Saturday’s attacks in Israel, posts identified as false have been spotted circulating on X — including, in one example, a clip that purported to show
+Hamas missile attacks on Israel but was actually footage from a video game.
+
+Meanwhile X’s ability to respond internally to reports of content problems have been drastically pared back after Musk’s takeover last year — which saw major
+layoffs, including in content moderation and human rights as part of the new billionaire owner’s bid to improve the platform’s profitability.
+</item 2>
+
+<item 3>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+X (formerly Twitter) has been called out in the European Union for having the worst ratio of disinformation/misinformation to posts not spreading falsehoods
+among mainstream social networks.
+
+In a speech today discussing the latest updates from other platforms that have signed up to combat disinformation under a beefed up EU Code of Practice that’s
+been linked to compliance with the the bloc’s legally binding Digital Services Act (DSA), it commissioner for values and transparency, Vera Jourova, said X’s
+poor performance was assessed during a pilot phase of testing of new methodology developed by Code signatories.
+
+“A big novelty under the Code is now the publication of the first set of structural indicators such as how easy it is to find disinformation content, how much
+engagement such content receives or indicators about sources. These indicators — developed by the signatories — constitute an unprecedented and novel insight
+into disinformation on online platforms,” she suggested. “Such insight is crucial to understand how effective platforms efforts are to fight this threat even
+more efficiently.
+</item 3>
+
+<item 4>
+EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks (TechCrunch, 2023-10-10T23:47:38+00:00)
+In a very swift test of the European Union’s newly updated content moderation rulebook, the bloc has fired a public warning at Elon Musk–owned X (formerly
+Twitter) for failing to tackle illegal content circulating on the platform in the wake of Saturday’s deadly attacks on Israel by Hamas terrorists based in the
+Gaza Strip.
+
+The European Commission has also raised concerns about the spread of disinformation on X related to the terrorist attacks and their aftermath.
+
+Unlike terrorism content, disinformation is not illegal in the EU per se. However, the EU’s Digital Services Act (DSA) puts an obligation on X — as a so-called
+very large online platform — to mitigate risks attached to harmful falsehoods as well as to act diligently on reports of illegal content.
+
+Following the terrorist attacks by Hamas against 🇮🇱, we have indications of X/Twitter being used to disseminate illegal content & disinformation in the EU.
+</item 4>
+
+<item 5>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+Under Musk, X has pushed the use of an existing crowdsourced fact-checking feature (rebranded as Community Notes) which essentially seeks to outsource the issue
+to a hands-length process of aggregating views from platform users, some of which may be appended as contextual notes to dubious tweets. At the same time the
+erratic billionaire has set about removing signals Twitter users were previously able to rely on to help assess the quality of information tweets contained,
+such as removing state-affiliated media labels from propaganda outlets and replacing legacy account verifications with pay-to-play.
+
+X was contacted for a response to the EU’s analysis of the ratio of disinformation it’s spreading. It replied with an automated email reading: “Busy now, please
+check back later.”
+</item 5>
+
+<item 6>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+During this period the DSA had not entered into force yet for VLOPs and VLOSEs, including X/Twitter. The Commission cannot comment further on the substance of
+the risk assessments. We are analysing the available information on a range of issues and we are in close contact with X but we cannot comment on specifics and
+timelines. As stated by Commissioner [Thierry] Breton, minor protection and integrity of elections are priorities in the enforcement of the DSA.
+
+Penalties for breaches of the DSA can scale up to 6% of global annual turnover and the Commission has previously wanted that not following the Code of Practice
+on Disinformation would be factored into its assessments. So the price for X ignoring the EU’s warnings on disinformation could be steep — albeit its ad revenue
+has cratered since Musk’s takeover, as a result of his failure to tackle toxicity and harmful disinformation encouraging an advertiser exodus — and shrinking
+earnings would effectively downsize any future penalties X could face under the DSA.
+</item 6>
+
+<item 7>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+The law puts an obligation on so-called very large online platforms (VLOPs) to assess societal risks attached to their use of algorithms — and put in place
+“reasonable, proportionate and effective mitigation measures” for identified risks, with their reporting and mitigation plans subject to independent audit and
+oversight by the Commission.
+
+We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation.
+
+Update: A Commission spokesperson told us:
+
+While the Code is voluntary, compliance with the DSA is not. The DSA is now legally binding on X/Twitter. This includes in particular the obligation of Very
+Large Online Platforms, such as X/Twitter to mitigate the risks their platforms pose for the spread of disinformation. The TrustLab study to measure two
+Structural Indicators covers signatories of the Code at the time of the launch of the exercise, which at the time included X/Twitter.
+</item 7>
+
+<item 8>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+This is a very valuable industry proposal that has great potential while it has to be still further developed.
+
+“Here, signatories have decided to run a pilot phase in three Member States to evaluate the methodology on two of those indicators. X, former Twitter, who is
+not under the Code any more is the platform with the largest ratio of mis/disinformation posts.”
+
+The Elon Musk-owned platform exited the EU’s Code of Practice on Disinformation back in May, shortly after EU lawmakers warned that policy shifts executed after
+Musk’s takeover were boosting Kremlin propaganda and criticised the company for patchy reporting. The EU’s top diplomat also took a public shot at Twitter for
+ending free access to its APIs for researchers, saying the action could threaten the study of disinformation.
+
+Last year the Commission also warned Musk over “huge work” ahead if the platform was to avoid falling foul of the incoming DSA.
+</item 8>
+
+<item 9>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+On Wednesday, in an “urgent” letter to Musk, the EU’s internal market commissioner Thierry Breton said the bloc had seen “indications” from “qualified sources”
+that X is being used to disseminate illegal content and disinformation in the EU” following Saturday’s attacks — before reminding X of the DSA’s “very precise
+obligations” vis-à-vis content moderation.
+
+“When you receive notices of illegal content in the EU, you must be timely, diligent and objective in taking action and removing the relevant content when
+warranted,” Breton also warned then.
+
+In its latest press release, the EU said it has sent X a formal request for information under the DSA.
+
+“This request follows indications received by the Commission services of the alleged spreading of illegal content and disinformation, in particular the
+spreading of terrorist and violent content and hate speech,” it wrote, adding that the ask also addresses other aspects of DSA compliance.
+
+The pan-EU regulation puts a series of governance obligations on digital services and platforms with the aim of ensuring companies are responding to reports of
+illegal content.
+</item 9>
+
+<item 10>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+In this case, failure to reply by the deadline could lead to the imposition of period penalties,” the EU added.
+
+Earlier this year, Musk pulled out of the EU’s Code of Practice on online disinformation. In a response to X leaving the voluntary Code, Breton warned:
+“Obligations remain. You can run but you can’t hide.”
+
+In recent days, TikTok and Meta have also been warned by the EU over disinformation related to the Israel-Hamas war. But back in September, a study commissioned
+via the EU’s Code of Practice suggested X is the worst of the major platforms when it comes to spreading disinformation.
+
+This report was substantially revised to clarify a number of aspects, including — most saliently — that the EU has sent a formal request for information to X at
+this point. This could prefigure a formal announcement of an investigation but is not, yet, that formal technical step.
+</item 10>
+=== END ITEM id=cfe4a008328fdc4c ===
+
+=== ITEM id=3050e1c0f2eb3a44 ===
+Gold sentences and facts:
+Sentence 0: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 0.0: SBF, as he is known, has pleaded not guilty to some seven charges.
+  Fact 0.1: The charges SBF pleaded not guilty to are charges of fraud and conspiracy.
+Sentence 1: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 1.0: Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money.
+  Fact 1.1: The question asked whether Bankman-Fried had been told about that money in words or in substance.
+  Fact 1.2: Bankman-Fried did not admit he had been told about that money until Judge Lewis Kaplan intervened.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 1>
+
+<item 2>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+In late 2019, Alameda had a negative balance on FTX. Because they sat in an open-plan office, Wang heard a trader ask Bankman-Fried if it was okay to keep
+withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue. He was the CEO of both companies
+at the time.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses.
+
+The amount that Alameda was allowed to go negative began to creep up. Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by
+about $200 million, which was more than the $150 million FTX made in revenue. That had to mean Alameda was taking customer money. It surprised him and he says
+he discussed it with Bankman-Fried, who told him that he just needed to take into account the value of FTT. Wang said he trusted Bankman-Fried’s judgment and
+didn’t pursue the issue further.
+</item 2>
+
+<item 3>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+The one Wang said Alameda took to keep off FTX’s balance sheet? Yeah, so it was a totally innocent thing where what actually happened was that Bankman-Fried
+thought it was appropriate that Alameda take the position as a backstop liquidity provider, that’s all.
+
+In June 2022, Bankman-Fried heard about the account called “fiat@ftx” tracking how much money Alameda owed to FTX, he testified. He did not know what it was and
+did not bother to find out. He was busy! That was when Bankman-Fried directed Ellison to repay Alameda’s lenders, because he thought Alameda was good for it. He
+also gave BlockFi and Voyager, two crypto lenders, some capital infusions for good measure.
+
+He was “very surprised!”
+
+Remember that testimony Adam Yedidia gave about a conversation with Bankman-Fried in August 2022 about the enormous amount of money Alameda owed FTX? Well,
+Bankman-Fried remembers it differently.
+</item 5>
+
+<item 6>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+Other customers didn’t have the same privileges.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses. In 2021, FTX was facing a “several hundred million dollar” loss from an exploit
+in MobileCoin, Wang said. (This seems to have happened in April 2021, though Wang didn’t give a month.) Bankman-Fried directed him to have Alameda take it on
+instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t.
+
+Yesterday, Paradigm Capital’s Matt Huang showed us the balance sheets he received from Bankman-Fried. They didn’t include the loss, which should have been
+included in the second quarter numbers he’d received — they showed $63 million in trading expenses and $63 million in “other expenses” in that quarter, and an
+estimated profit of $732 million.
+
+“FTX was not fine and assets were not fine.”
+
+By 2022, Alameda’s negative balance on FTX was a cause for concern for Caroline Ellison, Singh, and Wang.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 7>
+
+<item 8>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 8>
+
+<item 9>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It was turned on in July. No other customer trading on FTX had “allow_negative” privileges — only Alameda. Wang’s testimony suggests that the fraud at FTX
+started very early since the same day that allow_negative was switched on, Bankman-Fried tweeted that Alameda’s account “was like everyone else’s.”
+
+The general sense I got, from the testimony of Bankman-Fried’s former friends, was that things just kept escalating. For instance, Alameda Research first had a
+negative balance in late 2019, Wang testified. Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money
+from the account as long as the amount was less than FTX’s total trading revenue. A little later, Wang discovered that Alameda was negative by $50 million more
+than FTX’s revenue. Bankman-Fried told him it was fine, and it just didn’t account for the FTT token that the two of them had launched. Wang trusted him.
+</item 9>
+
+<item 10>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 10>
+=== END ITEM id=3050e1c0f2eb3a44 ===
+
+=== ITEM id=f9312937c9366d4c ===
+Gold sentences and facts:
+Sentence 0: In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated.
+  Fact 0.0: In the above scenario, supply disruption will lead to higher inflation.
+  Fact 0.1: In the above scenario, central bankers will have to adjust their policies.
+  Fact 0.2: In the above scenario, central bankers will have to hold rates higher for longer than anticipated.
+Sentence 1: Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.
+  Fact 1.0: Back then, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively.
+  Fact 1.1: Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.
+  Fact 1.2: The home price boom back then was like the home price boom today.
+
+Retrieved items:
+<item 1>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+After the most aggressive monetary-tightening campaign in four decades, academics and economic practitioners are running autopsies on what could have prevented
+the cost-of-living crisis and how to ensure the same mistakes won’t be repeated.
+
+Markets have scrambled to price in high-for-longer interest rates, with a new war in the Middle East adding yet more risk to an already uncertain outlook
+confronting central bankers as they gather for their penultimate meetings of a tumultuous year.
+
+The policy navel-gazing is centering around three debates. How much flexibility central banks can allow in reaching their inflation targets, the effectiveness
+of asset purchases in the policy mix, and the merits of monetary and fiscal coordination.
+
+Bloomberg surveyed economists from around the world to gather views on those three debates. Their verdict: Central banks won’t break their economies in a rush
+to hit inflation targets, QE will be used more sparingly in the future, and fiscal policy risks countering the work of monetary authorities.
+</item 1>
+
+<item 2>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+What Bloomberg Economics Says… “A long period of galloping price gains, and fears that the last yards back to target could be most painful for workers, have
+reignited the debate about whether central banks should aim for a higher rate of inflation. That’s a conversation worth having. But for monetary policymakers,
+the imperative of retaining credibility means the right time for it is after inflation is back at target, not before.” — Tom Orlik, chief economist
+
+Rethinking Targets
+
+So long as people believe prices will get back toward 2%, central bankers have some leeway in deciding how aggressive they need to be in pursuing that goal.
+
+Economists covering 16 of the world’s most important central banks say policymakers will allow more time to bring inflation back to target if it means less
+damage to their economies. The Bloomberg special survey also shows that a sizable minority sees them going even further, accepting price pressures that are
+either slightly too strong or too weak — as long as expectations remain anchored.
+</item 2>
+
+<item 3>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+She recommends they be ready to react preemptively, even when inflation hasn’t yet spun out of control.
+
+They may be called into action soon on that front, should an escalation in the conflict in the Middle East hit oil deliveries.
+
+When the next big global slowdown comes, though, flexibility may be needed the other way. Europe’s eight-year experiment with negative rates ended with mixed
+reviews last summer as to whether it was all worth it.
+
+The Bank for International Settlements argues that there’s room for greater tolerance for moderate shortfalls even if they’re persistent, because “low-inflation
+regimes, in contrast to high-inflation ones, have self-stabilizing properties.”
+
+Rethinking Quantitative Easing
+
+With a more flexible approach to those 2% targets, monetary policy after the 2008 financial crisis would have looked very different in many parts of the world.
+</item 3>
+
+<item 4>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 4>
+
+<item 5>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+But a spread of the crisis to the whole Middle East can risk trade through this route, which accounts for 20 per cent of global oil trade passage. If Iran is
+embroiled into this conflict, then trade with landlocked Central Asia, which is a big agricultural producer, raw materials and minerals like copper, cotton,
+uranium, gold, natural gas, gets disrupted. Central Asia also hosts a network of road, rail, and air routes that link China, Europe, and South Asia.
+
+Impact on Indian markets
+
+In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer
+than anticipated. We may witness a scenario where rates are held higher till the year 2025. Higher crude oil bill and higher global rates will prompt the RBI to
+also remain hawkish in its approach with regards to rates and liquidity measures. EBITDA margins of India Inc. may again get impacted on account of higher input
+costs and higher freight and fuel costs.
+</item 5>
+
+<item 6>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+Olivier Blanchard, a former IMF chief economist, has long argued in favor of raising the inflation target, and former European Central Bank Vice President Vitor
+Constancio has also embraced the idea. But it’s a controversial view and only possible from a position of credibility, which means central banks would likely
+have to get inflation back to 2% first.
+
+“It would be a mistake of the first order to think you can change a goal you have set if you can’t achieve it,” according to Bundesbank President Joachim Nagel.
+
+Global trends suggest inflation will be stronger than in the past, with former Bank of England Governor Mark Carney among those saying rates won’t return to
+pre-pandemic lows.
+
+One lesson Gita Gopinath, the IMF’s No. 2 official, draws from the latest inflation episode is that policymakers mustn’t assume that looking through supply
+shocks — as text books suggest — is the optimal response.
+</item 6>
+
+<item 7>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+That’s reviving questions about whether central banks can deliver price stability all on their own.
+
+“If we were designing optimal policy arrangements from scratch, monetary and fiscal policy would both have a role in managing the economic cycle and inflation,
+and that there would be close coordination,” Philip Lowe said in his last speech as Australian central bank governor in September.
+
+Economists surveyed by Bloomberg predict fiscal policy will somewhat counteract the Fed’s efforts to rein in inflation in the US.
+
+“It’s true that there are circumstances where working hand in hand and supporting each other has proved helpful,” ECB President Christine Lagarde told a panel
+discussion in June at the institution’s annual economic forum.
+
+Fed Chair Jerome Powell, who sat to her right, signaled he wasn’t ready to rely on that kind of cooperation. “Our assignment is to deliver price stability kind
+of regardless of the stance of fiscal policy.”
+
+Central bankers warn that any failure to scale back fiscal spending risks coming at the cost of yet higher interest rates.
+</item 7>
+
+<item 8>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 8>
+
+<item 9>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+The ECB faces an extra legal burden on bond holdings that comes with operating in a currency union of 20 countries. Concerns around illegally financing
+governments and debt mutualization have already landed the central bank in court several times.
+
+Mixing Policies
+
+Low interest rates and large-scale QE programs allowed treasuries to borrow on the cheap to finance stimulus campaigns, protecting labor markets, businesses and
+consumers from collapse. But the spending blowout throughout and since the pandemic — part critical emergency funding, part political need to show an
+all-hands-on-deck approach in crisis — contributed to the latest outbreak in inflation.
+
+While the same kind of pulling in the same direction is needed to restrain demand, many governments are concerned that if they tighten policy too hard, voters
+will kick them out and replace them with populists or extremists. That’s reviving questions about whether central banks can deliver price stability all on their
+own.
+</item 9>
+
+<item 10>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+They also want elected officials to put in place policies that help deliver sustainable growth.
+
+“A change in mindset needs to happen,” said Agustin Carstens, the former governor of the Bank of Mexico who’s now the general manager of the BIS. “Growth needs
+to depend less on fiscal and monetary policy, it should depend more on structural policies.”
+</item 10>
+=== END ITEM id=f9312937c9366d4c ===
+
+=== ITEM id=46adce00dc50ae4e ===
+Gold sentences and facts:
+Sentence 0: Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people.
+  Fact 0.0: The Fortnite maker announced on September 28 that it is laying off 16% of its workforce.
+  Fact 0.1: The layoff amounts to 870 people.
+Sentence 1: Because while Google spent most of its first day attempting to explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog.
+  Fact 1.0: Google spent most of its first day attempting to explain complicated ins and outs of business.
+  Fact 1.1: Epic was able to paint a black-and-white picture of good and evil.
+  Fact 1.2: In that picture Epic itself was the clear underdog.
+  Fact 1.3: Epic was able to do this because Google spent most of its first day on those explanations.
+
+Retrieved items:
+<item 1>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 1>
+
+<item 2>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+September 2023
+
+IronNet
+
+In a regulatory filing published September 29, the cybersecurity startup has ceased all business activities as it prepares for Chapter 7 bankruptcy and has laid
+off its remaining staff.
+
+Naughty Dog
+
+Is reportedly cutting at least 25 contract developers, two sources familiar with the situation told Kotaku.
+
+Epic Games
+
+Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people.
+
+Talkdesk
+
+An impacted employee confirmed on September 27 that at least 140 people, if not more, were affected by Talkdesk’s third round of layoffs in less than 14 months.
+
+Byju’s
+
+Announced on September 26, the company plans to cut 5,000 jobs due to restructuring efforts. The startup has eliminated more than 10,000 positions in the past
+two years.
+
+Roblox
+
+Confirmed to TechCrunch on September 21, Roblox let go of 30 employees in its talent acquisition organization. No other teams are impacted.
+</item 2>
+
+<item 3>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 3>
+
+<item 4>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+Multiverse
+
+Will lay off nearly a third of their U.S. staff. It’s the second round of layoffs at the U.K.-based unicorn company in just over a month.
+
+ONE
+
+Is cutting its workforce by around 25% November 27, citing “market conditions” affecting the EV battery startup.
+
+ByteDance
+
+Started mass layoffs November 27 in its gaming department, Nuverse, after two years of tepid performance. The number of affected employees is unknown.
+
+Veev
+
+Is closing up shop, according to multiple reports, after reaching unicorn status in 2022.
+
+Tulip
+
+Laid off 25 employees, CEO Ali Asaria announced November 24.
+
+Anar
+
+Is shutting down operations and returning capital to investors, CEO Nishank Jain announced November 23.
+
+Alerzo
+
+Cut 100 workers November 21, reportedly due to increases in automation. The recent layoffs come after Alzero cut 15% of its workforce earlier this year and 5%
+in 2022.
+</item 4>
+
+<item 5>
+Video games in 2023: Acquisitions, layoffs, unions (Engadget, 2023-12-19T14:30:37+00:00)
+This wasn’t the only layoff round of the year. Unity lowered its headcount three times in 2023, affecting about 900 jobs. In its quarterly financial results in
+November, Unity reported a yearly revenue increase of 69 percent and it told investors, “We continued to manage costs well.”
+
+Sony cut 100 jobs at Bungie, a company it bought for $3.6 billion in 2022. According to developers that are still there, Sony executives are attempting to use
+this upheaval to wrest more control of the studio from Bungie founders and leaders.
+
+Epic Games fired roughly 830 people this year, or 16 percent of its staff. This included significant job cuts at Mediatonic, the studio behind Fall Guys that
+Epic purchased in 2021.
+
+Mediatonic
+
+“For a while now, we've been spending way more money than we earn,” CEO Tim Sweeney wrote about the layoffs.
+</item 5>
+
+<item 6>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+On Monday, Fortnite publisher Epic Games will drag a tech giant into court, alleging that its mobile app store is an illegal monopoly. You may be feeling some
+déjà vu!
+
+After all, didn’t Epic already go to trial with Apple, resulting in a ruling where Apple (mostly) won? Didn’t Epic fail to #FreeFortnite with its Llamacorn
+legal gambit? Didn’t that all happen years ago? What are we doing here again?
+
+The short answer: while Epic’s antitrust claims against Apple got their day in court, a similar lawsuit against Google never did. On November 6th, Epic v.
+Google will finally go to trial... a mere 1,180 days after Epic originally sued.
+
+Hi, I’m Sean, and I’ll be your guide to this whole delightful mess.
+
+Update, December 15th, 2023: It’s basically over now. What happened? Read this, this, and this to get the whole picture.
+
+Original story continues:
+
+Llamacorn what now? What is happening?
+</item 6>
+
+<item 7>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 7>
+
+<item 8>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+So there are absolutely no hard feelings, and we’re grateful that they joined the case because they did help in critical ways. Epic will continue to fight for
+all developers, seeking remedies, and... I don’t know if Sundar is going to be calling me, but if he does, all of our discussions will be directed toward
+solving the problem for everyone.
+
+A lot has changed since you filed the original lawsuit over three years ago. For a bit there, it seemed like Epic had an interest in expanding outside of games
+with acquisitions like Houseparty and Bandcamp. What changed? And did app store restrictions play into that at all?
+
+Let’s see. No... well, not directly, anyway. We have a really broad strategy of building games and technology. We’ve had huge success in recent years with the
+Unreal Engine gaining adoption among all kinds of industries even beyond games. We’ve also run into our own financial limitations. You know, we expanded the
+company to nine times the size we were before Fortnite took off.
+</item 8>
+
+<item 9>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+And when we tried to bundle Fortnite with other smartphone manufacturers like OnePlus and carriers of all sorts, they told us they couldn’t do a deal because
+Google had done a secret deal with them.
+
+It was really disconcerting to see the extent of bad faith efforts that were going on in a company of Google’s size. You’d think a trillion-dollar company would
+develop to the point where they have pretty respectable processes and leadership structures that provide a check and balance against wrongdoing, but they were
+rampantly destroying all their chats on these topics.
+
+You’d see long conversation threads would start to get into a spicy antitrust issue, and suddenly somebody points out the history’s on and the chat goes silent.
+They just turned it off to have the documents destroyed. It was great to see that all called out in detail.
+
+Any particular evidence where you’re like, “Oh wow, I never saw that, and now that specific thing came out for the world to see”?
+
+As an employee of Epic, I’ve not been able to see Google’s internal documents until the trial started.
+</item 9>
+
+<item 10>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+First, Epic announced it was bypassing Apple and Google’s app store fees. It deployed a hotfix update to Fortnite without either company’s knowledge, letting
+you purchase V-Bucks directly through its own payment processing option at a discount. Apple and Google almost immediately reacted by kicking Fortnite off their
+app stores for breaking the rules.
+
+Then: surprise! Epic was ready and waiting with two lawsuits and an attack ad, depicting a Fortnite hero throwing a unicorn-llama hammer into a giant screen
+reminiscent of Apple’s famous “1984” Macintosh ad.
+
+It was a striking publicity blitz followed by a lot of slow-moving court proceedings. While the Apple lawsuit went to court in 2021, the Google one was delayed
+again and again. A ruling came down for the Apple trial that September, and it was mostly decided in Apple’s favor, though both parties are waiting for the
+Supreme Court to potentially weigh in. Meanwhile, the machinations for its fight against Google continued, and now…
+
+It is time for trial number two.
+</item 10>
+=== END ITEM id=46adce00dc50ae4e ===
+
+=== ITEM id=54b6c73f383257f8 ===
+Gold sentences and facts:
+Sentence 0: India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26.
+  Fact 0.0: India played against Australia in the second semi-final of the 2015 World Cup.
+  Fact 0.1: The India versus Australia match was held in Sydney.
+  Fact 0.2: The India versus Australia match was played on March 26.
+Sentence 1: It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+  Fact 1.0: It is crunch time for England in the World Cups.
+  Fact 1.1: England faces South Africa in the semi-final of the Rugby World Cup.
+  Fact 1.2: England faces South Africa in the semi-final of the ODI Cricket World Cup.
+
+Retrieved items:
+<item 1>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+22 3:00 a.m. SGT Malaysia Sun, Oct. 22 3:00 a.m. MYT Hong Kong Sun, Oct. 22 3:00 a.m. HKT
+
+England vs South Africa live stream, TV channel
+
+TV networks worldwide will be showing all 48 matches at the tournament live, including many on free-to-air television.
+
+On social platforms alone, video content from the Rugby World Cup and organisers World Rugby drew more than 2.1 billion views in 2019 — almost six times the
+previous figure.
+</item 1>
+
+<item 2>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+TV channel Streaming USA — Peacock Canada TSN TSN+ UK ITV ITV X Australia Channel 9 Stan Sport, 9Now New Zealand Sky GO Sky GO India — Fan Code Hong Kong BeIN
+Sports BeIN Sports Malaysia BeIN Sports BeIN Sports Singapore BeIN Sports BeIN Sports
+
+MORE: Every single team to have lifted the Rugby World Cup trophy
+
+England vs South Africa lineups, team news
+
+"The start is crucial, the end is vital..."
+
+
+
+- Steve Borthwick explains changing 3️⃣ of his England starters for Saturday's Rugby World Cup semi-final, from Liam Heagney 👨‍💻 in Paris. #RWC2023 #ENGvRSA
+#EnglandRugby
+</item 2>
+
+<item 3>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The latter is winning only his seventh England cap but gets the starting nod alongside Maro Itoje, with Genge, Chessum and the rest of the replacements hoping
+to make an impact sizeable enough to overcome the Springboks' infamous 'bomb squad'.
+
+Their time is now 🙌
+
+
+
+Here is the @EnglandRugby team to take on reigning champions South Africa in the semi-final in Paris#RWC2023 | #ENGvRSA pic.twitter.com/nkf6rXBPUU — Rugby World
+Cup (@rugbyworldcup) October 19, 2023
+
+England starting XV: Freddie Steward, Jonny May, Joe Marchant, Manu Tuilagi, Elliot Daly, Owen Farrell, Alex Mitchell; Joe Marler, Jamie George, Dan Cole, Maro
+Itoje, George Martin, Courtney Lawes, Tom Curry, Ben Earl.
+</item 3>
+
+<item 4>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England and South Africa face off in the 2023 Rugby World Cup's second semi-final, played at the Stade de France in Saint-Denis, France. The game kicks off at 9
+p.m. local time on Saturday, October 21, 2023.
+
+Here are the kick-off times for this game around the world:
+
+Location Date Time USA Sat, Oct. 21 3:00 p.m. ET Canada Sat, Oct. 21 3:00 p.m. ET Australia Sun, Oct. 22 6:00 a.m. AEDT UK Sat, Oct. 21 8:00 p.m. BST New
+Zealand Sun, Oct. 22 8:00 a.m. NZDT India Sun, Oct. 22 12:30 a.m. IST Singapore Sun, Oct. 22 3:00 a.m. SGT Malaysia Sun, Oct.
+</item 4>
+
+<item 5>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England vs. South Africa betting odds, prediction
+
+The last time these two sides met was a tumultuous period to say the least, particularly for English rugby. South Africa's dominant 27-13 victory at Twickenham
+proved to be the last game in charge for Eddie Jones, the coach who had taken England to the 2019 World Cup final. In his place, Steve Borthwick was hired, and
+he's just one game away from repeating that feat.
+
+England's form at this tournament has been perfect — at face value. Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in
+the semi-finals — and England have beaten all of them. However, only Japan and Chile were defeated with bonus points, and the narrow wins over both Samoa and
+Fiji in their last two games showed that England are certainly gettable.
+</item 5>
+
+<item 6>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The #Springboks are gearing up for another tough challenge this week with a semi-final clash against England 🇿🇦🏴󠁧󠁢󠁥󠁮󠁧󠁿#StrongerTogether #RWC2023
+pic.twitter.com/HLSnnjWggB — Springboks (@Springboks) October 18, 2023
+
+England are the only side still competing who are yet to lose a game, and that will stand them in good stead coming into this semi-final. Dominant wins over
+Argentina, Japan and Chile sealed passage to the last eight, and after being given an almighty scare by Samoa in their final pool match, England overcame a
+Fijian fightback in Marseille to triumph 30-24. Despite being outscored by three tries to two, captain Owen Farrell kicked 20 points, sending his side into the
+last four at the expense of 2023's breakout stars.
+</item 6>
+
+<item 7>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India moved to finals and beat Sri Lanka to win their second World Cup title.
+
+
+
+2015 World Cup, against Australia
+
+India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26. Australia outplayed India in almost all departments
+of the game.
+
+Australian Man-of-the-Match Steve Smith (105 runs in 93 balls) and Aaron Finch (81 runs in 116 balls) were the guiding forces in taking Australia to 328 runs
+for 7 wickets in 50 overs.
+
+In reply, India needed a few big innings, but apart from skipper MS Dhoni (65 runs in 65 balls), Shikhar Dhawan (45 runs in 34 balls), and Ajinkya Rahane (44
+runs in 68 balls), the batting order collapsed miserably as India lost the match by 95 runs.
+
+
+
+2019 World Cup, against New Zealand
+
+The cricket World Cup returned to England for the fifth time.
+</item 7>
+
+<item 8>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The last time Cheslin Kolbe played England at a Rugby World Cup... 🇿🇦 🏆#RWC2023 | #ENGvRSA pic.twitter.com/Riw2uaSaKa — Rugby World Cup (@rugbyworldcup) October
+19, 2023
+
+Both sides' journeys have seen twists, turns, and bumps in the road, but it's led them both to within 80 minutes of a Rugby World Cup final. England will no
+doubt be looking to echo the spirit of 2019, when they beat the All Blacks 19-7 to reach the final, but in South Africa, they face a side who have taken their
+game to new heights just to reach the semis.
+
+MORE: 2023 Rugby World Cup final: Details, kick-off time and every team's route
+
+What time does England vs South Africa kick off?
+</item 8>
+
+<item 9>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The 2019 Rugby World Cup final between England and South Africa was one of many firsts: the game itself capped off a sensational tournament played outside of
+the sport's traditional strongholds for the first time; it was the first final in which South Africa scored a try, and by full-time, the 32-12 score in the
+Springboks' favour sealed a record-equalling third title for the Rainbow Nation.
+
+Fast forward four years, and South Africa once again prepare to take on England in an all-or-nothing match to decide which nation gets a shot at World Cup glory
+— but this time around, the pair meet in the semi-finals of the 2023 tournament, rather than the decider.
+
+That won't make an ounce of difference for either camp, though, as these two long-time rivals prepare for a battle that could re-define the definition of a
+'physical encounter.'
+</item 9>
+
+<item 10>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+In short, this semi-final requires a huge step up in quality for Borthwick's side, and that's why we think that the Springboks will be victorious at the Stade
+de France. South Africa have already shown they can match, and beat, the world's best, and we think that they'll do the latter in Saint-Denis.
+</item 10>
+=== END ITEM id=54b6c73f383257f8 ===
+
+=== ITEM id=2e3a51e7746bae80 ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.2: Caroline Ellison is the CEO of Alameda.
+  Fact 0.3: Bankman-Fried had "secret access" to customer money, both cash and crypto.
+  Fact 0.4: The government claimed this.
+Sentence 1: Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.
+  Fact 1.0: Before his fall, Bankman-Fried presented himself as the Good Boy of crypto.
+  Fact 1.1: Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+It is honestly kind of incredible to watch a man torpedo his own credibility on direct testimony. We’re not even at the cross yet, and the judge has already
+instructed him to answer the question he’s being asked by his own lawyer.
+
+The jury is watching all of this intently.
+
+The main thing that’s been clear so far from Bankman-Fried’s testimony is that the man really loves the sound of his own voice. So far, the count of “Objection,
+narrative!” to Bankman-Fried’s answers, followed by “Sustained” is at three.
+
+Also, sometimes when Bankman-Fried says “we,” he only means himself.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud. FTX was a fraud
+“from the start,” the Securities and Exchange Commission alleged — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer
+funds.” Follow along for all the latest news and regular updates from the trial.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 7>
+
+<item 8>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Much of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make
+investments or direct funding toward political causes and charities.
+
+SBF trial: What we learned in week two
+
+The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to
+repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX
+Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.
+
+And though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in
+frozen trading accounts.
+
+SBF trial: What we learned in the week one
+
+As expected, the opening statements in the SBF trial were spicy.
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 10>
+=== END ITEM id=2e3a51e7746bae80 ===

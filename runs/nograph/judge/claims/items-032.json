@@ -1,0 +1,74 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "618216653575106100",
+   "sentences": [
+    "Group 3 in the periodic table Hydrogen Helium Lithium Beryllium Boron Carbon Nitrogen Oxygen Fluorine Neon Sodium Magnesium Aluminium Silicon Phosphorus Sulfur Chlorine Argon Potassium Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton Rubidium Strontium Yttrium Zirconium Niobium Molybdenum Technetium Ruthenium Rhodium Palladium Silver Cadmium Indium Tin Antimony Tellurium Iodine Xenon Caesium Barium Lanthanum Cerium Praseodymium Neodymium Promethium Samarium Europium Gadolinium Terbium Dysprosium Holmium Erbium Thulium Ytterbium Lutetium Hafnium Tantalum Tungsten Rhenium Osmium Iridium Platinum Gold Mercury ( element ) Thallium Lead Bismuth Polonium Astatine Radon Francium Radium Actinium Thorium Protactinium Uranium Neptunium Plutonium Americium Curium Berkelium Californium Einsteinium Fermium Mendelevium Nobelium Lawrencium Rutherfordium Dubnium Seaborgium Bohrium Hassium Meitnerium Darmstadtium Roentgenium Copernicium Nihonium Flerovium Moscovium Livermorium Tennessine Oganesson alkaline earth metals ← → group 4 IUPAC group number Name by element scandium group CAS group number ( US , pattern A-B-A ) IIIB old IUPAC number ( Europe , pattern A-B ) IIIA ↓ Period Scandium ( Sc ) 21 Transition metal 5 Yttrium ( Y ) 39 Transition metal 6 Lanthanum ( La * ) 57 Lanthanide 7 Actinium ( Ac * ) 89 Actinide * Whether the elements lutetium ( Lu ) and lawrencium ( Lr ) , in period 6 and 7 , are in group 3 is disputed . The grouping used in this article places La and Ac in group 3 , which is the most common form . For other groupings , see group 3 borders . Legend primordial element synthetic element Atomic number color : black = solid"
+   ]
+  },
+  {
+   "id": "5a7cdcbf55429907fabef04f",
+   "sentences": [
+    "Still Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active.",
+    "Time Bombs is a 2008 Canadian film produced by \"Productions de la ruelle\"."
+   ]
+  },
+  {
+   "id": "3062778689902618642",
+   "sentences": [
+    "The Curse of Oak Island follows brothers Marty and Rick Lagina , originally from Kingsford , Michigan , through their efforts to find the speculated treasure or historical artifacts believed to be on Oak Island . The series discusses the history of the island , recent discoveries , theories , and prior attempts to investigate the site . Areas of interest include the `` Money Pit '' , Borehole 10 - x , Smith 's Cove , `` Nolan 's Cross '' , the `` Hatch '' , the `` Watchtower '' and the `` Swamp '' ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1605",
+   "sentences": [
+    "When he entered free agency, a dozen teams lined up, curious to see if they could meet his eye.",
+    "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."
+   ]
+  },
+  {
+   "id": "multihop-rag-1324",
+   "sentences": [
+    "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a7faed65542994857a767b6",
+   "sentences": [
+    " The name comes from the City of Starachowice, where the factory is located.",
+    " It was sold in various countries for many years (not only in the Eastern Bloc; for example it was used by the Yemen Army).",
+    "The Eastern Bloc was the group of socialist states of Central and Eastern Europe, generally the Soviet Union and the countries of the Warsaw Pact."
+   ]
+  },
+  {
+   "id": "multihop-rag-1349",
+   "sentences": [
+    "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year.",
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."
+   ]
+  },
+  {
+   "id": "5a8501915542997175ce1f5a",
+   "sentences": [
+    "PC Magazine (shortened as PCMag) is an American computer magazine published by Ziff Davis.",
+    " The magazine focuses on sculpture, its collectors and enthusiasts, but painting and poetry are also frequently featured."
+   ]
+  },
+  {
+   "id": "6572568689091749101",
+   "sentences": [
+    "John Ernest Crawford ( born March 26 , 1946 ) is an American character actor , singer , and musician . At age 12 , Crawford rose to fame for playing Mark McCain , the son of Lucas McCain ( played by Chuck Connors ) , in the popular ABC Western series , The Rifleman , which originally aired from 1958 to 1963 . Crawford first performed before a national audience as a Mouseketeer ."
+   ]
+  },
+  {
+   "id": "-6618086333609794035",
+   "sentences": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ]
+  }
+ ]
+}

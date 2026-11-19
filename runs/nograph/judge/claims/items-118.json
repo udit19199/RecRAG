@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-698",
+   "sentences": [
+    "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people.",
+    "Because while Google spent most of its first day attempting to explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog."
+   ]
+  },
+  {
+   "id": "multihop-rag-1146",
+   "sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-118",
+   "sentences": [
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-640",
+   "sentences": [
+    "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.",
+    "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.",
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+   ]
+  },
+  {
+   "id": "5aba9d7955429901930fa85f",
+   "sentences": [
+    " It featured Reese Witherspoon and Paul Rudd, prior to both becoming considerably bigger film stars.",
+    " Born in New Orleans and raised in Tennessee, she began her career as a child actress, making her professional screen debut in \"The Man in the Moon\" (1991), for which she was nominated for a Young Artist Award."
+   ]
+  },
+  {
+   "id": "5a738fb4554299623ed4abf9",
+   "sentences": [
+    "Pulandian District () is one of the seven districts under the administration of Dalian, located in the south of Liaoning province, People's Republic of China.",
+    "Kaiyuan () is a county-level city in the northeast of Liaoning, People's Republic of China, bordering Jilin for a small section to the north."
+   ]
+  },
+  {
+   "id": "multihop-rag-1859",
+   "sentences": [
+    "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.",
+    "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "-484893103096113845",
+   "sentences": [
+    "German autobahns have no federally mandated speed limit for some classes of vehicles . However , limits are posted ( and enforced ) in areas that are urbanized , substandard , accident - prone , or under construction . On speed - unrestricted stretches , an advisory speed limit ( Richtgeschwindigkeit ) of 130 kilometres per hour ( 81 mph ) applies . While going faster is not illegal as such in the absence of a speed limit , it can cause an increased liability in the case of an accident ; courts have ruled that an `` ideal driver '' who is exempt from absolute liability for `` inevitable '' tort under the law would not exceed Richtgeschwindigkeit ."
+   ]
+  },
+  {
+   "id": "-1934660802319386406",
+   "sentences": [
+    "The Day the Music Died The memorial marking the crash site , 2003 Accident summary Date February 3 , 1959 ( 1959 - 02 - 03 ) Summary Spatial disorientation , loss of control in near - IMC conditions Site Near Clear Lake , Iowa , United States 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Coordinates : 43 ° 13 ′ 13.3 '' N 93 ° 22 ′ 53.1 '' W ﻿ / ﻿ 43.220361 ° N 93.381417 ° W ﻿ / 43.220361 ; - 93.381417 Passengers Crew Fatalities 4 ( all ) Survivors 0 Aircraft type Beechcraft Bonanza Operator Dwyer Flying Service , Mason City , Iowa Registration N3794N Flight origin Mason City Municipal Airport , Iowa Destination Hector Airport , North Dakota",
+    "At the time , Holly and his band , consisting of Waylon Jennings , Tommy Allsup , and Carl Bunch , were playing on the `` Winter Dance Party '' tour across the United States Midwest . Rising artists Valens and Richardson had joined the tour , as well . The long journeys between venues on board the cold , uncomfortable tour buses adversely affected the performers , with cases of flu and even frostbite . After stopping at Clear Lake to perform , and frustrated by such conditions , Holly chose to charter a plane to reach their next venue in Moorhead , Minnesota . Richardson , who had the flu , swapped places with Jennings , taking his seat on the plane , while Allsup lost his seat to Valens on a coin toss . Soon after takeoff , late at night and in poor , wintry weather conditions , the pilot lost control of the light aircraft , a Beechcraft Bonanza , which subsequently crashed into a cornfield . Everyone on board was killed . The event has since been mentioned in various songs and films . A number of monuments have been erected at the crash site and in Clear Lake , where an annual memorial concert is also held at the Surf Ballroom , the venue that hosted the artists ' last performance ."
+   ]
+  },
+  {
+   "id": "5ac24ad7554299636651995a",
+   "sentences": [
+    "Pinocchio is a 1940 American animated musical fantasy film produced by Walt Disney Productions and based on the Italian children's novel \"The Adventures of Pinocchio\" by Carlo Collodi.",
+    " It was the second animated feature film produced by Disney, made after the success of \"Snow White and the Seven Dwarfs\" (1937).",
+    "Home on the Range is a 2004 American animated musical western comedy film produced by Walt Disney Feature Animation and released by Walt Disney Pictures."
+   ]
+  }
+ ]
+}

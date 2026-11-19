@@ -1,0 +1,71 @@
+[
+{"id": "057737ce0e23e981", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 2, "quote": "over the collapse of FTX, the bankrupt cryptocurrency exchange"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "7623cfd6bdffd243", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "He revealed that he made a friendship bracelet"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "a fan tradition at her concerts"}, {"item": 7, "quote": "If you're up on Taylor Swift concerts, there are friendship bracelets"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "with his number on it to give to her"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "I wanted to give Taylor Swift one with my number on it"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "seemingly expressing his interest in Swift"}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "While on the Pat McAfee show, Kelce discussed the rumors"}, {"item": 8, "quote": "He then admitted that he invited Swift to one of his games"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 10, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 3, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]}
+]},
+{"id": "ef62134b9f81b301", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For the masses of NFL fans across the U.S."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "For the masses of NFL fans across the U.S."}]}
+]},
+{"id": "6f1e097cc374a611", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}, {"item": 3, "quote": "Ellison confessed the theft of customer funds to him"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX"}, {"item": 8, "quote": "The $65 billion line of credit Alameda Research had meant that it did not have to"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The whole time we were dating, he was my boss at work"}, {"item": 1, "quote": "They broke up because she wanted more from the relationship"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "4df27cc7591be7c7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "6fff843829eaf5cc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "as Alvaro Barreal's 78th-minute goal is enough to secure victory for FC Cincinnati"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "as Alvaro Barreal's 78th-minute goal is enough to secure victory for FC Cincinnati"}, {"item": 2, "quote": "In the process, Inter Miami are officially OUT of the MLS playoff race"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 2, "quote": "as tonight's defeat coupled with CF Montreal's 4-0 victory over Portland"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+]}
+]

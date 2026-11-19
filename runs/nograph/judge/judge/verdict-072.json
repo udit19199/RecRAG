@@ -1,0 +1,63 @@
+[
+{"id": "125c69abfd4c2bf8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "547029fd9d2e0474", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "97ec0a2e806377aa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+]},
+{"id": "a0e7bc7cb17dd3da", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "0a4aa79c4e805285", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."}, {"item": 9, "quote": "Sportsbooks adjust moneyline odds to ensure they remain profitable, balance their book"}]}
+]},
+{"id": "053e111acc710be1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]}
+]

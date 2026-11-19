@@ -1,0 +1,46 @@
+[
+ {"id": "5ac3d667554299076e296ca5", "sentences": [
+   ["The Appenzeller Sennenhund is a medium-size breed of dog.", "The Appenzeller Sennenhund is one of the four regional breeds of Sennenhund-type dogs.", "The Sennenhund-type dogs come from the Swiss Alps."],
+   ["The name Sennenhund refers to people called \"Senn\".", "The Senn people are herders in the Appenzell region of Switzerland."],
+   ["The Drentsche Patrijshond is a versatile spaniel-type hunting dog.", "The Drentsche Patrijshond is from the Dutch province of Drenthe."]
+ ]},
+ {"id": "5a84a7f95542992a431d1a85", "sentences": [
+   ["Julia Compton Moore's dates are February 10, 1929 to April 18, 2004.", "Julia Compton Moore was the wife of Lieutenant General (Ret.)."],
+   ["Hal Moore is a United States Army officer."],
+   ["Harold Gregory \"Hal\" Moore, Jr. lived from February 13, 1922 to February 10, 2017.", "Harold Gregory \"Hal\" Moore, Jr. was a United States Army lieutenant general.", "Harold Gregory \"Hal\" Moore, Jr. was an author."],
+   ["Hal Moore was a recipient of the Distinguished Service Cross.", "The Distinguished Service Cross is the U.S. military's second highest decoration for valor.", "Hal Moore was the first of his West Point class (1945) to be promoted to brigadier general.", "Hal Moore was the first of his West Point class (1945) to be promoted to major general.", "Hal Moore was the first of his West Point class (1945) to be promoted to lieutenant general."]
+ ]},
+ {"id": "5ac325495542995ef918c12e", "sentences": [
+   ["Akrofuom is located in the Obuasi Municipal district.", "The Obuasi Municipal district is in the Ashanti Region of Ghana."],
+   ["The Obuasi Municipality District is one of the twenty-seven (27) districts of the Ashanti Region of Ghana."]
+ ]},
+ {"id": "6334254940258112455", "sentences": [
+   ["In most of the world, speed limit signs display the limitation within a red circle.", "The red-circle speed limit sign design follows the style set out by the Vienna Convention on Road Signs and Signals.", "The Vienna Convention style is not followed by the United States and Canada.", "All countries worldwide, except the United Kingdom and the United States, use metric speed limits in kilometres per hour.", "Metric speed limit signs are optional in the United States.", "Metric speed limit signs are less commonly seen in the United States.", "Samoa uses both units for speed limits.", "In Ontario, Canada, the type, location, and frequency of speed limit signs is covered by regulation 615 of the Ontario Highway Traffic Act."]
+ ]},
+ {"id": "multihop-rag-637", "sentences": [
+   ["A quoted speaker says that if the Braves let this be the story of their series, that is on the Braves."],
+   ["Nocturne could have easily settled and coasted on classic Castlevania vibes.", "The new Nocturne show steps its game up considerably.", "The new Nocturne show uses the Castlevania franchise's iconic lore.", "The new Nocturne show uses the franchise's iconic lore to challenge the viewer's understanding of what it truly means to fight for freedom, equality, and fraternity."]
+ ]},
+ {"id": "-1640714294501064196", "sentences": [
+   ["Dragon Ball Z (ドラゴンボール ゼット, Doragon Bōru Zetto, commonly abbreviated as DBZ) is the long-running anime sequel to the Dragon Ball TV series.", "Dragon Ball Z is adapted from the final twenty-six volumes of the Dragon Ball manga written by Akira Toriyama.", "The Dragon Ball Z manga portion debuted in Weekly Shōnen Jump in October 4, 1988.", "The Dragon Ball Z manga portion lasted until 1995.", "The Dragon Ball Z anime adaptation premiered in Japan on Fuji Television on April 26, 1989.", "The Dragon Ball Z anime adaptation took over its predecessor's time slot.", "The Dragon Ball Z anime adaptation ended on January 31, 1996.", "The Dragon Ball Z anime adaptation lasted 291 episodes in Japan.", "The Dragon Ball Z anime adaptation originally lasted 276 episodes in the United States.", "All 291 Dragon Ball Z episodes were later broadcast, after content from the first 67 episodes was restored."]
+ ]},
+ {"id": "5a7af1a955429931da12c98f", "sentences": [
+   ["Disteghil Sar is also called Distaghil Sar.", "Disteghil Sar is the highest mountain in the Hispar Muztagh.", "The Hispar Muztagh is a subrange of the Karakoram mountain range.", "Disteghil Sar is in Gilgit-Baltistan."],
+   ["Disteghil Sar has a top ridge about 3 km long.", "The top ridge of Disteghil Sar is above 7400 m.", "Disteghil Sar has three distinct summits.", "The (north)west summit of Disteghil Sar is 7885 m high.", "The central summit of Disteghil Sar is 7760 m high.", "The (south)east summit of Disteghil Sar is 7696 m or 7535 m high."],
+   ["The summit of Disteghil Sar has an elevation of 7295 m.", "Disteghil Sar is the highest peak in the Yengisogat subrange of the Karakoram."]
+ ]},
+ {"id": "5ae234385542992decbdcc59", "sentences": [
+   ["All matches were played at the home arena of HC Davos.", "The home arena of HC Davos is Eisstadion Davos."],
+   ["Hockey Club Davos is a professional Swiss ice hockey club.", "Hockey Club Davos is based in Davos, Switzerland."]
+ ]},
+ {"id": "multihop-rag-1110", "sentences": [
+   ["A woman referred to in the quote has the Eras Tour booked all through next year.", "A woman referred to in the quote would rather die than cancel a show."],
+   ["Kelce spoke in July on the podcast he shares with his brother, New Heights.", "Kelce said he intended to give Swift a friendship bracelet with his number on it.", "Kelce intended to give the friendship bracelet during Swift's Eras Tour concert in Kansas City."],
+   ["The game is taking place at Arrowhead Stadium.", "Swift has performed at Arrowhead Stadium.", "Swift has attended a game at Arrowhead Stadium before."],
+   ["Swift has shared that she has nothing to hide in her new relationship with Kelce."]
+ ]},
+ {"id": "5a7283355542991f9a20c4b1", "sentences": [
+   ["The Karlsschrein, English name Shrine of Charlemagne, is in Aachen Cathedral.", "The Karlsschrein was made in Aachen.", "The Karlsschrein was made at the command of Frederick II, Holy Roman Emperor.", "The Karlsschrein was completed in 1215.", "Frederick II's grandfather was Frederick Barbarossa.", "Frederick Barbarossa exhumed Charlemagne's bones from their resting place in the Palatine Chapel, Aachen.", "Frederick Barbarossa exhumed Charlemagne's bones in 1165.", "The exhumation of Charlemagne's bones happened before the Karlsschrein was completed."],
+   ["Frederick I's German name is \"Friedrich I\".", "Frederick I's Italian name is \"Federico I\".", "Frederick I lived from 1122 to 10 June 1190.", "Frederick I is also known as Frederick Barbarossa.", "Frederick Barbarossa's Italian name is \"Federico Barbarossa\".", "Frederick I was the Holy Roman Emperor from 1155 until his death."]
+ ]}
+]

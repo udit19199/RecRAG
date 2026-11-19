@@ -1,0 +1,235 @@
+[
+ {
+  "id": "5a7dbc175542995ed0d1666b",
+  "sentences": [
+   [
+    "The group included Alexander Bogdanov.",
+    "The group included Maxim Gorky.",
+    "The group included Anatoly Lunacharsky.",
+    "The group included Mikhail Pokrovsky.",
+    "The group included Grigory Aleksinsky.",
+    "The group included Stanislav Volski.",
+    "The group included Martyn Liadov."
+   ],
+   [
+    "Anatoly Vasilyevich Lunacharsky's Russian name is Анато́лий Васи́льевич Лунача́рский.",
+    "Anatoly Vasilyevich Lunacharsky was born on 23 November 1875 (Old Style 11 November 1875).",
+    "Anatoly Vasilyevich Lunacharsky died on 26 December 1933.",
+    "Anatoly Vasilyevich Lunacharsky was a Russian Marxist revolutionary.",
+    "Anatoly Vasilyevich Lunacharsky was the first Soviet People's Commissar of Education.",
+    "Anatoly Vasilyevich Lunacharsky was responsible for culture and education as People's Commissar of Education."
+   ]
+  ]
+ },
+ {
+  "id": "-6431068926886690087",
+  "sentences": [
+   [
+    "The text gives Urdu lyrics about the Land of Pakistan.",
+    "The text gives an ALA-LC transliteration of the Urdu lyrics.",
+    "The text gives a poetical English translation of the lyrics.",
+    "The text gives a literal English translation of the lyrics.",
+    "The lyrics wish that the holy land stay glad.",
+    "The lyrics wish that the beautiful realm stay glad.",
+    "The lyrics describe the Land of Pakistan as the sign of high resolve.",
+    "The lyrics describe the Land of Pakistan as the citadel of faith.",
+    "The lyrics refer to the order of the holy land.",
+    "The lyrics refer to the power of the brotherhood of the people.",
+    "The lyrics wish that the nation, the country, and the state shine in everlasting glory.",
+    "The lyrics wish that the cherished goal stay glad.",
+    "The lyrics refer to the flag with the star and crescent.",
+    "The lyrics describe the flag as the leader of progress and ascent.",
+    "The lyrics describe the flag as an interpreter of the past.",
+    "The lyrics describe the flag as the pride of the present.",
+    "The lyrics describe the flag as the soul of the future.",
+    "The lyrics describe the land as the shade of God, the Glorious and Mighty."
+   ]
+  ]
+ },
+ {
+  "id": "-4187551720360968088",
+  "sentences": [
+   [
+    "The table lists drivers with their seasons, entries, podiums, and percentage.",
+    "Michael Schumacher raced in the seasons 1991 to 2006 and 2010 to 2012.",
+    "Michael Schumacher had 308 entries.",
+    "Michael Schumacher had 155 podiums.",
+    "Michael Schumacher has a percentage of 50.32%.",
+    "Lewis Hamilton raced in the seasons 2007 to 2018.",
+    "Lewis Hamilton had 211 entries.",
+    "Lewis Hamilton had 119 podiums.",
+    "Lewis Hamilton has a percentage of 56.40%.",
+    "Alain Prost raced in the seasons 1980 to 1991 and 1993.",
+    "Alain Prost had 202 entries.",
+    "Alain Prost had 106 podiums.",
+    "Alain Prost has a percentage of 52.48%.",
+    "Sebastian Vettel raced in the seasons 2007 to 2018.",
+    "Sebastian Vettel had 202 entries.",
+    "Sebastian Vettel had 101 podiums.",
+    "Sebastian Vettel has a percentage of 50.00%.",
+    "Fernando Alonso is ranked 5th in the table.",
+    "Fernando Alonso raced in the seasons 2001 and 2003 to 2018.",
+    "Fernando Alonso had 296 entries.",
+    "Fernando Alonso had 97 podiums.",
+    "Fernando Alonso has a percentage of 32.77%.",
+    "Kimi Räikkönen is ranked 6th in the table.",
+    "Kimi Räikkönen raced in the seasons 2001 to 2009 and 2012 to 2018.",
+    "Kimi Räikkönen had 276 entries.",
+    "Kimi Räikkönen had 93 podiums.",
+    "Kimi Räikkönen has a percentage of 33.70%.",
+    "Ayrton Senna is ranked 7th in the table.",
+    "Ayrton Senna raced in the seasons 1984 to 1994.",
+    "Ayrton Senna had 162 entries.",
+    "Ayrton Senna had 80 podiums.",
+    "Ayrton Senna has a percentage of 49.38%.",
+    "Rubens Barrichello is ranked 8th in the table.",
+    "Rubens Barrichello raced in the seasons 1993 to 2011.",
+    "Rubens Barrichello had 326 entries.",
+    "Rubens Barrichello had 68 podiums.",
+    "Rubens Barrichello has a percentage of 20.86%.",
+    "David Coulthard is ranked 9th in the table.",
+    "David Coulthard raced in the seasons 1994 to 2008.",
+    "David Coulthard had 247 entries.",
+    "David Coulthard had 62 podiums.",
+    "David Coulthard has a percentage of 25.10%.",
+    "Nelson Piquet is ranked 10th in the table.",
+    "Nelson Piquet raced in the seasons 1978 to 1991.",
+    "Nelson Piquet had 207 entries.",
+    "Nelson Piquet had 60 podiums.",
+    "Nelson Piquet has a percentage of 28.99%.",
+    "The table ends with a 'Source' label that has no source given."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-1117",
+  "sentences": [
+   [
+    "The present Board of Trustees of the Fund consists of the Secretary of Education as Chairman.",
+    "The present Board of Trustees of the Fund includes the Director-General of the National Economic and Development Authority.",
+    "The present Board of Trustees of the Fund includes three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP), and the Philippine Association of Colleges and Universities (PACU).",
+    "The present Board of Trustees of the Fund shall also constitute the proposed Board of Trustees of the PhilEd."
+   ],
+   [
+    "Andrew Wilkinson is 72 years old.",
+    "Andrew Wilkinson has informed the HSF board of his intention to retire as a board director.",
+    "Andrew Wilkinson's retirement will reduce the company's board to five directors."
+   ]
+  ]
+ },
+ {
+  "id": "-51011525148659082",
+  "sentences": [
+   [
+    "In healthy adults there are two normal heart sounds.",
+    "The two normal heart sounds are often described as a lub and a dub (or dup).",
+    "The two normal heart sounds occur in sequence with each heartbeat.",
+    "The first heart sound (S) is produced by the closing of the atrioventricular valves.",
+    "The second heart sound (S) is produced by the closing of the semilunar valves.",
+    "The closing of the atrioventricular valves and the semilunar valves produces the first and second heart sounds, respectively.",
+    "In addition to the normal sounds, a variety of other sounds may be present.",
+    "The other sounds that may be present include heart murmurs, adventitious sounds, and gallop rhythms labeled S and S."
+   ]
+  ]
+ },
+ {
+  "id": "5adc2ae5554299438c868d64",
+  "sentences": [
+   [
+    "Yucca is a genus of perennial shrubs and trees.",
+    "Yucca is in the family Asparagaceae.",
+    "Yucca is in the subfamily Agavoideae."
+   ],
+   [
+    "Rodgersia is a genus of flowering plants.",
+    "Rodgersia is in the Saxifragaceae family."
+   ],
+   [
+    "Rodgersia are herbaceous perennials.",
+    "Rodgersia originate from east Asia."
+   ]
+  ]
+ },
+ {
+  "id": "5a8459aa5542996488c2e51e",
+  "sentences": [
+   [
+    "The unnamed subject's American superior was General Dwight D. Eisenhower.",
+    "Dwight D. Eisenhower wrote that the unnamed subject was 'blunt, at times to the point of rudeness'."
+   ],
+   [
+    "Dwight David 'Ike' Eisenhower was born on October 14, 1890.",
+    "Dwight David 'Ike' Eisenhower died on March 28, 1969.",
+    "Dwight David 'Ike' Eisenhower was an American politician.",
+    "Dwight David 'Ike' Eisenhower was an Army general.",
+    "Dwight David 'Ike' Eisenhower served as the 34th President of the United States.",
+    "Dwight David 'Ike' Eisenhower served as President from 1953 until 1961."
+   ]
+  ]
+ },
+ {
+  "id": "5a728f745542991f9a20c4e6",
+  "sentences": [
+   [
+    "The publication was launched in March 1994.",
+    "The publication was launched by Millivres Ltd.",
+    "The publication was launched under the editorship of Frances Williams.",
+    "The publication is now published by Twin Media Group.",
+    "Twin Media Group is owned by Silke Bader.",
+    "Twin Media Group is owned by Linda Riley."
+   ],
+   [
+    "Elle is a worldwide lifestyle magazine.",
+    "Elle is of French origin.",
+    "Elle focuses on fashion.",
+    "Elle focuses on beauty.",
+    "Elle focuses on health.",
+    "Elle focuses on entertainment."
+   ],
+   [
+    "Elle is also the world's best-selling fashion magazine."
+   ],
+   [
+    "Elle was founded by Pierre Lazareff.",
+    "Elle was founded by Hélène Gordon, the wife of Pierre Lazareff.",
+    "Elle was founded in 1945."
+   ]
+  ]
+ },
+ {
+  "id": "-9199561147097898525",
+  "sentences": [
+   [
+    "Billy Colman leaves work in Idaho's Snake River Valley.",
+    "Billy Colman sees a pack of dogs attacking a stray coonhound.",
+    "Billy Colman takes the stray coonhound home to feed it.",
+    "After the coonhound has rested, Billy Colman sets it free.",
+    "Billy Colman knows that the coonhound will return home."
+   ]
+  ]
+ },
+ {
+  "id": "-232899194860976791",
+  "sentences": [
+   [
+    "In the 12th century, luxury increased.",
+    "In the 12th century, bedsteads were made of wood.",
+    "The wooden bedsteads were much decorated with inlaid, carved, and painted ornamentation.",
+    "Folding beds were used.",
+    "The folding beds served as couches by day.",
+    "The folding beds had cushions covered with silk laid upon leather.",
+    "At night a linen sheet was spread on the bed.",
+    "At night pillows were placed on the bed.",
+    "At night silk-covered skins served as coverlets.",
+    "Carolingian manuscripts show metal bedsteads much higher at the head than at the feet.",
+    "The shape of the metal bedsteads with a higher head continued in use until the 13th century in France.",
+    "Many cushions were added to raise the body to a sloping position.",
+    "In 12th-century manuscripts, bedsteads appear much richer.",
+    "The richer 12th-century bedsteads have inlays, carving, and painting.",
+    "The richer 12th-century bedsteads have embroidered coverlets and mattresses in harmony.",
+    "Curtains were hung above the bed.",
+    "A small hanging lamp is often shown."
+   ]
+  ]
+ }
+]

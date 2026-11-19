@@ -1,0 +1,120 @@
+[
+ {"id": "multihop-rag-1599", "sentences": [
+   ["Huang said this during cross-examination.",
+    "Huang said Paradigm pressed Bankman-Fried on the board issue.",
+    "Paradigm was told that Bankman-Fried did not want investors as directors.",
+    "Bankman-Fried did plan on having a board with experts."],
+   ["The person quoted was the richest person in the world under 30.",
+    "The person quoted was going to spend that wealth to save humanity from extinction.",
+    "The person quoted said this."],
+   ["Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money, in words or in substance.",
+    "Bankman-Fried did not admit being told until Judge Lewis Kaplan intervened.",
+    "Bankman-Fried admitted he had been told about that money."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+    "The defense argued that the FTX founder acted in good faith.",
+    "The defense argued that the FTX founder never meant to commit fraud or steal.",
+    "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "3221262508309669486", "sentences": [
+   ["India and Pakistan gained independence in 1947.",
+    "Governors-General continued to be appointed over each nation after 1947 until republican constitutions were written.",
+    "Louis Mountbatten, 1st Earl Mountbatten of Burma, remained Governor-General of India for some time after independence.",
+    "The two nations were otherwise headed by native Governors-General.",
+    "India became a secular republic in 1950.",
+    "Pakistan became an Islamic republic in 1956."]
+ ]},
+ {"id": "5a84d80c5542992a431d1ab5", "sentences": [
+   ["MiMA stands for 'Middle of Manhattan'.",
+    "MiMA is a mixed-use building.",
+    "MiMA is located at 450 West 42nd Street.",
+    "MiMA is located between Dyer and 10th Avenues.",
+    "MiMA is located in the Hell's Kitchen neighborhood of Manhattan, New York City."],
+   ["Ground was broken on MiMA in 2007.",
+    "Topping out of MiMA occurred in early August 2010."],
+   ["MiMA was designed by the Miami-based architecture firm of Arquitectonica.",
+    "MiMA has 43 floors of luxury rentals on floors 7 to 50.",
+    "MiMA has twelve floors of condominiums on floors 51 to 63.",
+    "MiMA has a Yotel hotel on the lower levels."],
+   ["The height of MiMA is 204 meters (670 feet)."],
+   ["270 Park Avenue is also known as the JPMorgan Chase Tower.",
+    "270 Park Avenue was formerly known as the Union Carbide Building.",
+    "270 Park Avenue is a high-rise office building.",
+    "270 Park Avenue is located in Midtown Manhattan, New York City."]
+ ]},
+ {"id": "5a886886554299206df2b258", "sentences": [
+   ["Liu Ailing was born on June 2, 1967.",
+    "Liu Ailing is a Chinese former footballer.",
+    "Liu Ailing played for the China national team at the 1991 FIFA Women's World Cup.",
+    "Liu Ailing played for the China national team at the 1995 FIFA Women's World Cup.",
+    "Liu Ailing played for the China national team at the 1999 FIFA Women's World Cup."],
+   ["The FIFA Women's World Cup is an international football competition.",
+    "The FIFA Women's World Cup is contested by the senior women's national teams of the members of FIFA.",
+    "FIFA stands for Fédération Internationale de Football Association.",
+    "FIFA is the sport's global governing body."]
+ ]},
+ {"id": "5a8b128455429971feec463b", "sentences": [
+   ["The women's events include the Vans Hawaiian Pro at Haleiwa Ali'i Beach Park.",
+    "The women's events include the Roxy Pro at Sunset Beach.",
+    "The women's events include the Billabong Pro Maui at Honolua Bay, Maui."],
+   ["Haleʻiwa is a North Shore community.",
+    "Haleʻiwa is a census-designated place (CDP).",
+    "Haleʻiwa is in the Waialua District of the island of Oʻahu.",
+    "Haleʻiwa is in the City and County of Honolulu."]
+ ]},
+ {"id": "-3933902576274996149", "sentences": [
+   ["Every High Court has a Chief Justice.",
+    "Every High Court has many other judges.",
+    "The number of other judges in a High Court is defined by the President of India."]
+ ]},
+ {"id": "multihop-rag-1636", "sentences": [
+   ["Davidson said the player was not playing in the NHL in the last few years.",
+    "Davidson said the level of performance showed the player could control a game and dominate a game in junior.",
+    "Davidson said this performance indicated the player was going to be able to do that at some point in the NHL."],
+   ["The player helped guide more than a few future NHL stalwarts at that place.",
+    "Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala were among the future NHL stalwarts guided there.",
+    "Many other future NHL stalwarts besides those named were also guided there."]
+ ]},
+ {"id": "-3307908231607643449", "sentences": [
+   ["The American entry into World War I came in April 1917.",
+    "The American entry into World War I came after more than two and a half years of efforts by President Woodrow Wilson to keep the United States out of the war.",
+    "Apart from an Anglophile element urging early support for the British, American public opinion reflected that of the president.",
+    "The sentiment for neutrality was particularly strong among Irish Americans.",
+    "The sentiment for neutrality was particularly strong among German Americans.",
+    "The sentiment for neutrality was particularly strong among Scandinavian Americans.",
+    "The sentiment for neutrality was particularly strong among church leaders.",
+    "The sentiment for neutrality was particularly strong among women in general.",
+    "Before World War I had broken out, American opinion had been more negative toward Germany than toward any other country in Europe.",
+    "Over time, the American people increasingly came to see Germany as the aggressor in Europe.",
+    "The shift toward seeing Germany as the aggressor was especially driven by reports of atrocities in Belgium in 1914.",
+    "The shift toward seeing Germany as the aggressor was especially driven by the sinking of the passenger liner RMS Lusitania in 1915."]
+ ]},
+ {"id": "multihop-rag-2002", "sentences": [
+   ["Altman is not trained as an AI engineer.",
+    "Altman is now 38 years old.",
+    "Altman has been seen as a Silicon Valley wunderkind since his early 20s."],
+   ["Altman has been telling investors that he is planning to launch a new venture.",
+    "The Information reported that Altman has been telling investors about a new venture."],
+   ["The prevailing theory floating around right now is based on the board's language.",
+    "The prevailing theory floating around right now is based on the way these giant tech companies work."]
+ ]},
+ {"id": "3028343500075334931", "sentences": [
+   ["Network officials were concerned for the show's future.",
+    "Network officials turned to Tim Russert.",
+    "Tim Russert was the network's Washington, D.C., bureau chief.",
+    "Tim Russert took over as moderator of Meet the Press on December 8, 1991.",
+    "Tim Russert remained with Meet the Press until his death on June 13, 2008.",
+    "Tim Russert became the longest serving moderator in the history of Meet the Press."],
+   ["Martha Rountree was moderator from 1947 to 1953.",
+    "Ned Brooks was moderator from 1953 to 1965.",
+    "Lawrence E. Spivak was moderator from 1966 to 1975.",
+    "Bill Monroe was moderator from 1975 to 1984.",
+    "Roger Mudd and Marvin Kalb were co-moderators from 1984 to 1985.",
+    "Marvin Kalb was moderator from 1985 to 1987.",
+    "Chris Wallace was moderator from 1987 to 1988.",
+    "Garrick Utley was moderator from 1989 to 1991.",
+    "Tim Russert was moderator from 1991 to 2008.",
+    "Tom Brokaw was moderator in 2008.",
+    "David Gregory was moderator from 2008 to 2014.",
+    "Chuck Todd has been moderator since 2014."]
+ ]}
+]

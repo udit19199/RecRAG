@@ -1,0 +1,78 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae383e15542992f92d822fb",
+   "sentences": [
+    "The Apple Dumpling Gang is a 1975 American comedy-western film produced by Walt Disney Productions about a slick gambler named Russell Donovan (Bill Bixby) who is duped into taking care of a group of orphans who eventually strike gold during the California Gold Rush.",
+    "Heavyweights is a 1995 American comedy-drama film directed by Steven Brill and written by Brill with Judd Apatow."
+   ]
+  },
+  {
+   "id": "-6719831189568463411",
+   "sentences": [
+    "This article covers the professional life of George W. Bush , the 43rd President of the United States . Prior to his election as President in 2000 , Bush held numerous other positions , including being an oil executive , an owner of the Texas Rangers baseball team , and Governor of Texas . ( Also see Governorship of George W. Bush . )"
+   ]
+  },
+  {
+   "id": "8711835034449877304",
+   "sentences": [
+    "Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24 Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5 Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia : 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1",
+    "United Kingdom : 64",
+    "Africa South Africa : 9 Egypt : 5 Morocco : 4 Tunisia : 3 Algeria : 1 Americas United States : 85 Mexico : 84 Brazil : 56 Canada : 32 Colombia : 14 Argentina : 10 Chile : 9 Venezuela : 8 Peru : 4 Puerto Rico : 4 Dominican Republic : 3 Guatemala : 3 Panama : 3 Costa Rica : 2 Ecuador : 2 El Salvador : 2 Honduras : 2 Uruguay : 2 Aruba : 1 Nicaragua : 1 Paraguay : 1 Asia China : 200 Japan : 99 South Korea : 43 Saudi Arabia : 39 Israel : 24 India : 20 Indonesia : 17 Hong Kong : 14 Thailand : 11 United Arab Emirates : 11 Malaysia : 10 Singapore : 9 Taiwan : 9 Philippines : 8 Lebanon : 7 Kazakhstan : 5 Kuwait : 5 Qatar : 5 Jordan : 3 Bahrain : 2 Macau : 2 Oman : 1 Vietnam : 1 Europe Spain : 430 France : 128 Italy : 104 Russia : 100 Portugal : 87 Germany : 77 United Kingdom : 64 Poland : 47 Greece : 46 Turkey : 41 Belgium : 31 Netherlands : 28 Romania : 24 Switzerland : 20 Austria : 14 Sweden : 12 Croatia : 10 Ireland : 9 Ukraine : 9 Hungary : 8 Bulgaria : 6 Cyprus : 6 Czech Republic : 6 Finland : 5 Lithuania : 5 Norway : 5 Serbia : 5 Slovenia : 5 Denmark : 4 Latvia : 4 Estonia : 3 Azerbaijan : 3 Bosnia and Herzegovina : 3 Georgia : 3 Luxembourg : 3 Slovakia : 3 Armenia : 2 Albania : 1 Andorra : 1 Belarus : 1 Iceland : 1 Macedonia : 1 Malta : 1 Monaco : 1 Montenegro : 1 Oceania Australia : 19 New Zealand : 1"
+   ]
+  },
+  {
+   "id": "multihop-rag-1289",
+   "sentences": [
+    "With the latest Amazon-created Prime-themed sale day behind us and Black Friday slowly approaching, the deals world feels a bit like Pippin waiting on the edge of battle.",
+    "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it.",
+    "During Prime Day this past summer, Amazon introduced invite-only deals—a system to help make it easier for Prime members to access deals that are expected to sell out quickly—and the company brought it back for Prime Big Deal Days.",
+    "“Selling on Amazon is a life-changing opportunity and the amount of sellers that throw stones at the platform is astounding,” one user wrote."
+   ]
+  },
+  {
+   "id": "multihop-rag-1686",
+   "sentences": [
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5ae796af554299540e5a5623",
+   "sentences": [
+    " It is found in Yemen and India.",
+    " Because of this, Yemen's capital has been temporarily relocated to the port city of Aden, on the southern coast."
+   ]
+  },
+  {
+   "id": "6361206394302458673",
+   "sentences": [
+    "Superfecundation is the fertilization of two or more ova from the same cycle by sperm from separate acts of sexual intercourse , which can lead to twin babies from two separate biological fathers . The term superfecundation is derived from fecund , meaning the ability to produce offspring . Heteropaternal superfecundation refers to the fertilization of two separate ova by two different fathers . Homopaternal superfecundation refers to the fertilization of two separate ova from the same father , leading to fraternal twins . While heteropaternal superfecundation is referred to as a form of atypical twinning , genetically , the twins are half siblings . Superfecundation , while rare , can occur through either separate occurrences of sexual intercourse or through artificial insemination ."
+   ]
+  },
+  {
+   "id": "-7890654922490959584",
+   "sentences": [
+    "In 1918 , Firestone Tire and Rubber Company of Canada was incorporated in Hamilton , Ontario and in 1922 , the first Canadian - made tire rolled off the line on September 15 . During the 1920s , Firestone produced the Oldfield tire , named for racing driver Barney Oldfield .",
+    "Bridgestone / Firestone also produces tires under the Fuzion brand name . Fuzion is a tire manufactured in China for Bridgestone / Firestone as a budget replacement tire ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2491",
+   "sentences": [
+    "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.",
+    "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "6476881275619096827",
+   "sentences": [
+    "Islami Somaz Bank Limited Al - Arafah Islami Bank Limited EXIM Bank Limited First Security Islami Bank Limited ICB Islamic Bank Limited Islami Bank Bangladesh Limited Shahjalal Islami Bank Limited Social Islami Bank Limited Union Bank Limited"
+   ]
+  }
+ ]
+}

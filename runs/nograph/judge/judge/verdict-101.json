@@ -1,0 +1,65 @@
+[
+  {"id": "ac41bbfc25f05bad", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Just a single and the wicket off the over"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "Shai Hope can’t break the legspin shackles."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "6d ago 23.16 GMT"}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "14th over: West Indies 112-4 (Hope 27, Powell 10)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "West Indies 112-4 (Hope 27, Powell 10)"}]},
+    {"fact": "1.3", "status": "contradicted", "evidence": [{"item": 9, "quote": "West Indies 112-4 (Hope 27, Powell 10)"}]},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e3c84b58d22b307c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "Erling Haaland (Manchester City/Norway) - 50 goals"}, {"item": 2, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "Erling Haaland (Manchester City/Norway) - 50 goals"}, {"item": 2, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]}
+  ]},
+  {"id": "70e0c71bff19d0fc", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 1, "quote": "Alameda could have negative balances and unlimited withdrawals."}, {"item": 3, "quote": "In late 2019, Alameda had a negative balance on FTX."}]},
+    {"fact": "2.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.”"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "And the business practices between the two were reasonable, he argued, claiming that"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]}
+  ]},
+  {"id": "e1a869643188ac13", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7417c0dbd459b740", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "242b44e0d6ff164c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to"}, {"item": 2, "quote": "repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to"}, {"item": 2, "quote": "using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "using them as a line of credit under the instruction of SBF."}]}
+  ]}
+]

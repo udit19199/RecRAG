@@ -1,0 +1,63 @@
+[
+  {"id": "125fd09182ad11d2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "their children grow older, more independent, and more distant"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "their children grow older, more independent, and more distant"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "264ba9d2ede8c614", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]}
+  ]},
+  {"id": "920cdc4ded5b6e26", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "69c6b5e7008cabcc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]}
+  ]},
+  {"id": "05dab63a71c51559", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]}
+  ]},
+  {"id": "e5c0f33cdc5f87c1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Wang testified that Bankman-Fried had asked him to increase it a few times"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Wang heard a trader ask Bankman-Fried if it was okay to keep withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

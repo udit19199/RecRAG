@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8f876e5542997ba9cb32a1",
+   "sentences": [
+    "Marc Rosset (born 7 November 1970) is a former professional tennis player from Switzerland who is best remembered for winning the men's singles gold medal at the 1992 Olympic Games.",
+    "Maksim \"Max\" Mirnyi (Belarusian: Максім Мікалаевіч Мірны ] ) (Russian: Максим Николаевич Мирный ] ) (born 6 July 1977, in Minsk) is a Belarusian professional tennis player."
+   ]
+  },
+  {
+   "id": "multihop-rag-283",
+   "sentences": [
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "6594701918829323034",
+   "sentences": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ]
+  },
+  {
+   "id": "5ac308135542990b17b154f4",
+   "sentences": [
+    " He succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne.",
+    "Eric IV, also known as Eric Ploughpenny or Eric Plowpenny (Danish: \"Erik Plovpenning\" ), (  1216 – 10 August 1250) was king of Denmark from 1241 until his death in 1250."
+   ]
+  },
+  {
+   "id": "5abd0097554299700f9d7956",
+   "sentences": [
+    "Ionolyce is a small genus of butterflies in the family Lycaenidae.",
+    " \"I. helicon\" is widespread in the Indoaustralasian region (India to the Malay Archipelago.",
+    "India lies on the Indian Plate, the northern portion of the Indo-Australian Plate, whose continental crust forms the Indian subcontinent.",
+    " It is the seventh-largest country in the world, with a total area of 3287263 km2 ."
+   ]
+  },
+  {
+   "id": "multihop-rag-376",
+   "sentences": [
+    "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week.",
+    "HISTORY: Harris had over 120 total yards and a touchdown in a Week 17 win in Baltimore last year."
+   ]
+  },
+  {
+   "id": "-5345751650770708960",
+   "sentences": [
+    "`` Sacrifice '' is a ballad performed by musician Elton John . The lyrics are by Bernie Taupin and the music by John . The song appears on the 1989 album Sleeping with the Past . It was first released in October 1989 , then in 1990 , and was the second single from the album . It achieved success , particularly in France and the UK , where it became his first solo chart - topper , spending five weeks at the top ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2262",
+   "sentences": [
+    "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.",
+    "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary."
+   ]
+  },
+  {
+   "id": "5a710a915542994082a3e504",
+   "sentences": [
+    "Scott Treleaven is a Canadian artist whose work employs a variety of media including collage, film, video, drawing, photography and installation.",
+    "Edmund Mortimer (21 August 1874 – 21 May 1944) was an American actor and film director."
+   ]
+  },
+  {
+   "id": "5ae16d9655429920d52343ce",
+   "sentences": [
+    "\"Collateral Damage\" is the eleventh episode of the third season of the crime-thriller television series \"Millennium\".",
+    " \"Collateral Damage\" featured guest appearances by O'Quinn, Jacinda Barrett, James Marsters, and radio host Art Bell as himself.",
+    " Bell's radio show \"Coast to Coast AM\" was among Perry's inspirations for the script.",
+    "Coast to Coast AM is an American late-night radio talk show that deals with a variety of topics.",
+    " The program now airs seven nights a week 1:00 a.m. – 5:00 a.m. Eastern Time Zone."
+   ]
+  }
+ ]
+}

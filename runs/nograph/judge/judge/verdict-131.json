@@ -1,0 +1,53 @@
+[
+{"id": "9ecbecb26271b7a8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "5ff2ec89003543cb", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]}
+]},
+{"id": "ee4ee514e3f1239b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "fbea38ffa7dfa3c9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss"}]}
+]},
+{"id": "7284a1f3b766dd22", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity"}]}
+]},
+{"id": "dd0c2db1e586d3fd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move"}]}
+]}
+]

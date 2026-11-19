@@ -1,0 +1,56 @@
+[
+  {
+    "id": "325e833e6935ee3b",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+    ]
+  },
+  {
+    "id": "7dec3971c28e67d2",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+    ]
+  },
+  {
+    "id": "eea80de34da6b5a1",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+    ]
+  },
+  {
+    "id": "6874aeeccf533787",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+    ]
+  },
+  {
+    "id": "e8343d4c30496700",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+    ]
+  }
+]

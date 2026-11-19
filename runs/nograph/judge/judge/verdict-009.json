@@ -1,0 +1,50 @@
+[
+{"id": "41c8732cd664cbe8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+]},
+{"id": "7af4722a6c84b25c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Warner Music Group CEO Robert Kyncl"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "In recent months, Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry – not surprising, given that he came to the music biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer."}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "e86260963c023598", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]}
+]},
+{"id": "a1ac35f375419cea", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "the former billionaire got his start in finance after MIT"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 2, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.7", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "8bfd9c51949d0c08", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+]}
+]

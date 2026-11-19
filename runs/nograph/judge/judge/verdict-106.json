@@ -1,0 +1,58 @@
+[
+{"id": "2d6f877962244ea4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "because we’ve always thought it was the best."}]}
+]},
+{"id": "2936da9fdf9dc4f4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "6b26947f5150f4dc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+]},
+{"id": "09f7484d7b83b5b7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]}
+]},
+{"id": "c42daad20e00fa7f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "like Potter at the club. He has been out of work since his Blues tenure came to a close back in April"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "but it would be a hard sell to fans after his time with the London club went so poorly."}]}
+]},
+{"id": "945c47f0043be936", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison, the former CEO of Alameda,"}, {"item": 8, "quote": "Caroline Ellison, Bankman-Fried’s ex-girlfriend."}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

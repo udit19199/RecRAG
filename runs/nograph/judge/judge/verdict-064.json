@@ -1,0 +1,55 @@
+[
+{"id": "44781a694a501180", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "HISTORY: Harris had over 120 total yards and a touchdown in a Week 17 win in Baltimore last year."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "HISTORY: Harris had over 120 total yards and a touchdown in a Week 17 win in Baltimore last year."}]}
+]},
+{"id": "dc2b34d1bd336985", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "posts identified as false have been spotted circulating on X — including, in one example, a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]}
+]},
+{"id": "5abac61e5c3382aa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "1314c25c2f44586d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "79fd645fbb434152", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+{"fact": "0.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Epic Games fired roughly 830 people this year, or 16 percent of its staff."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "746c0a03023f3325", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]}
+]}
+]

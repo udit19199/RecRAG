@@ -1,0 +1,147 @@
+[
+ {"id": "618216653575106100", "sentences": [[
+  "The periodic table has a group 3.",
+  "The text lists the element names from Hydrogen through Oganesson.",
+  "The text mentions alkaline earth metals.",
+  "The article's grouping places lanthanum (La) and actinium (Ac) in group 3.",
+  "The article says placing La and Ac in group 3 is the most common form.",
+  "Scandium (Sc) has atomic number 21 and is a transition metal.",
+  "Yttrium (Y) has atomic number 39, is in period 5, and is a transition metal.",
+  "Lanthanum (La) has atomic number 57, is in period 6, and is a lanthanide.",
+  "Actinium (Ac) has atomic number 89, is in period 7, and is an actinide.",
+  "Whether lutetium (Lu) and lawrencium (Lr), in periods 6 and 7, are in group 3 is disputed.",
+  "For other groupings, the article refers readers to group 3 borders.",
+  "The scandium group has CAS group number IIIB (US pattern A-B-A).",
+  "The scandium group has old IUPAC number IIIA (Europe pattern A-B).",
+  "The article has a legend distinguishing primordial elements and synthetic elements.",
+  "The article has a legend for atomic number colors, where black means solid."
+ ]]},
+ {"id": "5a7cdcbf55429907fabef04f", "sentences": [
+  [
+   "Still Kicking: Six Artistic Women of Project Arts & Longevity is a documentary film.",
+   "Still Kicking: Six Artistic Women of Project Arts & Longevity was released in 2006.",
+   "Still Kicking: Six Artistic Women of Project Arts & Longevity runs 32 minutes.",
+   "Still Kicking: Six Artistic Women of Project Arts & Longevity was made by Pacific Grove filmmaker Greg Young.",
+   "Still Kicking: Six Artistic Women of Project Arts & Longevity features six Bay Area women role models.",
+   "The six women featured in Still Kicking are over 85 years old.",
+   "The six women featured in Still Kicking remained artistically active."
+  ],
+  [
+   "Time Bombs is a film.",
+   "Time Bombs is a 2008 film.",
+   "Time Bombs is a Canadian film.",
+   "Time Bombs was produced by Productions de la ruelle."
+  ]
+ ]},
+ {"id": "3062778689902618642", "sentences": [[
+  "The Curse of Oak Island is a series.",
+  "The Curse of Oak Island follows brothers Marty and Rick Lagina.",
+  "Marty and Rick Lagina are originally from Kingsford, Michigan.",
+  "The Curse of Oak Island follows the Laginas' efforts to find the speculated treasure or historical artifacts believed to be on Oak Island.",
+  "The series discusses the history of Oak Island.",
+  "The series discusses recent discoveries on Oak Island.",
+  "The series discusses theories about Oak Island.",
+  "The series discusses prior attempts to investigate the site on Oak Island.",
+  "Areas of interest in the series include the \"Money Pit\".",
+  "Areas of interest in the series include Borehole 10-x.",
+  "Areas of interest in the series include Smith's Cove.",
+  "Areas of interest in the series include \"Nolan's Cross\".",
+  "Areas of interest in the series include the \"Hatch\".",
+  "Areas of interest in the series include the \"Watchtower\".",
+  "Areas of interest in the series include the \"Swamp\"."
+ ]]},
+ {"id": "multihop-rag-1605", "sentences": [
+  [
+   "A player entered free agency.",
+   "A dozen teams lined up when that player entered free agency.",
+   "The teams were curious to see if they could meet that player's eye."
+  ],
+  [
+   "The speaker is the player.",
+   "The player explores a system of the Imperium.",
+   "The player has a loyal crew of companions.",
+   "The player makes impactful choices.",
+   "The player determines the fate of those around the player."
+  ]
+ ]},
+ {"id": "multihop-rag-1324", "sentences": [
+  [
+   "Google's public documentation says Google uses three categories to rank results that are local to a searcher.",
+   "The three categories Google's public documentation names for ranking local results are relevance, distance, and prominence."
+  ],
+  [
+   "A woman admits she may have misinterpreted the evidence.",
+   "The woman maintains that Google manipulates Search to maximise ad revenue."
+  ],
+  [
+   "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+   "The case argues that Google \"siphons off\" news publishers' content through anticompetitive means.",
+   "The case argues that Google \"siphons off\" news publishers' readers through anticompetitive means.",
+   "The case argues that Google \"siphons off\" news publishers' ad revenue through anticompetitive means."
+  ]
+ ]},
+ {"id": "5a7faed65542994857a767b6", "sentences": [
+  [
+   "The name comes from the City of Starachowice.",
+   "The factory is located in the City of Starachowice."
+  ],
+  [
+   "The item was sold in various countries for many years.",
+   "The item was sold in countries beyond the Eastern Bloc.",
+   "The item was used by the Yemen Army."
+  ],
+  [
+   "The Eastern Bloc was the group of socialist states of Central and Eastern Europe.",
+   "The Eastern Bloc generally included the Soviet Union.",
+   "The Eastern Bloc generally included the countries of the Warsaw Pact."
+  ]
+ ]},
+ {"id": "multihop-rag-1349", "sentences": [
+  [
+   "DeepMind is Google's premier AI research lab.",
+   "DeepMind is expected to debut a next-gen chatbot called Gemini.",
+   "The Gemini chatbot debut is expected before the end of the year."
+  ],
+  [
+   "DeepMind did not release the full model, Gemini Ultra.",
+   "DeepMind released only a \"lite\" version called Gemini Pro."
+  ]
+ ]},
+ {"id": "5a8501915542997175ce1f5a", "sentences": [
+  [
+   "PC Magazine is shortened as PCMag.",
+   "PC Magazine is an American computer magazine.",
+   "PC Magazine is published by Ziff Davis."
+  ],
+  [
+   "The magazine focuses on sculpture.",
+   "The magazine focuses on sculpture collectors.",
+   "The magazine focuses on sculpture enthusiasts.",
+   "Painting is also frequently featured in the magazine.",
+   "Poetry is also frequently featured in the magazine."
+  ]
+ ]},
+ {"id": "6572568689091749101", "sentences": [[
+  "John Ernest Crawford was born March 26, 1946.",
+  "John Ernest Crawford is an American character actor.",
+  "John Ernest Crawford is an American singer.",
+  "John Ernest Crawford is an American musician.",
+  "At age 12, John Ernest Crawford rose to fame for playing Mark McCain.",
+  "Mark McCain is the son of Lucas McCain.",
+  "Lucas McCain was played by Chuck Connors.",
+  "Crawford played Mark McCain in the popular ABC Western series The Rifleman.",
+  "The Rifleman originally aired from 1958 to 1963.",
+  "John Ernest Crawford first performed before a national audience as a Mouseketeer."
+ ]]},
+ {"id": "-6618086333609794035", "sentences": [[
+  "Stone tools were made from a variety of stones.",
+  "Flint and chert were shaped, or chipped, for use as cutting tools and weapons.",
+  "Basalt and sandstone were used for ground stone tools.",
+  "Basalt and sandstone were used for ground stone tools such as quern-stones.",
+  "Wood, bone, shell, and antler (deer) were widely used materials.",
+  "Other materials were widely used as well.",
+  "During the most recent part of the period, sediments such as clay were used to make pottery.",
+  "Agriculture was developed.",
+  "Certain animals were domesticated."
+ ]]}
+]

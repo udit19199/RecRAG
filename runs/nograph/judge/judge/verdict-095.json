@@ -1,0 +1,50 @@
+[
+  {"id": "92a7ed8364d1e478", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "prosecutor Thane Rehn told the court."}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "da4cae92c570b7f0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "His career has only blossomed in the years since he took that trip"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "some artists might feel trepidation at the attainment of so much success from such an early age"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Mitchell is clear-eyed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Since then he’s been linked to club jobs in Europe"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "opted to stick around with the national team."}]}
+  ]},
+  {"id": "d62f7d73dc5fa7e9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "with the Director-General of the National Economic and Development Authority"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]}
+  ]},
+  {"id": "5f2271f4e5f9b672", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "711fe130b16425b2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "One of the major sources of Gen Z’s distress, of course, is climate change."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+    {"fact": "1.6", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+    {"fact": "1.7", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]},
+    {"fact": "1.8", "status": "stated", "evidence": [{"item": 7, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."}]}
+  ]}
+]

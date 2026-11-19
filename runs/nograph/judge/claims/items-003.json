@@ -1,0 +1,76 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-5738880170312599174",
+   "sentences": [
+    "The Raiders had a great chance to score a touchdown early in the game after cornerback Charles Woodson intercepted Buccaneers quarterback Brad Johnson 's pass on the third play of the game and returned it 12 yards to the Tampa Bay 36 - yard line . However , six plays later , Tampa Bay defensive end Simeon Rice sacked Raiders quarterback Rich Gannon on third down , forcing Oakland to settle for kicker Sebastian Janikowski 's 40 - yard field goal to give them a 3 -- 0 lead .",
+    "Still , even Gruden had trouble getting the offense in sync during his first year as Tampa Bay 's head coach . In 2002 , the Buccaneers ranked 25th in the league in total yards gained ( 5,222 ) . Quarterback Brad Johnson made the Pro Bowl , completing 281 out of 451 passes for 3,049 yards , 22 touchdowns , and only 6 interceptions . Running back Michael Pittman led the team in rushing with 718 yards and one touchdown , and caught 59 passes for 477 yards . Pro Bowl fullback Mike Alstott had 548 rushing yards and 5 touchdowns , and also had 35 receptions for 242 yards and 2 touchdowns . Wide receiver Keyshawn Johnson led the team with 76 receptions for 1,088 yards and 5 touchdowns , while wide receiver Keenan McCardell had 61 receptions for 670 yards and 6 touchdowns ."
+   ]
+  },
+  {
+   "id": "-2446865335924530326",
+   "sentences": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ]
+  },
+  {
+   "id": "8467542931261548456",
+   "sentences": [
+    "The Ming dynasty also engaged in a thriving trade with both Europe and Japan . The amount of silver flowing into the Ming dynasty was estimated by Joseph Needham at 300 million taels , which is equivalent to more than 190 billion dollars in today 's money . In addition to silver , the Ming also imported many European firearms , in order to ensure the modernness of their weapons ."
+   ]
+  },
+  {
+   "id": "5a78d16455429974737f78bb",
+   "sentences": [
+    "Prof. Dr. Ernst Willi Messerschmid (born May 21, 1945) is a German physicist and former astronaut.",
+    "Philippe Perrin (Colonel, French Air Force) (born January 6, 1963) is a French test pilot and former CNES and European Space Agency astronaut."
+   ]
+  },
+  {
+   "id": "5ab56f7a554299637185c59a",
+   "sentences": [
+    "Not Richard, But Dick is the seventh studio album by The Dead Milkmen, released in 1993 by Hollywood Records.",
+    "The Dead Milkmen are an American punk rock band formed in 1983 in Philadelphia, Pennsylvania."
+   ]
+  },
+  {
+   "id": "multihop-rag-2235",
+   "sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5ae256435542992decbdccc3",
+   "sentences": [
+    "The City Heiress is a play by Aphra Behn produced in 1682.",
+    "Aphra Behn ( ; 14 December 1640?",
+    " (baptismal date)–16 April 1689) was a British playwright, poet, translator and fiction writer from the Restoration era."
+   ]
+  },
+  {
+   "id": "1213934315672255524",
+   "sentences": [
+    "A defensive three - second violation , also known as illegal defense , is a basketball rules infraction in the National Basketball Association ( NBA ) introduced in the 2001 -- 2002 season . It is assessed when a member of the defending team spends more than three seconds in the free throw lane ( also known as the 16 - foot lane , or colloquially as `` in the paint '' ) while not actively guarding an opponent . To be considered actively guarding , a defender must be within arm 's length of an opponent and in a guarding position . A three - second count is suspended if :"
+   ]
+  },
+  {
+   "id": "5a7c96765542990527d554d8",
+   "sentences": [
+    "Ralph Foster Smart {'1': \", '2': \", '3': \", '4': \"} (27 August 1908 – 12 February 2001) was a film and television producer, director, and writer, born in England to Australian parents.",
+    "Randolph Severn \"Trey\" Parker III (born October 19, 1969) is an American actor, animator, writer, director, producer, singer, and songwriter."
+   ]
+  },
+  {
+   "id": "5ac3d4b6554299204fd21e93",
+   "sentences": [
+    "Jack and Jill is an American bimonthly magazine for children 7 to 12 years old that takes its title from the nursery rhyme of the same name.",
+    "Paper, stylized as PAPER, is a New York City-based independent magazine focusing on fashion, popular culture, nightlife, music, art and film."
+   ]
+  }
+ ]
+}

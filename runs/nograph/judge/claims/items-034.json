@@ -1,0 +1,86 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae2e06d55429928c4239521",
+   "sentences": [
+    "Vytautas Kevin Gerulaitis (July 26, 1954 – September 17, 1994) was an American professional tennis player.",
+    "Heather Miriam Watson (born 19 May 1992) is a British tennis player and a Wimbledon Mixed Doubles Champion."
+   ]
+  },
+  {
+   "id": "5a812cd555429926c1cdacfc",
+   "sentences": [
+    " It consists of three shots, two Sourz Apple and one Cherry Brandy.",
+    " Each shot is taken from an average shot glass which is around 1.5 ounces (roughly 45 ml).",
+    "The flaming volcano is a large tropical group cocktail made of rum, brandy, pineapple juice, orange juice, almond syrup, and sometimes other ingredients.",
+    " It is usually a multi-user drink, served to a group in a special, ritual vessel known as a volcano bowl, which is a decorative ceramic bowl (typically of about 32 USoz capacity) designed with a rising central hub feature usually resembling a crude volcano cone."
+   ]
+  },
+  {
+   "id": "multihop-rag-1581",
+   "sentences": [
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.",
+    "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."
+   ]
+  },
+  {
+   "id": "multihop-rag-1903",
+   "sentences": [
+    "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.",
+    "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "multihop-rag-848",
+   "sentences": [
+    "For all the other benefits they get from Android, Google could solve this problem today if they wanted to.",
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-1236",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).",
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-447",
+   "sentences": [
+    "At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.",
+    "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."
+   ]
+  },
+  {
+   "id": "5ab5574b554299488d4d994e",
+   "sentences": [
+    "Robin R. Bottin (born April 1, 1959) is an American special make-up effects creator.",
+    " Known for his collaborations with directors John Carpenter, Paul Verhoeven and David Fincher, Bottin worked with Carpenter on both \"The Fog\" and \"The Thing\", with Verhoeven on \"RoboCop\", \"Total Recall\" and \"Basic Instinct\", and with Fincher on \"Se7en\" and \"Fight Club\".",
+    "David Andrew Leo Fincher (born August 28, 1962) is an American director and producer, notably for films, television series and music videos.",
+    " He was nominated for the Academy Award for Best Director for \"The Curious Case of Benjamin Button\" (2008) and \"The Social Network\" (2010).",
+    " For the latter, he won the Golden Globe Award for Best Director and the BAFTA Award for Best Direction."
+   ]
+  },
+  {
+   "id": "5ac3090d5542990b17b154fc",
+   "sentences": [
+    "Operalia, The World Opera Competition is an annual international competition for young opera singers.",
+    " Founded in 1993 by Plácido Domingo, the competition has helped launch the careers of several important artists, such as Joseph Calleja, Giuseppe Filianoti, Rolando Villazón, José Cura, Joyce DiDonato, Elizabeth Futral, Inva Mula, Ana María Martínez and Sonya Yoncheva.",
+    "Sonya Yoncheva (Bulgarian: Соня Йончева, born 25 December 1981) is a Bulgarian operatic soprano."
+   ]
+  },
+  {
+   "id": "5a762cf0554299109176e6a4",
+   "sentences": [
+    "Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space.",
+    "Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions."
+   ]
+  }
+ ]
+}

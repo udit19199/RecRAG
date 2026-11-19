@@ -1,0 +1,68 @@
+[
+  {
+    "id": "dfc16fa0ef587644",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+    ]
+  },
+  {
+    "id": "cd356028e6fcea3f",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.5", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.6", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+    ]
+  },
+  {
+    "id": "d96148ffa119d50d",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "0.5", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes."}]}
+    ]
+  },
+  {
+    "id": "04936a867c9de9f6",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]}
+    ]
+  },
+  {
+    "id": "be155b6072d08fde",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+    ]
+  }
+]

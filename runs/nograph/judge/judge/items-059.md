@@ -1,0 +1,814 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=fc69cc800f002c73 ===
+Gold sentences and facts:
+Sentence 0: Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+  Fact 0.0: Google unveiled new hardware.
+  Fact 0.1: Google held its annual hardware event this week.
+  Fact 0.2: Google is a search and consumer tech giant.
+  Fact 0.3: At its annual hardware event, Google showed off what it has been working on.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed the article for not meeting its standards.
+  Fact 1.1: The article was shared widely on social media.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The extent to which the article was shared and boosted shows how willing people are to accept foul play on Google's part.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google "siphons off" news publishers' content.
+  Fact 2.2: The case argues that Google "siphons off" news publishers' readers.
+  Fact 2.3: The case argues that Google "siphons off" news publishers' ad revenue.
+  Fact 2.4: The case argues that Google obtains these through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Some critics, including Megan Grey, contend that Google uses semantic keyword matching to make searches less precise on purpose, which widens the pool of
+content served and increases auctions for its ads. The quality tests, then, would ensure that the systems were still returning results that were justifiably
+related to the input.
+</item 2>
+
+<item 3>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 8>
+
+<item 9>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 10>
+=== END ITEM id=fc69cc800f002c73 ===
+
+=== ITEM id=8ad0584e807585e5 ===
+Gold sentences and facts:
+Sentence 0: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 0.0: The planned argument will attempt to argue that Google restrains competition within two separate markets.
+  Fact 0.1: The two markets include the distribution of apps to Android users.
+  Fact 0.2: The two markets include the market for payment processing solutions for content inside Android apps.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed the article for not meeting its standards.
+  Fact 1.1: The degree to which the article was shared on social media shows just how willing people are to accept foul play on Google's part.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The degree to which the article was boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google's part.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 2>
+
+<item 3>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 3>
+
+<item 4>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+That sounds fascinating, but if I don’t care about Fortnite or rich companies suing each other, what’s in it for me?
+
+The future of Google’s app store could depend on this trial — both Epic and Google agree on that. Epic wants to break up Google’s alleged monopoly on Android
+app stores and payment methods, so developers aren’t stuck paying the “Google Tax” or passing that fee along to you.
+
+But if Epic wins — according to Google, anyhow — it could make Android phones less safe by dismantling basic protections against sideloaded apps, and damage
+Android’s ability to compete with the iPhone because it (arguably) can’t run a competitive app store by giving it away for free.
+
+Or maybe you just want juicy dirt on both companies? More on that later!
+
+What exactly is Epic claiming?
+
+Epic argues that Google makes it so difficult for developers and users to get around its Android app store, and that app store’s standard fees, that it’s
+created an illegal monopoly that unjustly enriches Google while artificially driving up app prices because other stores can’t compete.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 5>
+
+<item 6>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 6>
+
+<item 7>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 7>
+
+<item 8>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+As an example, Epic will point to Activision Blizzard, the owner of King.com and maker of Candy Crush and Call of Duty, as one developer that wanted to go the
+route of opening its own app store. Google and Activision Blizzard then entered into a three-year agreement in January 2020, worth approximately $360 million,
+to keep the developer on Google Play, Epic will argue.
+
+Google, however, will characterize this program as a way to incentivize developers to launch their apps on Android at the same time as they launch on iOS and
+plans to dispute Epic’s claims that it prevented developers from opening their own app stores.
+
+Android allows sideloading
+
+Google will make note that, unlike Apple, it also allows apps to be sideloaded on Android devices — something Epic takes advantage of today. It will note this
+process is streamlined and helps keep users safe.
+</item 8>
+
+<item 9>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 9>
+
+<item 10>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 10>
+=== END ITEM id=8ad0584e807585e5 ===
+
+=== ITEM id=81307c0019da61ea ===
+Gold sentences and facts:
+Sentence 0: Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.
+  Fact 0.0: Back then, as today, home prices had boomed for years.
+  Fact 0.1: Fed officials were ultimately forced to hike interest rates.
+  Fact 0.2: Fed officials hiked interest rates aggressively in an attempt to fight inflation.
+  Fact 0.3: Home prices had boomed for years before Fed officials hiked interest rates.
+Sentence 1: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 1.0: Postponements of such reports could complicate things for the Fed.
+  Fact 1.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+
+Retrieved items:
+<item 1>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 1>
+
+<item 2>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Infratil (down 3.6 per cent), Meridian Energy (down 2.7 per cent) and Resmed (down 2 per cent) were among the biggest large-cap decliners. The lowdown The
+Australian sharemarket shook off a positive lead from Wall Street on Wednesday after hotter-than-expected inflation data raised the prospect of another interest
+rate rise at the Reserve Bank’s next meeting, which would weigh on the equity market. Interest-rate sensitive sectors, including REITS and consumer companies,
+were among the weakest on the local bourse as investors digested the news.
+
+GSFM investment strategist Stephen Miller said the inflation data, taken with the October Reserve Bank board meeting minutes, which revealed the board had “low
+tolerance for a slower return of inflation to target than currently expected”, made the possibility of an interest rate rise from the central bank in November a
+“near certainty”. However, commodity prices supported mining companies as iron ore prices increased 2.9 per cent overnight, bolstering Australia’s iron ore
+giants.
+</item 2>
+
+<item 3>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 3>
+
+<item 4>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 4>
+
+<item 5>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 5>
+
+<item 6>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 6>
+
+<item 7>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 7>
+
+<item 8>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 8>
+
+<item 9>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 9>
+
+<item 10>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 10>
+=== END ITEM id=81307c0019da61ea ===
+
+=== ITEM id=d8a65838eb230b19 ===
+Gold sentences and facts:
+Sentence 0: Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No.
+  Fact 0.0: The section is titled 'Love Story'.
+  Fact 0.1: This brings us to the fated sighting of Swift at Arrowhead Stadium.
+  Fact 0.2: The fated sighting of Swift at Arrowhead Stadium was on Monday.
+  Fact 0.3: Swift was cheering on No.
+Sentence 1: The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.
+  Fact 1.0: The game is taking place at Arrowhead Stadium.
+  Fact 1.1: Swift has performed at Arrowhead Stadium herself.
+  Fact 1.2: Swift has attended a game at Arrowhead Stadium before.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide.
+  Fact 2.1: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+87 with gusto.
+
+The 12-time Grammy winner appeared to shout “let’s f—ing go” after Kelce scored a touchdown before chest-bumping other Chiefs fans. Considering Swift is known
+for being an Eagles fan – she’s originally from Pennsylvania and even references the team in Gold Rush – her outward support for the Kelce’s team seemed extra
+telling. Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together. If that wasn’t enough, extra observant fans
+were able to note that Kelce’s blue and white post-game outfit was supposedly labelled the “1989 bedroom painting set”, perhaps an intentional reference to
+Swift’s 2014 album, which she will be re-releasing in October. Swift’s penchant for Easter eggs must be rubbing off on the tight end player. As if this weren’t
+enough subtle references already, they were also spotted in a “getaway car” together outside the stadium – potentially a nod towards her 2017 track.
+</item 1>
+
+<item 2>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+After the game, which saw the Chiefs beat the Chicago Bears 41-10, Kelce was seen leaving the stadium in a blue and white splatter-paint denim suit. Eagle-eyed
+fans were quick to believe that Kelce’s outfit paid homage to Swift’s forthcoming album, 1989 (Taylor’s Version), which is due for re-release on 27 October.
+
+After the two escaped the crowd at Arrowhead Stadium in Kelce’s convertible, according to photos and videos posted online, the football star reportedly rented
+out Prime Social Rooftop in Kansas City for a post-game celebration with his family, his teammates, and Swift.
+
+“Travis bought out the restaurant for his family and team. Taylor arrived, wearing a denim dress, and was seen snacking, having some cocktails and dancing
+alongside Travis,” the witness told Entertainment Tonight. “The two were very affectionate with one another but kept things fun and lighthearted.
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Oct. 15: Kelce, Swift make 'SNL' cameos
+
+The two were spotted out in NYC together and then had a surprise appearance on "Saturday Night Live." Kelce had a cameo in a skit about how much coverage Swift
+was getting during games, while the singer introduced the musical act of the night, Ice Spice.
+
+Oct. 22: Swift attends fifth Chiefs game
+
+Swift has now attended games broadcast across all five networks (CBS, NBC, Fox, ESPN and Amazon). This week, she is watching the Chiefs face the Chargers and
+will be shown on CBS. She is sporting a Chiefs sweatshirt and is seated next to Kansas City quarterback Patrick Mahomes' wife, Brittany.
+</item 3>
+
+<item 4>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 4>
+
+<item 5>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 5>
+
+<item 6>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She explained that she doesn’t necessarily pay attention to the cameras and fans around her in those stadiums because she is watching her boyfriend play.
+
+(Denver Post via Getty Images)
+
+“I’m just there to support Travis,” she said. “I have no awareness of if I’m being shown too much and pissing off a few dads, Brads, and Chads.”
+
+When discussing how many Swifties have now started watching NFL games since she started dating Kelce, she quipped about how much she likes the sport. “Football
+is awesome, it turns out,” she joked. “I’ve been missing out my whole life.”
+
+Swift’s effect on the NFL didn’t go unnoticed in October, as one game between the Chiefs and New York Jets - which she attended with some of her famous friends
+- became the most-watched Sunday NFL show since the Super Bowl LVII in February 2023.
+</item 6>
+
+<item 7>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 7>
+
+<item 8>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+“Well I know for DAMN SURE that s*** about ‘having kids within the next year’ is NOT coming from Taylor’s side,” one claimed. “She’s got the Eras Tour booked
+all through next year, and she’d rather die than cancel a show. But we do know who’s been public about looking for a ‘BREEDER.’”
+
+The comments about Travis and Swift’s romance came days after they seemingly confirmed their relationship. On 22 October, Swift made her return to Arrowhead
+Stadium to watch as the Kansas City Chiefs won their game against the Los Angeles Chargers. The occasion marked Swift’s fourth time attending one of Kelce’s
+games, amid ongoing reports that they are dating.
+
+Following the event, Chariah Gordon, the partner of Kelce’s teammate Mecole Hardman Jr, took to Instagram to share a snap of the singer and NFL player’s sweet
+PDA moment. In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But at the same time, they're overdoing it a little bit."
+
+Jason also chimed in on the matter, saying, "I just think the NFL is not used to celebrities coming to the games. Like basketball has it all figured out.
+They're all courtside, they're sitting there. They show 'em once or twice, but then they get back to the game."
+
+Oct. 12: Swift attends Chiefs-Broncos
+
+"Now it's too late for you and your white horse *Bronco, to come around" - White Horse
+
+One day after her movie premiere, Swift is in the house for the Chiefs' "Thursday Night Football" divisional matchup against the Broncos. The game is taking
+place at Arrowhead Stadium, where Swift has performed herself and attended a game before. According to Al Michaels, the game will have minimal Swift coverage,
+though so far there has already been a mention of the superstar.
+
+Oct.
+</item 10>
+=== END ITEM id=d8a65838eb230b19 ===
+
+=== ITEM id=dd84d18767a99fd9 ===
+Gold sentences and facts:
+Sentence 0: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 0.0: Swift has shared that she has nothing to hide.
+  Fact 0.1: Swift is in a new relationship with Kelce.
+  Fact 0.2: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: The podcast host, referred to as 'he', later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The invitation was to a game at Arrowhead Stadium.
+  Fact 1.2: The 'Anti-Hero' singer accepted the invitation.
+  Fact 1.3: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in." - Gold Rush
+
+While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.
+
+"It is hilarious how much traction this has actually got," he said of all the talk. "It's like that old game in school called telephone where everybody is just
+whispering in each others ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."
+
+He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the
+Chiefs.
+
+"I threw it out there, I threw the ball in her court and I told her you know, I've seen you rock the stage in Arrowhead you might have to come see me rock the
+stage in Arrowhead and see which one is a little more lit. We will see what happens in the near future."
+</item 2>
+
+<item 3>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+“OF ALL 230 SONGS IN THE DISCOGRAPHY I’M SICK,” one fan commented, while another person wrote: “It’s unbelievable how invested I am in this.”
+
+“I’m gonna need to go back and see all photos of him from the last three months and dissect if he’s wearing friendship bracelets,” a third wrote.
+
+In other photos from the charity event - which were shared to Instagram by Jordan’s KC photography - Kelce wasn’t seen wearing the friendship bracelet, leading
+many people to believe that he received the bracelet from a fan that day.
+
+Two days after his charity event, the “All Too Well” singer was spotted cheering for the Kansas City Chiefs tight end from the box seats at Arrowhead Stadium in
+Kansas City, Missouri. Not only was she seen sitting next to Kelce’s mother, Donna, but she also appeared to yell “let’s f***ing go” in response to Kelce’s
+third-quarter touchdown reception.
+</item 3>
+
+<item 4>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Fans have spotted Travis Kelce wearing a friendship bracelet with Taylor Swift lyrics on it, just days before she attended his Kansas City Chiefs game.
+
+In a video posted to TikTok on 25 September, a fan shared a photo of Kelce posing with the piece of jewellery on his wrist. The post came after Swift was seen
+enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating.
+</item 4>
+
+<item 5>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+After the game, which saw the Chiefs beat the Chicago Bears 41-10, Kelce was seen leaving the stadium in a blue and white splatter-paint denim suit. Eagle-eyed
+fans were quick to believe that Kelce’s outfit paid homage to Swift’s forthcoming album, 1989 (Taylor’s Version), which is due for re-release on 27 October.
+
+After the two escaped the crowd at Arrowhead Stadium in Kelce’s convertible, according to photos and videos posted online, the football star reportedly rented
+out Prime Social Rooftop in Kansas City for a post-game celebration with his family, his teammates, and Swift.
+
+“Travis bought out the restaurant for his family and team. Taylor arrived, wearing a denim dress, and was seen snacking, having some cocktails and dancing
+alongside Travis,” the witness told Entertainment Tonight. “The two were very affectionate with one another but kept things fun and lighthearted.
+</item 5>
+
+<item 6>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Oct. 15: Kelce, Swift make 'SNL' cameos
+
+The two were spotted out in NYC together and then had a surprise appearance on "Saturday Night Live." Kelce had a cameo in a skit about how much coverage Swift
+was getting during games, while the singer introduced the musical act of the night, Ice Spice.
+
+Oct. 22: Swift attends fifth Chiefs game
+
+Swift has now attended games broadcast across all five networks (CBS, NBC, Fox, ESPN and Amazon). This week, she is watching the Chiefs face the Chargers and
+will be shown on CBS. She is sporting a Chiefs sweatshirt and is seated next to Kansas City quarterback Patrick Mahomes' wife, Brittany.
+</item 6>
+
+<item 7>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 7>
+
+<item 8>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+The dating speculation first began in July, when Kelce confessed that he tried and failed to give Swift a friendship bracelet with his number on it during her
+Eras Tour show. On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24
+September. Since then, Swift has attended three more of Kelce’s games.
+
+Kelce showed his support for Swift when he attended her Eras Tour show in Buenos Aires, Argentina, on 11 November. During the concert, Swift gave a shout-out to
+the Chiefs player when she changed her “Karma” lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang,
+letting out a laugh as fans in the audience screamed in response. The “All Too Well” singer was later seen running into his arms and kissing the NFL player
+following the concert, as he whisked her away backstage.
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 9>
+
+<item 10>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 10>
+=== END ITEM id=dd84d18767a99fd9 ===

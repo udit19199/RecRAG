@@ -1,0 +1,52 @@
+[
+ {"id": "5ae2e06d55429928c4239521", "sentences": [
+   ["Vytautas Kevin Gerulaitis was born on July 26, 1954.", "Vytautas Kevin Gerulaitis died on September 17, 1994.", "Vytautas Kevin Gerulaitis was an American professional tennis player."],
+   ["Heather Miriam Watson was born on 19 May 1992.", "Heather Miriam Watson is a British tennis player.", "Heather Miriam Watson is a Wimbledon Mixed Doubles Champion."]
+ ]},
+ {"id": "5a812cd555429926c1cdacfc", "sentences": [
+   ["The described drink consists of three shots.", "The described drink has two shots of Sourz Apple.", "The described drink has one shot of Cherry Brandy."],
+   ["Each shot is taken from an average shot glass.", "An average shot glass holds around 1.5 ounces (roughly 45 ml)."],
+   ["The flaming volcano is a large tropical group cocktail.", "The flaming volcano is made of rum, brandy, pineapple juice, orange juice and almond syrup.", "The flaming volcano is sometimes made with other ingredients."],
+   ["The flaming volcano is usually a multi-user drink.", "The flaming volcano is served to a group in a special ritual vessel known as a volcano bowl.", "A volcano bowl is a decorative ceramic bowl.", "A volcano bowl typically has a capacity of about 32 USoz.", "A volcano bowl is designed with a rising central hub feature.", "The rising central hub feature of a volcano bowl usually resembles a crude volcano cone."]
+ ]},
+ {"id": "multihop-rag-1581", "sentences": [
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google “siphons off” news publishers’ content.", "The case argues that Google siphons off news publishers’ readers.", "The case argues that Google siphons off news publishers’ ad revenue.", "The case argues that Google does this through anticompetitive means."],
+   ["Epic will also suggest that Google hid items from discovery.", "Epic will suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats.", "Google will counter this as well.", "Google will say it has provided the court with thousands of chat logs.", "Google will say it has provided the court with millions of documents."]
+ ]},
+ {"id": "multihop-rag-1903", "sentences": [
+   ["Sam is one of the most brilliant and impactful people the industry has ever had.", "Sam is more important as one of the most generous and caring people the speaker knows than as one of the most brilliant and impactful people the industry has ever had.", "Sam is one of the most generous and caring people the speaker knows."],
+   ["Altman is not trained as an AI engineer.", "Altman is now 38.", "Altman has been seen as a Silicon Valley wunderkind since his early 20s."],
+   ["The prevailing theory floating around right now is based on the board’s language.", "The prevailing theory floating around right now is based on the way these giant tech companies work.", "The described theory is the prevailing theory floating around right now."]
+ ]},
+ {"id": "multihop-rag-848", "sentences": [
+   ["Device makers get other benefits from Android.", "Google could solve the described problem today if Google wanted to."],
+   ["The Justice Department is focused on the deals Google makes.", "Google makes deals with Apple.", "Google makes deals with Samsung.", "Google makes deals with Mozilla.", "Google makes deals with many others.", "The deals are meant to ensure Google is the default search engine on practically every platform."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google “siphons off” news publishers’ content.", "The case argues that Google siphons off news publishers’ readers.", "The case argues that Google siphons off news publishers’ ad revenue.", "The case argues that Google does this through anticompetitive means."]
+ ]},
+ {"id": "multihop-rag-1236", "sentences": [
+   ["Rehn declared to the jury that “all of that, all of it, was built on lies.”"],
+   ["Bankman-Fried was compared to Warren Buffet.", "Many people called Bankman-Fried the white horse of crypto.", "TechCrunch never called Bankman-Fried the white horse of crypto."],
+   ["The second week of the trial’s standout testimony came from Caroline Ellison.", "Caroline Ellison is Alameda Research’s former CEO.", "Caroline Ellison claimed she took $14 billion from customers.", "Caroline Ellison claimed the $14 billion was used to repay debts to lenders.", "Caroline Ellison claimed customers were used as a line of credit.", "Caroline Ellison claimed this was done under the instruction of SBF."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.", "The defense countered that the FTX founder acted in good faith.", "The defense countered that the FTX founder never meant to commit fraud or steal.", "The defense countered that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "multihop-rag-447", "sentences": [
+   ["At the time, the music video for the song featured a woman with blonde hair.", "The music video sparked rumours that he and Spears broke up.", "The rumours said the breakup happened because Spears allegedly cheated on him."],
+   ["Danis’s first press conference for the Logan Paul fight hints towards the breakup.", "Danis held a first press conference for the Logan Paul fight."]
+ ]},
+ {"id": "5ab5574b554299488d4d994e", "sentences": [
+   ["Robin R. Bottin was born on April 1, 1959.", "Robin R. Bottin is an American special make-up effects creator."],
+   ["Robin R. Bottin is known for collaborations with directors John Carpenter, Paul Verhoeven and David Fincher.", "Robin R. Bottin worked with John Carpenter on “The Fog”.", "Robin R. Bottin worked with John Carpenter on “The Thing”.", "Robin R. Bottin worked with Paul Verhoeven on “RoboCop”.", "Robin R. Bottin worked with Paul Verhoeven on “Total Recall”.", "Robin R. Bottin worked with Paul Verhoeven on “Basic Instinct”.", "Robin R. Bottin worked with David Fincher on “Se7en”.", "Robin R. Bottin worked with David Fincher on “Fight Club”."],
+   ["David Andrew Leo Fincher was born on August 28, 1962.", "David Andrew Leo Fincher is an American director and producer.", "David Andrew Leo Fincher is notably known for films, television series and music videos."],
+   ["David Fincher was nominated for the Academy Award for Best Director for “The Curious Case of Benjamin Button” (2008).", "David Fincher was nominated for the Academy Award for Best Director for “The Social Network” (2010)."],
+   ["For “The Social Network”, David Fincher won the Golden Globe Award for Best Director.", "For “The Social Network”, David Fincher won the BAFTA Award for Best Direction."]
+ ]},
+ {"id": "5ac3090d5542990b17b154fc", "sentences": [
+   ["Operalia, The World Opera Competition is an annual international competition.", "Operalia is a competition for young opera singers."],
+   ["Operalia was founded in 1993.", "Operalia was founded by Plácido Domingo.", "Operalia has helped launch the careers of several important artists.", "Operalia has helped launch the career of Joseph Calleja.", "Operalia has helped launch the career of Giuseppe Filianoti.", "Operalia has helped launch the career of Rolando Villazón.", "Operalia has helped launch the career of José Cura.", "Operalia has helped launch the career of Joyce DiDonato.", "Operalia has helped launch the career of Elizabeth Futral.", "Operalia has helped launch the career of Inva Mula.", "Operalia has helped launch the career of Ana María Martínez.", "Operalia has helped launch the career of Sonya Yoncheva."],
+   ["Sonya Yoncheva was born on 25 December 1981.", "Sonya Yoncheva’s Bulgarian name is Соня Йончева.", "Sonya Yoncheva is a Bulgarian operatic soprano."]
+ ]},
+ {"id": "5a762cf0554299109176e6a4", "sentences": [
+   ["Bertalan Farkas was born on August 2, 1949.", "Bertalan Farkas is the first Hungarian cosmonaut.", "Bertalan Farkas is the first Esperantist in space."],
+   ["Hans Wilhelm Schlegel was born in Überlingen on 3 August 1951.", "Hans Wilhelm Schlegel is a German physicist.", "Hans Wilhelm Schlegel is an ESA astronaut.", "Hans Wilhelm Schlegel is a veteran of two NASA Space Shuttle missions."]
+ ]}
+]

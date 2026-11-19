@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1555",
+   "sentences": [
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a8072a5554299485f5985f1",
+   "sentences": [
+    "The 2015 Africa Magic Viewers Choice Awards (AMVCA) was held on March 7, 2015 at the Eko Hotel and Suites, Victoria Island, Lagos, Nigeria.",
+    "Lagos initially emerged as a port city which originated on a collection of islands, which are contained in the present day Local Government Areas (LGAs) of Lagos Island, Eti-Osa, Amuwo-Odofin and Apapa; the islands are separated by creeks, fringing the southwest mouth of Lagos Lagoon, while protected from the Atlantic Ocean by barrier islands and long sand spits such as Bar Beach, which stretch up to 100 km east and west of the mouth."
+   ]
+  },
+  {
+   "id": "-8463303168185775472",
+   "sentences": [
+    "Spike , occasionally referred to as Butch or Killer , is a stern but occasionally dumb American bulldog who is particularly disapproving of cats , but a softie when it comes to mice ( though in his debut appearance , Dog Trouble , Spike goes after both Tom and Jerry ) , and later , his son Tyke . In the shorts Jerry would often try to get Tom in trouble with Spike making him a shoo - in for a beating from the bulldog . Spike has a few weaknesses that Tom tries to capitalize upon : his possessiveness about his bone and his ticklishness . He made his first appearance in the 1942 Tom and Jerry cartoon Dog Trouble , and his first speaking role was in 1944 's The Bodyguard , where he was voiced by Billy Bletcher up until 1949 , from which point he was voiced by Daws Butler . Unlike his father Spike , Tyke does not speak . He only communicates by yapping , whimpering , growling , facial expressions and wagging his tail . In Tom and Jerry Kids , Tyke does have a speaking role in the program and is the first time that viewers were able to hear Tyke speak . Spike is very protective towards his son and gets very angry at Tom if Tyke is bothered or harmed . Although Tyke has spoken in Tom and Jerry Kids , he has laughed in one Tom and Jerry short . After Daws Butler , Maurice LaMarche , Frank Welker , John DiMaggio , Michael Donovan , Phil LaMarr and currently Rick Zieff would all perform Spike 's voice . Tyke 's vocal effects are provided by Frank Welker and speaking roles by Patric Zimmerman ."
+   ]
+  },
+  {
+   "id": "5ac176555542994d76dcce47",
+   "sentences": [
+    "Henry Louis Mencken (September 12, 1880 – January 29, 1956) was an American journalist, satirist, cultural critic and scholar of American English.",
+    "Albert Camus (] ; 7 November 1913 – 4 January 1960) was a French philosopher, author, and journalist."
+   ]
+  },
+  {
+   "id": "multihop-rag-470",
+   "sentences": [
+    "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.",
+    "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+   ]
+  },
+  {
+   "id": "multihop-rag-723",
+   "sentences": [
+    "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton.",
+    "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot.",
+    "“Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."
+   ]
+  },
+  {
+   "id": "-1014091045618911654",
+   "sentences": [
+    "In probability theory , two events are independent , statistically independent , or stochastically independent if the occurrence of one does not affect the probability of occurrence of the other . Similarly , two random variables are independent if the realization of one does not affect the probability distribution of the other ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1997",
+   "sentences": [
+    "The artists’ groups noted in their statement on Tuesday that the European Commission “has on several occasions acknowledged concerns about the impact of the ruling and made clear its intention to find a balanced solution.",
+    "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.",
+    "And some of these staff will also be deployed within the European Commission,” they added.",
+    "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+   ]
+  },
+  {
+   "id": "5a7d043755429909bec768f7",
+   "sentences": [
+    "Basie Meets Bond is a 1966 album by Count Basie and his orchestra.",
+    " The album is a collection of musical pieces from the first four James Bond films; \"Dr No\", \"From Russia with Love\", \"Goldfinger\" and \"Thunderball\".",
+    "William James \"Count\" Basie (August 21, 1904 – April 26, 1984) was an American jazz pianist, organist, bandleader, and composer."
+   ]
+  },
+  {
+   "id": "5ac4e593554299076e296e37",
+   "sentences": [
+    " The song is one of only two Van Halen tracks featuring Sammy Hagar playing a rhythm guitar part, which he played on a Gibson acoustic.",
+    "OU812 (pronounced \"Oh You Ate One Too\") is the eighth studio album by American hard rock band Van Halen, released in 1988, and the second to feature vocalist Sammy Hagar."
+   ]
+  }
+ ]
+}

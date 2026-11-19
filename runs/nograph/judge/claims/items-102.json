@@ -1,0 +1,76 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae1cb04554299234fd042fd",
+   "sentences": [
+    " He received an excellent education in both Arabic and Greek, having studied Arabic grammar with the famous poet Abul ʿAla Al-Maʿarri.",
+    "Abul ʿAla Al-Maʿarri (Arabic أبو العلاء المعري \"Abū al-ʿAlāʾ al-Maʿarrī \", full name أبو العلاء أحمد بن عبد الله بن سليمان التنوخي المعري \"Abū al-ʿAlāʾ Aḥmad ibn ʿAbd Allāh ibn Sulaimān al-Tanūẖī al-Maʿarrī \"; December 973 – May 1057) was a blind Arab philosopher, poet, and writer."
+   ]
+  },
+  {
+   "id": "-1241024226866484626",
+   "sentences": [
+    "Texas Bowl Academy Sports + Outdoors Texas Bowl Stadium NRG Stadium Location Houston , Texas Operated 2006 -- present Conference tie - ins Big 12 , SEC Previous conference tie - ins Big East / C - USA / MWC ( alternating years ) ( 2006 -- 2009 ) Big Ten ( 2010 -- 2013 ) Payout US $ 3 million per team ( as of 2015 ) Preceded by Houston Bowl Sponsors Meineke Car Care ( 2011 -- 2012 ) AdvoCare ( 2014 -- 2016 ) Academy Sports + Outdoors ( 2017 - present ) Former names Texas Bowl ( 2006 -- 2010 ) Meineke Car Care Bowl of Texas ( 2011 -- 2012 ) Texas Bowl ( 2013 ) AdvoCare V100 Texas Bowl ( 2014 -- 2016 ) 2016 matchup Texas A&M vs. Kansas State ( Kansas State 33 -- 28 ) 2017 matchup Missouri vs Texas ( Texas 33 -- 16 )"
+   ]
+  },
+  {
+   "id": "5a76fda05542994aec3b71b0",
+   "sentences": [
+    "Martin Archer Flavin (November 2, 1883 – December 27, 1967) was an American playwright and novelist.",
+    "Peter Bradford Benchley (May 8, 1940 – February 11, 2006) was an American author and screenwriter."
+   ]
+  },
+  {
+   "id": "-8488338195071516656",
+   "sentences": [
+    "John James McCoy is a fictional character in the television drama Law & Order . He was created by Michael S. Chernuchin and portrayed by Sam Waterston from 1994 until the end of the series in 2010 . He is the second - longest tenured character on the show ( 16 seasons ) , after Lt. Anita Van Buren ( 17 seasons ; portrayed by S. Epatha Merkerson ) . He appeared in 368 episodes of Law & Order , four episodes of Law & Order : Special Victims Unit , two episodes of Law & Order : Trial by Jury , two episodes of Homicide : Life on the Street , and the made - for - TV movie Exiled .",
+    "Jack McCoy brings 24 years of experience with him as he is appointed executive assistant district attorney by Adam Schiff ( Steven Hill ) in the season - five premiere episode `` Second Opinion '' . He quickly establishes himself as a more unconventional , ruthless litigator than his predecessor , Ben Stone ( Michael Moriarty ) . He often bends -- and sometimes breaks -- trial rules to get convictions , finds tenuous rationales for charging defendants with crimes when the original charges fail to stick , and charges innocent people to frighten them into testifying against others . McCoy is found in contempt of court 80 times for such behavior , and his tactics occasionally incur negative publicity for the DA 's office . His underlying motivation , however , is not , he maintains , corruption , but a sincere desire to see justice done . To that end , McCoy has gone after defendants accused of perverting the justice system to arrange wrongful convictions with just as much determination as his more mundane cases . Such aggressive actions in the courts have earned him the nickname `` Hang ' em High McCoy '' . He has subsequently developed a reputation with both colleagues and rival attorneys , once being referred to as `` the top of the legal food chain '' by a rival attorney during a trial .",
+    "`` Entitled '' ( onscreen ) : McCoy makes his first appearance on the series . McCoy , working with his assistant , Abbie Carmichael ( Angie Harmon ) , assists the Special Victims Unit in solving a cold case , that Briscoe handled years ago with his former partner , Detective Mike Logan ( Chris Noth ) ."
+   ]
+  },
+  {
+   "id": "5a7148d25542994082a3e766",
+   "sentences": [
+    "Warrel Dane (born March 7, 1969) is the lead singer of the American power metal band Sanctuary.",
+    "Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter."
+   ]
+  },
+  {
+   "id": "multihop-rag-570",
+   "sentences": [
+    "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.",
+    "And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."
+   ]
+  },
+  {
+   "id": "-6939993637603870565",
+   "sentences": [
+    "Club Owner ( s ) Estimated combined net worth Source of wealth Arsenal ( more information ) E. Stanley Kroenke ( 67.05 % ) Alisher Usmanov ( 30.04 % ) 15 ! $22.4 B Kroenke Sports Enterprises Metal and mining , investment Bournemouth Maxim Demin ( 75 % ) PEAK6 Investments ( 25 % ) Petrochemicals trading Seven Developments Brighton & Hove Albion Tony Bloom ( 75.61 % ) 12 ! $1.7 B Online Gambling , Real Estate , Property , Land Development & Investments Burnley Mike Garlick ( 49.3 % ) John Banaszkiewicz ( 27.55 % ) 18 ! $80 M -- - Michael Bailey Associates Freight Investor Services Chelsea ( more information ) Roman Abramovich 03 ! $9.3 B Oil and industry Crystal Palace Steve Parish Martin Long Joshua Harris David S. Blitzer Jeremy Hosking Stephen Browett 15 ! $65 M $100 M $3.2 B $1.3 B $250 M $110 M Tag Worldwide Churchill Insurance Apollo Global Management Blackstone Group Marathon Asset Management Farr Vintners Everton ( more information ) Farhad Moshiri ( 49.9 % ) Bill Kenwright CBE Jon Woods 15 ! $2.3 B Steel and energy Theatre production Planet Hollywood Ocean Software Huddersfield Town Dean Hoyle 09 ! $475 M Card Factory Leicester City The Srivaddhanaprabha Family 10 ! $4.9 B King Power International Group Liverpool ( more information ) John W. Henry 11 ! $2.5 B Fenway Sports Group Manchester City ( more information ) Mansour bin Zayed Al Nahyan ( 87 % ) China Media Capital ( 13 % ) 01 ! $44 B Oil and industry investment Government Manchester United ( more information ) The Glazer Family 06 ! $4.9 B First Allied Corporation , Tampa Bay Buccaneers Newcastle United ( more information ) Mike Ashley 04 ! $3.3 B Sports Direct International Southampton Gao Jisheng ( 80 % ) Katharina Liebherr ( 20 % ) 07 ! $3.9 B + Lander Sports Development Co Ltd Inheritance Stoke City The Coates Family 08 ! $3.1 B Bet365 Swansea City Stephen Kaplan & Jason Levien ( 68 % ) Swansea City Supporters Trust ( 21.1 % ) -- - -- - Memphis Grizzlies and D.C. United Investment trust Tottenham Hotspur ( more information ) Joe Lewis ( 70.6 % of 85 % holding company ) Daniel Levy ( 29.4 % of 85 % holding company ) 05 ! $5.6 B -- - Tavistock Group ENIC Group Watford Gino Pozzo -- - Businessman West Bromwich Albion ( more information ) Guochuan Lai ( 87.8 % ) 18 ! $6.2 B Investment West Ham United ( more information ) David Sullivan ( 51.1 % ) David Gold ( 35.1 % ) Straumur Investment Bank ( 10 % ) 13 ! $520 M $325 M -- - Daily Sport , Sunday Sport Gold Group International Straumur Investment Bank",
+    "Club Owner ( s ) Estimated combined net worth ( £ m ) Source of wealth Aston Villa ( more information ) Dr. Tony Xia $1.2 B ! $1.2 B Recon Group Barnsley Patrick Cryne 14 ! $40 M iSOFT Birmingham City ( more information ) Paul Suen ( 60.78 % ) Wang Lei ( 5.28 % ) Carson Yeung ( 6.51 % ) 21 ! $570 M Birmingham International Holdings Bolton Wanderers Eddie Davies CBE 13 ! $52 M Strix Brentford Matthew Benham ( 96 % ) Bristol City Stephen Lansdown 01 ! $1.9 B Hargreaves Lansdown Burton Albion Ben Robinson Cardiff City Vincent Tan ( 51 % ) 01 ! $820 M Berjaya Group Derby County Mel Morris $520 M King Fulham ( more information ) Shahid Khan 09 ! $8.9 B Flex - N-Gate Corp ( automobile parts manufacturer ) Hull City The Allam Family 15 ! $325 M Allam Marine Ipswich Town Marcus Evans 02 ! $825 M Marcus Evans Group Leeds United Andrea Radrizzani Eleonora Sports Ltd Aser Group Company Middlesbrough Steve Gibson 10 ! $260 M Bulkhaul Limited Millwall John Berylson Richard Smith 11 ! $175 M Chestnut Hill Ventures Norwich City ( more information ) Delia Smith and Michael Wynn - Jones ( 53 % ) Michael Foulger ( 15 % ) 20 ! $30 M Food industry Publishing Poultry Nottingham Forest Evangelos Marinakis 21 ! $650 M Owner of Olympiacos F.C. Preston North End Trevor Hemmings CVO ( 51.4 % ) 02 ! $720 M Blackpool Tower , horse racing , investment , Northern Trust , Sportech Queens Park Rangers ( more information ) Tony Fernandes ( 66 % ) Lakshmi Mittal ( 33 % ) 03 ! $345 M $16.4 B Air Asia , Tune Group ArcelorMittal Reading ( more information ) Narin Niruttinanon ( 50 % ) Sasima Srivikorn ( 25 % ) Sumrith Thanakarnjanasuth ( 25 % ) Sheffield United Abdullah bin Musa'ed ( 50 % ) 03 ! $155 M Property Oil Sheffield Wednesday Dejphon Chansiri Thai Union Group Sunderland Ellis Short 09 ! $2.9 B Lone Star Funds , Skibo Castle Wolverhampton Wanderers Fosun International ( parent company ) Guo Guangchang ( co-owner of Fosun ) $6.2 B Investment"
+   ]
+  },
+  {
+   "id": "587999005951345244",
+   "sentences": [
+    "As a technique for drawing , the closest predecesor to the pencil was Silverpoint until in 1565 ( some sources say as early as 1500 ) , a large deposit of graphite was discovered on the approach to Grey Knotts from the hamlet of Seathwaite in Borrowdale parish , Cumbria , England . This particular deposit of graphite was extremely pure and solid , and it could easily be sawn into sticks . It remains the only large - scale deposit of graphite ever found in this solid form . Chemistry was in its infancy and the substance was thought to be a form of lead . Consequently , it was called plumbago ( Latin for `` lead ore '' ) . Because the pencil core is still referred to as `` lead '' , or a `` lead '' , many people have the misconception that the graphite in the pencil is lead , and the black core of pencils is still referred to as lead , even though it never contained the element lead . The words for pencil in German ( bleistift ) , Irish ( peann luaidhe ) , Arabic ( قلم رصاص qalam raṣāṣ ) , and some other languages literally mean lead pen ."
+   ]
+  },
+  {
+   "id": "-3208479537930323813",
+   "sentences": [
+    "The Osborne 1 is considered the first true mobile computer by most historians . Adam Osborne founded Osborne Computer and formed the Osborne 1 in 1981 . The Osborne 1 had a five - inch screen , incorporating a modem port , two 5 1 / 4 floppy drives , a big collection of bundled software applications , and a battery pack . The computer company was a failure and did not last for very long . Although it was large and heavy compared to today 's laptops , with a tiny 5 '' CRT monitor , it had a near - revolutionary impact on business , as professionals were able to take their computer and data with them for the first time . This and other `` luggables '' were inspired by what was probably the first portable computer , the Xerox NoteTaker . The Osborne was about the size of a portable sewing machine , and could be carried on commercial aircraft . The Osborne 1 weighed close to 11 kg and was priced at $1795 .",
+    "The portable micro computer the `` Portal '' of the French company R2E Micral CCMC officially appeared in September 1980 at the Sicob show in Paris . The Portal was a portable microcomputer designed and marketed by the studies and developments department of the French firm R2E Micral in 1980 at the request of the company CCMC specializing in payroll and accounting . It was based on an Intel 8085 processor , 8 - bit , clocked at 2 MHz . It was equipped with a central 64K byte Ram , a keyboard with 58 alpha numeric keys and 11 numeric keys ( separate blocks ) , a 32 - character screen , a floppy disk : capacity = 140 000 characters , of a thermal printer : speed = 28 characters / second , an asynchronous channel , a synchronous channel , a 220V power supply . Designed for an operating temperature of 15 ° C to 35 ° C , it weighed 12 kg and its dimensions were 45cm x 45cm x 15cm . It provided total mobility . Its operating system was Prologue .",
+    "The first laptop in the modern form was the Grid Compass 1101 , designed by Bill Moggridge in 1979 -- 80 , and released in 1983 . Enclosed in a magnesium case , it introduced the now familiar clamshell design , in which the flat display folded shut against the keyboard . The computer could be run from batteries , and was equipped with a 320 × 200 - pixel electroluminescent display and 384 kilobyte bubble memory . It was not IBM - compatible , and its high price ( US $ 8,000 -- 10,000 ) limited it to specialized applications . However , it was used heavily by the U.S. military , and by NASA on the Space Shuttle during the 1980s . The GRiD 's manufacturer subsequently earned significant returns on its patent rights as its innovations became commonplace . GRiD Systems Corp. was later bought by the Tandy ( now RadioShack ) Corporation ."
+   ]
+  },
+  {
+   "id": "5ae4d0ff55429913cc204511",
+   "sentences": [
+    " Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.",
+    "Greek Fire is an American rock band from St. Louis, Missouri."
+   ]
+  }
+ ]
+}

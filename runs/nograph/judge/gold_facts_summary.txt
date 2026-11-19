@@ -1,0 +1,11 @@
+Gold facts found, % of questions (>=50% / >=75% / 100% of facts), 250 MultiHop-RAG questions
+
+comparison_query
+  Normal RAG     r1 n=125: 54 / 29 / 16   r2 n=125: 54 / 29 / 17   r3 n=125: 54 / 29 / 17
+  A3 full agent  r1 n=125: 74 / 49 / 38   r2 n=125: 76 / 50 / 37   r3 n=125: 74 / 49 / 35
+  A1 no graph    r1 n=125: 78 / 52 / 39   r2 n=125: 85 / 54 / 36   r3 n=125: 82 / 54 / 43
+
+temporal_query
+  Normal RAG     r1 n=125: 52 / 25 / 15   r2 n=125: 52 / 25 / 15   r3 n=125: 52 / 25 / 15
+  A3 full agent  r1 n=125: 76 / 47 / 34   r2 n=125: 76 / 41 / 29   r3 n=125: 70 / 43 / 32
+  A1 no graph    r1 n=125: 70 / 47 / 34   r2 n=125: 69 / 42 / 29   r3 n=125: 75 / 45 / 35

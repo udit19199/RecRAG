@@ -1,0 +1,51 @@
+[
+{"id": "95b52c3dc19a8278", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "including the distribution of apps to Android users"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "the market for payment processing solutions for content inside Android apps"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "acde1561ebb2e7de", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "home prices had boomed for years before Fed officials were ultimately forced to hike interest rates"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "fa849249ecc33acd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "they are committed to moving to a centralised high-performance model"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "He will also be tasked with “integrating” the programs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs"}]}
+]},
+{"id": "5780ac446e2a74af", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "was spotted cheering for the Kansas City Chiefs tight end from the box seats at Arrowhead Stadium"}]},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 4, "quote": "including Sunday's game agains the Chargers"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "cheering emphatically when No. 87 scored a touchdown"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "where Swift has performed herself and attended a game before"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "where Swift has performed herself and attended a game before"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "26bebd5958a83c15", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "While on the Pat McAfee show, Kelce discussed the rumors"}, {"item": 4, "quote": "He then admitted that he invited Swift to one of his games"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]
