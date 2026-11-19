@@ -1,0 +1,55 @@
+[
+{"id": "33e1d4ce9151f870", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "which was selected on Wednesday morning"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very"}, {"item": 6, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 6, "quote": "the former crypto mogul’s sudden rise"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []},
+{"fact": "3.4", "status": "missing", "evidence": []}
+]},
+{"id": "1d717c3e8492bf07", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "which was selected on Wednesday morning"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very"}, {"item": 2, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very"}, {"item": 2, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "0fd45e93f20ddd16", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "90391e3fffd0fa5d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "started Tuesday to determine whether he’s guilty of"}, {"item": 9, "quote": "seven counts of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]}
+]

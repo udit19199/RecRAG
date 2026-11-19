@@ -1,0 +1,74 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae4d7fc5542990ba0bbb16f",
+   "sentences": [
+    "Stephen Reeder Donaldson (born May 13, 1947) is an American fantasy, science fiction and mystery novelist, most famous for \"The Chronicles of Thomas Covenant\", his ten-novel fantasy series.",
+    "Michael John Moorcock (born 18 December 1939) is an English writer, primarily of science fiction and fantasy, who has also published literary novels."
+   ]
+  },
+  {
+   "id": "2991709613727685350",
+   "sentences": [
+    "The Walking Dead Cover of The Walking Dead No. 1 . Art by Tony Moore . Publication information Publisher Image Comics Schedule Monthly Format Ongoing series Genre Post-apocalyptic Publication date October 2003 -- present No. of issues 178 Creative team Created by Robert Kirkman Tony Moore Written by Robert Kirkman Artist ( s ) Tony Moore ( # 1 -- 6 ) Charlie Adlard ( # 7 -- present ) Penciller ( s ) Tony Moore ( # 1 -- 6 ) Charlie Adlard ( # 7 -- present ) Inker ( s ) Tony Moore ( # 1 -- 6 ) Charlie Adlard ( # 7 -- present ) Stefano Gaudiano ( # 115 -- present ) Letterer ( s ) Robert Kirkman ( # 1 -- 19 ) Rus Wooton ( # 20 -- present ) Colorist ( s ) Tony Moore ( # 1 -- 5 ) Cliff Rathburn ( # 6 -- present ) Editor ( s ) Aubrey Sitterson ( # 55 -- 70 ) Sina Grace ( # 67 -- 96 ) Sean Mackiewicz ( # 97 -- present )",
+    "The Walking Dead debuted in 2003 , published by Image Comics , with art by Tony Moore for the first six issues and Cliff Rathburn shading the art after issue five . Charlie Adlard took over as artist on issue # 7 , after he was approached by Kirkman . Moore also did the cover art for the first twenty - four issues and the first four trade paperbacks . The remainder were done by Adlard ."
+   ]
+  },
+  {
+   "id": "5abf12f25542997719eab667",
+   "sentences": [
+    "McFarland, USA (also known as McFarland) is a 2015 American sports drama film directed by Niki Caro, produced by Mark Ciardi and Gordon Gray, written by Christopher Cleveland, Bettina Gilois and Grant Thompson with music composed by Antônio Pinto.",
+    "The Black Hole is a 1979 American science fiction film directed by Gary Nelson and produced by Walt Disney Productions."
+   ]
+  },
+  {
+   "id": "5ae2c8b05542992decbdcd9d",
+   "sentences": [
+    " She was born in Guangzhou, China.",
+    " These videos are an overview and recap of each year's viral videos, events, memes, and music."
+   ]
+  },
+  {
+   "id": "-1561741427210997791",
+   "sentences": [
+    "Principal photography started April 26 , 1965 , at the 20th Century - Fox Studios and 20th Century - Fox Ranch , California . Other filming locations , simulating the desert , were Buttercup Valley , Arizona and Pilot Knob Mesa , California . The flying sequences were all filmed at Pilot Knob Mesa near Winterhaven , located in California 's Imperial Valley , on the western fringes of Yuma , Arizona ."
+   ]
+  },
+  {
+   "id": "7775645844703785477",
+   "sentences": [
+    "William Alan `` Will '' Friedle ( born August 11 , 1976 ) is an American actor and voice actor . He is best known for his comedic roles , most notably the underachieving elder brother Eric Matthews on the long - running TV sitcom Boy Meets World from 1993 to 2000 . More recently , he has voiced a number of animated characters such as Terry McGinnis / Batman , the title character of Batman Beyond , and Ron Stoppable of Kim Possible . He voices Deadpool in Ultimate Spider - Man and Star - Lord in the animated version of Guardians of the Galaxy , replacing Chris Cox . He also performed the voices of Doyle in The Secret Saturdays , Lion - O in the rebooted ThunderCats series , and Blue Beetle on Batman : The Brave and the Bold . One of his most recent roles has been the speaking voice of Bumblebee in the final episode of Transformers : Prime and the movie Transformers Prime Beast Hunters : Predacons Rising and in the sequel series Transformers : Robots in Disguise , as well as in Transformers : Rescue Bots ."
+   ]
+  },
+  {
+   "id": "5ab57022554299637185c59e",
+   "sentences": [
+    "Isaac Asimov ( ; born Isaak Ozimov; January 2, 1920 – April 6, 1992) was a Russian-American writer and professor of biochemistry at Boston University.",
+    "Michael Cunningham (born November 6, 1952) is a U.S. novelist and screenwriter."
+   ]
+  },
+  {
+   "id": "multihop-rag-1895",
+   "sentences": [
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.",
+    "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."
+   ]
+  },
+  {
+   "id": "multihop-rag-2089",
+   "sentences": [
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.",
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."
+   ]
+  },
+  {
+   "id": "5abb9ad4554299642a094abe",
+   "sentences": [
+    " In 2003, he received the award for his actions during the Battle of Qala-i-Jangi, which took place in late November – early December 2001.",
+    "The Battle of Qala-i-Jangi (also incorrectly referred to as the \"Battle of Mazar-i-Sharif\") was a prisoner-of-war camp uprising that took place between November 25 and December 1, 2001, in northern Afghanistan, following the armed intervention by United States-led coalition forces to try to overthrow the Taliban's Islamic Emirate of Afghanistan, which it had accused of harboring al-Qaeda operatives."
+   ]
+  }
+ ]
+}

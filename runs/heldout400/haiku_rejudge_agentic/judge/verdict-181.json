@@ -1,0 +1,14 @@
+[
+  {"id": "f013563acfbb30f9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "two separate markets, including the distribution of apps to Android users"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

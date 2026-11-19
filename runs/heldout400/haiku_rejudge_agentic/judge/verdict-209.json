@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f4175c59f29b4303",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 10, "quote": "Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 10, "quote": "Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 10, "quote": "Bankman-Fried’s decision, she said, as he was the CEO of FTX."}
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of"},
+          {"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}
+        ]
+      },
+      {
+        "fact": "3.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}
+        ]
+      },
+      {
+        "fact": "3.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}
+        ]
+      },
+      {
+        "fact": "3.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}
+        ]
+      },
+      {
+        "fact": "3.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}
+        ]
+      },
+      {
+        "fact": "3.4",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}
+        ]
+      }
+    ]
+  }
+]

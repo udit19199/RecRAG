@@ -1,0 +1,17 @@
+[
+  {"id": "134edb6d251fac14", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e. most people just pick up their phone and just use the default search engine."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "“We make Google be the default search engine,” he said"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "he said, “because we’ve always thought it was the best."}]}
+  ]},
+  {"id": "98e77efff212cc56", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]}
+]

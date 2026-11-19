@@ -1,0 +1,22 @@
+[
+  {"id": "a7cfdcfa9ed17034", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "a fan tradition at her concerts"}, {"item": 5, "quote": "Taylor Swift concerts, there are friendship bracelets"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "with my number on it."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet"}, {"item": 5, "quote": "I wanted to give Taylor Swift one"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "seemingly expressing his interest in Swift"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "bfa9e58824f2022c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]}
+  ]}
+]

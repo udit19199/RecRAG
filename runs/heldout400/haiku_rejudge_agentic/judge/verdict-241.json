@@ -1,0 +1,18 @@
+[
+{"id": "a0cbfcb2d7d42717", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "In recent months, Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry – not surprising, given that he came to the music biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer."}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "737d2bbd5871f308", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,129 @@
+[
+ {"id": "2620720975912644835", "sentences": [[
+   "Taxpayers in the United States may face various penalties for failures related to federal tax matters",
+   "Taxpayers in the United States may face various penalties for failures related to state tax matters",
+   "Taxpayers in the United States may face various penalties for failures related to local tax matters",
+   "The Internal Revenue Service (IRS) is primarily responsible for charging these penalties at the federal level",
+   "The IRS can assert only those penalties specified under federal tax law",
+   "State and local tax penalty rules vary widely",
+   "State and local tax penalty rules are administered by state and local authorities",
+   "State and local tax penalty rules are not discussed in the source text"
+ ]]},
+ {"id": "multihop-rag-1422", "sentences": [
+   [
+     "Judge Lewis Kaplan intervened and asked whether Bankman-Fried had ever been told by Yedidia about that money",
+     "The question asked whether Bankman-Fried had been told about that money in words or in substance",
+     "Bankman-Fried admitted he had been told about that money",
+     "Bankman-Fried admitted being told about that money only after Judge Lewis Kaplan's question"
+   ],
+   [
+     "Before his fall, Bankman-Fried presented himself as the Good Boy of crypto",
+     "Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry, crypto"
+   ],
+   [
+     "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud",
+     "The prosecution said the fraud was committed to achieve great wealth, power and influence",
+     "The defense argued that the FTX founder, Bankman-Fried, acted in good faith",
+     "The defense argued that Bankman-Fried never meant to commit fraud or steal",
+     "The defense argued that Bankman-Fried basically got in over his head"
+   ]
+ ]},
+ {"id": "5a904f6355429916514e746e", "sentences": [
+   [
+     "Cantarella was a poison",
+     "Cantarella was allegedly used by the Borgias",
+     "The alleged use of Cantarella by the Borgias occurred during the papacy of Pope Alexander VI"
+   ],
+   [
+     "The use of Cantarella is not well documented in any of the papal records",
+     "Cantarella was most likely conceived after 1503",
+     "Cantarella was most likely conceived as part of Pope Julius II's effort to remove his name from the records"
+   ],
+   [
+     "Damnatio memoriae is a modern Latin phrase",
+     "Damnatio memoriae literally means condemnation of memory",
+     "Damnatio memoriae means that a person must not be remembered"
+   ]
+ ]},
+ {"id": "5a8198565542995ce29dcc13", "sentences": [
+   [
+     "Ranger Rick was originally called Ranger Rick's Nature Magazine",
+     "Ranger Rick is a children's nature magazine",
+     "Ranger Rick is published by the United States National Wildlife Federation"
+   ],
+   [
+     "TENNIS is an American sports magazine",
+     "TENNIS is owned by the Sinclair Broadcast Group"
+   ]
+ ]},
+ {"id": "4142183495658071394", "sentences": [[
+   "In graph theory, a loop is an edge that connects a vertex to itself",
+   "A loop is also called a self-loop",
+   "A loop is also called a buckle",
+   "A simple graph contains no loops"
+ ]]},
+ {"id": "4399912168528695468", "sentences": [[
+   "Rigor mortis is very important in meat technology",
+   "The onset of rigor mortis partially determines the tenderness of meat",
+   "The resolution of rigor mortis partially determines the tenderness of meat",
+   "If post-slaughter meat is immediately chilled to 15 °C (59 °F), a phenomenon known as cold shortening occurs",
+   "Cold shortening is the phenomenon that occurs when post-slaughter meat is immediately chilled to 15 °C (59 °F)",
+   "In cold shortening, the muscle sarcomeres shrink to a third of their original length"
+ ]]},
+ {"id": "1706317595158666491", "sentences": [[
+   "Teri Garr played the role of Mrs. Ramsay",
+   "Mrs. Ramsay is Alec's mother"
+ ]]},
+ {"id": "5ab8494d55429916710eb016", "sentences": [
+   [
+     "The University of California, Santa Barbara is commonly referred to as UC Santa Barbara or UCSB",
+     "The University of California, Santa Barbara is a public research university",
+     "The University of California, Santa Barbara is one of the 10 campuses of the University of California system"
+   ],
+   [
+     "UCSB traces its roots back to 1891",
+     "UCSB's roots as an independent teachers' college date to 1891",
+     "UCSB joined the University of California system in 1944",
+     "UCSB is the third-oldest general-education campus in the University of California system"
+   ],
+   [
+     "UCSB was founded in 1991",
+     "UCSB was founded by the renowned philanthropist Hakim Said",
+     "Hakim Said is a philanthropist of the Hamdard Foundation"
+   ]
+ ]},
+ {"id": "multihop-rag-2298", "sentences": [
+   [
+     "The parties in question receive other benefits from Android",
+     "Google could solve this problem today if it wanted to"
+   ],
+   [
+     "It will attempt to argue that Google restrains competition within two separate markets",
+     "One of the two markets is the distribution of apps to Android users",
+     "The other market is the market for payment processing solutions for content inside Android apps"
+   ],
+   [
+     "The case was filed by Arkansas-based publisher Helena World Chronicle",
+     "The case argues that Google siphons off news publishers' content",
+     "The case argues that Google siphons off news publishers' readers",
+     "The case argues that Google siphons off news publishers' ad revenue",
+     "The case argues that Google does this through anticompetitive means"
+   ]
+ ]},
+ {"id": "6117400998512150504", "sentences": [[
+   "The condition is also known as an immediate hemolytic transfusion reaction",
+   "The reaction is a medical emergency",
+   "The reaction results from rapid destruction of the donor red blood cells by host antibodies",
+   "The host antibodies involved are IgG and IgM",
+   "The reaction is usually related to ABO blood group incompatibility",
+   "The most severe ABO incompatibility often involves group A red cells being given to a patient with group O type blood",
+   "Properdin binds to complement C3 in the donor blood",
+   "Properdin's binding facilitates the reaction through the alternate pathway cascade",
+   "The donor cells become coated with IgG",
+   "The IgG-coated donor cells are subsequently removed by macrophages in the reticuloendothelial system (RES)",
+   "Jaundice may also occur",
+   "Disseminated intravascular coagulation (DIC) may also occur",
+   "The most common cause of the reaction is clerical error",
+   "Clerical error means the wrong unit of blood being given to the patient"
+ ]]}
+]

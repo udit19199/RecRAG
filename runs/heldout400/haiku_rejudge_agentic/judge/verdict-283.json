@@ -1,0 +1,47 @@
+[
+  {"id": "771d0a386bfdc34a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Around 2019 or 2020, Wang checked the database"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Wang checked the database and discovered that Alameda was negative by about $200 million"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 6, "quote": "As a result, at one point the risk engine got stuck in a catastrophic feedback loop"}, {"item": 6, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay”"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "would keep Alameda from being liquidated by a bug."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "062823eec4a92d9d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Is he a liar and a fraud?"}, {"item": 2, "quote": "That answer ultimately lies with the jury"}, {"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 3, "quote": "or steal and basically got in over his head."}]}
+  ]},
+  {"id": "29080f475d98cc84", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "said an Anthropic spokesperson, Sally Aldous."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic"}, {"item": 10, "quote": "said an Anthropic spokesperson, Sally Aldous."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "In perhaps the most unexpected tech news of the year"}, {"item": 6, "quote": "Here are some totally speculative theories that occurred to us and others around the web."}]},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 6, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]}
+]

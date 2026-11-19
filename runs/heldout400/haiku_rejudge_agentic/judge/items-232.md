@@ -1,0 +1,538 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 2 items.
+
+=== ITEM id=9fb94c0348a90c5e ===
+Gold sentences and facts:
+Sentence 0: Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.
+  Fact 0.0: It was unfortunate that the woman said she had conversations with investors as part of their due diligence.
+  Fact 0.1: Alameda was taking on losses from FTX.
+  Fact 0.2: Alameda was taking on losses from FTX to keep FTX's balance sheet pristine.
+Sentence 1: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.
+  Fact 1.0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.
+  Fact 1.1: Huang said Paradigm was told that Bankman-Fried did not want investors as directors.
+  Fact 1.2: Huang said Bankman-Fried did plan on having a board with experts.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+The one Wang said Alameda took to keep off FTX’s balance sheet? Yeah, so it was a totally innocent thing where what actually happened was that Bankman-Fried
+thought it was appropriate that Alameda take the position as a backstop liquidity provider, that’s all.
+
+In June 2022, Bankman-Fried heard about the account called “fiat@ftx” tracking how much money Alameda owed to FTX, he testified. He did not know what it was and
+did not bother to find out. He was busy! That was when Bankman-Fried directed Ellison to repay Alameda’s lenders, because he thought Alameda was good for it. He
+also gave BlockFi and Voyager, two crypto lenders, some capital infusions for good measure.
+
+He was “very surprised!”
+
+Remember that testimony Adam Yedidia gave about a conversation with Bankman-Fried in August 2022 about the enormous amount of money Alameda owed FTX? Well,
+Bankman-Fried remembers it differently.
+
+Graph facts:
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Adam Yedidia
+- Adam Yedidia -MENTIONS-> MIT
+- Sam Bankman-Fried didn’t ask where the $8 billion went -MENTIONS-> Adam Yedidia
+- In the end, the FTX trial was about the friends screwed along the way -MENTIONS-> Adam Yedidia
+- Is Sam Bankman-Fried’s defense even trying to win? -MENTIONS-> Adam Yedidia
+
+Entities: Adam Yedidia, The jury finally hears from Sam Bankman-Fried, Alameda, Voyager, fiat@ftx, Ellison, FTX, Wang, Sam Bankman-Fried, BlockFi, The Verge
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Caroline Ellison
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Caroline Ellison
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried didn’t ask where the $8 billion went -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> Caroline Ellison
+
+Entities: Caroline Ellison, The jury finally hears from Sam Bankman-Fried, Alameda, Sam Trabucco, MobileCoin loss, Singh, FTX, Wang, Sam Bankman-Fried,
+MobileCoin, The Verge
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> crypto
+- SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run -MENTIONS-> crypto
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> crypto
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> crypto
+- Is Sam Bankman-Fried’s defense even trying to win? -MENTIONS-> crypto
+
+Entities: crypto, Alameda, Sam Bankman-Fried was a terrible boyfriend, FTX Ventures, Emergent Fidelity Technologies, Ellison, customer funds, FTX, Sam
+Bankman-Fried, Robinhood, The Verge
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+
+Graph facts:
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Sequoia Capital
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Sequoia Capital
+- The fate of US venture capital in China teeters on uncertainty -MENTIONS-> Sequoia Capital
+- Matt Huang -WORKS_FOR-> Sequoia Capital
+- Sequoia Capital -PARTICIPATED_IN-> OpenAI $300M share sale
+
+Entities: Sequoia Capital, Alameda, FTX trial, The FTX trial is bigger than Sam Bankman-Fried, Hermine Wong, lying to FTX investors, FTX, Sam Bankman-Fried,
+Binance, SEC, Coinbase, The Verge
+</item 4>
+
+<item 5>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+That was all done by Bankman-Fried, he testified. In early 2020, Wang said he discovered for the first time Alameda's negative balance exceeded FTX's revenue,
+an indication that Alameda was taking customer funds. Wang said he brought this to Bankman-Fried's attention several times. In late 2021, Wang discovered
+Alameda had withdrawn $3 billion from its $65 billion line of credit. Wang's compensation was a base salary of $200,000 per year plus stock. He owned roughly
+17% of FTX. Even though they were co-founders, "ultimately it was Sam's decision to make" when there were disagreements, he said.
+</item 5>
+
+<item 6>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Additionally, he was promised that Alameda had no preferential treatment on the FTX platform, even though the hedge fund was one of its top traders. Huang said
+he was concerned about FTX's lack of a board of directors, but he eventually invested anyway. During cross-examination, Huang said Paradigm pressed
+Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts. — CNBC's Dawn Giel
+contributed to this report.
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Paradigm
+- Meet Alliance DAO’s latest accelerator cohort of startups building in crypto winter -MENTIONS-> Paradigm
+- Matt Huang -WORKS_FOR-> Paradigm
+- Paradigm -PARTICIPATED_IN-> class-action lawsuit
+- Paradigm -ACCUSED_OF-> defrauding customers
+
+Entities: Paradigm, Bankman-Fried, Alameda, Signal, Bahamas, FTX, Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in
+court, Huang, Dawn Giel, board of directors, CNBC
+</item 6>
+
+<item 7>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+In late 2019, Alameda had a negative balance on FTX. Because they sat in an open-plan office, Wang heard a trader ask Bankman-Fried if it was okay to keep
+withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue. He was the CEO of both companies
+at the time.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses.
+
+The amount that Alameda was allowed to go negative began to creep up. Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by
+about $200 million, which was more than the $150 million FTX made in revenue. That had to mean Alameda was taking customer money. It surprised him and he says
+he discussed it with Bankman-Fried, who told him that he just needed to take into account the value of FTT. Wang said he trusted Bankman-Fried’s judgment and
+didn’t pursue the issue further.
+
+Graph facts:
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Bankman-Fried
+- In the end, the FTX trial was about the friends screwed along the way -MENTIONS-> Bankman-Fried
+- Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court -MENTIONS-> Bankman-Fried
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> Bankman-Fried
+- Bankman-Fried -SAID-> Alameda Research
+
+Entities: Bankman-Fried, Alameda, FTX, Wang, FTT, FTX jury, Today the FTX jury suffered through a code review, The Verge
+</item 7>
+
+<item 8>
+Graph query row:
+article: 200+ of the best deals from Amazon's Cyber Monday sale
+publisher: None
+passage: 200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+Table of Contents Table of Contents Echo, Fire TV, and Kindle deals Apple deals TV deals Laptop deals Headphone and earbud deals Tablet deals Gaming deals
+Speaker deals Vacuum deals Kitchen deals Smart home deals Fitness deals Beauty tech deals Drone deals Camera deals Lego deals Gift card deals
+
+UPDATE: Nov. 27, 2023, 5:00 a.m. EST This post has been updated with all of the latest Cyber Monday deals available at Amazon.
+
+Amazon is dragging out the year's biggest shopping holiday(s) into 11 days of deals.
+
+The retail giant began its Black Friday sale in the early morning of Friday, Nov. 17 (a week ahead of schedule) and was on top of making the switch to Cyber
+Monday language in the wee hours of Saturday, Nov. 25. Official Cyber Monday mode, which is currently on through Monday, Nov. 27, includes both a ton of deals
+carried over from Black Friday plus some new ones.
+</item 8>
+
+<item 9>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Caroline Ellison
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Caroline Ellison
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried didn’t ask where the $8 billion went -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> Caroline Ellison
+
+Entities: Caroline Ellison, The jury finally hears from Sam Bankman-Fried, Alameda Research, FTX, Nishad Singh, Wang, Sam Bankman-Fried, The Verge
+</item 9>
+
+<item 10>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+
+Graph facts:
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Gary Wang
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Caroline Ellison
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Mark Cohen
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Adam Yedidia
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Securities and Exchange Commission
+
+Entities: The jury finally hears from Sam Bankman-Fried, Alameda, balcony conversation, penthouse, Singh, FTX, Yedidia, Sam Bankman-Fried, The Verge
+</item 10>
+=== END ITEM id=9fb94c0348a90c5e ===
+
+=== ITEM id=1c344398a2bd729e ===
+Gold sentences and facts:
+Sentence 0: And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.0: Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.1: Valve has made these minor physical upgrades alongside the big improvements.
+  Fact 0.2: Valve's new iteration includes big improvements.
+Sentence 1: We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.
+  Fact 1.0: The writer looks at Valve and sees a store that could be both.
+  Fact 1.1: Valve has decided to focus exclusively on games.
+Sentence 2: The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day.
+  Fact 2.0: The Steam Deck OLED will go on sale on November 16th at 1pm ET.
+  Fact 2.1: Valve has units of the Steam Deck OLED ready to ship on that same day.
+
+Retrieved items:
+<item 1>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+When we award the Polygon Recommends badge, it’s because we believe the recipient is uniquely thought-provoking, entertaining, inventive, or fun — and worth
+fitting into your schedule. If you want curated lists of our favorite media, check out What to Play and What to Watch .
+
+It appears, at first glance, that Valve cribbed from Nintendo’s playbook with the Switch OLED, for which Nintendo upgraded the device’s screen but not its guts.
+In terms of raw power, the Steam Deck OLED is identical to the original Steam Deck. Valve says this synchronicity is meant in part to continue to provide
+developers with a single goal when optimizing their games — though it promises that the Steam Deck 2 (which the company hopes to release in two to three years)
+will have a generational power leap.
+
+For those who haven’t tried a Steam Deck, though, I wouldn’t wait for its sequel. Because while Valve hasn’t upped the horsepower, it has improved practically
+everything else.
+
+Graph facts:
+- The best video games of the year so far -MENTIONS-> Nintendo
+- Microsoft Activision: What does deal mean for gamers? -MENTIONS-> Nintendo
+- The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more -MENTIONS-> Nintendo
+- The best October Prime Day gaming deals -MENTIONS-> Nintendo
+- Super Mario Bros. Wonder review: The joy of pure imagination -MENTIONS-> Nintendo
+
+Entities: Nintendo, Switch OLED, Steam Deck 2, The Steam Deck OLED improves much more than its screen, Valve, Polygon, Steam Deck, Steam Deck OLED, Polygon
+Recommends badge, What to Play, What to Watch
+</item 1>
+
+<item 2>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+Yes. But you might find that the screen and the battery justify the double dip. For someone like me, who puts hundreds of hours into the Steam Deck each year,
+the upgrade is inescapable.
+
+And if you don’t have a Steam Deck? How many times can I say it: This is my favorite console ever. And it just got better.
+
+The Steam Deck OLED will be available Nov. 16 to purchase through the Steam storefront. The hardware was reviewed with a unit provided by Valve. Vox Media has
+affiliate partnerships. These do not influence editorial content, though Vox Media may earn commissions for products purchased via affiliate links. You can find
+additional information about Polygon’s ethics policy here .
+
+Graph facts:
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> battery
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Nintendo
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> OLED screen
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Steam Deck team
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Switch OLED
+
+Entities: The Steam Deck OLED improves much more than its screen, Valve, Steam storefront, Polygon, Vox Media, Steam Deck, Steam Deck OLED
+</item 2>
+
+<item 3>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+When asked about the potential for future hardware — like a return of the Steam Machine or an updated Steam Controller — there were no firm updates, but there
+does seem to be something happening. Griffais agreed that enabling the Steam Deck to work as a hybrid living room console was a "side goal" of the team, and
+noted that everything Valve does to improve SteamOS will benefit other devices. Coomer added that Valve is still working internally on "a bunch of controllers
+and prototypes." If SteamOS is being used on larger displays, the team would want to augment that experience with better input options. "We don't have any
+announcements on that front, but it's why we're building prototypes and thinking about the future there," Coomer said.
+
+The Steam Deck OLED will be available to order on November 16th at 1PM ET. Valve expects units to begin shipping as soon as orders start to roll in. The updated
+pricing on the existing LCD models is already in effect.
+
+Graph facts:
+- Tim Sweeney on Epic’s victory royale over Google -MENTIONS-> Valve
+- The best October Prime Day gaming deals -MENTIONS-> Valve
+- The Epic v. Google trial may come down to simple v. complicated -MENTIONS-> Valve
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Valve
+- Steam Deck OLED review: It's just better -MENTIONS-> Valve
+
+Entities: Valve, Steam Deck, Steam Deck OLED, The Steam Deck OLED arrives November 16 with an improved screen and longer battery life, Steam Machine, Steam
+Controller, Griffais, SteamOS, Coomer, Engadget
+</item 3>
+
+<item 4>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+In early 2022, Valve released my favorite video game console. But even I had some gripes. With the Steam Deck, I could — for the first time — play the bulk of
+my sprawling collection of video games wherever I’d like. But I tended to bundle it with a huge portable power supply. I also couldn’t quite shirk how much
+better games looked on our family’s OLED TV.
+
+And yet, for me, an adult with limited time to play video games alone in a quiet room, nothing could beat the Steam Deck’s freedom. Barring the occasional
+diversion, Valve’s handheld PC had served as my preferred gaming option ever since I published our review. Then, last week, the Steam Deck OLED arrived. It’s as
+if the Steam Deck team collected a laundry list of complaints about the original, then responded to all of them one by one.
+
+Polygon Recommends is our way of endorsing our favorite games, movies, TV shows, comics, tabletop books, and entertainment experiences.
+
+Graph facts:
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Switch OLED
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> battery
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Nintendo
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> OLED screen
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Steam Deck 2
+
+Entities: Steam Deck team, The Steam Deck OLED improves much more than its screen, Valve, Polygon Recommends, Polygon, OLED TV, Steam Deck, Steam Deck OLED
+</item 4>
+
+<item 5>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses. More
+importantly, this is Valve renewing its commitment to portable PC gaming, and that’s a relief to see. The Steam Deck is the granddaddy of handheld PCs and Valve
+has the resources to continue innovating in this space. For now, the OLED model is a half-step toward the Steam Deck 2, which may be the final version of the
+device — unless Valve finally learns how to count to three.
+
+Graph facts:
+- Steam Deck OLED review: It's just better -MENTIONS-> Sony
+- Steam Deck OLED review: It's just better -MENTIONS-> HDR
+- Steam Deck OLED review: It's just better -MENTIONS-> Switch OLED upgrade
+- Steam Deck OLED review: It's just better -MENTIONS-> OLED screen
+- Steam Deck OLED review: It's just better -MENTIONS-> LCD
+
+Entities: Steam Deck OLED review: It's just better, handheld PCs, portable PC gaming, Steam Deck 2, Valve, Steam Deck, Steam Deck OLED, Engadget
+</item 5>
+
+<item 6>
+Graph query row:
+article: The Steam Deck OLED improves much more than its screen
+connections: ['PUBLISHED_BY: Polygon', 'MENTIONS: battery', 'MENTIONS: Nintendo', 'MENTIONS: OLED screen', 'MENTIONS: Steam Deck team', 'MENTIONS: Switch OLED',
+'MENTIONS: Steam Deck 2', 'MENTIONS: OLED', 'MENTIONS: HDR OLED', 'MENTIONS: BIOS update', 'MENTIONS: iFixit', 'MENTIONS: screens', 'MENTIONS: power supply',
+'MENTIONS: carrying case', 'MENTIONS: slim case', 'MENTIONS: original bulky case', 'MENTIONS: Valve', 'MENTIONS: 1 TB OLED', 'MENTIONS: 512 GB OLED', 'MENTIONS:
+256 GB non-OLED Steam Deck', 'MENTIONS: special edition 1 TB Steam Deck OLED', 'MENTIONS: screen', 'MENTIONS: Steam storefront', 'MENTIONS: Bluetooth',
+'MENTIONS: Polygon Recommends', 'MENTIONS: OLED TV', 'MENTIONS: Canada', 'MENTIONS: batteries', 'MENTIONS: Vox Media', 'MENTIONS: Steam Deck', 'MENTIONS: Steam
+Deck OLED', 'MENTIONS: battery life', 'MENTIONS: Wi-Fi 6E', 'MENTIONS: U.S.', 'MENTIONS: Polygon Recommends badge', 'MENTIONS: What to Play', 'MENTIONS: What to
+Watch', 'MENTIONS: The Verge']
+passages: ['The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)\nIn early 2022, Valve released my favorite video game
+console. But even I had some gripes. With the Steam Deck, I could — for the first time — play the bulk of my sprawling collection of video games wherever I’d
+like. But I tended to bundle it with a huge portable power supply. I also couldn’t quite shirk how much better games looked on our family’s OLED TV.\n\nAnd yet,
+for me, an adult with limited time to play video games alone in a quiet room, nothing could beat the Steam Deck’s freedom. Barring the occasional diversion,
+Valve’s handheld PC had served as my preferred gaming option ever since I published our review. Then, last week, the Steam Deck OLED arrived. It’s as if the
+Steam Deck team collected a laundry list of complaints about the original, then responded to all of them one by one.\n\nPolygon Recommends is our way of
+endorsing our favorite games, movies, TV shows, comics, tabletop books, and entertainment experiences.', 'The Steam Deck OLED improves much more than its screen
+(Polygon, 2023-11-09T18:00:00+00:00)\nWhen we award the Polygon Recommends badge, it’s because we believe the recipient is uniquely thought-provoking,
+entertaining, inventive, or fun — and worth fitting into your schedule. If you want curated lists of our favorite media, check out What to Play and What to
+Watch .\n\nIt appears, at first glance, that Valve cribbed from Nintendo’s playbook with the Switch OLED, for which Nintendo upgraded the device’s screen but
+not its guts. In terms of raw power, the Steam Deck OLED is identical to the original Steam Deck. Valve says this synchronicity is meant in part to continue to
+provide developers with a single goal when optimizing their games — though it promises that the Steam Deck 2 (which the company hopes to release in two to three
+years) will have a generational power leap.\n\nFor those who haven’t tried a Steam Deck, though, I wouldn’t wait for its sequel. Because while Valve hasn’t
+upped the horsepower, it has improved practically everything else.', 'The Steam Deck OLED improves much more than its screen (Polygon,
+2023-11-09T18:00:00+00:00)\nBecause while Valve hasn’t upped the horsepower, it has improved practically everything else. The Steam Deck OLED has longer battery
+life, faster Wi-Fi, and a stand-alone Bluetooth module. And the screen isn’t just OLED; it’s HDR OLED — the first HDR OLED screen on any gaming portable, with a
+peak brightness of 1,000 nits for HDR content and 600 nits for SDR (for comparison, the original screen’s peak brightness was 400 nits). And somehow, with all
+of these additions, the Steam Deck OLED is lighter.\n\nSo, goodbye, old Steam Deck; hello, new Steam Deck.\n\nThe Steam Deck OLED delivers on Valve’s original
+promise\n\nOLED is in the name for a reason.\n\nThe OLED panel in the new Steam Deck is lighter, thinner, and more power efficient than its LCD predecessor.
+It’s also bigger and faster. Though the device has the same shape as the original Steam Deck, smaller screen bezels allow for a display that’s slightly larger,
+at 7.4 inches compared to 7 inches.', 'The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)\nThe panel has a wider color
+gamut (110% DCI-P3, for the visual obsessives) and the beautiful, inky blacks that OLED dorks like myself adore.\n\nSteam Deck OLED’s bigger, better battery
+Valve’s promise of 30-50% more battery raised one obvious question: Is that comparing the OLED model with a Steam Deck running its original firmware (which had
+poor battery life), or a Steam Deck using the latest firmware? Valve’s answer: the latter! So if you’re a Steam Deck owner, expect those big battery
+improvements over your current Steam Deck experience.\n\nThe OLED panel also has a 90 Hz refresh rate — perfect for frame doubling from 45 frames per second. In
+case that jargon means nothing to you, suffice it to say that gameplay on the Steam Deck OLED looks smoother.', 'The Steam Deck OLED improves much more than its
+screen (Polygon, 2023-11-09T18:00:00+00:00)\nThe OLED screen makes for a fancier Steam Deck, but it’s the battery life (and some tweaks throughout the design to
+carve out more of it) that lets Valve’s new handheld truly deliver on its promise of a portable gaming PC.\n\nAll the tiny, delightful improvements of Steam
+Deck OLED\n\nSince the original Steam Deck launched, Valve has been improving the hardware through updates — its team estimates around 300 to date. That will
+continue with both the Steam Deck OLED and the original Steam Deck, the latter of which will get a fresh BIOS update to align itself with some of the former’s
+upgrades. The original device will see some battery life improvement; just don’t expect the OLED model’s jump of 30-50%.\n\nSome changes — even smallish ones —
+demand new hardware. And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.', 'The Steam Deck OLED
+improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)\nThe Steam Deck OLED now includes a Wi-Fi 6E radio (great if you have a modern router
+and connection to make use of it) and a dedicated Bluetooth module, which allows for improved audio quality with wireless headphones, the option to wake the
+Steam Deck from a controller, and the capability to connect many Bluetooth controllers for multiplayer. The haptics are noticeably improved, with a wider
+frequency range. And the touchscreen is markedly better — it’s responsive to the point where I don’t feel the need to plug in a USB-C keyboard anytime I need to
+type a few words.\n\nA review for spec specifics If you’re the sort of person who likes the nitty-gritty technical details of screens and batteries, we also
+recommend reading The Verge’s review.\n\nValve also claims that the Steam Deck OLED is more repairable, which, mercifully, I didn’t have the need to test for
+myself. (Parts will once again be sold through iFixit.)', 'The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)\n(Parts
+will once again be sold through iFixit.) However, I did enjoy the new power supply, with its faster charging (45 minutes gets you from 20% to 80%) and 2.5-meter
+cable that stretches the length of my couch.\n\nOne small, charming detail: The carrying case now has a tinier carrying case within it. If you want to be extra
+cautious, stick to the original bulky case. But if you need to toss the Steam Deck in your backpack for a day trip? Go with the slim case that has funny little
+thumbstick nipples!\n\nAll of the tweaks, large and small, amount to a perfect handheld — made better by the price, which remains the same as the original Steam
+Deck available today, just that the OLED will come with more stuff.', 'The Steam Deck OLED improves much more than its screen (Polygon,
+2023-11-09T18:00:00+00:00)\nValve will be selling three models:\n\n$649 - 1 TB OLED (up from 512 GB)\n\n$529 - 512 GB OLED (up from 256 GB)\n\n$399 - 256 GB
+non-OLED Steam Deck (up from 64 GB)\n\nPlus, for a limited time, the company will offer a special edition 1 TB Steam Deck OLED made with a translucent shell for
+$679 — only in the U.S. and Canada. Though let’s be real: This thing will sell like hotcakes and Valve will reconsider the definition of “limited supply.” Have
+I considered ordering one of these limited editions? Yes. But I am also practicing restraint. Like, how many Steam Decks should one human have?\n\nI suppose
+that’s the question, really. If you already have a Steam Deck, is the OLED model technically an incremental improvement? Yes. But you might find that the screen
+and the battery justify the double dip.', 'The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)\nYes. But you might find
+that the screen and the battery justify the double dip. For someone like me, who puts hundreds of hours into the Steam Deck each year, the upgrade is
+inescapable.\n\nAnd if you don’t have a Steam Deck? How many times can I say it: This is my favorite console ever. And it just got better.\n\nThe Steam Deck
+OLED will be available Nov. 16 to purchase through the Steam storefront. The hardware was reviewed with a unit provided by Valve. Vox Media has affiliate
+partnerships. These do not influence editorial content, though Vox Media may earn commissions for products purchased via affiliate links. You can find
+additional information about Polygon’s ethics policy here .']
+</item 6>
+
+<item 7>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Surprise! Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it. It might not look like a big change from the outside, but the
+Steam Deck OLED is a thorough mid-cycle refresh of a machine that’s not even two years old. At the same time, Valve is also adjusting the configuration of its
+entry-level model, making it a far more compelling option. Apologies to anyone who literally bought a Steam Deck yesterday.
+
+At an event held for press prior to the device's launch, Greg Coomer, a product designer at Valve, called the new model "the definitive version of the Steam
+Deck." He explained that the device contains many things the company wanted to include at the LCD model's launch but wasn't able to, along with some additions
+based on community feedback.
+
+As its name suggests, the most noticeable upgrade to the Steam Deck OLED is the display. The original Steam Deck had a 7-inch 800p LCD running at 60Hz.
+
+Graph facts:
+- Tim Sweeney on Epic’s victory royale over Google -MENTIONS-> Valve
+- The best October Prime Day gaming deals -MENTIONS-> Valve
+- The Epic v. Google trial may come down to simple v. complicated -MENTIONS-> Valve
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Valve
+- Steam Deck OLED review: It's just better -MENTIONS-> Valve
+
+Entities: Valve, Steam Deck, Steam Deck OLED, Greg Coomer, The Steam Deck OLED arrives November 16 with an improved screen and longer battery life, Engadget
+</item 7>
+
+<item 8>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The range still tops out at $649, but you’re getting a lot more for your money: All of the hardware improvements, 1TB of storage instead of 512GB and an
+improved carry case that can pop out into a slimmer shell that’s smaller and easier to fit in a bag. As mentioned, it also has the same anti-glare etched glass
+as the outgoing 512GB LCD model.
+
+Finally, there’s also a Limited Edition version of the 1TB model, with a translucent shell and a customized carry case, which will be sold at $679. We imagine
+stocks will not last very long, as it looks pretty rad:
+
+Valve
+
+While there are no concrete updates on future hardware developments, Valve engineer Pierre-Loup Griffais noted that, so long as interest in handheld gaming
+remains high, the company has "plans for successive generations of handhelds." For now, Griffais explained, it's important to Valve that developers don't need
+to "split their attention" between different performance targets.
+
+Graph facts:
+- Tim Sweeney on Epic’s victory royale over Google -MENTIONS-> Valve
+- The best October Prime Day gaming deals -MENTIONS-> Valve
+- The Epic v. Google trial may come down to simple v. complicated -MENTIONS-> Valve
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Valve
+- Steam Deck OLED review: It's just better -MENTIONS-> Valve
+
+Entities: Valve, Steam Deck OLED, The Steam Deck OLED arrives November 16 with an improved screen and longer battery life, Pierre-Loup Griffais, handheld
+gaming, handhelds, 1TB model, Limited Edition version, 512GB LCD model, Engadget
+</item 8>
+
+<item 9>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Other improvements include support for both Wi-Fi 6E and Bluetooth 5.3, together with a new antenna array that will give a better experience when using both at
+the same time. There’s also a reworked power supply (it has a logo now!) with a longer 2.5m cable that will charge the OLED model from 20 to 80 percent in “as
+little as 45 minutes.” The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper.
+
+Valve
+
+The Steam Deck OLED starts at $549, and will replace all but the entry-level model in the range.
+
+Graph facts:
+- Tim Sweeney on Epic’s victory royale over Google -MENTIONS-> Valve
+- The best October Prime Day gaming deals -MENTIONS-> Valve
+- The Epic v. Google trial may come down to simple v. complicated -MENTIONS-> Valve
+- The Steam Deck OLED improves much more than its screen -MENTIONS-> Valve
+- Steam Deck OLED review: It's just better -MENTIONS-> Valve
+
+Entities: Valve, Steam Deck OLED, Wi-Fi 6E, Bluetooth 5.3, antenna array, power supply, thumbsticks, touch pads, The Steam Deck OLED arrives November 16 with an
+improved screen and longer battery life, Engadget
+</item 9>
+
+<item 10>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Currently, more than 10,000 titles on Steam fall under the playable or verified labels, with more added every day.
+
+When will the Steam Deck OLED be available?
+
+The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day. The company has lowered the price of its LCD
+lineup and will sell through its backstock of 64GB and 512GB models until they’re all gone. It’ll continue selling the 256GB LCD model at a reduced price of
+$400, while the 512GB OLED model will cost $550 and the 1TB OLED model will cost $650. There’s also a limited edition 1TB OLED version priced at $680 that comes
+with a special carrying case, a translucent gray body and orange accents.
+
+Valve
+
+Wrap-up
+
+According to the developers I spoke with at Valve, this is the definitive version of the Steam Deck.
+
+Graph facts:
+- Steam Deck OLED review: It's just better -MENTIONS-> Switch OLED upgrade
+- Steam Deck OLED review: It's just better -MENTIONS-> OLED screen
+- Steam Deck OLED review: It's just better -MENTIONS-> Sony
+- Steam Deck OLED review: It's just better -MENTIONS-> HDR
+- Steam Deck OLED review: It's just better -MENTIONS-> LCD
+
+Entities: Steam Deck OLED sale, 64GB Steam Deck LCD model, 512GB Steam Deck LCD model, 256GB Steam Deck LCD model, 512GB Steam Deck OLED model, 1TB Steam Deck
+OLED model, Limited edition 1TB OLED version, developers at Valve, Steam Deck OLED review: It's just better, Steam, Valve, Steam Deck OLED, Engadget
+</item 10>
+=== END ITEM id=1c344398a2bd729e ===

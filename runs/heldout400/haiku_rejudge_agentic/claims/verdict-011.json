@@ -1,0 +1,43 @@
+[
+ {"id": "5a78d38455429970f5fffd94", "sentences": [
+   ["This person creates bespoke millinery under the J Smith Esquire brand.", "This person creates bespoke millinery for a portfolio of private clients.", "The portfolio of private clients includes Angelina Jolie.", "The portfolio of private clients includes Brad Pitt.", "The portfolio of private clients includes Amal Clooney."],
+   ["Amal Clooney is also known by the name Alamuddin (née Alamuddin).", "Amal Clooney's Arabic name is أمل علم الدين.", "Amal Clooney was born on 3 February 1978.", "Amal Clooney is a barrister at Doughty Street Chambers.", "Amal Clooney specialises in international law.", "Amal Clooney specialises in human rights."]
+ ]},
+ {"id": "5abeebe25542993fe9a41d9c", "sentences": [
+   ["Season of Migration to the North is a classic post-colonial Sudanese novel.", "Season of Migration to the North is written by the novelist Tayeb Salih.", "The Arabic title of Season of Migration to the North is موسم الهجرة إلى الشمال, transliterated Mawsim al-Hiǧra ilā ash-Shamāl."],
+   ["Season of Migration to the North is a counter narrative to Heart of Darkness."],
+   ["Heart of Darkness is dated 1899.", "Heart of Darkness is a novella.", "Heart of Darkness is by Polish-British novelist Joseph Conrad.", "Heart of Darkness is about a voyage up the Congo River into the Congo Free State.", "The voyage in Heart of Darkness goes into the heart of Africa.", "The narrator of Heart of Darkness is Charles Marlow."]
+ ]},
+ {"id": "5abaee845542996606241696", "sentences": [
+   ["On February 25, 2017, this person lost to Jarrett Hurd.", "The February 25, 2017 loss was for the International Boxing Federation light middleweight world title."],
+   ["Jarrett Hurd was born on August 31, 1990.", "Jarrett Hurd is an American light middleweight boxer.", "Jarrett Hurd is from Accokeek, Maryland."]
+ ]},
+ {"id": "5225754983651766092", "sentences": [
+   ["Trade winds are the prevailing pattern of easterly surface winds found in the tropics.", "Trade winds are found within the lower portion of the Earth's atmosphere.", "Trade winds are found in the lower section of the troposphere near the Earth's equator.", "Trade winds blow predominantly from the northeast in the Northern Hemisphere.", "Trade winds blow predominantly from the southeast in the Southern Hemisphere.", "Trade winds strengthen during the winter.", "Trade winds strengthen when the Arctic oscillation is in its warm phase.", "Trade winds have been used by captains of sailing ships to cross the world's oceans for centuries.", "Trade winds enabled European empire expansion into the Americas.", "Trade winds enabled trade routes to become established across the Atlantic and Pacific oceans."]
+ ]},
+ {"id": "5a80b35c5542992bc0c4a7b8", "sentences": [
+   ["This person's favorite events are the 800 metres.", "This person's favorite events are the 1500 metres."],
+   ["The distance has been contested at the Summer Olympics since 1896.", "The distance has been contested at the World Championships in Athletics since 1983."]
+ ]},
+ {"id": "5ae457a95542996836b02c85", "sentences": [
+   ["This person did voice work for My Life As A Teenage Robot.", "This person did voice work for The Replacements.", "This person did the voice of Knotty in a 1992 work whose title is blank in the sentence.", "This person did additional voices in the film Fantasia 2000 (1999).", "This person did additional voices in the film Sing (2016)."],
+   ["The film was directed by Garth Jennings.", "The film was written by Garth Jennings.", "The film was co-directed by Christophe Lourdelet.", "The film starred the voices of Matthew McConaughey.", "The film starred the voices of Reese Witherspoon.", "The film starred the voices of Seth MacFarlane.", "The film starred the voices of Scarlett Johansson.", "The film starred the voices of John C. Reilly.", "The film starred the voices of Taron Egerton.", "The film starred the voices of Tori Kelly."]
+ ]},
+ {"id": "5a8b515e55429971feec46bb", "sentences": [
+   ["This person has acted in a few Off Broadway productions.", "This person has made appearances on American television shows such as Person of Interest.", "This person has made appearances on an American television show whose title is blank in the sentence.", "This person has made appearances in video games such as Grand Theft Auto V.", "This person has made appearances in video games such as Red Dead Redemption.", "This person has made appearances in video games such as Red Dead Revolver.", "This person has made appearances in a video game whose title is blank in the sentence."],
+   ["Red Dead Redemption is a Western action-adventure video game.", "Red Dead Redemption was developed by Rockstar San Diego.", "Red Dead Redemption was published by Rockstar Games."]
+ ]},
+ {"id": "multihop-rag-1701", "sentences": [
+   ["Huang said this during cross-examination.", "Huang said Paradigm pressed Bankman-Fried on the board issue.", "Huang said Paradigm was told that Bankman-Fried did not want investors as directors.", "Huang said Bankman-Fried did plan on having a board with experts."],
+   ["Bankman-Fried did not admit being told by Yedidia about that money until Judge Lewis Kaplan intervened.", "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money.", "The question asked whether Bankman-Fried had been told about that money in words or in substance.", "Bankman-Fried admitted that he had been told about that money."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.", "The prosecution said the fraud was committed to achieve great wealth, power and influence.", "The defense countered that the FTX founder acted in good faith.", "The defense countered that the FTX founder never meant to commit fraud or steal.", "The defense countered that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "2673329117028914160", "sentences": [
+   ["In vertebrates, the gallbladder is a small hollow organ.", "In vertebrates, bile is stored in the gallbladder before it is released into the small intestine.", "In vertebrates, bile is concentrated in the gallbladder before it is released into the small intestine.", "In humans, the gallbladder is pear-shaped.", "In humans, the gallbladder lies beneath the liver.", "The structure and position of the gallbladder can vary significantly among animal species.", "The gallbladder receives bile produced by the liver via the common hepatic duct.", "The gallbladder stores bile produced by the liver via the common hepatic duct.", "The gallbladder releases bile via the common bile duct into the duodenum.", "Bile helps in the digestion of fats in the duodenum."]
+ ]},
+ {"id": "3274948378518710725", "sentences": [
+   ["Only Mexico has hosted the event on two occasions.", "Only Italy has hosted the event on two occasions.", "Only France has hosted the event on two occasions.", "Only Germany has hosted the event on two occasions.", "Only Brazil has hosted the event on two occasions.", "Germany's hosting covers West Germany until shortly after the 1990 World Cup."],
+   ["Mexico City's Estadio Azteca is one of the only venues ever to have hosted two FIFA World Cup finals.", "Rio de Janeiro's Maracanã is one of the only venues ever to have hosted two FIFA World Cup finals.", "Estadio Azteca and the Maracanã are the only venues ever to have hosted two FIFA World Cup finals."],
+   ["Only the 2002 FIFA World Cup had more than one host.", "The 2002 FIFA World Cup was split between Japan and South Korea."]
+ ]}
+]

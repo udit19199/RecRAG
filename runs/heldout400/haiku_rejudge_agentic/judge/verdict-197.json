@@ -1,0 +1,30 @@
+[
+{"id": "bc445c49c81a4a89", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "they are committed to moving to a centralised high-performance model"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "He will also be tasked with “integrating” the programs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs."}]}
+]},
+{"id": "87f069a9e3a518ad", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September"}]},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "Swift is in the house for the Chiefs' \"Thursday Night Football\" divisional matchup against the Broncos."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 1, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star."}]}
+]},
+{"id": "b17663447e3d932d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

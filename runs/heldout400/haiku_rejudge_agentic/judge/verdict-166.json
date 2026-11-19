@@ -1,0 +1,14 @@
+[
+  {
+    "id": "94c04dbf3a6c70d3",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year,"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off,"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "then left the game for further evaluation in the locker room."}]}
+    ]
+  }
+]

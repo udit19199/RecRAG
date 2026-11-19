@@ -1,0 +1,89 @@
+[
+  {
+    "id": "07c3bf1eb468bfa3",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [
+        {"item": 5, "quote": "including the $26.3 billion Google spent making itself the default search engine across platforms in"}
+      ]},
+      {"fact": "1.1", "status": "stated", "evidence": [
+        {"item": 5, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}
+      ]},
+      {"fact": "2.0", "status": "stated", "evidence": [
+        {"item": 5, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021"}
+      ]},
+      {"fact": "2.1", "status": "stated", "evidence": [
+        {"item": 5, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021"}
+      ]},
+      {"fact": "2.2", "status": "stated", "evidence": [
+        {"item": 5, "quote": "had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}
+      ]},
+      {"fact": "2.3", "status": "stated", "evidence": [
+        {"item": 5, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}
+      ]},
+      {"fact": "2.4", "status": "stated", "evidence": [
+        {"item": 5, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}
+      ]},
+      {"fact": "3.0", "status": "stated", "evidence": [
+        {"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+      ]},
+      {"fact": "3.1", "status": "stated", "evidence": [
+        {"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+      ]},
+      {"fact": "3.2", "status": "stated", "evidence": [
+        {"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+      ]},
+      {"fact": "3.3", "status": "stated", "evidence": [
+        {"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+      ]}
+    ]
+  },
+  {
+    "id": "4190552ea423c00a",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "4976d09de6cd5e2c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [
+        {"item": 6, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"},
+        {"item": 7, "quote": "Bankman-Fried is charged with seven counts"}
+      ]},
+      {"fact": "1.2", "status": "stated", "evidence": [
+        {"item": 4, "quote": "is on trial for seven counts of wire fraud and conspiracy"}
+      ]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "stated", "evidence": [
+        {"item": 6, "quote": "Alameda Research’s former CEO, Caroline Ellison"}
+      ]},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []},
+      {"fact": "2.5", "status": "missing", "evidence": []},
+      {"fact": "2.6", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []},
+      {"fact": "3.4", "status": "missing", "evidence": []},
+      {"fact": "3.5", "status": "stated", "evidence": [
+        {"item": 4, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}
+      ]}
+    ]
+  }
+]

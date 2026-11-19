@@ -1,0 +1,34 @@
+[
+  {
+    "id": "55f1a276bc61b854",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+    ]
+  },
+  {
+    "id": "80c8491e5972892d",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e. most people just pick up their phone and just use the default search engine."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]}
+    ]
+  },
+  {
+    "id": "6d693ca7c4ea22a6",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+[
+{"id": "a17d1b3ebab4bfd8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "started Tuesday to determine whether he’s guilty of"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "a77fc4332aa3cbd2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023,"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "fb9834aba929b39f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "5 things we learned so far about the Google antitrust case"}, {"item": 10, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "5 things we learned so far about the Google antitrust case"}, {"item": 10, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]}
+]

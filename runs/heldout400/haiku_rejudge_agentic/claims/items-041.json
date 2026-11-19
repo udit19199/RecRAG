@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-2537",
+   "sentences": [
+    "The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut interest rates next year by less than it earlier expected.",
+    "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control."
+   ]
+  },
+  {
+   "id": "5a7a1d305542990783324e66",
+   "sentences": [
+    "Charles Thomas \"Tom\" Johnston (born August 15, 1948) is an American musician.",
+    "Daryl Palumbo (born February 10, 1979) is an American musician, originally from Elmira, New York."
+   ]
+  },
+  {
+   "id": "5a7cdd6b55429909bec76858",
+   "sentences": [
+    "Edward Sharpe and the Magnetic Zeros is an American folk rock band formed in Los Angeles, California in 2007.",
+    "Louis XIV is an American rock band from San Diego, California.",
+    " The band has released four EPs between 2003 and 2007, and three albums between 2003 and 2008, the latter two of which were distributed by Atlantic Records."
+   ]
+  },
+  {
+   "id": "multihop-rag-1932",
+   "sentences": [
+    "“There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic,” said an Anthropic spokesperson, Sally Aldous.",
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.",
+    "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "-5359074013301333095",
+   "sentences": [
+    "In 1991 , the brainwashed super-soldier James `` Bucky '' Barnes is dispatched from a Hydra base in Siberia to intercept an automobile carrying a case of super-soldier serum . In the present day , approximately one year after Ultron 's defeat in the nation of Sokovia at the hands of the Avengers , Steve Rogers , Natasha Romanoff , Sam Wilson , and Wanda Maximoff stop Brock Rumlow from stealing a biological weapon from a lab in Lagos . Rumlow blows himself up , hoping to kill Rogers . When Maximoff throws the explosion into the sky with telekinesis , it damages a nearby building , killing several Wakandan humanitarian workers ."
+   ]
+  },
+  {
+   "id": "5abd247e5542996e802b472f",
+   "sentences": [
+    "Robert Harry Philibosian (born 1940) is an American politician.",
+    "David R. Ignatius (May 26, 1950), is an American journalist and novelist."
+   ]
+  },
+  {
+   "id": "955374967862684316",
+   "sentences": [
+    "With the Intertropical Convergence Zone ( ITCZ ) swinging northward over West Africa from the Southern Hemisphere in April , heavy showers coming from pre-monsoonal convective clouds mainly in the form of squall lines also known as the north easterlies formed mainly as a result of the interactions of the two dominant airmasses in Nigeria known as the Maritime tropical ( south westerlies ) and the Continental tropical ( north easterlies ) , begins in central Nigeria while the Monsoons from the south atlantic ocean arrives in central Nigeria in July bringing with it high humidity , heavy cloud cover and heavy rainfall which can be daily occurrence lasting till September when the monsoons gradually begin retreating southward to the southern part of Nigeria. Rainfall totals in central Nigeria varies from 1,100 mm ( 43.3 in ) in the lowlands of the river Niger Benue trough to over 2,000 mm ( 78.7 in ) along the south western escarpment of the Jos Plateau ."
+   ]
+  },
+  {
+   "id": "5a7e0bb65542997cc2c4750a",
+   "sentences": [
+    " His exploits in that battle were described by Hal Moore in, \"We Were Soldiers Once and Young\".",
+    "Harold Gregory \"Hal\" Moore, Jr. (February 13, 1922 – February 10, 2017) was a United States Army lieutenant general and author."
+   ]
+  },
+  {
+   "id": "5a8675b1554299211dda2b44",
+   "sentences": [
+    "Black (Bengali: ব্ল্যাক ) is a Bangladeshi rock band, formed in Dhaka, Bangladesh.",
+    "New Found Glory (formerly A New Found Glory) is an American rock band from Coral Springs, Florida, formed in 1997."
+   ]
+  },
+  {
+   "id": "5a7c99705542990527d554de",
+   "sentences": [
+    " Levitt & Sons developed the Monmouth Heights section from 1965-1969.",
+    " The company is most famous for having built the town of Levittown, New York."
+   ]
+  }
+ ]
+}

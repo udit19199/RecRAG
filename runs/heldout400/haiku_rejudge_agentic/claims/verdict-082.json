@@ -1,0 +1,173 @@
+[
+  {
+    "id": "multihop-rag-2034",
+    "sentences": [
+      [
+        "The pastor explained that Jesus brought more positivity than anyone.",
+        "The pastor said it is important to keep faith aligned with the practice of positive thinking."
+      ],
+      [
+        "The pastor added that when a person consistently taps into the habit of positive thinking, their relationship with Jesus grows deeper and deeper.",
+        "The pastor said the growth in that relationship happens automatically."
+      ]
+    ]
+  },
+  {
+    "id": "5a747a3755429974ef308c09",
+    "sentences": [
+      [
+        "Scott Richard Weiland was born Scott Richard Kline.",
+        "Scott Richard Weiland was born on October 27, 1967.",
+        "Scott Richard Weiland's date range ends on December 3, 2015.",
+        "Scott Richard Weiland was an American musician.",
+        "Scott Richard Weiland was an American singer.",
+        "Scott Richard Weiland was an American songwriter."
+      ],
+      [
+        "Richard Willis Hawley was born on 17 January 1967.",
+        "Richard Willis Hawley is English.",
+        "Richard Willis Hawley is a guitarist.",
+        "Richard Willis Hawley is a singer-songwriter.",
+        "Richard Willis Hawley is a producer."
+      ]
+    ]
+  },
+  {
+    "id": "6277705479500881118",
+    "sentences": [
+      [
+        "Polar moment of inertia is a quantity used to predict an object's ability to resist torsion.",
+        "Polar moment of inertia predicts torsion resistance for objects, or segments of objects, with an invariant circular cross section.",
+        "Polar moment of inertia predicts torsion resistance for objects with no significant warping or out-of-plane deformation.",
+        "Polar moment of inertia is used to calculate the angular displacement of an object subjected to a torque.",
+        "Polar moment of inertia is analogous to the area moment of inertia.",
+        "The area moment of inertia characterizes an object's ability to resist bending.",
+        "The area moment of inertia is required to calculate displacement."
+      ]
+    ]
+  },
+  {
+    "id": "5a791ce955429974737f798e",
+    "sentences": [
+      [
+        "Brett Dallas McClure was born on February 19, 1981.",
+        "Brett Dallas McClure was born in Yakima, Washington.",
+        "Brett Dallas McClure is a retired American gymnast."
+      ],
+      [
+        "Brett Dallas McClure won a bronze medal in the pommel horse at the 2001 Goodwill Games in Brisbane, Australia.",
+        "Brett Dallas McClure later helped his U.S. gymnastics team earn a silver medal in the team competition at the 2004 Summer Olympics in Athens."
+      ],
+      [
+        "The competition was held in Brisbane, Queensland, Australia.",
+        "The competition was held from 29 August to 9 September 2001."
+      ]
+    ]
+  },
+  {
+    "id": "5abd455c55429924427fcf5a",
+    "sentences": [
+      [
+        "Age of Chance was a British alternative rock-dance crossover band.",
+        "Age of Chance was from Leeds, England.",
+        "Age of Chance was active from 1985 to 1991."
+      ],
+      [
+        "Vector was a rock band.",
+        "Vector was formed in Sacramento, California.",
+        "Vector was formed in the early 1980s.",
+        "Vector was formed by Jimmy Abegg.",
+        "Vector was formed by Steve Griffith.",
+        "Vector was formed by Charlie Peacock."
+      ]
+    ]
+  },
+  {
+    "id": "-641745345943697344",
+    "sentences": [
+      [
+        "The Sino-Indian War is also known as the Sino-Indian Border Conflict.",
+        "The Sino-Indian War's Hindi name is भारत - चीन युद्ध (Bhārat - Chīn Yuddh).",
+        "The Sino-Indian War's simplified Chinese name is 中印边境战争.",
+        "The Sino-Indian War's traditional Chinese name is 中印邊境戰爭.",
+        "The Sino-Indian War's pinyin name is Zhōng-Yìn Biānjìng Zhànzhēng.",
+        "The Sino-Indian War was a war between China and India.",
+        "The Sino-Indian War occurred in 1962.",
+        "A disputed Himalayan border was the main pretext for the Sino-Indian War.",
+        "Other issues played a role in the Sino-Indian War.",
+        "There had been a series of violent border incidents after the 1959 Tibetan uprising.",
+        "India had granted asylum to the Dalai Lama at the time of the 1959 Tibetan uprising.",
+        "India initiated a Forward Policy.",
+        "In its Forward Policy, India placed outposts along the border.",
+        "In its Forward Policy, India placed several outposts north of the McMahon Line.",
+        "The McMahon Line is the eastern portion of a Line of Actual Control.",
+        "The Line of Actual Control was proclaimed by Chinese Premier Zhou Enlai in 1959."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-2195",
+    "sentences": [
+      [
+        "Altman has been telling investors that he is planning to launch a new venture.",
+        "The Information is the source of this report."
+      ],
+      [
+        "The theory described here is based on the board's language.",
+        "The theory described here is based on the way giant tech companies work.",
+        "The theory described here is the prevailing theory floating around right now."
+      ]
+    ]
+  },
+  {
+    "id": "5abdbf3755429933744ab818",
+    "sentences": [
+      [
+        "Watkins was born in Des Moines, Iowa.",
+        "Watkins rose to fame in the early 1990s.",
+        "Watkins rose to fame as a member of the girl-group TLC."
+      ],
+      [
+        "Watkins is best known as the former main vocalist of the South Korean girl group T-ara.",
+        "Watkins is best known as the former member of the South Korean girl group T-ara."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-1541",
+    "sentences": [
+      [
+        "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.",
+        "Huang said Paradigm was told that Bankman-Fried did not want investors as directors.",
+        "Huang said Bankman-Fried did plan on having a board with experts."
+      ],
+      [
+        "The criminal trial of Sam Bankman-Fried was highly anticipated.",
+        "Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.",
+        "The criminal trial of Sam Bankman-Fried started on a Tuesday.",
+        "The criminal trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy."
+      ],
+      [
+        "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+        "The defense countered that Bankman-Fried acted in good faith.",
+        "The defense countered that Bankman-Fried never meant to commit fraud or steal.",
+        "The defense countered that Bankman-Fried basically got in over his head."
+      ]
+    ]
+  },
+  {
+    "id": "multihop-rag-904",
+    "sentences": [
+      [
+        "It was unfortunate that the woman said she had conversations with investors as part of their due diligence.",
+        "Alameda was taking on losses from FTX.",
+        "Alameda was taking on losses from FTX to keep FTX's balance sheet pristine."
+      ],
+      [
+        "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.",
+        "Huang said Paradigm was told that Bankman-Fried did not want investors as directors.",
+        "Huang said Bankman-Fried did plan on having a board with experts."
+      ]
+    ]
+  }
+]

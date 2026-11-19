@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a7ca74c55429907fabeefe9",
+   "sentences": [
+    "Aram Saroyan (born September 25, 1943) is an American poet, novelist, biographer, memoirist and playwright, who is especially known for his minimalist poetry, famous examples of which include the one-word poem \"lighght\" and a one-letter poem comprising a four-legged version of the letter \"m\".",
+    "Dr. Edward Keonjian (14 August 1909 – 6 September 1999) was a prominent engineer, an early leader in the field of low-power electronics, the father of microelectronics."
+   ]
+  },
+  {
+   "id": "multihop-rag-693",
+   "sentences": [
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "2588583207329611463",
+   "sentences": [
+    "`` A Whiter Shade of Pale '' is the debut single by the British rock band Procol Harum , released 12 May 1967 . The single reached number one in the UK Singles Chart on 8 June 1967 and stayed there for six weeks . Without much promotion , it reached number 5 on the Bilboard pop chart in the United States . One of the anthems of the 1967 Summer of Love , it is one of fewer than 30 singles to have sold over 10 million copies worldwide ."
+   ]
+  },
+  {
+   "id": "5adfee9c55429906c02daa8a",
+   "sentences": [
+    "In September, The Fader published an interview with CupcakKe, which she discussed her new album that would address \"rape, and everything else\".",
+    "The Fader (stylized as The FADER) is a New York City-based music magazine launched in 1999 by Rob Stone and Jon Cohen, covering music, style and culture.",
+    " It was the first print publication to be released on iTunes."
+   ]
+  },
+  {
+   "id": "multihop-rag-2366",
+   "sentences": [
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "Because FTX had grown so much, he could no longer run both companies, he said.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1368",
+   "sentences": [
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1910",
+   "sentences": [
+    "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-265",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.",
+    "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "-4112499438130311497",
+   "sentences": [
+    "Transcription occurs in the cell nucleus , where the DNA is held . The DNA structure of the cell is made up of two helixes made up of sugar and phosphate held together by hydrogen bonds between the bases of opposite strands . The sugar and the phosphate in each strand are joined together by stronger phosphodiester covalent bonds . The DNA is `` unzipped '' ( disruption of hydrogen bonds between different single strands ) by the enzyme helicase , leaving the single nucleotide chain open to be copied . RNA polymerase reads the DNA strand from the 3 - prime ( 3 ' ) end to the 5 - prime ( 5 ' ) end , while it synthesizes a single strand of messenger RNA in the 5 ' - to - 3 ' direction . The general RNA structure is very similar to the DNA structure , but in RNA the nucleotide uracil takes the place that thymine occupies in DNA . The single strand of mRNA leaves the nucleus through nuclear pores , and migrates into the cytoplasm ."
+   ]
+  },
+  {
+   "id": "5adc020a5542994650320c4c",
+   "sentences": [
+    "Jeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.",
+    "Millard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director."
+   ]
+  }
+ ]
+}

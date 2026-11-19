@@ -1,0 +1,25 @@
+[
+{"id": "4a37256822111eeb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+]},
+{"id": "6a19649b4997cc3c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "b5c774e128046e3a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "As for her children, Jada praised them for how they’ve helped her grow."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "My children, they’re little gurus."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "noting that they’ve taught her “a deep sense of self-acceptance”."}]}
+]}
+]

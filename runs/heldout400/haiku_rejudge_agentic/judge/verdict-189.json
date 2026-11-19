@@ -1,0 +1,39 @@
+[
+  {"id": "98749b3efe971399", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It has been expected since before he hit free agency"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "As the player, I explore a system of the Imperium"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "I explore a system of the Imperium with a loyal crew of companions"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "I explore a system of the Imperium with a loyal crew of companions, making impactful choices"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "determining the fate of those around me"}]}
+  ]},
+  {"id": "a955e9af4eadfe2c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}, {"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals"}]}
+  ]},
+  {"id": "870184201736603b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney"}]}
+  ]},
+  {"id": "90b0510668784132", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX"}]}
+  ]}
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "d90d78e1c2c0ee26",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

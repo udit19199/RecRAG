@@ -1,0 +1,46 @@
+[
+  {
+    "id": "80b31603db9a8fb0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "As for the All Blacks, they looked lost at times during this World Cup cycle"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "it’s still faintly remarkable that head coach Ian Foster survived last summer"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "survived last summer as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "5516c0e6f59a6a80",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "stated", "evidence": [{"item": 6, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]},
+      {"fact": "3.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "d4ba69f7757165bc",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "That answer ultimately lies with the jury"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "which was selected on Wednesday morning"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 6, "quote": "the founder of failed cryptocurrency exchange FTX"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges"}, {"item": 6, "quote": "has been found guilty on seven counts including charges of wire fraud"}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "and basically got in over his head."}]}
+    ]
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "f1d8d1b8f394dc92",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 2, "quote": "The Fed’s main interest rate is at its highest level since 2001"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 2, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected."}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 2, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 2, "quote": "The Fed is trying to push still-high inflation down to its target, and its main tool of high interest rates does that by trying to slow the economy and hurting prices for investments."}
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 8, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "771290e161aecbec",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 6, "quote": "Spider-Man is broadly sympathetic. We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 6, "quote": "Spider-Man is broadly sympathetic. We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 6, "quote": "Spider-Man is broadly sympathetic. We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers that the holiday is about the hope of mutual connection, support, and nurturing."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.4",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "6946484e11bf2960",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

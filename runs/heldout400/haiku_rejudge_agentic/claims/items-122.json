@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1155",
+   "sentences": [
+    "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "5a8bc29a5542995d1e6f1446",
+   "sentences": [
+    "\"Quiet in Heaven\"/\"Song of Liberty\" is a double A-side single, and is the only official release, by Faith No Man (stylised as Faith•No Man•), before the majority of their members quit and formed Faith No More.",
+    " Before settling on their current name in 1982, the band performed under the names Sharp Young Men and later Faith No Man."
+   ]
+  },
+  {
+   "id": "multihop-rag-1092",
+   "sentences": [
+    "His career has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed.",
+    "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."
+   ]
+  },
+  {
+   "id": "multihop-rag-1825",
+   "sentences": [
+    "Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought.",
+    "The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”."
+   ]
+  },
+  {
+   "id": "multihop-rag-2326",
+   "sentences": [
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.",
+    "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "4980328185343503580",
+   "sentences": [
+    "`` You 'll Never Find Another Love Like Mine '' ( written by Kenny Gamble & Leon Huff ) is a song performed by R&B singer Lou Rawls on his 1976 album All Things in Time . The song proved to be Rawls ' breakthrough hit , reaching number one on both the R&B and Easy Listening charts as well as number four on the dance chart and number two on the US Billboard Hot 100 , where it was kept from the top spot for two weeks by `` You Should Be Dancing '' by The Bee Gees and `` ( Shake , Shake , Shake ) Shake Your Booty '' by KC and the Sunshine Band , respectively . This was the first and only time that one of Rawls ' records managed to reach Billboard 's pop top ten . It was the first big hit for Philadelphia International to feature the reformulated MFSB , after many of the original members left Gamble and Huff for better opportunities . The song started Rawls ' live shows from 1977 on ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1470",
+   "sentences": [
+    "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury.",
+    "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."
+   ]
+  },
+  {
+   "id": "-8650104853556692961",
+   "sentences": [
+    "Manchester United Football Club is a professional football club based in Old Trafford , Greater Manchester , England , that competes in the Premier League , the top flight of English football . Nicknamed `` the Red Devils '' , the club was founded as Newton Heath LYR Football Club in 1878 , changed its name to Manchester United in 1902 and moved to its current stadium , Old Trafford , in 1910 ."
+   ]
+  },
+  {
+   "id": "multihop-rag-310",
+   "sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a7351785542994cef4bc539",
+   "sentences": [
+    " Egoyan's most critically acclaimed film is the drama \"The Sweet Hereafter\" (1997), for which he received two Academy Award nominations, and his biggest commercial success is the erotic thriller \"Chloe\" (2009).",
+    "Chloe is a 2009 erotic thriller film directed by Atom Egoyan, a remake of the 2003 French film \"Nathalie...\"."
+   ]
+  }
+ ]
+}

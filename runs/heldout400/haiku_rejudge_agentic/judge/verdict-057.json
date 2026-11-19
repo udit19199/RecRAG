@@ -1,0 +1,62 @@
+[
+  {
+    "id": "7500ef3160b5148d",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "cc5a826ffe11d014",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "d3eb50e89967b6b1",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [
+        {"item": 7, "quote": "People flat out lost their minds over the new AI and its CEO, Sam Altman."},
+        {"item": 10, "quote": "he has been the face of” generative AI technology"}
+      ]},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [
+        {"item": 3, "quote": "In the year since Altman catapulted ChatGPT to global fame"}
+      ]},
+      {"fact": "1.1", "status": "stated", "evidence": [
+        {"item": 3, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}
+      ]},
+      {"fact": "1.2", "status": "stated", "evidence": [
+        {"item": 3, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}
+      ]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []}
+    ]
+  }
+]

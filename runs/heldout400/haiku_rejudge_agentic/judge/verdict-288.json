@@ -1,0 +1,49 @@
+[
+  {"id": "d768fc33e5c898bd", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "The Verge reports"}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+  ]},
+  {"id": "c577fc9add271775", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "07cbb8d6754b8706", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As confirmed during a teleconference Wednesday, SBF will be taking the stand"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}, {"item": 4, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution has made a strong case that Bankman-Fried presided over the various forms of fraud that played out at Alameda Research and FTX, orchestrating some of it and engaging in some of it directly"}]},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "missing", "evidence": []},
+    {"fact": "3.5", "status": "stated", "evidence": [{"item": 4, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]}
+  ]}
+]

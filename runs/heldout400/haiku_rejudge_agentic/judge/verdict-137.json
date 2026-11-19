@@ -1,0 +1,47 @@
+[
+  {"id": "caddecda3eb0deee", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "And after Bankman-Fried left Jane Street"}, {"item": 7, "quote": "he persuaded Yedidia to join him as a trader at Alameda"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}, {"item": 5, "quote": "was no liar, according to Mark Cohen, one of his lawyers."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "842daaaff9203d71", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}, {"item": 1, "quote": "the Justice Department’s landmark antitrust case against Google"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "including its deal with Apple and other partners to make Google the default search engine."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "its deal with Apple and other partners to make Google the default search engine."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 6, "quote": "Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices"}, {"item": 1, "quote": "making itself the default search engine across platforms"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "ff8df5f96c3e38af", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "She is once again at Arrowhead Stadium"}, {"item": 8, "quote": "including Sunday's game agains the Chargers."}]},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "She is once again at Arrowhead Stadium"}, {"item": 8, "quote": "including Sunday's game agains the Chargers."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}, {"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]}
+]

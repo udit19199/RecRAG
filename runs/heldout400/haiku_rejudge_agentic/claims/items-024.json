@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae33c4d5542992f92d82262",
+   "sentences": [
+    "Robert Suettinger was United States President Bill Clinton's national intelligence officer for East Asia at the National Intelligence Council (NIC) from 1997-1998.",
+    "William Jefferson Clinton (born William Jefferson Blythe III; August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001.",
+    " Prior to the presidency, he was the Governor of Arkansas during two separate terms, from 1979 to 1981, and again from 1983 to 1992."
+   ]
+  },
+  {
+   "id": "5adc6c4c5542994650320ce0",
+   "sentences": [
+    "Hydrangea ( ; common names hydrangea or hortensia) is a genus of 70–75 species of flowering plants native to southern and eastern Asia (China, Japan, Korea, the Himalayas, and Indonesia) and the Americas.",
+    " It contains, 13–18 species, but is best known for a single species, Jequirity (\"A. precatorius\")."
+   ]
+  },
+  {
+   "id": "2899508417890381443",
+   "sentences": [
+    "No . Name ( birth -- death ) Portrait Party Term of office Electorate served Elections won Ministry Ref Sir Edmund Barton ( 1849 -- 1920 ) Protectionist 1 January 1901 24 September 1903 Hunter , NSW , 1901 -- 1903 ( resigned ) 1901 Barton Alfred Deakin ( 1856 -- 1919 ) Protectionist 24 September 1903 27 April 1904 Ballaarat , Vic , 1901 -- 1913 ( retired ) 1903 1st Deakin Chris Watson ( 1867 -- 1941 ) Labour 27 April 1904 18 August 1904 Bland , NSW , 1901 -- 1906 South Sydney , NSW , 1906 -- 1910 ( retired ) -- Watson George Reid ( 1845 -- 1918 ) Free Trade 18 August 1904 5 July 1905 East Sydney , NSW , 1901 -- 1909 ( resigned ) -- Reid ( 2 ) Alfred Deakin ( 1856 -- 1919 ) Protectionist 5 July 1905 13 November 1908 Ballaarat , Vic , 1901 -- 1913 ( retired ) -- 2nd Deakin 1906 3rd Deakin 5 Andrew Fisher ( 1862 -- 1928 ) Labour 13 November 1908 2 June 1909 Wide Bay , Qld , 1901 -- 1915 ( resigned ) -- 1st Fisher ( 2 ) Alfred Deakin ( 1856 -- 1919 ) Commonwealth Liberal 2 June 1909 29 April 1910 Ballaarat , Vic , 1901 -- 1913 ( retired ) -- 4th Deakin ( 5 ) Andrew Fisher ( 1862 -- 1928 ) Labor 29 April 1910 24 June 1913 Wide Bay , Qld , 1901 -- 1915 ( resigned ) 1910 2nd Fisher 6 Joseph Cook ( 1860 -- 1947 ) Commonwealth Liberal 24 June 1913 17 September 1914 Parramatta , NSW , 1901 -- 1921 ( resigned ) 1913 Cook ( 5 ) Andrew Fisher ( 1862 -- 1928 ) Labor 17 September 1914 27 October 1915 Wide Bay , Qld , 1901 -- 1915 ( resigned ) 1914 3rd Fisher Billy Hughes ( 1862 -- 1952 ) Labor 27 October 1915 14 November 1916 West Sydney , NSW , 1901 -- 1917 Bendigo , Vic , 1917 -- 1922 North Sydney , NSW , 1922 -- 1949 Bradfield , NSW , 1949 -- 1952 ( died ) -- 1st Hughes 7 National Labor 14 November 1916 17 February 1917 -- 2nd Hughes Nationalist 17 February 1917 9 February 1923 -- 3rd Hughes 1917 4th Hughes 1919 5th Hughes 8 Stanley Bruce ( 1883 -- 1967 ) Nationalist ( Coalition ) 9 February 1923 22 October 1929 Flinders , Vic , 1918 -- 1929 ( defeated ) ; 1931 -- 1933 ( resigned ) 1922 1st Bruce 1925 2nd Bruce 1928 3rd Bruce 9 James Scullin ( 1876 -- 1953 ) Labor 22 October 1929 6 January 1932 Corangamite , Vic , 1910 -- 1913 ( defeated ) Yarra , Vic , 1922 -- 1949 ( retired ) 1929 Scullin 10 Joseph Lyons ( 1879 -- 1939 ) United Australia ( Coalition ) 6 January 1932 7 April 1939 † Wilmot , Tas , 1929 -- 1939 ( died ) 1931 1st Lyons 1934 2nd Lyons -- 3rd Lyons 1937 4th Lyons 11 Sir Earle Page ( 1880 -- 1961 ) Country ( Coalition ) 7 April 1939 26 April 1939 Cowper , NSW 1919 -- 1961 ( defeated ) -- Page 12 Robert Menzies ( 1894 -- 1978 ) United Australia ( Coalition ) 26 April 1939 28 August 1941 Kooyong , Vic , 1934 -- 1966 ( resigned ) -- 1st Menzies 2nd Menzies 1940 3rd Menzies 13 Arthur Fadden ( 1894 -- 1973 ) Country ( Coalition ) 28 August 1941 7 October 1941 Darling Downs , Qld 1936 -- 1949 McPherson , Qld 1949 -- 1958 ( retired ) -- Fadden 14 John Curtin ( 1885 -- 1945 ) Labor 7 October 1941 5 July 1945 † Fremantle , WA , 1928 -- 1931 ( defeated ) ; 1934 -- 1945 ( died ) -- 1st Curtin 1943 2nd Curtin 15 Frank Forde ( 1890 -- 1983 ) Labor 6 July 1945 13 July 1945 Capricornia , Qld , 1922 -- 1946 ( defeated ) -- Forde 16 Ben Chifley ( 1885 -- 1951 ) Labor 13 July 1945 19 December 1949 Macquarie , NSW , 1928 -- 1931 ( defeated ) ; 1940 -- 1951 ( died ) -- 1st Chifley 1946 2nd Chifley ( 12 ) Sir Robert Menzies ( 1894 -- 1978 ) Liberal ( Coalition ) 19 December 1949 26 January 1966 Kooyong , Vic , 1934 -- 1966 ( resigned ) 1949 4th Menzies 1951 5th Menzies 1954 6th Menzies 1955 7th Menzies 1958 8th Menzies 1961 9th Menzies 1963 10th Menzies 17 Harold Holt ( 1908 -- 1967 ) Liberal ( Coalition ) 26 January 1966 19 December 1967 † Fawkner , Vic , 1935 -- 1949 Higgins , Vic , 1949 -- 1967 ( disappeared ) -- 1st Holt 1966 2nd Holt 18 John McEwen ( 1900 -- 1980 ) Country ( Coalition ) 19 December 1967 10 January 1968 Echuca , Vic , 1934 -- 1937 Indi , Vic , 1937 -- 1949 Murray , Vic , 1949 -- 1971 ( resigned ) -- McEwen 19 John Gorton ( 1911 -- 2002 ) Liberal ( Coalition ) 10 January 1968 10 March 1971 Senator 1950 -- 1968 ( resigned ) MP for Higgins , Vic , 1968 -- 1975 ( retired ) -- 1st Gorton 1969 2nd Gorton 20 William McMahon ( 1908 -- 1988 ) Liberal ( Coalition ) 10 March 1971 5 December 1972 Lowe , NSW , 1949 -- 1982 ( resigned ) -- McMahon 21 Gough Whitlam ( 1916 -- 2014 ) Labor 5 December 1972 11 November Werriwa , NSW , 1952 -- 1978 ( resigned ) 1972 1st Whitlam -- 2nd Whitlam 3rd Whitlam 22 Malcolm Fraser ( 1930 -- 2015 ) Liberal ( Coalition ) 11 November 11 March Wannon , Vic , 1955 -- 1983 ( resigned ) -- 1st Fraser 2nd Fraser 1977 3rd Fraser 1980 4th Fraser 23 Bob Hawke ( 1929 -- ) Labor 11 March 20 December 1991 Wills , Vic , 1980 -- 1992 ( resigned ) 1st Hawke 1984 2nd Hawke 3rd Hawke 1990 4th Hawke 24 Paul Keating ( 1944 -- ) Labor 20 December 1991 11 March Blaxland , NSW , 1969 -- 1996 ( resigned ) -- 1st Keating 1993 2nd Keating 25 John Howard ( 1939 -- ) Liberal ( Coalition ) 11 March 3 December 2007 Bennelong , NSW , 1974 -- 2007 ( defeated ) 1st Howard 1998 2nd Howard 2001 3rd Howard 4th Howard 26 Kevin Rudd ( 1957 -- ) Labor 3 December 2007 24 June Griffith , Qld , 1998 -- 2013 ( resigned ) 2007 1st Rudd 27 Julia Gillard ( 1961 -- ) Labor 24 June 27 June 2013 Lalor , Vic , 1998 -- 2013 ( retired ) -- 1st Gillard 2nd Gillard ( 26 ) Kevin Rudd ( 1957 -- ) Labor 27 June 2013 18 September 2013 Griffith , Qld , 1998 -- 2013 ( resigned ) -- 2nd Rudd 28 Tony Abbott ( 1957 -- ) Liberal ( Coalition ) 18 September 2013 15 September 2015 Warringah , NSW , since 1994 2013 Abbott 29 Malcolm Turnbull ( 1954 -- ) Liberal ( Coalition ) 15 September 2015 Incumbent Wentworth , NSW , since 2004 -- 1st Turnbull 2016 2nd Turnbull",
+    "Federation occurred on 1 January 1901 , but elections for the first parliament were not scheduled until late March . In the interim , an unelected caretaker government was necessary . In what is now known as the Hopetoun Blunder , the governor - general , Lord Hopetoun , invited Sir William Lyne , the premier of the most populous state , New South Wales , to form a government . Lyne was unable to do so and returned his commission in favour of Edmund Barton , who became the first Prime Minister and led the inaugural government into and beyond the election ."
+   ]
+  },
+  {
+   "id": "-2162391145049066060",
+   "sentences": [
+    "The Director of the United States Mint is the head of the United States Mint . The position is currently vacant . Since January 20 , 2017 , the senior career official at the Mint has been Acting Principal Deputy Director David Motl .",
+    "Name Assumed Office Left Office President Appointed By David Rittenhouse April 1792 June 1795 George Washington Henry William de Saussure July 1795 October 1795 Elias Boudinot October 1795 July 1805 Robert Patterson January 1806 July 1824 Thomas Jefferson Samuel Moore July 1824 July 1835 James Monroe Robert M. Patterson May 1835 July 1851 Andrew Jackson George Nicholas Eckert July 1851 April 1853 Millard Fillmore Thomas M. Pettit April 1853 May 1853 Franklin Pierce James Ross Snowden June 1853 May 1861 James Pollock May 1861 September 1866 Abraham Lincoln William Millward October 1866 April 1867 Andrew Johnson Henry Linderman April 1867 May 1869 James Pollock May 1869 March 1873 Ulysses S. Grant Henry Linderman April 1873 December 1878 Horatio C. Burchard February 1879 June 1885 Rutherford B. Hayes James P. Kimball July 1885 October 1889 Grover Cleveland Edward O. Leech October 1889 May 1893 Benjamin Harrison Robert E. Preston November 1893 February 1898 Grover Cleveland George E. Roberts February 1898 July 1907 William McKinley Frank A. Leach September 1907 August 1909 Theodore Roosevelt A. Piatt Andrew November 1909 June 1910 William Howard Taft George E. Roberts July 1910 November 1914 Robert W. Woolley March 1915 July 1916 Woodrow Wilson F.H. von Engelken September 1916 March 1917 Raymond T. Baker March 1917 March 1922 Frank Edgar Scobey March 1922 September 1923 Warren G. Harding Robert J. Grant November 1923 May 1933 Calvin Coolidge Nellie Tayloe Ross May 1933 April 1953 Franklin D. Roosevelt William H. Brett July 1954 January 1961 Dwight D. Eisenhower Eva Adams October 1961 August 1969 John F. Kennedy Mary Brooks September 1969 February 1977 Richard Nixon Stella Hackel Sims November 1977 April 1981 Jimmy Carter Donna Pope July 1981 August 1991 Ronald Reagan David J. Ryder September 1992 November 1993 George H.W. Bush Philip N. Diehl June 1994 March 2000 Bill Clinton Jay W. Johnson May 2000 August 2001 Henrietta H. Fore August 2001 August 2005 George W. Bush Edmund C. Moy September 2006 January 2011 David J. Ryder April 2018 Incumbent Donald Trump"
+   ]
+  },
+  {
+   "id": "multihop-rag-748",
+   "sentences": [
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5ab5b0f75542992aa134a38c",
+   "sentences": [
+    " This episode represents a milestone in the history of the series as Snowball II is killed off, which, excluding the death of Homer's mother in season 19's \"Mona Leaves-a\", is to date the closest thing to an actual Simpson family member actually being killed off.",
+    "Mona Penelope Simpson (née Olsen) is a recurring fictional character in the animated television series \"The Simpsons\"."
+   ]
+  },
+  {
+   "id": "3630714342371225513",
+   "sentences": [
+    "The term `` spirit '' in reference to alcohol stems from Middle Eastern alchemy . These alchemists were more concerned with medical elixirs than with transmuting lead into gold . The vapor given off and collected during an alchemical process ( as with distillation of alcohol ) was called a spirit of the original material ."
+   ]
+  },
+  {
+   "id": "5a81028b55429938b614228a",
+   "sentences": [
+    "Aliens of the Deep is a 2005 documentary film, directed in part by James Cameron alongside fellow cameraman and friend Steven Quale, who would go on to direct \"Final Destination 5\" six years later, and filmed in the IMAX 3D format.",
+    " Cameron teams with NASA scientists to explore the Mid-Ocean Ridges, submerged chains of mountains in the Atlantic and Pacific oceans that are home to some of the planet's more unusual forms of life.",
+    "Poetry in Motion is a 1982 Canadian documentary film directed by Ron Mann featuring contemporary North American poetry and music.",
+    " Featured are some of the Black Mountain poets, Beats, minimalist poets, and avant-garde poets.",
+    " It was released in theaters, later being distributed on VHS, LaserDisc, and DVD.",
+    " An extended CD-ROM version was also released."
+   ]
+  },
+  {
+   "id": "5ae0432a55429924de1b7081",
+   "sentences": [
+    "Rosario Castellanos Figueroa (] ; 25 May 1925 – 7 August 1974) was a Mexican poet and author.",
+    "Lucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 – April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\"."
+   ]
+  },
+  {
+   "id": "8066631268978073518",
+   "sentences": [
+    "2016 production of still wine State Production ( gal ) Production ( % ) Alabama 34,966 0.004 % Arizona 190,008 0.024 % Arkansas 246,363 0.031 % California 680,272,512 84.354 % Colorado 556,994 0.069 % Connecticut 134,517 0.017 % Florida 1,634,103 0.203 % Georgia 276,144 0.034 % Idaho 497,007 0.062 % Illinois 391,805 0.049 % Indiana 1,411,540 0.175 % Iowa 335,522 0.042 % Kansas 104,129 0.013 % Kentucky 2,176,059 0.270 % Louisiana 38,232 0.005 % Maine 48,222 0.006 % Maryland 436,185 0.054 % Massachusetts 792,884 0.098 % Michigan 2,576,238 0.319 % Minnesota 331,946 0.041 % Missouri 993,831 0.123 % Montana 33,445 0.004 % Nebraska 120,366 0.015 % New Hampshire 159,316 0.020 % New Jersey 1,832,325 0.227 % New Mexico 749,818 0.093 % New York 27,969,308 3.468 % North Carolina 1,903,060 0.236 % Ohio 5,938,738 0.736 % Oklahoma 70,204 0.009 % Oregon 11,822,972 1.466 % Pennsylvania 12,405,181 1.538 % South Carolina 77,842 0.010 % South Dakota 139,738 0.017 % Tennessee 1,279,752 0.159 % Texas 1,907,299 0.237 % Vermont 2,172,526 0.269 % Virginia 2,157,395 0.268 % Washington 40,747,190 5.053 % West Virginia 40,733 0.005 % Wisconsin 1,129,405 0.140 % Others 312,051 0.039 % Sum 806,447,891 100 %"
+   ]
+  }
+ ]
+}

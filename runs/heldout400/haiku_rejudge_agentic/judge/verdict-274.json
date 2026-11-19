@@ -1,0 +1,45 @@
+[
+  {
+    "id": "d6c25119dfe37329",
+    "facts": [
+      {"fact": "0.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "United have also conceded 14 goals in the Champions League group stages"}, {"item": 4, "quote": "shipping 15 goals in the process, more than any other English team ever."}]},
+      {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "United have also conceded 14 goals in the Champions League group stages, a new and unwanted record for the club"}, {"item": 4, "quote": "shipping 15 goals in the process, more than any other English team ever."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "that could get worse when they face Bayern in the final match."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "they find themselves out of Europe altogether as the bottom team in the group"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "There was nothing much at all. Where was the energy? Where was the intensity?"}, {"item": 7, "quote": "Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich was how grimly routine it all felt."}]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "8e554d93c93efb79",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "8298a20b11a5a5d5",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "seven counts of fraud and conspiracy."}]},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

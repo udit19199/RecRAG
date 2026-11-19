@@ -1,0 +1,68 @@
+[
+  {
+    "id": "92ef37951d674d4c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [
+        {"item": 6, "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."},
+        {"item": 6, "quote": "Every sportsbook’s goal is to even out the betting on both sides of every bet."},
+        {"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}
+      ]},
+      {"fact": "1.1", "status": "stated", "evidence": [
+        {"item": 6, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}
+      ]}
+    ]
+  },
+  {
+    "id": "5c4702e25c533428",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [
+        {"item": 3, "quote": "if president of baseball operations Jerry Dipoto decided to move one for a bat."}
+      ]},
+      {"fact": "0.1", "status": "stated", "evidence": [
+        {"item": 3, "quote": "Moving any of Woo, Miller or Hancock could be more appealing for a front office that is looking for ways to add long-term offensive upside."},
+        {"item": 3, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}
+      ]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "c10516ca660a5fbf",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [
+        {"item": 6, "quote": "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller"}
+      ]},
+      {"fact": "0.1", "status": "stated", "evidence": [
+        {"item": 6, "quote": "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller"}
+      ]},
+      {"fact": "0.2", "status": "stated", "evidence": [
+        {"item": 6, "quote": "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller"}
+      ]},
+      {"fact": "0.3", "status": "stated", "evidence": [
+        {"item": 6, "quote": "which is the same controller in white-and-black, red-and-black, or blue-and-black"}
+      ]},
+      {"fact": "0.4", "status": "stated", "evidence": [
+        {"item": 6, "quote": "finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}
+      ]},
+      {"fact": "0.5", "status": "stated", "evidence": [
+        {"item": 6, "quote": "finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}
+      ]},
+      {"fact": "0.6", "status": "stated", "evidence": [
+        {"item": 6, "quote": "finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}
+      ]},
+      {"fact": "0.7", "status": "stated", "evidence": [
+        {"item": 6, "quote": "finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}
+      ]},
+      {"fact": "1.0", "status": "stated", "evidence": [
+        {"item": 1, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}
+      ]},
+      {"fact": "1.1", "status": "stated", "evidence": [
+        {"item": 1, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}
+      ]}
+    ]
+  }
+]

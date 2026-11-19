@@ -1,0 +1,78 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a7f244255429934daa2fcec",
+   "sentences": [
+    " Through its three divisions, it offers a wide variety of liberal arts and science courses at the secondary, British A-level, and United States junior college levels.",
+    " Grammar, logic, and rhetoric were the core liberal arts, while arithmetic, geometry, the theory of music, and astronomy also played a (somewhat lesser) part in education."
+   ]
+  },
+  {
+   "id": "-6959456828837530300",
+   "sentences": [
+    "Coordinates : 90 ° N 0 ° W ﻿ / ﻿ 90 ° N - 0 ° E ﻿ / 90 ; - 0",
+    "The North Pole is the northernmost point on the Earth , lying diametrically opposite the South Pole . It defines geodetic latitude 90 ° North , as well as the direction of true north . At the North Pole all directions point south ; all lines of longitude converge there , so its longitude can be defined as any degree value . Along tight latitude circles , counterclockwise is east and clockwise is west . The North Pole is at the center of the Northern Hemisphere ."
+   ]
+  },
+  {
+   "id": "1311019403755331535",
+   "sentences": [
+    "His roles continued in the 1990s with the TV series Cracker ( 1993 -- 1996 , returning in 2006 for a one - off special ) , in which he starred as forensic psychologist Dr. Edward `` Fitz '' Fitzgerald . The role won him three BAFTA awards . Roles in bigger films followed ; the James Bond films GoldenEye ( 1995 ) and The World Is Not Enough ( 1999 ) , a supporting role in From Hell ( 2001 ) , as well as half - giant Rubeus Hagrid in the Harry Potter films ( 2001 -- 2011 ) . J.K. Rowling , author of the Harry Potter series , had Coltrane at the top of her list to play Hagrid and , when asked whom she would like to see in the role , responded `` Robbie Coltrane for Hagrid '' in one quick breath . There is also an unnamed 8ft actor who stands in for the 6ft 1in Coltrane in some scenes .",
+    "Robbie Coltrane OBE Coltrane in April 2007 Anthony Robert McMillan ( 1950 - 03 - 30 ) 30 March 1950 ( age 67 ) Rutherglen , South Lanarkshire , Scotland Nationality British Alma mater University of Edinburgh Occupation Actor , Author Years active 1979 -- present Height 6 ft 1 in ( 185 cm ) Spouse ( s ) Rhona Gemmell ( m . 1999 -- 2003 ) Children"
+   ]
+  },
+  {
+   "id": "multihop-rag-2308",
+   "sentences": [
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-890",
+   "sentences": [
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "2246133419130953189",
+   "sentences": [
+    "Name Type Notes Anthropomorphism Form of personification that applies human - like characteristics to animals and objects The Adventures of Pinocchio by Carlo Collodi or the Cheshire Cat of Alice 's Adventures in Wonderland by Lewis Carroll Hamartia The character flaw of an initially rich and powerful hero that leads to his tragic downfall . This is also referred to as the tragic flaw . Oedipus kills his own father because he does n't understand his true parentage . Pathetic fallacy Reflecting a character 's ( usually the protagonist ) mood in the atmosphere or inanimate objects . Related to anthropomorphism and projection For example , the storm in William Shakespeare 's King Lear , which mirrors Lear 's mental deterioration . Personification Using comparative metaphors and similes to give living characteristics to abstract concepts and non-human entities Taken from Act I , Scene II of Romeo and Juliet : `` When well - appareled April on the heel / Of limping winter treads . ''"
+   ]
+  },
+  {
+   "id": "-7428135141357814239",
+   "sentences": [
+    "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning . Avoid electrical appliances , including corded telephones . Cordless and wireless telephones are safe to use during a thunderstorm . Close and stay away from windows and doors , as glass can become a serious hazard in high wind . Do not bathe or shower , as plumbing conducts electricity . If driving , safely exit the roadway , turn on hazard lights , and park . Remain in the vehicle and avoid touching metal .",
+    "Take action immediately upon hearing thunder . Anyone close enough to the storm to hear thunder can be struck by lightning ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1430",
+   "sentences": [
+    "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.",
+    "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."
+   ]
+  },
+  {
+   "id": "5ae17a9b5542990adbacf7a2",
+   "sentences": [
+    "The Shins are an American indie rock band from Albuquerque, New Mexico, formed in 1996.",
+    "Paramore is an American rock band from Franklin, Tennessee, formed in 2004."
+   ]
+  },
+  {
+   "id": "multihop-rag-1729",
+   "sentences": [
+    "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.",
+    "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide.",
+    "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."
+   ]
+  }
+ ]
+}

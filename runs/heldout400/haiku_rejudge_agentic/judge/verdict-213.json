@@ -1,0 +1,39 @@
+[
+{"id": "54b15c6462271e64", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "said an Anthropic spokesperson, Sally Aldous."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic,” said an Anthropic spokesperson, Sally Aldous."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Sam is one of the most generous and caring people I know."}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "1d090f423659a286", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "As for the All Blacks, they looked lost at times during this World Cup cycle"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "it’s still faintly remarkable that head coach Ian Foster survived last summer"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "survived last summer as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "eae433065510f2dc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 1, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]}
+]

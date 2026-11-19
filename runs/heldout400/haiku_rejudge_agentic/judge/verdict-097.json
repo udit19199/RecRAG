@@ -1,0 +1,34 @@
+[
+{"id": "0068a68a4e684370", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "e089af5f5f46d974", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an \"oblique strain that was legit\" and could miss time."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing yards on the year, replaced Walker as Seattle's top ball carrier."}, {"item": 2, "quote": "Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an \"oblique strain that was legit\" and could miss time."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]}
+]},
+{"id": "603e7142f35ac1c1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

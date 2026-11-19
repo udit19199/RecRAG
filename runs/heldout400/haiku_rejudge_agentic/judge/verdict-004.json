@@ -1,0 +1,32 @@
+[
+{"id": "11e0896dd3a44ca9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "anticompetitive by making deals with Apple and others. The DOJ doubled down on this"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "anticompetitive by making deals with Apple and others."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "anticompetitive by making deals with Apple and others."}]},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "'allegedAction': 'misappropriation of Publishers’ content', 'relationship': 'ACCUSED_OF', 'subject': 'Google'"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "d815b288932230ef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "but not all of them are effective and none are"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "but not all of them are effective and none are foolproof."}]}
+]},
+{"id": "4c6ced507c91c428", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Gary Wang, the lesser-known co-founder of FTX"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]}
+]}
+]

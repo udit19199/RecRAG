@@ -1,0 +1,45 @@
+[
+  {"id": "774cd181a10042a3", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "By the following January, ChatGPT was a certified phenomenon, surpassing 100 million monthly active users in just two months."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "People flat out lost their minds over the new AI and its CEO, Sam Altman."}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "And it wasn’t just the terminally online that embraced AI image generation,"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "ChatGPT, OpenAI’s text-generating AI chatbot, has taken the world by storm."}]},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "009808f73f7a0b59", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "discovered that Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "discovered that Alameda was negative by about $200 million, which was more than the $150 million FTX made in revenue."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "As a result, at one point the risk engine got stuck in a catastrophic feedback loop that would have created losses in the “trillions of dollars,” Bankman-Fried testified."}, {"item": 9, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay”"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Because of that experience, Bankman-Fried suggested an “alert” or “delay” that would keep Alameda from being liquidated by a bug."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1197ec32c1ee9b49", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "has been found guilty on seven counts including charges of wire fraud."}, {"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]}
+]

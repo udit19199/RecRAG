@@ -1,0 +1,25 @@
+[
+  {
+    "id": "9fb94c0348a90c5e",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+    ]
+  },
+  {
+    "id": "1c344398a2bd729e",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+    ]
+  }
+]

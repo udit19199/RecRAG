@@ -1,0 +1,45 @@
+[
+ {"id": "5ae74eeb5542991bbc9761e1", "sentences": [
+   ["Ecopack Ltd is a PET bottles blowing company.", "Ecopack Ltd is located in Pakistan."],
+   ["Polyethylene terephthalate is also written as poly(ethylene terephthalate).", "Polyethylene terephthalate is commonly abbreviated as PET.", "Polyethylene terephthalate is commonly abbreviated as PETE.", "Polyethylene terephthalate is sometimes abbreviated as PETP, which is obsolete.", "Polyethylene terephthalate is sometimes abbreviated as PET-P, which is obsolete.", "Polyethylene terephthalate is the most common thermoplastic polymer resin of the polyester family.", "Polyethylene terephthalate is used in fibers for clothing.", "Polyethylene terephthalate is used in containers for liquids and foods.", "Polyethylene terephthalate is used in thermoforming for manufacturing.", "Polyethylene terephthalate is used in combination with glass fiber for engineering resins."]
+ ]},
+ {"id": "multihop-rag-814", "sentences": [
+   ["He revealed that he made a friendship bracelet.", "A friendship bracelet is a fan tradition at Swift's concerts.", "The friendship bracelet had his number on it.", "He made the friendship bracelet to give to Swift.", "The friendship bracelet seemingly expresses his interest in Swift."],
+   ["Swift has the Eras Tour booked all through next year.", "Swift would rather die than cancel a show."],
+   ["Swift has now shared that she has nothing to hide.", "Swift has a new relationship with Kelce.", "Swift has now shared that she has nothing to hide in her new relationship with Kelce."]
+ ]},
+ {"id": "multihop-rag-2472", "sentences": [
+   ["The Justice Department is focused on the deals Google makes.", "Google makes deals with Apple.", "Google makes deals with Samsung.", "Google makes deals with Mozilla.", "Google makes deals with many others.", "The Justice Department focuses on these deals to ensure Google is the default search engine on practically every platform."],
+   ["In the last roundup, the writers learned that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.", "In the last roundup, the writers learned that Google tried to have Chrome preinstalled on iPhones."]
+ ]},
+ {"id": "802677011826729357", "sentences": [
+   ["Daren Maxwell Kagasoff is pronounced KA-guh-sawf.", "Daren Maxwell Kagasoff was born September 16, 1987.", "Daren Maxwell Kagasoff is an American actor."],
+   ["Daren Maxwell Kagasoff is known for starring as Ricky Underwood.", "Daren Maxwell Kagasoff starred as Ricky Underwood on The Secret Life of the American Teenager.", "The Secret Life of the American Teenager is an ABC Family teen drama series.", "Daren Maxwell Kagasoff starred on The Secret Life of the American Teenager from 2008 to 2013."]
+ ]},
+ {"id": "multihop-rag-912", "sentences": [
+   ["Valve has made a gaggle of minor physical upgrades with its new iteration.", "Valve has made these minor physical upgrades alongside the big improvements.", "Valve's new iteration includes big improvements."],
+   ["The writer looks at Valve and sees a store that could be both.", "Valve has decided to focus exclusively on games."],
+   ["The Steam Deck OLED will go on sale on November 16th at 1pm ET.", "Valve has units of the Steam Deck OLED ready to ship on that same day."]
+ ]},
+ {"id": "5ab84c6955429916710eb021", "sentences": [
+   ["Claudio Giovanni Antonio Monteverdi was baptized on 15 May 1567.", "Claudio Giovanni Antonio Monteverdi died on 29 November 1643.", "Claudio Giovanni Antonio Monteverdi was an Italian composer.", "Claudio Giovanni Antonio Monteverdi was an Italian string player.", "Claudio Giovanni Antonio Monteverdi was an Italian choirmaster."],
+   ["Monteverdi composed both secular and sacred music.", "Monteverdi was a pioneer in the development of opera.", "Monteverdi is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history."],
+   ["Georges Bizet was born on 25 October 1838.", "Georges Bizet died on 3 June 1875.", "Georges Bizet was registered at birth as Alexandre César Léopold Bizet.", "Georges Bizet was a French composer.", "Georges Bizet was a composer of the romantic era."],
+   ["Georges Bizet is best known for his operas.", "Bizet's career was cut short by his early death.", "Bizet achieved few successes before his final work.", "Bizet's final work is 'Carmen'.", "Carmen has become one of the most popular works in the entire opera repertoire.", "Carmen is one of the most frequently performed works in the entire opera repertoire."]
+ ]},
+ {"id": "multihop-rag-2539", "sentences": [
+   ["The standout testimony in the second week of the trial came from Caroline Ellison.", "Caroline Ellison is Alameda Research's former CEO.", "Caroline Ellison claimed she took $14 billion from customers.", "Caroline Ellison claimed she took the $14 billion to repay debts to lenders.", "Caroline Ellison claimed she used customers as a line of credit.", "Caroline Ellison claimed she did this under the instruction of SBF."],
+   ["The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.", "The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.", "The defense argued that the FTX founder acted in good faith.", "The defense argued that the FTX founder never meant to commit fraud or steal.", "The defense argued that the FTX founder basically got in over his head."]
+ ]},
+ {"id": "5a72aec45542994cef4bc3d7", "sentences": [
+   ["Nelson Algren was born March 28, 1909.", "Nelson Algren died May 9, 1981.", "Nelson Algren was an American writer."],
+   ["Nathanael West was born Nathan Weinstein.", "Nathanael West was born October 17, 1903.", "Nathanael West died December 22, 1940.", "Nathanael West was an American author.", "Nathanael West was an American screenwriter.", "Nathanael West was an American satirist."]
+ ]},
+ {"id": "647659679149316553", "sentences": [
+   ["The Sahara is a desert.", "The Sahara's Arabic name is الصحراء الكبرى, transliterated aṣ-ṣaḥrāʼ al-kubrá, meaning 'the Great Desert'.", "The Sahara is the largest hot desert in the world.", "The Sahara is the third largest desert in the world, after Antarctica and the Arctic.", "The Sahara's area is 9,200,000 square kilometres (3,600,000 sq mi).", "The Sahara's area is comparable to the area of China.", "The Sahara's area is comparable to the area of the United States.", "The name 'Sahara' is derived from a dialectal Arabic word for 'desert'.", "The dialectal Arabic word is ṣaḥra (صحرا)."]
+ ]},
+ {"id": "5a8319b255429940e5e1a960", "sentences": [
+   ["The referenced piece plays during the opening sequence.", "Danny Elfman composed the piece in 1989.", "Danny Elfman composed the piece after Matt Groening approached him.", "Matt Groening is the series creator.", "Matt Groening requested a retro-style theme."],
+   ["Clausen has scored or orchestrated music for more than 30 films and television shows.", "Clausen has scored or orchestrated music for 'Moonlighting'.", "Clausen has scored or orchestrated music for 'The Naked Gun'.", "Clausen has scored or orchestrated music for 'ALF'.", "Clausen has scored or orchestrated music for 'Ferris Bueller's Day Off'."]
+ ]}
+]

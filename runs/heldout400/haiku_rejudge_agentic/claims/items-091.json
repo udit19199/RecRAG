@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a88b3b4554299206df2b336",
+   "sentences": [
+    "The Consul is an opera in three acts with music and libretto by Gian Carlo Menotti, his first full-length opera.",
+    " He completed the music for the opera while living in Zurich in 1916."
+   ]
+  },
+  {
+   "id": "5a7458ff55429979e2882918",
+   "sentences": [
+    "That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug.",
+    "Honey, I Blew Up the Kid is a 1992 American comedy science fiction film and the sequel to the 1989 film \"Honey, I Shrunk the Kids\"."
+   ]
+  },
+  {
+   "id": "5a81adfc55429903bc27b9a4",
+   "sentences": [
+    " He appeared in 57 films between 1919 and 1932.",
+    " He also directed 54 films between 1920 and 1933, including one Harry Langdon short, two of the Tay Garnett- penned comedies Stan Laurel made for Joe Rock, and fifteen of the earliest entries in the Edgar Kennedy \"Average Man\" series.",
+    "John Scott Biddle (1925–2008) was a foremost yachting cinematographer and lecturer, establishing a film-making career that spanned more than forty years."
+   ]
+  },
+  {
+   "id": "multihop-rag-789",
+   "sentences": [
+    "Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights.",
+    "And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297."
+   ]
+  },
+  {
+   "id": "5a84b5975542991dd0999da3",
+   "sentences": [
+    "The Bishop of Ely is the ordinary of the Church of England Diocese of Ely in the Province of Canterbury.",
+    " Conway became Bishop of Ely in 2010, translated from the Diocese of Salisbury where he was Bishop suffragan of Ramsbury.",
+    "The Diocese of Salisbury is a Church of England diocese in the south of England, within the ecclesiastical Province of Canterbury."
+   ]
+  },
+  {
+   "id": "5a70f0a75542994082a3e403",
+   "sentences": [
+    "Spettekaka or spettkaka (\"spiddekaga\" in native Scanian) is a local dessert of the southern parts of Sweden, chiefly in the province of Scania (Skåne) but also in Halland.",
+    "Scanian (   ) is a closely related group of South Swedish dialects spoken in the province of Scania in southern Sweden.",
+    " Scanian formed part of the old Scandinavian dialect continuum and are by most historical linguists considered to be an East Danish dialect group, but due to the modern-era influence from Standard Swedish in the region and because traditional dialectology in the Scandinavian countries normally has not considered isoglosses that cut across state borders, the Scanian dialects have normally been treated as a South Swedish dialect group in Swedish dialect research."
+   ]
+  },
+  {
+   "id": "multihop-rag-767",
+   "sentences": [
+    "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "-303776797247457856",
+   "sentences": [
+    "Cast Character Rank / Position Seasons Notes Regular Recurring Guest Christopher Meloni Elliot Stabler Detective 1 -- 12 Mariska Hargitay Olivia Benson Lieutenant 1 -- Richard Belzer John Munch DA Investigator 1 -- 15 15 , 17 Dann Florek Donald Cragen Captain 1 -- 15 16 Michelle Hurd Monique Jeffries Detective 1 -- 2 Stephanie March Alexandra Cabot Assistant District Attorney 2 -- 5 , 11 2 , 10 , 13 6 Ice - T Odafin `` Fin '' Tutuola Detective 2 -- Tamara Tunie Melinda Warner Medical Examiner 7 -- 12 2 -- 6 , 13 -- 17 19 B.D. Wong George Huang FBI Special Agent 4 -- 12 2 -- 3 13 -- 15 , 17 Diane Neal Casey Novak Senior Assistant District Attorney 5 -- 9 13 12 Adam Beach Chester Lake Detective 9 8 Michaela McManus Kim Greylek Assistant District Attorney 10 Danny Pino Nick Amaro Detective 13 -- 16 Kelli Giddish Amanda Rollins Detective 13 -- Raúl Esparza Rafael Barba Assistant District Attorney 15 -- 14 Peter Scanavino Dominick Carisi Jr . Detective 16 -- 16"
+   ]
+  },
+  {
+   "id": "5704535453361095916",
+   "sentences": [
+    "The small intestine or small bowel is the part of the gastrointestinal tract between the stomach and the large intestine , and is where most of the end absorption of food takes place . The small intestine has three distinct regions -- the duodenum , jejunum , and ileum . The duodenum is the shortest part of the small intestine and is where preparation for absorption begins . It also receives bile and pancreatic juice through the pancreatic duct , controlled by the sphincter of Oddi . The primary function of the small intestine is the absorption of nutrients and minerals from food , using small finger - like protrusions called villi ."
+   ]
+  },
+  {
+   "id": "-7326729858763272108",
+   "sentences": [
+    "The nineteenth season of Law & Order : Special Victims Unit premiered on September 27 , 2017 ."
+   ]
+  }
+ ]
+}

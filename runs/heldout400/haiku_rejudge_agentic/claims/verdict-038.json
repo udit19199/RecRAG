@@ -1,0 +1,45 @@
+[
+ {"id": "5ab9d6ef5542994dbf01985b", "sentences": [
+   ["Dana Robins Ivey was born on August 12, 1941.", "Dana Robins Ivey is an American actress."],
+   ["Two Weeks Notice is a 2002 film.", "Two Weeks Notice is an Australian-American film.", "Two Weeks Notice is a romantic comedy film.", "Two Weeks Notice stars Hugh Grant.", "Two Weeks Notice stars Sandra Bullock."]
+ ]},
+ {"id": "-8817510910624892182", "sentences": [
+   ["Shortwave radio is radio transmission using shortwave radio frequencies.", "There is no official definition of the shortwave band.", "The shortwave band range always includes the high frequency band (HF).", "The shortwave band generally extends from 1.7 to 30 MHz (176.3 to 10.0 m).", "The shortwave band extends from the high end of the medium frequency band (MF), just above the mediumwave AM broadcast band.", "The shortwave band extends to the end of the HF band."],
+   ["Very little infrastructure is required for long-distance two-way communication using shortwave radio.", "All one needs for shortwave radio communication is a pair of transceivers, each with an antenna.", "All one needs for shortwave radio communication is a source of energy, such as a battery, a portable generator, or the electrical grid.", "Shortwave radio is one of the most robust means of communications.", "Shortwave radio communications can be disrupted only by interference or bad ionospheric conditions.", "Modern digital transmission modes such as MFSK and Olivia are even more robust.", "Modern digital transmission modes such as MFSK and Olivia allow successful reception of signals well below the noise floor of a conventional receiver."]
+ ]},
+ {"id": "5abbee315542993f40c73c1d", "sentences": [
+   ["Bicycling is a cycling brand.", "Bicycling is published by Rodale, Inc. in Emmaus, Pennsylvania."],
+   ["National Review (NR) is an American magazine.", "National Review is semi-monthly.", "National Review is conservative.", "National Review is an editorial magazine.", "National Review focuses on news and commentary pieces on political affairs.", "National Review focuses on news and commentary pieces on social affairs.", "National Review focuses on news and commentary pieces on cultural affairs."]
+ ]},
+ {"id": "multihop-rag-1656", "sentences": [
+   ["Defense analysts agree on this.", "Much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."],
+   ["Any illusion of the success of globalization was stripped away with Russia's most recent invasion of Ukraine.", "Any illusion that the twenty-first century represents a break from the brutal twentieth century was stripped away with Russia's most recent invasion of Ukraine."]
+ ]},
+ {"id": "5ade8b2655429975fa854eff", "sentences": [
+   ["US Airways Flight 1549 was an Airbus A320-214.", "US Airways Flight 1549 took off from New York City's LaGuardia Airport.", "US Airways Flight 1549 took off on January 15, 2009.", "US Airways Flight 1549 struck a flock of Canada geese three minutes after takeoff.", "The bird strike happened just northeast of the George Washington Bridge.", "US Airways Flight 1549 consequently lost all engine power."],
+   ["Pilots could not reach any airport.", "Pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River.", "The Hudson River ditching was off Midtown Manhattan."],
+   ["Chesley Burnett \"Sully\" Sullenberger III was born in 1951.", "Chesley Sullenberger is an American retired airline captain.", "Chesley Sullenberger is celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan.", "The plane was disabled by striking a flock of Canada geese immediately after takeoff.", "All 155 people aboard survived."]
+ ]},
+ {"id": "-7275272659885289884", "sentences": [
+   ["In 1908, the first five-day workweek in the United States was instituted by a New England cotton mill.", "The New England cotton mill instituted the five-day workweek so that Jewish workers would not have to work on the Sabbath from sundown Friday to sundown Saturday.", "In 1926, Henry Ford began shutting down his automotive factories for all of Saturday and Sunday.", "In 1929, the Amalgamated Clothing Workers of America Union was the first union to demand a five-day workweek.", "In 1929, the Amalgamated Clothing Workers of America Union received a five-day workweek.", "After that, the rest of the United States slowly followed.", "The two-day weekend was not adopted nationwide until 1940.", "The two-day weekend was adopted nationwide in 1940, when a provision of the 1938 Fair Labor Standards Act mandating a maximum 40-hour workweek went into effect."]
+ ]},
+ {"id": "5ac00f795542996f0d89cb16", "sentences": [
+   ["Alan Young was born Angus Young.", "Alan Young was born on November 19, 1919.", "Alan Young died on May 19, 2016.", "Alan Young was a British-born Canadian-American actor.", "Alan Young was a voice actor.", "Alan Young was a comedian.", "Alan Young was a radio and television host/personality.", "TV Guide called Alan Young \"The Charlie Chaplin of Television\"."],
+   ["Alan Young was the voice of Disney's Scrooge McDuck for over thirty years.", "Alan Young first voiced Scrooge McDuck in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983).", "Alan Young voiced Scrooge McDuck in various other films, TV series and video games.", "Alan Young voiced Scrooge McDuck until his death."],
+   ["During the 1940s and 1950s, Alan Young starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television.", "The television version of \"The Alan Young Show\" gained Alan Young two Emmy Awards in 1951."],
+   ["The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\".", "The cartoon stars Scrooge McDuck as Ebenezer Scrooge."]
+ ]},
+ {"id": "5a8787915542996e4f30882e", "sentences": [
+   ["Dangal's English title is \"Wrestling competition\".", "Dangal is a 2016 film.", "Dangal is an Indian film.", "Dangal is a Hindi-language film.", "Dangal is a biographical sports drama film.", "Dangal is loosely based on the story of Mahavir Singh Phogat.", "Mahavir Singh Phogat is an amateur wrestler.", "Mahavir Singh Phogat trains his daughters Geeta Phogat and Babita Kumari.", "Mahavir Singh Phogat trains his daughters to be world-class wrestlers."],
+   ["The Man from Snowy River II is a 1988 film.", "The Man from Snowy River II is an Australian drama film.", "The Man from Snowy River II is the sequel to the 1982 film \"The Man from Snowy River\"."]
+ ]},
+ {"id": "multihop-rag-762", "sentences": [
+   ["Amazon introduced invite-only deals during Prime Day this past summer.", "The invite-only deals are a system to help Prime members access deals that are expected to sell out quickly.", "The invite-only deals system makes it easier for Prime members to access deals expected to sell out quickly.", "Amazon brought the invite-only deals back for Prime Big Deal Days."],
+   ["A two-pack is available at Amazon for $15.99.", "The two-pack can be kept one at home and the other in a bag brought around during everyday travels."],
+   ["One user wrote that selling on Amazon is a life-changing opportunity.", "One user wrote that the amount of sellers that throw stones at the platform is astounding."]
+ ]},
+ {"id": "multihop-rag-2377", "sentences": [
+   ["The official details have not been reported.", "The report indicated the deal will shatter Mike Trout's record 12-year, $426.5 million deal."],
+   ["According to ESPN's Jeff Passan, the deal is for $42 million.", "According to ESPN's Jeff Passan, the deal is over three years.", "According to ESPN's Jeff Passan, the deal includes a club option for a fourth year.", "According to ESPN's Jeff Passan, the deal includes an opt out after his second season with the club."]
+ ]}
+]

@@ -1,0 +1,11 @@
+[
+  {"id": "5141a3addbe94f14", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "After already raising its main interest rate to the highest level since 2001"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}, {"item": 10, "quote": "Higher rates and yields slow the economy, hurt prices for investments"}]}
+  ]}
+]

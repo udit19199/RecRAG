@@ -1,0 +1,78 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ae74eeb5542991bbc9761e1",
+   "sentences": [
+    "Ecopack Ltd is a PET bottles blowing company in Pakistan.",
+    "Polyethylene terephthalate (sometimes written poly(ethylene terephthalate)), commonly abbreviated PET, PETE, or the obsolete PETP or PET-P, is the most common thermoplastic polymer resin of the polyester family and is used in fibers for clothing, containers for liquids and foods, thermoforming for manufacturing, and in combination with glass fiber for engineering resins."
+   ]
+  },
+  {
+   "id": "multihop-rag-814",
+   "sentences": [
+    "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift.",
+    "“She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "multihop-rag-2472",
+   "sentences": [
+    "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.",
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+   ]
+  },
+  {
+   "id": "802677011826729357",
+   "sentences": [
+    "Daren Maxwell Kagasoff ( KA - guh - sawf ) ( born September 16 , 1987 ) is an American actor . He is known for starring as Ricky Underwood on the ABC Family teen drama series The Secret Life of the American Teenager from 2008 to 2013 ."
+   ]
+  },
+  {
+   "id": "multihop-rag-912",
+   "sentences": [
+    "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.",
+    "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.",
+    "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+   ]
+  },
+  {
+   "id": "5ab84c6955429916710eb021",
+   "sentences": [
+    "Claudio Giovanni Antonio Monteverdi (] ; 15 May 1567 (baptized) – 29 November 1643) was an Italian composer, string player and choirmaster.",
+    " A composer of both secular and sacred music, and a pioneer in the development of opera, he is considered a crucial transitional figure between the Renaissance and the Baroque periods of music history.",
+    "Georges Bizet (] ; 25 October 18383 June 1875), registered at birth as Alexandre César Léopold Bizet, was a French composer of the romantic era.",
+    " Best known for his operas in a career cut short by his early death, Bizet achieved few successes before his final work, \"Carmen\", which has become one of the most popular and frequently performed works in the entire opera repertoire."
+   ]
+  },
+  {
+   "id": "multihop-rag-2539",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5a72aec45542994cef4bc3d7",
+   "sentences": [
+    "Nelson Algren (March 28, 1909 – May 9, 1981) was an American writer.",
+    "Nathanael West (born Nathan Weinstein; October 17, 1903 – December 22, 1940) was an American author, screenwriter and satirist."
+   ]
+  },
+  {
+   "id": "647659679149316553",
+   "sentences": [
+    "The Sahara ( Arabic : الصحراء الكبرى ‎ , aṣ - ṣaḥrāʼ al - kubrá , ' the Great Desert ' ) is the largest hot desert and the third largest desert in the world after Antarctica and the Arctic . Its area of 9,200,000 square kilometres ( 3,600,000 sq mi ) is comparable to the area of China or the United States . The name ' Sahara ' is derived from dialectal Arabic word for `` desert '' , ṣaḥra ( صحرا / ˈsʕaħra / ) ."
+   ]
+  },
+  {
+   "id": "5a8319b255429940e5e1a960",
+   "sentences": [
+    " It plays during the opening sequence and was composed by Danny Elfman in 1989, after series creator Matt Groening approached him requesting a retro-style theme.",
+    " Clausen has scored or orchestrated music for more than 30 films and television shows, including \"Moonlighting\", \"The Naked Gun\", \"ALF\" and \"Ferris Bueller's Day Off\"."
+   ]
+  }
+ ]
+}

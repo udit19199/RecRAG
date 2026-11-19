@@ -1,0 +1,28 @@
+[
+  {"id": "c18b6a2a0bdbe0f1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+  ]},
+  {"id": "f3a9a0993b7a4343", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "637604ea1cb56337", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

@@ -1,0 +1,42 @@
+[
+{"id": "dd7db60e65d30583", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The company did accomplish that goal"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The company did accomplish that goal, but in doing so, it"}, {"item": 10, "quote": "inadvertently and profoundly changed how the internet looked."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The company did accomplish that goal, but in doing so, it"}, {"item": 10, "quote": "inadvertently and profoundly changed how the internet looked."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "945864d1a105d47c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "acdac1544bb5f904", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "she and husband Will Smith have been separated for the last seven years."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "during the 2022 Academy Awards - when Will slapped Chris Rock"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six"}, {"item": 7, "quote": "appearance - the pair had actually been separated for six years."}]},
+{"fact": "3.0", "status": "contradicted", "evidence": [{"item": 3, "quote": "During a 2020 episode of her Facebook Watch series, Red Table Talk,"}]},
+{"fact": "3.1", "status": "contradicted", "evidence": [{"item": 3, "quote": "During a 2020 episode of her Facebook Watch series, Red Table Talk,"}]},
+{"fact": "3.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "During a 2020 episode of her Facebook Watch series, Red Table Talk,"}]},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]}
+]

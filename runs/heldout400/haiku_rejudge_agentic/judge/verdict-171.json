@@ -1,0 +1,28 @@
+[
+  {
+    "id": "785b7b12c0d1cfc0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]}
+    ]
+  },
+  {
+    "id": "7434bf9065ceea26",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Wired removed the article for not meeting its standards"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "boosted in write-ups at other outlets"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part"}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  }
+]

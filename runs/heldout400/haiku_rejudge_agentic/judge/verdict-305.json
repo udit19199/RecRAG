@@ -1,0 +1,57 @@
+[
+  {
+    "id": "24b86d50e8bcb69b",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [
+        {"item": 2, "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."},
+        {"item": 8, "quote": "If a significant majority of bettors are placing their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing the betting action."}
+      ]}
+    ]
+  },
+  {
+    "id": "851b5f19049921d7",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [
+        {"item": 6, "quote": "intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary."}
+      ]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "stated", "evidence": [
+        {"item": 7, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}
+      ]},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "stated", "evidence": [
+        {"item": 7, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}
+      ]}
+    ]
+  },
+  {
+    "id": "7c41cbf22e98fd42",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [
+        {"item": 2, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats,"}
+      ]},
+      {"fact": "0.1", "status": "stated", "evidence": [
+        {"item": 2, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}
+      ]},
+      {"fact": "0.2", "status": "stated", "evidence": [
+        {"item": 2, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}
+      ]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  }
+]

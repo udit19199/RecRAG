@@ -1,0 +1,73 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "-4752044886865067782",
+   "sentences": [
+    "The Cylinder 's text has traditionally been seen by biblical scholars as corroborative evidence of Cyrus ' policy of the repatriation of the Jewish people following their Babylonian captivity ( an act that the Book of Ezra attributes to Cyrus ) , as the text refers to the restoration of cult sanctuaries and repatriation of deported peoples . This interpretation has been disputed , as the text identifies only Mesopotamian sanctuaries , and makes no mention of Jews , Jerusalem , or Judea . The Cylinder has also been referred to by Mohammad Reza Pahlavi , the last Shah of Iran as the first declaration of universal human rights , a view rejected by some historians as anachronistic and a misunderstanding of the Cylinder 's generic nature as a typical statement made by a new monarch at the beginning of his reign . Neil MacGregor , Director of the British Museum , has stated that the cylinder was `` the first attempt we know about running a society , a state with different nationalities and faiths -- a new kind of statecraft . '' It was adopted as a national symbol of Iran by the Imperial State which put it on display in Tehran in 1971 to commemorate 2,500 year celebration of the Persian Empire . On October 14 , the Mohammad Reza Shah 's sister , Princess Ashraf Pahlavi , presented the United Nations Secretary General U Thant with a replica of the Cylinder . The princess asserted that `` the heritage of Cyrus was the heritage of human understanding , tolerance , courage , compassion and , above all , human liberty '' ."
+   ]
+  },
+  {
+   "id": "5a77685e5542993569682d83",
+   "sentences": [
+    "The Second Battle of Guam (21 July – 10 August 1944) was the American recapture of the Japanese-held island of Guam, a U.S. territory in the Mariana Islands captured by the Japanese from the U.S. in the 1941 First Battle of Guam during the Pacific campaign of World War II.",
+    "The Battle of Antietam , also known as the Battle of Sharpsburg, particularly in the South, was fought on September 17, 1862, near Sharpsburg, Maryland and Antietam Creek as part of the Maryland Campaign."
+   ]
+  },
+  {
+   "id": "5a7a96b055429941d65f26d7",
+   "sentences": [
+    " She was also a member of a secret society composed exclusively of Cheyenne women.",
+    "Cheyenne military societies are one of the two central institutions of traditional Cheyenne Indian tribal governance, the other being the Council of Forty-four."
+   ]
+  },
+  {
+   "id": "8426342968417319670",
+   "sentences": [
+    "1924 Winter Olympics medal table Rank NOC Gold Silver Bronze Total Norway ( NOR ) 7 6 17 Finland ( FIN ) 11 Austria ( AUT ) 0 Switzerland ( SUI ) 0 United States ( USA ) 6 Great Britain ( GBR ) 7 Sweden ( SWE ) 0 8 Canada ( CAN ) 0 0 9 France ( FRA ) * 0 0 10 Belgium ( BEL ) 0 0 Total ( 10 NOCs ) 16 16 17 49",
+    "The 1924 Winter Olympics , officially known as the I Olympic Winter Games , and known at the time as Semaine Internationale des Sports d'Hiver ( `` International Winter Sports Week '' ) , was a winter multi-sport event held in Chamonix , France , from 25 January to 5 February 1924 . Norway topped the table , collecting seventeen medals in total , including four gold , three of which were won by Thorleif Haug in the nordic combined and cross-country skiing events . Norway also achieved two podium sweeps , winning all three medals in both the 50 km cross-country skiing and the nordic combined . This remained a record at the Winter Olympics until 2014 ."
+   ]
+  },
+  {
+   "id": "9111835660082410727",
+   "sentences": [
+    "A justice of the peace ( JP ) is a judicial officer , of a lower or puisne court , elected or appointed by means of a commission ( letters patent ) to keep the peace . In past centuries the term commissioner of the peace was often used with the same meaning . Depending on the jurisdiction , such justices dispense summary justice or merely deal with local administrative applications in common law jurisdictions . Justices of the peace are appointed or elected from the citizens of the jurisdiction in which they serve , and are ( or were ) usually not required to have any formal legal education in order to qualify for the office . Some jurisdictions have varying forms of training for JPs ."
+   ]
+  },
+  {
+   "id": "4053461415821443645",
+   "sentences": [
+    "`` What a Friend We Have in Jesus '' is a Christian hymn originally written by Joseph M. Scriven as a poem in 1855 to comfort his mother who was living in Ireland while he was in Canada . Scriven originally published the poem anonymously , and only received full credit for it in the 1880s . The tune to the hymn was composed by Charles Crozat Converse in 1868 . William Bolcom composed a setting of the hymn ."
+   ]
+  },
+  {
+   "id": "5a8a573355429970aeb7029a",
+   "sentences": [
+    "The Australian women's national soccer team represents Australia in international women's soccer at the senior level.",
+    " The team's official nickname is the Matildas (from the Australian folk song \"Waltzing Matilda\"), having been known as the Female Socceroos before 1995.",
+    "\"Waltzing Matilda\" is Australia's best-known bush ballad, and has been described as the country's \"unofficial national anthem\"."
+   ]
+  },
+  {
+   "id": "5a7e08b55542997cc2c474fe",
+   "sentences": [
+    " After the Blackhawks jumped to an early 4–1 lead in the first game of the series, Mario Lemieux and the Penguins came back to win the game, sweep the series in four games, and win their second consecutive and second overall Stanley Cup.",
+    "Mario Lemieux, OC, CQ ( ; ] ; born October 5, 1965) is a Canadian former professional ice hockey player and current owner of the Pittsburgh Penguins team."
+   ]
+  },
+  {
+   "id": "8199559637713501129",
+   "sentences": [
+    "Ballets by Pyotr Ilyich Tchaikovsky Swan Lake ( 1876 ) Sleeping Beauty ( 1889 ) The Nutcracker ( 1892 ) List of all compositions"
+   ]
+  },
+  {
+   "id": "multihop-rag-1950",
+   "sentences": [
+    "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund.",
+    "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."
+   ]
+  }
+ ]
+}

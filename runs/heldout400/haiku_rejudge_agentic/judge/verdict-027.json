@@ -1,0 +1,21 @@
+[
+  {"id": "e3dd0d72671b51f7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The whole time we were dating, he was my boss at work,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "We ultimately took about $14 billion, some of which we were not able to"}, {"item": 9, "quote": "Ellison did indeed confess to stealing customer funds"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "which Ellison said were customer funds"}, {"item": 8, "quote": "The $65 billion line of credit Alameda Research had meant that it did not have to"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval"}]}
+  ]},
+  {"id": "dd4423a8a8db63c5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

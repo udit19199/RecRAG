@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ea732fb29cef0aa5",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "482c5cb470d8095b",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "they are committed to moving to a centralised high-performance model"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "He will also be tasked with “integrating” the programs"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs."}]}
+    ]
+  },
+  {
+    "id": "2a371b6ee20c2477",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "when she famously first attended Kelce’s game at Arrowhead Stadium in September"}]},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "cheering emphatically when No. 87 scored a touchdown"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}, {"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+ {"id": "-1114133849011983215", "sentences": [
+   ["Roger Federer was the defending champion.", "Roger Federer successfully defended his title.", "Roger Federer defeated Marin Čilić in the final.", "The final score was 6-2, 6-7, 6-3, 3-6, 6-1.", "The win was Roger Federer's 20th Grand Slam singles title.", "The win was Roger Federer's record-equalling sixth Australian Open men's singles title.", "Roger Federer's sixth Australian Open men's singles title tied him with Roy Emerson and Novak Djokovic.", "With the win, Roger Federer became the first male player to win at least six titles at two Grand Slam tournaments.", "Roger Federer won six of those titles at the Australian Open.", "Roger Federer won eight of those titles at Wimbledon.", "Roger Federer became the oldest man to win a Grand Slam singles title in the Open era since Ken Rosewall won one in 1972.", "The time span between Roger Federer's first Grand Slam title at Wimbledon and his latest Grand Slam title is almost 15 years.", "That time span is an Open era record in men's singles.", "This was Roger Federer's 10th defense of a Grand Slam title.", "Roger Federer's previous Grand Slam title defense was at the 2008 US Open.", "Marin Čilić became the first Croatian player to reach a singles final at the Australian Open."],
+   ["The men's singles champion of the 2018 Australian Open was Roger Federer.", "The men's singles runner-up of the 2018 Australian Open was Marin Čilić.", "The 2018 Australian Open men's singles final score was 6-2, 6-7, 6-3, 3-6, 6-1.", "The 2018 Australian Open men's singles draw had 128 entries (16 qualifiers and 8 wild cards).", "The 2018 Australian Open men's singles had 32 seeds.", "The previous edition was the 2017 Australian Open.", "The next edition was the 2019 Australian Open."]
+ ]},
+ {"id": "5a8e27d45542995a26add46a", "sentences": [
+   ["The woman described is married to Scott Stapp.", "Scott Stapp is a former frontman of the band Creed.", "Scott Stapp is the current frontman for the band Art of Anarchy."],
+   ["The band's third album, “Weathered”, was released in 2001.", "Tremonti handled bass when “Weathered” was released.", "The band disbanded in 2004.", "The band disbanded in 2004 due to increasing tension between members."]
+ ]},
+ {"id": "-8074993547733090370", "sentences": [
+   ["The title is Diary of a Wimpy Kid: The Getaway.", "The author is Jeff Kinney.", "The country is United States.", "The language is English.", "The series is Diary of a Wimpy Kid.", "The genres are children's novel and graphic novel.", "The publisher is Amulet Books (US).", "The publisher is Puffin Books (UK).", "The publication date is November 7, 2017 (worldwide).", "The media type is print (hardcover).", "The book has 217 story pages, 224 altogether.", "The ISBN is 978-1-4197-2545-6.", "It is preceded by Double Down."]
+ ]},
+ {"id": "multihop-rag-2351", "sentences": [
+   ["Cue said there certainly wasn't a valid alternative to Google at the time."],
+   ["Google could solve this problem today if it wanted to.", "Google gets other benefits from Android."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google “siphons off” news publishers' content.", "The case argues that Google siphons off news publishers' readers.", "The case argues that Google siphons off news publishers' ad revenue.", "The case argues that this is done through anticompetitive means."]
+ ]},
+ {"id": "-1330515253963834494", "sentences": [
+   ["On 25 January 2018, it was confirmed that Dancing on Ice had been recommissioned.", "Dancing on Ice was recommissioned for an eleventh series.", "The eleventh series is to air in 2019."]
+ ]},
+ {"id": "-461258131989129967", "sentences": [
+   ["Nigeria is the largest oil and gas producer in Africa."],
+   ["Crude oil from the delta basin comes in two types: light, and comparatively heavy.", "The lighter type has a gravity of around 36.", "The heavier type has a gravity of 20 to 25."],
+   ["Both types of crude oil from the delta basin are paraffinic.", "Both types of crude oil from the delta basin are low in sulfur."]
+ ]},
+ {"id": "5adf043b5542993a75d263d4", "sentences": [
+   ["The program described features former GOP representative Joe Scarborough.", "Joe Scarborough provides enterprise reporting on the program.", "Joe Scarborough provides discussion on the news of the day on the program.", "The program is in a panel format.", "Mika Brzezinski is a co-host of the program.", "Willie Geist is a co-host of the program."],
+   ["Charles Joseph Scarborough was born on April 9, 1963.", "Charles Joseph Scarborough is an American cable news host.", "Charles Joseph Scarborough is an American talk radio host."]
+ ]},
+ {"id": "5ab9b4a555429970cfb8eb75", "sentences": [
+   ["Rick Husband Amarillo International Airport has the IATA code AMA.", "Rick Husband Amarillo International Airport has the ICAO code KAMA.", "Rick Husband Amarillo International Airport has the FAA LID AMA.", "Rick Husband Amarillo International Airport is a public airport.", "Rick Husband Amarillo International Airport is six miles (10 km) east of downtown Amarillo.", "Rick Husband Amarillo International Airport is in Potter and Randall Counties, Texas, United States."],
+   ["Grand Forks International Airport has the IATA code GFK.", "Grand Forks International Airport has the ICAO code KGFK.", "Grand Forks International Airport has the FAA LID GFK.", "Grand Forks International Airport is a public airport.", "Grand Forks International Airport is five miles (8 km) northwest of Grand Forks.", "Grand Forks International Airport is in Grand Forks County, North Dakota."]
+ ]},
+ {"id": "5a86fde6554299211dda2b7f", "sentences": [
+   ["Pramod Bhasin stepped down as President of Genpact.", "Pramod Bhasin stepped down as CEO of Genpact.", "Genpact is India's largest business process outsourcing (BPO) company.", "Pramod Bhasin became non-executive Vice Chairman in 2011."],
+   ["Genpact is a global business process management and services corporation.", "Genpact is an IT corporation.", "Genpact has key offices in New York City, United States."]
+ ]},
+ {"id": "5a884adb5542996e4f308938", "sentences": [
+   ["Eryngium is a genus of flowering plants.", "Eryngium is in the family Apiaceae."],
+   ["Arnebia is a genus of flowering plants.", "Arnebia is in the family Boraginaceae."]
+ ]}
+]

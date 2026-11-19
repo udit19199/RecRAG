@@ -1,0 +1,86 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8e341c5542995085b373d6",
+   "sentences": [
+    "Hou Hsiao-hsien (] born 8 April 1947) is a Taiwanese film director, screenwriter, producer and actor.",
+    " He is a leading figure in world cinema and in Taiwan's New Wave cinema movement, an auteur.",
+    " He won the Golden Lion at the Venice Film Festival in 1989 for his film \"A City of Sadness\" (1989), and the Best Director award at the Cannes Film Festival in 2015 for \"The Assassin\" (2015).",
+    " Other highly regarded works of his include \"The Puppetmaster\" (1993) and \"Flowers of Shanghai\" (1998).",
+    "Kenneth John \"Kenny\" Ortega (born April 18, 1950) is an American producer, director, and choreographer.",
+    " He is best known for directing \"Hocus Pocus\", the \"High School Musical\" trilogy, \"Descendants\" and Michael Jackson's \"This Is It\" concerts."
+   ]
+  },
+  {
+   "id": "5a7652785542992db9473760",
+   "sentences": [
+    "Vladimir Petrovich Danilevich (Russian: Владимир Петрович Данилевич ; 4 September 1924 — 9 October 2001) was well-known Soviet and Russian Animator: who successfully worked as the film director, the screenwriter, the art director and the animator.",
+    "Wolfgang Becker (born 22 June 1954) is a German film director and writer.",
+    " He is best known to the international audience for his work \"Good Bye Lenin!",
+    "\" (2003)."
+   ]
+  },
+  {
+   "id": "multihop-rag-1858",
+   "sentences": [
+    "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana.",
+    "Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania, who recorded their second win over Sydney in as many attempts this season."
+   ]
+  },
+  {
+   "id": "multihop-rag-2079",
+   "sentences": [
+    "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.",
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "multihop-rag-2125",
+   "sentences": [
+    "Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it.",
+    "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.",
+    "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets.",
+    "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+   ]
+  },
+  {
+   "id": "multihop-rag-1667",
+   "sentences": [
+    "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.",
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "5abd4f2e5542993062266c4b",
+   "sentences": [
+    "Stephanocereus is genus of cactus from Brazil, related to \"Arrojadoa\".",
+    " They are mostly liana-forming plants of the Old World tropics, ranging from South China, Indonesia, Malaysia and the Philippines; westward to Madagascar (two species) and the Seychelles (one); southward to Australia (three) and New Caledonia (one); and northward to India (one) and Sri Lanka (one)."
+   ]
+  },
+  {
+   "id": "multihop-rag-2126",
+   "sentences": [
+    "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform.",
+    "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."
+   ]
+  },
+  {
+   "id": "multihop-rag-2456",
+   "sentences": [
+    "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.",
+    "But “all of that, all of it, was built on lies,” Rehn declared to the jury.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "-6378089928409183337",
+   "sentences": [
+    "The previous department issued firearm for CHP officers is the Smith & Wesson Model 4006 TSW in . 40 S&W . As of August 2017 , the department has begun replacing the 4006 TSW with the Smith & Wesson M&P in . 40 S&W . Each CHP patrol vehicle is equipped with a Remington 870 Police Magnum 12 ‐ gauge shotgun and a Sig Sauer M400 rifle in 5.56 mm . Less Lethal options for officers include OC Pepper Spray and the PR - 24 Side Handle Baton . The ASP Expandable Straight Baton is authorized as an optional piece of equipment for officers completing their probationary year . Additionally , officers are authorized to carry the TASER X2 Defender . In early 2009 , officers have been allowed to mount tactical lights to their Smith & Wesson 4006 TSW pistols ."
+   ]
+  }
+ ]
+}

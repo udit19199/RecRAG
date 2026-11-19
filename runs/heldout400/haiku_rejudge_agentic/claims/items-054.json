@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5adfff0755429925eb1afbce",
+   "sentences": [
+    "Groom Lake is a salt flat in Nevada used for runways of the Nellis Bombing Range Test Site airport (KXTA).",
+    " Located within the namesake Groom Lake Valley portion of the Tonopah Basin, the lake is 25 mi south of Rachel, Nevada.",
+    "Rachel is a census-designated place (CDP) in Lincoln County, Nevada, United States."
+   ]
+  },
+  {
+   "id": "multihop-rag-1504",
+   "sentences": [
+    "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury.",
+    "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."
+   ]
+  },
+  {
+   "id": "5a7a33205542996a35c1712f",
+   "sentences": [
+    "The New York – New Jersey Line War (also known as the N.J. Line War) refers to a series of skirmishes and raids that took place for over half a century between 1701 and 1765 at the disputed border between two American colonies, the Province of New York and the Province of New Jersey.",
+    "The Province of New York (1664–1776) was a British proprietary colony and later royal colony on the northeast coast of North America."
+   ]
+  },
+  {
+   "id": "multihop-rag-2441",
+   "sentences": [
+    "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4.",
+    "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a79c1095542996c55b2dc62",
+   "sentences": [
+    "Chester Erskine (November 29, 1905 – April 7, 1986) was a Hollywood and Broadway director, writer, and producer.",
+    "Sam Taylor (August 13, 1895, New York City – March 6, 1958, Santa Monica) was a film director, screenwriter, and producer, most active in the silent film era."
+   ]
+  },
+  {
+   "id": "5a863114554299211dda2aa5",
+   "sentences": [
+    "Francis Keogh Gleason (April 14, 1906 – December 18, 1982) was a resident set decorator at MGM studios for over 40 years.",
+    " In that time he won 4 Academy Awards (for \"An American in Paris\" in 1951, \"The Bad and the Beautiful\" in 1952, \"Somebody Up There Likes Me\" in 1956 and \"Gigi\" in 1958) and was nominated an additional 3 times.",
+    "Somebody Up There Likes Me is a 1956 American drama film based on the life of middleweight boxing legend Rocky Graziano."
+   ]
+  },
+  {
+   "id": "multihop-rag-2033",
+   "sentences": [
+    "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.",
+    "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."
+   ]
+  },
+  {
+   "id": "4259863793651737582",
+   "sentences": [
+    "The Earth 's magnetic field serves to deflect most of the solar wind , whose charged particles would otherwise strip away the ozone layer that protects the Earth from harmful ultraviolet radiation . One stripping mechanism is for gas to be caught in bubbles of magnetic field , which are ripped off by solar winds . Calculations of the loss of carbon dioxide from the atmosphere of Mars , resulting from scavenging of ions by the solar wind , indicate that the dissipation of the magnetic field of Mars caused a near total loss of its atmosphere ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1734",
+   "sentences": [
+    "Google compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.",
+    "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5a76404b5542994ccc91873d",
+   "sentences": [
+    "The Shame of a City is a 2006 feature-length documentary, which premiered at the Philadelphia Film Festival.",
+    "Unchained Memories is a 2003 documentary film about the stories of former slaves interviewed during the 1930s as part of the Federal Writers' Project and preserved in the WPA Slave Narrative Collection."
+   ]
+  }
+ ]
+}

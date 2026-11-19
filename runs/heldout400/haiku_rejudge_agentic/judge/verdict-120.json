@@ -1,0 +1,30 @@
+[
+{"id": "01a8d03f4bf56e6f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "428f9c4cc54deb8d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 4, "quote": "Bankman-Fried directed him to have Alameda take it on instead"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]}
+]},
+{"id": "1dcd0287790d8838", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper."}, {"item": 7, "quote": "It might not look like a big change from the outside"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The new Steam Deck’s main upgrade is its OLED screen, which replaces the original LCD and, crucially, has native support for HDR and faster frame rates."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]}
+]

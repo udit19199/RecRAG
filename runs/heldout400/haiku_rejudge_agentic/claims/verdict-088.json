@@ -1,0 +1,88 @@
+[
+ {"id": "6194915277794840386", "sentences": [[
+  "'Baby, Now That I've Found You' was written by Tony Macaulay and John MacLeod.",
+  "'Baby, Now That I've Found You' runs 3 minutes 49 seconds.",
+  "'Baby, Now That I've Found You' is previously unreleased.",
+  "'Oh, Atlanta' was written by Mick Ralphs.",
+  "'Oh, Atlanta' runs 4 minutes 41 seconds.",
+  "'Oh, Atlanta' is previously unreleased.",
+  "'Broadway' was written by Sidney & Suzanne Cox.",
+  "'Broadway' runs 3 minutes 57 seconds.",
+  "'Broadway' is previously unreleased.",
+  "'Every Time You Say Goodbye' was written by John Pennell.",
+  "'Every Time You Say Goodbye' runs 3 minutes 13 seconds.",
+  "'Every Time You Say Goodbye' is from the album 'Every Time You Say Goodbye' by Alison Krauss & Union Station.",
+  "'Tonight I'll Be Lonely Too' was written by Sidney Cox.",
+  "'Tonight I'll Be Lonely Too' runs 3 minutes 25 seconds.",
+  "'Tonight I'll Be Lonely Too' is from the album 'I've Got That Old Feeling' by Alison Krauss.",
+  "'Teardrops Will Kiss the Morning Dew' was written by Paul Craft.",
+  "'Teardrops Will Kiss the Morning Dew' runs 3 minutes 38 seconds.",
+  "'Teardrops Will Kiss the Morning Dew' is from the album 'Two Highways' by Alison Krauss & Union Station.",
+  "'Sleep On' was written by Nelson Mandrell.",
+  "'Sleep On' runs 2 minutes 23 seconds.",
+  "'Sleep On' is from the album 'Too Late to Cry' by Alison Krauss.",
+  "'When God Dips His Pen of Love in My Heart' was written by Cleavant Derricks.",
+  "'When God Dips His Pen of Love in My Heart' runs 2 minutes 26 seconds.",
+  "'When God Dips His Pen of Love in My Heart' is from the album 'Everybody's Reaching Out for Someone' by The Cox Family.",
+  "'I Will' was written by John Lennon and Paul McCartney.",
+  "'I Will' runs 4 minutes 4 seconds.",
+  "'I Will' is from the album 'Within Reach' by Tony Furtado.",
+  "'I Don't Believe You've Met My Baby' was written by Autry Inman.",
+  "'I Don't Believe You've Met My Baby' runs 3 minutes 10 seconds.",
+  "'I Don't Believe You've Met My Baby' is from the album 'Slide Rule' by Jerry Douglas.",
+  "'In the Palm of Your Hand' was written by Ron Block.",
+  "'In the Palm of Your Hand' runs 3 minutes 24 seconds.",
+  "'In the Palm of Your Hand' is from the album 'I Know Who Holds Tomorrow' by Alison Krauss & The Cox Family.",
+  "'When You Say Nothing at All' was written by Paul Overstreet and Don Schlitz.",
+  "'When You Say Nothing at All' runs 4 minutes 21 seconds.",
+  "'When You Say Nothing at All' is performed by Alison Krauss & Union Station on the album 'Keith Whitley: A Tribute Album'."
+ ]]},
+ {"id": "multihop-rag-1573", "sentences": [
+  ["Zazie Beetz will return in the role of Arthur's neighbor.", "Zazie Beetz's character Sophie is Arthur's love interest.", "Sophie is unwitting about being Arthur's love interest."],
+  ["MJ is also in the new installment.", "MJ has made a comeback from the first installment."]
+ ]},
+ {"id": "5a83a7e15542992ef85e2347", "sentences": [
+  ["Homer Jay Simpson is a fictional character.", "Homer Jay Simpson is the main protagonist of the American animated television series 'The Simpsons'.", "Homer Jay Simpson is the patriarch of the Simpson family, the family the show is named after."],
+  ["Homer Simpson is voiced by Dan Castellaneta.", "Homer Simpson first appeared on television along with the rest of his family.", "Homer Simpson's first television appearance was in the short 'Good Night' from 'The Tracey Ullman Show'.", "Homer Simpson's first television appearance was on April 19, 1987."],
+  ["Daniel Louis Castellaneta was born October 29, 1957.", "Daniel Louis Castellaneta is an American actor.", "Daniel Louis Castellaneta is a voice actor.", "Daniel Louis Castellaneta is a comedian.", "Daniel Louis Castellaneta is a screenwriter."]
+ ]},
+ {"id": "multihop-rag-530", "sentences": [
+  ["Inter Miami scheduled a two-match tour of China in early November.", "The China tour was scheduled after Inter Miami's regular season concluded.", "The likely sole intent of the China tour was keeping Messi fit during that time off.", "The China tour had the added bonus of raking in significant cash."],
+  ["Alvaro Barreal scored a goal in the 78th minute.", "Barreal's 78th-minute goal ended any hope Inter Miami had of completing a stunning playoff charge.", "Inter Miami's defeat, together with CF Montreal's 4-1 victory over Portland, means Inter Miami are officially out of the postseason running."],
+  ["Lionel Messi's arrival at Inter Miami has brought a craze for fans to get a glimpse of him.", "Lionel Messi is one of the sport's most talented players of all time.", "Lionel Messi is one of the sport's most legendary players of all time."]
+ ]},
+ {"id": "5a840e395542992ef85e239d", "sentences": [
+  ["The Straight Story is a 1999 film.", "The Straight Story is internationally co-produced.", "The Straight Story is a biographical road drama film.", "The Straight Story was directed by David Lynch."],
+  ["Frozen is a 2013 film.", "Frozen is American.", "Frozen is a 3D computer-animated film.", "Frozen is a musical fantasy film.", "Frozen was produced by Walt Disney Animation Studios.", "Frozen was released by Walt Disney Pictures."]
+ ]},
+ {"id": "6166989945125161991", "sentences": [[
+  "The Roosevelt Corollary was an addition to the Monroe Doctrine.",
+  "President Theodore Roosevelt articulated the Roosevelt Corollary.",
+  "Theodore Roosevelt articulated the Roosevelt Corollary in his State of the Union address in 1904.",
+  "The Roosevelt Corollary was articulated after the Venezuela Crisis of 1902-03.",
+  "The Roosevelt Corollary states that the United States will intervene in conflicts between European countries and Latin American countries.",
+  "Under the Roosevelt Corollary, the United States intervenes to enforce legitimate claims of the European powers.",
+  "Under the Roosevelt Corollary, the United States intervenes rather than having the Europeans press their claims directly."
+ ]]},
+ {"id": "multihop-rag-1003", "sentences": [
+  ["Miami has five remaining opponents.", "Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight."],
+  ["Tyreek Hill missed last week's game.", "Tyreek Hill now needs to average almost 153 yards per game in his final three games.", "The figure cited is 152.67 yards per game.", "Tyreek Hill's stated goal is 2,000 receiving yards this season."]
+ ]},
+ {"id": "-7123670178204378853", "sentences": [[
+  "All black military pilots who trained in the United States trained at Moton Field.",
+  "All black military pilots who trained in the United States trained at the Tuskegee Army Air Field.",
+  "All black military pilots who trained in the United States were educated at Tuskegee University.",
+  "Tuskegee University is located near Tuskegee, Alabama.",
+  "The group included five Haitians from the Haitian Air Force.",
+  "The group included one pilot from Trinidad.",
+  "The group included a Hispanic or Latino airman born in the Dominican Republic."
+ ]]},
+ {"id": "multihop-rag-352", "sentences": [
+  ["By the age of 16, the person described is public property.", "By the age of 16, the person described is incapable of going outside without being mobbed.", "By the age of 16, the person described's love of singing and dancing is now a lucrative resource."],
+  ["The speaker described it as almost a very strange, subtle clue to the media.", "The clue signals that the media does not know everything that happened in that relationship.", "The speaker says something really major and traumatic could have happened to her that the media does not know about.", "The speaker told NPR this."]
+ ]},
+ {"id": "5a794f8155429970f5fffe95", "sentences": [
+  ["Martin Degville was born 27 January 1961 in Walsall.", "Martin Degville is the lead singer of the UK pop band Sigue Sigue Sputnik.", "Martin Degville is a co-songwriter of Sigue Sigue Sputnik.", "Sigue Sigue Sputnik had a worldwide hit single in 1986 with 'Love Missile F1-11'.", "Sigue Sigue Sputnik has six other EMI single releases."],
+  ["Paul Richard 'Richie' Furay was born May 9, 1944.", "Richie Furay is an American singer.", "Richie Furay is an American songwriter.", "Richie Furay is a Rock & Roll Hall of Fame member.", "Richie Furay is best known for forming Buffalo Springfield with Stephen Stills, Neil Young, Bruce Palmer, and Dewey Martin.", "Richie Furay is best known for forming Poco with Jim Messina, Rusty Young, George Grantham, and Randy Meisner."]
+ ]}
+]

@@ -1,0 +1,79 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5ab9d6ef5542994dbf01985b",
+   "sentences": [
+    "Dana Robins Ivey (born August 12, 1941) is an American actress.",
+    "Two Weeks Notice is a 2002 Australian-American romantic comedy film starring Hugh Grant and Sandra Bullock."
+   ]
+  },
+  {
+   "id": "-8817510910624892182",
+   "sentences": [
+    "Shortwave radio is radio transmission using shortwave radio frequencies . There is no official definition of the band , but the range always includes all of the high frequency band ( HF ) , and generally extends from 1.7 -- 30 MHz ( 176.3 -- 10.0 m ) ; from the high end of the medium frequency band ( MF ) just above the mediumwave AM broadcast band , to the end of the HF band .",
+    "Very little infrastructure is required for long - distance two - way communications using shortwave radio . All one needs is a pair of transceivers , each with an antenna , and a source of energy ( such as a battery , a portable generator , or the electrical grid ) . This makes shortwave radio one of the most robust means of communications , which can be disrupted only by interference or bad ionospheric conditions . Modern digital transmission modes such as MFSK and Olivia are even more robust , allowing successful reception of signals well below the noise floor of a conventional receiver ."
+   ]
+  },
+  {
+   "id": "5abbee315542993f40c73c1d",
+   "sentences": [
+    "Bicycling is a cycling brand published by Rodale, Inc. in Emmaus, Pennsylvania.",
+    "National Review (NR) is an American semi-monthly conservative editorial magazine focusing on news and commentary pieces on political, social, and cultural affairs."
+   ]
+  },
+  {
+   "id": "multihop-rag-1656",
+   "sentences": [
+    "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote.",
+    "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."
+   ]
+  },
+  {
+   "id": "5ade8b2655429975fa854eff",
+   "sentences": [
+    "US Airways Flight 1549 was an Airbus A320-214 which, three minutes after takeoff from New York City's LaGuardia Airport on January 15, 2009, struck a flock of Canada geese just northeast of the George Washington Bridge and consequently lost all engine power.",
+    " Unable to reach any airport, pilots Chesley Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan.",
+    "Chesley Burnett \"Sully\" Sullenberger III (born 1951) is an American retired airline captain celebrated for the January 15, 2009 water landing of US Airways Flight 1549 in the Hudson River off Manhattan after the plane was disabled by striking a flock of Canada geese immediately after takeoff; all 155 people aboard survived."
+   ]
+  },
+  {
+   "id": "-7275272659885289884",
+   "sentences": [
+    "In 1908 , the first five - day workweek in the United States was instituted by a New England cotton mill so that Jewish workers would not have to work on the Sabbath from sundown Friday to sundown Saturday . In 1926 , Henry Ford began shutting down his automotive factories for all of Saturday and Sunday . In 1929 , the Amalgamated Clothing Workers of America Union was the first union to demand a five - day workweek and receive it . After that , the rest of the United States slowly followed , but it was not until 1940 , when a provision of the 1938 Fair Labor Standards Act mandating a maximum 40 - hour workweek went into effect , that the two - day weekend was adopted nationwide ."
+   ]
+  },
+  {
+   "id": "5ac00f795542996f0d89cb16",
+   "sentences": [
+    "Alan Young (born Angus Young; November 19, 1919 – May 19, 2016) was a British-born Canadian-American actor, voice actor, comedian and radio and television host/personality who \"TV Guide\" called \"The Charlie Chaplin of Television\".",
+    " Young was also the voice of Disney's Scrooge McDuck for over thirty years, first in the Academy Award-nominated short film \"Mickey's Christmas Carol\" (1983) and in various other films, TV series and video games until his death.",
+    " During the 1940s and 1950s, he starred in his own variety/comedy sketch shows \"The Alan Young Show\" on radio and television, the latter gaining him two Emmy Awards in 1951.",
+    " The cartoon is an adaptation of Charles Dickens' \"A Christmas Carol\", starring Scrooge McDuck as Ebenezer Scrooge."
+   ]
+  },
+  {
+   "id": "5a8787915542996e4f30882e",
+   "sentences": [
+    "Dangal (English: \"Wrestling competition\" ) is a 2016 Indian Hindi-language biographical sports drama film loosely based on the story of Mahavir Singh Phogat, an amateur wrestler, who trains his daughters Geeta Phogat and Babita Kumari to be world-class wrestlers.",
+    "The Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\"."
+   ]
+  },
+  {
+   "id": "multihop-rag-762",
+   "sentences": [
+    "During Prime Day this past summer, Amazon introduced invite-only deals—a system to help make it easier for Prime members to access deals that are expected to sell out quickly—and the company brought it back for Prime Big Deal Days.",
+    "You can get this two-pack at Amazon for $15.99, so you can keep one at home and then put the other in a bag you bring around during everyday travels.",
+    "“Selling on Amazon is a life-changing opportunity and the amount of sellers that throw stones at the platform is astounding,” one user wrote."
+   ]
+  },
+  {
+   "id": "multihop-rag-2377",
+   "sentences": [
+    "The official details have not been reported, though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal.",
+    "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."
+   ]
+  }
+ ]
+}

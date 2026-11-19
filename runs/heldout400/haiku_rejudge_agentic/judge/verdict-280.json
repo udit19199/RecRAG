@@ -1,0 +1,38 @@
+[
+{"id": "50675693b1a1aaae", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "generative AI — technology that can produce novel imagery, passages of text and other media"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In the year since Altman catapulted ChatGPT to global fame"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []}
+]},
+{"id": "82afa52ff28fe558", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’?"}, {"item": 3, "quote": "it looked like the defendant was on the top of the world"}, {"item": 3, "quote": "former CEO of FTX oversaw a supposedly thriving crypto exchange"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of"}, {"item": 5, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of"}, {"item": 5, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy"}]},
+{"fact": "3.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "3.1", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "3.2", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.3", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "3.4", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "8cde0bfa18a09e80", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []}
+]}
+]

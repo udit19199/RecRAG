@@ -1,0 +1,34 @@
+[
+  {
+    "id": "b0ea60f8d3db23f2",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+    ]
+  },
+  {
+    "id": "93adeab5b29c9455",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it"}]},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 10, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "5ea7a724fb07d28e",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "As for her children, Jada praised them for how they’ve helped her grow."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "My children, they’re little gurus."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "she and the King Richard star share two children - Jaden, 25, and Willow, 22."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "she and the King Richard star share two children - Jaden, 25, and Willow, 22."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "noting that they’ve taught her “a deep sense of self-acceptance”."}]}
+    ]
+  }
+]

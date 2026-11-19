@@ -1,0 +1,73 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5926634737519636306",
+   "sentences": [
+    "The new season of The Little Couple premiered on September 19 , 2017 ."
+   ]
+  },
+  {
+   "id": "5a70f9335542994082a3e46a",
+   "sentences": [
+    "Essence is a monthly magazine for African American women between the ages of 18 and 49.",
+    "ALT for Damerne (meaning \"All for the Ladies\" in English) is a Danish language weekly women's magazine published in Copenhagen, Denmark."
+   ]
+  },
+  {
+   "id": "-3553072210127301492",
+   "sentences": [
+    "Geoffrey Dyson Palmer , OBE ( born 4 June 1927 ) is an English actor known for his roles in British television sitcoms playing Jimmy Anderson in The Fall and Rise of Reginald Perrin ( 1976 -- 79 ) , Ben Parkinson in Butterflies ( 1978 -- 83 ) and Lionel Hardcastle in As Time Goes By ( 1992 -- 2005 ) . His film appearances include A Fish Called Wanda ( 1988 ) , The Madness of King George ( 1994 ) , Mrs. Brown ( 1997 ) , and Tomorrow Never Dies ( 1997 ) ."
+   ]
+  },
+  {
+   "id": "5a8a265b5542992d82986ecc",
+   "sentences": [
+    "Frederick King Keller (born 1954 in Buffalo, New York) is an American director, producer and screenwriter for film and television.",
+    "Ian Schneider (born October 3, 1992), is an independent American film director and screenwriter."
+   ]
+  },
+  {
+   "id": "multihop-rag-346",
+   "sentences": [
+    "“The company’s approach also raises concerns regarding the GDPR,” Pachl further noted.",
+    "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.",
+    "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+   ]
+  },
+  {
+   "id": "5a7b63eb55429931da12ca7e",
+   "sentences": [
+    "Paul Clyne was the District Attorney of Albany County, New York from January 2001 through December 2004.",
+    "P. David Soares (born October 26, 1969, Brava, Cape Verde) is the Albany County, N.Y. District Attorney."
+   ]
+  },
+  {
+   "id": "-5097374528538276327",
+   "sentences": [
+    "The Pan-American Highway is a network of roads measuring about 30,000 kilometres ( 19,000 mi ) in total length . Except for a rainforest break of approximately 160 km ( 100 mi ) , called the Darién Gap , the road links almost all of the Pacific coastal countries of the Americas in a connected highway system . According to Guinness World Records , the Pan-American Highway is the world 's longest `` motorable road '' . However , because of the Darién Gap , it is not possible to cross between South America and Central America with conventional highway vehicles . Without an all - terrain vehicle , it is necessary to circumnavigate this terrestrial stretch by sea ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1154",
+   "sentences": [
+    "One of the major sources of Gen Z’s distress, of course, is climate change.",
+    "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers."
+   ]
+  },
+  {
+   "id": "5ab913205542991b5579f0e0",
+   "sentences": [
+    " In 1972, a grant from the Eleanor and John Y. Brown Jr., Foundation led to the construction of the current facility.",
+    " He served as the 55th governor of Kentucky from 1979 to 1983, although he may be best known for building Kentucky Fried Chicken (KFC) into a multimillion-dollar restaurant chain."
+   ]
+  },
+  {
+   "id": "2112011235189339436",
+   "sentences": [
+    "The Uralic languages ( / jʊəˈrælɪk / ; sometimes called Uralian languages / jʊəˈreɪliən / ) form a language family of 38 languages spoken by approximately 25 million people , predominantly in Northern Eurasia . The Uralic languages with the most native speakers are Hungarian , Finnish , and Estonian , which are the official languages of Hungary , Finland , and Estonia , respectively , and of the European Union . Other Uralic languages with significant numbers of speakers are Erzya , Moksha , Mari , Udmurt , and Komi , which are officially recognized languages in various regions of Russia ."
+   ]
+  }
+ ]
+}

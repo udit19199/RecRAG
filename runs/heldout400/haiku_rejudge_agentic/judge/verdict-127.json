@@ -1,0 +1,29 @@
+[
+{"id": "7476645cc24bc5bc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "8cd8931cce87f96a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The prosecution painted a picture of an empire “built on lies”"}, {"item": 6, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+]},
+{"id": "d83ee76968febb36", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "With the recent release of Marvel’s Spider-Man 2"}, {"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+]}
+]

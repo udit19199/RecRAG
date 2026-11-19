@@ -1,0 +1,35 @@
+[
+  {
+    "id": "465dfb42c53486a0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "e8c9c15193716ef8",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]}
+    ]
+  },
+  {
+    "id": "6ca74455e329ca32",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

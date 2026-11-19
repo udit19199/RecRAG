@@ -48,9 +48,12 @@ can be deleted; run results in `runs/` are committed.
     Claude Haiku judge extracts from the gold sentences (`evals/haiku_fact_judge.py`,
     `claims`). A fact counts as found only when `judge` marks it `stated` with a
     quote that appears in the retrieved text (`full_status`). Per-question data:
-    latest run `facts[].found` in `runs/final500/judge/per_question.jsonl`; previous run
-    `gold[].claims[].full_status` in `runs/heldout400/judge_support/*/per_question.jsonl`
-    (that run's facts were judged by GPT-6 Luna, before the Haiku rule).
+    latest run `facts[].found` in `runs/final500/judge/per_question.jsonl`. Previous
+    run, also judged by Claude Haiku on the same frozen facts: counts in
+    `runs/heldout400/gold_facts_by_run_haiku.json` (Agentic Hybrid RAG re-judged in
+    `runs/heldout400/haiku_rejudge_agentic/`; baselines are final500's rows for the
+    heldout400 folders). The old GPT-6 Luna counts (`gold_facts_by_run.json`,
+    `judge_support/`) are kept for provenance only; never chart them.
   - Do not report gold-sentence recall or sentence-level matching; the gold
     facts replace them. Null questions have no gold facts, so they have no
     retrieval numbers.

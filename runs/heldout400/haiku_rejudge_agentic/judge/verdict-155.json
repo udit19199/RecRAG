@@ -1,0 +1,27 @@
+[
+  {
+    "id": "9876e9f1791f3b6e",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 6, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 6, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}
+        ]
+      },
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

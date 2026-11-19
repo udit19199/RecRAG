@@ -1,0 +1,23 @@
+[
+{"id": "8ffa6b4c1cee54fd", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "5049dc253124a2f6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone — which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "Roumie said that building a habit of prayer"}, {"item": 10, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "Roumie said that building a habit of prayer"}, {"item": 10, "quote": "you find your relationship with Jesus growing deeper and deeper, just automatically."}]}
+]},
+{"id": "ad37a01dbb03ddd9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "While some economic factors are stronger today than they were during the GFC"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "housing affordability is undeniably worse"}, {"item": 2, "quote": "2008 crash that kicked off the Global Financial Crisis (GFC)"}, {"item": 5, "quote": "housing affordability is even worse now than during 2008"}]}
+]}
+]

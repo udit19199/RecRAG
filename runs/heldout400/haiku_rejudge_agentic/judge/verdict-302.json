@@ -1,0 +1,43 @@
+[
+  {
+    "id": "4aa66c55be0f1479",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "b75a84845492768a",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "they need a top blueprint not only for now but for the next five years"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "hard moments when you don't get the right results, even though you're doing the right things."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "16685513d74ba6f7",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "though he mostly avoided addressing the only topic on anyone's mind."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

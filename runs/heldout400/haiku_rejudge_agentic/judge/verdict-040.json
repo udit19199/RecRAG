@@ -1,0 +1,79 @@
+[
+  {"id": "76adb90b6037f7c4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 9, "quote": "The trial of Sam Bankman-Fried is likely to be more consequential than just whether the man himself is found guilty."},
+      {"item": 9, "quote": "is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy charges"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 8, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 8, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"},
+      {"item": 8, "quote": "the trustworthy face of a sometimes-shady industry."}
+    ]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [
+      {"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}
+    ]},
+    {"fact": "3.1", "status": "stated", "evidence": [
+      {"item": 7, "quote": "the defense countered that the FTX founder acted in good faith"}
+    ]},
+    {"fact": "3.2", "status": "stated", "evidence": [
+      {"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}
+    ]},
+    {"fact": "3.3", "status": "stated", "evidence": [
+      {"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}
+    ]}
+  ]},
+  {"id": "01f792e7d5e683ae", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 5, "quote": "The former CEO of FTX oversaw a supposedly thriving crypto exchange"},
+      {"item": 9, "quote": "Even if they are made whole by the bankruptcy proceedings"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 4, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 4, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."},
+      {"item": 4, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 6, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 6, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 6, "quote": "the defense countered that the FTX founder acted in good faith"}
+    ]},
+    {"fact": "1.3", "status": "stated", "evidence": [
+      {"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}
+    ]},
+    {"fact": "1.4", "status": "stated", "evidence": [
+      {"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}
+    ]}
+  ]},
+  {"id": "42b8b92871707e42", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 4, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 4, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,164 @@
+[
+  {"id": "3071184395682844971", "sentences": [[
+    "The poem survives in a single manuscript, the Cotton Nero A.x.",
+    "The Cotton Nero A.x. manuscript also includes three religious narrative poems: Pearl, Purity and Patience.",
+    "Pearl, Purity and Patience are thought to have been written by the same unknown author.",
+    "The unknown author is dubbed the 'Pearl Poet' or 'Gawain Poet'.",
+    "The 'Pearl Poet' or 'Gawain Poet' name is given because all four poems are written in a North West Midland dialect of Middle English.",
+    "All four poems are written in a North West Midland dialect of Middle English."
+  ]]},
+  {"id": "5ade7fa3554299728e26c727", "sentences": [
+    [
+      "Marcel Émile Verdet was born on 13 March 1824.",
+      "Marcel Émile Verdet died on 3 June 1866.",
+      "Marcel Émile Verdet was a French physicist."
+    ],
+    [
+      "Marcel Émile Verdet did much to champion the early theory of the conservation of energy in France.",
+      "Marcel Émile Verdet championed this theory in France through his editorial supervision of the 'Annales de chimie et de physique'."
+    ],
+    [
+      "Annales de chimie et de physique is French for 'Annals of Chemistry and of Physics'.",
+      "Annales de chimie et de physique is a scientific journal.",
+      "Annales de chimie et de physique was founded in Paris, France, in 1789.",
+      "Annales de chimie et de physique was founded under the title 'Annales de chimie'."
+    ]
+  ]},
+  {"id": "5a8f799d55429918e830d22d", "sentences": [
+    [
+      "Myrsine contains about 200 species.",
+      "Myrsine includes several notable radiations.",
+      "The matipo of New Zealand is one of the notable radiations within Myrsine.",
+      "The kōlea of Hawaiʻi is one of the notable radiations within Myrsine.",
+      "The New Zealand 'black matipo', Pittosporum tenuifolium, is not related to Myrsine."
+    ],
+    [
+      "Storax or snowbell are the common names of Styrax.",
+      "Styrax is a genus of about 130 species.",
+      "Styrax species are large shrubs or small trees.",
+      "Styrax belongs to the family Styracaceae.",
+      "Styrax is mostly native to warm temperate to tropical regions of the Northern Hemisphere.",
+      "The majority of Styrax species are in eastern and southeastern Asia.",
+      "Styrax also crosses the equator in South America."
+    ]
+  ]},
+  {"id": "multihop-rag-1054", "sentences": [
+    [
+      "In blog posts and press materials, Google touted Gemini's superior architecture and capabilities.",
+      "Google claimed that the Gemini model meets or exceeds the performance of other leading gen AI models.",
+      "OpenAI's GPT-4 is one of the other leading gen AI models Google compared Gemini against.",
+      "Google's claim that Gemini meets or exceeds other leading models was made in blog posts and press materials."
+    ],
+    [
+      "The Justice Department is focused on the deals Google makes.",
+      "Google makes deals with Apple, Samsung, Mozilla and many others.",
+      "The Justice Department is focused on these deals to ensure Google is the default search engine on practically every platform."
+    ],
+    [
+      "Cue said there was certainly not a valid alternative to Google at the time."
+    ],
+    [
+      "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+      "The case argues that Google 'siphons off' news publishers' content.",
+      "The case argues that Google 'siphons off' news publishers' readers.",
+      "The case argues that Google 'siphons off' news publishers' ad revenue.",
+      "The case argues that Google does this through anticompetitive means."
+    ]
+  ]},
+  {"id": "multihop-rag-1179", "sentences": [
+    [
+      "Sportsbooks are also gathering this information.",
+      "Sportsbooks begin to tighten the NBA Rookie of the Year lines in response."
+    ],
+    [
+      "Sportsbooks might adjust the odds to balance their liability if a significant amount of money is placed on one team or participant."
+    ]
+  ]},
+  {"id": "-7900537827363346667", "sentences": [
+    [
+      "A subcutaneous injection is administered as a bolus into the subcutis.",
+      "The subcutis is the layer of skin directly below the dermis and epidermis.",
+      "The dermis and epidermis are collectively referred to as the cutis.",
+      "Subcutaneous injections are highly effective in administering vaccines.",
+      "Subcutaneous injections are highly effective in administering medications such as insulin, morphine, diacetylmorphine and goserelin.",
+      "Subcutaneous injection of recreational drugs, as opposed to intravenous injection, is referred to as 'skin popping'.",
+      "Subcutaneous administration may be abbreviated as SC, SQ, sub-cu, sub-Q, SubQ, or subcut.",
+      "Subcut is the preferred abbreviation for patient safety."
+    ]
+  ]},
+  {"id": "multihop-rag-1212", "sentences": [
+    [
+      "Cue said there was certainly not a valid alternative to Google at the time."
+    ],
+    [
+      "Google compared the performance of Gemini Pro to GPT-3.5.",
+      "GPT-3.5 is the predecessor of GPT-4.",
+      "GPT-3.5 is a model that is around a year old."
+    ],
+    [
+      "The case was filed by Arkansas-based publisher Helena World Chronicle.",
+      "The case argues that Google 'siphons off' news publishers' content.",
+      "The case argues that Google 'siphons off' news publishers' readers.",
+      "The case argues that Google 'siphons off' news publishers' ad revenue.",
+      "The case argues that Google does this through anticompetitive means."
+    ]
+  ]},
+  {"id": "multihop-rag-1192", "sentences": [
+    [
+      "FTX had grown so much.",
+      "Bankman-Fried said he could no longer run both companies because FTX had grown so much."
+    ],
+    [
+      "A woman said the decision was Bankman-Fried's.",
+      "A woman said the decision was Bankman-Fried's because he was the CEO of FTX.",
+      "Bankman-Fried was the CEO of FTX."
+    ],
+    [
+      "Bankman-Fried, known as SBF, has pleaded not guilty.",
+      "SBF has pleaded not guilty to some seven charges.",
+      "The seven charges against SBF are charges of fraud and conspiracy."
+    ],
+    [
+      "The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+      "The defense argued that the FTX founder, Bankman-Fried, acted in good faith.",
+      "The defense argued that the FTX founder never meant to commit fraud or steal.",
+      "The defense argued that the FTX founder basically got in over his head."
+    ]
+  ]},
+  {"id": "5a8a06455542992e4fca84db", "sentences": [
+    [
+      "Lukas Rossi was born on December 21, 1976.",
+      "Lukas Rossi is a Canadian rock musician.",
+      "Lukas Rossi was the winner of a CBS Television reality series.",
+      "That CBS Television reality series was a televised audition contest to become lead singer of the hard rock supergroup 'Rock Star Supernova'."
+    ],
+    [
+      "Terry Alan Kath was born on January 31, 1946.",
+      "Terry Alan Kath died on January 23, 1978.",
+      "Terry Alan Kath was an American musician.",
+      "Terry Alan Kath was an American songwriter.",
+      "Terry Alan Kath was best known as the original guitarist of the rock band Chicago.",
+      "Terry Alan Kath was one of the lead singers of the rock band Chicago.",
+      "Terry Alan Kath was a founding member of the rock band Chicago."
+    ]
+  ]},
+  {"id": "7306427910586845578", "sentences": [
+    [
+      "Slasher began filming a second season on May 1, 2017.",
+      "Slasher filmed its second season in Orangeville, Ontario, Canada.",
+      "Shaftesbury Films confirmed that Slasher will not return to Super Channel or Chiller for a second season.",
+      "Netflix acquired the rights to the second season of Slasher.",
+      "The second season of Slasher was released via Netflix on October 17, 2017."
+    ],
+    [
+      "The first season of Slasher, retroactively subtitled The Executioner, was produced in association with the Canadian network Super Channel.",
+      "Slasher was the first original series by U.S. TV channel Chiller.",
+      "Chiller premiered the series on Friday, March 4, 2016, at 9:00 pm EST.",
+      "Super Channel aired the show's Canadian premiere on April 1, 2016.",
+      "The first season of Slasher centered on a mysterious figure billed as 'The Executioner'.",
+      "The Executioner terrorized the fictional town of Waterbury, Canada.",
+      "The first season was filmed between July and October 2015.",
+      "The first season was filmed in Sudbury, Parry Sound, and Sault Ste. Marie, Ontario."
+    ]
+  ]}
+]

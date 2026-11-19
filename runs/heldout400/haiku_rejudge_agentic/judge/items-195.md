@@ -1,0 +1,791 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=72c864c53146a3f9 ===
+Gold sentences and facts:
+Sentence 0: This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+  Fact 0.0: It allows the collection of data from complex equipment.
+  Fact 0.1: It enables operators to track equipment performance.
+  Fact 0.2: It enables operators to predict maintenance.
+  Fact 0.3: It enables operators to predict downtimes.
+Sentence 1: If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt.
+  Fact 1.0: A track that is not used or taken care of for an extended period of time will start to wear out.
+  Fact 1.1: A worn-out track will eventually become completely unsuitable for any kind of racing.
+  Fact 1.2: A track becomes unsuitable for racing unless it is taken apart and rebuilt.
+
+Retrieved items:
+<item 1>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+By the IoT Analytics team.
+
+A new report from IoT Analytics highlights eight notable trends helping to advance and promote digital twins.
+
+Four of these trends are discussed in detail in this article. These trends are shaping the future of the digital twin market and influencing investment
+priorities for companies across various industries.
+
+Key insights:
+
+According to our Digital Twin Market Report 2023–2027, the digital twin market is expanding, with a projected CAGR of 30% between 2023 and 2027.
+
+29% of global manufacturing companies have either fully or partially implemented their digital twin strategies. Further, job posts related to digital twins have
+increased by 11% compared to October 2021, while openings for other tech topics have declined in the same timeframe.
+
+The report notes eight notable trends helping to advance and promote digital twins, four of which are discussed in this article.
+
+Graph facts:
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> China
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> SimplyHired
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> software
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Microsoft
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> global manufacturing companies
+
+Entities: IoT Business News, digital twin market, Digital Twin Market Report 2023–2027, digital twins, IoT Analytics, Digital twin market: Analyzing growth and
+4 emerging trends, manufacturing
+</item 1>
+
+<item 2>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 4: Initiatives promoting interoperability of digital twins across systems from different vendors
+
+Agreement on integration standards among the various digital twin technology providers is crucial for building cross-system digital twins. With standards,
+manufacturers can offer services that can be applied to unique situations with other digital twin technology and software.
+
+Recognizing this, countries and industry organizations have taken several steps to address this need:
+
+Plattform Industrie 4.0 and CESMII
+
+Plattform Industrie 4.0 and the Clean Energy Smart Manufacturing Innovation Institute (CESMII) partnered to establish standards for manufacturers in Germany and
+the United States to better enable smart, sustainable competition. The partnership addressed similar challenges related to Industry 4.0 and Smart Manufacturing.
+
+Graph facts:
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Microsoft
+- Cell phone shocker as 97% of kids use their device during school hours and beyond, says study -MENTIONS-> software
+- Breathe Battery Technologies -MADE-> software
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> software
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> China
+
+Entities: software, IoT Business News, Plattform Industrie 4.0, CESMII, Industry 4.0, Smart Manufacturing, interoperability of digital twins, integration
+standards, digital twins, digital twin technology, Partnership to establish standards for manufacturers, Digital twin market: Analyzing growth and 4 emerging
+trends, United States, Germany
+</item 2>
+
+<item 3>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Example: In large motor applications, such as room-sized motors that pump high volumes of gas, oil, or other chemicals, operators need to monitor the motors’
+temperatures—especially if the motors are high-powered and repeatedly started. If a motor is too hot during a restart, the components could cause serious
+damage. Unfortunately, using a direct, physical sensor within a motor is often impractical, and operators must work from an assumptive time it takes for the
+motor to cool (with an additional safety buffer time). This means motors can be down longer than necessary, impacting efficiency and revenue.
+
+To address this issue, Siemens developed a prototype virtual sensor based on a digital twin. It offers a simulation of how a physical sensor would operate if it
+were possible to install it within a motor. Using AR headsets, operators can see a simulation of the motor and its interior with a demonstrator superimposed
+over it, and they can see the motor’s temperature.
+
+Graph facts:
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> China
+- Siemens -PARTICIPATED_IN-> Expansion of the Siemens and AWS partnership
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> software
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Microsoft
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> digital twin market
+
+Entities: IoT Business News, Siemens, virtual sensor, digital twin, AR headsets, motor, physical sensor, Digital twin market: Analyzing growth and 4 emerging
+trends
+</item 3>
+
+<item 4>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Considerations for digital twin vendors
+
+3 questions digital twin vendors should ask themselves based on research findings discussed in this article:
+
+1. Sustainability goals: Given the emphasis on sustainability and the role of digital twins in achieving it, is my company’s digital twin solution well-equipped
+to support sustainability objectives? Are there new features we need to develop?
+
+2. Interoperability: Is our digital twin solution currently designed to be interoperable with other systems and technologies, especially those from different
+vendors?
+
+3. Product development: How aligned is our product development roadmap with the emerging trends highlighted in the report, especially around end-user and
+technological advancements?
+
+Considerations for adopters
+
+3 questions adopters should ask themselves based on research findings discussed in this article:
+
+1. Infrastructure readiness: Do we have the necessary infrastructure and resources in place to support the deployment and effective use of digital twins? If
+not, what investments are required?
+
+2.
+
+Graph facts:
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> software
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Microsoft
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> China
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> digital twin market
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Digital Twin Market Report 2023–2027
+
+Entities: IoT Business News, Digital twin market: Analyzing growth and 4 emerging trends, digital twin solution, product development, infrastructure readiness,
+sustainability, interoperability
+</item 4>
+
+<item 5>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Based on these observations and additional insights from our report, our current projection estimates that the global digital twin market could grow at a CAGR
+of approximately 30% between 2023 and 2027.
+
+Against the backdrop of this growing market, the report notes eight trends that help promote the advancement and adoption of digital twins. Here, we will focus
+on four:
+
+1. Digital twins deployed to meet sustainability goals
+
+2. Digital twins employed as virtual sensors in complex conditions
+
+3. Partnerships between cloud hyperscalers and OT and simulation specialists
+
+4. Initiatives promoting interoperability of digital twins across multifaceted systems
+
+Before we dive into these trends, and to provide context, it is helpful to understand how IoT Analytics defines digital twins and the digital twin market.
+
+Defining digital twins and the digital twin market
+
+In our March 2023 Decoding Digital Twins article, we define digital twins as a virtual model replicating the behavior of an existing or a potential real-world
+asset, system, or multiple systems.
+
+Graph facts:
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Microsoft
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> China
+- Bringing aqueous rechargeable zinc iodine batteries to the mainstream energy market -MENTIONS-> sustainability goals
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> software
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Digital Twin Market Report 2023–2027
+
+Entities: IoT Business News, digital twin market, digital twins, sustainability goals, virtual sensors, complex conditions, cloud hyperscalers, OT, simulation
+specialists, multifaceted systems, IoT Analytics, Decoding Digital Twins, Digital twin market: Analyzing growth and 4 emerging trends, interoperability
+</item 5>
+
+<item 6>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+If not, what investments are required?
+
+2. Data integration: How compatible are our current data sources and systems with digital twin technologies, especially in terms of sensor data (both physical
+and virtual/soft)?
+
+3. Interoperability concerns: As we use multiple software solutions across our operations, how important is interoperability between digital twin technologies
+and our existing systems?
+
+Graph facts:
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> software
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Microsoft
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> China
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> digital twin market
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Digital Twin Market Report 2023–2027
+
+Entities: IoT Business News, Digital twin market: Analyzing growth and 4 emerging trends, digital twin technologies, data integration, sensor data, software
+solutions, investments, interoperability
+</item 6>
+
+<item 7>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+The companies aimed to accelerate Siemens Xcelerator adoption and democratize new digital twin solutions using AWS IoT TwinMaker, a service intended to make
+creating digital twins that incorporate multiple data sources faster and easier.
+
+Hyperscalers and simulation companies
+
+Simulation companies bring specialized expertise in creating accurate, high-fidelity models of physical entities, be it machinery, buildings, or entire
+ecosystems. By partnering with a hyperscaler, simulation companies can harness these cloud services’ data storage and computational power to create more robust,
+responsive, and accurate data twins that can be scaled and integrated seamlessly into broader IT ecosystems.
+
+Example: In 2023, Ansys and Microsoft announced a partnership to help customers envision digital twins on a large scale. In cooperation with Tata Consultancy
+Services, Ansys and Microsoft integrated Ansys’s Twin Builder’s physics-based simulation capabilities with Azure Digital Twin and IoT data to allow Twin Builder
+users to run scenarios and obtain predictions on how their systems will behave.
+
+Graph facts:
+- Microsoft -MENTIONS-> device-agnostic ecosystem
+- 200+ of the best deals from Amazon's Cyber Monday sale -MENTIONS-> Microsoft
+- ASX set to drop as Wall Street’s September slump deepens -MENTIONS-> Microsoft
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Microsoft
+- Microsoft -MENTIONS-> cloud gaming
+
+Entities: Microsoft, IoT Business News, digital twins, AWS, AWS IoT TwinMaker, Siemens Xcelerator, Ansys, Tata Consultancy Services, Twin Builder, Azure Digital
+Twin, Ansys and Microsoft partnership, Digital twin market: Analyzing growth and 4 emerging trends, IoT
+</item 7>
+
+<item 8>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Digital twin market trends
+
+We will now look at four trends helping digital twin market growth.
+
+Trend 1: Digital twins deployed to meet sustainability goals
+
+Sustainability was discussed in approximately 21% of recent CEO earnings calls and has remained a consistent topic throughout 2023. This pairs with our report’s
+analysis that the pursuit of sustainability goals is a tailwind macro factor for the digital twin market.
+
+To achieve their sustainability goals, many companies are exploring digital twins. Due to their ability to simulate real-world conditions and deliver real-time
+information, organizations can optimize resource usage, reducing carbon emissions and improving supply and transportation networks.
+
+According to Capgemini Research Institute’s 2022 digital twins report, 57% of organizations agreed that one of the key drivers for their digital twin
+investments was improving their sustainability, and 51% agreed that digital twins would help achieve their organization’s environmental sustainability goals.
+
+In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the
+challenges inherent in sustainability goals.
+
+Graph facts:
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Microsoft
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> China
+- IoT Analytics -SAID-> digital twins
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> software
+- Digital twin market: Analyzing growth and 4 emerging trends -MENTIONS-> Digital Twin Market Report 2023–2027
+
+Entities: IoT Business News, digital twin market, digital twins, Capgemini Research Institute, 2022 digital twins report, Digital twin market: Analyzing growth
+and 4 emerging trends, sustainability
+</item 8>
+
+<item 9>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 3: Partnerships forged in the clouds: Hyperscalers team up with OT and simulation specialists
+
+In the last few years, cloud hyperscalers like AWS and Microsoft Azure have introduced digital twin platforms, e.g., AWS IoT TwinMaker and Azure Digital Twins,
+that allow for interconnecting various data sources and building digital twin topology. However, these companies realize they cannot deliver end-to-end digital
+twin solutions by themselves and are thus partnering with OT and simulation companies to add capabilities to their networks.
+
+Hyperscalers and OT companies
+
+OT companies provide industrial data management capabilities and connections to millions of local physical assets. By partnering with hyperscalers, OT companies
+can reach broader audiences looking for digital transformation solutions by offering typical cloud benefits like storage and computation power.
+
+Example: In 2021, Siemens and AWS announced an expansion of their partnership, with digital twin technology being an area of focus.
+
+Graph facts:
+- Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation -MENTIONS-> AWS
+- AWS -MADE-> Machine Learning Toolkit
+- Siemens -MADE-> virtual sensor
+- A comprehensive list of 2023 tech layoffs -MENTIONS-> AWS
+- AWS -PART_OF-> Amazon
+
+Entities: IoT Business News, Siemens, AWS, Microsoft Azure, AWS IoT TwinMaker, Azure Digital Twins, OT companies, simulation companies, Expansion of the Siemens
+and AWS partnership, digital twin technology, industrial data management, Digital twin market: Analyzing growth and 4 emerging trends, digital transformation
+</item 9>
+
+<item 10>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+A digital twin strategy as part of an overall digitalization plan can be a crucial capability for asset-intensive industries and needs to encompass the entire
+asset lifecycle, process, and value chain from design and operations through maintenance and strategic business planning.”
+
+Example: Aden, a Chinese integrated facility service provider, created a digital twin for one of its commercial centers in Chengdu, China. The digital twin was
+designed to help facility managers inspect, maintain, and repair building assets. 3D simulations assist facility managers in visualizing, predicting, and
+optimizing energy consumption, and the expected benefits include lower annual energy consumption, water usage, and waste.
+
+Trend 2: Digital twins employed as virtual sensors in complex conditions
+
+Virtual sensors approximate data that otherwise cannot be obtained via physical sensors, often due to physical sensors being impractical, costly, or hazardous
+to employ. Companies are now building digital twins to model hardware and calculate data based on other conditions. This not only allows the collection of data
+from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+
+Graph facts:
+- ASX set for bright start despite Wall Street slip; $A drops -MENTIONS-> China
+- ASX set to open higher as Wall Street rebounds; $A rises -MENTIONS-> China
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> China
+- A comprehensive list of 2023 tech layoffs -MENTIONS-> China
+- ASX set to drop as Wall Street’s September slump deepens -MENTIONS-> China
+
+Entities: China, IoT Business News, virtual sensors, Aden, digital twin, Chengdu, Digital twin market: Analyzing growth and 4 emerging trends
+</item 10>
+=== END ITEM id=72c864c53146a3f9 ===
+
+=== ITEM id=435a7a750e8a733a ===
+Gold sentences and facts:
+Sentence 0: Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth.
+  Fact 0.0: PMS provides expert guidance in navigating volatile markets.
+  Fact 0.1: PMS provides expert guidance in seizing investment opportunities.
+  Fact 0.2: PMS helps create wealth.
+  Fact 0.3: Mutual funds provide expert guidance in navigating volatile markets.
+  Fact 0.4: Mutual funds provide expert guidance in seizing investment opportunities.
+  Fact 0.5: Mutual funds help create wealth.
+Sentence 1: Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results, especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023).
+  Fact 1.0: Brown said he was surprised.
+  Fact 1.1: Brown was surprised that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results.
+  Fact 1.2: Kroll was appointed to consider the reasonableness of Citrin Cooperman's assumptions for HSF's previous set of results.
+  Fact 1.3: HSF's previous set of results runs to end of March 2023.
+
+Retrieved items:
+<item 1>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+“[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try and pin the
+blame on [Hipgnosis Songs Management].” Christopher Brown, JP Morgan
+
+Concluded Brown: “[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try
+and pin the blame on [Hipgnosis Songs Management].
+
+“Our view is that a breakdown in the relationship between Board and manager would not be optimal for maximising shareholder value.”
+
+Brown further noted that JP Morgan would “not be surprised to see Citrin Cooperman resign, having been very publicly undermined by the [HSF] Board today”.
+
+JP Morgan retained its ‘overweight’ rating against HSF’s share price “in spite of yet another [HSF] own goal”.
+
+Graph facts:
+- Andrew Wilkinson -WORKS_FOR-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -SAID-> valuation
+- Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 -MENTIONS-> Hipgnosis Songs Fund
+- Andrew Sutch -WORKS_FOR-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -PARTICIPATED_IN-> Proposed sale of assets to Hipgnosis Songs Capital for USD $440 million (pre-costs) or $417.5 million (post-costs)
+
+Entities: Hipgnosis Songs Fund, Hipgnosis Songs Fund board, JP Morgan, Citrin Cooperman, Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s
+latest valuation of the company. What’s it going to do about it?, Hipgnosis Songs Management, Christopher Brown, Music Business Worldwide
+</item 1>
+
+<item 2>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+HSF’s investments in seasonal Christmas ‘evergreens’ continue to pay off too, with cuts on Michael Buble’s Christmas album and – most famously – a share of
+Mariah Carey’s perennial megahit, All I Want For Christmas Is You.
+
+JKBX (pronounced "Jukebox") unlocks shared value from things people love by offering consumers access to music as an asset class — it calls them Royalty Shares.
+In short: JKBX makes it possible for you to invest in music the same way you invest in stocks and other securities.Music Business Worldwide
+
+Graph facts:
+- Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 -MENTIONS-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -SAID-> valuation
+- Christopher Brown -SAID-> Hipgnosis Songs Fund
+- Andrew Sutch -WORKS_FOR-> Hipgnosis Songs Fund
+- Andrew Wilkinson -WORKS_FOR-> Hipgnosis Songs Fund
+
+Entities: Hipgnosis Songs Fund, Citrin Cooperman, Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it
+going to do about it?, Michael Buble, Christmas album, Mariah Carey, All I Want For Christmas Is You, Royalty Shares, Music Business Worldwide, JKBX, music
+</item 2>
+
+<item 3>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+In response, Hipgnosis Song Management issued its own statement today: “Hipgnosis Song Management has fulfilled its duties to [HSF] with respect to both the
+independent valuation and preparation of the interim results in a timely and efficient manner.
+
+“Notwithstanding the Board’s decision to delay publication of the interim financial statements, [we] will continue to work in a constructive manner to support
+the interests of the Company and its shareholders.”
+
+The oddest thing about all of this? Citrin Cooperman’s valuation of Hipgnosis Songs Fund is, according to HSF’s own company documentation, appointed and
+overseen… by the HSF board.
+
+See this line, in every annual and interim report from HSF so far (bolding MBW’s own): “Portfolio Independent Valuer… Citrin Cooperman Advisors LLC, formerly
+Massarsky Consulting, Inc., [is] appointed by the Board to independently value the Company’s Catalogues within the Portfolio.”
+
+Graph facts:
+- Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 -MENTIONS-> Hipgnosis Songs Fund
+- Andrew Wilkinson -WORKS_FOR-> Hipgnosis Songs Fund
+- Christopher Brown -SAID-> Hipgnosis Songs Fund
+- Andrew Sutch -WORKS_FOR-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -PARTICIPATED_IN-> Proposed sale of assets to Hipgnosis Songs Capital for USD $440 million (pre-costs) or $417.5 million (post-costs)
+
+Entities: Hipgnosis Songs Fund, HSF board, valuation, Citrin Cooperman Advisors LLC, Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest
+valuation of the company. What’s it going to do about it?, Music Business Worldwide, Hipgnosis Song Management
+</item 3>
+
+<item 4>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+the multiples that Merck Mercuriadis paid to acquire it?
+
+Such questions will only be answered when Hipgnosis Songs Fund’s board elects to release the company’s six-monthly financial results to end of September 30.
+
+The most important KPI within those results, in MBW’s view: the company’s Pro-Forma Revenue, and how it compares, like-for-like, vs. the previous year’s
+equivalent period.
+
+In the meantime, back in the ‘real world’ of the music biz, HSF is actually enjoying quite a fanciable Q4.
+
+The company is benefitting from its cuts on hit albums including Taylor Swift’s 1989 (Taylor’s Version), via its acquired Jack Antonoff catalog, as well as
+Swift’s Lover (via its acquired Joel Little catalog).
+
+Graph facts:
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> 1989 (Taylor’s Version)
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> 1989 (Taylor’s Version)
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+
+Entities: 1989 (Taylor’s Version), Taylor Swift, Jack Antonoff, Hipgnosis Songs Fund, Citrin Cooperman, Hipgnosis Songs Fund’s board is concerned over Citrin
+Cooperman’s latest valuation of the company. What’s it going to do about it?, Jack Antonoff catalog, Lover, Joel Little, Joel Little catalog, Pro-Forma Revenue,
+Music Business Worldwide, Merck Mercuriadis
+</item 4>
+
+<item 5>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+WHAT’S HAPPENED?
+
+MBW Explains is a series of analytical features in which we explore the context behind major music industry talking points – and suggest what might happen next.
+MBW Explains is supported by JKBX , a technology platform that offers consumers access to music royalties as an asset class.
+
+The drama at Hipgnosis Songs Fund isn’t letting up for the Holidays, it seems.
+
+This morning (December 19), the company’s board – now led by Chairman, Rob Naylor – issued a statement announcing that HSF would no longer, as previously
+expected, be issuing its latest financial results today.
+
+Instead, the results (covering the six months to end of September 2023) are now expected to be published sometime before the close of December 31.
+
+The reason for the delay?
+
+Graph facts:
+- Christopher Brown -SAID-> Hipgnosis Songs Fund
+- Andrew Sutch -WORKS_FOR-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 -MENTIONS-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -SAID-> valuation
+- Andrew Wilkinson -WORKS_FOR-> Hipgnosis Songs Fund
+
+Entities: Rob Naylor, Hipgnosis Songs Fund, Hipgnosis Songs Fund board, Citrin Cooperman, Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s
+latest valuation of the company. What’s it going to do about it?, music royalties, Music Business Worldwide, JKBX
+</item 5>
+
+<item 6>
+Investment options for high networth investors (Business Line, 2023-10-28T14:42:28+00:00)
+Portfolio Management Services (PMS)
+
+PMS guidelines in India date back to 1993, but this investment avenue has grown in popularity with HNIs recently. The growing financialisation of savings, the
+formalisation of the economy, and the growing prosperity of tier 2 and 3 cities have resulted in an increase in AUM (excluding EPFO/PF), which stood at ₹5.28
+lakh crore as of July 2023. Because the minimum investment is ₹50 lakh, this option is also only available to HNIs. Both PMS and mutual funds provide expert
+guidance in navigating volatile markets and seizing investment opportunities that help create wealth. Because mutual funds cater to retail investors, their
+guidelines are relatively stringent, and compliance is rigorous.
+
+Regarding PMS, the investment guidelines are somewhat more flexible, allowing portfolio managers to outperform mutual funds. Another feature that appeals to
+HNIs is that the beneficial ownership of securities is that of the investors, as opposed to mutual funds, where the ownership is that of the fund.
+</item 6>
+
+<item 7>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+A Final thought…
+
+As mentioned in the opening sentence of this article, there is plenty of drama surrounding HSF right now – from the ‘discontinuation vote’ we saw at the company
+in October, through to a recent lawsuit launched against Hipgnosis Songs Fund by a former business partner of Merck Mercuriadis.
+
+Yet, amongst all of the noise, what will likely most interest HSF’s investors (including the likes of Investec Wealth & Investment, Aviva Investors, and
+BlackRock) is the ongoing underlying commercial performance of the firm’s copyrights.
+
+How are Hipgnosis Songs Fund’s assets performing vs. the market? How is the company’s ‘premium-only’ acquisition strategy holding up against its promise of
+growth “uncorrelated” to other industries? And what does all of this suggest about the ongoing growth potential of the HSF portfolio vs. the multiples that
+Merck Mercuriadis paid to acquire it?
+
+Graph facts:
+- Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 -MENTIONS-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -SAID-> valuation
+- Christopher Brown -SAID-> Hipgnosis Songs Fund
+- Andrew Sutch -WORKS_FOR-> Hipgnosis Songs Fund
+- Andrew Wilkinson -WORKS_FOR-> Hipgnosis Songs Fund
+
+Entities: Hipgnosis Songs Fund, Citrin Cooperman, Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it
+going to do about it?, discontinuation vote, Investec Wealth & Investment, Aviva Investors, copyrights, premium-only acquisition strategy, lawsuit, Music
+Business Worldwide, BlackRock, Merck Mercuriadis
+</item 7>
+
+<item 8>
+Graph query row:
+article: Investment options for high networth investors
+relationship: PUBLISHED_BY
+connected_entity: Business Line
+</item 8>
+
+<item 9>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+That price, according to HSF’s board, represented a 14.2% discount on Citrin Cooperman’s valuation of this portfolio as of September 30 (something we’ll come
+back to).
+
+As part of its announcement this morning, the HSF board took something of a swipe at its investment adviser, Merck Mercuriadis‘ Hipgnosis Song Management.
+
+After seeing Citrin Cooperman’s latest valuation and believing it to be too high, said HSF, it then “sought advice from Hipgnosis Song Management… which is
+majority owned by funds managed and/or advised by Blackstone, on their opinion on the independent valuer’s valuation.”
+
+HSF’s board added: “Hipgnosis Song Management… eventually provided an opinion, which was heavily caveated, such that the Board has concerns as to the valuation
+of the Company’s assets in its interim results.”
+
+Graph facts:
+- Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 -MENTIONS-> Hipgnosis Songs Fund
+- Andrew Wilkinson -WORKS_FOR-> Hipgnosis Songs Fund
+- Christopher Brown -SAID-> Hipgnosis Songs Fund
+- Andrew Sutch -WORKS_FOR-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -PARTICIPATED_IN-> Proposed sale of assets to Hipgnosis Songs Capital for USD $440 million (pre-costs) or $417.5 million (post-costs)
+
+Entities: Hipgnosis Songs Fund, valuation, Citrin Cooperman, Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company.
+What’s it going to do about it?, Blackstone, Music Business Worldwide, Hipgnosis Song Management, Merck Mercuriadis
+</item 9>
+
+<item 10>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Worth remembering: The HSF board has known about Citrin Cooperman’s latest valuation (as of September 30) for at least the past eight days.
+
+We know this because, as mentioned, on December 11, HSF announced that the $23.1 million price of an agreed HSF ‘non-core’ asset sale represented a 14.2%
+discount vs. Citrin Cooperman’s latest valuation of the portfolio (i.e. the HSF board had seen this latest valuation).
+
+Yet it took until today (December 19) for HSF to alert its investors to its dissatisfaction with this valuation.
+
+WHAT does JP Morgan make of it all?
+
+One of the closest watchers of Hipgnosis Songs Fund in recent years has been JP Morgan and its analyst Christopher Brown.
+
+Graph facts:
+- Andrew Wilkinson -WORKS_FOR-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -SAID-> valuation
+- Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 -MENTIONS-> Hipgnosis Songs Fund
+- Andrew Sutch -WORKS_FOR-> Hipgnosis Songs Fund
+- Hipgnosis Songs Fund -PARTICIPATED_IN-> Proposed sale of assets to Hipgnosis Songs Capital for USD $440 million (pre-costs) or $417.5 million (post-costs)
+
+Entities: Hipgnosis Songs Fund, HSF board, JP Morgan, Citrin Cooperman, Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of
+the company. What’s it going to do about it?, Christopher Brown, Music Business Worldwide
+</item 10>
+=== END ITEM id=435a7a750e8a733a ===
+
+=== ITEM id=e6a60bb56d997ae1 ===
+Gold sentences and facts:
+Sentence 0: Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+  Fact 0.0: Bankman-Fried was even compared to Warren Buffet
+  Fact 0.1: Many people called Bankman-Fried the white horse of crypto
+  Fact 0.2: TechCrunch never called Bankman-Fried the white horse of crypto
+Sentence 1: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.
+  Fact 1.0: Wang testified
+  Fact 1.1: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account
+  Fact 1.2: Wang testified that this was okay as long as the amount was less than FTX's total trading revenue
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence
+  Fact 2.1: The defense argued that the FTX founder, Bankman-Fried, acted in good faith
+  Fact 2.2: The defense argued that Bankman-Fried never meant to commit fraud or steal
+  Fact 2.3: The defense argued that Bankman-Fried basically got in over his head
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+
+Graph facts:
+- The FTX trial is bigger than Sam Bankman-Fried -MENTIONS-> defense
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Bitcoin
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Gisele Bündchen
+- Israel's defense undone by reliance on technology -MENTIONS-> defense
+- Patrick Kane destinations: Sabres, Red Wings among potential landing spots for free agent winger -MENTIONS-> defense
+
+Entities: Gisele Bündchen, Bitcoin, defense, Elizabeth Holmes, cryptocurrency, Is Sam Bankman-Fried’s defense even trying to win?, Juilliard, major VC firms,
+Elizabeth Holmes trial, FTX, Sam Bankman-Fried, The Verge
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+There was a minimum of word salad today. I don’t know if he was more relaxed, or he’d just been more rehearsed, but I will certainly be watching to see if he
+suddenly becomes much less coherent when Sassoon gets him for the cross.
+
+Here is the story of FTX, from his point of view.
+
+Bankman-Fried, who informed us he’s “somewhat introverted, naturally,” gave us a rather prolonged tour of his pre-Alameda Research life, which I will skip. In
+2017, during a crypto bull run, he started his cryptocurrency trading firm. He knew “basically nothing” about cryptocurrency at the time, he explained, but he
+wanted to do arbitrage on it anyway.
+
+Alameda Research was named for Alameda County in California, which was where its first office was set up. As for its name, here’s what Bankman-Fried said on the
+stand:
+
+Effectively, we wanted to be under the radar at that point in time.
+
+Graph facts:
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Gary Wang
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Caroline Ellison
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Mark Cohen
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Adam Yedidia
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Securities and Exchange Commission
+
+Entities: The jury finally hears from Sam Bankman-Fried, Alameda County, arbitrage, crypto bull run, Alameda Research, Sassoon, cryptocurrency, FTX, California,
+Sam Bankman-Fried, The Verge
+</item 2>
+
+<item 3>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+
+Graph facts:
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> SBF Trial
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> Google’s hardware event
+- Founders, are events useful? -MENTIONS-> Pixel 8
+- The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more -MENTIONS-> Pixel 8
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -MENTIONS-> Pixel 8 Pro
+
+Entities: teens’ startup, ad-free tier, Pixel 8, Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier, Jacquelyn,
+Southern District of New York courthouse, Bankman-Fried, SBF and FTX trial, TechCrunch, TechCrunch+, the defense, FTX, Google, Rebecca, the prosecution
+</item 3>
+
+<item 4>
+Graph query row:
+title: SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+publisher: TechCrunch
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+
+Graph facts:
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Gary Wang
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Caroline Ellison
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Mark Cohen
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Adam Yedidia
+- The jury finally hears from Sam Bankman-Fried -MENTIONS-> Securities and Exchange Commission
+
+Entities: The jury finally hears from Sam Bankman-Fried, Alameda Research, allow_negative, Ellison, Singh, Wang, Sam Bankman-Fried, The Verge
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, FTX trial, The FTX trial is bigger than Sam Bankman-Fried, extensive media tour, interviews, Andrew Ross Sorkin, Good Morning
+America, The New Yorker, FTX, Sam Bankman-Fried, The Verge
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Caroline Ellison
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Caroline Ellison
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried didn’t ask where the $8 billion went -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> Caroline Ellison
+
+Entities: Caroline Ellison, The jury finally hears from Sam Bankman-Fried, Alameda Research, FTX, Nishad Singh, Wang, Sam Bankman-Fried, The Verge
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+He noted that Julliard was a licensed commodities broker, who was trading in crypto because he didn’t have to disclose it; that Julliard knew that crypto was
+new and risky, and that Julliard didn’t review the terms of service agreement he’d assented to when making his FTX account.
+
+Well, sure, but so what?
+
+The next witness called was Bankman-Fried’s former college (and FTX) roommate, Adam Yedidia, about whom I expect I will have much more to say tomorrow.
+
+Graph facts:
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> crypto
+- SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run -MENTIONS-> crypto
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> crypto
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> crypto
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> crypto
+
+Entities: crypto, Adam Yedidia, Is Sam Bankman-Fried’s defense even trying to win?, Julliard, FTX account, terms of service agreement, FTX, Sam Bankman-Fried,
+The Verge
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+This is to say nothing of the regulatory risks around crypto.
+
+As Cohen droned on about airplanes, I couldn’t stop thinking about the missing risk officer. Bringing it up, I thought, was a tremendous mistake. The
+prosecution hadn’t mentioned it. Either Bankman-Fried is stupid — unlikely — or he deliberately didn’t hire a risk officer. Was he worried about what one might
+find?
+
+Sure, as Cohen put it, Bankman-Fried was a math nerd who didn’t party. That paints a picture of someone who’s pretty deliberate, particularly since he
+immediately left MIT and went to work on Wall Street. If he had been a party-hardy trainwreck, I could see overlooking a risk officer in order to do another
+line, or a supermodel, or something else important. Why was the defense bringing this up?
+
+But as Cohen tried to tell me that FTX’s and Alameda’s business relationships were “reasonable under the circumstances,” the lack of risk officer kept elbowing
+me in the ribs.
+
+Graph facts:
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> crypto
+- SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run -MENTIONS-> crypto
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> crypto
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> crypto
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> crypto
+
+Entities: crypto, Alameda, Is Sam Bankman-Fried’s defense even trying to win?, Cohen, FTX, Sam Bankman-Fried, Wall Street, MIT, The Verge
+</item 9>
+
+<item 10>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+
+Graph facts:
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -MENTIONS-> Caroline Ellison
+- Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand -MENTIONS-> Caroline Ellison
+- SBF’s trial starts soon, but how did he — and FTX — get here? -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried didn’t ask where the $8 billion went -MENTIONS-> Caroline Ellison
+- Sam Bankman-Fried was a terrible boyfriend -MENTIONS-> Caroline Ellison
+
+Entities: Caroline Ellison, The jury finally hears from Sam Bankman-Fried, Alameda, Sam Trabucco, MobileCoin loss, Singh, FTX, Wang, Sam Bankman-Fried,
+MobileCoin, The Verge
+</item 10>
+=== END ITEM id=e6a60bb56d997ae1 ===

@@ -1,0 +1,37 @@
+[
+{"id": "9e957e0c43b9a762", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "During Prime Day this past summer, Amazon introduced invite-only deals—a system to help make it easier for Prime members to access deals that are expected to sell out quickly"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "a system to help make it easier for Prime members to access deals that are expected to sell out quickly"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "a system to help make it easier for Prime members to access deals that are expected to sell out quickly"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "and the company brought it back for Prime Big Deal Days"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "e6cc00bc671d110a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "3.0", "status": "missing", "evidence": []},
+{"fact": "3.1", "status": "missing", "evidence": []},
+{"fact": "3.2", "status": "missing", "evidence": []},
+{"fact": "3.3", "status": "missing", "evidence": []}
+]},
+{"id": "b255c6c4b9598313", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "maintains that Google manipulates Search to maximise ad revenue"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

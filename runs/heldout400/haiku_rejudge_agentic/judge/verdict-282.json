@@ -1,0 +1,42 @@
+[
+  {"id": "e8c913999a110879", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "c1458444f1d43a86", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Beeper Mini will be free for the time being"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Beeper Mini will be free for the time being"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "given the unstable nature of Beeper’s status"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Apple’s attempts at shutting it down"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "In addition, Beeper Mini will be free for the time being given the unstable nature of Beeper’s status and Apple’s attempts at shutting it down."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Beeper Mini was made possible because the team behind the app has managed to reverse-engineer the iMessage protocol"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "the team behind the app has managed to reverse-engineer the iMessage protocol, they say"}]}
+  ]},
+  {"id": "ccafa206a3a4fda1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "has taken the world by storm"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "he has been the face of” generative AI technology"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "4d79cbb0a747c3c1",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "72b0bf988e048b12",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "1bdd3c2565ee4520",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}, {"item": 9, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX."}, {"item": 4, "quote": "which Ellison said were customer funds."}, {"item": 8, "quote": "The $65 billion line of credit Alameda Research had meant that it did not have to post collateral."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]}
+    ]
+  }
+]

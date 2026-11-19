@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-2020",
+   "sentences": [
+    "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.",
+    "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."
+   ]
+  },
+  {
+   "id": "multihop-rag-887",
+   "sentences": [
+    "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.",
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-2388",
+   "sentences": [
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.",
+    "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."
+   ]
+  },
+  {
+   "id": "-3129873875789425845",
+   "sentences": [
+    "The provisions relating to the right to property were changed a number of times . The Forty - Fourth Amendment of 1978 deleted the right to property from the list of fundamental rights A new provision , Article 300 - A , was added to the constitution , which provided that `` no person shall be deprived of his property save by authority of law '' . Thus if a legislature makes a law depriving a person of his property , there would be no obligation on the part of the State to pay anything as compensation . The aggrieved person shall have no right to move the court under Article 32 . Thus , the right to property is no longer a fundamental right , though it is still a constitutional right . If the government appears to have acted unfairly , the action can be challenged in a court of law by aggrieved citizens ."
+   ]
+  },
+  {
+   "id": "-3001662032923593229",
+   "sentences": [
+    "Place Actor / Actress Episodes Finals Total score ( 175 ) 3 - 4 5 - 6 7 - 8 9 - 10 11 - 12 13 - 14 15 - 16 17 - 18 19 - 20 21 - 22 23 - 24 25 - 26 Aman Gandotra 8 12 14 14 7 + 3 = 10 9 + 3 = 12 10 + 3 = 13 10 + 4 = 14 10 + 5 = 15 10 + 5 = 15 10 + 4 = 14 Winner 141 Natasha Bharadwaj 9 18 14 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 Winner 166 2 / 3 Finalists Aashish Mehrotra 8 16 18 20 8 + 4 = 12 10 + 4 = 14 8 + 4 = 12 10 + 4 = 14 10 + 5 = 15 8 + 5 = 13 10 + 4 = 14 Runner up 156 Shruti Sharma 9 18 19 18 10 + 5 = 15 10 + 4 = 14 10 + 4 = 14 10 + 4 = 14 10 + 5 = 15 10 + 5 = 15 10 + 5 = 15 Runner up 166 Harshvardhan Deo NOT IN COMPETITION Debut 8 + 4 = 12 10 + 4 = 14 10 + 4 = 14 10 + 4 = 14 Runner up 54 Naina Singh 7 15 15 18 10 + 4 = 14 7 + 3 = 10 8 + 4 = 12 10 + 4 = 14 8 + 5 = 13 10 + 5 = 15 10 + 4 = 14 Runner up 147 Semifinalists Ansh Bagri 10 19 18 17 10 + 4 = 14 7 + 4 = 11 8 + 4 = 12 8 + 4 = 12 10 + 5 = 15 10 + 5 = 15 8 + 4 = 12 ELIMINATED 155 Lekha Prajapati 7 16 16 16 8 + 4 = 12 8 + 4 = 12 8 + 4 = 12 9 + 4 = 13 10 + 4 = 14 10 + 5 = 15 10 + 4 = 14 ELIMINATED 147 5 Shariq Nanda 9 16 14 14 10 + 3 = 13 8 + 4 = 12 8 + 3 = 11 10 + 4 = 14 8 + 5 = 13 ELIMINATED 116 Elisha Mayor NOT IN COMPETITION Debut 8 + 4 = 12 8 + 5 = 13 ELIMINATED 25 6 Tapan Singh NOT IN COMPETITION Debut 6 + 3 = 9 ELIMINATED 9 Simran Choudhary NOT IN COMPETITION Debut 8 + 4 = 12 ELIMINATED 12 7 Karan Taluja 7 17 16 16 6 + 3 = 9 8 + 4 = 12 6 + 3 = 9 ELIMINATED 86 Angela Krislinzki 9 18 20 16 8 + 5 = 13 6 + 3 = 9 6 + 3 = 9 ELIMINATED 97 8 Ahmed Masih 8 14 16 18 6 + 3 = 9 6 + 4 = 10 ELIMINATED 75 Kanikka Kapur 10 19 19 19 6 + 3 = 9 6 + 3 = 9 ELIMINATED 97 9 Harshvardhan Ahlawat 7 14 12 13 6 + 3 = 9 ELIMINATED 55 Pranati Rai Prakash 7 13 17 14 6 + 3 = 9 ELIMINATED 60 10 Jash Bahl 10 14 12 ELIMINATED 36 Heli Vyas 6 12 12 ELIMINATED 30 11 Shivank Chaudhary 6 12 ELIMINATED 18 Sahiba Bhasin 7 12 ELIMINATED 19 12 Karanraj Sharma 6 ELIMINATED 6 Laveena Keswani 6 ELIMINATED 6",
+    "India 's Next Superstars is a talent - searcher Indian reality show , which premiered on Star Plus and is streamed on Hotstar . Karan Johar and Rohit Shetty are the judges for the show . Aman Gandotra and Natasha Bharadwaj are declared winners of 2018 season , alongside Shruti Sharma who won a ' Special Mention ' award . Runners up in the male category were Aashish Mehrotra and Harshvardhan Deo and in the female category were Naina Singh and Shruti Sharma ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1207",
+   "sentences": [
+    "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports.",
+    "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly.",
+    "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app, like a 911 button and the ability to share location with a friend.",
+    "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."
+   ]
+  },
+  {
+   "id": "5a79d2fe5542994f819ef0c3",
+   "sentences": [
+    "Aleksandr Ivanovsky (1881–1968) was a Russian screenwriter and film director who worked during the Soviet era.",
+    "Arthur Lubin (July 25, 1898 – May 12, 1995) was an American film director and producer who directed several \"Abbott & Costello\" films, \"Phantom of the Opera\" (1943), the \"Francis the Talking Mule\" series and created the talking-horse TV series \"Mister Ed\"."
+   ]
+  },
+  {
+   "id": "6565178863987366953",
+   "sentences": [
+    "The following season , a cancerous desmoid tumor was found in Dravecky 's pitching arm . On October 7 , 1988 , he underwent surgery , which removed half of the deltoid muscle in his pitching arm and froze the humerus bone in an effort to eliminate all of the cancerous cells . Doctors advised Dravecky to wait until 1990 to pitch again , but Dravecky was determined to pitch in 1989 . By July 1989 , he was pitching in the minors , and on August 10 , he made a highly publicized return to the major leagues , pitching eight innings and defeating Cincinnati 4 -- 3 . In his following start , five days later in Montreal , Dravecky pitched three no - hit innings , but in the fifth inning , he felt a tingling sensation in his arm . In the sixth inning , he started off shaky , allowing a home run to the leadoff batter and then hitting the second batter , Andrés Galarraga . Then , on his first pitch to Tim Raines , his humerus bone snapped ; the sound of it breaking could be heard throughout the stadium . Dravecky collapsed on the mound . He 'd suffered a clean break midway between his shoulder and elbow , ending his season ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1184",
+   "sentences": [
+    "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans.",
+    "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."
+   ]
+  },
+  {
+   "id": "5abdcad155429965af743e4d",
+   "sentences": [
+    "Pagliacci (] ; literal translation, \"Clowns\") is an Italian opera in a prologue and two acts, with music and libretto by Ruggero Leoncavallo.",
+    "Suor Angelica (Sister Angelica) is an opera in one act by Giacomo Puccini to an original Italian libretto by Giovacchino Forzano."
+   ]
+  }
+ ]
+}

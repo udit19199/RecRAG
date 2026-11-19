@@ -1,0 +1,806 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=ce7fe5f86378b8d5 ===
+Gold sentences and facts:
+Sentence 0: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 0.0: Swift has shared that she has nothing to hide.
+  Fact 0.1: Swift is in a new relationship with Kelce.
+  Fact 0.2: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: The podcast host, referred to as 'he', later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The invitation was to a game at Arrowhead Stadium.
+  Fact 1.2: The 'Anti-Hero' singer accepted the invitation.
+  Fact 1.3: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+
+Retrieved items:
+<item 1>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Since then, Swift has released four “Taylor’s Version” albums: Fearless (Taylor’s Version) in April 2021, Red (Taylor’s Version) in November 2021, Speak Now
+(Taylor’s Version) in July 2023, and 1989 (Taylor’s Version) in October 2023.
+
+“It’s not lost on me that the two great catalysts for this happening were two horrendous things that happened to me,” Swift said, when asked about the success
+of her tour. “The first was getting cancelled within an inch of my life and sanity. The second was having my life’s work taken away from me by someone who hates
+me.”
+
+While Swift is arguably more famous now than ever before, the Grammy winner revealed that the constant attention and swarms of paparazzi won’t stop her from
+living her life. There’s also constant rumours surrounding her personal life, specifically rumours about her relationship with Alwyn that her publicist, Tree
+Paine, was forced to publicly deny.
+
+Graph facts:
+- Taylor Swift -MENTIONS-> jersey sales
+- Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? -MENTIONS-> 1989 (Taylor’s
+Version)
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> 1989 (Taylor’s Version)
+- Taylor Swift reveals secret start to her relationship with Travis Kelce -MENTIONS-> Time
+- Taylor Swift -MENTIONS-> Instagram
+
+Entities: 1989 (Taylor’s Version), Time, Taylor Swift, Taylor Swift is Time’s Person of the Year, Fearless (Taylor’s Version), Red (Taylor’s Version), Speak Now
+(Taylor’s Version), tour, Alwyn, Tree Paine, rumours about Taylor Swift and Alwyn’s relationship, Grammy, The Independent
+</item 1>
+
+<item 2>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+
+Graph facts:
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> Time
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+
+Entities: Time, Taylor Swift, Eras Tour, Travis Kelce, Taylor Swift reveals secret start to her relationship with Travis Kelce, The Independent
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+In an interview withWSJ Magazine, published on 20 November, he described how much he admires her skills as a musician. “I’ve never been a man of words. Being
+around her, seeing how smart Taylor is, has been f***ing mind-blowing. I’m learning every day,” he explained.
+
+However, he also acknowledged the heavy public attention around his private life as a result of his relationship, noting he’s “never dated anyone with that kind
+of aura around them”. But, according to Kelce, he’s not letting the media affect his relationship.
+
+“But at the same time, I’m not running away from any of it,” he said. “The scrutiny she gets, how much she has a magnifying glass on her, every single day,
+paparazzi outside her house, outside every restaurant she goes to, after every flight she gets off, and she’s just living, enjoying life. When she acts like
+that I better not be the one acting all strange.”
+
+Graph facts:
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> WSJ Magazine
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+
+Entities: WSJ Magazine, Taylor Swift, Travis Kelce, Taylor Swift reveals secret start to her relationship with Travis Kelce, The Independent
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+
+Graph facts:
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> All Too Well
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> All Too Well
+- ‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand -MENTIONS-> Argentina
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Argentina
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Argentina
+
+Entities: All Too Well, Argentina, Buenos Aires, Karma, Time, Taylor Swift, Travis Kelce, Chiefs, Taylor Swift reveals secret start to her relationship with
+Travis Kelce, Eras Tour show, Style, The Independent
+</item 4>
+
+<item 5>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+
+Graph facts:
+- Kelce -MENTIONS-> Raiders
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> Kelce
+- When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover -MENTIONS-> Kelce
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Kelce
+- NFL DFS picks Week 15: Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups -MENTIONS-> Kelce
+
+Entities: Kelce, Time, Taylor Swift, Joe Alwyn, Conversations with Friends, Taylor Swift is Time’s Person of the Year, The Independent
+</item 5>
+
+<item 6>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Anti-Hero
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> Time
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Anti-Hero
+- Taylor Swift -MENTIONS-> Instagram
+
+Entities: Anti-Hero, Time, Taylor Swift, Travis Kelce, relationship, Taylor Swift reveals secret start to her relationship with Travis Kelce, paparazzi, media,
+The Independent - Life and Style
+</item 6>
+
+<item 7>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+
+Graph facts:
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> Time
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+
+Entities: Time, Taylor Swift, Travis Kelce, Kelce’s game on 3 December, public relationship, Taylor Swift reveals secret start to her relationship with Travis
+Kelce, The Independent
+</item 7>
+
+<item 8>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Time, Taylor Swift, NFL fans, NFL appearance, Taylor Swift is Time’s Person of the Year, Travis Kelce, Chiefs game, Eras Tour show, Kansas City
+Chiefs, The Independent - Life and Style, football
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+
+Graph facts:
+- When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover -MENTIONS-> Arrowhead Stadium
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Arrowhead Stadium
+- Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE -MENTIONS-> Arrowhead Stadium
+- Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance -MENTIONS-> Arrowhead Stadium
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Arrowhead Stadium
+
+Entities: Arrowhead Stadium, Taylor Swift, Travis Kelce, NFL, first game, Taylor Swift reveals secret start to her relationship with Travis Kelce, The
+Independent, Kansas City Chiefs
+</item 9>
+
+<item 10>
+Graph query row:
+article: Taylor Swift is Time’s Person of the Year
+publisher: The Independent
+section: Life and Style
+mentioned_people: ['Kelce', 'King Charles III', 'Taylor Swift', 'Joe Alwyn', 'Ana Clara Benevides', 'Alwyn', 'Tree Paine', 'Travis Kelce', 'Scooter Braun',
+'Vladimir Putin', 'Xi Jinping']
+passages: [{'page': 'Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage': 'Taylor Swift is
+Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)\nStay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Please enter a valid email address Please
+enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our privacy notice Thanks for signing
+up to the\n\nLifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{
+/verifyErrors }}\n\nTaylor Swift has officially been named Time’s 2023 Person of the Year.\n\nOn Wednesday 6 December, the magazine announced Swift had earned
+the honour after an “editors’ assessment of the individual who most shaped the headlines over the previous 12 months, for better or for worse”.\n\nThe
+recognition of Swift comes on the heels of a whirlwind year for the popstar, whose Eras Tour dominated ticket sales in 2023.'}, {'page': 'Taylor Swift is Time’s
+Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage': 'Taylor Swift is Time’s Person of the Year (The Independent - Life
+and Style, 2023-12-06T13:55:17+00:00)\n“This is the proudest and happiest I’ve ever felt, and the most creatively fulfilled and free I’ve ever been,” Swift told
+Time. “Ultimately, we can convolute it all we want, or try to overcomplicate it, but there’s only one question... Are you not entertained?”\n\nSwift was chosen
+among a strong list of contenders, including Chinese President Xi Jinping, King Charles III, the live-action Barbie movie, and Vladimir Putin. “While her
+popularity has grown across the decades, this is the year that Swift, 33, achieved a kind of nuclear fusion: shooting art and commerce together to release an
+energy of historic force,” the magazine said about its selection.\n\nThis year alone, Swift has broken records with her career-spanning Eras Tour, which is
+estimated to have grossed over $1.4bn. Her concert film, the Eras Tour movie, has surpassed $250m at the global box office since its opening weekend in
+October.'}, {'page': 'Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage': 'Taylor Swift is
+Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)\nNot to mention her rumoured relationship with Kansas City Chiefs tight
+end Travis Kelce caused a 400 per cent spike in NFL jersey sales.\n\nSince her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games
+has received pushback from NFL fans who believe her presence is distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no
+awareness of if I’m being shown too much and pissing off a few dads, Brads, and Chads.”\n\nShe playfully added: “Football is awesome, it turns out. I’ve been
+missing out my whole life.”\n\nThe “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to
+give Swift his phone number after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in
+September, they were already a couple. “I think some people think that they saw our first date at that game?'}, {'page': 'Taylor Swift is Time’s Person of the
+Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage': 'Taylor Swift is Time’s Person of the Year (The Independent - Life and Style,
+2023-12-06T13:55:17+00:00)\n“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first
+date,” Swift joked.\n\nBack in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were
+notoriously private, as the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird
+part of the culture”.\n\nNow, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that
+means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you
+have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”'}, {'page': 'Taylor Swift
+is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage': 'Taylor Swift is Time’s Person of the Year (The
+Independent - Life and Style, 2023-12-06T13:55:17+00:00)\nAnd we’re just proud of each other.”\n\nSpeaking to Time, Swift detailed exactly how much work went
+into preparing for her Eras Tour - where each concert spans over 180 minutes, with more than 40 songs from at least nine albums and 16 costume changes. “Every
+day I would run on the treadmill, singing the entire set list out loud,” she told the outlet. “Fast for fast songs, and a jog or a fast walk for slow
+songs.”\n\nShe also stopped drinking and underwent three months of dance training, something that she admitted is “not my strong suit”. After she plays a run of
+shows, Swift said she takes a day to rest and recover before taking the stage once again. “I do not leave my bed except to get food and take it back to my bed
+and eat it there,” she revealed. “It’s a dream scenario.”\n\nMost recently, a heat wave in Brazil forced Swift to postpone the second night of her Eras Tour
+shows in Rio de Janeiro.'}, {'page': 'Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage':
+'Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)\nThe decision came after one of the singer’s fans,
+23-year-old Ana Clara Benevides, died from a cardiac arrest during Swift’s first performance in the country. Swift explained to Time that “part of my identity
+as a human” is putting on a show for her fans, no matter the circumstances. “I know I’m going on that stage whether I’m sick, injured, heartbroken,
+uncomfortable, or stressed,” she said. “That’s part of my identity as a human being now. If someone buys a ticket to my show, I’m going to play it unless we
+have some sort of force majeure.”\n\nPerhaps it was her decision to re-record her music catalogue that catapulted Swift into such success. When music mogul
+Scooter Braun aquired Swift’s longtime label, Big Machine Records, in 2019, he also gained the rights to the master recordings of Swift’s first six studio
+albums. In November 2020, Braun sold the masters to an investment fund in a deal that was believed to be over $300 million.'}, {'page': 'Taylor Swift is Time’s
+Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage': 'Taylor Swift is Time’s Person of the Year (The Independent - Life
+and Style, 2023-12-06T13:55:17+00:00)\nSince then, Swift has released four “Taylor’s Version” albums: Fearless (Taylor’s Version) in April 2021, Red (Taylor’s
+Version) in November 2021, Speak Now (Taylor’s Version) in July 2023, and 1989 (Taylor’s Version) in October 2023.\n\n“It’s not lost on me that the two great
+catalysts for this happening were two horrendous things that happened to me,” Swift said, when asked about the success of her tour. “The first was getting
+cancelled within an inch of my life and sanity. The second was having my life’s work taken away from me by someone who hates me.”\n\nWhile Swift is arguably
+more famous now than ever before, the Grammy winner revealed that the constant attention and swarms of paparazzi won’t stop her from living her life. There’s
+also constant rumours surrounding her personal life, specifically rumours about her relationship with Alwyn that her publicist, Tree Paine, was forced to
+publicly deny.'}, {'page': 'Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)', 'passage': 'Taylor Swift
+is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)\n“Over the years, I’ve learned I don’t have the time or bandwidth to
+get pressed about things that don’t matter,” Swift told Time. “Yes, if I go out to dinner, there’s going to be a whole chaotic situation outside the restaurant.
+But I still want to go to dinner with my friends.\n\n“Life is short. Have adventures. Me locking myself away in my house for a lot of years - I’ll never get
+that time back,” she added. “I’m more trusting now than I was six years ago.”'}]
+</item 10>
+=== END ITEM id=ce7fe5f86378b8d5 ===
+
+=== ITEM id=7dfbaf915463f222 ===
+Gold sentences and facts:
+Sentence 0: Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+  Fact 0.0: Todd Boehly is American.
+  Fact 0.1: Todd Boehly is a co-owner of Chelsea.
+  Fact 0.2: Expanding Chelsea's profile and reach in the U.S. would make sense under Todd Boehly's co-ownership.
+  Fact 0.3: Catarina Macario is a USWNT international.
+  Fact 0.4: Mia Fishel is a USWNT international.
+  Fact 0.5: Catarina Macario plays her club football in the U.S.
+  Fact 0.6: Mia Fishel plays her club football in the U.S.
+  Fact 0.7: CBS Sports holds WSL rights.
+Sentence 1: It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again.
+  Fact 1.0: The date was 24 September.
+  Fact 1.1: Chelsea suffered a home Premier League defeat on 24 September.
+  Fact 1.2: The 24 September defeat was Chelsea's second home Premier League defeat in a row.
+  Fact 1.3: Chelsea's home Premier League defeat before the 24 September defeat was against Nottingham Forest.
+  Fact 1.4: Chelsea were booed off again after the 24 September defeat.
+Sentence 2: Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson, while Benoit Badiashile could return from a long-term injury.
+  Fact 2.0: Late fitness checks will be made on Reece James.
+  Fact 2.1: Late fitness checks will be made on Axel Disasi.
+  Fact 2.2: Late fitness checks will be made on Nicolas Jackson.
+  Fact 2.3: Benoit Badiashile could return from a long-term injury.
+
+Retrieved items:
+<item 1>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+But he also pops up in the channels, on the wing, either supporting the man in possession or offering himself for the quick switch of play.
+
+Great times for a great guy. But, of course, if you commit a midfielder to this role, then you leave gaps elsewhere. One of the reasons Chelsea found it so easy
+to play through United was that, with the forwards pushed high and McTominay as the secret sauce in the final third, there were open spaces every time they
+played through the press. Chelsea’s goal was a case in point: two simple vertical passes straight through the centre via Mykhailo Mudryk to Cole Palmer, passes
+that McTominay could see coming but could do precious little to stop.
+
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties.
+
+Graph facts:
+- Everton players and fans will be fired up by points penalty, asserts Sean Dyche -MENTIONS-> Chelsea
+- Carabao Cup fixtures, draws, results, TV channel, and live streams for every round of EFL League Cup 2023/24 -MENTIONS-> Chelsea
+- Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn -MENTIONS-> Chelsea
+- How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea -MENTIONS-> Chelsea
+- Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe -MENTIONS-> Chelsea
+
+Entities: Chelsea, Jonathan Liew, Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew, The Guardian, United, McTominay, Cole
+Palmer, Mykhailo Mudryk, Football Daily, Ten Hag
+</item 1>
+
+<item 2>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+GO DEEPER USWNT's Emma Hayes hire could create a problem in preparation for the Olympics
+
+What’s next for Chelsea?
+
+Questions surrounding Hayes’ future have cropped up previously in her tenure at Chelsea. She was linked to several jobs in the men’s English Football League in
+the past and has always been interested in managing Spain’s national team, although there was never an official conversation with Spain’s federation. So it was
+a question of when, not if, Hayes would leave. Still, news of her decision came as a shock to her staff and players.
+
+A few staff members were told on the morning of Nov. 4 before Chelsea’s away game at Aston Villa kicked off at 12.30 p.m. UK time. Most of the other staff
+members found out with the players in the post-match meeting minutes before the official club statement, which Hayes had no hand in writing and did not even see
+before publication, was released at 3 p.m.
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, English Football League, Emma Hayes, U.S. Women's Soccer Team, Spain's national team, Spain's federation, Chelsea's away game at
+Aston Villa, How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea, Chelsea, Aston Villa, Olympics
+</item 2>
+
+<item 3>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Soccer’s planned combined headquarters and national training facility in Georgia. As of yet, there’s no targeted date set for the move.
+
+Hayes, too, will benefit in ways other than compensation and prestige. She spoke to reporters about looking forward to spending more time with her five-year-old
+son, Harry. She has never been to one of his sports days, picked him up from school or taken him to an after-school club and she wants to do that.
+
+The main visible wrinkle in the process was Chelsea’s surprise move of announcing Hayes’ departure on Saturday, Nov. 4. With the contract not yet finalized and
+U.S. Soccer board approval still needed, Chelsea issued their statement at 11 a.m. ET in the U.S. in which it noted she would leave at the end of the season “to
+pursue a new opportunity outside of the WSL and club football.” The club feared that the news was starting to leak and wanted to share the news on its own.
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, club football, U.S. Women’s Soccer Team, U.S. Soccer, Georgia, WSL, Chelsea announcement of Hayes’ departure, Emma Hayes, How U.S.
+Women’s Soccer Team Lured Emma Hayes Away From Chelsea, Chelsea, the U.S., Harry, soccer
+</item 3>
+
+<item 4>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+For more information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our
+Privacy Policy . We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+On another night, perhaps Chelsea score from one of these counterattacks. Perhaps in another game United come up against a better finisher than Nicolas Jackson,
+who for all his talent looks like a man playing football in a hall of mirrors. This is the high-wire act that Ten Hag is enacting: a daring gamble that United
+will gain more going forward than they lose going back.
+
+That once Lisandro Martínez and Raphaël Varane come back, once he brings the defensive line up 10 yards, once Rasmus Højlund hits some form, once Mason Mount
+gets up to speed, lawless abandon will begin to resemble a sustainable attacking blueprint.
+
+Graph facts:
+- Everton players and fans will be fired up by points penalty, asserts Sean Dyche -MENTIONS-> Chelsea
+- Carabao Cup fixtures, draws, results, TV channel, and live streams for every round of EFL League Cup 2023/24 -MENTIONS-> Chelsea
+- Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn -MENTIONS-> Chelsea
+- How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea -MENTIONS-> Chelsea
+- Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe -MENTIONS-> Chelsea
+
+Entities: Chelsea, Mason Mount, Jonathan Liew, Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew, Lisandro Martínez, Rasmus
+Højlund, Google Privacy Policy, Terms of Service, Google, The Guardian, United, Raphaël Varane, McTominay, Nicolas Jackson, Google reCaptcha
+</item 4>
+
+<item 5>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+England and Chelsea captain Millie Bright was “devastated,” and most players were understandably sad — many of whom owe their career progression to Hayes — but
+know they still have a job to do this season.
+
+“It’s been a bit of a whirlwind. As a player and a person, I was devastated. I’ve been here nine years under Emma and the things I’ve learned,” Bright said.
+“She’s a mentor, a coach, a friend, a life coach. It’s more than just football playing under her.”
+
+Bright credits Hayes for her on and off-field guidance. (Photo by Marc Atkins, Getty Images)
+
+Hayes’ American assistant Denise Reddy, born in New Jersey, is likely to follow her across the pond. The former United States Under-20 coach has remained
+faithful to her friend of 20 years and voluntarily quit her job as assistant at Chicago Red Stars in 2010 when Hayes was fired as head coach. Chelsea’s general
+manager Paul Green will stay at the club.
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, Getty Images, U.S. Women’s Soccer Team, Emma Hayes, Millie Bright, Denise Reddy, United States Under-20, Chicago Red Stars, Paul
+Green, Marc Atkins, How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea, Chelsea, England, New Jersey, football
+</item 5>
+
+<item 6>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+There is the possibility of Hayes retaining a connection to the club via some sort of ambassadorial role, but it’s likely contingent upon a lack of conflict
+with the USWNT role and responsibilities. Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,
+especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+
+There is, for now, an immediate task for Hayes to focus on. Chelsea faces off against Real Madrid on Wednesday for their first match of the UWCL Champions
+League group stage. Her full American arrival will not come for another half a year after that.
+
+(Top photo: Julian Finney/Getty Images)
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, CBS Sports, Getty Images, U.S. Women’s Soccer Team, WSL, Emma Hayes, How U.S. Women’s Soccer Team Lured Emma Hayes Away From
+Chelsea, Catarina Macario, Mia Fishel, Chelsea vs Real Madrid UWCL Champions League group stage match, UWCL Champions League group stage, Julian Finney,
+Chelsea, Real Madrid, Todd Boehly
+</item 6>
+
+<item 7>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+“Of course, I’m disappointed to hear things being said in the press. I want to make sure I maintain my own professionalism in everything I do.”
+
+Advertisement
+
+U.S Soccer’s annual financial reports reveal the salaries of their head coaches and other executives. While Berhalter received a new contract this year, his
+previous deal that ran from April 2021 to March 2022, earned him $1.6 million, including $300,000 in bonuses. During that same time, Andonovski earned $446,495,
+of which only $50,000 was bonus money. With Hayes expected to earn close to $2 million per year in her deal, this will likely create a knock-on effect for other
+international women’s coaches negotiating their next contracts.
+
+U.S. Soccer’s rollout of their new head coach has not been an easy one for the federation’s communications staff, considering that Hayes is essentially
+unavailable for any formal ceremonies or media appearances until her time with Chelsea is complete.
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, U.S. Women’s Soccer Team, U.S. Soccer, Andonovski, Emma Hayes, How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea,
+Chelsea, Berhalter
+</item 7>
+
+<item 8>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+This was a win that felt a lot tighter than it really was: United inexplicably hanging on at the end despite enjoying 28 shots and an xG tally of 4.07. For long
+periods United played some of their most authentically thrilling football of the season, a doctrine of relentless attack that had Diogo Dalot flying forward
+from right-back even as the minutes ticked down.
+
+It was also a game that felt more chaotic than it really was. In fact the slippery, slingy nature of the play was largely by design: United hollowing out their
+midfield in order to throw bodies forward, Chelsea hollowing out theirs in order to leave men up for the breakaway. It was a game that hung on United’s
+determination to keep allowing Chelsea counterattacks, and Chelsea’s determination to keep messing them up. It was a game, above all, that hung on the curious
+main character energy of Scott McTominay.
+
+Graph facts:
+- Everton players and fans will be fired up by points penalty, asserts Sean Dyche -MENTIONS-> Chelsea
+- Carabao Cup fixtures, draws, results, TV channel, and live streams for every round of EFL League Cup 2023/24 -MENTIONS-> Chelsea
+- Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn -MENTIONS-> Chelsea
+- How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea -MENTIONS-> Chelsea
+- Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe -MENTIONS-> Chelsea
+
+Entities: Chelsea, game, Jonathan Liew, Scott McTominay, Diogo Dalot, Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew, The
+Guardian, United, Ten Hag
+</item 8>
+
+<item 9>
+Graph query row:
+article: How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea
+relationship: MENTIONS
+connected_entity: Chicago
+</item 9>
+
+<item 10>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+This began the race to confirm Hayes had been selected as the USWNT head coach.
+
+Talks between U.S. Soccer and Hayes’ representatives continued even after Chelsea’s press release. The federation’s board convened late on Saturday, Nov. 4 to
+approve the selection, even without the final details of the contract settled or signed.
+
+At the end of it all, the sides have agreed to a deal that will make Hayes the highest-paid women’s football coach in the world — though her salary is not tied
+to equal compensation with Berhalter. While her salary is in the same range as the USMNT head coach, it’s thought to be a reflection of the market value for
+Hayes. With reports that Chelsea was prepared to quadruple her salary to keep her, Hayes herself danced around the details in her first media availability with
+the club.
+
+“I believe in private conversations,” she said. “Of course, I’m disappointed to hear things being said in the press.
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, U.S. Women’s Soccer Team, U.S. Soccer, private conversations, Emma Hayes, How U.S. Women’s Soccer Team Lured Emma Hayes Away From
+Chelsea, Chelsea, Berhalter, USMNT
+</item 10>
+=== END ITEM id=7dfbaf915463f222 ===
+
+=== ITEM id=d1296de605fd9482 ===
+Gold sentences and facts:
+Sentence 0: Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills.
+  Fact 0.0: Today, social networks are often run by large corporations.
+  Fact 0.1: Meta, Snap and Google are examples of large corporations that run social networks.
+  Fact 0.2: On social networks run by large corporations, advertisers pay the bills.
+Sentence 1: By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter.
+  Fact 1.0: By the end of 2012, Google and Facebook were angling to acquire the London lab.
+  Fact 1.1: Three people familiar with the matter said Google and Facebook were angling to acquire the London lab by the end of 2012.
+
+Retrieved items:
+<item 1>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+When Google bought DeepMind, it bought the whole thing. Musk was out. Financially, he had come out ahead, but he was unhappy. Three Google executives now firmly
+in control of DeepMind were there: Page; Sergey Brin, a Google co-founder and Tesla investor; and Eric Schmidt, Google’s chair. Among the other attendees were
+Reid Hoffman, another PayPal founder; and Toby Ord, an Australian philosopher studying “existential risk”.
+
+The DeepMind founders reported that they were pushing ahead with their work but that they were aware the technology carried serious risks. Suleyman, the
+DeepMind co-founder, gave a presentation called “The Pitchforkers Are Coming.” AI could lead to an explosion in disinformation, he told the board. He fretted
+that as the technology replaced countless jobs in the coming years, the public would accuse Google of stealing their livelihoods. Google would need to share its
+wealth with the millions who could no longer find work and provide a “universal basic income,” he argued. Musk agreed.
+
+Graph facts:
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> disinformation
+- EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks -MENTIONS-> disinformation
+- The Israel-Hamas War Is Drowning X in Disinformation -MENTIONS-> disinformation
+- One year later, ChatGPT is still alive and kicking -MENTIONS-> disinformation
+- How the conspiracy-fueled Epoch Times went mainstream and made millions -MENTIONS-> disinformation
+
+Entities: disinformation, Musk, Page, How ego and fear fuelled the rise of artificial intelligence, Sergey Brin, Toby Ord, Suleyman, The Pitchforkers Are
+Coming, universal basic income, jobs, PayPal, DeepMind, existential risk, The Age, Google
+</item 1>
+
+<item 2>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter. Hassabis and his co-founders
+insisted on two conditions: No DeepMind technology could be used for military purposes, and its AGI technology must be overseen by an independent board of
+technologists and ethicists.
+
+Google offered $US650 million. Zuckerberg of Facebook offered a bigger payout to DeepMind’s founders but would not agree to the conditions. DeepMind sold to
+Google. Zuckerberg was determined to build an AI lab of his own. He hired Yann LeCun, a French computer scientist who had also done pioneering AI research, to
+run it. A year after Hinton’s auction, Zuckerberg and LeCun flew to Lake Tahoe for the same AI conference. While padding around a suite at the Harrah’s casino
+in his socks, Zuckerberg personally interviewed top researchers, who were soon offered millions of dollars in salary and stock. AI was once laughed off.
+
+Graph facts:
+- Hinton -PARTICIPATED_IN-> auction
+- Hassabis -PARTICIPATED_IN-> conference
+- Hinton -WORKS_FOR-> academia
+- Hinton -WORKS_FOR-> Microsoft
+- Harrah’s hotel and casino -LOCATED_IN-> Lake Tahoe
+
+Entities: Hassabis, Hinton, Lake Tahoe, How ego and fear fuelled the rise of artificial intelligence, Zuckerberg, AI lab, AI conference, Harrah’s casino,
+Hinton’s auction, independent board of technologists and ethicists, AGI technology, military purposes, DeepMind, The Age, Facebook
+</item 2>
+
+<item 3>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+There’s this picture from more than a decade ago that still goes viral on the web every once in a while. You’ve probably seen it: it was created by the venture
+capitalist Andrew Parker, and it compares a few dozen startups with subsections of Craigslist. Back then, Craigslist was all things to all people online, and a
+generation of startups figured they could do part of the job a lot better.
+
+Some of those companies failed — sometimes because of Craigslist! — but some also became gigantically successful. Airbnb worked because it was more searchable,
+reliable, and trustworthy than a random Craigslist listing; StubHub sold you secondhand tickets without the 50 percent chance those tickets were fake; Etsy
+offered a much more fun shopping and discovery experience than a bunch of text listings and crappy photos.
+
+For a decade, startups tried to unbundle Craigslist. Now they can do the same for social networks.
+
+Graph facts:
+- StubHub -SAID-> Jets game against the Chiefs
+- Josh Silverman -WORKS_FOR-> Etsy
+- Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE -MENTIONS-> StubHub
+- A comprehensive list of 2023 tech layoffs -MENTIONS-> Etsy
+- AfroFuture’s vision is to bring African art, cuisine, fashion, and music to a global audience. -MENTIONS-> AirBnB
+
+Entities: Etsy, StubHub, AirBnB, social networks, Andrew Parker, Craigslist, fediverse, 2023 in social media: the case for the fediverse, social media, The
+Verge
+</item 3>
+
+<item 4>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+AI was once laughed off. Now the richest men in Silicon Valley were shelling out billions to keep from being left behind. The lost ethics board
+
+When Musk invested in DeepMind, he broke his own informal rule – that he would not invest in any company he didn’t run himself. The downsides of his decision
+were already apparent when, only a month or so after his birthday spat with Page, he again found himself face to face with his former friend and fellow
+billionaire. Larry Page, co-founder of Google. Credit: Bloomberg The occasion was the first meeting of DeepMind’s ethics board, on August 14, 2015. The board
+had been set up at the insistence of the startup’s founders to ensure that their technology did no harm after the sale. The members convened in a conference
+room just outside Musk’s office at SpaceX. But that’s where Musk’s control ended. When Google bought DeepMind, it bought the whole thing. Musk was out.
+
+Graph facts:
+- Why Mozilla is betting on a decentralized social networking future -MENTIONS-> Musk
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> Musk
+- Founders, are events useful? -MENTIONS-> Musk
+- X (formerly Twitter) is worst for disinformation, per EU analysis -MENTIONS-> Musk
+- The UK just laid out new rules for the internet — it only gets harder from here -MENTIONS-> Musk
+
+Entities: Musk, SpaceX, How ego and fear fuelled the rise of artificial intelligence, Larry Page, DeepMind ethics board, first meeting of DeepMind’s ethics
+board, birthday spat, DeepMind, The Age, Google, Silicon Valley, artificial intelligence, Bloomberg
+</item 4>
+
+<item 5>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+With Amo, the founder of Zenly wants to make social apps social again The startup raised $20 million and is launching ID today
+
+In 2018, I wrote a TechCrunch article stating that 2018 was “the year social networks were no longer social.” Reflecting on that article, I’m not sure that 2018
+was the turning point. But the premise of the article still holds up well.
+
+At some point, social networks were no longer about connecting with your closest friends, keeping up with long-distance family members and feeling a special
+connection with people you love.
+
+TikTok, Instagram, Snapchat, Facebook, YouTube and X (formerly Twitter) are all slowly evolving to become the same infinite scrollable feed of
+algorithm-optimized short videos from top performers.
+
+And it turns out that I’m not the only one who has noticed that social networks have been slowly drifting away from their original purpose.
+
+Graph facts:
+- SBF’s trial starts soon, but how did he — and FTX — get here? -PUBLISHED_BY-> TechCrunch
+- Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier -PUBLISHED_BY-> TechCrunch
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -PUBLISHED_BY-> TechCrunch
+- After warning, the EU opens investigation into X over alleged disinformation -PUBLISHED_BY-> TechCrunch
+- SBF Trial: The latest updates from the FTX collapse’s courtroom drama -PUBLISHED_BY-> TechCrunch
+
+Entities: TechCrunch, X, ID, social networks, With Amo, the founder of Zenly wants to make social apps social again, Zenly, Amo, social apps, Instagram,
+Snapchat, TikTok, YouTube, Facebook
+</item 5>
+
+<item 6>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+
+Graph facts:
+- Founders, are events useful? -MENTIONS-> Pixel 8
+- Founders, are events useful? -MENTIONS-> Humans
+- Founders, are events useful? -MENTIONS-> Musk
+- Founders, are events useful? -MENTIONS-> TC+ team
+- Founders, are events useful? -MENTIONS-> events
+
+Entities: Founders, are events useful?, LLM ecosystems, Project Stardust, next-gen AI photo editing engine, Creatives, campaign targeting potential corporate
+abuse of AI technology, musicians, AR headset, Meta Quest 3, AR/VR, Brian, ChatGPT, AI tools, Apple, TechCrunch
+</item 6>
+
+<item 7>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+
+Graph facts:
+- Founders, are events useful? -MENTIONS-> Pixel 8
+- Founders, are events useful? -MENTIONS-> Humans
+- Founders, are events useful? -MENTIONS-> Musk
+- Founders, are events useful? -MENTIONS-> TC+ team
+- Founders, are events useful? -MENTIONS-> events
+
+Entities: Founders, are events useful?, A social social network network, Lauren, X may go ad-free?, Premium, Passwords? We don’t need no steenkin’ passwords,
+Passkeys, passwords, PINs, physical security key, biometrics, TechCrunch, X, Google, TikTok
+</item 7>
+
+<item 8>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+Consumers are hungry for a new way of social networking, where trust and safety are paramount and power isn’t centralized with a Big Tech CEO in charge… or at
+least that’s what Mozilla believes. The mission-driven tech company behind the Firefox browser, Pocket reader and other apps is now investing its energy into
+the so-called “fediverse” — a collection of decentralized social networking applications, like Mastodon, that communicate with one another over the ActivityPub
+protocol.
+
+The idea is to rethink social networking from the ground up.
+
+Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills. This has created a world where modern
+social networks are profit-driven, and consumer needs aren’t always at the forefront, Mozilla believes. This disconnect between what people want and what
+today’s networks offer hit an inflection point last year, when billionaire Elon Musk bought Twitter, leading to a surge of interest in alternatives to
+centralized social networking, including apps like Mastodon and Bluesky.
+
+Graph facts:
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Mozilla
+- Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ -MENTIONS-> Mozilla
+- Is Google Search better than the rest? And is that fair? -MENTIONS-> Mozilla
+- How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement -MENTIONS-> Mozilla
+- Mozilla bets on a decentralized future -MENTIONS-> Mozilla
+
+Entities: Mozilla, Firefox, Pocket, fediverse, Elon Musk bought Twitter, Why Mozilla is betting on a decentralized social networking future, Meta, social
+networking, TechCrunch, Snap, Elon Musk, Google, Mastodon, ActivityPub, Bluesky
+</item 8>
+
+<item 9>
+Graph query row:
+article: Why Mozilla is betting on a decentralized social networking future
+publisher: TechCrunch
+entity: Google
+connections: [{'amount': None, 'stake': None, 'type': 'PUBLISHED_BY'}, {'amount': None, 'stake': None, 'type': 'PUBLISHED_BY'}, {'amount': None, 'stake': None,
+'type': 'MENTIONS'}, {'amount': None, 'stake': None, 'type': 'WORKS_FOR'}]
+</item 9>
+
+<item 10>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+“This is another indication that AI is progressing faster than even many experts anticipated,” Victoria Krakovna, who would soon join DeepMind as an “AI safety”
+researcher, wrote in a blog post. DeepMind’s founders were increasingly worried about what Google would do with their inventions. In 2017, they tried to break
+away from the company. Google responded by increasing the salaries and stock award packages of the DeepMind founders and their staff. They stayed put. The
+ethics board never had a second meeting. The Breakup
+
+Convinced that Page’s optimistic view of AI was dead wrong, and angry at his loss of DeepMind, Musk built his own lab. OpenAI was founded in late 2015, just a
+few months after he met with Altman at the Rosewood hotel in Silicon Valley. Sam Altman Credit: Bloomberg Businessweek Musk pumped money into the lab, and his
+former PayPal buddies – Hoffman and Thiel – came along for the ride.
+
+Graph facts:
+- Why Mozilla is betting on a decentralized social networking future -MENTIONS-> Musk
+- After warning, the EU opens investigation into X over alleged disinformation -MENTIONS-> Musk
+- Founders, are events useful? -MENTIONS-> Musk
+- X (formerly Twitter) is worst for disinformation, per EU analysis -MENTIONS-> Musk
+- The UK just laid out new rules for the internet — it only gets harder from here -MENTIONS-> Musk
+
+Entities: Musk, Page, Rosewood hotel, Thiel, How ego and fear fuelled the rise of artificial intelligence, Victoria Krakovna, Bloomberg Businessweek, Hoffman,
+PayPal, ethics board, break away from Google, DeepMind, The Age, Google, Silicon Valley
+</item 10>
+=== END ITEM id=d1296de605fd9482 ===

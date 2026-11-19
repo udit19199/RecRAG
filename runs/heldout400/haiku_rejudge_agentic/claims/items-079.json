@@ -1,0 +1,74 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a851b0d5542997175ce1f7f",
+   "sentences": [
+    "Dogo Cubano also known as the Cuban Mastiff, Cuban Dogo and Cuban Dogge is an extinct dog breed from Cuba.",
+    "The Dutch Shepherd is a herding dog of Dutch origin."
+   ]
+  },
+  {
+   "id": "multihop-rag-2448",
+   "sentences": [
+    "New customers can get up to $1000 in bonus bets if they lose their first bet.",
+    "We expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."
+   ]
+  },
+  {
+   "id": "5a77720255429967ab10517f",
+   "sentences": [
+    " Her only novel, \"The Bone People\", won the Booker Prize in 1985.",
+    " His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years."
+   ]
+  },
+  {
+   "id": "5ae0fe8855429945ae959495",
+   "sentences": [
+    "Jürgen Melzer (born 22 May 1981 in Vienna) is an Austrian tennis player.",
+    "Tom Gullikson (born September 8, 1951) is a tennis coach and former professional tennis player from the United States."
+   ]
+  },
+  {
+   "id": "5a89e95c5542992e4fca8474",
+   "sentences": [
+    "Javier Alberto Frana (born 25 December 1966) is a former tennis player from Argentina and current tennis commentator for ESPN Latin America.",
+    "Thomaz Koch (born May 11, 1945 in Porto Alegre), is a left-handed former tennis player from Brazil, who was a quarter-finalist at the French Open, Wimbledon and the U.S. National Championships."
+   ]
+  },
+  {
+   "id": "multihop-rag-2016",
+   "sentences": [
+    "With this sale, they offer some of the best value in their class from one of the top names in the business.",
+    "“Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low,” CMA CGM Chief Financial Officer Ramon Fernandez told reporters Friday."
+   ]
+  },
+  {
+   "id": "-4141063008045921128",
+   "sentences": [
+    "At the Council , following advice offered by Simon Peter ( Acts 15 : 7 -- 11 and Acts 15 : 14 ) , Barnabas and Paul gave an account of their ministry among the gentiles ( Acts 15 : 12 ) , and the apostle James quoted from the words of the prophet Amos ( Acts 15 : 16 -- 17 , quoting Amos 9 : 11 -- 12 ) . James added his own words to the quotation : `` Known to God from eternity are all His works '' and then submitted a proposal , which was accepted by the Church and became known as the Apostolic Decree :"
+   ]
+  },
+  {
+   "id": "-2416536857956403808",
+   "sentences": [
+    "The park lies in the north - east of South Africa , in the eastern parts of Limpopo and Mpumalanga provinces . Phalaborwa , Limpopo is the only town in South Africa that borders the Kruger National Park . It is one of the largest national parks in the world , with an area of 19,485 square kilometres ( 7,523 sq mi ) . The park is approximately 360 kilometres ( 220 mi ) long , and has an average width of 65 kilometres ( 40 mi ) . At its widest point , the park is 90 kilometres ( 56 mi ) wide from east to west .",
+    "Kruger National Park is one of the largest game reserves in Africa . It covers an area of 19,485 square kilometres ( 7,523 sq mi ) in the provinces of Limpopo and Mpumalanga in northeastern South Africa , and extends 360 kilometres ( 220 mi ) from north to south and 65 kilometres ( 40 mi ) from east to west . The administrative headquarters are in Skukuza . Areas of the park were first protected by the government of the South African Republic in 1898 , and it became South Africa 's first national park in 1926 .",
+    "Kruger National reserve IUCN category II ( national park ) Burchell 's zebra in a Kruger landscape Location of the park ( red area ) in South Africa Location Limpopo and Mpumalanga provinces , South Africa Nearest city Nelspruit ( southern ) Phalaborwa ( central ) Coordinates 24 ° 0 ′ 41 '' S 31 ° 29 ′ 7 '' E ﻿ / ﻿ 24.01139 ° S 31.48528 ° E ﻿ / - 24.01139 ; 31.48528 Coordinates : 24 ° 0 ′ 41 '' S 31 ° 29 ′ 7 '' E ﻿ / ﻿ 24.01139 ° S 31.48528 ° E ﻿ / - 24.01139 ; 31.48528 Area 19,485 km ( 7,523 sq mi ) Established 31 May 1926 ( 1898 ) Visitors 1,336,981 ( in 2004 ) Governing body South African National Parks www.sanparks.org/parks/kruger/"
+   ]
+  },
+  {
+   "id": "970985133701043298",
+   "sentences": [
+    "At the federal level in the United States , legislation ( i.e. , `` statutes '' or `` statutory law '' ) consists exclusively of Acts passed by the Congress of the United States and its predecessor , the Continental Congress , that were either signed into law by the President or passed by Congress after a presidential veto ."
+   ]
+  },
+  {
+   "id": "3147312731957254507",
+   "sentences": [
+    "Celebrity Notability ( known for ) Professional partner Status Trista Sutter Reality television star Louis Van Amstel Eliminated 1st on June 8 , 2005 Evander Holyfield Professional boxer Edyta Sliwinska Eliminated 2nd on June 15 , 2005 Rachel Hunter Supermodel & actress Jonathan Roberts Eliminated 3rd on June 22 , 2005 Joey McIntyre New Kids on the Block singer Ashly DelGrosso Third place on June 29 , 2005 John O'Hurley Actor & game show host Charlotte Jorgensen Runner - up on July 6 , 2005 Kelly Monaco Actress Alec Mazo Winner on July 6 , 2005"
+   ]
+  }
+ ]
+}

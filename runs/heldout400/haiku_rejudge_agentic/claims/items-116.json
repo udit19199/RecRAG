@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "6618579378419636986",
+   "sentences": [
+    "The time that has elapsed since the Camp David Accords has left no doubt as to their enormous ramifications on Middle Eastern politics . Most notably , the perception of Egypt within the Arab world changed . With the most powerful of the Arab militaries and a history of leadership in the Arab world under Nasser , Egypt had more leverage than any of the other Arab states to advance Arab interests . Egypt was subsequently suspended from the Arab League from 1979 until 1989 ."
+   ]
+  },
+  {
+   "id": "8179898753906755813",
+   "sentences": [
+    "This Academy Awards ceremony is notable for Peter Finch becoming the first posthumous winner of an Oscar for acting , a feat matched only by fellow Australian Heath Ledger 32 years later ; Finch had suffered a fatal heart attack in mid-January . Beatrice Straight set another record by becoming the actor with the shortest performance ever in a film to win an acting Oscar , with only five minutes and two seconds of screen - time in Network . Network , along with All the President 's Men , were the two biggest champs of the ceremony with four Oscars each , but Best Picture and Best Director ultimately went to Rocky ."
+   ]
+  },
+  {
+   "id": "5a8fdb955542990a98493572",
+   "sentences": [
+    "Mediastan is a 2013 documentary film about the 2010 United States diplomatic cables leak, directed by Johannes Wahlström and produced by Julian Assange, Rebecca O'Brien and Lauren Dark.",
+    "Julian Paul Assange ( ; born Julian Paul Hawkins, 3 July 1971) is an Australian computer programmer and the founder of WikiLeaks, an organisation which he founded in 2006."
+   ]
+  },
+  {
+   "id": "multihop-rag-751",
+   "sentences": [
+    "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.",
+    "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "6002453471247819122",
+   "sentences": [
+    "R.H. Thomson as Matthew Cuthbert"
+   ]
+  },
+  {
+   "id": "multihop-rag-1877",
+   "sentences": [
+    "It was a Michigan quarterback that led the Buccaneers to the promised land last time so perhaps lightning strikes twice.",
+    "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."
+   ]
+  },
+  {
+   "id": "multihop-rag-1784",
+   "sentences": [
+    "You're probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth.",
+    "With Kenneth Walker III's oblique injury comes opportunity for the rookie, who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams.",
+    "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."
+   ]
+  },
+  {
+   "id": "5adcd4325542994d58a2f6ed",
+   "sentences": [
+    "Colocasia is a genus of flowering plants in the family Araceae, native to southeastern Asia and the Indian subcontinent.",
+    "The genus Coronilla contains about 20 species of flowering plants native to Europe and North Africa."
+   ]
+  },
+  {
+   "id": "5a84de255542991dd0999e06",
+   "sentences": [
+    "Eric Arthur Blair (25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.",
+    "Nelson Richard DeMille (born August 23, 1943) is an American author of action adventure and suspense novels.",
+    " DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews."
+   ]
+  },
+  {
+   "id": "5a866c04554299211dda2b25",
+   "sentences": [
+    "Pterostyrax, the epaulette tree, is a small genus of four species of deciduous large shrubs or small trees in the family Styracaceae, native to eastern Asia in China and Japan.",
+    "Dregea is a genus of vines in the Apocynaceae, first described as a genus with this name in 1838.",
+    " It is native to Africa and southern Asia."
+   ]
+  }
+ ]
+}

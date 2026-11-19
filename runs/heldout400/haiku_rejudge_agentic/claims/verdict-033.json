@@ -1,0 +1,199 @@
+[
+ {
+  "id": "5ab71b5c5542991d3222377e",
+  "sentences": [
+   [
+    "The area along Northern Boulevard is well known for its high-end premium open-air shopping center.",
+    "The high-end premium open-air shopping center is named the Americana Manhasset."
+   ],
+   [
+    "Hermes, Dior, Cartier, Bottega Veneta, Chanel, Fendi, Gucci, Louis Vuitton, MaxMara, Celine, Tiffany & Co., and Prada are international fashion designer labels and luxury goods companies.",
+    "These companies maintain a total of more than 60 retail stores and restaurants.",
+    "These stores and restaurants are on a 220000 sqft site.",
+    "The 220000 sqft site is surrounded by gardens.",
+    "The gardens surrounding the site were designed by Oheme van Sweden."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-854",
+  "sentences": [
+   [
+    "The answer ultimately lies with the jury.",
+    "The jury was selected on Wednesday morning.",
+    "The jury was selected before lawyers for the government and then Bankman-Fried swapped two very different stories.",
+    "The two very different stories are about the former crypto mogul's sudden rise and almost instantaneous fall."
+   ],
+   [
+    "Bankman-Fried left Jane Street.",
+    "Jane Street is a high-frequency trading firm.",
+    "Bankman-Fried is a former billionaire.",
+    "Bankman-Fried got his start in finance at Jane Street after MIT.",
+    "After leaving Jane Street, Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.",
+    "Yedidia later joined Bankman-Fried as a developer at FTX."
+   ],
+   [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+    "The defense countered that the FTX founder acted in good faith.",
+    "The defense countered that the FTX founder never meant to commit fraud or steal.",
+    "The defense countered that the FTX founder basically got in over his head."
+   ]
+  ]
+ },
+ {
+  "id": "5a80c79155429938b61421da",
+  "sentences": [
+   [
+    "Moho House is the twenty-first episode of the twenty-eighth season of the animated television series The Simpsons.",
+    "Moho House is the 617th episode of The Simpsons overall.",
+    "The Simpsons is an animated television series."
+   ],
+   [
+    "Fox announced on May 4, 2015.",
+    "Fox announced that The Simpsons had been renewed for season 28."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2141",
+  "sentences": [
+   [
+    "Ramaswamy's Republican colleagues have largely shunned TikTok.",
+    "Ramaswamy is presenting himself as one of the Cool Politicians.",
+    "The Cool Politicians are politicians who will actually use TikTok."
+   ],
+   [
+    "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok.",
+    "Audiences have started to resist artists making their songs trend on TikTok."
+   ]
+  ]
+ },
+ {
+  "id": "5a900b575542995b44242099",
+  "sentences": [
+   [
+    "Christopher Haden-Guest is the 5th Baron Haden-Guest.",
+    "Christopher Haden-Guest was born on February 5, 1948.",
+    "Christopher Haden-Guest is simply known as Christopher Guest.",
+    "Christopher Guest is an English-American screenwriter.",
+    "Christopher Guest is an English-American composer.",
+    "Christopher Guest is an English-American musician.",
+    "Christopher Guest is an English-American director.",
+    "Christopher Guest is an English-American actor.",
+    "Christopher Guest is an English-American comedian.",
+    "Christopher Guest holds dual British and American citizenship."
+   ],
+   [
+    "Christopher Guest is most widely known in Hollywood for having written his series of comedy films shot in mock-documentary (mockumentary) style.",
+    "Christopher Guest is most widely known in Hollywood for having directed his series of comedy films shot in mock-documentary (mockumentary) style.",
+    "Christopher Guest is most widely known in Hollywood for having starred in his series of comedy films shot in mock-documentary (mockumentary) style."
+   ],
+   [
+    "Christopher Guest directed dark comedies.",
+    "Christopher Guest directed children's movies.",
+    "Christopher Guest directed historical pictures."
+   ]
+  ]
+ },
+ {
+  "id": "5abaad5855429901930fa88f",
+  "sentences": [
+   [
+    "He won three singles titles.",
+    "He won 26 doubles titles.",
+    "He won the Australian Open 1978 doubles title with Wojtek Fibak.",
+    "He won the Australian Open 1980 title with fellow countryman Mark Edmondson.",
+    "He won the Australian Open 1981 title with fellow countryman Mark Edmondson.",
+    "He won the Roland Garros 1986 title with fellow countryman Mark Edmondson.",
+    "He was a runner-up at the Australian Open 1985 with fellow countryman Mark Edmondson.",
+    "Mark Edmondson is a fellow countryman of his."
+   ],
+   [
+    "In his career, he won nine doubles titles.",
+    "In his career, he won no singles titles."
+   ]
+  ]
+ },
+ {
+  "id": "5a7a9b9a5542990198eaf160",
+  "sentences": [
+   [
+    "The album includes a collaboration with Popcaan.",
+    "The album includes a collaboration with Zhu.",
+    "The album includes a collaboration with Leikeli47.",
+    "The album includes a collaboration with Dreezy.",
+    "The album includes a collaboration with Flume.",
+    "The album includes a collaboration with Pell."
+   ],
+   [
+    "Steven Zhu was born in 1989.",
+    "Steven Zhu is known professionally as Zhu.",
+    "Zhu is a Chinese American electronic musician.",
+    "Zhu is a Chinese American singer.",
+    "Zhu has been active since the beginning of 2014.",
+    "Zhu is signed to Mind of a Genius Records.",
+    "Zhu is signed to Columbia Records."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-574",
+  "sentences": [
+   [
+    "Erik ten Hag is a top coach from Ajax.",
+    "The party referred to as they needs a top blueprint not only for now but for the next five years.",
+    "The party referred to as they needs to work towards that blueprint.",
+    "On the journey toward that blueprint, there are sometimes hard moments when the party does not get the right results.",
+    "The hard moments happen even though the party is doing the right things."
+   ],
+   [
+    "Manchester United are out of Europe altogether.",
+    "Manchester United's exit followed a limp display against Bayern at Old Trafford.",
+    "Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.",
+    "Kingsley Coman's goal was the one that sealed the 1-0 win.",
+    "The 1-0 win was for Thomas Tuchel's side."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-434",
+  "sentences": [
+   [
+    "The second week of the trial had standout testimony.",
+    "The standout testimony of the second week came from Alameda Research's former CEO Caroline Ellison.",
+    "Caroline Ellison claimed she took $14 billion from customers.",
+    "Caroline Ellison claimed she used the $14 billion to repay debts to lenders.",
+    "Caroline Ellison claimed she used customers as a line of credit.",
+    "Caroline Ellison claimed she did this under the instruction of SBF."
+   ],
+   [
+    "SBF is the name by which he is known.",
+    "SBF has pleaded not guilty to some seven charges of fraud and conspiracy."
+   ],
+   [
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.",
+    "The defense countered that the FTX founder acted in good faith.",
+    "The defense countered that the FTX founder never meant to commit fraud or steal.",
+    "The defense countered that the FTX founder basically got in over his head."
+   ]
+  ]
+ },
+ {
+  "id": "multihop-rag-2415",
+  "sentences": [
+   [
+    "Valve has made a gaggle of minor physical upgrades with its new iteration.",
+    "Valve has made big improvements with its new iteration.",
+    "The minor physical upgrades are part of the new iteration alongside the big improvements."
+   ],
+   [
+    "Valve looks at a store that could be both.",
+    "Valve decided to focus exclusively on games."
+   ],
+   [
+    "The Steam Deck OLED will go on sale on November 16th at 1pm ET.",
+    "Valve has units ready to ship on November 16th."
+   ]
+  ]
+ }
+]

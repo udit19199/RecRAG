@@ -1,0 +1,75 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a78d38455429970f5fffd94",
+   "sentences": [
+    " He creates bespoke millinery under the J Smith Esquire brand for a portfolio of private clients that includes Angelina Jolie, Brad Pitt and Amal Clooney.",
+    "Amal Clooney (\"née\" Alamuddin, Arabic: أمل علم الدين‎ ‎ ; born 3 February 1978) is a barrister at Doughty Street Chambers, specialising in international law and human rights."
+   ]
+  },
+  {
+   "id": "5abeebe25542993fe9a41d9c",
+   "sentences": [
+    "Season of Migration to the North (Arabic: موسم الهجرة إلى الشمال‎ ‎ Mawsim al-Hiǧra ilā ash-Shamāl ) is a classic post-colonial Sudanese novel by the novelist Tayeb Salih.",
+    " The novel is a counter narrative to \"Heart of Darkness\".",
+    "Heart of Darkness (1899) is a novella by Polish-British novelist Joseph Conrad, about a voyage up the Congo River into the Congo Free State, in the heart of Africa, by the story's narrator Charles Marlow."
+   ]
+  },
+  {
+   "id": "5abaee845542996606241696",
+   "sentences": [
+    "On February 25, 2017 he lost to Jarrett Hurd for the International Boxing Federation light middleweight world title.",
+    "Jarrett Hurd (born August 31, 1990) is an American light middleweight boxer from Accokeek, Maryland."
+   ]
+  },
+  {
+   "id": "5225754983651766092",
+   "sentences": [
+    "The trade winds are the prevailing pattern of easterly surface winds found in the tropics , within the lower portion of the Earth 's atmosphere , in the lower section of the troposphere near the Earth 's equator . The trade winds blow predominantly from the northeast in the Northern Hemisphere and from the southeast in the Southern Hemisphere , strengthening during the winter and when the Arctic oscillation is in its warm phase . Trade winds have been used by captains of sailing ships to cross the world 's oceans for centuries , and enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans ."
+   ]
+  },
+  {
+   "id": "5a80b35c5542992bc0c4a7b8",
+   "sentences": [
+    " Her favorite events are 800 metres and 1500 metres.",
+    " The distance has been contested at the Summer Olympics since 1896 and the World Championships in Athletics since 1983."
+   ]
+  },
+  {
+   "id": "5ae457a95542996836b02c85",
+   "sentences": [
+    "\", \"My Life As A Teenage Robot\" and \"The Replacements\" and he also did the voice of Knotty in \"\" (1992) and he also did additional voices in films \"Fantasia 2000\" (1999) and \"Sing\" (2016)",
+    " It was directed and written by Garth Jennings, co-directed by Christophe Lourdelet, and starring the voices of Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson, John C. Reilly, Taron Egerton, and Tori Kelly."
+   ]
+  },
+  {
+   "id": "5a8b515e55429971feec46bb",
+   "sentences": [
+    " He has acted in a few Off Broadway productions and has made appearances on American television shows such as \"\", \"Person of Interest\" and \"\" and video games such as \"Grand Theft Auto V\", \"Red Dead Redemption\", \"\" and \"Red Dead Revolver\".",
+    "Red Dead Redemption is a Western action-adventure video game developed by Rockstar San Diego and published by Rockstar Games."
+   ]
+  },
+  {
+   "id": "multihop-rag-1701",
+   "sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "2673329117028914160",
+   "sentences": [
+    "In vertebrates , the gallbladder is a small hollow organ where bile is stored and concentrated before it is released into the small intestine . In humans , the pear - shaped gallbladder lies beneath the liver , although the structure and position of the gallbladder can vary significantly among animal species . It receives and stores bile , produced by the liver , via the common hepatic duct , and releases it via the common bile duct into the duodenum , where the bile helps in the digestion of fats ."
+   ]
+  },
+  {
+   "id": "3274948378518710725",
+   "sentences": [
+    "Only Mexico , Italy , France , Germany ( West Germany until shortly after the 1990 World Cup ) and Brazil have hosted the event on two occasions . Mexico City 's Estadio Azteca and Rio de Janeiro 's Maracanã are the only venues ever to have hosted two FIFA World Cup finals . Only the 2002 FIFA World Cup had more than one host , being split between Japan and South Korea ."
+   ]
+  }
+ ]
+}

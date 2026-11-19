@@ -1,0 +1,842 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=cc5a57d5f3bd50b7 ===
+Gold sentences and facts:
+Sentence 0: 13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+  Fact 0.0: The 12th over is timestamped 13 Dec 2023 00.58 GMT.
+  Fact 0.1: At the end of the 12th over, West Indies were 102-4.
+  Fact 0.2: At the end of the 12th over, Hope had 26 runs.
+  Fact 0.3: At the end of the 12th over, Hetmyer had 1 run.
+  Fact 0.4: The 12th over had just a single and a wicket.
+  Fact 0.5: Shai Hope could not break the legspin shackles in the 12th over.
+Sentence 1: 6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary.
+  Fact 1.0: The 16th over is timestamped 6d ago, 22.54 GMT.
+  Fact 1.1: At the end of the 16th over, West Indies were 112-4.
+  Fact 1.2: At the end of the 16th over, Hope had 29 runs.
+  Fact 1.3: At the end of the 16th over, Powell had 8 runs.
+  Fact 1.4: Hope is playing an exemplary innings.
+  Fact 1.5: Hope opens the face to steer Rehan for Hope's first boundary.
+
+Retrieved items:
+<item 1>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 00.20 GMT 5th over: West Indies 56-1 (Mayers 20, Hope 12) Woakes continues, after five balls he’s gone for just three runs. Can he get out of the
+over cheaply? No – A length ball is clubbed down the ground for SIX with a minimum of fuss by Shai Hope. West Indies have come out of the traps as well as
+England did, one over of the Powerplay left.
+
+Graph facts:
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+- West Indies clinch T20 series after Shai Hope edges hosts past England total -MENTIONS-> Shai Hope
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Shai Hope
+- Shai Hope -PARTICIPATED_IN-> first T20 international
+- Shai Hope -PARTICIPATED_IN-> game
+
+Entities: Shai Hope, West Indies v England: first T20 international, Mayers, Woakes, Powerplay, West Indies v England: first T20 international – live, West
+Indies, England, The Guardian
+</item 1>
+
+<item 2>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts? Show Download the Guardian app from the iOS App Store on iPhone or the Google Play store on Android
+by searching for 'The Guardian'.
+
+If you already have the Guardian app, make sure you’re on the most recent version.
+
+In the Guardian app, tap the Menu button at the bottom right, then go to Settings (the gear icon), then Notifications.
+
+Turn on sport notifications. Was this helpful? Thank you for your feedback.
+
+Halfway through their innings they were 62 for three, and if England had 15 more runs at the same point they had also made a complete hash of the rest of it.
+That was a trap which, thanks to Hope’s 43-ball 43 as he again steered his side to their target, West Indies avoided. This batting display may have lacked their
+usual flamboyance but until the final ball it was entirely appropriate for the occasion.
+
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant.
+
+Graph facts:
+- What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today -MENTIONS-> Android
+- ChatGPT’s mobile app hits record $4.58M in revenue in September -MENTIONS-> Android
+- ChatGPT: Everything you need to know about the AI-powered chatbot -MENTIONS-> Android
+- The best Black Friday deals you can get for under $25 -MENTIONS-> Android
+- More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo -MENTIONS-> Android
+
+Entities: Android, Google Play Store, Shai Hope, West Indies, England, iOS App Store, Adil Rashid, The Guardian, sport, West Indies clinch T20 series after Shai
+Hope edges hosts past England total, T20 series, Guardian app
+</item 2>
+
+<item 3>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Just as surely as when they came out on Tuesday facing an almost unachievable task, the outcome of the West Indies’ run chase seemed inevitable from the start.
+With such a meagre target they needed little more than to keep their heads, and though both Topley and Sam Curran conceded only two with their final overs to
+push the contest into its final over, that never looked in doubt.
+
+skip past newsletter promotion Sign up to The Spin Free weekly newsletter Subscribe to our cricket newsletter for our writers' thoughts on the biggest stories
+and a review of the week’s action Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more
+information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy
+. We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts?
+</item 3>
+
+<item 4>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+That made it 70 for four and the game was one ball into its ninth over, at which point Liam Livingstone and Moeen Ali had to focus for a while on disaster
+prevention rather than entertainment.
+
+Gudakesh Motie is embraced his his West Indies teammates after dismissing England’s in-form Phil Salt. Photograph: Randy Brooks/AFP/Getty Images
+
+Suddenly bowlers were energised by the prospect of posting, for a change, less-than-humiliating figures. Akeal Hosein’s were outstanding, his four overs going
+for just 20 and bringing the wickets of Will Jacks and Moeen, undone by a relay catch on the boundary after combining with Livingstone to add 40 for the fifth
+wicket. Livingstone followed precisely two overs later, prodding the ball limply back into the hands of Motie, at which point things really fell apart, the last
+five wickets surrendered in 20 balls for just 11 runs.
+
+Graph facts:
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Shai Hope
+- West Indies v England: first T20 international – live -MENTIONS-> Shai Hope
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: first T20 international
+- Shai Hope -PARTICIPATED_IN-> first T20 international
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+
+Entities: Shai Hope, Liam Livingstone, Will Jacks, West Indies, AFP, Getty Images, England, Phil Salt, The Guardian, West Indies clinch T20 series after Shai
+Hope edges hosts past England total, Gudakesh Motie, Moeen Ali, Randy Brooks, Akeal Hosein, T20 series
+</item 4>
+
+<item 5>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant. The 35-year-old, who rose to the top of the T20 bowling rankings for the first
+time on Wednesday, took two wickets and conceded just 21 while Topley was even better, also claiming a pair of victims but conceding only 17. England take
+plenty of positives from this series, but the result was not one.
+
+Graph facts:
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Shai Hope
+- West Indies v England: first T20 international – live -MENTIONS-> Shai Hope
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: first T20 international
+- Shai Hope -PARTICIPATED_IN-> first T20 international
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+
+Entities: Shai Hope, West Indies, Topley, England, Adil Rashid, The Guardian, West Indies clinch T20 series after Shai Hope edges hosts past England total, T20
+series, T20 bowling rankings
+</item 5>
+
+<item 6>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+What a difference two days make. Somehow Tuesday’s ludicrous, record-smashing, high-scoring entertainment was followed by a sequel on the same surface that
+eventually delivered thrilling low-scoring entertainment, and a different result claimed in very different style. It was eventually won for West Indies with
+four balls to spare and in the most unfitting of ways – with a massive six – by Shai Hope, again proving himself the right man for a run-chase.
+
+So a series marked by stunning power hitting, roaring run rates and an unexpected midway transformation in England’s performances and prospects concluded with a
+3-2 triumph for West Indies, who extended their supremacy over England at home to four series in three formats across nearly five years.
+
+England assembled exactly the same players in exactly the same place and exactly the same situation – losing the toss, put in to bat – but this was an entirely
+different performance.
+
+Graph facts:
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Shai Hope
+- West Indies v England: first T20 international – live -MENTIONS-> Shai Hope
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: first T20 international
+- Shai Hope -PARTICIPATED_IN-> first T20 international
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+
+Entities: Shai Hope, West Indies, England, The Guardian, West Indies clinch T20 series after Shai Hope edges hosts past England total, T20 series
+</item 6>
+
+<item 7>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 01.45 GMT WICKET! Shai Hope c Brook b Rehan Ahmed 36 (West Indies 123-5) Ahmed is bunted for SIX by Shai Hope but strikes with the next ball as Hope
+holes out!
+
+
+
+13 Dec 2023 01.44 GMT 14th over: West Indies 112-4 (Hope 27, Powell 10) Liam Livingstone instead of Rashid and he does well to keep it to singles, England
+trying to take this as deep as possible and hope West Indies fluff their lines at the death. West Indies need 55 from 36 balls.
+
+Graph facts:
+- Powell -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+- Powell Says Fed to Be Careful, Won’t Hesitate to Hike If Needed -MENTIONS-> Powell
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Powell
+- Powell -PARTICIPATED_IN-> first T20 international
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Rehan Ahmed
+
+Entities: Powell, Rehan Ahmed, Shai Hope, Brook, Liam Livingstone, Rashid, West Indies v England: first T20 international, West Indies v England: first T20
+international – live, West Indies, England, The Guardian
+</item 7>
+
+<item 8>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+Brutal elegance. Rehan comes back well with two sharply turning leggies. Bosh! Shai Hope gets in on the act and smears a length ball over mid on for the third
+six of the over. It’s a learning curve for the tyro spinner but that doesn’t make it any less bruising.
+
+
+
+13 Dec 2023 00.23 GMT 6th over: West Indies 59-1 (Mayers 22, Hope 13) Curran is called back, Mills granted just the one over for the time being. Two slower
+balls bring two soothing dots for England. A single each to Mayers and Hope. Curran does very well to get out of the over with just three runs conceded.
+Powerplay complete. How long till we see some spin from Rehan? Not long at all, he’s on for the next over.
+
+Graph facts:
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Shai Hope
+- Curran -PARTICIPATED_IN-> West Indies v England: first T20 international
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Curran
+- Curran -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+- West Indies clinch T20 series after Shai Hope edges hosts past England total -MENTIONS-> Shai Hope
+
+Entities: Curran, Shai Hope, Rehan, first T20 international, Mayers, Mills, West Indies v England: first T20 international – live, West Indies, England, The
+Guardian
+</item 8>
+
+<item 9>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Often there is a sense as a tour enters its final days of thoughts turning to home, and perhaps the focus was not as laser-sharp as it might have been for this
+game, determination less than absolute to grasp this opportunity to end England’s run of reverses in the Caribbean. Whatever the reason, the pyrotechnics that
+rocketed England to victory in the two previous matches never sparked in this one. It took a fabulous delivery from Gudakesh Motie to end Phil Salt’s run of
+absurd form with his score a modest 38, but some of the other wickets that fell during the period that defined England’s innings and the game seemed a little
+careless.
+
+In the fourth over Jos Buttler casually turned a Jason Holder delivery to fine leg, where Oshane Thomas was positioned, hands cupped. Harry Brook tried to
+paddle-sweep Motie but sent the ball only a few feet into the air, giving Nicholas Pooran an easy catch.
+
+Graph facts:
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Shai Hope
+- West Indies v England: first T20 international – live -MENTIONS-> Shai Hope
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: first T20 international
+- Shai Hope -PARTICIPATED_IN-> first T20 international
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+
+Entities: Shai Hope, Nicholas Pooran, Jason Holder, West Indies, Jos Buttler, England, game, Phil Salt, Harry Brook, The Guardian, West Indies clinch T20 series
+after Shai Hope edges hosts past England total, Gudakesh Motie, Oshane Thomas, Caribbean, T20 series
+</item 9>
+
+<item 10>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+A wicket once so true turned untrustworthy and they struggled to a score of 132, less than half the 267 to which they had joyously motored just 48 hours
+previously. And though the home side’s response was anything but overwhelming, neither was the result ever in significant doubt.
+
+“We’ve had some high-scoring games, but the last game was almost the complete opposite of what happened here,” Reece Topley said. “We were probably just under
+par with the first-innings score but with the ball we were excellent, pushed them right to the end. I think it’s been an amazing series. Both teams have played
+some unbelievable cricket. I was so excited turning up today, because it was basically a final and those are the games you want to play in and be on the right
+side of. The bottom line is you want to win this series, I want to win every series I can for England.”
+
+Graph facts:
+- West Indies v England: fifth and deciding men’s T20 cricket international – live -MENTIONS-> Shai Hope
+- West Indies v England: first T20 international – live -MENTIONS-> Shai Hope
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: first T20 international
+- Shai Hope -PARTICIPATED_IN-> first T20 international
+- Shai Hope -PARTICIPATED_IN-> West Indies v England: fifth and deciding men’s T20 cricket international
+
+Entities: Shai Hope, West Indies, England, cricket, The Guardian, Reece Topley, West Indies clinch T20 series after Shai Hope edges hosts past England total,
+T20 series
+</item 10>
+=== END ITEM id=cc5a57d5f3bd50b7 ===
+
+=== ITEM id=8e05598679536108 ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook adjusts when odds change for a legitimate reason.
+  Fact 1.2: An injury or a roster move is an example of a legitimate reason for a line or odds to change.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+
+Graph facts:
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> MLB
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> odds and lines
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> totals bets
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> Caesars
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> bet365 app
+
+Entities: MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023, MLB betting, online sportsbooks, MLB First 5 Innings bets, weather-related betting
+rules, wagers, Sporting News, baseball
+</item 1>
+
+<item 2>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 2>
+
+<item 3>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+
+Graph facts:
+- UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl -PUBLISHED_BY-> Sporting News
+- North Texas vs. SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green -PUBLISHED_BY-> Sporting News
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -PUBLISHED_BY-> Sporting News
+- Jaguars vs. Saints live score, updates, highlights from NFL 'Thursday Night Football' game -PUBLISHED_BY-> Sporting News
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -PUBLISHED_BY-> Sporting News
+
+Entities: Sporting News, NBA betting, basketball odds, spreads, totals, parlays, online sportsbooks, The Best NBA Betting Sites and Apps for the 2023-24 Season,
+NBA, NBA prop bets, moneylines
+</item 3>
+
+<item 4>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+
+Graph facts:
+- Line Shopping in Sports Betting - How to Find the Best Odds -MENTIONS-> live odds feed
+- Line Shopping in Sports Betting - How to Find the Best Odds -MENTIONS-> NFL
+- Line Shopping in Sports Betting - How to Find the Best Odds -MENTIONS-> odds and lines
+- Line Shopping in Sports Betting - How to Find the Best Odds -MENTIONS-> How to bet on sports in the US
+- Line Shopping in Sports Betting - How to Find the Best Odds -MENTIONS-> sportsbook apps
+
+Entities: line shopping, Line Shopping in Sports Betting - How to Find the Best Odds, Sporting News, sportsbooks, sports betting
+</item 4>
+
+<item 5>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Beyond these, game props allow bets on specific game events, while player futures bets provide the chance to predict longer-term outcomes like season MVPs or
+rookie of the year honors.
+
+Caesars also has a cash-out option that allows you to settle bets early to guarantee a payout (though at a reduced amount).
+
+See more:
+
+Bet365 Sportsbook
+
+One of the world's premier sportsbooks, Bet365, has marked its presence in the US, notably emphasizing its Major League Baseball odds. Now accessible in many
+states and expected to grow further, Bet365 posts daily MLB odds boosts. The Bet365 app is perfect for rookie bettors yet also offers customized displays for
+seasoned MLB wagering veterans.
+
+A significant highlight is the platform's live-betting feature, allowing real-time bets on MLB games.
+
+See more:
+
+BetRivers Sportsbook
+
+BetRivers stands out for its comprehensive Major League Baseball betting offerings. Bettors are presented with a wealth of stats and insightful tips related to
+upcoming games, enhancing the decision-making process.
+
+Graph facts:
+- 2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet -MENTIONS-> Caesars
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Caesars
+- Caesars -MADE-> Caesars Sportsbook app
+- 2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet -MENTIONS-> bet365 app
+- ASX set to drop as Wall Street’s September slump deepens -MENTIONS-> US
+
+Entities: Caesars, bet365 app, US, Bet365, MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023, Major League Baseball, baseball betting, game props,
+player futures bets, season MVPs, rookie of the year honors, Sporting News, BetRivers, live betting
+</item 5>
+
+<item 6>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Traditional bet types, such as moneylines, where one bets on the outright winner; run lines, which focus on the margin of victory; and totals that predict
+combined team scores, are all readily available.
+
+For those who relish a deeper drop into the game, BetMGM has a deep lineup of player and team prop bets. Whether it's forecasting a player's strikeouts in a
+game or predicting the cumulative runs scored by a team, there's something for every strategy.
+
+For the long-term visionaries, BetMGM rolls out an impressive array of futures bets. Fans can place wagers on outcomes such as which team will clinch its
+division or which player will be honored as the league's Most Valuable Player.
+
+See more:
+
+Caesars Sportsbook
+
+Caesars has a comprehensive suite of MLB odds to elevate the game-watching experience. That includes run lines, predicting the margin of victory; totals, where
+bettors forecast the combined scores; and player props, focusing on individual milestones such as hits, home runs, or RBIs.
+</item 6>
+
+<item 7>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+These allow bettors to engage with games beyond simple outcomes. For those looking at the bigger picture, DraftKings provides futures bets. Fans can bet on
+potential division victors or take a shot at predicting the next World Series champion.
+
+See more:
+
+FanDuel Sportsbook
+
+FanDuel stands out as a top destination for MLB enthusiasts looking to bet daily. It offers the staple bets such as run lines, where you can bet on the margin
+of victory, and totals, predicting the combined score of both teams.
+
+FanDuel also has dozens of player props, allowing bettors to focus on individual performances, predicting stats like hits, home runs, or strikeouts.
+Additionally, FanDuel presents an array of game props and futures bets, letting fans speculate on longer-term outcomes such as division champions or MVP
+candidates.
+
+See more:
+
+BetMGM Sportsbook
+
+BetMGM provides MLB aficionados with an expansive betting portfolio.
+
+Graph facts:
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -MENTIONS-> MLB
+- 2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet -MENTIONS-> MLB
+- Vermont Sportsbook Promos and Sports Betting Launch News -MENTIONS-> MLB
+- Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00) -MENTIONS-> MLB
+- How Did the Houston Astros Cheat in 2017? Everything to Know About a Dark Moment in MLB History -MENTIONS-> MLB
+
+Entities: MLB, MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023, Sporting News, FanDuel Sportsbook, BetMGM Sportsbook, DraftKings, baseball, World
+Series
+</item 7>
+
+<item 8>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+
+Graph facts:
+- Moneyline Betting - What is the Moneyline and How Does it Work? -MENTIONS-> MLS
+- Moneyline Betting - What is the Moneyline and How Does it Work? -MENTIONS-> New York Giants
+- Moneyline Betting - What is the Moneyline and How Does it Work? -MENTIONS-> NFL
+- Moneyline Betting - What is the Moneyline and How Does it Work? -MENTIONS-> Dallas Cowboys
+- Moneyline Betting - What is the Moneyline and How Does it Work? -MENTIONS-> moneyline bet
+
+Entities: moneyline betting, Moneyline Betting - What is the Moneyline and How Does it Work?, Player injuries, Player substitutions, Professional bettors,
+Professional gamblers, Lines, Oddsmakers, Initial miscalculation, Sporting News, sportsbooks, betting, Odds, Weather Conditions
+</item 8>
+
+<item 9>
+Graph query row:
+article: Line Shopping in Sports Betting - How to Find the Best Odds
+passage: Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Line shopping is the key that unlocks the best odds and lines at top sports betting sites.
+
+The process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is quite often better odds
+and improved lines.
+
+What is line shopping, and why is it worth your time? Find the answers below in our complete guide to line shopping.
+
+How do sportsbooks set odds and lines?
+
+The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.
+
+Other sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics,
+statistics, injury and roster news, performance, matchup data, and more to develop the lines and odds.
+
+Betting lines and odds are then subject to change based on the betting public’s reaction and any additional information that comes to light ahead of the game.
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+</item 9>
+
+<item 10>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Betting apps offer real-time updates on all odds, which allows you to react to game flow as it’s happening.
+
+Your MLB betting app can help you track shifting odds and facilitate live betting. Betting apps offer real-time updates on all odds, which allows you to react
+to game flow as it’s happening. Bet from within legal states: As long as you are in a state that has legal online sports betting, you can use your app to make
+bets, track your account, add or withdraw funds, and more. Remember that you can only place bets when you are in the state lines, but you can access your
+account and monitor wagers from anywhere you have internet access.
+
+MLB live betting
+
+The best sports betting apps offer live, in-game betting for Major League Baseball.
+
+Live betting means you can bet on a game in progress, right down to what the next batter will do with the next pitch or what team will win the inning.
+
+Graph facts:
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> MLB
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> odds and lines
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> totals bets
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> Caesars
+- MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 -MENTIONS-> bet365 app
+
+Entities: MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023, Major League Baseball, betting apps, Sporting News, live betting, baseball, online
+sports betting
+</item 10>
+=== END ITEM id=8e05598679536108 ===
+
+=== ITEM id=728973657e9e6e76 ===
+Gold sentences and facts:
+Sentence 0: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 0.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 0.1: The leading piece of drama returns.
+Sentence 1: The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley.
+  Fact 1.0: The Big Ten suspended coach Jim Harbaugh for three games.
+  Fact 1.1: The Big Ten suspended Jim Harbaugh on Friday.
+  Fact 1.2: The team was on a plane en route to Penn State when the suspension happened.
+  Fact 1.3: Michigan had hoped to block the suspension.
+  Fact 1.4: The Wolverines (Michigan) will be without their coach on the sidelines in Happy Valley.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+However, the primary difference is Michigan is accused of using in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire
+its information.
+
+Monday, Nov. 6
+
+No connection between Buckeyes coach, Michigan investigation
+
+Ohio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan, Yahoo Sports reported.
+
+A report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes' arch-rivals, but the NCAA told the Big Ten there
+are no ties that it knows of between the Ohio State coach and the investigation.
+
+NCAA shares findings with Big Ten as Harbaugh suspension looms
+
+Yahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the in-person scouting
+and recording of opponents’ sidelines to Harbaugh."
+
+Still, the conference is considering a suspension for Harbaugh and could hand down punishments before the end of the week.
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, in-person scouting, Big Ten, Yahoo Sports, Jim Harbaugh, Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh
+suspension from NCAA cheating investigation, Big Ten investigation into Michigan, NCAA investigation into Michigan, possible suspension for Jim Harbaugh,
+recording of opponents’ sidelines, NCAA rules, Ryan Day, Ohio State, Sporting News, NCAA
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+The Conference has confirmed that it is not aware of any information suggesting Coach Harbaugh's involvement in the allegations. The University continues to
+cooperate fully with the NCAA's investigation.
+
+From the Big Ten:
+
+"The Big Ten Conference's commitment to student-athletes, sportsmanship and the commissioner's duty to protect the integrity of competition will never waver.
+Today's decision by the University of Michigan to withdraw its legal challenge against the conference's November 10th notice of disciplinary action is
+indicative of the high standards and values that the conference and the university seek to uphold, the University of Michigan is a valued member of the Big Ten
+Conference and the conference will continue to work cooperatively with the university and the NCAA during this process."
+
+Monday, Nov. 13
+
+Harbaugh says he'll state his case at Friday hearing
+
+Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.
+
+Graph facts:
+- Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> Jim Harbaugh
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Jim Harbaugh
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> sign-stealing scandal
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Jim Harbaugh
+- Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game -MENTIONS-> Jim Harbaugh
+
+Entities: sign-stealing scandal, Jim Harbaugh, Big Ten Conference, University of Michigan, University of Michigan legal challenge withdrawal, University of
+Michigan notice of disciplinary action, Jim Harbaugh news conference, Jim Harbaugh hearing, cheating investigation, Michigan sign-stealing scandal news: Latest
+updates on possible Jim Harbaugh suspension from NCAA cheating investigation, Sporting News, NCAA investigation, NCAA
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+pic.twitter.com/Qm9iehYVTR — Pete Thamel (@PeteThamel) November 11, 2023
+
+Harbaugh will not be on the sidelines vs. Penn State
+
+Michigan filed a temporary restraining order against the Big Ten on Friday night, hoping to block Harbaugh's suspension. But there will not be a ruling before
+the Wolverines' game vs. Penn State, with the hearing scheduled for Friday, Nov. 17.
+
+No ruling on Michigan’s TRO filing today, so Jim Harbaugh will not coach vs. Penn State.
+
+
+
+Statement from the school: “We look forward to presenting our case next week where we intend to demonstrate that the Big Ten has not acted legally or fairly.”
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, Penn State, Big Ten, Jim Harbaugh suspension, Jim Harbaugh, NCAA cheating investigation, Michigan game vs. Penn State, temporary restraining
+order filing, Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation, Pete Thamel, hearing,
+Sporting News, NCAA
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, sign-stealing scandal, Stalions, Jim Harbaugh, NCAA cheating investigation, sign decoding, electronic recordings of games, Michigan
+sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation, Sporting News, NCAA
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Although the Big Ten has closed its investigation, we are continuing to cooperate with the NCAA as it moves forward with its ongoing investigation. Consistent
+with our commitment to integrity, we will continue to take the appropriate actions, including disciplinary measures, based on information we obtain. Earlier
+today, Michigan Athletics relieved Chris Partridge of his duties as a member of the Michigan Football staff. Due to employee privacy laws, we are unable to
+comment further."
+
+Because Michigan and Harbaugh on Thursday dropped their litigation against the Big Ten, he will not be on Michigan's sideline this week against Maryland and
+next week against Ohio State to end the regular season.
+
+Former Wolverines assistant and Harbaugh confidant Biff Poggi on Friday offered his former boss an invitation. Poggi, in his first year as Charlotte's head
+coach, asked Harbaugh to join the 49ers for their games vs. Rice on Saturday and at South Florida on Nov. 25.
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, sign-stealing scandal, Maryland, Big Ten, Chris Partridge, Michigan Football, Biff Poggi, Charlotte, South Florida, Jim Harbaugh, NCAA
+cheating investigation, Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation, Michigan
+Athletics, Ohio State, Sporting News
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+17
+
+Michigan fires coach connected to destroying evidence in investigation
+
+Yahoo Sports' Ross Dellenger and Dan Wetzel reported on Friday that the NCAA's investigation into the sign-stealing and advanced scouting operation has found
+that Stalions was at least partially funded by a Michigan booster, named as "Uncle T," and that linebackers coach Chris Partridge, who was fired by Michigan on
+Friday, is alleged to have destroyed evidence on a computer pertaining to the sign-stealing allegations.
+
+The report states Partridge is not believed to have had prior knowledge of the sign-stealing operation, but then later worked to cover it up. In a statement on
+his firing, Michigan appeared to indicate a connection between Partridge and the NCAA's investigation, which Dellenger and Wetzel reported is still in the early
+stage:
+
+From the outset, our focus has been on seeking due process and allowing the NCAA to conduct a fair and deliberate investigation.
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, Yahoo Sports, Ross Dellenger, Dan Wetzel, sign-stealing and advanced scouting operation, Stalions, Uncle T, Chris Partridge, destroying
+evidence, NCAA investigation into the sign-stealing and advanced scouting operation, cover-up, Jim Harbaugh, Michigan sign-stealing scandal news: Latest updates
+on possible Jim Harbaugh suspension from NCAA cheating investigation, Sporting News, NCAA
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+On the other, he could emerge as a martyr for Michigan fans given there is reportedly no proof yet he knew of Stalion's rule-breaking.
+
+Harbaugh will have a temporary restraining order hearing on Nov. 17, according to ESPN.com. That will determine whether he returns to the field for the final
+two games against Maryland and No. 1 Ohio State.
+
+It's an inescapable fact that Harbaugh is 31-3 – and Michigan is 35-3 – since the program bottomed out at the end of the 2020 season. While it is almost
+impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough
+stain to erase knowing those violations are now on the Big Ten record.
+
+What will Harbaugh do now? That is almost impossible to predict given his combative personality. Would he sign a contract extension and continue to fight the
+NCAA? Will Harbaugh finally take the parachute to the NFL?
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Michigan, in-person scouting, Stalion, Michigan fans, ESPN.com, Maryland, temporary restraining order hearing, rule-breaking, 2020 season,
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti, Big Ten, Jim Harbaugh, Ohio State, Sporting News
+</item 7>
+
+<item 8>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, Penn State, Big Ten, Happy Valley, Michigan sign-stealing scheme investigation, Jim Harbaugh suspension, Jim Harbaugh, Michigan
+sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation, Connor Stalions, Sporting News, sign-stealing
+scheme, NCAA
+</item 8>
+
+<item 9>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, Big Ten, Jim Harbaugh suspension, Jim Harbaugh, Matt Fortuna, court order, cheating investigation, Michigan sign-stealing scandal news:
+Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation, Sporting News, sign-stealing scheme, NCAA
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Nicole Auerbach (@NicoleAuerbach) November 11, 2023
+
+Harbaugh hearing coming down to wire before Penn State game
+
+ESPN's Pete Thamel reported it's unclear Harbaugh will be granted a hearing in time to be able to coach against Penn State. With kickoff scheduled for noon ET,
+Thamel said "the drama's going to go right up 'till noon."
+
+Latest from ⁦@CollegeGameDay⁩ on Jim Harbaugh’s TRO legal filing. Will he coach Michigan at Penn State today? pic.twitter.com/bz3R1eYxI9 — Pete Thamel
+(@PeteThamel) November 11, 2023
+
+The case is reportedly in the hands of Judge Carol Kunhke, a Michigan alumnus.
+
+Harbaugh was not on the Michigan team bus with other coaches and players when it arrived at Beaver Stadium Saturday morning.
+
+Michigan players and coaches arrive. No Jim Harbaugh on the bus.
+
+Graph facts:
+- Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti -MENTIONS-> Michigan
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -MENTIONS-> Michigan
+- 2024 NFL Mock Draft: Bengals' Joe Burrow gets another playmaker; four QBs go in Round 1, but Pats opt for WR -MENTIONS-> Michigan
+- USC basketball futures odds to win Pac-12, NCAA tourney ahead of Bronny James collegiate debut -MENTIONS-> Michigan
+- Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines -MENTIONS-> Michigan
+
+Entities: Michigan, Nicole Auerbach, Penn State, Michigan sign-stealing scandal, Beaver Stadium, ESPN, Jim Harbaugh, NCAA cheating investigation, Carol Kunhke,
+Harbaugh hearing, TRO legal filing, Penn State game, Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating
+investigation, Pete Thamel, Sporting News
+</item 10>
+=== END ITEM id=728973657e9e6e76 ===

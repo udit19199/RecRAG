@@ -1,0 +1,78 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8e0cb85542995085b373b2",
+   "sentences": [
+    "The Celluloid Closet is a 1995 American documentary film directed and written by Rob Epstein and Jeffrey Friedman.",
+    "Station to Station is the 2014 film of Doug Aitken's 2013 \"Nomadic Happening\", the film is made up of 62 one-minute films."
+   ]
+  },
+  {
+   "id": "5ab5d4eb5542992aa134a3aa",
+   "sentences": [
+    " The album was Prince's third to be released that year (along with \"Chaos and Disorder\" and the soundtrack album of the Spike Lee movie \"Girl 6\"), which made 1996 one of the most prolific years for material released by Prince.",
+    " His production company, 40 Acres and a Mule Filmworks, has produced over 35 films since 1983."
+   ]
+  },
+  {
+   "id": "5adcfb5f5542990d50227d81",
+   "sentences": [
+    "Grantley Jonathan \"Grant\" Nicholas (born 12 November 1967) is a Welsh musician, best known as the lead singer and lead guitarist of the rock band Feeder.",
+    "Danny Shirley (born August 12, 1956) is an American country music singer."
+   ]
+  },
+  {
+   "id": "5ae2eda355429928c4239570",
+   "sentences": [
+    "The soundtrack for the 1968 film \"Romeo and Juliet\" was composed and conducted by Nino Rota.",
+    "Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare."
+   ]
+  },
+  {
+   "id": "5ab3c270554299233954ff9e",
+   "sentences": [
+    "Midland F1 Racing (also known as MF1 Racing) was a Formula One constructor and racing team.",
+    " In 2007, the team competed as Spyker F1, and in 2008 was sold to Indian businessman Vijay Mallya and was renamed Force India F1.",
+    "The Spyker F1 Team, known as the Etihad Aldar Spyker F1 Team for sponsorship reasons was a Formula One team that competed in the 2007 Formula One World Championship, and was created by Spyker Cars after their buyout of the short-lived Midland F1 (formerly Jordan Grand Prix) team."
+   ]
+  },
+  {
+   "id": "multihop-rag-1527",
+   "sentences": [
+    "The Buckeyes settled for a 52-yard field goal late in the first half, which Jayden Fielding missed wide left.",
+    "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."
+   ]
+  },
+  {
+   "id": "5a74ab6055429916b01641b9",
+   "sentences": [
+    " is a board game created by Glenn Drover and published by Eagle Games in 2003.",
+    "Can't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States."
+   ]
+  },
+  {
+   "id": "7621889567969940898",
+   "sentences": [
+    "The Whistleblower Protection Act of 1989 , Pub. L. 101 - 12 as amended , is a United States federal law that protects federal whistleblowers who work for the government and report agency misconduct . A federal agency violates the Whistleblower Protection Act if agency authorities take ( or threaten to take ) retaliatory personnel action against any employee or applicant because of disclosure of information by that employee or applicant . Whistleblowers may file complaints that they believe reasonably evidences a violation of a law , rule or regulation ; gross mismanagement ; gross waste of funds ; an abuse of authority ; or a substantial and specific danger to public health or safety ."
+   ]
+  },
+  {
+   "id": "multihop-rag-497",
+   "sentences": [
+    "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated.",
+    "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."
+   ]
+  },
+  {
+   "id": "5ade6eb65542992fa25da782",
+   "sentences": [
+    " The album features a pair of duets with Waylon Jennings, one of which was the \"There Ain't No Good Chain Gang\" single; it was one of Cash's first collaborations with Jennings, and the two recorded songs together throughout the 1980s, including a separate album entitled \"Heroes\".",
+    " Cash and Jennings would also work together as The Highwaymen with Willie Nelson and Kris Kristofferson.",
+    "The Highwaymen was a country music supergroup composed of four of the genre's biggest artists well known for their pioneering influence on the outlaw country subgenre: Johnny Cash, Waylon Jennings, Willie Nelson, and Kris Kristofferson.",
+    " Active as a group between 1985 and 1995, these four artists recorded three major label albums as The Highwaymen: two on Columbia Records and one for Liberty Records."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+[
+  {"id": "37cff9fa118f7019", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+  ]},
+  {"id": "a1241d74729b5242", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "AI technology presents a tremendous opportunity for the creative development of music."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Warner Music Group boss Robert Kyncl on AI"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4d753189b61a387e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "but the level of performance and how he could control a game and dominate a game in junior"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

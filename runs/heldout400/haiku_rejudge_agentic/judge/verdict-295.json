@@ -1,0 +1,37 @@
+[
+  {
+    "id": "3824e34b8bb1cd75",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+      {"fact": "2.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "316d85f45ce12774",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said."}]}
+    ]
+  },
+  {
+    "id": "348d3c4a01a74099",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "when she famously first attended Kelce’s game at Arrowhead Stadium in September"}, {"item": 2, "quote": "I think some people think that they saw our first date at that game?"}, {"item": 3, "quote": "games, amid ongoing reports that they are dating."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

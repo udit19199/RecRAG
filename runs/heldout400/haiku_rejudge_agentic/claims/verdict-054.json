@@ -1,0 +1,45 @@
+[
+ {"id": "5adfff0755429925eb1afbce", "sentences": [
+   ["Groom Lake is a salt flat in Nevada.", "Groom Lake is used for runways of the Nellis Bombing Range Test Site airport.", "The Nellis Bombing Range Test Site airport has the code KXTA."],
+   ["Groom Lake is located within the Groom Lake Valley portion of the Tonopah Basin.", "Groom Lake Valley is the namesake of the Groom Lake Valley portion of the Tonopah Basin.", "Groom Lake is 25 miles south of Rachel, Nevada."],
+   ["Rachel is a census-designated place (CDP).", "Rachel is in Lincoln County, Nevada, United States."]
+ ]},
+ {"id": "multihop-rag-1504", "sentences": [
+   ["He immediately left the game after the hit.", "He went to the locker room after the hit.", "It was confirmed that he would not return to the game with a head injury."],
+   ["He is a former All-Pro.", "He battled a lingering hamstring injury earlier this year.", "He received attention on the sidelines after limping off.", "He then left the game for further evaluation.", "The further evaluation took place in the locker room."]
+ ]},
+ {"id": "5a7a33205542996a35c1712f", "sentences": [
+   ["The New York – New Jersey Line War is also known as the N.J. Line War.", "The New York – New Jersey Line War refers to a series of skirmishes and raids.", "The skirmishes and raids took place for over half a century.", "The skirmishes and raids took place between 1701 and 1765.", "The skirmishes and raids took place at the disputed border between two American colonies.", "The two American colonies were the Province of New York and the Province of New Jersey."],
+   ["The Province of New York existed from 1664 to 1776.", "The Province of New York was a British proprietary colony.", "The Province of New York later became a royal colony.", "The Province of New York was on the northeast coast of North America."]
+ ]},
+ {"id": "multihop-rag-2441", "sentences": [
+   ["Google touted Gemini's superior architecture and capabilities in blog posts and press materials.", "Google claimed that Gemini meets or exceeds the performance of other leading gen AI models.", "OpenAI's GPT-4 is one of the other leading gen AI models Google named."],
+   ["The woman admits that she may have misinterpreted the evidence.", "The woman maintains that Google manipulates Search to maximise ad revenue."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content.", "The case argues that Google siphons off news publishers' readers.", "The case argues that Google siphons off news publishers' ad revenue.", "The case argues that Google does this through anticompetitive means."]
+ ]},
+ {"id": "5a79c1095542996c55b2dc62", "sentences": [
+   ["Chester Erskine was born on November 29, 1905.", "Chester Erskine died on April 7, 1986.", "Chester Erskine was a Hollywood and Broadway director.", "Chester Erskine was a Hollywood and Broadway writer.", "Chester Erskine was a Hollywood and Broadway producer."],
+   ["Sam Taylor was born on August 13, 1895, in New York City.", "Sam Taylor died on March 6, 1958, in Santa Monica.", "Sam Taylor was a film director.", "Sam Taylor was a screenwriter.", "Sam Taylor was a film producer.", "Sam Taylor was most active in the silent film era."]
+ ]},
+ {"id": "5a863114554299211dda2aa5", "sentences": [
+   ["Francis Keogh Gleason was born on April 14, 1906.", "Francis Keogh Gleason died on December 18, 1982.", "Francis Keogh Gleason was a resident set decorator at MGM studios.", "Francis Keogh Gleason was a resident set decorator at MGM studios for over 40 years."],
+   ["Francis Keogh Gleason won 4 Academy Awards during his time at MGM.", "Francis Keogh Gleason won an Academy Award for 'An American in Paris' in 1951.", "Francis Keogh Gleason won an Academy Award for 'The Bad and the Beautiful' in 1952.", "Francis Keogh Gleason won an Academy Award for 'Somebody Up There Likes Me' in 1956.", "Francis Keogh Gleason won an Academy Award for 'Gigi' in 1958.", "Francis Keogh Gleason was nominated for an Academy Award an additional 3 times."],
+   ["Somebody Up There Likes Me is a 1956 American drama film.", "Somebody Up There Likes Me is based on the life of middleweight boxing legend Rocky Graziano."]
+ ]},
+ {"id": "multihop-rag-2033", "sentences": [
+   ["Sportsbooks are also gathering this information.", "Sportsbooks begin to tighten the NBA Rookie of the Year lines in response."],
+   ["Every sportsbook jumps on board when a line moves for a legitimate reason.", "Every sportsbook jumps on board when odds change for a legitimate reason.", "An injury or a roster move is an example of a legitimate reason."]
+ ]},
+ {"id": "4259863793651737582", "sentences": [
+   ["The Earth's magnetic field serves to deflect most of the solar wind.", "The solar wind's charged particles would otherwise strip away the ozone layer.", "The ozone layer protects the Earth from harmful ultraviolet radiation.", "One stripping mechanism is for gas to be caught in bubbles of magnetic field.", "The bubbles of magnetic field are ripped off by solar winds.", "Calculations of the loss of carbon dioxide from the atmosphere of Mars result from scavenging of ions by the solar wind.", "The calculations indicate that the dissipation of the magnetic field of Mars caused a near total loss of the atmosphere of Mars."]
+ ]},
+ {"id": "multihop-rag-1734", "sentences": [
+   ["Google compared the performance of Gemini Pro to GPT-3.5.", "GPT-3.5 is the predecessor of GPT-4.", "GPT-3.5 is a model that is around a year old."],
+   ["This will probably come up later in the trial.", "Epic chose to focus more on simply painting Google as the bad guy on day one."],
+   ["The case was filed by Arkansas-based publisher Helena World Chronicle.", "The case argues that Google 'siphons off' news publishers' content.", "The case argues that Google siphons off news publishers' readers.", "The case argues that Google siphons off news publishers' ad revenue.", "The case argues that Google does this through anticompetitive means."]
+ ]},
+ {"id": "5a76404b5542994ccc91873d", "sentences": [
+   ["The Shame of a City is a 2006 feature-length documentary.", "The Shame of a City premiered at the Philadelphia Film Festival."],
+   ["Unchained Memories is a 2003 documentary film.", "Unchained Memories is about the stories of former slaves.", "The former slaves were interviewed during the 1930s.", "The interviews were part of the Federal Writers' Project.", "The stories are preserved in the WPA Slave Narrative Collection."]
+ ]}
+]

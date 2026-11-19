@@ -1,0 +1,35 @@
+[
+  {
+    "id": "b1e00a799cdd1c98",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "the All Blacks kicked for the corner on a couple occasions out wide."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+    ]
+  },
+  {
+    "id": "83db696822ce5166",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+    ]
+  },
+  {
+    "id": "bc740a2cb2bd1c3c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]}
+    ]
+  }
+]

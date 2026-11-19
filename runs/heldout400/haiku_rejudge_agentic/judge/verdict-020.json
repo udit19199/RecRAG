@@ -1,0 +1,26 @@
+[
+  {"id": "b6738076a4fe6ad9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "499ef81b72ff0672", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "ousting of Kevin McCarthy as the speaker of the House of Representatives"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "ousting of Kevin McCarthy as the speaker of the House of Representatives"}]}
+  ]},
+  {"id": "1ff6936eff696e99", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In our report, a former VP at an industrial automation vendor shared,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+  ]}
+]

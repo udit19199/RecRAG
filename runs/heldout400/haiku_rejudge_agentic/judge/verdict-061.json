@@ -1,0 +1,45 @@
+[
+  {"id": "d2706fcc661da50f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "has pleaded not-guilty to some seven charges of fraud and conspiracy"}, {"item": 1, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "SBF, as he’s known, has pleaded not-guilty"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "3.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "3.1", "status": "stated", "evidence": [{"item": 3, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "3.2", "status": "stated", "evidence": [{"item": 3, "quote": "never meant to commit fraud or steal"}]},
+    {"fact": "3.3", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "3453cfbf077b3e82", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "said an Anthropic spokesperson, Sally Aldous."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic"}, {"item": 9, "quote": "said an Anthropic spokesperson, Sally Aldous."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "Sam is one of the most generous and caring people I know."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b321427a8c12e37c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "As for the All Blacks, they looked lost at times during this World Cup cycle"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "it’s still faintly remarkable that head coach Ian Foster survived last summer"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Ian Foster survived last summer as the home defeats to Ireland, South Africa and Argentina piled up."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "the home defeats to Ireland, South Africa and Argentina piled up"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "the home defeats to Ireland, South Africa and Argentina piled up"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "the home defeats to Ireland, South Africa and Argentina piled up"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

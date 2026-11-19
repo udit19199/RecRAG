@@ -1,0 +1,16 @@
+[
+  {"id": "1daa840c8e0729dd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "With the recent release of Marvel’s Spider-Man 2"}, {"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+  ]},
+  {"id": "4fcb4654cd1bebe5", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Swans, who went winless in their debut season last year"}, {"item": 2, "quote": "(The Age, 2023-10-20T23:51:34+00:00)"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot"}]}
+  ]}
+]

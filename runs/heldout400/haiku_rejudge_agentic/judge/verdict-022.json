@@ -1,0 +1,57 @@
+[
+  {
+    "id": "e1325bedac29ffae",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 3,
+            "quote": "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."
+          }
+        ]
+      }
+    ]
+  }
+]

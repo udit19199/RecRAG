@@ -1,0 +1,80 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "5a8db42f5542994ba4e3dd11",
+   "sentences": [
+    "Race to Nowhere is a 2009 documentary film written by Maimone Attia and directed by Vicki Abeles and Jessica Congdon.",
+    "SlamNation is a documentary film by director Paul Devlin.",
+    " The film follows the National Poetry Slam in Portland, Oregon."
+   ]
+  },
+  {
+   "id": "5ae346365542991a06ce9985",
+   "sentences": [
+    " Most figures are all shaped with the body of Mickey Mouse but have different themed markings, colors, and patterns.",
+    " He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928."
+   ]
+  },
+  {
+   "id": "5ac2cb125542996773102626",
+   "sentences": [
+    "Leycesteria is a genus of flowering plants in the honeysuckle family Caprifoliaceae, native to temperate Asia in the Himalaya and southwestern China.",
+    "Anigozanthos is a small genus of Australian plants in the Bloodwort family Haemodoraceae."
+   ]
+  },
+  {
+   "id": "5add016e5542992c1e3a250b",
+   "sentences": [
+    " The body that was to become the Gran i General Consell was founded in 1249, and the Consell was abolished on 22 July 1718 by Philip V, empowered by the Nova Planta Decree of Majorca and Ibiza (28 November 1715).",
+    "Philip V (Spanish: \"Felipe V\" , French: \"Philippe\" , Italian: \"Filippo\" ; 19 December 1683 – 9 July 1746) was King of Spain from 1 November 1700 to 15 January 1724, when he abdicated in favour of his son Louis, and from 6 September 1724, when he reassumed the throne upon his son's death, to his own death 9 July 1746."
+   ]
+  },
+  {
+   "id": "5ae0ead25542990adbacf6c8",
+   "sentences": [
+    "Pennsylvania Route 145 (PA 145) is a 20.89 mi long north–south state highway in the Lehigh Valley area of eastern Pennsylvania.",
+    " MacArthur Road is a divided highway; between U.S. Route 22 (US 22) and Eberhart Road, it is six lanes wide with a Jersey barrier and jughandles while the remainder of the road a four-lane divided highway.",
+    " Plastic water-filled barriers of the same general shape are also now commonly called Jersey barriers."
+   ]
+  },
+  {
+   "id": "multihop-rag-2421",
+   "sentences": [
+    "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.",
+    "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked.",
+    "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  },
+  {
+   "id": "5aba7cfe554299232ef4a2fd",
+   "sentences": [
+    " Along with competing in the league, the club will also participate in the FA Cup, EFL Cup and EFL Trophy.",
+    "The EFL Cup (referred to historically, and colloquially, as simply the League Cup), currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football."
+   ]
+  },
+  {
+   "id": "5a88fa1c5542995153361219",
+   "sentences": [
+    " He earned 1 cap under Jack Charlton for the Irish national team.",
+    " He was part of the England team that won the 1966 World Cup."
+   ]
+  },
+  {
+   "id": "1658149178541467525",
+   "sentences": [
+    "Important production centres today are the Hallertau in Germany ( more hop - growing area than any other country as of 2006 ) , the Yakima ( Washington ) and Willamette ( Oregon ) valleys , and western Canyon County , Idaho ( including the communities of Parma , Wilder , Greenleaf , and Notus ) . The principal production centres in the UK are in Kent ( which produces Kent Goldings hops ) , Herefordshire , and Worcestershire . Essentially all of the harvested hops are used in beer making .",
+    "Hops production is concentrated in moist temperate climates , with much of the world 's production occurring near the 48th parallel north . Hop plants prefer the same soils as potatoes and the leading potato - growing states in the United States are also major hops - producing areas ; however , not all potato - growing areas can produce good hops naturally : soils in the Maritime Provinces of Canada , for example , lack the boron that hops prefer . Historically , hops were not grown in Ireland , but were imported from England . In 1752 more than 500 tons of English hops were imported through Dublin alone ."
+   ]
+  },
+  {
+   "id": "-7442827774477803702",
+   "sentences": [
+    "During the 1995 -- 96 season , Alan Shearer became the first player to score 100 Premier League goals , and holds the record for the fewest games taken to reach 100 , doing so in 124 appearances . He also holds the record for most goals scored in the Premier League . After Shearer , Harry Kane is the second - fastest to 100 goals , doing so in 141 games .",
+    "List of Premier League players with 100 or more goals Rank Player Position Premier League club ( s ) Goals Played Ratio Shearer , Alan Alan Shearer Blackburn Rovers , Newcastle United 260 441 0.59 Rooney , Wayne Wayne Rooney Everton , Manchester United 208 484 0.43 Cole , Andy Andy Cole Newcastle United , Manchester United , Blackburn Rovers , Fulham , Manchester City , Portsmouth 187 414 0.45 Lampard , Frank Frank Lampard MF West Ham United , Chelsea , Manchester City 177 609 0.29 Henry , Thierry Thierry Henry Arsenal 175 258 0.68 6 Fowler , Robbie Robbie Fowler Liverpool , Leeds United , Manchester City 163 379 0.43 7 Defoe , Jermain Jermain Defoe West Ham United , Portsmouth , Tottenham Hotspur , Sunderland , Bournemouth 162 485 0.33 8 Owen , Michael Michael Owen Liverpool , Newcastle United , Manchester United , Stoke City 150 326 0.46 9 Ferdinand , Les Les Ferdinand Queens Park Rangers , Newcastle United , Tottenham Hotspur , West Ham United , Leicester City , Bolton Wanderers 149 351 0.42 10 Sheringham , Teddy Teddy Sheringham Nottingham Forest , Tottenham Hotspur , Manchester United , Portsmouth , West Ham United 146 418 0.35 11 van Persie , Robin Robin van Persie Arsenal , Manchester United 144 280 0.51 12 Agüero , Sergio Sergio Agüero Manchester City 143 204 0.70 13 Hasselbaink , Jimmy Floyd Jimmy Floyd Hasselbaink Leeds United , Chelsea , Middlesbrough , Charlton Athletic 127 288 0.44 14 Keane , Robbie Robbie Keane Coventry City , Leeds United , Tottenham Hotspur , Liverpool , West Ham United , Aston Villa 126 349 0.36 15 Anelka , Nicolas Nicolas Anelka Arsenal , Liverpool , Manchester City , Bolton Wanderers , Chelsea , West Bromwich Albion 125 364 0.34 16 Yorke , Dwight Dwight Yorke Aston Villa , Manchester United , Blackburn Rovers , Birmingham City , Sunderland 123 375 0.33 17 Gerrard , Steven Steven Gerrard MF Liverpool 120 504 0.24 18 Wright , Ian Ian Wright Arsenal , West Ham United 113 213 0.53 19 Dublin , Dion Dion Dublin Manchester United , Coventry City , Aston Villa 111 312 0.36 20 Heskey , Emile Emile Heskey Leicester City , Liverpool , Birmingham City , Wigan Athletic , Aston Villa 110 516 0.21 21 Giggs , Ryan Ryan Giggs MF Manchester United 109 632 0.17 22 Crouch , Peter Peter Crouch Aston Villa , Southampton , Liverpool , Portsmouth , Tottenham Hotspur , Stoke City 107 454 0.23 22 Scholes , Paul Paul Scholes MF Manchester United 107 499 0.21 24 Bent , Darren Darren Bent Ipswich Town , Charlton Athletic , Tottenham Hotspur , Sunderland , Aston Villa , Fulham 106 276 0.38 25 Kane , Harry Harry Kane Tottenham Hotspur , Norwich City 104 149 0.70 26 Drogba , Didier Didier Drogba Chelsea 104 254 0.41 27 Lukaku , Romelu Romelu Lukaku West Bromwich Albion , Everton , Manchester United 101 216 0.47 28 Le Tissier , Matt Matt Le Tissier MF Southampton 100 270 0.37 Italics show players still playing professional football ; Bold shows players still playing in the Premier League ."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+[
+  {"id": "140b78a5c432d786", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "80a3279d23cea2d0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0f2fff5bfe71b46a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The survivors in the joined lawsuit also allege that Uber’s “fast and shallow background checks” are substandard and designed to make it as easy as possible for drivers to sign up quickly."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Uber has attempted to address sexual assaults by drivers — which the lawsuits claim Uber has known about since 2014 — through new safety features in its app,"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "like a 911 button and the ability to share location with a friend."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "like a 911 button and the ability to share location with a friend."}]},
+    {"fact": "3.0", "status": "missing", "evidence": []},
+    {"fact": "3.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "Uber reported net income of $221 million in the third quarter, or 10 cents per share"}]}
+  ]}
+]

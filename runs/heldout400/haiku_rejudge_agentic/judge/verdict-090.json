@@ -1,0 +1,33 @@
+[
+{"id": "ae66673f7a0c11fe", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The stock gets a Hold rating from Seeking Alpha's Quant Rating system"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+]},
+{"id": "a61a9ffeeeacc995", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "with the jury, which was selected on Wednesday morning"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "how FTX went from the third-largest crypto exchange valued at a peak of $32 billion to bankruptcy"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "contradicted", "evidence": [{"item": 4, "quote": "seven counts tied to fraud and money laundering"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "f3806f3a313a38de", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 10, "quote": "NFL Media reported on Monday that Kupp suffered a low ankle sprain and will be evaluated going forward."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "then left the game for further evaluation in the locker room"}]}
+]}
+]

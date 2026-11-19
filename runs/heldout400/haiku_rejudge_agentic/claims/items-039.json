@@ -1,0 +1,81 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-2302",
+   "sentences": [
+    "But it was ChatGPT’s explosion into public consciousness that thrust Altman into the spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media.",
+    "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.",
+    "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+   ]
+  },
+  {
+   "id": "5ae0159855429925eb1afc09",
+   "sentences": [
+    "Anaïs Nin (] ; born Angela Anaïs Juana Antolina Rosa Edelmira Nin y Culmell; February 21, 1903 – January 14, 1977) was an essayist and memoirist born to Cuban parents in France, where she was also raised.",
+    "Odysseas Elytis (Greek: Οδυσσέας Ελύτης , ] , pen name of Odysseas Alepoudellis, Greek: Οδυσσέας Αλεπουδέλλης ; 2 November 1911 – 18 March 1996) was regarded as a major exponent of romantic modernism in Greece and the world.",
+    " In 1979 he was awarded the Nobel Prize in Literature."
+   ]
+  },
+  {
+   "id": "5855711681130036664",
+   "sentences": [
+    "DJ Lance Rock -- ( Portrayed by Lance Robertson U.S. , voice dubbed by Ortis Deley in the UK ) A DJ who is the narrator and friend of the other characters and the series ' host . Muno -- ( Voiced by Adam Deibert U.S. , Bob Golding UK ) A friendly red cyclops boy . He 's the tallest , is somewhat clumsy and has a close bond with Foofa ( though she also bonds with Brobee in the same way ) . He is also the band 's guitarist . In the episodes `` Family '' , `` Circus '' , and `` Baby '' , his family makes an appearance . During Super Bowl XLIV , he appeared in a commercial for the Kia Sorento . His realm resembles the moon , another planet , or a desert and he has a pet horse . He has three stomachs as seen in the X-ray in the Season 1 episode `` Halloween '' ( # 13 ) . However another X-ray in the Season 1 episode `` Imagine '' ( # 20 ) shows him with one stomach , a normal heart and lungs . His catchphrase is `` Razzle Dazzle '' . Foofa -- ( Voiced by Emma Jacobs - Briggs U.S. , Teresa Gallagher UK ) A female flower bubble character who 's `` pink and happy . '' She likes flowers , rainbows and unicorns . Her instrument is the tambourine . Her realm is a spring or summer meadow . Brobee -- ( Voiced by Amos Watene U.S. , Simon Feilder UK ) A small , green monster boy and the baby of the gabbas . He is the drummer for the Gabba band . He is the one of the characters whose facial expression changes depending on the situation ; his normal face turning into a frown , and vice versa . He is often subjected to trying new foods . His realm is a vast autumn forest . It is mentioned that he is four years old . Toodee -- ( Voiced by Erin Pearce U.S. , Jonell Elliot UK ) A blue arctic female cat - dragon who loves to have fun . She has a close bond with Plex and is the bassist for the Gabba band . She resides in a winter arctic realm , with icicles . Plex -- ( Voiced by Christian Jacobs U.S. , Simon Feilder UK ) A magic yellow robot boy and the oldest of the gabbas and he is Toodee 's love instest . He is portrayed as being smart and as the leader of Gabba Land . Plex usually teaches lessons to his friends and is a father figure to the gang . He can also use his special ray to bring things into existence . His instrument is the keytar . He has no realm in particular , though he seems to have a `` docking station '' between Foofa and Brobee 's realms . In `` Gabbaland Begins '' , Plex is the last in DJ Lance 's original creations after he goes through Muno , Foofa , Brobee , and Toodee , although , Brobee is supposedly a four - year - old in the series . Gooble - ( Voiced by Joel Fox U.S. ) A ghost who is always so sad and crying . He resides in a haunted house located in a non-gabba land - place named `` Gooble Land '' .",
+    "Hosted by a character named DJ Lance Rock , the series featured a mix of live - action segments featuring cartoonish costumed characters -- Muno ( the red cyclops ) , Foofa ( the pink flower bubble ) , Brobee ( a little hairy green monster ) , Toodee ( the blue cat - dragon ) and Plex ( the magic yellow robot ) -- and many short animated sketches and musical numbers ."
+   ]
+  },
+  {
+   "id": "2236521535238054703",
+   "sentences": [
+    "`` Where Have All the Flowers Gone ? '' is a modern folk - style song . The melody and the first three verses were written by Pete Seeger in 1955 and published in Sing Out ! magazine . Additional verses were added in May 1960 by Joe Hickerson , who turned it into a circular song . Its rhetorical `` where ? '' and meditation on death place the song in the ubi sunt tradition . In 2010 , the New Statesman listed it as one of the `` Top 20 Political Songs '' ."
+   ]
+  },
+  {
+   "id": "multihop-rag-2030",
+   "sentences": [
+    "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line.",
+    "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."
+   ]
+  },
+  {
+   "id": "5ae0e183554299422ee9953f",
+   "sentences": [
+    " Although called a \"city\", Qionghai refers to a large land area in Hainan - an area which was once a county.",
+    " It has an area of 1692 km2 and in 2010, it had a population of 483,217.",
+    "Suining (; Sichuanese Pinyin: Xunin; Sichuanese pronunciation: ; ) is a prefecture-level city of eastern Sichuan province in Southwest China.",
+    " In 2002, Suining had a population of 658,798."
+   ]
+  },
+  {
+   "id": "multihop-rag-1253",
+   "sentences": [
+    "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.",
+    "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."
+   ]
+  },
+  {
+   "id": "5a77857155429949eeb29ebf",
+   "sentences": [
+    " U2 did not play the song live until 2 July 2009, when they performed it on the second concert of their U2 360° Tour in Barcelona.",
+    "The U2 360° Tour was a worldwide concert tour by rock band U2.",
+    " The concerts featured the band playing \"in the round\" on a circular stage, allowing the audience to surround them on all sides."
+   ]
+  },
+  {
+   "id": "5a7129685542994082a3e5fa",
+   "sentences": [
+    " They are most well known for being the team that includes former UFC light heavyweight champions 'Sugar' Rashad Evans and Vitor Belfort and former UFC lightweight champion Eddie Alvarez.",
+    "Vitor Vieira Belfort (] ; born April 1, 1977) is a Brazilian mixed martial artist currently competing in the Middleweight division of the Ultimate Fighting Championship."
+   ]
+  },
+  {
+   "id": "multihop-rag-2092",
+   "sentences": [
+    "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.",
+    "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.",
+    "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+   ]
+  }
+ ]
+}

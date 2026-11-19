@@ -1,0 +1,66 @@
+[
+  {"id": "fe962a9c07ea0ac2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "109455b39e9b725b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 2, "quote": "Bankman-Fried is charged with seven counts"},
+      {"item": 6, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 2, "quote": "Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges."}
+    ]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 6, "quote": "Alameda Research’s former CEO, Caroline Ellison"}
+    ]},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []},
+    {"fact": "3.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "The prosecution has made a strong case that Bankman-Fried presided over the various forms of fraud that played out at Alameda Research and FTX, orchestrating some of it and engaging in some of it directly."}
+    ]},
+    {"fact": "3.1", "status": "missing", "evidence": []},
+    {"fact": "3.2", "status": "missing", "evidence": []},
+    {"fact": "3.3", "status": "missing", "evidence": []},
+    {"fact": "3.4", "status": "missing", "evidence": []},
+    {"fact": "3.5", "status": "stated", "evidence": [
+      {"item": 5, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX"}
+    ]}
+  ]},
+  {"id": "6706b4c3f68779bc", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "'Google’s hardware event', 'Pixel 8 Pro', 'Flexport drama', 'FTX fallout'"}
+    ]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "stated", "evidence": [
+      {"item": 3, "quote": "'Google’s hardware event', 'Pixel 8 Pro', 'Flexport drama', 'FTX fallout'"}
+    ]},
+    {"fact": "1.4", "status": "stated", "evidence": [
+      {"item": 3, "quote": "'Google’s hardware event', 'Pixel 8 Pro', 'Flexport drama', 'FTX fallout'"}
+    ]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

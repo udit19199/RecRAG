@@ -1,0 +1,45 @@
+[
+  {
+    "id": "922142849c8c6d05",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+    ]
+  },
+  {
+    "id": "283f2e006245a990",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Because FTX had grown so much"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Because FTX had grown so much, he could no longer run both"}, {"item": 10, "quote": "companies, he said."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Though Bankman-Fried was the CEO, and also the majority owner"}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges."}]},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "b36be649a8b89bd8",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The former CEO of FTX oversaw a supposedly thriving crypto exchange"}]},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []},
+      {"fact": "3.4", "status": "missing", "evidence": []}
+    ]
+  }
+]

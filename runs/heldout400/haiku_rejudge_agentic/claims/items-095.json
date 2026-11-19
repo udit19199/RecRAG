@@ -1,0 +1,77 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-244",
+   "sentences": [
+    "The league's leading receiver, Tyreek Hill (vs. Titans in Week 14), stands as the unquestioned WR1 for Week 14 after torching the Commanders to the tune of five catches, 157 yards, and two TDs.",
+    "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.",
+    "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."
+   ]
+  },
+  {
+   "id": "multihop-rag-2210",
+   "sentences": [
+    "Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.",
+    "It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again.",
+    "Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson, while Benoit Badiashile could return from a long-term injury."
+   ]
+  },
+  {
+   "id": "multihop-rag-168",
+   "sentences": [
+    "Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that infiltrated its territory.",
+    "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."
+   ]
+  },
+  {
+   "id": "5ae022ab554299025d62a428",
+   "sentences": [
+    " It is common across temperate and subtropical parts of Eurasia, northern Africa, and the Americas, as well as naturalized in Australia and on various islands.",
+    "Echeveria is a large genus of flowering plants in the Crassulaceae family, native to semi-desert areas of Central America, Mexico and northwestern South America."
+   ]
+  },
+  {
+   "id": "5a8408a9554299123d8c21d3",
+   "sentences": [
+    " Although the film takes its title from an album by (and Ira Nadel's biography of) Leonard Cohen, the subject of the film is not Cohen, nor does he have any affiliation with the work.",
+    "Leonard Norman Cohen {'1': \", '2': \", '3': \", '4': \"} (September 21, 1934 – November 7, 2016) was a Canadian singer, songwriter, musician, poet, novelist, and painter."
+   ]
+  },
+  {
+   "id": "4590422471265833514",
+   "sentences": [
+    "On Earth , Ivan 's Ecto - Morphicons are completely unearthed , and he unleashes them on Angel Grove , ordering the parents to commit suicide at the construction site . Fred , Bulk , Skull and the other kids head to the construction site to save their parents . The Rangers return with their new animal - themed Ninja Zords and destroy one of Ivan 's Ecto - Morphicons . Ivan takes control of the other and battles the Rangers himself . The Rangers lead Ivan into space right into the path of Ryan 's Comet , which destroys him . His destruction breaks the hypnosis and the parents are reunited with their children . The Rangers then use the Great Power to restore the Command Center and resurrect Zordon ."
+   ]
+  },
+  {
+   "id": "5a7b88165542997c3ec971fe",
+   "sentences": [
+    "And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.",
+    " He currently lives with his family in Rochdale, North West England."
+   ]
+  },
+  {
+   "id": "5adfed5e55429942ec259b92",
+   "sentences": [
+    "Bumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc.",
+    " The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City."
+   ]
+  },
+  {
+   "id": "5a74a62b55429916b01641a0",
+   "sentences": [
+    "Jean-François André Clervoy (born 19 November 1958) is a French engineer and a CNES and ESA astronaut.",
+    "Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut."
+   ]
+  },
+  {
+   "id": "5ab29c24554299449642c932",
+   "sentences": [
+    "Giuseppe Fortunino Francesco Verdi (] ; 9 or 10 October 1813 – 27 January 1901) was an Italian opera composer.",
+    "Charles Louis Ambroise Thomas (5 August 1811 – 12 February 1896) was a French composer, best known for his operas \"Mignon\" (1866) and \"Hamlet\" (1868, after Shakespeare) and as Director of the Conservatoire de Paris from 1871 till his death."
+   ]
+  }
+ ]
+}

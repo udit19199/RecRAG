@@ -1,0 +1,82 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-306",
+   "sentences": [
+    "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.",
+    "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."
+   ]
+  },
+  {
+   "id": "multihop-rag-2432",
+   "sentences": [
+    "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair.",
+    "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."
+   ]
+  },
+  {
+   "id": "-8972183967530424533",
+   "sentences": [
+    "Cuban War of Independence An estimated 200,000 Cubans died in Spanish concentration camps . Date February 24 , 1895 -- February 15 , 1898 ( 2 years , 11 months , 3 weeks and 1 day ) Location Cuba ( Caribbean ) Result Cuban victory American Intervention ; Expulsion of the Spanish colonial government during Spanish -- American War ( 1898 ) . Treaty of Paris United States Military Government in Cuba Cuban independence Belligerents Spain Spanish Cuba Spanish Philippines Cuban nationalists United States Commanders and leaders Arsenio Linares Manuel Macías Ramón Blanco Valeriano Weyler Patricio Montojo Pascual Cervera Máximo Gómez Calixto García José Martí † Antonio Maceo † Nelson A. Miles William Shafter George Dewey William T. Sampson Strength 196,000 53,774 rebels 28,000 -- 60,000 US regulars and 200,000 + volunteers Casualties and losses 786 killed in action 8,627 DOW 53,313 dead from disease 900 killed in action ( 1898 ) 5,180 Cuban insurgents died in combat 3,437 Cuban insurgents dead from disease 385 US soldiers died in combat 2,061 US soldiers dead from disease 300,000 total Cubans dead ( most of them civilian fatalities in the concentration camps )",
+    "Martí was killed shortly after landing on May 19 , 1895 , at Dos Rios , but Máximo Gomez and Antonio Maceo fought on , taking the war to all parts of Oriente . By the end of June , all of Camagüey was at war . Based on new research in Cuban sources , historian John Lawrence Tone demonstrated that Gomez and Maceo were the first to force the civilian forces to choose sides . `` Either they relocated to the east side of the islands , where the Cubans controlled the mountainous terrain , or they would be accused of supporting the Spanish and be subject to immediate trial and execution . '' Continuing west , they were joined by 1868 war veterans , such as Polish internationalist General Carlos Roloff and Serafín Sánchez in Las Villas , who brought weapons , men and experience to the revolutionaries ' arsenal .",
+    "During the years 1869 -- 1888 of the so - called `` Rewarding Truce '' , lasting for 17 years from the end of the Ten Years ' War in 1878 , there were fundamental social changes in Cuban society . With the abolition of slavery in October 1886 , freedmen joined the ranks of farmers and the urban working class . The economy could no longer sustain itself with the shift and changes ; therefore , many wealthy Cubans lost their property , and joined the urban middle class . The number of sugar mills dropped and efficiency increased : only companies , and the most powerful plantation owners , remained in business followed by the Central Board of Artisans in 1879 , and many more across the island . After his second deportation to Spain in 1878 , José Martí moved to the United States in 1881 . There he mobilized the support of the Cuban exile community , especially in Ybor City ( Tampa area ) and Key West , Florida . His goal was revolution in order to achieve independence from Spain . Martí lobbied against the U.S. annexation of Cuba , which was desired by some politicians in both the U.S. and Cuba ."
+   ]
+  },
+  {
+   "id": "5a88e3cc5542997e5c09a6c2",
+   "sentences": [
+    "Saddle Rock Elementary School or simply \"Saddle Rock\" is an elementary school, comprising grades Kindergarten through 5.",
+    " It is a public school located in Great Neck, New York, USA as part of the Great Neck School District.",
+    "The Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York.",
+    " It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island."
+   ]
+  },
+  {
+   "id": "-6383310849066297596",
+   "sentences": [
+    "The ABA Model Rules of Professional Conduct , created by the American Bar Association ( ABA ) , are a set of rules that prescribe baseline standards of legal ethics and professional responsibility for lawyers in the United States . They were promulgated by the ABA House of Delegates upon the recommendation of the Kutak Commission in 1983 . The rules are merely recommendations , or models , ( hence the name `` Model Rules '' ) and are not themselves binding . However , having a common set of Model Rules facilitates a common discourse on legal ethics , and simplifies professional responsibility training as well as the day - to - day application of such rules . As of 2015 , 49 states and four territories have adopted the rules in whole or in part , of which the most recent to do so was the Commonwealth of the Northern Mariana Islands in March 2015 . California is the only state that has not adopted the ABA Model Rules , while Puerto Rico is the only U.S. jurisdiction outside of confederation has not adopted them but instead has its own Código de Ética Profesional ."
+   ]
+  },
+  {
+   "id": "multihop-rag-1108",
+   "sentences": [
+    "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "-3015473067588310177",
+   "sentences": [
+    "In the aftermath of the disputed 1824 presidential election , the separate factions took on many characteristics of parties in their own right . Adams ' supporters , in league with Clay , favored modernization , banks , industrial development and federal spending for roads and other internal improvements , which the Old Republicans and the Jackson men usually opposed . Writing in his personal journal on December 13 , 1826 , President Adams noted the difficulty he faced in attempting to be nonpartisan in appointing men to office :"
+   ]
+  },
+  {
+   "id": "multihop-rag-239",
+   "sentences": [
+    "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.",
+    "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-617",
+   "sentences": [
+    "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City.",
+    "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.",
+    "Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with pals go on to make headlines.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "-2346694142996376613",
+   "sentences": [
+    "The film was directed by Robert Mulligan , and starred Gary Grimes as Hermie , Jerry Houser as his best friend Oscy , Oliver Conant as their nerdy young friend Benjie , Jennifer O'Neill as Hermie 's mysterious love interest , and Katherine Allentuck and Christopher Norris as a pair of girls whom Hermie and Oscy attempt to seduce . Mulligan also has an uncredited role as the voice of the adult Hermie . Maureen Stapleton ( Allentuck 's real - life mother ) also appears in a small , uncredited voice role ( calling after Hermie as he leaves the house in an early scene , and after he enters his room in a later scene ) .",
+    "Summer of ' 42 Theatrical release poster Directed by Robert Mulligan Produced by Richard A. Roth Written by Herman Raucher Starring Jennifer O'Neill Gary Grimes Jerry Houser Oliver Conant Narrated by Robert Mulligan Music by Michel Legrand Cinematography Robert Surtees Edited by Folmar Blangsted Distributed by Warner Bros. Pictures Release date April 18 , 1971 ( 1971 - 04 - 18 ) Running time 104 minutes Country United States Language English Budget $1 million Box office $32,063,634"
+   ]
+  }
+ ]
+}

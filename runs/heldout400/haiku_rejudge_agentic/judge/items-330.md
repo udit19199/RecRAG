@@ -1,0 +1,251 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=5141a3addbe94f14 ===
+Gold sentences and facts:
+Sentence 0: The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut interest rates next year by less than it earlier expected.
+  Fact 0.0: The Fed's main interest rate is at its highest level since 2001.
+  Fact 0.1: The central bank indicated last week that it may cut interest rates next year.
+  Fact 0.2: The central bank indicated last week that any cut to interest rates next year may be smaller than it earlier expected.
+Sentence 1: Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control.
+  Fact 1.0: Stocks surged through the week.
+  Fact 1.1: Stocks surged on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates.
+  Fact 1.2: The Federal Reserve's hikes to interest rates were market-crunching.
+  Fact 1.3: The Federal Reserve's interest rate hikes were intended to get inflation under control.
+
+Retrieved items:
+<item 1>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+
+Graph facts:
+- ASX set for bright start despite Wall Street slip; $A drops -PUBLISHED_BY-> The Sydney Morning Herald
+- ASX set to open lower as Wall Street closes September with more losses -PUBLISHED_BY-> The Sydney Morning Herald
+- The best shows to stream in December -PUBLISHED_BY-> The Sydney Morning Herald
+- McRae reveals hidden message he carried under collar of his grand final shirt -PUBLISHED_BY-> The Sydney Morning Herald
+- ASX set to drop as Wall Street’s September slump deepens -PUBLISHED_BY-> The Sydney Morning Herald
+
+Entities: The Sydney Morning Herald, ASX to rise after interest rate hopes boost US shares, US shares, Clark, Westpac, NAB, ANZ, interest-rate trade, long-term
+bond yields, employment data, growth stocks, rate rise, S&P 500, Wall Street, ASX
+</item 1>
+
+<item 2>
+Graph query row:
+article: ASX set to open lower as Wall Street closes September with more losses
+published_on: 2023-10-01T18:19:08+00:00
+publisher: The Sydney Morning Herald
+connection_type: MENTIONS
+connection: Federal Reserve
+</item 2>
+
+<item 3>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+They also continued to decelerate from earlier months. A second economic report from the morning likewise offered both encouragement and caution for financial
+markets. It said slightly fewer US workers than expected applied for unemployment benefits last week. On one hand, it indicates a job market with few lay-offs,
+which means strength for the overall economy. But it could also be adding fuel to keep upward pressure on inflation.
+
+After the reports, the 10-year Treasury yield rose to 4.7 per cent from 4.56 per cent late Wednesday. The two-year Treasury yield, which more closely tracks
+expectations for the Fed, climbed to 5.06 per cent from 4.99 per cent. Yields are still down slightly for the week so far. After jumping last week to their
+highest levels in more than a decade, yields regressed following speeches that investors saw as hints that the Fed may not raise its main overnight interest
+rate further.
+
+Graph facts:
+- Psagot worth 80% less since Rani Zim bought it -MENTIONS-> financial markets
+- ASX set to open higher as Wall Street rebounds; $A rises -MENTIONS-> financial markets
+- There are no sacred numbers -MENTIONS-> financial markets
+- ASX to rise after interest rate hopes boost US shares -MENTIONS-> financial markets
+- Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions -MENTIONS-> financial
+markets
+
+Entities: financial markets, ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields, unemployment benefits, Fed, interest rate, The
+Age, US, economy, bond yields, ASX, Wall Street, Treasury yields, job market, inflation
+</item 3>
+
+<item 4>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+
+Graph facts:
+- ASX set to open higher as Wall Street rebounds; $A rises -MENTIONS-> financial markets
+- ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields -MENTIONS-> financial markets
+- There are no sacred numbers -MENTIONS-> financial markets
+- Psagot worth 80% less since Rani Zim bought it -MENTIONS-> financial markets
+- Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions -MENTIONS-> financial
+markets
+
+Entities: financial markets, The Sydney Morning Herald, US, economy, bond market, interest rates, ASX to rise after interest rate hopes boost US shares, ASX, US
+shares, Wall Street, Treasury yields, The Fed, job market, pay raises, Friday’s jobs report
+</item 4>
+
+<item 5>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+
+Graph facts:
+- ASX set to open higher as Wall Street rebounds; $A rises -MENTIONS-> financial markets
+- ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields -MENTIONS-> financial markets
+- There are no sacred numbers -MENTIONS-> financial markets
+- Psagot worth 80% less since Rani Zim bought it -MENTIONS-> financial markets
+- Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions -MENTIONS-> financial
+markets
+
+Entities: financial markets, Apple, Bank of America, Fed, The Sydney Morning Herald, US, ASX to rise after interest rate hopes boost US shares, Wall Street,
+BofA Global Research, Institute for Supply Management, US services industries
+</item 5>
+
+<item 6>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 6>
+
+<item 7>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+
+Graph facts:
+- ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields -MENTIONS-> Evolution
+- ASX set to open higher as Wall Street rebounds; $A rises -MENTIONS-> Brent crude
+- ASX set to open higher as Wall Street rebounds; $A rises -MENTIONS-> benchmark US crude
+- ASX set to open lower as Wall Street closes September with more losses -MENTIONS-> Brent crude
+- ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields -MENTIONS-> gold miners
+
+Entities: benchmark US crude, Brent crude, ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields, Thursday’s inflation report,
+Seema Shah, Principal Asset Management, Fed’s next move on interest rates, interest rate hike, Fed, The Age, the economy, bond yields, 10-year Treasury yield,
+crude oil prices, ASX
+</item 7>
+
+<item 8>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+
+Graph facts:
+- ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields -MENTIONS-> Fed
+- Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style -MENTIONS-> Fed
+- ASX set to open lower as Wall Street closes September with more losses -MENTIONS-> Fed
+- Powell Says Fed to Be Careful, Won’t Hesitate to Hike If Needed -MENTIONS-> Fed
+- ASX to rise after interest rate hopes boost US shares -MENTIONS-> Fed
+
+Entities: Fed, The Sydney Morning Herald, Chinese government, bond market, resource stocks, stimulus package, interest rates, consumer discretionary,
+information technology, annual general meetings, Nasdaq, Atlanta Fed, Raphael Bostic, recession, Oil
+</item 8>
+
+<item 9>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+
+Graph facts:
+- How ego and fear fuelled the rise of artificial intelligence -MENTIONS-> jobs
+- Want to help your kids achieve their potential? This expert has some advice -MENTIONS-> jobs
+- Billie Jean King sees progress in her crusade for more investment women’s sports: 'We’re kind of at a tipping point' -MENTIONS-> jobs
+- Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation -MENTIONS-> jobs
+- Suleyman -SAID-> jobs
+
+Entities: jobs, ASX set to open higher as Wall Street rebounds; $A rises, wages, ADP, ADP report, comprehensive jobs report, markets, overnight rate, private
+employers, US government, Federal Reserve, The Age, interest rates, oil prices, ASX
+</item 9>
+
+<item 10>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+
+Graph facts:
+- ASX set to open higher as Wall Street rebounds; $A rises -MENTIONS-> financial markets
+- ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields -MENTIONS-> financial markets
+- There are no sacred numbers -MENTIONS-> financial markets
+- Psagot worth 80% less since Rani Zim bought it -MENTIONS-> financial markets
+- Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions -MENTIONS-> financial
+markets
+
+Entities: financial markets, financial system, Fed, The Sydney Morning Herald, US, economy, interest rates, ASX to rise after interest rate hopes boost US
+shares, Expedia Group, Treasury yields, Katie Nixon, Northern Trust Wealth Management, investments, coronavirus crash, three high-profile US bank failures
+</item 10>
+=== END ITEM id=5141a3addbe94f14 ===

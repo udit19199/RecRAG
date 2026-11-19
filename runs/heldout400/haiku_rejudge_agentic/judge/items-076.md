@@ -1,0 +1,906 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=fb46248d13d794e7 ===
+Gold sentences and facts:
+Sentence 0: He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift.
+  Fact 0.0: He revealed that he made a friendship bracelet.
+  Fact 0.1: A friendship bracelet is a fan tradition at Swift's concerts.
+  Fact 0.2: The friendship bracelet had his number on it.
+  Fact 0.3: He made the friendship bracelet to give to Swift.
+  Fact 0.4: The friendship bracelet seemingly expresses his interest in Swift.
+Sentence 1: “She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.
+  Fact 1.0: Swift has the Eras Tour booked all through next year.
+  Fact 1.1: Swift would rather die than cancel a show.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has now shared that she has nothing to hide.
+  Fact 2.1: Swift has a new relationship with Kelce.
+  Fact 2.2: Swift has now shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Some found issue with these changes, but the NFL said this is a "pop cultural moment" and they are acting as such.
+
+"We frequently change our bios and profile imagery based on what's happening in and around our games, as well as culturally," the NFL wrote in a statement. "The
+Taylor Swift and Travis Kelce news has been a pop cultural moment we've leaned into in real time, as it's an intersection of sport and entertainment, and we've
+seen an incredible amount of positivity around the sport."
+
+Oct. 6: Travis and Jason think the NFL is doing too much
+
+The NFL is really digging into the Swift-Kelce coverage, and not everyone is a fan, including the people involved.
+
+"I think it's fun when they show who's at the game," Travis said. "I think it brings a little bit more to the atmosphere, brings a little bit more to what
+you're watching. But at the same time, they're overdoing it a little bit."
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Jason, Taylor Swift, rumored romance, Travis Kelce, pop cultural moment, Swift-Kelce coverage, Taylor Swift-Travis Kelce timeline: Everything to
+know about rumored romance between pop star, Chiefs TE, CBSSports.com
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Head coach Andy Reid was also asked about his star tight end's supposed relationship, to which he quipped, "I set them up."
+
+Sept. 24: Kelce and Swift leave stadium together
+
+"You know when it's time to go." - It's Time To Go
+
+This was the first time the two were photographed together. They walked side by side, Kelce fittingly wearing an outfit with "1989" in the title and Swift
+wearing a Chiefs zip-up.
+
+Sept. 24: The two leave in a convertible
+
+"Nothing good starts in the getaway car." - Getaway Car
+
+Swift and Swift were spotted in a convertible, with the tight end driving, after the Chiefs' win. Kelce reportedly rented out a restaurant for a private party
+with Swift and his teammates.
+
+"Taylor Swift likes that Travis Kelce 'pursued her' and the two are having a 'great time getting to know each other,'" a source told Entertainment Tonight.
+
+Graph facts:
+- Taylor Swift -MENTIONS-> jersey sales
+- NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 -MENTIONS-> Andy Reid
+- FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 -MENTIONS-> Andy Reid
+- When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover -MENTIONS-> Andy Reid
+- Taylor Swift -MENTIONS-> Instagram
+
+Entities: Andy Reid, Taylor Swift, Travis Kelce, It's Time To Go, Getaway Car, Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance
+between pop star, Chiefs TE, CBSSports.com, Chiefs, 1989, Entertainment Tonight
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+
+Graph facts:
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> Time
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+
+Entities: Time, Taylor Swift, Eras Tour, Travis Kelce, Taylor Swift reveals secret start to her relationship with Travis Kelce, The Independent
+</item 4>
+
+<item 5>
+Graph query row:
+report: Taylor Swift is Time’s Person of the Year
+published_on: 2023-12-06T13:55:17+00:00
+publisher: The Independent
+entity: Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game
+relationship: PUBLISHED_BY
+related: The Independent
+passage: Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Fans have spotted Travis Kelce wearing a friendship bracelet with Taylor Swift lyrics on it, just days before she attended his Kansas City Chiefs game.
+
+In a video posted to TikTok on 25 September, a fan shared a photo of Kelce posing with the piece of jewellery on his wrist. The post came after Swift was seen
+enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating.
+</item 5>
+
+<item 6>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+
+Graph facts:
+- Taylor Swift -MENTIONS-> Instagram
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> Taylor Swift
+- Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages -MENTIONS-> Taylor Swift
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Taylor Swift
+- Taylor Swift -MENTIONS-> jersey sales
+
+Entities: Taylor Swift, Arrowhead, rumored romance, Travis Kelce, Mahomes, postgame press conference, Swiftie talk, Taylor Swift-Travis Kelce timeline:
+Everything to know about rumored romance between pop star, Chiefs TE, CBSSports.com, Chiefs, game, Donna Kelce
+</item 6>
+
+<item 7>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Here's a look at how it all started and where it has gone since:
+
+June 29: Kelce makes friendship bracelets for fellow TEs
+
+Is this where it all begin? Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends. He said he was "taking a page out of Taylor
+Swift's book."
+
+July 26: Kelce makes friendship bracelet for Swift
+
+"So make the friendship bracelets, take the moment and taste it." - You're On Your Own Kid
+
+Kelce announced that he went to Swift's highly anticipated concert, but said he did not have the chance to meet the 12-time Grammy winner.
+</item 7>
+
+<item 8>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Anti-Hero
+- Taylor Swift -MENTIONS-> jersey sales
+- Taylor Swift is Time’s Person of the Year -MENTIONS-> Time
+- Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral -MENTIONS-> Anti-Hero
+- Taylor Swift -MENTIONS-> Instagram
+
+Entities: Anti-Hero, Time, Taylor Swift, Travis Kelce, relationship, Taylor Swift reveals secret start to her relationship with Travis Kelce, paparazzi, media,
+The Independent - Life and Style
+</item 8>
+
+<item 9>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Chicago Bears
+- NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game -MENTIONS-> Chicago Bears
+- NFL standings: Updated AFC, NFC playoff picture for Week 13 of 2023 season -MENTIONS-> Chicago Bears
+- Browns survive Bears Hail Mary on wild, near-catch by Darnell Mooney: 'Damn near s— myself' -MENTIONS-> Chicago Bears
+- NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 -MENTIONS-> Chicago Bears
+
+Entities: Chicago Bears, Taylor Swift, Travis Kelce, Chiefs' Week 3 game against the Chicago Bears, nonprofit charity event, Vigilante Sh--, Fifteen, Taylor
+Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE, CBSSports.com, Chiefs, Donna Kelce
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+
+Graph facts:
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> Kansas City
+- When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover -MENTIONS-> Kansas City
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> Kansas City
+- Beyoncé tops box office with $21 million debut for concert film ‘Renaissance’ -MENTIONS-> Kansas City
+- Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back -MENTIONS-> Kansas City
+
+Entities: Kansas City, Taylor Swift, Travis Kelce, Mahomes, KSHB 41, Chiefs Kingdom, Speak Now, Enchanted, afterparty, Taylor Swift-Travis Kelce timeline:
+Everything to know about rumored romance between pop star, Chiefs TE, CBSSports.com, Chiefs, game
+</item 10>
+=== END ITEM id=fb46248d13d794e7 ===
+
+=== ITEM id=6e498d9aa84f63c1 ===
+Gold sentences and facts:
+Sentence 0: She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years.
+  Fact 0.0: The speaker explained this at the time of the 2022 Academy Awards.
+  Fact 0.1: Will slapped Chris Rock at the 2022 Academy Awards.
+  Fact 0.2: At the time Will slapped Chris Rock, the speaker and Will had been separated for six years.
+Sentence 1: Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy.
+  Fact 1.0: Outsiders are now aware that Jada and Will have been separated since 2016.
+  Fact 1.1: The timeline of Jada's relationship with Alsina is still fuzzy.
+
+Retrieved items:
+<item 1>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Will Smith has spoken out about his “tumultuous” relationship with his wife, Jada Pinkett Smith, while speaking to a crowd of fans in Baltimore, Maryland.
+
+The 55-year-old actor took the stage at the Enoch Pratt Free Library on 18 October, as he made an appearance at a press event for his wife’s book, Worthy,
+alongside their two children – Jaden, 25, and Willow, 22.
+
+Graph facts:
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Willow
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Jada Pinkett Smith
+- Willow -PARTICIPATED_IN-> Willow’s birth
+- Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? -MENTIONS-> Willow
+- Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? -MENTIONS-> Jada Pinkett Smith
+
+Entities: Willow, Jada Pinkett Smith, Will Smith, Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith, Jaden, Enoch Pratt Free
+Library, press event for Worthy, Worthy, The Independent, Baltimore, Maryland
+</item 1>
+
+<item 2>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+he wrote on Facebook at the time. “So, in the interest of redundant, repetitious, over and over-again-ness… Jada and I are… NOT GETTING A DIVORCE!!!!!!!!!!!!!”
+
+2018: Will revealed that he and Jada don’t refer to themselves as married
+
+In an episode of TIDAL’s Rap Radar podcast, Will said he and Jada “refer to ourselves as life partners, where you get into that space where you realise you are
+literally with somebody for the rest of your life. There’s no deal breakers. There’s nothing she could do - ever. Nothing that would break our relationship. She
+has my support till death and it feels so good to get to that space.”
+
+Graph facts:
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -PUBLISHED_BY-> The Independent
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Chris Rock
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> 2022 Academy Awards
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> King Richard
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> separation
+
+Entities: A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation, TIDAL, Rap Radar podcast, an episode of TIDAL’s Rap Radar podcast,
+Jada Pinkett Smith, Will Smith, The Independent - Life and Style, Facebook
+</item 2>
+
+<item 3>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Will Smith y Jada Pinkett Smith (Getty Images)
+
+According to Lucas, some of the controversy surrounding Will and Jada’s relationship ties back to the 2022 Academy Awards - when the King Richard star jumped
+onto the stage and struck Rock across the face after the comedian made a joke about Jada’s shaved head, which is a result of her alopecia. “Keep my wife’s name
+out of your f***ing mouth,” Will yelled. Now that it’s been revealed the couple was separated at the time, Lucas questioned Will’s behaviour and word choice
+during the awards ceremony.
+
+“That’s a weird reaction to have somebody who you’ve been broken up with for six years, you know? So, were they really broken up or is Jada saying that as an
+attention-seeking thing?” he asked.
+
+However, Winter still believes the controversial incident speaks different volumes about the work Will has put into his relationship.
+
+Graph facts:
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Jada Pinkett Smith
+- Jada Pinkett Smith reveals why she and Will Smith never signed a prenup -MENTIONS-> 2022 Academy Awards
+- Chris Rock -PARTICIPATED_IN-> 2022 Academy Awards
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> 2022 Academy Awards
+- Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith -MENTIONS-> Jada Pinkett Smith
+
+Entities: 2022 Academy Awards, Jada Pinkett Smith, Rock, Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get
+divorced?, Winter, Will Smith, King Richard, alopecia, The Independent, Lucas
+</item 3>
+
+<item 4>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Will and Jada with their son Jayden in 2003 (Getty)
+
+2013: Jada denies open marriage rumours (sort of)
+
+After a quiet decade and a half making movies and raising their children, Jada took to Facebook to address rumours she and Will were in an open relationship.
+
+She wrote: “Here is how I will change my statement... Will and I BOTH can do WHATEVER we want, because we TRUST each other to do so. This does NOT mean we have
+an open relationship... this means we have a GROWN one.”
+
+2015: Will addresses divorce rumours
+
+Will addresses persistent separation rumours by clarifying the pair were not getting a divorce.
+
+“Under normal circumstances, I don’t usually respond to foolishness. But, so many people have extended [to] me their ‘deepest condolences’ that I figured -
+‘What the hell… I can be foolish, too!’” he wrote on Facebook at the time.
+
+Graph facts:
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -PUBLISHED_BY-> The Independent - Life and Style
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Chris Rock
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> 2022 Academy Awards
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> King Richard
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> separation
+
+Entities: A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation, Jada denies open marriage rumours, Will addresses divorce rumours,
+open relationship, divorce rumours, separation rumours, Jada Pinkett Smith, Will Smith, Jayden, The Independent, Getty, Facebook
+</item 4>
+
+<item 5>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Although they’ve made their dedication to each other quite clear, there have been some grey areas over the last seven years about the terms of Will and Jada’s
+separation. In 2020, Jada made headlines when she revealed in a Red Table Talk episode with her husband that she had a relationship with Alsina. She explained
+that she and her husband were “separated amicably” when the romance occurred, which had not been disclosed to the press at the time. “We decided that we were
+going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,” Jada said. As the Girls
+Trip star recalled that she “got into a different kind of entanglement with August,” she was prompted by Will to confirm it “was a relationship, absolutely.”
+
+Graph facts:
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> separation
+- Jacob Lucas -SAID-> separation
+- Susan Winter -SAID-> separation
+- Winter -SAID-> separation
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Jada Pinkett Smith
+
+Entities: separation, Jada Pinkett Smith, Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced?, Will Smith,
+Alsina, relationship, Girls Trip, Red Table Talk, The Independent
+</item 5>
+
+<item 6>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Less than two weeks later, Jada and Will appeared on an episode of Jada’s Red Table Talk where Jada confirmed that she did have a relationship with Alsina,
+saying that she and Will were separated at the time.
+
+“We decided that we were going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,”
+Jada said at the time.
+
+“From there, as time went on, I got into a different kind of entanglement with August... Yes, it was a relationship absolutely.”
+
+Jada also said that Will didn’t give permission, as the only person who could give her permission was herself.
+
+2021: Jada discusses her and Will’s sex life, Will’s memoir is released
+
+In another episode of Red Table Talk in October 2021, Jada said it “takes work” to maintain a spark in the bedroom.
+
+“It’s hard... the thing Will and I talk about a lot is the journey.
+
+Graph facts:
+- Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? -MENTIONS-> separation
+- Jacob Lucas -SAID-> separation
+- Susan Winter -SAID-> separation
+- Winter -SAID-> separation
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -PUBLISHED_BY-> The Independent - Life and Style
+
+Entities: separation, A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation, August Alsina, Jada Pinkett Smith, relationship with
+August Alsina, permission, maintaining a spark in the bedroom, episode of Red Table Talk, Will Smith, Red Table Talk, The Independent
+</item 6>
+
+<item 7>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Jada Pinkett Smith has revealed that she and husband Will Smith have been separated for the last seven years.
+
+The Girls Trip star, 52, shared in a new interview with People published on 11 October that she and the King Richard actor, 55, are “still figuring it out” when
+it comes to their marriage of 26 years. She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six
+years.
+
+Graph facts:
+- Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? -MENTIONS-> 2022 Academy Awards
+- Jada Pinkett Smith reveals why she and Will Smith never signed a prenup -MENTIONS-> Chris Rock
+- Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? -MENTIONS-> Chris Rock
+- Chris Rock -PARTICIPATED_IN-> 94th annual Oscars
+- Jada Pinkett Smith reveals why she and Will Smith never signed a prenup -MENTIONS-> 2022 Academy Awards
+
+Entities: Chris Rock, 2022 Academy Awards, King Richard, separation, A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation, Jada
+Pinkett Smith, Will Smith, Girls Trip, The Independent, People
+</item 7>
+
+<item 8>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+In an interview with People on 10 October, Jada shared that during the 2022 Academy Awards - when Will slapped Chris Rock after he cracked a joke about Jada’s
+appearance - the pair had actually been separated for six years. “We’ve been doing some really heavy-duty work together,” she explained, while promoting her new
+memoir, Worthy. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+
+She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep
+sense of self-acceptance”. Although the married couple are not living together, she insisted that their marriage has never been an open one, as she and Will
+have “eliminated the chance of betrayal” while going on to live their “separate lives”.
+
+Graph facts:
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> 2022 Academy Awards
+- Jada Pinkett Smith reveals why she and Will Smith never signed a prenup -MENTIONS-> Chris Rock
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Chris Rock
+- Chris Rock -PARTICIPATED_IN-> 94th annual Oscars
+- Jada Pinkett Smith reveals why she and Will Smith never signed a prenup -MENTIONS-> 2022 Academy Awards
+
+Entities: Chris Rock, 2022 Academy Awards, separation, self-acceptance, Willow, Jada Pinkett Smith, Jada Pinkett Smith and Will Smith have been separated since
+2016 - when should couples just get divorced?, Will Smith, Jaden, Worthy, The Independent - Life and Style, People
+</item 8>
+
+<item 9>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Prior to sharing the video, Smith showed his support for his partner and her success in a statement toThe New York Times. During the interview, the outlet noted
+that Smith said his wife’s memoir “kind of woke him up” and that he has now realised she is more “resilient, clever and compassionate than he’d understood”.
+
+“When you’ve been with someone for more than half of your life, a sort of emotional blindness sets in, and you can all too easily lose your sensitivity to their
+hidden nuances and subtle beauties,” he added.
+
+In an interview with People published on 10 October, Jada first revealed that she and her husband were living separately. “We’ve been doing some really
+heavy-duty work together,” she said. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+
+Graph facts:
+- He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. -PUBLISHED_BY-> The New York Times
+- How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea -PUBLISHED_BY-> The New York Times
+- After a Stunning Snub, College Football Is Facing an Identity Crisis -PUBLISHED_BY-> The New York Times
+- N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders -PUBLISHED_BY-> The New York Times
+- Which M.L.B. Playoff Team Has the Most Daunting Home Field? We Ranked Them. -PUBLISHED_BY-> The New York Times
+
+Entities: The New York Times, Jada Pinkett Smith, Will Smith, Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith, Interview with
+People, The Independent, People
+</item 9>
+
+<item 10>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Longtime Hollywood couple Will Smith and Jada Pinkett Smith sent shockwaves around the world this week when the Red Table Talk host revealed that she and the
+actor have been separated since 2016. Both Jada and Will have previously doubled down on their stance against getting a divorce, but her recent reveal about
+their lengthy separation poses a new question: When should couples just get a divorce?
+
+Graph facts:
+- A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation -MENTIONS-> Jada Pinkett Smith
+- Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith -MENTIONS-> Jada Pinkett Smith
+- Jada Pinkett Smith reveals why she and Will Smith never signed a prenup -MENTIONS-> Jada Pinkett Smith
+- Jada Pinkett Smith -SAID-> separation
+- Jada Pinkett Smith -SAID-> self-acceptance
+
+Entities: Jada Pinkett Smith, Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced?, separation, Will Smith,
+Red Table Talk, divorce, The Independent
+</item 10>
+=== END ITEM id=6e498d9aa84f63c1 ===
+
+=== ITEM id=e9fc01f9ca5693cf ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves or odds change for a legitimate reason.
+  Fact 1.1: Examples of legitimate reasons include an injury or a roster move.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+We urge you to read the requirements for any available promotions and offers before accepting them so you’re aware of any restrictions before betting.
+
+You can now place your initial deposit, which is easy at online betting sites thanks to various deposit and withdrawal options.
+
+To bet on the NBA Rookie of the Year, navigate to the basketball section of the sportsbook website, select the NBA, and go to the futures tab.
+
+You’ll find Rookie of the Year odds, NBA MVP odds, and more there. Select the bet you want to make, enter the amount you want to bet, and finalize your bet
+slip.
+
+Ensure you’re using only legal online sportsbooks for any type of betting. Offshore sportsbooks advertise widely on the internet, but they are illegal and offer
+no protection against fraud and other criminal activities.
+
+Best sportsbooks for NBA Rookie of the Year odds
+
+Here are some of the best sports betting sites where you can bet on the next NBA Rookie of the Year.
+
+Graph facts:
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Gregg Popovich
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Spurs
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NFL
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Victor Wembanyama
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NBA Rookie of the Year award
+
+Entities: Wembanyama, NBA Rookie of the Year, NBA Rookie of the Year Odds - Wembanyama the early favorite, Sporting News, NBA MVP, NBA
+</item 1>
+
+<item 2>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Cons:
+
+There is a reduced opportunity to find value.
+
+The odds may not be as favorable.
+
+Keep in mind that it’s always important to take into consideration your risk tolerance while you weigh the potential rewards. No matter when you decide to make
+your wager, always gather as much information as possible before risking your hard-earned money.
+
+Who are the past NBA ROTY winners?
+
+For context, here is a list of the National Basketball Association Rookie of the Year winners since 2010.
+
+Graph facts:
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Gregg Popovich
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Spurs
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NFL
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Victor Wembanyama
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NBA Rookie of the Year award
+
+Entities: Wembanyama, NBA Rookie of the Year, NBA Rookie of the Year Odds - Wembanyama the early favorite, Sporting News, National Basketball Association
+</item 2>
+
+<item 3>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Season Player Position Team 2023 Paolo Banchero Forward Orlando Magic 2022 Scottie Barnes Forward Toronto Raptors 2021 LaMelo Ball Guard Charlotte Hornets 2020
+Ja Morant Guard Memphis Grizzlies 2019 Luka Dončić Guard/Forward Dallas Mavericks 2018 Ben Simmons Forward/Guard Philadelphia 76ers 2017 Malcolm Brogdon Guard
+Milwaukee Bucks 2016 Karl-Anthony Towns Center Minnesota Timberwolves 2015 Andrew Wiggins Forward/Guard Minnesota Timberwolves 2014 Michael Carter-Williams
+Guard Philadelphia 76ers 2013 Damian Lillard Guard Portland Trail Blazers 2012 Kyrie Irving Guard Cleveland Cavaliers 2011 Blake Griffin Forward Los Angeles
+Clippers 2010 Tyreke Evans Guard/Forward Sacramento Kings
+
+What other NBA futures can I bet on?
+
+Rookie of the Year is not the only form of NBA futures betting.
+
+Graph facts:
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Victor Wembanyama
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Gregg Popovich
+- NBA MVP Odds 2024 Season - Jokic and Giannis early favorites -MENTIONS-> NBA futures betting
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NFL
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Spurs
+
+Entities: NBA futures betting, Wembanyama, NBA Rookie of the Year Odds - Wembanyama the early favorite, Paolo Banchero, Orlando Magic, Scottie Barnes, Toronto
+Raptors, LaMelo Ball, Charlotte Hornets, Ja Morant, Memphis Grizzlies, Luka Dončić, Dallas Mavericks, Ben Simmons, Philadelphia 76ers
+</item 3>
+
+<item 4>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+DraftKings Sportsbook: DraftKings, known as a daily fantasy sports operator before becoming a renowned sportsbook, offers up a nice variety of futures bets,
+including the NBA Rookie of the Year award. The online sportsbook and betting app are intuitive and offer an easy-to-understand betting experience.
+Additionally, DraftKings fields a competitive welcome bonus for new players.
+
+DraftKings, known as a daily fantasy sports operator before becoming a renowned sportsbook, offers up a nice variety of futures bets, including the NBA Rookie
+of the Year award. The online sportsbook and betting app are intuitive and offer an easy-to-understand betting experience. Additionally, DraftKings fields a
+competitive welcome bonus for new players. FanDuel Sportsbook: Also known for being in the DFS market, FanDuel has one of the largest followings in the country.
+It offers competitive odds for NBA ROTY and has one of the best sports betting apps. Look for a quality welcome bonus for new players and attractive promotions
+for existing customers.
+
+Graph facts:
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Gregg Popovich
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Spurs
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NFL
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Victor Wembanyama
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NBA futures betting
+
+Entities: NBA Rookie of the Year award, Wembanyama, NBA Rookie of the Year Odds - Wembanyama the early favorite, Sporting News, DraftKings, FanDuel
+</item 4>
+
+<item 5>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Rookie of the Year is not the only form of NBA futures betting. Legal online sportsbooks have a wide selection of NBA futures you can bet on, including:
+
+In addition to futures bets, you can wager on many NBA bets during the regular season and postseason. NBA game lines (moneylines, point spreads, and totals) are
+the most popular, but you’ll also be able to bet on NBA team and player props, parlays, and more.
+
+The NBA is the second-most popular odds market to bet on in the US, behind NFL betting odds. That means every online betting site always has a great selection
+of NBA odds.
+
+Graph facts:
+- Brock Purdy -MENTIONS-> NFL
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -MENTIONS-> NFL
+- Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game -MENTIONS-> NFL
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -MENTIONS-> NFL
+- Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek -MENTIONS-> NFL
+
+Entities: NFL, Wembanyama, NBA Rookie of the Year Odds - Wembanyama the early favorite, US, Sporting News, Rookie of the Year, NBA
+</item 5>
+
+<item 6>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Once the season has started and you get to see how the various rookies are performing, you can gather the relevant data. But sportsbooks are also gathering this
+information, and they begin to tighten the NBA Rookie of the Year lines in response.
+
+So, while you can better guess which player will hoist the Wilt Chamberlain Trophy, the odds will be tighter, and your potential return on your wager will be
+reduced.
+
+Pros and cons of betting early on the NBA Rookie of the Year:
+
+Pros:
+
+You have an opportunity to find better value.
+
+The betting odds are fresh and haven't been adjusted.
+
+Cons:
+
+There is a much higher risk as a player's performance, health, and team dynamic can change throughout the season.
+
+You’ll find limited information to make an informed bet.
+
+Pros and cons of waiting to bet on the NBA Rookie of the Year:
+
+Pros:
+
+There is a lot more information available to make an informed bet.
+
+You don’t risk betting on a player not remotely in contention.
+
+Cons:
+
+There is a reduced opportunity to find value.
+
+Graph facts:
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Gregg Popovich
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Spurs
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Victor Wembanyama
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NFL
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NBA Rookie of the Year award
+
+Entities: Wembanyama, NBA Rookie of the Year, Wilt Chamberlain Trophy, NBA Rookie of the Year Odds - Wembanyama the early favorite, Sporting News, NBA, betting
+odds
+</item 6>
+
+<item 7>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Caesars Sportsbook: Caesars knows its way around sports betting when you use its app and online sportsbook. It offers favorable odds for almost every bet type,
+including NBA ROTY betting, and offers a nice variety of deposit and withdrawal options. Additionally, Caesars has a competitive welcome bonus for new players
+and runs NBA betting promos for existing players.
+
+When is the best time for NBA ROTY odds?
+
+The earlier you bet on NBA ROTY, the better the odds. But you’ll be doing so without much information that could be key in making an educated decision.
+
+Conversely, if you wait for the data you need for an informed bet, the odds will tighten up, and you will see less of a return on your wager.
+
+When the lines are first released for NBA ROTY honors, the season hasn’t even started yet, so there are no statistics, trends, or player news. The pre-season
+odds are so favorable because even the oddsmakers don’t have the data to craft more specific lines.
+
+Graph facts:
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Gregg Popovich
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Spurs
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NFL
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Victor Wembanyama
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NBA Rookie of the Year award
+
+Entities: Wembanyama, NBA Rookie of the Year betting, NBA Rookie of the Year Odds - Wembanyama the early favorite, Caesars, Sporting News, Caesars Sportsbook,
+NBA
+</item 7>
+
+<item 8>
+Graph query row:
+report: Line Shopping in Sports Betting - How to Find the Best Odds
+published_on: 2023-11-06T22:21:05+00:00
+publisher: Sporting News
+connections: [{'entity': 'Sporting News', 'relationship': 'PUBLISHED_BY'}, {'entity': 'NFL', 'relationship': 'MENTIONS'}, {'entity': 'line shopping',
+'relationship': 'MENTIONS'}, {'entity': 'odds and lines', 'relationship': 'MENTIONS'}, {'entity': 'How to bet on sports in the US', 'relationship': 'MENTIONS'},
+{'entity': 'live odds feed', 'relationship': 'MENTIONS'}, {'entity': 'sportsbook apps', 'relationship': 'MENTIONS'}, {'entity': 'live odds feeds',
+'relationship': 'MENTIONS'}, {'entity': 'totals bets', 'relationship': 'MENTIONS'}, {'entity': 'futures markets', 'relationship': 'MENTIONS'}, {'entity':
+'liability', 'relationship': 'MENTIONS'}, {'entity': 'teams', 'relationship': 'MENTIONS'}, {'entity': 'Vegas line', 'relationship': 'MENTIONS'}, {'entity': 'Las
+Vegas sportsbooks', 'relationship': 'MENTIONS'}, {'entity': 'online betting sites', 'relationship': 'MENTIONS'}, {'entity': 'parlay bet', 'relationship':
+'MENTIONS'}, {'entity': 'roster move', 'relationship': 'MENTIONS'}, {'entity': 'Cincinnati Bengals', 'relationship': 'MENTIONS'}, {'entity': 'US',
+'relationship': 'MENTIONS'}, {'entity': 'point spread', 'relationship': 'MENTIONS'}, {'entity': 'sportsbooks', 'relationship': 'MENTIONS'}, {'entity': 'sports
+betting apps', 'relationship': 'MENTIONS'}, {'entity': 'Betting patterns', 'relationship': 'MENTIONS'}, {'entity': 'DraftKings Sportsbook', 'relationship':
+'MENTIONS'}, {'entity': 'FanDuel Sportsbook', 'relationship': 'MENTIONS'}, {'entity': 'BetMGM Sportsbook', 'relationship': 'MENTIONS'}, {'entity': 'injury',
+'relationship': 'MENTIONS'}, {'entity': 'Caesars Sportsbook', 'relationship': 'MENTIONS'}, {'entity': 'NBA', 'relationship': 'MENTIONS'}, {'entity': 'prop
+bets', 'relationship': 'MENTIONS'}, {'entity': 'sports betting', 'relationship': 'MENTIONS'}, {'entity': 'Kansas City Chiefs', 'relationship': 'MENTIONS'},
+{'entity': 'Las Vegas', 'relationship': 'MENTIONS'}, {'entity': 'point spreads', 'relationship': 'MENTIONS'}, {'entity': 'moneylines', 'relationship':
+'MENTIONS'}, {'entity': 'Odds', 'relationship': 'MENTIONS'}]
+passages: [{'page': 'Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': 'Line Shopping in
+Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)\nLine shopping is the key that unlocks the best odds and lines at top
+sports betting sites.\n\nThe process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is
+quite often better odds and improved lines.\n\nWhat is line shopping, and why is it worth your time? Find the answers below in our complete guide to line
+shopping.\n\nHow do sportsbooks set odds and lines?\n\nThe best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.\n\nOther
+sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics, statistics,
+injury and roster news, performance, matchup data, and more to develop the lines and odds.\n\nBetting lines and odds are then subject to change based on the
+betting public’s reaction and any additional information that comes to light ahead of the game. Sportsbooks will move the line or change the odds if the public
+bets heavily on one side.'}, {'page': 'Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': 'Line
+Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)\nSportsbooks will move the line or change the odds if the
+public bets heavily on one side.\n\nEvery sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit
+built into the odds and lines without worrying about which side wins.\n\nThe betting is rarely the same at every sportsbook. While one sportsbook may be forced
+to move a line or change the odds because of betting, another won’t. That’s when you’ll spot a difference between sportsbooks. This difference may allow you to
+book a bet at improved odds or a more favorable line.\n\nThe lines and odds may even be different right from the jump. Either way, the differences are why line
+shopping always makes sense. Shop around, and you can find opportunities to lay less, win more, and improve your chances.'}, {'page': 'Line Shopping in Sports
+Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': 'Line Shopping in Sports Betting - How to Find the Best Odds
+(Sporting News, 2023-11-06T22:21:05+00:00)\nShop around, and you can find opportunities to lay less, win more, and improve your chances.\n\nSee more: How to bet
+on sports in the US\n\nShop for the best lines at online sportsbooks\n\nBelow is a live odds feed that shows you the differences between lines and odds for the
+same bets at many of the top sportsbooks in the country. Look here for current opportunities.\n\nWhat’s the best way to shop lines?\n\nThe easiest way to
+line-shop is to find something like the live odds feed above. It’s a one-stop shop. Shopping lines here will take just seconds.\n\nPerforming the task manually
+may take longer, but you can check with more sportsbooks or the chosen few you feel consistently offer the best lines and odds. The best way to do this is to
+download and install more than one of the best sports betting apps on your phone.\n\nThen, tap around among the sportsbooks to compare lines and odds for the
+bets you plan.\n\nBest sportsbooks for line shopping\n\nThe biggest brands in sports betting offer competitive lines in dozens of states.'}, {'page': 'Line
+Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': "Line Shopping in Sports Betting - How to Find
+the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)\nShop around at the following top online sportsbooks to find the best prices on your bets.\n\nCaesars
+Sportsbook\n\nCaesars' odds and lines are consistently among the best in the country, making it a must-see when shopping lines. The point spreads here can be a
+half-point to two points better than the competition’s, and the moneyline odds may be more favorable.\n\nBetMGM Sportsbook\n\nThe lines and odds at BetMGM are
+consistently competitive. Plus, sports betting promos and odds boosts abound, so you'll find a better price on many bets here.\n\nDraftKings
+Sportsbook\n\nDraftKings has more open betting markets than most online sportsbooks, and the lines and odds are always competitive.\n\nFanDuel
+Sportsbook\n\nFanDuel is committed to posting competitive odds and runs so many generous promos and odds boosts that it is always worth a look.\n\nHow to find
+the best lines and odds for any bet\n\nShopping around lets you find the best lines and odds for any bet."}, {'page': 'Line Shopping in Sports Betting - How to
+Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': 'Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News,
+2023-11-06T22:21:05+00:00)\nThat means checking the posted lines and odds for the same bets at different sportsbooks.\n\nYou can do this for moneylines, point
+spreads, totals bets, prop bets, and more. Finding the best line or better odds on any bet is like finding money.\n\nYou can shop around using multiple
+sportsbook apps on your phone or live odds feeds like the one above. Pick a side, then use the drop-down menus and tabs to find the odds and lines for that
+bet.\n\nFinally, bet when you see an opportunity at better odds or an improved line compared to the competition.\n\nLine shopping for futures\n\nPeople tend to
+bet futures at their favorite online sportsbook. However, shopping for better odds on any future bet is worth your time. Most game lines are similar at
+different sportsbooks, but the odds in futures markets can vary significantly.\n\nSportsbooks sometimes have higher liabilities for specific teams and offer
+better odds on others to lay that off. Timing is everything.\n\nGet it right, and you can easily take advantage of changes in different futures markets due to
+liability.'}, {'page': 'Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': "Line Shopping in
+Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)\nGetting more points or laying fewer on a typical NFL point spread or NBA
+point spread might lead to winning a bet you’d otherwise lose. Plus, if you find better odds on any bet, you can potentially drop fewer dollars when you lose
+and earn more when you win.\n\nShopping lines will help you consistently find the best prices on your bets. It won't help you pick more winners, but it will
+improve your chances and lead to bigger wins and more affordable losses. That’s undoubtedly worth your time.\n\nFor example, you might like the Kansas City
+Chiefs to beat the Cincinnati Bengals in a mid-season NFL game. Say you look around and see that three of four licensed online sportsbooks in your state have
+the Chiefs as -3 favorites, but the fourth has them at just -2.5.\n\nLet’s say the Chiefs win by exactly three, a distinct possibility since a single field goal
+decides most NFL games. Bets at the first three sportsbooks would push. However, you’d have a winner at the fourth."}, {'page': 'Line Shopping in Sports Betting
+- How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': 'Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News,
+2023-11-06T22:21:05+00:00)\nHowever, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck
+with a push instead of a profit.\n\nWhat is the Vegas line?\n\nLas Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is
+copying a line, it’s usually copying the Vegas line. Most online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all
+lines in every major sport.\n\nIf those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take
+advantage when sportsbooks stray from the Vegas line.\n\nWhy do the lines move?\n\nIt’s worth reiterating that sportsbooks want an equal amount of money bet on
+each side of every bet. When that happens, they earn the small profit built into the odds without concern about who wins or loses.'}, {'page': 'Line Shopping in
+Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)', 'passage': 'Line Shopping in Sports Betting - How to Find the Best Odds
+(Sporting News, 2023-11-06T22:21:05+00:00)\nSportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other
+side to get it that way.\n\nThat’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for
+a legitimate reason, like an injury or roster move. It’ll be difficult for you to find value in that case.\n\nBut when a line moves or odds change because of
+betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right there.\n\nLine shopping is a tool to help you spot
+changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.\n\nChoose a side, shop around at online
+sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable to your viewpoint.\n\nSee more: What
+is a parlay bet?'}]
+</item 8>
+
+<item 9>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+His wingspan and defensive prowess will challenge opponents. Offensively, he capitalizes on mismatches and has diverse scoring abilities, from the paint to the
+3-point line. His underrated passing syncs well with OKC's pace and style.
+
+How to bet on NBA Rookie of the Year
+
+The first thing you need when preparing to bet on the NBA Rookie of the Year Award, or any other bet, is an account at an online sportsbook.
+
+Signing up for a new betting account doesn’t take much time. Once you visit the online sportsbook you’re interested in, click a “sign up” or “register” button.
+This will take you to a form for your details. Fill that out and accept the sportsbook’s terms and conditions.
+
+At that point, you’ll be able to claim your welcome bonus, which you’ll qualify for by following the link on this page from our site to the online sportsbook.
+If you need to enter a code to get the bonus, you’ll also find that code on our site.
+
+Graph facts:
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Gregg Popovich
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Spurs
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> Victor Wembanyama
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NFL
+- NBA Rookie of the Year Odds - Wembanyama the early favorite -MENTIONS-> NBA futures betting
+
+Entities: NBA Rookie of the Year award, Wembanyama, OKC, NBA Rookie of the Year Odds - Wembanyama the early favorite, Sporting News, NBA, online sportsbook
+</item 9>
+
+<item 10>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Ensure the site has a responsible gaming section.
+
+The overall user experience should be smooth and hassle-free.
+
+Safety and Security:
+
+Top NBA betting sites prioritize users' safety.
+
+Ensure your personal information is secure.
+
+Some sportsbooks excel in ensuring cybersecurity; always go for those with solid reputations.
+
+How to find the best NBA lines
+
+Not all sportsbook betting odds are created equal. If you're willing to put in some legwork, you can shop for the best NBA lines to maximize your potential
+return.
+
+Movement in the odds depends on multiple factors, including team news, injuries, public betting, recent play, and even the number of games a team plays in a
+row.
+
+Oddsmakers use all the available information to craft their lines, and you can find value in shopping around for the most favorable lines and odds.
+
+You can use our NBA odds page (see link above) to find the best lines for your prospective bet, or you can open accounts at multiple sportsbooks and do the
+shopping yourself.
+
+Graph facts:
+- UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl -PUBLISHED_BY-> Sporting News
+- North Texas vs. SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green -PUBLISHED_BY-> Sporting News
+- Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game -PUBLISHED_BY-> Sporting News
+- Jaguars vs. Saints live score, updates, highlights from NFL 'Thursday Night Football' game -PUBLISHED_BY-> Sporting News
+- Raiders vs. Lions live score, updates, highlights from NFL 'Monday Night Football' game -PUBLISHED_BY-> Sporting News
+
+Entities: Sporting News, NBA betting, NBA, sportsbooks, responsible gaming, The Best NBA Betting Sites and Apps for the 2023-24 Season, cybersecurity
+</item 10>
+=== END ITEM id=e9fc01f9ca5693cf ===

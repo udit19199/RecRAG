@@ -1,0 +1,83 @@
+{
+ "prompt_version": "2026-11-10.haiku.2",
+ "guide": "You split gold evidence sentences into the separate facts each one states.\n\nFor every item in this file, split each numbered sentence into facts. Cover\nevery fact in the sentence: do not drop names, numbers, dates, places, or\nqualifiers such as 'former', 'first', or 'only'. Each fact is one short\nself-contained statement in plain words that names its subject instead of\nusing a pronoun. Do not add anything the sentence does not say.\n\nWrite the verdict file named in your task as a JSON array with one object per\nitem, in any order:\n{\"id\": \"<item id>\", \"sentences\": [[\"fact\", \"fact\"], [\"fact\"]]}\nThe outer list has one entry per sentence, in sentence order (sentence 0 first).\nUse only ids from this file and do not skip any item or sentence.",
+ "items": [
+  {
+   "id": "multihop-rag-1927",
+   "sentences": [
+    "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.",
+    "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).",
+    "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.",
+    "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+   ]
+  },
+  {
+   "id": "multihop-rag-1749",
+   "sentences": [
+    "This isn’t the first time that Jada has opened up about her long-term commitment to her husband.",
+    "Jada then praised her children for how they’ve helped her grow, adding: “My children, they’re little gurus.",
+    "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep sense of self-acceptance”."
+   ]
+  },
+  {
+   "id": "5adcfbf45542990d50227d86",
+   "sentences": [
+    "\"Into Dust\" is a song by American duo Mazzy Star that appears as the ninth track on their second album \"So Tonight That I Might See\".",
+    "Mazzy Star is an American alternative rock band formed in Santa Monica, California, in 1989 from the group Opal, a collaboration of guitarist David Roback and bassist Kendra Smith."
+   ]
+  },
+  {
+   "id": "5a84b6e15542991dd0999daa",
+   "sentences": [
+    "Mulled wine is a beverage usually made with red wine along with various mulling spices and sometimes raisins.",
+    " It is served hot or warm and is alcoholic, although there are non-alcoholic versions of mulled wine.",
+    "Blue Lagoon is a popular summer cocktail featuring blue Curaçao."
+   ]
+  },
+  {
+   "id": "multihop-rag-1095",
+   "sentences": [
+    "According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm.",
+    "Risk management is a crucial part of the business; risk officers exist to identify business’ potential risks, monitor, and mitigate them.",
+    "Binance has made headlines this past year for a range of reasons, including Zhao’s comments contributing to the collapse of FTX, which was once one of its top competitors.",
+    "Liquidation is a way for FTX to manage risk when people were engaging in risky bets on its platform."
+   ]
+  },
+  {
+   "id": "multihop-rag-865",
+   "sentences": [
+    "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No.",
+    "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.",
+    "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+   ]
+  },
+  {
+   "id": "5a7652435542992d0ec060a5",
+   "sentences": [
+    "Pietro Alessandro Gaspare Scarlatti (2 May 1660 – 22 October 1725) was an Italian Baroque composer, especially famous for his operas and chamber cantatas.",
+    "Pyotr Ilyich Tchaikovsky ( ; Russian: Пётр Ильи́ч Чайко́вский ; 25 April/7 May 1840 – 25 October/6 November 1893), often anglicized as Peter Ilich Tchaikovsky, was a Russian composer of the romantic period, some of whose works are among the most popular music in the classical repertoire.",
+    " He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the United States."
+   ]
+  },
+  {
+   "id": "4839853516523677080",
+   "sentences": [
+    "A muscle relaxant is a drug that affects skeletal muscle function and decreases the muscle tone . It may be used to alleviate symptoms such as muscle spasms , pain , and hyperreflexia . The term `` muscle relaxant '' is used to refer to two major therapeutic groups : neuromuscular blockers and spasmolytics . Neuromuscular blockers act by interfering with transmission at the neuromuscular end plate and have no central nervous system ( CNS ) activity . They are often used during surgical procedures and in intensive care and emergency medicine to cause temporary paralysis . Spasmolytics , also known as `` centrally acting '' muscle relaxants , are used to alleviate musculoskeletal pain and spasms and to reduce spasticity in a variety of neurological conditions . While both neuromuscular blockers and spasmolytics are often grouped together as muscle relaxants , the term is commonly used to refer to spasmolytics only ."
+   ]
+  },
+  {
+   "id": "5ac2758b55429963665199c3",
+   "sentences": [
+    "Nicolae Titulescu (] ; March 4, 1882 – March 17, 1941) was a well-known Romanian diplomat, at various times government minister, finance and foreign minister, and for two terms President of the General Assembly of the League of Nations (1930–32).",
+    "The League of Nations (abbreviated as LN in English, \"La Société des Nations \" ] abbreviated as SDN or SdN in French) was an intergovernmental organisation founded on 10 January 1920 as a result of the Paris Peace Conference that ended the First World War."
+   ]
+  },
+  {
+   "id": "5ae55d1e55429960a22e02cb",
+   "sentences": [
+    " The event was broadcast live on BBC One and was hosted by Graham Norton.",
+    "Graham William Walker (born 4 April 1963), better known as Graham Norton, is an Irish television and radio presenter, DJ, comedian, actor, and writer."
+   ]
+  }
+ ]
+}

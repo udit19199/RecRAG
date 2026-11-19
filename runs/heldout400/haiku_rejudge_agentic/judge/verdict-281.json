@@ -1,0 +1,51 @@
+[
+  {
+    "id": "10e50ddc6c2be57c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  },
+  {
+    "id": "915293f23f3b0648",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "who claimed she took $14 billion from customers to"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "claimed she took $14 billion from customers to repay debts to lenders"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "using them as a line of credit under the instruction of SBF"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "companies, he said."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "9b198a1f1be4f210",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

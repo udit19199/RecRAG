@@ -1,0 +1,55 @@
+[
+  {
+    "id": "b534b6a69fa43eef",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "That answer ultimately lies with the jury"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "1ffd3468dbc9e3d0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "If a piece of news or a prevailing sentiment starts to gain traction about a particular team's increased chances of winning, this can influence how people bet, leading sportsbooks to adjust their lines accordingly."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "If a piece of news or a prevailing sentiment starts to gain traction about a particular team's increased chances of winning, this can influence how people bet, leading sportsbooks to adjust their lines accordingly."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "If a piece of news or a prevailing sentiment starts to gain traction about a particular team's increased chances of winning, this can influence how people bet, leading sportsbooks to adjust their lines accordingly."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "If a significant majority of bettors are placing their money on one team to cover the spread"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing the betting action."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+      {"fact": "3.0", "status": "missing", "evidence": []},
+      {"fact": "3.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "e065acaf0e9dbf30",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "3.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution has made a strong case that Bankman-Fried presided over the various forms of fraud that played out at Alameda Research and FTX, orchestrating some of it and engaging in some of it directly."}]},
+      {"fact": "3.1", "status": "missing", "evidence": []},
+      {"fact": "3.2", "status": "missing", "evidence": []},
+      {"fact": "3.3", "status": "missing", "evidence": []},
+      {"fact": "3.4", "status": "missing", "evidence": []}
+    ]
+  }
+]
