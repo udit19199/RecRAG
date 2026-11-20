@@ -1,0 +1,9 @@
+[
+ {
+  "chunk": "chunk-c10db9fbea870c552bb7faa04d107af0",
+  "stage": "triples",
+  "key": "faf0b0589306a5b89672d89c2d7837be201c6a31a1a6a46f2096aef5186e45e3",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Scrooge, or, Marley's Ghost\",\n    \"1901\",\n    \"British\",\n    \"Walter R. Booth\",\n    \"Ebenezer Scrooge\",\n    \"Marley's Ghost\",\n    \"Charles Dickens\",\n    \"1843\",\n    \"A Christmas Carol\",\n    \"Ewan Davidson\",\n    \"BFI Screenonline\"\n  ],\n  \"triple_list\": [\n    [\"Scrooge, or"
+ }
+]

@@ -1,0 +1,22 @@
+{
+ "dataset": "hotpotqa",
+ "method": "graphrag",
+ "pages": 4860,
+ "chunks": 5122,
+ "corpus_sha256": "ce9482236a22cd041147cd753fe72cb6ab40609be772ffbdc6f3d6e8e9c09ae8",
+ "index_dir": "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/graphrag/indexes/911fda8a4ba92b0c46f2bd0645b21aca47150f715f24bbbdf107b99508a12002",
+ "started_at": "2026-11-13T10:41:57.013406+00:00",
+ "seconds": 3968.940739709011,
+ "service_tier_env": "flex",
+ "calls_by_tier": {
+  "flex": 3396
+ },
+ "failed_calls": 98,
+ "restarts": [
+  "2026-11-13T11:05:33.831581+00:00 LLMGenerationError(OpenAIAPIError('upstream connect error or disconnect/reset before headers. reset reason: connection timeout'))"
+ ],
+ "missing_usage_calls": 0,
+ "billed_usd": 1.4229233875,
+ "list_usd": 2.6865257,
+ "seeded_cache": null
+}

@@ -1,0 +1,1 @@
+2026-11-13T11:05:33.831581+00:00 LLMGenerationError(OpenAIAPIError('upstream connect error or disconnect/reset before headers. reset reason: connection timeout'))

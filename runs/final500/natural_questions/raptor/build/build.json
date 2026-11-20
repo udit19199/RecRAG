@@ -1,0 +1,24 @@
+{
+ "dataset": "natural_questions",
+ "method": "raptor",
+ "pages": 497,
+ "chunks": 21554,
+ "corpus_sha256": "62ade65dcad7bfaa5e41f0b039a5dddaf640ef26b04a4b0aa9849df7c3b60ee9",
+ "index_dir": "/data/workspace/RecRAG/runs/final500/natural_questions/raptor/indexes/c7803516fbbcd9614c71dad0bf09d04fecd1372e7b53cba0fe42e0ab2639ae99",
+ "started_at": "2026-11-13T21:19:06.987441+00:00",
+ "seconds": 14010.743830024001,
+ "service_tier_env": "flex",
+ "calls_by_tier": {
+  "flex": 11093,
+  "default": 7535
+ },
+ "failed_calls": 303,
+ "restarts": [
+  "2026-11-13T23:32:02.100809+00:00 InternalServerError(\"Error code: 500 - {'error': {'message': 'The server had an error while processing your request. Sorry about that!', 'type': 'server_error', 'param': None, 'code': None}}\")"
+ ],
+ "purged_cache_rows": 0,
+ "missing_usage_calls": 0,
+ "billed_usd": 0.9123661425,
+ "list_usd": 1.75322046,
+ "seeded_cache": null
+}

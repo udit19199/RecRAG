@@ -1,0 +1,254 @@
+[
+ {
+  "chunk": "chunk-551ac7620d9282d1bc07f6ef84ea6c30",
+  "stage": "triples",
+  "key": "c988bac75380eb4092fb84d5cbd1babe8c145d236b55bb4dd7d9a36d764e29cd",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Loppa Church\",\n    \"Loppa kirke\",\n    \"Loppa\",\n    \"Finnmark\",\n    \"Norway\",\n    \"Alta deanery\",\n    \"Diocese of Nord-H\u00e5logaland\",\n    \"1953\"\n  ],\n  \"triple_list\": [\n    [\"Loppa Church\", \"has Norwegian name\", \"Loppa kirke\"],\n    [\"Loppa Church\", \"is a parish church in th"
+ },
+ {
+  "chunk": "chunk-3f6abf927cbaaf0f6a02c866b5592d8b",
+  "stage": "triples",
+  "key": "d7b0d70a171bf1f70d15d12c9ee43a7815a158a12dfb75c4ebf8ef87e959c2a8",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Battle of Blue Licks\",\n    \"August 19, 1782\",\n    \"American Revolutionary War\",\n    \"Lord Cornwallis\",\n    \"Yorktown\",\n    \"Licking River\",\n    \"Robertson County\",\n    \"Kentucky\",\n    \"Kentucky County\",\n    \"Virginia\"\n  ],\n  \"triple_list\": [\n    [\"Battle of Blue Licks\", "
+ },
+ {
+  "chunk": "chunk-7549a99797a20a2f5fc2c35ad5a5689c",
+  "stage": "triples",
+  "key": "fedcf691e0ef2f477349371295cb2527ad8f41e00c0c9f84d9e18bb63f395b13",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\"Last Man Standing\", \"1996\", \"Walter Hill\", \"Bruce Willis\", \"Christopher Walken\", \"Bruce Dern\", \"Akira Kurosawa\", \"Yojimbo\"],\n  \"triple_list\": [\n    [\"Last Man Standing\", \"released in\", \"1996\"],\n    [\"Last Man Standing\", \"written by\", \"Walter Hill\"],\n    [\"Last Man Standing\", "
+ },
+ {
+  "chunk": "chunk-b7450415c4ce1ddee120e2e6f6740b53",
+  "stage": "triples",
+  "key": "ef1c8f66d04b701153bab7a8dc9059ca965e3d4190752a75df27507685e62828",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"The Breeders\",\n    \"Kim Deal\",\n    \"Pixies\",\n    \"Tanya Donelly\",\n    \"Throwing Muses\",\n    \"4AD\",\n    \"Pod\",\n    \"Safari\",\n    \"Last Splash\",\n    \"May 1990\",\n    \"1989\",\n    \"1990\",\n    \"1992\",\n    \"1993\",\n    \"1994\",\n    \"United States\",\n    \"Billboard 200\",\n    \"Recor"
+ },
+ {
+  "chunk": "chunk-1b8c555d41493569ce9ba8c5be351383",
+  "stage": "triples",
+  "key": "05d5e1ef6eff3c79beace89403f57a581aa8307ceb807551b09d7affca857561",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Boeing F/A-18E/F Super Hornet\",\n    \"Boeing\",\n    \"F/A-18E\",\n    \"F/A-18F\",\n    \"McDonnell Douglas\",\n    \"F/A-18 Hornet\",\n    \"F/A-18C\",\n    \"F/A-18D\",\n    \"M61\"\n  ],\n  \"triple_list\": [\n    [\"Boeing F/A-18E/F Super Hornet\", \"is based on\", \"F/A-18 Hornet\"],\n    [\"F/A-18E\""
+ },
+ {
+  "chunk": "chunk-c10db9fbea870c552bb7faa04d107af0",
+  "stage": "triples",
+  "key": "faf0b0589306a5b89672d89c2d7837be201c6a31a1a6a46f2096aef5186e45e3",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Scrooge, or, Marley's Ghost\",\n    \"1901\",\n    \"British\",\n    \"Walter R. Booth\",\n    \"Ebenezer Scrooge\",\n    \"Marley's Ghost\",\n    \"Charles Dickens\",\n    \"1843\",\n    \"A Christmas Carol\",\n    \"Ewan Davidson\",\n    \"BFI Screenonline\"\n  ],\n  \"triple_list\": [\n    [\"Scrooge, or"
+ },
+ {
+  "chunk": "chunk-cb314badf095ae84bcda1ae83411c53e",
+  "stage": "triples",
+  "key": "6dbca3c74805e2ae7be037265eb3d2195741246f0749744138c85341e671df8f",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Godzilla: Final Wars\",\n    \"\u30b4\u30b8\u30e9 \u30d5\u30a1\u30a4\u30ca\u30eb\u30a6\u30a9\u30fc\u30ba\",\n    \"Gojira: Fainaru W\u014dzu\",\n    \"Godzilla\",\n    \"Toho\",\n    \"Millennium series\",\n    \"Ryuhei Kitamura\",\n    \"Wataru Mimura\",\n    \"Isao Kiriyama\",\n    \"Masahiro Matsuoka\",\n    \"Rei Kikukawa\",\n    \"Don Frye\",\n    \"Maki Mizuno\",\n "
+ },
+ {
+  "chunk": "chunk-1189b4e007a499da67d1e0747019e4a6",
+  "stage": "triples",
+  "key": "f2a1c490e15c289cbe9b83f6f24667ba0e34251dbe06859650921a6c556d05af",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\"German Spitz (Klein)\", \"German Spitz\"],\n  \"triple_list\": [\n    [\"German Spitz (Klein)\", \"is a breed of\", \"dog\"],\n    [\"German Spitz (Klein)\", \"is of the type\", \"German Spitz\"],\n    [\"German Spitz (Klein)\", \"is usually classed as\", \"toy breed\"],\n    [\"German Spitz (Klein)\", \"i"
+ },
+ {
+  "chunk": "chunk-ddfe0ad1f172ab3454eaed0df11ab69c",
+  "stage": "triples",
+  "key": "25d8266ad5ff2b274a789e2b59cf0675273fd7d894f158a33c5c96b33b54595b",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Nedal Hussein\",\n    \"Oriental and Pacific Boxing Federation\",\n    \"OPBF\",\n    \"Hiroyuki Enoki\",\n    \"Takashi Uchiyama\"\n  ],\n  \"triple_list\": [\n    [\"OPBF\", \"abbreviation of\", \"Oriental and Pacific Boxing Federation\"],\n    [\"Nedal Hussein\", \"fought against\", \"Hiroyuki Eno"
+ },
+ {
+  "chunk": "chunk-96fb6e74c35717f1bac19cdee1e2d14b",
+  "stage": "triples",
+  "key": "7dd948b4e30eaa9943f47e8d4909fe8067409230fd4222cde43a2e04c304dabe",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Fallow deer\",\n    \"Dama dama\",\n    \"Cervidae\",\n    \"western Eurasia\",\n    \"Antigua & Barbuda\",\n    \"Argentina\",\n    \"South Africa\",\n    \"Fernando P\u00f3\",\n    \"S\u00e3o Tom\u00e9\",\n    \"Madagascar\",\n    \"Mauritius\",\n    \"Mayotte\",\n    \"R\u00e9union\",\n    \"Seychelles\",\n    \"Comoro Islands\","
+ },
+ {
+  "chunk": "chunk-06b30718a4d048129e6b576de12d03ae",
+  "stage": "triples",
+  "key": "1cb30ed3da180672deb2dfa2895f775b61caa61ca0d8d01065e8094063031304",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Subatomic Sound System\",\n    \"1999\",\n    \"John Emch\",\n    \"Noah Shachtman\",\n    \"New York City\",\n    \"Brooklyn\",\n    \"fall 2008\",\n    \"Vienna\",\n    \"Dubblestandart\",\n    \"Lee \\\"Scratch\\\" Perry\",\n    \"12-inch vinyl\",\n    \"UK\",\n    \"the first decade of the 21st century\",\n "
+ },
+ {
+  "chunk": "chunk-e9d5edd0c68a515983fab449a2a906af",
+  "stage": "triples",
+  "key": "0f25416eaeba911a3f70e506940e1f7bfbde7d274a293b8500c226bafb49f74d",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Just a Little Time\",\n    \"Lynsey de Paul\",\n    \"30 September 1994\",\n    \"Music Deluxe\",\n    \"Tring International PLC\",\n    \"Arc Records\",\n    \"The Magic Collection\",\n    \"Sugar Me\",\n    \"Getting a Drag\",\n    \"Storm in a Teacup\",\n    \"Dancing on a Saturday Night\",\n    \"Wo"
+ },
+ {
+  "chunk": "chunk-ae22e882a645e379995ab5b8983bb365",
+  "stage": "triples",
+  "key": "1aa53eede9148fffd62aae509936272214872ac858c90792bca5c28fd68cc762",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"The Earrings of Madame de\u2026\",\n    \"Madame de\u2026\",\n    \"1953\",\n    \"Max Oph\u00fcls\",\n    \"Louise Leveque de Vilmorin\",\n    \"Marcel Archard\",\n    \"Annette Wadement\",\n    \"1950s\",\n    \"French cinema\",\n    \"Andrew Sarris\"\n  ],\n  \"triple_list\": [\n    [\"The Earrings of Madame de\u2026\", \""
+ },
+ {
+  "chunk": "chunk-46a5ca98670a7e485ac63a815991711a",
+  "stage": "triples",
+  "key": "7e88f9ed5c205091263530be43be092ecda42c37b7611c3a9ae2825e36c5b236",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Franklin-Creighton Mine\",\n    \"Georgia Gold Rush\",\n    \"Yellow Creek Road\",\n    \"Ball Ground\",\n    \"Cherokee County\",\n    \"Georgia\",\n    \"Etowah River\",\n    \"Franklin Mine\",\n    \"Mrs. Mary G. Franklin\",\n    \"Gold Lottery of 1832\",\n    \"1832\",\n    \"1883\",\n    \"Creighton M"
+ },
+ {
+  "chunk": "chunk-bafc2550b6f06861c9db575c85fceccb",
+  "stage": "triples",
+  "key": "6c55d9f722f4e9a5cd96f0605fb4b1ddd175fcd3a4f926fa9e1f10842196cc52",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Long Island Electric Railway\",\n    \"Brooklyn\",\n    \"Queens\",\n    \"Nassau County\",\n    \"New York\",\n    \"United States\",\n    \"1894\",\n    \"1926\",\n    \"Long Island Consolidated Electric Companies\",\n    \"Long Island Rail Road\",\n    \"August Belmont\",\n    \"Interborough Rapid Tr"
+ },
+ {
+  "chunk": "chunk-9a9d43d03b4c1f5d23f7378459092b79",
+  "stage": "triples",
+  "key": "301bef5a42b2c3e1c77214e10819bd3afb72ab5de15e7e6857d6cd5edf0fba26",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Scandinavian folklore\",\n    \"Nordic folklore\",\n    \"Norway\",\n    \"Sweden\",\n    \"Finland\",\n    \"Denmark\",\n    \"Iceland\",\n    \"Faroe Islands\"\n  ],\n  \"triple_list\": [\n    [\"Scandinavian folklore\", \"also known as\", \"Nordic folklore\"],\n    [\"Scandinavian folklore\", \"folklore "
+ },
+ {
+  "chunk": "chunk-8c7c556b24ab7d92249ea39824da8bd0",
+  "stage": "triples",
+  "key": "652f3a4bade314c706cf494c30506af3b9b53c356bbf14083c65737f3a585e56",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Adventure Time\",\n    \"2007\",\n    \"Random! Cartoons\",\n    \"Nicktoons Network\",\n    \"YouTube\",\n    \"Nickelodeon\",\n    \"Cartoon Network\",\n    \"April 5, 2010\"\n  ],\n  \"triple_list\": [\n    [\"Adventure Time pilot\", \"first aired in\", \"2007\"],\n    [\"Adventure Time pilot\", \"was re"
+ },
+ {
+  "chunk": "chunk-a6d86d2ee485ba6d4506770be9a59d40",
+  "stage": "triples",
+  "key": "6909291daf589f62ea9539565a0ee7665d49b9bc3dbc106e5536e660eb542eaa",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Witmer Stone\",\n    \"September 22, 1866\",\n    \"May 24, 1939\",\n    \"American Ornithologists\u2019 Union\",\n    \"The Auk\",\n    \"1912\u20131936\",\n    \"1920\u201323\",\n    \"1931\",\n    \"Academy of Natural Sciences of Philadelphia\",\n    \"Delaware Valley Ornithological Club\",\n    \"1890\",\n    \"Jo"
+ },
+ {
+  "chunk": "chunk-3f7aebfce24320e31dfc1748ee52c8db",
+  "stage": "triples",
+  "key": "3dd1e9cfb15adff52d89ae1aa957b9960e5eb568b0f257c380dd230e1c5b3004",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Scott Free Productions\",\n    \"Ridley Scott\",\n    \"Tony Scott\",\n    \"Percy Main Productions\",\n    \"1980\",\n    \"Percy Main\",\n    \"1995\",\n    \"Gladiator\",\n    \"2000\",\n    \"Cracks\",\n    \"2009\",\n    \"White Squall\",\n    \"1996\",\n    \"G.I. Jane\",\n    \"1997\",\n    \"Hollywood\"\n  ],"
+ },
+ {
+  "chunk": "chunk-751ec4a0a5af755fe7d7cc8e36e18ebc",
+  "stage": "triples",
+  "key": "32d6c02b398479c129043622597ee13a24a5ae5787b88f57655c27ade08ffec5",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Hector Fautario\",\n    \"Hector Luis Fautario\",\n    \"Argentine Air Force\",\n    \"1973\",\n    \"1975\",\n    \"1976 Argentine coup d'\u00e9tat\",\n    \"Army\",\n    \"Navy\",\n    \"General Jorge Rafael Videla\"\n  ],\n  \"triple_list\": [\n    [\"Hector Luis Fautario\", \"also known as\", \"Hector Faut"
+ },
+ {
+  "chunk": "chunk-684039da609ae2b42598551eac98241d",
+  "stage": "triples",
+  "key": "5df9178f957920545364eb0ef08f1e21d1debe6ec0bcdc963c015b39308d2c7d",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Ulf Merbold\",\n    \"Dr. Ulf Dietrich Merbold\",\n    \"June 20, 1941\",\n    \"West German\",\n    \"Sigmund J\u00e4hn\",\n    \"German\",\n    \"European Space Agency Astronaut Corps\",\n    \"US\",\n    \"1983\",\n    \"Byron Lichtenberg\"\n  ],\n  \"triple_list\": [\n    [\"Dr. Ulf Dietrich Merbold\", \"al"
+ },
+ {
+  "chunk": "chunk-0732d9fcf2c1afc59dee9e187c077c2c",
+  "stage": "triples",
+  "key": "1528e2aab68f27e254a00bcfe507d02925703ebdcf7d117cfec2afe9b25cafa1",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Loreta Janeta Vel\u00e1zquez\",\n    \"June 26, 1842\",\n    \"1923\",\n    \"Cuba\",\n    \"American Civil War\",\n    \"Confederate States Army\",\n    \"1861\",\n    \"Bull Run\",\n    \"Ball's Bluff\",\n    \"Fort Donelson\",\n    \"New Orleans\",\n    \"Shiloh\",\n    \"U.S. Secret Service\",\n    \"William C"
+ },
+ {
+  "chunk": "chunk-07bda5b557b719a115f7973172837fdc",
+  "stage": "triples",
+  "key": "4354ee56a493cc0aba93cc1a49bd3fcf7a7366467969770eee923e223d9fe312",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Doug Grean\",\n    \"Los Angeles\",\n    \"Sheryl Crow\",\n    \"Ricki Lee Jones\",\n    \"Glen Campbell\",\n    \"Scott Weiland\",\n    \"Slash\",\n    \"Velvet Revolver\",\n    \"Stone Temple Pilots\",\n    \"The Crystal Method\",\n    \"Tim McGraw\",\n    \"Cyndi Lauper\",\n    \"Annabella Lwin\",\n    \"B"
+ },
+ {
+  "chunk": "chunk-fb9467a3c721dc94be3b84df439fb8f8",
+  "stage": "triples",
+  "key": "b31685e9c01cd6af9a8236085075e60a787c2a400c31993e37c154321ad5de49",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"U2 360\u00b0 Tour\",\n    \"U2\",\n    \"No Line on the Horizon\",\n    \"2009\",\n    \"2011\",\n    \"The Claw\"\n  ],\n  \"triple_list\": [\n    [\"U2 360\u00b0 Tour\", \"was performed by\", \"U2\"],\n    [\"U2 360\u00b0 Tour\", \"was a\", \"worldwide concert tour\"],\n    [\"U2 360\u00b0 Tour\", \"was launched in support of"
+ },
+ {
+  "chunk": "chunk-d9db4e958bc53f72d926a3c854ae0a1f",
+  "stage": "triples",
+  "key": "de2b008f1cd411824ce5766272e7903e8863fec85fee0925757fd9fff3233341",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Fire: From a Journal of Love\",\n    \"Fire: From the Unexpurgated Diary of Ana\u00efs Nin\",\n    \"Ana\u00efs Nin\",\n    \"1995\",\n    \"1934\u20131937\"\n  ],\n  \"triple_list\": [\n    [\"Fire: From a Journal of Love\", \"full title\", \"Fire: From the Unexpurgated Diary of Ana\u00efs Nin\"],\n    [\"Fire: Fro"
+ },
+ {
+  "chunk": "chunk-f04bd5e25b42a9db679534445106c3e8",
+  "stage": "triples",
+  "key": "7c51ee0a49c35f033e5132fd8528334db16a0121584130f655edb7d60fa8cbcc",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Fernando Fern\u00e1ndez\",\n    \"El Crooner de M\u00e9xico\",\n    \"November 9, 1916\",\n    \"Monterrey\",\n    \"Mexico\",\n    \"Mexico City\",\n    \"November 24, 1999\",\n    \"Eloisa Reyes\",\n    \"Emilio Fern\u00e1ndez\",\n    \"Jaime Fern\u00e1ndez\",\n    \"Lupita Palomera\",\n    \"2008\",\n    \"the Crooner of M"
+ },
+ {
+  "chunk": "chunk-f539de371d95ce2624b07df965433fdb",
+  "stage": "triples",
+  "key": "537a3f89d43cec471a7a9f6830fb40aa3fe5d8a306eca5571b45c3ed6bf9eca3",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\"Oxfordshire\", \"late 1990s\"],\n  \"triple_list\": [\n    [\"A people's jury\", \"is also called\", \"a citizen's jury\"],\n    [\"A people's jury\", \"is used by\", \"a democratically elected body\"],\n    [\"A people's jury\", \"aims to\", \"resolve a divisive issue and reach consensus\"],\n    [\"A p"
+ },
+ {
+  "chunk": "chunk-a2c54b72237f6bde0f4fe4e709ddabdc",
+  "stage": "triples",
+  "key": "32d9f60dfb10fe09a9947b4d5d3a3206a83101d9dd08fb4d96861b6e186d2af7",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Allison Miller\",\n    \"September 2, 1985\",\n    \"Michelle Benjamin\",\n    \"NBC\",\n    \"Kings\",\n    \"Skye Tate\",\n    \"Fox\",\n    \"Terra Nova\",\n    \"Carrie\",\n    \"Go On\",\n    \"Laura Larson\",\n    \"Syfy\",\n    \"Incorporated\"\n  ],\n  \"triple_list\": [\n    [\"Allison Miller\", \"was born"
+ },
+ {
+  "chunk": "chunk-de9c89d4b4451316d5a002032ef88f70",
+  "stage": "triples",
+  "key": "efc32fed13fe0c2ffaad265c5f7f6ef4d50ce863909eedc57ae2d1cc75c0ba80",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Bruce Yonemoto\",\n    \"1949\",\n    \"National Endowment for the Arts\",\n    \"American Film Institute\",\n    \"The Rockefeller Foundation\",\n    \"Maya Deren Award for Experimental Film and Video\",\n    \"Japanese American National Museum\",\n    \"InterCommunication Center\",\n    \"Tok"
+ },
+ {
+  "chunk": "chunk-39658ae7b18bbcff0f52d4f7ce784c7e",
+  "stage": "triples",
+  "key": "df3998b8d10254ba13e7f8248a865a1afaabdc2d96def18f566ad2430e915f0d",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Arthur Millard\",\n    \"Arthur Arnold Millard\",\n    \"1869\",\n    \"1891\",\n    \"English\",\n    \"Birmingham\",\n    \"Football Alliance\",\n    \"Small Heath\",\n    \"FA Cup\",\n    \"1891\u201392\"\n  ],\n  \"triple_list\": [\n    [\"Arthur Arnold Millard\", \"also known as\", \"Arthur Millard\"],\n    [\""
+ },
+ {
+  "chunk": "chunk-0fe94a57d28de744e6303882256c50bf",
+  "stage": "triples",
+  "key": "e30b103c28534d5492d56b6daf8bf38e0a22319acab16783dfbc815003302489",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Charles Pede\",\n    \"Charles N. Pede\",\n    \"United States Army\",\n    \"July 26, 2017\"\n  ],\n  \"triple_list\": [\n    [\"Charles N. Pede\", \"also known as\", \"Charles Pede\"],\n    [\"Charles N. Pede\", \"is a\", \"military lawyer\"],\n    [\"Charles N. Pede\", \"serves as\", \"40th Judge Advo"
+ },
+ {
+  "chunk": "chunk-2976a6a7dcd4af2e96ea7b6a6eda6fe4",
+  "stage": "triples",
+  "key": "81104bf711211737b16aaf072cc84f7d7e1567b163059fad9f4bcf7d9bc26989",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Madonna\",\n    \"Sire Records\",\n    \"1982\",\n    \"MTV\",\n    \"Borderline\",\n    \"Lucky Star\",\n    \"Like a Virgin\",\n    \"Madonna (1984)\",\n    \"1985\",\n    \"True Blue\",\n    \"1986\",\n    \"Making My Video\",\n    \"La Isla Bonita\",\n    \"Who's That Girl\",\n    \"1987\"\n  ],\n  \"triple_list"
+ },
+ {
+  "chunk": "chunk-e911ab3857faeabeb725d0a5b62f5d5d",
+  "stage": "triples",
+  "key": "e73b607be62025f2da78ad058ac570bbe50b04966073b99989d2a4e6898fbf59",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\"Leave Them Boys Alone\", \"Ernest Tubb\", \"Nashville Sound\", \"1960s\"],\n  \"triple_list\": [\n    [\"Leave Them Boys Alone\", \"associated with\", \"Ernest Tubb\"],\n    [\"Nashville Sound\", \"took over the music in\", \"1960s\"]\n  ]\n}"
+ },
+ {
+  "chunk": "chunk-0a5f6e0111abc16ca351958a3bea2ea2",
+  "stage": "triples",
+  "key": "e67e2252779e9c7833f586ef529d1c7ea1ff1f131d7a512be8f2d58c330f1b1b",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"Daphne\",\n    \"Richard Strauss\",\n    \"Joseph Gregor\",\n    \"Ovid\",\n    \"Metamorphoses\",\n    \"The Bacchae\",\n    \"Euripides\",\n    \"Semperoper\",\n    \"Dresden\",\n    \"15 October 1938\",\n    \"Friedenstag\",\n    \"Karl B\u00f6hm\"\n  ],\n  \"triple_list\": [\n    [\"Daphne\", \"is an opera compos"
+ },
+ {
+  "chunk": "chunk-75565cd8a99faa14094270be45106358",
+  "stage": "triples",
+  "key": "6fa99d71038f46a702c9c7170924ac29b09bf85facb1673d442d190d81507e56",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\n    \"On Broadway: Act One \u2013 October 28th, 1987\",\n    \"Jerry Garcia Band\",\n    \"Jerry Garcia Acoustic Band\",\n    \"Grateful Dead\",\n    \"Jerry Garcia\",\n    \"Lunt-Fontanne Theatre\",\n    \"New York City\",\n    \"October 28, 1987\",\n    \"ATO Records\",\n    \"June 23, 2015\"\n  ],\n  \"triple"
+ },
+ {
+  "chunk": "chunk-60000db3d2171549621456783fb6910b",
+  "stage": "triples",
+  "key": "a4b8fe580c44590341dc91fd5466f77816e44b03797bba86caaede7bcc5bb897",
+  "error": "OpenIE response does not contain a valid JSON object with 'triples'.",
+  "reply": "{\n  \"named_entities\": [\"National Institutes of Health\"],\n  \"triple_list\": [\n    [\"National Institutes of Health\", \"recommends\", \"a weight loss goal of 5% to 10% of a person's current weight\"],\n    [\"National Institutes of Health\", \"recommends achieving the weight loss goal over\", \"six months\"]\n  ]\n}"
+ }
+]

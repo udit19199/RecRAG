@@ -1,0 +1,6 @@
+[
+ {
+  "key": "767e0ffd66352f45a5a1aa3caf6164bfa4311b08668d3fa106603e3dfc4d40f3",
+  "reply": "{\"nodes\":[{\"id\":\"0\",\"label\":\"Place\",\"properties\":[{\"key\":\"name\",\"value\":\"Disney's Art of Animation Resort\"},{\"key\":\"kind\",\"value\":\"resort\"},{\"key\":\"completed_on\",\"value\":\"2012\"},{\"key\":\"coordinates\",\"value\":{\"latitude\":28.3502722,\"longitude\":-81.5484972,\"height\":0}}]},{\"id\":\"1\",\"label\":\"Place\",\"properties\":[{\"key\":\"name\",\"value\":\"Walt Disney World Resort\"},{\"key\":\"kind\",\"value\":\"resort\"}]},{\"id\":\"2\",\"label\":\"Place\",\"properties\":[{\"key\":\"name\",\"value\":\"Four Seasons\"},{\"key\":\"kind\",\"value\":\"hotel\"}]},{\"id\":\"3\",\"label\":\"Place\",\"properties\":[{\"key\":\"name\",\"value\":\"Hilton\"},{\"key\":\"kind\",\"value\":\"h"
+ }
+]

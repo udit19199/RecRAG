@@ -1,0 +1,19 @@
+{
+ "dataset": "natural_questions",
+ "method": "graphrag",
+ "pages": 497,
+ "chunks": 21554,
+ "corpus_sha256": "62ade65dcad7bfaa5e41f0b039a5dddaf640ef26b04a4b0aa9849df7c3b60ee9",
+ "index_dir": "/data/workspace/RecRAG/runs/final500/natural_questions/graphrag/indexes/52b2ad143f0b1235d5e09974fc2bf3f0f638c073440920e4ba1e2d4a2b1286a1",
+ "started_at": "2026-11-13T19:19:00.131260+00:00",
+ "seconds": 794.6313919759996,
+ "service_tier_env": "flex",
+ "calls_by_tier": {},
+ "failed_calls": 0,
+ "restarts": [],
+ "purged_cache_rows": 0,
+ "missing_usage_calls": 0,
+ "billed_usd": 0,
+ "list_usd": 0,
+ "seeded_cache": null
+}

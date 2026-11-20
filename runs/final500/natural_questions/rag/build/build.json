@@ -1,0 +1,19 @@
+{
+ "dataset": "natural_questions",
+ "method": "rag",
+ "pages": 497,
+ "chunks": 21554,
+ "corpus_sha256": "62ade65dcad7bfaa5e41f0b039a5dddaf640ef26b04a4b0aa9849df7c3b60ee9",
+ "index_dir": "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/rag/indexes/f1fbc2708604669b3504eb39ea7c8172c11217d3f05513532b546e9be650e045",
+ "started_at": "2026-11-13T09:33:40.816758+00:00",
+ "seconds": 1618.2524849579931,
+ "service_tier_env": "flex",
+ "calls_by_tier": {
+  "default": 1348
+ },
+ "failed_calls": 0,
+ "missing_usage_calls": 0,
+ "billed_usd": 0.0959713,
+ "list_usd": 0.0959713,
+ "seeded_cache": null
+}

@@ -3,7 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-build/
+# Root only: run folders keep a build/ directory of index-build records
+/build/
 dist/
 wheels/
 *.egg-info/
@@ -46,8 +47,19 @@ runs/**/*.pickle
 state/
 tmp/
 
-# Dataset inputs are fetched on demand by dataset.py and scripts/
-datasets/
+# Index-build records are committed (build.json, errors, purged rows); the
+# verbose log and itemised per-call cost dumps are too large and stay local.
+# The ! line overrides the global gitignore's broad "build/" rule.
+!runs/**/build/
+runs/**/build/build.log
+runs/**/build/build_cost*.json
+
+# Dataset inputs are fetched on demand by dataset.py and scripts/. The pinned
+# HotpotQA sample is committed because it fixes the question set.
+datasets/*
+!datasets/hotpotqa/
+datasets/hotpotqa/*
+!datasets/hotpotqa/hotpotqa_distractor_validation_hard_bridge_1000_seed_42.json
 
 # Agent and local tooling
 .agents/

@@ -1,0 +1,24 @@
+{
+ "dataset": "hotpotqa",
+ "method": "hipporag",
+ "pages": 4860,
+ "chunks": 5122,
+ "corpus_sha256": "ce9482236a22cd041147cd753fe72cb6ab40609be772ffbdc6f3d6e8e9c09ae8",
+ "index_dir": "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/hipporag/indexes/dc616713f8a77d285d4459bcc65f9adef2d8997069551a88b8c672aca9254739",
+ "started_at": "2026-11-13T12:36:15.190101+00:00",
+ "seconds": 842.5760647499992,
+ "service_tier_env": "flex",
+ "calls_by_tier": {
+  "flex": 37,
+  "default": 203
+ },
+ "failed_calls": 0,
+ "restarts": [
+  "2026-11-13T12:37:32.473187+00:00 RuntimeError(\"Triple extraction failed for 1 chunk(s): ['chunk-c10db9fbea870c552bb7faa04d107af0']\")"
+ ],
+ "purged_cache_rows": 1,
+ "missing_usage_calls": 0,
+ "billed_usd": 0.03179142,
+ "list_usd": 0.037666820000000004,
+ "seeded_cache": null
+}

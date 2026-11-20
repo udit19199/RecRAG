@@ -1,0 +1,26 @@
+{
+ "dataset": "natural_questions",
+ "method": "hipporag",
+ "pages": 497,
+ "chunks": 21553,
+ "corpus_sha256": "bd548966746baa628c2968b1cdca8183e923d29645ed70f3ef8871e5a5cda01e",
+ "index_dir": "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/natural_questions/hipporag/indexes/34414cf7e5d00470830c19cd29e28a24bbb5a1a9958ebb05b9c45f1624697d45",
+ "started_at": "2026-11-13T14:39:53.243694+00:00",
+ "seconds": 6057.597305500007,
+ "service_tier_env": "flex",
+ "calls_by_tier": {
+  "flex": 758,
+  "default": 1190
+ },
+ "failed_calls": 52,
+ "restarts": [
+  "2026-11-13T14:40:34.355612+00:00 RuntimeError(\"Triple extraction failed for 732 chunk(s): ['chunk-927f1492cf0303cddbe419a6183be36e', 'chunk-ebda80bc3a6e0e76689ea2b71961dab8', 'chunk-6c8c5558b0936bfd8c147814df8f9323', 'chunk-893daef62c86c5c4bd43797978258f1c', 'chunk-417ca0eea802730242f6367c223a8c38', 'chunk-1dd757b6b3bc9b65f9cb2f97f33b3c51', 'chunk-f7e4da487423566524346e21b02b008d', 'chunk-05b109445af399869f0fcbbdeb95d075', 'chunk-1868edf5c3354276a66b5a829683416c', 'chunk-79bc20bcc3c25b8080d04673",
+  "2026-11-13T14:56:46.278224+00:00 RuntimeError(\"Triple extraction failed for 43 chunk(s): ['chunk-d518acc1f18808e1467c2fdc22ceacad', 'chunk-1868edf5c3354276a66b5a829683416c', 'chunk-00a1db371dd2d48daa0e867a74567cb5', 'chunk-65806a14bd035cf4e2c3852a11118bea', 'chunk-d172503cd5b490323803caca8fa1ebdd', 'chunk-ffa925be0b7df09e48fe1571ea585bf7', 'chunk-547b3ea18cc4e96c34aeb570c1eb571a', 'chunk-305e7fa5c198c3ce9f6c7c8320a5a8e8', 'chunk-50352c835f12db67207914b0c39b07cd', 'chunk-4b8b21be4db1fd1d3a0cd65c8",
+  "2026-11-13T15:02:48.991119+00:00 RuntimeError(\"Triple extraction failed for 1 chunk(s): ['chunk-4b8b21be4db1fd1d3a0cd65c8688fc99']\")"
+ ],
+ "purged_cache_rows": 767,
+ "missing_usage_calls": 0,
+ "billed_usd": 0.37497016,
+ "list_usd": 0.58427232,
+ "seeded_cache": null
+}

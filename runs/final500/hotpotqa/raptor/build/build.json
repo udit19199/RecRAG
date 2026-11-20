@@ -1,0 +1,20 @@
+{
+ "dataset": "hotpotqa",
+ "method": "raptor",
+ "pages": 4860,
+ "chunks": 5122,
+ "corpus_sha256": "ce9482236a22cd041147cd753fe72cb6ab40609be772ffbdc6f3d6e8e9c09ae8",
+ "index_dir": "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/raptor/indexes/2979b1697d3ad7d32005435217af6623ee08384c463834a8c3ee75a0f86fc5b7",
+ "started_at": "2026-11-13T09:33:36.735711+00:00",
+ "seconds": 6344.763056875003,
+ "service_tier_env": "flex",
+ "calls_by_tier": {
+  "default": 710,
+  "flex": 387
+ },
+ "failed_calls": 44,
+ "missing_usage_calls": 0,
+ "billed_usd": 0.079871735,
+ "list_usd": 0.13455874,
+ "seeded_cache": null
+}

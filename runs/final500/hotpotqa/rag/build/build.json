@@ -1,0 +1,19 @@
+{
+ "dataset": "hotpotqa",
+ "method": "rag",
+ "pages": 4860,
+ "chunks": 5122,
+ "corpus_sha256": "ce9482236a22cd041147cd753fe72cb6ab40609be772ffbdc6f3d6e8e9c09ae8",
+ "index_dir": "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/final500/hotpotqa/rag/indexes/5dff86f578fac0ee98ceddd583c63294ee8a51349b436bda8d4f81883734fa73",
+ "started_at": "2026-11-13T09:33:36.725066+00:00",
+ "seconds": 336.8001247499924,
+ "service_tier_env": "flex",
+ "calls_by_tier": {
+  "default": 321
+ },
+ "failed_calls": 0,
+ "missing_usage_calls": 0,
+ "billed_usd": 0.012646880000000001,
+ "list_usd": 0.012646880000000001,
+ "seeded_cache": null
+}
