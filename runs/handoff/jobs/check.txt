@@ -1,0 +1,10 @@
+A0_vector_top10 r1: 250 answers, 250 questions, 0 empty answers
+A0_vector_top10 r2: 250 answers, 250 questions, 0 empty answers
+A0_vector_top10 r3: 250 answers, 250 questions, 0 empty answers
+A2_graph_top10 r1: 250 answers, 250 questions, 0 empty answers
+A2_graph_top10 r2: 250 answers, 250 questions, 0 empty answers
+A2_graph_top10 r3: 250 answers, 250 questions, 0 empty answers
+A3_picks_no_graph_rows r1: 250 answers, 250 questions, 0 empty answers
+A3_picks_no_graph_rows r2: 250 answers, 250 questions, 0 empty answers
+A3_picks_no_graph_rows r3: 250 answers, 250 questions, 0 empty answers
+ok

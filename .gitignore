@@ -68,3 +68,4 @@ datasets/hotpotqa/*
 .cursor/
 .gemini/
 skills-lock.json
+runs/handoff/cache/

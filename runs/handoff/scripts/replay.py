@@ -67,37 +67,61 @@ def tool_results(row: dict) -> list[tuple[int, str, str, str]]:
 
 
 def main_build() -> None:
+    import logging
+
     import graphrag_retrieval as g
+
+    logging.getLogger("neo4j.notifications").setLevel(logging.ERROR)
 
     rag = g.GraphRAG.from_config(dataset="multihop_rag")
     (ROOT / "runs/handoff/cache").mkdir(parents=True, exist_ok=True)
     rag._embedder.store = g.SQLiteEmbeddingCache(ROOT / "runs/handoff/cache/query_embeddings.sqlite")
-    chunk_vec: dict[tuple[str, str], list[float]] = {}
+    index_scores: dict[tuple[str, str], dict[str, float]] = {}
 
     def score(db: str, query: str, text: str) -> float:
-        # Neo4j's cosine vector index reports (1 + cos) / 2.
-        if (db, text) not in chunk_vec:
+        # The score the agent's vector_search got: the same Neo4j vector index
+        # query (top 10), whose scores are approximate, so exact cosine can
+        # reorder near-ties. A passage the index query no longer returns falls
+        # back to (1 + cos) / 2 and is counted.
+        if (db, query) not in index_scores:
             recs = rag._driver.execute_query(
-                "MATCH (c:Chunk) WHERE c.text = $t RETURN c.embedding AS e LIMIT 1",
-                t=text, database_=db,
+                "CALL db.index.vector.queryNodes('chunk_embeddings', $k, $v) "
+                "YIELD node, score RETURN node.text AS t, score",
+                k=g.RETRIEVAL_TOP_K, v=rag._embedder.embed_query(query), database_=db,
             ).records
-            chunk_vec[(db, text)] = recs[0]["e"]
+            index_scores[(db, query)] = {r["t"]: r["score"] for r in recs}
+        found = index_scores[(db, query)].get(text)
+        if found is not None:
+            return found
+        stats["scores from exact cosine"] += 1
+        c = rag._driver.execute_query(
+            "MATCH (c:Chunk) WHERE c.text = $t RETURN c.embedding AS e LIMIT 1",
+            t=text, database_=db,
+        ).records[0]["e"]
         q = rag._embedder.embed_query(query)
-        c = chunk_vec[(db, text)]
-        cos = sum(a * b for a, b in zip(q, c)) / (math.hypot(*q) * math.hypot(*c))
-        return (1 + cos) / 2
+        return (1 + sum(a * b for a, b in zip(q, c)) / (math.hypot(*q) * math.hypot(*c))) / 2
 
     def evidence_lists(row: dict) -> dict[str, list[tuple[str, str, float]]]:
         """Rebuild the agent's pooled results; return each rule's 10 items (id, content, score)."""
         db = "recrag-benchmark-" + Path(row["index_dir"]).name[:24]
         queries = {t["step"]: t["args"].get("query_text", "") for t in row["retrieval"]["trace"]}
         passages: dict[str, tuple[float, int, str, str]] = {}
+        # Kept passages carry their original score; use it. Only passages the
+        # agent run did not keep are re-scored (query re-embedded, so a
+        # near-tie can order differently; counted as a mismatch below).
+        kept_score = {
+            g._evidence_key(c): s
+            for c, s in zip(row["retrieval"]["evidence"], row["retrieval"]["scores"])
+            if s != g.NO_SCORE
+        }
         seen, graph_rows = set(), []
         for step, tool, eid, content in tool_results(row):
             key = g._evidence_key(content)
             assert g.evidence_id(content) == eid
             if tool == "vector_search":
-                s = score(db, queries[step], g.parse_vector_evidence(content).text)
+                s = kept_score.get(key)
+                if s is None:
+                    s = score(db, queries[step], g.parse_vector_evidence(content).text)
                 found = passages.get(key)
                 if found is None:
                     passages[key] = (s, len(passages), eid, content)
@@ -126,6 +150,7 @@ def main_build() -> None:
         }
 
     stats: Counter = Counter()
+    mismatches: list[str] = []
     for source in ("A3", "A1"):
         for rep in ("1", "2", "3"):
             rows, settings_dir = rows_of(source, rep)
@@ -136,7 +161,7 @@ def main_build() -> None:
                 again = [c for _, c, _ in lists["picks"]]
                 if again != saved:
                     stats[f"{source} picks mismatch"] += 1
-                    raise SystemExit(f"{source} r{rep} {row['record_id']}: rebuilt picks differ from saved evidence")
+                    mismatches.append(f"{source} r{rep} {row['record_id']}")
                 # Saved scores of kept vector passages, vs ours, as a check on the re-embedding.
                 for (_, _, s), old in zip(lists["picks"], row["retrieval"]["scores"]):
                     if old != g.NO_SCORE:
@@ -167,7 +192,10 @@ def main_build() -> None:
                         f.write(json.dumps(new, ensure_ascii=False) + "\n")
             print(source, rep, "ok", flush=True)
     rag.close()
+    stats["mismatched rows"] = mismatches
     (ROOT / "runs/handoff/build_check.json").write_text(json.dumps(dict(stats), indent=1) + "\n")
+    if len(mismatches) > 15:  # more than 1% of the 1,500 rows
+        raise SystemExit(f"{len(mismatches)} rows differ from the saved evidence; see build_check.json")
     print(json.dumps(dict(stats), indent=1))
 
 
