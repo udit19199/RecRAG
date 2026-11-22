@@ -1,0 +1,36 @@
+{
+  "method": "rag",
+  "dataset": "multihop_rag",
+  "count": 125,
+  "precision": 0.608,
+  "recall": 0.608,
+  "f1": 0.608,
+  "exact_match": 0.608,
+  "overlap_accuracy": 0.608,
+  "retrieval_accuracy": 0.496,
+  "total_construction_seconds": 0.0,
+  "mean_retrieval_seconds": 0.6233636311192531,
+  "mean_answer_seconds": 1.5951739311122801,
+  "mean_retrieved_tokens": 2272.976,
+  "total_storage_mb": 0.0,
+  "categories": [
+    {
+      "question_type": "temporal_query",
+      "count": 125,
+      "accuracy": 0.608,
+      "complexity": null
+    }
+  ],
+  "total_question_cost_usd": 0.00932058,
+  "mean_question_cost_usd": 0.00007456464,
+  "mean_retrieval_and_answer_seconds": 2.2185375622315333,
+  "options": {
+    "top_k": 10,
+    "rerank": true,
+    "rerank_candidate_k": 50,
+    "rerank_top_k": 10,
+    "ircot": false,
+    "max_steps": 2
+  },
+  "novelqa_categories": []
+}

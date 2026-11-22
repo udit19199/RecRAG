@@ -1,0 +1,1018 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=39b98f5523783c77 ===
+Gold sentences and facts:
+Sentence 0: Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto.
+  Fact 0.0: Shares of Rogers extended losses on news of the lawsuit.
+  Fact 0.1: Rogers shares closed down 2.2% to C$53.07 in Toronto.
+Sentence 1: Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it.
+  Fact 1.0: Amazon tumbled 4 per cent after the Federal Trade Commission filed an antitrust lawsuit against it.
+  Fact 1.1: 17 state attorneys general filed an antitrust lawsuit against Amazon.
+  Fact 1.2: The Federal Trade Commission and the 17 state attorneys general filed the antitrust lawsuit against Amazon together.
+
+Retrieved items:
+<item 1>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+On a YTD basis, Amazon shares have expanded by almost 50% in value.
+
+"AMZN's cost-cutting initiatives and margin improvements make it a solid buying opportunity, despite concerns such as the FTC lawsuit and a weakening economy."
+writes SA Investing Group Leader Danie Jones with a bullish stance on the stock. Meanwhile, fellow Investing Group Leader Sensor Unlimited expects the stock to
+continue being range-bound in the near term due to the key challenges on its operating margins, competition in key growth areas, and valuation risks.
+
+Consensus EPS Estimates: $0.60
+
+Consensus Revenue Estimates: $141.621B
+
+Earnings Insight: Amazon has beaten EPS and revenue expectations in half of the past 8 quarters.
+
+Also reporting: Kenvue (KVUE), Intel (INTC), Ford Motor Company (F), Altria Group (MO), Merck & Co.
+</item 1>
+
+<item 2>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+Big Tech stocks tend to be among the hardest hit by high rates, and they were the heaviest weights on the index. Apple fell 2.3 per cent and Microsoft lost 1.7
+per cent. Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it. They accuse the
+e-commerce behemoth of using its dominant position to inflate prices on other platforms, overcharge sellers and stifle competition. In China, concerns continued
+over heavily indebted real estate developer Evergrande. The property market crisis there is dragging on China’s economic growth and raising worries about
+financial instability. France’s CAC 40 fell 0.7 per cent, and Germany’s DAX lost 1 per cent.
+
+Crude oil prices rose, adding to worries about inflation. A barrel of benchmark US crude climbed 71¢ to $US90.39. Brent crude, the international standard, added
+67¢ to $US93.96 per barrel.
+</item 2>
+
+<item 3>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+A worker sorts out parcels in the outbound dock at the Amazon fulfillment center in Eastvale, California, on Aug. 31, 2021. Watchara Phomicinda | MediaNews
+Group | The Riverside Press-Enterprise via Getty Images
+
+It was late in the day on Oct. 27, 2021, when Fred Ruckel received the dreaded automated email from Amazon . Amazon’s software had detected that Ruckel’s
+popular cat toy, called the Ripple Rug, was being sold somewhere else for a cheaper price. His product would no longer be shown in Amazon’s all-important buy
+box, an area of the listing where shoppers click “Add to Cart.” Ruckel is the sole seller of the Ripple Rug on Amazon, so the move all but ensured his product
+would disappear from the website, costing him thousands of dollars per day.
+</item 3>
+
+<item 4>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+The result was that five Rogers Communications directors were fired, replaced by five allies of Edward Rogers. Soon after, then-CEO Joe Natale was sacked and
+replaced by Staffieri, the former chief financial officer. Rogers-Hixon and Martha Rogers had opposed the CEO change.
+
+In early 2022, family members agreed to temporarily shelve their disagreements, according to this week’s court filing, to avoid negative publicity as the
+company sought regulators’ approval for the takeover of Shaw Communications Inc. The C$20 billion transaction was the company’s biggest deal ever and among the
+largest corporate transactions in Canadian history.
+
+Negotiations Collapse
+
+As part of that truce, Rogers-Hixon and Martha Rogers agreed not to participate in board discussions about the Shaw deal or receive materials on it, because of
+an argument about Rogers-Hixon’s personal lawyer, whose firm also does work for Telus Corp., a competitor to Rogers and Shaw.
+</item 4>
+
+<item 5>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“I’ve lost a lot of sleep because of some of the things that they have done. And the issues that they brought up, while they are interesting, they haven’t
+created me a lot of pain.” Needham said he was particularly puzzled by the inclusion of the claims that Amazon is coercive in the way it encourages sellers to
+use its fulfillment service, known as Fulfillment by Amazon, or FBA. Needham said many sellers “love FBA” because of its compelling value in terms of the price
+and promise to deliver two-day shipping. For many, using FBA doesn’t feel like a requirement, but they believe using it will make their businesses "easier and
+more effective." "I think that the power that Amazon wields over sellers is considerable and absolutely worth looking into,” Needham said. “But I’m not sure if
+this would actually change that.”
+</item 5>
+
+<item 6>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“Below is a list of product(s) in your catalog that are not currently eligible to be the Featured Offer because they are not priced competitively compared to
+prices for those products from retailers outside Amazon,” according to the email, which was viewed by CNBC. Unbeknownst to him, Chewy was running a discount
+promotion, and dropped the price of his product by a few dollars to $39.99 – less than the $43 offer on Amazon. The algorithm had flagged it as a lower offer,
+even though the item on Chewy cost $48.54 after shipping and taxes. Ruckel had to make a choice: Lower the price on Amazon or ask Chewy to raise the price of
+his product. He opted for the latter.
+
+Fred Ruckel's company Snuggly Cat makes Ripple Rug, an interactive play mat for cats.
+</item 6>
+
+<item 7>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+Two members of the billionaire family that controls Rogers Communications Inc. are suing the company, saying they’ve been frozen out of board meetings and
+blocked from getting information, reigniting a bitter power struggle within one of Canada’s wealthiest clans.
+
+Melinda Rogers-Hixon says she’s the target of a “personal vendetta” by her older brother, Rogers Chair Edward Rogers, according to a letter contained in the
+court filing. The Rogers siblings were close to an agreement that would have resolved their longstanding differences, but Edward Rogers reneged on it, according
+to the Sept. 20 missive by Rogers-Hixon, which was sent to Chief Executive Officer Tony Staffieri.
+
+The court petition was filed by Rogers-Hixon and her sister, Martha Rogers, and it argues the company has been “oppressive” to them.
+
+The documents show that the fractures inside the prominent Toronto family have never healed.
+</item 7>
+
+<item 8>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Fred Ruckel
+
+Nearly three years later, Ruckel’s experience hits at the core of a sweeping antitrust lawsuit filed last week by the Federal Trade Commission against Amazon.
+The agency accused Amazon of wielding its monopoly power to squeeze merchants and thwart rivals. For consumers, that’s led to artificially inflated prices and a
+degraded shopping experience, the agency alleges. In the 172-page suit, the FTC said Amazon relies on an “anti-discounting strategy” and a “massive web-crawling
+apparatus that constantly tracks online prices” to stifle competition. The agency said Amazon punishes third-party sellers who offer cheaper products elsewhere
+by threatening to disqualify them from appearing in the buy box if it detects a lower price. Losing the buy box is an “existential threat” to sellers’
+businesses, the complaint alleges. The end result of these tactics, the FTC argues, is elevated prices across the web.
+</item 8>
+
+<item 9>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+The Shaw takeover finally closed on April 3 of this year, and the Rogers siblings engaged in talks “intended to resolve all issues between us,” Rogers-Hixon
+stated in an affidavit. “I was hopeful all issues could be resolved without negative publicity.” But those negotiations collapsed last month, she said.
+
+It isn’t clear from the court filings whether the discussions included the possibility that any Rogers family members would sell their stake in Rogers
+Communications, leave their roles at the company, or exit the family trust that controls almost all of the voting shares of the public company.
+
+“This matter should be resolved privately,” Rogers Communications spokesperson Sarah Schmidt said by email. “We’ve demonstrated that we will not be distracted
+by these actions — we have significant momentum in the market, our merger is tracking ahead of plan, and we remain squarely focused on doing what’s right for
+our customers and stakeholders.”
+</item 9>
+
+<item 10>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+The documents show that the fractures inside the prominent Toronto family have never healed. Rogers Communications is the country’s largest wireless provider
+and the owner of a cable television empire, the Toronto Blue Jays baseball team and other media and sports assets. The family’s controlling stake in the public
+company is worth close to C$8 billion ($5.9 billion), according to calculations based on company filings for its 2023 annual meeting.
+
+Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto. They’ve dropped 16% this year.
+
+The children of late founder Ted Rogers have frequently fought one another — sometimes driving down Rogers’ stock price as investors grew worried about the
+company’s governance.
+
+The bad blood spilled into full view in October 2021, when Edward Rogers publicly battled his sisters and his mother for control of the board and won in court.
+The result was that five Rogers Communications directors were fired, replaced by five allies of Edward Rogers.
+</item 10>
+=== END ITEM id=39b98f5523783c77 ===
+
+=== ITEM id=f5a03e5ce9bf3f0b ===
+Gold sentences and facts:
+Sentence 0: "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen," he told Fox News Digital.
+  Fact 0.0: A speaker said that they all found themselves at home looking at the people they worked with, the people they went out for drinks with, and the people in their extended family on a computer screen.
+  Fact 0.1: The speaker told Fox News Digital this.
+Sentence 1: We used to play in person, but since the pandemic I run the game virtually online from my house.
+  Fact 1.0: The speaker used to play the game in person.
+  Fact 1.1: Since the pandemic, the speaker runs the game virtually online from their house.
+
+Retrieved items:
+<item 1>
+TwitchCon 2023 was better than last year, but everyone hated Las Vegas (TechCrunch, 2023-10-26T00:15:43+00:00)
+Twitch, which saw exponential growth during the pandemic, was one of them. Last year’s San Diego-based TwitchCon, for all of its faults, took place in a
+walkable city abundant with nearby places to hang out, allowing attendees to bond, network and interact outside of the convention center. There’s no shortage of
+third places in Las Vegas, but for many TwitchCon attendees, nightclubs and casinos aren’t accessible alternatives to San Diego’s more casual venues.
+
+Moni, a streamer working in games tech who goes by Monistreams, expressed her frustrations in a recent post on Twitch’s feedback forum UserVoice.
+
+“They do a really good job of preparing content, it truly feels like a celebration of the community and streamers,” Moni said over a Discord call. “That’s their
+selling point. It is a celebration of streamers and their communities.
+</item 1>
+
+<item 2>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+Julia Corcoran, a licensed clinical psychologist and board-certified coach, who is currently serving as the director of clinical strategy and experience at
+Modern Health in San Francisco.
+
+The challenge isn’t exclusive to Zoom; other videoconferencing platforms can have the same effect.
+
+The pandemic's effect
+
+With the COVID-19 pandemic, Zoom and other videoconferencing platforms "exploded in popularity," said Dr. Carl Nassar, PhD, a professional counselor based in
+Denver, Colorado.
+
+"We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer
+screen," he told Fox News Digital.
+
+WORKERS FIRED ON ZOOM: HERE'S HOW TO NAVIGATE A 'DEVASTATING' EXPERIENCE AND COME OUT ON THE OTHER SIDE
+
+"Our work went virtual, our social life went virtual, our doctors' appointments went virtual, and even our intimate relationships sometimes went virtual," he
+said.
+</item 2>
+
+<item 3>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Our campaign is called The Heartsguard Saga, and it’s based off Deven Rue’s map of a place called Euphoros. My players are at around level 15 and I frequently
+give them a variety of amazing and unique gear that I’ve dreamed up all on my own... which they go on to forget they have, and never use. We used to play in
+person, but since the pandemic I run the game virtually online from my house. I put a camera hovering over my gaming mat, and make a labeled grid for the
+players so they call out, “Move me from A5 to B10.” During important rolls, I even make my players face their camera toward their dice for added suspense!
+
+Petrana Radulovic, entertainment reporter
+
+I’d wanted to play Dungeons & Dragons since I was in high school, but I never knew how to get into it.
+</item 3>
+
+<item 4>
+Can anyone survive Fortnite as a job? (Polygon, 2023-10-19T16:01:20+00:00)
+Suddenly, “live service” was everywhere — and games like Overwatch, which couldn’t achieve a similar pace, were posed as disappointments by content creators.
+
+Does an average player truly need their favorite game to give them something new, week in and week out? Developers say getting half of their players to actually
+finish games is unusual and worth celebrating, because the reality is that most people will never finish a game they start. Twenty-two percent of purchased
+games on Steam are unplayed outright. A number of things affect these percentages, like being a part of a sale or Game Pass, but the statistics still paint a
+picture. A reported 25% of players between the ages of 18 and 34 enjoy games between three and six hours a week, 28% play two hours or less, and 19% play
+between 13 to 24 hours or more, according to Statista. As they get older, fans apparently spend less time in games. In the most engaged age group, half of all
+players only log a couple of hours or so per week in their favorite games.
+</item 4>
+
+<item 5>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+In Alan Wake 2, everyone’s story is happening at once, branching out in endless directions, and we might not know the genre until it’s too late. It’s a
+hypertext mystery, an ergodic game that molds itself to an audience raised online, though few computers are in sight. It’s a game for a world suspended in an
+endless second act — forever wars, live services, franchises, infinite scrolls — endlessly searching for a conclusion. —JR
+
+2. Baldur’s Gate 3
+
+Developer: Larian Studios
+
+Where to play: PlayStation 5 and Windows PC
+
+Baldur’s Gate 3 hit at the perfect moment. Despite the handful of truly great computer role-playing games that have been released since the early 2000s (Larian
+Studios itself made waves with its Divinity: Original Sin series in 2014 and 2017), the genre has largely remained a modern niche. But times have changed:
+Dungeons & Dragons has undergone something of a renaissance, thanks to actual-play series like Critical Role and Dimension 20.
+</item 5>
+
+<item 6>
+Can anyone survive Fortnite as a job? (Polygon, 2023-10-19T16:01:20+00:00)
+It was all live-service games like League of Legends and Fortnite.
+
+In 2011, when Twitch first launched, content creation wasn’t fully a career and people still uploaded their photos to Facebook. Normal, everyday teens weren’t
+yet decrying the hungry maw of the internet, and the generational shift toward work-life balance hadn’t yet taken hold. Twitch happened at the exact right time,
+benefiting from a cadre of optimistic young users who grew up on the internet, happy to give away as much of themselves as they could. They didn’t even realize
+it was happening, in many cases, and they couldn’t imagine the unsustainable system it would go on to create. People were just having fun.
+
+Things have changed since then. Twitch has crowned millionaires, like Félix “xQc” Lengyel, who wear thick diamond chains around their necks while streaming. At
+the same time, viewership is dropping after years of platform growth that was partially bolstered by the COVID-19 pandemic, all while top creators are streaming
+less.
+</item 6>
+
+<item 7>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Thankfully, in the doldrums of 2020, someone I knew knew someone who knew someone (that’s literally what the connection was) who was interested in running a
+game. That kicked off my D&D career, but was this year that everything finally clicked in my brain and it went from a hobby I enjoyed to one that I spend every
+free minute of my spare time thinking about.
+
+Part of it is finally having reliable groups. After some initial shuffling of members, in 2023 I’ve been blessed to have not one but two separate D&D groups,
+both with enthusiastic members who are committed to at least trying to meet regularly. And yes, part of it is Baldur’s Gate 3, which helped me to understand
+some of the more complicated D&D mechanics and just generally made me very excited about combat in a way I never was before.
+
+I’ve still yet to actually have a game in person! My groups are spread out across North America, but I’m hoping to manifest an in-person session soon.
+</item 7>
+
+<item 8>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+It is not as much of a heroic power fantasy as D&D 5e or Pathfinder, but neither is it as minimalist as many old-school games. With fickle gods, mutating
+magics, lucky scoundrels, and ferocious fighters, DCC feels like playing through a Bal-Sagoth or Eternal Champion song. It’s also easy to pick up if your group
+has any experience with D&D’s third edition or Pathfinder. DCC rocks! Its focus on simple, impactful rules was a core design inspiration for the (almost
+system-neutral) Survivalist’s Guide to Spelunking for 5e, a book I wrote with Douglas Niles and Stephen Yeardley. It warms my heart to know that DCC authors,
+judges, and players use the book as well!
+
+Dungeons & Dragons
+
+Mike Haracz, corporate R&D chef and host of Heroes’ Feast
+
+I’m lucky enough to be in the seventh year of a homebrew Dungeons & Dragons campaign, one I play with friends locally in the Chicagoland area.
+</item 8>
+
+<item 9>
+VTubers have reached their inevitable conclusion (Polygon, 2023-10-19T16:01:50+00:00)
+Brands, too: Remember the Tony the Tiger VTuber in August of 2022?
+
+Many creators that jumped on the trend have since stopped using their avatars, but at the start of the COVID-19 pandemic, there was a large increase in VTubers
+on Twitch and other streaming platforms, like YouTube, as models and equipment became more accessible to the general public. Twitch has since gone on to
+highlight a wide variety of VTubers through its VTuber Takeover promotion, which most recently ran in August. Twitch also reported that VTubing-related content
+on the platform shot up by some 350% between January and August 2022. Despite this, some have argued that the VTubing bubble has all but burst.
+
+Polygon is celebrating TwitchCon 2023 with a package of stories covering streaming trends and news from the show. Check it out!
+
+“I do feel that VTubing has become less novel as the market has become more saturated,” says a streamer with agency Nijisanji who is not approved to speak
+publicly.
+</item 9>
+
+<item 10>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+"And this meant a lot of time looking at each other on-screen instead of in person."
+
+Long after the pandemic, many of these habits have persisted.
+
+"This video-ing of each other, it turns out, is far more tiring to humans than actually being together," said Nassar.
+
+"One reason is that our brains are wired for actual in-person interactions, not wired for interactions on the screen."
+
+Impacts of Zoom fatigue
+
+While video calls can be convenient, Elliott warned that staring at a computer or phone screen for extended periods of time can result in negative mental health
+consequences .
+
+"Zoom fatigue can aggravate stress, anxiety and burnout among workers," he told Fox News Digital.
+
+"Our brains are wired for actual in-person interactions, not wired for interactions on the screen."
+
+"Some people share that spending so much time interacting on screens makes it difficult to interact in real life."
+
+CAN YOU AVOID END-OF-THE-YEAR CAREER BURNOUT?
+</item 10>
+=== END ITEM id=f5a03e5ce9bf3f0b ===
+
+=== ITEM id=a1030e6977da1cf5 ===
+Gold sentences and facts:
+Sentence 0: Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+  Fact 0.0: Todd Boehly is American.
+  Fact 0.1: Todd Boehly is a co-owner of Chelsea.
+  Fact 0.2: Expanding Chelsea's profile and reach in the U.S. would make sense under Todd Boehly's co-ownership.
+  Fact 0.3: Catarina Macario is a USWNT international.
+  Fact 0.4: Mia Fishel is a USWNT international.
+  Fact 0.5: Catarina Macario plays her club football in the U.S.
+  Fact 0.6: Mia Fishel plays her club football in the U.S.
+  Fact 0.7: CBS Sports holds WSL rights.
+Sentence 1: It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again.
+  Fact 1.0: The date was 24 September.
+  Fact 1.1: Chelsea suffered a home Premier League defeat on 24 September.
+  Fact 1.2: The 24 September defeat was Chelsea's second home Premier League defeat in a row.
+  Fact 1.3: Chelsea's home Premier League defeat before the 24 September defeat was against Nottingham Forest.
+  Fact 1.4: Chelsea were booed off again after the 24 September defeat.
+Sentence 2: Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson, while Benoit Badiashile could return from a long-term injury.
+  Fact 2.0: Late fitness checks will be made on Reece James.
+  Fact 2.1: Late fitness checks will be made on Axel Disasi.
+  Fact 2.2: Late fitness checks will be made on Nicolas Jackson.
+  Fact 2.3: Benoit Badiashile could return from a long-term injury.
+
+Retrieved items:
+<item 1>
+Pochettino looks past James mistake and stakes future on his ‘Chelsea DNA’ (The Guardian, 2023-10-20T21:30:28+00:00)
+Arsenal represent an acid test of the progress and the start of a daunting run in the league; after them, Chelsea face Brentford, Tottenham, Manchester City,
+Newcastle, Brighton and Manchester United. Pochettino, though, pushed back against the notion that he was seeking a first statement win at the club, something
+to ignite his tenure. All he wants are points to drive his team up from 11th in the table.
+
+Pochettino has appeared mired in a selection crisis since his arrival at Chelsea; James only one element of it and he will be without seven others through
+injury against Arsenal.
+
+“The moment we have all the squad at a high level and fit, we can say: ‘OK, we are going to Arsenal, Manchester City and we are going to beat you.’ At the
+moment, with the circumstances, I don’t think this game is going to be a statement to say: ‘Be careful, Chelsea is coming,’ or something like this.”
+</item 1>
+
+<item 2>
+Pochettino looks past James mistake and stakes future on his ‘Chelsea DNA’ (The Guardian, 2023-10-20T21:30:28+00:00)
+It was the moment when Reece James simply could not handle the frustration. Named by Mauricio Pochettino as the Chelsea captain, James had not played since the
+opening weekend draw with Liverpool at Stamford Bridge when he injured a hamstring. Now, he seethed from the sideline as his team lost 1-0 at home to Aston
+Villa, a game in which his replacement, Malo Gusto, was controversially sent off.
+
+It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again. James would
+lose his cool with an official in the tunnel and, when a Football Association charge was announced three days later for abusive conduct, it felt like only a
+matter of time before he was given a one-match ban.
+
+It did not come in time for Chelsea’s visit to Fulham on 2 October, when James was still injured. That would have been too simple.
+</item 2>
+
+<item 3>
+Inside the Man United takeover and it’s anything but smooth sailing for Sir Jim Ratcliffe as he seeks board vote (TalkSport, 2023-10-18T21:30:00+00:00)
+This was a move mainly influenced by the fact Raine had managed to broker a deal with Todd Boehly to commit to invest £4.5bn to take control of Chelsea, giving
+the Glazers grand ideas they could rake in as much as DOUBLE for a global sporting institution like United.
+
+After several rounds of bidding, it quickly became clear the race for United was a straight shootout between Oldham-born Ratcliffe, who had previously offered
+£4bn to buy Chelsea, and Qatari Sheikh Jassim bin Al Thani, who also professed to being a lifelong Red Devils fan and set up the ’92 Foundation’ in tribute to
+the famous class of ’92 of David Beckham and company.
+</item 3>
+
+<item 4>
+Manchester United face Galatasaray with high hopes but bad memories (The Guardian, 2023-11-27T22:30:42+00:00)
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Newsletters may contain
+info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google reCaptcha to protect our
+website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+“I think that it is important sometimes that you have to go through those moments to realise what it takes. There are elements that happen in a football match
+and elements that happen in the buildup to a football match, so you have to experience all those things if you want to be successful.”
+
+The win against Everton on Sunday was defined by two teenagers, Alejandro Garnacho and Kobbie Mainoo.
+</item 4>
+
+<item 5>
+Pochettino looks past James mistake and stakes future on his ‘Chelsea DNA’ (The Guardian, 2023-10-20T21:30:28+00:00)
+For more information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our
+Privacy Policy . We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+“It’s how you are and about your character,” Pochettino said. “He feels football. I am 51 and still sometimes I feel that decisions are no good or unfair. You
+are competitive. Like with Mikel or myself or other coaches that played football, in our minds, we still believe we can play. Still, we have the animal
+instinct. We cannot be thinkers.”
+
+For Pochettino, it must be about channeling the emotion in the right way and not suppressing it. More broadly, he is in a better place after the wins at Fulham
+and Burnley, which followed the Carabao Cup victory over Brighton on the day that James was charged.
+</item 5>
+
+<item 6>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+The Jets would have taken possession with barely more than a minute remaining, no timeouts and Zach Wilson behind center facing a ferocious Eagles pass rush.
+Was having Hurts pass in a situation when gaining a first down is unlikely the smart play under the circumstances?
+
+“Are coaches not willing to go against the slight statistical benefit that WPA (win probability added) provides?” the exec asked. “Is it no longer OK to let
+your defense win the game when it clearly has a huge talent/performance advantage? This Eagles game was 14-12, not 37-35.”
+
+Critics attuned to the trend toward aggressiveness pounce when teams pass up chances to go for the kill. Coaches know team owners tend to be fans, not football
+strategists. They know owners listen to these criticisms. That can provide an incentive to make the aggressive play, to go down swinging.
+
+“Everybody thinks they are playing Brady, Manning or Rodgers in two-minute,” a veteran coach said.
+</item 6>
+
+<item 7>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Newsletters may contain
+info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google reCaptcha to protect our
+website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Manchester United’s century old stadium needs an upgrade. Photograph: Greig Cowie/Shutterstock
+
+Communications
+
+The Glazers treat a microphone or TV camera as United fans do Liverpool or Manchester City: as a fierce enemy. No family member has given a press conference or
+interview during their 18-year tenure.
+</item 7>
+
+<item 8>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+There is the possibility of Hayes retaining a connection to the club via some sort of ambassadorial role, but it’s likely contingent upon a lack of conflict
+with the USWNT role and responsibilities. Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,
+especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+
+There is, for now, an immediate task for Hayes to focus on. Chelsea faces off against Real Madrid on Wednesday for their first match of the UWCL Champions
+League group stage. Her full American arrival will not come for another half a year after that.
+
+(Top photo: Julian Finney/Getty Images)
+</item 8>
+
+<item 9>
+Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn (The Guardian, 2023-11-01T22:03:18+00:00)
+“We should be proud of this performance.”
+
+Blackburn certainly managed to cause problems for Chelsea even after the hosts made their intentions clear straight from the kick-off when Nicolas Jackson
+forced a corner when his shot was blocked. Travis was very lucky not to concede a penalty when he slid in against Sterling after 10 minutes, with no VAR to
+overrule what looked like a clear and obvious error from the referee Tim Robinson.
+
+It took a good save from Leopold Wahlstedt to deny James but Blackburn then enjoyed a good period of possession in their opponents’ half. James was inches away
+from breaking the deadlock midway through the first half but his shot just eluded the far post before Enzo Fernández forced Wahlstedt to palm away his effort
+soon afterwards.
+
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties.
+</item 9>
+
+<item 10>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+These game plans were conservative enough to signal a potential in-season quarterback change. Denver faces Green Bay and Kansas City over the next two weeks
+before heading into its Week 9 bye.
+
+5. You play to win the game, but can you win too quickly? The Giants and Vikings are test cases.
+
+The New York Giants and Minnesota Vikings exceeded expectations under first-year head coaches in 2022. Both reached the playoffs. Both are struggling in their
+second seasons, facing difficult questions about the future. Would they have been better off enjoying only moderate success early? That could depend on how well
+the football leadership has communicated with ownership.
+
+Every head coach and general manager wants to win as much as possible, but the goal is to build for the long term, which can require time to do things with
+sustainability in mind. Bad teams that win right away can reset expectations for fans and ownership, making it less practical to take one step backward in the
+short term for a better shot at taking two steps forward down the line.
+</item 10>
+=== END ITEM id=a1030e6977da1cf5 ===
+
+=== ITEM id=7940f097f1a7351b ===
+Gold sentences and facts:
+Sentence 0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.
+  Fact 0.0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night.
+  Fact 0.1: The Cowboys kept the heat on the Eagles.
+  Fact 0.2: The Eagles lost their game.
+  Fact 0.3: The Eagles were ahead of the Cowboys.
+  Fact 0.4: The Cowboys hosted the Eagles in Dallas in Week 14.
+Sentence 1: Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart football every step of the way down the stretch.
+  Fact 1.0: Philadelphia beat Miami 31-17.
+  Fact 1.1: Philadelphia's win over Miami was on "Sunday Night Football".
+  Fact 1.2: Philadelphia rolled to the win.
+  Fact 1.3: Philadelphia kept the Dolphins' offense off the scoreboard in the second half.
+  Fact 1.4: Philadelphia played smart football every step of the way down the stretch.
+
+Retrieved items:
+<item 1>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+11:07 p.m. — Tagovailoa is sacked on back-to-back plays, and this game has quickly spiraled for the Dolphins. It's 4th & 10.
+
+11:00 p.m. TOUCHDOWN — Kenneth Gainwell hits the Dolphins with the spin move and likely ices this game! The Eagles lead 31-17 with just under five minutes
+remaining.
+
+10:58 p.m. — The Eagles might've just hit the Dolphins with the dagger. Hurts goes downfield and hits A.J. Brown for a huge 42-yard gain. Philadelphia is
+knocking on the door after a long, long drive.
+
+10:55 p.m. — The Brotherly Shove works AGAIN. It wasn't close, either. The Eagles are churning away, soaking up valuable time.
+
+10:53 p.m. — Hurts' sneak is a success, as usual. The Eagles have a fresh set of downs.
+
+10:52 p.m.
+</item 1>
+
+<item 2>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+He gets Philadelphia a first down.
+
+8:23 p.m. — The Eagles will start the game with the ball, and we are underway!
+
+8:18 p.m. — As many have pointed out, Tua Tagovailoa and Jalen Hurts were once teammates and competitors at Alabama. Both have something to prove tonight,
+considering Hurts hasn't looked like himself for much of this season.
+
+8:10 p.m. — The Dolphins can open up a two-game AFC East lead on the Bills with a win tonight. Buffalo was upset by the Patriots earlier today.
+
+8:03 p.m. — Lincoln Financial Field has a new look for Kelly Green day.
+
+Lincoln Financial Field, with a new logo and wordmark for this stadium: pic.twitter.com/vHEm7uBDgi — Zach Berman (@ZBerm) October 22, 2023
+
+7:55 p.m. — Oh yeah, Julio Jones is back in the NFL.
+</item 2>
+
+<item 3>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+After the Eagles' defense clamped down on Tagovailoa and the Dolphins, the offense pieced together a touchdown drive spanning nearly seven minutes to ice the
+game.
+
+A.J. Brown overcame a slow start and shined for the Eagles, posting 137 yards and a touchdown in the win. Brown has now ripped off five consecutive games of at
+least 125 yards and seems to be on his way to a career-best season.
+
+Hurts, Brown and the Eagles have higher goals than just individual success, and a win over one of the AFC's best teams is one way to make a statement.
+Philadelphia moves to 6-1, while the Dolphins miss a chance to open up a two-game lead in the AFC East and fall to 5-2 ahead of a matchup with the Patriots.
+
+MORE: Latest injury updates on Dolphins WR Jaylen Waddle
+
+The Sporting News tracked live scoring updates and highlights from "Sunday Night Football" between the Dolphins and Eagles. Check out all of the key moments you
+might have missed.
+</item 3>
+
+<item 4>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+It'll be a field goal try for Jake Elliott.
+
+8:30 p.m. — Jalen Hurts is celebrating National Tight Ends Day by hitting Dallas Goedert on back-to-back passes for a total of 45 yards. The Eagles are into the
+red zone.
+
+Fitting that the first big play of the game goes to Dallas Goedert on #NationalTightEndsDay
+
+
+
+📺: #MIAvsPHI on NBC
+
+📱: Stream on #NFLPlus https://t.co/0rIJPFKW6L pic.twitter.com/DPfTTVQbnz — NFL (@NFL) October 23, 2023
+
+8:28 p.m. — Swift has five touches already. No one else has seen the ball.
+
+8:26 p.m. — The Eagles are riding D'Andre Swift early, as the running back is up to three carries through three snaps. He gets Philadelphia a first down.
+
+8:23 p.m.
+</item 4>
+
+<item 5>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+📺: #MIAvsPHI on NBC
+
+📱: Stream on #NFLPlus https://t.co/0rIJPFKW6L pic.twitter.com/Izpm8KQDCA
+
+9:23 p.m. — What a fourth down play for the Eagles! Hurts comes under heavy pressure but gets away and finds A.J. Brown for what was initially called a
+touchdown. Instead, Philadelphia will be at the goal line looking to take a 17-3 lead.
+
+9:22 p.m. — Hurts is very fortunate to see Smith (and not a Dolphins defender) come down with a pass after he was hit during a throw.
+
+9:19 p.m. — DeVonta Smith with a nice catch on a dart from Hurts to take the Eagles into Miami territory. Aside from the one turnover, the Eagles are putting
+together long, sustained drives.
+
+9:15 p.m.
+</item 5>
+
+<item 6>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Check out all of the key moments you might have missed.
+
+Dolphins vs. Eagles final score
+
+1 2 3 4 F Dolphins 3 7 7 0 17 Eagles 3 14 7 7 31
+
+Dolphins vs. Eagles results, highlights from 'Sunday Night Football'
+
+(All times Eastern)
+
+Final: Eagles 31, Dolphins 17
+
+11:16 p.m. — And that'll do it. The Eagles finish strong and get back on track with an impressive win over the Dolphins.
+
+11:12 p.m. — D'Andre Swift goes 22 yards for a first down, so the Eagles will simply kneel it the rest of the way.
+
+11:09 p.m. — The Eagles take over on downs and will have the chance to just run out the clock on Miami.
+
+11:07 p.m.
+</item 6>
+
+<item 7>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+— Oh yeah, Julio Jones is back in the NFL.
+
+What a group 🤌 pic.twitter.com/fV9WgGOpRY — Philadelphia Eagles (@Eagles) October 22, 2023
+
+7:41 p.m. — Believe it or not, Tyreek Hill has a chance to break 1,000 yards tonight. He would need 186, but with the way he's played this season, that at least
+seems to be within reach.
+
+7:29 p.m. — Don't forget the Eagles will be back in Kelly Green tonight. This will be a fascinating uniform matchup.
+
+7:20 p.m. — It's 55 degrees and dropping in Philadelphia. That's not unusual for the Eagles, but will Tua Tagovailoa be able to rise to the occasion in cooler
+weather?
+
+What channel is Dolphins vs. Eagles on today?
+
+Game: Dolphins vs. Eagles
+
+Dolphins vs.
+</item 7>
+
+<item 8>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Deion Sanders once said, “If you look good, you feel good, and if you feel good, you play good." The Eagles looked good on Sunday night, donning Kelly Green
+jerseys and helmets for their matchup with the Dolphins.
+
+And their play absolutely matched the look.
+
+Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart
+football every step of the way down the stretch.
+
+The Dolphins quickly made up a 17-3 deficit, scoring a touchdown just before halftime and finding the end zone again in the third quarter when Jerome Baker
+intercepted a deflected pass from Jalen Hurts for a pick-six.
+
+MORE: How Mike McDaniel overcame alcoholism to become rising NFL coach
+
+The defining series of the game came right after the pick-six when Hurts shrugged off the turnover and led a surgical touchdown drive.
+</item 8>
+
+<item 9>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+to stretch the lead back to two possessions.
+
+10:05 p.m. — Miami will punt from just past midfield, after a drive that started with some promise.
+
+10:04 p.m. — The Dolphins face 3rd & 18, largely the result of a holding penalty. Tagovailoa has already converted one of these tonight.
+
+10:01 p.m. — Raheem Mostert has struggled to get going, but he takes the Dolphins into Eagles territory with a solid 7-yard gain.
+
+10:00 p.m. — Hill picks up where he left off and goes 17 yards to give this Dolphins drive an early spark.
+
+End of first half: Eagles 17, Dolphins 10
+
+9:45 p.m. — Any hope the Eagles had of doing something before halftime ends with a Jaelan Phillips sack of Hurts. Philadelphia will go to halftime up 17-10.
+
+9:43 p.m. — Hill is up to 65 yards on eight catches.
+</item 9>
+
+<item 10>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+They'll go for it.
+
+10:16 p.m. — Raheem Mostert is running wild. He rips off back-to-back runs of 21 and 15 yards, respectively, and the Dolphins are deep into Eagles territory
+just like that.
+
+Raheem Mostert moves the chains in back to back plays pic.twitter.com/cKtaJouqeZ — DIE-HARD 🦅 Fans (@Eaglesfans9) October 23, 2023
+
+10:11 p.m. — The Eagles manage only one first down on the drive, and the Dolphins have a chance to get pretty strong field position after Philadelphia's first
+punt of the night.
+
+10:10 p.m. — Zach Sieler gets to Hurts and takes him down for a loss of three yards.
+
+10:06 p.m. — The Eagles will be backed up deep in their own territory to start the next drive, but it's a big opportunity for Hurts and co. to stretch the lead
+back to two possessions.
+</item 10>
+=== END ITEM id=7940f097f1a7351b ===
+
+=== ITEM id=9737c29c29424275 ===
+Gold sentences and facts:
+Sentence 0: Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana.
+  Fact 0.0: The U.S. will travel to GEODIS Park in Nashville, Tennessee on October 17.
+  Fact 0.1: The U.S. will play a friendly against Ghana at GEODIS Park.
+Sentence 1: Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania, who recorded their second win over Sydney in as many attempts this season.
+  Fact 1.0: Milton Doyle is a fellow import.
+  Fact 1.1: Majok Deng is a fellow import.
+  Fact 1.2: Milton Doyle scored 17 for Tasmania.
+  Fact 1.3: Majok Deng scored 17 for Tasmania.
+  Fact 1.4: Tasmania recorded their second win over Sydney this season.
+  Fact 1.5: Tasmania's second win over Sydney this season came in as many attempts as the team made this season.
+
+Retrieved items:
+<item 1>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+“I was able to put lessons from that time into practice, develop and eventually return to the Socceroos much more prepared for the role. It’s been a privilege
+to be part of the national team again with the benefit of that experience, and I’m immensely proud of what this group has been able to achieve in the last four
+years.
+
+“In my opinion, there’s no greater honour than representing your nation on the international stage. I look at the young players coming through the Socceroos
+system now full of pride in the work they’ve put in to get where they are, and the journey that’s ahead of them.
+
+“I’ve always loved being a part of the Socceroos culture and my desire to see Australia fulfil its footballing potential is still driving me to take this group
+to further success.”
+
+Australia starts the road to north America in Melbourne at AAMI Park on Thursday night, before travelling to the Middle East to play Palestine next Wednesday
+(1.00am AEDT).
+</item 1>
+
+<item 2>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino Dest PSV Eindhoven (NED) 28 2 DEF DeJuan Jones New England Revolution (USA) 7 0 DEF Kristoffer Lund Palermo
+(ITA) 2 0 DEF Kevin Paredes Wolfsburg (GER) 1 0 DEF Tim Ream Fulham (ENG) 52 1 DEF Chris Richards Crystal Palace (ENG) 12 1 DEF Miles Robinson Atlanta United
+(USA) 27 3 DEF Joe Scally Gladbach (GER) 6 0 MID Johnny Cardoso Internacional (BRA) 7 0 MID Luca de la Torre Celta Vigo (SPA) 17 0 MID Lennard Maloney
+Heidenheim (GER) 0 0 MID Weston McKennie Juventus (ITA) 46 11 MID Yunus Musah AC Milan (ITA) 29 0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman
+</item 2>
+
+<item 3>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+MORE: Breaking down Germany squad, tactics as Julian Nagelsmann debuts as manager
+
+USA roster for October friendlies vs Germany, Ghana
+
+The USMNT squad for the October friendlies was announced on Thursday, October 5. Gregg Berhalter has called in 23 players, which is one fewer than were brought
+in for the friendlies against Uzbekistan and Oman last month.
+
+Below is the official 23-man roster for the upcoming October friendlies against Germany and Ghana.
+
+PSV midfielder Malik Tillman was forced to withdraw from the squad due to injury, with Alex Zendejas of Club America named to the roster in his place.
+
+MORE: Tracking every goal scored by Christian Pulisic at new club AC Milan
+
+Pos Name Club Caps Goals GK Ethan Horvath Nott. Forest (ENG) 9 0 GK Matt Turner Nott. Forest (ENG) 33 0 DEF Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino
+Dest PSV Eindhoven
+</item 3>
+
+<item 4>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman PSV Eindhoven (NED) 6 0 FWD Brenden Aaronson Union Berlin (GER) 34 8 FWD Folarin Balogun Arsenal
+(ENG) 4 2 FWD Ricardo Pepi PSV Eindhoven (NED) 18 9 FWD Christian Pulisic AC Milan (ITA) 62 26 FWD Tim Weah Juventus (ITA) 33 5 FWD Alex Zendejas Club America
+(MEX) 7 1
+
+Tyler Adams, Antonee Robinson injured for October camp
+
+Gregg Berhalter largely has the entire first-choice player pool available for selection, with only a few injuries to work around.
+
+There is one notable absence, as captain Tyler Adams remains sidelined with a frustrating long-term hamstring injury.
+</item 4>
+
+<item 5>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Gregg Berhalter and the U.S. men's national team continue their preparations for the 2024 Copa America and 2026 FIFA World Cup with friendlies against Germany
+and Ghana this month.
+
+First, the U.S. will take on Germany in Hartford, Connecticut on October 14. The 15th-ranked Germans are under new management, so the USMNT will serve as the
+debut match for new head coach Julian Nagelsmann, the 36-year-old who has been out of a job since departing Bayern Munich back in March.
+
+Most European countries are busy with Euro 2024 qualifying, but the Germans are hosting the tournament and therefore qualify automatically, opening up their
+schedule for this friendly match.
+
+Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana. The two nations have a deep history of
+contentious matchups, including in three consecutive World Cup tournaments in 2006, 2010, and 2014.
+</item 5>
+
+<item 6>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+Nagelsmann's dismissal at Bayern Munich came as a shock to much of the European football landscape, as the club had performed exceptionally in the Champions
+League and was still very much in the title race, sitting just a point behind Dortmund. Now, with a chance for redemption at the helm of the national team,
+Nagelsmann will see his time begin with a friendly against the United States.
+
+MORE: A look at the 23-man squad for Gregg Berhalter as USMNT play Germany & Ghana
+
+Germany squad, players for USA friendly
+
+Julian Nagelsmann will be very familiar with much of the 26-man German national team squad, as five players hail from his former club Bayern Munich, including
+critical midfield duo Josh Kimmich and Leon Goretzka, who were instrumental in his setup at Allianz Arena.
+</item 6>
+
+<item 7>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Also missing is Antonee Robinson, who Gregg Berhalter said is dealing with a sports hernia, and while he played through it last camp and recently for his club,
+it's affecting him and therefore rest is the best option here.
+
+Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a
+return to fitness, and has been included on the squad.
+
+With Adams injured, there has been some noise on social media calling for Heidenheim midfielder Lennard Maloney to be brought into the squad in October, and he
+was given the call-up here. The 23-year-old was born in Berlin to an American father, appearing for the U.S. at the U-20 level in the past and stating his
+desire to reach the USMNT senior squad.
+
+MORE: All players in U.S.
+</item 7>
+
+<item 8>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+He was initially injured while playing for Leeds United back in March, and while he had finally recovered to make his Bournemouth debut in the EFL Cup in late
+September, he played just 20 minutes off the bench before suffering a setback, sidelined again for the foreseeable future.
+
+Gio Reyna has returned from his leg fracture and is called in for the first time under Berhalter since their falling out at the 2022 World Cup. Also included is
+defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury. On the heels of that return just before the
+international break, he is called in.
+
+Goalkeepers Zack Steffen and Sean Johnson remain out of action due to injuries. Additionally, Josh Sargent is sidelined with a long-term ankle injury, while
+Daryl Dike is also out after tearing his Achilles.
+</item 8>
+
+<item 9>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+With Berhalter having since confirmed the two have broken the ice and talked over the phone, they will now look to move forward without any more personal
+conflict.
+
+After the October roster release, Berhalter confirmed that the two spoke "weeks ago" on Zoom, with the U.S. head coach appreciative of Reyna's willingness to
+move forward. He spoke that because Reyna has not yet played for his club this season, their goal will be to "get him minutes" so he can build his fitness and
+return to Dortmund in the best position possible to begin his club campaign.
+
+Berhalter stated that they see Reyna being able to play three different positions: central midfielder, attacking midfielder, and winger, with further
+clarification being his skill-set fitting a "between the lines" style of wide play if he were deployed on the wing, as opposed to one glued to the touchline.
+</item 9>
+
+<item 10>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+MORE: All players in U.S. national team pool currently playing for a European club
+
+Gio Reyna to make USMNT return under Gregg Berhalter
+
+The ability of Berhalter and Reyna to work together moving forward has been a major talking point since the fallout of their saga after the 2022 World Cup.
+
+Reyna's lack of playing time at the World Cup was exacerbated by the actions of his parents in the weeks that followed, which sparked a domestic violence
+investigation of Berhalter before his eventual re-hire as national team head coach.
+
+Now, having recovered from a leg fracture suffered in summer Nations League duty under an interim USMNT head coach, the 20-year-old Borussia Dortmund playmaker
+returns to the international fold under Berhalter for the first time.
+
+The USMNT head coach has been forthcoming about the situation, admitting upon his re-hire that the two have a "lot of work to do" but insisting time was needed
+to broach the situation.
+</item 10>
+=== END ITEM id=9737c29c29424275 ===
+
+=== ITEM id=bba003210ec58069 ===
+Gold sentences and facts:
+Sentence 0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.
+  Fact 0.0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.
+  Fact 0.1: Huang said Paradigm was told that Bankman-Fried did not want investors as directors.
+  Fact 0.2: Huang said Bankman-Fried did plan on having a board with experts.
+Sentence 1: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 1.0: The criminal trial of Sam Bankman-Fried was highly anticipated.
+  Fact 1.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 1.2: The criminal trial of Sam Bankman-Fried started on a Tuesday.
+  Fact 1.3: The criminal trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that Bankman-Fried acted in good faith.
+  Fact 2.2: The defense countered that Bankman-Fried never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that Bankman-Fried basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 1>
+
+<item 2>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+That was all done by Bankman-Fried, he testified. In early 2020, Wang said he discovered for the first time Alameda's negative balance exceeded FTX's revenue,
+an indication that Alameda was taking customer funds. Wang said he brought this to Bankman-Fried's attention several times. In late 2021, Wang discovered
+Alameda had withdrawn $3 billion from its $65 billion line of credit. Wang's compensation was a base salary of $200,000 per year plus stock. He owned roughly
+17% of FTX. Even though they were co-founders, "ultimately it was Sam's decision to make" when there were disagreements, he said.
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+The trial of Sam Bankman-Fried is likely to be more consequential than just whether the man himself is found guilty. Depending on what evidence is introduced
+during the trial, it could be rough for the entire crypto industry.
+
+“How much damage can this trial do to the already beaten-down reputation of the industry at this point?” asks Yesha Yadav, a law professor at Vanderbilt
+University. “This trial is going to be an excruciating moment for the industry because no one knows what kind of evidence might come out.”
+
+Bankman-Fried, the founder of FTX and Alameda Research, is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy
+charges. FTX was a failed cryptocurrency exchange founded in 2019. According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded
+because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 8>
+
+<item 9>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 9>
+
+<item 10>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Additionally, he was promised that Alameda had no preferential treatment on the FTX platform, even though the hedge fund was one of its top traders. Huang said
+he was concerned about FTX's lack of a board of directors, but he eventually invested anyway. During cross-examination, Huang said Paradigm pressed
+Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts. — CNBC's Dawn Giel
+contributed to this report.
+</item 10>
+=== END ITEM id=bba003210ec58069 ===

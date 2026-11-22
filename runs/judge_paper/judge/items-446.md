@@ -1,0 +1,835 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=6b891715f727adc5 ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.1: Caroline Ellison was the CEO of Alameda.
+  Fact 0.2: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.3: Bankman-Fried had 'secret access' to customer money.
+  Fact 0.4: The customer money included both cash and crypto.
+  Fact 0.5: The government claimed this.
+Sentence 1: He was concerned because it "seemed like a lot of money" from FTX customers was at risk.
+  Fact 1.0: The person was concerned about the risk.
+  Fact 1.1: The person was concerned because the money seemed like a lot of money.
+  Fact 1.2: The money was from FTX customers.
+  Fact 1.3: The money from FTX customers was at risk.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 2>
+
+<item 3>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Those privileges ultimately resulted in Alameda owing FTX $8 billion worth of customer deposits. "We gave special privileges on FTX that gave unlimited
+withdrawals on the platform to Alameda," Wang said. Alameda was allowed to withdraw and transfer those funds and had a $65 billion line of credit. "When
+customers deposited USD, it went to Alameda," he said. "It existed in the computer code. Alameda could have negative balances and unlimited withdrawals." That
+"bug" in the code was written by Nishad Singh, who was FTX's director of engineering, and reviewed by Wang. Bankman-Fried was calling the shots, Wang said. Wang
+also told the court about a $1 million personal loan he received and a $200 million to $300 million loan in his name from Alameda that was never deposited into
+his account, but rather was used to make investments into other companies on behalf of FTX.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 4>
+
+<item 5>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+As a result of today’s testimony, I am both more and less confused. I am clearer on what probably happened at FTX. What I don’t understand is why Gary Wang did
+it.
+
+Wang was the co-founder and chief technology officer of FTX, as well as the co-founder of Alameda Research. He owned only 10 percent of Alameda and 17 percent
+of FTX. He got a $200,000 a year salary, with no performance bonuses. (Okay, sure, at times he was a billionaire on paper.) By contrast, Bankman-Fried owned 90
+percent of Alameda and 65 percent of FTX.
+
+Yet Wang’s testimony suggests he took bizarre risks for his own relatively small share. Bankman-Fried didn’t code, so none of his fingerprints are on the
+technical changes that let FTX allegedly defraud its customers and investors. Meanwhile, Wang supervised the code behind a key prosecution claim: that Alameda
+Research was afforded secret, special privileges with FTX’s funds.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 6>
+
+<item 7>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+In June 2022, he submitted a report to Bankman-Fried on Signal that showed $8 billion in customer money held in an internal database tracking the cash wired to
+an Alameda account called "fiat at ftx.com" was missing. Yedidia said he and Bankman-Fried spoke about it at the pickleball court at the resort in Nassau,
+Bahamas. He asked his boss if things were OK. He was concerned because it "seemed like a lot of money" from FTX customers was at risk. "Sam said, we were
+bulletproof last year. We aren't bulletproof this year," Yedidia testified. Yedidia said he asked when they would be bulletproof again. Bankman-Fried said he
+wasn't sure, but it may be six months to three years. Yedidia said Bankman-Fried appeared "worried or nervous," which he said was atypical.
+</item 7>
+
+<item 8>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Additionally, he was promised that Alameda had no preferential treatment on the FTX platform, even though the hedge fund was one of its top traders. Huang said
+he was concerned about FTX's lack of a board of directors, but he eventually invested anyway. During cross-examination, Huang said Paradigm pressed
+Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts. — CNBC's Dawn Giel
+contributed to this report.
+</item 8>
+
+<item 9>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+"FTX defrauded all its customers," he said.
+
+Matt Huang, co-founder of Paradigm Operations LP, right, arrives at court in New York, US, on Thursday, Oct. 5, 2023. Former FTX Co-Founder Sam Bankman-Fried is
+charged with seven counts of fraud and money laundering following the collapse of his cryptocurrency empire last year. Photographer: Yuki Iwamura/Bloomberg via
+Getty Images Yuki Iwamura | Bloomberg | Getty Images
+
+Investment to zero
+
+The third witness to take the stand was Matt Huang, co-founder and managing partner of Paradigm, a crypto venture capital firm that invested over $275 million
+in FTX. That stake was wiped out. Huang testified about his firm's due diligence on FTX, and he told the court that Bankman-Fried assured him that funds would
+be used for FTX and not Alameda.
+</item 9>
+
+<item 10>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Ellison is expected to take the stand under a similar arrangement.
+
+U.S. District Judge Lewis Kaplan presides as Gary Wang testifies during the fraud trial of Sam Bankman-Fried over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+Born in China, Wang moved to the U.S. at age 7, and grew up in Minnesota before going to the Massachusetts Institute of Technology to study math and computer
+science. He worked at Google after college. Wang, who first met Bankman-Fried during high school at a summer camp, owned 10% of Alameda, while his boss owned
+the other 90%. Wang told the court about the advantages that Alameda received by having code baked into FTX's software that allowed special access to the crypto
+exchange.
+</item 10>
+=== END ITEM id=6b891715f727adc5 ===
+
+=== ITEM id=1a98c4457dbd24e4 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: Google makes deals with Apple.
+  Fact 0.2: Google makes deals with Samsung.
+  Fact 0.3: Google makes deals with Mozilla.
+  Fact 0.4: Google makes deals with many others.
+  Fact 0.5: The Justice Department focuses on these deals to ensure Google is the default search engine on practically every platform.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: In the last roundup, the writers learned that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 1.1: In the last roundup, the writers learned that Google tried to have Chrome preinstalled on iPhones.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 1>
+
+<item 2>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 3>
+
+<item 4>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“We try to get people up and running as fast as possible.”
+
+Cue acknowledged that the ISA didn’t allow Apple to offer users a choice of search engines during setup but also said he wouldn’t want to do that anyway. “We
+try to get people up and running as fast as possible,” he said. “Setup is just critical stuff.” Showing people a bunch of search engines they’ve never heard of
+would just be a bad user experience, he argued; even Cue couldn’t remember the names of some of the alternatives to Google. “We make Google be the default
+search engine,” he said, “because we’ve always thought it was the best. We pick the best one and let users easily change it.” (“Easily” is a persistent point of
+contention in this trial — DuckDuckGo’s CEO, who testified last week, claimed it takes “too many steps” to switch.)
+
+As for the privacy pop-ups? This is where Bellshaw began to press on how exactly Apple decided Google had the best product.
+</item 4>
+
+<item 5>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 5>
+
+<item 6>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 8>
+
+<item 9>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 9>
+
+<item 10>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 10>
+=== END ITEM id=1a98c4457dbd24e4 ===
+
+=== ITEM id=e7fb1bd90815c1a2 ===
+Gold sentences and facts:
+Sentence 0: 9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.
+  Fact 0.0: At 9:47 p.m., the Bears answer right back and sack Dobbs.
+  Fact 0.1: Sweat and Brisker are in there to take Dobbs down.
+Sentence 1: The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game).
+  Fact 1.0: The Ravens defense has allowed the fewest points per game this season, 16.1.
+  Fact 1.1: The Ravens defense has allowed the second-fewest total yards this season, 4,030.
+  Fact 1.2: San Francisco's defense ranks second in points, at 16.7.
+  Fact 1.3: San Francisco's defense ranks 10th in yardage, at 310 yards per game.
+
+Retrieved items:
+<item 1>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+He goes 18 yards here to put Minnesota near midfield.
+
+10:29 p.m. FUMBLE — That's exactly what CAN'T happen if you're the Bears. Fields loses the football, Sheldon Day recovers, and the Bears waste an opportunity to
+make this a two-score game.
+
+Josh Metellus forces a fumble and the Vikings take over 😤
+
+
+
+📺: #CHIvsMIN on ESPN/ABC
+
+📱: Stream on #NFLPlus https://t.co/J5tLNJHyh1 pic.twitter.com/fKnE0eTxsP — NFL (@NFL) November 28, 2023
+
+10:27 p.m. — Fields finds Mooney for a big third down conversion as the Bears get firmly into field goal range.
+
+10:25 p.m. INTERCEPTION — Josh Dobbs throws his FOURTH interception of the night. Justin Jones nearly had it, but it was Kyler Gordon who came away with it.
+</item 1>
+
+<item 2>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+The honeymoon period is over for Joshua Dobbs in Minnesota.
+
+The folk hero quarterback threw four interceptions in the Vikings' 12-10 "Monday Night Football" loss to the Bears, leading a sluggish offense that didn't find
+its footing until the fourth quarter in a game that Minnesota wouldn't have needed many points to win.
+
+The Bears' defense swarmed Dobbs throughout the night, sacking him only twice but bringing a great deal of pressure as the defensive backs made plays. Despite
+the barrage of turnovers, Chicago largely failed to take advantage. The Bears scored only three points off of the four Dobbs interceptions.
+
+MORE: How Joshua Dobbs got his 'Passtronaut' nickname
+
+Meanwhile, Chicago's first turnover of the night — a deflating fumble by Fields when the Bears had a chance to extend their lead to two possessions — was
+quickly turned into a touchdown by the Vikings.
+</item 2>
+
+<item 3>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Matthew Stafford (@ Ravens), Geno Smith (@ 49ers), and Josh Dobbs (@ Raiders) are all risky against some of the league's better pass defenses. Stafford faces a
+sound Ravens stop unit that entered their Week 13 bye allowing the second-fewest FPPG to QBs.
+
+There's a chance the Vikings opt to start fellow QB Nick Mullens over Dobbs after his debacle last Monday night against the Bears, but if Minnesota elects to
+stick with Dobbs, his rocky Week 12 outing concerns us against a Raiders defense that's been one of the more efficient pass defenses since Week 5, sitting
+eighth in dropback EPA.
+
+On the other hand, after an elite Week 13 effort in Seattle's one-possession loss to Dallas, fantasy owners might go looking to chase points with Smith, but
+replicating last week's showing against the 49ers is a completely different ask for a QB who's underwhelmed this season.
+</item 3>
+
+<item 4>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+MORE: Inside the Cowboys historic offensive explosion vs. Giants
+
+11. Seattle Seahawks 6-3 (13)
+
+The Seahawks needed every ounce of their offense around Geno Smith to rally to beat the Commanders, but the get-well performance worked well for him, Kenneth
+Walker and the wide receivers. The defense could be more consistent.
+
+12. Minnesota Vikings 6-4 (14)
+
+The new man on the Vikings, Josh Dobbs, keeps producing the same results they were enjoying offensively with Kirk Cousins, thanks to more help from the running
+game for Kevin O'Connell and the defense overall under Brian Flores. Their 0-3 and 1-4 starts are distant memories as the Vikings look for a sixth straight win
+in Week 11 vs. Denver.
+
+13. Houston Texans 5-4 (16)
+
+The Texans are looking great with C.J. Stroud leading their offense and now they've found some running game, too.
+</item 4>
+
+<item 5>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in
+points (16.7) and 10th in yardage (310 per game).
+
+The 49ers defense might be slightly inferior statistically, but it could have more of an impact in this matchup. San Francisco has racked up an NFL-leading 25
+turnovers and has given up the second-fewest rushing yards (1,252), which should help slow down the team with the league's most effective running game.
+</item 5>
+
+<item 6>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+Only Joshua Dobbs, who ran for 55 yards, has scored double-digit Fantasy points against the Niners (18 points). Not that the Cowboys have been tested much --
+Daniel Jones, Zach Wilson and the Patriots QBs are the other guys they've man-handled.
+
+O-LINE: San Francisco has allowed a pass rush pressure on 36.4% of their snaps, which sounds like a lot but it's just a shade worse than league average. That
+number is weighted by the Giants' decision to blitz on 84.6% of Purdy's dropbacks in Week 2, creating an inflated pass rush pressure rate. Despite the Giants'
+efforts, Purdy still threw for 310 yards and two touchdowns in a game he didn't have Brandon Aiyuk in.
+
+COWBOYS: Have become one of the most aggressive defenses in the league, ranking third from the bottom in zone coverage snaps.
+</item 6>
+
+<item 7>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Can QB Jalen Hurts and the Eagles offense finally bounce back?: Philadelphia's defense isn't the only unit that needs to rebound, as the offense has struggled
+mightily over the last three games, with Hurts' ineffectiveness playing a significant role. After averaging the third-most points in the NFL over the first 11
+games (28.2), the Eagles have scored four offensive touchdowns during their current skid, three of which came via the "tush push."
+
+The Eagles may have difficulty throwing against a solid Giants pass defense, though they could alleviate some of their offensive woes by running the ball
+efficiently. New York gives up 131.6 rushing yards per game, the fourth-most in the league.
+
+Does Giants QB Tommy DeVito have any magic left?: The Giants may have a terrible offense, but this unit has operated at its best under DeVito, an undrafted
+rookie and native of Cedar Grove, New Jersey.
+</item 7>
+
+<item 8>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+The Bears defense comes up big with a 4th down stop
+
+
+
+📺: #CHIvsMIN on ESPN/ABC
+
+📱: Stream on #NFLPlus https://t.co/J5tLNJHyh1 pic.twitter.com/yndUqwgIbf — NFL (@NFL) November 28, 2023
+
+9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.
+
+9:46 p.m. — Alexander Mattison has drawn the ire of Vikings fans all season, but he just got Minnesota's second half of to a booming start with a 21-yard run.
+
+End of first half: Bears 3, Vikings 3
+
+9:32 p.m. FIELD GOAL — Greg Joseph drills it from 34 yards out, and this mess of a game is all tied at three entering the half.
+
+9:30 p.m.
+</item 8>
+
+<item 9>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+McCaffrey, who seems poised to win the Offensive Player of the Year Award, leads the NFL in rushing (1,292 yards) and total yards per game (128.6) this season
+and is tied for first in touchdowns (20).
+
+Ravens TE Isaiah Likely thriving in the starting role: The Ravens offense hasn't lost a step since losing one of the team's top weapons in tight end Mark
+Andrews (ankle) in Week 11, largely due to Likely's emergence.
+
+The second-year tight end has averaged 64.3 yards over his last three games, which is particularly noteworthy since Andrews averaged 54.4 yards per game before
+sustaining his injury.
+
+Should we expect a defensive battle?: While both teams boast offenses that rank in the top five in yardage and scoring, this may not turn into a shootout.
+</item 9>
+
+<item 10>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+DeVito has thrown for 858 yards, seven touchdowns, and one interception in five games since being named New York's starting quarterback, posting the
+13th-highest passer rating in the NFL during that stretch (97.3).
+
+Baltimore Ravens (11-3) at San Francisco 49ers (11-3) | 8:15 p.m. ET
+
+Potential Super Bowl sneak peek and MVP implications: Easily the most hyped game of the week, with the top seed in each respective conference squaring off in
+what could be a potential Super Bowl LVIII preview as well as the decisive clash for the MVP Award.
+
+According to oddschecker, 49ers QB Brock Purdy is listed as the heavy favorite to be named league MVP (-230), while Baltimore signal-caller Lamar Jackson holds
+the second-shortest odds (+525).
+
+Purdy, the final pick of the 2022 NFL Draft, has seen his career unfold as if it were a fairy tale that just keeps getting more remarkable.
+</item 10>
+=== END ITEM id=e7fb1bd90815c1a2 ===
+
+=== ITEM id=433b73314a5e5324 ===
+Gold sentences and facts:
+Sentence 0: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 0.0: The trial's standout testimony in the second week came from Caroline Ellison.
+  Fact 0.1: Caroline Ellison is Alameda Research's former CEO.
+  Fact 0.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 0.3: Caroline Ellison claimed she took the $14 billion to repay debts to lenders.
+  Fact 0.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 0.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 1: Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+  Fact 1.0: Bankman-Fried was even compared to Warren Buffet.
+  Fact 1.1: Many people called Bankman-Fried the white horse of crypto.
+  Fact 1.2: TechCrunch never called Bankman-Fried the white horse of crypto.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve great power.
+  Fact 2.3: The prosecution said Bankman-Fried committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that the FTX founder acted in good faith.
+  Fact 2.5: The defense said the FTX founder never meant to commit fraud.
+  Fact 2.6: The defense said the FTX founder never meant to steal.
+  Fact 2.7: The defense said the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 1>
+
+<item 2>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 3>
+
+<item 4>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Bankman-Fried faces seven federal charges, including wire fraud, securities fraud and money laundering, that could put him in prison for the rest of his life.
+Thus far, Bankman-Fried, 31, has remained mostly quiet in court intently listening to witnesses and at times writing notes to his attorneys. But as Wang
+testified against him, Bankman-Fried looked visibly upset, shifting his gaze from his former friend to the ground, and at one point putting his head in his
+hands.
+
+Sam Bankman-Fried listens as Assistant U.S. Attorney Nicolas Roos questions Gary Wang during Bankman-Fried's fraud trial over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Wang, 30, was technology chief for FTX, which spiraled into bankruptcy in November.
+</item 4>
+
+<item 5>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Sure, Sam Bankman-Fried’s trial has revealed that FTX was basically a seething mass of scams. But it has also revealed how Bankman-Fried blew up the lives of
+the people who are closest to him.
+
+Of course everyone who had money trapped on the FTX exchange when it collapsed — as the result of Bankman-Fried’s trading firm Alameda Research purloining its
+customers’ funds — had their lives altered. Even if they are made whole by the bankruptcy proceedings, that’s still money that they should have had access to at
+any time they wanted it. That may mean houses that weren’t purchased, medical procedures that were left undone, and life savings lost.
+
+There is a simultaneous drama of ruined lives playing out in the courtroom
+
+Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges. As we near the end of the prosecution’s case, I have been
+struck by how bizarre it all is.
+</item 5>
+
+<item 6>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 6>
+
+<item 7>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 7>
+
+<item 8>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 8>
+
+<item 9>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 9>
+
+<item 10>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 10>
+=== END ITEM id=433b73314a5e5324 ===
+
+=== ITEM id=41b6efd6f019e434 ===
+Gold sentences and facts:
+Sentence 0: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 0.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 0.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 0.2: The case argues that Google siphons off news publishers' readers.
+  Fact 0.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 0.4: The case argues that Google does this through anticompetitive means.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed an article for not meeting its standards.
+  Fact 1.1: The article was shared widely on social media.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The degree to which the article was shared and boosted shows how willing people are to accept foul play on Google's part.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 10>
+=== END ITEM id=41b6efd6f019e434 ===

@@ -1,0 +1,1000 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=2fa13bb76754f6e5 ===
+Gold sentences and facts:
+Sentence 0: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 0.0: Wired removed the article for not meeting its standards.
+  Fact 0.1: The article was shared widely on social media.
+  Fact 0.2: The article was boosted in write-ups at other outlets.
+  Fact 0.3: The degree to which the article was shared and boosted shows how willing people are to accept foul play on Google's part.
+Sentence 1: When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+  Fact 1.0: Google's search head Prabhakar Raghavan testified in court on October 28.
+  Fact 1.1: Prabhakar Raghavan revealed that Google paid $26.3 billion in 2021 to multiple browsers, phones and platforms.
+  Fact 1.2: The payments went to companies including Apple, Samsung and Mozilla.
+  Fact 1.3: The Verge reports this.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google siphons off news publishers' content, their readers and ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 5>
+
+<item 6>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+“This lawsuit simply ignores how intensely competitive and dynamic the technology industry is today.” Walker also points out that, when faced with a situation
+where Google is not the default, users tend to spend some effort putting Google back in charge. When Mozilla made Yahoo! the default on Firefox, most users
+changed it to Google. And when people set up a Windows device for the first time they frequently sidestep the Microsoft default — “Google” was the number one
+search query on Bing in 2021 — despite Microsoft making that very annoying to do. This is a compelling point, and many of us will be well accustomed to dodging
+all of Microsoft’s pleading while trying to get Chrome and Google set as defaults whenever we set up a new PC. But all of these arguments do ignore the fact
+that Google and its competitors are not on an even playing field. The question remains, why do users prefer Google?
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 8>
+
+<item 9>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 10>
+=== END ITEM id=2fa13bb76754f6e5 ===
+
+=== ITEM id=18c4e714ae810e14 ===
+Gold sentences and facts:
+Sentence 0: Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1 FPTS/G 11.4 The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia in Week 4.
+  Fact 0.0: The matchup is at ATL, and the betting line is ATL -2.5.
+  Fact 0.1: The over/under is 42.5.
+  Fact 0.2: The opponent's ranking against wide receivers is 6th.
+  Fact 0.3: The projected points are 12.1.
+  Fact 0.4: The WR rank is 37th.
+  Fact 0.5: Year-to-date receptions are 25.
+  Fact 0.6: Year-to-date targets are 31.
+  Fact 0.7: Year-to-date receiving yards are 261.
+  Fact 0.8: Year-to-date touchdowns are 1.
+  Fact 0.9: Fantasy points per game are 11.4.
+  Fact 0.10: The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2.
+  Fact 0.11: The only two games McLaurin posted good numbers in were Washington's 34-31 overtime loss to Philadelphia in Week 4.
+Sentence 1: Again, don't expect a massive game because the running game, defense, and special teams will have plenty of success in another big victory.
+  Fact 1.0: The writer says readers should not expect a massive game.
+  Fact 1.1: The running game will have plenty of success in another big victory.
+  Fact 1.2: The defense will have plenty of success in another big victory.
+  Fact 1.3: The special teams will have plenty of success in another big victory.
+
+Retrieved items:
+<item 1>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+On the flip side, three of the four quarterbacks Chicago faced found three touchdowns on their limited throws.
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Terry McLaurin WR WAS Washington • #17
+
+Age: 28 • Experience: 5 yrs. Weekly Breakdown MATCHUP vs CHI WAS -6 O/U 44.5 OPP VS WR 19th PROJ PTS 15.2 WR RNK 21st YTD Stats REC 21 TAR 26 REYDS 212 TD 1
+FPTS/G 12.1 The Commanders may wish to win this one with a big dose of the run game (Brian Robinson is a must-start), but if the Bears put up any offense at
+all, McLaurin will be in position to put up nice numbers. He's a low-end WR2 worth the nod over George Pickens, Zay Flowers, Drake London and Jahan Dotson.
+</item 1>
+
+<item 2>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+I'd expect that to be out the window now -- Flacco wasn't shy about chucking the rock deep with the Jets, attempting passes of 15-plus Air Yards on 20 percent
+of his throws, and he had no problem focusing on one primary receiver (Garrett Wilson had 8, 14 and 11 targets in Flacco's starts). The hope is that both Flacco
+and Cooper are experienced and capable enough to develop rhythm to salvage the Browns passing game. It's the only thing to buy into here as the Rams have
+allowed the 12th fewest Fantasy points to wide receivers on the season and happen to have done well against deep throws against wide receivers (40% completion
+rate allowed, two touchdowns, both top six on the season). Cooper's volume should hopefully push him to a decent Fantasy stat line. I'd give him a whirl over
+Terry McLaurin, Marquise Brown and Diontae Johnson.
+</item 2>
+
+<item 3>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+By the end of the game McLaurin's body language seemed dispirited.
+
+COMMANDERS: Throw to their wideouts on 58.7% of their targets, which is below league average (but not as bad as, say, the Falcons at 36.4%). What makes that
+number worse is that McLaurin has just one more target (31) than Jahan Dotson (30), who has three more targets than Curtis Samuel (27). They're all nearly even
+after five games and each of them has had a turn leading in targets at least once.
+
+FALCONS: Are expected to play a heavy dose of zone coverage, if only because the Commanders have struggled to be explosive against zone coverage this year.
+Atlanta also gave a full dose of snaps last week to outside cornerback Jeff Okudah, who wasn't flawless but does offer another sizable body to help against
+stronger perimeter receivers. Between Okudah and A.J.
+</item 3>
+
+<item 4>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+PAST THREE WEEKS: McLaurin has led all Commanders wide receivers in targets and all Commanders players in receptions. He's the No. 1 guy, and his big Week 4
+game (8-86-0 with an offensive fumble recovery for a touchdown) would have been even bigger if Sam Howell had better ball placement on a deep pass McLaurin was
+open for.
+
+BEARS: Are expected to play again without top outside cornerback Jaylon Johnson and safety Eddie Jackson. Not that those two absences led to a bonanza from
+Broncos receivers; Russell Wilson spread the ball around. But if McLaurin remains the target leader then he'll have the best shot at a big game. Rookies Tyrique
+Stevenson and Terell Smith figure to line up across from McLaurin the most.
+</item 4>
+
+<item 5>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+The Commanders offensive line has had some ugly showings lately against the Cowboys (four sacks, 49% pass rush pressure rate allowed), the Giants (four sacks,
+32.7% pressure rate allowed) and the Seahawks (three sacks, 46.8% pressure rate allowed). Somehow these results are better than what they were allowing through
+much of the first two months of the year. Sam Howell getting the ball out faster has been a positive in this regard but a negative for his numbers in three of
+his past four games (the one game he did really well in was sort of fluky). The matchup is a good test for the Dolphins pass rush post-Phillips, one that it
+should pass without giving up much in the way of deep completions.
+
+STARTS: Tyreek Hill, Jaylen Waddle, Raheem Mostert, Tua Tagovailoa, Terry McLaurin (low-end WR2),
+</item 5>
+
+<item 6>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+MATCHUPS: Each top-target earning wide receiver that plays mostly outside (like McLaurin) has found at least 10 PPR points in every game against the Bears. That
+includes Rashee Rice in Week 3 (7 targets, 5-59-0), Courtland Sutton in Week 4 (5 targets, 3-27-1), Romeo Doubs in Week 1 (5 targets, 4-26-2) and Mike Evans in
+Week 2 (8 targets, 6-171-1). Note that these receivers combined to catch 18 of 25 targets (72%) against Chicago.
+</item 6>
+
+<item 7>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+Expect more of the same from QB Justin Herbert and his stud back against the Jets, who have allowed 46 receiving yards per game to RBs (sixth-most in the NFL).
+They'll try to shut him down this Sunday, but it would feel so empty without AE!
+
+Jahan Dotson, WR, Commanders @ Patriots — OVER 45.5 receiving yards
+
+We've come full circle with Dotson, who made our preseason sleepers column then faded into early-season obscurity only to emerge again over the past two weeks.
+Curtis Samuel was clearly not right last week, and the second-year wideout more than made up for it. Dotson caught 8-of-10 targets for 108 yards and a TD, a
+stellar encore to his Week 7 line of five catches for 43 yards. The banged-up Patriots defense will be primarily focused on stopping stud Commanders receiver
+Terry McLaurin, which should open up plenty of opportunities for Dotson.
+</item 7>
+
+<item 8>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Start 'em 10.0-7.00 6.99 - 5.01 5.00 - 0 Sit 'em
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline Terry McLaurin WR WAS Washington • #17
+
+Age: 28 • Experience: 5 yrs. Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1
+FPTS/G 11.4 The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia
+in Week 4. This matchup has an over/under of 42.5 points, tied for fourth-lowest of the week.
+</item 8>
+
+<item 9>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Bowden Jr., alongside A.T. Perry and Keith Kirkwood, are the only healthy Saints WRs right now, and a favorable matchup against Detroit gives each some flex
+value in deep leagues. Mingo also draws a plus matchup against a reeling Buccaneers secondary, as a potential negative game script should boost his Week 13
+fantasy ceiling.
+
+Tillman is another talented rookie who's getting more run as the season progresses, and although P.J. Walker's struggled under center, Tillman is set up for a
+high-usage day against the Rams with Amari Cooper (ribs) banged up.
+
+WEEK 13 DFS:
+
+DK lineup | FD lineup | Best stacks | Best values
+
+Who are the biggest potential WR busts in Week 13?
+
+Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs.
+</item 9>
+
+<item 10>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Between Okudah and A.J. Terrell there isn't a matchup that's great for McLaurin.
+
+McLAURIN: Has an impressive 91.3% catch rate versus zone coverage this year, but is averaging just 9.3 yards per catch with it on a sub-9.0 ADOT. His target
+share is below 20% regardless of the kind of coverage he sees.
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Logan Thomas TE WAS Washington • #82
+
+Age: 32 • Experience: 9 yrs. Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS TE 31st PROJ PTS 8.4 TE RNK 11th YTD Stats REC 18 TAR 25 REYDS 183 TD 2
+FPTS/G 11.6 Streaming Thomas is worth the risk considering how the Falcons have let up numbers to tight ends.
+</item 10>
+=== END ITEM id=18c4e714ae810e14 ===
+
+=== ITEM id=9efc5bc9ecc3da5d ===
+Gold sentences and facts:
+Sentence 0: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 0.0: The answer ultimately lies with the jury.
+  Fact 0.1: The jury was selected on Wednesday morning.
+  Fact 0.2: The jury was selected before lawyers for the government.
+  Fact 0.3: Bankman-Fried then swapped two very different stories of the former crypto mogul's sudden rise and almost instantaneous fall.
+Sentence 1: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 1.0: The highly anticipated criminal trial of Sam Bankman-Fried started on Tuesday.
+  Fact 1.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 1.2: The trial is to determine whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 1>
+
+<item 2>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Bankman-Fried faces seven federal charges, including wire fraud, securities fraud and money laundering, that could put him in prison for the rest of his life.
+Thus far, Bankman-Fried, 31, has remained mostly quiet in court intently listening to witnesses and at times writing notes to his attorneys. But as Wang
+testified against him, Bankman-Fried looked visibly upset, shifting his gaze from his former friend to the ground, and at one point putting his head in his
+hands.
+
+Sam Bankman-Fried listens as Assistant U.S. Attorney Nicolas Roos questions Gary Wang during Bankman-Fried's fraud trial over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Wang, 30, was technology chief for FTX, which spiraled into bankruptcy in November.
+</item 2>
+
+<item 3>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 3>
+
+<item 4>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 4>
+
+<item 5>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Sure, Sam Bankman-Fried’s trial has revealed that FTX was basically a seething mass of scams. But it has also revealed how Bankman-Fried blew up the lives of
+the people who are closest to him.
+
+Of course everyone who had money trapped on the FTX exchange when it collapsed — as the result of Bankman-Fried’s trading firm Alameda Research purloining its
+customers’ funds — had their lives altered. Even if they are made whole by the bankruptcy proceedings, that’s still money that they should have had access to at
+any time they wanted it. That may mean houses that weren’t purchased, medical procedures that were left undone, and life savings lost.
+
+There is a simultaneous drama of ruined lives playing out in the courtroom
+
+Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges. As we near the end of the prosecution’s case, I have been
+struck by how bizarre it all is.
+</item 5>
+
+<item 6>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+It is honestly kind of incredible to watch a man torpedo his own credibility on direct testimony. We’re not even at the cross yet, and the judge has already
+instructed him to answer the question he’s being asked by his own lawyer.
+
+The jury is watching all of this intently.
+
+The main thing that’s been clear so far from Bankman-Fried’s testimony is that the man really loves the sound of his own voice. So far, the count of “Objection,
+narrative!” to Bankman-Fried’s answers, followed by “Sustained” is at three.
+
+Also, sometimes when Bankman-Fried says “we,” he only means himself.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud. FTX was a fraud
+“from the start,” the Securities and Exchange Commission alleged — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer
+funds.” Follow along for all the latest news and regular updates from the trial.
+</item 7>
+
+<item 8>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+The trial of Sam Bankman-Fried is likely to be more consequential than just whether the man himself is found guilty. Depending on what evidence is introduced
+during the trial, it could be rough for the entire crypto industry.
+
+“How much damage can this trial do to the already beaten-down reputation of the industry at this point?” asks Yesha Yadav, a law professor at Vanderbilt
+University. “This trial is going to be an excruciating moment for the industry because no one knows what kind of evidence might come out.”
+
+Bankman-Fried, the founder of FTX and Alameda Research, is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy
+charges. FTX was a failed cryptocurrency exchange founded in 2019. According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded
+because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm.
+</item 9>
+
+<item 10>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 10>
+=== END ITEM id=9efc5bc9ecc3da5d ===
+
+=== ITEM id=a7eecf29110eba4f ===
+Gold sentences and facts:
+Sentence 0: “But nah, it was awesome.” On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+  Fact 0.0: A speaker said 'But nah, it was awesome.'
+  Fact 0.1: On Saturday, the competition said goodbye to a range of players.
+  Fact 0.2: On Saturday, the competition said goodbye to Western Bulldogs forward Richelle Cranston.
+  Fact 0.3: Richelle Cranston has battled stage five chronic kidney disease while playing this season.
+  Fact 0.4: On Saturday, the competition said goodbye to Hawthorn's Akec Makur Chuot.
+  Fact 0.5: Akec Makur Chuot is a Hawthorn player.
+  Fact 0.6: Akec Makur Chuot played 40 games for three clubs.
+Sentence 1: The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year.
+  Fact 1.0: The Dogs are Richelle Cranston's third club.
+  Fact 1.1: Richelle Cranston started at Melbourne.
+  Fact 1.2: Richelle Cranston had a stint with Geelong.
+  Fact 1.3: Richelle Cranston joined the Bulldogs last year.
+
+Retrieved items:
+<item 1>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Dogs forward reveals battle with kidney disease Western Bulldogs forward Richelle Cranston has revealed she’s been living, and playing, with stage five chronic
+kidney disease. “I still manage to do the things I love,” the inaugural AFLW player posted to Instagram. “It’s just really hard sometimes.” Richelle Cranston of
+the Bulldogs: “It’s just really hard sometimes.” Credit: Getty Images The 34-year-old posted the caption along with a video detailing her life with the disease
+including weekly blood tests and daily blood pressure checks, tracking water and food intake, taking medications including resonium (to lower potassium levels),
+all while training in the high-performance environment.
+
+The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year. Cranston lined up for
+the Bulldogs in her side’s 57-point loss to Sydney on Saturday at Whitten Oval, 14.12 (96) to 6.3 (39).
+</item 1>
+
+<item 2>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I don’t think I’ve been as nervous to kick a goal in my life, to be honest,” she joked. “But nah, it was awesome.” On Saturday, the competition also said
+goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season,
+and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+
+Cranston, who was an inaugural AFLW player, will start kidney dialysis in January so had no option but to hang up the boots and focus on her treatment and
+health. “[I’m feeling] sad. Emotions hit me when the siren went. It’s been a really emotional week, the girls have really gotten around me. But yeah, my health
+has sort of deteriorated, it’s been a really hard year,” Cranston told Fox Footy after the Bulldogs lost to North Melbourne 7.13 (55) to 1.3 (9).
+</item 2>
+
+<item 3>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+We’re stoked. It’s pretty special for the club.” Missing star ruck Ally Morphett to a season-ending wrist injury, Laura Gardiner stood the tallest in the
+midfield, while Molloy (two goals), Montana Ham, Privitelli and Brooke Lochland hit the scoreboard. An off-season recruit from Geelong, 20-year-old Gardiner had
+the ball on a string with a game-high 33 disposals and 18 contested possessions.
+
+Demons denied the minor premiership The Brisbane Lions have toppled AFLW heavyweights Melbourne by 25 points to clinch a double chance in the finals and deny
+the Demons the minor premiership. A year after Melbourne walked away with the 2022 premiership, the Lions avenged their upset grand final loss by defeating the
+defending premiers 8.5 (53) to 4.4 (28) at Brighton Homes Arena on Saturday. Melbourne’s Lauren Peace fights for the ball againt the Lions.
+</item 3>
+
+<item 4>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+WEEK ONE FINALS FIXTURE SATURDAY NOVEMBER 11 First Qualifying Final: Adelaide v Brisbane Lions, 2.35pm local (3.05pm AEDT), Norwood Oval First Elimination
+Final: Gold Coast v Sydney, 6.15pm local (7.15pm AEDT), Heritage Bank Stadium SUNDAY NOVEMBER 12 Second Elimination Final: Geelong v Essendon, 1.05pm AEDT,
+GMHBA Stadium Second Qualifying Final: Melbourne v North Melbourne, 3.05pm AEDT, Ikon Park The eight was not decided until the final game of the regular season,
+when Sydney downed Fremantle by 22 points to leapfrog St Kilda into the final spot, after the Saints had kept themselves in the race with a 20-point win over
+Carlton earlier in the day, 7.4 (46) to 3.8 (26).
+</item 4>
+
+<item 5>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Melbourne’s Lauren Peace fights for the ball againt the Lions. Credit: Getty Images The Lions were at risk of slipping from the top four after last week’s
+21-point loss to St Kilda, but will now finish the home-and-away season fourth, avoiding a sudden-death elimination final and marking coach Craig Starcevich’s
+75th game in style.
+
+Meanwhile, Melbourne ceded the minor premiership to Adelaide and dropped to second spot. The Lions put on a show across the park, with powerhouse duo Ally
+Anderson (22 disposals) and Jade Ellenger (22) going to work in the midfield while Dakota Davidson (two goals) led the charge in the forward line. Captain Bre
+Koenen was superb in defence as she played on Melbourne’s leader Kate Hore, collecting a game-high 12 intercept possessions and limiting the prolific goalkicker
+to just one goal. Lions duo Charlotte Mullins and Ruby Svarc celebrate.
+</item 5>
+
+<item 6>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“We love going in those four walls. We train there three, four times a week. So having that familiarity of the ground is awesome ... So I would be super-excited
+to make finals for one, but then play at home would be just that extra and having all our support behind us really drives us on the field.” Tears abound in
+Phillips’ emotional farewell
+
+There were emotional scenes at Alberton Oval as the siren sounded on AFLW great Erin Phillips’ last game, with Port Adelaide saluting her with a huge 58-point
+win over Greater Western Sydney on Saturday. The crowd, which included Phillips’ father Greg and mother Julie (both in tears after the game), more family and
+friends, and Adelaide captain Chelsea Randall, erupted as the curtain finally came down for the three-time premiership player after eight seasons and 67 games.
+</item 6>
+
+<item 7>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“It was an awesome game and four quarters of Port Adelaide footy … It was awesome to finish up like that,” Phillips told Fox Footy after the 13.10 (88) to 4.6
+(30) win over the Giants. Erin Phillips celebrates a goal during her final AFLW match. Credit: AFL Photos Earlier, she told the ABC that she wanted her legacy
+to include doing everything she could to grow the game.
+
+“Hopefully I can be remembered as someone who took their opportunities, loved the game and was willing to do whatever it took to ensure the next generation was
+in a better position,” she said. Richelle Cranston of the Bulldogs is chaired off the ground by teammates Isabelle Pritchard and Ellie Blackburn after
+announcing her retirement. Credit: Getty The 38-year-old kicked a momentous goal from a set shot in the final quarter, and she was smothered by her jubilant
+teammates afterwards.
+</item 7>
+
+<item 8>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Molloy, the Swans’ star off-season recruit, turned on one of the best performances of her career to demolish their injury-hit hosts.
+
+The former Collingwood ace was a class above as she kicked 3.4 from her 28 possessions and played a crucial role in setting up numerous other Sydney goals.
+Loading “She [Molloy] was itching to get in there [in the midfield],” Swans coach Scott Gowans said. “We kept her forward deliberately. It was important Chloe
+played a good block of time forward so we could have a look at it.” The Blues lost to Greater Western Sydney by two points on Saturday afternoon, denying them
+the chance to leapfrog into the top eight, 8.1 (49) to 7.5 (47).
+
+Narrm reclaim top spot Reigning premiers Narrm have reclaimed top spot on the ladder and their position as flag favourites after defeating third-placed North
+Melbourne by 23 points at Ikon Park on Saturday night.
+</item 8>
+
+<item 9>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Crows elected not to challenge the decision. ‘Horror week’: Bombers stunned by struggling, controversy-hit Eagles West Coast withstood a late-term surge
+from Essendon to narrowly claim their second win of the AFLW season.
+
+Fresh off a controversy caused by comments their coach Michael Prior made following last week’s 70-point loss to Melbourne, the Eagles prevailed 3.5 (23) to 2.7
+(19) in a slugfest at the appropriately named Windy Hill on Sunday. West Coast’s Kate Bartlett (left) and Isabella Lewis celebrate Sunday’s surprise win over
+Essendon flanked by their teammates. Credit: Getty Prior had blasted the decision to pit strugglers West Coast against defending premiers Melbourne, saying:
+“How we play that team is beyond me. That is what you get when you get fixturing like that.” He later backtracked on the criticism, but his comments did put
+added pressure and focus on his team this week. Michael Prior guided West Coast to a gutsy win.
+</item 9>
+
+<item 10>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+J’Noemi Anderson is tackled by a group of Dockers. Credit: AFL Photos The Dockers dominated the Saints from the start to win 6.9 (45) to 3.3 (21) at Fremantle
+Oval. Having been on the verge of making their first finals appearance, St Kilda (4-4) could now miss the top eight even if they beat the fourth-placed Brisbane
+Lions and the ninth-placed Carlton.
+
+Dana East was everywhere for Fremantle, leading the game in disposals (19) and contested possessions (11), alongside Orlagh Lally (19 disposals, five
+clearances). Jamiee Lambert was the shining light for the otherwise subdued Saints, collecting a game-high seven clearances and 13 contested possessions. Docker
+Hayley Miller hunts a loose ball against St Kilda. Credit: Getty Fremantle flew out of the gates from the first siren, producing their highest-scoring quarter
+of the season with 26 points in the opening term.
+</item 10>
+=== END ITEM id=a7eecf29110eba4f ===
+
+=== ITEM id=077a4977fcad3a7f ===
+Gold sentences and facts:
+Sentence 0: When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+  Fact 0.0: Google's search head Prabhakar Raghavan testified in court on October 28.
+  Fact 0.1: Prabhakar Raghavan revealed in court testimony that Google paid $26.3 billion in 2021.
+  Fact 0.2: The $26.3 billion was paid to multiple browsers, phones and platforms.
+  Fact 0.3: The payments were made to companies including Apple, Samsung and Mozilla.
+  Fact 0.4: The Verge reports this.
+Sentence 1: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 1.0: The case (the sentence's subject, referred to as 'It') will attempt to argue that Google restrains competition within two separate markets.
+  Fact 1.1: One of the two markets is the distribution of apps to Android users.
+  Fact 1.2: The other market is the market for payment processing solutions for content inside Android apps.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 10>
+=== END ITEM id=077a4977fcad3a7f ===
+
+=== ITEM id=eb767ea5d8fb5226 ===
+Gold sentences and facts:
+Sentence 0: The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.
+  Fact 0.0: The Springboks took a 12-3 lead after 34 minutes.
+  Fact 0.1: The Springboks took the lead when the All Blacks once again failed to release on their goal line.
+  Fact 0.2: The All Blacks failed to release on their goal line once again.
+Sentence 1: Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide.
+  Fact 1.0: The All Blacks sensed an opportunity to strike against 14 men.
+  Fact 1.1: On a couple of occasions, the All Blacks kicked for the corner out wide.
+Sentence 2: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 2.0: This comes despite Argentina beating the All Blacks last year in Christchurch.
+  Fact 2.1: Argentina also gave the All Blacks a maiden defeat in 2020 in Sydney.
+
+Retrieved items:
+<item 1>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+The victory was the perfect sign-off for the Springboks’ management, with director of rugby Rassie Erasmus set to follow head coach Jacques Nienaber out.
+
+The duo will go down as the greatest coaching duo in rugby history, having led the Springboks to back-to-back World Cup triumphs.
+
+“We came a long way with the players. We always planned for this World Cup, since 2018,” Nienaber said.
+
+“Massive credit to our fans. They were special from South Africa, 62 million people, the videos we had to play from them. It was unbelievable.”
+
+Veteran back-rower Duane Vermeulen will also call time on his illustrious career.
+
+All Blacks coach Ian Foster’s tenure in charge has also come to an end, with Scott Robertson to take over following a bumpy four years in charge.
+</item 1>
+
+<item 2>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The All Blacks will experience a changing of the guard next season.
+
+Indeed, the All Blacks’ social media channels described the team selection for the World Cup final as the “Last Dance”.
+
+2015 World Cup winner Dane Coles will call time on his career, while his tight-five teammates Brodie Retallick and Sam Whitelock, who is bidding to become the
+first player to win the Webb Ellis Cup for a third time, will head overseas.
+
+Fellow World Cup winners Aaron Smith and Beauden Barrett will also head to Japan.
+
+Coles, who was labelled by Samisoni Taukei’aho as a “Grandad” type figure in the All Blacks, has even been denied the chance of a farewell send-off after
+missing selection.
+
+Advertisement
+
+“Yeah, tough,” said coach Ian Foster of the conversation with the 36-year-old around leaving him out.
+</item 2>
+
+<item 3>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 3>
+
+<item 4>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 4>
+
+<item 5>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+“This group is very proud to be All Blacks, very proud to play for their country and have worked incredibly hard to get here.
+
+“While I am so proud of what we did and how we worked we have to give it to South Africa, they are a quality team. They have had a few close victories in this
+tournament and are a different class. It’s special for them but it equally hurts for us. I can’t ask for much more than we did, we couldn’t put more out on the
+park.”
+
+Advertisement
+
+Controversy was on display from the outset, as Frizell was shown a yellow card for an illegal cleanout on Springboks hooker Bongi Mbonambi. The incident saw the
+hooker, who was cleared earlier in the week by World Rugby following an alleged racial slur on England back-rower Tom Curry, replaced by Deon Fourie in the
+third minute.
+
+The penalty allowed Pollard to step up and bang over three points.
+</item 5>
+
+<item 6>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 6>
+
+<item 7>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“It’s the life of this business, it’s a tough game. It’s tough when you’re trying to get your performance right. It’s a tough game when people around you see
+things differently, but we’ve learned a lot about ourselves.
+
+“We take massive pride in the jersey and making sure we reach the levels we want to. The rest of that is probably a conversation for another day.
+
+“It hasn’t altered our vision of where we want this team to be. I know we’ve surprised a few people but I don’t think we’ve surprised ourselves.”
+</item 7>
+
+<item 8>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“There were a few tears and I think that’s awesome to see, players showing vulnerability, just opening up about how much this tour and this sort of game means.
+
+
+
+“There were some (people) saying this is probably one of the most important games of All Blacks history. (The) All Blacks went through a bit of a hard path to
+get here, media, friends, family even criticising us and all that, and we stuck together. We weren’t even said to be in the final and now look at us, we’re
+here.
+
+Advertisement
+
+“Different players take it differently and some of the older players probably were hit a little bit harder and it was good to see just a bit of emotion and the
+want from them. Seeing that gives all the other players an extra two, three per cent to think ‘OK, we are going to the well and we’ve got to give it our all’.”
+
+The All Blacks will experience a changing of the guard next season.
+</item 8>
+
+<item 9>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+It’s been far from smooth, having overseen their historic defeats to Argentina as well as the 2-1 series loss to Ireland on home soil.
+
+A famous 35-23 win over the Springboks at Ellis Park saw him save his career, with Scott Robertson being lined up on the side.
+
+But it wasn’t enough for New Zealand Rugby to back him before this year’s Test season got underway, with Robertson announced as Foster’s successor.
+
+“Am I at peace?” Foster repeated a question during his World Cup team announcement when asked about where his mental state was ahead of his last Test in charge
+of the All Blacks.
+
+“Yeah, I’m reasonably peaceful. I love the word but I’m not sure I’m peaceful right now.”
+
+Advertisement
+
+He added: “I’ve just started to get my back nice and straight from last year and now you’re trying to make me hunched over again!
+
+“It’s the life of this business, it’s a tough game.
+</item 9>
+
+<item 10>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Four years ago, Rassie Erasmus delivered one of the great rugby speeches ahead of the 2019 World Cup final.
+
+“You don’t have the right today to worry about your mistakes,” Erasmus said before the Springboks sealed a stunning 32-12 victory over England to claim their
+third William Webb Ellis Cup.
+
+“If you worry about your mistakes today, you’ve got ego problems.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+“You are not representing yourself today. You are fighting for the things that happen in South Africa.
+
+“You are tackling for the boy who didn’t get the same opportunities that you got eventually.”
+
+Four years later and the “ego” Erasmus spoke about is what is driving the standards and expectations around the Springboks’ bid to go back-to-back.
+
+“We explain to the whole squad why we are going a certain route.
+</item 10>
+=== END ITEM id=eb767ea5d8fb5226 ===

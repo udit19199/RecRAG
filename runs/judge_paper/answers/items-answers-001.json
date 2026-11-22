@@ -1,0 +1,87 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "16cf8da2df1eb361",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages and versions: Gemini’s expected debut, then the release of the lite Gemini Pro version."
+  },
+  {
+   "id": "00f9aec8c0fbbe75",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles implicate Bankman-Fried; TechCrunch says Ellison took the funds under his instruction, not without his knowledge."
+  },
+  {
+   "id": "46f80229e1bd1e9c",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages and versions: Gemini Pro was released, while Gemini Ultra was still expected."
+  },
+  {
+   "id": "c2df14cb59ad7f8b",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: Argentina exposed past gameplay challenges, while the final saw the All Blacks give a performance they were proud of despite losing."
+  },
+  {
+   "id": "b944fd656bd33688",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both assert Sam Bankman-Fried’s involvement; TechCrunch says Ellison acted under his instruction, not without his knowledge."
+  },
+  {
+   "id": "54bac6314d2f9a0c",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on high-performance centralisation, but differ on who retains control of commercial and corporate functions."
+  },
+  {
+   "id": "eb872f07c4b77809",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there a change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from default-search dominance to alleged anticompetitive use of publishers’ content in AI search."
+  },
+  {
+   "id": "f415ccd986de0200",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: past struggles against Argentina and a hard-fought World Cup final loss to South Africa."
+  },
+  {
+   "id": "7bb8af1635e550a1",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from long-term planning for sustainable success to poor European results and mounting pressure."
+  }
+ ],
+ "evidence": []
+}

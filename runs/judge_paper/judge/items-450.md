@@ -1,0 +1,933 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=1deb29e347e2291d ===
+Gold sentences and facts:
+Sentence 0: It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end.
+  Fact 0.0: It would seem that the All Blacks are playing for themselves as much as anyone.
+  Fact 0.1: The Springboks play for their country.
+  Fact 0.2: A generation of players and leaders will call time on their international careers at week's end.
+Sentence 1: The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.
+  Fact 1.0: The Springboks took a 12-3 lead.
+  Fact 1.1: The Springboks took the 12-3 lead after 34 minutes.
+  Fact 1.2: The 12-3 lead came when the All Blacks once again failed to release on their goal line.
+Sentence 2: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 2.0: The preceding situation (named 'It' in this sentence) comes despite Argentina knocking over the All Blacks last year in Christchurch.
+  Fact 2.1: The preceding situation also comes despite a maiden defeat in 2020 in Sydney.
+  Fact 2.2: There was a maiden defeat in 2020 in Sydney.
+
+Retrieved items:
+<item 1>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“We don’t want to talk too much about post-game stuff, but that was a tough one, probably the toughest I have had as a coach. He took it the way I expected him
+to. He’s a champion.”
+
+Papali’i said the All Blacks were intent on sending their leaders out on a high.
+
+“There’s a few leaders in the team, it’s going to be their last game in the jersey, so it’s a big game for us and even the other players that are staying,
+knowing that we want to send those boys out on a high,” he said.
+
+“How much they put into the jersey. We are standing on their…what’s that quote? It’s standing on the shoulders of giants.”
+
+The generational change isn’t just occurring on the field but off it, too.
+
+Advertisement
+
+Foster will depart the All Blacks set up after 12 years, the last four as head coach.
+</item 1>
+
+<item 2>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 2>
+
+<item 3>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“It’s the life of this business, it’s a tough game. It’s tough when you’re trying to get your performance right. It’s a tough game when people around you see
+things differently, but we’ve learned a lot about ourselves.
+
+“We take massive pride in the jersey and making sure we reach the levels we want to. The rest of that is probably a conversation for another day.
+
+“It hasn’t altered our vision of where we want this team to be. I know we’ve surprised a few people but I don’t think we’ve surprised ourselves.”
+</item 3>
+
+<item 4>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 4>
+
+<item 5>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The pain of the days and weeks after that dark July, as well as the bumps and bruises along the way, including as recently as August when they suffered their
+biggest defeat to the Boks to lose the inaugural and prestigious Qatar Cup, still runs deep.
+
+“It was quite special to hear some of the things those certain players said from the heart. You know, you think you know someone but once they open up and
+really be vulnerable in front of a team, it was quite special to hear,” back-rower Dalton Papali’i said this week.
+
+
+
+“It was truly something special when you hear those boys open up. You know those leaders have been through a lot in their careers, the highs and the lows, the
+off-field and on-field stuff, and for them to open up, it sort of makes you feel welcomed and you want to play this game for them.
+</item 5>
+
+<item 6>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Four years ago, Rassie Erasmus delivered one of the great rugby speeches ahead of the 2019 World Cup final.
+
+“You don’t have the right today to worry about your mistakes,” Erasmus said before the Springboks sealed a stunning 32-12 victory over England to claim their
+third William Webb Ellis Cup.
+
+“If you worry about your mistakes today, you’ve got ego problems.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+“You are not representing yourself today. You are fighting for the things that happen in South Africa.
+
+“You are tackling for the boy who didn’t get the same opportunities that you got eventually.”
+
+Four years later and the “ego” Erasmus spoke about is what is driving the standards and expectations around the Springboks’ bid to go back-to-back.
+
+“We explain to the whole squad why we are going a certain route.
+</item 6>
+
+<item 7>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The All Blacks will experience a changing of the guard next season.
+
+Indeed, the All Blacks’ social media channels described the team selection for the World Cup final as the “Last Dance”.
+
+2015 World Cup winner Dane Coles will call time on his career, while his tight-five teammates Brodie Retallick and Sam Whitelock, who is bidding to become the
+first player to win the Webb Ellis Cup for a third time, will head overseas.
+
+Fellow World Cup winners Aaron Smith and Beauden Barrett will also head to Japan.
+
+Coles, who was labelled by Samisoni Taukei’aho as a “Grandad” type figure in the All Blacks, has even been denied the chance of a farewell send-off after
+missing selection.
+
+Advertisement
+
+“Yeah, tough,” said coach Ian Foster of the conversation with the 36-year-old around leaving him out.
+</item 7>
+
+<item 8>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+It’s been far from smooth, having overseen their historic defeats to Argentina as well as the 2-1 series loss to Ireland on home soil.
+
+A famous 35-23 win over the Springboks at Ellis Park saw him save his career, with Scott Robertson being lined up on the side.
+
+But it wasn’t enough for New Zealand Rugby to back him before this year’s Test season got underway, with Robertson announced as Foster’s successor.
+
+“Am I at peace?” Foster repeated a question during his World Cup team announcement when asked about where his mental state was ahead of his last Test in charge
+of the All Blacks.
+
+“Yeah, I’m reasonably peaceful. I love the word but I’m not sure I’m peaceful right now.”
+
+Advertisement
+
+He added: “I’ve just started to get my back nice and straight from last year and now you’re trying to make me hunched over again!
+
+“It’s the life of this business, it’s a tough game.
+</item 8>
+
+<item 9>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“We explain to the whole squad why we are going a certain route. It is not about individual selection,” Springboks coach Jacques Nienaber said shortly after
+announcing two changes to his starting side and five in total, after going in with a forwards-heavy 7-1 bench split.
+
+Advertisement
+
+“It is for South Africa. As selectors we know there will be pressure on us if we don’t deliver a result but at the back of our minds we know this selection is
+for South Africa.
+
+“The players take it like that. It is not about person or ego, not that they have egos, but you can’t think of that. You have to think about South Africa and
+the Springboks.”
+
+Seemingly the Springboks are playing for more than themselves. They’re playing for their country.
+
+It’s a powerful force, one that saw them progress through the knockout stages to reach the final after consecutive one-point victories.
+
+Pressure?
+</item 9>
+
+<item 10>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“There were a few tears and I think that’s awesome to see, players showing vulnerability, just opening up about how much this tour and this sort of game means.
+
+
+
+“There were some (people) saying this is probably one of the most important games of All Blacks history. (The) All Blacks went through a bit of a hard path to
+get here, media, friends, family even criticising us and all that, and we stuck together. We weren’t even said to be in the final and now look at us, we’re
+here.
+
+Advertisement
+
+“Different players take it differently and some of the older players probably were hit a little bit harder and it was good to see just a bit of emotion and the
+want from them. Seeing that gives all the other players an extra two, three per cent to think ‘OK, we are going to the well and we’ve got to give it our all’.”
+
+The All Blacks will experience a changing of the guard next season.
+</item 10>
+=== END ITEM id=1deb29e347e2291d ===
+
+=== ITEM id=c4f46a57bfdcd83a ===
+Gold sentences and facts:
+Sentence 0: Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.
+  Fact 0.0: Epic will also suggest that Google hid items from discovery by allowing executives and employees to have 'off the record' chats.
+  Fact 0.1: Google will counter this, saying it has provided the court with thousands of chat logs.
+  Fact 0.2: Google says it has provided the court with millions of documents.
+Sentence 1: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 1.0: Google did not release the full model, Gemini Ultra.
+  Fact 1.1: Google released only a 'lite' version called Gemini Pro.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that this happens through anticompetitive means.
+
+Retrieved items:
+<item 1>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Match may have settled its antitrust lawsuit with Google last week, but Fortnite maker Epic Games is still set to go to trial with the tech giant today,
+November 6, in hopes of convincing a jury that Google engages in anticompetitive behavior with regard to its Android app store, Google Play, and its commission
+structure. This case will differ slightly from Epic’s battle with Apple on the same topic because, this time, Epic can’t allege there’s no other way to load
+apps onto Android devices, as it could with Apple, because Android does allow for sideloading apps. Though Epic will suggest Google makes that process
+cumbersome, the bulk of its arguments will center around what it believes are anticompetitive agreements between Google and device manufacturers and developers.
+
+The precedent Epic’s case will rely on is a Microsoft case where courts found Microsoft to have a monopoly over the operating system and were abusing it, making
+it hard for users to download alternative browsers, like Netscape, on Windows devices.
+</item 1>
+
+<item 2>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+“Android’s choice and flexibility work well for consumers and developers of all sizes. We look forward to making our case in court as we fight to keep our users
+safe from harm, partner with developers to grow their businesses, and keep the Android ecosystem thriving and healthy for everyone,” reads a Google blog post by
+Wilson White, VP, Government Affairs & Public Policy.
+
+Epic’s lawsuit originally involved Match and several U.S. attorneys general, but Google reached a settlement with the latter last month and with Match last
+week. Epic will now fight the antitrust battle on its own. The lawsuit, held in the U.S. District Court in California’s Northern District, will include
+testimony from a number of Google and Android execs, including CEO Sundar Pichai, and Epic Games CEO Tim Sweeney, as well as Apple, Netflix and other Android
+developers.
+
+Google is also involved in another antitrust lawsuit with the Department of Justice over its alleged search monopoly.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 4>
+
+<item 5>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 5>
+
+<item 6>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 7>
+
+<item 8>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 10>
+=== END ITEM id=c4f46a57bfdcd83a ===
+
+=== ITEM id=54e35dbc6d7d292a ===
+Gold sentences and facts:
+Sentence 0: McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund.
+  Fact 0.0: McTominay is now United's top scorer for the season.
+  Fact 0.1: McTominay has six goals for the season.
+  Fact 0.2: McTominay is one goal ahead of Bruno Fernandes.
+  Fact 0.3: McTominay is one goal ahead of Rasmus Hojlund.
+Sentence 1: He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages.
+  Fact 1.0: McTominay has already been firing in many top-flight goals this term.
+  Fact 1.1: McTominay is also the joint-leading scorer from the Champions League group stages.
+
+Retrieved items:
+<item 1>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+He has also found his shooting boots for his country, most notably scoring four in a 5-0 win over Azerbaijan in November.
+
+Lukaku's career seems to have reignited and that has seen him close to claiming a place as one of the highest goalscorers this year.
+
+8 Lukaku ended the Euro 2024 qualifying campaign as top scorer Credit: AFP
+
+4. Erling Haaland (Manchester City/Norway) - 50 goals
+
+No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36
+strikes last term.
+
+He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages.
+
+Just six out of his 50 goals in 2023 have been for his national side Norway, with Haaland helping the Citizens to a historic treble last campaign.
+</item 1>
+
+<item 2>
+Ten Hag responds to Carra: Man Utd have actually improved (Sky Sports, 2023-10-28T21:30:00+00:00)
+Ten Hag on misfiring strikers: We need to be better
+
+Please use Chrome browser for a more accessible video player Manchester United boss Erik ten Hag speaks on the improvement he's seen in goalkeeper Andre Onana
+and insists he believes Marcus Rashford can get back to scoring goals
+
+United go into Sunday's derby with a slight striker scoring problem. City forward Erling Haaland has scored more Premier League goals this season (9) than
+United's five forwards have managed in all competitions (8).
+
+United's top scorer this season is actually defensive midfielder Casemiro with four strikes so far.
+
+Asked if their forwards are to blame for this frontline problem, Ten Hag replied: "Fault? It's co-operation. It has to click.
+
+"We have shown in some games, we have so many in overload positions to the opponents goal and we don't net or don't even hit the target. We should be doing this
+better."
+
+It has been a sobering start to the season for Marcus Rashford, who has one goal so far this term for United.
+</item 2>
+
+<item 3>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+Kane, who has scored nine goals for England in 2023, is also the first player to register a hat-trick in their first outing against Borussia Dortmund.
+
+It should come as no surprise that he is also on course to score the most goals in a debut Bundesliga campaign as he hunts down Uwe Seeler's record of 30 for
+Hamburg in the 1963/64 season.
+
+As well as that, Kane is on track to break Robert Lewandowski's record of 41 goals in a single season.
+
+He's adding assists, too, as evidenced by his 'filthy' effort against Man United in the Champions League.
+
+Like Mbappe, Kane cannot overtake Ronaldo's tally due to the German winter break.
+
+8 Kane already has 25 goals for Bayern in all competitions Credit: Getty
+
+1.
+</item 3>
+
+<item 4>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+Santiago Gimenez (Feyenoord/Mexico) - 39 goals
+
+One of the most exciting strikers in world football, the 22-year-old has taken European football by storm.
+
+Joining Dutch side Feyenoord in the summer of 2022, he fired Arne Slot's men to the Eredivisie championship with 15 goals.
+
+With 20 goals this season along with two strikes for Mexico, it's clear to see why Arsenal, Tottenham and Chelsea have all been linked with a move.
+
+8 Gimenez seems destined for a big move in the near future Credit: Getty
+
+5. Romelu Lukaku (Roma/Belgium) - 40 goals
+
+After reuniting with Jose Mourinho at Roma in the summer, Lukaku has found his goalscoring form once again.
+
+The Belgian has been firing back in Serie A following another loan move from Chelsea, netting in almost all of his starts this season.
+</item 4>
+
+<item 5>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+In the final year of his contract at Parc des Princes, Real Madrid are favourites to secure a free transfer next summer, but they face competition from
+Liverpool.
+
+PSG have no games left to play in 2023 due to the French winter break, with Mbappe therefore unable to catch Ronaldo.
+
+8 Mbappe has enjoyed a stunning 2023 having scored 52 goals for club and country Credit: AFP
+
+2*. Harry Kane (Bayern Munich/Tottenham/England) - 52 goals
+
+A stunning 2022/23 season saw Bayern splash out over £100m to sign the Spurs legend in August.
+
+And Kane has repaid the Bundesliga club's faith having broken a number of records with his 25 goals so far this season.
+
+The leading scorer [22 goals] in the German top-flight, the Three Lions skipper set a new Bundesliga record last month by finding the back of the net 17 times
+in his opening 11 outings.
+</item 5>
+
+<item 6>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+The Portugal international Ronaldo has been battling with with Kylian Mbappe, Erling Haaland and Harry Kane for the title of the best goalscorer of 2023..
+
+Here talkSPORT.com runs you through how Ronaldo compares to the top six highest scoring European based footballers this year...
+
+7. Lautaro Martinez (Inter Milan) - 37 goals
+
+All of Martinez's goals this year have come at club level for Inter Milan, with none coming on the international scene for Argentina.
+
+With so many goals this campaign, it's no surprise that the Serie A giants are desperate to tie him down to a new deal.
+
+He currently leads the Scudetto Golden Boot race - six more than closest rival Domenico Berardi.
+
+8 Inter striker Martinez has carried on from last season by banging them in for fun Credit: Getty
+
+6.
+</item 6>
+
+<item 7>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+With two games left for City in 2023, Haaland has time to be the overall top scorer, though it remains to be seen if Pep Guardiola will play him against Everton
+and Sheffield United.
+
+Haaland has missed City's last five games with a foot injury, but it is believed he could be in contention now to return to action.
+
+8 Haaland is the leading goalscorer in the Premier League this season
+
+2*. Kylian Mbappe (Paris Saint-Germain/France) - 52 goals
+
+Paris Saint Germain's all-time record scorer with 233 goals, it's easy to forget that the ex-Monaco man is still just 24 years old.
+
+He has added even more goals to his tally for Les Parisiens this term, while he has fired in ten times for the French national team.
+
+Mbappe's overall tally of 46 goals for Les Bleus is just ten shy of Giroud's current record.
+</item 7>
+
+<item 8>
+Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe (TalkSport,
+2023-11-29T23:40:49+00:00)
+Manchester United's domestic form has certainly shown signs of improvement in recent weeks, but that's far from the case in Europe.
+
+Erik ten Hag's side have once again dropped points from a winning position as they drew 3-3 with Galatasaray in the Champions League, a damaging result in their
+bid to reach the last 16.
+
+4 United were once again the victims of their own demise Credit: Getty
+
+Goals from Alejandro Garnacho and Bruno Fernandes fired them into a two-goal lead within 18 minutes before Chelsea loanee Hakim Ziyech struck back.
+
+Scott McTominay scored what he thought would have been a crucial third shortly after the break but United failed to hold on.
+
+Another free-kick from Ziyech caught Andre Onana off guard once again and a strong strike from Kerem Akturkoglu levelled the scoring.
+</item 8>
+
+<item 9>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+Al Nassr striker Cristiano Ronaldo looks set to be the top scorer in 2023 after his Boxing Day double against Al Ittihad.
+
+The 38-year-old may have swapped Europe for the Middle East, but he has showed no signs of slowing down in Saudi Arabia.
+
+8 Ronaldo has been in lethal form for club and country in 2023 Credit: Getty
+
+Ronaldo linked up with Al Nassr in the winter transfer window after parting ways with Manchester United following his explosive interview with Piers Morgan.
+
+Liverpool legend Jamie Carragher described the five-time Ballon d'Or winner's switch to the Gulf nation as a 'sad end' to his career, but Ronaldo continues to
+prove his doubters wrong.
+
+But he isn't the only star that has been in great form, with players across Europe banging them in for fun.
+</item 9>
+
+<item 10>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+Manchester United got themselves back to winning ways thanks to a superb Scott McTominay brace against Chelsea.
+
+The victory remarkably puts them within three points of rivals Manchester City, after the reigning champions were defeated by Aston Villa, and keeps them in
+reach of the top four places.
+
+McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund. The Red Devils' captain had a first-half
+penalty saved by Robert Sanchez and United's Danish striker was substituted after another Premier League game without a goal, despite making 11 appearances.
+
+Erik ten Hag's side were dominant in the first half and finally pounced on Chelsea's inability to take control in midfield. Mauricio Pochettino's men attempted
+to break at pace but Sofyan Amrabat made a vital interception and Fernandes found Alejandro Garnacho out wide.
+</item 10>
+=== END ITEM id=54e35dbc6d7d292a ===
+
+=== ITEM id=df8ef15c60c8a2a2 ===
+Gold sentences and facts:
+Sentence 0: His career has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed.
+  Fact 0.0: His career has only blossomed in the years since he took that trip.
+  Fact 0.1: Some artists might feel trepidation about attaining so much success from such an early age.
+  Fact 0.2: Mitchell is clear-eyed.
+Sentence 1: Since then he’s been linked to club jobs in Europe but opted to stick around with the national team.
+  Fact 1.0: Since then, he has been linked to club jobs in Europe.
+  Fact 1.1: He opted to stick around with the national team.
+
+Retrieved items:
+<item 1>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+His love for the Socceroos and football in Australia is both infectious and inspiring. That energy and passion is a huge element to the way he’s able to lead
+and inspire our nation’s best male footballers in some of our sport’s most challenging arenas.
+
+“On behalf of Football Australia, I’d like to congratulate Arnie on everything he’s achieved in reaching this milestone and we look forward to him continuing to
+build on what is already an exceptional legacy.”
+
+In a remarkable few weeks last year Arnold went from on the nose to a man revived. Since then he’s been linked to club jobs in Europe but opted to stick around
+with the national team.
+
+While national team coaches make important calls every game, Arnold’s record-breaking achievement is conceivably down to one big ballsy call in the playoff
+against Peru.
+</item 1>
+
+<item 2>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+Arnold – who also represented the Socceroos 56 times as a player – has been involved in national team coaching ranks since 2000, first as an assistant to Farina
+and then Guus Hiddink, before a brief period as caretaker coach in 2006.
+
+“It’s certainly a proud moment and an achievement that I’ll reflect on when the time is right,” Arnold said.
+
+“I look at some of the names on that list – Farina, Arok, Thompson, Rasic – guys I played under or assisted in the early part of my coaching career, and it
+gives you some perspective on what a journey it’s been so far.
+
+Advertisement
+
+“I think back to that caretaker period and how much I learnt about coaching; it was a challenging experience and one that on reflection I probably wasn’t ready
+for. I’m grateful for the opportunity I was given and what it was able to teach me ahead of my pathway into club coaching.
+</item 2>
+
+<item 3>
+How shooting Beyoncé and Kamala Harris made this photographer famous too (The Age, 2023-11-27T23:00:00+00:00)
+Tyler Mitchell Albany, Georgia, 2021 (detail). Credit: Courtesy of the artist and Jack Shainman Gallery, New York As a 20-year-old film student at New York
+University, Mitchell became enamoured with still photography after he signed up to do a documentary photography course in Havana, Cuba. Frustrated by the amount
+of time and money required to make films, he was drawn to the accessibility of still photography.
+
+Advertisement
+
+“I was impatient when I got started and just wanted to make visual things now, and I didn’t want to wait for permission, or didn’t want to wait on equipment, or
+didn’t want to lug large amounts of equipment up flights of stairs. I just wanted to make something that I felt compelled by, immediately,” he says. His career
+has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early
+age, Mitchell is clear-eyed. “The idea of the road ahead only excites me,” he says.
+</item 3>
+
+<item 4>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+He got to answer critics like Mark Bosnich and Craig Foster as well – bluntly rejecting their negativity with the dismissive “who cares?”. That would have
+tasted sweet.
+
+On Tuesday, FA CEO James Johnson, who held firm on Arnold 20 months ago, got to congratulate the coach on his impending record-breaking match against Bangladesh
+as 2026 World Cup qualifying starts on Thursday.
+
+Advertisement
+
+“Graham is one of the greatest contributors to the Socceroos,” Johnson said in a statement.
+
+“He’s been a constant in the Australian football landscape for more than 30 years as both a player and coach, being a part of some of the Socceroos most
+memorable moments.
+
+“Anyone who knows Arnie will tell you he bleeds green and gold. His love for the Socceroos and football in Australia is both infectious and inspiring.
+</item 4>
+
+<item 5>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+It’s such a lame excuse.”
+
+Atherton described the England players as looking ‘dazed and shell-shocked, unable to comprehend what has befallen them’, and wrote in The Times that the Sri
+Lankan defeat officially represented the ‘end of an era’ for English white-ball supremacy.
+
+Advertisement
+
+“Each defeat, now four in five matches, has chipped away at the confidence of a group of players at the end of a cycle,” Atherton wrote.
+
+“No batsman looks in any kind of form. Every player has been used; some discarded and used again. They lost faith in their all-rounder strategy before the South
+Africa match, making three changes, and then went back to it here, making three more.
+
+“Players sense uncertainty in decision-making – and there has been a lot of uncertainty.
+
+“It was hard to think that they could put in a worse performance than in Mumbai but they managed it with the bat in Bengaluru.”
+</item 5>
+
+<item 6>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+We need to maximize the development of the players. At the end of the day, that’s the key to success and alignment of your resources, for a small country.
+
+“Because Australia, if you look at the history of rugby, when we were amateur, we were probably ahead of the game because we had the influence of rugby league.
+We had the influence of AFL and our players were more professional than the rest of the world.”
+
+He added: “I know what’s going on and we need to get a better system of developing players. We need to develop better players and we need to develop a larger
+batch of better players and that only comes through changing the whole system.”
+
+While all five Australian Super Rugby sides fundamentally are on board with regards to moving to a centralised high-performance program, The Roar added that
+some states, including the ACT Brumbies as well as the QRU, don’t want to give up their commercial assets.
+</item 6>
+
+<item 7>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+In March last year Graham Arnold seemed a dead man walking – the Socceroos World Cup qualification campaign was lurching towards failure and the manager was
+being battered from all sides.
+
+Arnold’s team had finished seven points off automatic qualification for Qatar after a shocking run of one win in seven games left them facing a Asian playoff
+against United Arab Emirates and then another against Peru to make the finals.
+
+While rumours swirled and ex-players and fans bayed for his blood, Football Australia took the pragmatic course and stuck by Arnold. It likely had more to do
+with the lateness of the hour and financial considerations than any overwhelming faith in Arnie to run around the fortunes.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+But he did just that with qualification – and an excellent run at the finals – bowing out to the eventual champions Argentina and after nearly taking them to
+extra time.
+</item 7>
+
+<item 8>
+How shooting Beyoncé and Kamala Harris made this photographer famous too (The Age, 2023-11-27T23:00:00+00:00)
+Tyler Mitchell: “I’ve never been to Australia so it’s very exciting to sort of have a global or new conversation on a new continent with my work.″⁣ Credit:
+Courtesy of the artist and Jack Shainman Gallery, New York The theme of the Triennial is “Magic, Matter, Memory”, making Mitchell’s pieces a logical inclusion.
+“A lot of my work meditates on being between a heightened reality, or potentially even a magical reality and an actual reality,” he says.
+
+Advertisement
+
+“I’m creating what I call lightly staged moments. And so that means I’m setting up scenarios where these families are enjoying real moments of leisure in
+outdoor spaces, usually open pastures and fields, and those moments are meant to stand in for a meditation on what it means to enjoy leisurely outdoor nature as
+a black person.” Tyler Mitchell, Vastness, 2021.
+</item 8>
+
+<item 9>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+“I was able to put lessons from that time into practice, develop and eventually return to the Socceroos much more prepared for the role. It’s been a privilege
+to be part of the national team again with the benefit of that experience, and I’m immensely proud of what this group has been able to achieve in the last four
+years.
+
+“In my opinion, there’s no greater honour than representing your nation on the international stage. I look at the young players coming through the Socceroos
+system now full of pride in the work they’ve put in to get where they are, and the journey that’s ahead of them.
+
+“I’ve always loved being a part of the Socceroos culture and my desire to see Australia fulfil its footballing potential is still driving me to take this group
+to further success.”
+
+Australia starts the road to north America in Melbourne at AAMI Park on Thursday night, before travelling to the Middle East to play Palestine next Wednesday
+(1.00am AEDT).
+</item 9>
+
+<item 10>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+With moments left in extra time against the South Americans, Arnold dragged Mat Ryan and replaced him with Andrew Redmayne – who saved the decisive spot kick
+(and also threw his opponents water bottle with cheat sheet attached away from the goal).
+
+Advertisement
+
+Ryan might well have gotten the Socceroos to Qatar, but if Australia had not advanced there’s little chance Arnold would still be their coach today.
+
+And there’s virtually no chance he’ll have to endure a similar level of stress through to the next finals – with FIFA expanding the tournament from 36 to 48
+teams meaning eight direct Asian confederation qualifiers will proceed directly instead of four.
+
+Arnold, in his second stint as national team manager, will prowl the technical area for a 59th time on Thursday, taking him clear of Frank Farina.
+</item 10>
+=== END ITEM id=df8ef15c60c8a2a2 ===
+
+=== ITEM id=1164dc99f253f68e ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that 'all of that, all of it, was built on lies.'
+Sentence 1: And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+  Fact 1.0: Bankman-Fried left Jane Street.
+  Fact 1.1: Jane Street is a high-frequency trading firm.
+  Fact 1.2: Bankman-Fried was a former billionaire.
+  Fact 1.3: Bankman-Fried got his start in finance at Jane Street.
+  Fact 1.4: Bankman-Fried got his start in finance after MIT.
+  Fact 1.5: After leaving Jane Street, Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.
+  Fact 1.6: Bankman-Fried later persuaded Yedidia to join him as a developer at FTX.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder, Bankman-Fried, acted in good faith.
+  Fact 2.2: The defense said Bankman-Fried never meant to commit fraud or steal.
+  Fact 2.3: The defense said Bankman-Fried basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued.
+
+“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”
+
+A Frenchman who lives in London testifies in New York
+
+After lawyers from both sides depicted two very different Bankman-Frieds, the prosecution called its first two witnesses to the stand—and they weren’t
+blockbuster names or former lieutenants-turned-government-cooperators, like Ellison.
+
+The first was a victim: Marc-Antoine Julliard, a Paris-born cocoa trader who lives in London. In 2021, Julliard, who had coiffed hair and spoke with a strong
+French accent, decided to invest in crypto and landed on FTX as his exchange of choice, where he traded cryptocurrencies like Bitcoin and Dogecoin.
+
+On Nov. 8, in the crypto exchange’s final few days, he tried to pull out his cash and crypto.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 4>
+
+<item 5>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 5>
+
+<item 6>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 7>
+
+<item 8>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+He could face up to 115 years in jail if convicted on all charges.
+
+The crypto industry as a whole suffered from FTX’s collapse, which was the first of many. BlockFi filed for Chapter 11 in November 2022, as did Genesis Global
+Trading in January.
+
+Where we are today
+
+Bankman-Fried will be represented by Cohen & Gresser, and Mark Cohen, a high-profile defense attorney and former federal prosecutor, will be the lead attorney.
+If that name sounds familiar, it might be because he also represented Ghislaine Maxwell in her sex trafficking trial related to Jeffrey Epstein. He requested an
+early release for Bankman-Fried but was denied.
+
+With the trial beginning, we’re witnessing how FTX’s story ends. But what’s on our mind is what happens to the investors and creditors affected by the collapse?
+And what happens to the billions in crypto assets tied up in legal proceedings?
+</item 8>
+
+<item 9>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+How much? Almost $100,000, he said. And was he ever able to? “Never,” he told prosecutors.
+
+Shortly afterward, as the trial neared late afternoon, the government called Adam Yedidia to the stand. A fast-talking graduate of MIT, he and Bankman-Fried
+were close friends in college, he said. And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in
+finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+
+When Yedidia first took the stand, Danielle Sassoon, one of the lead prosecutors, said that the college friend of Bankman-Fried had legal immunity during his
+testimony. Why did he make such a deal with the government, she asked.
+
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+</item 10>
+=== END ITEM id=1164dc99f253f68e ===

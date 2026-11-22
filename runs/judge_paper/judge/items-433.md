@@ -1,0 +1,840 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=ba1a01a887bf4b78 ===
+Gold sentences and facts:
+Sentence 0: The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+  Fact 0.0: The agreement also meant that Apple never switched to a Google competitor.
+  Fact 0.1: The agreement also meant that Apple never allowed users to choose their browser when setting up their iPhones.
+Sentence 1: Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months.
+  Fact 1.0: Apple has already indicated that it plans to appeal.
+  Fact 1.1: Appealing is a lengthy process.
+  Fact 1.2: Appealing can take around 18 months.
+Sentence 2: They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms.
+  Fact 2.0: The party described uses its own store.
+  Fact 2.1: The party described uses its own payments.
+  Fact 2.2: The party described forces developers to all have the same terms.
+  Fact 2.3: The party described forces OEMs to all have the same terms.
+  Fact 2.4: The party described forces carriers to all have the same terms.
+
+Retrieved items:
+<item 1>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+In 2013, then President Barack Obama vetoed an import ban on the iPhone. At the time, Samsung accused Apple of infringing on its cellular data patents. But in
+that case, according to Levi, Apple was able to make the argument that there were issues regarding fair, reasonable, and nondiscriminatory licensing (FRAND).
+The patents involved were considered standard and essential, and the Obama administration was concerned the import ban would give Samsung “undue leverage.”
+Plus, it only impacted the iPhone 4 and older models of the iPad. Newer iPhones didn’t use an infringing chipset. In the case of the Apple Watch, Apple doesn’t
+have any of these arguments.
+
+“In that case 10 years ago, Apple really rolled the dice and the pulled the rabbit out of the hat. It’s very unlikely for them to do that again,” says Levi.
+
+Where does Apple go from here?
+</item 1>
+
+<item 2>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+And after the 24th, they’ll disappear from Apple Stores, too.
+
+“I think Apple sees the writing on the wall and they’re preparing themselves,” says Ben Levi, a partner at Levi Snotherly & Schaumberg, which has experience
+litigating ITC disputes.
+
+It’s rare to see Big Tech lose — and with such tangible consequences at that. There are still ways that Apple can keep the watches on sale, but it’ll likely
+take a lot of waiting or a lot of money to make it happen.
+
+How Apple got here
+
+This ban is the result of a long-standing patent dispute between Apple and the medical device maker Masimo. The latter is known for its pulse oximetry tech,
+generally referred to as SpO2 or blood oxygen saturation in the wearable world, and it claims that Apple is using that patented technology without permission.
+
+This particular story started about 10 years ago when Apple reached out to Masimo about a potential partnership around blood oxygen features on its wearables.
+</item 2>
+
+<item 3>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+“From a legal perspective, whatever change Apple makes has to be significant enough to avoid the patent, and it cannot be what’s called a ‘colorable’
+difference. Minor changes will not be sufficient,” Iancu says.
+
+Basically, Apple can’t simply make a small tweak to the code and call it a day. Masimo claims that the patents are hardware related, so even completely
+disabling the sensor may not work depending on how the patent is written. Apple could remove it entirely from the design, but that would require mucking around
+with Apple’s meticulous supply chain and could take some time.
+
+Then there are the options that would cost Apple some money. Apple could sit down with Masimo and hammer out a licensing deal for the infringed patents. In a
+New York Times interview, Masimo CEO Joe Kiani said Apple “had not engaged in licensing negotiations.” It’s an easy-seeming fix, so why not do it? For starters,
+both parties have to want to settle.
+</item 3>
+
+<item 4>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+Where does Apple go from here?
+
+A hail mary veto is unlikely, but that doesn’t mean Apple is just going to accept an import ban on a $17 billion segment of its business. Apple spokesperson
+Nikki Rothberg told The Verge in a statement that the company was “pursuing a range of legal and technical options to ensure that Apple Watch is available to
+customers.” That means the watch is going back on sale one way or another — it’s just a question of what path Apple takes.
+
+Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months. The company will also probably ask for a
+stay on the import ban, but Brittingham says that’s not likely to be granted because Apple would have to prove that it would be irreparably harmed. In other
+words, it’d have to make a convincing case that it would go out of business if it can’t sell the Apple Watch.
+
+Apple says it’s exploring both legal and technical options to get around this import ban.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 5>
+
+<item 6>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+Soon after, Apple reportedly poached several Masimo engineers and its chief medical officer. And then in fall 2020, Apple released the Apple Watch Series 6 —
+its first Apple Watch to feature an SpO2 sensor to measure blood oxygen saturation levels.
+
+The SpO2 sensors measure blood oxygen levels and are at the heart of this patent dispute. Photo by Amelia Holowaty Krales / The Verge
+
+In 2020, Masimo filed a lawsuit in the US District Court in the Central District of California accusing Apple of stealing trade secrets and infringing on 10 of
+its patents. That case dragged on and on, so Masimo then filed a separate case with the ITC in 2021. Then last year, Apple sued Masimo back, claiming the
+company made an Apple Watch clone with its Masimo W1 Medical Watch. Clearly, there’s some bad blood here. But in this case, the important thing is that the ITC
+sided with Masimo.
+</item 6>
+
+<item 7>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+Apple getting a presidential veto would be like lightning striking the same place twice.
+
+“It is extraordinarily rare for the President to overturn a decision from the International Trade Commission and in my view, [it’s] unlikely in this particular
+case,” says Andrei Iancu, co-chair of the Council for Innovation Promotion (C4IP) and partner at Sullivan & Cromwell LLP, who was also the director of the US
+Patent and Trademark Office from 2018 to 2021.
+
+To get a veto, a company usually has to show a public interest or health policy basis — and that isn’t the case here. “It’s unlikely that the import exclusion
+order will be disapproved by the USTR and the president,” says Smith Brittingham, partner at Finnegan, Henderson, Farabow, Garrett & Dunner, LLP. “The only real
+answer would be, ‘Well, it’s Apple.’”
+
+That said, Apple did manage to beat the system once. In 2013, then President Barack Obama vetoed an import ban on the iPhone.
+</item 7>
+
+<item 8>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 8>
+
+<item 9>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+Apple says it’s exploring both legal and technical options to get around this import ban. Photo by Amelia Holowaty Krales / The Verge
+
+While the Apple Watch is a popular product and makes up for roughly 30 percent of the smartwatch market, Apple won’t go under if the Apple Watch is out of
+commission in just the US. It’ll hurt to lose such an important market, but it can still sell all three of its Apple Watch models abroad. Similarly, the import
+ban wouldn’t affect every Apple Watch. The entry-level SE is unaffected by the ban as it doesn’t have blood oxygen sensing capabilities.
+
+The SE points to one way for Apple to sidestep the import ban altogether. According to both Brittingham and Levi, Apple could redesign its Apple Watch to avoid
+the infringed patents until the appeals process is done. Theoretically, all Apple has to do is push out a firmware update that disables the SpO2 sensor and then
+it could go right back to importing Apple Watches for sale.
+</item 9>
+
+<item 10>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+For starters, both parties have to want to settle.
+
+“Apple is a tough nut to crack,” says Brittingham, noting that Apple is one of the most sued companies in Silicon Valley. The company’s large cash reserves also
+make taking Apple to court a costly endeavor. Masimo, for example, has reportedly spent $60 million litigating the issue thus far. “I think they tend to hold
+out as long as possible in order to make it less appetizing to sue Apple.”
+
+The other option is for Apple to avoid the import ban altogether. Iancu says Apple could simply decide to manufacture the watches within the US instead of
+overseas — but that’s a significant supply chain change that’s unlikely to happen any time soon.
+
+Does this set a precedent?
+
+This import ban isn’t the only one Apple is facing. In February, the Biden administration also declined to veto another ITC import ban and cease-and-desist
+order stemming from a dispute with AliveCor over the Apple Watch’s EKG features.
+</item 10>
+=== END ITEM id=ba1a01a887bf4b78 ===
+
+=== ITEM id=5e4b8947d153b76f ===
+Gold sentences and facts:
+Sentence 0: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 0.0: The party referred to as 'it' did not release the full model, Gemini Ultra.
+  Fact 0.1: Only a 'lite' version called Gemini Pro was released.
+Sentence 1: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 1.0: The Justice Department is focused on the deals Google makes.
+  Fact 1.1: Google makes deals with Apple.
+  Fact 1.2: Google makes deals with Samsung.
+  Fact 1.3: Google makes deals with Mozilla.
+  Fact 1.4: Google makes deals with many others.
+  Fact 1.5: The Justice Department is focused on ensuring Google is the default search engine on practically every platform.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 3>
+
+<item 4>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Most read
+
+AI, faked: Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called
+Gemini Pro. In a press briefing and blog posts, Google touted Gemini’s coding capabilities and multimodal prowess, claiming that the model can understand
+images, audio and videos just as well as text. But Gemini Pro — which is strictly text-in, text-out — has proven to be mistake-prone. And in a worse look for
+Google, the company was caught faking a Gemini demo by tuning text prompts with still images off camera.
+
+Offensive notebooks: In another Google PR blunder, people who attended the company’s K&I Black Summit in August were given third-party notebooks containing
+highly insensitive language. My colleague Dominic-Madori writes that the inside of the notebooks were printed with the phrase “I was just cotton the moment, but
+I came back to take your notes” (emphasis ours).
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 8>
+
+<item 9>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+prompts that get around the safety filters in place to attempt to prevent it from discussing controversial topics.
+
+Using an automated method to algorithmically change the context of prompts until Gemini Pro’s guardrails failed, AI security researchers at Robust Intelligence,
+a startup selling model-auditing tools, managed to get Gemini Pro to suggest ways to steal from a charity and assassinate a high-profile individual (albeit with
+“nanobots” — admittedly not the most realistic weapon of choice).
+
+Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products. Google
+compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.
+
+But Google nevertheless promised improvements in reasoning, planning and understanding with Gemini Pro over the previous model powering Bard, claiming Gemini
+Pro was better at summarizing content, brainstorming and writing. Clearly, it has some work to do in those departments.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 10>
+=== END ITEM id=5e4b8947d153b76f ===
+
+=== ITEM id=b44c8cd579a791b4 ===
+Gold sentences and facts:
+Sentence 0: “She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.
+  Fact 0.0: The person quoted has the Eras Tour booked all through next year.
+  Fact 0.1: The person quoted would rather die than cancel a show.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker said it was almost like a very strange, subtle clue to the media that they don't know everything that happened in that relationship.
+  Fact 1.1: The speaker said she can have something really major and traumatic happen to her and they don't know about it.
+  Fact 1.2: The speaker told NPR this.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Taylor Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 1>
+
+<item 2>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+In an interview withWSJ Magazine, published on 20 November, he described how much he admires her skills as a musician. “I’ve never been a man of words. Being
+around her, seeing how smart Taylor is, has been f***ing mind-blowing. I’m learning every day,” he explained.
+
+However, he also acknowledged the heavy public attention around his private life as a result of his relationship, noting he’s “never dated anyone with that kind
+of aura around them”. But, according to Kelce, he’s not letting the media affect his relationship.
+
+“But at the same time, I’m not running away from any of it,” he said. “The scrutiny she gets, how much she has a magnifying glass on her, every single day,
+paparazzi outside her house, outside every restaurant she goes to, after every flight she gets off, and she’s just living, enjoying life. When she acts like
+that I better not be the one acting all strange.”
+</item 3>
+
+<item 4>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+And we’re just proud of each other.”
+
+Speaking to Time, Swift detailed exactly how much work went into preparing for her Eras Tour - where each concert spans over 180 minutes, with more than 40
+songs from at least nine albums and 16 costume changes. “Every day I would run on the treadmill, singing the entire set list out loud,” she told the outlet.
+“Fast for fast songs, and a jog or a fast walk for slow songs.”
+
+She also stopped drinking and underwent three months of dance training, something that she admitted is “not my strong suit”. After she plays a run of shows,
+Swift said she takes a day to rest and recover before taking the stage once again. “I do not leave my bed except to get food and take it back to my bed and eat
+it there,” she revealed. “It’s a dream scenario.”
+
+Most recently, a heat wave in Brazil forced Swift to postpone the second night of her Eras Tour shows in Rio de Janeiro.
+</item 4>
+
+<item 5>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 5>
+
+<item 6>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 6>
+
+<item 7>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Since then, Swift has released four “Taylor’s Version” albums: Fearless (Taylor’s Version) in April 2021, Red (Taylor’s Version) in November 2021, Speak Now
+(Taylor’s Version) in July 2023, and 1989 (Taylor’s Version) in October 2023.
+
+“It’s not lost on me that the two great catalysts for this happening were two horrendous things that happened to me,” Swift said, when asked about the success
+of her tour. “The first was getting cancelled within an inch of my life and sanity. The second was having my life’s work taken away from me by someone who hates
+me.”
+
+While Swift is arguably more famous now than ever before, the Grammy winner revealed that the constant attention and swarms of paparazzi won’t stop her from
+living her life. There’s also constant rumours surrounding her personal life, specifically rumours about her relationship with Alwyn that her publicist, Tree
+Paine, was forced to publicly deny.
+</item 7>
+
+<item 8>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 9>
+
+<item 10>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She explained that she doesn’t necessarily pay attention to the cameras and fans around her in those stadiums because she is watching her boyfriend play.
+
+(Denver Post via Getty Images)
+
+“I’m just there to support Travis,” she said. “I have no awareness of if I’m being shown too much and pissing off a few dads, Brads, and Chads.”
+
+When discussing how many Swifties have now started watching NFL games since she started dating Kelce, she quipped about how much she likes the sport. “Football
+is awesome, it turns out,” she joked. “I’ve been missing out my whole life.”
+
+Swift’s effect on the NFL didn’t go unnoticed in October, as one game between the Chiefs and New York Jets - which she attended with some of her famous friends
+- became the most-watched Sunday NFL show since the Super Bowl LVII in February 2023.
+</item 10>
+=== END ITEM id=b44c8cd579a791b4 ===
+
+=== ITEM id=47555103a7ee819b ===
+Gold sentences and facts:
+Sentence 0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 0.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Ortal says the understandings that Israel reached with Hamas in 2012 were made "to stop the fighting".
+  Fact 1.1: Ortal says the understandings that Israel reached with Hamas in 2012 were made to get life back to normal as quickly as possible.
+
+Retrieved items:
+<item 1>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Israel's security concept was updated by Dan Meridor and Lt. Col. Ron Eldadi, with the addition of a fourth component, defense, to the three components of
+Israel’s traditional national security doctrine as determined by Ben-Gurion: deterrence, warning, and decisive victory, leading to the development of systems
+such as the Iron Dome, and David's Sling (formerly called Magic Wand)."
+
+But, emphasizes Matania, "The IDF senior officers aren’t technologically savvy as a whole, some see these systems as black boxes, and don't always understand
+their advantages and disadvantages. At the West Point or Annapolis military academies, it's customary to teach technological subjects as well, because they
+understand that the military profession today requires a basic understanding of the field. The correct way to integrate technology with security is to implement
+it as part of an operational concept, not as a single component, and to assume that it is not perfect, but has vulnerabilities, and may suffer from system
+failures.
+</item 1>
+
+<item 2>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+The Berlin Wall was built in 1961 as a standard wire and concrete fence to make it difficult for East German residents to escape to freedom in the West. By the
+end of the 1970s, its fourth generation already included a 127 km long electrified fence, a strip of land made of sharp metal nails, a closely-packed row of
+watchtowers, a patrol road, an intrusion-tracking dirt road, guard dogs, deep trenches anti-vehicle trenches, and two layers of concrete walls. "The fence was
+initially quite weak, so it was decided to place guards every few meters on top of the wall," Dr. Avner Barnea, a former Shin Bet senior officer and lecturer on
+intelligence and national security, and business intelligence at Bar-Ilan University, tells "Globes." "But until they mined the area, they didn't really succeed
+in preventing escapees. These low-tech solutions made all the difference. None of the authorities ever took the risk of relying on advanced technologies."
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 3>
+
+<item 4>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Matania explains that the IDF has always advocated technological advancement as part of a concept that values quality over quantity. "This existed even during
+[Israel’s first Prime Minster David] Ben-Gurion’s time, because it was clear that we could not defeat the enemy in terms of quantity, and it also integrated
+well with saving human lives - an important pillar in the security concept - but at that time, innovation was expressed in tactical issues. After the Yom Kippur
+War, Israel pulled strongly in the direction of building military technological superiority, and this integrated well with the Israeli economy, which was
+gradually opening up to the world, and the computer revolution.
+
+This effort bore fruit as early as 1982, when we proved to the whole world that we could destroy most of the Syrian surface-to-air missile array using
+precision-guided weaponry. Israel's security concept was updated by Dan Meridor and Lt. Col.
+</item 4>
+
+<item 5>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 5>
+
+<item 6>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Technology greatly influences our way of thinking and is seen as the answer to everything - only no one ever asks themselves what the vulnerabilities are, and
+what is the backup plan for the doomsday scenario when the technology layer collapses."
+
+Barnea compares Israel’s sense of technological superiority with US activity during the Vietnam War between 1965 and 1968. "The Americans relied on massive
+aerial bombardment with precision bombs and napalm bombs that burned huge areas, and advocated the "scorched earth" concept. They convinced themselves that the
+Vietcong could not withstand it. In practice, the North Vietnamese army studied the American activity. It dug tunnels, moved equipment and people between
+bombings, eventually enabling it to reach the important bases in the south of the country, and overwhelm the Americans. In fact, the US military so believed in
+the damage it was causing that they reported a far greater number of casualties on the other side than the actual number, which in turn created an illusion of
+victory.
+</item 7>
+
+<item 8>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 8>
+
+<item 9>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+None of the authorities ever took the risk of relying on advanced technologies."
+
+The fence that, until October 7, separated Israel and the Gaza Strip was completed in December 2021, 60 years after construction of the Berlin Wall began. It
+was intended to protect against a major security threat, but in practice it was much leaner than that. The fence was almost unmanned by soldiers, and relied
+mainly on sensors, above and below ground, surveillance cameras, and vehicle patrols. And, of course, there was no surrounding minefield.
+
+After Operation Protective Edge in 2014 revealed that Hamas forces were able to penetrate the Gaza border settlements at several points via underground tunnels,
+it was decided in 2016 to build a defense line focused on this threat called "the anti-tunnel barrier" that would replace the existing fence.
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Shiloh, which is currently subordinate to the Ministry of Defense, was established following State Comptroller reports about the lack of coordination and
+synchronization between the Ministry of Defense and the IDF units; and lead a new border defense concept based on sensors and other technologies for gathering
+intelligence and thwarting infiltration; strengthening the Air Force in the form of additional aircraft and armaments; and strengthening the operational end of
+the regular front units.
+
+All this, while at the same time closing down armored battalions and consolidating helicopter squadrons. Ground force technological capabilities were also
+addressed, such as improved coordination between the infantry and air forces in air-to-ground actions, or identifying terrorists and weapons in an urban
+environment. However, there is a problem at the outset, says, Prof. Eviatar Matania of Tel Aviv University School of Political Sciences, Government and
+International Affairs, and founder and first director general of the Israel National Cyber Directorate: a large gap between the technology and the officers
+expected to implement it as part of the security concept.
+</item 10>
+=== END ITEM id=47555103a7ee819b ===
+
+=== ITEM id=a75a1bb8719a72cd ===
+Gold sentences and facts:
+Sentence 0: While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location.
+  Fact 0.0: Stores' usual hours of operation are from 6am to 9pm.
+  Fact 0.1: Stores' opening and closing times on the holiday vary based on location.
+Sentence 1: Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+  Fact 1.0: Thanksgiving is celebrated every year.
+  Fact 1.1: Thanksgiving is celebrated on the fourth Thursday of the month.
+  Fact 1.2: Thanksgiving falls on 23 November this year.
+
+Retrieved items:
+<item 1>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Americans started preparing their Thanksgiving menus weeks ago, with the requisite turkeys and stuffing ingredients likely already purchased for the holiday,
+which is celebrated this year on Thursday 23 November.
+
+Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are
+thankful for, either with family or friends.
+
+In America, Thanksgiving is a cultural holiday that symbolises peace, thankfulness, and the beginning of the holiday season.
+
+What is Thanksgiving and where did it come from?
+</item 1>
+
+<item 2>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Walmart’s usual hours are from 6am to 11pm every day, but opening times on Black Friday are based on stores’ locations.
+
+Target
+
+The beloved retail store will also be closed on Thanksgiving Day before reopening the next day for Black Friday. Hours of operation for the day after
+Thanksgiving vary based on the store’s location.
+
+Trader Joe’s
+
+Stores will be closed on 23 November in observance of the federal holiday. Trader Joe’s stores will reopen on Black Friday, with hours of operation depending on
+each store.
+
+Wegmans
+
+While Wegamans will be open on Thanksgiving, hours of operation are limited. For example, one Wegmans store in Brooklyn, New York, will be closed at 4pm,
+instead of at 11pm like it usually does. Opening and closing times for Wegmans can vary based on the location of the store.
+
+Although most Wegmans stores are expected to reopen at 6am on Black Friday, specific opening and closing times vary for each location.
+</item 2>
+
+<item 3>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+While this is the first time that Walgreens has closed its doors on the holiday, some 24-hour stores will still be open during certain hours on Thanksgiving
+Day, depending on store location.
+
+Walgreens stores will reopen on 24 November, with opening and closing times depending on the location of the store.
+</item 3>
+
+<item 4>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Here are when stores open and close on Thanksgiving Day and Black Friday in the US.
+
+Whole Foods
+
+If you’re looking for some fresh produce to cook up a storm, then you’re in luck, as Whole Foods is set to be open during the holiday season. However, they will
+run on a limited schedule, and hours of operation may vary, so be sure to check your local store. Whole Foods stores will be open on Black Friday, with hours of
+operation depending on location.
+
+Costco
+
+All Costco stores in the US will be closed on Thanksgiving Day, as noted by the retailer’s official site. Costco Warehouses will reopen on Friday, with hours
+depending on store locations. The retailer has already started some of its online sales for Black Friday, with some in-store sales going from 24 November
+through 27 November.
+
+Walmart
+
+The retail giant will be closed on the holiday, before reopening the next day for Black Friday, an annual shopping occasion filled with store deals.
+</item 4>
+
+<item 5>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Starbucks
+
+Earlier this month, a spokesperson for Starbucks told Country Living that stores will be open on Thanksgiving Day. While its usual hours of operation are from
+6am to 9pm, stores’ opening and closing times on the holiday vary based on location.
+
+Although Starbucks is expected to operate from 6am to 9pm on Black Friday, specific hours vary for each store.
+
+Aldi
+
+According to Aldi’s official website, all stores will be closed on Thanksgiving Day. Aldi will be reopening on Black Friday, as its hours of operation are
+usually from 8.30am to 9pm. However, specific opening and closing hours vary for each location.
+
+Dollar General
+
+The low-priced retailer will be open from 7am to 10pm on Thanksgiving Day but times may vary depending on location. You can find out more on the day by heading
+over to the store’s website.
+</item 5>
+
+<item 6>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 6>
+
+<item 7>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+You can find out more on the day by heading over to the store’s website. Dollar General is expected to be open during its usual hours during Black Friday, with
+specific closing and opening times based on location.
+
+CVS
+
+A representative with CVS told ThePioneerWoman.com that most, but not all, CVS locations will be open on Thanksgiving. To check your local store, be sure to
+head over to the CVS’ website. On Black Friday, CVS locations will be open during its regular hours.
+
+Dunkin’ Donuts
+
+The beloved coffee chain will be open on Thanksgiving Day but with limited hours. Opening and closing times of stores on the holiday vary based on location.
+
+Dunkin’ Donuts with reopen on Black Friday, with its usual hour of operation based on each store.
+
+Walgreens
+
+Most Walgreens stores will be closed on 23 November this year, according to a press release shared by the brand on 16 November.
+</item 7>
+
+<item 8>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+However, since Thanksgiving Day is a federal holiday in the US, some stores will be completely shut down on the holiday.
+
+For example, both Target and Walmart announced permanent closures on the holiday in 2020, with the policy remaining in place ever since. The outbreak of the
+pandemic had initially pushed these chains to close their doors on Thanksgiving, in order to limit crowding and spread out the shopping season.
+
+However, that doesn’t mean that all grocery stores will remain closed on Thanksgiving Day. In fact, there are some retailers that you could make your way to on
+the morning of the holiday, in preparation for your annual feast.
+
+Once Thanksgiving Day comes to a close, many stores will be reopening on Friday. From there, shops be operating during their earlier or usual business hours, in
+preparation for some of the biggest sales of the year.
+
+Here are when stores open and close on Thanksgiving Day and Black Friday in the US.
+</item 8>
+
+<item 9>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the parade passes down 6th Avenue Reuters Macy's
+Thanksgiving Day Parade takes place in New York An NYPD officer stands by AP Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon
+flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A marching band takes part in the parade Reuters Macy's Thanksgiving Day
+Parade takes place in New York A balloon flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A performer in the parade AP Macy's
+Thanksgiving Day Parade takes place in New York The Ronald McDonald balloon flies in the parade AP Macy's Thanksgiving Day Parade takes place in New York A
+clown performs in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Olaf balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York Flag wavers take part in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York Clowns on roller blades perform in
+the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is
+</item 9>
+
+<item 10>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+On Thursday 23 November, Americans will be hard at work to prepare their Thanksgiving dinner, with foods on the menus ranging from a roasted turkey to a green
+bean casserole.
+
+Aside from the dishes served in the lavish feast, which can vary based on families’ cultures and traditions, Thanksgiving is also the annual holiday for people
+to commemorate all that they’re grateful for.
+
+In the midst of planning the big meal, there’s also a huge range of ingredients that need to be purchased at your local grocery store.
+</item 10>
+=== END ITEM id=a75a1bb8719a72cd ===
