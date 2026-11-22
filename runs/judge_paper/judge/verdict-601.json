@@ -1,0 +1,67 @@
+[
+  {"id": "80fbf5226c114b0e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "5be56d898d173f62", "facts": [
+    {"fact": "0.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "Caroline Ellison, Bankman-Fried’s ex-girlfriend."}]},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "from customers to repay debts to lenders, using them as a line of credit"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "using them as a line of credit under the instruction of SBF"}]}
+  ]},
+  {"id": "8a62777ee1c087dd", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "is on trial for seven counts of wire fraud and conspiracy."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "98db19216a3529a9", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "12fcbc1df7f37620", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Google unveils new hardware: This week was Google’s annual hardware event"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "This week was Google’s annual hardware event"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "the degree to which it was shared on social media"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "it was shared on social media and boosted in write-ups at other outlets"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b3bf0f625737f552", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "they begin to tighten the NBA Rookie of the Year lines in response."}]}
+  ]}
+]

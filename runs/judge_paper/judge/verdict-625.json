@@ -1,0 +1,56 @@
+[
+  {"id": "4c57aa58d6407bf3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts"}, {"item": 5, "quote": "If you’re up on Taylor Swift concerts, there are friendship bracelets"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "with his number on it to give to her"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "I wanted to give Taylor Swift one with my number on it."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "to give to her, seemingly expressing his interest in Swift"}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "While on the Pat McAfee show, Kelce discussed the rumors"}, {"item": 4, "quote": "He then admitted that he invited Swift to one of his games"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 8, "quote": "Swift took Kelce up on his offer"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}, {"item": 9, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "587925689148605e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul"}, {"item": 7, "quote": "sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "35dea01f5febfe3c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "1.6", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "80ed80f1256c005c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]}
+  ]},
+  {"id": "ff4caef93c087215", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+  ]}
+]

@@ -1,0 +1,75 @@
+[
+{"id": "dc932a4098b5694f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "e2e685b355e2299a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "This week was Google’s annual hardware event"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "bbd123d306d5a818", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "Hope played a gem of an innings there"}]},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "f4e4146b3cfcd1aa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "6dbe2910825ea4ec", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]},
+{"id": "de60a65455755bdb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]}
+]}
+]

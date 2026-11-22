@@ -1,0 +1,77 @@
+[
+  {"id": "54a6502266ea4ab6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "This matchup has an over/under of 42.5 points"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "OPP VS WR 6th PROJ PTS 12.1"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "OPP VS WR 6th PROJ PTS 12.1"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "WR RNK 37th"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 8, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.7", "status": "stated", "evidence": [{"item": 8, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.8", "status": "stated", "evidence": [{"item": 8, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.9", "status": "stated", "evidence": [{"item": 8, "quote": "FPTS/G 11.4"}]},
+    {"fact": "0.10", "status": "stated", "evidence": [{"item": 8, "quote": "The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2"}]},
+    {"fact": "0.11", "status": "stated", "evidence": [{"item": 8, "quote": "Washington's 34-31 OT loss to Philadelphia in Week 4"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2532e16069896604", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Strong showing by this Detroit defense. And that should put things to bed."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "End of fourth quarter: Lions 34, Packers 20"}, {"item": 5, "quote": "officially putting the game on ice"}]},
+    {"fact": "1.6", "status": "stated", "evidence": [{"item": 5, "quote": "End of fourth quarter: Lions 34, Packers 20"}]},
+    {"fact": "1.7", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7a10b1d45c85febb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "from companies including Apple, Samsung and Mozilla, The Verge reports"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1bb2769be4e69e22", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]}
+  ]},
+  {"id": "4b45cbfdb189389a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "1.6", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The prosecution painted a picture of an empire “built on lies”"}, {"item": 6, "quote": "“He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+  ]},
+  {"id": "e86cad7ecb36e54e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "but not all of them are effective and none are foolproof"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "but not all of them are effective and none are foolproof"}]}
+  ]}
+]

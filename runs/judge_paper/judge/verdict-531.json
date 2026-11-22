@@ -1,0 +1,54 @@
+[
+  {"id": "199a1163f712a995", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+  ]},
+  {"id": "82d9225d684ff090", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+  ]},
+  {"id": "7ccb96968d93fbec", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+  ]},
+  {"id": "fe54afe6b6e6b9e4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "5737e7b14ac4dabb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

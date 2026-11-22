@@ -1,0 +1,48 @@
+[
+{"id": "c5d8d67d34bd236e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "4f48fad9d5d15991", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "even though you're doing the right things"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Kingsley Coman’s winning goal"}, {"item": 2, "quote": "where Kingsley Coman sealed a 1-0 win"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]},
+{"id": "93989b9b950e0847", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+]},
+{"id": "718125810115616d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "6f8722cb2d9b92e4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}, {"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals"}, {"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals"}]}
+]}
+]

@@ -1,0 +1,56 @@
+[
+{"id": "0effdda3900efc05", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]}
+]},
+{"id": "f11eb175a25db4a2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "96516c5083e46c81", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "5044657b7539d752", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+]},
+{"id": "20c360d1b7fb0dd8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "8579cc6808cf64af", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "returned to action with Brazilian club Internacional, indicating a return to fitness"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "and has been included on the squad."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "De'Von Achane hit Injured Reserve this week with a knee injury."}]}
+]}
+]

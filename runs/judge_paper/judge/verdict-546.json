@@ -1,0 +1,63 @@
+[
+{"id": "43fb4d4e0b120830", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "67c0e505e8f32167", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "8bafd31053477377", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "When FTX took a loss in the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet."}, {"item": 7, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "No other customer trading on FTX had “allow_negative” privileges — only Alameda."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "5b5cb3e107cf743e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]}
+]},
+{"id": "2b3154e3dafbda5d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "187fd94c3896be88", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+]}
+]

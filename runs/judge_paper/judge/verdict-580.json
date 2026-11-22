@@ -1,0 +1,66 @@
+[
+{"id": "da311dd33b8593d0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "basically got in over his head"}]}
+]},
+{"id": "0e40cd82f969d802", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "seemingly expressing his interest in Swift"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "c8ccc181c078357a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}, {"item": 7, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "basically got in over his head"}]}
+]},
+{"id": "75977ef2a2685c8a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Because FTX had grown so much, he could no longer run both"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "eb40a9aff7ece79b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+]},
+{"id": "604379c2ac4fe90b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards), even keeping a lid on Travis Kelce last week (6.7 yards per catch). But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards), even keeping a lid on Travis Kelce last week (6.7 yards per catch). But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards), even keeping a lid on Travis Kelce last week (6.7 yards per catch). But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "VIKINGS: Allow the fewest yards per catch to rival tigh ends (5.9 yards), even keeping a lid on Travis Kelce last week (6.7 yards per catch). But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won't be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)"}]}
+]}
+]

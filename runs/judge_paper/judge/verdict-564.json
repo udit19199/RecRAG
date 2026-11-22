@@ -1,0 +1,67 @@
+[
+{"id": "3fc0b23f7129daa1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "We ultimately took about $14 billion, some of which we were not able to"}, {"item": 5, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX."}, {"item": 9, "quote": "a row labeled “FTX borrows,” which Ellison said were customer funds."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "while she and Bankman-Fried were broken up"}, {"item": 10, "quote": "The whole time we were dating, he was my boss at work,"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "2d8bd27aacadfa67", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "8a7db1dc93640300", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "not all of them are effective and none are"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "but not all of them are effective and none are foolproof."}]}
+]},
+{"id": "70db0b6ea60fe2c0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents."}]}
+]},
+{"id": "893431e379507072", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+]},
+{"id": "8f82b8566f756f3f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Bankman-Fried admitted he’d been told."}]}
+]}
+]

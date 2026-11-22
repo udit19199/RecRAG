@@ -1,0 +1,53 @@
+[
+{"id": "539dbca27be04d01", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]},
+{"id": "4596d8fd12539fa5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "0fb8f4cd108e831d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "cheering emphatically when No. 87 scored a touchdown in the first game she attended last month."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "By the time I went to that first game, we were a couple."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}, {"item": 4, "quote": "By the time I went to that first game, we were a couple."}]}
+]},
+{"id": "eac4ffe78952a806", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "d2ada3442a1bf9c0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]}
+]

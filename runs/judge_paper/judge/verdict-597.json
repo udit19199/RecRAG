@@ -1,0 +1,48 @@
+[
+{"id": "9e7b3c6337e2a1a9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 1, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 1, "quote": "never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.7", "status": "stated", "evidence": [{"item": 1, "quote": "never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "fd5cec87ce02faba", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+]},
+{"id": "e600fb82ebb94ab5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]},
+{"id": "5c7bff9e9d69db46", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 5, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "930e25edceb66feb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+]}
+]

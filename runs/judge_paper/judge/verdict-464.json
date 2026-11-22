@@ -1,0 +1,49 @@
+[
+{"id": "08be7837b94fd670", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kooker added later in the speech"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Kooker added later in the speech: “Music is a tremendous driver for AI technology, and AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "he came to the music biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer."}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "d11e9dc61a178e0e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "61b56492fa4571d3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+]},
+{"id": "74dceeb381faa967", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+]},
+{"id": "aaf18350615819a9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

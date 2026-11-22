@@ -1,0 +1,68 @@
+[
+{"id": "cc0c31b4be3e96be", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "2c474c9ccce8b39d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]},
+{"id": "4e294e87b4d3c62a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "b16649cc37b85cc2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]},
+{"id": "e52864c8e856ad6a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+]},
+{"id": "9a44b0f1fd875f48", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+]}
+]

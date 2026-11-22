@@ -1,0 +1,48 @@
+[
+  {"id": "d09e878190fe5022", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]}
+  ]},
+  {"id": "a1dfcb45b6953f48", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "a4fb01c8db1b3beb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+  ]},
+  {"id": "9363c97bfd4c793a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+  ]},
+  {"id": "73ce29bbbbb3744b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e. most people just pick up their phone and just use the default search engine."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "576c1ef60d7d4262", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]}
+  ]}
+]

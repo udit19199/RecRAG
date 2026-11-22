@@ -1,0 +1,59 @@
+[
+{"id": "3eaeb07c884825b7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "but the level of performance and how he could control a game and dominate a game in junior"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]}
+]},
+{"id": "d22d9cf1a8fc03fc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "c3c39388f4f408f3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]}
+]},
+{"id": "730ed476e8407e84", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "013242e628ea680f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.8", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.9", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "0.10", "status": "stated", "evidence": [{"item": 2, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."}]}
+]},
+{"id": "97fd70421d29855f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "which is why it's important to keep faith aligned with that practice of positive thinking"}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "Roumie said that building a habit of prayer \"is easier than people think.\""}, {"item": 4, "quote": "He added, \"As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 4, "quote": "Roumie said that building a habit of prayer \"is easier than people think.\""}, {"item": 4, "quote": "He added, \"As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]}
+]}
+]

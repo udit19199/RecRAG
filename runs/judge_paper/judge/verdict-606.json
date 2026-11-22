@@ -1,0 +1,60 @@
+[
+{"id": "3827cf52e0c06770", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "bff82562c290fd77", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]}
+]},
+{"id": "9de60b61e3a455f3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "1df046a029feb114", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 6, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]}
+]},
+{"id": "22783f862fc22291", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]}
+]

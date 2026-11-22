@@ -1,0 +1,57 @@
+[
+{"id": "227641d48aa84ebe", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "In America, Thanksgiving is a cultural holiday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Apart from the food - arguably the main component of the day"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "the holiday is a beloved time of year when Americans come together"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Americans come together to celebrate what they are thankful for, either with family or friends."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Americans come together to celebrate what they are thankful for, either with family or friends."}]}
+]},
+{"id": "c3e975a576cbe2b4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "SBF’s trial starts soon"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Because FTX had grown so much, he could no longer run both"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "0ecd3b353cbdb56a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "that X is being used to disseminate illegal content and disinformation in the EU"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "illegal content and disinformation following Hamas attacks"}]}
+]},
+{"id": "c67e2042cf73ba05", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "After missing last week's game, Tyreek Hill now needs to"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+]},
+{"id": "a3ccc8aab80cc5d4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The understandings that Israel reached with Hamas in 2012"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "\"to stop the fighting\", Ortal says"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "cf3de55ce01ec41e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The whole time we were dating, he was my boss at work,” she said."}, {"item": 8, "quote": "echoing Bankman-Fried and Ellison’s romantic relationship,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Ellison’s tenure as CEO of Alameda Research"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Though Bankman-Fried was the CEO, and also the majority owner,"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+]}
+]

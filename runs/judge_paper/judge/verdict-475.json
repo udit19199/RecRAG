@@ -1,0 +1,49 @@
+[
+{"id": "4e8147fd6f26bb70", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+]},
+{"id": "8a95da790a5689e4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]}
+]},
+{"id": "fc947e553d581c57", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone — which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "Roumie said that building a habit of prayer"}, {"item": 2, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "Roumie said that building a habit of prayer"}, {"item": 2, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]}
+]},
+{"id": "8cc32ca18bac6f2c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+]},
+{"id": "e8975928ff4c120d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "If a key player is injured or unable to play, this can influence the expected total score, leading bookmakers to adjust the line accordingly."}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "8f2197c23962a664", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+]}
+]

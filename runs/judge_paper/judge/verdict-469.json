@@ -1,0 +1,65 @@
+[
+  {"id": "2be4002676c0859b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "78447c0a96115d82", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+  ]},
+  {"id": "09b4fa3d5a0b24b6", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Harris had over 120 total yards and a touchdown in a Week 17 win in Baltimore last year."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Harris had over 120 total yards and a touchdown in a Week 17 win in Baltimore last year."}]}
+  ]},
+  {"id": "210133ca9d7046b8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Strong showing by this Detroit defense."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "End of fourth quarter: Lions 34, Packers 20"}, {"item": 5, "quote": "Lions complete yet another fourth down, officially putting the game on ice."}]},
+    {"fact": "1.6", "status": "stated", "evidence": [{"item": 5, "quote": "End of fourth quarter: Lions 34, Packers 20"}]},
+    {"fact": "1.7", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4c47410fd9a4c998", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "“But nah, it was awesome.”"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year."}]}
+  ]},
+  {"id": "ed47976859979b84", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "During the opening statement, Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

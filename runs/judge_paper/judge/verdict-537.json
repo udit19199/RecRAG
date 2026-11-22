@@ -1,0 +1,51 @@
+[
+  {"id": "a597dbc65c01d128", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ec20324427742f90", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "27d22fe6fef4133d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends."}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it during one of her Eras Tour shows."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it during one of her Eras Tour shows."}, {"item": 1, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 4, "quote": "While on the Pat McAfee show, Kelce discussed the rumors"}, {"item": 4, "quote": "He then admitted that he invited Swift to one of his games"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the Chiefs."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 9, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "when she famously first attended Kelce’s game at Arrowhead Stadium in September"}, {"item": 9, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]}
+  ]},
+  {"id": "40882c0769839c09", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "the platform known as X (formerly Twitter)"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "19b8e85186975b39", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’"}, {"item": 4, "quote": "He said there still isn’t one."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

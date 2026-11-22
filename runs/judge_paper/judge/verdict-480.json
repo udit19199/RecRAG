@@ -1,0 +1,54 @@
+[
+  {"id": "41f21a7f96972f58", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "including the distribution of apps to Android users"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "the market for payment processing solutions for content inside Android apps"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1d21b32fdcb7277f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 8, "quote": "The promo codes on this page are for new customers only."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 8, "quote": "The promo codes on this page are for new customers only."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 8, "quote": "The promo codes on this page are for new customers only."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 8, "quote": "The promo codes on this page are for new customers only."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 8, "quote": "The promo codes on this page are for new customers only."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 8, "quote": "The promo codes on this page are for new customers only."}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 8, "quote": "The promo codes on this page are for new customers only."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus."}]}
+  ]},
+  {"id": "93a4b5bc481a9c0c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]}
+  ]},
+  {"id": "ae316658b14c18f8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+  ]},
+  {"id": "d216d521f61250cb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

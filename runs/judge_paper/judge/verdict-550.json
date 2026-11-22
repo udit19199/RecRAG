@@ -1,0 +1,61 @@
+[
+{"id": "8c9789343bb40128", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}, {"item": 10, "quote": "table-toppers and tournament favourites India"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.5", "status": "contradicted", "evidence": [{"item": 10, "quote": "having been bowled out for a miserable 156 in Bengaluru, the 2019 champions"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.6", "status": "contradicted", "evidence": [{"item": 10, "quote": "the 2019 champions are now only mathematically a chance of scraping through to the semi-finals"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]}
+]},
+{"id": "fdb9c068836efd0c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "d3c64fe009be1f8e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "when you don't get the right results, even though you're doing the right things"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]},
+{"id": "0a86cfa867676754", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The prospect has raised hopes that, after years of effort, scientists may be closing in on ways to directly tackle the UK’s dementia crisis."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+]},
+{"id": "b950fd6fc2bd6022", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "and how Google tried to have Chrome preinstalled on iPhones"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "e49164668c05d814", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+]}
+]

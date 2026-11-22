@@ -1,0 +1,76 @@
+[
+{"id": "b10c3dc102f5fff2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "thrust Altman into the spotlight as a face of generative AI"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "33087bf4fa9071f7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "5d56d78a0ac77fb8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]}
+]},
+{"id": "cc193d0e565e86df", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "d4b65c19e9361548", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "bb9403f7e480d3bc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Drew Lock will be taking snaps until there is more clarity on Smith's status moving forward."}]}
+]}
+]

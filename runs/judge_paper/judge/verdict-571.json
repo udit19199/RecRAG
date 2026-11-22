@@ -1,0 +1,59 @@
+[
+  {"id": "1fbb9a686ddac5f4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "122747fd9597c642", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "cfded4dea34fef0e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]}
+  ]},
+  {"id": "b59920c578e2db6e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]}
+  ]},
+  {"id": "8634f2228d085eb2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "If a key player is injured or unable to play, this can influence the expected total score, leading bookmakers to adjust the line accordingly."}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Oddsmakers use all the available information to craft their lines"}]},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e998c8fa9aa2ddf6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}, {"item": 8, "quote": "important to keep faith aligned with that practice of positive thinking"}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 7, "quote": "Roumie said that building a habit of prayer"}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "Roumie said that building a habit of prayer"}, {"item": 7, "quote": "you find your relationship with Jesus growing deeper and deeper, just automatically"}]}
+  ]}
+]

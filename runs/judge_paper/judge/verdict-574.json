@@ -1,0 +1,68 @@
+[
+{"id": "aa181e8f4ae349bf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "ef3d2e5fcf073773", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.5", "status": "contradicted", "evidence": [{"item": 10, "quote": "against Sri Lanka having been bowled out for a miserable 156 in Bengaluru"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.6", "status": "contradicted", "evidence": [{"item": 10, "quote": "the 2019 champions are now only mathematically a chance of scraping through to the semi-finals"}, {"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]}
+]},
+{"id": "3daa9741fd70180b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.”"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 10, "quote": "And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]}
+]},
+{"id": "ae10e3289bdefa11", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "They promised “invest[ment] in the AI-powered technology”"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "“invest[ment] in the AI-powered technology” that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "“protect our community of viewers, creators, artists and songwriters"}, {"item": 5, "quote": "[from] trademark and copyright abuse"}]}
+]},
+{"id": "86298be25f2b89cd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Doe's story was adapted into the 1971 book \"The Exorcist\" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]}
+]},
+{"id": "8d350a5f347b4ebc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

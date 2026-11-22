@@ -1,0 +1,53 @@
+[
+{"id": "160a6eb7bb180b48", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "He has been out of work since his Blues tenure came to a close back in April"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "it would be a hard sell to fans after his time with the London club went so poorly."}]}
+]},
+{"id": "8cc3e5768825bc65", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Before setting odds for an event, oddsmakers gather extensive data."}]},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "8a89250ce6273342", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "d2fd745219bb8a9a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "Hope played a gem of an innings there"}]},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "9f707136faca3a53", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 2, "quote": "Swift took Kelce up on his offer"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "187d4cf73299e744", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]}
+]}
+]

@@ -1,0 +1,59 @@
+[
+  {"id": "beb173e3ab5d71ea", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "8df7561788b291cc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,"}, {"item": 9, "quote": "\"Yes,\" responded Wang."}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6be8117da722f2fe", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "3305be62e91dc5aa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward."}, {"item": 7, "quote": "Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ab8d9d35479f1a9b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with"}, {"item": 9, "quote": "the club."}]}
+  ]},
+  {"id": "e2023e7ea7b0c3b2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a"}, {"item": 10, "quote": "Hold, expressing concerns about valuation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a"}, {"item": 10, "quote": "Hold, expressing concerns about valuation."}]}
+  ]}
+]

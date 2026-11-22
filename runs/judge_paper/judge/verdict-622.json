@@ -1,0 +1,53 @@
+[
+{"id": "62891c8c4caae22d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "926eb8ee659e905e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]},
+{"id": "46b97d65d893a093", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]}
+]},
+{"id": "798beab6e602b94e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+]},
+{"id": "936ae0ddea7d693a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out."}]}
+]},
+{"id": "5295b803193c2440", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate the peak of his power and influence prior to FTX’s implosion."}, {"item": 9, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]}
+]

@@ -1,0 +1,51 @@
+[
+{"id": "db61365327a90d7f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}, {"item": 1, "quote": "The Big Ten announced Michigan coach Jim Harbaugh will be prohibited from coaching on the sideline for the remainder of the regular season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+]},
+{"id": "13af3ad476f797a2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+]},
+{"id": "383e4f81760a1c65", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "49a6f9bd57b8ce32", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The executive defended Google’s business tactics, including its deal with Apple and other partners to make Google the default search engine."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "anticompetitive by making deals with Apple and others."}]},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the biggest checks?"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "191bab19e5b8ac76", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36 strikes last term."}, {"item": 9, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36 strikes last term."}, {"item": 9, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]}
+]}
+]

@@ -1,0 +1,45 @@
+[
+{"id": "f84a5ac34ad4c3d0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The performance this season was so bad that they find themselves out of Europe altogether"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich was how"}, {"item": 6, "quote": "There was nothing much at all. Where was the energy? Where was the intensity?"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Just over 10 minutes later Bayern made it 1-0 in Manchester. Kingsley Coman got it"}, {"item": 8, "quote": "Another infamous European night at Old Trafford."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "the Bayern coach, Thomas Tuchel, said."}, {"item": 1, "quote": "Just over 10 minutes later Bayern made it 1-0 in Manchester."}]}
+]},
+{"id": "c82d53ec9d7e6d2d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "c73bded9c9832dc1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "c6549f2192f9e665", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "18ff1528950835f3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday"}, {"item": 2, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Certainly there wasn’t a valid alternative to Google at the time,"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "News publisher files class action antitrust suit against Google"}, {"item": 7, "quote": "SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it “plagiarizes” their content."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it “plagiarizes” their content."}]},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "29cee7eb5097d7fa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]}
+]

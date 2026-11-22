@@ -1,0 +1,61 @@
+[
+{"id": "faecc609dd63b1c5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "49e39ef55bfee2d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "bfaf5c0de7565741", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+]},
+{"id": "67d6c8dabc24bfeb", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "ee540fa69aa5b466", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "by the age of 16, she is public property"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "and I can have something really major and traumatic happen to me and they don't know about it"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."}]}
+]},
+{"id": "0e32f808c90f666d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

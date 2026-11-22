@@ -1,0 +1,58 @@
+[
+  {"id": "d94b096bc2568604", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "they earn the small profit built into the odds without concern about who wins or loses."}]}
+  ]},
+  {"id": "f4563fe05e83bac7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "contradicted", "evidence": [{"item": 6, "quote": "Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at all."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "He bought himself wealth, power and influence."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+  ]},
+  {"id": "7153b678579af119", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+  ]},
+  {"id": "a6e2c9c119c1323c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9e69d7561f87aaf4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "as Alvaro Barreal's 78th-minute goal is enough to secure victory for FC Cincinnati."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Eventually, Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge"}]},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 4, "quote": "as tonight's defeat coupled with CF Montreal's 4-0 victory over Portland are enough to"}, {"item": 6, "quote": "and the defeat coupled with CF Montreal’s big 4-1 victory over Portland means Inter Miami are officially out of the postseason running."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+  ]},
+  {"id": "b1f38ba596e170b2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]}
+  ]}
+]

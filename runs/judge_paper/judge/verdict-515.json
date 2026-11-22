@@ -1,0 +1,42 @@
+[
+  {"id": "4b71df25c77bfdc0", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "c38c2aa7a91a4956", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]}
+  ]},
+  {"id": "5fdc7b5af7a90451", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]}
+  ]},
+  {"id": "e016bedf6d80b17c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+  ]},
+  {"id": "11b6876b646f7be2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Since Saturday’s attacks in Israel, posts identified as false have been spotted circulating on X — including, in one example, a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Since Saturday’s attacks in Israel, posts identified as false have been spotted circulating on X — including, in one example, a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]}
+  ]}
+]

@@ -1,0 +1,69 @@
+[
+{"id": "85998ff35bee9fc1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "President Ferdinand Marcos, Jr."}, {"item": 8, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]},
+{"id": "d278a467a295a5c4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "63226a1ef9b607a5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "8510b99389220812", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "It has been expected since before he hit free agency that Ohtani would set the record"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]}
+]},
+{"id": "f62cd707f93f96d7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "intimidating Alameda’s former CEO, Caroline Ellison"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "99870ae843925846", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’?"}, {"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 3, "quote": "Caroline Ellison, Bankman-Fried’s ex-girlfriend."}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 8, "quote": "intimidating Alameda’s former CEO, Caroline Ellison"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]}
+]

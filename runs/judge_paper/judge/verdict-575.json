@@ -1,0 +1,47 @@
+[
+  {"id": "f9a5bdb04daf5f3f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]}
+  ]},
+  {"id": "04cd30523d08f502", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]}
+  ]},
+  {"id": "6e8deca595902935", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]}
+  ]},
+  {"id": "59443e3854711dc5", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+  ]},
+  {"id": "78a6b718dd4f8643", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said."}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

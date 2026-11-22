@@ -1,0 +1,51 @@
+[
+{"id": "5e0ac915b0fcdcb4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "including its deal with Apple and other partners to make Google the default search engine"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "and how Google tried to have Chrome preinstalled on iPhones"}]}
+]},
+{"id": "575fca3ee684597a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "and how Google tried to have Chrome preinstalled on iPhones"}]}
+]},
+{"id": "1172a167eedc1a18", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Jada praised them for how they’ve helped her grow"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "My children, they’re little gurus."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "she and the King Richard star share two children - Jaden, 25, and Willow, 22"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "she and the King Richard star share two children - Jaden, 25, and Willow, 22"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "noting that they’ve taught her “a deep sense of self-acceptance”"}]}
+]},
+{"id": "705d3f5af05aac1f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "maintains that Google manipulates Search to maximise ad revenue"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "c33d825cd9cedc2f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "maintains that Google manipulates Search to maximise ad revenue"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]}
+]
