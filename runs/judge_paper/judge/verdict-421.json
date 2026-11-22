@@ -1,0 +1,48 @@
+[
+  {"id": "6d4b0527514da1c3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "But while this will probably come up later in the trial,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0af5bb78b36cee06", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "57d4fed9885381be", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+  ]},
+  {"id": "76289916feb5dfdb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "52dc33d9e4bbf6a5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The winger came firing out of the gate"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "The outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "The outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]}
+  ]}
+]

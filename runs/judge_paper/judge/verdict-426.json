@@ -1,0 +1,45 @@
+[
+  {"id": "437024f8a1c30d1c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+  ]},
+  {"id": "74d17f2dae348bd2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]},
+  {"id": "d2231d6914584df1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]}
+  ]},
+  {"id": "f484db0978a31a44", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+  ]},
+  {"id": "a34ad3ab664922c8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+  ]},
+  {"id": "12e61d5704fe5992", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+  ]}
+]

@@ -1,0 +1,63 @@
+[
+{"id": "3513e5f324353be9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "cf25f66afcbb213b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+]},
+{"id": "610dd2f52f7dd5aa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.5", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "against Sri Lanka having been bowled out for a miserable 156 in Bengaluru"}]},
+{"fact": "1.6", "status": "contradicted", "evidence": [{"item": 10, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 10, "quote": "the 2019 champions are now only mathematically a chance of scraping through to the semi-finals"}]}
+]},
+{"id": "a801c470b340f119", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]}
+]},
+{"id": "61838b11bcf6bc2d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+]},
+{"id": "c7f7798fc1c4b3be", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

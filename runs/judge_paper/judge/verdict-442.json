@@ -1,0 +1,49 @@
+[
+  {"id": "f595d77155facd02", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "in advance of a potential ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "dbe38821ea72e348", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}, {"item": 6, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "eead871abe0db6f3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "77067a3a30501ec7", "facts": [
+    {"fact": "0.0", "status": "contradicted", "evidence": [{"item": 6, "quote": "The Dodgers have officially announced their signing of Ohtani"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Trout’s biggest MLB deal record of 12 years, $426.5 million."}, {"item": 10, "quote": "shattering the MLB record for both total value and average annual"}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual"}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e85ced38d8667a6e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "de2ea9d15e6e5683", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+  ]}
+]

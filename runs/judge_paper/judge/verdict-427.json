@@ -1,0 +1,69 @@
+[
+{"id": "401375a54fce9b5a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 10, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "20ececbcaa6028bb", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "92175cd3754934f3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}, {"item": 2, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "fc13673814777d25", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+]},
+{"id": "c91e307b57f177ad", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 3, "quote": "which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}]},
+{"fact": "0.7", "status": "stated", "evidence": [{"item": 3, "quote": "which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]}
+]},
+{"id": "e373649c096383fa", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]}
+]}
+]

@@ -1,0 +1,33 @@
+[
+  {"id": "4377a71fdaa3ae78", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e. most people just pick up their phone and just use the default search engine."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "because we’ve always thought it was the best."}]}
+  ]},
+  {"id": "169c9b18347f7fff", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0a36b915f6654249", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "5 things we learned so far about the Google antitrust case"}, {"item": 8, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]}
+  ]},
+  {"id": "51b2296129ff2c2d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4ba6e43ab9c8f0fe", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys took advantage of their \"no contest\" vs. the Giants at home with Dak Prescott continuing to ball as a passer and runner."}]}
+  ]}
+]

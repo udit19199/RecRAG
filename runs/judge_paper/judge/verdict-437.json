@@ -1,0 +1,70 @@
+[
+{"id": "4dd7a79567b1915a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "With this sale, they offer some of the best value in their class"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "they offer some of the best value in their class from one of the top names in the business."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "39a5c35753281421", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Google unveils new hardware: This week was Google’s annual hardware event"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "This week was Google’s annual hardware event"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "38124b28146da600", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "“Sam acted in good faith and took reasonable business measures”"}, {"item": 8, "quote": "Man, it’s no good when your defense lawyer has just made you sound worse than the prosecution already did."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "4051e29665516134", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "With a 10% surge in the stock this year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Seeking Alpha's Quant Rating system suggests a"}, {"item": 9, "quote": "Hold, expressing concerns about valuation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Hold, expressing concerns about valuation."}]}
+]},
+{"id": "14665186946ed229", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "new users can claim more than $5,000 in"}, {"item": 8, "quote": "sports betting bonuses for NFL games like tonight’s Eagles/Seahawks MNF matchup."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "To claim this top-notch welcome offer, click our Caesars Sportsbook promo code link and sign up for a new Caesars account."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "BetMGM has a nice welcome offer that provides new customers who use our exclusive BetMGM promo code SPORTSPICK a first bet offer worth up to $1,500 in bonus"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "New Bet365 customers can choose from two excellent welcome offers when using our exclusive Bet365 promo code TSNCO:"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "FanDuel is giving new customers who use our exclusive FanDuel promo code link a chance to claim $150 in bonus bets."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "DraftKings has three welcome offers new customers can claim by using our DraftKings promo code link:"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 10, "quote": "Sign up for a new BetRivers account using our exclusive BetRivers bonus code SPORTSRIV to get a Second Chance Bet worth up to $500."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "To claim this top-notch welcome offer, click our Caesars Sportsbook promo code link and sign up for a new Caesars account."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "For the Bet $5, Get $150 new user offer, you’ll receive $150 in bonus bets after placing your first bet of at least $5."}]}
+]},
+{"id": "3506804dfea8ba18", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "A conscious criminal"}, {"item": 3, "quote": "The prosecution’s account of the alleged crimes by Bankman-Fried"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}, {"item": 7, "quote": "Cohen repeatedly harped on"}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 1, "quote": "“He didn’t steal any money.”"}, {"item": 7, "quote": "“Sam didn’t defraud anyone,” he said early on in his opening statement."}]},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]}
+]

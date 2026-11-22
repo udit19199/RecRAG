@@ -1,0 +1,49 @@
+[
+{"id": "53493c4900ffba64", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "so bring things up,” Alev said."}]}
+]},
+{"id": "03796d8e5081b63e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "73fffee518bd7e99", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "That answer ultimately lies with the jury,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "according to Mark Cohen, one of his lawyers."}, {"item": 4, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "80bf5764961349d9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]}
+]},
+{"id": "4220e3d7a745b6fe", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]}
+]}
+]

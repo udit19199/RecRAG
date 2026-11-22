@@ -1,0 +1,53 @@
+[
+{"id": "9ebaad49cd61ff5a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "an invitation she famously accepted on 24 September."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "an invitation she famously accepted on 24 September."}]}
+]},
+{"id": "8edde383a85723a7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 9, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "b0e1e56ba377a6e1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+]},
+{"id": "639e27f69b1dd8b7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "13d49c781401c7bf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

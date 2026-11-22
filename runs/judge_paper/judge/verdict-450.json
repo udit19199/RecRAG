@@ -1,0 +1,54 @@
+[
+{"id": "1deb29e347e2291d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "as the Springboks play for their country"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "the generation of players and leaders that will call time on their international careers at week’s end"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "as well as a maiden defeat in 2020 in Sydney"}]}
+]},
+{"id": "c4f46a57bfdcd83a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "54e35dbc6d7d292a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 1, "quote": "No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36"}, {"item": 1, "quote": "He has already been firing in many top-flight goals this term"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 1, "quote": "No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36"}, {"item": 1, "quote": "as well as being the joint-leading scorer from the Champions League group stages"}]}
+]},
+{"id": "df8ef15c60c8a2a2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "His career has only blossomed in the years since he took that trip"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "while some artists might feel trepidation at the attainment of so much success from such an early age"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Mitchell is clear-eyed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]}
+]},
+{"id": "1164dc99f253f68e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 10, "quote": "And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "What followed was a roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}, {"item": 7, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried did not act like someone who was guilty."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "“He didn’t steal any money.”"}, {"item": 1, "quote": "Bankman-Fried did not act like someone who was guilty."}]},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,54 @@
+[
+{"id": "26910bdf169b4012", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court."}, {"item": 9, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]},
+{"id": "507039fb4bb8d79b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Kooker added later in the speech"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Music is a tremendous driver for AI technology"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "AI technology presents a tremendous opportunity for the creative development of music."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Robert Kyncl, CEO of Warner Music Group"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Robert Kyncl, CEO of Warner Music Group – and an ex-high flyer at YouTube"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "With each major leap in technology, the music industry navigates a fresh set of challenges and opportunities."}]}
+]},
+{"id": "4e82ea4971353923", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]},
+{"id": "6046cd339acb5720", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "5c59f7c827f1ae2a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In the above scenario, supply disruption will lead to higher inflation"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In the above scenario, central bankers will have to adjust their policies"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Back then, Fed Chair Paul Volcker fought inflation through aggressive interest rate hikes"}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

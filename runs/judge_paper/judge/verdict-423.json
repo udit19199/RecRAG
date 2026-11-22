@@ -1,0 +1,47 @@
+[
+  {"id": "ed871b6acefadee6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d760a4594e1f9f24", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]}
+  ]},
+  {"id": "4f79df63e76a2643", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "if the Manchester born Ratcliffe follows through"}, {"item": 7, "quote": "between Oldham-born Ratcliffe, who had previously offered"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The latest slip saw the Red Devils crash out of Europe"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "fb156d560777b138", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "“It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]}
+  ]},
+  {"id": "dcdb46f7a5df2ddb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]}
+  ]}
+]

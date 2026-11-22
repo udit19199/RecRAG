@@ -1,0 +1,49 @@
+[
+{"id": "ba1a01a887bf4b78", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+]},
+{"id": "5e4b8947d153b76f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being anticompetitive by making deals with Apple and others."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "b44c8cd579a791b4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "47555103a7ee819b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]}
+]},
+{"id": "a75a1bb8719a72cd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+]}
+]

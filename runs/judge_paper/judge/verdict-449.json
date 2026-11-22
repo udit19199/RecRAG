@@ -1,0 +1,54 @@
+[
+  {"id": "78f87698d1f2977a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Big Ten made a Friday ruling that will prohibit Harbaugh from being on the field for the final three regular-season games"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]}
+  ]},
+  {"id": "9fd849eccdd9d5f6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "59160d3aab9d66df", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "He has been out of work since his Blues tenure came to a close back in April"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "it would be a hard sell to fans after his time with the London club went so poorly."}]}
+  ]},
+  {"id": "45046e32363569c4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2e5b91d161954811", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "OpenAI COO Brad Lightcap said yesterday’s announcement “took [the management team] by surprise”"}, {"item": 3, "quote": "It’s unclear what missteps Altman might’ve made helming OpenAI… at present."}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "This week was Google’s annual hardware event"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "73da653513743ec1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]
