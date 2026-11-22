@@ -1,0 +1,5 @@
+graphrag: saved retrieval for multihop-rag-306
+graphrag: saved retrieval for multihop-rag-503
+graphrag record 0: EM=1.00, F1=1.00
+graphrag record 1: EM=1.00, F1=1.00
+RESULTS /data/home/work/RecRAG/runs/milvus/runs/graphrag/20261122T154557539007Z/results.jsonl

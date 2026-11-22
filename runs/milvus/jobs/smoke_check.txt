@@ -1,0 +1,1 @@
+smoke ok ['vector_search', 'vector_search', 'select_evidence'] ['Yes', 'Yes']

@@ -1,0 +1,1 @@
+{"vector_db": "milvus 2.5.10", "collection": "agent_chunks", "RECRAG_AGENT_NO_GRAPH": "1", "rep": "2", "shard": 0, "shards": 2, "limit": null}
