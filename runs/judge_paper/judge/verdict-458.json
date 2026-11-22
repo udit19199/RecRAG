@@ -1,0 +1,60 @@
+[
+  {"id": "28b65e40d3db2888", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 1, "quote": "Uber reported net income of $221 million in the third quarter"}, {"item": 8, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+  ]},
+  {"id": "5594e46bd5df3655", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "On one hand, Harbaugh could serve his second suspension within one season"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "3a07a2eb982fc51c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "The guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "They promised “invest[ment] in the AI-powered technology” that, amongst other things,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]}
+  ]},
+  {"id": "d4fca859c2092694", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "and although Michigan had hoped to block the suspension"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+  ]},
+  {"id": "7b8bf395ca381835", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]}
+  ]},
+  {"id": "c9f26c2296fe0679", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+    {"fact": "1.6", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+    {"fact": "1.7", "status": "stated", "evidence": [{"item": 2, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]}
+  ]}
+]

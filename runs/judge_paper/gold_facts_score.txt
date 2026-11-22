@@ -29,4 +29,10 @@ run | type | questions | gold facts found >=50% / >=75% / 100%
 /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T101418828562Z | temporal_query | 125 | 93 / 58 / 39
 /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T103425179365Z | comparison_query | 125 | 108 / 71 / 52
 /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T103425179365Z | temporal_query | 125 | 90 / 55 / 34
-judge statuses {'stated': 14882, 'missing': 9532, 'contradicted': 229}; stated but quote not found in text: 76
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T120228965077Z | comparison_query | 125 | 98 / 64 / 52
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T171056043913Z | temporal_query | 125 | 73 / 44 / 30
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261122T152200055325Z | comparison_query | 125 | 98 / 64 / 52
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261122T152709544702Z | temporal_query | 125 | 73 / 44 / 30
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261122T153234144637Z | comparison_query | 125 | 98 / 64 / 52
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261122T153804092972Z | temporal_query | 125 | 73 / 44 / 30
+judge statuses {'stated': 16126, 'missing': 10283, 'contradicted': 245}; stated but quote not found in text: 83
