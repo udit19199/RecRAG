@@ -1,0 +1,60 @@
+[
+{"id": "ed868b2a0c2a8489", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and investors."}, {"item": 3, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]},
+{"id": "4a638d309acb0fd4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "fde638eb7bb54f99", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]}
+]},
+{"id": "3f3e7bcaca461bec", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}, {"item": 2, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]}
+]},
+{"id": "f0123946bafa3ad7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company."}, {"item": 7, "quote": "Before we go into some of these tidbits"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]}
+]

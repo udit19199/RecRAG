@@ -1,0 +1,57 @@
+{
+ "A2_graph_top10": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r1"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r2"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r3"
+  ]
+ },
+ "A0_vector_top10": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r1"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r2"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r3"
+  ]
+ },
+ "A3_picks_no_graph_rows": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r1"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r2"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r3"
+  ]
+ },
+ "B2": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T091956008107Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T092000929032Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T094637209296Z"
+  ]
+ },
+ "B3": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T094642087919Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T101418828562Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T103425179365Z"
+  ]
+ }
+}

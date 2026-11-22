@@ -1,0 +1,1135 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=7e25616ed4acb309 ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.1: Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.2: Caroline Ellison was the CEO of Alameda.
+  Fact 0.3: Bankman-Fried had 'secret access' to customer money, both cash and crypto.
+  Fact 0.4: The government claimed that Bankman-Fried had this secret access to customer money.
+Sentence 1: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 1.0: A quoted speaker said Bankman-Fried was the richest person in the world under 30.
+  Fact 1.1: A quoted speaker said Bankman-Fried was going to spend his wealth to save humanity from extinction.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great power.
+  Fact 2.3: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that Bankman-Fried, the FTX founder, acted in good faith.
+  Fact 2.5: The defense countered that Bankman-Fried, the FTX founder, never meant to commit fraud or steal.
+  Fact 2.6: The defense countered that Bankman-Fried, the FTX founder, basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said. Besides telling her about his presidential chances, he also told her that
+if there was a coin flip where tails destroyed the world and heads made the world twice as good, he’d flip the coin. He called this being “risk-neutral,” which
+seems like a fancy way of saying he was a gambling addict.
+
+She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022. The goal, Bankman-Fried told her, was to
+“optically” separate Alameda Research and FTX. “The whole time we were dating, he was my boss at work,” she said. They broke up because she wanted more from the
+relationship; Bankman-Fried was distant and not paying enough attention to her.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That was the basis of the worst of her testimony — and the spreadsheet from hell.
+
+Ellison said she’d prepared the spreadsheet at Bankman-Fried’s request in the fall of 2021 and shared it with him. The point was risk analysis around paying
+back Alameda’s loans if they were abruptly recalled by Genesis, their lender. Bankman-Fried wanted to use $3 billion for venture investments, so Ellison was
+ballparking what that would do to Alameda’s risk. In the as-is scenario, if things went south, she figured there was a 30 percent chance they wouldn’t be able
+to meet the loan recalls. If Bankman-Fried used $3 billion to make investments, there was a 100 percent chance they couldn’t meet the recalls, even with FTX
+customer funds.
+
+Echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length
+
+The problem here wasn’t really the math, which seemed pretty arbitrary.
+</item 9>
+
+<item 10>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 10>
+=== END ITEM id=7e25616ed4acb309 ===
+
+=== ITEM id=f4ed5475bad0d64f ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook adjusts when odds change for a legitimate reason.
+  Fact 1.2: An injury or a roster move is an example of a legitimate reason for a line or odds to change.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+</item 1>
+
+<item 2>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Betting apps offer real-time updates on all odds, which allows you to react to game flow as it’s happening.
+
+Your MLB betting app can help you track shifting odds and facilitate live betting. Betting apps offer real-time updates on all odds, which allows you to react
+to game flow as it’s happening. Bet from within legal states: As long as you are in a state that has legal online sports betting, you can use your app to make
+bets, track your account, add or withdraw funds, and more. Remember that you can only place bets when you are in the state lines, but you can access your
+account and monitor wagers from anywhere you have internet access.
+
+MLB live betting
+
+The best sports betting apps offer live, in-game betting for Major League Baseball.
+
+Live betting means you can bet on a game in progress, right down to what the next batter will do with the next pitch or what team will win the inning.
+</item 2>
+
+<item 3>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 3>
+
+<item 4>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 4>
+
+<item 5>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Visit the sportsbook’s website via our links. If you haven’t signed up previously, you can claim the best new customer sports betting bonus & promos. While
+you’re at the site, download the sportsbook’s betting app for your phone or tablet. Place your bets: You’ll have the option to bet on MLB games either pre-game
+or live. You’ll find all of the traditional pre-game bets, like game lines and run totals, and live betting options. Live bets can become more granular, like
+the result of the next at-bat.
+
+You’ll have the option to bet on MLB games either pre-game or live. You’ll find all of the traditional pre-game bets, like game lines and run totals, and live
+betting options. Live bets can become more granular, like the result of the next at-bat. Keep tabs on odds: Your MLB betting app can help you track shifting
+odds and facilitate live betting.
+</item 5>
+
+<item 6>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Traditional bet types, such as moneylines, where one bets on the outright winner; run lines, which focus on the margin of victory; and totals that predict
+combined team scores, are all readily available.
+
+For those who relish a deeper drop into the game, BetMGM has a deep lineup of player and team prop bets. Whether it's forecasting a player's strikeouts in a
+game or predicting the cumulative runs scored by a team, there's something for every strategy.
+
+For the long-term visionaries, BetMGM rolls out an impressive array of futures bets. Fans can place wagers on outcomes such as which team will clinch its
+division or which player will be honored as the league's Most Valuable Player.
+
+See more:
+
+Caesars Sportsbook
+
+Caesars has a comprehensive suite of MLB odds to elevate the game-watching experience. That includes run lines, predicting the margin of victory; totals, where
+bettors forecast the combined scores; and player props, focusing on individual milestones such as hits, home runs, or RBIs.
+</item 6>
+
+<item 7>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Beyond these, game props allow bets on specific game events, while player futures bets provide the chance to predict longer-term outcomes like season MVPs or
+rookie of the year honors.
+
+Caesars also has a cash-out option that allows you to settle bets early to guarantee a payout (though at a reduced amount).
+
+See more:
+
+Bet365 Sportsbook
+
+One of the world's premier sportsbooks, Bet365, has marked its presence in the US, notably emphasizing its Major League Baseball odds. Now accessible in many
+states and expected to grow further, Bet365 posts daily MLB odds boosts. The Bet365 app is perfect for rookie bettors yet also offers customized displays for
+seasoned MLB wagering veterans.
+
+A significant highlight is the platform's live-betting feature, allowing real-time bets on MLB games.
+
+See more:
+
+BetRivers Sportsbook
+
+BetRivers stands out for its comprehensive Major League Baseball betting offerings. Bettors are presented with a wealth of stats and insightful tips related to
+upcoming games, enhancing the decision-making process.
+</item 7>
+
+<item 8>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+You’re betting on which team you believe is going to win the game. Each team is given odds by the sportsbook to indicate their perceived chances of winning. The
+underdog is represented by a positive (+) number, and the favorite is represented by a negative number (-).
+
+Similar to a point spread in other sports, the run line bet gives the underdog a handicap of 1.5 runs in the game. The underdog needs to lose by one run or win
+outright for bets on them to be successful, while the favorite in the game needs to win by two runs or more to cover the spread.
+
+Totals bets, also known as over/unders, focus on the combined number of runs both teams score. Oddsmakers assign a total number of runs, and bettors must decide
+if the two teams will score over or under that predicted total. The actual winner of the game doesn’t matter.
+
+You’ll find these staple bet types at every online sportsbook that supports MLB betting.
+</item 8>
+
+<item 9>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 9>
+
+<item 10>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+These allow bettors to engage with games beyond simple outcomes. For those looking at the bigger picture, DraftKings provides futures bets. Fans can bet on
+potential division victors or take a shot at predicting the next World Series champion.
+
+See more:
+
+FanDuel Sportsbook
+
+FanDuel stands out as a top destination for MLB enthusiasts looking to bet daily. It offers the staple bets such as run lines, where you can bet on the margin
+of victory, and totals, predicting the combined score of both teams.
+
+FanDuel also has dozens of player props, allowing bettors to focus on individual performances, predicting stats like hits, home runs, or strikeouts.
+Additionally, FanDuel presents an array of game props and futures bets, letting fans speculate on longer-term outcomes such as division champions or MVP
+candidates.
+
+See more:
+
+BetMGM Sportsbook
+
+BetMGM provides MLB aficionados with an expansive betting portfolio.
+</item 10>
+=== END ITEM id=f4ed5475bad0d64f ===
+
+=== ITEM id=ccc841da3b4eea2b ===
+Gold sentences and facts:
+Sentence 0: The official details have not been reported, though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal.
+  Fact 0.0: The official details have not been reported.
+  Fact 0.1: The report indicated the deal will shatter Mike Trout's record 12-year, $426.5 million deal.
+Sentence 1: According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club.
+  Fact 1.0: According to ESPN's Jeff Passan, the deal is for $42 million.
+  Fact 1.1: According to ESPN's Jeff Passan, the deal is over three years.
+  Fact 1.2: According to ESPN's Jeff Passan, the deal includes a club option for a fourth year.
+  Fact 1.3: According to ESPN's Jeff Passan, the deal includes an opt out after his second season with the club.
+
+Retrieved items:
+<item 1>
+M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers (The New York Times, 2023-12-09T22:04:02+00:00)
+Only one team could secure Ohtani’s services. He will now be compensated for both his immense talent and his unparalleled star power. His contract eclipsed the
+$360 million record for free agents set last winter by New York Yankees slugger Aaron Judge and also surpassed the record-setting $426.5 million extension from
+Ohtani’s former Angels teammate Mike Trout. His achievement exceeded even those outside of baseball, topping the $450 million contract inked by Kansas City
+Chiefs quarterback Patrick Mahomes. Ohtani has outpaced even soccer star Lionel Messi’s $674 million contract — signed in 2017 when he was with FC Barcelona.
+
+His individual brilliance was not enough to lift the Angels into the postseason. With the Dodgers, Ohtani will now have an opportunity to add collective
+hardware to his trophy case. The Dodgers have won the National League West in 10 of the past 11 seasons, topped 100 victories in five of the past six full
+seasons and won the World Series in 2020.
+</item 1>
+
+<item 2>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Instead, the Royals will hope the veteran Smith, who had solid underlying numbers in 2023, can serve as a reliable late-inning arm after both Scott Barlow and
+Aroldis Chapman were traded before the deadline this past season.
+
+Shohei Ohtani agrees to mega contract with Dodgers
+
+Date: Saturday, Dec. 9
+
+Source: Shohei Ohtani, Jeff Passan
+
+Two-time MVP Shohei Ohtani announced on Instagram that he is signing with the Los Angeles Dodgers, spurning the Blue Jays and remaining in the city where he
+became a sensation with the Angels.
+
+ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual
+value.
+
+Ohtani joins a Dodgers lineup that already features two former MVPs in Mookie Betts and Freddie Freeman, both of whom were NL MVP finalists in 2023.
+</item 2>
+
+<item 3>
+M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers (The New York Times, 2023-12-09T22:04:02+00:00)
+Shohei Ohtani’s singular pursuit of history, one man’s quest to rewrite the baseball world’s understanding of what is possible, reached another summit on
+Saturday when he agreed to the largest contract in the annals of major North American team sports, a 10-year, $700 million contract with the Los Angeles
+Dodgers, his agency CAA announced.
+
+Advertisement
+
+Ohtani announced his decision on Instagram. The deal ends years of feverish speculation about Ohtani’s future. Ohtani, a 29-year-old two-way sensation, has
+captivated the industry since he left Japan for Major League Baseball heading into the 2018 season. He has done things that appeared impossible in the modern
+era, feats that harkened back to Babe Ruth. As he traveled the country with the Los Angeles Angels this past summer, fans serenaded him with recruiting pitches.
+When he entered free agency, a dozen teams lined up, curious to see if they could meet his eye.
+</item 3>
+
+<item 4>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+11
+
+Source: Los Angeles Dodgers
+
+The Dodgers have officially announced their signing of Ohtani, calling him a "once-in-a-generation talent and one of the most exciting professional athletes in
+the world."
+
+"Dodger fans, thank you for welcoming me to your team. I can say 100 percent that you, the Dodger organization and I share the same goal - to bring World Series
+parades to the streets of Los Angeles," Ohtani said in a statement.
+
+The Los Angeles Dodgers have signed two-time American League Most Valuable Player Shohei Ohtani to a 10-year contract. pic.twitter.com/mggYwgp01i — Los Angeles
+Dodgers (@Dodgers) December 12, 2023
+
+Ohtani to defer $680 million of $700 million Dodgers deal
+
+Date: Monday, Dec.
+</item 4>
+
+<item 5>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Here's the latest on Ohtani's free agency pursuits.
+
+MORE: Projecting Shohei Ohtani's contract in free agency
+
+Shohei Ohtani news: Latest updates, rumors for MLB free agency
+
+Ohtani agrees to 10-year, $700 million deal with Dodgers
+
+Date: Saturday, Dec. 9
+
+Shohei Ohtani announced Saturday that he has agreed to a contract with the Dodgers. It's a colossal 10-year, $700 million deal with "significant deferrals," so
+while Los Angeles won't pay him $70 million per year, the franchise will be paying him beyond those 10 seasons.
+
+While rumors connected Ohtani to the Blue Jays on Friday, it's the Dodgers who hand him a record-shattering contract and pair the two-time MVP with two former
+MVPs in Mookie Betts and Freddie Freeman.
+
+Ohtani not headed to Toronto, at his home in Southern California
+
+Date: Friday, Dec.
+</item 5>
+
+<item 6>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+20
+
+Source: Ken Rosenthal, The Athletic
+
+Buried at the bottom of Rosenthal’s piece on what an Ohtani contract might look like — incentives, opt-outs and all sorts of stuff — is this little bit of
+reporting:
+
+An agreement at the winter meetings in Nashville the first week of December would be the ideal outcome for MLB, but not necessarily for Ohtani. He perhaps will
+be better off waiting for the signing of Japanese righty Yoshinobu Yamamoto, who is expected to be posted for free agency as soon as Monday, triggering a 45-day
+window for teams to negotiate with him. Losing out on the 25-year-old Yamamoto, who could command more than $200 million, might put certain teams on tilt,
+improving the landscape for Ohtani.
+
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov.
+</item 6>
+
+<item 7>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+11
+
+Source: Fabian Ardaya, The Athletic
+
+According to The Athletic, Ohtani will defer a whopping $680 million of his $700 million contract from the Dodgers, receiving only $2 million per year.
+
+While it's important to note the deal will still count as $46 million annually toward the luxury tax thresholds for Los Angeles, Ohtani is still giving the
+organization much more flexibility than expected over the course of the deal.
+
+The two-time MVP will receive $68 million per year, without interest, from 2034-43, making the present-day value of the contract much less than it originally
+appeared.
+
+MORE: Complete breakdown of Shohei Ohtani's Dodgers contract, by the minute
+
+Giants reportedly meet with Yamamoto
+
+Date: Monday, Dec. 11
+
+Source: Buster Olney, ESPN
+
+ESPN's Buster Olney reports the Giants met with Japanese ace Yoshinobu Yamamoto on Sunday, Dec. 10.
+</item 7>
+
+<item 8>
+M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers (The New York Times, 2023-12-09T22:04:02+00:00)
+(Photo: Michael Owens / Getty Images)
+
+Ohtani is committed to being a starting pitcher. If he cannot stay healthy enough for that role, he could aid his new team as a reliever. He closed the final
+game of the World Baseball Classic, securing the crown for Japan by striking out Trout. His four-seam fastball averaged nearly 97 mph in 2023; the velocity of
+the pitch figures to improve in short bursts.
+
+Advertisement
+
+Even if Ohtani never pitches again, his value as a hitter is immense. In 1920, his first season exclusively as a hitter, Ruth led the American League in homers,
+on-base percentage and slugging percentage. In 2023, while still making 23 starts with a 3.14 ERA, Ohtani led the American League in the same three categories
+as Ruth. He swatted 44 homers with a career-best 1.066 OPS. He did this while making starts and dealing with a torn ligament in his elbow.
+</item 8>
+
+<item 9>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+The Giants are considered to be an unknown.
+
+In addition to the teams, Passan also reported Ohtani is expecting a contract somewhere between $550 and $600 million, which would be the largest guaranteed
+contract in North American sports.
+
+Blue Jays could alter roster with Ohtani signing
+
+Date: Nov. 30
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays are one of the teams believed to still be among the strongest in the mix for Ohtani. The New York Post's Jon Heyman reported there could be some
+changes if Ohtani signs with the Blue Jays, however, reporting that some rivals believe Bo Bichette and Vladimir Guerrero Jr. could hit the trade block if
+Toronto lands the star.
+
+Trading the two infielders might seem counterproductive to signing Ohtani in the first place. Those two would be the biggest supporting bats in the lineup
+around Ohtani.
+</item 9>
+
+<item 10>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+'Money's great, but winning's better'
+
+Date: Nov. 21
+
+Source: Max Scherzer, Rangers pitcher on Foul Territory
+
+OK, so this isn't necessarily a rumor, but an example of how much players would love for Ohtani to join their team. Scherzer was a guest on Foul Territory on
+Monday.
+
+"Money's great, but winning's better."
+
+
+
+Max Scherzer shares his pitch for Shohei Ohtani to join the @Rangers 🏆
+
+
+
+▶️ https://t.co/6KoSRqSgk2 pic.twitter.com/PHW2jHWj6C — Foul Territory (@FoulTerritoryTV) November 20, 2023
+
+Maybe Ohtani won’t sign quite so soon after all
+
+Date: Nov.
+</item 10>
+=== END ITEM id=ccc841da3b4eea2b ===
+
+=== ITEM id=68bff3cdd3f3c416 ===
+Gold sentences and facts:
+Sentence 0: In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.
+  Fact 0.0: A year has passed since Altman catapulted ChatGPT to global fame.
+  Fact 0.1: Altman has become Silicon Valley's sought-after voice on the promise of artificial intelligence.
+  Fact 0.2: Altman has become Silicon Valley's sought-after voice on the potential dangers of artificial intelligence.
+  Fact 0.3: Altman's sudden exit was mostly unexplained.
+  Fact 0.4: Altman's exit brought uncertainty to the industry's future.
+Sentence 1: This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.
+  Fact 1.0: The piece covers this week's topics.
+  Fact 1.1: Sam Altman is backing a teen's AI startup.
+  Fact 1.2: Google held a hardware event.
+  Fact 1.3: First impressions of the Pixel 8 Pro are covered.
+  Fact 1.4: Flexport drama is covered.
+  Fact 1.5: The ongoing FTX fallout is covered.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The board's language is a basis for the prevailing theory.
+  Fact 2.1: The way giant tech companies work is a basis for the prevailing theory.
+  Fact 2.2: The prevailing theory currently floating around is based on the board's language and how giant tech companies work.
+
+Retrieved items:
+<item 1>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Any significant snafu in that department would reflect on her, as well as Altman.
+
+5. Perhaps a difference of AI ethics or philosophy?
+
+Altman is a proud techno-optimist, and often speaks fondly of the possibilities of AGI, or artificial general intelligence, a theoretical software system that
+achieves human-like intellect and versatility.
+
+The board’s statement pointedly includes that “OpenAI was deliberately structured to advance our mission: to ensure that artificial general intelligence
+benefits all humanity” and that new leadership was necessary. It’s possible that Sam’s zeal for AGI, even absent a secret project or agreement, led to a major
+rift between him and the board.
+
+It’s been obvious to all that Altman took the company in a much more corporate direction from its origins, changing its legal status and aggressively pursuing
+enterprise and consumer applications. That doesn’t sound a lot like the “mission” the board wants to advance.
+</item 1>
+
+<item 2>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman posted Friday on X: “i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved
+working with such talented people. will have more to say about what’s next later.”
+
+The Associated Press and OpenAI have a licensing and technology agreement allowing OpenAI access to part of the AP’s text archives.
+
+Altman helped start OpenAI as a nonprofit research laboratory in 2015. But it was ChatGPT’s explosion into public consciousness that thrust Altman into the
+spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media. On a world tour this year, he was mobbed by
+a crowd of adoring fans at an event in London.
+
+He’s sat with multiple heads of state to discuss AI’s potential and perils.
+</item 2>
+
+<item 3>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He was recruited in 2014 to take lead of the startup incubator YCombinator.
+
+“Sam is one of the smartest people I know, and understands startups better than perhaps anyone I know, including myself,” read YCombinator co-founder Paul
+Graham’s 2014 announcement that Altman would become its president. Graham said at the time that Altman was “one of those rare people who manage to be both
+fearsomely effective and yet fundamentally benevolent.”
+
+OpenAI started out as a nonprofit when it launched with financial backing from Tesla CEO Elon Musk and others. Its stated aims were to “advance digital
+intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return.”
+
+That changed in 2018 when it incorporated a for-profit business Open AI LP, and shifted nearly all its staff into the business, not long after releasing its
+first generation of the GPT large language model for mimicking human writing.
+</item 3>
+
+<item 4>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Sam Altman has been fired from OpenAI, Inc., the 501(c)(3) nonprofit that acts as the governing body for OpenAI, the AI startup behind ChatGPT, DALL-E 3, GPT-4
+and other highly capable generative AI systems. He’ll both leave the company’s board of directors and step down as CEO.
+
+In a post on OpenAI’s official blog, the company writes that Altman’s departure follows a “deliberative review process by the board” that concluded that Altman
+“wasn’t consistently candid in his communications” with other board members, “hindering its ability to exercise its responsibilities.”
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+“The board no longer has confidence in [Altman’s] ability to continue leading OpenAI,” the blog post reads.
+</item 4>
+
+<item 5>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI, the company behind viral AI hits like
+ChatGPT, GPT-4 and DALL-E 3, by OpenAI’s board of directors. Then, the company’s longtime president and co-founder, Greg Brockman, resigned — as did three
+senior OpenAI researchers. And the fallout continues.
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+It’s a fast-moving situation that we’re still trying to get to the bottom of. No doubt more will become clear as time goes on. To make it easier to follow all
+that’s happened in the meantime, though, we’ve put together a timeline; we’ll do our best to keep it current.
+</item 5>
+
+<item 6>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 6>
+
+<item 7>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+The Information, speaking to three sources formerly with the company, reports that they no longer expect the sale — led by Thrive Capital — to happen, or, if it
+does, to come with a lesser valuation because of the recent turn of events.
+
+Altman planning new venture
+
+Altman has been telling investors that he’s planning to launch a new venture, according to The Information. Brockman is expected to join the effort — whatever
+form it takes. (Possibly an AI chip startup.)
+
+i love you all. today was a weird experience in many ways. but one unexpected one is that it has been sorta like reading your own eulogy while you’re still
+alive. the outpouring of love is awesome. one takeaway: go tell your friends how great you think they are.
+</item 7>
+
+<item 8>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 8>
+
+<item 9>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Altman has a long history steering OpenAI. After co-founding the company alongside Peter Thiel, LinkedIn cofounder Reid Hoffman and others, Altman, who formerly
+headed startup accelerator Y Combinator and also holds a seat on the board at Worldcoin, the ambitious cryptocurrency project, initially served as a co-chair of
+OpenAI alongside Elon Musk. Musk left in 2018 to avoid a conflict of interest with Tesla.
+
+Altman over the past several months played an active role in attempting to shape regulators’ responses to AI, appearing at U.S. congressional hearings and
+meeting personally with world leaders including President Joe Biden, German Chancellor Olaf Scholz and French President Emmanuel Macron, among others, on an
+international policy tour.
+
+More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+I've never met someone who has supported and lifted up more people around them than him. Couldn't be a prouder brother.
+</item 9>
+
+<item 10>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 10>
+=== END ITEM id=68bff3cdd3f3c416 ===
+
+=== ITEM id=713e020dbaeda40b ===
+Gold sentences and facts:
+Sentence 0: Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury.
+  Fact 0.0: Cameron Carter-Vickers is also included.
+  Fact 0.1: Cameron Carter-Vickers is a defender.
+  Fact 0.2: Cameron Carter-Vickers only just made his debut for Celtic this season.
+  Fact 0.3: Cameron Carter-Vickers's Celtic debut came thanks to a hamstring injury.
+Sentence 1: 30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss.
+  Fact 1.0: The match kickoff is 30 minutes away.
+  Fact 1.1: Paraguay have a new manager.
+  Fact 1.2: Daniel Garnero makes his debut as Paraguay's new permanent boss.
+
+Retrieved items:
+<item 1>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+He was initially injured while playing for Leeds United back in March, and while he had finally recovered to make his Bournemouth debut in the EFL Cup in late
+September, he played just 20 minutes off the bench before suffering a setback, sidelined again for the foreseeable future.
+
+Gio Reyna has returned from his leg fracture and is called in for the first time under Berhalter since their falling out at the 2022 World Cup. Also included is
+defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury. On the heels of that return just before the
+international break, he is called in.
+
+Goalkeepers Zack Steffen and Sean Johnson remain out of action due to injuries. Additionally, Josh Sargent is sidelined with a long-term ankle injury, while
+Daryl Dike is also out after tearing his Achilles.
+</item 1>
+
+<item 2>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+Referees once again took the headlines on the opening matchday of the 2023/24 Premier League season following an incorrect VAR decision in Manchester United's
+fixture against Wolves.
+
+Gary O'Neil's side were denied a late penalty after a foul from Andre Onana on Sasa Kalajdzic. Despite a long VAR check, Wolves were not given the spot-kick in
+injury time and lost the match 1-0.
+
+Fans watching the game were in disbelief when the call was made, and similar incidents have happened since, including against United. Bruno Fernandes said he
+would wait for an apology — one that never arrived — after Cristian Romero was not punished for handball in the Red Devils' 2-0 loss to Tottenham, and plenty of
+onlookers debated the penalty won by Marcus Rashford in United's subsequent comeback win at home to Nottingham Forest.
+</item 2>
+
+<item 3>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+John Brooks was taken off VAR duty for two games after he drew the offside line in the wrong place, denying Brighton's Pervis Estupinan a goal.
+
+Aston Villa 3-1 Manchester United: November 6, 2022
+
+Lucas Digne's free-kick was one of the highlights in Aston Villa's victory over Man United, but a post-match review showed he received additional help following
+a mistake from the referee.
+
+The Red Devils' wall was set more than 10 yards behind the ball, allowing Digne more room to find the back of the net.
+
+Nottingham Forest 2-2 Brentford: November 5, 2022
+
+Brentford were awarded a penalty after a collision between Dean Henderson and Yoane Wissa. Replays showed that Wissa initiated the contact, but Brentford were
+still given the spot-kick.
+
+This forced Webb to apologise to Forest after the match.
+</item 3>
+
+<item 4>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+Nicolas Tagliafico started both matches in September, and while Marcos Acuna is back with the team following an injury, the former retains his starting spot.
+Messi's club teammate Facundo Farias was also included on the roster but it'd be surprising if he saw the field.
+
+MORE: Preview the Argentina vs Paraguay match with picks, predictions, and odds
+
+Argentina starting lineup (4-3-3): E. Martinez (GK) — Molina, Romero, Otamendi, Tagliafico — De Paul, Mac Allister, E. Fernandez — J. Alvarez, L. Martinez, N.
+Gonzalez.
+
+New Paraguay head coach Daniel Garnero, making his debut, has rung the changes after falling to Venezuela last time out, making five alterations to that
+starting lineup. The entire midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+</item 4>
+
+<item 5>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino Dest PSV Eindhoven (NED) 28 2 DEF DeJuan Jones New England Revolution (USA) 7 0 DEF Kristoffer Lund Palermo
+(ITA) 2 0 DEF Kevin Paredes Wolfsburg (GER) 1 0 DEF Tim Ream Fulham (ENG) 52 1 DEF Chris Richards Crystal Palace (ENG) 12 1 DEF Miles Robinson Atlanta United
+(USA) 27 3 DEF Joe Scally Gladbach (GER) 6 0 MID Johnny Cardoso Internacional (BRA) 7 0 MID Luca de la Torre Celta Vigo (SPA) 17 0 MID Lennard Maloney
+Heidenheim (GER) 0 0 MID Weston McKennie Juventus (ITA) 46 11 MID Yunus Musah AC Milan (ITA) 29 0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman
+</item 5>
+
+<item 6>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+54-year-old Garnero is an Argentine who made one appearance for the national team as a player, and spent most of his career with Argentine club Independiente.
+He's managed at the club level in Paraguay since 2015 with Sol de America, Guarani, and Olimpia before his spell at Libertad.
+
+It's quite the test for Garnero in his debut match, taking on Lionel Messi and the defending World Cup champions Argentina, his home nation. My intention is
+always to play with the ball. We must be smart and aggressive in recoveries." A bold claim by the Paraguay boss.
+
+"Vamos a jugar contra una selección que es la mejor del mundo. No solamente por logros, sino por idea colectiva y rendimientos individuales. Mi intención
+siempre es jugar con la pelota. Debemos ser inteligentes y agresivos en las recuperaciones".
+
+
+
+🗣️ Daniel Garnero.
+</item 6>
+
+<item 7>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+“I will commit to being the catalyst that will set the tone for our group for every game, to help restore our club to where it deserves to be, I am confident of
+that. We will be back and better.”#NERevs pic.twitter.com/A0mVyGdaAZ — Seth (@SethMan31) November 10, 2023
+
+Jamaica vs Canada lineups & team news
+
+Jamaica manager Hallgrimsson also described his side as being on a mission, but they faced it without New York Red Bulls forward Cory Burke because of a groin
+problem.
+
+Karoy Anderson, who plays for English club Charlton Athletic, was called up for the first time. "I was just shocked," the midfielder told the Addicks' website.
+"I was looking at it for a long time just taking it in and I told my mum and she started crying."
+</item 7>
+
+<item 8>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+It's far too early to be watching outside results too intently, but regardless, that's a great result for Paraguay, who will want every CONMEBOL nation outside
+the top two to drop as many points as possible.
+
+The messier it gets around Paraguay, the better a chance they have of securing a qualifying spot in the expanded World Cup field.
+
+💥 ¡Qué cierre! Penal, expulsado el portero y Uruguay lo empata con Darwin Núñez pic.twitter.com/csgmJt6yJz — Tigo Sports Costa Rica (@tigosports_cr) October 12,
+2023
+
+30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss. He spent the last two years in charge of
+Paraguayan giants Libertad, taking over for Guillermo Barros Schelotto who was let go after the September qualifiers just three days shy of his two-year hire
+anniversary.
+</item 8>
+
+<item 9>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Argentina subs (12): Armani (GK), Musso (GK), Quarta, Montiel, Acuna, Ocampos, Paredes, Lo Celso, Pezzella, G. Rodriguez, Garnacho, Messi.
+
+Paraguay head coach Daniel Garnero has rung the changes after falling to Venezuela last time out, making five alterations to that starting lineup. The entire
+midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+
+Forward Miguel Almiron is Paraguay's most prominent goalscoring threat and is in good form, with three goals in his past five matches for Newcastle United.
+
+Paraguay have questions at goalkeeper, as mainstay Antony Silva has been phased out, leaving three inexperienced internationals currently on the roster. New
+York Red Bulls starter Carlos Coronel earned his first two caps in the September matches and he remains in net here.
+</item 9>
+
+<item 10>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+There are no natural right-backs on the roster, meaning he will either have to pidgeonhole a center-back (Antonio Rudiger or Niklas Sule) out wide, sacrifice
+Josh Kimmich's presence in midfield to move him back, or move Pascal Gross back. None of those are ideal options.
+
+Whether Nagelsmann deploys a 4-2-3-1 or a 3-2-4-1, the tactical approach will likely remain the same.
+
+Getting the best out of young superstar Jamal Musiala will be one of the most important aspects of Nagelsmann's tenure, as Musiala has blossomed into a
+world-class talent at Bayern Munich, but the 20-year-old has just one goal in 23 international caps to this point.
+
+Nagelsmann will also look to introduce a few overlooked players, starting with Robert Andrich who could factor into the midfield setup as a traditional No. 6,
+especially as Ilkay Gundogan enters the twilight of his career.
+</item 10>
+=== END ITEM id=713e020dbaeda40b ===
+
+=== ITEM id=5566175c5be59520 ===
+Gold sentences and facts:
+Sentence 0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.
+  Fact 0.0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night.
+  Fact 0.1: The Cowboys' win kept the heat on the Eagles.
+  Fact 0.2: The Eagles were a losing team.
+  Fact 0.3: The Eagles were ahead of the Cowboys.
+  Fact 0.4: The Cowboys will host the Eagles in Dallas in Week 14.
+Sentence 1: Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay.
+  Fact 1.0: The Lions' win was fueled by a stout defensive showing.
+  Fact 1.1: The Lions' win was fueled by a gritty run game.
+  Fact 1.2: The Lions' win was fueled by a bit of fairy dust from St. Brown.
+  Fact 1.3: The Lions' win was fueled by a bit of fairy dust from Sam LaPorta.
+  Fact 1.4: The Lions' win was fueled by a bit of fairy dust from Josh Reynolds.
+  Fact 1.5: The Lions cruised to a 34-20 win.
+  Fact 1.6: The Lions beat Green Bay 34-20.
+  Fact 1.7: Green Bay is the Lions' hated NFC North rival.
+
+Retrieved items:
+<item 1>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+Sideline reporter Kaylee Hartung will offer updates throughout the affair.
+
+Fans in the Detroit and Green Bay markets can watch the Amazon broadcast over the air on local channels.
+
+Those in Canada can stream it on DAZN, which carries every NFL game all season.
+</item 1>
+
+<item 2>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+Lions 34, Packers 17
+
+10:50 p.m.: Quay Walker's leaps over a blocker on Riley Patterson's field goal attempt, prompting a unsportsmanlike penalty. That will put Detroit on the cusp
+of another score, pending a Packers defensive rally.
+
+10:43 p.m.: Lions beginning to salt the game away with strong running through the tackles. Montgomery and Gibbs creeping through the crevices to push Detroit
+down the field. And an impressive toss from Goff into the outstretched hands of Reynolds, as well. The Lions are on the doorstep of the red zone.
+
+10:36 p.m.: TOUCHDOWN! Love scampers into the end zone from short distance to cut that Detroit lead down even more. He got held short of the end zone on the
+ensuing two-point effort. But Green Bay is firmly back in it.
+</item 2>
+
+<item 3>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+11:11 p.m.: FIELD GOAL! Carlson's try from distance makes the deficit two possessions.
+
+11:08 p.m.: Not so fast. ... A quick three-and-out gives Green Bay a glimmer. That glimmer grows even brighter after an impressive return by Keisean Nixon.
+Let's see what they can do with 3:30 left.
+
+11:04 p.m.: INTERCEPTION! That's wraps. Love misses his target, instead finding the mitts of Jacobs for his second pick of the day. Strong showing by this
+Detroit defense. And that should put things to bed.
+
+10:54 p.m.: TOUCHDOWN! Walker's penalty proves vital as Montgomery finds pay dirt from a couple yards out on fourth down. Gutsy call by Campbell. And one that
+pays off in spades for Detroit, which extends its lead to 17.
+
+Lions 34, Packers 17
+
+10:50 p.m.
+</item 3>
+
+<item 4>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+NFL WEEK 4 PICKS: Straight up | Against the spread | Projection model
+
+The Sporting News tracked live updates from Thursday's clash between the Lions and the Packers. Scroll below to check out highlights and live results as two of
+the NFC's oldest sides faced off for NFC North glory.
+
+Lions vs. Packers score
+
+1 2 3 4 F Lions 14 13 0 7 34 Packers 3 0 8 9 20
+
+Lions vs. Packers live updates, highlights from Thursday Night Football
+
+(All times Eastern)
+
+End of fourth quarter: Lions 34, Packers 20
+
+11:19 p.m.: Lions complete yet another fourth down, officially putting the game on ice.
+
+11:12 p.m.: Onside kick spills out of bounds, and it's looking like that might be that. Packers have one timeout remaining but Montgomery's fiery run through
+the tackles should make that obsolete.
+
+11:11 p.m.: FIELD GOAL!
+</item 4>
+
+<item 5>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+But Green Bay is firmly back in it.
+
+Lions 27, Packers 17
+
+End of third quarter: Lions 27, Packers 11
+
+10:31 p.m.: Impressive pitch-and-catch by Love and Jayden Reed. Packers hurler drops it right into Reed's bread basket for the 44 yard gain as the quarter comes
+to an end.
+
+10:24 p.m.: Things slow down for Green Bay on Drive No. 2 of the second half. Punt incoming. Packers need less of that as they attempt their second-straight
+rally in as many weeks.
+
+10:15 p.m.: Green Bay defense firms up, forcing yet another punt. Can Love and the Packers bring things back?
+
+10:10 p.m.: TOUCHDOWN! Love finds Watson for the TD, giving Packers fans a much-needed boost of adrenaline. Good drive by Green Bay, which finally shows signs
+of life after a putrid first half.
+</item 5>
+
+<item 6>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+Amon-Ra St. Brown was in the midst of a tempest, shrouded in a sea of green with few options around him. The Lions WR had done the hard part, stretching beyond
+an exasperated Packers defense to trot into the end zone.
+
+But he had a choice to make: rollick in the joy of his sapphire-clad teammates. Or take a leap of faith into the Lambeau Field abyss.
+
+He opted for the latter. St. Brown hurled himself into the green lagoon. Then, he smiled.
+
+St. Brown's impersonation of the Lambeau Leap was one of many high points in a memorable night for Detroit. Fueled by a stout defensive showing, a gritty run
+game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals,
+Green Bay.
+</item 6>
+
+<item 7>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+Good drive by Green Bay, which finally shows signs of life after a putrid first half.
+
+Lions 27, Packers 11
+
+10:05 p.m.: Great throw by Love, who threads the needle to find Romeo Doubs to keep the chains moving on fourth down. Packers on the brink of a much-needed
+touchdown.
+
+9:58 p.m.: This Green Bay offense has to come to life sooner rather than later. If not, this scoreboard could get even more crooked.
+
+Good start to the third frame by the Pack, who find themselves marauding down the field with relative ease in the quarter's opening possession. Every journey
+began with a single step...
+
+9:20 p.m.: INTERCEPTION! Love's errant pass gets snagged by Jerry Jacobs, who plods 20 yards back to put Detroit on the brink of the promised land. It's been a
+putrid start for Love and the Green Bay offense so far.
+
+9:15 p.m.: FIELD GOAL!
+</item 7>
+
+<item 8>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+Lions are closed to adding a second score.
+
+8:40 p.m.: Since the interception, it's felt as if Goff and the Lions can get anything they want. Gibbs is lightning in a bottle, while Montgomery brings the
+thunder. This drive just continues to get lengthier and lengthier.
+
+8:34 p.m.: Lions are looking menacing as can be in the trenches. Isaiah Buggs sends Love spiraling with a crunching hit behind the line. The Packers are giving
+the ball back to the Lions on a three-and-out.
+
+8:29 p.m.: TOUCHDOWN! Amon-Ra St. Brown leaps, stretches and reels in Goff's feather towards the corner of the end zone! Detroit showing just what its offense
+can do when its clicking.
+
+Lions 7, Packers 3
+
+8:27 p.m.: Sam LaPorta gets beyond his marker with a strong move and plods 35 yards down the field.
+</item 8>
+
+<item 9>
+Prisco's Week 12 NFL picks: Jaguars beat Texans in AFC South battle, Saints get key divisional win vs. Falcons (CBSSports.com, 2023-11-23T21:30:38+00:00)
+Dak Prescott plays well again. Cowboys roll.
+
+Pick: Cowboys 32, Commanders 16 (Result: Cowboys 45-10)
+
+Thursday, 8:20 p.m. ET (NBC, fubo)
+
+This is a huge division game for two teams that have had a good rivalry over the past decade. The Seahawks are coming off a bad loss to the Rams, while the
+49ers are coming off two dominant victories. Geno Smith is banged up, so his health is key. The 49ers have the look of a Super team again. They show it here.
+
+Pick: 49ers 28, Seahawks 19 (Result: 49ers 31-13)
+
+Friday, 3 p.m. ET (Amazon Prime Video)
+
+This Friday game the day after Thanksgiving isn't what it was expected to be with the Jets being an offensive disaster.
+</item 9>
+
+<item 10>
+Prisco's Week 12 NFL picks: Jaguars beat Texans in AFC South battle, Saints get key divisional win vs. Falcons (CBSSports.com, 2023-11-23T21:30:38+00:00)
+Thursday, 12:30 p.m. ET (Fox, fubo)
+
+This is a big game in the division for both teams, a survival test for Green Bay and a big one for the Lions if they want to try and get home-field advantage in
+the conference. The Lions have had defensive issues as of late and Jordan Love has played well the past two weeks. That will keep the Packers in this game, but
+the Lions win it.
+
+Pick: Lions 31, Packers 27 (Result: Packers 29, Lions 22)
+
+Thursday, 4:30 p.m. ET (CBS, Paramount+)
+
+The Commanders are coming off a dud last week against the Giants, while Dallas is flying high. The Cowboys are playing as well as any team in the league.
+Washington's offensive line is an issue, which will lead to the Cowboys having a field day with their defensive front. Dak Prescott plays well again. Cowboys
+roll.
+</item 10>
+=== END ITEM id=5566175c5be59520 ===

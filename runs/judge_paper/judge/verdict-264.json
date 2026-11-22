@@ -1,0 +1,59 @@
+[
+{"id": "fe788fbb9e8b8a01", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+]},
+{"id": "d0be09d80a2b3d59", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "However, national home prices actually remained stable."}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "However, national home prices actually remained stable."}]}
+]},
+{"id": "da1b10f6d999a79e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "3071a816db05f66c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "contradicted", "evidence": [{"item": 8, "quote": "India have already booked a place in semi-finals"}]}
+]},
+{"id": "c25c15e25cca486b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 5, "quote": "He was ruled questionable to return. NFL Media reported on Monday that Kupp suffered a low ankle sprain"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year,"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "received attention on the sidelines after limping off"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "then left the game for further evaluation in the locker room."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "then left the game for further evaluation in the locker room."}]}
+]},
+{"id": "48adaedf0d8052fd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Place a first bet within 30 days and if it loses, receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000"}]}
+]}
+]

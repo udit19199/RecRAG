@@ -1,0 +1,57 @@
+[
+  {"id": "36b47279984b3f6d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "eb92eeb84d052084", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 7, "quote": "On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 10, "quote": "Swift took Kelce up on his offer"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ce0d5f34ae30708b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.6", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.7", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "2fb60f1c5890bfee", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The first of these is the fact that tech companies continue to see huge pressure on their valuations."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+  ]},
+  {"id": "5e32dc693ab893f9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math."}]}
+  ]},
+  {"id": "6bdf5936da161213", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks."}]}
+  ]}
+]

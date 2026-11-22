@@ -1,0 +1,532 @@
+[
+  {
+    "id": "ca9d6f8c30ff29be",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "f50bdb63c395a1a5",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "the race for United was a straight shootout between Oldham-born Ratcliffe, who had previously offered"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Manchester United, one of the grandest and richest names in this competition, have again gone out of the Champions League at the group stage."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich was how grimly routine it all felt."
+          },
+          {
+            "item": 10,
+            "quote": "There was nothing much at all. Where was the energy? Where was the intensity?"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "c6d64c2afb6aa231",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "“This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "“This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "“This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 1,
+            "quote": "“This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "51ac0f0fa9a8e4ab",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          }
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          }
+        ]
+      },
+      {
+        "fact": "0.5",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Los Pumas are also in the semi-finals"
+          }
+        ]
+      },
+      {
+        "fact": "0.6",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          },
+          {
+            "item": 7,
+            "quote": "and England have beaten all of them."
+          }
+        ]
+      },
+      {
+        "fact": "0.7",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          },
+          {
+            "item": 7,
+            "quote": "and England have beaten all of them."
+          }
+        ]
+      },
+      {
+        "fact": "0.8",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          },
+          {
+            "item": 7,
+            "quote": "and England have beaten all of them."
+          }
+        ]
+      },
+      {
+        "fact": "0.9",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          },
+          {
+            "item": 7,
+            "quote": "and England have beaten all of them."
+          },
+          {
+            "item": 7,
+            "quote": "the narrow wins over both Samoa and Fiji in their last two games"
+          }
+        ]
+      },
+      {
+        "fact": "0.10",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"
+          },
+          {
+            "item": 7,
+            "quote": "and England have beaten all of them."
+          },
+          {
+            "item": 7,
+            "quote": "the narrow wins over both Samoa and Fiji in their last two games"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "S﻿AINT-ETIENNE:"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."
+          }
+        ]
+      },
+      {
+        "fact": "1.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "72c2d5ae0675da41",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "That answer ultimately lies with the jury"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "which was selected on Wednesday morning before lawyers for the government"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "which was selected on Wednesday morning before lawyers for the government"
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 5,
+            "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"
+          },
+          {
+            "item": 7,
+            "quote": "over the collapse of FTX, the bankrupt cryptocurrency exchange"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 2,
+            "quote": "is on trial for seven counts of wire fraud and conspiracy."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "while the defense countered that the FTX founder acted in good faith"
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"
+          }
+        ]
+      },
+      {
+        "fact": "2.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "40daff7398352266",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "I know I’m going on that stage whether I’m sick, injured, heartbroken, uncomfortable, or stressed"
+          },
+          {
+            "item": 6,
+            "quote": "If someone buys a ticket to my show, I’m going to play it unless we have some sort of force majeure."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it,\" she told NPR."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."
+          }
+        ]
+      }
+    ]
+  }
+]

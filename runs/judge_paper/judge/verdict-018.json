@@ -1,0 +1,67 @@
+[
+{"id": "cbaf493f91060b4a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "4a3715ff33062557", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]}
+]},
+{"id": "f5c813b27e0952ed", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "95decdf3cfb5f93e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "cf1b6a74f86a599f", "facts": [
+{"fact": "0.0", "status": "contradicted", "evidence": [{"item": 7, "quote": "looked like being part of a tour of China, although that's no longer the case"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+]},
+{"id": "d0fc788585807f74", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "cheering emphatically when No. 87 scored a touchdown"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "By the time I went to that first game, we were a couple."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]}
+]

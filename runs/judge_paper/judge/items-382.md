@@ -1,0 +1,879 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=0bca57322cc374e9 ===
+Gold sentences and facts:
+Sentence 0: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 0.0: Al Saadi said her frustration with Meta is common among Palestinians.
+  Fact 0.1: Al Saadi said her frustration with Meta is common among Palestinians in occupied territories.
+  Fact 0.2: Al Saadi said her frustration with Meta is common among Palestinians across the diaspora.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores.
+  Fact 1.1: Meta wants to shift the burden of monitoring social media usage among teens back to parents.
+
+Retrieved items:
+<item 1>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Although harassment and abuse are still rampant on Instagram and Facebook, he said, the company has been responsive to suspending accounts with patterns of
+targeting other users.
+
+The company has also made more contact with regional Palestinian organizations since 2021, York added, but it’s been slow to implement recommendations from EFF
+and other advocacy groups. It’s “very clear” that Meta is not putting the same resources behind Arabic and other non-English languages, York said, compared to
+the attention Meta gives to countries that have the most regulatory pressure. Moderation of English and other European languages tends to be more comprehensive,
+for example, because the EU enforces the Digital Services Act.
+
+In Meta’s response to the report, Miranda Sissons, the company’s director of human rights, said that Meta was “assessing the feasibility” of reviewing Arabic
+content by dialect. Sissons said that the company has “large and diverse teams” who understand “local cultural context across the region,” including in
+Palestine.
+</item 1>
+
+<item 2>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+At the recommendation of its Oversight Board, Meta conducted a third-party due diligence report about the platform’s moderation during the May 2021 conflict.
+The report found that Arabic content was flagged as potentially violating at significantly higher rates than Hebrew content was, and was more likely to be
+erroneously removed. The report noted that Meta’s moderation system may not be as precise for Arabic content as it was for Hebrew content, because the latter is
+a “more standardized language,” and suggested that reviewers may lack the linguistic and cultural competence to understand less common Arabic dialects like
+Palestinian Arabic.
+
+Has anything improved?
+
+Meta committed to implementing policy changes based on the report’s recommendations, such as updating its keywords associated with dangerous organizations,
+disclosing government requests to remove content and launching a hostile speech classifier for Hebrew content. Abukhater added that Meta has improved its
+response to harassment, at least in comparison to other social media platforms like X (formerly Twitter).
+</item 2>
+
+<item 3>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“And so I think that is what is the most problematic right now about that particular rule, and the way that it’s enforced.”
+
+Over the 13 days leading up to the ceasefire between Hamas and Israel, 7amleh documented more than 500 reports of Palestinian “digital rights violations,”
+including the removal and restriction of content, hashtags and accounts related to the conflict.
+
+Meta blamed some of the instances of perceived censorship to technical issues, like one that prevented users in Palestine and Colombia from posting Instagram
+Stories. It attributed others to human error, like blocking the hashtag for Al-Aqsa Mosque, the holy site where Israeli police clashed with Ramadan worshippers,
+because it was mistaken for a terrorist organization. The company also blocked journalists in Gaza from WhatsApp without explanation.
+
+The same month, a group of Facebook employees filed internal complaints accusing the company of bias against Arab and Muslim users. In internal posts obtained
+by BuzzFeed News, an employee attributed the bias to “years and years of implementing policies that just don’t scale globally.”
+</item 3>
+
+<item 4>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Most recently, Instagram users accused Meta of “shadowbanning” their Stories about Palestine.
+
+It’s the latest in a lengthy history of incidents on Meta platforms that reflect an inherent bias against Palestinian users in its processes, as documented by
+years of complaints from both inside and outside the company. The company may not intentionally suppress specific communities, but its moderation practices
+often disproportionately affect Palestinian users.
+
+For instance, Meta struggles to navigate the cultural and linguistic nuances of Arabic, a language with over 25 dialects, and has been criticized for neglecting
+to adequately diversify its language resources. The company’s black-and-white policies often preclude it from effectively moderating any nuanced topic, like
+content that discusses violence without condoning it. Advocacy groups have also raised concerns that Meta’s partnerships with government agencies, such as the
+Israeli Cyber Unit, politically influence the platform’s policy decisions.
+</item 4>
+
+<item 5>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices Instagram users suspect Meta of shadowbanning content about
+Palestine. The platform has a history of inherent bias.
+
+Earlier this year, Palestinian-American filmmaker Khitam Jabr posted a handful of Reels about her family’s trip to the West Bank. In the short travel vlogs,
+Jabr shared snippets of Palestinian culture, from eating decadent meals to dancing at her niece’s wedding.
+
+“I hadn’t been in a decade, so it’s just like, life abroad,” Jabr told TechCrunch.
+
+“I would get [anti-Palestine] comments,” she recalled. “And I couldn’t respond [to them] or use my account for 24 hours. I wasn’t even posting anything about
+the occupation. But fast forward to now and the same shit’s happening.”
+
+In the aftermath of Hamas’ attack on Israelis, Israel’s retaliatory airstrikes and total blockade — cutting access to electricity, water and vital supplies —
+have devastated Gaza.
+</item 5>
+
+<item 6>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+When reached for comment about these recent claims of shadowbanning, a representative for the company pointed TechCrunch to a Threads post by Stone.
+
+“We identified a bug impacting all Stories that re-shared Reels and Feed posts, meaning they weren’t showing up properly in people’s Stories tray, leading to
+significantly reduced reach,” Stone said. “This bug affected accounts equally around the globe and had nothing to do with the subject matter of the content —
+and we fixed it as quickly as possible.”
+
+But many are frustrated that Meta continues to disproportionately suppress Palestinian voices. Leen Al Saadi, a Palestinian journalist currently based in Jordan
+and host of the podcast “Preserving Palestine,” said she is used to “constantly being censored.” Her Instagram account was restricted last year after she posted
+a trailer for the podcast’s first episode, which discussed a documentary about Palestinian street art under occupation.
+
+“Palestinians are currently undergoing two wars,” Al Saadi said. “The first is with their legal occupier.
+</item 6>
+
+<item 7>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+During the last violent outbreak between Hamas and Israel in 2021, a report commissioned by Meta and conducted by a third party concluded that the company’s
+actions had an “adverse human rights impact” on Palestinian users’ right to freedom of expression and political participation.
+
+Meta communications director Andy Stone declined to comment on the record, and pointed TechCrunch to Meta’s newsroom post about the conflict, which was updated
+on Oct. 18 with a statement addressing the shadowbanning claims.
+
+“Our policies are designed to keep people safe on our apps while giving everyone a voice,” the post stated. “We apply these policies equally around the world
+and there is no truth to the suggestion that we are deliberately suppressing voice … We can make errors and that is why there is an appeals process for people
+to tell us when they think we have made the wrong decision, so we can look into it.”
+
+The belief that Meta shadowbans, or limits the visibility of, content about Palestine is not new.
+</item 7>
+
+<item 8>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents. In a blog post published today, Meta’s
+global head of Safety, Antigone Davis, argues that parents should be responsible for approving their teens’ app downloads and staked Meta’s position in
+supporting federal legislation that would require parental approval for app downloads for users under the age of 16.
+
+Guiding its reasoning, Meta pointed to recent Pew research that indicated that 81% of U.S. adults were in favor of requiring parental consent for teens to
+create social media accounts. While this may speak to popular opinion around parental sentiment, it doesn’t mean that parents have thought through who should be
+responsible for preventing or allowing teens’ access to social media, or how those apps should operate to protect teens.
+
+A coalition of 42 states and D.C. are currently suing Meta over its harms to teens and young users, in part referencing findings from Meta whistleblower Frances
+Haugen.
+</item 8>
+
+<item 9>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“As if there’s better moderation for those languages, and more careless moderation for Arabic content.”
+
+Stone declined to comment on allegations of Meta disproportionately flagging Arabic news content, instead directing TechCrunch to the updated newsroom post —
+which did not directly address the allegations.
+
+And as the Intercept reported, Instagram and Facebook are flagging images of the al-Ahli Hospital, claiming that the content violates Meta’s Community
+Guidelines on nudity or sexual activity.
+
+The Community Guidelines are enforced inconsistently, particularly when it comes to content related to Palestine. Al Saadi recently tried to report a comment
+that said she should be “raped” and “burned alive” — left in response to her comment on a CNN post about the conflict — but in screenshots reviewed by
+TechCrunch, Instagram said that it didn’t violate the platform’s Community Guidelines against violence or dangerous organizations.
+
+“The restrictions on content, especially the content that relates to Palestine, is heavily politicized,” Abukhater said. “It feeds into the bias against
+Palestinian narrative genuinely.
+</item 9>
+
+<item 10>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“It feeds into the bias against Palestinian narrative genuinely. It really takes the balance against Palestinians in a situation where there’s a huge asymmetry
+of power.”
+
+A history of suppression
+
+Content about Palestine is disproportionately scrutinized, as demonstrated during the last severe violent outbreak between Hamas and Israel two years ago. Amid
+the violence following the May 2021 court ruling to evict Palestinian families from Sheikh Jarrah, a neighborhood in occupied East Jerusalem, users across
+Facebook and Instagram accused Meta of taking down posts and suspending accounts that voiced support for Palestinians.
+
+The digital rights nonprofit Electronic Frontier Foundation (EFF) described Meta’s actions in 2021 as “systemic censorship of Palestinian voices.” In its 2022
+report of Palestinian digital rights, 7amleh said that Meta is “still the most restricting company” compared to other social media giants in the extent of its
+moderation of the Palestinian digital space.
+</item 10>
+=== END ITEM id=0bca57322cc374e9 ===
+
+=== ITEM id=d79a1f90c597a695 ===
+Gold sentences and facts:
+Sentence 0: In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4.
+  Fact 0.0: Google touted Gemini's superior architecture and capabilities in blog posts and press materials.
+  Fact 0.1: Google claimed that Gemini meets or exceeds the performance of other leading gen AI models.
+  Fact 0.2: OpenAI's GPT-4 is one of the other leading gen AI models Google named.
+Sentence 1: She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.
+  Fact 1.0: The woman admits that she may have misinterpreted the evidence.
+  Fact 1.1: The woman maintains that Google manipulates Search to maximise ad revenue.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 2>
+
+<item 3>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Some critics, including Megan Grey, contend that Google uses semantic keyword matching to make searches less precise on purpose, which widens the pool of
+content served and increases auctions for its ads. The quality tests, then, would ensure that the systems were still returning results that were justifiably
+related to the input.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 4>
+
+<item 5>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+But Google denies pushing users towards the most monetisable subjects.
+
+Similarly, it’s also pretty common to see people complaining on the internet with some variation of “Google Search was a lot better 10 years ago”, which could
+absolutely be true. But it would be a stretch to assume that’s because of the company’s monetisation practices, when there’s a much simpler explanation. In
+2013, people were creating around 9 ZB of data every year (that’s nine zettabytes, or nine trillion gigabytes), which Google had to index constantly, whereas in
+2023 it’s more like 120 ZB. And not a whole lot of that is static websites like it was a decade ago, it’s live information that may be nested within various
+services and apps. What really happens when we search? Google has published extensive information about its Search procedures, so it’s not difficult to get its
+own take on what happens in the background when you send off a query.
+</item 5>
+
+<item 6>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 10>
+=== END ITEM id=d79a1f90c597a695 ===
+
+=== ITEM id=b521b1ca992ed629 ===
+Gold sentences and facts:
+Sentence 0: In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia.
+  Fact 0.0: The Wallabies had a World Cup flop.
+  Fact 0.1: The Queensland Rugby Union reaffirmed its position.
+  Fact 0.2: The Queensland Rugby Union is committed to moving to a centralised high-performance model.
+  Fact 0.3: The Queensland Rugby Union will not follow the NSW Waratahs by handing over the keys to Rugby Australia.
+Sentence 1: He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs.
+  Fact 1.0: A person will be tasked with integrating the programs.
+  Fact 1.1: RA is trying to centralise all of the Super Rugby's high-performance programs.
+
+Retrieved items:
+<item 1>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+His appointment reflects RA’s desire to go down an administrative path rather than former coach of any standing like Millard would have offered.
+
+Horne, who joined World Rugby in 2015 as a general manager of high-performance before moving into his current role, will sit at the top of the high-performance
+tree, with the next Wallabies coach to report into him.
+
+Advertisement
+
+During his tenure with World Rugby, the Sydneysider has played an important role in setting up competitions, high-performance structures and pathways across
+developing countries.
+
+He also played a role in helping Super Rugby integrate Fiji Drua and Moana Pasifika into the competition.
+
+Those successes played out in the recent Rugby World Cup, with Chili, Fiji, Georgia and Portugal delivering encouraging performances that positively reflected
+World Rugby’s desire to spread and build the game. Horne briefly worked at Saracens as a general manger.
+</item 1>
+
+<item 2>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The QRU also expressed its satisfaction that RA was willing to discuss the annual $1.7m being reinstated, which had been withheld because of the Covid pandemic
+to keep the game afloat.
+
+Meanwhile, The Roar understands the ACT Brumbies have sent RA confirmation of solvency for the next 12 months.
+
+RA was forced to take out a $40m loan from Ares to keep the game afloat.
+
+Advertisement
+
+While RA has around another $15m left to spend from the loan, the governing body is looking to borrow up to another $60m so they’re in the strongest possible
+position to capitalise on the two major money-making events – the 2025 British and Irish Lions series and home men’s World Cup in 2017 – and succeed.
+</item 2>
+
+<item 3>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The QRU confirmed that on Wednesday morning.
+
+Advertisement
+
+“The QRU is committed to working with Rugby Australia to lead reform of our game at a high-performance level, and help Rugby Australia develop an improved game
+through high-performance centralisation,” the statement read.
+
+“Centralisation” would include a national player-contracting model, and alignment of key high-performance staff, such as coaching, strength and conditioning,
+and medical to operate as one national system.”
+
+The letter pointed to RA’s involvement in Les Kiss’ appointment as Reds coach, with the former State of Origin winger turned coach, who has spent the best part
+of two decades coaching in Ireland and England, replacing Brad Thorn.
+
+As The Roar has previously reported, the QRU stopped short of wanting to hand over its commercial property.
+
+“While the QRU is very supportive of high-performance alignment, it will not agree to any proposal on centralising commercial or corporate functions,” the
+letter read.
+</item 3>
+
+<item 4>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+We need to maximize the development of the players. At the end of the day, that’s the key to success and alignment of your resources, for a small country.
+
+“Because Australia, if you look at the history of rugby, when we were amateur, we were probably ahead of the game because we had the influence of rugby league.
+We had the influence of AFL and our players were more professional than the rest of the world.”
+
+He added: “I know what’s going on and we need to get a better system of developing players. We need to develop better players and we need to develop a larger
+batch of better players and that only comes through changing the whole system.”
+
+While all five Australian Super Rugby sides fundamentally are on board with regards to moving to a centralised high-performance program, The Roar added that
+some states, including the ACT Brumbies as well as the QRU, don’t want to give up their commercial assets.
+</item 4>
+
+<item 5>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+“The very strength of our State unions is the expertise they bring in their own markets.
+
+Advertisement
+
+“We are open to work on commercial initiatives together but will always retain our independence for the benefit of Queensland Rugby, its members and
+stakeholders.
+
+“Queensland Rugby has built a sustainable business model through the elimination of legacy operating debt, delivered four-straight operating profits and worked
+in partnership with Governments to successfully deliver $31 million of improvements to Ballymore through the construction of the National Rugby Training Centre,
+the home of the Wallaroos and Queensland Reds.”
+
+The letter also pointed to the 71,000 players across the state, including more than 16,000 of those female participants, 257 schools featuring rugby as part of
+its program, as well as its Hospital Cup competition and regional club competitions, as evidence that the game was in good health in Queensland.
+</item 5>
+
+<item 6>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+RA is also in the early stages of looking to renew its next broadcast deal, with the governing body hoping to at least double its current deal with Nine
+Entertainment/Stan Sport, which is seeing them paid $29m per year until the end of 2025.
+</item 6>
+
+<item 7>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Horne briefly worked at Saracens as a general manger.
+
+RA always said they wanted to have the role filled by Christmas, with chief-executive Phil Waugh saying the successful candidate had one of the biggest jobs to
+change the game’s standing in Australia.
+
+“It’s a big job,” Waugh said. “It’s the biggest job on my leadership team in terms of the impact it has on the general sentiment around the game.”
+
+Horne will oversee all of Australia’s men’s and women’s high-performance programs.
+
+Advertisement
+
+He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs.
+
+Perhaps most pressing will be building a list of coaching candidates to take over from Eddie Jones, with RA wanting to have the new Wallabies coach set in stone
+by the start of Super Rugby.
+</item 7>
+
+<item 8>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the open letter to their members on Wednesday morning, QRU chief executive David Hanham and chairman Brett Clark moved to update constituents on the reform
+measures that RA is attempting to usher through the game.
+
+Last week, The Roar revealed that the New South Wales Rugby Union was in the latter stages of handing over their license to RA.
+
+By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property.
+
+Advertisement
+
+The decision will see all male and female Waratahs players, including coaches and high-performance staff, as well as all commercial and operations staff, run
+out of RA’s office.
+
+NSW Waratahs chief executive Paul Doorn informed stakeholders of the decision last week.
+
+RA is cognisant that not every Super Rugby franchise will follow suit immediately, but the governing body is hopeful that now one of the two biggest states has
+agreed to hand over the keys, others will follow suit swiftly.
+</item 8>
+
+<item 9>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised
+high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia.
+
+They also expressed their strong support for Rugby Australia to conduct a “fully independent and transparent top-to-bottom review of the Wallabies program and
+how it can be improved” in light of the historic first World Cup pool exit.
+
+They added: “It should also provide a clear view of what is needed in a leadership and governance framework to ensure we put the right people, in the right
+roles, in the right system.”
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The QRU has also expressed their desire for Rugby Australia to reinstate the annual $1.7 million in funding to each of the Super Rugby franchises that was
+withdrawn following the Covid pandemic to help keep the game afloat.
+</item 9>
+
+<item 10>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The Melbourne Rebels are expected to follow.
+
+RA chief executive Phil Waugh says building trust back between the governing body and states is essential to their plans.
+
+Under fire Wallabies coach Eddie Jones also advocated for Australian rugby to move to a centralised model, believing the nation had fallen behind the rest of
+the world.
+
+“We’re a state-based union that’s run by the states, the national union wants to assume more responsibility and when things were going well, no one questioned
+that,” Jones said.
+
+Advertisement
+
+“But over the last period of time, they haven’t been going so well and this tournament’s probably been the icing on the cake where it’s got to a stage where I
+think people, most people probably think there’s time for change. But it’s not going to go easy.
+
+“[It’s] one of the key issues. We need to maximize the development of the players.
+</item 10>
+=== END ITEM id=b521b1ca992ed629 ===
+
+=== ITEM id=3f5729e78fa97ecf ===
+Gold sentences and facts:
+Sentence 0: Ketamine is primarily used as an anesthetic during surgical procedures — but in recent years it's been used as a remedy for treatment-resistant depression .
+  Fact 0.0: Ketamine is primarily used as an anesthetic during surgical procedures.
+  Fact 0.1: In recent years, ketamine has been used as a remedy for treatment-resistant depression.
+Sentence 1: If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans.
+  Fact 1.0: If the treatment worked with fish, researchers might then be able to figure out how the diet affects behavior.
+  Fact 1.1: If the treatment worked with fish, researchers might then be able to improve the effectiveness of the treatment for humans.
+
+Retrieved items:
+<item 1>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+ULTRAPROCESSED FOODS WITH ‘FEEL-GOOD CHEMICALS’ COULD BE AS ADDICTIVE AS CIGARETTES AND DRUGS, STUDY SUGGESTS
+
+"These can produce strong cardiac effects of a very high blood pressure and pulse, and can lead to serious medical complications," he said.
+
+Myth No. 4: Intranasal or micro-dosing is safe for recreational use
+
+While using small doses of ketamine may seem safer than the larger doses given via IV, Johnson warned that when this drug is self-administered, there is a
+danger of exceeding safe limits.
+
+"The total cumulative dose could end up being higher than a standard dose of a medically administered intravenous dose," he told Fox News Digital.
+
+Intranasal use can also lead to "more aggressive drug-seeking" behaviors, Johnson warned, as the "high" of taking the ketamine is paired with cues in the user’s
+environment — which are not present in a medical office.
+</item 1>
+
+<item 2>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+They would follow each other in groups and ceased going round in circles. There were some other behaviors, such as attention to a specific task and sleeping,
+that were unaffected, but overall the results were promising and according to Yoshizawa, suggest dopamine could be key to how the diet affects behavior.
+
+“We suspect that due to this behavior variation, probably the target of the ketogenic diet is the dopaminergic system,” he said. The challenge now is teasing
+out all the complex factors that may be involved.
+
+Diet, environment, and genes – a complex recipe
+
+According to Yoshizawa, there are two plausible ideas as to how the ketones produced by a ketogenic diet are acting on behavior. The first involves the
+mitochondria, which use either carbs or fat to produce energy in our cells, and the other involves epigenetics, which simple refers to any non-genetic influence
+which turns genes on and off.
+
+Ketones are known to create detectable increases in gene expression in cells.
+</item 2>
+
+<item 3>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+"First, if a patient has access to use it at home for pain or mood, this can increase the likelihood of developing a physical or psychological dependence,"
+Sullivan told Fox News Digital.
+
+Experts recommend that home use of ketamine is only prescribed for select patients — who should be closely monitored with regular face-to-face office visits.
+
+"Another way it can become dangerous is if a patient uses too large of a dose in an unsupervised setting, where they may put themselves at risk for accidents,
+such as falls or drownings," said Sullivan.
+
+CLICK HERE TO SIGN UP FOR OUR HEALTH NEWSLETTER
+
+Mixing ketamine with other medicines can also be dangerous, Johnson warned.
+
+For example, when mixed with opiates, it can have a stronger sedative effect, and combining ketamine with stimulants can worsen cardiovascular effects, he said.
+
+In particular, ketamine mixed with buprenorphine can enhance sedation and lead to unresponsiveness, said Johnson.
+</item 3>
+
+<item 4>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+Johnson, however, noted that ketamine is a "moderately addictive substance."
+
+He told Fox News Digital, "Even long-term users typically only develop a behavioral or psychological dependence. Physical dependence can occur, but usually the
+withdrawal signs are mild to moderate."
+
+Dr. Sandhya Prashad, president of the American Society Of Ketamine Physicians, Psychotherapists and Practitioners (ASKP3) in Florida, said there is "an
+extremely low risk of addiction, craving or withdrawal" when ketamine is used in low doses in a monitored clinical setting.
+
+"Abuse of ketamine occurs when it is self-administered in high or frequent doses without supervision or monitoring, which leads to addiction ," she told Fox
+News Digital.
+
+Myth No 3: Ketamine can be self-prescribed and purchased online
+
+Ketamine should only be obtained and administered by a licensed and experienced medical doctor, Johnson said.
+</item 4>
+
+<item 5>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+The fish avoid their peers and engage in repetitive behavior, such as swimming in circles.
+
+“Many people first doubted that the fish have an autism-like state; I also doubted it at first,” said Yoshizawa. But as he soon found out, even patterns of gene
+regulation resembled autistic patients.
+
+Believing that cavefish might be useful for the study of autism, Yoshizawa approached his colleague Ryan Lee, a physician working with autism patients at
+Shriners Hospital for Children Honolulu. “When I showed him the video of the cavefish he immediately said, ‘yes, that is very similar to what I observe in my
+patients’,” recounted Yoshizawa.
+
+Lee, who has experimented with ketogenic diets to improve autism symptoms with some success suggested they try it with the fish. In humans, not all patients
+receiving the ketogenic diet improve, but some do. If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve
+the effectiveness of the treatment for humans.
+</item 5>
+
+<item 6>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+Buprenorphine, a drug that is prescribed to treat opioid use disorder , was in Perry’s system at the time of his death.
+
+Guidelines to be published soon
+
+ASKP3 announced that it will soon publish guidelines for safe use of the drug.
+
+"In the wake of Matthew Perry’s autopsy report, we are committed to creating and publishing guidelines for at-home ketamine use, which should only be practiced
+with a very specific patient profile and only in the context of a close relationship with a physician and in-office follow-up," the organization said in a
+released statement.
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+It is important for people to recognize the distinction between different uses of the drug, according to Prashad.
+
+"In reality, the ways in which ketamine is used for anesthesia versus depression versus abuse are all very different in terms of dosage and frequency."
+</item 6>
+
+<item 7>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+When thinking about treatments for conditions like autism spectrum disorder, diet is likely not high on the list. But clues from an eyeless species of
+cave-dwelling fish point to a link between a trendy weight loss diet, the brain, social behavior, and autism.
+
+The ketogenic diet is designed to induce a physiological state called ketosis. This happens when the body no longer has enough carbohydrates to burn for energy
+and switches to fat as an energy source. Breaking down fat for energy produces a group of molecules called ketones, which travel throughout the body.
+
+High in protein and fat but low in carbs, the ketogenic diet is popular for its weight loss effects but also appears to have some neuroprotective and
+anti-inflammatory effects too. Children with epilepsy are sometimes placed on this diet because it helps reduce the frequency of seizures.
+
+The exact mechanism behind these neurological effects is still a mystery and there have been reports of long-term side effects in people trying the diet outside
+of clinical settings.
+</item 7>
+
+<item 8>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+"To use ketamine, it is important to establish a clear diagnosis of severe depression or anxiety and/or post-traumatic stress disorder," he told Fox News
+Digital. "This requires an expert and cannot be self-diagnosed properly."
+
+"Abuse of ketamine occurs when it is self-administered in high or frequent doses without supervision or monitoring, which leads to addiction."
+
+Those who think they may benefit from ketamine treatment should consult a doctor, Johnson advised.
+
+"Ketamine is generally safe when administered by trained health professionals in a medical setting," Johnson said.
+
+"In those settings, it is best delivered by the IV route, where the dose can be calculated accurately."
+
+When purchasing ketamine outside a doctor’s prescription, there is also the risk of receiving a tainted product, experts warned. While people might assume
+they're purchasing straight ketamine, the drug is often mixed with stimulants like cocaine or phencyclidine (PCP), Johnson noted.
+</item 8>
+
+<item 9>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+Myth No. 1: Ketamine is a new treatment
+
+In reality, the drug has been used for depression, post-traumatic stress disorder and pain for more than 10 years, according to Dr. Patrick Sullivan, medical
+director of Initia Nova Medical Solutions in New Jersey .
+
+The FDA approved ketamine for anesthesia in both humans and animals since 1970, the doctor noted.
+
+After successful clinical trials , the FDA approved the drug in 2019 as a medication for treatment-resistant depression.
+
+OZEMPIC AND WEGOVY WEIGHT LOSS DRUGS COULD HELP REDUCE ALCOHOL USE DISORDER SYMPTOMS, STUDY SUGGESTS
+
+"There are hundreds of studies showing it to be safe and effective in the outpatient setting," Sullivan told Fox News Digital.
+
+Myth No. 2: Ketamine is powerfully addictive
+
+Ketamine is "legally recognized as having the potential for abuse and for both psychological and physical dependence," according to the American Addiction
+Centers website.
+</item 9>
+
+<item 10>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+Ketones are known to create detectable increases in gene expression in cells. Pulling apart exactly how things like, diet, environment, genes and
+neurotransmitters are linked is incredibly difficult but could reveal which pathways are best to target for autism treatments or could identify a specific
+ketone which works more efficiently than others.
+
+While the cavefish are not an exact model for human autism this work shows how these experiments shine light on the biology and evolution of these behavioral
+conditions and offer new directions for researchers to follow.
+
+Reference: Motoko Iwashita, et al. Metabolic shift toward ketosis in asocial cavefish increases social-like affinity, BMC Biology (2023), DOI:
+10.1186/s12915-023-01725-9
+
+Feature image credit: Masato Yoshizawa
+
+Correction: This article was edited on November 2, 2023. Ryan Lee was originally described as working at the University of Hawai‘i Mānoa.
+</item 10>
+=== END ITEM id=3f5729e78fa97ecf ===
+
+=== ITEM id=712cddb1423b0998 ===
+Gold sentences and facts:
+Sentence 0: “Certainly there wasn’t a valid alternative to Google at the time,” Cue said.
+  Fact 0.0: Cue said there was not a valid alternative to Google at the time.
+  Fact 0.1: Cue said 'Certainly there wasn't a valid alternative to Google at the time.'
+Sentence 1: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 1.0: The party referred to as 'they' gets other benefits from Android.
+  Fact 1.1: Google could solve this problem today if Google wanted to.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 1>
+
+<item 2>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 2>
+
+<item 3>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 5>
+
+<item 6>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 8>
+
+<item 9>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 9>
+
+<item 10>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 10>
+=== END ITEM id=712cddb1423b0998 ===

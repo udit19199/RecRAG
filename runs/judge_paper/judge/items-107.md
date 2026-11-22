@@ -1,0 +1,985 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=00d419afadd02012 ===
+Gold sentences and facts:
+Sentence 0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together.
+  Fact 0.0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies.
+  Fact 0.1: In this innovation cycle, there is a strong need for technologists and designers to be in the process together.
+Sentence 1: Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere.
+  Fact 1.0: Ric Lipson is a partner at Stufish.
+  Fact 1.1: Ric Lipson collaborated on the U2 project for Sphere.
+  Fact 1.2: Es Devlin, an artist, collaborated with Ric Lipson on the U2 project for Sphere.
+  Fact 1.3: Brian Eno, a producer, collaborated with Ric Lipson on the U2 project for Sphere.
+
+Retrieved items:
+<item 1>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Product design is in a moment of profound change and redefinition as technologies like artificial intelligence (AI) and spatial computing dramatically affect
+computing experiences. AI, especially, may have only minor impacts on interface design but will significantly impact the holistic product or ecosystem
+experience. Spatial computing, on the other hand, will change human-computer interactions and unmoor our understanding of what a computer is.
+
+In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for
+technologists and designers to be in the process together.
+
+For successful products and businesses, innovation is perpetual. There is a never-ending search to find the next new thing that enhances the user experience,
+extends product reach, expands revenue, or all three simultaneously. Product design makes innovation less daunting and increases chances for success because it
+is a multidisciplinary process with structures and frameworks to catalyze innovation. Technologists have a role in the process that expands beyond simply
+validating the technology or concept, which is their customary responsibility.
+</item 1>
+
+<item 2>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Sphere, in contrast, more wholly and subtly envelops you. “They are both legacy projects made by artists who have the career and track record to be able to look
+at these things objectively in a way that a younger performer perhaps wouldn’t because it takes an entire lifetime of experience to make those kinds of choices
+and make it work,” Williams says. The two shows also share British music stage architecture firm Stufish whose work ranges from the Queen’s Platinum Jubilee,
+tours for Beyoncé and Jay-Z, Michael Bublé, Elton John and Madonna as well as the ABBA Arena in London. Stufish partner Ric Lipson (along with artist Es Devlin
+and producer Brian Eno) collaborated on the U2 project for Sphere. “With the ABBA Arena, it’s absolutely designed for that show, but you could also imagine that
+building having another avatar show in there, or indeed a live performance where people would use the technology that’s in the building as an immersive
+environment,” Lipson says.
+</item 2>
+
+<item 3>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+As experts on a technology or technology stack, we can communicate abstract insights or contribute in more conceptual contexts. Technologists add value to the
+product design process by sharing their expertise on a technology’s characteristics. Designers use this information to shape and exploit technologies in the
+visual and interaction design process. In this way, technologists inform new interaction models, interface metaphors, and product channels. This involvement
+gives confidence and conviction to the promises of design.
+
+Think of digital technologies as a material like paint, stone, or wood. For artisans to create with materials, they must understand the material’s ontology and
+phenomenology. An artist must know the differences between oil, acrylic, or watercolor paints because each material has different properties that affect how and
+what can be created. Technologists must “find the grain” of a technology.
+</item 3>
+
+<item 4>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Critically, says Lipson, the staging for the U2 show is elementary in real terms, despite its technological complexity. “And what’s interesting is that the
+Sphere, like ABBA Arena, is only touching the sides of what you can do,” he says. “In five years’ time and 10 years’ time, two years’ time, whenever the
+technology shifts, you’ll be able to do more.” By the numbers ... U2 perform at the Sphere in Las Vegas. Credit: Stufish Entertainment Architects The screens,
+for example, are a bespoke assembly of state-of-the-art screens. But behind those screens are “a whole new kind of speaker,” Lipson says. “In a regular show,
+the speakers are at one end pushing the sound down the room, so it’s louder at the stage end and quieter further away. [But here] because everybody’s sort of
+getting their own feed, everybody’s getting an equal volume. So hearing the show in there, sonically, may be better than anywhere.”
+</item 4>
+
+<item 5>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+For most technical leads and software developers, this is a mode inversion from our traditional tactical and direct interaction with technology. The context
+switch from daily build-and-operate is challenging but is paramount to developing successful and innovative products. We are uniquely positioned to generate
+strategic insights translated from dense technical minutiae that drive innovative business cases and product experiences.
+
+A technology innovation must solve a business problem, such as improving operational efficiency, growing existing revenue streams, or generating new ones. The
+problem space may be customer-facing (e.g., how can we deliver a new feature?) or internal-facing (e.g., how can we make a process more efficient?). The problem
+is the paramount concern. The specific technologies or innovations used to solve the problem are often less critical. We cannot lose perspective of the business
+needs; otherwise, the activities become too academic or a paid hobby.
+
+An ordinary domestic analogy is hanging a picture. The hole size, bracket, or tools used to hang the picture are immaterial as long as the picture is on the
+wall and straight.
+</item 5>
+
+<item 6>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Before discussing the nontraditional ways technologists participate in product innovation, let’s conceptually examine innovation and product design.
+
+The word innovation has a simple meaning — to introduce something new or a novel method of doing something — yet we frequently inflate it to mean something
+magical, grandiose, and world-changing. Innovation can just as easily be mundane and straightforward. The key to innovation is being “new.” The “new” can be
+localized to a team, product, process, or business unit. The “novel” can be well-known and established practices not incorporated into your workflow or product.
+Sometimes, innovation comes from closing small gaps and isn’t always a grand eureka moment.
+
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+Product design is a process and not a discipline or deliverable. It is (understandably) easy to limit the scope of product design to color choices, content
+layout, and aesthetics.
+</item 6>
+
+<item 7>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+The specifics of the process and technologies are only important as they pertain to how well they solve the problem, the costs to do so, and the overall end
+user experience.
+
+Product innovation is experimental and should not always be expected to yield productive results. It requires a learning curve and patience, as the outcomes are
+often ambiguous and unknown. Business leadership can struggle with this perspective because it is indefinite (in terms of results and timelines), and it is
+challenging to translate pure technology innovation into value creation. A gap opens between technology and product teams wherein technology teams strain to
+articulate the capabilities and value of a technology innovation, leading to unfilled promises and the perception of “technology for the sake of technology” or
+quips like “a solution looking for a problem.”
+
+The current hype cycle in AI serves as a great concrete example. For technology or product executives, the challenge is how to do more than check the AI box —
+it’s about how to meaningfully incorporate AI into a product. Instead of forcing a technology onto a product, the design process flows to the technologies.
+</item 7>
+
+<item 8>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Technologists must “find the grain” of a technology. In this way, they become an intermediary between the abstract nature of design and the pedantic nature of
+technology. This philosophical perspective is especially important when a product is in a growth stage or when using emerging technologies.
+
+Regardless of whether your product is growing or in a stable stage or employs established or emerging technologies, integrating technologists into the product
+strategy and design process enriches the final outcome. There is a technology perspective extending beyond the operations and mechanics of the code “factory
+floor,” which provokes innovation. Sometimes this leads to small, impactful moments of innovation — and sometimes it is a brilliant revolution.
+</item 8>
+
+<item 9>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Too often, design is minimized to only the act of making user interfaces pretty. Product design is much deeper and broader in scope than visual design assets.
+For example, product design can give direction and focus to a business strategy, user experience strategy, or technology explorations.
+
+The process establishes a guide rail throughout any innovation initiative. The core of product design is decision-making with an astute instinct for making the
+best decisions at the most opportune time. Product design helps reduce risk and leads to more effective innovation through quality decision-making.
+
+A progressive role for technologists
+
+Technologists play a strategic role in product innovation and should bring a metaphysical perspective in addition to being punctilious. Our job is to
+communicate the essence of a technology and think strategically about the application of technologies to problem spaces. We are most constructive when we
+translate the technicals of “how to make X do Y” to “these are the types of products and services realizable with technology X.”
+</item 9>
+
+<item 10>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 10>
+=== END ITEM id=00d419afadd02012 ===
+
+=== ITEM id=096d877d85c3b5d3 ===
+Gold sentences and facts:
+Sentence 0: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 0.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 0.1: The case argues that Google "siphons off" news publishers' content.
+  Fact 0.2: The case argues that Google siphons off news publishers' readers.
+  Fact 0.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 0.4: The case argues that Google does this through anticompetitive means.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The argument in the case will probably come up later in the trial.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy.
+  Fact 1.2: Epic made this choice on day one of the trial.
+
+Retrieved items:
+<item 1>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 1>
+
+<item 2>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 2>
+
+<item 3>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 3>
+
+<item 4>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Both Epic and Google spent a long, long time on subtle lines of questioning. You really had to read between the lines to see that Epic was trying to make a
+point about how Google’s 70/30 revenue split is probably based on an arbitrary decision Valve made two decades ago with Steam or how Google was trying to make a
+point that Epic, too, likely believed that an app store provides more value than just payment processing and maybe deserves more money.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 5>
+
+<item 6>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 7>
+
+<item 8>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 9>
+
+<item 10>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Also, that one’s not over till the Supreme Court weighs in or declines to take a look.
+
+2) Google can’t tell jurors that Apple won its case, or that other plaintiffs settled. The judge in this case says so!
+
+3) Oh, and by the way, this is a jury trial.
+
+Wait, why does that matter?
+
+Epic and Google have to convince a jury, not the judge, which is totally different from how the Apple case played out. (That one was a “bench trial.”)
+
+Maybe all the evidence of tricky deals inside Google might sway a jury against the company? Maybe Google scaremongering that sideloaded apps equal gaping
+security holes will sway a jury against Epic instead? Who knows!
+
+(If you’re a Epic juror reading this — stop! Judge Donato explicitly said you’re in a “news-free bubble” through mid-December, folks.)
+
+Didn’t other parties sue Google too?
+
+They did! And then, they all settled.
+</item 10>
+=== END ITEM id=096d877d85c3b5d3 ===
+
+=== ITEM id=a482fe6f7029a8f6 ===
+Gold sentences and facts:
+Sentence 0: 10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.
+  Fact 0.0: At 10:03 p.m., Love hits Dillon out in the front.
+  Fact 0.1: Dillon makes his defender miss.
+  Fact 0.2: Dillon races beyond the marker for a first down.
+Sentence 1: 7:06 p.m. – Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run.
+  Fact 1.0: At 7:06 p.m., Anthony Hankerson gets two first downs for the Buffs.
+  Fact 1.1: Anthony Hankerson's first downs come on a four-yard run.
+  Fact 1.2: Anthony Hankerson's first downs come on a 12-yard run.
+
+Retrieved items:
+<item 1>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+They are gaining more than 15 yards on just 11 percent of pass plays, down from 21 percent through six games last season and 19 percent for 2022 overall. Jalen
+Hurts, A.J. Brown, DeVonta Smith and Dallas Goedert are still on the team, so I’m inclined to trust the production will return. But there’s also a lingering
+fear defenses have caught up to aspects of the Eagles’ scheme. Does Philly have a counterpunch?
+
+Advertisement
+
+Exec comment: “People are going to crush Hurts and the offense. They are just churning the clock so much. It just feels like they are imposing their will on
+teams through the run game and through their short passing and it just hasn’t taken off from an explosive passing standpoint, so when they play a team that can
+move the ball on them through the air, it presents some challenges.”
+</item 1>
+
+<item 2>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+But they also haven’t really beaten anyone. They were down 14 points to Carolina. Do you think they are coming back from 13 down against Philly? In my opinion,
+no.”
+
+Advertisement
+
+• Dallas Cowboys: Is this team any better than previous Dallas teams that fell short?
+
+What I think: It’s a tough time to evaluate the Cowboys fairly because they were so bad against San Francisco on a big stage in their most recent game. I just
+don’t see where Dallas is better or going to get considerably better, especially on offense. And every time they enjoy success, they seem to enjoy it a little
+too much. That is a reflection of their owner.
+
+Exec comment: “Run defense and consistency on defense, and then offensively, what is their identity? They just are not very good. Their best games are when they
+play great defense and get turnovers, but that is not going to happen enough, especially against the good teams.”
+
+• Detroit Lions: Have they fixed their defense?
+</item 2>
+
+<item 3>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Randy Mueller raised the thought last week, recalling examples from his career as a GM when offering a pick one round higher than a prospect’s actual draft
+round proved alluring. Detroit used a third-round choice for Hooker, who is recovering from ACL surgery. Hooker would have been valued higher if healthy. Could
+that be true again at some point in the future?
+
+• News that Indianapolis Colts rookie quarterback Anthony Richardson might undergo season-ending shoulder surgery could carry a silver lining. Richardson got to
+play enough for the Colts to evaluate where he stands, but if he shuts it down for the season, neither he nor the team would have to suffer through a full
+season of growing pains. Gardner Minshew’s three-pick game against Jacksonville on Sunday works against the idea Indy is better positioned to compete with the
+journeyman in the lineup, but most coaches and execs I’ve spoken with believe that to be the case in the short term.
+</item 3>
+
+<item 4>
+Colorado vs. Arizona State live score, updates, highlights from Week 6 college football game (Sporting News, 2023-10-07T21:21:03+00:00)
+On 4th & goal Xavier Weaver takes it in for @CUBuffsFootball 🦬
+
+
+
+This game is tied 💪 pic.twitter.com/bGwGZ7b0IF — FOX College Football (@CFBONFOX) October 7, 2023
+
+7:06 p.m. – Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run.
+
+7:00 p.m. – It was a three-and-out for Colorado, and now it's a three-and-out for Arizona State.
+
+6:54 p.m. – Intentional grounding is called on Shedeur Sanders on first down.
+
+Colorado 0, Arizona State 7
+
+6:47 p.m. TOUCHDOWN – The Sun Devils start quick, scoring a touchdown on its first drive behind Elijhah Badger's 48 yards. Its 7-0 just a few minutes in.
+
+6:35 p.m.
+</item 4>
+
+<item 5>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Receiving Yards Through Six NFL Games Rk Player Season Yds 1 Don Hutson 1942 819 2 Tyreek Hill 2023 812 3 Wes Welker 2011 785 4 Elroy Hirsch 1951 766 5 Santana
+Moss 2005 743 6 DeAndre Hopkins 2015 726 7 Raymond Berry 1960 725 8 Jerry Rice 1986 723 9 Bob Boyd 1954 718 10 Bobby Mitchell 1962 714
+
+• Jared Goff is enjoying the second-best start to a season for his career from a statistical standpoint, behind only his 2018 Super Bowl season with the Rams.
+With the Lions at 5-1 and Goff heading toward a likely contract extension, could another team come after his injured backup, former University of Tennessee
+quarterback Hendon Hooker?
+</item 5>
+
+<item 6>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+Revisiting the NBA caricature back in time, the New York Knicks became the first all-Black team in 1979. But their fans made their disapproval very apparent.
+“It wasn’t so much New York attitudes, but fans around the league let you know how they felt about you as an opponent and as a Black man as well,” Knicks star
+Earl Monroe told Newsday.
+
+USA Today via Reuters May 15, 2021; San Antonio, Texas, USA; Phoenix Suns forward Torrey Craig (12) and San Antonio Spurs forward Keldon Johnson (3) fight for
+loose ball as Suns guards Devin Booker (1) and Chris Paul (3) look on in the third quarterat AT&T Center. Mandatory Credit: Scott Wachter-USA TODAY Sports
+
+We could list out all the scandals, fights, and controversies here, but you get the idea.
+</item 6>
+
+<item 7>
+Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-12-03T23:00:04+00:00)
+First NFL TD for Ben Sims ✅
+
+First Lambeau Leap for Ben Sims ✅
+
+
+
+📺: #KCvsGB on NBC
+
+📱: Stream on #NFLPlus https://t.co/CQH1cx3gZS pic.twitter.com/VBgaxibcsI — NFL (@NFL) December 4, 2023
+
+Packers 7, Chiefs 0
+
+8:35 p.m.: Dontayvion Wicks makes the catch though traffic, racing beyond the first down marker to bring Green Bay on the cusp of the end zone.
+
+8:28 p.m.: A.J. Dillon bursts through the mire to pick up the first down on third-and-short. Decent start for the Packers so far, who have climbed down the
+gridiron with relative ease in the opening few minutes.
+
+8:26 p.m.: Wonderful pitch and catch between Love and one of his favorite targets, Christian Watson. Good for a 20-yard gain.
+</item 7>
+
+<item 8>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+STEVENSON: Nothing has changed in terms of his efficiency. We can blame the offensive line to some degree but Stevenson has averaged 0.97 yards before contact
+per rush this season. That ranks 30th out of 41 qualifying running backs. And if you think that's bad then consider his yards after contact per rush average of
+1.79, which is dead last among those same 41 qualifiers.
+
+EXPLOSIVE RUNS: Stevenson has one (1) explosive carry of 12 or more yards. It was against Miami. It went 12 yards. This is a big change from 2022 when he had 21
+explosive runs and an explosive run rate of 10%, which was eighth-best.
+
+RECEIVING: Is averaging 3.6 targets per game and catching 67% of them but is getting just 7.3 yards per catch and has one (1) explosive catch of 16 or more
+yards.
+</item 8>
+
+<item 9>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+That figure was 7.8 in Mahomes’ first year as the starter and has climbed every season since. It’s a testament to the Chiefs’ adaptability, but also a
+reflection of plummeting explosive play rates.
+
+Exec comment: “Yeah, it looks harder for them on offense until Mahomes finds (Travis) Kelce on every major third down, every major two-minute play, every major
+touchdown. Kansas City has the luxury of their best players being their toughest players. Chris Jones is a very tough player. Kelce is a very tough player.
+Mahomes is a very tough player. You wonder why they win the games? Because the games are won by the toughest teams most of the time.”
+
+• Philadelphia Eagles: Has Jalen Hurts regressed? Where are the explosive pass plays?
+
+What I think: Explosive passing is down through most of the league, including for the Eagles.
+</item 9>
+
+<item 10>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+From Colin Kaepernick taking a knee during the national anthem to protest against racism, to domestic violence by players, to the Deflategate and Bountygate
+scandals. But there have been bigger crises as well. The Union of Concerned Scientists accused the NFL of trying to intimidate scientists studying the link
+between CTE and pro football. The NFL is already way past other leagues in terms of revenue, and now with the pivotal shift in its strategy, “America’s favorite
+pastime” is on its way to world domination.
+
+ADVERTISEMENT Article continues below this ad
+
+Editorial Disclaimer: The views expressed are those of the author and do not necessarily reflect the views of EssentiallySports.
+
+Watch This Story: Will Patrick Mahomes Eclipse Tom Brady as the NFL Goat? Travis Kelce Responds
+</item 10>
+=== END ITEM id=a482fe6f7029a8f6 ===
+
+=== ITEM id=227c8d7dd89bfa06 ===
+Gold sentences and facts:
+Sentence 0: McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund.
+  Fact 0.0: McTominay is now United's top scorer for the season.
+  Fact 0.1: McTominay has six goals for the season.
+  Fact 0.2: McTominay is one goal ahead of Bruno Fernandes.
+  Fact 0.3: McTominay is one goal ahead of Rasmus Hojlund.
+Sentence 1: He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages.
+  Fact 1.0: McTominay has already been firing in many top-flight goals this term.
+  Fact 1.1: McTominay is also the joint-leading scorer from the Champions League group stages.
+
+Retrieved items:
+<item 1>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+United fans will no doubt note the rich irony in the fact that these days McTominay is basically doing the job they once paid Paul Pogba to do. Marauding
+midfield engine and late-running goal threat; the all-action superhero who can chip in with 10 goals a season and pull off slide tackles that make the highlight
+reels. It never quite worked out for Pogba at United, largely – if you believe his most vehement critics – on account of his hair. McTominay is a different kind
+of player with a different kind of skillset. But for all the undoubted leadership qualities of Bruno Fernandes and Harry Maguire, tactically it is McTominay
+running the show right now: a development with numerous interesting consequences.
+
+Here he scored his fifth and sixth goals of the season. Previously he has never got more than seven. Where is this coming from?
+</item 1>
+
+<item 2>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+Manchester United got themselves back to winning ways thanks to a superb Scott McTominay brace against Chelsea.
+
+The victory remarkably puts them within three points of rivals Manchester City, after the reigning champions were defeated by Aston Villa, and keeps them in
+reach of the top four places.
+
+McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund. The Red Devils' captain had a first-half
+penalty saved by Robert Sanchez and United's Danish striker was substituted after another Premier League game without a goal, despite making 11 appearances.
+
+Erik ten Hag's side were dominant in the first half and finally pounced on Chelsea's inability to take control in midfield. Mauricio Pochettino's men attempted
+to break at pace but Sofyan Amrabat made a vital interception and Fernandes found Alejandro Garnacho out wide.
+</item 2>
+
+<item 3>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+The Portugal international Ronaldo has been battling with with Kylian Mbappe, Erling Haaland and Harry Kane for the title of the best goalscorer of 2023..
+
+Here talkSPORT.com runs you through how Ronaldo compares to the top six highest scoring European based footballers this year...
+
+7. Lautaro Martinez (Inter Milan) - 37 goals
+
+All of Martinez's goals this year have come at club level for Inter Milan, with none coming on the international scene for Argentina.
+
+With so many goals this campaign, it's no surprise that the Serie A giants are desperate to tie him down to a new deal.
+
+He currently leads the Scudetto Golden Boot race - six more than closest rival Domenico Berardi.
+
+8 Inter striker Martinez has carried on from last season by banging them in for fun Credit: Getty
+
+6.
+</item 3>
+
+<item 4>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+32nd minute: McTominay should have his second! Fernandes picks him out beautifully from the left but the Scotsman heads directly at Sanchez. Either side of the
+Chelsea goalkeeper and United would have a two-goal lead.
+
+25th minute: Penalty appeal for Chelsea! Sterling drops to the floor after very minimal contact with Victor Lindelof but neither the referee nor VAR buy his
+theatrics.
+
+19th minute: GOAL! 1-0 United! Scott McTominay finishes off a scrappy period of play and United have a deserved lead.
+
+18th minute: Silva's block denies Antony the opener. He's not scored at Old Trafford since his debut...
+
+15th minute: It's all gone a bit wild here as neither side appears to have a midfield capable of dictating the play. Chelsea have just had two glorious chances
+but Mudryk couldn't beat Onana and Fernandes made a brilliant recovery run to prevent the other attack.
+
+9th minute: SAVED!
+</item 4>
+
+<item 5>
+The Soccer Star on the Verge of Breaking an 89-Year-Old Record (The New York Times, 2023-11-17T21:47:19+00:00)
+They are, at least, likely to qualify for the play-offs, and therefore will have two must-win games in March to secure their first major tournament appearance
+since 2000 — the summer when Haaland was born. But there’s been little in recent performances to think Norway will breeze through those play-offs.
+
+Juve’s individual record will soon be surpassed, but captaining his side to a bronze medal at the Olympics may stand as his nation’s greatest achievement for
+much longer.
+
+GO DEEPER Erling Haaland is phenomenal - so why hasn’t he made Manchester City better?
+
+(Top photo: Sebastian Widmann – UEFA/UEFA via Getty Images)
+</item 5>
+
+<item 6>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+With two games left for City in 2023, Haaland has time to be the overall top scorer, though it remains to be seen if Pep Guardiola will play him against Everton
+and Sheffield United.
+
+Haaland has missed City's last five games with a foot injury, but it is believed he could be in contention now to return to action.
+
+8 Haaland is the leading goalscorer in the Premier League this season
+
+2*. Kylian Mbappe (Paris Saint-Germain/France) - 52 goals
+
+Paris Saint Germain's all-time record scorer with 233 goals, it's easy to forget that the ex-Monaco man is still just 24 years old.
+
+He has added even more goals to his tally for Les Parisiens this term, while he has fired in ten times for the French national team.
+
+Mbappe's overall tally of 46 goals for Les Bleus is just ten shy of Giroud's current record.
+</item 6>
+
+<item 7>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+70th minute: GOAL! 2-1 United! And it's McTominay who has a brace! It's a great ball to the back post by Garnacho and McTominay meets the header from inside the
+six-yard box. He's in terrific goalscoring form and becomes United's top scorer this season.
+
+69th minute: Antony tries one of his trademark curling efforts from the right after cutting in on his left but it's wide of the goal.
+
+62nd minute: Penalty appeal for United! Shaw rockets an attempt goalwards and it looked as though Colwill may have blocked it with his hand. VAR took a quick
+look and play continues.
+
+61st minute: Antony's trivela is deflected for a corner, it may have been going wide.
+
+54th minute: Unfortunately for Garnacho, lightning doesn't strike twice. His latest acrobatic effort is well wide of the goal.
+</item 7>
+
+<item 8>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+Al Nassr striker Cristiano Ronaldo looks set to be the top scorer in 2023 after his Boxing Day double against Al Ittihad.
+
+The 38-year-old may have swapped Europe for the Middle East, but he has showed no signs of slowing down in Saudi Arabia.
+
+8 Ronaldo has been in lethal form for club and country in 2023 Credit: Getty
+
+Ronaldo linked up with Al Nassr in the winter transfer window after parting ways with Manchester United following his explosive interview with Piers Morgan.
+
+Liverpool legend Jamie Carragher described the five-time Ballon d'Or winner's switch to the Gulf nation as a 'sad end' to his career, but Ronaldo continues to
+prove his doubters wrong.
+
+But he isn't the only star that has been in great form, with players across Europe banging them in for fun.
+</item 8>
+
+<item 9>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+He has also found his shooting boots for his country, most notably scoring four in a 5-0 win over Azerbaijan in November.
+
+Lukaku's career seems to have reignited and that has seen him close to claiming a place as one of the highest goalscorers this year.
+
+8 Lukaku ended the Euro 2024 qualifying campaign as top scorer Credit: AFP
+
+4. Erling Haaland (Manchester City/Norway) - 50 goals
+
+No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36
+strikes last term.
+
+He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages.
+
+Just six out of his 50 goals in 2023 have been for his national side Norway, with Haaland helping the Citizens to a historic treble last campaign.
+</item 9>
+
+<item 10>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+The youngster then cut the ball back to Harry Maguire whose effort rebounded perfectly into the path of McTominay. The Scotland international took one touch
+before blasting past Sanchez.
+
+United led for the majority of the first 45 minutes but failed to build on their lead and were pegged back by the former Manchester City man, Cole Palmer. The
+21-year-old, who made the transfer from the Etihad Stadium to Stamford Bridge in August, stroked the ball into the far corner with deadly accuracy. It was his
+fifth Premier League goal of the season and his first from open play.
+
+But United continued to put Chelsea under pressure in the second half and after numerous attempts, McTominay headed powerfully past Sanchez. The Scotsman had
+seven shots, his most ever in a league game. Despite a flurry of late attacks driven by Reece James, Ten Hag's team stood strong and held on to see out the
+victory.
+</item 10>
+=== END ITEM id=227c8d7dd89bfa06 ===
+
+=== ITEM id=4db2f444b891773a ===
+Gold sentences and facts:
+Sentence 0: Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury.
+  Fact 0.0: Cameron Carter-Vickers is also included.
+  Fact 0.1: Cameron Carter-Vickers is a defender.
+  Fact 0.2: Cameron Carter-Vickers only just made his debut for Celtic this season.
+  Fact 0.3: Cameron Carter-Vickers's Celtic debut came thanks to a hamstring injury.
+Sentence 1: 30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss.
+  Fact 1.0: The match kickoff is 30 minutes away.
+  Fact 1.1: Paraguay have a new manager.
+  Fact 1.2: Daniel Garnero makes his debut as Paraguay's new permanent boss.
+
+Retrieved items:
+<item 1>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+He was initially injured while playing for Leeds United back in March, and while he had finally recovered to make his Bournemouth debut in the EFL Cup in late
+September, he played just 20 minutes off the bench before suffering a setback, sidelined again for the foreseeable future.
+
+Gio Reyna has returned from his leg fracture and is called in for the first time under Berhalter since their falling out at the 2022 World Cup. Also included is
+defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury. On the heels of that return just before the
+international break, he is called in.
+
+Goalkeepers Zack Steffen and Sean Johnson remain out of action due to injuries. Additionally, Josh Sargent is sidelined with a long-term ankle injury, while
+Daryl Dike is also out after tearing his Achilles.
+</item 1>
+
+<item 2>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+Referees once again took the headlines on the opening matchday of the 2023/24 Premier League season following an incorrect VAR decision in Manchester United's
+fixture against Wolves.
+
+Gary O'Neil's side were denied a late penalty after a foul from Andre Onana on Sasa Kalajdzic. Despite a long VAR check, Wolves were not given the spot-kick in
+injury time and lost the match 1-0.
+
+Fans watching the game were in disbelief when the call was made, and similar incidents have happened since, including against United. Bruno Fernandes said he
+would wait for an apology — one that never arrived — after Cristian Romero was not punished for handball in the Red Devils' 2-0 loss to Tottenham, and plenty of
+onlookers debated the penalty won by Marcus Rashford in United's subsequent comeback win at home to Nottingham Forest.
+</item 2>
+
+<item 3>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+John Brooks was taken off VAR duty for two games after he drew the offside line in the wrong place, denying Brighton's Pervis Estupinan a goal.
+
+Aston Villa 3-1 Manchester United: November 6, 2022
+
+Lucas Digne's free-kick was one of the highlights in Aston Villa's victory over Man United, but a post-match review showed he received additional help following
+a mistake from the referee.
+
+The Red Devils' wall was set more than 10 yards behind the ball, allowing Digne more room to find the back of the net.
+
+Nottingham Forest 2-2 Brentford: November 5, 2022
+
+Brentford were awarded a penalty after a collision between Dean Henderson and Yoane Wissa. Replays showed that Wissa initiated the contact, but Brentford were
+still given the spot-kick.
+
+This forced Webb to apologise to Forest after the match.
+</item 3>
+
+<item 4>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+Nicolas Tagliafico started both matches in September, and while Marcos Acuna is back with the team following an injury, the former retains his starting spot.
+Messi's club teammate Facundo Farias was also included on the roster but it'd be surprising if he saw the field.
+
+MORE: Preview the Argentina vs Paraguay match with picks, predictions, and odds
+
+Argentina starting lineup (4-3-3): E. Martinez (GK) — Molina, Romero, Otamendi, Tagliafico — De Paul, Mac Allister, E. Fernandez — J. Alvarez, L. Martinez, N.
+Gonzalez.
+
+New Paraguay head coach Daniel Garnero, making his debut, has rung the changes after falling to Venezuela last time out, making five alterations to that
+starting lineup. The entire midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+</item 4>
+
+<item 5>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino Dest PSV Eindhoven (NED) 28 2 DEF DeJuan Jones New England Revolution (USA) 7 0 DEF Kristoffer Lund Palermo
+(ITA) 2 0 DEF Kevin Paredes Wolfsburg (GER) 1 0 DEF Tim Ream Fulham (ENG) 52 1 DEF Chris Richards Crystal Palace (ENG) 12 1 DEF Miles Robinson Atlanta United
+(USA) 27 3 DEF Joe Scally Gladbach (GER) 6 0 MID Johnny Cardoso Internacional (BRA) 7 0 MID Luca de la Torre Celta Vigo (SPA) 17 0 MID Lennard Maloney
+Heidenheim (GER) 0 0 MID Weston McKennie Juventus (ITA) 46 11 MID Yunus Musah AC Milan (ITA) 29 0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman
+</item 5>
+
+<item 6>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+It's far too early to be watching outside results too intently, but regardless, that's a great result for Paraguay, who will want every CONMEBOL nation outside
+the top two to drop as many points as possible.
+
+The messier it gets around Paraguay, the better a chance they have of securing a qualifying spot in the expanded World Cup field.
+
+💥 ¡Qué cierre! Penal, expulsado el portero y Uruguay lo empata con Darwin Núñez pic.twitter.com/csgmJt6yJz — Tigo Sports Costa Rica (@tigosports_cr) October 12,
+2023
+
+30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss. He spent the last two years in charge of
+Paraguayan giants Libertad, taking over for Guillermo Barros Schelotto who was let go after the September qualifiers just three days shy of his two-year hire
+anniversary.
+</item 6>
+
+<item 7>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+“I will commit to being the catalyst that will set the tone for our group for every game, to help restore our club to where it deserves to be, I am confident of
+that. We will be back and better.”#NERevs pic.twitter.com/A0mVyGdaAZ — Seth (@SethMan31) November 10, 2023
+
+Jamaica vs Canada lineups & team news
+
+Jamaica manager Hallgrimsson also described his side as being on a mission, but they faced it without New York Red Bulls forward Cory Burke because of a groin
+problem.
+
+Karoy Anderson, who plays for English club Charlton Athletic, was called up for the first time. "I was just shocked," the midfielder told the Addicks' website.
+"I was looking at it for a long time just taking it in and I told my mum and she started crying."
+</item 7>
+
+<item 8>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+54-year-old Garnero is an Argentine who made one appearance for the national team as a player, and spent most of his career with Argentine club Independiente.
+He's managed at the club level in Paraguay since 2015 with Sol de America, Guarani, and Olimpia before his spell at Libertad.
+
+It's quite the test for Garnero in his debut match, taking on Lionel Messi and the defending World Cup champions Argentina, his home nation. My intention is
+always to play with the ball. We must be smart and aggressive in recoveries." A bold claim by the Paraguay boss.
+
+"Vamos a jugar contra una selección que es la mejor del mundo. No solamente por logros, sino por idea colectiva y rendimientos individuales. Mi intención
+siempre es jugar con la pelota. Debemos ser inteligentes y agresivos en las recuperaciones".
+
+
+
+🗣️ Daniel Garnero.
+</item 8>
+
+<item 9>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Argentina subs (12): Armani (GK), Musso (GK), Quarta, Montiel, Acuna, Ocampos, Paredes, Lo Celso, Pezzella, G. Rodriguez, Garnacho, Messi.
+
+Paraguay head coach Daniel Garnero has rung the changes after falling to Venezuela last time out, making five alterations to that starting lineup. The entire
+midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+
+Forward Miguel Almiron is Paraguay's most prominent goalscoring threat and is in good form, with three goals in his past five matches for Newcastle United.
+
+Paraguay have questions at goalkeeper, as mainstay Antony Silva has been phased out, leaving three inexperienced internationals currently on the roster. New
+York Red Bulls starter Carlos Coronel earned his first two caps in the September matches and he remains in net here.
+</item 9>
+
+<item 10>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+There are no natural right-backs on the roster, meaning he will either have to pidgeonhole a center-back (Antonio Rudiger or Niklas Sule) out wide, sacrifice
+Josh Kimmich's presence in midfield to move him back, or move Pascal Gross back. None of those are ideal options.
+
+Whether Nagelsmann deploys a 4-2-3-1 or a 3-2-4-1, the tactical approach will likely remain the same.
+
+Getting the best out of young superstar Jamal Musiala will be one of the most important aspects of Nagelsmann's tenure, as Musiala has blossomed into a
+world-class talent at Bayern Munich, but the 20-year-old has just one goal in 23 international caps to this point.
+
+Nagelsmann will also look to introduce a few overlooked players, starting with Robert Andrich who could factor into the midfield setup as a traditional No. 6,
+especially as Ilkay Gundogan enters the twilight of his career.
+</item 10>
+=== END ITEM id=4db2f444b891773a ===
+
+=== ITEM id=bd3842d2489c1ba6 ===
+Gold sentences and facts:
+Sentence 0: If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+  Fact 0.0: If the debt continues to rise more than the economy, risks will increase.
+  Fact 0.1: The government may 'crowd out' private investment.
+  Fact 0.2: The government competes with the private sector for funds to service its debt.
+Sentence 1: And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+  Fact 1.0: President Ferdinand Marcos, Jr. said the Philippines worries about its debt-to-GDP ratio.
+  Fact 1.1: President Ferdinand Marcos, Jr. said the Philippines' debt-to-GDP ratio is about 63%.
+  Fact 1.2: President Ferdinand Marcos, Jr. said that 63% debt-to-GDP ratio is a little high for the Philippines and not ideal.
+  Fact 1.3: President Ferdinand Marcos, Jr. said this to members of the US-ASEAN Business Council who visited Malacañang.
+  Fact 1.4: The statement is reported by ABS-CBN on Aug. 9, 2023.
+
+Retrieved items:
+<item 1>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The surplus budget policy is important to encourage economic growth,” the DBM said.
+
+The exhortations of the national budget managers must be quoted word for word to educate the non-economists and questioning common people about how a surplus
+budget is necessary versus a deficit budget:
+
+“The less the government borrow from the public, the lesser the pressure on interest and inflation rates and the more funds are made available in the financial
+market. Such funds may be used by businessmen to build factories, hire workers, buy equipment and open more employment opportunities. By keeping more funds in
+the hands of the private sector rather than competing for credit, the government helps make financing available for families who want to own homes, buy cars, or
+support their children’s education. The government also needs to generate a budget surplus to repay the huge debt it has accumulated over the years. The
+reduction of the national budget debt will correspondingly lessen government’s requirements for interest and principal payments. This becomes important
+particularly during periods of rising interest rates and unstable exchange rates” (dbm.gov.ph).
+</item 1>
+
+<item 2>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+
+Whom are we to believe, but inflation — which independently says it as it is.
+
+“While inflation in the Philippines has been on a downward trend since January, the country needs to achieve a 3.7% average inflation rate for the next five
+months for the country to hit the BSP’s forecast of 5.5% inflation for 2023, Assistant National Statistician Rachel Lacsa said (Ibid.). Some economists say that
+deficit budgets and the remedies — monetary (borrowings increasing money supply) and fiscal (like raising taxes) increase inflation, and stubborn inflation
+further entrenches structural deficits in the system. It is a vicious cycle.”
+
+National budgets might not be innocent of political agendas (call them plans and programs) that can divert money from the proper socio-economic goals of
+equilibrium as a balanced budget might work towards.
+</item 2>
+
+<item 3>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+But traditional politicians (called “trapo” in the Philippines) might have it in their hearts to think about the country and the welfare of future generations.
+
+How many generations will pay for the monstrous debt incurred for the dubious objectives and vanities of some today?
+
+Amelia H. C. Ylagan is a doctor of Business Administration from the University of the Philippines.
+
+ahcylagan@yahoo.com
+</item 3>
+
+<item 4>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+During the Congressional budget hearing, Finance Secretary Benjamin Diokno optimistically provided updates on the government’s fiscal and revenue collection
+performances and presented sources of funding for the national budget. Tax revenue is projected to increase from P3.5 trillion in 2023 to P6.5 trillion in 2028,
+while non-tax revenues are expected to decline from P191 billion in 2023 to P184 billion in 2028, Diokno told the Philippine News Agency (pna.gov.ph, Aug. 10).
+
+Diokno said the Finance department aims to gradually reduce net financing or new debt from P1.42 trillion in 2022 to P1.22 trillion in 2024, which will help
+bring the country’s debt-to-GDP ratio to almost below 60% by 2025. And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%
+and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr.
+</item 4>
+
+<item 5>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+Why then, do we have a deficit budget for 2024?
+
+The national budget for 2024 is at P5.768 trillion, 9.5% higher than the current (2023) budget of P5.268 trillion. Observers note that this first budget fully
+prepared by the current administration accounts for 21.7% of gross domestic product (GDP). The 2024 expenditure program is higher by P499.6 billion or a
+year-on-year growth rate of 9.5% as compared to the 2023 level of P5.268 trillion. The P5.768-trillion budget, to be supported mainly by P3.5-trillion tax
+revenues (based on 2023 tax revenue projections), would mean a budget deficit of some P2.268 trillion, to be funded by additional borrowings. This could
+increase government debt from the current P14.24 trillion (as of July) to P16+ trillion by the end of 2024.
+</item 5>
+
+<item 6>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+The National Government plans to raise more revenue to finance the country’s socio-economic needs, largely through a progressive and simplified tax system, more
+efficient and effective tax collection measures through digitalization and, to some extent, from policy measures such as value-added tax on digital service
+providers and excise tax on sweetened beverages and junk food.
+
+Achieving fiscal stability presupposes the sustainability of fiscal policy, and fiscal stability helps “crowd in” private investment.
+
+PRICE STABILITY AND INFLATION
+
+In his second State of the Nation Address (SONA), President Ferdinand Marcos, Jr. singled out inflation as the country’s most pressing problem. In the first
+nine months of 2023, inflation averaged 6.6% — far above the upper end of the target range of 2-4% set by the BSP. If left unchecked, inflation could undermine
+growth. Not only does this increase costs to organizations, but it also sets in motion second-round effects as workers start demanding higher wages,
+consequently increasing business costs and discouraging investments.
+</item 6>
+
+<item 7>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+the government borrows money either from foreign sources or from the domestic capital market which increases the debt stock of the NG and its debt servicing
+requirements; b.) the government borrows money from the Bangko Sentral ng Pilipinas; or, c.) the government withdraws funds from its cash balances in the
+Treasury. Historically, National Government expenditures have always exceeded total revenues resulting in annual budget deficits, the DBM declared. “Thus, the
+National Government had to resort to borrowing to cover said deficits which resulted in the ballooning of foreign and domestic debts,” the budget office
+admitted.
+
+“However, in 1994, the government broke the deficit trend by posting a budget surplus of P16 billion through an aggressive privatization and revenue generation
+program and a prudent expenditure program. Since then, the government has been exerting efforts to maintain the surplus budget policy. The surplus budget policy
+is important to encourage economic growth,” the DBM said.
+</item 7>
+
+<item 8>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+For this, the economy must grow its per capita income above the threshold set by the World Bank, which means a gross national income (GNI) per capita of at
+least $4,466. In 2022, the Philippines achieved a GNI per capita of $3,950.
+
+The second is to lower the poverty level from 18.1% in 2021 to single digits by 2028 — the end of the term of the current administration. Both indicators
+require high growth rates. For the next year through 2028, the government pencils the growth rate between 6.5% and 8%.
+
+Growth is expected to be investment-led with the implementation of structural changes such as the Corporate Recovery and Tax Incentives for Enterprises (CREATE)
+law, which lowered the corporate income tax rate, and the amendments to the Public Service Act (PSA), Foreign Investment Act (FIA), and Retail Trade
+Liberalization Act (RTLA), which further liberalized the economy. The new legislation is expected to attract more local and foreign investment, especially in
+the liberalized sectors.
+</item 8>
+
+<item 9>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+This plan gradually narrows the deficit to 3% of GDP by 2028, down from 7.3% in 2022, such that the debt-to-GDP ratio is reduced from nearly 61% in 2022 to a
+more sustainable level of at most 53% by 2028.
+
+DEBT MANAGEMENT
+
+The National Government’s debt was less than 40% before the pandemic struck. It expended much of its fiscal space combatting the pandemic, incurring debt and
+large budget deficits. While the current 61% debt-to-GDP ratio may be manageable for an emerging economy like the Philippines for some time, the country may not
+have the fiscal space to respond to another potential domestic or external shock. If the debt continues to rise more than the economy, risks will increase, and
+the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+
+The planned fiscal consolidation entails harmonizing the revenue needs with the promotion of investment through the structure and administration of the reformed
+incentive system.
+</item 9>
+
+<item 10>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The Department of Budget and Management (DBM) defines the government budget as “the financial plan of the government…which shows what its resources are, and how
+they will be generated and used over the fiscal period. It refers to the income, expenditures and sources of borrowings of the National Government (NG) that are
+used to achieve national objectives, strategies and programs.”
+
+Section 22, Article VII of the Constitution states that: “The President shall submit to the Congress within 30 days from the opening of every regular session,
+as the basis of the general appropriation bill, a budget of expenditures and sources of financing including receipts from existing and proposed revenue
+measures.”
+
+The National Government (NG) budget is the totality of the budgets of all government entities, namely the National Government, the non-financial
+government-owned and -controlled corporations (which usually includes only the 14 major GOCCs), government financial institutions (GFIs), local government units
+(LGUs), the social security institutions (the Government Service Insurance System or GSIS, the Social Security System or SSS, the military pensions, PhilHealth,
+etc.
+</item 10>
+=== END ITEM id=bd3842d2489c1ba6 ===

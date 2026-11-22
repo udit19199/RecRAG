@@ -1,0 +1,74 @@
+[
+{"id": "24531a53d550d019", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "ecef64c94966a164", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "he came to the music biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer."}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "e53d012292e49cc6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}]},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]}
+]},
+{"id": "3024b215c320959d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 8, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "No other customer trading on FTX had “allow_negative” privileges — only Alameda."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "cb6677d54f935795", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "d7e6c8bd041a6909", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 3, "quote": "Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left in the third quarter."}, {"item": 7, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "and backup Drew Lock took over under center with 18 seconds left in the third quarter."}]}
+]}
+]

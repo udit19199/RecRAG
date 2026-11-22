@@ -1,0 +1,959 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ce7186f1aac493df ===
+Gold sentences and facts:
+Sentence 0: The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.
+  Fact 0.0: The Springboks took a 12-3 lead after 34 minutes.
+  Fact 0.1: The Springboks took the lead when the All Blacks once again failed to release on their goal line.
+  Fact 0.2: The All Blacks failed to release on their goal line once again.
+Sentence 1: Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide.
+  Fact 1.0: The All Blacks sensed an opportunity to strike against 14 men.
+  Fact 1.1: On a couple of occasions, the All Blacks kicked for the corner out wide.
+Sentence 2: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 2.0: This comes despite Argentina beating the All Blacks last year in Christchurch.
+  Fact 2.1: Argentina also gave the All Blacks a maiden defeat in 2020 in Sydney.
+
+Retrieved items:
+<item 1>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 1>
+
+<item 2>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 2>
+
+<item 3>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 3>
+
+<item 4>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+PARIS – The All Blacks have downplayed Rieko Ioane’s gestures towards Ireland fans and retiring great Johnny Sexton, as the three-time world champions said they
+have learned to “respect Argentina” ahead of their semi-final on Saturday (6am AEDT).
+
+It comes as Michael Cheika embraced the underdog status and said he was hoping Los Pumas “inspired” Argentina “not by our results but by our ambition”, as the
+former Wallabies coach readies for another clash against the All Blacks and a second semi-final.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+Ioane copped a spray from Sexton following their 28-24 nail-biting win over Ireland.
+
+It came after the lethal back cupped his ear at Irish supporters at the Stade de France after the final whistle, as well as putting his finger to his lips in a
+‘shush gesture’.
+</item 4>
+
+<item 5>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Minutes later and Kolisi was off, as he cannoned into Savea. He would later return, much to the anger of the New Zealanders in the crowd who were calling for
+justice.
+
+Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide. It came back to haunt them, as their
+usually silky and composed skill sets failed them.
+
+That much was true when the TMO intervened after Smith thought he had a try in his final Test, but an error at the lineout cancelled out the five-pointer.
+
+Advertisement
+
+Eventually the All Blacks did have a try, as Mark Telea, the All Blacks’ best and biggest attacking threat all night, managed to get on the outside and draw in
+two defenders before offloading to Beauden Barrett. But Mo’unga missed the conversion to leave them trailing by a point.
+</item 5>
+
+<item 6>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The All Blacks will experience a changing of the guard next season.
+
+Indeed, the All Blacks’ social media channels described the team selection for the World Cup final as the “Last Dance”.
+
+2015 World Cup winner Dane Coles will call time on his career, while his tight-five teammates Brodie Retallick and Sam Whitelock, who is bidding to become the
+first player to win the Webb Ellis Cup for a third time, will head overseas.
+
+Fellow World Cup winners Aaron Smith and Beauden Barrett will also head to Japan.
+
+Coles, who was labelled by Samisoni Taukei’aho as a “Grandad” type figure in the All Blacks, has even been denied the chance of a farewell send-off after
+missing selection.
+
+Advertisement
+
+“Yeah, tough,” said coach Ian Foster of the conversation with the 36-year-old around leaving him out.
+</item 6>
+
+<item 7>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 7>
+
+<item 8>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+But the first real in-match statement came on 27 minutes as New Zealand-born Aki – perhaps the player of the World Cup so far who had made a tournament-high 61
+carries, 33 dominant carries and 23 defenders beaten heading into the weekend – brilliantly jinked inside two defenders, fended off another and powered through
+a gap to dive over the line.
+
+Yet more All-Black class saw Ardie Savea go over in the corner after quick ball was shipped wide but with scrum-half Aaron Smith in the sin-bin for a deliberate
+knock-on, Ireland narrowed the gap to 18-17 just before the break as another New Zealand-born Irish star, Jamison Gibson-Park, sniped from a lineout maul and
+somehow stretched out for the try.
+
+The All Blacks extended an incredible record of leading at half-time of their quarter-final in every single World Cup but that lead had never felt more fragile.
+</item 8>
+
+<item 9>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“To inspire is not about results, it’s not just one player who played well; no, it’s about our behaviour in general, our ability to be ready to come back from
+difficult times and seizing our opportunities.
+
+“There are not a lot of opportunities in life – us playing in a semi-final is even rarer and we want to have no regrets.”
+</item 9>
+
+<item 10>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Sam Cane – the All Blacks captain – was forced to watch the match from the sidelines for 53 minutes after having his yellow card for a high shot on Jesse Kriel
+upgraded to red. His opposite in the number seven jersey, Siya Kolisi, was later shown a yellow card for a high shot on Ardie Savea, but returned.
+
+Cheslin Kolbe – the magnificent winger who sealed their World Cup triumph four years earlier against England – meanwhile couldn’t bare to watch from the
+sidelines after being shown a yellow card for a deliberate knockdown in the 73rd minute.
+
+Advertisement
+
+It was that kind of evening, where the margins were tiny and the outcomes almighty.
+
+“There are no ways I can explain it,” Kolisi said.
+
+“I want to give credit to the All Blacks. They took us to the end, they took us to a dark place. It shows what kind of team they are, to fight with a man down
+from early in the game.
+</item 10>
+=== END ITEM id=ce7186f1aac493df ===
+
+=== ITEM id=7c3da4e6dacd2407 ===
+Gold sentences and facts:
+Sentence 0: India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26.
+  Fact 0.0: India played against Australia in the second semi-final of the 2015 World Cup.
+  Fact 0.1: The India versus Australia match was held in Sydney.
+  Fact 0.2: The India versus Australia match was played on March 26.
+Sentence 1: It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+  Fact 1.0: It is crunch time for England in the World Cups.
+  Fact 1.1: England faces South Africa in the semi-final of the Rugby World Cup.
+  Fact 1.2: England faces South Africa in the semi-final of the ODI Cricket World Cup.
+
+Retrieved items:
+<item 1>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+talkSPORT will have updates from all the action in Paris as England take on the Springboks from 8:00pm
+
+9 Owen Farrell will be looking to inspire England to victory against the Springboks Credit: Getty
+
+Over in India, England's Cricket World Cup hopes hang by a thread after their latest shock defeat to Afghanistan.
+
+They will be boosted by the news that Ben Stokes is fit for the match after he picked up a hip injury five days before the tournament.
+
+But victory for England could scarcely be more crucial.
+
+Having also lost to New Zealand in their opener, their chances of finishing in the top four and progressing to the semi-finals are looking dubious.
+
+But South Africa, despite winning their first two games, suffered a shock defeat to the Netherlands in their most recent match - a sign for England that the
+Proteas can be beaten.
+</item 1>
+
+<item 2>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The Springboks have done it tough, too, having already faced two of the tournament favourites on their way to the semi-finals. Comfortable defeats of Scotland,
+Romania and Tonga couldn't mask the disappointment of the 13-8 loss to Ireland, which consigned South Africa to second in Pool B. However, with Ireland sent
+home by the All Blacks in the quarters, the Bokke showed their World Cup mettle to edge the hosts 29-28 at the Stade de France, sneaking past Les Bleus in one
+of the best games of rugby you're ever likely to see.
+</item 2>
+
+<item 3>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The last time Cheslin Kolbe played England at a Rugby World Cup... 🇿🇦 🏆#RWC2023 | #ENGvRSA pic.twitter.com/Riw2uaSaKa — Rugby World Cup (@rugbyworldcup) October
+19, 2023
+
+Both sides' journeys have seen twists, turns, and bumps in the road, but it's led them both to within 80 minutes of a Rugby World Cup final. England will no
+doubt be looking to echo the spirit of 2019, when they beat the All Blacks 19-7 to reach the final, but in South Africa, they face a side who have taken their
+game to new heights just to reach the semis.
+
+MORE: 2023 Rugby World Cup final: Details, kick-off time and every team's route
+
+What time does England vs South Africa kick off?
+</item 3>
+
+<item 4>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+In short, this semi-final requires a huge step up in quality for Borthwick's side, and that's why we think that the Springboks will be victorious at the Stade
+de France. South Africa have already shown they can match, and beat, the world's best, and we think that they'll do the latter in Saint-Denis.
+</item 4>
+
+<item 5>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England vs. South Africa betting odds, prediction
+
+The last time these two sides met was a tumultuous period to say the least, particularly for English rugby. South Africa's dominant 27-13 victory at Twickenham
+proved to be the last game in charge for Eddie Jones, the coach who had taken England to the 2019 World Cup final. In his place, Steve Borthwick was hired, and
+he's just one game away from repeating that feat.
+
+England's form at this tournament has been perfect — at face value. Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in
+the semi-finals — and England have beaten all of them. However, only Japan and Chile were defeated with bonus points, and the narrow wins over both Samoa and
+Fiji in their last two games showed that England are certainly gettable.
+</item 5>
+
+<item 6>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+2023 World Cup, against New Zealand
+
+To be played
+</item 6>
+
+<item 7>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The #Springboks are gearing up for another tough challenge this week with a semi-final clash against England 🇿🇦🏴󠁧󠁢󠁥󠁮󠁧󠁿#StrongerTogether #RWC2023
+pic.twitter.com/HLSnnjWggB — Springboks (@Springboks) October 18, 2023
+
+England are the only side still competing who are yet to lose a game, and that will stand them in good stead coming into this semi-final. Dominant wins over
+Argentina, Japan and Chile sealed passage to the last eight, and after being given an almighty scare by Samoa in their final pool match, England overcame a
+Fijian fightback in Marseille to triumph 30-24. Despite being outscored by three tries to two, captain Owen Farrell kicked 20 points, sending his side into the
+last four at the expense of 2023's breakout stars.
+</item 7>
+
+<item 8>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+TV channel Streaming USA — Peacock Canada TSN TSN+ UK ITV ITV X Australia Channel 9 Stan Sport, 9Now New Zealand Sky GO Sky GO India — Fan Code Hong Kong BeIN
+Sports BeIN Sports Malaysia BeIN Sports BeIN Sports Singapore BeIN Sports BeIN Sports
+
+MORE: Every single team to have lifted the Rugby World Cup trophy
+
+England vs South Africa lineups, team news
+
+"The start is crucial, the end is vital..."
+
+
+
+- Steve Borthwick explains changing 3️⃣ of his England starters for Saturday's Rugby World Cup semi-final, from Liam Heagney 👨‍💻 in Paris. #RWC2023 #ENGvRSA
+#EnglandRugby
+</item 8>
+
+<item 9>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England replacements: Theo Dan, Ellis Genge, Kyle Sinckler, Ollie Chessum, Billy Vunipola, Danny Care, George Ford, Ollie Lawrence.
+
+The Springboks are unchanged from that epic quarter-final with France, having all played their part as Jacques Nienaber's side hung on in the second half. The
+contribution of backs Kurt-Lee Arendse, Damian de Allende and Cheslin Kolbe saw all three cross for first-half tries, with Kolbe's coming off the back of a
+charged-down conversion from France's Thomas Ramos. Preventing those two points proved crucial in the end.
+
+The key contribution, though, came from Eben Etzebeth, who bulldozed his way over to score the only five-pointer of the second half and wrestle the game back
+into South African hands.
+</item 9>
+
+<item 10>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The 2019 Rugby World Cup final between England and South Africa was one of many firsts: the game itself capped off a sensational tournament played outside of
+the sport's traditional strongholds for the first time; it was the first final in which South Africa scored a try, and by full-time, the 32-12 score in the
+Springboks' favour sealed a record-equalling third title for the Rainbow Nation.
+
+Fast forward four years, and South Africa once again prepare to take on England in an all-or-nothing match to decide which nation gets a shot at World Cup glory
+— but this time around, the pair meet in the semi-finals of the 2023 tournament, rather than the decider.
+
+That won't make an ounce of difference for either camp, though, as these two long-time rivals prepare for a battle that could re-define the definition of a
+'physical encounter.'
+</item 10>
+=== END ITEM id=7c3da4e6dacd2407 ===
+
+=== ITEM id=24bdc22b3f73a908 ===
+Gold sentences and facts:
+Sentence 0: “But nah, it was awesome.” On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+  Fact 0.0: A speaker said 'But nah, it was awesome.'
+  Fact 0.1: On Saturday, the competition said goodbye to a range of players.
+  Fact 0.2: On Saturday, the competition said goodbye to Western Bulldogs forward Richelle Cranston.
+  Fact 0.3: Richelle Cranston has battled stage five chronic kidney disease while playing this season.
+  Fact 0.4: On Saturday, the competition said goodbye to Hawthorn's Akec Makur Chuot.
+  Fact 0.5: Akec Makur Chuot is a Hawthorn player.
+  Fact 0.6: Akec Makur Chuot played 40 games for three clubs.
+Sentence 1: The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year.
+  Fact 1.0: The Dogs are Richelle Cranston's third club.
+  Fact 1.1: Richelle Cranston started at Melbourne.
+  Fact 1.2: Richelle Cranston had a stint with Geelong.
+  Fact 1.3: Richelle Cranston joined the Bulldogs last year.
+
+Retrieved items:
+<item 1>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Tackled above waist and below shoulders. No sling or double motion. Sheppard lands on her back. ′ ‘Girls’ play hard too,” Harford said on X, the social media
+site formerly known as Twitter. This echoed Collingwood defender and Fox Footy commentator Ruby Schleicher’s thoughts at the time, who called it a “monster
+tackle” but believed it was “fair”. “I don’t see any dirtiness in that,” Schleicher said on Fox Footy. “It was pretty heavy on her head, wasn’t it? I look at
+that – I still see a fair tackle. There’s no doubt the match review [officer] will look at it because they have to I guess. The duty of care for the player.”
+
+The decision a week comes after Adelaide premiership defender Najwa Allen was handed a three-ban suspension, the longest ban in AFLW history, for a high bump on
+Western Bulldog Kirsten McLeod. The Crows elected not to challenge the decision.
+</item 1>
+
+<item 2>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Richmond were just absolute beasts, especially their midfielders. They really worked hard all night,” Hawthorn coach Bec Goddard said after the game. “Our work
+rate really dropped off and we just watched them play some really good footy. “If you’re a Hawks fan, you would’ve seen some really exciting moments of footy
+tonight.
+
+“Keep getting excited. We are coming, we’re growing, we’re getting better.” Hawthorn’s Irish ace Aine McDonagh kicked the opening goal before Tigers skipper
+Katie Brennan slotted two unanswered majors to celebrate her 50th game in style. Fellow 50-gamer Greta Bodey put boot to ball to snatch her own goal before
+quarter-time. A skirmish erupted in the second term after Brennan took exception to a tackle by Mattea Breed on Laura McClelland. McClelland was gifted a
+50-metre penalty following a bump against Sarah Hosking by Sophie Locke and converted from inside the goal square while players were occupied by the tussle.
+</item 2>
+
+<item 3>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I don’t think I’ve been as nervous to kick a goal in my life, to be honest,” she joked. “But nah, it was awesome.” On Saturday, the competition also said
+goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season,
+and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+
+Cranston, who was an inaugural AFLW player, will start kidney dialysis in January so had no option but to hang up the boots and focus on her treatment and
+health. “[I’m feeling] sad. Emotions hit me when the siren went. It’s been a really emotional week, the girls have really gotten around me. But yeah, my health
+has sort of deteriorated, it’s been a really hard year,” Cranston told Fox Footy after the Bulldogs lost to North Melbourne 7.13 (55) to 1.3 (9).
+</item 3>
+
+<item 4>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+If the Lions had lost, they were at risk of falling out of the top four with second-season side Essendon chasing their spot. Last season’s best and fairest Ally
+Anderson said her side loved playing at its training ground in Springfield, which it has made a fortress, and work well in hot conditions . “It was really hot.
+It was a grind… But yeah, it was a good finish,” Anderson told Fox Footy post-game. “Every week that we play here, every time that we play here, we get better
+and better. So, it was just a matter of time before we finally got the first win and then it hopefully [will] open the floodgates a bit.”
+
+The Lions next play St Kilda before taking on the reigning premiers Melbourne in the final round. After this weekend, they have staked their claim as being
+premiership contenders again. Adelaide will play top-four side North Melbourne next weekend before 18th-placed Western Bulldogs.
+</item 4>
+
+<item 5>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Single filled the massive Rowbottom-size gap, collecting 25 disposals and six clearances in her prolific performance across the field while also playing a
+crucial tagging role on Maddy Prespakis. Coast with the most: Georgia Clayden of the Suns celebrates after kicking a goal. Credit: AFL Photos / Getty Images The
+former rugby sevens player was well-supported by Claudia Whitford (25 possessions) and Alison Drennan (22 touches). Prespakis was held to eight contested
+possessions, well below a season average of 14 per game, while Georgia Nanscawen proved a potent threat with 13 contested possessions and three score
+involvements.
+
+The Bombers broke through first with a goal from Amber Clarke but young talent Darcie Davies (two goals) was able to respond after being gifted 50 metres from a
+protected area infringement by Mia Bush. Daisy D’Arcy, Jacqueline Dupuy, Jamie Stanton and Davies attempted to break away from the low-scoring tug-of-war in the
+second with goals of their own.
+</item 5>
+
+<item 6>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Dogs forward reveals battle with kidney disease Western Bulldogs forward Richelle Cranston has revealed she’s been living, and playing, with stage five chronic
+kidney disease. “I still manage to do the things I love,” the inaugural AFLW player posted to Instagram. “It’s just really hard sometimes.” Richelle Cranston of
+the Bulldogs: “It’s just really hard sometimes.” Credit: Getty Images The 34-year-old posted the caption along with a video detailing her life with the disease
+including weekly blood tests and daily blood pressure checks, tracking water and food intake, taking medications including resonium (to lower potassium levels),
+all while training in the high-performance environment.
+
+The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year. Cranston lined up for
+the Bulldogs in her side’s 57-point loss to Sydney on Saturday at Whitten Oval, 14.12 (96) to 6.3 (39).
+</item 6>
+
+<item 7>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“But I go out with on a happy note. I love these girls and I’ll be over at the pancake pocket [Pancake Parlour at Whitten Oval] watching them from now on and
+have a few bevs on the sideline.” Roos’ lock in top-four spot; Dogs have issues to work through in off-season North Melbourne secured third spot on the ladder
+and the double chance in finals after downing the Western Bulldogs by a whopping 46 points. They will head into finals with momentum but a glaring issue to work
+on: kicking accuracy. Despite the comfortable win, they could have done a lot more damage after booting double the number of behinds to goals.
+
+Star midfielder Ash Riddell, who had 36 touches and seven clearances, said she was excited to go up against Melbourne or Adelaide in the first weekend of finals
+depending on other results this round, as they were the only two sides who beat them this year.
+</item 7>
+
+<item 8>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+The Dogs have plenty to work on for next season as they look to regain a competitive edge, which was lost after a finals berth last year. Along with being in a
+rebuild, they were badly injury-hit this season and used 32 players, more than any other club. Suns secure finals spot AAP Unsung hero Lucy Single has helped
+Gold Coast book their second AFLW finals appearance with a 14-point win over Essendon. Losing midfield powerhouse Charlie Rowbottom to an ankle injury proved no
+obstacle in the Suns’ maiden clash with the Bombers, as they finished the regular season in fifth spot after a 6.3 (39) to 3.7 (25) victory to kick off pride
+round at Great Barrier Reef Arena on Friday.
+
+While their men’s side have yet to make a finals appearance, this is the second time Gold Coast’s women have clinched a play-off spot, having also done so in
+the cancelled 2020 season.
+</item 8>
+
+<item 9>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Molloy, the Swans’ star off-season recruit, turned on one of the best performances of her career to demolish their injury-hit hosts.
+
+The former Collingwood ace was a class above as she kicked 3.4 from her 28 possessions and played a crucial role in setting up numerous other Sydney goals.
+Loading “She [Molloy] was itching to get in there [in the midfield],” Swans coach Scott Gowans said. “We kept her forward deliberately. It was important Chloe
+played a good block of time forward so we could have a look at it.” The Blues lost to Greater Western Sydney by two points on Saturday afternoon, denying them
+the chance to leapfrog into the top eight, 8.1 (49) to 7.5 (47).
+
+Narrm reclaim top spot Reigning premiers Narrm have reclaimed top spot on the ladder and their position as flag favourites after defeating third-placed North
+Melbourne by 23 points at Ikon Park on Saturday night.
+</item 9>
+
+<item 10>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“It was an awesome game and four quarters of Port Adelaide footy … It was awesome to finish up like that,” Phillips told Fox Footy after the 13.10 (88) to 4.6
+(30) win over the Giants. Erin Phillips celebrates a goal during her final AFLW match. Credit: AFL Photos Earlier, she told the ABC that she wanted her legacy
+to include doing everything she could to grow the game.
+
+“Hopefully I can be remembered as someone who took their opportunities, loved the game and was willing to do whatever it took to ensure the next generation was
+in a better position,” she said. Richelle Cranston of the Bulldogs is chaired off the ground by teammates Isabelle Pritchard and Ellie Blackburn after
+announcing her retirement. Credit: Getty The 38-year-old kicked a momentous goal from a set shot in the final quarter, and she was smothered by her jubilant
+teammates afterwards.
+</item 10>
+=== END ITEM id=24bdc22b3f73a908 ===
+
+=== ITEM id=d0d0a8b8b1e84eb0 ===
+Gold sentences and facts:
+Sentence 0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 0.0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.1: Israel is reportedly preparing for a ground invasion.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Ortal says the understandings Israel reached with Hamas in 2012 were made to stop the fighting.
+  Fact 1.1: Ortal says the understandings Israel reached with Hamas in 2012 were made to get life back to normal as quickly as possible.
+Sentence 2: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 2.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 1>
+
+<item 2>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 3>
+
+<item 4>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Thirdly, as long as the rockets are intercepted in the skies over Israel, and not the skies over Gaza, the Israeli home front is forced to experience sirens,
+security rooms and shelters, and disrupted routine living. In other words, even the complete success of the Iron Dome left daily life on the home front in the
+hands of the terrorist organizations."
+
+In 2018, Ortal wrote about "the barrier" that, "it would be wrong to assume it will turn out to be more immune than its predecessors. The longer as we delay
+cutting the direct connection between the Hamas rockets and those of our other enemies, who make extensive use of this method of operation, and the idea of
+attacking our territory, the longer we will be condemned to watch from the sidelines and look at their constant enhancement."
+
+A strategic surprise
+
+In the months leading up to October 7, the former head of the Planning Division, Major General (Res.)
+</item 4>
+
+<item 5>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Shiloh, which is currently subordinate to the Ministry of Defense, was established following State Comptroller reports about the lack of coordination and
+synchronization between the Ministry of Defense and the IDF units; and lead a new border defense concept based on sensors and other technologies for gathering
+intelligence and thwarting infiltration; strengthening the Air Force in the form of additional aircraft and armaments; and strengthening the operational end of
+the regular front units.
+
+All this, while at the same time closing down armored battalions and consolidating helicopter squadrons. Ground force technological capabilities were also
+addressed, such as improved coordination between the infantry and air forces in air-to-ground actions, or identifying terrorists and weapons in an urban
+environment. However, there is a problem at the outset, says, Prof. Eviatar Matania of Tel Aviv University School of Political Sciences, Government and
+International Affairs, and founder and first director general of the Israel National Cyber Directorate: a large gap between the technology and the officers
+expected to implement it as part of the security concept.
+</item 5>
+
+<item 6>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 7>
+
+<item 8>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+There had been a second line of defense, observation balloons, but for unknown reasons, all three had stopped working some weeks before the attack, and repairs
+were postponed until "after the holidays."
+
+Israel’s drone warfare fleet, which is capable of jamming signals of a hostile drone, and the attack drone fleet, known for warfare against incendiary balloons,
+also did not work for unknown reasons, and dozens of Hamas drones operated without interruption. The IDF's Iron Beam high energy laser (HEL) interception
+system, which was developed for such cases, among other things, has not yet entered into operational activity after many years of development. All allowed the
+Hamas terrorists to quickly reach the IDF bases along the Gaza border, disable the information and communications technology (ICT) systems, neutralizing the
+ability to call reinforcements without arousing much suspicion at IDF Kirya headquarters in Tel Aviv.
+
+Above all there was a sense of security and belief in technology and the sophisticated barrier’s ability to prevent any form of intrusion.
+</item 8>
+
+<item 9>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+On Saturday, October 7, for example, suspicious movement in Gaza convinced the Shin Bet head to send a special team to the southern border, but he was unable to
+convince the top IDF echelons to prepare accordingly. To handle those weak signals, Eiland claims, one must use "scenario theory", meaning, taking into account
+scenarios that have a low probability of occurring, but with devastating results should they occur, and the simple way to prepare for them.
+
+Eiland explains: "You detect certain noises on Friday night, but conclude that the probability of an attack is low, let's say only 10%. Those who act only on
+the probability do not consider the question: if this attack happens - will you be able to live with yourself for eliminating this threat? There’s also a third
+consideration, which is ease of effort: what is the effort required of me to prepare for this unlikely but dangerous scenario?
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Published by Globes, Israel business news - en.globes.co.il - on November 5, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 10>
+=== END ITEM id=d0d0a8b8b1e84eb0 ===
+
+=== ITEM id=3a5abc24360f5e0e ===
+Gold sentences and facts:
+Sentence 0: She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years.
+  Fact 0.0: The speaker explained this at the time of the 2022 Academy Awards.
+  Fact 0.1: Will slapped Chris Rock at the 2022 Academy Awards.
+  Fact 0.2: At the time Will slapped Chris Rock, the speaker and Will had been separated for six years.
+Sentence 1: Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy.
+  Fact 1.0: Outsiders are now aware that Jada and Will have been separated since 2016.
+  Fact 1.1: The timeline of Jada's relationship with Alsina is still fuzzy.
+
+Retrieved items:
+<item 1>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Longtime Hollywood couple Will Smith and Jada Pinkett Smith sent shockwaves around the world this week when the Red Table Talk host revealed that she and the
+actor have been separated since 2016. Both Jada and Will have previously doubled down on their stance against getting a divorce, but her recent reveal about
+their lengthy separation poses a new question: When should couples just get a divorce?
+</item 1>
+
+<item 2>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Although they’ve made their dedication to each other quite clear, there have been some grey areas over the last seven years about the terms of Will and Jada’s
+separation. In 2020, Jada made headlines when she revealed in a Red Table Talk episode with her husband that she had a relationship with Alsina. She explained
+that she and her husband were “separated amicably” when the romance occurred, which had not been disclosed to the press at the time. “We decided that we were
+going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,” Jada said. As the Girls
+Trip star recalled that she “got into a different kind of entanglement with August,” she was prompted by Will to confirm it “was a relationship, absolutely.”
+</item 2>
+
+<item 3>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Less than two weeks later, Jada and Will appeared on an episode of Jada’s Red Table Talk where Jada confirmed that she did have a relationship with Alsina,
+saying that she and Will were separated at the time.
+
+“We decided that we were going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,”
+Jada said at the time.
+
+“From there, as time went on, I got into a different kind of entanglement with August... Yes, it was a relationship absolutely.”
+
+Jada also said that Will didn’t give permission, as the only person who could give her permission was herself.
+
+2021: Jada discusses her and Will’s sex life, Will’s memoir is released
+
+In another episode of Red Table Talk in October 2021, Jada said it “takes work” to maintain a spark in the bedroom.
+
+“It’s hard... the thing Will and I talk about a lot is the journey.
+</item 3>
+
+<item 4>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Will Smith y Jada Pinkett Smith (Getty Images)
+
+According to Lucas, some of the controversy surrounding Will and Jada’s relationship ties back to the 2022 Academy Awards - when the King Richard star jumped
+onto the stage and struck Rock across the face after the comedian made a joke about Jada’s shaved head, which is a result of her alopecia. “Keep my wife’s name
+out of your f***ing mouth,” Will yelled. Now that it’s been revealed the couple was separated at the time, Lucas questioned Will’s behaviour and word choice
+during the awards ceremony.
+
+“That’s a weird reaction to have somebody who you’ve been broken up with for six years, you know? So, were they really broken up or is Jada saying that as an
+attention-seeking thing?” he asked.
+
+However, Winter still believes the controversial incident speaks different volumes about the work Will has put into his relationship.
+</item 4>
+
+<item 5>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+In an interview with People on 10 October, Jada shared that during the 2022 Academy Awards - when Will slapped Chris Rock after he cracked a joke about Jada’s
+appearance - the pair had actually been separated for six years. “We’ve been doing some really heavy-duty work together,” she explained, while promoting her new
+memoir, Worthy. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+
+She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep
+sense of self-acceptance”. Although the married couple are not living together, she insisted that their marriage has never been an open one, as she and Will
+have “eliminated the chance of betrayal” while going on to live their “separate lives”.
+</item 5>
+
+<item 6>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+This isn’t the first time that Jada and Will have taken some time apart from each other. During a 2020 episode of her Facebook Watch series, Red Table Talk,
+Jada disclosed that while she and Will were separated amicably, she had a relationship with singer August Alsina, describing their involvement as an
+“entanglement”.
+
+Throughout their marriage of 26 years, the A-listers have made it clear that divorce was never in the cards. Jada furthered that belief during a preview for an
+interview with Today’s Hoda Kotb, which aired on 13 October. “I made a promise that there will never be a reason for us to get a divorce,” she said. “We will
+work through, whatever. I just haven’t been able to break that promise.”
+
+Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage.
+</item 6>
+
+<item 7>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Jada Pinkett Smith has revealed that she and husband Will Smith have been separated for the last seven years.
+
+The Girls Trip star, 52, shared in a new interview with People published on 11 October that she and the King Richard actor, 55, are “still figuring it out” when
+it comes to their marriage of 26 years. She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six
+years.
+</item 7>
+
+<item 8>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+“It’s hard... the thing Will and I talk about a lot is the journey. We started in this [relationship] at a very young age, 22 years old... I think you expect
+your partner to know - especially when it comes to sex. It’s like: ‘Well, if you love me, you should know. If you love me, you should read my mind.’ That’s a
+huge pitfall,” she said at the time.
+
+The next month, Will’s memoir is released which details several issues the couple have had over the years. He wrote they were “suffering the brutal death of our
+romantic fantasies, the burning away of the idealistic illusion of the perfect marriage and the perfect family. Neither of us wanted a divorce; we knew we loved
+each other, and some aspects of our union were magical. But the structure of the life that we had established was strangling both of us.”
+</item 8>
+
+<item 9>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Will Smith has spoken out about his “tumultuous” relationship with his wife, Jada Pinkett Smith, while speaking to a crowd of fans in Baltimore, Maryland.
+
+The 55-year-old actor took the stage at the Enoch Pratt Free Library on 18 October, as he made an appearance at a press event for his wife’s book, Worthy,
+alongside their two children – Jaden, 25, and Willow, 22.
+</item 9>
+
+<item 10>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+he wrote on Facebook at the time. “So, in the interest of redundant, repetitious, over and over-again-ness… Jada and I are… NOT GETTING A DIVORCE!!!!!!!!!!!!!”
+
+2018: Will revealed that he and Jada don’t refer to themselves as married
+
+In an episode of TIDAL’s Rap Radar podcast, Will said he and Jada “refer to ourselves as life partners, where you get into that space where you realise you are
+literally with somebody for the rest of your life. There’s no deal breakers. There’s nothing she could do - ever. Nothing that would break our relationship. She
+has my support till death and it feels so good to get to that space.”
+</item 10>
+=== END ITEM id=3a5abc24360f5e0e ===
+
+=== ITEM id=e76469572948ae5d ===
+Gold sentences and facts:
+Sentence 0: India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15).
+  Fact 0.0: India will face New Zealand in the ongoing World Cup semi-final match.
+  Fact 0.1: The match is at the Wankhede Stadium in Mumbai.
+  Fact 0.2: The match is on Wednesday (November 15).
+Sentence 1: Second-last of ten on the table after a fourth abject loss in barely three weeks, this time by eight wickets and nearly 25 overs to spare against Sri Lanka having been bowled out for a miserable 156 in Bengaluru, the 2019 champions are now only mathematically a chance of scraping through to the semi-finals.
+  Fact 1.0: India is second-last of ten on the table.
+  Fact 1.1: India suffered a fourth abject loss in barely three weeks.
+  Fact 1.2: This loss was by eight wickets.
+  Fact 1.3: This loss came with nearly 25 overs to spare.
+  Fact 1.4: The loss was against Sri Lanka.
+  Fact 1.5: Sri Lanka bowled India out for a miserable 156 in Bengaluru.
+  Fact 1.6: India, the 2019 champions, is now only mathematically a chance of scraping through to the semi-finals.
+
+Retrieved items:
+<item 1>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+2011 World Cup, against Pakistan
+
+Fans from India and Pakistan wouldn't have expected a better occasion than a World Cup for the meeting of two teams.
+
+The World Cup returned to India after 1996, and India and Pakistan were facing each other in the second semi-final at the IS Bindra Stadium in Mohali on March
+30.
+
+Man-of-the-Match Tendulkar rose to the occasion, scoring 85 runs for India.
+
+Virender Sehwag scored 38 while Suresh Raina remained unbeaten on 36 as India scored 260 for 9 in 50 overs.
+
+Pakistan seamer Wahab Riaz took 5 for 46 in 10 overs. In reply, Pakistan batsmen Misbah-ul-Haq (56 runs) and Mohammad Hafeez (43 runs) showed some resistance
+from Pakistan, but in lack of a big innings lower down the order hit Pakistan's prospects badly as they were all out for 231 runs in 49.5 overs.
+</item 1>
+
+<item 2>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+2003 World Cup, against Kenya
+
+India were playing underdogs Kenya in the last-four stage match in Durban on March 20.
+
+With Man-of-the-Match India skipper Sourav Ganguly scoring an unbeaten 111 runs in 114 balls and Man-of-the-Tournament Tendulkar scoring an 111-ball 83, India
+comfortably scored 270 for four wickets in 50 overs.
+
+In reply, Kenya were no match for Indian dominance, and barring their skipper Steve Tikolo, who top-scored with 56 runs, no Kenyan batsman could score more than
+29 runs.
+
+With Zaheer Khan taking 3 wickets in 9.2 overs for just 14 runs, India could easily beat Kenya by 91 runs.
+
+Though India breezed into semi-finals easily, the tournament is also remembered for Kenya's best run in the World Cup as the team from a country with limited
+cricket facilities and no proper grassroots structure could reach as far as semi-finals.
+</item 2>
+
+<item 3>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+Also Read: IND vs NZ FREE Live Streaming: When and How to watch India vs New Zealand Cricket World Cup 2023 Semi-Final Match Live on Web, TV, mobile apps online
+
+Also Read: AUS vs SA FREE Live Streaming: When and How to watch Australia vs South Africa Cricket World Cup 2023 Semi-Final Match Live on Web, TV, mobile apps
+online
+
+1983 Prudential Cup, against England
+
+Having lost in the first round of the 1975 and 1979 World Cups, India were underdogs in the third World Cup, which was being held in England for the third
+consecutive time.
+
+However, in the World Cup, India wronged many of their critics, reaching semi-finals and playing against mighty hosts England in Manchester on June 22.
+
+Skipper Kapil Dev struck three wickets while Roger Binny and Man-of-the-Match Mohinder Amarnath took two each as India restricted England to 213 all out in 60
+overs.
+</item 3>
+
+<item 4>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India were playing their sixth semi-finals at a place where they played their first World Cup semi-final in 1983, Manchester. However, with a different team-
+New Zealand.
+
+Indian bowlers raised hopes when they restricted New Zealand to 239 for 8 in 50 overs with Bhuvneshwar Kumar taking three wickets.
+
+Ross Taylor 74 runs (90 balls) and skipper Kane Willamson 67 runs (95 balls) were the top scorers for New Zealand. But Kiwi Man-of-the-Match bowler Matt Henry
+sent openers KL Rahul and Rohit Sharma back to the pavilion soon, followed by the dismissal of Dinesh Karthik in the 10th over of India's innings.
+
+With the Indian top-order failing, Ravindra Jadeja (77 runs in 59 balls) and wicketkeeper MS Dhoni (50 runs in 72 balls) tried to steady the Indian ship.
+
+But once they fell, it was all over for India as they lost the battle by 18 runs.
+</item 4>
+
+<item 5>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+2023 World Cup, against New Zealand
+
+To be played
+</item 5>
+
+<item 6>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India, one of the favourites to win the World Cup, were very much on the path to victory till Mohammad Azharuddin, who top-scored with 64 runs was at the
+crease.
+
+But with the fall of his wicket, the Indian lower order collapsed like a house of placards as India lost the match by 35 runs.
+
+1996 Wills World Cup, against Sri Lanka
+
+The 1996 Cricket World Cup is known for Sri Lanka's emergence as a cricketing power on the horizon of world cricket and the beginning of Sachin Tendulkar's
+extraordinary dominance in batting history.
+
+Playing in the first semi-final at the Eden Gardens in Kolkata on March 13, India were favourites again, and they raised their hopes when they managed to
+restrict Sri Lanka to 251 for 8 in 50 overs despite Man-of-the-Match Aravinda de Silva's 66 and Roshan Mahanama's 58.
+</item 6>
+
+<item 7>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+In reply, Mohinder Amarnath played a useful innings of 46, while Yashpal Sharma scored a fine 61.
+
+Sandeep Patil played a fiery innings of 51 not out in just 32 balls as India stormed into semifinals for the first time, beating England by six wickets with 5.2
+overs to spare.
+
+Also Read: ICC World Cup 2023: List of centuries; Most tons in World Cup so far
+
+1987 Reliance Cup, against England
+
+Four years later, the World Cup was being played outside England for the first time, and it was India which was hosting it.
+
+In a co-incidence, India was against England in the semi-finals once again, at the Wankhede Stadium, Mumbai, on November 5.
+
+This time, England's Man-of-the-Match skipper Graham Gooch smashed 115 runs in 136 balls to lay a solid foundation for his team's fighting total of 254 for 6
+wickets.
+</item 7>
+
+<item 8>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+ICC World Cup 2023: Rohit Sharma-led India are playing Netherlands in their ninth ICC World Cup 2023 round-robin match at the M Chinnaswamy Stadium in Bengaluru
+on Sunday (November 12, 2023). India have already booked a place in semi-finals, thrashing Sri Lanka by 302 runs at the Wankhede Stadium in Mumbai on November
+2, 2023. India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15). This is the seventh
+time India have entered into the last-four stage of the 50-over World Cup.
+
+Also Read: ICC Cricket World Cup 2023 Prize Money: How much finalists, semi-finalists, and other teams will win at ODI World Cup
+
+India first entered semifinals of the World Cup at the 1983 Prudential Cup in England, where they emerged as the tournament winners.
+</item 8>
+
+<item 9>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India moved to finals and beat Sri Lanka to win their second World Cup title.
+
+
+
+2015 World Cup, against Australia
+
+India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26. Australia outplayed India in almost all departments
+of the game.
+
+Australian Man-of-the-Match Steve Smith (105 runs in 93 balls) and Aaron Finch (81 runs in 116 balls) were the guiding forces in taking Australia to 328 runs
+for 7 wickets in 50 overs.
+
+In reply, India needed a few big innings, but apart from skipper MS Dhoni (65 runs in 65 balls), Shikhar Dhawan (45 runs in 34 balls), and Ajinkya Rahane (44
+runs in 68 balls), the batting order collapsed miserably as India lost the match by 95 runs.
+
+
+
+2019 World Cup, against New Zealand
+
+The cricket World Cup returned to England for the fifth time.
+</item 9>
+
+<item 10>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+They moved into the last-four stage on the next two occasions when the World Cup was held in India, in 1987 and 1996.
+
+India were in semi-finals in 2003 in South Africa.
+
+Eight years later, they were again in last four at the 2011 World Cup as hosts, and repeated their feat in 2015, 2019, and 2023.
+
+It means that in their last six World Cups, India have been in the semi-finals on five occasions.
+
+Also Read: ICC Cricket World Cup 2023 semi-final schedule: India to play New Zealand in Mumbai; South Africa to face Australia in Kolkata; know venue, squads
+
+In this write-up, ZeeBiz will take you through the memory lane of India's semifinal journey in the biggest cricket extravaganza in the world.
+</item 10>
+=== END ITEM id=e76469572948ae5d ===

@@ -1,0 +1,59 @@
+[
+{"id": "26e06c24a1171c2f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "like an injury or roster move."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]}
+]},
+{"id": "a856ad913d984c70", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "At the time, the music video for the song"}, {"item": 8, "quote": "which featured a woman with blonde hair"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "At the time, the music video for the song"}, {"item": 8, "quote": "sparked rumours that he and Spears broke up"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Danis’s first press conference for the Logan Paul fight."}]}
+]},
+{"id": "211ea9beb3022294", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "6e53858b6ce3b4be", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "He’s sat with multiple heads of state to discuss AI’s potential and perils."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "He’s sat with multiple heads of state to discuss AI’s potential and perils."}, {"item": 2, "quote": "guardrails, calling attention to the existential dangers future AI could pose."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI"}, {"item": 9, "quote": "still trying to get to the bottom of"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or business one."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "5f498ba84ce7cb17", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "like an injury or roster move."}]}
+]},
+{"id": "546fe57fc5b11479", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}, {"item": 7, "quote": "important to keep faith aligned with that practice of positive thinking"}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "Roumie said that building a habit of prayer"}, {"item": 2, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "Roumie said that building a habit of prayer"}, {"item": 2, "quote": "just automatically."}]}
+]}
+]

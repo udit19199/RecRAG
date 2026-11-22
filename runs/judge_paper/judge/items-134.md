@@ -1,0 +1,858 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=72b2ece856c403c2 ===
+Gold sentences and facts:
+Sentence 0: The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices.
+  Fact 0.0: The process also involves the European Commission.
+  Fact 0.1: The European Commission helps facilitate dialogue.
+  Fact 0.2: The European Commission helps assess issues.
+  Fact 0.3: The European Commission helps bring pressure to bear on unfair practices.
+Sentence 1: We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.
+  Fact 1.0: The speaker continues to work through the process with the European Commission.
+  Fact 1.1: The speaker is focused on addressing the European Commission's questions.
+  Fact 1.2: The speaker is focused on addressing any identified concerns at this stage.
+Sentence 2: Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war.
+  Fact 2.0: The earlier actions were focused on concerns about the spread of illegal content.
+  Fact 2.1: The earlier actions were focused on concerns about disinformation.
+  Fact 2.2: The illegal content and disinformation are related to the Israel-Hamas war.
+
+Retrieved items:
+<item 1>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+X owner Elon Musk last projected revenues of about $3 billion for this year. It’s anyone’s guess if that’s accurate now, but as an example, that would result in
+a fine of up to $180 million.
+
+Indirectly, an investigation will also be a key way for the public to have significantly more transparency around how X is being used (and abused): since Musk
+took Twitter private, the company no longer produces quarterly earnings reports and is not held to account as closely as a result.
+
+EU officials confirmed to TechCrunch that an investigation has not been taken at this point. Clearly, though, yesterday’s development (and the pace at which
+regulators are moving) is a strong indication of the bloc’s direction of travel.
+
+The Commission said it is looking at X’s compliance with the DSA across a number of areas — including with regard to its policies and practices regarding
+notices on illegal content; complaint handling; risk assessment and measures to mitigate the risks identified.
+</item 1>
+
+<item 2>
+Meta to offer ad-free subscription in Europe in bid to keep tracking other users (TechCrunch, 2023-10-30T13:52:00+00:00)
+The Commission is the sole enforcer of the DMA.
+
+Meta is already in the Commission’s sights over its approach to the DSA — with the EU’s executive, in recent days, requesting more information from the tech
+giant vis-à-vis its approach to content threats flowing from the Israel-Hamas war and about election security issues. But it remains to be seen whether the EU
+will apply the same close scrutiny to Meta’s ad tracking offer.
+
+In its blog post Meta claims the choice to offer people to pay it for their privacy or else agree to being tracked “balances the requirements of European
+regulators while giving users choice and allowing Meta to continue serving all people in the EU, EEA and Switzerland”. But, well, it would say that.
+
+The subscription is also only being offered to people aged 18 and up — which raises questions over how it will comply with requirements in the DSA and DMA not
+to processing children’s data for ad targeting.
+</item 2>
+
+<item 3>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+The EU said the probe will also look at the effectiveness of “related policies mitigating risks to civic discourse and electoral processes”
+
+— with a focus on the effectiveness of its “Community Notes” system of crowdsourcing fact-checking to aggregated views of users, who may vote to label disputed
+tweets with additional context. The EU said the probe will also look at the Transparency requirements — with a focus on “suspected shortcomings” by X in giving
+researchers access to publicly accessible data as mandated by Article 40 of the DSA, and suspected shortcomings in its ads repository (aka the ads transparency
+library the regulation also mandates)
+
+— with a focus on “suspected shortcomings” by X in giving researchers access to publicly accessible data as mandated by Article 40 of the DSA, and suspected
+shortcomings in its ads repository (aka the ads transparency library the regulation also mandates) Suspected deceptive design elements in X’s user interface —
+“notably in relation to checkmarks linked to certain subscription products, the so-called Blue checks”
+
+“If proven,
+</item 3>
+
+<item 4>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+At the time the EU’s then competition chief, Margrethe Vestager, trumpeted the outcome as setting what she dubbed “new rules for how Amazon operates its
+business in Europe” — arguing the settlement meant the ecommerce giant could “no longer abuse its dual role” as marketplace operator and own brand retailer; and
+further claiming the outcome would ensure “competing independent retailers and carriers as well as consumers will benefit from these changes opening up new
+opportunities and choice.”
+
+Given the commitments the EU already extracted from Amazon after those earlier investigations it’s interesting to see the bloc remains concerned over levers the
+ecommerce behemoth still has its disposal to potentially influence competitive outcomes on its marketplace vis-à-vis iRobot vs rival robot vacs.
+
+Since then Amazon has also been named a gatekeeper under the EU’s shiny new ex ante competition regulation, the Digital Markets Act — which lists its
+marketplace as a core platform service. This designation means Amazon must comply with a series of up-front obligations, which include restrictions on self
+preferencing.
+</item 4>
+
+<item 5>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+EU regulators are also set to assess Musk & co’s claims that replacing a formal content moderation function with crowdsourced opinions is a valid approach to
+tackling diverse information risks; and, consequently, to look into how much Musk’s gutting of content moderation teams and processes has cost X’s users in
+terms of harm exposure.
+
+To say the Commission’s investigation looks fascinating and timely is an understatement.
+
+EU lawmakers can certainly bask in the glow of being prepared for the possibility of an erratic billionaire running a wrecking ball through a major social
+platform. But of course they will need to follow through — and it’s clear the real work is just starting. So this probe looks set to be a test of how much
+stomach the EU has to actually enforce the rules it loves to lay down on paper.
+
+The investigation may also test Musk’s mettle for what could be an expensive head-on clash with EU regulators.
+</item 5>
+
+<item 6>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Confirmed breaches of the online governance regime can face a range of major sanctions, including fines of up to 6% of global annual turnover.
+
+The EU can also apply interim measures where it believes there’s a risk of serious harm for users and may even seek to have access to infringing services
+temporarily blocked. Although its announcement today is careful to caveat the development by affirming no conclusions have yet been reached.
+
+There is also no confirmed timeline for the probe to conclude. But the fact of it being opened means other tools are put within reach of regulators and could be
+applied if the EU sees the need to act quickly — such as the aforementioned interim measures. So the Commission’s official scrutiny of X could have real world
+implications for how the platform operates sooner rather than later.
+</item 6>
+
+<item 7>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+It’s official! Elon Musk’s X marks the spot of the first confirmed investigation opened by the European Union under its rebooted digital rulebook, the Digital
+Services Act (DSA).
+
+Announcing the opening of a “formal proceeding” today, the European Commission said the investigation will look at whether the social networking platform may
+have breached rules linked to risk management, content moderation, dark patterns, advertising transparency and data access for researchers.
+
+The opening of a formal DSA investigation on X comes hard on the heels of a complaint against X’s adtech by privacy rights group, noyb — although today’s formal
+proceeding is unlikely to be directly linked as the Commission has been probing the platform for months via a flurry of requests for information. Its earlier
+actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war.
+
+Back in October the Commission sent Musk’s company an “urgent” formal request for information about how it was responding to information risks arising out of
+the conflict.
+</item 7>
+
+<item 8>
+European consumer groups band together to fight Meta’s self-serving ad-free sub — branding it ‘unfair’ and ‘illegal’ (TechCrunch, 2023-11-30T05:00:57+00:00)
+In the latter case its social networks, Facebook and Instagram, were designated as very large online platforms (VLOPs) earlier this year. And, since late
+August, they’ve been expected to be compliant with that digital rulebook.
+
+Both pan-EU laws put restrictions on the use of personal data for advertising — explicitly requiring consent is obtained from users for such a purpose; and that
+consent must be as easy to withhold as to affirm. So one issue the Commission — which is the sole enforcer of the DSA on VLOPs — might weigh in in the coming
+months on is whether clicking accept vs digging out a credit card to pay a monthly charge are equivalently easy.
+
+The regulation also contains provisions which are intended to combat unfair/deceptive design, such as targeting choice interfaces that make it “more difficult
+or time-consuming” to pick one option over another.
+</item 8>
+
+<item 9>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Per the Commission, the EU’s investigation of X focuses on the following areas and issues:
+
+Compliance with DSA obligations related to countering the dissemination of illegal content in the EU — “ notably in relation to the risk assessment and
+mitigation measures adopted by X to counter the dissemination of illegal content in the EU, as well as the functioning of the notice and action mechanism for
+illegal content in the EU mandated by the DSA, including in light of X’s content moderation resources
+
+— “ The effectiveness of measures taken by X to combat info manipulation — with a focus on the effectiveness of its “Community Notes” system of crowdsourcing
+fact-checking to aggregated views of users, who may vote to label disputed tweets with additional context.
+</item 9>
+
+<item 10>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+European Union regulators have sent Amazon a formal statement of objections setting out competition concerns over its proposed acquisition of robot vacuum
+maker, iRobot.
+
+The step does not confirm the EU will seek to block the deal but it shows antitrust regulators do remain concerned. It could therefore push Amazon to offer
+remedies to EU authorities to settle the investigation and avoid the risk of the acquisition being blocked.
+
+Amazon has already lowered its acquisition price for iRobot — which was originally an all-cash offer of $1.7 billion back in August 2022 — by 15% owing to
+increased debt taken on by its target while regulatory snags delayed closing the deal at the original purchase price.
+
+The bloc has been closely scrutinizing the Amazon-iRobot deal since July when the EU announced its in-depth probe. The Commission said at the time it was
+worried the transaction would allow Amazon to restrict competition in the market for robot vacuum cleaners (RVCs) and strengthen its position as online
+marketplace provider in a number of ways.
+</item 10>
+=== END ITEM id=72b2ece856c403c2 ===
+
+=== ITEM id=dacab9c6b92835dc ===
+Gold sentences and facts:
+Sentence 0: If you've got your gift list handy, now's a good time to start checking it off so you won't be pressed for time or funds when Black Friday and Cyber Monday come around next month.
+  Fact 0.0: It is a good time to start checking off a gift list now.
+  Fact 0.1: Black Friday and Cyber Monday come around next month.
+  Fact 0.2: Checking off the gift list now means the reader won't be pressed for time or funds when Black Friday and Cyber Monday come around.
+Sentence 1: “One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said.
+  Fact 1.0: Alev said one of the hardest things is that resentment can build up if you feel you need to buy gifts for your family and can barely make your student loan payments.
+  Fact 1.1: Alev said people should bring things up.
+
+Retrieved items:
+<item 1>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+If you are looking for a budget template, Microsoft Office offers a holiday spending-focused version.
+
+COMMUNICATE WITH YOUR LOVED ONES
+
+If you’re experiencing a lot of financial pressure this holiday season, Alev recommends that you try to communicate your feelings to your loved ones.
+
+“One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments,
+so bring things up,” Alev said.
+
+Sharing your financial struggles can be hard. If you want to talk but don’t want to share every detail of your financial struggles, that’s okay. Ultimately,
+what you want is for your loved ones to understand how you’re feeling.
+
+Plauché just recently started sharing her money worries with her family.
+
+“I have been open with my family, just that I’m not going to be able to give gifts that year,” she said.
+
+EXPERIENCES VS.
+</item 1>
+
+<item 2>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+For Nicole Plauché and her family, Christmas is the time of the year where they can use their preferred love language: gift giving. This year, however, Plauché
+is worried about how much she can afford to spend on gifts. Her main struggle? Student loan payments.
+
+“It just doesn’t leave much room for anything outside of just basic necessities,” said Plauché, a 23-year old tech sales manager from Dallas, Texas.
+
+Marisa Johnson, 26, has approximately $145,000 in student loan debt from both her bachelor’s and master’s degrees. Since the COVID-era payment pause ended in
+October, she’s been paying back $300 a month while she waits to see if she’ll be enrolled in a new income-driven repayment plan.
+
+Because all of her money is going to necessities and paying back her student loans, Johnson hasn’t been able to spend as much on gifts as in previous years.
+</item 2>
+
+<item 3>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+“I’ve mostly been trying to think of affordable gifts or combining gifts with my older sister,” said Johnson, a non-profit worker in Citrus Heights, California.
+
+Plauché and Johnson are just two of the millions of people who had to start paying back student loans after the Biden administration ended the three-year
+payment pause.
+
+“We know that the holidays are often a very joyful time of the year and an expensive one every year,” said Courtney Alev, consumer financial advocate at Credit
+Karma. “With federal student loan payments just resuming, it’s going to add another often very significant line item into holiday budgets.”
+
+If student loan payments are cutting into what used to be your holiday budget, here are some recommendations:
+
+THE PRESSURE IS REAL
+
+From family expectations to social media and TV ads showing lavish gifts, many people feel that the only way they can show love is to spend a lot of money.
+</item 3>
+
+<item 4>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Today’s 5.5% rate is definitely an improvement on last year’s 2.9%. But it’s nothing compared to the years preceding COVID-19, such as 2017, where we were
+seeing growth of 18% or more.
+
+Inflation is making an impact but not as much as the worry around consumer spending, said Adobe, which said that spending is being led actually by more
+discounts to encourage buying, rather than less buying of more expensive products. That leads one to wonder what kind of impact that’s having on retailers’
+margins.
+
+“Cyber Week is off to a strong start with Thanksgiving driving a record $5.6 billion in online spend as consumers took advantage of strong discounts and
+continued their shopping plans, virtually,” said Vivek Pandya, lead analyst, Adobe Digital Insights, in a statement. “Mobile shopping hit an all-time high, as
+shoppers took to their smartphones to get the best deals during holiday gatherings, further solidifying mobile’s growing importance in e-commerce.”
+</item 4>
+
+<item 5>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+EXPERIENCES VS. GIFTS
+
+Another great way to save money is to skip material gifts and instead, grant your time. In many cases, your family would rather spend quality time with you.
+
+Alev recommended planning low-cost activities such as a hike with your family, or attending a free event in your city. Other options can be a holiday movie
+marathon with your friends, a free museum with your parents or a volunteering day with your family.
+
+USE CREDIT RESPONSIBLY
+
+Since Plauché is already paying her student loan debt every month, she is avoiding using her credit card this holiday season to avoid carrying more debt.
+
+If using your credit card is your only option, it’s important that you use it wisely.
+
+If you struggle with overspending during the holidays, Alev also recommends setting a budget for each of your credit cards.
+</item 5>
+
+<item 6>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+She’s been looking into gifting a used book to her dad and because she loves painting and already has all the tools, she’s working on a painting for her mom.
+
+Other affordable alternatives can be sending hand written notes to your loved ones, buying from thrift stores, hosting a cookie bake off or simply spending
+quality time with your family.
+
+___
+
+The Associated Press receives support from Charles Schwab Foundation for educational and explanatory reporting to improve financial literacy. The independent
+foundation is separate from Charles Schwab and Co. Inc. The AP is solely responsible for its journalism.
+</item 6>
+
+<item 7>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Black Friday is almost here, but we wouldn't blame you if you've felt like it's been here for a while. What was once a one-day event filled with limited-time
+deals has grown into a month-long event with a plethora of sales to sift through each day. This year, Amazon, Target, Best Buy and Walmart and several other
+retailers kicked off their Black Friday deals early, with some starting as soon as late October. If you're overwhelmed by the amount of discounts showing up in
+your feeds, you're not alone.
+
+
+
+To help, we at Engadget have collected all of the best Black Friday deals you can shop right now, primarily on tech we've tested and reviewed. These are the
+best tech deals you can get this year, on the gadgets we know to be worth your money.
+</item 7>
+
+<item 8>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+BUDGET
+
+Alev is a big proponent of the 50-30-20 budgeting method, where 50% of your income is allocated for necessities like food and rent, 30% for things you want, and
+20% for savings and debt repayment.
+
+To find space in your budget for gifts, Alev recommends that you plan ahead as much as possible and only take money from the 30% portion of your budget.
+
+If the 50-30-20 is not the right format for you, there are plenty of other budgeting methods that you can use. Whether is recording your spending on an Excel
+spreadsheet, using an app or writing it down on a notebook, keeping a budget is most effective when you do it in a format that works for you.
+
+If you are looking for a budget template, Microsoft Office offers a holiday spending-focused version.
+</item 8>
+
+<item 9>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+If you can’t pay your balance in full every month, it’s important that you understand when you payment is due and have a plan to avoid paying a lot of interest.
+
+If you’re planning to use “ buy now, pay later services ”, it’s best to be very intentional, Alev said.
+
+“It’s easy to get caught up. It’s easy to use it a lot and have several different payments that will come down the road,” she said.
+
+AFFORDABLE ALTERNATIVES
+
+There is more than one way to find the “perfect” gift for your family and it doesn’t always involve spending a lot. In her quest to find gifts that don’t cause
+her financial stress, Johnson has been getting creative.
+
+“I’ve definitely been trying to save or just make gifts because I don’t really have the disposable income to buy other people gifts or even buy myself a
+Christmas gift,” Johnson said.
+</item 9>
+
+<item 10>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+Between being a mom and a new grad with a salary to match, Plauché says she can barely manage her daily expenses. Still, she feels a responsibility to give her
+family gifts because that’s how they have traditionally shown each other love.
+
+“I don’t want to give my family this message that they’re not loved and it definitely adds a lot of pressure,” she said.
+
+Johnson feels guilty because the holidays are the time she feels she can show her family how grateful she is for them. She has always prided herself on being a
+great gift giver who not only finds something nice but knows how to spot unique and special gifts.
+
+“I think I’m a little embarrassed to tell them that this year I might not be able to be a good gift giver,” said Johnson.
+
+Acknowledging that you’re feeling pressure is a good first step towards making a plan to set expectations and be realistic about what you can spend.
+</item 10>
+=== END ITEM id=dacab9c6b92835dc ===
+
+=== ITEM id=d470d5dd4bd113b2 ===
+Gold sentences and facts:
+Sentence 0: At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.
+  Fact 0.0: At the time, the music video for the song featured a woman with blonde hair.
+  Fact 0.1: The music video sparked rumours that he and Spears broke up.
+  Fact 0.2: The rumours said the breakup happened because Spears allegedly cheated on him.
+Sentence 1: Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight.
+  Fact 1.0: Danis’s first press conference for the Logan Paul fight hints towards the breakup.
+  Fact 1.1: Danis held a first press conference for the Logan Paul fight.
+
+Retrieved items:
+<item 1>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+They haven’t made any claims of breakup and have been silent about their relationship with each other. The only things that have changed are Savannah’s
+Instagram feed. She has stopped posting pictures with Danis, which were quite prevalent back in 2020. Also, another thing that hints towards their breakup is
+Danis’s first press conference for the Logan Paul fight.
+
+ADVERTISEMENT Article continues below this ad
+
+During the fight, Logan Paul brought up the topic of Montano, when Danis pointedly mentioned their breakup. Paul said, “Yo you’ve been so salty ever since
+Savannah rejected your a** to go hook up with real athletes. You don’t gotta take that s**t out on me because my brother hooked up with your ex.” Danis scoffed
+at Maverick’s claim and clapped back, “At least I got rid of the sl*t, you’re marrying one.”
+</item 1>
+
+<item 2>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+Savannah, how you doing? What’s good?” However, Montano completely denied any relation with the Influencer boxer whatsoever. She responded to Paul’s stories
+through a video and gave her side of the story.
+
+She said, “I’m dead confused at some of you guys going, ‘Oh, but why did you answer his call?’ As if I have his f**king number saved in my phone! It was
+literally a random number. You can literally see in the video, I’m like, ‘Who is this?’” So she denied the accusations of hooking up with Paul and even felt
+disgusted by the speculations.
+
+However, her current relationship status is unknown. Even three years later, many followers are still not convinced about her breakup with Dillon Danis.
+
+Dillon Danis and Savannah Montano breakup reality
+
+As of now, it’s not completely clear whether the couple is still together or not.
+</item 2>
+
+<item 3>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+In her forthcoming memoir, The Woman in Me, Britney Spears is expected to reflect on some of the most pivotal moments in her life, including her relationships.
+
+Over the years, the pop star’s love life has continued to make headlines. Most recently, her ex-husband Sam Asghari filed for divorce after only 14 months of
+marriage.
+</item 3>
+
+<item 4>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+At the time, her representative also confirmed to People: “Yes, she’s single.”
+
+The news of the breakup came asTMZ alleged that Lucado had cheated on Spears, with claims that her father had purchased a video of the infidelity incident. The
+publication later alleged that Lucado denied the cheating allegations, with claims that he was seeing the other woman while he and Spears were broken up.
+
+Despite their seemingly rocky history, Lucado showed his support for his ex in a 2016 interview with theNew York Times about her conservatorship. Speaking to
+the publication, he said: “If anyone knew the real Britney, they would know that she would rather be remembered for being the great mother she is rather than
+the artist she is.”
+
+The publication also noted that Lucado denied the infidelity claims from Spears’ father, before he added: “And if anyone could see her interactions with her
+kids, they would know that there is no need for a conservatorship over Britney’s personal life.”
+</item 4>
+
+<item 5>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Justin Timberlake: 1998 to 2002
+
+(Getty Images)
+
+Spears’ first highly public relationship was with her co-star in the Mickey Mouse Club, Justin Timberlake. The pair made many appearances together while dating,
+including the iconic moment Spears and Timberlake wore matching, all-denim outfits to the American Music Awards in 2001.
+
+They broke up in 2002, shortly after Timberlake and his boy band NSYNC released their hit tune, “Cry Me a River”. At the time, the music video for the song –
+which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.
+
+Although the former couple never acknowledged the breakup rumours, the 2021 Framing Britney documentary addressed some of the public scrutiny that Spears faced
+during the 2000s. Following the documentary’s release, Timberlake came under criticism for the way he acted following his breakup with Spears.
+</item 5>
+
+<item 6>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+That same day, the fitness instructor officially filed for divorce, listing the date of separation as 28 July 2023 and citing "irreconcilable differences" as
+the reason for the split.
+
+In a statement posted online, Asghari said: “After six years of love and commitment to each other my wife and I have decided to end our journey together. We
+will hold onto the love and respect we have for each other and I wish her the best always. S*** happens. Asking for privacy seems ridiculous so I will just ask
+for everyone including the media to be kind and thoughtful.”
+
+Days before Spears’ memoir release date, Asghari revealed that he had obtained an early copy of the book. In an interview with TMZ on 13 October, he explained
+that he wasn’t worried about anything being written in the book that could paint him in a negative light.
+
+“I already read it and I’m very proud of her,” he told the outlet.
+</item 6>
+
+<item 7>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Jason Trawick: 2009 to 2013
+
+(Getty Images)
+
+Spears and Jason Trawick, a Hollywood agent who worked at WME, started dating in 2009 before getting engaged in December 2011. However, they called off their
+engagement in January 2013 and announced they were going their separate ways.
+
+"Jason and I have decided to call off our engagement. I’ll always adore him and we will remain great friends," Spears said in a statement sent by her
+representative to ABC News.
+
+Trawick also issued a statement at the time, saying: “As this chapter ends for us a new one begins. I love and cherish her and her boys and we will be close
+forever."
+
+David Lucado: 2013 to 2014
+
+Two months after ending her engagement with Trawick, Spears started dating David Lucado, who worked at a legal firm. In August 2014, Spears announced their
+split, tweeting: “Ahhhh the single life!”
+</item 7>
+
+<item 8>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Spears went on to file for divorce from Federline in November 2006, citing “irreconcilable differences” as the reason for their split. In the couple’s initial
+divorce settlement, they were granted joint legal and physical custody over their two children. While it appeared they were on good terms after their
+separation, things took a turn in 2018 when Federline requested an increase of $20,000 a month more child support payments from Spears.
+
+After months of court discussions, Federline rejected Spears’s child support proposal and instead doubled his request to $40k a month. A settlement was finally
+reached between the two parties in September 2018, with Spears increasing her child support payments to Federline from $20,000 to $35,000 a month.
+
+Federline has since moved on from the relationship, as he married volleyball player Victoria Prince in 2013. They now share two daughters, Jordan, 10, and
+Peyton, eight.
+</item 8>
+
+<item 9>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+Instead, he ended up taking the fight against the former Olympic MMA artist, Ben Askren in 2021. He again won the fight by a knockout, while many fans still
+thought that Danis was smart to not respond to the Youtuber-turned-boxer. Still, Paul tried his best to involve Montano in their non-existent tussle.
+
+via Getty TAMPA, FLORIDA – DECEMBER 18: Jake Paul fights Tyron Woddley during a rematch of an eight-round cruiserweight bout at the Amalie Arena on December 18,
+2021 in Tampa, Florida. (Photo by Mike Ehrmann/Getty Images)
+
+Besides the Instagram Stories, Jake Paul also told TMZ, about the entanglement with Savannah Montano. He said, “Dillon, I know you’re watching this … Just
+remember you’re still a bitch and I hooked up with your girlfriend. Savannah, how you doing? What’s good?”
+</item 9>
+
+<item 10>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+They made their relationship Instagram official in 2017 and went on to support each other through different milestones - including the 29th annual GLAAD Media
+Awards, where Spears accepted the Vanguard Award for her work promoting equality and acceptance.
+
+In April 2022, Spears announced she was pregnant with her and Asghari’s first child together, and her third child. However, the following month, she said in a
+statement posted to Instagram that she had suffered a miscarriage. The couple wrote: “We have lost our miracle baby.”
+
+That June, they held their lavish nuptials at her home in California with a star-studded guest list, which included Selena Gomez, Paris Hilton, Drew Barrymore,
+and Donatella Versace - who designed Spears’ wedding dress.
+
+In August, months after Asghari shut down speculation about getting a divorce, TMZ claimed that he had confronted Spears about rumours she cheated on him.
+</item 10>
+=== END ITEM id=d470d5dd4bd113b2 ===
+
+=== ITEM id=4641705a70e98f01 ===
+Gold sentences and facts:
+Sentence 0: As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases.
+  Fact 0.0: The subject referred to as 'they' is never going to replace the need for reducing emissions of CO2 and other greenhouse gases.
+Sentence 1: He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math.
+  Fact 1.0: He stopped flying.
+  Fact 1.1: He became a vegetarian.
+  Fact 1.2: He ditched gasoline-powered cars.
+  Fact 1.3: He drives a Tesla.
+  Fact 1.4: He cut his personal emissions by about 90%, according to his math.
+
+Retrieved items:
+<item 1>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+Otherwise, that would defeat their use in carbon capture.
+
+Educators and Parents, Sign Up for The Cheat Sheet Weekly updates to help you use Science News Explores in the learning environment Client key* E-mail Address*
+Go Thank you for signing up! There was a problem signing you up.
+
+MXenes also cost a lot to make. The high cost of making these materials would be less important if they could withstand thousands of CO 2 capture-and-release
+cycles. That way, scientists wouldn’t have to keep making new MXenes.
+
+So far, no one has tested MXenes’ durability for stored CO 2 removal and reuse. Still, it helps that MXenes are mechanically rugged. Research has shown that
+certain types can be as strong as steel.
+
+The Riverside group’s new paper also points to a related family of nanosheets that may prove good CO 2 sponges. Made from MXenes, they’re known as MBenes,
+because the “X” layer is made up of boron atoms.
+</item 1>
+
+<item 2>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+For comparison, a sheet of paper is 100,000 times thicker.
+
+MXenes normally come as stacks of these individual sheets. The many separate sheets inside a stack add up to a huge overall surface area. It’s like how the
+combined surface area of all the pages in a book is much larger than that of just the covers.
+
+In fact, the total surface area contained in one gram (1/400 ounce) of MXene “can cover a football field,” notes Per Persson. He’s a materials scientist at
+Linköping University in Sweden.
+
+Atoms across MXenes’ large surface areas can interact with their environment. That includes grabbing carbon dioxide, or CO 2, out of the air around them — a
+process called carbon capture.
+
+The white exhaust leaving smokestacks at this coal-fired power plant in Arizona is largely steam. Not visible is the carbon dioxide gas also leaving those
+stacks.
+</item 2>
+
+<item 3>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+This is another in our series of stories identifying new technologies and actions that can slow climate change, reduce its impacts or help communities cope with
+a rapidly changing world.
+
+One up-and-coming class of tiny materials could help solve the huge problem of climate change. How? By catching climate-warming carbon dioxide out of the air.
+
+The nano-scale materials are called MXenes (MAX-eenz). Their name comes from their structure, which is made up of alternating layers of M and X atoms. “M”
+layers consist of some transition metal. (Those atoms are bulky and can shed a variable number of electrons.) “X” layers contain atoms of another element, such
+as carbon or nitrogen.
+
+A single MXene sheet contains a few of these alternating M and X layers chemically bound to each other. It may look like MXM or MXMXM. Each sheet is typically
+only about 1 nanometer thick. For comparison, a sheet of paper is 100,000 times thicker.
+</item 3>
+
+<item 4>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+So water and oxygen make MXenes less reactive. But scientists think they can overcome this problem by tweaking MXenes’ structure. Capping the materials’ edges
+with bulky salts, for instance, could shield MXenes from damage by oxygen.
+
+It’s also hard, right now, to make large amounts of MXenes. In the lab, researchers can make only several kilograms (pounds) in a single batch. Several
+companies are working out how to boost batch sizes.
+
+But Thakur points out one irony: Making MXenes for carbon capture can have a big carbon footprint. It takes a lot of electricity to get the heat needed to make
+them, she notes. Much of that electricity is made using CO 2 -spewing fossil fuels. It’s important to make sure that the energy used to make these materials
+doesn’t spew more CO 2 than the MXenes can later sop up. Otherwise, that would defeat their use in carbon capture.
+</item 4>
+
+<item 5>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+MXenes could be heated up to release their CO 2 for long-term storage somewhere else. Flushing MXenes with a different kind of gas, such as hydrogen, might also
+remove the CO 2 from them. Then the MXenes could be reused for a new round of carbon capture.
+
+MXenes could also help transform the CO 2 they capture into other useful compounds, Stavila says. That’s because MXenes are catalytic. That means they can help
+drive other chemicals, such as CO 2 , to react. MXenes also conduct electricity. Since they like sharing electrons with CO 2 , they can ferry those electrons to
+other compounds.
+
+As a result, “you can do [transformations of CO 2 ] that may not be otherwise possible,” Stavila says. For instance, with a boost from MXenes, CO 2 can react
+with hydrogen to form methanol or formic acid.
+</item 5>
+
+<item 6>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+This diagram depicts a process to convert MAX phase materials into thin sheets of MXenes. An acid etches out all but the M layers (blue) and X layers (purple)
+to yield thick MXene sheets. The far right panel shows a scanning electron microscope image of the MXene. M. Ozkan et al/Chem. Oct. 4, 2023 ( CC BY 4.0 DEED
+
+MXenes have “probably the largest diversity and tunability any 2-D material can offer,” says Michael Naguib. By tunable, this engineering physicist means that
+MXenes can be tweaked to take on different properties. Naguib works at Tulane University in New Orleans, La. He made the world’s first MXene in 2011, a titanium
+carbide.
+
+Scientists have now made more than 50 MXenes. New ones arise when scientists mix and match different M and X atoms. Each MXene has slightly different
+properties, from how well it conducts electricity to how strong it is.
+</item 6>
+
+<item 7>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+These materials are harder to make than MXenes. So most research on them has been done with math or computer models. But MBenes could have unique mechanical and
+electrical traits, Ozkan’s team finds. And those just might help them last through many, many cycles of CO 2 capture and release.
+
+Each year, human activities spew tens of billions of tons of CO 2 into the air. That’s equivalent to the weight of tens of billions of elephants. Carbon
+absorbers, including MXenes or MBenes, can’t catch it all. As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse
+gases.
+
+Still, given the urgency of climate change, even a quick or partial fix — such as carbon capture — can’t be ignored. “At this point in time,” says Persson, “we
+need to look at all the possible solutions.” And MXene-like materials are emerging as potentially important candidates.
+</item 7>
+
+<item 8>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+Each MXene has slightly different properties, from how well it conducts electricity to how strong it is.
+
+Scientists can even modify existing MXenes by treating them with different chemicals. This involves covering the MXene’s surface with new atoms, such as oxygen
+and fluorine, to change its behavior. For more than a decade, scientists have been tailoring different MXenes for use in batteries and other energy storage
+devices. But tweaking MXenes’ chemistry can also alter their ability to collect CO 2 .
+
+In an October 4 paper in Chem, engineers at the University of California, Riverside, reviewed the potential widespread use of MXenes. In a statement, lead
+author Mihri Ozkan noted, “Their unique properties make them excellent candidates for capturing CO 2 .”
+
+Painting on a CO 2 -absorber
+
+Freshly prepared MXenes appear as a dark-colored powder. Each fleck contains many MXene sheets. Under a microscope, they look like loose sheets of paper.
+</item 8>
+
+<item 9>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+While on his working vacation in Maine, Kalmus invited NBC News for a short visit to the community to see the crisis through the eyes of Americans taking it as
+seriously as anyone.
+
+The Possibility Alliance is an 11-acre homestead that operates without power, running water or a sewer system. The Hughes family, which operates the alliance,
+pays only one monthly bill for landline phone service. (Evan Bush / NBC News)
+
+Detoxifying
+
+About a decade ago, Kalmus ditched a promising academic career in astrophysics to study the physics of climate change instead.
+
+He made other changes too. He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about
+90%, according to his math.
+
+It wasn’t a political statement, but a detoxification.
+
+“Burning fossil fuels started to feel more and more disgusting,” he said.
+
+Ethan Hughes, who operates the Possibility Alliance, rejects globalization and thinks capitalism is a ruinous symptom of “greed and separation.”
+</item 9>
+
+<item 10>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+Several research groups have been exploring MXenes’ potential to capture CO 2 from the air. In the Linköping experiments, “CO 2 stuck to the MXene surface like
+refrigerator magnets,” Persson says. “It was absolutely amazing.” His group has shown that MXenes can sponge up as much as half their weight in CO 2 .
+
+One large family
+
+MXenes don’t exist in nature. Scientists have to make them.
+
+This is freshly produced MXene, which normally forms a dark powder when dry. This MXene contains alternating layers of vanadium (M) and carbon (X) atoms.
+Karamullah Eisawi/Tulane Univ.
+
+They do this using other labmade compounds called MAX phases. Like MXenes, MAX phases are layered crystals. But MAX phases have extra sheets of metal “A” that
+sandwich between their M and X layers.
+
+To turn MAX phases into MXenes, scientists must eat away the A layers using a strong acid.
+</item 10>
+=== END ITEM id=4641705a70e98f01 ===
+
+=== ITEM id=ccb916c00dd9a2e5 ===
+Gold sentences and facts:
+Sentence 0: If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+  Fact 0.0: If the debt continues to rise more than the economy, risks will increase.
+  Fact 0.1: If the debt continues to rise more than the economy, the government may 'crowd out' private investment.
+  Fact 0.2: The government may crowd out private investment as it competes with the private sector for funds to service its debt.
+Sentence 1: And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+  Fact 1.0: President Ferdinand Marcos, Jr. said 'We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%'.
+  Fact 1.1: President Ferdinand Marcos, Jr. said the Philippines' debt-to-GDP ratio of about 63% is a little high for the country and is not ideal.
+  Fact 1.2: President Ferdinand Marcos, Jr. said this to members of the US-ASEAN Business Council who visited Malacañang.
+  Fact 1.3: ABS-CBN reported this on Aug. 9, 2023.
+
+Retrieved items:
+<item 1>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+the government borrows money either from foreign sources or from the domestic capital market which increases the debt stock of the NG and its debt servicing
+requirements; b.) the government borrows money from the Bangko Sentral ng Pilipinas; or, c.) the government withdraws funds from its cash balances in the
+Treasury. Historically, National Government expenditures have always exceeded total revenues resulting in annual budget deficits, the DBM declared. “Thus, the
+National Government had to resort to borrowing to cover said deficits which resulted in the ballooning of foreign and domestic debts,” the budget office
+admitted.
+
+“However, in 1994, the government broke the deficit trend by posting a budget surplus of P16 billion through an aggressive privatization and revenue generation
+program and a prudent expenditure program. Since then, the government has been exerting efforts to maintain the surplus budget policy. The surplus budget policy
+is important to encourage economic growth,” the DBM said.
+</item 1>
+
+<item 2>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+For this, the economy must grow its per capita income above the threshold set by the World Bank, which means a gross national income (GNI) per capita of at
+least $4,466. In 2022, the Philippines achieved a GNI per capita of $3,950.
+
+The second is to lower the poverty level from 18.1% in 2021 to single digits by 2028 — the end of the term of the current administration. Both indicators
+require high growth rates. For the next year through 2028, the government pencils the growth rate between 6.5% and 8%.
+
+Growth is expected to be investment-led with the implementation of structural changes such as the Corporate Recovery and Tax Incentives for Enterprises (CREATE)
+law, which lowered the corporate income tax rate, and the amendments to the Public Service Act (PSA), Foreign Investment Act (FIA), and Retail Trade
+Liberalization Act (RTLA), which further liberalized the economy. The new legislation is expected to attract more local and foreign investment, especially in
+the liberalized sectors.
+</item 2>
+
+<item 3>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The surplus budget policy is important to encourage economic growth,” the DBM said.
+
+The exhortations of the national budget managers must be quoted word for word to educate the non-economists and questioning common people about how a surplus
+budget is necessary versus a deficit budget:
+
+“The less the government borrow from the public, the lesser the pressure on interest and inflation rates and the more funds are made available in the financial
+market. Such funds may be used by businessmen to build factories, hire workers, buy equipment and open more employment opportunities. By keeping more funds in
+the hands of the private sector rather than competing for credit, the government helps make financing available for families who want to own homes, buy cars, or
+support their children’s education. The government also needs to generate a budget surplus to repay the huge debt it has accumulated over the years. The
+reduction of the national budget debt will correspondingly lessen government’s requirements for interest and principal payments. This becomes important
+particularly during periods of rising interest rates and unstable exchange rates” (dbm.gov.ph).
+</item 3>
+
+<item 4>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+The National Government plans to raise more revenue to finance the country’s socio-economic needs, largely through a progressive and simplified tax system, more
+efficient and effective tax collection measures through digitalization and, to some extent, from policy measures such as value-added tax on digital service
+providers and excise tax on sweetened beverages and junk food.
+
+Achieving fiscal stability presupposes the sustainability of fiscal policy, and fiscal stability helps “crowd in” private investment.
+
+PRICE STABILITY AND INFLATION
+
+In his second State of the Nation Address (SONA), President Ferdinand Marcos, Jr. singled out inflation as the country’s most pressing problem. In the first
+nine months of 2023, inflation averaged 6.6% — far above the upper end of the target range of 2-4% set by the BSP. If left unchecked, inflation could undermine
+growth. Not only does this increase costs to organizations, but it also sets in motion second-round effects as workers start demanding higher wages,
+consequently increasing business costs and discouraging investments.
+</item 4>
+
+<item 5>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+But traditional politicians (called “trapo” in the Philippines) might have it in their hearts to think about the country and the welfare of future generations.
+
+How many generations will pay for the monstrous debt incurred for the dubious objectives and vanities of some today?
+
+Amelia H. C. Ylagan is a doctor of Business Administration from the University of the Philippines.
+
+ahcylagan@yahoo.com
+</item 5>
+
+<item 6>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+This plan gradually narrows the deficit to 3% of GDP by 2028, down from 7.3% in 2022, such that the debt-to-GDP ratio is reduced from nearly 61% in 2022 to a
+more sustainable level of at most 53% by 2028.
+
+DEBT MANAGEMENT
+
+The National Government’s debt was less than 40% before the pandemic struck. It expended much of its fiscal space combatting the pandemic, incurring debt and
+large budget deficits. While the current 61% debt-to-GDP ratio may be manageable for an emerging economy like the Philippines for some time, the country may not
+have the fiscal space to respond to another potential domestic or external shock. If the debt continues to rise more than the economy, risks will increase, and
+the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+
+The planned fiscal consolidation entails harmonizing the revenue needs with the promotion of investment through the structure and administration of the reformed
+incentive system.
+</item 6>
+
+<item 7>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+During the Congressional budget hearing, Finance Secretary Benjamin Diokno optimistically provided updates on the government’s fiscal and revenue collection
+performances and presented sources of funding for the national budget. Tax revenue is projected to increase from P3.5 trillion in 2023 to P6.5 trillion in 2028,
+while non-tax revenues are expected to decline from P191 billion in 2023 to P184 billion in 2028, Diokno told the Philippine News Agency (pna.gov.ph, Aug. 10).
+
+Diokno said the Finance department aims to gradually reduce net financing or new debt from P1.42 trillion in 2022 to P1.22 trillion in 2024, which will help
+bring the country’s debt-to-GDP ratio to almost below 60% by 2025. And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%
+and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr.
+</item 7>
+
+<item 8>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+
+Whom are we to believe, but inflation — which independently says it as it is.
+
+“While inflation in the Philippines has been on a downward trend since January, the country needs to achieve a 3.7% average inflation rate for the next five
+months for the country to hit the BSP’s forecast of 5.5% inflation for 2023, Assistant National Statistician Rachel Lacsa said (Ibid.). Some economists say that
+deficit budgets and the remedies — monetary (borrowings increasing money supply) and fiscal (like raising taxes) increase inflation, and stubborn inflation
+further entrenches structural deficits in the system. It is a vicious cycle.”
+
+National budgets might not be innocent of political agendas (call them plans and programs) that can divert money from the proper socio-economic goals of
+equilibrium as a balanced budget might work towards.
+</item 8>
+
+<item 9>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+Inflation is partly driven by supply-side issues and the government is allocating more resources to the agriculture sector to boost production. Mr. Marcos also
+mentioned that the National Government had distributed 28,000 new tools and machinery to farmers. An additional 600 km of farm-to-market roads were laid down to
+support the 14 million hectares of farmland, enhancing farmer access to markets. In addition, he signed Executive Order No. 28 in May, forming the Inter-Agency
+Committee on Inflation and Market Outlook, which is tasked to keep inflation within government targets and boost the economy.
+
+ENHANCING CLIMATE RESILIENCE
+
+While price stability and fiscal sustainability are important macroeconomic issues, environmental sustainability is increasingly gaining importance. Climate
+change uncertainties and challenges need to be managed and both the Philippine government and the private sector are hard-pressed to deliver their commitments
+to addressing them. Despite climate change risks, the Philippines has the opportunity to position itself as a prime destination of foreign investments against
+climate change or environmental, social, and governance (ESG) investments.
+</item 9>
+
+<item 10>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+Why then, do we have a deficit budget for 2024?
+
+The national budget for 2024 is at P5.768 trillion, 9.5% higher than the current (2023) budget of P5.268 trillion. Observers note that this first budget fully
+prepared by the current administration accounts for 21.7% of gross domestic product (GDP). The 2024 expenditure program is higher by P499.6 billion or a
+year-on-year growth rate of 9.5% as compared to the 2023 level of P5.268 trillion. The P5.768-trillion budget, to be supported mainly by P3.5-trillion tax
+revenues (based on 2023 tax revenue projections), would mean a budget deficit of some P2.268 trillion, to be funded by additional borrowings. This could
+increase government debt from the current P14.24 trillion (as of July) to P16+ trillion by the end of 2024.
+</item 10>
+=== END ITEM id=ccb916c00dd9a2e5 ===

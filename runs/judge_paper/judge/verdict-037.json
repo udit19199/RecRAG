@@ -1,0 +1,38 @@
+[
+{"id": "df2836b80947b026", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Jada Pinkett Smith and Will Smith have been separated since 2016"}]},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "88af48c7a04b3209", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "f405ce7892224e31", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+]},
+{"id": "a3f03b5e0e7da899", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}, {"item": 6, "quote": "and to parents."}]}
+]},
+{"id": "450a9e1c536db9c3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."}, {"item": 9, "quote": "Sportsbooks adjust moneyline odds to ensure they remain profitable, balance their book"}]}
+]}
+]

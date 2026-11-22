@@ -1,0 +1,63 @@
+[
+{"id": "827a3b648fae6a89", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+]},
+{"id": "20a23576192ea9bd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "They aren’t allegations. It happened,"}, {"item": 1, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "0ce3e10f3bbdd2fb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+]},
+{"id": "0edb17ff307d2ab0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s board after an apparent vote of no confidence."}, {"item": 6, "quote": "It’s a fast-moving situation that we’re still trying to get to the bottom of."}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "78f2ac3980b0475c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors."}, {"item": 3, "quote": "They argue that Bankman-Fried lied about consumer protection"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "85b21c20e9b4b1ce", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "In January, Bankman-Fried pleaded not guilty to all counts"}, {"item": 7, "quote": "potential sentencing for seven counts tied to fraud and money laundering."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted a picture of an empire “built on lies”"}, {"item": 5, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+]}
+]

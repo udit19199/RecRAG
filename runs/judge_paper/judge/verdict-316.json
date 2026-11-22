@@ -1,0 +1,54 @@
+[
+{"id": "9641cadbb115ab00", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]}
+]},
+{"id": "29c5c8d841e98109", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "a1d6dbe306cd9cd3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The House had never ousted its speaker before McCarthy"}, {"item": 7, "quote": "stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy."}, {"item": 1, "quote": "since hard-liners ousted Kevin McCarthy at the start of the month."}]}
+]},
+{"id": "b7d914f0926f146a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "e83eb85d663fd7c6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+]},
+{"id": "79957d5891659ac2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

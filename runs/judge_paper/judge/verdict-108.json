@@ -1,0 +1,72 @@
+[
+{"id": "378eae88e8312134", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "the former CEO and co-founder of collapsed crypto exchange FTX"}, {"item": 8, "quote": "to blame FTX’s bankruptcy for BlockFi’s subsequent bankruptcy"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 2, "quote": "seven counts tied to fraud and money laundering"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "2c26c0810374231b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Kingsley Coman’s winning goal"}, {"item": 7, "quote": "where Kingsley Coman sealed a 1-0 win"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]},
+{"id": "f0bf1e8ff964ece4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "many called him the white horse of crypto (TechCrunch never did, for what it’s worth)"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "a4950f748adf8148", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "bf1368c26d7d2efa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "09be004be3e0b38c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Fed’s main interest rate is at its highest level since 2001"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control."}]}
+]}
+]

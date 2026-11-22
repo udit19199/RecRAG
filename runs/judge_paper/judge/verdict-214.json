@@ -1,0 +1,52 @@
+[
+{"id": "415141a6069f7e52", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "5cff43c611a9b04d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "6cfa2fdcd9358257", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28,"}, {"item": 1, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"}, {"item": 1, "quote": "browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"}, {"item": 1, "quote": "browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "be135623f2024f33", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "8b2067f0bd2ba4d5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,882 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=87797728b62d15d6 ===
+Gold sentences and facts:
+Sentence 0: Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.
+  Fact 0.0: The witness said she had conversations with investors as part of their due diligence.
+  Fact 0.1: Alameda was taking on losses from FTX to keep FTX's balance sheet pristine.
+Sentence 1: It was not, however, possible for those accounts to avoid liquidation, as Wang testified Alameda could do — or to have an overall negative balance.
+  Fact 1.0: It was not possible for those accounts to avoid liquidation.
+  Fact 1.1: Wang testified that Alameda could avoid liquidation for those accounts.
+  Fact 1.2: It was not possible for those accounts to have an overall negative balance.
+Sentence 2: It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies.
+  Fact 2.0: The argument described Alameda as a 'very innovative, successful company'.
+  Fact 2.1: The argument's speaker claimed the business practices between Alameda and FTX were reasonable.
+  Fact 2.2: The argument's speaker claimed Alameda acted legally as an FTX customer.
+  Fact 2.3: The argument's speaker claimed Alameda acted legally as an FTX payment processor.
+  Fact 2.4: The argument's speaker claimed Alameda acted legally as an FTX market maker.
+  Fact 2.5: A market maker is a financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies.
+
+Retrieved items:
+<item 1>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+We have some inkling of what the government will be arguing thanks to the filings prosecutors are making in this case. They argue that Bankman-Fried lied about
+consumer protection and that Bankman-Fried’s statements that FTX was “avoiding or managing conflicts of interest” and that “as a general principle FTX
+segregates customer assets from its own assets across our platforms” were lies, in a superseding indictment filed August 14th.
+
+The indictment also says that there were special features in FTX’s code that “permitted Alameda to spend and withdraw unlimited amounts of money from FTX,”
+which were created at Bankman-Fried’s direction. That effectively exempted Alameda from the kinds of risk management other customers faced. At the same time,
+the government alleges, “Bankman-Fried publicly and repeatedly asserted that Alameda did not have privileged access to FTX.”
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 3>
+
+<item 4>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Those privileges ultimately resulted in Alameda owing FTX $8 billion worth of customer deposits. "We gave special privileges on FTX that gave unlimited
+withdrawals on the platform to Alameda," Wang said. Alameda was allowed to withdraw and transfer those funds and had a $65 billion line of credit. "When
+customers deposited USD, it went to Alameda," he said. "It existed in the computer code. Alameda could have negative balances and unlimited withdrawals." That
+"bug" in the code was written by Nishad Singh, who was FTX's director of engineering, and reviewed by Wang. Bankman-Fried was calling the shots, Wang said. Wang
+also told the court about a $1 million personal loan he received and a $200 million to $300 million loan in his name from Alameda that was never deposited into
+his account, but rather was used to make investments into other companies on behalf of FTX.
+</item 4>
+
+<item 5>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Then a bigger one. Then an effectively limitless one.
+
+Ellison testified to something similar, choking back tears: “When I started working at Alameda, I don’t think I would have believed you if you told me I would
+be sending false balance sheets to our lenders or taking customer money, but over time, it was something I became more comfortable with.”
+
+Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified. Alameda Research was, by then, FTX’s sin-eater. When FTX took a loss in
+the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet. FTX’s “insurance fund,” meant to
+keep traders from getting stuck with other traders’ losses, was totally made up — Alameda simply picked up the tab.
+
+Even that wasn’t good enough.
+</item 5>
+
+<item 6>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+Wang said he trusted Bankman-Fried’s judgment and didn’t pursue the issue further. Later, though, Alameda’s balance was more negative than FTT and the trading
+revenue, and Wang had more conversations with Bankman-Fried about it. Wang said he knew at the time that Alameda was using FTX’s customers’ funds and that he
+knew it was wrong.
+
+We heard yesterday about the line of credit Alameda had on FTX, a staggering $65 billion. Today we saw it in the database. The line of credit didn’t start that
+big — Wang testified that Bankman-Fried had asked him to increase it a few times because Alameda kept running into its limits. First it was “a few hundred
+million,” then a billion, then even that wasn’t enough. It wasn’t clear how Wang arrived at $65 billion specifically, but he said he’d discussed the number with
+Bankman-Fried. Other customers didn’t have the same privileges.
+</item 6>
+
+<item 7>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+Other customers didn’t have the same privileges.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses. In 2021, FTX was facing a “several hundred million dollar” loss from an exploit
+in MobileCoin, Wang said. (This seems to have happened in April 2021, though Wang didn’t give a month.) Bankman-Fried directed him to have Alameda take it on
+instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t.
+
+Yesterday, Paradigm Capital’s Matt Huang showed us the balance sheets he received from Bankman-Fried. They didn’t include the loss, which should have been
+included in the second quarter numbers he’d received — they showed $63 million in trading expenses and $63 million in “other expenses” in that quarter, and an
+estimated profit of $732 million.
+
+“FTX was not fine and assets were not fine.”
+
+By 2022, Alameda’s negative balance on FTX was a cause for concern for Caroline Ellison, Singh, and Wang.
+</item 7>
+
+<item 8>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It was turned on in July. No other customer trading on FTX had “allow_negative” privileges — only Alameda. Wang’s testimony suggests that the fraud at FTX
+started very early since the same day that allow_negative was switched on, Bankman-Fried tweeted that Alameda’s account “was like everyone else’s.”
+
+The general sense I got, from the testimony of Bankman-Fried’s former friends, was that things just kept escalating. For instance, Alameda Research first had a
+negative balance in late 2019, Wang testified. Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money
+from the account as long as the amount was less than FTX’s total trading revenue. A little later, Wang discovered that Alameda was negative by $50 million more
+than FTX’s revenue. Bankman-Fried told him it was fine, and it just didn’t account for the FTT token that the two of them had launched. Wang trusted him.
+</item 8>
+
+<item 9>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+In late 2019, Alameda had a negative balance on FTX. Because they sat in an open-plan office, Wang heard a trader ask Bankman-Fried if it was okay to keep
+withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue. He was the CEO of both companies
+at the time.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses.
+
+The amount that Alameda was allowed to go negative began to creep up. Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by
+about $200 million, which was more than the $150 million FTX made in revenue. That had to mean Alameda was taking customer money. It surprised him and he says
+he discussed it with Bankman-Fried, who told him that he just needed to take into account the value of FTT. Wang said he trusted Bankman-Fried’s judgment and
+didn’t pursue the issue further.
+</item 9>
+
+<item 10>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Even that wasn’t good enough. Singh testified to sprucing up FTX’s balance sheet with backdated transactions in December 2021 to push FTX’s revenue “over the
+line” to $1 billion. By the time Singh found out about the use of customer money, in 2022, he was already compromised.
+
+At every turn, the scams at FTX and Alameda led back to making Bankman-Fried more important
+
+In Singh’s case, it wasn’t just balance sheets he was fiddling with — it was also the American political system. By coordinating with Gabe Bankman-Fried, Singh
+had funneled money to a number of political causes. That money came from “loans,” which weren’t really loans since he hadn’t signed any term sheets.
+
+What was the goal here? What was accomplished? Singh testified to more than a billion dollars spent on celebrity endorsements, which made FTX very famous — even
+though the futures platform didn’t operate in the US.
+</item 10>
+=== END ITEM id=87797728b62d15d6 ===
+
+=== ITEM id=f2475ca824d67973 ===
+Gold sentences and facts:
+Sentence 0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.
+  Fact 0.0: Huang said this during cross-examination.
+  Fact 0.1: Huang said Paradigm pressed Bankman-Fried on the board issue.
+  Fact 0.2: Huang said Paradigm was told that Bankman-Fried did not want investors as directors.
+  Fact 0.3: Huang said Bankman-Fried did plan on having a board with experts.
+Sentence 1: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 1.0: Bankman-Fried did not admit being told by Yedidia about that money until Judge Lewis Kaplan intervened.
+  Fact 1.1: Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money.
+  Fact 1.2: The question asked whether Bankman-Fried had been told about that money in words or in substance.
+  Fact 1.3: Bankman-Fried admitted that he had been told about that money.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said the fraud was committed to achieve great wealth, power and influence.
+  Fact 2.2: The defense countered that the FTX founder acted in good faith.
+  Fact 2.3: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.4: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 2>
+
+<item 3>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Additionally, he was promised that Alameda had no preferential treatment on the FTX platform, even though the hedge fund was one of its top traders. Huang said
+he was concerned about FTX's lack of a board of directors, but he eventually invested anyway. During cross-examination, Huang said Paradigm pressed
+Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts. — CNBC's Dawn Giel
+contributed to this report.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Instead, Bankman-Fried directed alleged co-conspirator Caroline Ellison to repay third-party loans and went on making investments.
+
+Bankman-Fried said that he found out about the fiat@ftx account — that’s the one that tracked how much Alameda owed FTX — in June 2022 while his senior staff
+was focused on fixing the software bug. He did not, however, discover what the account was for until October. I know this sounds unbelievable, but this is his
+actual testimony.
+
+His employees told him “they were busy and I should stop asking questions because it was distracting.”
+
+Simple questions nailed Bankman-Fried to the wall. Had he given his employees at Alameda the direction not to spend FTX customer deposits? Had he put in any
+policies to prevent Alameda employees from spending FTX customer money? Did he put in place any measures at Alameda to protect the FTX customer money? No, no,
+and no. Oh, but he was testifying to Congress about keeping customer funds safe.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 8>
+
+<item 9>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 10>
+=== END ITEM id=f2475ca824d67973 ===
+
+=== ITEM id=db5131b205c3796d ===
+Gold sentences and facts:
+Sentence 0: McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago.
+  Fact 0.0: McHenry has brushed off attempts to take the job more permanently.
+  Fact 0.1: McHenry was appointed to the role after the ouster of McCarthy.
+  Fact 0.2: The ouster of McCarthy was unprecedented.
+  Fact 0.3: The ouster of McCarthy happened more than two weeks ago.
+Sentence 1: Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives.
+  Fact 1.0: Wall Street is also absorbing the ouster of Kevin McCarthy.
+  Fact 1.1: Kevin McCarthy was the speaker of the House of Representatives.
+  Fact 1.2: Kevin McCarthy was ousted as speaker of the House of Representatives.
+
+Retrieved items:
+<item 1>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives. The unprecedented move to remove a speaker from the
+position likely doesn’t change much in the short term, with funding for the US government set until November 17.
+
+“That said, a leadership vacuum in the House raises the odds of a government shutdown when the current funding extension expires,” according to economists at
+Goldman Sachs. A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past
+shutdowns. On Wall Street, big tech stocks helped to support the market after leading it lower a day earlier. They tend to move more sharply with expectations
+for rates because high-growth stocks are seen as some of the biggest victims of high yields. In markets abroad, stock indexes were mixed across much of Europe.
+</item 1>
+
+<item 2>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Republican Rep. Jim Jordan failed again Wednesday on a crucial second ballot to become House speaker, the hard-fighting ally of Donald Trump losing even more
+GOP colleagues who are refusing to give him the gavel.
+
+Next steps were highly uncertain as angry, frustrated Republicans looked at other options. A bipartisan group of lawmakers floated an extraordinary plan — to
+give the interim speaker-pro-tempore, Rep. Patrick McHenry, R-N.C., more power to reopen the immobilized House and temporarily conduct routine business.
+
+What was clear was that Jordan’s path to become House speaker was almost certainly lost. He was opposed by 22 Republicans, two more than he lost in first round
+voting the day before.
+
+“We’ll keep talking to members, keep working on it,” Jordan, a founding member of the hard-right Freedom Caucus, said after the vote, vowing to stay in the
+race.
+
+The House came to another abrupt standstill, stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden
+ouster of Kevin McCarthy.
+</item 2>
+
+<item 3>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Others are simply upset at the way the whole process has dragged out.
+
+They cast their ballots for McCarthy, Majority Leader Steve Scalise — who had been the party’s first nominee to replace McCarthy — and others, one vote even
+going to the retired Boehner.
+
+“Jim Jordan will be a great speaker,” Trump had said Tuesday said outside a courthouse in Manhattan, where he is facing business fraud charges. “I think he’s
+going to have the votes soon, if not today, over the next day or two.”
+
+Jordan has been a top Trump ally, particularly during the Jan. 6 Capitol attack by the former president’s backers who were trying to overturn the 2020 election
+he lost to Biden. Days later, Trump awarded Jordan a Medal of Freedom.
+
+The political climb has been steep for Jordan who is known more as a chaos agent than a skilled legislator, raising questions about how he would lead.
+</item 3>
+
+<item 4>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Once a formality in Congress, the vote for House speaker has devolved into another bitter GOP showdown for the gavel.
+
+As Republicans upset and exhausted by the infighting retreated for private conversations, hundreds of protesters, if not more, amassed outside the Capitol over
+the Israel-Hamas war, a stark reminder of the dangers of having the House adrift as political challenges intensify at home and abroad.
+
+Ahead of the morning vote, Jordan, the combative Judiciary Committee chairman, made an unusual plea for party unity — almost daring his colleagues to put
+forward the alternative proposal for a temporary speaker.
+
+“We’ve been at this two weeks,” Jordan said at the Capitol. “American people deserve to have their government functioning.”
+
+But as the roll call got under way, he lost more than he gained, picking up three backers but adding more detractors. No further votes were scheduled.
+</item 4>
+
+<item 5>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Don Bacon, R-Neb.
+
+For more than two weeks the stalemate has shut down the U.S. House, leaving a seat of American democracy severely hobbled at a time of challenges at home and
+abroad. The House Republican majority appears to have no idea how to end the political turmoil and get back to work.
+
+With Republicans in majority control of the House, 221-212, any candidate can lose only a few detractors. It appears there is no Republican at present who can
+win a clear majority, 217 votes, to become speaker.
+
+In fact, the hard-charging Judiciary chairman lost rather than gained votes despite hours spent trying to win over holdouts, no improvement from the 20 and then
+22 Republicans he lost in early rounds this week.
+
+Friday’s vote was 194 for Jordan, his lowest tally yet, and 210 for Jeffries, with two absences on each side.
+
+“He doesn’t have the votes to be speaker,” Rep.
+</item 5>
+
+<item 6>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+11, 2001, terror attacks to ensure continuity of government.
+
+The novel concept of boosting the interim speaker’s role was gaining favor with a pair of high-profile Republicans: Former GOP speakers Newt Gingrich and John
+Boehner.
+
+Gingrich said while he likes Jordan, he has “no faith” the nominee can get much beyond the 200 votes he won in the first vote.
+
+“We can’t sit around and suck our thumbs and hope the world will wait until the House Republicans get their act together,” Gingrich told Fox News’ Sean Hannity
+on his show.
+
+Boehner reposted Gingrich’s views saying, “I agree,” on social media.
+
+The two men have deep experience with the subject. Both were chased to early retirement.
+
+“The Republicans are unable to function right now,” Jeffries said late Tuesday. “All options are on the table to end the Republican civil war,” he added
+Wednesday.
+
+In nominating Jordan, veteran Republican Rep. Tom Cole of Oklahoma said it was time to end the upheaval that he had warned against with McCarthy’s sudden
+ouster.
+</item 6>
+
+<item 7>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Next steps are highly uncertain as lawmakers start offering new ideas for a possible speaker. But it appears no one at present can win a GOP majority.
+
+“We’re in a very bad place right now,” McCarthy said earlier.
+
+In a floor vote Friday morning, Jordan’s third reach for the gavel, he lost 25 Republican colleagues, worse than he had fared earlier in the week, and far from
+the majority needed, as they reject his hardline approach.
+
+But after two failed votes, Jordan’s third attempt at the gavel essentially collapsed — in large part because more centrist Republicans are revolting over the
+nominee and the hardball tactics being used to win their votes. They have been bombarded with harassing phone calls and even reported death threats.
+
+Ahead of the vote, Jordan showed no signs of stepping aside, insisting at a Capitol press conference: “The American people are hungry for change.”
+
+But afterward Jordan told colleagues behind closed doors, “I tried my best,” according to one of his opponents, Rep. Don Bacon, R-Neb.
+</item 7>
+
+<item 8>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+A closed-door meeting Thursday to regroup grew heated at times with Republican factions blaming one another for sending their majority into chaos, lawmakers
+said.
+
+Elevating McHenry to an expanded speaker’s role could be a possible off-ramp for the crisis, but it would not be as politically simple as it might seem.
+
+Republicans are loath to partner with the Democrats in a bipartisan way on the arrangement, and it’s highly unlikely Republicans could agree to give McHenry
+more powers on their own, since their hard-liners don’t like it.
+
+McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more
+than two weeks ago.
+
+To win over GOP colleagues, Jordan had relied on backing from Trump, the party’s front-runner in the 2024 election, and groups pressuring rank-and-file
+lawmakers for the vote. But they were not enough and in fact backfired on some.
+
+Jordan has been a top Trump ally, particularly during the Jan.
+</item 8>
+
+<item 9>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+“We have a chance today to end that chaos, end that uncertainty,” Cole said.
+
+He said that Jordan was not a “shrinking violet” but someone who could lead the House.
+
+Democratic Rep. Pete Aguilar of California nominated Jeffries, noting the Democratic leader continues to win more votes and is the best choice to move the
+country forward.
+
+“The country cannot afford more delays and more chaos,” Aguilar said.
+
+Jordan had relied on backing from Trump, the party’s frontrunner in the 2024 election to challenge President Joe Biden, and groups pressuring rank-and-file
+lawmakers for the vote, but it was not enough.
+
+Flexing their independence, the holdouts are a mix of pragmatists — ranging from seasoned legislators and committee chairs worried about governing, to newer
+lawmakers from districts where voters back home prefer President Joe Biden to Trump.
+
+Some Republicans resent being pressured by Jordan’s allies and say they are being threatened with primary opponents if they don’t support him as speaker. Others
+are simply upset at the way the whole process has dragged out.
+</item 9>
+
+<item 10>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+No further votes were scheduled.
+
+The holdouts added to a surprisingly large and politically diverse group of 20 Republicans who had rejected Jordan’s nomination the day before, many resenting
+the hardball tactics seeking to enforce support, and viewing the Ohio congressman as too extreme for a central seat of U.S. power.
+
+With Republicans in majority control of the House, 221-212, Jordan must pick up most of his GOP foes to win. Wednesday’s tally, with 199 Republicans voting for
+Jordan and 212 for Democratic leader Hakeem Jeffries of New York, left no candidate with a clear majority, as the 22 Republicans voted for someone else.
+
+One new Jordan opponent, Rep. Vern Buchanan of Florida, explained his vote, “I think it’s time to move on.”
+
+Bipartisan groups of lawmakers have been floating ways to operate the House by giving greater power to McHenry or another temporary speaker. The House had never
+ousted its speaker before McCarthy, and McHenry could tap the temporary powers that were created after the Sept.
+</item 10>
+=== END ITEM id=db5131b205c3796d ===
+
+=== ITEM id=3d86e8054825dc6d ===
+Gold sentences and facts:
+Sentence 0: This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+  Fact 0.0: It allows the collection of data from complex equipment.
+  Fact 0.1: It enables operators to track equipment performance.
+  Fact 0.2: It enables operators to predict maintenance.
+  Fact 0.3: It enables operators to predict downtimes.
+Sentence 1: If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt.
+  Fact 1.0: A track that is not used or taken care of for an extended period of time will start to wear out.
+  Fact 1.1: A worn-out track will eventually become completely unsuitable for any kind of racing.
+  Fact 1.2: A track becomes unsuitable for racing unless it is taken apart and rebuilt.
+
+Retrieved items:
+<item 1>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+By the IoT Analytics team.
+
+A new report from IoT Analytics highlights eight notable trends helping to advance and promote digital twins.
+
+Four of these trends are discussed in detail in this article. These trends are shaping the future of the digital twin market and influencing investment
+priorities for companies across various industries.
+
+Key insights:
+
+According to our Digital Twin Market Report 2023–2027, the digital twin market is expanding, with a projected CAGR of 30% between 2023 and 2027.
+
+29% of global manufacturing companies have either fully or partially implemented their digital twin strategies. Further, job posts related to digital twins have
+increased by 11% compared to October 2021, while openings for other tech topics have declined in the same timeframe.
+
+The report notes eight notable trends helping to advance and promote digital twins, four of which are discussed in this article.
+</item 1>
+
+<item 2>
+NASCAR Might Have Just Saved Themselves With the $7.7 Billion Media Rights Deal (Essentially Sports, 2023-12-01T20:55:57+00:00)
+He said, “NASCAR is in a tough situation because they had to deliver more money as well and clearly if they went this route, that’s a good indication that’s
+because they had to go this route to deliver more money for the industry.”
+
+While NASCAR secured an impressive deal, there could be downsides to it and Stern explained it beautifully.
+
+Adam Stern points out a key potential drawback with NASCAR’s new media rights deal
+
+Safe to say, NASCAR has been struggling to keep their teams happy in terms of profitability. Since the introduction of the Next Gen cars, it has only become
+more difficult for the Cup Series teams and teams in other competitions. While they have taken a commercial hit, they have piled up pressure on NASCAR to help
+out in this case.
+
+ADVERTISEMENT Article continues below this ad
+
+In addition to that, Sports Business Journalist Adam Stern detailed one important issue with the new media rights deal. Speaking on the same podcast, he said,
+“When you look at the deal with Warner Bros.
+</item 2>
+
+<item 3>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+A digital twin strategy as part of an overall digitalization plan can be a crucial capability for asset-intensive industries and needs to encompass the entire
+asset lifecycle, process, and value chain from design and operations through maintenance and strategic business planning.”
+
+Example: Aden, a Chinese integrated facility service provider, created a digital twin for one of its commercial centers in Chengdu, China. The digital twin was
+designed to help facility managers inspect, maintain, and repair building assets. 3D simulations assist facility managers in visualizing, predicting, and
+optimizing energy consumption, and the expected benefits include lower annual energy consumption, water usage, and waste.
+
+Trend 2: Digital twins employed as virtual sensors in complex conditions
+
+Virtual sensors approximate data that otherwise cannot be obtained via physical sensors, often due to physical sensors being impractical, costly, or hazardous
+to employ. Companies are now building digital twins to model hardware and calculate data based on other conditions. This not only allows the collection of data
+from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+</item 3>
+
+<item 4>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+If not, what investments are required?
+
+2. Data integration: How compatible are our current data sources and systems with digital twin technologies, especially in terms of sensor data (both physical
+and virtual/soft)?
+
+3. Interoperability concerns: As we use multiple software solutions across our operations, how important is interoperability between digital twin technologies
+and our existing systems?
+</item 4>
+
+<item 5>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Digital twin market trends
+
+We will now look at four trends helping digital twin market growth.
+
+Trend 1: Digital twins deployed to meet sustainability goals
+
+Sustainability was discussed in approximately 21% of recent CEO earnings calls and has remained a consistent topic throughout 2023. This pairs with our report’s
+analysis that the pursuit of sustainability goals is a tailwind macro factor for the digital twin market.
+
+To achieve their sustainability goals, many companies are exploring digital twins. Due to their ability to simulate real-world conditions and deliver real-time
+information, organizations can optimize resource usage, reducing carbon emissions and improving supply and transportation networks.
+
+According to Capgemini Research Institute’s 2022 digital twins report, 57% of organizations agreed that one of the key drivers for their digital twin
+investments was improving their sustainability, and 51% agreed that digital twins would help achieve their organization’s environmental sustainability goals.
+
+In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the
+challenges inherent in sustainability goals.
+</item 5>
+
+<item 6>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 3: Partnerships forged in the clouds: Hyperscalers team up with OT and simulation specialists
+
+In the last few years, cloud hyperscalers like AWS and Microsoft Azure have introduced digital twin platforms, e.g., AWS IoT TwinMaker and Azure Digital Twins,
+that allow for interconnecting various data sources and building digital twin topology. However, these companies realize they cannot deliver end-to-end digital
+twin solutions by themselves and are thus partnering with OT and simulation companies to add capabilities to their networks.
+
+Hyperscalers and OT companies
+
+OT companies provide industrial data management capabilities and connections to millions of local physical assets. By partnering with hyperscalers, OT companies
+can reach broader audiences looking for digital transformation solutions by offering typical cloud benefits like storage and computation power.
+
+Example: In 2021, Siemens and AWS announced an expansion of their partnership, with digital twin technology being an area of focus.
+</item 6>
+
+<item 7>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Example: In large motor applications, such as room-sized motors that pump high volumes of gas, oil, or other chemicals, operators need to monitor the motors’
+temperatures—especially if the motors are high-powered and repeatedly started. If a motor is too hot during a restart, the components could cause serious
+damage. Unfortunately, using a direct, physical sensor within a motor is often impractical, and operators must work from an assumptive time it takes for the
+motor to cool (with an additional safety buffer time). This means motors can be down longer than necessary, impacting efficiency and revenue.
+
+To address this issue, Siemens developed a prototype virtual sensor based on a digital twin. It offers a simulation of how a physical sensor would operate if it
+were possible to install it within a motor. Using AR headsets, operators can see a simulation of the motor and its interior with a demonstrator superimposed
+over it, and they can see the motor’s temperature.
+</item 7>
+
+<item 8>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Based on these observations and additional insights from our report, our current projection estimates that the global digital twin market could grow at a CAGR
+of approximately 30% between 2023 and 2027.
+
+Against the backdrop of this growing market, the report notes eight trends that help promote the advancement and adoption of digital twins. Here, we will focus
+on four:
+
+1. Digital twins deployed to meet sustainability goals
+
+2. Digital twins employed as virtual sensors in complex conditions
+
+3. Partnerships between cloud hyperscalers and OT and simulation specialists
+
+4. Initiatives promoting interoperability of digital twins across multifaceted systems
+
+Before we dive into these trends, and to provide context, it is helpful to understand how IoT Analytics defines digital twins and the digital twin market.
+
+Defining digital twins and the digital twin market
+
+In our March 2023 Decoding Digital Twins article, we define digital twins as a virtual model replicating the behavior of an existing or a potential real-world
+asset, system, or multiple systems.
+</item 8>
+
+<item 9>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+In terms of the digital twin market, our market model only considers software spending for digital twins, which we break into two scopes:
+
+Broad digital twin market – includes the revenue for all software solutions that provide capabilities that are used for digital twins, such as solutions that
+integrate data sources into a digital twin and are capable of simulation, visualization, and predictions
+
+– includes the revenue for all software solutions that provide capabilities that are used for digital twins, such as solutions that integrate data sources into
+a digital twin and are capable of simulation, visualization, and predictions Narrow digital twin market – only considers spending for digital twin-specific
+software, such as software intended to model the digital twin data
+
+Though hardware and services related to digital twins can bolster the capabilities of digital twin software, we only view them as supporting services for the
+software, and we do not consider them in our digital twin market model. That said, this ability to bolster capabilities means they can aid digital twin market
+growth, as shown in some of the trends below.
+</item 9>
+
+<item 10>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Considerations for digital twin vendors
+
+3 questions digital twin vendors should ask themselves based on research findings discussed in this article:
+
+1. Sustainability goals: Given the emphasis on sustainability and the role of digital twins in achieving it, is my company’s digital twin solution well-equipped
+to support sustainability objectives? Are there new features we need to develop?
+
+2. Interoperability: Is our digital twin solution currently designed to be interoperable with other systems and technologies, especially those from different
+vendors?
+
+3. Product development: How aligned is our product development roadmap with the emerging trends highlighted in the report, especially around end-user and
+technological advancements?
+
+Considerations for adopters
+
+3 questions adopters should ask themselves based on research findings discussed in this article:
+
+1. Infrastructure readiness: Do we have the necessary infrastructure and resources in place to support the deployment and effective use of digital twins? If
+not, what investments are required?
+
+2.
+</item 10>
+=== END ITEM id=3d86e8054825dc6d ===
+
+=== ITEM id=b02da4bce4a733f2 ===
+Gold sentences and facts:
+Sentence 0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.
+  Fact 0.0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.
+  Fact 0.1: Paradigm was told that Bankman-Fried did not want investors as directors.
+  Fact 0.2: Bankman-Fried planned on having a board with experts.
+Sentence 1: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 1.0: Rehn declared to the jury that all of that, all of it, was built on lies.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve power and influence.
+  Fact 2.3: The defense argued that the FTX founder acted in good faith.
+  Fact 2.4: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.5: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+It is honestly kind of incredible to watch a man torpedo his own credibility on direct testimony. We’re not even at the cross yet, and the judge has already
+instructed him to answer the question he’s being asked by his own lawyer.
+
+The jury is watching all of this intently.
+
+The main thing that’s been clear so far from Bankman-Fried’s testimony is that the man really loves the sound of his own voice. So far, the count of “Objection,
+narrative!” to Bankman-Fried’s answers, followed by “Sustained” is at three.
+
+Also, sometimes when Bankman-Fried says “we,” he only means himself.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud. FTX was a fraud
+“from the start,” the Securities and Exchange Commission alleged — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer
+funds.” Follow along for all the latest news and regular updates from the trial.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued.
+
+“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”
+
+A Frenchman who lives in London testifies in New York
+
+After lawyers from both sides depicted two very different Bankman-Frieds, the prosecution called its first two witnesses to the stand—and they weren’t
+blockbuster names or former lieutenants-turned-government-cooperators, like Ellison.
+
+The first was a victim: Marc-Antoine Julliard, a Paris-born cocoa trader who lives in London. In 2021, Julliard, who had coiffed hair and spoke with a strong
+French accent, decided to invest in crypto and landed on FTX as his exchange of choice, where he traded cryptocurrencies like Bitcoin and Dogecoin.
+
+On Nov. 8, in the crypto exchange’s final few days, he tried to pull out his cash and crypto.
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+How much? Almost $100,000, he said. And was he ever able to? “Never,” he told prosecutors.
+
+Shortly afterward, as the trial neared late afternoon, the government called Adam Yedidia to the stand. A fast-talking graduate of MIT, he and Bankman-Fried
+were close friends in college, he said. And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in
+finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+
+When Yedidia first took the stand, Danielle Sassoon, one of the lead prosecutors, said that the college friend of Bankman-Fried had legal immunity during his
+testimony. Why did he make such a deal with the government, she asked.
+
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“You will see the full picture.”
+
+…or a well-meaning founder?
+
+But Bankman-Fried, whose cheekbones were more prominent after spending about seven weeks in a Brooklyn prison, was no liar, according to Mark Cohen, one of his
+lawyers. “Sam didn’t defraud anyone,” he said early on in his opening statement.
+
+What the jury will see is a nerdy startup founder who acted in “good faith,” not the prosecution’s “cartoon of a villain.” (Cohen repeatedly harped on
+Bankman-Fried’s allegedly good-faith actions throughout his address to the jury.)
+
+Alameda was not subterranean or shady. It was a successful hedge fund, he said. FTX was no Ponzi scheme. It was a “very innovative, successful company.”
+</item 5>
+
+<item 6>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+“All of that was built on lies,” Rehn said.
+
+In his opening statement, Rehn dodged explaining cryptocurrency to the jury. Instead, he punched hard on Bankman-Fried lying and stealing.
+
+Bankman-Fried sat almost motionless, occasionally glancing at Rehn, as the prosecutor told the jury that Bankman-Fried sold stock in FTX and borrowed millions
+from lenders by lying.
+
+The story Rehn told is familiar to anyone following the news. In May and June of 2022, Alameda Research — the crypto trading company ostensibly helmed by
+Caroline Ellison — didn’t have enough to pay its bills, so it pulled customer money to repay loans. By September, the hole in the FTX balance sheet was so big
+that customers could never be repaid.
+
+FTX “didn’t have a chief risk officer, which became an issue when the storm hit.”
+
+When CoinDesk published its article in November 2022, people realized FTX was a house of cards, Rehn said. Meanwhile, Bankman-Fried tweeted.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+
+Soon, however, the clock neared 4:30 p.m., and court adjourned for the day. Yedidia will continue his testimony on Thursday, followed by Matt Huang, a former
+partner at the high-powered venture capital firm Sequoia Capital, and then Gary Wang, a key Bankman-Fried lieutenant and one of the government’s star witnesses.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 10>
+=== END ITEM id=b02da4bce4a733f2 ===

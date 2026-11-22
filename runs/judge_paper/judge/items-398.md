@@ -1,0 +1,870 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=67f9243afd633879 ===
+Gold sentences and facts:
+Sentence 0: From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.
+  Fact 0.0: The Netflix description states that Jess and Bill Walker are doing their best to keep their family connected.
+  Fact 0.1: Jess and Bill Walker are doing their best to keep their family connected as their children grow older.
+  Fact 0.2: Jess and Bill Walker's children are growing more independent.
+  Fact 0.3: Jess and Bill Walker's children are growing more distant.
+Sentence 1: Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that "the holidays are a time for families to come together.
+  Fact 1.0: McLean spoke about the Christmas season.
+  Fact 1.1: McLean was born in New Rochelle, New York.
+  Fact 1.2: McLean said that the holidays are a time for families to come together.
+
+Retrieved items:
+<item 1>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“Sometimes it can be helpful for them to know about the dynamics that they’re stepping into and how they can best support you. Frankly, they should be aware if
+there is tension or if there is stress within your family.”
+
+(Getty Images)
+
+Communication before the holidays goes both ways, and there are things that your family should know about your significant other too. “If there’s something
+about your partner that could be surprising to your family, or that’s a notable difference from who someone you’ve brought home before, tell your relatives
+that,” Zar said. “Let’s set your family and partner up for success.”
+
+Before bringing your significant other home for the holidays, you may want to express to your family how you wish for them to feel included - such as
+incorporating your partner’s family traditions into your own celebration. However, Zar advised against oversharing information before Christmas. You still want
+your family and partner to connect in person, rather than hearing about each other through the grapevine.
+</item 1>
+
+<item 2>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"We have our lists and we like to get things done."
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+"I also remember the first time we met — ee were getting ready to go out and she dug in her purse and pulled out all these tubes of lipstick. I said, ‘Oh my
+God. You've surpassed me.’ We both constantly put on lipstick. It's so funny."
+
+Bazella continued, "We both like [garden] gnomes and we’re kind of collecting them now. Our mannerisms are similar. We have the same sense of humor."
+
+"One of the main dreams is that we stay healthy and I live long enough … so we can make up some of this time." — Sherri Geerts
+
+Bazella said she has met all four of her siblings — and also has formed a relationship with her birth father, Victor Rebeck, 84.
+</item 2>
+
+<item 3>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+That isn’t necessarily a cause for concern, as long as you inform your significant other about the interworkings of your family dynamics.
+
+“I think that we tend to be our best relational self when we’ve really done the work around understanding all of our past relationships,” Zar explained. “You
+can tell your partner: ‘I don’t have a close relationship with my brother, and here’s why. Here are the intentional choices that I’ve made around it.’ Or you
+can say: ‘Here’s my chosen family. These are the people who are important to me.’ Your significant other will see that you’ve been introspective and have
+takeaways around how you’ve navigated your family’s origin.”
+
+As long as you and your partner have discussed your relationship expectations - both before and during the holidays – introducing them to your family may deepen
+your relationship and could be a step in the right direction.
+</item 3>
+
+<item 4>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+With this in mind, parents should avoid "processing their frustration around the holidays audibly around the children," she said.
+
+"The ‘mom brain’ is wired to process problems rapidly and move on to solutions," she said. "The ‘child brain,’ however, is wired to process a problem internally
+and take on the responsibility."
+
+Said Keeley, "Knowing this, make sure you don’t do any ‘grinchy griping’ out loud to the children. You may see it as temporary venting, but they see it as, ‘Mom
+is upset and I’m probably the reason.’"
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+Instead, parents should stay calm, find a reason to be grateful and vocalize it, even when frustrations accumulate.
+
+5. Neglecting the ‘give list’
+
+While building a wish list is fun for kids, Keeley emphasized the moral importance of the "give list."
+</item 4>
+
+<item 5>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"I do remember the day I had to give her up," Geerts told Fox News Digital.
+
+"I got to name her and I got to dress her. There was a lady there to take her away, and she was kind of shaky and it scared me because I didn’t want her to pick
+her up."
+
+Geerts said she thought about her daughter every single year on her birthday.
+
+Now that the two have met, they've been getting together several times a year, either in California or Minnesota.
+
+COUPLE OF 60 YEARS, SEPARATED FOR 215 DAYS AMID PANDEMIC, REUNITES IN TOUCHING VIDEO: 'I MISSED YOU SO MUCH'
+
+And from the first time they met in person, they began discovering things they have in common.
+
+"We both keep things in order," Bazella said. "We have our lists and we like to get things done."
+</item 5>
+
+<item 6>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+Pressures are high for parents and caregivers around the holidays.
+
+That means there’s room for error, according to parenting expert Hannah Keeley, who offered up some of the biggest mistakes parents tend to make at
+Christmastime.
+
+In an email she sent to Fox News Digital, Virginia-based Keeley identified the top five holiday blunders that parents often make.
+
+HOME FOR THE HOLIDAYS? HERE'S HOW TO AVOID STRESS AROUND FAMILY MEMBERS, ACCORDING TO EXPERTS
+
+Here are the mistakes Keeley thinks parents should try to avoid.
+
+Diving right in …
+
+1. Creating unrealistic expectations
+
+Parents who make a "must-do" Christmas list that’s a "mile long" at the "first sniff of peppermint mochas" are perhaps setting themselves up for failure — and
+Keeley said she empathized with this instinct.
+
+Doing the most could lead to a season of disappointment, she warned.
+
+CHRISTMAS TREE SHOPPING?
+</item 6>
+
+<item 7>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Here’s what we found.
+
+City of Winter
+
+Linda Codega, Ennie Award-winning entertainment journalist
+
+My friends and I still talk about the weekend we spent playing City of Winter. With lightweight rules but a heavy emphasis on the kind of ephemera usually
+reserved for much crunchier games, creating space for this game is almost as important as who you chose to play it with. Characters travel along a cloth map
+that illustrates a landscape with only barest indications of topography; the focus instead relies on themes of assimilation, diaspora, and — most importantly to
+the narrative — baggage. As a family of immigrants (bound by blood or by choice), players describe their home, their traditions, and then, as a darkness comes
+from the west side of the map, they leave it all behind, choosing what traditions and rituals they pick up from the places they visit and what they hold on to
+from their homeland.
+</item 7>
+
+<item 8>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’ Like a temperature check,” she added. “Those are points where the two of you can come
+and remind each other: ‘We are a team in this.’ Or, the two of you could go on a walk and separate from the family, just for a little bit of time to reset
+within the relationship.”
+
+During the holiday season, your partner may be seeing how you interact with your family for the first time. But that’s not necessarily a bad thing, according to
+the relationship experts. “I think introducing a significant other to family is a really vulnerable act, and that vulnerability is going to be what allows for
+greater intimacy,” Lurie said. “When your significant other sees you with your family, they may see another side of you that they may not have had access to
+before.”
+
+(Getty Images)
+
+On the other hand, your partner could learn that your relationship with your parents and extended family members is complex.
+</item 8>
+
+<item 9>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I think anytime that emotions are heightened, with the holidays certainly being one of those times, our expectations are really high,” she said. “We’re
+expecting it to be this joyful, happy, perfect occasion. So, we sometimes forget that the holidays come with a lot of stress.”
+
+Despite tensions between relatives at the dinner table, that doesn’t mean your relationship shouldn’t be celebrated. Saba Lurie is a licensed marriage and
+family therapist at Take Root Thereapy in California. She explained to The Independent that while there isn’t a right or wrong time to introduce your partner to
+your family, the intentions of such an introduction must be clear. Not only should you have already discussed where your relationship is headed, but you should
+also tell your partner everything they need to know about your family.
+
+“I think you should tell the person why you’re bringing them home for the holidays, so you’re on the same page about the intentions and what’s motivating the
+decision to include,” she said.
+</item 9>
+
+<item 10>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+In a recent poll from the American Psychological Association, 41 per cent of US adults said their stress levels increased from November to January when compared
+to other months of the year. Nearly 50 per cent of Americans also described their stress level during the season as “moderate”.
+
+Everyone has different concerns leading up to Christmas, Hanukkah, or New Years - from family drama at the dinner table to a small spats with your mother about
+decorations. With what can be stressful events, it only begs the question: do you really want to bring your partner into the mix? While it’s important to
+eventually introduce your loved ones to your significant other, relationship experts believe there are some discussions you should have beforehand, especially
+during the holidays.
+
+Speaking to The Independent, Rachel Zar - a licensed marriage and family therapist at Spark Chicago Therapy - acknowledged that while every family is different,
+there’s a variety of problems that could arise during the holiday season - mainly because we put too much pressure on having a joyful holiday.
+</item 10>
+=== END ITEM id=67f9243afd633879 ===
+
+=== ITEM id=052b2d9bb3c3eef2 ===
+Gold sentences and facts:
+Sentence 0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 0.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 0.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.
+  Fact 0.2: The defense argued that the FTX founder acted in good faith.
+  Fact 0.3: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 0.4: The defense argued that the FTX founder basically got in over his head.
+Sentence 1: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 1.0: The second week of the trial's standout testimony came from Caroline Ellison.
+  Fact 1.1: Caroline Ellison is Alameda Research's former CEO.
+  Fact 1.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 1.3: Caroline Ellison claimed she took the $14 billion to repay debts to lenders.
+  Fact 1.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 1.5: Caroline Ellison claimed she did this under the instruction of SBF.
+
+Retrieved items:
+<item 1>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Read a recap of the prosecution and defense’s full arguments here.
+
+FTX’s co-founder and CTO Gary Wang testified Thursday on the extent to which Alameda Research was used for whatever purposes he and SBF saw fit. The crypto
+trading firm, according to Wang, pulled funding directly from FTX customers, whose transactions would be funneled toward Alameda and then directed elsewhere.
+
+Check here for our rundown of Wang’s testimony so far, resulting from a guilty plea in December 2022.
+
+Thursday also brought in testimony from Matt Huang, co-founder and managing partner at crypto investment firm Paradigm. That firm invested $278 million in FTX
+across 2021 and 2022, and is part of a class-action lawsuit accusing it and others of defrauding customers by promoting FTX.
+
+His testimony centered around being left uninformed about FTX’s utilization of customer money to keep the Alameda Research afloat, a practice that Huang says
+would have halted his involvement.
+</item 1>
+
+<item 2>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+He, like many of SBF’s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical “legal justification” for
+the use of billions in consumer funds just days before FTX filed for bankruptcy.
+
+Robert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately
+resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a
+relationship, he testified that Third Point would not have invested in FTX in the first place.
+
+And earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he
+uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.
+</item 2>
+
+<item 3>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 3>
+
+<item 4>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+You can also follow along with her and the TechCrunch team’s coverage in the Chain Reaction newsletter, which drops Thursdays at 12 p.m. PT, and the Chain
+Reaction podcast, which will hit your feed every Thursday.
+
+How to follow the SBF trial
+
+The trial kicked off with jury selection October 3. From there, access to the proceedings is limited, as no devices are allowed; reports are being physically
+put together within the courtroom (or sent to overflow rooms).
+
+Beyond our daily coverage, additional expertise and commentary will live on TechCrunch+. There, you can find stories like this in-depth breakdown of what to
+expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from
+the opening arguments.
+
+SBF trial: What we learned in week three
+
+The third week of the trial featured a couple of noteworthy moments for the prosecution, including FTX’s former general counsel Can Sun.
+</item 4>
+
+<item 5>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 5>
+
+<item 6>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+“He can’t just walk out if he doesn’t like how it’s going.”
+
+
+
+Naftalis spoke at length about what comes next in the trial, and addressed common misconceptions about the prosecution and defense in the latest episode of
+TechCrunch’s Chain Reaction podcast, which you can listen to below, or on Apple Podcasts or Spotify.
+
+The SBF trial is one of the biggest cases of its kind within the crypto space. Our resident crypto expert Jacquelyn Melinek has been on the ground at the trial
+since it started, and continues to cover the ins and outs of the proceedings. But the trial has been on pause from October 20 to today, so there’s plenty to
+catch up on if you need a refresher ahead of it entering its final few phases.
+
+For those in need of a total refresher on the case, her breakdown of how FTX went from the third-largest crypto exchange valued at a peak of $32 billion to
+bankruptcy will get you up to speed.
+</item 6>
+
+<item 7>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 7>
+
+<item 8>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 8>
+
+<item 9>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 9>
+
+<item 10>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The full breakdown of his testimony on his relationship with FTX, stretching back to 2019, can be found right here.
+
+We also got a look at the composition of the SBF trial’s jury, which ranges from a train conductor to a retired investment banker who attended Stanford
+University. You can listen to a special joint episode of our podcasts Equity and Chain Reaction to get a better sense of the vibe between the jurors and the
+rest of the court.
+
+For a full rundown of our coverage of the SBF trial, check below:
+</item 10>
+=== END ITEM id=052b2d9bb3c3eef2 ===
+
+=== ITEM id=90973fdc37599b04 ===
+Gold sentences and facts:
+Sentence 0: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 0.0: The party referred to as 'it' did not release the full model, Gemini Ultra.
+  Fact 0.1: Only a 'lite' version called Gemini Pro was released.
+Sentence 1: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 1.0: The Justice Department is focused on the deals Google makes.
+  Fact 1.1: Google makes deals with Apple.
+  Fact 1.2: Google makes deals with Samsung.
+  Fact 1.3: Google makes deals with Mozilla.
+  Fact 1.4: Google makes deals with many others.
+  Fact 1.5: The Justice Department is focused on ensuring Google is the default search engine on practically every platform.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+I tried the same prompt and got a very similar response. ChatGPT, by contrast, gives a bullet-list summary with citations to news articles:
+
+Interestingly, Gemini Pro did provide a summary of updates on the war in Ukraine when I asked it for one. However, the information was over a month out of date:
+
+Google emphasized Gemini’s enhanced coding skills in a briefing earlier this week. Perhaps it’s genuinely improved in some areas — posts on X suggest as much.
+But it also appears that Gemini Pro struggles with basic coding functions like this one in Python:
+
+Tried gemini based Bard, and well, it still can't write intersection of two polygons. It's one of those rare relatively simple to express functions that wasn't
+ever implemented in python, there is no stack overflow post, and all these models fail on it.
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 3>
+
+<item 4>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+(Among other mistruths, Gemini Pro said that Stross contributed to the Linux kernel; he never has.)
+
+Translation doesn’t appear to be Gemini Pro’s strong suit, either. It struggles to give a six-letter word in French:
+
+FYI, Google Gemini is complete trash. pic.twitter.com/EfNzTa5qas — Benjamin Netter (@benjaminnetter) December 6, 2023
+
+When I ran the same prompt through Bard (“Can you give me a 6-letters word in French?”), Gemini Pro responded with a seven-letter word instead of a five-letter
+one — which gives some credence to the reports about Gemini’s poor multilingual performance.
+
+What about summarizing news? Surely Gemini Pro, with Google Search and Google News at its disposal, can give a recap of something topical? Not necessarily.
+
+It seems Gemini Pro is loath to comment on potentially controversial news topics, instead telling users to… Google it themselves.
+
+I tried the same prompt and got a very similar response.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 5>
+
+<item 6>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Most read
+
+AI, faked: Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called
+Gemini Pro. In a press briefing and blog posts, Google touted Gemini’s coding capabilities and multimodal prowess, claiming that the model can understand
+images, audio and videos just as well as text. But Gemini Pro — which is strictly text-in, text-out — has proven to be mistake-prone. And in a worse look for
+Google, the company was caught faking a Gemini demo by tuning text prompts with still images off camera.
+
+Offensive notebooks: In another Google PR blunder, people who attended the company’s K&I Black Summit in August were given third-party notebooks containing
+highly insensitive language. My colleague Dominic-Madori writes that the inside of the notebooks were printed with the phrase “I was just cotton the moment, but
+I came back to take your notes” (emphasis ours).
+</item 6>
+
+<item 7>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 7>
+
+<item 8>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+prompts that get around the safety filters in place to attempt to prevent it from discussing controversial topics.
+
+Using an automated method to algorithmically change the context of prompts until Gemini Pro’s guardrails failed, AI security researchers at Robust Intelligence,
+a startup selling model-auditing tools, managed to get Gemini Pro to suggest ways to steal from a charity and assassinate a high-profile individual (albeit with
+“nanobots” — admittedly not the most realistic weapon of choice).
+
+Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products. Google
+compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.
+
+But Google nevertheless promised improvements in reasoning, planning and understanding with Gemini Pro over the previous model powering Bard, claiming Gemini
+Pro was better at summarizing content, brainstorming and writing. Clearly, it has some work to do in those departments.
+</item 8>
+
+<item 9>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+This week, Google took the wraps off of Gemini, its new flagship generative AI model meant to power a range of products and services including Bard, Google’s
+ChatGPT competitor. In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds
+the performance of other leading gen AI models like OpenAI’s GPT-4.
+
+But the anecdotal evidence suggests otherwise.
+
+A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday, and it didn’t take long before users began voicing their frustrations with it on X
+(formerly Twitter).
+
+The model fails to get basic facts right, like 2023 Oscar winners:
+
+I'm extremely disappointed with Gemini Pro on Bard. It still give very, very bad results to questions that shouldn't be hard anymore with RAG. A simple question
+like this with a simple answer like this, and it still got it WRONG.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 10>
+=== END ITEM id=90973fdc37599b04 ===
+
+=== ITEM id=47543e2abcb7c846 ===
+Gold sentences and facts:
+Sentence 0: In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively.
+  Fact 0.0: Scientists point to a number of recent developments in the long term.
+  Fact 0.1: The recent developments have raised hopes that dementia may be possible to tackle more directly.
+  Fact 0.2: The recent developments have raised hopes that dementia may be possible to tackle more effectively.
+Sentence 1: Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies.
+  Fact 1.0: Health coach Susan Saunders found herself parenting her mother.
+  Fact 1.1: Susan Saunders's mother had dementia.
+  Fact 1.2: Susan Saunders's own daughters were babies at the time.
+
+Retrieved items:
+<item 1>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+“It is a challenge, and a very important one.”
+</item 1>
+
+<item 2>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+Both drugs are to be considered for approval in the UK next year. The Medicines & Healthcare products Regulatory Agency (MHRA) will first decide if they are
+safe and effective, then the National Institute for Health and Care Excellence (Nice) will rule on whether they offer value for money.
+
+Both medicines are expensive – lecanemab costs about $25,000 (£19,700) a year – and are given by regular intravenous infusions. “That is a challenge from a
+health-service point of view, because you need to find the space and time to put someone in an infusion suite to treat them,” added Thomas.
+
+However, the main problem facing doctors is the difficulty involved in pinpointing dementia not just in its early stages but even in its later phases. Most
+cases are first presented to GPs, who will then refer patients to memory clinics for a dementia test. However there are long waiting times – up to two years on
+average – for appointments at these centres.
+</item 2>
+
+<item 3>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+“Anyone with older parents should be urging them out for a walk five days a week – and when they have a companion, the walk also doubles as a social occasion,”
+he explained. “If they can walk for longer than 20 minutes, even better. Our study showed that the risk of depression fell in proportion to the time spent
+walking.”
+
+As well as a daily walk, Laird recommends vitamin D and B12 supplements – both of which appear to moderate the chance of depression in older people. “Depression
+matters,” he added. “Not just because it reduces quality of life, but because in older people there seems to be a link between depression and dementia which
+we’re still unpacking.”
+
+Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies. “I’d advise anyone with a parent in the
+early stages of dementia to investigate all the available research trials. Start by joining Dementia Research, a nationwide register that matches volunteers to
+research programmes.”
+</item 3>
+
+<item 4>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+People in Britain could benefit from a key medical breakthrough next year. They may be given access to the first drugs ever developed to slow the impact of
+Alzheimer’s disease.
+
+The first of these medicines – lecanemab – was recently approved in the US and Japan, where treatments using it have already been launched. A second drug,
+donanemab, is expected to follow soon, and next year it is anticipated that the UK medical authorities will consider both of them for approval in Britain.
+
+The prospect has raised hopes that, after years of effort, scientists may be closing in on ways to directly tackle the UK’s dementia crisis. About a million
+people are living with the condition in this country, and this is expected to rise to about 1.7 million by 2040 – with potentially grim consequences. Last year
+dementia took the lives of 66,000 people in England and Wales, and it is now the leading cause of death in Britain, with Alzheimer’s accounting for two-thirds
+of cases.
+</item 4>
+
+<item 5>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+Start by joining Dementia Research, a nationwide register that matches volunteers to research programmes.”
+
+Even if your parents don’t require such intensive “parenting”, a simple supplement could help. A recent study from Columbia University involving 2,200 adults
+aged 60 and over found that an inexpensive multivitamin formulated specifically for older people improved cognition, memory and focus. In fact, the results were
+so marked that the researchers said the supplement could slow age-related memory decline by three years.
+
+But while most of us can probably persuade our parents to take a multivitamin, suggesting they change their diet might be more complicated. Appetites fade as we
+age, chewing becomes more difficult and those living alone don’t always feel inclined to cook. The important thing, say both Saunders and Laird, is that older
+people consume plenty of protein.
+
+“Older adults should be taking at least 1 to 1.5g of protein per kilogram of body weight,” says Laird.
+</item 5>
+
+<item 6>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+However there are long waiting times – up to two years on average – for appointments at these centres.
+
+In addition, diagnosing Alzheimer’s and other forms of dementia is usually based on pen-and-paper tests, followed by lumbar punctures and brain scans before a
+final diagnosis.
+
+About 65% of cases are confirmed this way. The remaining third of dementia cases are never diagnosed. Yet patients can only expect to receive treatments –
+including the new drugs – if their condition is identified.
+
+Eleanor Mackenzie-Smith’s father, Mike, has young-onset Alzheimer’s. His first symptoms were spotted 17 years ago, when Eleanor was 11. “However, it took over
+10 years from the start of his symptoms and four separate tests between 2009 and 2017 to get my dad’s final diagnosis, when he was 65. It was distressing not
+knowing what was happening. Too many families, like mine, have had to watch as dementia takes hold of our loved ones while we are left without a diagnosis and
+the support and access to treatments.”
+</item 6>
+
+<item 7>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+Until now doctors have only been able to prescribe medicines that help patients manage their symptoms, so the arrival of the first drugs that treat the actual
+cause of the condition has been welcomed – although experts have warned that their use should be treated with some caution.
+
+After decades of research, these are the first drugs to improve patients’ lives directly. If nothing else, they suggest we’re on the right road to tackling
+Alzheimer’s
+
+“The new drugs slow down the development of Alzheimer’s by six months to a year and are useful only for those in the early stages of the condition, so they are
+certainly not miracle medicines,” said David Thomas, head of policy at Alzheimer’s Research UK.
+
+“However, after decades of research, they are the first to improve patients’ lives directly, and that is a justifiable cause for excitement. If nothing else,
+they suggest we are probably on the right road to tackling Alzheimer’s.”
+
+This point was backed by neurologist Cath Mummery, of the Dementia Research Centre at University College London.
+</item 7>
+
+<item 8>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+“Meanwhile, we have got to get the NHS to a state where it is much more focused and better organised in getting better and earlier dementia diagnoses. That will
+be crucial in our battle against the condition.”
+
+Mummery agreed: “By the time you have dementia, you will have had Alzheimer’s disease developing in your brain for at least 20 years. Dementia is the latest
+stage; we need to pick up signals much earlier. So we need to be thinking about how to diagnose people at the very earliest stages of disease, when they may
+only have very, very subtle symptoms.
+
+We are now exploring ways of helping drugs get into the brain much more efficiently, and that could have a major impact Cath Mummery
+
+“Our current service isn’t good for doing that, and we need to develop brain health clinics where we can pinpoint the disease much earlier, then help to build
+resilience against dementia in a patient when it is only in a very early stage.”
+</item 8>
+
+<item 9>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+In the last few years I’ve witnessed friends and family dashing to help parents with poorly designed online banking systems, unruly fridge alarms, “upgraded”
+software that has changed beyond recognition, apps and phones that don’t function as expected, and numerous other technical challenges.
+
+Frankly, technology is often baffling to me, too. Luckily I have kids who delight in parenting me – advising, explaining and guiding me on all things digital.
+But studies suggest that this helpfulness might not be as beneficial as we think. Grappling with new and baffling things forces the ageing brain to work in
+novel ways. A recent study from the University of Texas involving more than 200 elderly adults found that those who engaged with technology had better cognition
+and memory than their non-engaging peers.
+
+Digital engagement – whatever the device – protects the brain
+
+Even the stress we experience while battling with our computer can be helpful, sharpening our mental acuity. The study authors concluded that digital engagement
+– whatever the device – protects the brain.
+</item 9>
+
+<item 10>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and
+effectively. One major challenge they have faced is the problem of getting drugs to pass through the blood-brain barrier, which controls the movement of ions
+and molecules from our bodies to our brains. That makes it difficult to get drugs into the central nervous system to tackle problems such as amyloid plaques.
+
+“However, researchers are developing active transport methods for getting drugs across the blood-brain barrier,” said Mummery. “For example, we are now
+exploring ways of helping drugs get into the brain much more efficiently, and that could have a major impact.”
+
+Such developments will take years to realise, scientists caution, and a great deal needs to be done in the short term to deal with dementia.
+
+“It is clear we have taken a step in the right direction but there is much more to do before we can have successfully dealt with these processes that are
+happening to our brains,” said Thomas.
+</item 10>
+=== END ITEM id=47543e2abcb7c846 ===
+
+=== ITEM id=4a5ece85f47abe35 ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.2: Caroline Ellison is the CEO of Alameda.
+  Fact 0.3: Bankman-Fried had "secret access" to customer money, both cash and crypto.
+  Fact 0.4: The government claimed this.
+Sentence 1: Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.
+  Fact 1.0: Before his fall, Bankman-Fried presented himself as the Good Boy of crypto.
+  Fact 1.1: Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+“Sam acted in good faith and took reasonable business measures” is a pretty hard pill to swallow with that in mind.
+
+Man, it’s no good when your defense lawyer has just made you sound worse than the prosecution already did. And while Cohen tried to make the common white-collar
+defense argument that Bankman-Fried, as CEO, was simply too busy to oversee what everyone did every day, he just made me more suspicious. That’s why you hire a
+risk officer and delegate! That’s the whole point! I could barely even hear Cohen blaming Caroline Ellison and Changpeng “CZ” Zhao for the debacle over the “no
+risk officer” ringing in my ears.
+
+Following the defense’s opening statements, things got still worse for Bankman-Fried. The prosecution called its first witness, Marc-Antoine Julliard, whose
+money got stuck on FTX. Juilliard, who was born in Paris and lives in London, testified that he trusted FTX because Bankman-Fried came across as a leading
+figure of the industry.
+</item 7>
+
+<item 8>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 10>
+=== END ITEM id=4a5ece85f47abe35 ===

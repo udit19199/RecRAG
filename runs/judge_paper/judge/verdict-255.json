@@ -1,0 +1,50 @@
+[
+{"id": "904daa73183f1d74", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Philadelphia rolled to a 31-17 win over Miami"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\""}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Philadelphia rolled to a 31-17 win over Miami"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "keeping the Dolphins' offense off the scoreboard in the second half"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "playing smart football every step of the way down the stretch."}]}
+]},
+{"id": "bc432b9bc67e5b30", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "posts identified as false have been spotted circulating on X"}, {"item": 2, "quote": "a clip that purported to show Hamas missile attacks on Israel but was actually footage from a video game."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}]}
+]},
+{"id": "ed5235554ea52a46", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "8983c59b846d10cd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Spider-Man is broadly sympathetic. We identify with his struggles and his little glimmers of connection and triumph"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Spider-Man is broadly sympathetic. We identify with his struggles and his little glimmers of connection and triumph"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Spider-Man is broadly sympathetic. We identify with his struggles and his little glimmers of connection and triumph"}, {"item": 6, "quote": "which makes him the perfect superhero for Thanksgiving."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In America, Thanksgiving is a cultural holiday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Apart from the food - arguably the main component of the day"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "the holiday is a beloved time of year when Americans come together to celebrate what they are"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "when Americans come together to celebrate what they are thankful for, either with family or friends."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "when Americans come together to celebrate what they are thankful for, either with family or friends."}]}
+]},
+{"id": "0111018bfcb1f275", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+]},
+{"id": "b1ae837569806791", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "and is reportedly preparing for a ground invasion."}]}
+]}
+]

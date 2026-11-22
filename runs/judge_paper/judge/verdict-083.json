@@ -1,0 +1,53 @@
+[
+  {"id": "995fd4651707e95e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "f7c326fec3211131", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "“Sam acted in good faith and took reasonable business measures”"}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "a6dc4db007da8020", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]}
+  ]},
+  {"id": "770df81fecbb4fa9", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "c01dc21ba70f89a0", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+  ]}
+]

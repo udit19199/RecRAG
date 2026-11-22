@@ -1,0 +1,92 @@
+[
+  {"id": "c287fb745dd4d891", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "contradicted", "evidence": [
+      {"item": 2, "quote": "While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it."},
+      {"item": 2, "quote": "He then admitted that he invited Swift to one of his games"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "Sept. 24: Swift attends Chiefs game"},
+      {"item": 3, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 4, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"},
+      {"item": 4, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}
+    ]},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "980759d68e2c6ce0", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9bb88121ea3ac6b4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}
+    ]}
+  ]},
+  {"id": "f127584a4ed27b46", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 5, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 5, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 5, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.3", "status": "stated", "evidence": [
+      {"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.4", "status": "stated", "evidence": [
+      {"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]}
+  ]},
+  {"id": "9b90ffc3b95e7c6e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 10, "quote": "“Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 8, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 8, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference."}
+    ]}
+  ]}
+]

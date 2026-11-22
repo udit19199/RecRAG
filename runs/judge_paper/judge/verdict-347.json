@@ -1,0 +1,70 @@
+[
+{"id": "516a4fdd84791efd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 4, "quote": "End of fourth quarter: Lions 34, Packers 20"}, {"item": 4, "quote": "Lions complete yet another fourth down, officially putting the game on ice."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 4, "quote": "End of fourth quarter: Lions 34, Packers 20"}]},
+{"fact": "1.7", "status": "missing", "evidence": []}
+]},
+{"id": "d746edd97f38afed", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "we need to improve our understanding of drivers of sea surface temperature patterns"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "drivers of sea surface temperature patterns—decadal coupled variability"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "the pace and spatial structure of ocean heat uptake"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "the pace and spatial structure of ocean heat uptake"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 5, "quote": "and forcing by aerosols, greenhouse gases, and volcanoes"}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 5, "quote": "and forcing by aerosols, greenhouse gases, and volcanoes"}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 5, "quote": "and forcing by aerosols, greenhouse gases, and volcanoes"}]},
+{"fact": "1.8", "status": "stated", "evidence": [{"item": 5, "quote": "we need to improve our understanding of drivers"}, {"item": 5, "quote": "as well as the relative timing of these drivers"}]}
+]},
+{"id": "ce16ab2c352870a3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "with the Director-General of the National Economic and Development Authority"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU)"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "shall also constitute the proposed Board of Trustees of the PhilEd."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "which will reduce the company’s board to five directors."}]}
+]},
+{"id": "a67bb55c0ebfa30b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "important to keep faith aligned with that practice of positive thinking"}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "Roumie said that building a habit of prayer"}, {"item": 5, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "Roumie said that building a habit of prayer"}, {"item": 5, "quote": "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically."}]}
+]},
+{"id": "13246a10096c2067", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday"}, {"item": 6, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]}
+]},
+{"id": "6ef1e0dfe0da0160", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]}
+]

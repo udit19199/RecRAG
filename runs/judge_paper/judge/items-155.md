@@ -1,0 +1,1095 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=d63e4f5ab0a473ce ===
+Gold sentences and facts:
+Sentence 0: He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift.
+  Fact 0.0: A man revealed that he made a friendship bracelet.
+  Fact 0.1: Friendship bracelets are a fan tradition at Taylor Swift's concerts.
+  Fact 0.2: The friendship bracelet had his number on it.
+  Fact 0.3: He made the friendship bracelet to give to Swift.
+  Fact 0.4: The friendship bracelet seemingly expressed his interest in Swift.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: The man later invited Swift to one of his games on his podcast.
+  Fact 1.1: Swift is the Anti-Hero singer.
+  Fact 1.2: The game was at Arrowhead Stadium.
+  Fact 1.3: Swift accepted the invitation on 24 September.
+  Fact 1.4: Swift famously accepted the invitation.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide.
+  Fact 2.1: Swift is in a new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But before he could even answer, the answer was given for him.
+
+Sept. 14: Rumors aren't denied
+
+"The rumors are terrible and cruel, but honey, most of them are true." - New Romantics
+
+Of course people were going to ask Jason, who is very close with his brother, whether rumors of the two hanging out were true. He did not confirm them, but he
+also did not deny them.
+
+Sept. 17: The references begin
+
+"I watched it begin again." - Begin Again
+
+The rumors began to pick up, and now there were a lot of people, commentators included, making Swift references around Kelce.
+
+When the tight end caught a touchdown pass from Patrick Mahomes, CBS Sports' Ian Eagle said, "Kelce finds a blank space for the score."
+
+This was only the start to many, many, Swift lyrics being referenced during NFL games.
+
+Sept. 21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in."
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 4>
+
+<item 5>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+</item 5>
+
+<item 6>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 6>
+
+<item 7>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 7>
+
+<item 8>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Head coach Andy Reid was also asked about his star tight end's supposed relationship, to which he quipped, "I set them up."
+
+Sept. 24: Kelce and Swift leave stadium together
+
+"You know when it's time to go." - It's Time To Go
+
+This was the first time the two were photographed together. They walked side by side, Kelce fittingly wearing an outfit with "1989" in the title and Swift
+wearing a Chiefs zip-up.
+
+Sept. 24: The two leave in a convertible
+
+"Nothing good starts in the getaway car." - Getaway Car
+
+Swift and Swift were spotted in a convertible, with the tight end driving, after the Chiefs' win. Kelce reportedly rented out a restaurant for a private party
+with Swift and his teammates.
+
+"Taylor Swift likes that Travis Kelce 'pursued her' and the two are having a 'great time getting to know each other,'" a source told Entertainment Tonight.
+</item 8>
+
+<item 9>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Here's a look at how it all started and where it has gone since:
+
+June 29: Kelce makes friendship bracelets for fellow TEs
+
+Is this where it all begin? Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends. He said he was "taking a page out of Taylor
+Swift's book."
+
+July 26: Kelce makes friendship bracelet for Swift
+
+"So make the friendship bracelets, take the moment and taste it." - You're On Your Own Kid
+
+Kelce announced that he went to Swift's highly anticipated concert, but said he did not have the chance to meet the 12-time Grammy winner.
+</item 10>
+=== END ITEM id=d63e4f5ab0a473ce ===
+
+=== ITEM id=a756ee8d92a2d835 ===
+Gold sentences and facts:
+Sentence 0: In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City.
+  Fact 0.0: In July, Kelce spoke on the podcast he shares with his brother, New Heights.
+  Fact 0.1: Kelce said he intended to give Swift a friendship bracelet with his number on it.
+  Fact 0.2: Kelce said he intended to give the bracelet during Swift's Eras Tour concert in Kansas City.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: On his podcast, Kelce later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Could they have been driving off into the sunset? Of course, none of this actually confirms Swift and Kelce are actually dating. But regardless of whether it’s
+a friendship or a romantic relationship, it has sent shockwaves through two massive cultural franchises, expanding the NFL’s audience into uncharted territory.
+It’s a cultural pairing on par with – and perhaps even bigger than – Kim Kardashian and Kanye West.
+</item 1>
+
+<item 2>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Suddenly, football fans and Swifties were living through this surprising collision. Swift lyrics were infiltrating NFL game commentary, and her fans were
+furiously becoming football experts. All that needed to happen was for Swift herself to infiltrate a game, determining once and for all whether there was
+anything to these rumours or not. This Is Me Trying
+
+On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games. “I told her, ‘I’ve seen you rock the stage in Arrowhead,
+you might have to come see me rock a stage at Arrowhead and we can see which one’s a little more lit,’” he said. “We’ll see what happens in the near future.”
+Were they finally about to hard-launch their friendship/potential romance to the world, laying all speculation to rest? Love Story This finally brings us to the
+fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto.
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Some found issue with these changes, but the NFL said this is a "pop cultural moment" and they are acting as such.
+
+"We frequently change our bios and profile imagery based on what's happening in and around our games, as well as culturally," the NFL wrote in a statement. "The
+Taylor Swift and Travis Kelce news has been a pop cultural moment we've leaned into in real time, as it's an intersection of sport and entertainment, and we've
+seen an incredible amount of positivity around the sport."
+
+Oct. 6: Travis and Jason think the NFL is doing too much
+
+The NFL is really digging into the Swift-Kelce coverage, and not everyone is a fan, including the people involved.
+
+"I think it's fun when they show who's at the game," Travis said. "I think it brings a little bit more to the atmosphere, brings a little bit more to what
+you're watching. But at the same time, they're overdoing it a little bit."
+</item 3>
+
+<item 4>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 4>
+
+<item 5>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+87 with gusto.
+
+The 12-time Grammy winner appeared to shout “let’s f—ing go” after Kelce scored a touchdown before chest-bumping other Chiefs fans. Considering Swift is known
+for being an Eagles fan – she’s originally from Pennsylvania and even references the team in Gold Rush – her outward support for the Kelce’s team seemed extra
+telling. Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together. If that wasn’t enough, extra observant fans
+were able to note that Kelce’s blue and white post-game outfit was supposedly labelled the “1989 bedroom painting set”, perhaps an intentional reference to
+Swift’s 2014 album, which she will be re-releasing in October. Swift’s penchant for Easter eggs must be rubbing off on the tight end player. As if this weren’t
+enough subtle references already, they were also spotted in a “getaway car” together outside the stadium – potentially a nod towards her 2017 track.
+</item 5>
+
+<item 6>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Swift’s name began popping up everywhere on the podcast, including during conversations about... facial hair?
+
+In August, the brothers discussed Kelce’s moustache, which he grows every year in honour of the Chief’s head coach, Andy Reid. When asked if he knew what Swift
+thought of the ’stache, he remained cheekily confident. “We’re not going to bring up Taylor Swift in this episode,” he says, “But something tells me she’s going
+to like it.” There was a clear suggestion Kelce had made contact with Swift, and was even going to meet her. Shortly after that remark, Kelce took a week off
+training to visit New York City, according to Vulture. Coincidentally, this happened to be while Swift was re-recording her 1989 tracks in the city. Welcome to
+New York
+
+The suspicion the two were actually spending time together in New York was seemingly confirmed in September when it was reported they had been “quietly hanging
+out” for months.
+</item 6>
+
+<item 7>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the
+classic game “Kiss, Marry, Kill”. Speaking with AfterBuzz TV, Kelce was given the options of Swift, Katy Perry and Ariana Grande. He said he’d ultimately kill
+Grande, marry Perry and kiss Swift. That was about six years ago, but it has more recently set tongues wagging as fans wondered how long the plan for them to
+meet has been in the works. Cruel Summer Fast-forward seven years, and things started to heat up. In July, speaking on the podcast he shares with his brother,
+New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City. Unfortunately, the
+bracelet never made it to her wrist or his digits to her phone.
+</item 7>
+
+<item 8>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce believes the National Football League’s coverage of his rumoured girlfriend Taylor Swift is a bit too much.
+
+Following his game against the New York Jets on 1 October, the 33-year-old Kansas City Chiefs tight end opened up about the NFL broadcast on the most recent
+episode of his podcast, New Heights with Jason and Travis Kelce.
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She explained that she doesn’t necessarily pay attention to the cameras and fans around her in those stadiums because she is watching her boyfriend play.
+
+(Denver Post via Getty Images)
+
+“I’m just there to support Travis,” she said. “I have no awareness of if I’m being shown too much and pissing off a few dads, Brads, and Chads.”
+
+When discussing how many Swifties have now started watching NFL games since she started dating Kelce, she quipped about how much she likes the sport. “Football
+is awesome, it turns out,” she joked. “I’ve been missing out my whole life.”
+
+Swift’s effect on the NFL didn’t go unnoticed in October, as one game between the Chiefs and New York Jets - which she attended with some of her famous friends
+- became the most-watched Sunday NFL show since the Super Bowl LVII in February 2023.
+</item 9>
+
+<item 10>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 10>
+=== END ITEM id=a756ee8d92a2d835 ===
+
+=== ITEM id=3cdaa76a5a85f34b ===
+Gold sentences and facts:
+Sentence 0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 0.0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.1: Israel is reportedly preparing for a ground invasion.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Ortal says the understandings Israel reached with Hamas in 2012 were made to stop the fighting.
+  Fact 1.1: Ortal says the understandings Israel reached with Hamas in 2012 were made to get life back to normal as quickly as possible.
+Sentence 2: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 2.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 1>
+
+<item 2>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Published by Globes, Israel business news - en.globes.co.il - on November 5, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 3>
+
+<item 4>
+"There are no sacred numbers" (Globes English | Israel Business Arena, 2023-10-12T18:50:29+00:00)
+The first week of fighting in the bitter war in Israel’s south is almost over, with the financial markets trying to gauge the damage that the Israeli economy
+will sustain. Clearly, we are talking about a very significant event, but the fog of war makes it hard to estimate its full consequences. The main index on the
+Tel Aviv Stock Exchange, the Tel Aviv 35, fell 6.4% over the week.
+
+Prof. Leo Leiderman, chief economic adviser at Bank Hapoalim and a professor of economics at Tel Aviv University, sets out for "Globes" his proposals for
+rehabilitating the economy and repairing the damage that the war will cause.
+
+What has been going through your mind in these first days of the war?
+
+"What most preoccupies me is not the economy but concern for the families of the soldiers, the wounded, and the captives, and solidarity with them. I have four
+relatives from Kibbutz Nir Oz who are still missing, and we have no information about them.
+</item 4>
+
+<item 5>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Shiloh, which is currently subordinate to the Ministry of Defense, was established following State Comptroller reports about the lack of coordination and
+synchronization between the Ministry of Defense and the IDF units; and lead a new border defense concept based on sensors and other technologies for gathering
+intelligence and thwarting infiltration; strengthening the Air Force in the form of additional aircraft and armaments; and strengthening the operational end of
+the regular front units.
+
+All this, while at the same time closing down armored battalions and consolidating helicopter squadrons. Ground force technological capabilities were also
+addressed, such as improved coordination between the infantry and air forces in air-to-ground actions, or identifying terrorists and weapons in an urban
+environment. However, there is a problem at the outset, says, Prof. Eviatar Matania of Tel Aviv University School of Political Sciences, Government and
+International Affairs, and founder and first director general of the Israel National Cyber Directorate: a large gap between the technology and the officers
+expected to implement it as part of the security concept.
+</item 5>
+
+<item 6>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 7>
+
+<item 8>
+"There are no sacred numbers" (Globes English | Israel Business Arena, 2023-10-12T18:50:29+00:00)
+We have a great deal of information about loss of growth and product in various episodes in the past, such as the Yom Kippur War, the Lebanon War, two
+intifadas, various military operations, and the Covid pandemic.
+
+"We see this is a completely different episode, however. This is a new situation that has no precedent as far as the damage to the economy is concerned. There’s
+a whole spectrum of possible scenarios, from a short war on the southern front only, to the nightmare scenario of a prolonged war with additional sectors
+involved. We are only in the fifth day of the war, and it’s to be hoped that the picture will start to become clearer."
+
+Which industries will be hit by the war?
+
+"A substantial decline can be expected in private consumption, particularly of services. This is not just because of the damage to output and income, but also
+for psychological reasons. Distress, uncertainty, the possibility of prolonged reserve duty by some of the public - all these things will affect consumer
+sentiment.
+</item 8>
+
+<item 9>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+"Despite the clear threat posed by Gaza, the decision makers preferred to avoid a policy that would mean returning a large part of the country's population to
+the reality of air raids and disrupted daily routines. The bottom line: the Iron Dome did not change the essential strategic situation; as firepower from the
+Gaza Strip developed, so did the terrorist organizations’ ability to control daily life in Israel’s hinterland, hold it hostage, and restrain Israel from taking
+proactive measures against them."
+
+"Why didn't the relative success of the Iron Dome translate into the even more important strategic achievement of restoring Israel's freedom of action against
+Hamas in the Strip?" asks Ortal rhetorically, and names several factors. "The first, like any other operational system, Iron Dome is also not perfect. The enemy
+studies it and develops its own challenges against it, and the decision makers recognized the fact that the State of Israel is not hermetically protected.
+Second, the enormous cost involved in deploying and operating [Iron Dome] batteries significantly impedes a policy based on continuous rounds of violence.
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 10>
+=== END ITEM id=3cdaa76a5a85f34b ===
+
+=== ITEM id=91f626ebba71e742 ===
+Gold sentences and facts:
+Sentence 0: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 0.0: The answer ultimately lies with the jury.
+  Fact 0.1: The jury was selected on Wednesday morning.
+  Fact 0.2: The jury was selected before lawyers for the government.
+  Fact 0.3: Bankman-Fried swapped two very different stories of the former crypto mogul's sudden rise and almost instantaneous fall.
+  Fact 0.4: The former crypto mogul had a sudden rise and an almost instantaneous fall.
+Sentence 1: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 1.0: The highly anticipated criminal trial was for Sam Bankman-Fried.
+  Fact 1.1: Sam Bankman-Fried is a former CEO of bankrupt crypto exchange FTX.
+  Fact 1.2: FTX is a bankrupt crypto exchange.
+  Fact 1.3: The criminal trial started on Tuesday.
+  Fact 1.4: The criminal trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 2>
+
+<item 3>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+How much? Almost $100,000, he said. And was he ever able to? “Never,” he told prosecutors.
+
+Shortly afterward, as the trial neared late afternoon, the government called Adam Yedidia to the stand. A fast-talking graduate of MIT, he and Bankman-Fried
+were close friends in college, he said. And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in
+finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+
+When Yedidia first took the stand, Danielle Sassoon, one of the lead prosecutors, said that the college friend of Bankman-Fried had legal immunity during his
+testimony. Why did he make such a deal with the government, she asked.
+
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 5>
+
+<item 6>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I was ready to hear this pursued further — but then it, too, was dropped.
+
+I think the defense was also trying to suggest that the government had coerced Ellison’s testimony, by suggesting that she had pleaded guilty to a charge of
+defrauding investors that she couldn’t have been involved in. After all, she didn’t prepare materials for them. Unfortunately, she did say that she had
+conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine. This
+line of questioning felt like a waste of time.
+
+There were rather a lot of sidebars during the cross-examination, to the point that when one occurred, several jurors looked entertained. There were a few
+yesterday, too, including one in which the prosecution complained that Bankman-Fried was visibly scoffing at Ellison’s answers, according to the court
+transcript.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+I have never seen Sam Bankman-Fried so still as he was during the prosecution’s opening statement. The characteristic leg-jiggling was absent. He barely moved
+as the prosecutor listed the evidence against him: internal company files, what customers were told, the testimony of his co-conspirators and his own words.
+
+His hair was shorn, the result of a haircut from a fellow prisoner, the Wall Street Journal reported. He wore a suit bought at a discount at Macy’s, per the
+Journal; it hung on him. He appeared to have lost some weight.
+
+“All of that was built on lies.”
+
+Bankman-Fried, at this time last year, had a luxury lifestyle as the CEO of crypto exchange FTX, said the assistant US attorney, Thane Rehn, in the cadence of a
+high schooler delivering his lines in a student play. Bankman-Fried hung out with Tom Brady. He was on magazine covers, lived in a $30 million penthouse, and
+spent time with world politicians.
+</item 7>
+
+<item 8>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 8>
+
+<item 9>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 10>
+=== END ITEM id=91f626ebba71e742 ===
+
+=== ITEM id=67fea8a6b57f492a ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook adjusts when odds change for a legitimate reason.
+  Fact 1.2: An injury or a roster move is an example of a legitimate reason for a line or odds to change.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on one side might indicate that the
+initial odds were potentially "off," prompting an adjustment. Event Dynamics: For live betting, where bets are placed while the event is in progress, the
+evolving dynamics of the match can lead to frequent changes in the odds.
+
+Sportsbooks adjust moneyline odds to ensure they remain profitable, balance their book, and reflect the most current information about the event.
+
+Related Pages:
+</item 1>
+
+<item 2>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck with a push instead of a
+profit.
+
+What is the Vegas line?
+
+Las Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is copying a line, it’s usually copying the Vegas line. Most
+online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all lines in every major sport.
+
+If those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take advantage when sportsbooks stray
+from the Vegas line.
+
+Why do the lines move?
+
+It’s worth reiterating that sportsbooks want an equal amount of money bet on each side of every bet. When that happens, they earn the small profit built into
+the odds without concern about who wins or loses.
+</item 2>
+
+<item 3>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Ensure the site has a responsible gaming section.
+
+The overall user experience should be smooth and hassle-free.
+
+Safety and Security:
+
+Top NBA betting sites prioritize users' safety.
+
+Ensure your personal information is secure.
+
+Some sportsbooks excel in ensuring cybersecurity; always go for those with solid reputations.
+
+How to find the best NBA lines
+
+Not all sportsbook betting odds are created equal. If you're willing to put in some legwork, you can shop for the best NBA lines to maximize your potential
+return.
+
+Movement in the odds depends on multiple factors, including team news, injuries, public betting, recent play, and even the number of games a team plays in a
+row.
+
+Oddsmakers use all the available information to craft their lines, and you can find value in shopping around for the most favorable lines and odds.
+
+You can use our NBA odds page (see link above) to find the best lines for your prospective bet, or you can open accounts at multiple sportsbooks and do the
+shopping yourself.
+</item 3>
+
+<item 4>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 4>
+
+<item 5>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+</item 5>
+
+<item 6>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 6>
+
+<item 7>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Some examples of popular MLB futures odds and proposition bets include:
+
+World Series: You can bet on which team you believe will become the next World Series champion. You’ll find World Series futures odds for these nearly as soon
+as the previous World Series comes to an end, and they’ll change based on offseason moves, team news, team performance, and more.
+
+You can bet on which team you believe will become the next World Series champion. You’ll find World Series futures odds for these nearly as soon as the previous
+World Series comes to an end, and they’ll change based on offseason moves, team news, team performance, and more. MVP: Wager on the player you believe will take
+home the Most Valuable Player award for the season. This bet can be a fun way to keep tabs on certain players throughout the entire season.
+
+Wager on the player you believe will take home the Most Valuable Player award for the season. This bet can be a fun way to keep tabs on certain players
+throughout the entire season.
+</item 7>
+
+<item 8>
+Totals Betting - What is an Over/Under Bet? (Sporting News, 2023-11-01T22:08:31+00:00)
+Bookmakers adjust the line to balance the action and protect themselves from potential losses.
+
+One of the most common reasons for line movement is a significant amount of money being wagered on one side (either over or under). Bookmakers adjust the line
+to balance the action and protect themselves from potential losses. Injury Updates: If a key player is injured or unable to play, this can influence the
+expected total score, leading bookmakers to adjust the line accordingly.
+
+If a key player is injured or unable to play, this can influence the expected total score, leading bookmakers to adjust the line accordingly. Weather
+Conditions: In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a
+lower-scoring game, causing the line to move down.
+
+In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a lower-scoring game,
+causing the line to move down.
+</item 8>
+
+<item 9>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 9>
+
+<item 10>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 10>
+=== END ITEM id=67fea8a6b57f492a ===
+
+=== ITEM id=d36e06ce93da1f8d ===
+Gold sentences and facts:
+Sentence 0: You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform.
+  Fact 0.0: Value can be found in player props.
+  Fact 0.1: Value can be found in team props.
+  Fact 0.2: Value can be found by gathering information from multiple sources.
+  Fact 0.3: Value can be found by tracking how players and their teammates perform.
+Sentence 1: You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game.
+  Fact 1.0: Bets can be placed on team props.
+  Fact 1.1: A team props bet can be whether a team will lead at the end of a certain quarter.
+  Fact 1.2: A team props bet can be an over/under bet on the total number of points the team will score in the game.
+
+Retrieved items:
+<item 1>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 1>
+
+<item 2>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Positive numbers, like +145, show how much you stand to win for every $100 you wager. If you were to bet $50 on Giannis Antetokounmpo to have over 7.5 rebounds
+and the odds were +130 at the time you finalized your bet slip, you would win $65 in profit if your bet wins.
+
+Positive numbers also indicate which side of the bet is the underdog in the eyes of the oddsmakers.
+
+Remember that you can bet as little or as much as you want, and your payout will be calculated based on your wager amount and the odds at the time you make your
+bet.
+
+Types of NBA props
+
+You can make two main prop bets on the National Basketball Association:
+
+Team props
+
+Player props
+
+Team props are typically focused on statistical accomplishments by a particular team and rarely on the game’s result.
+</item 2>
+
+<item 3>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+They vary from player to team bets and lean heavily on the statistical side of the game. Some NBA prop examples include:
+
+How many points a player will score
+
+Number of assists or three-pointers a player will have
+
+Which player will score the first basket of a game
+
+You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team
+will score in the game.
+
+See more: NBA prop bets
+
+NFL prop bets
+
+The National Football League is the king of sports betting, and NFL betting sites have no qualms about showcasing every kind of possible bet type for it.
+
+Bettors will find many prop bet opportunities, especially for the Super Bowl. During the regular season, one of the most popular prop bet options includes the
+“anytime touchdown scorer” bet, where you can wager on a player to score a TD at any point in the game. Other prop bets can be focused on the team or even both
+teams.
+</item 3>
+
+<item 4>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Accept the terms and conditions: Before finalizing your account information, you must accept the sportsbook’s terms and conditions. We recommend you read
+through these to understand the rules your sportsbook will enforce regarding bets, especially for the sports you intend to wager on. The terms and conditions
+are also available on the sportsbook website for you to read at any point.
+
+Get your bonus: At this point, you can accept your welcome bonus. Be sure to read through the bonus requirements before accepting anything. If a bonus code is
+needed, which you can find on our website, this is where you will input it during the registration process.
+
+Make a deposit: Now that you’ve signed up for an account, you can start funding your bankroll by making a deposit. Most legal sportsbooks have a variety of ways
+you can add funds to your account, such as through your bank or an e-wallet.
+
+Start betting: Go to the basketball section of your sportsbook and select the NBA.
+</item 4>
+
+<item 5>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+You’ll often come across NBA team prop bets that are based on a team’s points, such as the first team to reach 20 points, the first team to score in a game, or
+whether the total points by both teams in a contest will end up being odd or even.
+
+Team props, also known as “game props,” don’t rely on individual players but rather on the team as a whole. Player props, on the other hand, are driven by
+individual performance.
+
+These individual props are focused on statistical milestones during a game. The most popular bets typically focus on points, rebounds, assists, and three-point
+field goals. You can also bet on combination wagers, such as points and rebounds together.
+
+In most cases, you can bet on traditional statistics for the five starters on each team.
+
+See more:
+
+Tips for betting on NBA props
+
+Every bettor should develop their strategies, but we do have three tips you can use for NBA props.
+</item 5>
+
+<item 6>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+In the NBA, prop bets deal with both players and teams.
+
+Some examples of NBA player props are:
+
+How many points a player will score
+
+Number of rebounds a player will have
+
+How many assists a player will get
+
+Rebounds and assists combined
+
+Points, rebounds, and assists combined
+
+How many steals a player will get
+
+Number of three-pointers made
+
+Some examples of NBA team props include:
+
+Which team will reach 10 points first
+
+Which team will have the highest-scoring period
+
+Which team will score first
+
+Which team will win the first half
+
+Which team will win the second half
+
+Will there be a fourth-quarter comeback victory
+
+All of the best sports betting sites have their selection of prop bets for each NBA game, so shop around to find the sportsbooks that best suit your needs.
+
+How to bet on NBA props
+
+The first step to betting on NBA props is opening an account at an online sportsbook. The process is simple, free, and doesn’t take very long.
+</item 6>
+
+<item 7>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Favorites to win the game are shown negative odds, such as -135, while the underdogs will have positive odds, like +165.
+
+NBA over/under bets: Also known as totals. These bets are focused on the combined point total of the two teams playing in a game. (Winners and losers don’t
+matter.) For example, the over/under could be set at 211.5 points in the Knicks vs. Heat matchup. If you were to pick the over on the bet, you’d need the two
+teams to combine for 212 points or more to win. They need to score 211 points or fewer if you went with the under.
+
+NBA props and futures
+
+NBA player and team props are growing in popularity. Sportsbooks are taking note and providing more NBA props than ever.
+
+After all, it’s much easier to focus on a single player and how he will perform than the entire team. Player props could focus on how many points a player
+scores or how many rebounds he pulls down.
+</item 7>
+
+<item 8>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+The NBA is one of the most popular sports to bet on in the US. NBA prop bets are an easy way to jump into basketball betting.
+
+Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props to give you plenty of variety.
+
+Below, we look at betting NBA props at the best NBA betting sites and share some key information to make informed bets.
+
+What are NBA props?
+
+A prop bet is a side wager on an aspect of a game that usually doesn’t tie directly to the result. In the NBA, prop bets deal with both players and teams.
+</item 8>
+
+<item 9>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Remember that some of the best players in the NBA were once on the bench for most games until small increases in their playing time gave them a chance to shine.
+
+Shop for the best lines: This tip applies to every bet you make. Using multiple sportsbook accounts lets you find the best odds for every NBA prop bet. Even the
+smallest differences, like one sportsbook having odds at +125 and another at +135, can make a difference in your profit. By shopping for the best lines, you can
+make smarter bets and find the best value.
+
+Related Pages:
+</item 9>
+
+<item 10>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Start betting: Go to the basketball section of your sportsbook and select the NBA. From there, you can choose individual games and make bets like money lines,
+point spreads, totals, props, futures, and more.
+
+How to read NBA props odds
+
+At first glance, all the positive and negative numbers at US sportsbooks can be daunting. The good news is they are easy to read once you understand what you
+see.
+
+Negative numbers, such as -110, represent how much money you need to wager to win $100. In many cases, such as a moneyline bet, the negative number also
+indicates which side of the bet is the favorite to win.
+
+For example, if you were to bet on LeBron James scoring over 15.5 points in a contest at -125 odds, you’d need to wager $125 to win $100. If you did and your
+bet was correct, then you’d take home $225, which is your original $125 stake returned to you plus your $100 in profit.
+</item 10>
+=== END ITEM id=d36e06ce93da1f8d ===

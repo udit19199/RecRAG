@@ -1,0 +1,1047 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=865bdeb4feb43b7a ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that 'all of that, all of it, was built on lies.'
+Sentence 1: And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+  Fact 1.0: Bankman-Fried left Jane Street.
+  Fact 1.1: Jane Street is a high-frequency trading firm.
+  Fact 1.2: Bankman-Fried was a former billionaire.
+  Fact 1.3: Bankman-Fried got his start in finance at Jane Street.
+  Fact 1.4: Bankman-Fried got his start in finance after MIT.
+  Fact 1.5: After leaving Jane Street, Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.
+  Fact 1.6: Bankman-Fried later persuaded Yedidia to join him as a developer at FTX.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder, Bankman-Fried, acted in good faith.
+  Fact 2.2: The defense said Bankman-Fried never meant to commit fraud or steal.
+  Fact 2.3: The defense said Bankman-Fried basically got in over his head.
+
+Retrieved items:
+<item 1>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Whatever records the Southern District of New York has for the transactions will be shown.
+
+“What conversations happened between him and his co-conspirators that are now cooperating against him?”
+
+The second part is where all the drama is likely to come, says Christopher LaVigne, a litigation partner and co-chair of the cryptocurrency practice at the law
+firm Withers. Prosecutors have to connect those transactions to Bankman-Fried, show that he knew what he was doing was wrong, and prove that he lied about it
+anyway.
+
+“What was he saying to his parents and his other advisors about this?” LaVigne says. “What conversations happened between him and his co-conspirators that are
+now cooperating against him?”
+
+To further establish intent, the government can use Bankman-Fried’s own words. The indictment calls Bankman-Fried’s tweets in November 2022 “false and
+misleading.”
+
+“We had him going out directly to the internet,” LaVigne says.
+</item 5>
+
+<item 6>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+I have never seen Sam Bankman-Fried so still as he was during the prosecution’s opening statement. The characteristic leg-jiggling was absent. He barely moved
+as the prosecutor listed the evidence against him: internal company files, what customers were told, the testimony of his co-conspirators and his own words.
+
+His hair was shorn, the result of a haircut from a fellow prisoner, the Wall Street Journal reported. He wore a suit bought at a discount at Macy’s, per the
+Journal; it hung on him. He appeared to have lost some weight.
+
+“All of that was built on lies.”
+
+Bankman-Fried, at this time last year, had a luxury lifestyle as the CEO of crypto exchange FTX, said the assistant US attorney, Thane Rehn, in the cadence of a
+high schooler delivering his lines in a student play. Bankman-Fried hung out with Tom Brady. He was on magazine covers, lived in a $30 million penthouse, and
+spent time with world politicians.
+</item 8>
+
+<item 9>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 9>
+
+<item 10>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 10>
+=== END ITEM id=865bdeb4feb43b7a ===
+
+=== ITEM id=4623d20175312137 ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves or odds change for a legitimate reason.
+  Fact 1.1: Examples of legitimate reasons include an injury or a roster move.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 1>
+
+<item 2>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Once the season has started and you get to see how the various rookies are performing, you can gather the relevant data. But sportsbooks are also gathering this
+information, and they begin to tighten the NBA Rookie of the Year lines in response.
+
+So, while you can better guess which player will hoist the Wilt Chamberlain Trophy, the odds will be tighter, and your potential return on your wager will be
+reduced.
+
+Pros and cons of betting early on the NBA Rookie of the Year:
+
+Pros:
+
+You have an opportunity to find better value.
+
+The betting odds are fresh and haven't been adjusted.
+
+Cons:
+
+There is a much higher risk as a player's performance, health, and team dynamic can change throughout the season.
+
+You’ll find limited information to make an informed bet.
+
+Pros and cons of waiting to bet on the NBA Rookie of the Year:
+
+Pros:
+
+There is a lot more information available to make an informed bet.
+
+You don’t risk betting on a player not remotely in contention.
+
+Cons:
+
+There is a reduced opportunity to find value.
+</item 2>
+
+<item 3>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+That means checking the posted lines and odds for the same bets at different sportsbooks.
+
+You can do this for moneylines, point spreads, totals bets, prop bets, and more. Finding the best line or better odds on any bet is like finding money.
+
+You can shop around using multiple sportsbook apps on your phone or live odds feeds like the one above. Pick a side, then use the drop-down menus and tabs to
+find the odds and lines for that bet.
+
+Finally, bet when you see an opportunity at better odds or an improved line compared to the competition.
+
+Line shopping for futures
+
+People tend to bet futures at their favorite online sportsbook. However, shopping for better odds on any future bet is worth your time. Most game lines are
+similar at different sportsbooks, but the odds in futures markets can vary significantly.
+
+Sportsbooks sometimes have higher liabilities for specific teams and offer better odds on others to lay that off. Timing is everything.
+
+Get it right, and you can easily take advantage of changes in different futures markets due to liability.
+</item 3>
+
+<item 4>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Getting more points or laying fewer on a typical NFL point spread or NBA point spread might lead to winning a bet you’d otherwise lose. Plus, if you find better
+odds on any bet, you can potentially drop fewer dollars when you lose and earn more when you win.
+
+Shopping lines will help you consistently find the best prices on your bets. It won't help you pick more winners, but it will improve your chances and lead to
+bigger wins and more affordable losses. That’s undoubtedly worth your time.
+
+For example, you might like the Kansas City Chiefs to beat the Cincinnati Bengals in a mid-season NFL game. Say you look around and see that three of four
+licensed online sportsbooks in your state have the Chiefs as -3 favorites, but the fourth has them at just -2.5.
+
+Let’s say the Chiefs win by exactly three, a distinct possibility since a single field goal decides most NFL games. Bets at the first three sportsbooks would
+push. However, you’d have a winner at the fourth.
+</item 4>
+
+<item 5>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, the only way to find these opportunities is shopping lines.
+
+See more: NFL futures bets
+
+Can I get a better line or odds after I’ve already bet?
+
+When you bet, you lock in the odds or line as currently posted. If they change, for better or worse, you’re stuck with the odds from when you wagered.
+
+That’s precisely why you should go line shopping before you bet. Of course, if significant changes occur, you can take more action at the improved odds or more
+favorable line.
+
+Is line shopping worth my time?
+
+Because it can provide you the opportunity to lay less, win more, and improve your chances, line shopping is certainly worth your time. Plus, it doesn’t have to
+take up all that much of it.
+
+Use the live odds feed above to do a basic survey. You’ll find it takes just seconds to compare lines and odds. Plus, download and install multiple licensed
+online sportsbook apps on your phone, and you can do a more thorough shop in just a few minutes.
+</item 5>
+
+<item 6>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Line shopping is the key that unlocks the best odds and lines at top sports betting sites.
+
+The process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is quite often better odds
+and improved lines.
+
+What is line shopping, and why is it worth your time? Find the answers below in our complete guide to line shopping.
+
+How do sportsbooks set odds and lines?
+
+The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.
+
+Other sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics,
+statistics, injury and roster news, performance, matchup data, and more to develop the lines and odds.
+
+Betting lines and odds are then subject to change based on the betting public’s reaction and any additional information that comes to light ahead of the game.
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+</item 6>
+
+<item 7>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck with a push instead of a
+profit.
+
+What is the Vegas line?
+
+Las Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is copying a line, it’s usually copying the Vegas line. Most
+online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all lines in every major sport.
+
+If those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take advantage when sportsbooks stray
+from the Vegas line.
+
+Why do the lines move?
+
+It’s worth reiterating that sportsbooks want an equal amount of money bet on each side of every bet. When that happens, they earn the small profit built into
+the odds without concern about who wins or loses.
+</item 7>
+
+<item 8>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other side to get it that way.
+
+That’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like
+an injury or roster move. It’ll be difficult for you to find value in that case.
+
+But when a line moves or odds change because of betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right
+there.
+
+Line shopping is a tool to help you spot changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.
+
+Choose a side, shop around at online sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable
+to your viewpoint.
+
+See more: What is a parlay bet?
+</item 8>
+
+<item 9>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Shop around, and you can find opportunities to lay less, win more, and improve your chances.
+
+See more: How to bet on sports in the US
+
+Shop for the best lines at online sportsbooks
+
+Below is a live odds feed that shows you the differences between lines and odds for the same bets at many of the top sportsbooks in the country. Look here for
+current opportunities.
+
+What’s the best way to shop lines?
+
+The easiest way to line-shop is to find something like the live odds feed above. It’s a one-stop shop. Shopping lines here will take just seconds.
+
+Performing the task manually may take longer, but you can check with more sportsbooks or the chosen few you feel consistently offer the best lines and odds. The
+best way to do this is to download and install more than one of the best sports betting apps on your phone.
+
+Then, tap around among the sportsbooks to compare lines and odds for the bets you plan.
+
+Best sportsbooks for line shopping
+
+The biggest brands in sports betting offer competitive lines in dozens of states.
+</item 9>
+
+<item 10>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Rookie of the Year is not the only form of NBA futures betting. Legal online sportsbooks have a wide selection of NBA futures you can bet on, including:
+
+In addition to futures bets, you can wager on many NBA bets during the regular season and postseason. NBA game lines (moneylines, point spreads, and totals) are
+the most popular, but you’ll also be able to bet on NBA team and player props, parlays, and more.
+
+The NBA is the second-most popular odds market to bet on in the US, behind NFL betting odds. That means every online betting site always has a great selection
+of NBA odds.
+</item 10>
+=== END ITEM id=4623d20175312137 ===
+
+=== ITEM id=8ff324dbec05e331 ===
+Gold sentences and facts:
+Sentence 0: Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet.
+  Fact 0.0: Depending on which one you get, it might come with USB ports.
+  Fact 0.1: The USB ports let you charge multiple devices in one outlet.
+Sentence 1: With a 10,000-mAh capacity, WIRED contributor Simon Hill says it charged his iPhone 14 Pro once and then delivered an additional 64 percent the second time before tapping out.
+  Fact 1.0: The device has a 10,000-mAh capacity.
+  Fact 1.1: WIRED contributor Simon Hill says the device charged his iPhone 14 Pro once.
+  Fact 1.2: Simon Hill says the device then delivered an additional 64 percent to his iPhone 14 Pro the second time.
+  Fact 1.3: Simon Hill says the device tapped out before the second charge was finished.
+
+Retrieved items:
+<item 1>
+54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods (Wired, 2023-11-25T00:00:29+00:00)
+Flip over to the back, and you'll find two USB-A ports, two USB-C ports, and three AC outlets. It's a compact and tidy charger, and our unit has been going
+strong for more than two years. It fluctuates in price very often, and it's hit as low as $60 in the past, but we still think this is a good deal.
+
+This power bank is one of our favorites if you're looking for an upgrade. It has an absolutely gargantuan 24,000-mAh capacity, and it can be charged up in an
+hour. It can output up to 140W, making it powerful enough to charge laptops and tablets, as well as charging your phone super quick.
+
+This is a great charger if you travel often with an iPhone and Apple Watch. Instead of packing two separate chargers, the Duo offers the luxury of both all
+within a compact, foldable form factor.
+</item 1>
+
+<item 2>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+There's even a built-in display to monitor stats like temperature and remaining battery percentage.
+
+This heavy metal brick is a good option for charging laptops and smaller gadgets. It packs 20,000 mAh and supports a wide variety of fast charging standards.
+There is one USB-C PD port rated at 65 watts, two USB-A QC ports at 30 watts apiece, and a micro-USB input (though you are best using the USB-C to recharge it).
+We haven't seen it go on sale very often.
+
+This travel kit from ESR works well if you want something that can prop your iPhone in portrait or landscape orientation. It can also display your Apple Watch
+in Nightstand mode, so you can peek and see how long before you must get out of bed. The main body folds open with a MagSafe charging pad for your iPhone and a
+slot behind for your AirPods. We have seen this dip a little lower, but this is still a solid deal.
+</item 2>
+
+<item 3>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+But that’s just life while traveling with a dog anyway.
+
+An extension cord for awkward situations
+
+Sarah Jeong, deputy features editor
+
+Anker 321 Power Strip $ 15 $ 26 42 % off $ 15 $ 15 $ 26 42 % off This all-in-one 20W USB-C power cube boasts three AC outlets, two USB-A ports, and one USB-C
+port. $15 at Amazon
+
+Nobody wants to carry a power strip or an extension cord with them on their vacation. It’s probably unnecessary if you’re staying in relatively modern buildings
+and definitely unnecessary if you’re camping. But sometimes you want to stay in a charming historical hotel or a lovely cabin in the woods, and it’s only when
+you go to charge your devices at night that you realize that the only electrical socket in the bedroom is in the corner farthest away from the bed and there’s
+already two lamps plugged into it.
+</item 3>
+
+<item 4>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Older buildings especially suffer from what I can only describe as loose socket syndrome, where those very convenient modern boxy socket extenders with five
+different USB and USB-C charging ports simply cannot stay in place and fall right out of the wall because they’re too heavy. After one (totally pleasant)
+vacation where I had to charge my phone, watch, AirPods, and laptop in a weird corner of my room with the plug-in charging hub propped up on a strategically
+balanced mountain of books and sham pillows, I bought this Anker combination extension cord / power strip. It’s not a full power strip — just a cube with a few
+sockets along with USB and USB-C charging ports at the end of a five-foot cable. I’ve brought it on a few trips since then. It takes up extra space in my
+suitcase but each time has left me feeling vindicated about the purchase.
+
+The three prongs at the end of the cable are static, rather than folding flat for easy packing.
+</item 4>
+
+<item 5>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Granted, it’s bulkier than buying one or two specialized adapter plugs, but if you’ve got a multi-continent itinerary, it’s a game-changer. What I like about
+this one from Epicka is that it comes with a spare fuse in case things go sideways with voltage.
+
+The only caveat is that, although it says “universal,” it’s technically only the four most common types of plugs. That’ll get you by in most countries, but it’s
+not a guarantee in places like Brazil, South Africa, or India. Even so, I’ll take this over price gouging at airport electronics shops or having to take time
+out of my schedule to visit a local hardware store.
+
+Lovely lights
+
+Brandon Widder, senior commerce editor
+
+I’m a big fan of ambient lighting, even when I’m 50 miles from the nearest outlet.
+</item 5>
+
+<item 6>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+And while I’ve long been a proponent of MPOWERD’s solar-powered Luci lanterns, I recently picked up the company’s like-minded string lights for car camping and
+overnight jaunts in the backcountry when I don’t mind toting a little extra weight with me.
+
+The 18-foot string is certainly not the brightest you can buy — it packs a series of 100-lumen LEDs, whereas your average headlamp might offer 400 — but it can
+swap between six different colors and features a 2,000mAh battery for when your phone needs some emergency juice. Best of all, you can charge the lights via USB
+or solar, meaning you can spend less time worrying about how to keep them going and more time taking in the vibes.
+
+Memory card holder and reader
+
+Becca Farsace, senior producer
+
+As a video person who is constantly on the move, there is nothing better than the consolidation of gear — especially when it pertains to dongles.
+</item 6>
+
+<item 7>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+This 2.5-inch cube from Anker is a great compact charger. It comes with a MagSafe pad on top (that charges at up to 15 watts), a top section that hinges to a
+60-degree angle to reveal a charging surface for your AirPods, and a shelf on the side that has a built-in Apple Watch charger (which can comfortably
+accommodate any Apple Watch including the Ultra). You'll also get a 5-foot cable and a 30-watt charger in the box. It supports fast charging too.
+
+Anker 737 Power Bank Photograph: Anker
+
+We just added this power bank as our top upgrade pick in our guide to the Best Portable Chargers. It's pricey, but today's deal makes it more accessible. It
+charges from zero to completely full in an hour and boasts a whopping 24,000-mAh capacity. And it's powerful enough to charge laptops and tablets as well as
+phones and other gadgets. There's even a built-in display to monitor stats like temperature and remaining battery percentage.
+</item 7>
+
+<item 8>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+The performance is fast, the recharging is fast. It even looks fast. It has a bright, 120-Hz AMOLED screen, great speakers, and surprisingly good battery life
+for all that. Our main gripe is the IP64 water- and dust-resistance rating, which is not nearly as good as other flagship phones.
+
+Ugreen's charger is, as the name suggests, a 145-watt charger with a 25,000-mAh battery. It's surprisingly compact for the power it provides, although at 1.1
+pounds, it's definitely not ultralight. There are two USB-C ports and one USB-A port. What sets the Ugreen apart is that you can actually draw 145 watts while
+charging. That works out to one USB-C port at 100W and the other at 45W. Very few other batteries we've tested are capable of that feat.
+
+Photograph: Anker
+
+The Anker Nano is one of our favorite portable power banks, particularly for phones.
+</item 8>
+
+<item 9>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Universal travel adapter
+
+Victoria Song, senior reviewer
+
+Epicka universal travel adapter $ 20 $ 25 20 % off $ 20 $ 20 $ 25 20 % off Epicka’s universal travel adapter is an all-in-one adapter that includes four
+different plugs that cover over 150 countries. $20 at Amazon
+
+In my youth, I forgot to pack plug adapters for international trips one too many times. Buying them once you’ve landed in another country isn’t always easy,
+either. And if you’re like me, your relatives in rural Korea don’t always have more than one plug for your American devices — in which case, you’ll have to
+share with your six other cousins. Nope. Absolutely not. Which is why I never leave this country without a universal travel adapter.
+
+Basically, it’s six plug adaptors in one. Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet.
+</item 9>
+
+<item 10>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+A car-friendly charger
+
+Sean Hollister, senior editor
+
+Maybe someday Apple will realize that it wasn’t the brightest idea to artificially limit the reach of its MagSafe charging ecosystem and you’ll be able to plop
+your phone on a magical minimalist disc that charges it at high speeds. In the meanwhile, a standard Qi charger is about the best you’ll get — and the bulky but
+practical iOttie Easy One Touch Qi does it with the satisfying snap of springs. When you push your phone into its waiting jaws, it depresses a button that
+causes those jaws to firmly snap closed on either side of your device. When you want to remove it, you pinch a pair of levers with your finger and thumb to
+release as you grab your slab. It’s wide enough to fit practically anything on the market, save an opened Samsung Z Fold. I’ve used one for years with Android
+and Apple phones alike, including newer MagSafe handsets.
+</item 10>
+=== END ITEM id=8ff324dbec05e331 ===
+
+=== ITEM id=f0e413072fed019d ===
+Gold sentences and facts:
+Sentence 0: “Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said.
+  Fact 0.0: Zapolsky said that even with those tools, some businesses selling on Amazon might still choose to set prices that are not competitive.
+Sentence 1: That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference.
+  Fact 1.0: eBay will give the buyer an eBay coupon for the difference in price between what the buyer paid for an item and what a competitor is selling it for.
+  Fact 1.1: The eBay coupon also includes an additional 10 percent of that price difference.
+
+Retrieved items:
+<item 1>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Shopify, for example, gives sellers much more control over how they communicate with customers, Needham said, adding that although Amazon still controls the
+communication process, at least there is one. "I wish it was a clear-cut case,” Needham said. “I have a vested interest in the marketplace doing really well, as
+a seller and as a service provider. And... this case, it doesn’t make the marketplace better for sellers."
+
+Concerns over Amazon pricing policies, fees
+
+Many sellers have zeroed in on Amazon’s pricing policies and rising fees as rightful areas of concern in the FTC's lawsuit. Molson Hart, whose company Viahart
+sells toys on Amazon, has been a longtime critic of Amazon’s pricing policies. Hart complained of how Amazon’s seller fees impact pricing in a 2019 Medium post
+and later that year testified about his experience before a House committee.
+</item 1>
+
+<item 2>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Nothing is more frustrating than buying a new pair of headphones, an OLED TV, or a backpack just to find out that you could have gotten it for a lot cheaper
+somewhere else. In order to keep customers happy — and prevent them from going elsewhere — many retailers offer price-matching policies where they promise to
+match a lower price you’ve found elsewhere. That’s information that could come in handy now that Black Friday and Cyber Monday are just around the corner.
+
+What follows are the price-matching policies for a variety of major retailers. There are a few things to make note of here. First, all price-matching policies
+have a number of rules attached to them. We’ve summarized some of the rules here, but you’d be advised to go to the links that we’ve provided and read the
+policy carefully. Second, and logically enough, retailers that serve as marketplaces for other sellers, such as Costco, don’t have price-matching policies.
+
+Lastly, there are always exceptions to the rules.
+</item 2>
+
+<item 3>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“We can tailor our ads to hit exactly the consumers we want,” Moller said. “It’s a perfect marriage of a transaction, and that’s one of the beauties of what
+their marketplace offers.” Needham said he feels he would have been more supportive of the case if it were filed a few years ago, pre-pandemic. At that time, he
+said, "I would have felt, yes Amazon is a monopoly… But actually after Covid, into 2023, ecommerce has had a lot of big changes.” He added, "The competition is
+just not what it was in 2019." Competitors like Shopify and Walmart are increasingly viable alternatives for many categories of sellers, Needham said, not to
+mention rapidly growing Chinese e=commerce companies like Temu. As a result, Needham said he’s seen some significant changes from Amazon. Among those is a
+greater ability for Amazon sellers to communicate with buyers, offering select customers certain promotions.
+</item 3>
+
+<item 4>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+Amazon does not price match, which is annoying, but it’s tolerable since it often has the lowest prices of all retailers anyway. Amazon only protects the price
+on pre-orders that have its “Pre-order Price Guarantee,” which ensures that you’ll pay the lowest amount a product sells for before it’s launched.
+
+Not only does Best Buy match prices from “qualified competitors,” but its site says that most products bought between now and Dec. 30 can be price-matched
+through Jan. 13, 2024.
+
+Walmart’s policy says it won’t price match with competitors, nor does it price match for products purchased online that later decrease in price.
+
+Target says that purchases made between Oct. 22 and Dec. 24 can be price-adjusted if the cost lowers in the span of time, and if you show proof of purchase. You
+may be eligible for a price match on a purchase, but the rules for submitting documentation vary depending on whether you’re shopping online or in store. It’s
+all explained here.
+</item 4>
+
+<item 5>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Then, you can just repurchase the product wherever it’s cheapest.
+
+As of October 22nd, Target will match the price of any item purchased online or in-store from Target that goes on sale through December 24th. However, the
+current price-matching policy doesn’t apply to products you may have bought from one Target store and found for less at another.
+
+Target will also match the price of items purchased from Amazon, Best Buy, and a select group of competitors if you ask for it at the time of or within 14 days
+of your purchase. You must bring the original ad or listing, whether digital or in print, along with your receipt into the store. Alternatively, you can call
+for online purchases at 1-800-591-3869 or chat online via contactus.target.com.
+
+Be mindful, however, that Target’s policy excludes doorbusters and competitors’ lightning sales, like those that Amazon offers.
+</item 5>
+
+<item 6>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+The end result of these tactics, the FTC argues, is elevated prices across the web. The company steadily hikes the fees it charges sellers and prevents them
+from discounting on other sites, so sellers often inflate their prices off of Amazon, creating an “artificial price floor everywhere,” according to the
+complaint. The FTC is seeking to hold Amazon liable for allegedly violating anti-monopoly law, though it has not yet outlined the specific remedies it believes
+would best resolve its concerns. In antitrust cases, remedies are often determined only after a court finds the defendant liable. In a blog post, Amazon general
+counsel David Zapolsky said third-party sellers set their own prices on the marketplace. The company also invests in tools to help sellers offer “competitive
+prices,” he said. “Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said.
+</item 6>
+
+<item 7>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+If you bought the product from a Costco warehouse location, visit the membership counter at the store where you made the purchase. Costco doesn’t price-match
+items bought from Costco warehouses with Costco.com purchases.
+
+Dell will price-match identical products from Dell, Amazon, Best Buy, Walmart, Target, HP, Apple, Lenovo, and a number of other retailers. You can call
+1-877-275-3355 or chat online to run a price check, but you’ll need to provide a link to the competitor’s product.
+
+You can also contact the company about a price difference within 30 days of purchase. However, there is a long list of restrictions, and none of this is
+available between Thanksgiving Day and the Monday following Thanksgiving (or on Green Monday).
+
+As a general rule, eBay doesn’t match the prices of purchases made during the weeks of Thanksgiving and Cyber Monday. It does, however, offer a generous
+price-matching policy for items bought before or after that time period.
+</item 7>
+
+<item 8>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+If you find a lower price from a qualifying competitor on an eBay Deal item that you bought within 48 hours — or on another product with the “Best Price
+Guarantee” symbol attached to it — you’ll get “110 percent” of the difference. That means eBay will give you an eBay coupon for the difference in price between
+what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference. Note, however, that these
+coupons will expire within 30 days of being issued.
+
+The products must be new, unopened, and identical to the competitor’s item. You have to contact eBay Customer Service, and if they verify your claims are
+legitimate, you will receive the coupon and be able to use it toward your next eBay purchase.
+
+GameStop does not mention an official price-matching policy on its website. Last year, however, GameStop tweeted that the store will price-match items sold and
+shipped by Amazon as long as they’re available online or in-store.
+</item 8>
+
+<item 9>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Walmart doesn’t price-match the prices of its competitors, though Walmart’s online store offers price-matching on items purchased from Walmart stores if the
+item is in stock at Walmart.com.
+
+However, the policy doesn’t apply to those who live in Alaska, Hawaii, or Puerto Rico. Additionally, it doesn’t apply to special event prices, like those seen
+during Black Friday. Walmart also does not retroactively price-match items bought from Walmart.com that have dropped in price after the time of purchase. The
+retailer additionally doesn’t price-match items purchased from Walmart Marketplace retailers or third-party sellers.
+
+Apple doesn’t offer a price-matching policy, though you can price-match on devices like the 15-inch MacBook Air — assuming it’s on sale — elsewhere. Photo by
+Amelia Holowaty Krales / The Verge
+
+While we’ve seen some claims that Apple will price-match up to 10 percent for products bought at certain major retailers, there is no official policy on the
+company’s website.
+</item 9>
+
+<item 10>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Apple does say that if it reduces its price on an Apple-branded product within 14 days from when you received your item, you can visit an Apple Store or contact
+the Apple Contact Center at 1-800-676-2775 to request a refund or get credit for the price difference. However, that doesn’t apply to special sales like Black
+Friday or Cyber Monday.
+
+B&H says that it might be able to honor a current lower price or match the price of a competitor, but it does so on a case-by-case basis. You have to contact
+its Customer Service team using the on-site chat, email, or by calling 800-606-6969 / 212-444-6615.
+
+Costco does not price-match with competitors. However, according to the website, it will issue a credit for the difference between the price a member has paid
+and a promotional price if you bought the item online at Costco and requested the credit up to 30 days before the change in price.
+</item 10>
+=== END ITEM id=f0e413072fed019d ===
+
+=== ITEM id=3b9358dfa048ecfc ===
+Gold sentences and facts:
+Sentence 0: But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource.
+  Fact 0.0: By the age of 16, the person described is public property.
+  Fact 0.1: By the age of 16, the person described is incapable of going outside without being mobbed.
+  Fact 0.2: By the age of 16, the person described's love of singing and dancing is now a lucrative resource.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker described it as almost a very strange, subtle clue to the media.
+  Fact 1.1: The clue signals that the media does not know everything that happened in that relationship.
+  Fact 1.2: The speaker says something really major and traumatic could have happened to her that the media does not know about.
+  Fact 1.3: The speaker told NPR this.
+
+Retrieved items:
+<item 1>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+In interviews, Taylor delighted in revealing this was based on a true story.
+
+"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something
+really major and traumatic happen to me and they don't know about it," she told NPR.
+
+In her Rolling Stone cover story, Taylor said the crash actually occurred on a snowmobile "with an ex who lost control and wrecked it so badly that she saw her
+life flash before her eyes".
+
+That prompted speculation the track was also about Styles: The couple had gone skiing with Justin Bieber and Selena Gomez in late 2012.
+
+The lyrics also reference their identical aeroplane necklaces and a December break-up, which ties in with the "Sad Taylor on a boat" meme.
+
+But the singer steadfastly refuses to name names: "The fact that I've never confirmed who those songs are about makes me feel like there is still one card I'm
+holding," she told GQ.
+</item 1>
+
+<item 2>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+But that's for another article..
+
+17-21) Tracks from the vault
+
+In 2014, Taylor said she had recorded more than 100 songs for 1989 - so the relative scarcity of vault tracks is intriguing.
+
+Whereas previous re-recordings have featured full discs of bonus material, this album gets just five new additions: Slut!, Say Don't Go, Now That We Don't Talk,
+Suburban Legends and Is It Over Now?
+
+As a whole, they feel like dry runs for the songs that made the cut. The melodies aren't as crisp, the lyrics aren't as sharp. Suburban Legends has a
+particularly clunky line about letting a partner's indiscretions slide "like a hose on a slippery plastic summer".
+
+Slut! has piqued fans' interest for its title alone - who might she be talking about? No-one, it turns out.
+</item 2>
+
+<item 3>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+"If she's got blue eyes, I will surmise that you'll probably date her."
+
+The fact that all the new songs were co-written and produced by Jack Antonoff suggests there may have been rights issues over the tracks she wrote with Max
+Martin - who has not been involved with the new re-recordings.
+
+That means the vault tracks are all bathed in the dreamy, soft-focus atmospherics of Out Of The Woods, rather than the upfront pop of Shake It Off.
+
+Speaking in 2015, Taylor admitted she'd been brutal about pruning songs from 1989's original tracklist.
+
+"There were so many songs I wrote for this album that were really good, but if I felt in any way that they would have belonged on my last album, Red, they got
+cut," she told New York radio's The Todd Show in the Morning.
+
+"There are really, really good songs on the cutting room floor because they weren't innovative enough or new enough.
+</item 3>
+
+<item 4>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+This isn't fun for me'. But my second reaction was, 'Hey, that's actually a really interesting character they're writing about: She jet-sets around the world
+collecting men - and she can get any of them, but she's so clingy that they leave and she cries in her marble bathtub surrounded by pearls'.
+
+"I was like, 'I can use this'."
+
+Lyrically, it contains some of her best lines ("darling, I'm a nightmare dressed like a daydream") and there's a delicious attention to detail - with a pen
+click signifying every new entry in her little black book.
+
+Shout-out to all the lonely Starbucks lovers; and to Chicago indie band Hard Femme who took that misheard lyric and made it a real song. Those search engine
+clicks gotta be lucrative, right?
+</item 4>
+
+<item 5>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+Only this time, she got to say everything she wanted.
+
+Image source, Universal Music Group Image caption, The video for Shake It Off was filmed under intense secrecy
+
+6) Shake It Off
+
+Rattling like a bag of spanners, Shake It Off is a 21st Century Hey Mickey, a honking great party record with a chorus that drills so far into your brain you
+start seeing lights.
+
+It was the last song recorded for 1989, and Taylor arrived at the studio with a challenge for her co-writers Max Martin and Johan "Shellback" Schuster: "We need
+drums that make even the person who's having a terrible night at the wedding [go], 'Oh, it's my song!'"
+
+Like Blank Space, Shake It Off is a response to celebrity takedown culture. Taylor lists all of her supposed flaws ("She's an airhead!' 'She dates too many
+men!") with a defiant "so what?
+</item 5>
+
+<item 6>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+No-one, it turns out.
+
+The song is thematically similar to Blank Space, commenting on the media's portrayal of Taylor's relationships: "But if I'm all dressed up / They might as well
+be lookin' at us / And if they call me a slut / You know it might be worth it for once."
+
+The best of the new tracks is Is It Over Now. An angrier take on 1989's philosophical break-up songs, it calls back to the Harry Styles snowmobile incident (see
+also, Out Of The Woods) then, deliciously, references the "Sad Taylor Boat" meme - a photo of Taylor fleeing a vacation alone after the couple split up.
+
+She goes on to call an ex a "lying traitor", accuses them of parading their new relationships in public, and noting that every new girlfriend looks like her.
+
+"If she's got blue eyes, I will surmise that you'll probably date her."
+</item 6>
+
+<item 7>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+All proceeds from the track are donated to New York City's Public Schools.
+
+Image source, Getty Images Image caption, The original version of 1989 won three Grammy Awards, including Album of the Year
+
+2) Blank Space
+
+Pretty much the perfect Taylor Swift song, Blank Space takes every horrible rumour that was being spread about her love life, and amplifies it with satirical
+relish.
+
+"In the last couple of years the media have had a wonderful fixation on painting me as the psycho serial dater girl," she told the Grammy Museum. "Every article
+was like, 'Here's Taylor Swift standing near some guy. WATCH OUT GUY!'
+
+"My first reaction was to be like, 'That's a bummer. This isn't fun for me'.
+</item 7>
+
+<item 8>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+It's so weird to look back on that - you've got heaping piles of discarded songs that I really loved when I wrote them and I still love now.
+
+"I just need each album to have its own sound and if it doesn't fit that sound, it doesn't matter if it's a great song to me."
+</item 8>
+
+<item 9>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+"I would never have said anything like that on a previous album," she told Ryan Seacrest.
+
+"My previous albums have always been, 'I was right, you were wrong'. What happens when you grow up is you realise that the rules in a relationship are very
+blurred. It gets very complicated, very quickly."
+
+4) Out Of The Woods
+
+One of 1989's strengths is how the music reflects the emotional tenor of the words. Here, that means frantic anxiety.
+
+As Taylor and her partner run from forces that seek to destroy them, they're pursued by pounding drums and rushing synths. And there's a desperation to her
+voice, as though she's repeating "everything's fine, everything's fine, everything's fine," against evidence to the contrary.
+
+By the middle 8, it seems they've made a clean getaway. Then car brakes are slammed, and it's "twenty stitches in a hospital room".
+
+In interviews, Taylor delighted in revealing this was based on a true story.
+</item 9>
+
+<item 10>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+Like, through thick and thin, sickness and health love," she told MTV.
+
+Drawing directly on conversations she'd had with Lena, the song blends scenes of everyday life (burnt toast, borrowed shirts) with moments of incandescent
+tenderness (kisses on sidewalks and late night heart-to-hearts).
+
+In an interview with Elle, Taylor talked wistfully about the couple's ease around each other.
+
+"I've never had that," she said. "[But] now I have more of a grasp on the fact that when you're in a state of infatuation and you think everything that person
+does is perfect, it then - if you're lucky - morphs into a real relationship when you see that that person is not in fact perfect, but you still want to see
+them every day."
+</item 10>
+=== END ITEM id=3b9358dfa048ecfc ===
+
+=== ITEM id=411b9329371cb811 ===
+Gold sentences and facts:
+Sentence 0: The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+  Fact 0.0: The agreement also meant that Apple never switched to a Google competitor.
+  Fact 0.1: The agreement also meant that Apple never allowed users to choose their browser when setting up their iPhones.
+Sentence 1: Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months.
+  Fact 1.0: Apple has already indicated that it plans to appeal.
+  Fact 1.1: Appealing is a lengthy process.
+  Fact 1.2: Appealing can take around 18 months.
+Sentence 2: They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms.
+  Fact 2.0: The party described uses its own store.
+  Fact 2.1: The party described uses its own payments.
+  Fact 2.2: The party described forces developers to all have the same terms.
+  Fact 2.3: The party described forces OEMs to all have the same terms.
+  Fact 2.4: The party described forces carriers to all have the same terms.
+
+Retrieved items:
+<item 1>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+For starters, both parties have to want to settle.
+
+“Apple is a tough nut to crack,” says Brittingham, noting that Apple is one of the most sued companies in Silicon Valley. The company’s large cash reserves also
+make taking Apple to court a costly endeavor. Masimo, for example, has reportedly spent $60 million litigating the issue thus far. “I think they tend to hold
+out as long as possible in order to make it less appetizing to sue Apple.”
+
+The other option is for Apple to avoid the import ban altogether. Iancu says Apple could simply decide to manufacture the watches within the US instead of
+overseas — but that’s a significant supply chain change that’s unlikely to happen any time soon.
+
+Does this set a precedent?
+
+This import ban isn’t the only one Apple is facing. In February, the Biden administration also declined to veto another ITC import ban and cease-and-desist
+order stemming from a dispute with AliveCor over the Apple Watch’s EKG features.
+</item 1>
+
+<item 2>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 2>
+
+<item 3>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 3>
+
+<item 4>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+Earlier this year, the US International Trade Commission (ITC) ruled that Apple had infringed on two patents from medical device maker Masimo. As a result, the
+ITC said it would impose an import ban on the Apple Watch Series 9 and Ultra 2 starting December 26th. At the time it was hard to believe that this would
+actually come to pass: Apple gets sued all the time, and even when it loses, how often does it actually face dramatic consequences?
+
+Well, now would be one of those times. Experts say that, barring a Christmas miracle, it’s unlikely that Apple will find a way to escape the ban. Case in point,
+the company shocked everyone yesterday when it decided to preemptively pull the watches from its online store starting December 21st at 3PM ET. And after the
+24th, they’ll disappear from Apple Stores, too.
+</item 4>
+
+<item 5>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+In 2013, then President Barack Obama vetoed an import ban on the iPhone. At the time, Samsung accused Apple of infringing on its cellular data patents. But in
+that case, according to Levi, Apple was able to make the argument that there were issues regarding fair, reasonable, and nondiscriminatory licensing (FRAND).
+The patents involved were considered standard and essential, and the Obama administration was concerned the import ban would give Samsung “undue leverage.”
+Plus, it only impacted the iPhone 4 and older models of the iPad. Newer iPhones didn’t use an infringing chipset. In the case of the Apple Watch, Apple doesn’t
+have any of these arguments.
+
+“In that case 10 years ago, Apple really rolled the dice and the pulled the rabbit out of the hat. It’s very unlikely for them to do that again,” says Levi.
+
+Where does Apple go from here?
+</item 5>
+
+<item 6>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+And after the 24th, they’ll disappear from Apple Stores, too.
+
+“I think Apple sees the writing on the wall and they’re preparing themselves,” says Ben Levi, a partner at Levi Snotherly & Schaumberg, which has experience
+litigating ITC disputes.
+
+It’s rare to see Big Tech lose — and with such tangible consequences at that. There are still ways that Apple can keep the watches on sale, but it’ll likely
+take a lot of waiting or a lot of money to make it happen.
+
+How Apple got here
+
+This ban is the result of a long-standing patent dispute between Apple and the medical device maker Masimo. The latter is known for its pulse oximetry tech,
+generally referred to as SpO2 or blood oxygen saturation in the wearable world, and it claims that Apple is using that patented technology without permission.
+
+This particular story started about 10 years ago when Apple reached out to Masimo about a potential partnership around blood oxygen features on its wearables.
+</item 6>
+
+<item 7>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+Thou shalt not have a competing store on iOS and thou shalt not use a competing payment method. And I think Apple should be receiving at least as harsh
+antitrust scrutiny as Google.
+
+It’s interesting to me that because Google distributes the Android operating system as open source, they had to put all these deals out in the open. More out in
+the open, I should say — certainly they still wanted to keep them secret.
+
+But I’m going down my story about all the best emails from the Epic v. Apple trial — and we do have a lot of documents from both Apple and Google that show they
+were similarly self-serving in terms of deals.
+
+I’d say this is the thing that’s disappointed me the most with Apple and Google: even at the peak of the antitrust trial against Microsoft, Microsoft was
+awesome to developers. Microsoft has always been awesome to developers, always being respectful, giving developers a great deal and treating them as partners,
+you know? And so even as Microsoft was crushing corporate competitors, the developer experience was excellent.
+</item 7>
+
+<item 8>
+Why the Apple Watch is being banned — and how Apple can avoid it (The Verge, 2023-12-19T18:16:57+00:00)
+“From a legal perspective, whatever change Apple makes has to be significant enough to avoid the patent, and it cannot be what’s called a ‘colorable’
+difference. Minor changes will not be sufficient,” Iancu says.
+
+Basically, Apple can’t simply make a small tweak to the code and call it a day. Masimo claims that the patents are hardware related, so even completely
+disabling the sensor may not work depending on how the patent is written. Apple could remove it entirely from the design, but that would require mucking around
+with Apple’s meticulous supply chain and could take some time.
+
+Then there are the options that would cost Apple some money. Apple could sit down with Masimo and hammer out a licensing deal for the infringed patents. In a
+New York Times interview, Masimo CEO Joe Kiani said Apple “had not engaged in licensing negotiations.” It’s an easy-seeming fix, so why not do it? For starters,
+both parties have to want to settle.
+</item 8>
+
+<item 9>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 10>
+=== END ITEM id=411b9329371cb811 ===

@@ -1,0 +1,1100 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=c3fc17ef2fa5b2ac ===
+Gold sentences and facts:
+Sentence 0: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 0.0: The answer ultimately lies with the jury.
+  Fact 0.1: The jury was selected on Wednesday morning.
+  Fact 0.2: The jury was selected before lawyers for the government.
+  Fact 0.3: Bankman-Fried then swapped two very different stories of the former crypto mogul's sudden rise and almost instantaneous fall.
+Sentence 1: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 1.0: The highly anticipated criminal trial of Sam Bankman-Fried started on Tuesday.
+  Fact 1.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 1.2: The trial is to determine whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“You will see the full picture.”
+
+…or a well-meaning founder?
+
+But Bankman-Fried, whose cheekbones were more prominent after spending about seven weeks in a Brooklyn prison, was no liar, according to Mark Cohen, one of his
+lawyers. “Sam didn’t defraud anyone,” he said early on in his opening statement.
+
+What the jury will see is a nerdy startup founder who acted in “good faith,” not the prosecution’s “cartoon of a villain.” (Cohen repeatedly harped on
+Bankman-Fried’s allegedly good-faith actions throughout his address to the jury.)
+
+Alameda was not subterranean or shady. It was a successful hedge fund, he said. FTX was no Ponzi scheme. It was a “very innovative, successful company.”
+</item 1>
+
+<item 2>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 2>
+
+<item 3>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 3>
+
+<item 4>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 5>
+
+<item 6>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I was ready to hear this pursued further — but then it, too, was dropped.
+
+I think the defense was also trying to suggest that the government had coerced Ellison’s testimony, by suggesting that she had pleaded guilty to a charge of
+defrauding investors that she couldn’t have been involved in. After all, she didn’t prepare materials for them. Unfortunately, she did say that she had
+conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine. This
+line of questioning felt like a waste of time.
+
+There were rather a lot of sidebars during the cross-examination, to the point that when one occurred, several jurors looked entertained. There were a few
+yesterday, too, including one in which the prosecution complained that Bankman-Fried was visibly scoffing at Ellison’s answers, according to the court
+transcript.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+I have never seen Sam Bankman-Fried so still as he was during the prosecution’s opening statement. The characteristic leg-jiggling was absent. He barely moved
+as the prosecutor listed the evidence against him: internal company files, what customers were told, the testimony of his co-conspirators and his own words.
+
+His hair was shorn, the result of a haircut from a fellow prisoner, the Wall Street Journal reported. He wore a suit bought at a discount at Macy’s, per the
+Journal; it hung on him. He appeared to have lost some weight.
+
+“All of that was built on lies.”
+
+Bankman-Fried, at this time last year, had a luxury lifestyle as the CEO of crypto exchange FTX, said the assistant US attorney, Thane Rehn, in the cadence of a
+high schooler delivering his lines in a student play. Bankman-Fried hung out with Tom Brady. He was on magazine covers, lived in a $30 million penthouse, and
+spent time with world politicians.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+How much? Almost $100,000, he said. And was he ever able to? “Never,” he told prosecutors.
+
+Shortly afterward, as the trial neared late afternoon, the government called Adam Yedidia to the stand. A fast-talking graduate of MIT, he and Bankman-Fried
+were close friends in college, he said. And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in
+finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+
+When Yedidia first took the stand, Danielle Sassoon, one of the lead prosecutors, said that the college friend of Bankman-Fried had legal immunity during his
+testimony. Why did he make such a deal with the government, she asked.
+
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 10>
+=== END ITEM id=c3fc17ef2fa5b2ac ===
+
+=== ITEM id=b04e0399e3f77b70 ===
+Gold sentences and facts:
+Sentence 0: They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+  Fact 0.0: Jerry Dipoto is president of baseball operations.
+  Fact 0.1: Those referred to as 'they' would all have significant value if Jerry Dipoto decided to move one for a bat.
+Sentence 1: Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+  Fact 1.0: Aaron Judge came away with a new contract.
+  Fact 1.1: Justin Verlander came away with a new contract.
+  Fact 1.2: Trea Turner came away with a new contract.
+  Fact 1.3: Xander Bogaerts came away with a new contract.
+
+Retrieved items:
+<item 1>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Passan reported a trade of Soto appears to be "edging closer to becoming a reality," and while several teams are out on him because of his large salary and
+pending free-agent status, there still could be a large market for the star outfielder.
+
+Much of the rest of the names on the trade market are arms. Dylan Cease and Tyler Glasnow are the pitchers most likely to be dealt this offseason, and Cleveland
+could also hold a pair of intriguing trade chips in closer Emmanuel Clase and former Cy Young winner Shane Bieber. The Brewers have also begun trade talks for
+former Cy Young winner Corbin Burnes.
+</item 1>
+
+<item 2>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+It also makes him less likely to be traded this offseason.
+
+First-year GM Chris Getz has suggested no one on the roster is truly untouchable, an understandable approach for a team that just lost 101 games. Neither owner
+Jerry Reinsdorf nor Getz has called this a rebuild, though.
+
+Any slim hopes the White Sox may have of competing in 2024 would be dashed by trading Cease, the only above-average starting pitcher on the roster.
+
+7. Alex Verdugo, RF, Red Sox
+
+Verdugo’s name has been floated in trade rumors for a few seasons. The Red Sox have held onto him thus far. They have a new baseball operations leader in Craig
+Breslow, who has acknowledged the team has gotten early calls on the left-handed hitting outfielder.
+
+Jarren Duran and Masataka Yoshida also hit from the left side. Dealing Verdugo could free some at-bats for a right-handed addition while perhaps bringing in
+immediate help for the pitching staff or at second base.
+</item 2>
+
+<item 3>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Twins could trade Max Kepler, Jorge Polance
+
+Date: Sunday, Dec. 17
+
+Source: Jon Morosi, MLB Network
+
+The Twins are coming off an AL Central title, but could be looking to deal away two of their key players form the team. Max Kepler and Jorge Polanco could both
+reportedly be on the trade market, per MLB Network's Jon Morosi, though their market could hinge on the status of other infield free agents.
+
+Kepler appeared in 130 games for the Twins, and posted an impressive .260/.332/.484 slash line with 24 homers for Minnesota. Polanco was moved to an infield
+utility role with Edouard Julien and Royce Lewis emerging into regulars, but was still solid in 80 games, logging a .255/.335/.454 slash with 14 homers.
+
+Yamamoto requests meeting with Yankees
+
+Date: Sunday, Dec.
+</item 3>
+
+<item 4>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Pirates acquire Marco Gonzales from Braves
+
+Date: Tuesday, Dec. 5
+
+Source: Jeff Passan, ESPN
+
+Gonzales, who was acquired by the Braves in the trade that helped them land Jarred Kelenic on Sunday, is being re-routed to Pittsburgh for cash and a player to
+be named later.
+
+Gonzales, 31, is a decent rotation arm with 65 wins, 665 strikeouts and a 4.14 ERA over 893.0 innings pitched in his nine-year career.
+
+Yankees land Alex Verdugo from Red Sox
+
+Date: Tuesday, Dec. 5
+
+Source: Jeff Passan, ESPN
+
+For just the seventh time in the last 50 years (!), the Red Sox and Yankees have agreed to a deal.
+
+Boston will send starting OF Alex Verdugo to New York for RHP Richard Fitts, RHP Greg Weissert and RHP Nicholas Judice.
+</item 4>
+
+<item 5>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Verdugo had been the Red Sox's starting outfielder for the last four seasons, coming over as the centerpiece in the trade that sent Mookie Betts to the Dodgers.
+Verdugo hit .281 with 43 home runs, 206 RBI and 16 stolen bases over 2,071 plate appearances with Boston. He also led the American League in outfield assists in
+2020 and 2023.
+
+In return, Boston will get Weissert and two pitching prospects headlined by Fitts — the Yankees' No. 4-ranked pitching prospect and 12-ranked prospect overall.
+
+Relievers Yates, Devenski get one-year deals for 2024
+
+Date: Tuesday, Dec. 5
+
+Source: Ken Rosenthal, The Athletic and Jeff Passan, ESPN
+
+Veteran relievers Kirby Yates and Chris Devenski know where they'll be pitching in 2024, according to reports Tuesday.
+</item 5>
+
+<item 6>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+Davis, Mike Yastrzemski
+
+Guardians: Josh Naylor, Cal Quantrill
+
+Mariners: Ty France
+
+Marlins: Josh Bell
+
+Mets: Jeff McNeil
+
+Nationals: Hunter Harvey, Lane Thomas
+
+Orioles: Anthony Santander
+
+Padres: Scott Barlow
+
+Phillies: Nick Castellanos
+
+Rays: Manuel Margot, Harold Ramírez
+
+Red Sox: Kenley Jansen, Chris Martin, Nick Pivetta
+
+Rockies: Brendan Rodgers
+
+Royals: Salvador Perez
+
+Tigers: Spencer Turnbull
+
+Twins: Kyle Farmer
+</item 6>
+
+<item 7>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+MLB's winter meetings are always a prime time for moves to happen as many of the top executives, players and agents all come together at the same spot.
+
+Last year's winter meetings wound up being explosive. Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+
+This year's winter meetings could wind up being similarly busy. There is a growing sense Shohei Ohtani could sign during the winter meetings, and a move of that
+magnitude could kick off the next wave of moves. There's also a number of top players on the trade market, including star Padres outfielder Juan Soto.
+
+Starting Sunday, Dec. 3, and running through Wednesday, Dec. 6, expect MLB's offseason to really kick into high gear.
+
+WINTER MEETINGS: Shohei Ohtani rumors, Juan Soto trade destination come to forefront
+
+Sporting News will be tracking all the latest news and rumors from the 2023 Winter Meetings.
+</item 7>
+
+<item 8>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+His 3.39 mark across 193 2/3 innings this past season wasn’t quite so dominant but is still high-end production.
+
+Burnes struck out just under 26% of opposing hitters. While his lowest mark since his rookie season, that’s still an above-average figure.
+
+Adames is coming off a less impressive year. The 28-year-old hit .217/.310/.407 through 638 trips to the plate. That’s slightly below-average offense, although
+he still connected on 24 home runs.
+
+Adames is an excellent defensive shortstop with plus power in an offseason where there are essentially no free agent shortstops of note. Even with a mediocre
+on-base percentage, he’d generate plenty of interest.
+
+4. Shane Bieber, SP, Guardians
+
+Develop high-end starting pitching, trade a top starter as they become more expensive, replace him with talented younger arms. The Guardians have trodden this
+path with Corey Kluber, Mike Clevinger and Carlos Carrasco.
+</item 8>
+
+<item 9>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+16. Mariners SP
+
+We initially had Bryan Woo in this spot. It could just as easily have been Bryce Miller or Emerson Hancock, so we’ll cheat and just mention the Seattle rotation
+in general.
+
+They’re almost certainly not going to trade George Kirby. It’d take a lot to pry away Logan Gilbert. Moving any of Woo, Miller or Hancock could be more
+appealing for a front office that is looking for ways to add long-term offensive upside.
+
+None of that trio has even reached one year of major league service. Hancock only has three big league starts under his belt. Miller and Woo spent more time in
+the rotation this year, starting 25 and 18 games respectively. They both turned in mid-rotation results.
+
+Other clubs probably have differing opinions on which right-hander they prefer. (The Mariners likely have their own slight preferences.) They’d all have
+significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+
+17.
+</item 9>
+
+<item 10>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+3
+
+Source: Susan Slusser, San Francisco Chronicle
+
+The Giants have missed out on big names in the past like Aaron Judge and Carlos Correa, but they are looking to turn that around in 2023 with heavy involvement
+and Ohtani, among others. Per San Francisco Chronicle's Susan Slusser, teams believe the Giants "might have an edge" in the pursuit of Japanese ace Yoshinobu
+Yamamoto.
+
+Dylan Cease trade market heating up
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+One of the biggest names on the market early is White Sox ace Dylan Cease in trade talks. MLB Network's Jon Morosi reported three teams, the Dodgers, Braves and
+Orioles, are among several involved discussing a deal for Cease as the winter meetings begin.
+
+Rays, Mariners talking trades in winter meetings
+
+Date: Sunday, Dec.
+</item 10>
+=== END ITEM id=b04e0399e3f77b70 ===
+
+=== ITEM id=c64e51fed438a3e1 ===
+Gold sentences and facts:
+Sentence 0: You're probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth.
+  Fact 0.0: Kenneth Walker III has an oblique injury.
+  Fact 0.1: Kenneth Walker III may remain out with his oblique injury.
+  Fact 0.2: You are probably starting him if Kenneth Walker III remains out with his oblique injury.
+  Fact 0.3: Consider other options if you have the depth.
+Sentence 1: With Kenneth Walker III's oblique injury comes opportunity for the rookie, who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams.
+  Fact 1.0: Kenneth Walker III has an oblique injury.
+  Fact 1.1: Kenneth Walker III's oblique injury creates opportunity for the rookie.
+  Fact 1.2: The rookie already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams.
+  Fact 1.3: Seattle lost narrowly to the Rams in Week 11.
+Sentence 2: Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+  Fact 2.0: Kenneth Walker III plays for the Seahawks.
+  Fact 2.1: Kenneth Walker III took four carries against the Rams.
+  Fact 2.2: Kenneth Walker III left the game with an oblique injury.
+  Fact 2.3: Kenneth Walker III left the game after taking four carries against the Rams.
+
+Retrieved items:
+<item 1>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Tampa Bay has a pretty good run defense, so Allgeier can't be trusted outside of a desperate flex play with his nine average touches over the past two weeks.
+
+What are the biggest RB injuries in Week 14?
+
+Derrick Henry (head/neck), Rhamondre Stevenson (ankle), Kenneth Walker III (oblique), Aaron Jones (knee), D'Onta Foreman (ankle), and D'Andre Swift
+(undisclosed) are all "questionable," at best, to suit up this week. We know for sure Stevenson will be out, but we'll have to monitor the injury reports
+throughout the week for the rest.
+
+Jonathan Taylor (thumb) underwent surgery last week and will miss the next few weeks, opening the door for Zack Moss to resume his role as Indy's super-sub lead
+back.
+
+We'll be updating these RB PPR rankings all week, so check back for the latest player movement.
+</item 1>
+
+<item 2>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Kansas City's front-seven has been tough against speedsters and more vulnerable to power backs, and the 5-11, 190-pound Cook 100 percent falls into the former
+category. Temper your expectations.
+
+We feel the same way about Zach Charbonnet (@ 49ers). It's great that the Week 13 injury he sustained on Thursday night was just a bruise, but it's not great
+that he now faces a 49ers defense that already stifled him on Thanksgiving. You're probably starting him if Kenneth Walker III remains out with his oblique
+injury, but consider other options if you have the depth. The floor and ceiling remain low against this uber-confident Niners D.
+
+Tyler Allgeier (vs. Buccaneers) continues to see his role diminish for the NFC South-leading Falcons, with dum-dum coach Arthur Smith finally realizing that
+Bijan Robinson gives the ATL the best chance at continued success.
+</item 2>
+
+<item 3>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Smith did return, however, for the final drive of the game in the losing effort. Head coach Pete Carroll said that Smith will "make it back." When asked if that
+means for Thursday's matchup against San Francisco, the coach said, "I would think so."
+
+Sam Howell (Commanders) received medical attention on the sidelines after enduring several hard hits to the upper body on a touchdown run against the Giants. He
+was quickly cleared of a potential concussion, however, and remained in the game. Veteran journeyman Jacoby Brissett is Washington's backup.
+
+RB
+
+Aaron Jones (Packers) suited up against the Chargers despite a lingering hamstring issue, only to manage just five carries before suffering a knee injury. The
+former Pro Bowler needed help to leave the field and was then carted to the locker room, replaced by A.J. Dillon.
+</item 3>
+
+<item 4>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for
+further evaluation in the locker room. He was ruled questionable to return. NFL Media reported on Monday that Kupp suffered a low ankle sprain and will be
+evaluated going forward.
+
+Darius Slayton (Giants) had a big impact against the Commanders, hauling in a deep score from Tommy DeVito, before exiting with an arm injury. He was ruled out
+for the remainder of the contest halfway through the third quarter.
+
+EDGE
+
+Joey Bosa (Chargers) appeared to injure his right leg or foot while held in a block during a first-quarter pass-rushing attempt against the Packers. He limped
+to the sidelines and was carted to the locker room, then ruled questionable to return.
+</item 4>
+
+<item 5>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Geno Smith's struggles complicate their fantasy prospects, as well.
+
+What are the biggest WR injuries in Week 13?
+
+Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging
+injuries. For now, we've placed Higgins and Brown in our Week 13 list and omitted Burks and Toney. We'll also be eyeing the Chargers' Josh Palmer (knee), who's
+eligible to come off the IR this week but probably won't suit up against New England.
+
+Last week, the most notable WRs to exit their respective games with injuries include Chris Olave (concussion), Amari Cooper (ribs), Demario Douglas
+(concussion), and Rashid Shaheed (thigh). We've left all four WRs out of our initial Week 13 list but will closely monitor their teams' injury reports to gauge
+their playing prospects.
+</item 5>
+
+<item 6>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+Keep rolling with Alexander Mattison (vs. Bears), too, against another below-average run defense.
+
+Welcome to the top 25, Zach Charbonnet (vs. 49ers)! With Kenneth Walker III's oblique injury comes opportunity for the rookie, who already looked strong in the
+month leading up to Seattle's narrow Week 11 loss to the Rams. Sure, Charbs' 69-yard effort in Los Angeles last week was a bit underwhelming, but we love his
+upside with a full game as the Seahawks' bell-cow.
+
+Speaking of bell-cow backs, things are looking very promising for the short-term workload of Green Bay's AJ Dillon (@ Lions). Veteran Aaron Jones (knee) and
+rookie Emanuel Wilson (shoulder) both got hurt in Week 11, so Dillon should be the main man in Motown for the Pack.
+</item 6>
+
+<item 7>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+The injury highlights the importance of handcuffs, as Zack Moss has put up multiple top-10 performances with and without Taylor this season.
+
+Seattle's Kenneth Walker III (oblique) missed Week 12 and 13, and we're not confident in his ability to suit up against the hard-hitting 49ers coming off a big
+win in Philly. Backup Zach Charbonnet exited early because of a knee injury against the Cowboys, putting his status in doubt, too. If both are out, DeeJay
+Dallas would start and lead the backfield in touches.
+
+Green Bay's Aaron Jones has a sprained MCL, and sources have revealed that the Packers continue to consider him week-to-week. He only logged four carries before
+sustaining the injury in Week 11, then he sat for the Packers' Thanksgiving Day tilt with the Lions and their Sunday Night Football win over Kansas City. Why
+rush him back if Green Bay is already winning games?
+</item 7>
+
+<item 8>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+They weren't awful against Dallas last week on a per-touch basis, but neither finished with more than 12 touches. Even worse, no Carolina back has enjoyed a
+60-yard rushing game since Oct. 15. Bad offensive line, negative game scripts, awful coaching — it's all bad, man!
+
+What are the biggest RB injuries in Week 12?
+
+Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11 that the ever-hip Pete Carroll referred to as "legit." KW3 has a better
+chance of missing multiple weeks than he does at suiting up for Seattle's Thanksgiving Day game against Fred Warner and the 49ers. If Zach Charbonnet somehow
+finds himself on your waiver wire, an early Merry Christmas to you if you have the FAAB or a high waiver priority.
+
+The hits just keep on coming for the Packers' Aaron Jones, who suffered a knee injury but seems to have at least caught a break in the sense that he didn't tear
+his ACL.
+</item 8>
+
+<item 9>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 9>
+
+<item 10>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+He was seen walking on the sidelines shortly afterward but ruled doubtful to return. Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing
+yards on the year, replaced Walker as Seattle's top ball carrier. Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an
+"oblique strain that was legit" and could miss time.
+
+D'Onta Foreman (Bears) remained a headliner of Chicago's backfield against the Lions, even with Khalil Herbert back from injured reserve, but managed just 14
+yards on the ground before suffering an ankle injury. He walked off with a limp and attempted to run on the sidelines but did not return to the field after the
+Bears ruled him questionable.
+
+Pick Six Newsletter Crafted By The Best NFL Experts Get the day's big stories + fun stuff you love like mock drafts, picks and power rankings.
+</item 10>
+=== END ITEM id=c64e51fed438a3e1 ===
+
+=== ITEM id=6c265ea04889aab1 ===
+Gold sentences and facts:
+Sentence 0: The official details have not been reported, though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal.
+  Fact 0.0: The official details have not been reported.
+  Fact 0.1: The report indicated the deal will shatter Mike Trout's record 12-year, $426.5 million deal.
+Sentence 1: According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club.
+  Fact 1.0: According to ESPN's Jeff Passan, the deal is for $42 million.
+  Fact 1.1: According to ESPN's Jeff Passan, the deal is over three years.
+  Fact 1.2: According to ESPN's Jeff Passan, the deal includes a club option for a fourth year.
+  Fact 1.3: According to ESPN's Jeff Passan, the deal includes an opt out after his second season with the club.
+
+Retrieved items:
+<item 1>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+20
+
+Source: Ken Rosenthal, The Athletic
+
+Buried at the bottom of Rosenthal’s piece on what an Ohtani contract might look like — incentives, opt-outs and all sorts of stuff — is this little bit of
+reporting:
+
+An agreement at the winter meetings in Nashville the first week of December would be the ideal outcome for MLB, but not necessarily for Ohtani. He perhaps will
+be better off waiting for the signing of Japanese righty Yoshinobu Yamamoto, who is expected to be posted for free agency as soon as Monday, triggering a 45-day
+window for teams to negotiate with him. Losing out on the 25-year-old Yamamoto, who could command more than $200 million, might put certain teams on tilt,
+improving the landscape for Ohtani.
+
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov.
+</item 1>
+
+<item 2>
+M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers (The New York Times, 2023-12-09T22:04:02+00:00)
+(Photo: Michael Owens / Getty Images)
+
+Ohtani is committed to being a starting pitcher. If he cannot stay healthy enough for that role, he could aid his new team as a reliever. He closed the final
+game of the World Baseball Classic, securing the crown for Japan by striking out Trout. His four-seam fastball averaged nearly 97 mph in 2023; the velocity of
+the pitch figures to improve in short bursts.
+
+Advertisement
+
+Even if Ohtani never pitches again, his value as a hitter is immense. In 1920, his first season exclusively as a hitter, Ruth led the American League in homers,
+on-base percentage and slugging percentage. In 2023, while still making 23 starts with a 3.14 ERA, Ohtani led the American League in the same three categories
+as Ruth. He swatted 44 homers with a career-best 1.066 OPS. He did this while making starts and dealing with a torn ligament in his elbow.
+</item 2>
+
+<item 3>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+But MLB Network's Jon Morosi said it's unlikely the Jays will land both star players, reporting they might land one of the two, but they will not add both this
+offseason.
+
+Ohtani has already received several $500+ million offers
+
+Date: Sunday, Dec. 3
+
+Source: Jon Heyman, NY Post
+
+It's no surprise the bidding for Ohtani is heating up, with the star expected to sign soon. And New York Post's Jon Heyman reported Ohtani has already received
+several deals that have topped $500 million, which could mean he winds up being the first $600 million player in MLB history. He added there are believed to be
+five teams in the running for Ohtani.
+
+Decision near for Ohtani
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+Nothing gets the hot-stove crowd excited like a big move during the winter meetings, and the biggest move of the offseason could come this week in Nashville or
+soon after.
+</item 3>
+
+<item 4>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+'Money's great, but winning's better'
+
+Date: Nov. 21
+
+Source: Max Scherzer, Rangers pitcher on Foul Territory
+
+OK, so this isn't necessarily a rumor, but an example of how much players would love for Ohtani to join their team. Scherzer was a guest on Foul Territory on
+Monday.
+
+"Money's great, but winning's better."
+
+
+
+Max Scherzer shares his pitch for Shohei Ohtani to join the @Rangers 🏆
+
+
+
+▶️ https://t.co/6KoSRqSgk2 pic.twitter.com/PHW2jHWj6C — Foul Territory (@FoulTerritoryTV) November 20, 2023
+
+Maybe Ohtani won’t sign quite so soon after all
+
+Date: Nov.
+</item 4>
+
+<item 5>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Instead, the Royals will hope the veteran Smith, who had solid underlying numbers in 2023, can serve as a reliable late-inning arm after both Scott Barlow and
+Aroldis Chapman were traded before the deadline this past season.
+
+Shohei Ohtani agrees to mega contract with Dodgers
+
+Date: Saturday, Dec. 9
+
+Source: Shohei Ohtani, Jeff Passan
+
+Two-time MVP Shohei Ohtani announced on Instagram that he is signing with the Los Angeles Dodgers, spurning the Blue Jays and remaining in the city where he
+became a sensation with the Angels.
+
+ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual
+value.
+
+Ohtani joins a Dodgers lineup that already features two former MVPs in Mookie Betts and Freddie Freeman, both of whom were NL MVP finalists in 2023.
+</item 5>
+
+<item 6>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Here's the latest on Ohtani's free agency pursuits.
+
+MORE: Projecting Shohei Ohtani's contract in free agency
+
+Shohei Ohtani news: Latest updates, rumors for MLB free agency
+
+Ohtani agrees to 10-year, $700 million deal with Dodgers
+
+Date: Saturday, Dec. 9
+
+Shohei Ohtani announced Saturday that he has agreed to a contract with the Dodgers. It's a colossal 10-year, $700 million deal with "significant deferrals," so
+while Los Angeles won't pay him $70 million per year, the franchise will be paying him beyond those 10 seasons.
+
+While rumors connected Ohtani to the Blue Jays on Friday, it's the Dodgers who hand him a record-shattering contract and pair the two-time MVP with two former
+MVPs in Mookie Betts and Freddie Freeman.
+
+Ohtani not headed to Toronto, at his home in Southern California
+
+Date: Friday, Dec.
+</item 6>
+
+<item 7>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Imagine a lineup consisting of Ohtani, Ronald Acuna Jr., Ozzie Albies, Austin Riley and Matt Olson?
+
+Sources: Braves are among the teams still engaged with Shohei Ohtani’s camp, as I reported in this @MLBNetwork segment. @MLB pic.twitter.com/lP4lISzttN — Jon
+Morosi (@jonmorosi) December 4, 2023
+
+Ohtani has already received several $500+ million offers
+
+Date: Dec. 3
+
+Source: Jon Heyman, NY Post
+
+It's no surprise the bidding for Ohtani is heating up, with the star expected to sign soon. And New York Post's Jon Heyman reported Ohtani has already received
+several deals that have topped $500 million, which could mean he winds up being the first $600 million player in MLB history. He added there are believed to be
+five teams in the running for Ohtani.
+</item 7>
+
+<item 8>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+11
+
+Source: Fabian Ardaya, The Athletic
+
+According to The Athletic, Ohtani will defer a whopping $680 million of his $700 million contract from the Dodgers, receiving only $2 million per year.
+
+While it's important to note the deal will still count as $46 million annually toward the luxury tax thresholds for Los Angeles, Ohtani is still giving the
+organization much more flexibility than expected over the course of the deal.
+
+The two-time MVP will receive $68 million per year, without interest, from 2034-43, making the present-day value of the contract much less than it originally
+appeared.
+
+MORE: Complete breakdown of Shohei Ohtani's Dodgers contract, by the minute
+
+Giants reportedly meet with Yamamoto
+
+Date: Monday, Dec. 11
+
+Source: Buster Olney, ESPN
+
+ESPN's Buster Olney reports the Giants met with Japanese ace Yoshinobu Yamamoto on Sunday, Dec. 10.
+</item 8>
+
+<item 9>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+The Hot Stove dominoes have started to fall, but everyone who loves baseball — fans, players, coaches, front-office types and everyone else — is waiting for
+free agent Shohei Ohtani’s decision. Where will the global superstar sign his next contract?
+
+He’s played his entire six-year MLB career with the Angels, but his teams haven’t even sniffed the postseason and Ohtani’s made his desire to win crystal clear,
+so he won’t be back. Will he chase every dollar possible, going solely by the highest offer? That seems unlikely, too. Remember, Ohtani wants to win.
+
+Lots of teams can meet Ohtani in that middle ground, offering both lots of money — he will absolutely sign the largest contract in baseball history — and lots
+of chances to compete for a World Series title (or two or three). It’s a long list.
+
+MORE: Ranking 15 possible destinations for Shoehei Ohtani
+
+So, the baseball world waits for news.
+</item 9>
+
+<item 10>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+The Giants are considered to be an unknown.
+
+In addition to the teams, Passan also reported Ohtani is expecting a contract somewhere between $550 and $600 million, which would be the largest guaranteed
+contract in North American sports.
+
+Blue Jays could alter roster with Ohtani signing
+
+Date: Nov. 30
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays are one of the teams believed to still be among the strongest in the mix for Ohtani. The New York Post's Jon Heyman reported there could be some
+changes if Ohtani signs with the Blue Jays, however, reporting that some rivals believe Bo Bichette and Vladimir Guerrero Jr. could hit the trade block if
+Toronto lands the star.
+
+Trading the two infielders might seem counterproductive to signing Ohtani in the first place. Those two would be the biggest supporting bats in the lineup
+around Ohtani.
+</item 10>
+=== END ITEM id=6c265ea04889aab1 ===
+
+=== ITEM id=68fa76c2db461a9e ===
+Gold sentences and facts:
+Sentence 0: "And if the Braves let this be the story of their series, that's on them.
+  Fact 0.0: A quoted speaker says that if the Braves let this be the story of their series, that is on the Braves.
+Sentence 1: But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity.
+  Fact 1.0: Nocturne could have easily settled and coasted on classic Castlevania vibes.
+  Fact 1.1: The new Nocturne show steps its game up considerably.
+  Fact 1.2: The new Nocturne show uses the Castlevania franchise's iconic lore.
+  Fact 1.3: The new Nocturne show uses the franchise's iconic lore to challenge the viewer's understanding of what it truly means to fight for freedom, equality, and fraternity.
+
+Retrieved items:
+<item 1>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+She said that reporters abstaining from writing on his comments would be akin to "protecting players from themselves."
+
+She also went on to say that what Arcia said wasn't a slur or hateful, and added the only reason anyone was concerned about it was because "they know it would
+motivate Harper to beat [the Braves]. Which implies the Braves do not feel they can handle a motivated Bryce Harper and are willing to suggest that is why they
+lost the other day."
+
+"I didn't say something sooner because I thought this was overblown," Janes continued. "And frankly, I thought it wouldn't help. But I am genuinely disgusted by
+the way some media members are acting like a reporter was in the wrong for this. He wasn't.
+
+"And if the Braves let this be the story of their series, that's on them. Win and it goes away. Period."
+</item 1>
+
+<item 2>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+It had been reported Monday night when the Braves beat the Phillies in Game 2 of the NLDS, ending on a critical base-running play involving Bryce Harper, that
+Atlanta shortstop Orlando Arcia taunted about the Phillies' star in the clubhouse after the game.
+
+That report wound up generating plenty of controversy.
+
+Fox Sports' Jake Mintz, one of the two brothers that runs the popular Cespedes Family BBQ account, reported that Arcia had been celebrating after Atlanta's 5-4
+win by saying "Atta boy Harper" in the Braves' clubhouse, jeering at the fact that Harper was doubled off on the basepaths after an outstanding catch by Michael
+Harris in center field and an impressive relay to get Harper at first to end the game.
+
+The comments wound up coming back to bite the Braves two days later, with Harper homering twice — staring down Arcia after each — as he powered the Phillies to
+the 10-2 Game 3 win.
+</item 2>
+
+<item 3>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But despite all of Julia’s skill with her family’s deadly heirloom, Castlevania: Nocturne’s world is one teeming with vampires even centuries after Dracula has
+seemingly been destroyed, and the series opens at a devastating moment in Richter’s past that leaves him orphaned and unable to access his magic.
+
+Though Nocturne takes place in the same continuity as the previous Castlevania show, it also uses major pieces of lore from Konami’s Castlevania: Rondo of Blood
+and Symphony of the Night games to tell a riveting story about the inherent hypocrisies baked into the historic record of colonial nations embracing democratic
+revolution.
+
+Here, the French Revolution isn’t just a transformative period of social unrest between moneyed elites and impoverished peasants fed up with their subjugation.
+</item 3>
+
+<item 4>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+Nocturne reworks a number of Castlevania’s classic supporting characters like Maria — who fights using reimagined versions of the Four Sacred Beasts — and
+empathic singer Edouard (Sydney James Harcourt) to brilliant effect. But out of all the show’s old but new faces, ferrokinetic Vodoun practitioner Annette
+(Thuso Mbedu) stands out because of how strongly the show introduces her as a woman whose Haitian identity is what makes her able to understand the situation
+over in France with an exacting kind of clarity.
+
+It’s through Annette and the show’s exploration of Afro Caribbean syncretism that Nocturne expands the boundaries of Castlevania’s magical mythology, which is
+touched on heavily throughout the season’s eight episodes. Small nods to the video games and gnarly beheadings abound, particularly in the Powerhouse
+Animation-produced show’s bigger hyperkinetic brawls between its heroes and hordes of horrific creatures.
+</item 4>
+
+<item 5>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But in all the bloodshed, Nocturne still finds the time to make its characters (and by extension, you) think about what it means to slaughter technically
+innocent people for a genuinely noble cause. That beat isn’t entirely original, and Nocturne’s mindful about leaning on it too hard as it begins to weave
+Annette and Edouard’s stories together with Richter and Maria’s in France. Still, it creates a resonance between the show’s action and the concepts it’s
+tackling that makes the season as a whole work beautifully.
+
+Image: Netflix
+
+Occasionally, there are moments where the fluid dreaminess of Nocturne’s overall art direction butts up against the show’s application of 3D animation to make
+certain pivotal moments pop. It can be jarring when traditionally animated characters who were just popping in and out of view using tricks of the eye suddenly
+turn to the camera with deeper faces accented by flat shadows that weren’t there a second before.
+</item 5>
+
+<item 6>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+As strong and different as the season starts, by its last two episodes, Nocturne does start to feel a bit like it’s rehashing moments from the first show — if
+not in exact form, then in terms of how neatly it brings its plotlines to a close. None of that’s enough to keep the show from hitting all the right notes,
+however, and by the time you hit the finale, there’s a solid chance you’ll already be hoping for more.
+</item 6>
+
+<item 7>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+It’s a war between undead ghouls like Drolta Tzuentes (Elarica Johnson) manipulating mortals from the shadows, selfish humans like a power-hungry Abbot
+(​​Richard Dormer), and agitators like summoner Maria (Pixie) who want to dismantle the entire oppressive system of power that makes France a formidable global
+presence.
+
+Image: Netflix
+
+Narratively, Nocturne’s focus on another brooding Belmont and its depiction of late-18th-century France as a country overrun by literally vampiric aristocrats
+drunk on the promise of a new messiah make the new series feel true to the essence of Castlevania. What makes Nocturne’s deep dive into this alternate history a
+worthwhile watch, though, is the way it presents France not just as a crumbling monarchy in the throes of a heroic social uprising but also as a colonial nation
+whose pivot to democracy at home can’t be divorced from its history of committing unfathomable atrocities abroad.
+</item 7>
+
+<item 8>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+Part of / The best entertainment of 2023
+
+Netflix’s first Castlevania animated series excelled by balancing its quiet, beautifully performed moments of human drama with explosive and artful action set
+pieces dazzling enough to evoke the feeling of playing Konami’s classic side-scroller for the first time. Despite the first show’s strengths, its regular issues
+with pacing and effectively cultivating characters from season to season made the idea of Netflix keeping the vampiric daddy issues ball rolling with
+Castlevania: Nocturne — a new spinoff series from executive producer Clive Bradley and co-directors Sam Deats and Adam Deats — a dubious one.
+
+Nocturne both looks and feels a lot like its predecessor in terms of its focus on a tortured scion waging war against machiavellian, bloodsucking ghouls who
+fancy themselves undead gods who walk among mortal livestock.
+</item 8>
+
+<item 9>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+"That's taking away from true reporters and true journalists. Where were you on the random Tuesday in April in Cincinnati when this team was playing in
+Cincinnati? Where were you on a rain delay, and you have to sit in the press box for all of this time? It's ridiculous."
+
+"And then some jackoff comes in at the end of the season that gets a credential, God only knows why. And the clubhouse is a sacred space." Alanna Rizzo went off
+on Jake Mintz's clubhouse reporting on MLBN's "High Heat" Thursday. pic.twitter.com/6dooqeLPnh — Awful Announcing (@awfulannouncing) October 12, 2023
+
+Rizzo's comments immediately drew heat from the baseball journalism world, including from Janes, who posted a thread defending Mintz. Janes reported that
+cameras and recorders were recording, and that Arcia yelled the comments while they were recording and with more than a dozen reporters around.
+</item 9>
+
+<item 10>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+The only difference was that Janes did not name the player.
+
+The reporting of Arcia's comments proved to be divisive across the baseball community. Among the most prominent to call out Mintz was Rizzo. The "High Heat"
+co-host said she was irritated by "bloggers or podcasters" going into the clubhouse and "ruining it for the rest of us" when "some jackoff comes in at the end
+of the season that gets a credential, God only knows why." She called the clubhouse "a sacred place" and defended the players who were upset by the reporting of
+Arcia's comments, before she called Mintz out by name.
+
+MORE: Every time Nick Castellanos has interrupted a somber moment with a home run
+
+"First of all, this guy, Jake Mintz, that's not even a reporter," Rizzo said. "That's taking away from true reporters and true journalists.
+</item 10>
+=== END ITEM id=68fa76c2db461a9e ===
+
+=== ITEM id=14186a34680a19e8 ===
+Gold sentences and facts:
+Sentence 0: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.
+  Fact 0.0: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.
+  Fact 0.1: Bankman-Fried said it was okay to keep withdrawing money as long as the amount was less than FTX's total trading revenue.
+Sentence 1: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 1.0: Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.
+  Fact 1.1: Caroline Ellison was the CEO of Alameda.
+  Fact 1.2: Bankman-Fried used Caroline Ellison as a front.
+  Fact 1.3: Through this front, Bankman-Fried had 'secret access' to customer money.
+  Fact 1.4: The customer money included both cash and crypto.
+  Fact 1.5: The government claimed that Bankman-Fried had this secret access to customer money.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 1>
+
+<item 2>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued.
+
+“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”
+
+A Frenchman who lives in London testifies in New York
+
+After lawyers from both sides depicted two very different Bankman-Frieds, the prosecution called its first two witnesses to the stand—and they weren’t
+blockbuster names or former lieutenants-turned-government-cooperators, like Ellison.
+
+The first was a victim: Marc-Antoine Julliard, a Paris-born cocoa trader who lives in London. In 2021, Julliard, who had coiffed hair and spoke with a strong
+French accent, decided to invest in crypto and landed on FTX as his exchange of choice, where he traded cryptocurrencies like Bitcoin and Dogecoin.
+
+On Nov. 8, in the crypto exchange’s final few days, he tried to pull out his cash and crypto.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 4>
+
+<item 5>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Much of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make
+investments or direct funding toward political causes and charities.
+
+SBF trial: What we learned in week two
+
+The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to
+repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX
+Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.
+
+And though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in
+frozen trading accounts.
+
+SBF trial: What we learned in the week one
+
+As expected, the opening statements in the SBF trial were spicy.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 10>
+=== END ITEM id=14186a34680a19e8 ===

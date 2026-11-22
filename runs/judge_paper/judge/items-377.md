@@ -1,0 +1,1035 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=027243c6e60cd7a1 ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook adjusts when odds change for a legitimate reason.
+  Fact 1.2: An injury or a roster move is an example of a legitimate reason for a line or odds to change.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+</item 1>
+
+<item 2>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 2>
+
+<item 3>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 3>
+
+<item 4>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Beyond these, game props allow bets on specific game events, while player futures bets provide the chance to predict longer-term outcomes like season MVPs or
+rookie of the year honors.
+
+Caesars also has a cash-out option that allows you to settle bets early to guarantee a payout (though at a reduced amount).
+
+See more:
+
+Bet365 Sportsbook
+
+One of the world's premier sportsbooks, Bet365, has marked its presence in the US, notably emphasizing its Major League Baseball odds. Now accessible in many
+states and expected to grow further, Bet365 posts daily MLB odds boosts. The Bet365 app is perfect for rookie bettors yet also offers customized displays for
+seasoned MLB wagering veterans.
+
+A significant highlight is the platform's live-betting feature, allowing real-time bets on MLB games.
+
+See more:
+
+BetRivers Sportsbook
+
+BetRivers stands out for its comprehensive Major League Baseball betting offerings. Bettors are presented with a wealth of stats and insightful tips related to
+upcoming games, enhancing the decision-making process.
+</item 4>
+
+<item 5>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+You’re betting on which team you believe is going to win the game. Each team is given odds by the sportsbook to indicate their perceived chances of winning. The
+underdog is represented by a positive (+) number, and the favorite is represented by a negative number (-).
+
+Similar to a point spread in other sports, the run line bet gives the underdog a handicap of 1.5 runs in the game. The underdog needs to lose by one run or win
+outright for bets on them to be successful, while the favorite in the game needs to win by two runs or more to cover the spread.
+
+Totals bets, also known as over/unders, focus on the combined number of runs both teams score. Oddsmakers assign a total number of runs, and bettors must decide
+if the two teams will score over or under that predicted total. The actual winner of the game doesn’t matter.
+
+You’ll find these staple bet types at every online sportsbook that supports MLB betting.
+</item 5>
+
+<item 6>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Betting apps offer real-time updates on all odds, which allows you to react to game flow as it’s happening.
+
+Your MLB betting app can help you track shifting odds and facilitate live betting. Betting apps offer real-time updates on all odds, which allows you to react
+to game flow as it’s happening. Bet from within legal states: As long as you are in a state that has legal online sports betting, you can use your app to make
+bets, track your account, add or withdraw funds, and more. Remember that you can only place bets when you are in the state lines, but you can access your
+account and monitor wagers from anywhere you have internet access.
+
+MLB live betting
+
+The best sports betting apps offer live, in-game betting for Major League Baseball.
+
+Live betting means you can bet on a game in progress, right down to what the next batter will do with the next pitch or what team will win the inning.
+</item 6>
+
+<item 7>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Traditional bet types, such as moneylines, where one bets on the outright winner; run lines, which focus on the margin of victory; and totals that predict
+combined team scores, are all readily available.
+
+For those who relish a deeper drop into the game, BetMGM has a deep lineup of player and team prop bets. Whether it's forecasting a player's strikeouts in a
+game or predicting the cumulative runs scored by a team, there's something for every strategy.
+
+For the long-term visionaries, BetMGM rolls out an impressive array of futures bets. Fans can place wagers on outcomes such as which team will clinch its
+division or which player will be honored as the league's Most Valuable Player.
+
+See more:
+
+Caesars Sportsbook
+
+Caesars has a comprehensive suite of MLB odds to elevate the game-watching experience. That includes run lines, predicting the margin of victory; totals, where
+bettors forecast the combined scores; and player props, focusing on individual milestones such as hits, home runs, or RBIs.
+</item 7>
+
+<item 8>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+You’ll find live betting with top betting sites such as DraftKings, FanDuel, BetMGM, and Caesars.
+
+The key to live betting is using a betting app to make your wagers. Apps allow you to track all of the changes — both on the diamond and in the odds — as they
+happen. You won’t find that response time at a brick-and-mortar sportsbook.
+
+Some common MLB in-game betting lines includes:
+
+Next team to score
+
+Run line and moneyline odds
+
+Total runs scored
+
+Winner of the next inning
+
+Player props, such as total hits or strikeouts
+
+Bet on MLB run lines, moneylines, and totals
+
+Three of the most popular bet types for Major League Baseball games are run lines, moneylines, and totals. In case you’re not familiar, let’s explain all three.
+
+A moneyline wager is as straightforward as they come. You’re betting on which team you believe is going to win the game.
+</item 8>
+
+<item 9>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 9>
+
+<item 10>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 10>
+=== END ITEM id=027243c6e60cd7a1 ===
+
+=== ITEM id=b88b159265965e50 ===
+Gold sentences and facts:
+Sentence 0: This isn’t the first time that Jada has opened up about her long-term commitment to her husband.
+  Fact 0.0: This is not the first time Jada has opened up about her long-term commitment to her husband.
+Sentence 1: Jada then praised her children for how they’ve helped her grow, adding: “My children, they’re little gurus.
+  Fact 1.0: Jada praised her children for how they helped her grow.
+  Fact 1.1: Jada said: 'My children, they're little gurus.'
+Sentence 2: She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep sense of self-acceptance”.
+  Fact 2.0: Jada and Will have two children.
+  Fact 2.1: Jada and Will's children are Jaden, who is 25, and Willow, who is 22.
+  Fact 2.2: Jada praised her children for being her 'little gurus' throughout this time.
+  Fact 2.3: Jada's children taught her 'a deep sense of self-acceptance'.
+
+Retrieved items:
+<item 1>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Jada Pinkett Smith has revealed that she and husband Will Smith have been separated for the last seven years.
+
+The Girls Trip star, 52, shared in a new interview with People published on 11 October that she and the King Richard actor, 55, are “still figuring it out” when
+it comes to their marriage of 26 years. She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six
+years.
+</item 1>
+
+<item 2>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+“We’ve been doing some really heavy-duty work together,” Jada said. “We just got deep love for each other and we are going to figure out what that looks like
+for us.”
+
+The pair have been married since 1997 and share son Jaden, 25, and daughter Willow, 22. The Fresh Prince of Bel-Air star also has a son Trey, 30, whom he shares
+with his first wife, Sheree Zampino.
+
+As for her children, Jada praised them for how they’ve helped her grow. “My children, they’re little gurus. They’ve taught me a deep sense of self-acceptance,”
+she told the outlet.
+
+Jada and Will have often opened up about their relationship over the years, and have had very public ups and downs throughout their marriage. Here’s a timeline
+of their relationship.
+</item 2>
+
+<item 3>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Less than two weeks later, Jada and Will appeared on an episode of Jada’s Red Table Talk where Jada confirmed that she did have a relationship with Alsina,
+saying that she and Will were separated at the time.
+
+“We decided that we were going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,”
+Jada said at the time.
+
+“From there, as time went on, I got into a different kind of entanglement with August... Yes, it was a relationship absolutely.”
+
+Jada also said that Will didn’t give permission, as the only person who could give her permission was herself.
+
+2021: Jada discusses her and Will’s sex life, Will’s memoir is released
+
+In another episode of Red Table Talk in October 2021, Jada said it “takes work” to maintain a spark in the bedroom.
+
+“It’s hard... the thing Will and I talk about a lot is the journey.
+</item 3>
+
+<item 4>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Jada Pinkett Smith has revealed why she and her husband Will Smith never signed a prenuptial agreement before getting married.
+
+The former talk show host, 52, spoke candidly about her husband during a recent interview with Parade. While discussing her new memoir, Worthy, Jada revealed
+that she and Will didn’t sign a prenup when they were married in 1997 because they knew divorce wasn’t in the cards for them.
+</item 4>
+
+<item 5>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Will Smith has spoken out about his “tumultuous” relationship with his wife, Jada Pinkett Smith, while speaking to a crowd of fans in Baltimore, Maryland.
+
+The 55-year-old actor took the stage at the Enoch Pratt Free Library on 18 October, as he made an appearance at a press event for his wife’s book, Worthy,
+alongside their two children – Jaden, 25, and Willow, 22.
+</item 5>
+
+<item 6>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+The altercation came after Rock said: “Jada, I love you. GI Jane 2, can’t wait to see you,” referring to Jada’s shaved head. While accepting the award for Best
+Actor, Will became teary as said he was a “fierce defender of his family”.
+</item 6>
+
+<item 7>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+During an interview with Hoda Kotb for Today, which aired on 13 October, the actor confirmed that she and her partner have been living “completely separate
+lives” for the past seven years. However, according to Jada, their choice to live in separate homes doesn’t mean that they’ll be getting divorced anytime soon.
+
+“I made a promise that there will never be a reason for us to get a divorce,” she said. “We will work through whatever. And I just haven’t been able to break
+that promise.”
+
+When asked why she and Will didn’t “just amicably divorce,” Jada simply replied: “We don’t want to.”
+
+She then explained how her family shaped that decision, as she and the King Richard star share two children - Jaden, 25, and Willow, 22. Will also has a
+30-year-old son, Trey, who he shares with ex-wife Sheree Zampino. “We love our family and we love each other.
+</item 7>
+
+<item 8>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+In an interview with People on 10 October, Jada shared that during the 2022 Academy Awards - when Will slapped Chris Rock after he cracked a joke about Jada’s
+appearance - the pair had actually been separated for six years. “We’ve been doing some really heavy-duty work together,” she explained, while promoting her new
+memoir, Worthy. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+
+She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep
+sense of self-acceptance”. Although the married couple are not living together, she insisted that their marriage has never been an open one, as she and Will
+have “eliminated the chance of betrayal” while going on to live their “separate lives”.
+</item 8>
+
+<item 9>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+Jada then praised her children for how they’ve helped her grow, adding: “My children, they’re little gurus. They’ve taught me a deep sense of self-acceptance.”
+
+On 16 October, Will broke his silence on his wife’s comments during an interview with the New York Times. The outlet noted that he said his partner’s memoir
+“kind of woke him up” and that he has now realised she is more “resilient, clever and compassionate than he’d understood”.
+
+“When you’ve been with someone for more than half of your life, a sort of emotional blindness sets in, and you can all too easily lose your sensitivity to their
+hidden nuances and subtle beauties,” Will added.
+</item 9>
+
+<item 10>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Prior to sharing the video, Smith showed his support for his partner and her success in a statement toThe New York Times. During the interview, the outlet noted
+that Smith said his wife’s memoir “kind of woke him up” and that he has now realised she is more “resilient, clever and compassionate than he’d understood”.
+
+“When you’ve been with someone for more than half of your life, a sort of emotional blindness sets in, and you can all too easily lose your sensitivity to their
+hidden nuances and subtle beauties,” he added.
+
+In an interview with People published on 10 October, Jada first revealed that she and her husband were living separately. “We’ve been doing some really
+heavy-duty work together,” she said. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+</item 10>
+=== END ITEM id=b88b159265965e50 ===
+
+=== ITEM id=83c1a9a5e7234150 ===
+Gold sentences and facts:
+Sentence 0: Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+  Fact 0.0: Bankman-Fried was even compared to Warren Buffet
+  Fact 0.1: Many people called Bankman-Fried the white horse of crypto
+  Fact 0.2: TechCrunch never called Bankman-Fried the white horse of crypto
+Sentence 1: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.
+  Fact 1.0: Wang testified
+  Fact 1.1: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account
+  Fact 1.2: Wang testified that this was okay as long as the amount was less than FTX's total trading revenue
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence
+  Fact 2.1: The defense argued that the FTX founder, Bankman-Fried, acted in good faith
+  Fact 2.2: The defense argued that Bankman-Fried never meant to commit fraud or steal
+  Fact 2.3: The defense argued that Bankman-Fried basically got in over his head
+
+Retrieved items:
+<item 1>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+Wang said he trusted Bankman-Fried’s judgment and didn’t pursue the issue further. Later, though, Alameda’s balance was more negative than FTT and the trading
+revenue, and Wang had more conversations with Bankman-Fried about it. Wang said he knew at the time that Alameda was using FTX’s customers’ funds and that he
+knew it was wrong.
+
+We heard yesterday about the line of credit Alameda had on FTX, a staggering $65 billion. Today we saw it in the database. The line of credit didn’t start that
+big — Wang testified that Bankman-Fried had asked him to increase it a few times because Alameda kept running into its limits. First it was “a few hundred
+million,” then a billion, then even that wasn’t enough. It wasn’t clear how Wang arrived at $65 billion specifically, but he said he’d discussed the number with
+Bankman-Fried. Other customers didn’t have the same privileges.
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda got its war chest — 60 percent to 70 percent of the initial supply — for free, while seed investors got FTT at 10 cents a coin, and FTT first listed at
+$1 a coin. Bankman-Fried felt that $1 per coin was psychologically important, Ellison said, and he directed her to buy up FTT using Alameda if its price fell
+below a dollar.
+
+FTT was one of several “Sam coins,” a nickname for tokens that Bankman-Fried was heavily involved in and owned a lot of, either personally or through Alameda.
+Those coins were almost certainly worth less than the value displayed on the balance sheet because trying to sell them all at once would crater the prices.
+Bankman-Fried directed her to put those coins on the balance sheets Alameda showed to lenders, even though she felt it was “somewhat misleading.”
+
+Alameda was also getting loans from outside lenders, such as Genesis, because when FTX started, there weren’t a lot of customer funds to borrow, Ellison
+testified.
+</item 3>
+
+<item 4>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+In late 2019, Alameda had a negative balance on FTX. Because they sat in an open-plan office, Wang heard a trader ask Bankman-Fried if it was okay to keep
+withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue. He was the CEO of both companies
+at the time.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses.
+
+The amount that Alameda was allowed to go negative began to creep up. Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by
+about $200 million, which was more than the $150 million FTX made in revenue. That had to mean Alameda was taking customer money. It surprised him and he says
+he discussed it with Bankman-Fried, who told him that he just needed to take into account the value of FTT. Wang said he trusted Bankman-Fried’s judgment and
+didn’t pursue the issue further.
+</item 4>
+
+<item 5>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Yet Lewis’s picture is a little less stark from the looks of the 60 Minutes episode. In fact, I’d say it’s not that clear at all if SBF is getting a kicking or
+a coat of polish in this interview when you consider Lewis’s celebration of SBF’s self-proclaimed (yet not quite proven) idealism, and the “Bankman-Fried-shaped
+hold in the world” that exists.
+
+You could say that confused message is very apt for cryptocurrency, where the process by which it works is forever murky and often misrepresented, at least to
+most people.
+
+If SBF didn’t intentionally aim to cynically defraud a bunch of people, in the long run he became one of the many who disastrously failed to manage the risk
+inherent in crypto speculation. That’s ultimately what happened with FTX, as financial discrepancies racked up between the exchange and its sister company
+Alameda Research (a trader itself on the platform).
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+There was a minimum of word salad today. I don’t know if he was more relaxed, or he’d just been more rehearsed, but I will certainly be watching to see if he
+suddenly becomes much less coherent when Sassoon gets him for the cross.
+
+Here is the story of FTX, from his point of view.
+
+Bankman-Fried, who informed us he’s “somewhat introverted, naturally,” gave us a rather prolonged tour of his pre-Alameda Research life, which I will skip. In
+2017, during a crypto bull run, he started his cryptocurrency trading firm. He knew “basically nothing” about cryptocurrency at the time, he explained, but he
+wanted to do arbitrage on it anyway.
+
+Alameda Research was named for Alameda County in California, which was where its first office was set up. As for its name, here’s what Bankman-Fried said on the
+stand:
+
+Effectively, we wanted to be under the radar at that point in time.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 9>
+
+<item 10>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+You can tell he had no experience in management or handling such big undertakings. I think he was in way over his head,” Ayelet Noff, the CEO and founder of
+public relations firm Sliced Brand, which represents a number of cryptocurrency businesses, told TechCrunch. “I think he does a disservice to the whole
+community. He pushed back crypto adoption by at least a year or two. Each time one of these things happens it brings back the whole market. It’s two steps
+forward and one step back.”
+
+The Michael Lewis interview is infuriating. SBF was a scumbag, and now we need to hear about his “tragic fall” in the MSM because Sam told them he was an
+“effective altruist” and people like Michael Lewis were so far up his ass they couldn’t tell truth from fiction.
+</item 10>
+=== END ITEM id=83c1a9a5e7234150 ===
+
+=== ITEM id=3abf5e6d3415a5d7 ===
+Gold sentences and facts:
+Sentence 0: Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things.
+  Fact 0.0: Erik ten Hag is a top coach from Ajax.
+  Fact 0.1: The party referred to as they needs a top blueprint not only for now but for the next five years.
+  Fact 0.2: The party referred to as they needs to work towards that blueprint.
+  Fact 0.3: On the journey toward that blueprint, there are sometimes hard moments when the party does not get the right results.
+  Fact 0.4: The hard moments happen even though the party is doing the right things.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United's exit followed a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.3: Kingsley Coman's goal was the one that sealed the 1-0 win.
+  Fact 1.4: The 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)
+“Sometimes players need time, they’re human beings, they need to settle, Sonny had a great track record at Hamburg and Leverkusen but there was this narrative
+that started to grow internally and externally that he wasn’t a good finisher.
+
+6 Mitchell is becoming an increasingly recognisable face
+
+“I remember telling a coach ‘you’re wrong, his history shows in two different clubs he’s a very astute finisher off both sides’.”
+
+Mitchell remains good friends with Rangnick from their time together at Leipzig, and last season made headlines when he was spotted at a youth team game while
+the German was interim coach at Man United.
+
+So astute is Mitchell in his observations, he even laid out a blueprint for United's success while at Monaco.
+
+“I think context is important to measure what Manchester United's current situation is, but I think they do need to get to the point of really putting down what
+Manchester United needs to be in the modern game,” he explained.
+
+"We are a long time from the Sir Alex Ferguson era.
+</item 1>
+
+<item 2>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+The manager’s future
+
+Erik ten Hag’s team are treading water at precisely the wrong moment: as Sir Jim Ratcliffe takes charge of Manchester United’s sporting department before making
+sweeping changes in the posts that will directly affect the manager. Richard Arnold has left despite officially staying until the end of the year and into his
+role may come Jean-Claude Blanc, the CEO of Ratcliffe’s Ineos Sport, as the man Ten Hag reports to. Ten Hag’s line manager may change too, as Ratcliffe
+considers whether a new football director is required, a position held by John Murtough. Ten Hag may have a first clue of his status in Ratcliffe’s new empire
+if he is sounded out for his view of a prime factor in his ability to coach and manage the side to success: United’s transfer policy. This leads us to Murtough
+…
+
+Will Murtough survive?
+
+The football director has no plans to depart but whether he remains in situ may be a matter for Ratcliffe.
+</item 2>
+
+<item 3>
+Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)
+Galatasaray knew that if they beat Copenhagen at Parken they would go through but Lukas Lerager scored the only goal in a 1-0 win for the hosts
+
+Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's
+side.
+
+Results
+
+Date Fixture/Result Sept. 20 Galatasaray 2-2 FC Copenhagen Sept. 20 Bayern Munich 4-3 Manchester United Oct. 3 Manchester United 2-3 Galatasaray Oct. 3 FC
+Copenhagen 1-2 Bayern Munich Oct. 24 Galatasaray 1-3 Bayern Munich Oct. 24 Manchester United 1-0 FC Copenhagen Nov. 8 Bayern Munich 2-1 Galatasaray Nov. 8 FC
+Copenhagen 4-3 Manchester United Nov. 29 Galatasaray 3-3 Manchester United Nov.
+</item 3>
+
+<item 4>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+Finally you get to manage the everyday metrics on which you will be judged; team, results, style, energy, messaging. Win things, improve players, create a
+coherent and happy internal culture: but do it during an unceasing takeover circus while star players sulk and brief against you, while the ghost of Hamlet’s
+father still skulks in the eaves. This felt like the end of one thing, perhaps even the beginning of the end of something else.
+</item 4>
+
+<item 5>
+Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)
+"We are a long time from the Sir Alex Ferguson era. Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five
+years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right
+things.
+
+"You have to know that, over that period, the consistency of the decision-making will yield a good end result. I think we've seen that both Manchester City and
+Liverpool, that when you adopt that long-term strategy you can get real consistency and sustainable success.
+
+"I think that's the biggest thing for Manchester United; putting down their identity of what they want to be today, but most crucially what they want to be in
+five years' time, and where they want to be, and what they want to look like; from everything from young players, to the style of play, to the whole culture
+peace in Manchester United."
+</item 5>
+
+<item 6>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Newsletters may contain
+info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google reCaptcha to protect our
+website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Manchester United’s century old stadium needs an upgrade. Photograph: Greig Cowie/Shutterstock
+
+Communications
+
+The Glazers treat a microphone or TV camera as United fans do Liverpool or Manchester City: as a fierce enemy. No family member has given a press conference or
+interview during their 18-year tenure.
+</item 6>
+
+<item 7>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+Old Trafford (and the training ground)
+
+To find an apt shorthand for the lurching ship that is United, end the search at the roof of their stadium where on Manchester’s (many) wet days rain leaks
+through. Old Trafford remains a storied venue but as it continues to crumble the tale of disrepair has become a central narrative in its recent history. As
+Premier League titles have become scarce (zero in a decade) the tale of neglect of a ground that dates to 1910 is emblematic of the Glazers’ quasi‑absentee
+proprietorship. Ratcliffe will invest $300m (£237m) into infrastructure but this is small beer when considering the multibillion-pound facelift or new venue
+required. There is also the cramped Carrington base: as on Sir Matt Busby Way, the footprint is large at the training ground but the configuration and
+facilities are ageing – badly.
+</item 7>
+
+<item 8>
+Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)
+Almost certain to consult Rangnick before any approach from Ratcliffe, Mitchell may be warned off of a club where long-term thinking hasn’t existed.
+
+But, should Ratcliffe get his man, it could signal exactly the change in fortunes he and every supporter has been hoping for at Manchester United.
+</item 8>
+
+<item 9>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+In the second half United’s back five was André Onana, Aaron Wan-Bissaka, Jonny Evans, Raphaël Varane and Diogo Dalot, an entirely random collection of players
+signed, at various times, by Ten Hag, José Mourinho, Ole Gunnar Solskjær and Alex Ferguson. Presumably Daley Thompson, Michael Portillo and Howard from Take
+That were busy.
+
+By the end United had five academy players on the pitch, ages ranged between 17 and 35, in outline evidence of internal good health, in reality another symptom
+of a machine that wants to function properly but has for so long been made to judder along at half-speed. Ever feel like you’re starting to slip into the past
+tense for good? When VAR happens at Old Trafford there isn’t even a VAR screen to say “VAR Check”. The 1990s were a hell of a decade. They still are around
+here.
+</item 9>
+
+<item 10>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+They still have the FA Cup, and the extended pursuit of fourth or even fifth place, although the state of the coefficient means the thing that might keep
+Manchester United out of Europe next season could be Manchester United being so bad in Europe this season. Maybe City can revive their fortunes by winning the
+Champions League again.
+
+Ten Hag will take the blame of course for the early exit and plenty of mistakes have been made, not least in the players the manager has been allowed to sign.
+In reality assessing the job any United manager does with this team involves applying a series of filters. To be United manager is to undertake three concurrent
+roles.
+
+First you must manage the past, which is constantly in the room and which skews every act, achievement and expectation. Second you must manage the dysfunction
+of the present, which expresses itself in every detail from a leaking stadium roof to the deep ills of a playing squad peopled with squatters and long‑term
+missteps.
+</item 10>
+=== END ITEM id=3abf5e6d3415a5d7 ===
+
+=== ITEM id=4e6c7472506a9942 ===
+Gold sentences and facts:
+Sentence 0: This whole line of argument is called “market definition.” If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google’s on the road to victory.
+  Fact 0.0: This whole line of argument is called 'market definition'.
+Sentence 1: Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+  Fact 1.0: If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google is on the road to victory.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: Monday's trial hearing revealed the $26.3 billion Google spent in 2021 to make itself the default search engine across platforms.
+  Fact 2.1: Monday's trial hearing revealed that Google tried to take its default search engine position further.
+  Fact 2.2: Monday's trial hearing revealed that Google tried to have Chrome preinstalled on iPhones.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 2>
+
+<item 3>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 5>
+
+<item 6>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 7>
+
+<item 8>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 8>
+
+<item 9>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 10>
+=== END ITEM id=4e6c7472506a9942 ===
+
+=== ITEM id=292dca3f2c662fc6 ===
+Gold sentences and facts:
+Sentence 0: Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs.
+  Fact 0.0: Lee was hampered by injury in 2023.
+  Fact 0.1: Lee slashed .349/.421/.575 in 2022.
+  Fact 0.2: Lee hit 36 doubles in 2022.
+  Fact 0.3: Lee hit 10 triples in 2022.
+  Fact 0.4: Lee hit a career-best 23 home runs in 2022.
+Sentence 1: He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches.
+  Fact 1.0: Lee picked up 16 wickets in 10 matches.
+  Fact 1.1: Lee conceded just 398 in those 10 matches.
+  Fact 1.2: Lee's economy rate was 4.25 in those 10 matches.
+
+Retrieved items:
+<item 1>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+2. Rohit Sharma, India
+
+The Indian captain has been on an all-out attack since the start of the World Cup campaign. He has smashed a total of 597 runs in 11 matches with one century
+and three fifties so far.
+
+1. Virat Kohli, India
+
+One of the best batsmen that ever graced the sport of cricket, Virat Kohli, is at the top with 765 runs in 11 matches. He has five fifties and three centuries
+to his name, with the highest score of 117 runs.
+</item 1>
+
+<item 2>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+7. Marco Jansen, South Africa
+
+Standing at a staggering 6 feet 7 inches tall, Jansen has made full use of his height, and it was evident in his bowling too. The 23-year-old picked up 17
+wickets in nine matches for the Proteas, conceding 450 runs.
+
+6. Shaheen Shah Afridi, Pakistan
+
+Afridi is the best bowler for Pakistan in this tournament, with 18 wickets and conceding 481 runs in nine matches.
+
+5. Gerald Coetzee, South Africa
+
+The 23-year-old Coetzee has picked up 20 wickets for the Proteas in eight matches, conceding 396 runs.
+
+4.
+</item 2>
+
+<item 3>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+4. Jasprit Bumrah, India
+
+Bumrah has taken 20 wickets under his belt, conceding 373 runs. He also has the best economy rate in the whole tournament, with 4.06.
+
+3. Dilshan Madushanka, Sri Lanka
+
+Despite such a dreadful performance by the Sri Lankan side in this World Cup, Madhushanka managed to be in the top 2 on the highest wicket-takers list. He
+picked up 21 wickets, conceding 525 runs.
+
+2. Adam Zampa, Australia
+
+Adam Zampa is having a World Cup to remember, as he is the highest wicket-taker for the Aussies. He picked up 23 wickets, in which there were three four-wicket
+hauls, conceding 515 runs.
+
+1.
+</item 3>
+
+<item 4>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+His high score was 130 runs in this campaign, and he provided good support from time to time whenever the team needed it.
+
+4. Rachin Ravindra, New Zealand
+
+The biggest find of this year's World Cup has to be this 23-year-old all-rounder, Rachin Ravindra. Ravindra has smashed three centuries and two fifties in this
+campaign and accumulated a total of 578 runs in 10 matches.
+
+3. Quinton de Kock, South Africa
+
+A pivotal part of the South African top-order, de Kock has been a phenomenal batter, scoring 594 runs in 10 matches. de Kock has the most number of centuries in
+this tournament, with four so far.
+
+2.
+</item 4>
+
+<item 5>
+IND vs AUS Head-to-Head Record in ODI World Cup: Check India vs Australia match stats in World Cup Finals and ODI series (Zee Business,
+2023-11-18T13:02:06+00:00)
+For India, Ravindra Jadeja picked up three wickets, along with Kuldeep Yadav and Jasprit Bumrah picking up two each.
+
+India was in a terrible position at the start of the second innings as both of the openers got out for a duck, and India lost three wickets for just two runs.
+
+However, two brilliant and sensible innings by KL Rahul and Virat Kohli, where they scored 97 runs off 115 balls and 85 runs off 116 balls, took India to shore
+as India won the match by six wickets.
+
+Also Read: 2023 ICC World Cup: Virat Kohli vs Australia; know the ODI batting records and stats
+
+Catch the latest stock market updates here. For all other news related to business, politics, tech, sports, and auto, visit Zeebiz.com.
+</item 5>
+
+<item 6>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+Top 10 Bowlers of ODI World Cup 2023:
+
+Rank Player Mat Wkts 1 Mohammed Shami (IND) 7 23 2 A Zampa (AUS) 11 23 3 D Madushanka (SL) 9 21 4 JJ Bumrah (IND) 11 20 5 G Coetzee (SA) 8 20 6 Shaheen Shah
+Afridi (PAK) 9 18 7 M Jansen (SA) 9 17 8 RA Jadeja (IND) 11 16 9 Josh Hazlewood 11 16 10 MJ Santner (NZ) 10 16 11 BFW de Leede (NED) 9 16
+
+*Still Bowling
+
+10.
+</item 6>
+
+<item 7>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+He has one century and two fifties to his name in the World Cup.
+
+7. Shreyas Iyer, India
+
+Iyer is the backbone of the Indian middle order; these are the words of Head Coach Rahul Dravid. Iyer has provided good support to the team when needed, scoring
+526 runs in 10 matches. He also has three fifties and two centuries to his name.
+
+6. David Warner, Australia
+
+One of the most destructive openers of the modern era, Warner has been providing great starts to Australian batting, scoring 528 runs in ten innings. His
+highest score is 163 runs, along with two centuries and two fifties.
+
+5. Daryl Mitchell, New Zealand
+
+Mitchell has been a powerhouse for the Kiwis in the middle order, scoring 520 runs in nine matches.
+</item 7>
+
+<item 8>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+Mitch Santner, New Zealand
+
+New Zealand's bowling has mostly depended on Santner, as he has been effective for the Kiwis on the turning tracks of India, as he picked up 16 wickets and
+conceded 449 runs in 10 matches.
+
+9. Josh Hazlewood, Australia
+
+The Aussie pacer has been phenomenal with the new ball. He has created movements with the ball which the batters struggle to play. He picked up 16 wickets in 11
+matches.
+
+8. Ravindra Jadeja, India
+
+Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an
+economy rate of 4.25 in 10 matches.
+
+7.
+</item 8>
+
+<item 9>
+ICC World Cup 2023 Most Runs and Wickets: Full List of top 10 batsmen and bowlers in 2023 edition of cricket World Cup, Know where Virat Kohli, Rohit Sharma,
+Shami, Bumrah, rank (Zee Business, 2023-11-18T15:51:59+00:00)
+1. Mohammad Shami, India
+
+Shami announced his return to the World Cup with a bang, picking a fifer in the very first match he played for India. He has picked up 24 wickets so far in just
+six matches, conceding just 257 runs. He has picked up three five-wicket hauls including a seven-wicket haul against New Zealand in the semi-final on Wednesday,
+November 15 at the Wankhede Stadium in Mumbai.
+
+Catch the latest stock market updates here. For all other news related to business, politics, tech, sports, and auto, visit Zeebiz.com.
+</item 9>
+
+<item 10>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+The deal includes an additional $800,000 in incentives.
+
+Tellez hit 35 home runs as a centerpiece of the Brewers' lineup in 2022, but he took a significant step back in 2023 after starting the season on a roll.
+Between first base and the DH role, however, the Pirates figure to give Tellez near-everyday playing time in hopes his power bat finds its form.
+
+Giants, Jung-Hoo Lee agree to six-year deal
+
+Date: Tuesday, Dec. 12
+
+Source: Jon Heyman, New York Post
+
+The Giants have struggled to land big-name free agents over the last two offseasons, but they reeled in a pretty significant fish on Tuesday by inking Korean
+outfielder Jung-Hoo Lee to a six-year, $113M contract. Lee can opt out after 2027.
+
+Lee is just 25 and was an on-base machine in Korea, batting .340 in his KBO career.
+</item 10>
+=== END ITEM id=292dca3f2c662fc6 ===

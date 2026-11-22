@@ -1,0 +1,63 @@
+[
+{"id": "ccd8f539d4752cd2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]}
+]},
+{"id": "576a221c19411a65", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 2, "quote": "It existed in the computer code. Alameda could have negative balances and unlimited withdrawals."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "aa49d4cd1cf0f665", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "contradicted", "evidence": [{"item": 1, "quote": "sentencing for seven counts tied to fraud and money laundering."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "3c2fad1f1750852e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "It existed in the computer code. Alameda could have negative balances and unlimited withdrawals."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "37892e74afd234bd", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "c478e89c4c4a7422", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Depending on which one you get, it might come with USB ports so you can charge multiple devices in one outlet."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "It has a 10,000-mAh capacity"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

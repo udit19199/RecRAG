@@ -1,0 +1,41 @@
+[
+  {"id": "d79ccd10232c463f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]}
+  ]},
+  {"id": "ce51f028fde9a22a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Were they finally about to hard-launch their friendship/potential romance to the world, laying all speculation to rest? Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together."}]}
+  ]},
+  {"id": "355d513c0afef6c0", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "04c6cc905960cf67", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."}]}
+  ]},
+  {"id": "93411a03a744b6f1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,998 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=f8c7573c17e13cce ===
+Gold sentences and facts:
+Sentence 0: Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad.
+  Fact 0.0: Johnny Cardoso had to pull out of the September camp due to an ankle injury.
+  Fact 0.1: Johnny Cardoso has returned to action with Brazilian club Internacional.
+  Fact 0.2: Johnny Cardoso's return to action indicates a return to fitness.
+  Fact 0.3: Johnny Cardoso has been included on the squad.
+Sentence 1: He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury.
+  Fact 1.0: Johnny Cardoso and his fresh legs are back just in time.
+  Fact 1.1: Rookie sensation De'Von Achane hit Injured Reserve this week.
+  Fact 1.2: De'Von Achane hit Injured Reserve with a knee injury.
+
+Retrieved items:
+<item 1>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Also missing is Antonee Robinson, who Gregg Berhalter said is dealing with a sports hernia, and while he played through it last camp and recently for his club,
+it's affecting him and therefore rest is the best option here.
+
+Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a
+return to fitness, and has been included on the squad.
+
+With Adams injured, there has been some noise on social media calling for Heidenheim midfielder Lennard Maloney to be brought into the squad in October, and he
+was given the call-up here. The 23-year-old was born in Berlin to an American father, appearing for the U.S. at the U-20 level in the past and stating his
+desire to reach the USMNT senior squad.
+
+MORE: All players in U.S.
+</item 1>
+
+<item 2>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Meanwhile, Pipkins was also limited on Friday.
+
+The Patriots will be down a couple of wide receivers as Douglas and Boutte have been ruled out after not practicing on Friday. For Douglas, he missed the entire
+week due to a concussion he suffered against the Giants, while Boutte was downgraded on the injury report on Thursday and missed back-to-back days due to an
+illness on top of his shoulder injury.
+
+Lions (-4) at Saints
+
+The Lions just designated Hooker for return, who has been rehabbing a torn ACL he suffered at Tennessee last year, this week so the rookie quarterback was not
+expected to be activated this week. Meanwhile, Anzalone did not practice at all this week, so his prospects look bleak for Week 13. As for Jackson, he was a
+full participant on both Thursday and Friday.
+
+Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a
+chance to play.
+</item 2>
+
+<item 3>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+McDANIEL: Prefers to use two running backs from game to game, and in Miami's past three games there's been a relatively close split in carries between two backs
+(18 and 13 in Week 3, 8 and 7 in Week 4, 11 and 10 in Week 5).
+
+LAST YEAR: Wilson was efficient in his eight games in Miami, averaging 4.7 yards per carry with three touchdowns and just over 60 total yards per matchup. That
+includes two games he barely played in (under 20 snaps) -- take those out and he averaged 78.2 total yards per game.
+
+SALVON AHMED? Was a healthy scratch last week and figures to be no better than a special-teams player this week. In fact, in the seven games Raheem Mostert,
+Wilson and Ahmed were all active for with the Dolphins last year, Ahmed played 18 offensive snaps and 25 special-teams snaps.
+</item 3>
+
+<item 4>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Washington could be without its starting center this weekend as it plays host to Miami. Larsen, who missed Wednesday's practice due to a knee injury, was
+limited on Friday and is officially listed as questionable. Meanwhile, the Commanders will play Week 13 without Forbes Jr., who has been sidelined since
+suffering an elbow injury against the Giants in Week 11. Head coach Ron Rivera called the injury "significant" earlier this week.
+
+Broncos at Texans (-3)
+
+Denver's lone player with an injury designation for Week 13 is Mathis, who did not practice Friday after being limited on Thursday. Outside of him, the Broncos
+are healthy heading into this matchup with Houston. Wideouts Jerry Jeudy (groin) and Marvin Mims Jr. (hamstring) were both full participants on Friday after
+being limited on Thursday.
+
+Dell logged back-to-back days as a limited participant in practice to end the week and is officially questionable.
+</item 4>
+
+<item 5>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+For Taylor, he underwent surgery on his thumb this week and is expected to miss at least a couple of weeks, which will thrust Zack Moss into a more prominent
+role in the Colts backfield.
+
+Burks is the only Titan to have an injury designation entering the weekend, but the wideout was a full participant in Friday's practice. However, he will need
+to clear the final stages of concussion protocol in order to play.
+
+Dolphins (-9.5) at Commanders
+
+Every player who the Dolphins listed as questionable for Sunday's game against Washington was able to practice on a limited basis on Friday. That includes
+Cotton and Lamm, who both were DNPs earlier in the week. Rookie running back De'Von Achane was a full participant in Friday's practice and head coach Mike
+McDaniel said he will play this week after missing time with a knee injury.
+
+Washington could be without its starting center this weekend as it plays host to Miami.
+</item 5>
+
+<item 6>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+He was initially injured while playing for Leeds United back in March, and while he had finally recovered to make his Bournemouth debut in the EFL Cup in late
+September, he played just 20 minutes off the bench before suffering a setback, sidelined again for the foreseeable future.
+
+Gio Reyna has returned from his leg fracture and is called in for the first time under Berhalter since their falling out at the 2022 World Cup. Also included is
+defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury. On the heels of that return just before the
+international break, he is called in.
+
+Goalkeepers Zack Steffen and Sean Johnson remain out of action due to injuries. Additionally, Josh Sargent is sidelined with a long-term ankle injury, while
+Daryl Dike is also out after tearing his Achilles.
+</item 6>
+
+<item 7>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+However, even a moderate MCL sprain could mean a multi-week absence for the injury-prone veteran back, especially in a lost season for the 4-6 Pack. Rookie
+Emanuel Wilson also hurt his shoulder in Week 11, so AJ Dillon could be getting the keys to Green Bay's backfield castle (although it's more of an oversized
+shack, at this point).
+
+Dolphins rookie De'Von Achane, who looked like the runaway Offensive Rookie of the Year earlier this season, looked to have aggravated his MCL injury upon his
+Week 11 return against the Raiders. Achane has a chance to return for Miami's Week 12 tilt with the Jets on Friday, but we wouldn't be surprised if the 7-3
+'Fins play it safe and keep him out until he's back to 100 percent. Meanwhile, Miami placed backup Salvon Ahmed on IR with a foot injury, so Jeff Wilson Jr.
+could be back in play as a handcuff stash.
+</item 7>
+
+<item 8>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury.
+
+DOLPHINS: Aren't quite the bastion of rushing that some headlines have made them out to be, but they're just over league average in rush rate at 43.7% and above
+league average in RB runs per game at 22.6. All of these numbers are weighted heavily by their 50-point win over Denver in Week 3 when they ran the ball 42
+times with their running backs. Their 7.6 yard per carry average is due to Achane's breakout start more than anything else.
+</item 8>
+
+<item 9>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+Achane is clearly far ahead of Mostert.
+
+LAST WEEK: Before he fumbled the ball away twice, Mostert was splitting reps with De'Von Achane in a way that was unfavorable for him. Before the Dolphins got
+inside the 10-yard line Mostert had a 16-to-9 edge, then Achane played every single snap inside the 10. Then after Mostert's second fumble of the half, Mostert
+played just nine of the remaining 35 snaps including nothing near the end zone. Coach Mike McDaniel preached the importance of his offense not having
+"self-inflicted wounds" immediately after the game.
+
+LAST TWO WEEKS: Achane played all but two snaps inside the 10-yard line for Miami, so that seems like a big part of his role that will stick. As for third
+downs, Mostert has a one-snap edge over Achane at 6 to 5, which means they're splitting those valuable touches.
+</item 9>
+
+<item 10>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 10>
+=== END ITEM id=f8c7573c17e13cce ===
+
+=== ITEM id=2056ecc8395a5ac8 ===
+Gold sentences and facts:
+Sentence 0: India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26.
+  Fact 0.0: India played against Australia in the second semi-final of the 2015 World Cup.
+  Fact 0.1: The India versus Australia match was held in Sydney.
+  Fact 0.2: The India versus Australia match was played on March 26.
+Sentence 1: It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+  Fact 1.0: It is crunch time for England in the World Cups.
+  Fact 1.1: England faces South Africa in the semi-final of the Rugby World Cup.
+  Fact 1.2: England faces South Africa in the semi-final of the ODI Cricket World Cup.
+
+Retrieved items:
+<item 1>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland.
+
+His absence could open up a gap in their defence for Everton to exploit.
+
+The Toffees were winless in their first five games, but have since picked up two much-needed wins.
+
+But Everton are up against the odds, having won just one out of the last 25 previous Merseyside derbies.
+
+Liverpool vs Everton is live on talkSPORT at 12:30pm on October 21
+
+9 Sean Dyche's side go into the Merseyside derby as heavy underdogs Credit: Getty
+
+Crystal Palace look to end Newcastle's building momentum
+
+The Magpies have been on an impressive run of form across all competitions, knocking last year's treble winners Manchester City out the Carabao Cup while
+defeating Paris Saint-Germain 4-1 in the Champions League.
+
+But Crystal Palace proved to be an unbeatable obstacle for Newcastle last season.
+</item 1>
+
+<item 2>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang
+
+As the Premier League returns with a Saturday packed full of huge matches, talkSPORT gets the action started at Anfield.
+
+But that's not all there is, with a Rugby World Cup semi-final, a London derby and a packed UFC card among the other offerings.
+
+9 Merseyside derbies are never dull and talkSPORT has the first one of the season live Credit: Getty
+
+9 Everton are starting to look much better after a rocky start Credit: Getty
+
+Here, talkSPORT runs through what is an epic day of sport.
+
+Merseyside derby
+
+Liverpool are sitting in a comfortable fourth place in the Premier League table having picked up five wins out of their opening eight games.
+
+The bad news for Jurgen Klopp is that the Reds lost to Tottenham and only managed a draw with Brighton just before the international break.
+</item 2>
+
+<item 3>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India moved to finals and beat Sri Lanka to win their second World Cup title.
+
+
+
+2015 World Cup, against Australia
+
+India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26. Australia outplayed India in almost all departments
+of the game.
+
+Australian Man-of-the-Match Steve Smith (105 runs in 93 balls) and Aaron Finch (81 runs in 116 balls) were the guiding forces in taking Australia to 328 runs
+for 7 wickets in 50 overs.
+
+In reply, India needed a few big innings, but apart from skipper MS Dhoni (65 runs in 65 balls), Shikhar Dhawan (45 runs in 34 balls), and Ajinkya Rahane (44
+runs in 68 balls), the batting order collapsed miserably as India lost the match by 95 runs.
+
+
+
+2019 World Cup, against New Zealand
+
+The cricket World Cup returned to England for the fifth time.
+</item 3>
+
+<item 4>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+They sit tenth in the table having won four and lost as many from their opening eight games.
+
+But their most recent Premier League victory over Brentford may give the Red Devils hope their season is on the up.
+
+Sheffield United vs Manchester United is live on talkSPORT - kick off is at 8:00pm
+
+9 United got a dramatic win over Brentford before the international break Credit: Getty
+
+An England vs South Africa double header
+
+If you've had your football fix for the day, there's also a packed Saturday of rugby and cricket.
+
+It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+
+After England secured victory over Fiji in the quarter-finals, they now look to overcome defending champions South Africa to advance into their second
+consecutive Rugby World Cup final.
+</item 4>
+
+<item 5>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+TV channel Streaming USA — Peacock Canada TSN TSN+ UK ITV ITV X Australia Channel 9 Stan Sport, 9Now New Zealand Sky GO Sky GO India — Fan Code Hong Kong BeIN
+Sports BeIN Sports Malaysia BeIN Sports BeIN Sports Singapore BeIN Sports BeIN Sports
+
+MORE: Every single team to have lifted the Rugby World Cup trophy
+
+England vs South Africa lineups, team news
+
+"The start is crucial, the end is vital..."
+
+
+
+- Steve Borthwick explains changing 3️⃣ of his England starters for Saturday's Rugby World Cup semi-final, from Liam Heagney 👨‍💻 in Paris. #RWC2023 #ENGvRSA
+#EnglandRugby
+</item 5>
+
+<item 6>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+2023 World Cup, against New Zealand
+
+To be played
+</item 6>
+
+<item 7>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+talkSPORT will have updates from all the action in Paris as England take on the Springboks from 8:00pm
+
+9 Owen Farrell will be looking to inspire England to victory against the Springboks Credit: Getty
+
+Over in India, England's Cricket World Cup hopes hang by a thread after their latest shock defeat to Afghanistan.
+
+They will be boosted by the news that Ben Stokes is fit for the match after he picked up a hip injury five days before the tournament.
+
+But victory for England could scarcely be more crucial.
+
+Having also lost to New Zealand in their opener, their chances of finishing in the top four and progressing to the semi-finals are looking dubious.
+
+But South Africa, despite winning their first two games, suffered a shock defeat to the Netherlands in their most recent match - a sign for England that the
+Proteas can be beaten.
+</item 7>
+
+<item 8>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+talkSPORT will bring you updates as England take on South Africa in the Cricket World Cup in Mumbai from 9:30am
+
+9 It's not looking good for England's cricketers
+
+UFC 294 in Abu Dhabi
+
+Islam Makhachev is hoping to to successfully defend his UFC lightweight belt against Alexander Volkanovski at UFC 294.
+
+Makhachev retained his title in February this year as he defeated Volkanovski by a unanimous decision.
+
+But despite the Russian's favourable 24-1-0 record, Volkanovski will be desperate to add the lightweight belt to his featherweight title.
+
+Also on the cards, Kamaru Usman will fight Khamzat Chimaev in a middleweight title eliminator.
+
+Expect fireworks.
+</item 8>
+
+<item 9>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The #Springboks are gearing up for another tough challenge this week with a semi-final clash against England 🇿🇦🏴󠁧󠁢󠁥󠁮󠁧󠁿#StrongerTogether #RWC2023
+pic.twitter.com/HLSnnjWggB — Springboks (@Springboks) October 18, 2023
+
+England are the only side still competing who are yet to lose a game, and that will stand them in good stead coming into this semi-final. Dominant wins over
+Argentina, Japan and Chile sealed passage to the last eight, and after being given an almighty scare by Samoa in their final pool match, England overcame a
+Fijian fightback in Marseille to triumph 30-24. Despite being outscored by three tries to two, captain Owen Farrell kicked 20 points, sending his side into the
+last four at the expense of 2023's breakout stars.
+</item 9>
+
+<item 10>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The Springboks have done it tough, too, having already faced two of the tournament favourites on their way to the semi-finals. Comfortable defeats of Scotland,
+Romania and Tonga couldn't mask the disappointment of the 13-8 loss to Ireland, which consigned South Africa to second in Pool B. However, with Ireland sent
+home by the All Blacks in the quarters, the Bokke showed their World Cup mettle to edge the hosts 29-28 at the Stade de France, sneaking past Les Bleus in one
+of the best games of rugby you're ever likely to see.
+</item 10>
+=== END ITEM id=2056ecc8395a5ac8 ===
+
+=== ITEM id=7cf0db2b13a3eef6 ===
+Gold sentences and facts:
+Sentence 0: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 0.0: The company did not release the full model, Gemini Ultra.
+  Fact 0.1: The company released only a 'lite' version called Gemini Pro.
+Sentence 1: “Certainly there wasn’t a valid alternative to Google at the time,” Cue said.
+  Fact 1.0: Cue said there certainly wasn't a valid alternative to Google at the time.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 1>
+
+<item 2>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 2>
+
+<item 3>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“We try to get people up and running as fast as possible.”
+
+Cue acknowledged that the ISA didn’t allow Apple to offer users a choice of search engines during setup but also said he wouldn’t want to do that anyway. “We
+try to get people up and running as fast as possible,” he said. “Setup is just critical stuff.” Showing people a bunch of search engines they’ve never heard of
+would just be a bad user experience, he argued; even Cue couldn’t remember the names of some of the alternatives to Google. “We make Google be the default
+search engine,” he said, “because we’ve always thought it was the best. We pick the best one and let users easily change it.” (“Easily” is a persistent point of
+contention in this trial — DuckDuckGo’s CEO, who testified last week, claimed it takes “too many steps” to switch.)
+
+As for the privacy pop-ups? This is where Bellshaw began to press on how exactly Apple decided Google had the best product.
+</item 3>
+
+<item 4>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 4>
+
+<item 5>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 5>
+
+<item 6>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 8>
+
+<item 9>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+prompts that get around the safety filters in place to attempt to prevent it from discussing controversial topics.
+
+Using an automated method to algorithmically change the context of prompts until Gemini Pro’s guardrails failed, AI security researchers at Robust Intelligence,
+a startup selling model-auditing tools, managed to get Gemini Pro to suggest ways to steal from a charity and assassinate a high-profile individual (albeit with
+“nanobots” — admittedly not the most realistic weapon of choice).
+
+Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products. Google
+compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.
+
+But Google nevertheless promised improvements in reasoning, planning and understanding with Gemini Pro over the previous model powering Bard, claiming Gemini
+Pro was better at summarizing content, brainstorming and writing. Clearly, it has some work to do in those departments.
+</item 9>
+
+<item 10>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 10>
+=== END ITEM id=7cf0db2b13a3eef6 ===
+
+=== ITEM id=76c31eacb57b65f8 ===
+Gold sentences and facts:
+Sentence 0: 13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+  Fact 0.0: The 12th over is timestamped 13 Dec 2023 00.58 GMT.
+  Fact 0.1: At the end of the 12th over, West Indies were 102-4.
+  Fact 0.2: At the end of the 12th over, Hope had 26 runs.
+  Fact 0.3: At the end of the 12th over, Hetmyer had 1 run.
+  Fact 0.4: The 12th over had just a single and a wicket.
+  Fact 0.5: Shai Hope could not break the legspin shackles in the 12th over.
+Sentence 1: 6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary.
+  Fact 1.0: The 16th over is timestamped 6d ago, 22.54 GMT.
+  Fact 1.1: At the end of the 16th over, West Indies were 112-4.
+  Fact 1.2: At the end of the 16th over, Hope had 29 runs.
+  Fact 1.3: At the end of the 16th over, Powell had 8 runs.
+  Fact 1.4: Hope is playing an exemplary innings.
+  Fact 1.5: Hope opens the face to steer Rehan for Hope's first boundary.
+
+Retrieved items:
+<item 1>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+A wicket once so true turned untrustworthy and they struggled to a score of 132, less than half the 267 to which they had joyously motored just 48 hours
+previously. And though the home side’s response was anything but overwhelming, neither was the result ever in significant doubt.
+
+“We’ve had some high-scoring games, but the last game was almost the complete opposite of what happened here,” Reece Topley said. “We were probably just under
+par with the first-innings score but with the ball we were excellent, pushed them right to the end. I think it’s been an amazing series. Both teams have played
+some unbelievable cricket. I was so excited turning up today, because it was basically a final and those are the games you want to play in and be on the right
+side of. The bottom line is you want to win this series, I want to win every series I can for England.”
+</item 1>
+
+<item 2>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant. The 35-year-old, who rose to the top of the T20 bowling rankings for the first
+time on Wednesday, took two wickets and conceded just 21 while Topley was even better, also claiming a pair of victims but conceding only 17. England take
+plenty of positives from this series, but the result was not one.
+</item 2>
+
+<item 3>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Just as surely as when they came out on Tuesday facing an almost unachievable task, the outcome of the West Indies’ run chase seemed inevitable from the start.
+With such a meagre target they needed little more than to keep their heads, and though both Topley and Sam Curran conceded only two with their final overs to
+push the contest into its final over, that never looked in doubt.
+
+skip past newsletter promotion Sign up to The Spin Free weekly newsletter Subscribe to our cricket newsletter for our writers' thoughts on the biggest stories
+and a review of the week’s action Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more
+information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy
+. We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts?
+</item 3>
+
+<item 4>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+That made it 70 for four and the game was one ball into its ninth over, at which point Liam Livingstone and Moeen Ali had to focus for a while on disaster
+prevention rather than entertainment.
+
+Gudakesh Motie is embraced his his West Indies teammates after dismissing England’s in-form Phil Salt. Photograph: Randy Brooks/AFP/Getty Images
+
+Suddenly bowlers were energised by the prospect of posting, for a change, less-than-humiliating figures. Akeal Hosein’s were outstanding, his four overs going
+for just 20 and bringing the wickets of Will Jacks and Moeen, undone by a relay catch on the boundary after combining with Livingstone to add 40 for the fifth
+wicket. Livingstone followed precisely two overs later, prodding the ball limply back into the hands of Motie, at which point things really fell apart, the last
+five wickets surrendered in 20 balls for just 11 runs.
+</item 4>
+
+<item 5>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts? Show Download the Guardian app from the iOS App Store on iPhone or the Google Play store on Android
+by searching for 'The Guardian'.
+
+If you already have the Guardian app, make sure you’re on the most recent version.
+
+In the Guardian app, tap the Menu button at the bottom right, then go to Settings (the gear icon), then Notifications.
+
+Turn on sport notifications. Was this helpful? Thank you for your feedback.
+
+Halfway through their innings they were 62 for three, and if England had 15 more runs at the same point they had also made a complete hash of the rest of it.
+That was a trap which, thanks to Hope’s 43-ball 43 as he again steered his side to their target, West Indies avoided. This batting display may have lacked their
+usual flamboyance but until the final ball it was entirely appropriate for the occasion.
+
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant.
+</item 5>
+
+<item 6>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+Brutal elegance. Rehan comes back well with two sharply turning leggies. Bosh! Shai Hope gets in on the act and smears a length ball over mid on for the third
+six of the over. It’s a learning curve for the tyro spinner but that doesn’t make it any less bruising.
+
+
+
+13 Dec 2023 00.23 GMT 6th over: West Indies 59-1 (Mayers 22, Hope 13) Curran is called back, Mills granted just the one over for the time being. Two slower
+balls bring two soothing dots for England. A single each to Mayers and Hope. Curran does very well to get out of the over with just three runs conceded.
+Powerplay complete. How long till we see some spin from Rehan? Not long at all, he’s on for the next over.
+</item 6>
+
+<item 7>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 01.45 GMT WICKET! Shai Hope c Brook b Rehan Ahmed 36 (West Indies 123-5) Ahmed is bunted for SIX by Shai Hope but strikes with the next ball as Hope
+holes out!
+
+
+
+13 Dec 2023 01.44 GMT 14th over: West Indies 112-4 (Hope 27, Powell 10) Liam Livingstone instead of Rashid and he does well to keep it to singles, England
+trying to take this as deep as possible and hope West Indies fluff their lines at the death. West Indies need 55 from 36 balls.
+</item 7>
+
+<item 8>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+Updated at 23.20 GMT
+
+6d ago 23.16 GMT I suppose it’s appropriate that it ended with a six, the 120th of the series. Hope played a gem of an innings there, calmly anchoring West
+Indies in an increasingly nervous chase with a run-a-ball 43. England fought admirably to defend a below-par total; but for Hope, they would probably have done
+it.
+
+Updated at 23.17 GMT
+
+6d ago 23.14 GMT WEST INDIES WIN THE SERIES 3-2! 19.2 overs: West Indies 133-6 (Hope 43, Holder 4) That’s it! Hope pings Woakes over extra cover for six to seal
+another series victory for West Indies! West Indies’ Shai Hope (right) celebrates with Jason Holder after hitting a six to win the match by 4 wickets.
+</item 8>
+
+<item 9>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Often there is a sense as a tour enters its final days of thoughts turning to home, and perhaps the focus was not as laser-sharp as it might have been for this
+game, determination less than absolute to grasp this opportunity to end England’s run of reverses in the Caribbean. Whatever the reason, the pyrotechnics that
+rocketed England to victory in the two previous matches never sparked in this one. It took a fabulous delivery from Gudakesh Motie to end Phil Salt’s run of
+absurd form with his score a modest 38, but some of the other wickets that fell during the period that defined England’s innings and the game seemed a little
+careless.
+
+In the fourth over Jos Buttler casually turned a Jason Holder delivery to fine leg, where Oshane Thomas was positioned, hands cupped. Harry Brook tried to
+paddle-sweep Motie but sent the ball only a few feet into the air, giving Nicholas Pooran an easy catch.
+</item 9>
+
+<item 10>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+What a difference two days make. Somehow Tuesday’s ludicrous, record-smashing, high-scoring entertainment was followed by a sequel on the same surface that
+eventually delivered thrilling low-scoring entertainment, and a different result claimed in very different style. It was eventually won for West Indies with
+four balls to spare and in the most unfitting of ways – with a massive six – by Shai Hope, again proving himself the right man for a run-chase.
+
+So a series marked by stunning power hitting, roaring run rates and an unexpected midway transformation in England’s performances and prospects concluded with a
+3-2 triumph for West Indies, who extended their supremacy over England at home to four series in three formats across nearly five years.
+
+England assembled exactly the same players in exactly the same place and exactly the same situation – losing the toss, put in to bat – but this was an entirely
+different performance.
+</item 10>
+=== END ITEM id=76c31eacb57b65f8 ===
+
+=== ITEM id=795ff72fcc594ef5 ===
+Gold sentences and facts:
+Sentence 0: 10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late.
+  Fact 0.0: At 10:59 p.m., the Cowboys are moving the ball.
+  Fact 0.1: The Cowboys are moving the ball when it is a bit too late.
+Sentence 1: Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati.
+  Fact 1.0: Mixon has been forced to step up.
+  Fact 1.1: Burrow is not under center.
+  Fact 1.2: Mixon is forced to step up without Burrow under center.
+  Fact 1.3: Mixon doubles as a runner for Cincinnati.
+  Fact 1.4: Mixon doubles as a receiver for Cincinnati.
+
+Retrieved items:
+<item 1>
+FanDuel Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments (Sporting News, 2023-12-07T22:17:00+00:00)
+RB Joe Mixon, Bengals vs. Colts ($7,200). Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati. Jake
+Browning has relied heavily upon the veteran RB, evidenced by Mixon's two touchdowns on Monday night against the Jaguars. Burrow's injury has made Mixon
+arguably the Bengals' top fantasy option now. We'll gladly insert the RB into the lineup in a good matchup against a Indianapolis team that's had some issues
+defending RBs, notably getting torched by Derrick Henry and Tyjae Spears one week ago.
+
+WEEK 14 DFS:
+
+DK lineup | Best values | Best stacks
+
+RB Breece Hall, Jets vs. Texans ($6,400). It's Week 14 and there is a Jets player in this DFS lineup. How bad can it get? The good news is that it can always
+get worse, and Hall's role in this offense makes him a worthy dart throw in this lineup.
+</item 1>
+
+<item 2>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+9:37 p.m. — Deebo Samuel takes some big hits but gets the 49ers down to the one-yard line. San Francisco is knocking on the door again.
+
+9:35 p.m. — The Cowboys had done a pretty nice job of containing McCaffrey to this point, but the former Pro-Bowler takes a screen pass for 19 yards to push the
+Niners to the edge of the red zone.
+
+9:31 p.m. — Aiyuk with a quick 15-yard catch to start the 49ers' drive. He's up to 35 yards on three catches.
+
+49ers 14, Cowboys 7
+
+9:27 p.m. TOUCHDOWN — KaVontae Turpin flashes his speed, gets separation, and hauls in Prescott's pass in the end zone! A perfectly drawn-up 26-yard play puts
+Dallas right back in this game.
+</item 2>
+
+<item 3>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The Cowboys' offense looked very much like it did in last season's playoff exit -- uncomfortable and out of sorts. Dallas was sluggish through the first half of
+the game, and the night unraveled quickly when Dak Prescott threw three interceptions in the second half. It got out of hand so quickly that Sam Darnold entered
+the game for the 49ers with more than 12 minutes remaining.
+
+For Prescott and the Cowboys, questions about whether they can get over the hump against the class of the NFC will persist. While their wins have been dominant,
+Dallas already sits two games behind the Eagles in the NFC East.
+
+The 49ers are rolling right along, with all of their major offensive weapons now healthy and the defense living up to its billing as well. San Francisco, now
+5-0, doesn't face a team with a winning record until Week 10, though the Browns, Vikings and Bengals are far from automatic wins for Kyle Shanahan's team.
+</item 3>
+
+<item 4>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+Only Joshua Dobbs, who ran for 55 yards, has scored double-digit Fantasy points against the Niners (18 points). Not that the Cowboys have been tested much --
+Daniel Jones, Zach Wilson and the Patriots QBs are the other guys they've man-handled.
+
+O-LINE: San Francisco has allowed a pass rush pressure on 36.4% of their snaps, which sounds like a lot but it's just a shade worse than league average. That
+number is weighted by the Giants' decision to blitz on 84.6% of Purdy's dropbacks in Week 2, creating an inflated pass rush pressure rate. Despite the Giants'
+efforts, Purdy still threw for 310 yards and two touchdowns in a game he didn't have Brandon Aiyuk in.
+
+COWBOYS: Have become one of the most aggressive defenses in the league, ranking third from the bottom in zone coverage snaps.
+</item 4>
+
+<item 5>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+For a Cowboys team that has embarrassed a few opponents this year, they might be on the bad end of an ugly game here.
+
+49ers 28, Cowboys 10
+
+10:27 p.m. TOUCHDOWN — Not one, not two, THREE touchdowns for George Kittle. The 49ers have everything working offensively tonight, and any Kittle fantasy
+owners are thrilled.
+
+10:25 p.m. — Aiyuk's loss is Deebo Samuel's gain. Samuel goes 43 yards on the very next play, which tells you how automatic the 49ers' offense is right now. San
+Francisco is in the red zone looking to make this a three-score game.
+
+10:23 p.m. — An offensive holding call wipes out a 40-yard gain from Aiyuk. Wow. That's a momentum swing. Spencer Burford is the culprit.
+
+10:21 p.m. — The Purdy-to-Aiyuk connection continues to get stronger.
+</item 5>
+
+<item 6>
+Bills vs. Bengals live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-11-05T23:47:00+00:00)
+: Mixon gets five yards on a run outside to the right, he's pushed out of bounds, but that will do it. The Bengals can kneel the game out and will win 24-18.
+
+11:19 p.m.: Mixon rushes for four yards to bring up a third-and-4 at the Bills' 37, and bring up the two-minute warning. A first down will win the game for the
+Bengals, since Buffalo cannot stop the clock. A stop on third will bring up an interesting decision for Zac Taylor and Cincinnati.
+
+11:17 p.m.: Mixon rushes for two yards after the big gain, and the Bills use their final timeout with 2:37 left.
+
+11:17 p.m.: Feels like a time to run the ball, right? Well, not to the Bengals, who trust Burrow to air out a deep pass to Boyd for 32 yards to the Bills 43.
+</item 6>
+
+<item 7>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+This team is relatively young. They are scrappy. The fact that they have been there before gives them a chance. I think the quarterback is growing.”
+
+• Cincinnati Bengals: Can Joe Burrow hold up for a full season?
+
+What I think: Burrow is looking healthier over the past two weeks. The bye week comes at a great time for Burrow to get even healthier, but check out the
+schedule on the other side: San Francisco, Buffalo, Houston, Baltimore, Pittsburgh and Jacksonville. Cincy still has a second game with the Steelers, plus games
+against Kansas City and Cleveland. I’m worried Burrow will wear down against these defenses.
+
+Exec comment: “You cannot always expect Joe Burrow to create magic with a bottom-half offensive line. The line is my concern all the way.”
+
+Advertisement
+
+2. Are teams sometimes going too far playing to win? The Eagles come to mind after falling 20-14 to the Jets.
+</item 7>
+
+<item 8>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Jerry Jones said earlier in the week that Sunday night's game would show him how the Cowboys stack up against the NFL's best.
+
+The answer? Not very well.
+
+Everything that could go wrong for Dallas on Sunday did go wrong, in a game that confirmed a 49ers team that ended the Cowboys' season in each of the last two
+years remains a level above its NFC counterpart.
+
+The 49ers carved up Dallas' defense on the opening drive, and that was a sign of what was to come. Brock Purdy threw four touchdowns in the 42-10 rout,
+including three to George Kittle. Christian McCaffrey scored a touchdown for a 14th consecutive game as all of San Francisco's offensive weapons got involved.
+
+MORE: Comparing stats for NFC stars Nick Bosa, Micah Parsons
+
+Defensively, the 49ers were relentless. Nobody had a larger impact than Fred Warner, who finished the night with an interception, sack and forced fumble in a
+swarming performance.
+</item 8>
+
+<item 9>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+At least 9 of those 15 throws went into the end zone.
+
+PASS RUSH: Bengals opponents have started to sniff out Burrow's issues and have come after him. The Browns and Titans had a pass rush pressure rate between 38&
+and 42% in their wins over Cincy with high blitz rates (at least 31% each). Compare that to the Rams and Ravens, who barely brought pressure or blitzes and
+either lost or nearly lost to the Bengals.
+
+CARDINALS: Are dead-last in blitz rate this season (14%) and third-to-worst in pass rush pressure rate (28%). They actually had nine sacks after Weeks 1 and 2
+but have had three since against the Cowboys and 49ers. Arizona seems to prefer using just four rushers to affect the quarterback, something that should be
+helpful to Burrow this week.
+</item 9>
+
+<item 10>
+Bills vs. Bengals live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-11-05T23:47:00+00:00)
+Bengals 24, Bills 10
+
+10:59 p.m.: Another toss play outside to Mixon goes for a loss of three, but Burrow finds Smith, who picks up eight yards to the Bills' 2 before he steps out of
+bounds. Third-and-goal at the 2, with the Bengals knocking on the door.
+
+10:57 p.m.: Burrow to Higgins has been the top combination all night, and it is again on the third down play. They connect for 18 yards, with Higgins catching a
+slant and races it to the Buffalo 7. First-and-goal with less than 10 minutes to play.
+
+10:56 p.m.: Mixon picks up four yards on a run up the middle, but Burrow throws the ball away on the second-and-6. Bengals use their third and final timeout
+with 10:19 left before a third-and-6 play.
+
+10:53 p.m.
+</item 10>
+=== END ITEM id=795ff72fcc594ef5 ===
+
+=== ITEM id=b815e1da87262926 ===
+Gold sentences and facts:
+Sentence 0: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 0.0: The answer to the question ultimately lies with the jury.
+  Fact 0.1: The jury was selected on Wednesday morning.
+  Fact 0.2: The jury was selected before lawyers for the government.
+  Fact 0.3: Bankman-Fried swapped two very different stories of the former crypto mogul's sudden rise and almost instantaneous fall.
+Sentence 1: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 1.0: SBF is how the person is known.
+  Fact 1.1: SBF has pleaded not-guilty to some seven charges of fraud.
+  Fact 1.2: SBF has pleaded not-guilty to some seven charges of conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 1>
+
+<item 2>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 2>
+
+<item 3>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Read a recap of the prosecution and defense’s full arguments here.
+
+FTX’s co-founder and CTO Gary Wang testified Thursday on the extent to which Alameda Research was used for whatever purposes he and SBF saw fit. The crypto
+trading firm, according to Wang, pulled funding directly from FTX customers, whose transactions would be funneled toward Alameda and then directed elsewhere.
+
+Check here for our rundown of Wang’s testimony so far, resulting from a guilty plea in December 2022.
+
+Thursday also brought in testimony from Matt Huang, co-founder and managing partner at crypto investment firm Paradigm. That firm invested $278 million in FTX
+across 2021 and 2022, and is part of a class-action lawsuit accusing it and others of defrauding customers by promoting FTX.
+
+His testimony centered around being left uninformed about FTX’s utilization of customer money to keep the Alameda Research afloat, a practice that Huang says
+would have halted his involvement.
+</item 3>
+
+<item 4>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The full breakdown of his testimony on his relationship with FTX, stretching back to 2019, can be found right here.
+
+We also got a look at the composition of the SBF trial’s jury, which ranges from a train conductor to a retired investment banker who attended Stanford
+University. You can listen to a special joint episode of our podcasts Equity and Chain Reaction to get a better sense of the vibe between the jurors and the
+rest of the court.
+
+For a full rundown of our coverage of the SBF trial, check below:
+</item 4>
+
+<item 5>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 6>
+
+<item 7>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+You can also follow along with her and the TechCrunch team’s coverage in the Chain Reaction newsletter, which drops Thursdays at 12 p.m. PT, and the Chain
+Reaction podcast, which will hit your feed every Thursday.
+
+How to follow the SBF trial
+
+The trial kicked off with jury selection October 3. From there, access to the proceedings is limited, as no devices are allowed; reports are being physically
+put together within the courtroom (or sent to overflow rooms).
+
+Beyond our daily coverage, additional expertise and commentary will live on TechCrunch+. There, you can find stories like this in-depth breakdown of what to
+expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from
+the opening arguments.
+
+SBF trial: What we learned in week three
+
+The third week of the trial featured a couple of noteworthy moments for the prosecution, including FTX’s former general counsel Can Sun.
+</item 7>
+
+<item 8>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Much of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make
+investments or direct funding toward political causes and charities.
+
+SBF trial: What we learned in week two
+
+The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to
+repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX
+Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.
+
+And though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in
+frozen trading accounts.
+
+SBF trial: What we learned in the week one
+
+As expected, the opening statements in the SBF trial were spicy.
+</item 8>
+
+<item 9>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 9>
+
+<item 10>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 10>
+=== END ITEM id=b815e1da87262926 ===

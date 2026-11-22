@@ -1,0 +1,888 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=bf61c0eea738774d ===
+Gold sentences and facts:
+Sentence 0: The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating.
+  Fact 0.0: A post came after Swift was seen enthusiastically cheering on the athlete in the box seats at Arrowhead Stadium.
+  Fact 0.1: The sighting of Swift cheering at Arrowhead Stadium fuelled speculation that Swift and the athlete are dating.
+Sentence 1: Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together.
+  Fact 1.0: Swifties were immediately on high alert.
+  Fact 1.1: Some Swifties captured Swift and Kelce leaving the stadium together.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But at the same time, they're overdoing it a little bit."
+
+Jason also chimed in on the matter, saying, "I just think the NFL is not used to celebrities coming to the games. Like basketball has it all figured out.
+They're all courtside, they're sitting there. They show 'em once or twice, but then they get back to the game."
+
+Oct. 12: Swift attends Chiefs-Broncos
+
+"Now it's too late for you and your white horse *Bronco, to come around" - White Horse
+
+One day after her movie premiere, Swift is in the house for the Chiefs' "Thursday Night Football" divisional matchup against the Broncos. The game is taking
+place at Arrowhead Stadium, where Swift has performed herself and attended a game before. According to Al Michaels, the game will have minimal Swift coverage,
+though so far there has already been a mention of the superstar.
+
+Oct.
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"Well I would say that Travis Kelce's had a lot of big catches in his career. This would be the biggest."
+
+Sept. 26: Chiefs games get even more popular
+
+"Welcome to New York (*New Jersey), it's been waiting for you." - Welcome to New York
+
+The defending Super Bowl champions are already one of the more popular teams in the league, but it is becoming the hottest ticket in town, no matter what town
+that is.
+
+"Since Swift's appearance at the Chiefs game on Sunday, the Jets have sold more tickets for their game against the Chiefs in a single day than since the season
+started -- by more than double," a representatives at StubHub told to Town & Country magazine.
+
+Sept. 27: Mahomes confirms he met Swift
+
+"It was enchanting to meet you, all I can say is I was enchanted to meet you."
+</item 3>
+
+<item 4>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+87 with gusto.
+
+The 12-time Grammy winner appeared to shout “let’s f—ing go” after Kelce scored a touchdown before chest-bumping other Chiefs fans. Considering Swift is known
+for being an Eagles fan – she’s originally from Pennsylvania and even references the team in Gold Rush – her outward support for the Kelce’s team seemed extra
+telling. Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together. If that wasn’t enough, extra observant fans
+were able to note that Kelce’s blue and white post-game outfit was supposedly labelled the “1989 bedroom painting set”, perhaps an intentional reference to
+Swift’s 2014 album, which she will be re-releasing in October. Swift’s penchant for Easter eggs must be rubbing off on the tight end player. As if this weren’t
+enough subtle references already, they were also spotted in a “getaway car” together outside the stadium – potentially a nod towards her 2017 track.
+</item 4>
+
+<item 5>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 5>
+
+<item 6>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Swift’s name began popping up everywhere on the podcast, including during conversations about... facial hair?
+
+In August, the brothers discussed Kelce’s moustache, which he grows every year in honour of the Chief’s head coach, Andy Reid. When asked if he knew what Swift
+thought of the ’stache, he remained cheekily confident. “We’re not going to bring up Taylor Swift in this episode,” he says, “But something tells me she’s going
+to like it.” There was a clear suggestion Kelce had made contact with Swift, and was even going to meet her. Shortly after that remark, Kelce took a week off
+training to visit New York City, according to Vulture. Coincidentally, this happened to be while Swift was re-recording her 1989 tracks in the city. Welcome to
+New York
+
+The suspicion the two were actually spending time together in New York was seemingly confirmed in September when it was reported they had been “quietly hanging
+out” for months.
+</item 6>
+
+<item 7>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Could they have been driving off into the sunset? Of course, none of this actually confirms Swift and Kelce are actually dating. But regardless of whether it’s
+a friendship or a romantic relationship, it has sent shockwaves through two massive cultural franchises, expanding the NFL’s audience into uncharted territory.
+It’s a cultural pairing on par with – and perhaps even bigger than – Kim Kardashian and Kanye West.
+</item 7>
+
+<item 8>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+This was the first, albeit tentative, confirmation from the media rather than from amateur Swiftie sleuths on social media. So, it was only a matter of time
+before it entered the cultural zeitgeist. Blank Space Which it did, very quickly. On September 17, Kelce scored a touchdown against the Jaguars, triggering CBS
+announcer Ian Eagle to reference Swift’s 2014 hit, Blank Space.
+
+“Kelce finds a blank space for the score,” Eagle said, poking fun at Kelce’s newfound Swiftie status. And Eagle wasn’t the only one, with NFL Network’s Rich
+Eisen including a slew of lyric references during a preshow, including “shake it off”, “anti-hero” and “all too well”. Kelce even acknowledged the
+tongue-in-cheek banter, commenting on a montage video of the preshow that Eisen posted to Instagram. “Well played Rich … Well played,” he wrote. Suddenly,
+football fans and Swifties were living through this surprising collision.
+</item 8>
+
+<item 9>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Suddenly, football fans and Swifties were living through this surprising collision. Swift lyrics were infiltrating NFL game commentary, and her fans were
+furiously becoming football experts. All that needed to happen was for Swift herself to infiltrate a game, determining once and for all whether there was
+anything to these rumours or not. This Is Me Trying
+
+On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games. “I told her, ‘I’ve seen you rock the stage in Arrowhead,
+you might have to come see me rock a stage at Arrowhead and we can see which one’s a little more lit,’” he said. “We’ll see what happens in the near future.”
+Were they finally about to hard-launch their friendship/potential romance to the world, laying all speculation to rest? Love Story This finally brings us to the
+fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto.
+</item 9>
+
+<item 10>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the
+classic game “Kiss, Marry, Kill”. Speaking with AfterBuzz TV, Kelce was given the options of Swift, Katy Perry and Ariana Grande. He said he’d ultimately kill
+Grande, marry Perry and kiss Swift. That was about six years ago, but it has more recently set tongues wagging as fans wondered how long the plan for them to
+meet has been in the works. Cruel Summer Fast-forward seven years, and things started to heat up. In July, speaking on the podcast he shares with his brother,
+New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City. Unfortunately, the
+bracelet never made it to her wrist or his digits to her phone.
+</item 10>
+=== END ITEM id=bf61c0eea738774d ===
+
+=== ITEM id=83e8b13164995e7e ===
+Gold sentences and facts:
+Sentence 0: “The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says.
+  Fact 0.0: 6PPD-quinone was identified in late 2020
+  Fact 0.1: 6PPD-quinone requires more research to understand what impact, if any, it may have on aquatic life or the environment
+  Fact 0.2: Chris Helsel is Goodyear's SVP of global operations and CTO
+  Fact 0.3: Chris Helsel says the 6PPD-quinone statement
+Sentence 1: In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals.
+  Fact 1.0: The report contains a quote from a former VP at an industrial automation vendor
+  Fact 1.1: The former VP at an industrial automation vendor said digital solutions provide visibility, analysis, and insight
+  Fact 1.2: The digital solutions address the challenges inherent in sustainability goals
+
+Retrieved items:
+<item 1>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Digital twin market trends
+
+We will now look at four trends helping digital twin market growth.
+
+Trend 1: Digital twins deployed to meet sustainability goals
+
+Sustainability was discussed in approximately 21% of recent CEO earnings calls and has remained a consistent topic throughout 2023. This pairs with our report’s
+analysis that the pursuit of sustainability goals is a tailwind macro factor for the digital twin market.
+
+To achieve their sustainability goals, many companies are exploring digital twins. Due to their ability to simulate real-world conditions and deliver real-time
+information, organizations can optimize resource usage, reducing carbon emissions and improving supply and transportation networks.
+
+According to Capgemini Research Institute’s 2022 digital twins report, 57% of organizations agreed that one of the key drivers for their digital twin
+investments was improving their sustainability, and 51% agreed that digital twins would help achieve their organization’s environmental sustainability goals.
+
+In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the
+challenges inherent in sustainability goals.
+</item 1>
+
+<item 2>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+If not, what investments are required?
+
+2. Data integration: How compatible are our current data sources and systems with digital twin technologies, especially in terms of sensor data (both physical
+and virtual/soft)?
+
+3. Interoperability concerns: As we use multiple software solutions across our operations, how important is interoperability between digital twin technologies
+and our existing systems?
+</item 2>
+
+<item 3>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+That isn’t bad just for the salmon and the Pacific Northwest’s fishing industry. 6PPD-quinone is in us, too, and it only comes from tires. 6PPD helps tires
+resist environmental damage, thus lasting longer between replacements. When 6PPD reacts with ozone, it becomes 6PPD-quinone.
+
+“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the
+environment,” Goodyear SVP of global operations and CTO Chris Helsel says. That’s hardly a mea culpa, but the tire industry genuinely has been an active partner
+in studying the problem.
+
+Goodyear and other members of the US Tire Manufacturers Association actually encouraged 6PPD-targeting regulation enacted by the California Environmental
+Protection Agency and have provided free tire compound samples to researchers.
+</item 3>
+
+<item 4>
+Bringing aqueous rechargeable zinc iodine batteries to the mainstream energy market (Advanced Science News, 2023-09-26T11:50:40+00:00)
+One of the major drawbacks of these lithium-ion batteries is the inherent risk of burning or even explosion as the result of thermal runaway, with overheated
+lithium-ion batteries deemed responsible for a number of fires in the past.
+
+A possibility with zinc
+
+One potential substitute for lithium-ion batteries are rechargeable zinc iodine batteries , which have the advantage of being safer, costing less, and being
+more friendly to the environment than lithium alternatives.
+
+However, zinc iodine batteries are not perfect. Composed of an negative iodine electrode and a positive zinc electrode , these batteries suffer from issues like
+lower energy output compared to commercial non-aqueous lithium batteries and the growth of zinc dendrites on the anodes — projections of material that build on
+electrodes and short batteries when they cross from one electrode to another — as well as the corrosion of the zinc anode that result in reduced efficiency and
+even short-circuiting.
+</item 4>
+
+<item 5>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Considerations for digital twin vendors
+
+3 questions digital twin vendors should ask themselves based on research findings discussed in this article:
+
+1. Sustainability goals: Given the emphasis on sustainability and the role of digital twins in achieving it, is my company’s digital twin solution well-equipped
+to support sustainability objectives? Are there new features we need to develop?
+
+2. Interoperability: Is our digital twin solution currently designed to be interoperable with other systems and technologies, especially those from different
+vendors?
+
+3. Product development: How aligned is our product development roadmap with the emerging trends highlighted in the report, especially around end-user and
+technological advancements?
+
+Considerations for adopters
+
+3 questions adopters should ask themselves based on research findings discussed in this article:
+
+1. Infrastructure readiness: Do we have the necessary infrastructure and resources in place to support the deployment and effective use of digital twins? If
+not, what investments are required?
+
+2.
+</item 5>
+
+<item 6>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+By the IoT Analytics team.
+
+A new report from IoT Analytics highlights eight notable trends helping to advance and promote digital twins.
+
+Four of these trends are discussed in detail in this article. These trends are shaping the future of the digital twin market and influencing investment
+priorities for companies across various industries.
+
+Key insights:
+
+According to our Digital Twin Market Report 2023–2027, the digital twin market is expanding, with a projected CAGR of 30% between 2023 and 2027.
+
+29% of global manufacturing companies have either fully or partially implemented their digital twin strategies. Further, job posts related to digital twins have
+increased by 11% compared to October 2021, while openings for other tech topics have declined in the same timeframe.
+
+The report notes eight notable trends helping to advance and promote digital twins, four of which are discussed in this article.
+</item 6>
+
+<item 7>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 4: Initiatives promoting interoperability of digital twins across systems from different vendors
+
+Agreement on integration standards among the various digital twin technology providers is crucial for building cross-system digital twins. With standards,
+manufacturers can offer services that can be applied to unique situations with other digital twin technology and software.
+
+Recognizing this, countries and industry organizations have taken several steps to address this need:
+
+Plattform Industrie 4.0 and CESMII
+
+Plattform Industrie 4.0 and the Clean Energy Smart Manufacturing Innovation Institute (CESMII) partnered to establish standards for manufacturers in Germany and
+the United States to better enable smart, sustainable competition. The partnership addressed similar challenges related to Industry 4.0 and Smart Manufacturing.
+</item 7>
+
+<item 8>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+“What you don’t want is all these little wear particles full of all these nasty compounds settling in the environment and inside us and gradually leaching out
+their toxins,” says Nick Molden, CEO of Emissions Analytics, an independent group focused on testing and data about the overall environmental impacts of
+transportation.
+
+“What you don’t want is all these little wear particles full of all these nasty compounds settling in the environment and inside us and gradually leaching out
+their toxins.”
+
+One such toxin is 6PPD-quinone. A 2020 study from the University of Washington’s Center for Urban Waters found that a dramatic decline in coho salmon
+populations was the result of the toxin. The salmon have now been placed on some West Coast endangered lists.
+
+“Shortly after birth, they were essentially going mad and dying,” Molden says. “The researchers finally linked it to this compound in tires because it was
+happening after rainfall. The rainfall was washing all the accumulated tire material off the road into the harbors and into the shore.”
+</item 8>
+
+<item 9>
+Bringing aqueous rechargeable zinc iodine batteries to the mainstream energy market (Advanced Science News, 2023-09-26T11:50:40+00:00)
+New research aims to improve the stability and safety of alternatives to rechargeable lithium-ion batteries using aqueous zinc and hydrogels.
+
+The demand for rechargeable batteries as a result of the growth of both the personal electronics and electric vehicle markets has grown steadily over the last
+decade. Lithium-ion batteries are one of the technologies that have emerged and matured due to this demand.
+
+In 2020, Statista estimated that lithium-ion batteries accounted for 185 gigawatts (GWh) of energy consumed, and this energy demand is projected to reach 2,035
+GWh by 2030. Most of this growth is accounted for by the increased desire for electric vehicles as people turn away from fossil fuels.
+
+While it is undeniable that lithium-ion batteries are more environmentally friendly than fossil fuels and while they are also relatively inexpensive, these
+batteries aren’t perfect.
+</item 9>
+
+<item 10>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Based on these observations and additional insights from our report, our current projection estimates that the global digital twin market could grow at a CAGR
+of approximately 30% between 2023 and 2027.
+
+Against the backdrop of this growing market, the report notes eight trends that help promote the advancement and adoption of digital twins. Here, we will focus
+on four:
+
+1. Digital twins deployed to meet sustainability goals
+
+2. Digital twins employed as virtual sensors in complex conditions
+
+3. Partnerships between cloud hyperscalers and OT and simulation specialists
+
+4. Initiatives promoting interoperability of digital twins across multifaceted systems
+
+Before we dive into these trends, and to provide context, it is helpful to understand how IoT Analytics defines digital twins and the digital twin market.
+
+Defining digital twins and the digital twin market
+
+In our March 2023 Decoding Digital Twins article, we define digital twins as a virtual model replicating the behavior of an existing or a potential real-world
+asset, system, or multiple systems.
+</item 10>
+=== END ITEM id=83e8b13164995e7e ===
+
+=== ITEM id=1462d340c657cc73 ===
+Gold sentences and facts:
+Sentence 0: She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years.
+  Fact 0.0: The speaker explained this at the time of the 2022 Academy Awards.
+  Fact 0.1: Will slapped Chris Rock at the 2022 Academy Awards.
+  Fact 0.2: At the time Will slapped Chris Rock, the speaker and Will had been separated for six years.
+Sentence 1: Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy.
+  Fact 1.0: Outsiders are now aware that Jada and Will have been separated since 2016.
+  Fact 1.1: The timeline of Jada's relationship with Alsina is still fuzzy.
+
+Retrieved items:
+<item 1>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Jada Pinkett Smith has revealed that she and husband Will Smith have been separated for the last seven years.
+
+The Girls Trip star, 52, shared in a new interview with People published on 11 October that she and the King Richard actor, 55, are “still figuring it out” when
+it comes to their marriage of 26 years. She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six
+years.
+</item 1>
+
+<item 2>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Although they’ve made their dedication to each other quite clear, there have been some grey areas over the last seven years about the terms of Will and Jada’s
+separation. In 2020, Jada made headlines when she revealed in a Red Table Talk episode with her husband that she had a relationship with Alsina. She explained
+that she and her husband were “separated amicably” when the romance occurred, which had not been disclosed to the press at the time. “We decided that we were
+going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,” Jada said. As the Girls
+Trip star recalled that she “got into a different kind of entanglement with August,” she was prompted by Will to confirm it “was a relationship, absolutely.”
+</item 2>
+
+<item 3>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Less than two weeks later, Jada and Will appeared on an episode of Jada’s Red Table Talk where Jada confirmed that she did have a relationship with Alsina,
+saying that she and Will were separated at the time.
+
+“We decided that we were going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,”
+Jada said at the time.
+
+“From there, as time went on, I got into a different kind of entanglement with August... Yes, it was a relationship absolutely.”
+
+Jada also said that Will didn’t give permission, as the only person who could give her permission was herself.
+
+2021: Jada discusses her and Will’s sex life, Will’s memoir is released
+
+In another episode of Red Table Talk in October 2021, Jada said it “takes work” to maintain a spark in the bedroom.
+
+“It’s hard... the thing Will and I talk about a lot is the journey.
+</item 3>
+
+<item 4>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Longtime Hollywood couple Will Smith and Jada Pinkett Smith sent shockwaves around the world this week when the Red Table Talk host revealed that she and the
+actor have been separated since 2016. Both Jada and Will have previously doubled down on their stance against getting a divorce, but her recent reveal about
+their lengthy separation poses a new question: When should couples just get a divorce?
+</item 4>
+
+<item 5>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+he wrote on Facebook at the time. “So, in the interest of redundant, repetitious, over and over-again-ness… Jada and I are… NOT GETTING A DIVORCE!!!!!!!!!!!!!”
+
+2018: Will revealed that he and Jada don’t refer to themselves as married
+
+In an episode of TIDAL’s Rap Radar podcast, Will said he and Jada “refer to ourselves as life partners, where you get into that space where you realise you are
+literally with somebody for the rest of your life. There’s no deal breakers. There’s nothing she could do - ever. Nothing that would break our relationship. She
+has my support till death and it feels so good to get to that space.”
+</item 5>
+
+<item 6>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Will and Jada with their son Jayden in 2003 (Getty)
+
+2013: Jada denies open marriage rumours (sort of)
+
+After a quiet decade and a half making movies and raising their children, Jada took to Facebook to address rumours she and Will were in an open relationship.
+
+She wrote: “Here is how I will change my statement... Will and I BOTH can do WHATEVER we want, because we TRUST each other to do so. This does NOT mean we have
+an open relationship... this means we have a GROWN one.”
+
+2015: Will addresses divorce rumours
+
+Will addresses persistent separation rumours by clarifying the pair were not getting a divorce.
+
+“Under normal circumstances, I don’t usually respond to foolishness. But, so many people have extended [to] me their ‘deepest condolences’ that I figured -
+‘What the hell… I can be foolish, too!’” he wrote on Facebook at the time.
+</item 6>
+
+<item 7>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+“I feel as though Will has a tremendous love and commitment to Jada, as well as to the marriage and the family unit,” she said. “The pride that he takes in
+defending his wife is extraordinary, almost to the detriment of his image, at times.”
+
+Ultimately, the public will never fully know what “heavy-duty work” Will and Jada are doing in their relationship, and according to Winter, it’s not necessarily
+any of our business. Still, she believes that their choice to separate is something fluid and outside of the traditional marriage design - an evolving model
+that could also come to serve other couples. If Will and Jada have been spending seven years apart as a married couple, why would they decide to go back to
+living in the same household?
+
+“They’re in the rough with a machete, carving a new path for themselves,” Winter said. “Why would they say: ‘Hey, let’s go back to the house and just relax?’
+</item 7>
+
+<item 8>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+This isn’t the first time that Jada and Will have taken some time apart from each other. During a 2020 episode of her Facebook Watch series, Red Table Talk,
+Jada disclosed that while she and Will were separated amicably, she had a relationship with singer August Alsina, describing their involvement as an
+“entanglement”.
+
+Throughout their marriage of 26 years, the A-listers have made it clear that divorce was never in the cards. Jada furthered that belief during a preview for an
+interview with Today’s Hoda Kotb, which aired on 13 October. “I made a promise that there will never be a reason for us to get a divorce,” she said. “We will
+work through, whatever. I just haven’t been able to break that promise.”
+
+Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage.
+</item 8>
+
+<item 9>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Will Smith y Jada Pinkett Smith (Getty Images)
+
+According to Lucas, some of the controversy surrounding Will and Jada’s relationship ties back to the 2022 Academy Awards - when the King Richard star jumped
+onto the stage and struck Rock across the face after the comedian made a joke about Jada’s shaved head, which is a result of her alopecia. “Keep my wife’s name
+out of your f***ing mouth,” Will yelled. Now that it’s been revealed the couple was separated at the time, Lucas questioned Will’s behaviour and word choice
+during the awards ceremony.
+
+“That’s a weird reaction to have somebody who you’ve been broken up with for six years, you know? So, were they really broken up or is Jada saying that as an
+attention-seeking thing?” he asked.
+
+However, Winter still believes the controversial incident speaks different volumes about the work Will has put into his relationship.
+</item 9>
+
+<item 10>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+In an interview with People on 10 October, Jada shared that during the 2022 Academy Awards - when Will slapped Chris Rock after he cracked a joke about Jada’s
+appearance - the pair had actually been separated for six years. “We’ve been doing some really heavy-duty work together,” she explained, while promoting her new
+memoir, Worthy. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+
+She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep
+sense of self-acceptance”. Although the married couple are not living together, she insisted that their marriage has never been an open one, as she and Will
+have “eliminated the chance of betrayal” while going on to live their “separate lives”.
+</item 10>
+=== END ITEM id=1462d340c657cc73 ===
+
+=== ITEM id=fc132226a552cb65 ===
+Gold sentences and facts:
+Sentence 0: Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+  Fact 0.0: Bankman-Fried was even compared to Warren Buffet
+  Fact 0.1: Many people called Bankman-Fried the white horse of crypto
+  Fact 0.2: TechCrunch never called Bankman-Fried the white horse of crypto
+Sentence 1: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.
+  Fact 1.0: Wang testified
+  Fact 1.1: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account
+  Fact 1.2: Wang testified that this was okay as long as the amount was less than FTX's total trading revenue
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence
+  Fact 2.1: The defense argued that the FTX founder, Bankman-Fried, acted in good faith
+  Fact 2.2: The defense argued that Bankman-Fried never meant to commit fraud or steal
+  Fact 2.3: The defense argued that Bankman-Fried basically got in over his head
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+</item 3>
+
+<item 4>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+There was a minimum of word salad today. I don’t know if he was more relaxed, or he’d just been more rehearsed, but I will certainly be watching to see if he
+suddenly becomes much less coherent when Sassoon gets him for the cross.
+
+Here is the story of FTX, from his point of view.
+
+Bankman-Fried, who informed us he’s “somewhat introverted, naturally,” gave us a rather prolonged tour of his pre-Alameda Research life, which I will skip. In
+2017, during a crypto bull run, he started his cryptocurrency trading firm. He knew “basically nothing” about cryptocurrency at the time, he explained, but he
+wanted to do arbitrage on it anyway.
+
+Alameda Research was named for Alameda County in California, which was where its first office was set up. As for its name, here’s what Bankman-Fried said on the
+stand:
+
+Effectively, we wanted to be under the radar at that point in time.
+</item 4>
+
+<item 5>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+You can tell he had no experience in management or handling such big undertakings. I think he was in way over his head,” Ayelet Noff, the CEO and founder of
+public relations firm Sliced Brand, which represents a number of cryptocurrency businesses, told TechCrunch. “I think he does a disservice to the whole
+community. He pushed back crypto adoption by at least a year or two. Each time one of these things happens it brings back the whole market. It’s two steps
+forward and one step back.”
+
+The Michael Lewis interview is infuriating. SBF was a scumbag, and now we need to hear about his “tragic fall” in the MSM because Sam told them he was an
+“effective altruist” and people like Michael Lewis were so far up his ass they couldn’t tell truth from fiction.
+</item 5>
+
+<item 6>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+This is to say nothing of the regulatory risks around crypto.
+
+As Cohen droned on about airplanes, I couldn’t stop thinking about the missing risk officer. Bringing it up, I thought, was a tremendous mistake. The
+prosecution hadn’t mentioned it. Either Bankman-Fried is stupid — unlikely — or he deliberately didn’t hire a risk officer. Was he worried about what one might
+find?
+
+Sure, as Cohen put it, Bankman-Fried was a math nerd who didn’t party. That paints a picture of someone who’s pretty deliberate, particularly since he
+immediately left MIT and went to work on Wall Street. If he had been a party-hardy trainwreck, I could see overlooking a risk officer in order to do another
+line, or a supermodel, or something else important. Why was the defense bringing this up?
+
+But as Cohen tried to tell me that FTX’s and Alameda’s business relationships were “reasonable under the circumstances,” the lack of risk officer kept elbowing
+me in the ribs.
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 7>
+
+<item 8>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 10>
+=== END ITEM id=fc132226a552cb65 ===
+
+=== ITEM id=69b5b99bf0a0c8b8 ===
+Gold sentences and facts:
+Sentence 0: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 0.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 0.1: The leading piece of drama returns.
+Sentence 1: The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley.
+  Fact 1.0: The Big Ten suspended coach Jim Harbaugh for three games.
+  Fact 1.1: The Big Ten suspended Jim Harbaugh on Friday.
+  Fact 1.2: The team was on a plane en route to Penn State when the suspension happened.
+  Fact 1.3: Michigan had hoped to block the suspension.
+  Fact 1.4: The Wolverines (Michigan) will be without their coach on the sidelines in Happy Valley.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Public reprimands/fines are common penalties under B1G sportsmanship policy. — Adam Rittenberg (@ESPNRittenberg) November 9, 2023
+
+Michigan's 10-page letter to Big Ten released
+
+Yahoo Sports' Dan Wetzel posted Michigan's full 10-page letter to the Big Ten on X (formerly Twitter). The letter outlines Michigan's belief that the Big Ten
+would be acting too hastily in suspending Harbaugh or levying any punishment toward Michigan before the completion of a full NCAA investigation.
+
+In the letter, Michigan said the university has not had the chance to review all the evidence and respond, which oversteps the due process allowed for Michigan.
+It said Pettiti should not have unilateral authority to punish violations without first having a completed investigation and then a response from the Compliance
+and Reinstatement Committee, which would recommend penalties for rules violations.
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+17
+
+Michigan fires coach connected to destroying evidence in investigation
+
+Yahoo Sports' Ross Dellenger and Dan Wetzel reported on Friday that the NCAA's investigation into the sign-stealing and advanced scouting operation has found
+that Stalions was at least partially funded by a Michigan booster, named as "Uncle T," and that linebackers coach Chris Partridge, who was fired by Michigan on
+Friday, is alleged to have destroyed evidence on a computer pertaining to the sign-stealing allegations.
+
+The report states Partridge is not believed to have had prior knowledge of the sign-stealing operation, but then later worked to cover it up. In a statement on
+his firing, Michigan appeared to indicate a connection between Partridge and the NCAA's investigation, which Dellenger and Wetzel reported is still in the early
+stage:
+
+From the outset, our focus has been on seeking due process and allowing the NCAA to conduct a fair and deliberate investigation.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+1 Ohio State is a huge television draw and Petitti has a background in TV with the MLB Network. Petitti went heavy-handed instead, maybe a little too heavy
+considering the pending legal response from Michigan.
+
+This no doubt is risky on several fronts. The Big Ten made it clear that they still have not linked Harbaugh to any wrongdoing and that this an institutional
+penalty based on the findings. The NCAA also will continue its investigation into the Wolverines. The timing of Friday's announcement also was poor – less than
+24 hours before the game against Penn State. Petitti upheld sportsmanship within the conference, but it could lead to a long-term rift with Michigan.
+
+Regardless, Petitti did the right thing.
+
+DECOURCY: Michigan got off easy with Harbaugh suspension
+
+Ohio State-Michigan TV ratings
+
+With or without Harbaugh, The Game will draw ridiculous television ratings.
+
+According to Sports Media Watch, three college football games have drew a Nielsen rating of 5.0 or better this season.
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Pete Thamel (@PeteThamel) November 8, 2023
+
+Tuesday, Nov. 7
+
+Michigan says three other Big Ten schools shared decoded Wolverines signals
+
+While Michigan tries to navigate the storm around its program, the Wolverines are also trying to make one thing clear: they're hardly alone in trying to
+decipher opponents' signals.
+
+Michigan has shared evidence with the Big Ten and NCAA showing staff members at Ohio State, Purdue and Rutgers shared intelligence on the Wolverines' signals
+prior to last year's Michigan-Purdue Big Ten Championship Game, The Athletic reported.
+
+Documents breaking down Michigan's signals for numerous plays were compiled by Purdue staffers ahead of the game based on information provided by Ohio State and
+Rutgers football personnel, the report says. The person who supplied the documents told The Athletic he spent 10 to 12 hours per week trying to decode signals
+based on game video and said the practice of sharing decoded signals with other schools is common.
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+12
+
+U-M president praises Wolverines for handling 'challenges and adversity'
+
+The day after the Penn State win, University of Michigan President Santa Ono posted on social media, praising the team's ability to "respond to any challenge
+head on with a conviction to do better and to emerge even stronger."
+
+Countless members of the University of Michigan family have reached out to me over the weekend and I wanted to express my appreciation. Like any community, we
+face our share of challenges and adversity. There have been many such moments in our history. But as our team showed so… — Santa Ono (@SantaJOno) November 12,
+2023
+
+The post drew immediate and extensive blowback on social media and beyond, as observers questioned Ono's tone with Michigan in the midst of a self-inflicted
+controversy.
+
+Saturday, Nov. 11
+
+Warde Manuel issues strong statement against Big Ten
+
+Michigan athletic director Warde Manuel did not mince words in a statement on the Big Ten's suspension of Harbaugh.
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Will Harbaugh finally take the parachute to the NFL? Those are questions bound to come up at the end of the 2023 season.
+
+BENDER: Michigan will need Jim Harbaugh against Ohio State
+
+Big Ten
+
+This is the fourth football scandal in less than a calendar year.
+
+Three former Iowa football players and a student manager were charged in an illegal sports wagering scandal. Several student-athletes face allegations of
+placing bets on games in which they played in. Northwestern coach Pat Fitzgerald was fired on July 10 after a hazing investigation into the program. Fitzgerald
+is suing the university for wrongful termination. Michigan State fired Mel Tucker on Sept. 27 after allegations of sexual misconduct from Brenda Tracy, a
+speaker on sexual assault awareness.
+
+Now, Michigan has a scandal on the field, and they countered with allegations that Ohio State and Rutgers leaked Michigan's signs to Purdue in last year's Big
+Ten championship game.
+</item 7>
+
+<item 8>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 8>
+
+<item 9>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Within it, the school warned Big Ten commissioner Tony Pettiti against levying "premature" disciplinary action against Jim Harbaugh and alleged that in-person
+scouting and sign-stealing are commonplace across the NCAA.
+
+"The conference should act cautiously when setting precedent given the reality that in-person scouting, collusion among opponents, and other questionable
+practices may well be far more prevalent than believed," the letter read.
+
+Michigan also included with the letter "two attached documents of Michigan's offensive and defensive signs allegedly stolen and shared by other Big Ten teams,"
+per Yahoo Sports.
+
+Conference awaits Michigan response
+
+The Big Ten expects a formal response from Michigan to the notice of discipline by the end of the day Wednesday, ESPN's Pete Thamel reports. His colleague Adam
+Rittenberg adds that a ruling is expected to come down Thursday.
+
+Sources: The Big Ten expects a response from Michigan on the notice of discipline by the end of day on Wednesday. Don’t expect any ruling by the Big Ten on
+Wednesday, as they are expected to take time to absorb Michigan’s response.
+</item 10>
+=== END ITEM id=69b5b99bf0a0c8b8 ===

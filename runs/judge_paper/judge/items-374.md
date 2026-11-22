@@ -1,0 +1,1072 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=36b47279984b3f6d ===
+Gold sentences and facts:
+Sentence 0: Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.
+  Fact 0.0: Epic will also suggest that Google hid items from discovery by allowing executives and employees to have 'off the record' chats.
+  Fact 0.1: Google will counter this, saying it has provided the court with thousands of chat logs.
+  Fact 0.2: Google says it has provided the court with millions of documents.
+Sentence 1: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 1.0: Google did not release the full model, Gemini Ultra.
+  Fact 1.1: Google released only a 'lite' version called Gemini Pro.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that this happens through anticompetitive means.
+
+Retrieved items:
+<item 1>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+As an example, Epic will point to Activision Blizzard, the owner of King.com and maker of Candy Crush and Call of Duty, as one developer that wanted to go the
+route of opening its own app store. Google and Activision Blizzard then entered into a three-year agreement in January 2020, worth approximately $360 million,
+to keep the developer on Google Play, Epic will argue.
+
+Google, however, will characterize this program as a way to incentivize developers to launch their apps on Android at the same time as they launch on iOS and
+plans to dispute Epic’s claims that it prevented developers from opening their own app stores.
+
+Android allows sideloading
+
+Google will make note that, unlike Apple, it also allows apps to be sideloaded on Android devices — something Epic takes advantage of today. It will note this
+process is streamlined and helps keep users safe.
+</item 1>
+
+<item 2>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 2>
+
+<item 3>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+“Android’s choice and flexibility work well for consumers and developers of all sizes. We look forward to making our case in court as we fight to keep our users
+safe from harm, partner with developers to grow their businesses, and keep the Android ecosystem thriving and healthy for everyone,” reads a Google blog post by
+Wilson White, VP, Government Affairs & Public Policy.
+
+Epic’s lawsuit originally involved Match and several U.S. attorneys general, but Google reached a settlement with the latter last month and with Match last
+week. Epic will now fight the antitrust battle on its own. The lawsuit, held in the U.S. District Court in California’s Northern District, will include
+testimony from a number of Google and Android execs, including CEO Sundar Pichai, and Epic Games CEO Tim Sweeney, as well as Apple, Netflix and other Android
+developers.
+
+Google is also involved in another antitrust lawsuit with the Department of Justice over its alleged search monopoly.
+</item 3>
+
+<item 4>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 4>
+
+<item 5>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 6>
+
+<item 7>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 8>
+
+<item 9>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 9>
+
+<item 10>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 10>
+=== END ITEM id=36b47279984b3f6d ===
+
+=== ITEM id=eb92eeb84d052084 ===
+Gold sentences and facts:
+Sentence 0: In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City.
+  Fact 0.0: In July, Kelce spoke on the podcast he shares with his brother, New Heights.
+  Fact 0.1: Kelce said he intended to give Swift a friendship bracelet with his number on it.
+  Fact 0.2: Kelce said he intended to give the bracelet during Swift's Eras Tour concert in Kansas City.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: On his podcast, Kelce later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Could they have been driving off into the sunset? Of course, none of this actually confirms Swift and Kelce are actually dating. But regardless of whether it’s
+a friendship or a romantic relationship, it has sent shockwaves through two massive cultural franchises, expanding the NFL’s audience into uncharted territory.
+It’s a cultural pairing on par with – and perhaps even bigger than – Kim Kardashian and Kanye West.
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 2>
+
+<item 3>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Swift’s name began popping up everywhere on the podcast, including during conversations about... facial hair?
+
+In August, the brothers discussed Kelce’s moustache, which he grows every year in honour of the Chief’s head coach, Andy Reid. When asked if he knew what Swift
+thought of the ’stache, he remained cheekily confident. “We’re not going to bring up Taylor Swift in this episode,” he says, “But something tells me she’s going
+to like it.” There was a clear suggestion Kelce had made contact with Swift, and was even going to meet her. Shortly after that remark, Kelce took a week off
+training to visit New York City, according to Vulture. Coincidentally, this happened to be while Swift was re-recording her 1989 tracks in the city. Welcome to
+New York
+
+The suspicion the two were actually spending time together in New York was seemingly confirmed in September when it was reported they had been “quietly hanging
+out” for months.
+</item 3>
+
+<item 4>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 4>
+
+<item 5>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+This was the first, albeit tentative, confirmation from the media rather than from amateur Swiftie sleuths on social media. So, it was only a matter of time
+before it entered the cultural zeitgeist. Blank Space Which it did, very quickly. On September 17, Kelce scored a touchdown against the Jaguars, triggering CBS
+announcer Ian Eagle to reference Swift’s 2014 hit, Blank Space.
+
+“Kelce finds a blank space for the score,” Eagle said, poking fun at Kelce’s newfound Swiftie status. And Eagle wasn’t the only one, with NFL Network’s Rich
+Eisen including a slew of lyric references during a preshow, including “shake it off”, “anti-hero” and “all too well”. Kelce even acknowledged the
+tongue-in-cheek banter, commenting on a montage video of the preshow that Eisen posted to Instagram. “Well played Rich … Well played,” he wrote. Suddenly,
+football fans and Swifties were living through this surprising collision.
+</item 5>
+
+<item 6>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the
+classic game “Kiss, Marry, Kill”. Speaking with AfterBuzz TV, Kelce was given the options of Swift, Katy Perry and Ariana Grande. He said he’d ultimately kill
+Grande, marry Perry and kiss Swift. That was about six years ago, but it has more recently set tongues wagging as fans wondered how long the plan for them to
+meet has been in the works. Cruel Summer Fast-forward seven years, and things started to heat up. In July, speaking on the podcast he shares with his brother,
+New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City. Unfortunately, the
+bracelet never made it to her wrist or his digits to her phone.
+</item 6>
+
+<item 7>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Suddenly, football fans and Swifties were living through this surprising collision. Swift lyrics were infiltrating NFL game commentary, and her fans were
+furiously becoming football experts. All that needed to happen was for Swift herself to infiltrate a game, determining once and for all whether there was
+anything to these rumours or not. This Is Me Trying
+
+On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games. “I told her, ‘I’ve seen you rock the stage in Arrowhead,
+you might have to come see me rock a stage at Arrowhead and we can see which one’s a little more lit,’” he said. “We’ll see what happens in the near future.”
+Were they finally about to hard-launch their friendship/potential romance to the world, laying all speculation to rest? Love Story This finally brings us to the
+fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto.
+</item 7>
+
+<item 8>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+87 with gusto.
+
+The 12-time Grammy winner appeared to shout “let’s f—ing go” after Kelce scored a touchdown before chest-bumping other Chiefs fans. Considering Swift is known
+for being an Eagles fan – she’s originally from Pennsylvania and even references the team in Gold Rush – her outward support for the Kelce’s team seemed extra
+telling. Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together. If that wasn’t enough, extra observant fans
+were able to note that Kelce’s blue and white post-game outfit was supposedly labelled the “1989 bedroom painting set”, perhaps an intentional reference to
+Swift’s 2014 album, which she will be re-releasing in October. Swift’s penchant for Easter eggs must be rubbing off on the tight end player. As if this weren’t
+enough subtle references already, they were also spotted in a “getaway car” together outside the stadium – potentially a nod towards her 2017 track.
+</item 8>
+
+<item 9>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Unfortunately, the bracelet never made it to her wrist or his digits to her phone.
+
+“I was disappointed that she doesn’t talk before or after her shows because she has to save her voice for the 44 songs she sings,” he said. “She doesn’t meet
+anybody, or at least she didn’t want to meet me, so I took it personal[sic].” At this point, it seems like any attraction between the two was one-sided. Kelce’s
+attempts to make proper contact with Swift at the show ultimately failed. Was she just not that into him? But Kelce, exhibiting the tenacity typical of a
+professional sportsman, remained determined to get her attention. Wildest Beards The Kelce brothers couldn’t stop talking about Swift, even though she’d left
+Travis hanging at the concert. Swift’s name began popping up everywhere on the podcast, including during conversations about... facial hair?
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 10>
+=== END ITEM id=eb92eeb84d052084 ===
+
+=== ITEM id=ce0d5f34ae30708b ===
+Gold sentences and facts:
+Sentence 0: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 0.0: A speaker said that he was the richest person in the world under 30.
+  Fact 0.1: The speaker said he was going to spend his wealth to save humanity from extinction.
+Sentence 1: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 1.0: Rehn declared to the jury that "all of that, all of it, was built on lies."
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve power.
+  Fact 2.3: The prosecution said Bankman-Fried committed fraud to achieve influence.
+  Fact 2.4: The defense countered that the FTX founder acted in good faith.
+  Fact 2.5: The defense countered that the FTX founder never meant to commit fraud.
+  Fact 2.6: The defense countered that the FTX founder never meant to steal.
+  Fact 2.7: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“You will see the full picture.”
+
+…or a well-meaning founder?
+
+But Bankman-Fried, whose cheekbones were more prominent after spending about seven weeks in a Brooklyn prison, was no liar, according to Mark Cohen, one of his
+lawyers. “Sam didn’t defraud anyone,” he said early on in his opening statement.
+
+What the jury will see is a nerdy startup founder who acted in “good faith,” not the prosecution’s “cartoon of a villain.” (Cohen repeatedly harped on
+Bankman-Fried’s allegedly good-faith actions throughout his address to the jury.)
+
+Alameda was not subterranean or shady. It was a successful hedge fund, he said. FTX was no Ponzi scheme. It was a “very innovative, successful company.”
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 4>
+
+<item 5>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 6>
+
+<item 7>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 8>
+
+<item 9>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued.
+
+“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”
+
+A Frenchman who lives in London testifies in New York
+
+After lawyers from both sides depicted two very different Bankman-Frieds, the prosecution called its first two witnesses to the stand—and they weren’t
+blockbuster names or former lieutenants-turned-government-cooperators, like Ellison.
+
+The first was a victim: Marc-Antoine Julliard, a Paris-born cocoa trader who lives in London. In 2021, Julliard, who had coiffed hair and spoke with a strong
+French accent, decided to invest in crypto and landed on FTX as his exchange of choice, where he traded cryptocurrencies like Bitcoin and Dogecoin.
+
+On Nov. 8, in the crypto exchange’s final few days, he tried to pull out his cash and crypto.
+</item 10>
+=== END ITEM id=ce0d5f34ae30708b ===
+
+=== ITEM id=2fb60f1c5890bfee ===
+Gold sentences and facts:
+Sentence 0: The first of these is the fact that tech companies continue to see huge pressure on their valuations.
+  Fact 0.0: The first of these is that tech companies continue to see huge pressure on their valuations.
+Sentence 1: With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation.
+  Fact 1.0: The stock surged 10% this year.
+  Fact 1.1: Seeking Alpha's Quant Rating system suggests a Hold.
+  Fact 1.2: The Quant Rating system expresses concerns about valuation.
+
+Retrieved items:
+<item 1>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+VCs fear that their portfolio companies might encounter a fate akin to that of Ant Group, whose colossal initial public offering was called off, and Didi, which
+weathered an extensive data security probe that eventually led to its delisting from New York. With China tightening its grip on overseas IPOs, investors who
+once relied on taking Chinese firms public in the U.S. are no longer assured of an exit channel.
+
+In the meantime, Washington has stepped up restrictions on the flow of U.S. money into China amid an escalating tech war between the two superpowers. In August,
+President Joe Biden signed an executive order barring U.S. investments in three strategically critical sectors in China — artificial intelligence, quantum
+computing and semiconductors.
+
+As USD funds in China await further clarity on the scope of the ban, they are practicing more discretion than ever before. They slow down capital deployment
+even amidst a global AI fervor that has given rise to a parallel AI universe in China.
+</item 1>
+
+<item 2>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+GitHub
+
+Announced February 9, 10% of its staff will be impacted through the end of the company’s fiscal year. Before this announcement, which was first reported by
+Fortune, GitHub had about 3,000 employees.
+
+Yahoo
+
+Announced on February 9, 20% of its staff, impacting 1,600 employees in its adtech business. Yahoo is the parent company to TechCrunch.
+
+GitLab
+
+Announced February 9 that it’s reducing its headcount by 7%. The round of redundancies will impact around 114 people, though that specific figure is dependent
+on its actual headcount as of February 9.
+
+Affirm
+
+Announced on February 8 that it is reducing its staff by 19%, or about 500 employees, and shutting down its crypto unit.
+
+Zoom
+
+Announced the cut of 15% of its staff, or 1,300 people on February 7.
+</item 2>
+
+<item 3>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+Driven by a confluence of factors, from China’s crackdown on the tech industry to escalating U.S.-China tensions, some of these investors are now turning their
+gaze to opportunities abroad, tracing the footsteps of a new generation of Chinese-founded startups that are expanding overseas.
+
+Between a rock and a hard place
+
+Since their entry into China in the late 1990s, American venture capital firms, led by powerhouses like Sequoia Capital, IDG Capital and GGV, have played a
+major role in funding high-risk, high-reward startups in the country’s consumer internet sector. This two-decade-long mutually beneficial relationship, however,
+now hangs in the balance as changes at home and abroad diminish the pool of investment opportunities for outside financiers.
+
+In recent years, Beijing’s sweeping tech crackdowns have introduced a new sense of uncertainty to investors.
+</item 3>
+
+<item 4>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+February 2023
+
+Twitter
+
+Announced on February 26, the company laid off more than 200 employees, including Esther Crawford, Haraldur Thorleifsson and Leah Culver. Since Musk took over
+Twitter in October last year, the company’s headcount has fallen by more than 70%.
+
+Poshmark
+
+Announced February 24, Poshmark confirmed with TechCrunch that less than 2% of its workforce was affected, primarily in the U.S. The company employs roughly
+800+ employees.
+
+Green Labs
+
+We do not have an exact figure of how many Green Labs plans to lay off its staff. Green Labs confirmed to TechCrunch that it is conducting a round of layoffs
+that could impact at least 50% of its workforce.
+
+Chipper Cash
+
+Announced on February 20, the African cross-border payments platform conducted a second round of layoffs just 10 weeks after it cut approximately 12.5% of its
+workforce. Chipper Cash relieved almost one-third of its workforce, about 100 employees.
+</item 4>
+
+<item 5>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+But tracking these layoffs helps us to understand the impact on innovation, which companies are facing tough pressures and who is available to hire for the
+businesses lucky to be growing right now. Unfortunately, it also serves as a reminder of the deeply human impact of layoffs and how risk profiles could evolve
+from here.
+
+Below you’ll find a comprehensive list of all the known layoffs in tech that have occurred in 2023, to be updated monthly. If you have a tip on a layoff,
+contact us here. If you prefer to remain anonymous, you can contact us here.
+
+The running total of layoffs for 2023 based on full months to date is 224,503, according to Layoffs.fyi. Tech layoffs conducted to date this year currently
+exceed the total number of tech layoffs in 2022, according to the data in the tracker.
+
+Data visualization by Miranda Halpern, created with Flourish
+
+December 2023
+
+ShareChat
+
+Is cutting 15% of its workforce in a “strategic restructuring” effort for 2024.
+</item 5>
+
+<item 6>
+Meltwater, the media monitoring startup, gets a $65M investment from Verdane (TechCrunch, 2023-12-18T10:54:31+00:00)
+The deal underscores a couple of important themes in the world of European tech and VC.
+
+The first of these is the fact that tech companies continue to see huge pressure on their valuations. Meltwater’s current market cap of just under $600 million
+is actually less than the company raised over the years when it was a privately held startup (over $700 million, per PitchBook data), and less than half of its
+valuation when it went public in December 2020 at over $1 billion.
+
+The second is the nature of dealmaking at the moment and the efforts that investors are making to de-risk. The market is particularly tight at the moment in
+Europe: VC firm Atomico’s annual deep dive into the funding landscape in Europe (which it puts together with a number of third-party research firms and
+particpation from others in the ecosystem) found that funding in 2023 halved to just $43 billion, and private equity firms are making a much bigger appearance
+in deals to make up some of the drop from VC.
+</item 6>
+
+<item 7>
+Earnings week ahead: DocuSign, NIO, Broadcom, GameStop and more (Seeking Alpha, 2023-12-03T13:02:00+00:00)
+(GTLB) is due to post its Q3 results after the market closes on Monday. With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a
+Hold, expressing concerns about valuation. This contrasts with Wall Street analysts, who advocate a Buy rating.
+
+Recently, Raymond James has rated the stock with a Market Perform rating, citing potential market exuberance and growth potential in fiscal 2025 due to a large
+total addressable market, healthy customers, and a value proposition favoring consolidation over fragmentation.
+
+On the other hand, Cantor Fitzgerald started coverage with an Overweight rating and a $55 price target, as the company anticipates benefits from product
+consolidation and the generative artificial intelligence wave.
+
+Consensus EPS Estimates: -$0.01
+
+Consensus Revenue Estimates: $141.04M
+
+Earnings Insight: GitLab has beaten EPS and revenue expectations in 8 straight quarters.
+</item 7>
+
+<item 8>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+: Shield AI, a startup specializing in autonomous flying systems for the U.S. military, has raised $200 million in a new funding round, reaching a valuation of
+$2.7 billion.
+
+Eero grows up, with best-in-class Wi-Fi: Amazon’s Eero has launched its most advanced mesh Wi-Fi router yet, the Eero Max 7.
+
+Boksing claver: Danish startup Soundboks released its fourth-generation Bluetooth speaker that has been a hit in Europe’s festival scene but has yet to gain a
+strong foothold in the U.S. market.
+
+Highs and lows in the world of startups
+
+The current bear market in cloud stocks has led to a reversal of revenue multiples from earlier this year, making it difficult for late-stage startups to accrue
+value, Alex writes on TC+. However, early-stage startups that are growing rapidly may still be able to raise funds and demand for a better valuation. The trend
+points toward a favorable environment for startups prioritizing growth over cash preservation.
+</item 8>
+
+<item 9>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The trend points toward a favorable environment for startups prioritizing growth over cash preservation.
+
+At the same time, we wouldn’t be surprised if WeWork ends up filing for bankruptcy (TC+). The company has been grappling with significant challenges. WeWork’s
+stock hit a new low, dropping over 47% after hours to just $1.21, which brings the company’s market cap down to a mere $121 million. This is a drastic fall from
+the $47 billion valuation it achieved after its SoftBank-led Series H round in early 2019.
+
+Hope for the best, prepare for the worst: Startup co-founders don’t always make it, and in her fantastic TC+ piece, Rebecca explores what you can do to prepare
+today, should a co-founder breakup be on your startup journey’s path.
+
+Bumper banking backing in Brazil: Brazilian startup QI Tech, a banking-as-a-service platform, has raised $200 million in a Series B funding round, marking the
+largest raise in Brazil this year across all sectors.
+</item 9>
+
+<item 10>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+A comprehensive list of 2023 tech layoffs From major layoffs at Google, Amazon and Microsoft to small fintech startups and apps
+
+Last year’s techwide reckoning continues. The tech industry has seen more than 240,000 jobs lost in 2023, a total that’s already 50% higher than last year and
+growing. Earlier this year, mass workforce reductions were driven by the biggest names in tech like Google, Amazon, Microsoft, Yahoo, Meta and Zoom. Startups
+across many sectors also announced cutbacks through the first half of the year. And while tech layoffs slowed down in the summer and fall, it appears that cuts
+are ramping up yet again.
+
+Many economists have cautioned against fears of a recession, which would seem like a reason for optimism. But the momentum for a tech sector rebound has been
+slow to build, resulting in tech companies continuing to cut back on their workforces and pivot from a growth mindset to one based on efficiency in the face of
+stubborn market conditions.
+</item 10>
+=== END ITEM id=2fb60f1c5890bfee ===
+
+=== ITEM id=5e32dc693ab893f9 ===
+Gold sentences and facts:
+Sentence 0: As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases.
+  Fact 0.0: The subject referred to as 'they' is never going to replace the need for reducing emissions of CO2 and other greenhouse gases.
+Sentence 1: He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about 90%, according to his math.
+  Fact 1.0: He stopped flying.
+  Fact 1.1: He became a vegetarian.
+  Fact 1.2: He ditched gasoline-powered cars.
+  Fact 1.3: He drives a Tesla.
+  Fact 1.4: He cut his personal emissions by about 90%, according to his math.
+
+Retrieved items:
+<item 1>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+He is fixated on them.
+
+Kalmus, 49, thinks civilization is on the path to break down, the Biden administration is clueless on climate, and that he might get fired from his job at NASA
+if he is arrested for a third time protesting what he views as downright madness: the continued use of fossil fuels.
+
+Kalmus visited the seaside town of Belfast, Maine, in July and August to visit the Possibility Alliance homestead as he looked for inspiration on how to best
+live with the effects climate change. (Evan Bush / NBC News)
+
+“It’s kind of weird and lonely,” he said. “People don’t want to talk about this stuff at parties.”
+
+Kalmus, whose strident tweets reach some 340,000 followers on X, is at the vanguard of a group of scientists who are increasingly disillusioned and growing
+convinced that more radical action is needed to wake up political leaders.
+</item 1>
+
+<item 2>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+Kalmus, trailed by a reporter, buzzed around the homestead like a giddy kid, hiking back and forth to a home in an eco-village near the Possibility Alliance
+where he was living and working on his research. He tramped down a forest trail in bare feet, paused work for a midday dip in a shady stream and never changed
+his T-shirt.
+
+He ground his coffee with a mortar and pestle, thumbed through a book of Enneagram personality types on the porch with his son Zane and listened to Ethan’s
+stories about sailing across the Atlantic in a cargo ship to avoid the carbon emissions of flying.
+
+“I feel met by Peter,” Sarah Wilcox-Hughes said of Kalmus. “I don’t feel like there are many people prioritizing the needs of the planet as he is and we are.”
+
+Kalmus found life in Belfast, and at the Possibility Alliance, slower, richer and more connected to the natural world.
+</item 2>
+
+<item 3>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+Months later, after returning “kicking and screaming” to the “quote-unquote real world,” Kalmus was planning a return trip to the Possibility Alliance over the
+winter holidays.
+
+He was still mulling why the Possibility Alliance’s “low energy” lifestyle had felt so meaningful and what was missing from modern life.
+
+Ethan Hughes his goats out to
+
+“Everything is too fast,” Kalmus said. “It’s obvious to a lot of people, but it’s a new revelation to me. There’s nothing more important in life than
+relationships.”
+
+This article was originally published on NBCNews.com
+</item 3>
+
+<item 4>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+The searing temperatures killed a dogwood tree in his front yard. His productivity slowed — he couldn’t focus on science.
+
+Kalmus had dreamed of making a life in the Pacific Northwest, which he felt might be buffered from the worst of climate change. That same year, a heat wave —
+considered nearly impossible if not for the influence of climate change — seared the region for three days, killing hundreds of people, buckling roadways and
+sending overheated baby birds jumping from their nests and to their deaths.
+
+“That’s when I realized that no place was safe,” Kalmus said. His family relocated to North Carolina, for his wife Sharon’s work, but the experience planted a
+seed:
+
+If he couldn’t stop climate change and he couldn’t avoid it, could he at least find a better way to survive it?
+
+Life at the homestead
+
+Kalmus knew what would not work.
+
+“I very quickly eliminated the idea of being a prepper — you know, hoarding beans and ammunition,” he said.
+</item 4>
+
+<item 5>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+He’s trying to build a gift economy in Belfast, in which neighbors share resources and services with no expectation of repayment. “I’m trying to role-model
+post-petrol,” Hughes said. (Evan Bush / NBC News)
+
+Kalmus, now a married father of two teenagers, is introspective, earnest and narrowly focused on climate change in both his personal and professional life. Tall
+with an athletic build, a neat beard and a tangle of messy hair that has a skunklike streak of white, he can sometimes come off like an overgrown teenager: He’s
+the smartest person in the room, brimming with idealism and still indignant — with a zeal many adults can no longer muster — about how life’s most annoying
+systems work (like the U.S. medical system, a symptom of what he calls the “capitalist death cult”).
+
+The changes he made weren’t enough. Kalmus wrote a book on climate change and chained himself to a Chase bank in protest of fossil fuel financing. Twice, he’s
+been arrested during climate protests.
+</item 5>
+
+<item 6>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+BELFAST, Maine — How does it feel to be a climate scientist in 2023?
+
+Let’s set the scene. Hundreds of picnickers are sprawled across a lawn speckled with colorful blankets. Yachts bob in the bay. Guitars blare, children wrestle
+and dancers twirl across a concert lawn in the golden glow of a dying summer night.
+
+It’s a picture-perfect August evening for the seaside town of Belfast’s “Summer Nights” concert series.
+
+Off to the side, Peter Kalmus sits alone. His eyes are closed. His toes are tucked beneath his body. He’s catching an occasional side-eye from onlookers.
+
+“When I’m meditating, I don’t feel anxious,” Kalmus later says, explaining that he strives for two hours of meditation a day to keep his climate anxiety at bay.
+Otherwise, “it’s completely overwhelming.”
+
+Many of us avoid thinking too deeply about the worst scenarios of climate change. He is fixated on them.
+</item 6>
+
+<item 7>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+While on his working vacation in Maine, Kalmus invited NBC News for a short visit to the community to see the crisis through the eyes of Americans taking it as
+seriously as anyone.
+
+The Possibility Alliance is an 11-acre homestead that operates without power, running water or a sewer system. The Hughes family, which operates the alliance,
+pays only one monthly bill for landline phone service. (Evan Bush / NBC News)
+
+Detoxifying
+
+About a decade ago, Kalmus ditched a promising academic career in astrophysics to study the physics of climate change instead.
+
+He made other changes too. He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about
+90%, according to his math.
+
+It wasn’t a political statement, but a detoxification.
+
+“Burning fossil fuels started to feel more and more disgusting,” he said.
+
+Ethan Hughes, who operates the Possibility Alliance, rejects globalization and thinks capitalism is a ruinous symptom of “greed and separation.”
+</item 7>
+
+<item 8>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+Twice, he’s been arrested during climate protests.
+
+His social media posts often evoke heartbreak.
+
+“We’re in the process of losing basically everything,” he wrote recently on X.
+
+Is anyone listening?
+
+climate scientist natural farming (Evan Bush / NBC News)
+
+Not his suburban neighbors in North Carolina, who continue to drive emissions-belching SUVs to big-box stores. Perhaps not even some in the science community,
+like those who kicked him out of the American Geophysical Union’s annual fall meeting last year after he unfurled a banner and protested on the major science
+conference’s biggest stage.
+
+He has grown increasingly frustrated with President Joe Biden, who signed the Inflation Reduction Act as his signature climate bill. Kalmus thinks it does too
+little to shut out the fossil fuel industry.
+
+(Rhodium Group, a nonpartisan think tank, estimates greenhouse gas emissions will drop 32%-42% below 2005 levels by 2030, well short of Biden’s own benchmark
+for progress. The inflation bill is responsible for about a quarter of that projected decrease.)
+</item 8>
+
+<item 9>
+New ultrathin materials can pull climate-warming CO2 from the air (Science News For Students, 2023-12-15T11:30:00+00:00)
+These materials are harder to make than MXenes. So most research on them has been done with math or computer models. But MBenes could have unique mechanical and
+electrical traits, Ozkan’s team finds. And those just might help them last through many, many cycles of CO 2 capture and release.
+
+Each year, human activities spew tens of billions of tons of CO 2 into the air. That’s equivalent to the weight of tens of billions of elephants. Carbon
+absorbers, including MXenes or MBenes, can’t catch it all. As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse
+gases.
+
+Still, given the urgency of climate change, even a quick or partial fix — such as carbon capture — can’t be ignored. “At this point in time,” says Persson, “we
+need to look at all the possible solutions.” And MXene-like materials are emerging as potentially important candidates.
+</item 9>
+
+<item 10>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+He has been on a 15-year quest to halt climate change and has already oriented most everything in his life to minimize his own climate footprint and maximize
+what he can do to push society to change.
+
+Nothing has been enough.
+
+And so this summer, as extreme heat and rainfall battered many American communities, Kalmus visited Maine searching for something different. He was looking not
+for climate solutions, but for new ways to withstand climate change’s harms — and also to make peace with the grief that often feels inescapable for those who
+reckon with global warming daily.
+
+climate scientist exercise bicycle environmentalist (Evan Bush / NBC News)
+
+That search brought him to an unusual community called the Possibility Alliance, a homestead where a small group of people is trying to figure out how to live
+in a world headed for a breakdown (as they see it).
+
+Its leaders eschew capitalism, grow much of their own food, and live without electricity. They’ve dedicated their lives to protest, living off the land as
+simply as possible, and are preparing their community for ecological disaster and to host climate refugees.
+</item 10>
+=== END ITEM id=5e32dc693ab893f9 ===
+
+=== ITEM id=6bdf5936da161213 ===
+Gold sentences and facts:
+Sentence 0: Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington.
+  Fact 0.0: Instead, Marshall will start freshman Cole Pennington.
+  Fact 0.1: Cole Pennington is a freshman.
+  Fact 0.2: Cole Pennington is the son of former Marshall star QB Chad Pennington.
+  Fact 0.3: Chad Pennington is a former Marshall star QB.
+Sentence 1: Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks.
+  Fact 1.0: Geno Smith's night appears to be done.
+  Fact 1.1: Drew Lock is back in for the Seahawks.
+
+Retrieved items:
+<item 1>
+DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments (Sporting News, 2023-12-07T22:18:00+00:00)
+Because we splurged for McCaffrey and Kamara, we had to sacrifice salary elsewhere, and London is a high-upside option even in an offense that doesn't throw the
+ball with efficiency.
+
+WR Jaxon Smith-Njigba, Seahawks @ 49ers ($4,100). Is a takeover underway in the Seahawks offense? Smith-Njigba is coming off a game against the Cowboys that saw
+him collect seven-of-11 targets for 62 yards. It's a step up from a disappointing outing against San Francisco, but Tyler Lockett's involvement seems to be
+lessening as of late with the rookie stepping up. It wasn't a great day for the Seattle offense on Thanksgiving against the Niners, but the Seahawks should put
+up a better effort against a divisional opponent they know so well. If they're trailing, JSN should see action with a negative game script.
+</item 1>
+
+<item 2>
+Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown tournaments (Sporting News, 2023-12-18T22:47:00+00:00)
+The receiver has been prone to being undisciplined on the field, however, resulting in an ejection against the 49ers last week. That is always a concern when
+trusting Metcalf, but we take the good with the bad since the ceiling is so high. No matter who ends up starting at QB, the WR is in line for another dominant
+showing against one of the league's most generous secondaries.
+
+FLEX QB Geno Smith, Seahawks ($9,400)
+
+Metcalf won't be throwing the ball to himself and he's not one to get opportunities in the running game, meaning that someone will be setting him up for
+success. And since Smith appears ready to play, he finds himself with a spot in our lineup. In the event that he doesn't play, however, we will turn to Drew
+Lock ($9,200) in his place. Regardless, the Seattle quarterbacks are set up for success and should be able to light up the skies on Monday night.
+</item 2>
+
+<item 3>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Matthew Stafford (@ Ravens), Geno Smith (@ 49ers), and Josh Dobbs (@ Raiders) are all risky against some of the league's better pass defenses. Stafford faces a
+sound Ravens stop unit that entered their Week 13 bye allowing the second-fewest FPPG to QBs.
+
+There's a chance the Vikings opt to start fellow QB Nick Mullens over Dobbs after his debacle last Monday night against the Bears, but if Minnesota elects to
+stick with Dobbs, his rocky Week 12 outing concerns us against a Raiders defense that's been one of the more efficient pass defenses since Week 5, sitting
+eighth in dropback EPA.
+
+On the other hand, after an elite Week 13 effort in Seattle's one-possession loss to Dallas, fantasy owners might go looking to chase points with Smith, but
+replicating last week's showing against the 49ers is a completely different ask for a QB who's underwhelmed this season.
+</item 3>
+
+<item 4>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+WEEK 14 DFS:
+
+DK lineup | FD lineup | Best values | Best stacks
+
+What are the biggest QB injuries in Week 14?
+
+Leading into Week 13, Dorian Thompson-Robinson (concussion) was the lone QB injury situation we were closely monitoring. Even if Thompson-Robinson is able to
+clear concussion protocol in time for Week 14, we expect Flacco to make his second start as a Brown.
+
+This week, we unfortunately saw Kenny Pickett (ankle) and Derek Carr (head, shoulder, back) exit their respective contests with injuries, complicating their
+statuses for Week 14. We've replaced both QBs with backups Mitchell Trubisky and Jameis Winston, respectively, as early indications point toward both missing
+time.
+
+UPDATE: Trevor Lawrence suffered an ankle injury on Monday, which will likely keep him out for at least a week and open the door for C.J. Beathard (vs. Browns)
+to start.
+</item 4>
+
+<item 5>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Week 11 of the 2023 NFL season has provided plenty of drama, from the Bears hanging with the Lions to the Giants getting a rebound from emergency quarterback
+Tommy DeVito. But the latest round of regular-season action has also brought another wave of unfortunate injuries. Here's a roundup of the latest big names to
+go down around the league:
+
+QB
+
+C.J. Stroud (Texans) left for a single play against the Cardinals after absorbing a hard hit, with backup Davis Mills entering in relief. Stroud did not receive
+an injury designation, however, and returned after a quick check-in from trainers.
+
+Geno Smith (Seahawks) suffered an injury to his throwing arm after guiding a 16-7 lead over the Rams, showing frustration while trying to stretch the arm after
+a hit from Aaron Donald. Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left
+in the third quarter.
+</item 5>
+
+<item 6>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Easy peasy!
+
+Start 'em 10.0-7.00 6.99 - 5.01 5.00 - 0 Sit 'em
+
+Both teams had a week of rest, so don't treat this like a typical Thursday game. But do expect the Cowboys defense to keep the pressure on Geno Smith and a
+Seattle offense that's struggled to gain consistency over the last month. Smith actually did OK completing passes last week when pressured (60% completion rate)
+but not at an efficient level (5.4 yards per attempt). Just two QBs have exceeded 250 yards and four QBs have thrown multiple touchdowns against Dallas this
+year; I don't like Smith's chances to do either, which hurts any upside case for any Seahawks receiver. By the way, Curtis Samuel was the first receiver to get
+100 yards on the Cowboys this year, and it took him 12 targets and 9 catches to get there.
+</item 6>
+
+<item 7>
+Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-10-02T22:00:04+00:00)
+New York has been dominated at home twice this season now, as this performance follows a 40-0 blowout in Week 1 on "Sunday Night Football." Daniel Jones' career
+mark in primetime falls to 1-13 and 0-3 this season.
+
+11:09 p.m.: TURNOVER ON DOWNS! Daniel Jones is sacked for an 11th time as Seattle takes back over at the New York 35-yard line.
+
+Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks.
+
+11:06 p.m: Daniel Jones is back under center for New York, which will look to drive and score to at least lessen the damage on the scoreboard.
+
+11:04 p.m.: FIELD GOAL! The turnover leads to three points for the Seahawks, who get a 34-yard field goal from Jason Myers. It's a three-touchdown lead for
+Seattle now with just over five minutes to play.
+</item 7>
+
+<item 8>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Broncos
+
+12 Russell Wilson, Broncos @ Chargers
+
+13 Justin Fields, Bears vs. Lions
+
+14 Gardner Minshew, Colts @ Bengals
+
+15 Matthew Stafford, Rams @ Ravens
+
+16 Trevor Lawrence, Jaguars @ Browns
+
+17 Geno Smith, Seahawks @ 49ers
+
+18 Derek Carr, Saints vs. Panthers
+
+19 Joe Flacco, Browns @ Jaguars
+
+20 Baker Mayfield, Buccaneers @ Falcons
+
+21 Josh Dobbs, Vikings @ Raiders
+
+22 Jake Browning, Bengals vs. Colts
+
+23 Bryce Young, Panthers @ Saints
+
+24 Aidan O'Connell, Raiders vs. Vikings
+
+25 Desmond Ridder, Falcons vs. Buccaneers
+
+26 Will Levis, Titans @ Dolphins
+
+27 Bailey Zappe, Patriots @ Steelers
+
+28 Mitch Trubisky, Steelers @ Patriots
+
+29 Tommy DeVito, Giants vs. Packers
+
+30 Zach Wilson, Jets vs. Texans
+</item 8>
+
+<item 9>
+Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-10-02T22:00:04+00:00)
+9:30 p.m.: At the two-minute warning, Drew Lock has gotten the Seahawks to their own 48-yard line. Lock will continue to lead the Seahawks' two-minute drill.
+
+Geno Smith is out of the medical tent and headed to the locker room for further testing on his knee. His status for the remainder of the game is questionable.
+
+The Seahawks will look to add some cushion to their lead as they will also receive the ball to open the second half.
+
+9:26 p.m.: Geno Smith's displeasure with the tackle from earlier is beginning to make sense. Seattle's QB has been in the medical tent with an undetermined
+injury.
+
+Drew Lock will be taking snaps until there is more clarity on Smith's status moving forward.
+
+9:23 p.m.: FIELD GOAL! Graham Gano connects on a 55-yarder to get the Giants on the board.
+</item 9>
+
+<item 10>
+Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-10-02T22:00:04+00:00)
+As the Seahawks get the ball back, they run the clock out as boos begin to rain down on the Giants from their home crowd.
+
+Making matters worse, Seattle is set to receive the second-half kickoff.
+
+9:37 p.m: TOUCHDOWN! RB Kenneth Walker III punches it in from one yard out. It's his second touchdown of the 2023 season.
+
+The play doesn't come without extracurriculars, however, as it is followed by a scrum between linemen. The result is offsetting penalties from Seahawks G
+Anthony Bradford and Giants DE Leonard Williams.
+
+Seahawks 14, Giants 3.
+
+9:35 p.m.: Drew Lock is balling.
+
+Lock connects with Noah Fant for a 51-yard completion that has the Seahawks on the 1-yard line. Credit to Fant, as he used his footwork to toe the sideline and
+turn the completion to a big play.
+
+9:30 p.m.
+</item 10>
+=== END ITEM id=6bdf5936da161213 ===

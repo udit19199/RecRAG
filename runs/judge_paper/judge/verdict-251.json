@@ -1,0 +1,60 @@
+[
+{"id": "dffe0737b74f27a9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}]}
+]},
+{"id": "86a780b4737d650d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "98aa05f4490108e5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "d94b52d6ae1ab7fa", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Bankman-Fried admitted he’d been told."}]}
+]},
+{"id": "722177bca0af7e59", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "6123afe3948585d9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 9, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]}
+]

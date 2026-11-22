@@ -1,0 +1,1083 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=547d37820b3ff9a2 ===
+Gold sentences and facts:
+Sentence 0: We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.
+  Fact 0.0: People identify with the superhero's struggles.
+  Fact 0.1: People identify with the superhero's little glimmers of connection and triumph.
+  Fact 0.2: Identifying with the superhero makes the superhero the perfect superhero for Thanksgiving.
+Sentence 1: Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends.
+  Fact 1.0: Thanksgiving is a holiday.
+  Fact 1.1: The food is arguably the main component of Thanksgiving day.
+  Fact 1.2: Thanksgiving is a beloved time of year.
+  Fact 1.3: Americans come together during Thanksgiving to celebrate what they are thankful for.
+  Fact 1.4: Americans celebrate what they are thankful for with family or with friends during Thanksgiving.
+
+Retrieved items:
+<item 1>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feelings of loneliness spike during the holidays, meaning that there’s a good chance you’ll feel even more like Peter Parker when late November rolls
+around.
+
+It’s what makes the Thanksgiving scene in the 2002 Spider-Man film so engaging. That whole movie is an exercise in heart-on-your-sleeve sweetness. Everyone
+who’s seen it knows the Thanksgiving dinner rapidly descends into chaos, with Norman Osborn ominously sticking his fingers into Aunt May’s sweet-potato
+casserole, figuring out Spider-Man’s secret identity, and delivering a grossly sexist diatribe to his son Harry, leaving Harry and Mary Jane at odds with each
+other. Aunt May and Peter clearly wind up with a ton of leftovers after everyone else storms out.
+
+But for Peter, who’s just lost his Uncle Ben and has been facing the initial trials of being Spider-Man, there’s a nice moment of personal respite at the
+opening of that scene, where he walks into a room where he knows he’s loved, bearing an offering of cranberry sauce,.
+</item 1>
+
+<item 2>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 2>
+
+<item 3>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Americans started preparing their Thanksgiving menus weeks ago, with the requisite turkeys and stuffing ingredients likely already purchased for the holiday,
+which is celebrated this year on Thursday 23 November.
+
+Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are
+thankful for, either with family or friends.
+
+In America, Thanksgiving is a cultural holiday that symbolises peace, thankfulness, and the beginning of the holiday season.
+
+What is Thanksgiving and where did it come from?
+</item 3>
+
+<item 4>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade. Other Marvel characters have appeared on floats, but only
+Spider-Man has been inflated to 80 feet and pulled through the Upper West Side. (That also makes him the only Marvel character to have his head horrifically
+torn open by a tree branch.)
+
+From his first comic book appearance, Spider-Man has been a reminder that life is hard and complicated, and being a superhero doesn’t preclude anyone from
+experiencing ordinary frustrations, setbacks, and confusion. But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers
+that the holiday is about the hope of mutual connection, support, and nurturing. Even if the girl of your dreams is out of reach and the Green Goblin is on your
+case, a table, some friends, and Aunt May’s rad turkey might just make everything better for a little while.
+</item 4>
+
+<item 5>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Aunt May has just gotten out of the hospital, and even noted jerk “Flash” Thompson has given Peter hell for how awful he’s been acting.
+
+Peter, attempting to make things right, opts to cook the Thanksgiving meal all by himself, but mostly succeeds in ruining the kitchen. No worries — Gwen Stacy
+and her father, along with a recuperating Aunt May and her doctor, all help out, and the episode concludes with a pleasant dinner. There are no big turns or
+twists, aside from Aunt May revealing that she’s publishing a cookbook. It’s just simple, earned solace in a life marked by chaos. Peter even gets a kiss from
+Gwen on his porch, a sequence conducted with a John Hughes sense of satisfying romantic flair.
+
+Various Spider-Man comics have also dabbled in seeing what Thanksgiving looks like when you’re young and arachnid-themed, but real life has associated
+Spider-Man with the holiday, too. Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade.
+</item 5>
+
+<item 6>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Marvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were
+essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable
+to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.
+
+But Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic.
+We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving. And Spider-Man
+writers know it.
+
+Thanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding
+friends and family is perhaps one of the most humane acts we can pursue.
+</item 6>
+
+<item 7>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feeding friends and family is perhaps one of the most humane acts we can pursue. It’s less about the spirit of giving, and more about admitting that people
+have innate, basic needs, like food and social comfort, and that those needs are best fulfilled when people work in tandem. Honestly, we should try to do it
+more on every other day of the year: The number of people volunteering to help feed the homeless and families in need peaks around November and December, but
+that energy needs to be carried through the preceding 10 months, too.
+
+Spider-Man represents these needs, even though very few of us have to balance photojournalist work, a fraught dating life, and pummeling Dr. Octopus. Peter
+Parker is often the most financially strapped among his Avengers buddies, and frequently the loneliest, too. Those are recognizable traits among many young
+people, even those without radioactive-spider powers. When you’re growing up and trying to figure out the world, it’s easy to feel lost and isolated.
+</item 7>
+
+<item 8>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While the winter holidays are still weeks away, you could use your Friendsgiving to host your annual gift exchanges.
+
+For example, many friend groups in the US have opted for the budget-friendly activity of Secret Santa, where each person is randomly assigned someone to give a
+gift to. During the exchange, you then reveal to your pal that you’re their “secret Santa,” before giving them their present.
+</item 8>
+
+<item 9>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 9>
+
+<item 10>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Sure, everyone in that room is trying to hold things together. Mary Jane wants to impress Norman, Harry wants to impress Norman and Mary Jane, Peter loves Mary
+Jane but doesn’t dare hurt Harry, and Aunt May is finishing what’s presumably a dope turkey, in an attempt to care for all of them.
+
+It’s the trying that counts: Life can be hard, weird, and cruel, but while sitting down for a meal with our nearest and dearest, maybe for at least a little
+while, we won’t need to have it all figured out.
+
+Not all Spider-Man Thanksgiving dinners end up falling apart, and some succeed in reminding Peter that he isn’t alone. The first season of The Spectacular
+Spider-Man ends with a bang: One of Peter’s closest pals, Eddie Brock, has become Venom, and has threatened everyone Peter holds dear. This comes just after
+Peter himself was infected by the symbiote, and went through the now-iconic throes of pushing everyone away.
+</item 10>
+=== END ITEM id=547d37820b3ff9a2 ===
+
+=== ITEM id=ac72c257c67e4585 ===
+Gold sentences and facts:
+Sentence 0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.
+  Fact 0.0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.
+  Fact 0.1: Huang said Paradigm was told that Bankman-Fried did not want investors as directors.
+  Fact 0.2: Huang said Bankman-Fried did plan on having a board with experts.
+Sentence 1: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 1.0: The criminal trial of Sam Bankman-Fried was highly anticipated.
+  Fact 1.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 1.2: The criminal trial of Sam Bankman-Fried started on a Tuesday.
+  Fact 1.3: The criminal trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that Bankman-Fried acted in good faith.
+  Fact 2.2: The defense countered that Bankman-Fried never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that Bankman-Fried basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+He could face up to 115 years in jail if convicted on all charges.
+
+The crypto industry as a whole suffered from FTX’s collapse, which was the first of many. BlockFi filed for Chapter 11 in November 2022, as did Genesis Global
+Trading in January.
+
+Where we are today
+
+Bankman-Fried will be represented by Cohen & Gresser, and Mark Cohen, a high-profile defense attorney and former federal prosecutor, will be the lead attorney.
+If that name sounds familiar, it might be because he also represented Ghislaine Maxwell in her sex trafficking trial related to Jeffrey Epstein. He requested an
+early release for Bankman-Fried but was denied.
+
+With the trial beginning, we’re witnessing how FTX’s story ends. But what’s on our mind is what happens to the investors and creditors affected by the collapse?
+And what happens to the billions in crypto assets tied up in legal proceedings?
+</item 1>
+
+<item 2>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+That means it purported to have more FTT tokens on its balance sheet than what existed in the world.
+
+Around the same time it was exposed, the world’s largest crypto exchange, Binance, started pulling out its remaining $2.1 billion equivalent of cash in BUSD and
+FTT. (It had an equity position in FTX from 2019 to 2021.) This essentially triggered a bank run on FTX.
+
+FTX and Alameda filed for Chapter 11 bankruptcy in the U.S. mid-November 2022. Bankman-Fried resigned, and John J. Ray III, the Enron turnaround veteran, was
+appointed its new CEO.
+
+Bankman-Fried, however, maintained his innocence. At The New York Times’ DealBook Summit, he appeared virtually from the Bahamas, saying “I didn’t ever try to
+commit fraud on anyone; I was shocked by what happened this month.”
+</item 2>
+
+<item 3>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 3>
+
+<item 4>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 4>
+
+<item 5>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 5>
+
+<item 6>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+Within two years, more than 80 investors provided about $2 billion in capital to FTX, helping Bankman-Fried propel his vision into a reality. In January 2022,
+the company raised $400 million in a Series C round, boosting its valuation to $32 billion. That was its last round of public funding.
+
+The company gained somewhat mainstream recognition with branding deals and partnerships. For example, in 2021 it bought the naming rights for the Miami Heat’s
+home arena. FTX also got its name branded on Major League Baseball umpires’ polos, and it partnered with celebrities like Tom Brady and his ex-wife, Gisele
+Bündchen, as well as Steph Curry, Shaquille O’Neal and Naomi Osaka, among others. He also had close ties to U.S. regulators and government officials, many of
+whom he donated to.
+</item 6>
+
+<item 7>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+regulators and government officials, many of whom he donated to.
+
+Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+
+But in early November 2022, that all changed.
+
+FTX’s collapse
+
+Concerns surrounding FTX’s liquidity grew after CoinDesk published a copy of Alameda’s balance sheet, showing the firm held $14.6 billion in assets and $8
+billion in liabilities as of June 30, 2022.
+
+But there was a problem: The report showed Alameda’s largest asset was $3.66 billion of “unlocked FTT” and $2.16 billion of “FTT collateral.” FTT was the token
+behind FTX.
+
+The balance sheet showed that the $5.82 billion in FTT tokens that Alameda owned was 193% higher than the total FTT market cap, which was about $3 billion at
+the time.
+</item 7>
+
+<item 8>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+He, like many of SBF’s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical “legal justification” for
+the use of billions in consumer funds just days before FTX filed for bankruptcy.
+
+Robert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately
+resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a
+relationship, he testified that Third Point would not have invested in FTX in the first place.
+
+And earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he
+uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.
+</item 8>
+
+<item 9>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The full breakdown of his testimony on his relationship with FTX, stretching back to 2019, can be found right here.
+
+We also got a look at the composition of the SBF trial’s jury, which ranges from a train conductor to a retired investment banker who attended Stanford
+University. You can listen to a special joint episode of our podcasts Equity and Chain Reaction to get a better sense of the vibe between the jurors and the
+rest of the court.
+
+For a full rundown of our coverage of the SBF trial, check below:
+</item 9>
+
+<item 10>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 10>
+=== END ITEM id=ac72c257c67e4585 ===
+
+=== ITEM id=5b3acb49662bd423 ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that 'all of that, all of it, was built on lies.'
+Sentence 1: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 1.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 1.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 1.2: Caroline Ellison is the CEO of Alameda.
+  Fact 1.3: The government claimed Bankman-Fried had 'secret access' to customer money.
+  Fact 1.4: The government claimed the customer money was both cash and crypto.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve great power.
+  Fact 2.3: The prosecution said Bankman-Fried committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that the FTX founder acted in good faith.
+  Fact 2.5: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.6: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 1>
+
+<item 2>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 2>
+
+<item 3>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said. Besides telling her about his presidential chances, he also told her that
+if there was a coin flip where tails destroyed the world and heads made the world twice as good, he’d flip the coin. He called this being “risk-neutral,” which
+seems like a fancy way of saying he was a gambling addict.
+
+She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022. The goal, Bankman-Fried told her, was to
+“optically” separate Alameda Research and FTX. “The whole time we were dating, he was my boss at work,” she said. They broke up because she wanted more from the
+relationship; Bankman-Fried was distant and not paying enough attention to her.
+</item 5>
+
+<item 6>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 9>
+
+<item 10>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 10>
+=== END ITEM id=5b3acb49662bd423 ===
+
+=== ITEM id=625533059ca4c6bf ===
+Gold sentences and facts:
+Sentence 0: As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.
+  Fact 0.0: Harris is also the preferred goal-line back.
+  Fact 0.1: Harris scored in three of those games.
+Sentence 1: The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman.
+  Fact 1.0: The Wildcats scored a touchdown on their first drive.
+  Fact 1.1: The Wildcats' first drive was a seven play drive.
+  Fact 1.2: The Wildcats' first drive covered 61 yards.
+  Fact 1.3: The Wildcats' first-drive touchdown came thanks to a 25-yard dash.
+  Fact 1.4: The 25-yard dash was followed by a dive into the end zone.
+  Fact 1.5: Running back Jonah Coleman dove into the end zone.
+
+Retrieved items:
+<item 1>
+No. 17 Arizona dominates No. 22 Utah, 42-18 (Rivals, 2023-11-18T23:45:32+00:00)
+"I don't think the rain effected us at all," Fisch said.
+
+With the rain starting to clear up to start the second half, overtime it was clear that the Wildcats’ defense was holding a cloud over the Utes’ heads. Arizona
+got off to a slow start but picked up much of its thunderous momentum after junior safety Gunner Maldonado broke up a pass on fourth and three. Since the
+fourth-down stop, the UA logged an interception and another turnover on downs.
+
+Although the defense was surging, the Wildcats not scoring since the first drive of the second quarter — their offense seemed to have lost its touch.
+
+But then “Swag Surfin” by Fast Life Yungstaz came on, signaling the fourth quarter, the quarter in which going into the game, Arizona was outscoring opponents
+90-37. The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by
+running back Jonah Coleman.
+</item 1>
+
+<item 2>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+Patriots
+
+22 Jerome Ford, Browns vs. Jaguars
+
+23 Alexander Mattison, Vikings @ Raiders
+
+24 Najee Harris, Steelers vs. Patriots
+
+25 Ezekiel Elliott, Patriots @ Steelers
+
+26 Gus Edwards, Ravens vs. Rams
+
+27 James Cook, Bills @ Chiefs
+
+28 Zack Moss, Colts @ Bengals
+
+29 Keaton Mitchell, Ravens vs. Rams
+
+30 AJ Dillon, Packers @ Giants
+
+31 Dameon Pierce, Texans @ Jets
+
+32 Aaron Jones, Packers @ Giants
+
+33 Clyde Edwards-Helaire, Chiefs vs. BIlls
+
+34 Jerick McKinnon, Chiefs vs. Bills
+
+35 Roschon Johnson, Bears vs. Lions
+
+36 Tyjae Spears, Titans @ Dolphins
+
+37 Kareem Hunt, Browns vs. Jaguars
+
+38 Tyler Allgeier, Falcons vs. Buccaneers
+
+39 Chuba Hubbard, Panthers @ Saints
+
+40 D'Onta Foreman, Bears vs.
+</item 2>
+
+<item 3>
+No. 17 Arizona dominates No. 22 Utah, 42-18 (Rivals, 2023-11-18T23:45:32+00:00)
+"Great win for the program," Arizona head coach Jedd Fisch said following the win. "Great win for our team, great win for our seniors, great win for Tucson,
+appreciate Tucson coming out in full force, selling out the stadium. ... I think you might as well put the season tickets on sale for next year on Monday and
+see if we can get six sell outs."
+
+Leading the Wildcats was junior safety Dalton Johnson, logging 11 tackles as well as two tackles for loss in the UA’s routing.
+
+"Dalton is a fantastic tackler," Fisch said. "When he's around the ball, he gets them down."
+
+After failing continuously on trick plays involving receiver Tetairoa McMillan passing behind the scrimmage this season, Arizona head coach Jedd Fisch designed
+it again — this time to perfection — with McMillan finding a wide-open fifth-year senior Michael Wiley to score a touchdown in his last game in Tucson.
+</item 3>
+
+<item 4>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+At least all of them went to his wideouts. All were in the red zone, none were on deep throws and none were on WR screens.
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline Najee Harris RB PIT Pittsburgh • #22
+
+Age: 25 • Experience: 3 yrs. Weekly Breakdown MATCHUP vs BAL BAL -4 O/U 38 OPP VS RB 12th PROJ PTS 9.3 RB RNK 30th YTD Stats RUYDS 210 REC 4 REYDS 34 TD 0
+FPTS/G 7.1 The Steelers' lack of scoring opportunities really crushes the upside for Harris, who admittedly has improved this season and could be on his way to
+being a reliable RB2. The Ravens have been pretty good against the run but they can give up some numbers. Harris is a volume-based back who is at best a low-end
+starting option given everything that's going on.
+</item 4>
+
+<item 5>
+No. 17 Arizona dominates No. 22 Utah, 42-18 (Rivals, 2023-11-18T23:45:32+00:00)
+The UA then ran away from the Utes, outscoring them 14-8, only allowing a garbage time touchdown in the last minute to secure its 8th win of the season.
+
+The last touchdown for Arizona came with backup quarterback Jayden de Laura hitting McMillan for a 51-yard touchdown.
+
+"I wanted Jayden to go out with a touchdown pass this season," Fisch said. "I think that he deserves that."
+
+When asked about whether the win against Utah, who has beat the Wildcats the last six meetings, signified anything further about the program, Fisch said that
+the win signified that they are having a great year.
+
+"[It signifies] that we're not gonna back down from anybody, and we feel really good about trying to continue to improve, get more physical, get tougher," Fisch
+said.
+</item 5>
+
+<item 6>
+No. 17 Arizona dominates No. 22 Utah, 42-18 (Rivals, 2023-11-18T23:45:32+00:00)
+Saturday’s game between Arizona and Utah was many things for the Wildcats: Senior Day, Military Appreciation Day, and their last home game of the season. With
+the UA needing a win to keep its own destiny alive for a Pac-12 Championship appearance, it handled the pressure once again against a ranked team.
+
+The Wildcats not only got halfway through en route to winning out but did it in statement fashion Saturday at Arizona Stadium in front of a sold out stadium,
+blowing out No. 22 Utah, 42-18, extending their winning streak to five games, as well as marking their first win over the Utes since 2015. It is also the first
+time the UA took down four ranked teams in a season since 1989, with it being the only team in the country this season to do so.
+
+"Great win for the program," Arizona head coach Jedd Fisch said following the win.
+</item 6>
+
+<item 7>
+No. 17 Arizona dominates No. 22 Utah, 42-18 (Rivals, 2023-11-18T23:45:32+00:00)
+Following the trickery, another huge roar of the Wildcat faithful ensued following a blocked punt and score by Anthony Ward, the first Arizona blocked punt and
+score since Nov. 13, 2021.
+
+The Wildcats’ momentum was rolling like a well-oiled machine on both ends of the ball in the first half, scoring offensive touchdowns on three of four drives,
+led by Michael Wiley tallying two of them, and outgaining the Utes by 98 yards on the ground, as well as forcing the Utes to two three-and-outs, three punts and
+a red zone interception, headlined by captain linebacker Jacob Manu, the first Arizona linebacker interception since Anthony Pandy against USC in 2021. With
+rain starting to pour late in the first half in a rare Arizona “rain game”, the overcast didn’t hinder the Zona Zoo from leaving the stadium, nor the Wildcats
+from letting up their progression, resulting in the UA taking staggering 28-7 lead at halftime.
+</item 7>
+
+<item 8>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+We'll talk more about Derrick Henry (concussion) in the injury section, but we can say with confidence here and now that Tyjae Spears (@ Dolphins) should be the
+hottest waiver-wire pickup of Week 14. Tennessee is a run-first offense and King Henry might be sidelined with a head injury, so Spears could very well pick up
+where he left off against Indy last weekend. The young back averaged 4.7 yards per carry (just shy of his 5.1 YPC entering the week) en route to 88 yards.
+
+Another backup getting a boost this week is the Patriots' Ezekiel Elliott (@ Steelers), who will assume lead-back duties after Rhamondre Stevenson went down
+with a pretty bad ankle injury in Week 13. Zeke might put in a vintage performance considering James Conner just went back to Pittsburgh and hung 105 yards and
+two TDs on his old squad.
+
+Could this be the weekend that Keaton Mitchell (vs.
+</item 8>
+
+<item 9>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Eagles
+
+15 Kyren Williams, Rams @ Ravens
+
+16 Joe Mixon, Bengals vs. Colts
+
+17 Javonte Williams, Broncos @ Chargers
+
+18 Derrick Henry, Titans @ Dolphins
+
+19 D'Andre Swift, Eagles @ Cowboys
+
+20 Jaylen Warren, Steelers vs. Patriots
+
+21 Alexander Mattison, Vikings @ Raiders
+
+22 Jerome Ford, Browns vs. Jaguars
+
+23 Kenneth Walker III, Seahawks
+
+24 Najee Harris, Steelers vs. Patriots
+
+25 James Cook, Bills @ Chiefs
+
+26 Zack Moss, Colts @ Bengals
+
+27 Keaton Mitchell, Ravens vs. Rams
+
+28 AJ Dillon, Packers @ Giants
+
+29 Ezekiel Elliott, Patriots @ Steelers
+
+30 Aaron Jones, Packers @ Giants
+
+31 Jerick McKinnon, Chiefs @ Bills
+
+32 Tyjae Spears, Titans @ Dolphins
+
+33 Gus Edwards, Ravens vs. Rams
+
+34 Dameon Pierce, Texans @ Jets
+
+35 Roschon Johnson, Bears vs.
+</item 9>
+
+<item 10>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+We still like Jaylen Warren better overall, but you can confidently take Najee Harris (vs. Patriots) out of the doghouse for good. Harris has been running with
+purpose, and his role in the passing game continues to make him a high-ceiling RB2 in a run-first offense that will be without Kenny Pickett (ankle) this week.
+New England might be banged up, but it's still a tough D to get chunk yardage against through the air. Look for Harris to see lots of screens and dump-downs in
+a rough-and-tumble Thursday night game in Pittsburgh.
+
+We love Baltimore's Keaton Mitchell (vs. Rams) and think he has the potential to smash Los Angeles at home this week.
+</item 10>
+=== END ITEM id=625533059ca4c6bf ===
+
+=== ITEM id=3230bfe38aff6301 ===
+Gold sentences and facts:
+Sentence 0: India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26.
+  Fact 0.0: India played against Australia in the second semi-final of the 2015 World Cup.
+  Fact 0.1: The India versus Australia match was held in Sydney.
+  Fact 0.2: The India versus Australia match was played on March 26.
+Sentence 1: It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+  Fact 1.0: It is crunch time for England in the World Cups.
+  Fact 1.1: England faces South Africa in the semi-final of the Rugby World Cup.
+  Fact 1.2: England faces South Africa in the semi-final of the ODI Cricket World Cup.
+
+Retrieved items:
+<item 1>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+Also Read: IND vs NZ FREE Live Streaming: When and How to watch India vs New Zealand Cricket World Cup 2023 Semi-Final Match Live on Web, TV, mobile apps online
+
+Also Read: AUS vs SA FREE Live Streaming: When and How to watch Australia vs South Africa Cricket World Cup 2023 Semi-Final Match Live on Web, TV, mobile apps
+online
+
+1983 Prudential Cup, against England
+
+Having lost in the first round of the 1975 and 1979 World Cups, India were underdogs in the third World Cup, which was being held in England for the third
+consecutive time.
+
+However, in the World Cup, India wronged many of their critics, reaching semi-finals and playing against mighty hosts England in Manchester on June 22.
+
+Skipper Kapil Dev struck three wickets while Roger Binny and Man-of-the-Match Mohinder Amarnath took two each as India restricted England to 213 all out in 60
+overs.
+</item 1>
+
+<item 2>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India were playing their sixth semi-finals at a place where they played their first World Cup semi-final in 1983, Manchester. However, with a different team-
+New Zealand.
+
+Indian bowlers raised hopes when they restricted New Zealand to 239 for 8 in 50 overs with Bhuvneshwar Kumar taking three wickets.
+
+Ross Taylor 74 runs (90 balls) and skipper Kane Willamson 67 runs (95 balls) were the top scorers for New Zealand. But Kiwi Man-of-the-Match bowler Matt Henry
+sent openers KL Rahul and Rohit Sharma back to the pavilion soon, followed by the dismissal of Dinesh Karthik in the 10th over of India's innings.
+
+With the Indian top-order failing, Ravindra Jadeja (77 runs in 59 balls) and wicketkeeper MS Dhoni (50 runs in 72 balls) tried to steady the Indian ship.
+
+But once they fell, it was all over for India as they lost the battle by 18 runs.
+</item 2>
+
+<item 3>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+talkSPORT will have updates from all the action in Paris as England take on the Springboks from 8:00pm
+
+9 Owen Farrell will be looking to inspire England to victory against the Springboks Credit: Getty
+
+Over in India, England's Cricket World Cup hopes hang by a thread after their latest shock defeat to Afghanistan.
+
+They will be boosted by the news that Ben Stokes is fit for the match after he picked up a hip injury five days before the tournament.
+
+But victory for England could scarcely be more crucial.
+
+Having also lost to New Zealand in their opener, their chances of finishing in the top four and progressing to the semi-finals are looking dubious.
+
+But South Africa, despite winning their first two games, suffered a shock defeat to the Netherlands in their most recent match - a sign for England that the
+Proteas can be beaten.
+</item 3>
+
+<item 4>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India moved to finals and beat Sri Lanka to win their second World Cup title.
+
+
+
+2015 World Cup, against Australia
+
+India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26. Australia outplayed India in almost all departments
+of the game.
+
+Australian Man-of-the-Match Steve Smith (105 runs in 93 balls) and Aaron Finch (81 runs in 116 balls) were the guiding forces in taking Australia to 328 runs
+for 7 wickets in 50 overs.
+
+In reply, India needed a few big innings, but apart from skipper MS Dhoni (65 runs in 65 balls), Shikhar Dhawan (45 runs in 34 balls), and Ajinkya Rahane (44
+runs in 68 balls), the batting order collapsed miserably as India lost the match by 95 runs.
+
+
+
+2019 World Cup, against New Zealand
+
+The cricket World Cup returned to England for the fifth time.
+</item 4>
+
+<item 5>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+They sit tenth in the table having won four and lost as many from their opening eight games.
+
+But their most recent Premier League victory over Brentford may give the Red Devils hope their season is on the up.
+
+Sheffield United vs Manchester United is live on talkSPORT - kick off is at 8:00pm
+
+9 United got a dramatic win over Brentford before the international break Credit: Getty
+
+An England vs South Africa double header
+
+If you've had your football fix for the day, there's also a packed Saturday of rugby and cricket.
+
+It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+
+After England secured victory over Fiji in the quarter-finals, they now look to overcome defending champions South Africa to advance into their second
+consecutive Rugby World Cup final.
+</item 5>
+
+<item 6>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+They moved into the last-four stage on the next two occasions when the World Cup was held in India, in 1987 and 1996.
+
+India were in semi-finals in 2003 in South Africa.
+
+Eight years later, they were again in last four at the 2011 World Cup as hosts, and repeated their feat in 2015, 2019, and 2023.
+
+It means that in their last six World Cups, India have been in the semi-finals on five occasions.
+
+Also Read: ICC Cricket World Cup 2023 semi-final schedule: India to play New Zealand in Mumbai; South Africa to face Australia in Kolkata; know venue, squads
+
+In this write-up, ZeeBiz will take you through the memory lane of India's semifinal journey in the biggest cricket extravaganza in the world.
+</item 6>
+
+<item 7>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+2023 World Cup, against New Zealand
+
+To be played
+</item 7>
+
+<item 8>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The 2019 Rugby World Cup final between England and South Africa was one of many firsts: the game itself capped off a sensational tournament played outside of
+the sport's traditional strongholds for the first time; it was the first final in which South Africa scored a try, and by full-time, the 32-12 score in the
+Springboks' favour sealed a record-equalling third title for the Rainbow Nation.
+
+Fast forward four years, and South Africa once again prepare to take on England in an all-or-nothing match to decide which nation gets a shot at World Cup glory
+— but this time around, the pair meet in the semi-finals of the 2023 tournament, rather than the decider.
+
+That won't make an ounce of difference for either camp, though, as these two long-time rivals prepare for a battle that could re-define the definition of a
+'physical encounter.'
+</item 8>
+
+<item 9>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+talkSPORT will bring you updates as England take on South Africa in the Cricket World Cup in Mumbai from 9:30am
+
+9 It's not looking good for England's cricketers
+
+UFC 294 in Abu Dhabi
+
+Islam Makhachev is hoping to to successfully defend his UFC lightweight belt against Alexander Volkanovski at UFC 294.
+
+Makhachev retained his title in February this year as he defeated Volkanovski by a unanimous decision.
+
+But despite the Russian's favourable 24-1-0 record, Volkanovski will be desperate to add the lightweight belt to his featherweight title.
+
+Also on the cards, Kamaru Usman will fight Khamzat Chimaev in a middleweight title eliminator.
+
+Expect fireworks.
+</item 9>
+
+<item 10>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+In reply, Mohinder Amarnath played a useful innings of 46, while Yashpal Sharma scored a fine 61.
+
+Sandeep Patil played a fiery innings of 51 not out in just 32 balls as India stormed into semifinals for the first time, beating England by six wickets with 5.2
+overs to spare.
+
+Also Read: ICC World Cup 2023: List of centuries; Most tons in World Cup so far
+
+1987 Reliance Cup, against England
+
+Four years later, the World Cup was being played outside England for the first time, and it was India which was hosting it.
+
+In a co-incidence, India was against England in the semi-finals once again, at the Wankhede Stadium, Mumbai, on November 5.
+
+This time, England's Man-of-the-Match skipper Graham Gooch smashed 115 runs in 136 balls to lay a solid foundation for his team's fighting total of 254 for 6
+wickets.
+</item 10>
+=== END ITEM id=3230bfe38aff6301 ===
+
+=== ITEM id=a3d758fb997e7591 ===
+Gold sentences and facts:
+Sentence 0: From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.
+  Fact 0.0: The Netflix description states that Jess and Bill Walker are doing their best to keep their family connected.
+  Fact 0.1: Jess and Bill Walker are doing their best to keep their family connected as their children grow older.
+  Fact 0.2: Jess and Bill Walker's children are growing more independent.
+  Fact 0.3: Jess and Bill Walker's children are growing more distant.
+Sentence 1: Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that "the holidays are a time for families to come together.
+  Fact 1.0: McLean spoke about the Christmas season.
+  Fact 1.1: McLean was born in New Rochelle, New York.
+  Fact 1.2: McLean said that the holidays are a time for families to come together.
+
+Retrieved items:
+<item 1>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+That isn’t necessarily a cause for concern, as long as you inform your significant other about the interworkings of your family dynamics.
+
+“I think that we tend to be our best relational self when we’ve really done the work around understanding all of our past relationships,” Zar explained. “You
+can tell your partner: ‘I don’t have a close relationship with my brother, and here’s why. Here are the intentional choices that I’ve made around it.’ Or you
+can say: ‘Here’s my chosen family. These are the people who are important to me.’ Your significant other will see that you’ve been introspective and have
+takeaways around how you’ve navigated your family’s origin.”
+
+As long as you and your partner have discussed your relationship expectations - both before and during the holidays – introducing them to your family may deepen
+your relationship and could be a step in the right direction.
+</item 1>
+
+<item 2>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"It’s a story with a good ending," Geerts told Fox News Digital.
+
+For Bazella, it appeared the search for her birth parents would not be an ordinary one — but rather an epic journey with numerous twists and turns.
+
+TEXAS SIBLINGS REUNITE IN EMOTIONAL VIDEO AFTER BROTHER SAVES 2-YEAR-OLD SISTER FROM DROWNING
+
+The process took grit and determination, research and genealogical skills and most of all, a deep-rooted desire to find out where she belonged, Bazella said.
+
+‘Spent a lot of time’
+
+Bazella first found Geerts, her birth mother, in May 2021, and they met in person in 2022.
+
+But it was only recently that she actually found the courage to share the story of her decades-long search, she said.
+
+"I’ve spent a lot of time dealing with the healing part of it," Bazella said.
+</item 2>
+
+<item 3>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+MICHIGAN SIBLINGS REUNITE WITH THEIR 3-YEAR-OLD BROTHER AFTER HIS 6-MONTH HOSPITAL STAY FOR CANCER TREATMENT
+
+"I was shocked and just so confused," Bazella said. "But at the same time, I wasn’t."
+
+"When I met my mom, I truly felt unconditional love." — Diane Bazella
+
+Over the next four years, Bazella reached out to people who were listed on her genealogy report, trying to figure out how they could be related, but with no
+success.
+
+Finally, one woman she contacted, who showed up as a close DNA match, emailed her back.
+
+"She reached out and said, ‘I want to figure this out with you,’" Bazella said.
+
+It took the two women more than a year to unravel the story.
+
+"We were thinking [that] maybe I had a different birth father … and that maybe it was one of her relatives," Bazella said.
+</item 3>
+
+<item 4>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+In a recent poll from the American Psychological Association, 41 per cent of US adults said their stress levels increased from November to January when compared
+to other months of the year. Nearly 50 per cent of Americans also described their stress level during the season as “moderate”.
+
+Everyone has different concerns leading up to Christmas, Hanukkah, or New Years - from family drama at the dinner table to a small spats with your mother about
+decorations. With what can be stressful events, it only begs the question: do you really want to bring your partner into the mix? While it’s important to
+eventually introduce your loved ones to your significant other, relationship experts believe there are some discussions you should have beforehand, especially
+during the holidays.
+
+Speaking to The Independent, Rachel Zar - a licensed marriage and family therapist at Spark Chicago Therapy - acknowledged that while every family is different,
+there’s a variety of problems that could arise during the holiday season - mainly because we put too much pressure on having a joyful holiday.
+</item 4>
+
+<item 5>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“Sometimes it can be helpful for them to know about the dynamics that they’re stepping into and how they can best support you. Frankly, they should be aware if
+there is tension or if there is stress within your family.”
+
+(Getty Images)
+
+Communication before the holidays goes both ways, and there are things that your family should know about your significant other too. “If there’s something
+about your partner that could be surprising to your family, or that’s a notable difference from who someone you’ve brought home before, tell your relatives
+that,” Zar said. “Let’s set your family and partner up for success.”
+
+Before bringing your significant other home for the holidays, you may want to express to your family how you wish for them to feel included - such as
+incorporating your partner’s family traditions into your own celebration. However, Zar advised against oversharing information before Christmas. You still want
+your family and partner to connect in person, rather than hearing about each other through the grapevine.
+</item 5>
+
+<item 6>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"I do remember the day I had to give her up," Geerts told Fox News Digital.
+
+"I got to name her and I got to dress her. There was a lady there to take her away, and she was kind of shaky and it scared me because I didn’t want her to pick
+her up."
+
+Geerts said she thought about her daughter every single year on her birthday.
+
+Now that the two have met, they've been getting together several times a year, either in California or Minnesota.
+
+COUPLE OF 60 YEARS, SEPARATED FOR 215 DAYS AMID PANDEMIC, REUNITES IN TOUCHING VIDEO: 'I MISSED YOU SO MUCH'
+
+And from the first time they met in person, they began discovering things they have in common.
+
+"We both keep things in order," Bazella said. "We have our lists and we like to get things done."
+</item 6>
+
+<item 7>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+And Sherri Nordlie Geerts was her mother.
+
+Bazella emailed Geerts and they started corresponding regularly.
+
+"I lost 39 years … There’s a lot of grieving with that." — Diane Bazella
+
+"We were slowly getting to know each other through email," Bazella said. "She had a lot on her plate as a caregiver to her husband, so we were slowly
+establishing our mother-daughter relationship."
+
+A LIFE IN PICTURES: FROM BIRTH INTO ADULTHOOD, A FATHER TAKES HIS SON’S PHOTO EVERY DAY FOR DECADES
+
+Finally, on Christmas Day 2021, Bazella and Geerts heard each other’s voices over the phone for the first time.
+
+They met in person in July 2022.
+
+Since then, they have been talking on the phone frequently, sometimes for hours at a time.
+
+‘Same sense of humor’
+
+During their conversations, Geerts opened up about having a baby when she was just 18 years old.
+</item 7>
+
+<item 8>
+Meet the American who made cranberries a Turkey Day tradition, Marcus Urann, farmer with can-do spirit (FOX News - Lifestyle, 2023-11-23T08:50:55+00:00)
+"They’ve been part of a fabric of our region from Indigenous people until today."
+
+Urann saw what cranberries could be far beyond the land of the Pilgrims.
+
+"I felt I could do something for New England," Urann told the Associated Press in a story that ran around the nation on Thanksgiving in 1959.
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+"You know, everything in life is what you do for others."
+
+To read more stories in this unique "Meet the American Who…" series from Fox News Digital, click here .
+</item 8>
+
+<item 9>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"We have our lists and we like to get things done."
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+"I also remember the first time we met — ee were getting ready to go out and she dug in her purse and pulled out all these tubes of lipstick. I said, ‘Oh my
+God. You've surpassed me.’ We both constantly put on lipstick. It's so funny."
+
+Bazella continued, "We both like [garden] gnomes and we’re kind of collecting them now. Our mannerisms are similar. We have the same sense of humor."
+
+"One of the main dreams is that we stay healthy and I live long enough … so we can make up some of this time." — Sherri Geerts
+
+Bazella said she has met all four of her siblings — and also has formed a relationship with her birth father, Victor Rebeck, 84.
+</item 9>
+
+<item 10>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+While she has found a place with her birth parents, Bazella knows she may never solve the mystery of how she was switched at birth.
+
+"I lost 39 years," Bazella said. "There’s a lot of grieving with that."
+
+Still, Bazella said she believes she's found unconditional love with her mother.
+
+"It's overwhelming for me coming from where I have been," she added.
+
+"I always felt like I was kind of in survival mode and alone. I finally feel at peace with everything, which is really nice."
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+As for Geerts, she said she hopes to make up for lost time.
+
+"One of the main dreams is that we stay healthy and I live long enough, like a hundred years at least — so we can make up some of this time," Geerts said.
+</item 10>
+=== END ITEM id=a3d758fb997e7591 ===

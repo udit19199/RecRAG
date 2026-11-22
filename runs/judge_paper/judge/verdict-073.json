@@ -1,0 +1,62 @@
+[
+{"id": "b9d3a59b8d6015e6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "573d19f166893f5b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "82b2402f99e1c539", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "a friendship bracelet with his phone number on it"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 6, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]}
+]},
+{"id": "445986af1951a0e6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "cheering emphatically when No. 87 scored a touchdown in the first game she"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 7, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star."}]}
+]},
+{"id": "8d572230bc120add", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "c243f767628dcb08", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+]}
+]

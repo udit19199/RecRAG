@@ -1,0 +1,68 @@
+[
+  {
+    "id": "7dd4f5a1519b8c05",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "5b22ccb5b2e39b36",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 3, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual value."}]},
+      {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 3, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual value."}]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "f2cb4a05d475d5fb",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "2be3c0747c0f3fee",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it during one of her Eras Tour shows."}]},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it during one of her Eras Tour shows."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it during one of her Eras Tour shows."}]},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 9, "quote": "Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+      {"fact": "2.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "fe40f6847a42dd33",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]}
+    ]
+  },
+  {
+    "id": "baf2cfb72d85b2b1",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+    ]
+  }
+]

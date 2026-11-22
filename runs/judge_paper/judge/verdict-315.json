@@ -1,0 +1,62 @@
+[
+  {"id": "f30144dd355d3aac", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "773721579308a5ef", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "94ef9414ebb869ab", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "His career has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "His career has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "His career has only blossomed in the years since he took that trip, and while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]}
+  ]},
+  {"id": "a326a94cb8dc4118", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "1.6", "status": "contradicted", "evidence": [{"item": 9, "quote": "India have already booked a place in semi-finals"}]}
+  ]},
+  {"id": "167cd222127f2a0d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "b2167990ef8beb0b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "a spokesperson for Starbucks told Country Living that stores will be open on Thanksgiving Day. While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "a spokesperson for Starbucks told Country Living that stores will be open on Thanksgiving Day. While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+  ]}
+]

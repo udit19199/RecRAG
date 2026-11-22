@@ -1,0 +1,55 @@
+[
+{"id": "3c6d3495eb47b55a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "f27ca2ed7c0eb516", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]}
+]},
+{"id": "fb920426fa0b1122", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]}
+]},
+{"id": "2d37488b63fe9038", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "So it won’t just be data protection authorities making a call on whether Meta’s subscription or tracking offer flies; the European Commission is responsible for oversight of very large online platforms’ DSA compliance."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "058178ae207f89ac", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]}
+]}
+]

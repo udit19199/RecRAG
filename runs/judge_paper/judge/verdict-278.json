@@ -1,0 +1,70 @@
+[
+{"id": "ee02c06d0fee20a4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Sam acted in good faith and took reasonable business measures"}, {"item": 9, "quote": "Man, it’s no good when your defense lawyer has just made you sound worse than the prosecution already did."}]},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "db021d67094640f0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "Hope played a gem of an innings there, calmly anchoring West Indies in an increasingly nervous chase with a run-a-ball 43."}]},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]},
+{"id": "d6ff8002c409fa5c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "but not all of them are effective and none are foolproof."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "but not all of them are effective and none are foolproof."}]}
+]},
+{"id": "aca6bbdf06254e00", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "61955579480204c1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+]},
+{"id": "51a94b95ddcdfac8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 3, "quote": "FTX’s bankruptcy for BlockFi’s subsequent bankruptcy"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]}
+]

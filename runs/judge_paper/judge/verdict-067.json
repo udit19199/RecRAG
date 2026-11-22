@@ -1,0 +1,52 @@
+[
+  {"id": "b9997a3f01507418", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "34c1087ed97f410a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 9, "quote": "It didn't have anything to do with the money Alameda owed FTX at all."}]}
+  ]},
+  {"id": "193b939195091ea6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "but inside the Big Ten, the topic has been more than just a curiosity."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season."}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "981873c0377d991e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "cheering emphatically when No. 87 scored a touchdown in the first game she"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "her relationship with Travis Kelce"}, {"item": 1, "quote": "She specified that she isn't trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "22b23a0459d3a09c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "When registering your new Caesars Sportsbook account, enter the bonus code NEWS1000"}, {"item": 8, "quote": "receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Place a first bet within 30 days and if it loses, receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000"}]}
+  ]},
+  {"id": "c1bc06ab5fe275ed", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]}
+  ]}
+]

@@ -1,0 +1,44 @@
+[
+  {"id": "945e8ef862ecbc51", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+  ]},
+  {"id": "9b3ebdac4642653d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e3b2423b614151fc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]}
+  ]},
+  {"id": "5938db4447d10f32", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "saying it has provided the court with thousands of chat logs and millions of documents."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,"}]}
+  ]},
+  {"id": "54b5ed0b354ea83f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]}
+  ]}
+]

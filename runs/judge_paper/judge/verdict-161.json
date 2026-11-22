@@ -1,0 +1,74 @@
+[
+  {"id": "19ae020b577d0f2e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f0359fbe41172174", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "after torching the Commanders to the tune of five catches, 157 yards, and two TDs."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "after torching the Commanders to the tune of five catches, 157 yards, and two TDs."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "after torching the Commanders to the tune of five catches, 157 yards, and two TDs."}, {"item": 9, "quote": "resulting in Miami's WR1 returning to the top spot against a putrid Washington stop unit."}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "8a3a6043cb72d38e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "During the opening statement, Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "During the opening statement, Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]}
+  ]},
+  {"id": "9f02435a302b8197", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []},
+    {"fact": "2.7", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2375f19534579466", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+  ]},
+  {"id": "4e2d1484f635412e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "which was selected on Wednesday morning"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "contradicted", "evidence": [{"item": 4, "quote": "ahead of a verdict and potential sentencing for seven counts tied to fraud and money laundering."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]}
+]

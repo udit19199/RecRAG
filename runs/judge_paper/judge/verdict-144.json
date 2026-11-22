@@ -1,0 +1,58 @@
+[
+{"id": "ac1c9ce64de09f44", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "This week was Google’s annual hardware event"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "79ed0c10e60c8aa6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Manchester United are out of Europe altogether"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]},
+{"id": "82ff33fa42b09c74", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 4, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "but he did plan on having a board with experts"}]}
+]},
+{"id": "366961b51e4fe8da", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]}
+]},
+{"id": "7d2814c3bfd14daf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

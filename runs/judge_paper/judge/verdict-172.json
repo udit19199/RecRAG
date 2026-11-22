@@ -1,0 +1,73 @@
+[
+  {
+    "id": "d899fe27803f9387",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+    ]
+  },
+  {
+    "id": "d8d7ef67d840b40d",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]}
+    ]
+  },
+  {
+    "id": "368f66905abc7c60",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "9bf873d5b1dddb52",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "af6f8ae005cd3040",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 6, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others."}]}
+    ]
+  },
+  {
+    "id": "4dbed2a60c60e4f2",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]}
+    ]
+  }
+]

@@ -1,0 +1,873 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=2f8101b57e5df145 ===
+Gold sentences and facts:
+Sentence 0: Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things.
+  Fact 0.0: Erik ten Hag is a top coach from Ajax.
+  Fact 0.1: The club needs a top blueprint not only for now but for the next five years.
+  Fact 0.2: The club should work towards that blueprint.
+  Fact 0.3: Sometimes on that journey there are hard moments when the club does not get the right results.
+  Fact 0.4: The club can be doing the right things even when it does not get the right results.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United put in a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+The performance this season was so bad that they find themselves out of Europe altogether as the bottom team in the group, although some at the club might find
+solace from that. There wasn’t much else. The second place they aimed for has instead gone to Copenhagen, a club with a fraction of United’s budget. That is
+where the damage was done.
+
+While that meant there was only ever a slim hope of going through – and the Danish side’s victory over Galatasaray ensured any win would be irrelevant – the
+club’s rich legacy in this competition was built on such defiance. There was absolutely none of it here.
+
+There was nothing much at all. Where was the energy? Where was the intensity? The Stretford End eventually implored United to “attack attack attack” but the
+complete absence of any such impulses eventually left some of the stadium booing the side off at the end.
+</item 1>
+
+<item 2>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+They still have the FA Cup, and the extended pursuit of fourth or even fifth place, although the state of the coefficient means the thing that might keep
+Manchester United out of Europe next season could be Manchester United being so bad in Europe this season. Maybe City can revive their fortunes by winning the
+Champions League again.
+
+Ten Hag will take the blame of course for the early exit and plenty of mistakes have been made, not least in the players the manager has been allowed to sign.
+In reality assessing the job any United manager does with this team involves applying a series of filters. To be United manager is to undertake three concurrent
+roles.
+
+First you must manage the past, which is constantly in the room and which skews every act, achievement and expectation. Second you must manage the dysfunction
+of the present, which expresses itself in every detail from a leaking stadium roof to the deep ills of a playing squad peopled with squatters and long‑term
+missteps.
+</item 2>
+
+<item 3>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+After all that pressure, all that tender hope, it looked a bit like a training goal.
+
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Newsletters may contain
+info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google reCaptcha to protect our
+website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+And that was pretty much that. From here United’s season continues to narrow. They can’t win the league now, can’t win the Champions League, can’t win the
+Carabao Cup.
+</item 3>
+
+<item 4>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+The 1990s were a hell of a decade. They still are around here.
+
+'We've lost decisive players': Ten Hag says injuries were key to Champions League exit – video
+
+So much for the good news then. The bad news is that Ten Hag’s United have now compiled arguably the worst performance by any English team in a Champions League
+group stage. OK, it’s no Blackburn Rovers. But there are extra marks here for United’s pedigree, for the fact the group really wasn’t much of a group, and for
+United managing to finish bottom, shipping 15 goals in the process, more than any other English team ever.
+
+Plus of course there were just so many moments of farce along the way, a six-part saga of chaos, collapse and laughter in the dark. We remember Onana diving out
+of the way of the ball in Munich. We remember Onana also diving out of the way of the ball in Istanbul.
+</item 4>
+
+<item 5>
+Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)
+"We are a long time from the Sir Alex Ferguson era. Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five
+years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right
+things.
+
+"You have to know that, over that period, the consistency of the decision-making will yield a good end result. I think we've seen that both Manchester City and
+Liverpool, that when you adopt that long-term strategy you can get real consistency and sustainable success.
+
+"I think that's the biggest thing for Manchester United; putting down their identity of what they want to be today, but most crucially what they want to be in
+five years' time, and where they want to be, and what they want to look like; from everything from young players, to the style of play, to the whole culture
+peace in Manchester United."
+</item 5>
+
+<item 6>
+Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe (TalkSport,
+2023-11-29T23:40:49+00:00)
+Manchester United's domestic form has certainly shown signs of improvement in recent weeks, but that's far from the case in Europe.
+
+Erik ten Hag's side have once again dropped points from a winning position as they drew 3-3 with Galatasaray in the Champions League, a damaging result in their
+bid to reach the last 16.
+
+4 United were once again the victims of their own demise Credit: Getty
+
+Goals from Alejandro Garnacho and Bruno Fernandes fired them into a two-goal lead within 18 minutes before Chelsea loanee Hakim Ziyech struck back.
+
+Scott McTominay scored what he thought would have been a crucial third shortly after the break but United failed to hold on.
+
+Another free-kick from Ziyech caught Andre Onana off guard once again and a strong strike from Kerem Akturkoglu levelled the scoring.
+</item 6>
+
+<item 7>
+Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe (TalkSport,
+2023-11-29T23:40:49+00:00)
+United now have to beat Bayern Munich and hope Galatasaray draw with FC Copenhagen on the final matchday to progress, and it's the third time in the Champions
+League this season that they have been in a winning position and then failed to emerge victorious.
+
+Eight points have been dropped when they've been in the lead, and no other team has suffered a worse fate this term.
+
+Captain Fernandes appears to be fed up of their inability to hold onto results as he told TNT Sports: "Every time we concede a goal we had many chances to score
+again.
+
+"I think at the end of the game we had like four chances to score a goal but we have to get our heads up and understand that sometimes it's about finding
+another pass, finding the player that is free.
+
+"Trying to get the best one in the best position and take the chance ourselves, we have to look for the team first and after, for ourselves."
+</item 7>
+
+<item 8>
+Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe (TalkSport,
+2023-11-29T23:40:49+00:00)
+4 Fernandes criticised their lack of ability to kill games off Credit: Getty
+
+He added: "It's too bad to be honest, I don't want to be too negative but for what we've been doing in the Champions League is not enough, we have to control
+our games every time.
+
+"It's not the first game we've had like this, even with FC Copenhagen, I understand we had one player less but we scored to make it 3-2 and we had to secure the
+result.
+
+"We have to understand in these kind of games, in these kind of stages, you have to be smart enough and manage the game better."
+
+United have also conceded 14 goals in the Champions League group stages, a new and unwanted record for the club that could get worse when they face Bayern in
+the final match.
+</item 8>
+
+<item 9>
+Erik ten Hag could pay the price for Manchester United’s incompetent Champions League campaign (The Independent - Sports, 2023-12-12T22:36:20+00:00)
+There was not even the sense of heroic failure that accompanied their quarter-final exit to Bayern in 2010. There was just crushing failure. Because it wasn’t
+Bayern who eliminated them. It was Galatasaray, who won at Old Trafford and scored six goals over 180 minutes against United. It was FC Copenhagen, who
+qualified instead of them. Rasmus Hojlund’s former club will be in the last 16. His current one won’t. Copenhagen will be the anomalies in the draw, the
+outsiders with the spot that had seemed reserved for United.
+
+Manchester United’s defeat means they miss out on a spot in the Europa League (PA)
+
+Instead, they are cast out of continental competition altogether. Europe’s sinking superpower have become just the fourth English team to prop up a Champions
+League group when it concluded. There was something predictable about the manner of their demise; their defence was unlocked by Harry Kane, with a lovely flick.
+</item 9>
+
+<item 10>
+Leaky defence ‘isn’t good enough’ and ‘scars’ grow from throwing away leads – It’s all going wrong for Manchester United in Europe (TalkSport,
+2023-11-29T23:40:49+00:00)
+They're easy saves and he's cost his team.
+
+"If Onana doesn't make those two mistakes, I think United go on to win 4-1.
+
+"He's so laid back on the ball that he can't switch on, he's late to dive for the free-kicks."
+
+4 United now face a huge task in their hope of reaching the last 16 Credit: AFP
+
+United's 12 goals in the group stage is the fifth highest tally out of any club but their defensive woes have been their downfall, and former defender Rio
+Ferdinand cites a lack of balance as to why.
+
+The 2007/08 Champions League winner with Man United said: "I think they've got to look at themselves.
+
+"You can't go into a Champions League campaign and score nine goals in three away games and have one point at the end of it. I think that shows you that there's
+a lack of balance in the team at the moment.
+</item 10>
+=== END ITEM id=2f8101b57e5df145 ===
+
+=== ITEM id=17b5d30863b34a39 ===
+Gold sentences and facts:
+Sentence 0: Ketamine is primarily used as an anesthetic during surgical procedures — but in recent years it's been used as a remedy for treatment-resistant depression .
+  Fact 0.0: Ketamine is primarily used as an anesthetic during surgical procedures.
+  Fact 0.1: In recent years, ketamine has been used as a remedy for treatment-resistant depression.
+Sentence 1: If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans.
+  Fact 1.0: If the treatment worked with fish, researchers might then be able to figure out how the diet affects behavior.
+  Fact 1.1: If the treatment worked with fish, researchers might then be able to improve the effectiveness of the treatment for humans.
+
+Retrieved items:
+<item 1>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+The fish avoid their peers and engage in repetitive behavior, such as swimming in circles.
+
+“Many people first doubted that the fish have an autism-like state; I also doubted it at first,” said Yoshizawa. But as he soon found out, even patterns of gene
+regulation resembled autistic patients.
+
+Believing that cavefish might be useful for the study of autism, Yoshizawa approached his colleague Ryan Lee, a physician working with autism patients at
+Shriners Hospital for Children Honolulu. “When I showed him the video of the cavefish he immediately said, ‘yes, that is very similar to what I observe in my
+patients’,” recounted Yoshizawa.
+
+Lee, who has experimented with ketogenic diets to improve autism symptoms with some success suggested they try it with the fish. In humans, not all patients
+receiving the ketogenic diet improve, but some do. If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve
+the effectiveness of the treatment for humans.
+</item 1>
+
+<item 2>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+"To use ketamine, it is important to establish a clear diagnosis of severe depression or anxiety and/or post-traumatic stress disorder," he told Fox News
+Digital. "This requires an expert and cannot be self-diagnosed properly."
+
+"Abuse of ketamine occurs when it is self-administered in high or frequent doses without supervision or monitoring, which leads to addiction."
+
+Those who think they may benefit from ketamine treatment should consult a doctor, Johnson advised.
+
+"Ketamine is generally safe when administered by trained health professionals in a medical setting," Johnson said.
+
+"In those settings, it is best delivered by the IV route, where the dose can be calculated accurately."
+
+When purchasing ketamine outside a doctor’s prescription, there is also the risk of receiving a tainted product, experts warned. While people might assume
+they're purchasing straight ketamine, the drug is often mixed with stimulants like cocaine or phencyclidine (PCP), Johnson noted.
+</item 2>
+
+<item 3>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+"First, if a patient has access to use it at home for pain or mood, this can increase the likelihood of developing a physical or psychological dependence,"
+Sullivan told Fox News Digital.
+
+Experts recommend that home use of ketamine is only prescribed for select patients — who should be closely monitored with regular face-to-face office visits.
+
+"Another way it can become dangerous is if a patient uses too large of a dose in an unsupervised setting, where they may put themselves at risk for accidents,
+such as falls or drownings," said Sullivan.
+
+CLICK HERE TO SIGN UP FOR OUR HEALTH NEWSLETTER
+
+Mixing ketamine with other medicines can also be dangerous, Johnson warned.
+
+For example, when mixed with opiates, it can have a stronger sedative effect, and combining ketamine with stimulants can worsen cardiovascular effects, he said.
+
+In particular, ketamine mixed with buprenorphine can enhance sedation and lead to unresponsiveness, said Johnson.
+</item 3>
+
+<item 4>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+Buprenorphine, a drug that is prescribed to treat opioid use disorder , was in Perry’s system at the time of his death.
+
+Guidelines to be published soon
+
+ASKP3 announced that it will soon publish guidelines for safe use of the drug.
+
+"In the wake of Matthew Perry’s autopsy report, we are committed to creating and publishing guidelines for at-home ketamine use, which should only be practiced
+with a very specific patient profile and only in the context of a close relationship with a physician and in-office follow-up," the organization said in a
+released statement.
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+It is important for people to recognize the distinction between different uses of the drug, according to Prashad.
+
+"In reality, the ways in which ketamine is used for anesthesia versus depression versus abuse are all very different in terms of dosage and frequency."
+</item 4>
+
+<item 5>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+They would follow each other in groups and ceased going round in circles. There were some other behaviors, such as attention to a specific task and sleeping,
+that were unaffected, but overall the results were promising and according to Yoshizawa, suggest dopamine could be key to how the diet affects behavior.
+
+“We suspect that due to this behavior variation, probably the target of the ketogenic diet is the dopaminergic system,” he said. The challenge now is teasing
+out all the complex factors that may be involved.
+
+Diet, environment, and genes – a complex recipe
+
+According to Yoshizawa, there are two plausible ideas as to how the ketones produced by a ketogenic diet are acting on behavior. The first involves the
+mitochondria, which use either carbs or fat to produce energy in our cells, and the other involves epigenetics, which simple refers to any non-genetic influence
+which turns genes on and off.
+
+Ketones are known to create detectable increases in gene expression in cells.
+</item 5>
+
+<item 6>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+Johnson, however, noted that ketamine is a "moderately addictive substance."
+
+He told Fox News Digital, "Even long-term users typically only develop a behavioral or psychological dependence. Physical dependence can occur, but usually the
+withdrawal signs are mild to moderate."
+
+Dr. Sandhya Prashad, president of the American Society Of Ketamine Physicians, Psychotherapists and Practitioners (ASKP3) in Florida, said there is "an
+extremely low risk of addiction, craving or withdrawal" when ketamine is used in low doses in a monitored clinical setting.
+
+"Abuse of ketamine occurs when it is self-administered in high or frequent doses without supervision or monitoring, which leads to addiction ," she told Fox
+News Digital.
+
+Myth No 3: Ketamine can be self-prescribed and purchased online
+
+Ketamine should only be obtained and administered by a licensed and experienced medical doctor, Johnson said.
+</item 6>
+
+<item 7>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+Myth No. 1: Ketamine is a new treatment
+
+In reality, the drug has been used for depression, post-traumatic stress disorder and pain for more than 10 years, according to Dr. Patrick Sullivan, medical
+director of Initia Nova Medical Solutions in New Jersey .
+
+The FDA approved ketamine for anesthesia in both humans and animals since 1970, the doctor noted.
+
+After successful clinical trials , the FDA approved the drug in 2019 as a medication for treatment-resistant depression.
+
+OZEMPIC AND WEGOVY WEIGHT LOSS DRUGS COULD HELP REDUCE ALCOHOL USE DISORDER SYMPTOMS, STUDY SUGGESTS
+
+"There are hundreds of studies showing it to be safe and effective in the outpatient setting," Sullivan told Fox News Digital.
+
+Myth No. 2: Ketamine is powerfully addictive
+
+Ketamine is "legally recognized as having the potential for abuse and for both psychological and physical dependence," according to the American Addiction
+Centers website.
+</item 7>
+
+<item 8>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+Ketones are known to create detectable increases in gene expression in cells. Pulling apart exactly how things like, diet, environment, genes and
+neurotransmitters are linked is incredibly difficult but could reveal which pathways are best to target for autism treatments or could identify a specific
+ketone which works more efficiently than others.
+
+While the cavefish are not an exact model for human autism this work shows how these experiments shine light on the biology and evolution of these behavioral
+conditions and offer new directions for researchers to follow.
+
+Reference: Motoko Iwashita, et al. Metabolic shift toward ketosis in asocial cavefish increases social-like affinity, BMC Biology (2023), DOI:
+10.1186/s12915-023-01725-9
+
+Feature image credit: Masato Yoshizawa
+
+Correction: This article was edited on November 2, 2023. Ryan Lee was originally described as working at the University of Hawai‘i Mānoa.
+</item 8>
+
+<item 9>
+Cavefish provide clues to the keto diet’s effect on autism-like behavior (Advanced Science News, 2023-11-01T08:00:00+00:00)
+When thinking about treatments for conditions like autism spectrum disorder, diet is likely not high on the list. But clues from an eyeless species of
+cave-dwelling fish point to a link between a trendy weight loss diet, the brain, social behavior, and autism.
+
+The ketogenic diet is designed to induce a physiological state called ketosis. This happens when the body no longer has enough carbohydrates to burn for energy
+and switches to fat as an energy source. Breaking down fat for energy produces a group of molecules called ketones, which travel throughout the body.
+
+High in protein and fat but low in carbs, the ketogenic diet is popular for its weight loss effects but also appears to have some neuroprotective and
+anti-inflammatory effects too. Children with epilepsy are sometimes placed on this diet because it helps reduce the frequency of seizures.
+
+The exact mechanism behind these neurological effects is still a mystery and there have been reports of long-term side effects in people trying the diet outside
+of clinical settings.
+</item 9>
+
+<item 10>
+5 myths about ketamine, the drug tied to Matthew Perry's death, according to doctors (FOX News - Health, 2023-12-19T01:50:33+00:00)
+ULTRAPROCESSED FOODS WITH ‘FEEL-GOOD CHEMICALS’ COULD BE AS ADDICTIVE AS CIGARETTES AND DRUGS, STUDY SUGGESTS
+
+"These can produce strong cardiac effects of a very high blood pressure and pulse, and can lead to serious medical complications," he said.
+
+Myth No. 4: Intranasal or micro-dosing is safe for recreational use
+
+While using small doses of ketamine may seem safer than the larger doses given via IV, Johnson warned that when this drug is self-administered, there is a
+danger of exceeding safe limits.
+
+"The total cumulative dose could end up being higher than a standard dose of a medically administered intravenous dose," he told Fox News Digital.
+
+Intranasal use can also lead to "more aggressive drug-seeking" behaviors, Johnson warned, as the "high" of taking the ketamine is paired with cues in the user’s
+environment — which are not present in a medical office.
+</item 10>
+=== END ITEM id=17b5d30863b34a39 ===
+
+=== ITEM id=9d3c02d65fb7231e ===
+Gold sentences and facts:
+Sentence 0: When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the theft of customer funds to him and a few other employees, Drappi said.
+  Fact 0.0: Changpeng Zhao is the CEO of Binance.
+  Fact 0.1: Changpeng Zhao announced on Twitter that he intended to acquire FTX.
+  Fact 0.2: Ellison confessed the theft of customer funds to Changpeng Zhao and a few other employees when Zhao made that announcement.
+  Fact 0.3: Drappi said this.
+Sentence 1: Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified.
+  Fact 1.0: Ellison was CEO of Alameda Research.
+  Fact 1.1: Ellison testified that her tenure as CEO of Alameda Research was an exercise in optics.
+Sentence 2: In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets.
+  Fact 2.0: This speaker specifically pointed the finger at Ellison.
+  Fact 2.1: Ellison was the former CEO of Alameda.
+  Fact 2.2: The speaker said Ellison did not adequately protect Ellison's hedge fund from the inherent risk of the crypto markets.
+
+Retrieved items:
+<item 1>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+She’d testified on direct about Luna, a cryptocurrency token. It had a sister token, Terra, that was a paired algorithmic stablecoin. (If you don’t understand
+what that means, it doesn’t matter, because they were both nonsense.) Cohen asked her about Terra/Luna and she pointed out she’d only spoken about Luna, leaving
+him to fumble about how to explain the relationship between the two tokens. She kept a straight face on the stand while I chuckled from the press seats.
+
+During the opening statement, Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading. We heard more about this hedge in
+cross-examination, and friends, it was stupid. Forget evaluating the trade itself (hedging being long crypto by selling Nasdaq futures). Was she supposed to
+have taken more customer funds to put on the hedge? Was that the defense, that she didn’t take enough of them? Was it that she should have taken them sooner?
+What the fuck?
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+“Sam acted in good faith and took reasonable business measures” is a pretty hard pill to swallow with that in mind.
+
+Man, it’s no good when your defense lawyer has just made you sound worse than the prosecution already did. And while Cohen tried to make the common white-collar
+defense argument that Bankman-Fried, as CEO, was simply too busy to oversee what everyone did every day, he just made me more suspicious. That’s why you hire a
+risk officer and delegate! That’s the whole point! I could barely even hear Cohen blaming Caroline Ellison and Changpeng “CZ” Zhao for the debacle over the “no
+risk officer” ringing in my ears.
+
+Following the defense’s opening statements, things got still worse for Bankman-Fried. The prosecution called its first witness, Marc-Antoine Julliard, whose
+money got stuck on FTX. Juilliard, who was born in Paris and lives in London, testified that he trusted FTX because Bankman-Fried came across as a leading
+figure of the industry.
+</item 2>
+
+<item 3>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 3>
+
+<item 4>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+He spoke so fast that U.S. District Judge Lewis Kaplan and the prosecutor both stopped him at points to ask that he slow his pace. Much of Wang's testimony on
+Friday focused on the final days at FTX before the entire operation imploded, including reports in the media detailing Alameda's business practices and its
+troubling ties to FTX. Wang said that in response to the reporting an emergency meeting was called between Bankman-Fried, Wang and Singh, to discuss shutting
+down Alameda. He said they ultimately decided against such a move, because he and Bankman-Fried were aware that Alameda had no way to repay the roughly $14
+billion hole in its books. Prosecutors took the jury through a series of tweets, beginning on Nov. 7. Posts came from the company blaming bank hours for slow
+withdrawals, while Bankman-Fried tweeted from his personal account, assuring customers that all was fine.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 5>
+
+<item 6>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 6>
+
+<item 7>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Was it that she should have taken them sooner? What the fuck?
+
+When Sassoon got up for a quick redirect, she demolished any points Cohen had attempted to make. But I didn’t really appreciate her cleverness until after
+Ellison left the stand, and the jurors left the room. She’d managed to set a neat little trap for Cohen.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval
+
+On the direct examination, near the end, Sassoon asked about an Alameda all-hands meeting, without bringing up many specifics. During the cross, Cohen asked
+Ellison what topics were covered in the meeting, while avoiding details. That opened the door for Sasson on redirect to work in that Ellison had confessed to
+stealing billions of FTX customers’ money, at Bankman-Fried’s direction.
+
+There had been an open question of whether jurors would hear the tapes of Ellison’s remarks. The testimony set up an argument for the prosecution to bring in
+those tapes.
+</item 7>
+
+<item 8>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 8>
+
+<item 9>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Then a bigger one. Then an effectively limitless one.
+
+Ellison testified to something similar, choking back tears: “When I started working at Alameda, I don’t think I would have believed you if you told me I would
+be sending false balance sheets to our lenders or taking customer money, but over time, it was something I became more comfortable with.”
+
+Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified. Alameda Research was, by then, FTX’s sin-eater. When FTX took a loss in
+the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet. FTX’s “insurance fund,” meant to
+keep traders from getting stuck with other traders’ losses, was totally made up — Alameda simply picked up the tab.
+
+Even that wasn’t good enough.
+</item 9>
+
+<item 10>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+(I did observe him occasionally shaking his head, and sometimes quivering at points during her testimony, but didn’t have a view of his face.)
+
+At one point, Ellison appeared to even be toying with Cohen
+
+As we were approaching lunch, several jurors looked annoyed, and Cohen looked clueless. He asked Ellison to define what “buy on the way down” meant, as though
+it were a term of art. (It means what you think it means, to purchase an asset that’s losing value.) This seemed to puzzle her. At other times, Cohen seemed to
+forget what she had testified to, bringing up things she hadn’t said. I don’t know if this was an attempt to trap her in a lie or just poor preparation, but
+much like FTX employee Adam Yedidia before her, Ellison was fastidious about making sure a question was clear and her answer was precise.
+
+At one point, Ellison appeared to even be toying with Cohen. She’d testified on direct about Luna, a cryptocurrency token.
+</item 10>
+=== END ITEM id=9d3c02d65fb7231e ===
+
+=== ITEM id=db371a7f80e825de ===
+Gold sentences and facts:
+Sentence 0: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 0.0: Google gets other benefits from Android.
+  Fact 0.1: Google could solve this problem today if it wanted to.
+Sentence 1: Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.
+  Fact 1.0: Epic will suggest that Google hid items from discovery by allowing execs and employees to have 'off the record' chats.
+  Fact 1.1: Google will counter that suggestion.
+  Fact 1.2: Google will say it has provided the court with thousands of chat logs.
+  Fact 1.3: Google will say it has provided the court with millions of documents.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 7>
+
+<item 8>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 10>
+=== END ITEM id=db371a7f80e825de ===
+
+=== ITEM id=dbd97d8bd7639eb9 ===
+Gold sentences and facts:
+Sentence 0: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 0.0: Google's public documentation says Google uses three categories to rank results that are local to a searcher
+  Fact 0.1: The three categories are relevance, distance, and prominence
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The last roundup reported that Google spent $26.3 billion in 2021 making Google the default search engine across platforms
+  Fact 1.1: The last roundup reported that Google tried to have Chrome preinstalled on iPhones
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: A case was filed by Arkansas-based publisher Helena World Chronicle
+  Fact 2.1: The case argues that Google "siphons off" news publishers' content
+  Fact 2.2: The case argues that Google siphons off news publishers' readers
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue
+  Fact 2.4: The case argues that Google does this through anticompetitive means
+
+Retrieved items:
+<item 1>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 8>
+
+<item 9>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 10>
+=== END ITEM id=dbd97d8bd7639eb9 ===

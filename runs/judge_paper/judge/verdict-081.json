@@ -1,0 +1,41 @@
+[
+  {"id": "536a1ff04de1fff4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "After successful clinical trials , the FDA approved the drug in 2019 as a medication for treatment-resistant depression."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve"}, {"item": 4, "quote": "the effectiveness of the treatment for humans."}]}
+  ]},
+  {"id": "e61e9a98a24eb54f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Artists have spent the last few years trying to drum up engagement for their"}, {"item": 3, "quote": "work by making their songs trend on TikTok, which audiences have started to resist."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "work by making their songs trend on TikTok, which audiences have started to resist."}]}
+  ]},
+  {"id": "288cb37bbc8c34a4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The understandings that Israel reached with Hamas in 2012"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The understandings that Israel reached with Hamas in 2012"}, {"item": 8, "quote": "were made \"to stop the fighting\", Ortal says"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The understandings that Israel reached with Hamas in 2012"}, {"item": 8, "quote": "were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b3d1c99ea6337f02", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new"}, {"item": 6, "quote": "iteration."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new"}, {"item": 6, "quote": "iteration."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new"}, {"item": 6, "quote": "iteration."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d48387cfbb4a7b04", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "but not all of them are effective and none are"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "and none are"}, {"item": 6, "quote": "foolproof."}]}
+  ]}
+]

@@ -1,0 +1,43 @@
+[
+{"id": "c96b657efaea70dc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "ec1502cc9a1ead88", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks"}]}
+]},
+{"id": "c25826dcdca010cb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "they find themselves out of Europe altogether"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Manchester United should not be performing like this on what is supposed to be the classic European night at Old Trafford."}, {"item": 7, "quote": "It was another utterly forgettable display."}, {"item": 5, "quote": "this 1-0 defeat to Bayern Munich"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Just over 10 minutes later Bayern made it 1-0 in Manchester. Kingsley Coman got it,"}, {"item": 7, "quote": "Kingsley Coman’s winning goal"}, {"item": 5, "quote": "Another infamous European night at Old Trafford."}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "143aed67f00596ca", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "525d5f139dc27e03", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]}
+]}
+]

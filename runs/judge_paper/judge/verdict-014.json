@@ -1,0 +1,88 @@
+[
+  {"id": "bf61c0eea738774d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "There were rumors the two were dating for weeks, and those talks only intensified"},
+      {"item": 9, "quote": "Were they finally about to hard-launch their friendship/potential romance to the world, laying all speculation to rest? Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 4, "quote": "with some capturing Swift and Kelce leaving the stadium together"}
+    ]}
+  ]},
+  {"id": "83e8b13164995e7e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 3, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"},
+      {"item": 3, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "In our report, a former VP at an industrial automation vendor shared"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "a former VP at an industrial automation vendor shared"},
+      {"item": 1, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals"}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 1, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals"}
+    ]}
+  ]},
+  {"id": "1462d340c657cc73", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "Longtime Hollywood couple Will Smith and Jada Pinkett Smith sent shockwaves around the world this week when the Red Table Talk host revealed that she and the actor have been separated since 2016"}
+    ]},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "fc132226a552cb65", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}
+    ]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "69b5b99bf0a0c8b8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}
+    ]},
+    {"fact": "1.3", "status": "stated", "evidence": [
+      {"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}
+    ]},
+    {"fact": "1.4", "status": "stated", "evidence": [
+      {"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}
+    ]}
+  ]}
+]

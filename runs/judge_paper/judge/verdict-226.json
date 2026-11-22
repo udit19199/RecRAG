@@ -1,0 +1,41 @@
+[
+{"id": "ef6eca4eaa4a3f00", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]}
+]},
+{"id": "51739a90f4c4a2a5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Cowboys are moving the ball now, when it's a bit too late."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "66ff75ca17c08858", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "b7170e11c3f3c3d1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "and is reportedly preparing for a ground invasion."}]}
+]},
+{"id": "0027d7438a724c0e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+{"fact": "0.1", "status": "contradicted", "evidence": [{"item": 3, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}, {"item": 8, "quote": "Epic Games fired roughly 830 people this year, or 16 percent of its staff."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

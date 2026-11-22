@@ -1,0 +1,62 @@
+[
+{"id": "96546fd8e06b6c72", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 8, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "9a395cacfb8f78d5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+]},
+{"id": "0b387ac3392fe9fe", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "36fb68ffa747d082", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "d42c266c90ee499c", "facts": [
+{"fact": "0.0", "status": "contradicted", "evidence": [{"item": 7, "quote": "The Argentina star had looked like being part of a tour of China, although that's no longer the case"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+]},
+{"id": "e0a4b2620b5934a1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

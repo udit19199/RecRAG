@@ -1,0 +1,46 @@
+[
+{"id": "8e228f9862df9f12", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "38d9c37ed4203b2c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]}
+]},
+{"id": "05fc288aa86448aa", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "They promised “invest[ment] in the AI-powered technology”"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]}
+]},
+{"id": "657876761af184e7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "abcbcdc96f36281a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The product 6PPD-quinone, which was identified in late 2020,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]}
+]

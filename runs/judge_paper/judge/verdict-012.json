@@ -1,0 +1,45 @@
+[
+  {"id": "d1e5636126bc6800", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Fed’s main interest rate is at its highest level since 2001"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury"}, {"item": 4, "quote": "Atlanta Fed President Raphael Bostic said the US central bank did not need to raise interest rates any further"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "its main tool of high interest rates does that by trying to slow the economy and hurting prices for investments."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Fed is trying to push still-high inflation down to its target, and its main tool of high interest rates does that"}]}
+  ]},
+  {"id": "04e52eef3ccb9e41", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Harbaugh reportedly watched the game from the team hotel"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "and now the leading piece of drama returns."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "with the team on a plane en route to Penn State"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "although Michigan had hoped to block the suspension"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+  ]},
+  {"id": "75bfd0865cdc7b32", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]}
+  ]},
+  {"id": "dfe702cbc20ed0ce", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}]}
+  ]},
+  {"id": "71f290cdac88f26e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]}
+  ]}
+]

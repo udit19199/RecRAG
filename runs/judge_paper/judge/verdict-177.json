@@ -1,0 +1,63 @@
+[
+{"id": "2d70791628d80a6c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 1, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "365dac8ce33ee8f0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "4. Erling Haaland (Manchester City/Norway) - 50 goals"}, {"item": 9, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "4. Erling Haaland (Manchester City/Norway) - 50 goals"}, {"item": 9, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]}
+]},
+{"id": "1044d6f4385d4974", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]}
+]},
+{"id": "a16447840651c6aa", "facts": [
+{"fact": "0.0", "status": "contradicted", "evidence": [{"item": 7, "quote": "The Argentina star had looked like being part of a tour of China, although that's no longer the case"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+]},
+{"id": "ad2928139adde710", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it."}, {"item": 5, "quote": "He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 2, "quote": "Swift took Kelce up on his offer"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "This all started when Travis very adorably put me on blast on his podcast"}, {"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "fa4246224bbb104f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+]}
+]

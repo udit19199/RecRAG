@@ -1,0 +1,42 @@
+[
+  {"id": "46d563bb859d24bd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "MJ in Spider-Man 2 vs. MJ from Insomniac’s 2018 installment"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+  ]},
+  {"id": "b9db2b3c0e0bfa1d", "facts": [
+    {"fact": "0.0", "status": "contradicted", "evidence": [{"item": 6, "quote": "Shohei Ohtani announced Saturday that he has agreed to a contract with the Dodgers. It's a colossal 10-year, $700 million deal"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club."}]}
+  ]},
+  {"id": "d20afa9ea9b467f7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Thanksgiving is a national holiday in the United States"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Most Americans consider the holiday a day to gather and express their thanks through food, family, and football"}, {"item": 2, "quote": "While it’s often viewed as a day for Americans to express what they’re grateful for"}]},
+    {"fact": "1.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "76c24a12d29a0f76", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+  ]},
+  {"id": "b5a85ca09c897baf", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]}
+]

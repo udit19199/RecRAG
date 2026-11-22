@@ -1,0 +1,50 @@
+[
+  {"id": "03ffe70497b2b098", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "8554a2b677821db1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "For now, Griffais explained,"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]},
+  {"id": "58235129b3669131", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "“We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 1, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+  ]},
+  {"id": "46ece047fd65a077", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary."}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f5f50064d8f471f4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Users’ natural behavior for search is to follow the path of least resistance"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "“We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "“We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]}
+  ]}
+]

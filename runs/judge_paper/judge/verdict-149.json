@@ -1,0 +1,52 @@
+[
+{"id": "d6d03b3304bff5ee", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 5, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]}
+]},
+{"id": "34aa236aaba4eb06", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "In 2021, FTX was facing a “several hundred million dollar” loss from an exploit in MobileCoin, Wang said."}, {"item": 3, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "2e666c2e2e229933", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "18b164bb5c8111cc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "1ba3ed84574da740", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Wang heard a trader ask Bankman-Fried if it was okay to keep withdrawing money from that account."}, {"item": 6, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}]},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

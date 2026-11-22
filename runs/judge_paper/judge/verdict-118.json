@@ -1,0 +1,67 @@
+[
+  {"id": "547d37820b3ff9a2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In America, Thanksgiving is a cultural holiday that symbolises peace, thankfulness, and the beginning of the holiday season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends."}]}
+  ]},
+  {"id": "ac72c257c67e4585", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "5b3acb49662bd423", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}, {"item": 7, "quote": "The defendant lied to the world,” Rehn alleged."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "stated", "evidence": [{"item": 3, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]}
+  ]},
+  {"id": "625533059ca4c6bf", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 1, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]}
+  ]},
+  {"id": "3230bfe38aff6301", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}]}
+  ]},
+  {"id": "a3d758fb997e7591", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,895 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=e7bbedb157fabaf6 ===
+Gold sentences and facts:
+Sentence 0: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 0.0: Sportsbooks are also gathering this information.
+  Fact 0.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+Sentence 1: That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins.
+  Fact 1.0: The situation described in the preceding sentence allows sportsbooks to earn the profit built into the odds and lines.
+  Fact 1.1: Sportsbooks can earn the profit built into the odds and lines without worrying about which side wins.
+
+Retrieved items:
+<item 1>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Rookie of the Year is not the only form of NBA futures betting. Legal online sportsbooks have a wide selection of NBA futures you can bet on, including:
+
+In addition to futures bets, you can wager on many NBA bets during the regular season and postseason. NBA game lines (moneylines, point spreads, and totals) are
+the most popular, but you’ll also be able to bet on NBA team and player props, parlays, and more.
+
+The NBA is the second-most popular odds market to bet on in the US, behind NFL betting odds. That means every online betting site always has a great selection
+of NBA odds.
+</item 1>
+
+<item 2>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Once the season has started and you get to see how the various rookies are performing, you can gather the relevant data. But sportsbooks are also gathering this
+information, and they begin to tighten the NBA Rookie of the Year lines in response.
+
+So, while you can better guess which player will hoist the Wilt Chamberlain Trophy, the odds will be tighter, and your potential return on your wager will be
+reduced.
+
+Pros and cons of betting early on the NBA Rookie of the Year:
+
+Pros:
+
+You have an opportunity to find better value.
+
+The betting odds are fresh and haven't been adjusted.
+
+Cons:
+
+There is a much higher risk as a player's performance, health, and team dynamic can change throughout the season.
+
+You’ll find limited information to make an informed bet.
+
+Pros and cons of waiting to bet on the NBA Rookie of the Year:
+
+Pros:
+
+There is a lot more information available to make an informed bet.
+
+You don’t risk betting on a player not remotely in contention.
+
+Cons:
+
+There is a reduced opportunity to find value.
+</item 2>
+
+<item 3>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Line shopping is the key that unlocks the best odds and lines at top sports betting sites.
+
+The process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is quite often better odds
+and improved lines.
+
+What is line shopping, and why is it worth your time? Find the answers below in our complete guide to line shopping.
+
+How do sportsbooks set odds and lines?
+
+The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.
+
+Other sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics,
+statistics, injury and roster news, performance, matchup data, and more to develop the lines and odds.
+
+Betting lines and odds are then subject to change based on the betting public’s reaction and any additional information that comes to light ahead of the game.
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+</item 3>
+
+<item 4>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Look for a quality welcome bonus for new players and attractive promotions for existing customers.
+
+Also known for being in the DFS market, FanDuel has one of the largest followings in the country. It offers competitive odds for NBA ROTY and has one of the
+best sports betting apps. Look for a quality welcome bonus for new players and attractive promotions for existing customers. BetMGM Sportsbook: As one of the
+most recognizable names in the gambling industry, BetMGM knows how to attract and keep customers with competitive odds for all bet types, including futures bets
+and the NBA Rookie of the Year. BetMGM offers many deposit and withdrawal options and 24/7 customer service, and generous sports betting bonuses and promotions.
+
+As one of the most recognizable names in the gambling industry, BetMGM knows how to attract and keep customers with competitive odds for all bet types,
+including futures bets and the NBA Rookie of the Year. BetMGM offers many deposit and withdrawal options and 24/7 customer service, and generous sports betting
+bonuses and promotions.
+</item 4>
+
+<item 5>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+DraftKings Sportsbook: DraftKings, known as a daily fantasy sports operator before becoming a renowned sportsbook, offers up a nice variety of futures bets,
+including the NBA Rookie of the Year award. The online sportsbook and betting app are intuitive and offer an easy-to-understand betting experience.
+Additionally, DraftKings fields a competitive welcome bonus for new players.
+
+DraftKings, known as a daily fantasy sports operator before becoming a renowned sportsbook, offers up a nice variety of futures bets, including the NBA Rookie
+of the Year award. The online sportsbook and betting app are intuitive and offer an easy-to-understand betting experience. Additionally, DraftKings fields a
+competitive welcome bonus for new players. FanDuel Sportsbook: Also known for being in the DFS market, FanDuel has one of the largest followings in the country.
+It offers competitive odds for NBA ROTY and has one of the best sports betting apps. Look for a quality welcome bonus for new players and attractive promotions
+for existing customers.
+</item 5>
+
+<item 6>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 6>
+
+<item 7>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other side to get it that way.
+
+That’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like
+an injury or roster move. It’ll be difficult for you to find value in that case.
+
+But when a line moves or odds change because of betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right
+there.
+
+Line shopping is a tool to help you spot changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.
+
+Choose a side, shop around at online sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable
+to your viewpoint.
+
+See more: What is a parlay bet?
+</item 7>
+
+<item 8>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+His wingspan and defensive prowess will challenge opponents. Offensively, he capitalizes on mismatches and has diverse scoring abilities, from the paint to the
+3-point line. His underrated passing syncs well with OKC's pace and style.
+
+How to bet on NBA Rookie of the Year
+
+The first thing you need when preparing to bet on the NBA Rookie of the Year Award, or any other bet, is an account at an online sportsbook.
+
+Signing up for a new betting account doesn’t take much time. Once you visit the online sportsbook you’re interested in, click a “sign up” or “register” button.
+This will take you to a form for your details. Fill that out and accept the sportsbook’s terms and conditions.
+
+At that point, you’ll be able to claim your welcome bonus, which you’ll qualify for by following the link on this page from our site to the online sportsbook.
+If you need to enter a code to get the bonus, you’ll also find that code on our site.
+</item 8>
+
+<item 9>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck with a push instead of a
+profit.
+
+What is the Vegas line?
+
+Las Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is copying a line, it’s usually copying the Vegas line. Most
+online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all lines in every major sport.
+
+If those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take advantage when sportsbooks stray
+from the Vegas line.
+
+Why do the lines move?
+
+It’s worth reiterating that sportsbooks want an equal amount of money bet on each side of every bet. When that happens, they earn the small profit built into
+the odds without concern about who wins or loses.
+</item 9>
+
+<item 10>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+We urge you to read the requirements for any available promotions and offers before accepting them so you’re aware of any restrictions before betting.
+
+You can now place your initial deposit, which is easy at online betting sites thanks to various deposit and withdrawal options.
+
+To bet on the NBA Rookie of the Year, navigate to the basketball section of the sportsbook website, select the NBA, and go to the futures tab.
+
+You’ll find Rookie of the Year odds, NBA MVP odds, and more there. Select the bet you want to make, enter the amount you want to bet, and finalize your bet
+slip.
+
+Ensure you’re using only legal online sportsbooks for any type of betting. Offshore sportsbooks advertise widely on the internet, but they are illegal and offer
+no protection against fraud and other criminal activities.
+
+Best sportsbooks for NBA Rookie of the Year odds
+
+Here are some of the best sports betting sites where you can bet on the next NBA Rookie of the Year.
+</item 10>
+=== END ITEM id=e7bbedb157fabaf6 ===
+
+=== ITEM id=a8128929a49c84a7 ===
+Gold sentences and facts:
+Sentence 0: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.
+  Fact 0.0: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.
+  Fact 0.1: Bankman-Fried said it was okay to keep withdrawing money as long as the amount was less than FTX's total trading revenue.
+Sentence 1: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 1.0: Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.
+  Fact 1.1: Caroline Ellison was the CEO of Alameda.
+  Fact 1.2: Bankman-Fried used Caroline Ellison as a front.
+  Fact 1.3: Through this front, Bankman-Fried had 'secret access' to customer money.
+  Fact 1.4: The customer money included both cash and crypto.
+  Fact 1.5: The government claimed that Bankman-Fried had this secret access to customer money.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 1>
+
+<item 2>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+We have some inkling of what the government will be arguing thanks to the filings prosecutors are making in this case. They argue that Bankman-Fried lied about
+consumer protection and that Bankman-Fried’s statements that FTX was “avoiding or managing conflicts of interest” and that “as a general principle FTX
+segregates customer assets from its own assets across our platforms” were lies, in a superseding indictment filed August 14th.
+
+The indictment also says that there were special features in FTX’s code that “permitted Alameda to spend and withdraw unlimited amounts of money from FTX,”
+which were created at Bankman-Fried’s direction. That effectively exempted Alameda from the kinds of risk management other customers faced. At the same time,
+the government alleges, “Bankman-Fried publicly and repeatedly asserted that Alameda did not have privileged access to FTX.”
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 5>
+
+<item 6>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 9>
+
+<item 10>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Instead, Bankman-Fried directed alleged co-conspirator Caroline Ellison to repay third-party loans and went on making investments.
+
+Bankman-Fried said that he found out about the fiat@ftx account — that’s the one that tracked how much Alameda owed FTX — in June 2022 while his senior staff
+was focused on fixing the software bug. He did not, however, discover what the account was for until October. I know this sounds unbelievable, but this is his
+actual testimony.
+
+His employees told him “they were busy and I should stop asking questions because it was distracting.”
+
+Simple questions nailed Bankman-Fried to the wall. Had he given his employees at Alameda the direction not to spend FTX customer deposits? Had he put in any
+policies to prevent Alameda employees from spending FTX customer money? Did he put in place any measures at Alameda to protect the FTX customer money? No, no,
+and no. Oh, but he was testifying to Congress about keeping customer funds safe.
+</item 10>
+=== END ITEM id=a8128929a49c84a7 ===
+
+=== ITEM id=85aaebf927e6ca3e ===
+Gold sentences and facts:
+Sentence 0: Here's your chance to claim $5,000+ in bonuses as a new user from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, and BetRivers.
+  Fact 0.0: The reader has a chance to claim $5,000+ in bonuses as a new user.
+  Fact 0.1: A new user can claim bonuses from Caesars Sportsbook.
+  Fact 0.2: A new user can claim bonuses from BetMGM.
+  Fact 0.3: A new user can claim bonuses from Bet365.
+  Fact 0.4: A new user can claim bonuses from FanDuel.
+  Fact 0.5: A new user can claim bonuses from DraftKings.
+  Fact 0.6: A new user can claim bonuses from BetRivers.
+Sentence 1: Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus.
+  Fact 1.0: The reader can collect a welcome bonus.
+  Fact 1.1: A new customer receives a welcome bonus.
+
+Retrieved items:
+<item 1>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Keep in mind that when you wager with Bonus Bets (aka DK Dollars) and win, you only receive the winnings and not the wager amounts.
+
+DraftKings Sportsbook welcome offer pros and cons
+
+Pros
+
+There are multiple welcome offers and not just a single offer
+
+You don’t have to risk a lot — just $5 — to receive a total of $200 in Bonus Bets
+
+You also don’t have to worry about winning or losing your first wager to get a bonus as with other sites’ offers
+
+Cons
+
+The 20% deposit match bonus worth up to $1,000 might sound good, but with a 25x wagering requirement it is truthfully only useful to high-stakes bettors
+
+You only get a week to use the $150 in Bonus Bets awarded for making your first wager of at least $5
+
+You only receive winnings and not the bet amounts when you use Bonus Bets
+
+What will the welcome offer at DraftKings Sportsbook VT be?
+</item 1>
+
+<item 2>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Sometimes, you may need to enter the promo or bonus code, but those will all be listed on this page as well.
+
+You may need to place a qualifying bet or meet specific wagering requirements to get your hands on the bonus. All of this will be outlined in the terms and
+conditions attached to any Vermont online sportsbook bonus offer.
+
+Vermont sportsbook promo codes FAQ
+
+Can I get more than one bonus from a Vermont online sportsbook?
+
+No, you’ll almost certainly be limited to one bonus from each Vermont online sportsbook, and sometimes the limit will be one per household. However, you can
+claim that one bonus from every Vermont online sportsbook. Sign up at as many sportsbooks as you like.
+
+What sports can these bonuses be used on?
+
+Pretty much any sport should qualify. If betting on the sport is available in Vermont, you can use your bonus on it.
+
+Why should I use the promo codes here on The Sporting News?
+
+The promo codes on this page get you the best bonuses available.
+</item 2>
+
+<item 3>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Winning wagers with Bonus Bets award the winnings only and not the bet amounts.
+
+FanDuel Sportsbook welcome offer pros and cons
+
+Pros
+
+Unlike other offers, you don’t have to risk much of your own money to receive the bonus — just $5 to get $200 in Bonus Bets
+
+Also unlike other offers, it doesn’t matter if your initial wager wins or loses, you get the bonus either way
+
+You don’t have to use your Bonus Bets all at once (unless you want to), as you can divide up how you use the Bonus Bets any way you like
+
+Cons
+
+You can’t just withdraw the Bonus Bets, but you have to wager them
+
+You only have a week to use all $200 of your Bonus Bets
+
+If you win with Bonus Bets, you only get the winnings and not the wager amounts back
+
+What is the welcome offer at FanDuel Sportsbook VT?
+
+Those signing up at FanDuel Sportsbook Vermont by Jan.
+</item 3>
+
+<item 4>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+That means wagering requirements are attached, and payouts don't include the stake.
+
+Odds boosts
+
+You’ll receive better than the usual odds on specific bets. Daily odds boosts are available, but provide no value if the boosted bet isn't a winner.
+
+Bet insurance
+
+Get a refund if you lose a specific bet or your parlay comes up one leg short. Sportsbooks will limit the size of the refund you can claim, and most refunds are
+bonus bets or site credit, not cash. That means wagering requirements are attached, and payouts don't include the stake.
+
+Bet & get bonuses
+
+Here, you’ll get a bonus when you place a specific bet. Most bet & get bonuses are bonus bets or site credit. That means wagering requirements are attached, and
+payouts don't include the stake.
+
+App-only offers
+
+Place a specific bet with one of the best sports betting apps to receive a bonus. This won’t be available on the sportsbook website.
+</item 4>
+
+<item 5>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+The promo codes on this page get you the best bonuses available. When you plug in the code during registration, the sportsbook knows we sent you and gives you
+the bonus we negotiated for you.
+
+Are these promo codes for regular customers, too?
+
+The promo codes on this page are for new customers only. Once you’ve got an account with a sportsbook, you can take advantage of other bonus offers and ongoing
+promos.
+
+Related Pages:
+</item 5>
+
+<item 6>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Use Bet365 bonus code VATSN in Virginia or NJTSN in New Jersey.
+
+Claim here: Bet365 bonus code TSNCO for promo of your choice
+
+FanDuel promo code for Bet any $5 moneyline, Get $150 in bonus bets if your team wins in CBK game
+
+FanDuel has a new offer when using our exclusive FanDuel promo code link. Bet $5 on any moneyline, and Get $150 in bonus bets if your team wins!
+
+It's important to note that there are no odds restrictions, so it'd be prudent to bet a big favorite over an outmatched underdog on the CBK schedule. You need
+to win the wager to receive $150 in bonus bets.
+</item 6>
+
+<item 7>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+This won’t be available on the sportsbook website.
+
+Special event offers
+
+Get a bonus when you place a particular bet on special event odds like World Series odds, Super Bowl betting lines, or March Madness. Special event bonuses are
+often bonus bets or site credit. That means wagering requirements are attached, and payouts don't include the stake.
+
+Loyalty offers and programs
+
+Earn points with every bet, and the points are redeemable for rewards like cash and bonus bets.
+
+Important Vermont sportsbook bonus and promo conditions
+
+Terms and conditions will be attached to every bonus and promo offer from Vermont online sports betting sites. Be ready to see these stipulations.
+
+Banking options
+
+Your ability to withdraw the winnings from a bonus could be limited to specific banking methods.
+
+Wagering requirements
+
+You might be forced to bet a bonus amount a minimum number of times before you can withdraw winnings.
+
+Betting limitations
+
+There may be limits on the odds or bet types available for wagering bonus funds.
+</item 7>
+
+<item 8>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Start by clicking on our exclusive DraftKings promo code link
+
+Register as a new user by supplying personal info including your name, email, last four of your SSN#, and mailing address
+
+Deposit $5 to activate $50 bonus bet
+
+Bet $5 and Get $150 in bonus bets
+
+To max out DraftKings' deposit match at $1,000, make a minimum deposit of $5,000 and meet the 25X playthrough requirement.
+
+Claim here: DraftKings promo code for $1,200 in bonus bets
+
+BetRivers promo code SPORTSRIV unlocks 2nd chance bet for CBK games including Duke vs. Arkansas
+
+The BetRivers promo code SPORTSRIV gives new users a 2nd chance bet up to $500 depending on your state.
+
+If your first bet settles as a loss, BetRivers will refund your account in bonus bets.
+</item 8>
+
+<item 9>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+7 Tennessee vs. No. 14 North Carolina. Duke vs. Arkansas is another marquee matchup on tonight's slate of CBK games.
+
+Claim thousands in sports betting bonuses for college basketball games with these promo codes and links
+
+Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the
+tune of $5K+ in bonus bets!
+
+Click our links to activate the best sports betting bonuses in the industry and register your sportsbook accounts now!
+
+Caesars Sportsbook promo code NEWS1000 for $1,000 First Bet on Caesars for Volunteers vs. Tar Heels
+
+Caesars Sportsbook promo code NEWS1000 gives new users a First Bet up to $1,000 on Caesars!
+</item 9>
+
+<item 10>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Here are more details on the offer explaining how each part of the DraftKings Sportsbook welcome offer works:
+
+Sign up for a DraftKings Sportsbook account via the links on this page .
+
+. Make a first deposit of at least $5 and get a $50 Bonus Bet .
+
+and get a . When you make your first deposit, DraftKings will give you a 20% deposit match bonus worth up to $1,000 in Bonus Bets . Be aware this bonus comes
+with a 25x wagering requirement .
+
+worth up to . Be aware this bonus comes with a . Finally, when you place an initial bet of at least $5 , you get $150 more in Bonus Bets delivered as eight $25
+Bonus Bets that you’ll have seven days to use.
+
+, you get delivered as eight $25 Bonus Bets that you’ll have seven days to use. If you go for the full deposit match bonus, you can receive as much as $1,200 in
+Bonus Bets all told.
+</item 10>
+=== END ITEM id=85aaebf927e6ca3e ===
+
+=== ITEM id=a454c2b780f3ad69 ===
+Gold sentences and facts:
+Sentence 0: However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years.
+  Fact 0.0: Floyd has a massive net worth.
+  Fact 0.1: Canelo has inched closer to Floyd's billionaire status over the years.
+  Fact 0.2: Canelo has inched closer to Floyd's billionaire status over the years despite Floyd's massive net worth.
+Sentence 1: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 1.0: The speaker was the richest person in the world under 30.
+  Fact 1.1: The speaker was going to spend his wealth to save humanity from extinction.
+  Fact 1.2: The speaker said this.
+
+Retrieved items:
+<item 1>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+So, a fight with McGregor could earn him anywhere from $55 to $60 million, adding to his $180 million. Meaning his total net worth would jump up to $240
+million.
+
+ADVERTISEMENT Article continues below this ad
+
+While matching Floyd’s net worth is no easy feat, if anyone can do it – it’s Canelo Alvarez. However, only time will tell if the fight can ever materialize. In
+case it does, it will be a spectacle the whole world would come together to witness. Do you think McGregor vs. Canelo can happen? Who would win the fight?
+
+Watch This Story: Here’s How $200,000,000 Worth Canelo Alvarez Spent His First Ever Million
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 2>
+
+<item 3>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Furthermore, Canelo and McGregor’s careers are intertwined with the legendary Floyd Mayweather. ‘Money’ faced both fighters at one point or the other, leaving
+each with a boxing lesson. When Mayweather defeated Canelo, it pushed him to hone his skills while starting a lifelong rivalry. On the other hand, McGregor made
+his boxing debut against Mayweather, losing the fight but leaving with a fat stack.
+
+Implications of a fight between Canelo Alvarez and Conor McGregor
+
+The excitement and allure of two mammoths of combat sports getting in the ring to pummel each other to the brink of their endurance is undeniable. Not to
+mention, the fight will leave either party significantly wealthier than before. A potential clash between Saul Canelo Alvarez and the ‘Notorious’ Conor McGregor
+would not just be a dream come true for fans everywhere. It would also be a money magnet that would funnel income from a variety of channels.
+</item 3>
+
+<item 4>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Crossover boxing matches are all the rage these days. Until a few days ago, the phenomenon was limited to influencers and MMA stars. But after a recent quarrel
+on X (formerly Twitter) between Conor McGregor and Canelo Alvarez, a potential crossover boxing match has the boxing world buzzing with excitement. If the fight
+were to turn into a reality, it could help ‘Cinnamon’ get closer to his former rival Floyd Mayweather in terms of net worth.
+
+America’s Favorite Video Today
+
+The talks of Conor McGregor vs. Floyd Mayweather began with a tweet that launched a fiery exchange of words between these two mammoths of combat sports. The
+brash and confident ‘Notorious’ McGregor turned to X, praising Mayweather’s 2013 performance against Canelo. But he also boasted about landing more punches on
+‘Money’ Mayweather than the Mexican superstar. Canelo quickly retorted, asserting he would need only one hand to make quick work of McGregor.
+</item 4>
+
+<item 5>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Later, the banter further escalated, bringing a potential fight in the picture.
+
+Canelo Alvarez’s earnings and Floyd Mayweather’s influence
+
+ADVERTISEMENT Article continues below this ad
+
+Canelo Alvarez reached his career high by becoming the first boxer to become the undisputed champion at super-middleweight by holding onto the WBA Super, WBC,
+and Ring Magazine super middleweight titles since 2020, and the IBF nd WBO titles since 2021. Meanwhile, his pockets became deeper and deeper, to the point that
+Canelo boasts a $180 million net worth in 2023. The most significant addition to his bank balance came when he signed a lucrative $365 million deal with DAZN
+and Golden Boy Promotions.
+</item 5>
+
+<item 6>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+If these numbers are any evidence, a Canelo vs. McGregor clash would break all their previous records by a mile.
+
+A substantial step toward Mayweather’s net worth/Billionaire status
+
+It’s no secret that Floyd Mayweather is the richest boxer in the world. The legendary undefeated boxer boasts a staggering net worth of $450 million. It makes
+the retired boxer the richest personality in boxing to ever exist. Despite retiring from the sport, he occasionally fights in exhibition matches, generating
+millions each time. In addition, Floyd has made over a billion dollars in the span of his career.
+
+ADVERTISEMENT Article continues below this ad
+
+via Getty LAS VEGAS, NEVADA – JUNE 29: Floyd Mayweather Jr. attends a game between the New York Liberty and the Las Vegas Aces at Michelob ULTRA Arena on June
+29, 2023 in Las Vegas, Nevada. The Aces defeated the Liberty 98-81.
+</item 6>
+
+<item 7>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+It would also be a money magnet that would funnel income from a variety of channels.
+
+A few of those lucrative channels of income would be revenue from pay-per-view sales, live gate revenue, merchandise sales from either party and various
+promotional events from the fight. What’s more, if anyone wondered if people would want to watch the fight. The attention it has gathered in the small span of
+their X (Twitter) feud should be evidence enough. Not to mention, both fighters command a massive fan base, counted in millions across the globe.
+
+Canelo Alvarez and McGregor’s history of massive purses
+
+If Canelo’s PPV pull was ever in question, his history of fight purses should convince everyone. Stepping back in time, Canelo’s fight with Mayweather collected
+2.2 million pay-per-view buys. His 2017 bout against Julio César Chávez Jr. collected 1 million PPV buys.
+</item 7>
+
+<item 8>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+The Aces defeated the Liberty 98-81. NOTE TO USER: User expressly acknowledges and agrees that, by downloading and or using this photograph, User is consenting
+to the terms and conditions of the Getty Images License Agreement. (Photo by Ethan Miller/Getty Images)
+
+However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years. If Canelo vs. McGregor ever manages to
+materialize, it could help Canelo take a significant leap to Mayweather’s net worth. The financial windfall from such a humongous clash would be substantial,
+driving him closer to Mayweather’s level of wealth. If Canelo’s past earnings are any evidence, this fight will be bigger than ever before. Canelo’s biggest
+fight to date is $45 million from the third encounter with Golovkin.
+</item 8>
+
+<item 9>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+collected 1 million PPV buys. Canelo’s first battle with Gennady Golovkin gathered 1.3 million PPV sales. In his most recent battle against Jermell Charlo, the
+fight collected 700K PPV sales. These were just to name a few; over the years, Canelo has fought in increasingly profitable bouts.
+
+On the other hand, Conor McGregor has created his own history in MMA as well as boxing. First of all, McGregor’s fight against Mayweather generated 4.3 million
+pay-per-view buys. His second fight against Dustin Poirier collected 1.6 million buys. The infamous fight against Khabib Nurmagomedov saw 2.4 million PPV sales.
+And lastly, his second fight against Nate Diaz collected 1.65 million PPV buys. If these numbers are any evidence, a Canelo vs.
+</item 9>
+
+<item 10>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+via Imago RECORD DATE NOT STATED Saul -Canelo- Alvarez MEX vs Jermell Charlo USA – Weigh-in ceremony Saul -Canelo- Alvarez MEX during the weigh-in ceremony
+prior to the Boxing fight against Jermell Charlo USA, at the T-Mobile Arena Explanade on September 29, 2023. brbr Saul -Canelo- Alvarez MEX durante la ceremonia
+de pesaje previo a la pelea de Box contra Jermell Charlo USA, en la Explanada del Arena T-Mobile el 29 de septiembre de 2023. LAS VEGAS NEVADA ESTADOS UNIDOS
+PUBLICATIONxNOTxINxMEXxCHNxRUS Copyright: xDavidxLeahx 20230929183529_BOX_2023_ALV_CHA_WEIGH_ALVAREZ44.
+</item 10>
+=== END ITEM id=a454c2b780f3ad69 ===
+
+=== ITEM id=8a2253414370f382 ===
+Gold sentences and facts:
+Sentence 0: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 0.0: Postponements of such reports could complicate things for the Fed.
+  Fact 0.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+Sentence 1: With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them.
+  Fact 1.0: Inflation is down from its peak two summers ago.
+  Fact 1.1: Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates.
+  Fact 1.2: Wall Street is hopeful that the Federal Reserve could soon turn to cutting interest rates.
+
+Retrieved items:
+<item 1>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 1>
+
+<item 2>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 2>
+
+<item 3>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 3>
+
+<item 4>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 4>
+
+<item 5>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 5>
+
+<item 6>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+Too much strength would give inflation more fuel, but too little would mean a recession.
+
+With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest
+rates and could soon turn to cutting them. That could help the economy avoid a recession and give a boost to all kinds of investment prices. Investors have been
+looking for a slowdown in the job market in particular. The hope is that it can cool more through employers cutting back on open positions than on employers
+laying off workers. Tuesday’s report showed that employers advertised just 8.7 million jobs on the last day of October, down by 617,000 from a month earlier. In
+the bond market, US Treasury yields continued to sag further from the heights they reached during late October. The yield on the 10-year Treasury fell to 4.18
+per cent from 4.26 per cent late on Monday, offering more breathing space for stocks and other markets.
+</item 6>
+
+<item 7>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 7>
+
+<item 8>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 8>
+
+<item 9>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 9>
+
+<item 10>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 10>
+=== END ITEM id=8a2253414370f382 ===

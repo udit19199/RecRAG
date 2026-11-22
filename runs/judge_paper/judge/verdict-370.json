@@ -1,0 +1,56 @@
+[
+{"id": "7d675f6c7981cb9d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "OFFICIAL: Jim Harbaugh suspended for the remaining three regular season games."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "It would be Harbaugh's second suspension of the season"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "72db4b17ceedc299", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "2bbd8c39cf2eba78", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "996afbdc5a38026b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "including the distribution of apps to Android users"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "the market for payment processing solutions for content inside Android apps."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "d94c4dcfa515ecb9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}, {"item": 7, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}, {"item": 7, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "he tried and failed to give her a friendship bracelet with his phone number on it"}, {"item": 8, "quote": "But Kelce, exhibiting the tenacity typical of a professional sportsman, remained determined to get her attention."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]}
+]

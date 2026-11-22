@@ -1,0 +1,69 @@
+[
+{"id": "303e7d31c9bd6545", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]}
+]},
+{"id": "a89f0791bd3a7981", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]}
+]},
+{"id": "efdcc8290701e25c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Google unveils new hardware: This week was Google’s annual hardware event"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "This week was Google’s annual hardware event"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "where the search and consumer tech giant showed off what it’s been working on"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Google’s annual hardware event, where the search and consumer tech giant"}]}
+]},
+{"id": "52db82821648feef", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)"}]}
+]},
+{"id": "340e4bd89adf4a38", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday"}]}
+]},
+{"id": "21c3930ad582f7b5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Alvaro Barreal’s 78th-minute goal is enough to secure victory for FC Cincinnati"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Alvaro Barreal’s 78th-minute goal is enough to secure victory for FC Cincinnati"}, {"item": 3, "quote": "Inter Miami are officially OUT of the MLS playoff race"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 3, "quote": "4-0 victory over Portland are enough to see them eliminated from contention"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "one of the sport's most talented and legendary players of all time"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "one of the sport's most talented and legendary players of all time"}]}
+]}
+]

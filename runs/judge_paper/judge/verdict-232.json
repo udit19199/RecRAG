@@ -1,0 +1,66 @@
+[
+  {
+    "id": "b7f9a4f11f2b695e",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left in the third quarter."}, {"item": 6, "quote": "Smith did return, however, for the final drive of the game in the losing effort."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "backup Drew Lock took over under center with 18 seconds left in the third quarter."}]}
+    ]
+  },
+  {
+    "id": "9f5a60cd4d040e3f",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+    ]
+  },
+  {
+    "id": "3e896468f8950711",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+    ]
+  },
+  {
+    "id": "7a19628e9f9ab18a",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+    ]
+  },
+  {
+    "id": "e7072232a4b834aa",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]}
+    ]
+  },
+  {
+    "id": "66b3c009ff8de42d",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+    ]
+  }
+]

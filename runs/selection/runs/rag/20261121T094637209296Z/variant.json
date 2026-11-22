@@ -1,0 +1,1 @@
+{"variant": "B2", "rep": "3", "shard": 0, "shards": 1, "limit": null, "select_instruction": "Every result line starts with an ID such as [E1a2b3c]. Do not answer the question. Reply only with the IDs of the results the answer needs, at most 10, most important first, one per line. Pick evidence for every article, person or part the question asks about.", "query_instruction": null}

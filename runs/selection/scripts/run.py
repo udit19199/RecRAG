@@ -16,6 +16,12 @@ Same 250 MultiHop-RAG comparison and temporal questions as runs/nograph
 answer model, prompt and settings. Picks fewer than 10 are filled in retrieval
 order; no valid ID means the first 10. Every model call is metered into the
 question's cost. Writes variant.json into the run folder; prints "RESULTS <path>".
+
+Milvus (runs/milvus/SPEC.md): with RECRAG_VECTOR_DB=milvus, every vector search
+goes to the rag_chunks collection in self-hosted Milvus (same 7,728 chunks, same
+saved llama-index vectors, HNSW) instead of the llama-index store; the query is
+embedded the same way (text-embedding-3-small via the pipeline's embedder). Run
+folders go under runs/milvus/runs/. Variant B0 is plain Normal RAG, top 10.
 """
 
 import json
@@ -28,19 +34,73 @@ ROOT = Path(__file__).resolve().parents[3]
 variant, rep = sys.argv[1], sys.argv[2]
 shard, shards = int(sys.argv[3]), int(sys.argv[4])
 limit = int(sys.argv[5]) if len(sys.argv) > 5 else None
-assert variant in ("B1", "B2", "B3")
-os.environ["RECRAG_RUN_NAMESPACE"] = "selection/runs"  # run folders go under runs/selection/runs/
+MILVUS = os.environ.get("RECRAG_VECTOR_DB") == "milvus"
+assert variant in ("B1", "B2", "B3") or (MILVUS and variant == "B0")
+os.environ["RECRAG_RUN_NAMESPACE"] = "milvus/runs" if MILVUS else "selection/runs"
 indices = json.loads((ROOT / "runs/nograph/questions.json").read_text())["indices"][shard::shards]
 if limit:
     indices = indices[:limit]
 INDEX = ROOT / "runs/rag/indexes/07062033a2e929ec10405ef3a38d541e51b907cbb7041de545f72ab1e7b71799"
-if not (INDEX / "index_store.json").exists():
+if not MILVUS and not (INDEX / "index_store.json").exists():
     raise SystemExit(f"No Normal RAG index at {INDEX}; refusing to build.")
 
 import benchmark  # noqa: E402
 import rag_retrieval  # noqa: E402
 from benchmark import Message, ReasoningStep, RetrievalOptions  # noqa: E402
-from graphrag_retrieval import EVIDENCE_ID, evidence_id  # noqa: E402
+
+if variant == "B1":
+    try:
+        import sentence_transformers  # noqa: F401
+    except ModuleNotFoundError:
+        # B1 runs in .venv-hipporag (torch, transformers; no sentence_transformers).
+        # Same model and scoring as sentence_transformers.CrossEncoder.predict for a
+        # one-label reranker: tokenized (query, passage) pairs, truncated to the
+        # model's 512 tokens, sigmoid of the single logit. Order is what matters.
+        import types
+
+        import torch
+        from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+        # The cross-encoder is deterministic, so each (question, passage) pair is
+        # scored once and the score saved (runs/selection/cache/rerank_scores.jsonl);
+        # repeats 2 and 3 reuse it and differ only in the answer call.
+        from hashlib import sha256
+
+        CACHE = ROOT / "runs/selection/cache/rerank_scores.jsonl"
+
+        class CrossEncoder:
+            def __init__(self, name):
+                self.tok = AutoTokenizer.from_pretrained(name)
+                self.model = AutoModelForSequenceClassification.from_pretrained(name).eval()
+                CACHE.parent.mkdir(parents=True, exist_ok=True)
+                self.saved = {}
+                if CACHE.exists():
+                    for line in CACHE.read_text().splitlines():
+                        row = json.loads(line)
+                        self.saved[row["key"]] = row["score"]
+
+            @staticmethod
+            def key(question, passage):
+                return sha256(f"BAAI/bge-reranker-large\0{question}\0{passage}".encode()).hexdigest()
+
+            @torch.no_grad()
+            def predict(self, pairs, batch_size=16):
+                keys = [self.key(a, b) for a, b in pairs]
+                todo = [i for i, k in enumerate(keys) if k not in self.saved]
+                for i in range(0, len(todo), batch_size):
+                    batch = [pairs[j] for j in todo[i : i + batch_size]]
+                    enc = self.tok([a for a, _ in batch], [b for _, b in batch], padding=True,
+                                   truncation=True, max_length=512, return_tensors="pt")
+                    scores = torch.sigmoid(self.model(**enc).logits.view(-1)).tolist()
+                    with CACHE.open("a") as f:
+                        for j, s in zip(todo[i : i + batch_size], scores):
+                            self.saved[keys[j]] = s
+                            f.write(json.dumps({"key": keys[j], "score": s}) + "\n")
+                return [self.saved[k] for k in keys]
+
+        sys.modules["sentence_transformers"] = types.SimpleNamespace(CrossEncoder=CrossEncoder)
+else:
+    from graphrag_retrieval import EVIDENCE_ID, evidence_id  # noqa: E402
 
 # The run namespace moves run folders under runs/selection/runs/, which would
 # also move the index path; point the index back at the existing one.
@@ -53,7 +113,20 @@ def retrieve_existing(*, index_dir, **kwargs):
     return _retrieve(index_dir=INDEX, **kwargs)
 
 
-rag_retrieval.retrieve = retrieve_existing
+def retrieve_milvus(*, documents, question, index_dir, embeddings, top_k):
+    from time import perf_counter
+
+    from runs.milvus.scripts.milvus_store import search
+
+    started = perf_counter()
+    hits = search("rag_chunks", embeddings.get_query_embedding(question), top_k, ["text"])
+    return benchmark.RetrievedContext(
+        passages=[h["text"] for h in hits], scores=[h["score"] for h in hits],
+        construction_seconds=0.0, retrieval_seconds=perf_counter() - started,
+    )
+
+
+rag_retrieval.retrieve = retrieve_milvus if MILVUS else retrieve_existing
 
 TOP = 10
 # The agent's own picking sentences (graphrag_retrieval.AGENT_INSTRUCTION), word for word.
@@ -117,7 +190,9 @@ def select(question, initial, search, llm, options, reranker):
     return [ReasoningStep(retrieval_query=t.get("query", t["tool"]), text=t.get("output", "")) for t in trace]
 
 
-if variant == "B1":
+if variant == "B0":
+    options = RetrievalOptions(top_k=TOP)
+elif variant == "B1":
     options = RetrievalOptions(top_k=TOP, rerank=True, rerank_candidate_k=50, rerank_top_k=TOP)
 else:
     benchmark.refine_retrieval = select
@@ -127,7 +202,7 @@ os.environ["RECRAG_CONCURRENCY"] = "1"
 path = benchmark.run("rag", "multihop_rag", 0, len(indices), options=options, record_indices=indices)
 run_dir = Path(path).parent if Path(path).is_file() else Path(path)
 (run_dir / "variant.json").write_text(
-    json.dumps({"variant": variant, "rep": rep, "shard": shard, "shards": shards, "limit": limit,
+    json.dumps({"variant": variant, "vector_db": "milvus 2.5.10 rag_chunks" if MILVUS else "llama-index", "rep": rep, "shard": shard, "shards": shards, "limit": limit,
                 "select_instruction": SELECT_INSTRUCTION if variant != "B1" else None,
                 "query_instruction": QUERY_INSTRUCTION if variant == "B3" else None}) + "\n"
 )

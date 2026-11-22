@@ -1,0 +1,55 @@
+[
+  {"id": "e3d2ca19c7cfd21b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+  ]},
+  {"id": "c5cc135e1a698cb0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+  ]},
+  {"id": "93c1dccfe22e45d6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]}
+  ]},
+  {"id": "c0c99b792bf9a1cf", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt."}]}
+  ]},
+  {"id": "2f55922885a5d266", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss."}]}
+  ]},
+  {"id": "af2439d2183ff82a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]}
+]

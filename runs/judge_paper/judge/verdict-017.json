@@ -1,0 +1,64 @@
+[
+{"id": "b1b9b812b1b93cdc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+]},
+{"id": "2871b2e986964263", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Carbon absorbers, including MXenes or MBenes, can’t catch it all. As such, they’re never going to replace the need for reducing emissions of CO 2 and other greenhouse gases."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "ff0176e1cf115ea6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "just days before she attended his Kansas City Chiefs game"}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "bcaf70e1c5a6cae8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []}
+]},
+{"id": "affb82db6b3e70b8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "5fad7807722f6045", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]}
+]

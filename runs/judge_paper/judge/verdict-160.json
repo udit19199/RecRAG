@@ -1,0 +1,47 @@
+[
+{"id": "8f042b2ca8c87049", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+]},
+{"id": "c736ea365dd3f8be", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "7eab02783a08de14", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are foolproof."}]}
+]},
+{"id": "8927dab78e7ad775", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "2 hours to kickoff"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+]},
+{"id": "17aefab3b3cc6b57", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "b0daebe4202e2000", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday"}]}
+]}
+]

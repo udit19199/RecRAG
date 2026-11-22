@@ -1,0 +1,50 @@
+[
+{"id": "2232a5a3996d6c77", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+]},
+{"id": "62f267c16e03c332", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+]},
+{"id": "0171bf17aa130493", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "50fafb82bfbd84cd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Wang heard a trader ask Bankman-Fried if it was okay to keep withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Wang heard a trader ask Bankman-Fried if it was okay to keep withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "85f29be995006e70", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "cc415849472aa95d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

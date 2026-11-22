@@ -1,0 +1,51 @@
+[
+  {"id": "d03b24f1af3ca8fb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]},
+  {"id": "02a6363ff71d8a75", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4a36c86b32ad2f51", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "37f4a7764490c677", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2a734684bf3744b1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The House came to another abrupt standstill, stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The House came to another abrupt standstill, stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden ouster of Kevin McCarthy."}]}
+  ]}
+]

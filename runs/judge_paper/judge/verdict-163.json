@@ -1,0 +1,50 @@
+[
+{"id": "1834837b265dfc07", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Prince William (played by Rufus Kampa)"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+]},
+{"id": "16add4750d119345", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]},
+{"id": "f0b8e5e3ac619d65", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "3d15751c119ae54d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "e26cf85a933546d5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]}
+]

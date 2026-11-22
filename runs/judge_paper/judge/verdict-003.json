@@ -1,0 +1,55 @@
+[
+  {"id": "24d78f66b4e5c727", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Kincaid was a limited participant in practice on Wednesday due to a shoulder injury"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "it’s been reported he’s likely to suit up on Saturday"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "it’s been reported he’s likely to suit up on Saturday at less than 100%"}]}
+  ]},
+  {"id": "0cc4abad084e2c2c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6ee5c84fc07a372a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]}
+  ]},
+  {"id": "52821281b5025120", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "which revolve around Republicans crafting state-specific laws that order platforms to"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "which revolve around Republicans crafting state-specific laws that order platforms to keep their hands off of some social media posts"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation"}]}
+  ]},
+  {"id": "ffc722c4bc2477c5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "and how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f468609cba7fba56", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Longtime Hollywood couple Will Smith and Jada Pinkett Smith sent shockwaves around the world this week when the Red Table Talk host revealed that she and the actor have been separated since 2016."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

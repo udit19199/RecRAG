@@ -1,0 +1,831 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=cbc13ed9b6dfa3d4 ===
+Gold sentences and facts:
+Sentence 0: Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.
+  Fact 0.0: GPT-4 is more likely to follow the instructions of 'jailbreaking' prompts.
+  Fact 0.1: The co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text.
+Sentence 1: Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war.
+  Fact 1.0: The entity's earlier actions were focused on concerns about the spread of illegal content.
+  Fact 1.1: The entity's earlier actions were focused on concerns about the spread of disinformation related to the Israel-Hamas war.
+
+Retrieved items:
+<item 1>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Per the Commission, the EU’s investigation of X focuses on the following areas and issues:
+
+Compliance with DSA obligations related to countering the dissemination of illegal content in the EU — “ notably in relation to the risk assessment and
+mitigation measures adopted by X to counter the dissemination of illegal content in the EU, as well as the functioning of the notice and action mechanism for
+illegal content in the EU mandated by the DSA, including in light of X’s content moderation resources
+
+— “ The effectiveness of measures taken by X to combat info manipulation — with a focus on the effectiveness of its “Community Notes” system of crowdsourcing
+fact-checking to aggregated views of users, who may vote to label disputed tweets with additional context.
+</item 1>
+
+<item 2>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+The EU also said then it was looking at X’s compliance across a number of areas, including policies and practices regarding notices on illegal content,
+complaint handling, risk assessment and measures to mitigate the risks identified — and it gave X until the end of October to respond.
+
+“On the basis of the preliminary investigation conducted so far, including on the basis of an analysis of the risk assessment report submitted by X in
+September, X’s Transparency report published on 3 November, and X’s replies to a formal request for information, which, among others, concerned the
+dissemination of illegal content in the context of Hamas’ terrorist attacks against Israel, the Commission has decided to open formal infringement proceedings
+against X under the Digital Services Act,” the EU said today.
+</item 2>
+
+<item 3>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+EU turns up the heat on X over illegal content in wake of Israel-Hamas war
+
+The European Union is cranking up the heat on Elon Musk-owned X. Late Thursday, the Commission sent the company a formal request for more information — after
+issuing a public warning Wednesday about reports that illegal content and disinformation targeting the Israel-Hamas war is circulating on the platform, and
+Twitter’s CEO sending a high-level (non specific) response to that warning.
+
+The move could prefigure the opening of a formal investigation of X under the bloc’s content moderation rulebook, the Digital Services Act (DSA). If the
+Commission moves ahead on that, it will be the first investigation opened under the DSA since a compliance deadline for so called “very large online platforms”
+(aka VLOPs) kicked in this summer.
+
+Non-compliance under DSA rules, meanwhile, could trigger fines of up to 6% of annual turnover, plus potential blocking of a service for repeated infringements.
+X owner Elon Musk last projected revenues of about $3 billion for this year.
+</item 3>
+
+<item 4>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+On Wednesday, in an “urgent” letter to Musk, the EU’s internal market commissioner Thierry Breton said the bloc had seen “indications” from “qualified sources”
+that X is being used to disseminate illegal content and disinformation in the EU” following Saturday’s attacks — before reminding X of the DSA’s “very precise
+obligations” vis-à-vis content moderation.
+
+“When you receive notices of illegal content in the EU, you must be timely, diligent and objective in taking action and removing the relevant content when
+warranted,” Breton also warned then.
+
+In its latest press release, the EU said it has sent X a formal request for information under the DSA.
+
+“This request follows indications received by the Commission services of the alleged spreading of illegal content and disinformation, in particular the
+spreading of terrorist and violent content and hate speech,” it wrote, adding that the ask also addresses other aspects of DSA compliance.
+
+The pan-EU regulation puts a series of governance obligations on digital services and platforms with the aim of ensuring companies are responding to reports of
+illegal content.
+</item 4>
+
+<item 5>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+It’s official! Elon Musk’s X marks the spot of the first confirmed investigation opened by the European Union under its rebooted digital rulebook, the Digital
+Services Act (DSA).
+
+Announcing the opening of a “formal proceeding” today, the European Commission said the investigation will look at whether the social networking platform may
+have breached rules linked to risk management, content moderation, dark patterns, advertising transparency and data access for researchers.
+
+The opening of a formal DSA investigation on X comes hard on the heels of a complaint against X’s adtech by privacy rights group, noyb — although today’s formal
+proceeding is unlikely to be directly linked as the Commission has been probing the platform for months via a flurry of requests for information. Its earlier
+actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war.
+
+Back in October the Commission sent Musk’s company an “urgent” formal request for information about how it was responding to information risks arising out of
+the conflict.
+</item 5>
+
+<item 6>
+EU fires urgent warning at Elon Musk’s X over illegal content and disinformation following Hamas attacks (TechCrunch, 2023-10-10T23:47:38+00:00)
+A rule of law clash between Musk and the EU has looked increasingly inevitable in recent months — and, indeed, has been predicted by some industry watchers
+since rumors of the erratic billionaire’s plan to take over Twitter emerged last year.
+
+Reminder: Penalties for confirmed breaches of the DSA can be as high as 6% of global annual turnover. The bloc also has powers, in extremis, which could result
+in access to X being shut off in the region if the platform repeatedly fails to correct course. So if Musk fails to satisfy EU regulators, he could face serious
+consequences for what remains a highly indebted business.
+
+In his letter to Musk, Breton writes that the EU has “indications” that X is being used to disseminate illegal content and disinformation in the EU” following
+Saturday’s attacks. He then goes on to remind the company of the DSA’s “very precise obligations” vis-à-vis content moderation.
+</item 6>
+
+<item 7>
+After warning, the EU opens investigation into X over alleged disinformation (TechCrunch, 2023-10-13T00:38:56+00:00)
+X owner Elon Musk last projected revenues of about $3 billion for this year. It’s anyone’s guess if that’s accurate now, but as an example, that would result in
+a fine of up to $180 million.
+
+Indirectly, an investigation will also be a key way for the public to have significantly more transparency around how X is being used (and abused): since Musk
+took Twitter private, the company no longer produces quarterly earnings reports and is not held to account as closely as a result.
+
+EU officials confirmed to TechCrunch that an investigation has not been taken at this point. Clearly, though, yesterday’s development (and the pace at which
+regulators are moving) is a strong indication of the bloc’s direction of travel.
+
+The Commission said it is looking at X’s compliance with the DSA across a number of areas — including with regard to its policies and practices regarding
+notices on illegal content; complaint handling; risk assessment and measures to mitigate the risks identified.
+</item 7>
+
+<item 8>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+The EU said the probe will also look at the effectiveness of “related policies mitigating risks to civic discourse and electoral processes”
+
+— with a focus on the effectiveness of its “Community Notes” system of crowdsourcing fact-checking to aggregated views of users, who may vote to label disputed
+tweets with additional context. The EU said the probe will also look at the Transparency requirements — with a focus on “suspected shortcomings” by X in giving
+researchers access to publicly accessible data as mandated by Article 40 of the DSA, and suspected shortcomings in its ads repository (aka the ads transparency
+library the regulation also mandates)
+
+— with a focus on “suspected shortcomings” by X in giving researchers access to publicly accessible data as mandated by Article 40 of the DSA, and suspected
+shortcomings in its ads repository (aka the ads transparency library the regulation also mandates) Suspected deceptive design elements in X’s user interface —
+“notably in relation to checkmarks linked to certain subscription products, the so-called Blue checks”
+
+“If proven,
+</item 8>
+
+<item 9>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+EU regulators are also set to assess Musk & co’s claims that replacing a formal content moderation function with crowdsourced opinions is a valid approach to
+tackling diverse information risks; and, consequently, to look into how much Musk’s gutting of content moderation teams and processes has cost X’s users in
+terms of harm exposure.
+
+To say the Commission’s investigation looks fascinating and timely is an understatement.
+
+EU lawmakers can certainly bask in the glow of being prepared for the possibility of an erratic billionaire running a wrecking ball through a major social
+platform. But of course they will need to follow through — and it’s clear the real work is just starting. So this probe looks set to be a test of how much
+stomach the EU has to actually enforce the rules it loves to lay down on paper.
+
+The investigation may also test Musk’s mettle for what could be an expensive head-on clash with EU regulators.
+</item 9>
+
+<item 10>
+Elon Musk’s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design (TechCrunch, 2023-12-18T13:04:56+00:00)
+Confirmed breaches of the online governance regime can face a range of major sanctions, including fines of up to 6% of global annual turnover.
+
+The EU can also apply interim measures where it believes there’s a risk of serious harm for users and may even seek to have access to infringing services
+temporarily blocked. Although its announcement today is careful to caveat the development by affirming no conclusions have yet been reached.
+
+There is also no confirmed timeline for the probe to conclude. But the fact of it being opened means other tools are put within reach of regulators and could be
+applied if the EU sees the need to act quickly — such as the aforementioned interim measures. So the Commission’s official scrutiny of X could have real world
+implications for how the platform operates sooner rather than later.
+</item 10>
+=== END ITEM id=cbc13ed9b6dfa3d4 ===
+
+=== ITEM id=16b1c206eaa074fd ===
+Gold sentences and facts:
+Sentence 0: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 0.0: SBF, as he is known, has pleaded not guilty to some seven charges.
+  Fact 0.1: The charges SBF pleaded not guilty to are charges of fraud and conspiracy.
+Sentence 1: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 1.0: Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money.
+  Fact 1.1: The question asked whether Bankman-Fried had been told about that money in words or in substance.
+  Fact 1.2: Bankman-Fried did not admit he had been told about that money until Judge Lewis Kaplan intervened.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 1>
+
+<item 2>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced cryptocurrency entrepreneur accused of
+orchestrating “one of the biggest financial frauds in American history”: the multibillion-dollar collapse of FTX, the crypto exchange he founded and led.
+
+SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy. But, as we wait to hear both his version and the government’s version
+of what happened, there will be another tale recounting how things played out: “Going Infinite,” a book by Michael Lewis chronicling the rise and fall of SBF,
+is set to debut on the first day of the trial.
+
+The episode has fired up a lot of people, indignant at what they feel was too-easy treatment for someone who many believe brought down the whole crypto house.
+
+60 Minutes got rightly community noted here.
+</item 2>
+
+<item 3>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Michael Lewis
+
+Friendships and lucrative marketing deals followed, with sports icons like Tom Brady (who was paid $55 million) and Steph Curry ($35 million) to “lend FTX
+legitimacy and edge.” Even Anna Wintour, the icy fashion doyenne, was in contact: She reached out, over what must have been a hell of a Zoom meeting, to ask SBF
+— whose preferred get-up is/was wildly curly hair, t-shirts and cargo shorts — to sponsor her very fancy Met Costume Ball. Desperate times!
+
+As trades on FTX climbed up to $15 billion/day, SBF, of course, also got tied up in the corridors of political power.
+
+Lewis said that he met with the young crypto king ahead of him seeing Mitch McConnell to discuss how he could fund political candidates who were looking to
+offset Trump’s influence in the Republican Party.
+</item 3>
+
+<item 4>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+We find out that the gravitational pull of cargo shorts was a tough one to pull away from: The suit SBF brought to wear to the McConnell meeting was tightly
+balled up under his arm with his dress shoes falling out of the middle of the bundle. We’ve all been there, Sam. (Well, perhaps not Anna.)
+
+Lewis also claimed that SBF had concocted a plan to buy off Trump, to get him not to run again for president.
+
+“Like how much would it take to get an answer?” Lewis recounted. “There was a number that was kicking around… this was $5 billion.” He said that Sam was never
+sure whether that figure came directly from Trump. And no, we don’t find out if he ever did wire anything to camp Trump. That would be a wonderful detail to get
+teased out in the trial, though.
+</item 4>
+
+<item 5>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Yet Lewis’s picture is a little less stark from the looks of the 60 Minutes episode. In fact, I’d say it’s not that clear at all if SBF is getting a kicking or
+a coat of polish in this interview when you consider Lewis’s celebration of SBF’s self-proclaimed (yet not quite proven) idealism, and the “Bankman-Fried-shaped
+hold in the world” that exists.
+
+You could say that confused message is very apt for cryptocurrency, where the process by which it works is forever murky and often misrepresented, at least to
+most people.
+
+If SBF didn’t intentionally aim to cynically defraud a bunch of people, in the long run he became one of the many who disastrously failed to manage the risk
+inherent in crypto speculation. That’s ultimately what happened with FTX, as financial discrepancies racked up between the exchange and its sister company
+Alameda Research (a trader itself on the platform).
+</item 5>
+
+<item 6>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+That would be a wonderful detail to get teased out in the trial, though.
+
+And lest you think Biden and the Democrats have their hands clean of SBF… think again: He also looked to back candidates on that side of the aisle. You never
+know when you might need a friend!
+
+The hard crash
+
+All of that activity, of course, came to a crashing end: The value of cryptocurrencies on FTX was not banked to much more than speculation and the promise of
+higher value, and so when those valuations fell, they fell very, very hard.
+
+What we already knew was that SBF has been denied bail; his name is mud (or much worse) among those who have lost money in Alameda or FTX; and those who might
+not have had positions in these still blame him for other crypto woes because he set off a ripple effect.
+
+“He doesn’t come off good at all here. You can tell he had no experience in management or handling such big undertakings.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 7>
+
+<item 8>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 8>
+
+<item 9>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+You can tell he had no experience in management or handling such big undertakings. I think he was in way over his head,” Ayelet Noff, the CEO and founder of
+public relations firm Sliced Brand, which represents a number of cryptocurrency businesses, told TechCrunch. “I think he does a disservice to the whole
+community. He pushed back crypto adoption by at least a year or two. Each time one of these things happens it brings back the whole market. It’s two steps
+forward and one step back.”
+
+The Michael Lewis interview is infuriating. SBF was a scumbag, and now we need to hear about his “tragic fall” in the MSM because Sam told them he was an
+“effective altruist” and people like Michael Lewis were so far up his ass they couldn’t tell truth from fiction.
+</item 9>
+
+<item 10>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+The failure is indisputable: The jury will now have to decide how criminal, and how far, his intentions were around that.
+</item 10>
+=== END ITEM id=16b1c206eaa074fd ===
+
+=== ITEM id=7f2dda3d2648d0dd ===
+Gold sentences and facts:
+Sentence 0: Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue.
+  Fact 0.0: Wang testified that Wang heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account.
+  Fact 0.1: The withdrawals were okay as long as the amount was less than FTX's total trading revenue.
+Sentence 1: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 1.0: The answer to the question ultimately lies with the jury.
+  Fact 1.1: The jury was selected on Wednesday morning.
+  Fact 1.2: The jury was selected before lawyers for the government.
+  Fact 1.3: Bankman-Fried swapped two very different stories of the former crypto mogul's sudden rise.
+  Fact 1.4: Bankman-Fried swapped two very different stories of the former crypto mogul's almost instantaneous fall.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power, and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 1>
+
+<item 2>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 2>
+
+<item 3>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+In late 2019, Alameda had a negative balance on FTX. Because they sat in an open-plan office, Wang heard a trader ask Bankman-Fried if it was okay to keep
+withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue. He was the CEO of both companies
+at the time.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses.
+
+The amount that Alameda was allowed to go negative began to creep up. Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by
+about $200 million, which was more than the $150 million FTX made in revenue. That had to mean Alameda was taking customer money. It surprised him and he says
+he discussed it with Bankman-Fried, who told him that he just needed to take into account the value of FTT. Wang said he trusted Bankman-Fried’s judgment and
+didn’t pursue the issue further.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+It is a thankless task to cross-examine a customer whose money is gone
+
+In November 2022, things went bad for Julliard. He followed Bankman-Fried on Twitter, and read aloud the “FTX is fine. Assets are fine” tweets, along with “FTX
+has enough to cover all client holdings. We don’t invest client assets” and a few others, which gave Julliard the impression that his money was there — the
+problem might have been technical (anti-spam measures) or regulatory. When he tried to get his money out on November 8th, it was too late. We saw screenshots of
+his withdrawal attempts: $20,000 USD and about 4 Bitcoin, which were worth about $20,000 at the time: about $100,000 money, inaccessible.
+
+It is a thankless task to cross-examine a customer whose money is gone, but Cohen tried anyway.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+</item 9>
+
+<item 10>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 10>
+=== END ITEM id=7f2dda3d2648d0dd ===
+
+=== ITEM id=b9811da03668bd43 ===
+Gold sentences and facts:
+Sentence 0: “The company’s approach also raises concerns regarding the GDPR,” Pachl further noted.
+  Fact 0.0: The company's approach raises concerns regarding the GDPR.
+  Fact 0.1: Pachl further noted this.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift back to the app stores the burden of monitoring teens' social media usage.
+  Fact 1.1: Meta wants to shift back to parents the burden of monitoring teens' social media usage.
+Sentence 2: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 2.0: Al Saadi said that her frustration with Meta is common among Palestinians.
+  Fact 2.1: Al Saadi said that her frustration with Meta is common among Palestinians in occupied territories.
+  Fact 2.2: Al Saadi said that her frustration with Meta is common among Palestinians across the diaspora.
+
+Retrieved items:
+<item 1>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Most recently, Instagram users accused Meta of “shadowbanning” their Stories about Palestine.
+
+It’s the latest in a lengthy history of incidents on Meta platforms that reflect an inherent bias against Palestinian users in its processes, as documented by
+years of complaints from both inside and outside the company. The company may not intentionally suppress specific communities, but its moderation practices
+often disproportionately affect Palestinian users.
+
+For instance, Meta struggles to navigate the cultural and linguistic nuances of Arabic, a language with over 25 dialects, and has been criticized for neglecting
+to adequately diversify its language resources. The company’s black-and-white policies often preclude it from effectively moderating any nuanced topic, like
+content that discusses violence without condoning it. Advocacy groups have also raised concerns that Meta’s partnerships with government agencies, such as the
+Israeli Cyber Unit, politically influence the platform’s policy decisions.
+</item 1>
+
+<item 2>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“It feeds into the bias against Palestinian narrative genuinely. It really takes the balance against Palestinians in a situation where there’s a huge asymmetry
+of power.”
+
+A history of suppression
+
+Content about Palestine is disproportionately scrutinized, as demonstrated during the last severe violent outbreak between Hamas and Israel two years ago. Amid
+the violence following the May 2021 court ruling to evict Palestinian families from Sheikh Jarrah, a neighborhood in occupied East Jerusalem, users across
+Facebook and Instagram accused Meta of taking down posts and suspending accounts that voiced support for Palestinians.
+
+The digital rights nonprofit Electronic Frontier Foundation (EFF) described Meta’s actions in 2021 as “systemic censorship of Palestinian voices.” In its 2022
+report of Palestinian digital rights, 7amleh said that Meta is “still the most restricting company” compared to other social media giants in the extent of its
+moderation of the Palestinian digital space.
+</item 2>
+
+<item 3>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“The first is with their legal occupier. The second war is with the entire Western media landscape, and when I say the entire landscape, I mean social media.”
+
+Meta’s alleged shadowbanning
+
+Instagram users accuse Meta of suppressing more than just Stories related to Palestine.
+
+Creators say engagement on their posts tanked specifically after they publicly condemned Israel’s response to the Hamas attack as excessively violent. Some,
+like Jabr, say they were restricted from posting or going live, while others say Instagram flagged their content as “sensitive,” limiting its reach. Users also
+allege their posts were flagged as “inappropriate” and removed, even if the content adhered to Instagram’s Community Guidelines.
+
+Meta’s representative didn’t address the other accusations of censorship beyond just Story visibility and did not respond to TechCrunch’s follow-up questions.
+When asked for comment, Stone directed TechCrunch to Meta’s updated newsroom post, which said Meta identified and fixed a “bug” that prevented users from going
+live.
+</item 3>
+
+<item 4>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+At the recommendation of its Oversight Board, Meta conducted a third-party due diligence report about the platform’s moderation during the May 2021 conflict.
+The report found that Arabic content was flagged as potentially violating at significantly higher rates than Hebrew content was, and was more likely to be
+erroneously removed. The report noted that Meta’s moderation system may not be as precise for Arabic content as it was for Hebrew content, because the latter is
+a “more standardized language,” and suggested that reviewers may lack the linguistic and cultural competence to understand less common Arabic dialects like
+Palestinian Arabic.
+
+Has anything improved?
+
+Meta committed to implementing policy changes based on the report’s recommendations, such as updating its keywords associated with dangerous organizations,
+disclosing government requests to remove content and launching a hostile speech classifier for Hebrew content. Abukhater added that Meta has improved its
+response to harassment, at least in comparison to other social media platforms like X (formerly Twitter).
+</item 4>
+
+<item 5>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+The former employee had provided to news outlets a treasure trove of documents that appeared to indicate Meta understood the harms it was causing — including
+things like body image issues among teens — but didn’t take action. Instagram head Adam Mosseri was later hauled before Congress in December 2021 to defend the
+app’s teen safety record, but so far, legislators have not come to any decision about how to regulate teen usage of these platforms.
+
+Instead, Meta began regulating itself, adding new defaults and features that would restrict teens’ access to content on its apps, protect their privacy and
+limit ad targeting to teens, as well as introducing parental controls.
+
+In more recent weeks, a second Meta whistleblower, Arturo Bejar, has come forward to express concerns that Instagram’s approach to protecting teens wasn’t
+working to keep them safe from sexual predators and unwanted sexual advances and harassment. Hired as a consultant on the matter, Bejar eventually blew the
+whistle on Meta after seeing issues remain unresolved following years of work.
+</item 5>
+
+<item 6>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Although harassment and abuse are still rampant on Instagram and Facebook, he said, the company has been responsive to suspending accounts with patterns of
+targeting other users.
+
+The company has also made more contact with regional Palestinian organizations since 2021, York added, but it’s been slow to implement recommendations from EFF
+and other advocacy groups. It’s “very clear” that Meta is not putting the same resources behind Arabic and other non-English languages, York said, compared to
+the attention Meta gives to countries that have the most regulatory pressure. Moderation of English and other European languages tends to be more comprehensive,
+for example, because the EU enforces the Digital Services Act.
+
+In Meta’s response to the report, Miranda Sissons, the company’s director of human rights, said that Meta was “assessing the feasibility” of reviewing Arabic
+content by dialect. Sissons said that the company has “large and diverse teams” who understand “local cultural context across the region,” including in
+Palestine.
+</item 6>
+
+<item 7>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents. In a blog post published today, Meta’s
+global head of Safety, Antigone Davis, argues that parents should be responsible for approving their teens’ app downloads and staked Meta’s position in
+supporting federal legislation that would require parental approval for app downloads for users under the age of 16.
+
+Guiding its reasoning, Meta pointed to recent Pew research that indicated that 81% of U.S. adults were in favor of requiring parental consent for teens to
+create social media accounts. While this may speak to popular opinion around parental sentiment, it doesn’t mean that parents have thought through who should be
+responsible for preventing or allowing teens’ access to social media, or how those apps should operate to protect teens.
+
+A coalition of 42 states and D.C. are currently suing Meta over its harms to teens and young users, in part referencing findings from Meta whistleblower Frances
+Haugen.
+</item 7>
+
+<item 8>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+During the last violent outbreak between Hamas and Israel in 2021, a report commissioned by Meta and conducted by a third party concluded that the company’s
+actions had an “adverse human rights impact” on Palestinian users’ right to freedom of expression and political participation.
+
+Meta communications director Andy Stone declined to comment on the record, and pointed TechCrunch to Meta’s newsroom post about the conflict, which was updated
+on Oct. 18 with a statement addressing the shadowbanning claims.
+
+“Our policies are designed to keep people safe on our apps while giving everyone a voice,” the post stated. “We apply these policies equally around the world
+and there is no truth to the suggestion that we are deliberately suppressing voice … We can make errors and that is why there is an appeals process for people
+to tell us when they think we have made the wrong decision, so we can look into it.”
+
+The belief that Meta shadowbans, or limits the visibility of, content about Palestine is not new.
+</item 8>
+
+<item 9>
+Meta to offer ad-free subscription in Europe in bid to keep tracking other users (TechCrunch, 2023-10-30T13:52:00+00:00)
+Meta is to offer an ad-free subscription version of Facebook and Instagram in the European Union, EEA (European Economic Area) and Switzerland, confirming the
+core of a report in the WSJ earlier this month. The new ad-free subscription will be available from next month, per a Meta blog post.
+
+The move follows years of privacy litigation, enforcements and court rulings in the EU — which have culminated in a situation where Meta can no longer claim a
+contractual right (nor legitimate interest) to track and profile users for ad targeting. (Although, at the time of writing, it is still doing the latter —
+meaning it is technically operating without a proper legal basis. But this summer Meta announced an intention to switch to consent.)
+
+Under regional data protection law the only available basis left for Meta’s tracking and profiling ad business is to obtain freely given consent from users.
+</item 9>
+
+<item 10>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+“And so I think that is what is the most problematic right now about that particular rule, and the way that it’s enforced.”
+
+Over the 13 days leading up to the ceasefire between Hamas and Israel, 7amleh documented more than 500 reports of Palestinian “digital rights violations,”
+including the removal and restriction of content, hashtags and accounts related to the conflict.
+
+Meta blamed some of the instances of perceived censorship to technical issues, like one that prevented users in Palestine and Colombia from posting Instagram
+Stories. It attributed others to human error, like blocking the hashtag for Al-Aqsa Mosque, the holy site where Israeli police clashed with Ramadan worshippers,
+because it was mistaken for a terrorist organization. The company also blocked journalists in Gaza from WhatsApp without explanation.
+
+The same month, a group of Facebook employees filed internal complaints accusing the company of bias against Arab and Muslim users. In internal posts obtained
+by BuzzFeed News, an employee attributed the bias to “years and years of implementing policies that just don’t scale globally.”
+</item 10>
+=== END ITEM id=b9811da03668bd43 ===
+
+=== ITEM id=e363d413f2160eb7 ===
+Gold sentences and facts:
+Sentence 0: “It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL.
+  Fact 0.0: Davidson said the player was not playing in the NHL in the last few years.
+  Fact 0.1: Davidson said the level of performance showed the player could control a game and dominate a game in junior.
+  Fact 0.2: Davidson said this performance indicated the player was going to be able to do that at some point in the NHL.
+Sentence 1: There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others.
+  Fact 1.0: The player helped guide more than a few future NHL stalwarts at that place.
+  Fact 1.1: Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala were among the future NHL stalwarts guided there.
+  Fact 1.2: Many other future NHL stalwarts besides those named were also guided there.
+
+Retrieved items:
+<item 1>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+“So many players pull the puck in but can’t get the puck to release from under their body. His footwork is so underrated in that aspect. If you watch his front
+leg, at times it’s literally in the air at release — most have their back leg in the air at release. When he transfers his weight, he actually clears space for
+his hands to get tighter because he’s not afraid to actually lunge into the shot.”
+
+A fourth shooting coach, who hasn’t worked with Bedard and also requested anonymity because he works for another NHL club, expressed a little more hesitancy.
+
+Advertisement
+
+“I’m in the minority I’m sure, but I am very curious to see how well his trademark shooting style works at this level,” the coach said. “He really likes to pull
+pucks right into his feet.
+</item 1>
+
+<item 2>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+If there’s one thing Tim Turk knows, it’s shooting. A self-described “shooting and scoring coach,” Turk has more than two decades of experience working with NHL
+stars, national federations and half a dozen NHL teams.
+
+Turk had no idea who Bedard was when he fielded a call from agent Greg Landry of Newport Sports asking him what he was doing tomorrow.
+
+“Tomorrow?” he said. “I’m booked up a year in advance.”
+
+“We have these two players coming in from out west and we want you to see them,” Landry said.
+
+“Listen, I’m booked up,” Turk said again.
+
+“You have to see them,” Landry insisted.
+
+After moving around his schedule, Turk found himself at Gary Roberts’ personal rink in Uxbridge, Ontario.
+
+“Hey guys, I’m Tim Turk,” he said as he stepped into the small locker room.
+
+“My name’s Nate,” said the redhead, extending a hand.
+
+“My name’s Connor,” said the other, standing shorter and extending his.
+</item 2>
+
+<item 3>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+What is it, really, about Connor Bedard’s shot — a shot that, though he’s just 18 years old, has for years been talked about as if he has patented it — that
+makes it so dangerous and unique?
+
+What’s the nerdy science of it, from his feet up to his knees, hips, hands and head? How does he prep, shape and let it go? What does it look like to goalies,
+and to professional shooting coaches, those who’ve taught him — or, more accurately, watched him after he taught himself — and had to stop him? The Athletic
+spoke with five NHL shooting and skills coaches, his teammates, past opponents and him to try to take apart, piece by piece, “The Bedard.”
+
+Advertisement
+
+Their intel and stories help frame the NHL’s brightest young star’s signature skill.
+
+If there’s one thing Tim Turk knows, it’s shooting.
+</item 3>
+
+<item 4>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+For one, he learned to utilize his teammates more. He accumulated plenty of shots on net early in the season, but they were often from distance and more
+individualistic chances. Then, he scored his first NHL goal on a wraparound and his next three goals off passes from teammates.
+
+Advertisement
+
+“Look, I’m sure he’ll figure out the one-on-one and how to score that way or create chances that way,” Blackhawks general manager Kyle Davidson said. “There is
+also an element of working off your teammates. You are in the NHL, so everyone is a pretty good player and you’re able to create using more than just yourself.
+I think he’s figured that out.”
+
+Bedard found more success on the Blackhawks’ last road trip. He left Chicago with five goals in 11 games and returned from Florida with nine goals in 13 games,
+scoring twice against the Tampa Bay Lightning and again against the Panthers.
+
+Bedard wasn’t so reliant on teammates on those goals, either.
+</item 4>
+
+<item 5>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+9 pick) went first, and Turk could tell he was a talented and hard-working player with a good shot and real promise.
+
+Then, on Connor’s turn, Turk placed him in a position and watched how he got the puck ready to shoot. Only Connor didn’t stickhandle and prepare for the shot,
+he just took the puck and shot it right away.
+
+After watching him run through the same number of shots as Nate did, Turk spoke for the first time.
+
+“Timeout one second, just give me a second here, I’m just trying to see what you’re doing so I’m going to have you take an extra few shots so that I can analyze
+where the puck’s starting and where it’s finishing,” he said.
+
+Another round later, he knew that this Connor kid, whose last name he still didn’t know and who was then 16, was very different from even his high-end peers
+simply by his proficiency in shooting from a “frontal position.”
+</item 5>
+
+<item 6>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+“To me, when he takes a shot, it looks like he just bends down, picks it up with his hand and places it where he wants to.
+
+“He believes that ‘Hey, f— it, the puck is only two and a half inches wide, I can put it wherever I want.'”
+
+Today, Turk would take Bedard’s shot against anyone’s.
+
+Advertisement
+
+“On a shot release basis only, if I had to bet on who could get the puck off the quickest, with the most deception, with optimal speed, power and accuracy based
+on a starting point to a finishing point, I’m picking Connor Bedard over Auston Matthews,” Turk said. “And I’m not taking anything away from Auston. It’s just a
+little bit different because one’s a righty, one’s a lefty and one’s got a little bit of a higher-angle pull-in change.”
+
+If there’s one thing Nick Quinn wants people to know about “The Bedard,” it’s that it isn’t just some natural gift.
+</item 6>
+
+<item 7>
+Wild fire HC Dean Evason, hire John Hynes as replacement (Yardbarker, 2023-11-27T23:45:08+00:00)
+The 59-year-old Evason began his coaching career with the WHL’s Calgary Hitmen as an assistant in 1998-99 after finishing out his playing career in Germany,
+working his way up the junior hockey ranks over the next handful of seasons. His first NHL job came courtesy of an assistant role with the Capitals immediately
+after the 2004-05 lockout, coaching Alex Ovechkin in his first seven NHL seasons.
+
+After departing Washington in 2012, Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the
+Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor
+Arvidsson, and Kevin Fiala, among many others. After joining the Wild, he earned a promotion to head coach within two seasons when the Wild fired Bruce Boudreau
+late in the 2019-20 campaign.
+</item 7>
+
+<item 8>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+Bedard wasn’t so reliant on teammates on those goals, either. They were more about the work he’s putting in on the other side of the puck.
+
+“Even in practice, we’ve talked to him about maybe tracking harder and attacking pucks on the forecheck and showing him a couple clips,” Richardson said. “Ten,
+12 games in, he’s really figuring things out and realizes — why sit back and let things come to him? Go get it.”
+
+None of this is surprising to anyone involved. Bedard doesn’t show it if he impresses himself. And as grateful as the Blackhawks are to have drafted Bedard,
+this is what they expected. This is why teams lined up to take losses last season.
+
+“It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game
+in junior — it indicated he was going to be able to do that at some point in the NHL.
+</item 8>
+
+<item 9>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+“My name’s Connor,” said the other, standing shorter and extending his.
+
+“All right, well we’re just going to go out and I’m going to do an evaluation on you and do some shooting and have some fun, and I’ll make suggestions but I’m
+not here to change anything,” Turk said, giving the two boys his usual spiel and thinking nothing of it.
+
+That evaluation is what he calls an “NHL protocol observation assessment,” which runs new clients through specific drills that allow him to visualize their
+shooting actions from a technical standpoint (he calls each player’s shot “like a fingerprint”).
+
+That starts with Turk throwing some pucks down in the slot and simply asking them to shoot them stationary so he can watch their body formation, hip and
+shoulder positions, spine angles and puck preparation and positioning, paying particular attention to where the puck starts in their stance versus where it
+finishes.
+
+Advertisement
+
+On that day, Nate (Danielson, the Red Wings’ 2023 No.
+</item 9>
+
+<item 10>
+He’s Hockey’s Brightest Young Star. This Is What Makes His Shot So Special. (The New York Times, 2023-11-17T21:47:19+00:00)
+“I can tell you firsthand it didn’t happen by accident. Connor’s worked on this since he was little,” said Quinn, an NHL skills coach who has worked with Bedard
+each summer for several years.
+
+If there’s another, it’s how hard Bedard’s shot is to defend because he doesn’t show you he’s preparing for it.
+
+“As replicated in so many other areas of Connor’s game, it’s the deception and elite multi-tasking that catches opponents off guard,” Quinn said. “Connor’s
+ability to create deception and change the shot angle at top speed is like very few I’ve ever seen. The multi-tasking involved with attempting these shots at
+top speed is far beyond most player’s capabilities.”
+
+Another shooting coach, who requested anonymity for this story because he works for another NHL club, pointed to Bedard’s hands and legs.
+
+“What’s really interesting is how high and left he can get his top hand,” the coach said.
+</item 10>
+=== END ITEM id=e363d413f2160eb7 ===

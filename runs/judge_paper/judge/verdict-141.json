@@ -1,0 +1,61 @@
+[
+{"id": "5e0050381bfb93ce", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "df38a4cb4b261f2a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "0d6a34501c74b96f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "OFFICIAL: Jim Harbaugh suspended for the remaining three regular season games."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Harbaugh reportedly watched the game from the team hotel"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]}
+]},
+{"id": "2ee1a81777ad7eb3", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "aadfca8f2ea81070", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "0d97597f4d3cc29c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "he told Fox News Digital"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+]}
+]

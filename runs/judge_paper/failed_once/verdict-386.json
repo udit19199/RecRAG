@@ -1,0 +1,62 @@
+[
+  {"id": "889af2af724e9369", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4d6b21c66913dc74", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]}
+  ]},
+  {"id": "2ad298a08ff29ec2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2ad125da7c7ac617", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Apple defends Google Search deal in court"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "d7e16d0db0318cd0", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 4, "quote": "Caroline Ellison, Bankman-Fried’s ex-girlfriend."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []}
+  ]}
+]

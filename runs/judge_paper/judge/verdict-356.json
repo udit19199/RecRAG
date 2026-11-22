@@ -1,0 +1,45 @@
+[
+{"id": "024a23f2cbc335af", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "There were rumors the two were dating for weeks, and those talks only intensified"}, {"item": 3, "quote": "cheering emphatically when No. 87 scored a touchdown in the first game she"}, {"item": 3, "quote": "She is once again at Arrowhead Stadium"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "8111f846974f5e47", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "In the long term, scientists also point to a number of recent developments"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "which have raised hopes that it may be possible to tackle dementia more directly and"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "raised hopes that it may be possible to tackle dementia more directly and effectively"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "while her own daughters were babies"}]}
+]},
+{"id": "764a9a4fcbec732f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "5f8d64a23e96519f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents"}]}
+]},
+{"id": "1cfa98277d8a2df5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "the generation of players and leaders that will call time on their international careers at week’s end"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]}
+]

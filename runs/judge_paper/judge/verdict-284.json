@@ -1,0 +1,65 @@
+[
+  {"id": "8a548eb0e3143d84", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "They use their store, their payments"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "They use their store, their payments"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "they force developers to all have the same terms"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "they force OEMs and carriers to all have the same terms"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 9, "quote": "they force OEMs and carriers to all have the same terms"}]}
+  ]},
+  {"id": "3e50b4d0604d70ad", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+  ]},
+  {"id": "3c2fc1ead6c931f4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1)"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8)"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8)"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8)"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Hope, who is playing an exemplary innings"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary."}]}
+  ]},
+  {"id": "625c926a8bae789a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]}
+  ]},
+  {"id": "487fdfb9f1620064", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+  ]},
+  {"id": "537201429a9a83d7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

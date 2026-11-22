@@ -1,0 +1,46 @@
+[
+  {"id": "1d93a56f0c84a361", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+  ]},
+  {"id": "4c686be7d971c72d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+  ]},
+  {"id": "00dcb23d141fa2d1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "1282c90bcdda3546", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors."}]}
+  ]},
+  {"id": "823bdf979424feb1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

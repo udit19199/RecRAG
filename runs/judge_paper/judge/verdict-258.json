@@ -1,0 +1,53 @@
+[
+{"id": "bad77d33372caa6f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "although Michigan had hoped to block the suspension"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+]},
+{"id": "0fb99d1c3f42bce9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "for the trial of Sam Bankman-Fried"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "Come Tuesday, our eyes will be trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 1, "quote": "has pleaded not-guilty to some seven charges of fraud and conspiracy"}, {"item": 7, "quote": "ahead of a verdict and potential sentencing for seven counts tied to fraud and money laundering"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "e6183f9a07dadc26", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "with Julian Alvarez and Alejandro Garnacho considered the future of the forward line"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "with Julian Alvarez and Alejandro Garnacho considered the future of the forward line"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "2 hours to kickoff"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "A report from well-connected Argentine journalist Gaston Edul"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+]},
+{"id": "722421f86103a7c5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "71bb9e81baca3ebe", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,50 @@
+[
+  {"id": "b0c1c070f59829e2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e0367b7f54bd89e4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4ddcb053c3b4157f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI"}, {"item": 7, "quote": "We probably won’t know the full truth on this for a long time"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or business one."}]},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f420b08c308e2c3d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 10, "quote": "because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "No other customer trading on FTX had “allow_negative” privileges — only Alameda."}]},
+    {"fact": "2.0", "status": "contradicted", "evidence": [{"item": 3, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.”"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "the business practices between the two were reasonable, he argued"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "Alameda acted legally as an FTX customer, payment processor, and market maker"}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 3, "quote": "market maker, or financial entity that acts as a trading partner for customers looking to buy"}, {"item": 3, "quote": "and sell cryptocurrencies."}]}
+  ]},
+  {"id": "373cdaaef8109ccc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]}
+  ]}
+]

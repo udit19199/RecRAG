@@ -1,0 +1,59 @@
+[
+{"id": "18f9b6b1c386d36f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "6f6cbd907d0dba37", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 9, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]}
+]},
+{"id": "cc8555ea5393f759", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "At the time, the music video for the song"}, {"item": 3, "quote": "which featured a woman with blonde hair"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "At the time, the music video for the song"}, {"item": 3, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}]}
+]},
+{"id": "007ed3a9ed98051b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "consider other options if you have the depth."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "With Kenneth Walker III's oblique injury comes opportunity for the rookie"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]}
+]},
+{"id": "85ee87979947395d", "facts": [
+{"fact": "0.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "However, national home prices actually remained stable."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "raising interest rates aggressively to quash inflation."}]},
+{"fact": "0.3", "status": "contradicted", "evidence": [{"item": 5, "quote": "However, national home prices actually remained stable."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "a9201bfb63e319d7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "He will also be tasked with “integrating” the programs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "RA trying to centralise all of the Super Rugby’s high-performance programs."}]}
+]}
+]

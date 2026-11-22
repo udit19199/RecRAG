@@ -1,0 +1,42 @@
+[
+{"id": "900bf14ea347b948", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+]},
+{"id": "9e3a108e33ce12dc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "77fc8860d16a5147", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]}
+]},
+{"id": "07d9f7fb9e4ad883", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "2bf388d5b78c9cee", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]}
+]

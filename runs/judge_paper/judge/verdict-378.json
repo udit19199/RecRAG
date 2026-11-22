@@ -1,0 +1,65 @@
+[
+{"id": "2d27d1910fcbf96c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "You're probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "You're probably starting him if Kenneth Walker III remains out with his oblique injury, but consider other options if you have the depth."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "consider other options if you have the depth."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing yards on the year, replaced Walker as Seattle's top ball carrier."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]}
+]},
+{"id": "7ab4e0edb7f77f7c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "7bbb2bbc2982a8bf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "369671c33748ada1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "talkSPORT will have updates from all the action in Paris as England take on the Springboks from 8:00pm"}, {"item": 8, "quote": "Over in India, England's Cricket World Cup hopes hang by a thread after their latest shock defeat to Afghanistan."}, {"item": 8, "quote": "But victory for England could scarcely be more crucial."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Fast forward four years, and South Africa once again prepare to take on England in an all-or-nothing match to decide which nation gets a shot at World Cup glory — but this time around, the pair meet in the semi-finals of the 2023 tournament, rather than the decider."}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "21b44909becdff23", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 8, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "No other customer trading on FTX had “allow_negative” privileges — only Alameda."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "8e3cc2e06e2f0b96", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]}
+]

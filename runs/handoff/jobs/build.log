@@ -1,34 +1,38 @@
-Traceback (most recent call last):
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/graphrag_retrieval.py", line 259, in _create
-    response = self.client.embeddings.create(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/.venv/lib/python3.12/site-packages/openai/resources/embeddings.py", line 136, in create
-    return self._post(
-           ^^^^^^^^^^^
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1375, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1148, in request
-    raise self._make_status_error_from_response(err.response) from None
-openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Your API key has expired. Create a new API key to continue.', 'type': 'invalid_request_error', 'code': 'expired_secret_key', 'param': None}, 'status': 401}
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/scripts/replay.py", line 183, in <module>
-    main_build()
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/scripts/replay.py", line 134, in main_build
-    lists = evidence_lists(row)
-            ^^^^^^^^^^^^^^^^^^^
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/scripts/replay.py", line 100, in evidence_lists
-    s = score(db, queries[step], g.parse_vector_evidence(content).text)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/scripts/replay.py", line 85, in score
-    q = rag._embedder.embed_query(query)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/graphrag_retrieval.py", line 294, in embed_query
-    vector = self._create([text])[0]
-             ^^^^^^^^^^^^^^^^^^^^
-  File "/Users/uditagarwal19199/Workspace/HPE/RecRAG/graphrag_retrieval.py", line 263, in _create
-    raise EmbeddingsGenerationError(
-neo4j_graphrag.exceptions.EmbeddingsGenerationError: Failed to generate embeddings with OpenAI: Error code: 401 - {'error': {'message': 'Your API key has expired. Create a new API key to continue.', 'type': 'invalid_request_error', 'code': 'expired_secret_key', 'param': None}, 'status': 401}
+A3 1 ok
+A3 2 ok
+A3 3 ok
+A1 1 ok
+A1 2 ok
+A1 3 ok
+{
+ "score checks": 14823,
+ "max score diff x1e6": 651,
+ "A3 picks mismatch": 2,
+ "scores from exact cosine": 11,
+ "A2_graph_top10 r1 evidence changed": 234,
+ "A2_graph_top10 r1 graph rows sent": 0,
+ "A3_picks_no_graph_rows r1 evidence changed": 39,
+ "A3_picks_no_graph_rows r1 graph rows sent": 0,
+ "A2_graph_top10 r2 evidence changed": 228,
+ "A2_graph_top10 r2 graph rows sent": 0,
+ "A3_picks_no_graph_rows r2 evidence changed": 38,
+ "A3_picks_no_graph_rows r2 graph rows sent": 0,
+ "A2_graph_top10 r3 evidence changed": 229,
+ "A2_graph_top10 r3 graph rows sent": 0,
+ "A3_picks_no_graph_rows r3 evidence changed": 43,
+ "A3_picks_no_graph_rows r3 graph rows sent": 0,
+ "A1 picks mismatch": 2,
+ "A0_vector_top10 r1 evidence changed": 229,
+ "A0_vector_top10 r1 graph rows sent": 0,
+ "A0_vector_top10 r2 evidence changed": 223,
+ "A0_vector_top10 r2 graph rows sent": 0,
+ "A0_vector_top10 r3 evidence changed": 220,
+ "A0_vector_top10 r3 graph rows sent": 0,
+ "mismatched rows": [
+  "A3 r1 multihop-rag-952",
+  "A3 r2 multihop-rag-161",
+  "A1 r1 multihop-rag-2366",
+  "A1 r2 multihop-rag-1651"
+ ]
+}
+exit 0

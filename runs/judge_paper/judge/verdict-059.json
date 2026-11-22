@@ -1,0 +1,43 @@
+[
+{"id": "42f5f96a6ab5690d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "66d7d0fca01b2f4f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "7fad4d1a61483da9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season"}, {"item": 6, "quote": "knowing those violations are now on the Big Ten record"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "the alleged in-person scouting and sign-stealing"}, {"item": 6, "quote": "it will be a tough stain to erase knowing those violations are now on the Big Ten record."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "it will be a tough stain to erase knowing those violations are now on the Big Ten record."}]}
+]},
+{"id": "9fe9ce60d77749ca", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "090bcecc57ede04f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

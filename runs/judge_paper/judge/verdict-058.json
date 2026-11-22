@@ -1,0 +1,56 @@
+[
+{"id": "b3a291bcb54447d0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "seven charges of fraud and conspiracy"}, {"item": 6, "quote": "a verdict and potential sentencing for seven counts tied to fraud and money laundering"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "He defrauded sophisticated investors and lenders"}, {"item": 9, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "depicted SBF and his colleagues as in over their heads"}]}
+]},
+{"id": "cef0ced6c0a45d93", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "47121c8f26173371", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]},
+{"id": "aad652c31852be56", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "He’s sat with multiple heads of state to discuss AI’s potential and perils."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "calling attention to the existential dangers future AI could pose"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "We probably won’t know the full truth on this for a long time"}, {"item": 5, "quote": "didn’t produce any revelations beyond banal reassurances"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "This week was Google’s annual hardware event"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "79e8563257a5eeab", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Fed’s main interest rate is at its highest level since 2001"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "the central bank indicated last week it may cut interest rates next year"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "ASX to rise after interest rate hopes boost US shares"}, {"item": 4, "quote": "The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Higher rates and yields slow the economy, hurt prices for investments"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}]}
+]}
+]

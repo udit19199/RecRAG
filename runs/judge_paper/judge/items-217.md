@@ -1,0 +1,929 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=11562f760f61deaf ===
+Gold sentences and facts:
+Sentence 0: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 0.0: The planned argument will attempt to argue that Google restrains competition within two separate markets.
+  Fact 0.1: The two markets include the distribution of apps to Android users.
+  Fact 0.2: The two markets include the market for payment processing solutions for content inside Android apps.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed the article for not meeting its standards.
+  Fact 1.1: The degree to which the article was shared on social media shows just how willing people are to accept foul play on Google's part.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The degree to which the article was boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google's part.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+“Android’s choice and flexibility work well for consumers and developers of all sizes. We look forward to making our case in court as we fight to keep our users
+safe from harm, partner with developers to grow their businesses, and keep the Android ecosystem thriving and healthy for everyone,” reads a Google blog post by
+Wilson White, VP, Government Affairs & Public Policy.
+
+Epic’s lawsuit originally involved Match and several U.S. attorneys general, but Google reached a settlement with the latter last month and with Match last
+week. Epic will now fight the antitrust battle on its own. The lawsuit, held in the U.S. District Court in California’s Northern District, will include
+testimony from a number of Google and Android execs, including CEO Sundar Pichai, and Epic Games CEO Tim Sweeney, as well as Apple, Netflix and other Android
+developers.
+
+Google is also involved in another antitrust lawsuit with the Department of Justice over its alleged search monopoly.
+</item 1>
+
+<item 2>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 2>
+
+<item 3>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+As an example, Epic will point to Activision Blizzard, the owner of King.com and maker of Candy Crush and Call of Duty, as one developer that wanted to go the
+route of opening its own app store. Google and Activision Blizzard then entered into a three-year agreement in January 2020, worth approximately $360 million,
+to keep the developer on Google Play, Epic will argue.
+
+Google, however, will characterize this program as a way to incentivize developers to launch their apps on Android at the same time as they launch on iOS and
+plans to dispute Epic’s claims that it prevented developers from opening their own app stores.
+
+Android allows sideloading
+
+Google will make note that, unlike Apple, it also allows apps to be sideloaded on Android devices — something Epic takes advantage of today. It will note this
+process is streamlined and helps keep users safe.
+</item 3>
+
+<item 4>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic, meanwhile, lost its antitrust battle with Apple and is now asking the Supreme Court to weigh in.
+</item 4>
+
+<item 5>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 5>
+
+<item 6>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 6>
+
+<item 7>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Match may have settled its antitrust lawsuit with Google last week, but Fortnite maker Epic Games is still set to go to trial with the tech giant today,
+November 6, in hopes of convincing a jury that Google engages in anticompetitive behavior with regard to its Android app store, Google Play, and its commission
+structure. This case will differ slightly from Epic’s battle with Apple on the same topic because, this time, Epic can’t allege there’s no other way to load
+apps onto Android devices, as it could with Apple, because Android does allow for sideloading apps. Though Epic will suggest Google makes that process
+cumbersome, the bulk of its arguments will center around what it believes are anticompetitive agreements between Google and device manufacturers and developers.
+
+The precedent Epic’s case will rely on is a Microsoft case where courts found Microsoft to have a monopoly over the operating system and were abusing it, making
+it hard for users to download alternative browsers, like Netscape, on Windows devices.
+</item 7>
+
+<item 8>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+This program, still in pilot testing, is open to all developers who sell apps in the 35 markets where it’s now available, including the U.S., and reduces the
+standard commission by 4% for companies who choose to use their own payment processing solution. Spotify and Bumble were the initial testers for the new system,
+first introduced in November 2022, and Match, as part of its settlement agreement, will also now take advantage of this option.
+
+Google will also argue that its commissions aren’t just tied to payment processing, but rather help it to develop other features and controls to keep Android
+users safe and guide them to discovering new applications, as well as help fund the tools and services developers need to build and grow their apps. Google also
+helps developers reach a broader audience beyond the mobile phone, with support for Android across platforms, ranging from tablets to TVs to autos and more. And
+it will note that 99% of its developers qualify for a commission of 15% or less, based on their revenues.
+</item 8>
+
+<item 9>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 9>
+
+<item 10>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 10>
+=== END ITEM id=11562f760f61deaf ===
+
+=== ITEM id=f88f5448b451be13 ===
+Gold sentences and facts:
+Sentence 0: When he entered free agency, a dozen teams lined up, curious to see if they could meet his eye.
+  Fact 0.0: A player entered free agency.
+  Fact 0.1: A dozen teams lined up when that player entered free agency.
+  Fact 0.2: The teams were curious to see if they could meet that player's eye.
+Sentence 1: As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me.
+  Fact 1.0: The speaker is the player.
+  Fact 1.1: The player explores a system of the Imperium.
+  Fact 1.2: The player has a loyal crew of companions.
+  Fact 1.3: The player makes impactful choices.
+  Fact 1.4: The player determines the fate of those around the player.
+
+Retrieved items:
+<item 1>
+Rogue Trader’s role-playing embraces the brutality and freedom of Warhammer 40K (Polygon, 2023-12-06T13:00:00+00:00)
+“In the grim darkness of the far future, there is only war.” That’s the tagline of Warhammer 40,000, one of the most over-the-top and brutal sci-fi settings
+around. But even in a merciless, brutal dystopia that grinds its people into dust, some get to enjoy being on the top of the food chain. Warhammer 40,000: Rogue
+Trader is about the perils and pleasures of being atop that particular hierarchy.
+
+Rogue Traders in 40K are freelance explorers, scouting the far frontiers of the Imperium of Man. It’s a risky career, but it comes with luxurious rewards:
+agency, freedom, power, and a giant flagship. As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and
+determining the fate of those around me.
+
+Rogue Trader is a computer role-playing game in the vein of Baldur’s Gate 3 or Pillars of Eternity.
+</item 1>
+
+<item 2>
+Rogue Trader’s role-playing embraces the brutality and freedom of Warhammer 40K (Polygon, 2023-12-06T13:00:00+00:00)
+For 40K fans, this is a rare treat — a game that digs past the heroic facade of bolters and battles and taps into the grimdark dystopia that makes this
+particular sci-fi setting so damn compelling.
+
+Warhammer 40,000: Rogue Trader will be released on Dec. 7 on Windows PC. The game was reviewed using a pre-release download code provided by Owlcat Games. Vox
+Media has affiliate partnerships. These do not influence editorial content, though Vox Media may earn commissions for products purchased via affiliate links.
+You can find additional information about Polygon’s ethics policy here .
+</item 2>
+
+<item 3>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+But the fresh grand dame of my tabletop world is Triangle Agency, a gleaming, razor-sharp new TTRPG that feels like a cross between The X-Files, Annihilation,
+and playing Control with the Robert Anton Wilson mod turned on.
+
+In Triangle Agency, you are super-abled agents investigating and stopping ontological anomalies from destroying reality, with mechanics that feel like the
+platonic ideal mix of analytic crunch and grand narrative weirdness. And my god, it is gorgeous, with jaw-dropping art and design that puts it on the same shelf
+as Wanderhome and Mörk Borg. The full game ships early in 2024, but you can get the digital rules and start playing right now, for the low, low price of
+“whatever you think is appropriate.”
+
+Twilight: 2000
+
+Charlie Hall, senior editor, tabletop
+
+I firmly believe that tabletop role-play should always take into account the audience that sits down at the table to play. That’s part of the reason why I hate
+best-of lists for this particular category of games in particular.
+</item 3>
+
+<item 4>
+Rogue Trader’s role-playing embraces the brutality and freedom of Warhammer 40K (Polygon, 2023-12-06T13:00:00+00:00)
+The victory tasted like ash in my mouth after all that frustration.
+
+Voidship combat is another aspect that feels clunky and frustrating. Like the squad-based skirmishes, naval encounters are also turn-based, where positioning is
+ultra important. Space naval battles should feel tense, but instead, I’m mostly annoyed at having to continually rotate my ship and set up my zones of attack. I
+wish I could delegate these annoyances to my Senechal — to delegate the duties of character leveling and ship combat, the better to appreciate all of the things
+Rogue Trader is doing so well.
+
+Rogue Trader is a dense, vast game, and much of it has clearly been crafted with love for the expansive lore of the 40K canon. While there are small annoyances
+and clunky features along the way, the political intrigue, cast of characters, and moral choices have me hooked.
+</item 4>
+
+<item 5>
+Rogue Trader’s role-playing embraces the brutality and freedom of Warhammer 40K (Polygon, 2023-12-06T13:00:00+00:00)
+I can call on them to unlock doors or perform other environmental checks, but they come most in handy in combat.
+
+When I meet opposition, it’s deeply satisfying to control my troops in a turn-based battle. Each fight takes place on a grid; it’s very similar to Baldur’s Gate
+3 or even XCOM 2. Some positions provide cover, while others are out in the open. Friendly fire is also a very real concern. An arc of auto-fire from a bolter,
+or a Navigator’s third eye opening, can harm friend as well as foe. My Rogue Trader is a sniper, and she would be lost without her Senechal taking the front
+lines. There’s a lot of firepower at my disposal, and it’s mostly quite satisfying to use — even if I occasionally shred my poor Senechal with a devastating
+AOE.
+
+I can chat with the companions between battles, learning more about their pasts.
+</item 5>
+
+<item 6>
+Rogue Trader’s role-playing embraces the brutality and freedom of Warhammer 40K (Polygon, 2023-12-06T13:00:00+00:00)
+Dogmatic choices exult the God-Emperor and loathe the mutant and the witch, the Heretical options pursue corruptive power, and the Ionoclast path is the closest
+thing we have to modern-day “good guy” morality.
+
+After the events of the tutorial, my beautiful voidship is run down and my staff is struggling. As the newly anointed Rogue Trader, I have to trek around the
+various planets of the Koronus Expanse to get a new Navigator, fix my ship up, and avoid any major diplomatic incidents with the locals. My voidship is the size
+of a modern city; I’m as much a governor as a captain, and I have to manage the ship, its cargo, and its many occupants.
+
+In the process of getting back on my feet, I uncover a nefarious cult and a deep conspiracy. It’s not an easy job, but I’m blessed with a handful of companions
+from the Imperium to help me out.
+</item 6>
+
+<item 7>
+Rogue Trader’s role-playing embraces the brutality and freedom of Warhammer 40K (Polygon, 2023-12-06T13:00:00+00:00)
+He’s cruel, depraved, and an absolute hoot. Yes, he may flay a few too many people for my tastes, but he’s the best companion to bring to a party.
+
+In the grand scheme of things, this is one of the most complete and detailed explorations of the 40K universe you can find. The game is an homage to the
+Warhammer 40K RPGs from Fantasy Flight Games, including Rogue Trader and Dark Heresy. I spent years as a teenager and young adult poring over these sourcebooks
+(which Rogue Trader is inspired by), learning more about the tiny details of life in the Imperium. Developer Owlcat Games has paid the same attention to every
+detail of the Koronus Expanse. I delve into ancient facilities staffed by tech-priests of the Machine God, the hostile xenos city of Commorragh, or massive
+cities built to honor the God-Emperor of Mankind.
+</item 7>
+
+<item 8>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Players take on the role of soldiers and other hangers-on just trying to make it out alive. The heady mix of dice-driven gunplay and a playing-card-style
+encounter creation makes it easy to run. But the fun begins even before that with character generation, which uses old school randomized tables to simulate an
+entire military career. If you’re looking to get your video gaming buddies around the table for something that doesn’t require a headset or shouting down
+pre-teens in a glitchy public lobby, the all-inclusive starter set comes highly recommended.
+
+Project ECCO
+
+It’s a near-impossible task to get a consistent group together, so solo TTRPGs have become my primary method of gaming. However, the barrier for me is finding a
+game with a balance of narrative and mechanics that isn’t overwhelmingly crunchy, but also isn’t open-ended to the point of choice paralysis. For me, Project
+ECCO found that balance.
+</item 8>
+
+<item 9>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+—Mike Mahardy
+
+How the Polygon top 50 list works
+
+Over the past few weeks, the Polygon staff voted, championed, debated, and ultimately threw up its hands and marveled at the list of mammoths, curiosities,
+puzzle boxes, and black holes that is our top 50 games of 2023. Any video games that were released in 2023, received substantial updates in 2023, or achieved
+renewed cultural relevance in 2023 were eligible for this list. Last year, the cutoff for consideration was Nov. 30. (You’ll notice a certain Firaxis Games
+joint fairly high up our list.) This year, the cutoff was the same. Should we be thoroughly enamored with Warhammer 40,000: Rogue Trader or Avatar: Frontiers of
+Pandora, we’ll make sure they’re considered for next year’s top 50.
+
+Top 50
+
+50. Mr. Sun’s Hatbox
+
+Developer: Kenny Sun
+
+Where to play: Nintendo Switch and Windows PC
+
+Mr.
+</item 9>
+
+<item 10>
+Rogue Trader’s role-playing embraces the brutality and freedom of Warhammer 40K (Polygon, 2023-12-06T13:00:00+00:00)
+I create my custom protagonist, determining stats and bonuses based on my backstory, home world, and so on. I’m then thrust into a high-pressure job interview
+as a potential heir to a Rogue Trader aboard her flagship. Little do we know that there’s a coup in the works, and traitors aboard the ship. After a deadly
+struggle against heretics and demons, I ascend to the position of Rogue Trader. I’m the captain now, and I get to decide how to run my ship.
+
+This is a vast game, with tons of features you’d expect from a CRPG — companions (each with their own narrative paths and conversation trees), top-down
+strategic combat, and branching choices that impact the world around you. I get to make choices all day — in fact, that’s part of the gig of a Rogue Trader.
+Some are more important than others; whenever I get to specific points in the story, I can choose from one of three major paths.
+</item 10>
+=== END ITEM id=f88f5448b451be13 ===
+
+=== ITEM id=cae7a2a83e04bc4b ===
+Gold sentences and facts:
+Sentence 0: Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+  Fact 0.0: A trial hearing took place on Monday.
+  Fact 0.1: The Monday trial hearing revealed many tidbits.
+  Fact 0.2: Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 0.3: Google tried to have Chrome preinstalled on iPhones.
+  Fact 0.4: Google tried to take its default search engine position further.
+  Fact 0.5: The hearing revealed other tidbits in addition to these.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The last roundup reported that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 1.1: The last roundup reported that Google tried to have Chrome preinstalled on iPhones.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google siphons off news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Yahoo was already well behind Google in terms of search technology at that point. But also, Firefox was very well behind Chrome, which ended 2014 with nearly
+50% market share and ended 2017 (when Google got prime default search position on Firefox) at nearly 65% of all web browser usage on desktop: and mobile is even
+more skewed to Chrome. In other words, the number of Firefox users might have been declining for other reasons, although pushing the blame on Yahoo certainly
+works in Google’s favor here!
+
+The trial continues…
+</item 1>
+
+<item 2>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Quick backstory: Yahoo inked a deal with Mozilla way back in 2014 to pay the browser maker $375 million annually to be the default search engine on Firefox. At
+the time, Google was offering $276 million, said Baker. Reader, that was a bad deal.
+
+“I felt strongly that Yahoo was not delivering the search experience we needed and had contracted for,” she said, according to Bloomberg. The executive said
+Yahoo had promised to reduce the number of ads and offer less user tracking, but ended up gradually serving users more ads anyway.
+
+“The number of users who stayed with Firefox declined noticeably during the years when Yahoo was the default,” said Baker.
+
+Baker, who was providing a recorded deposition for Google’s defense, noted that Mozilla’s users apparently wanted and expected Google.
+
+However, that is not the full story. Yahoo was already well behind Google in terms of search technology at that point.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 7>
+
+<item 8>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 8>
+
+<item 9>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+In response, Google enacted a plan, which execs dubbed “Go Big in Europe,” to enhance search results in France and Germany in 2019 and 2020 with more local
+content: news, post-game soccer video highlights, information on local television options for streaming, and pronunciation practice for different language. The
+aim was to incentivize users to click on Google’s home screen, rather than the competition’s.
+
+That revelation effectively supports the Justice Department’s argument that Google, without the push of competition, has little incentive to improve its
+products, a classic consequence in a monopoly.
+
+Mozilla digs in on Google’s supremacy in search
+
+Interestingly, on November 1 Mozilla CEO Mitchell Baker provided a defense of Google’s quality as a search engine, even in “competitive” environments.
+Specifically, Baker recounted how, Mozilla “failed” when it switched Firefox’s default search engine from Google to Yahoo.
+</item 9>
+
+<item 10>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+and it replied with more options that were all over $300. Another observation from this test is that I tend to use the Google Search bar as much for returning
+to familiar sites as I do for searching for information, which means switching to another provider could be temporarily annoying simply because it wouldn’t
+remember all the places I’ve been. Is Google as the default unfair?
+
+In a response to the trial on Google’s blog, president of global affairs Kent Walker said the company’s search product was the favourite of users, browsers and
+device makers simply because it was the best in the business. And being default was not determinative, he said; changing from Google Search to any other search
+provider was easy, and the company competes with many others on phones and PCs. “People don’t use Google because they have to, they use it because they want
+to,” he said. “This lawsuit simply ignores how intensely competitive and dynamic the technology industry is today.”
+</item 10>
+=== END ITEM id=cae7a2a83e04bc4b ===
+
+=== ITEM id=faaac9a60ac8d0ca ===
+Gold sentences and facts:
+Sentence 0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.
+  Fact 0.0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night.
+  Fact 0.1: The Cowboys kept the heat on the Eagles.
+  Fact 0.2: The Eagles lost their game.
+  Fact 0.3: The Eagles were ahead of the Cowboys.
+  Fact 0.4: The Cowboys hosted the Eagles in Dallas in Week 14.
+Sentence 1: Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart football every step of the way down the stretch.
+  Fact 1.0: Philadelphia beat Miami 31-17.
+  Fact 1.1: Philadelphia's win over Miami was on "Sunday Night Football".
+  Fact 1.2: Philadelphia rolled to the win.
+  Fact 1.3: Philadelphia kept the Dolphins' offense off the scoreboard in the second half.
+  Fact 1.4: Philadelphia played smart football every step of the way down the stretch.
+
+Retrieved items:
+<item 1>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:15 p.m. — Julio Jones is on the board with his first catch as an Eagle. It's a three-yard gain for the future Hall of Famer.
+
+9:12 p.m. — The Eagles have the Dolphins' offense uncomfortable so far. Miami is punting after another Tagovailoa incompletion, and this will be a big moment
+for the Dolphins' defense.
+
+Eagles 10, Dolphins 3
+
+9:06 p.m. TOUCHDOWN — Happy National Tight Ends Day! Dallas Goedert with a great catch-and-run all the way into the end zone to give the Eagles the lead.
+
+9:05 p.m. — Christian Wilkins gets called for roughing the passer, pushing the Eagles right to the edge of the red zone.
+
+9:03 p.m. — On 4th & 1, you already know what the play is. Hurts gets two yards on a quarterback sneak to keep the Eagles' drive alive.
+</item 1>
+
+<item 2>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+He gets Philadelphia a first down.
+
+8:23 p.m. — The Eagles will start the game with the ball, and we are underway!
+
+8:18 p.m. — As many have pointed out, Tua Tagovailoa and Jalen Hurts were once teammates and competitors at Alabama. Both have something to prove tonight,
+considering Hurts hasn't looked like himself for much of this season.
+
+8:10 p.m. — The Dolphins can open up a two-game AFC East lead on the Bills with a win tonight. Buffalo was upset by the Patriots earlier today.
+
+8:03 p.m. — Lincoln Financial Field has a new look for Kelly Green day.
+
+Lincoln Financial Field, with a new logo and wordmark for this stadium: pic.twitter.com/vHEm7uBDgi — Zach Berman (@ZBerm) October 22, 2023
+
+7:55 p.m. — Oh yeah, Julio Jones is back in the NFL.
+</item 2>
+
+<item 3>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+It'll be a field goal try for Jake Elliott.
+
+8:30 p.m. — Jalen Hurts is celebrating National Tight Ends Day by hitting Dallas Goedert on back-to-back passes for a total of 45 yards. The Eagles are into the
+red zone.
+
+Fitting that the first big play of the game goes to Dallas Goedert on #NationalTightEndsDay
+
+
+
+📺: #MIAvsPHI on NBC
+
+📱: Stream on #NFLPlus https://t.co/0rIJPFKW6L pic.twitter.com/DPfTTVQbnz — NFL (@NFL) October 23, 2023
+
+8:28 p.m. — Swift has five touches already. No one else has seen the ball.
+
+8:26 p.m. — The Eagles are riding D'Andre Swift early, as the running back is up to three carries through three snaps. He gets Philadelphia a first down.
+
+8:23 p.m.
+</item 3>
+
+<item 4>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Deion Sanders once said, “If you look good, you feel good, and if you feel good, you play good." The Eagles looked good on Sunday night, donning Kelly Green
+jerseys and helmets for their matchup with the Dolphins.
+
+And their play absolutely matched the look.
+
+Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart
+football every step of the way down the stretch.
+
+The Dolphins quickly made up a 17-3 deficit, scoring a touchdown just before halftime and finding the end zone again in the third quarter when Jerome Baker
+intercepted a deflected pass from Jalen Hurts for a pick-six.
+
+MORE: How Mike McDaniel overcame alcoholism to become rising NFL coach
+
+The defining series of the game came right after the pick-six when Hurts shrugged off the turnover and led a surgical touchdown drive.
+</item 4>
+
+<item 5>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Eagles 24, Dolphins 17
+
+10:35 p.m. TOUCHDOWN — What an answer from the Eagles! A.J. Brown breaks a tackle and goes right into the end zone to put the Eagles back in front. It's 24-17.
+
+10:34 p.m. — Goedert comes through with a huge catch to extend the Eagles' drive and enter the red zone.
+
+10:33 p.m. — The Eagles are getting chunks of yards early on this drive, including a 25-yard catch by DeVonta Smith as they barrel into Dolphins territory.
+
+10:30 p.m. — Jevon Holland and David Long were both injured on the kickoff, resulting in a bit of a delay. They both were able to walk off.
+
+Dolphins 17, Eagles 17
+
+10:23 p.m. TOUCHDOWN — Watch out! Kader Kohou deflects a pass from Hurts and it's returned by Jerome Baker for a touchdown.
+</item 5>
+
+<item 6>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Viewers in Canada can stream every NFL game via DAZN.
+
+Dolphins vs. Eagles start time
+
+Date: Sunday, Oct. 22
+
+Sunday, Oct. 22 Start time: 8:20 p.m. ET
+
+Sunday night's game between the Dolphins and Eagles is set to kick off at 8:20 p.m. ET from Lincoln Financial Field in Philadelphia, Penn.
+
+The Eagles haven't beaten the Dolphins since 2011, when Miami's loss resulted in the firing of coach Tony Sparano the following day. The Dolphins got the better
+of Philadelphia in both 2015 and 2019, but none of those matchups carried the anticipation that this one does.
+</item 6>
+
+<item 7>
+Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel  (Sporting News, 2023-12-18T21:00:03+00:00)
+For a good stretch of the season, the Eagles appeared unstoppable and have been a favorite to return to the Super Bowl. After a surprising loss to the Jets in
+Week 6 (their first of the season), Philadelphia went on a five-game winning streak, impressively taking down top teams like the Dolphins, Cowboys and Chiefs.
+Most of those games were gritty, close wins, but then the Eagles dropped back-to-back games in blowout fashion to the 49ers and Cowboys, raising alarm bells
+amongst the Philly fanbase.
+
+The Eagles are looking to rebound against a Seahawks team that has been reeling even worse, losing four straight. Sitting four games behind the 49ers in the NFC
+West, despite a disappointing season, Seattle still has a shot at a wild card playoff spot.
+</item 7>
+
+<item 8>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Game: Dolphins vs. Eagles
+
+Dolphins vs. Eagles Date: Sunday, Oct. 22
+
+Sunday, Oct. 22 TV channel: NBC
+
+NBC Live stream: Peacock | NBCSports.com | Fubo (U.S.) | DAZN (Canada)
+
+Dolphins vs. Eagles can be watched on NBC, which has long held the broadcast rights to "Sunday Night Football."
+
+Mike Tirico (play-by-play) and Cris Collinsworth (color analyst) will be on the call from Levi's Stadium while Melissa Stark will serve as the sideline
+reporter. The crew is in its second season together after Tirico replaced play-by-play legend Al Michaels in 2022 while Stark took over for Michele Tafoya.
+
+Fans can also stream the game via Peacock or NBCSports.com with a subscription, along with Fubo, which offers a free trial.
+
+Viewers in Canada can stream every NFL game via DAZN.
+
+Dolphins vs.
+</item 8>
+
+<item 9>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+MORE: Why Brock Purdy remains one of the NFL's cheapest starting quarterbacks
+
+The Sporting News tracked live scoring updates and highlights from "Sunday Night Football" between the Cowboys and 49ers. Check out all of the key moments you
+might have missed.
+
+Cowboys vs. 49ers final score
+
+1 2 3 4 F Cowboys 0 7 3 0 10 49ers 7 14 7 14 42
+
+Cowboys vs. 49ers results, highlights from 'Sunday Night Football'
+
+(All times Eastern)
+
+Final: 49ers 42, Cowboys 10
+
+11:26 p.m. — That'll do it! The 49ers trounce the Cowboys and reassert themselves as one of the NFL's most dominant teams. Through five games, San Francisco is
+unbeaten.
+
+11:24 p.m. — These teams are trading possessions as the clock winds down.
+</item 9>
+
+<item 10>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Check out all of the key moments you might have missed.
+
+Dolphins vs. Eagles final score
+
+1 2 3 4 F Dolphins 3 7 7 0 17 Eagles 3 14 7 7 31
+
+Dolphins vs. Eagles results, highlights from 'Sunday Night Football'
+
+(All times Eastern)
+
+Final: Eagles 31, Dolphins 17
+
+11:16 p.m. — And that'll do it. The Eagles finish strong and get back on track with an impressive win over the Dolphins.
+
+11:12 p.m. — D'Andre Swift goes 22 yards for a first down, so the Eagles will simply kneel it the rest of the way.
+
+11:09 p.m. — The Eagles take over on downs and will have the chance to just run out the clock on Miami.
+
+11:07 p.m.
+</item 10>
+=== END ITEM id=faaac9a60ac8d0ca ===
+
+=== ITEM id=1bd076f4fa4d4c93 ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves or odds change for a legitimate reason.
+  Fact 1.1: Examples of legitimate reasons include an injury or a roster move.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 1>
+
+<item 2>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+We urge you to read the requirements for any available promotions and offers before accepting them so you’re aware of any restrictions before betting.
+
+You can now place your initial deposit, which is easy at online betting sites thanks to various deposit and withdrawal options.
+
+To bet on the NBA Rookie of the Year, navigate to the basketball section of the sportsbook website, select the NBA, and go to the futures tab.
+
+You’ll find Rookie of the Year odds, NBA MVP odds, and more there. Select the bet you want to make, enter the amount you want to bet, and finalize your bet
+slip.
+
+Ensure you’re using only legal online sportsbooks for any type of betting. Offshore sportsbooks advertise widely on the internet, but they are illegal and offer
+no protection against fraud and other criminal activities.
+
+Best sportsbooks for NBA Rookie of the Year odds
+
+Here are some of the best sports betting sites where you can bet on the next NBA Rookie of the Year.
+</item 2>
+
+<item 3>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck with a push instead of a
+profit.
+
+What is the Vegas line?
+
+Las Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is copying a line, it’s usually copying the Vegas line. Most
+online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all lines in every major sport.
+
+If those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take advantage when sportsbooks stray
+from the Vegas line.
+
+Why do the lines move?
+
+It’s worth reiterating that sportsbooks want an equal amount of money bet on each side of every bet. When that happens, they earn the small profit built into
+the odds without concern about who wins or loses.
+</item 3>
+
+<item 4>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Shop around, and you can find opportunities to lay less, win more, and improve your chances.
+
+See more: How to bet on sports in the US
+
+Shop for the best lines at online sportsbooks
+
+Below is a live odds feed that shows you the differences between lines and odds for the same bets at many of the top sportsbooks in the country. Look here for
+current opportunities.
+
+What’s the best way to shop lines?
+
+The easiest way to line-shop is to find something like the live odds feed above. It’s a one-stop shop. Shopping lines here will take just seconds.
+
+Performing the task manually may take longer, but you can check with more sportsbooks or the chosen few you feel consistently offer the best lines and odds. The
+best way to do this is to download and install more than one of the best sports betting apps on your phone.
+
+Then, tap around among the sportsbooks to compare lines and odds for the bets you plan.
+
+Best sportsbooks for line shopping
+
+The biggest brands in sports betting offer competitive lines in dozens of states.
+</item 4>
+
+<item 5>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, the only way to find these opportunities is shopping lines.
+
+See more: NFL futures bets
+
+Can I get a better line or odds after I’ve already bet?
+
+When you bet, you lock in the odds or line as currently posted. If they change, for better or worse, you’re stuck with the odds from when you wagered.
+
+That’s precisely why you should go line shopping before you bet. Of course, if significant changes occur, you can take more action at the improved odds or more
+favorable line.
+
+Is line shopping worth my time?
+
+Because it can provide you the opportunity to lay less, win more, and improve your chances, line shopping is certainly worth your time. Plus, it doesn’t have to
+take up all that much of it.
+
+Use the live odds feed above to do a basic survey. You’ll find it takes just seconds to compare lines and odds. Plus, download and install multiple licensed
+online sportsbook apps on your phone, and you can do a more thorough shop in just a few minutes.
+</item 5>
+
+<item 6>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Line shopping is the key that unlocks the best odds and lines at top sports betting sites.
+
+The process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is quite often better odds
+and improved lines.
+
+What is line shopping, and why is it worth your time? Find the answers below in our complete guide to line shopping.
+
+How do sportsbooks set odds and lines?
+
+The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.
+
+Other sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics,
+statistics, injury and roster news, performance, matchup data, and more to develop the lines and odds.
+
+Betting lines and odds are then subject to change based on the betting public’s reaction and any additional information that comes to light ahead of the game.
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+</item 6>
+
+<item 7>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Once the season has started and you get to see how the various rookies are performing, you can gather the relevant data. But sportsbooks are also gathering this
+information, and they begin to tighten the NBA Rookie of the Year lines in response.
+
+So, while you can better guess which player will hoist the Wilt Chamberlain Trophy, the odds will be tighter, and your potential return on your wager will be
+reduced.
+
+Pros and cons of betting early on the NBA Rookie of the Year:
+
+Pros:
+
+You have an opportunity to find better value.
+
+The betting odds are fresh and haven't been adjusted.
+
+Cons:
+
+There is a much higher risk as a player's performance, health, and team dynamic can change throughout the season.
+
+You’ll find limited information to make an informed bet.
+
+Pros and cons of waiting to bet on the NBA Rookie of the Year:
+
+Pros:
+
+There is a lot more information available to make an informed bet.
+
+You don’t risk betting on a player not remotely in contention.
+
+Cons:
+
+There is a reduced opportunity to find value.
+</item 7>
+
+<item 8>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other side to get it that way.
+
+That’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like
+an injury or roster move. It’ll be difficult for you to find value in that case.
+
+But when a line moves or odds change because of betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right
+there.
+
+Line shopping is a tool to help you spot changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.
+
+Choose a side, shop around at online sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable
+to your viewpoint.
+
+See more: What is a parlay bet?
+</item 8>
+
+<item 9>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+That means checking the posted lines and odds for the same bets at different sportsbooks.
+
+You can do this for moneylines, point spreads, totals bets, prop bets, and more. Finding the best line or better odds on any bet is like finding money.
+
+You can shop around using multiple sportsbook apps on your phone or live odds feeds like the one above. Pick a side, then use the drop-down menus and tabs to
+find the odds and lines for that bet.
+
+Finally, bet when you see an opportunity at better odds or an improved line compared to the competition.
+
+Line shopping for futures
+
+People tend to bet futures at their favorite online sportsbook. However, shopping for better odds on any future bet is worth your time. Most game lines are
+similar at different sportsbooks, but the odds in futures markets can vary significantly.
+
+Sportsbooks sometimes have higher liabilities for specific teams and offer better odds on others to lay that off. Timing is everything.
+
+Get it right, and you can easily take advantage of changes in different futures markets due to liability.
+</item 9>
+
+<item 10>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Rookie of the Year is not the only form of NBA futures betting. Legal online sportsbooks have a wide selection of NBA futures you can bet on, including:
+
+In addition to futures bets, you can wager on many NBA bets during the regular season and postseason. NBA game lines (moneylines, point spreads, and totals) are
+the most popular, but you’ll also be able to bet on NBA team and player props, parlays, and more.
+
+The NBA is the second-most popular odds market to bet on in the US, behind NFL betting odds. That means every online betting site always has a great selection
+of NBA odds.
+</item 10>
+=== END ITEM id=1bd076f4fa4d4c93 ===

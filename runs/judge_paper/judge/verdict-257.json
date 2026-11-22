@@ -1,0 +1,53 @@
+[
+{"id": "22a2221a6bef8768", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "7fab3e294f3ace28", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "200752579e652cea", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+]},
+{"id": "91317b009b9b0026", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "9937a41e4d22f639", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]}
+]

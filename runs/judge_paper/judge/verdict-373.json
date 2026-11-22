@@ -1,0 +1,79 @@
+[
+{"id": "11276053a2c10bfb", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [
+{"item": 8, "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."},
+{"item": 9, "quote": "Sportsbooks adjust moneyline odds to ensure they remain profitable, balance their book, and reflect the most current information about the event."}]}
+]},
+{"id": "3207ecd73c25d6bd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [
+{"item": 7, "quote": "Last week, Wang testified that Alameda got access"},
+{"item": 8, "quote": "Wang heard a trader ask Bankman-Fried if it was okay to keep withdrawing money from that account"},
+{"item": 8, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "0.1", "status": "stated", "evidence": [
+{"item": 8, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "e8211dfccab72bc1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [
+{"item": 10, "quote": "She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [
+{"item": 10, "quote": "but maintains that Google manipulates Search to maximise ad revenue"}]},
+{"fact": "2.0", "status": "stated", "evidence": [
+{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [
+{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+{"fact": "2.2", "status": "stated", "evidence": [
+{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [
+{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.4", "status": "stated", "evidence": [
+{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "efc2d389d0ba4774", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [
+{"item": 1, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland"}]},
+{"fact": "0.1", "status": "stated", "evidence": [
+{"item": 1, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland"}]},
+{"fact": "0.2", "status": "stated", "evidence": [
+{"item": 1, "quote": "William (Rufus Kampa) is left heartbroken with grief"}]},
+{"fact": "0.3", "status": "stated", "evidence": [
+{"item": 1, "quote": "William (Rufus Kampa) is left heartbroken with grief"}]},
+{"fact": "0.4", "status": "stated", "evidence": [
+{"item": 1, "quote": "William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it"}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [
+{"item": 2, "quote": "With the show heading into the late Nineties and early Noughties in its final season"}]},
+{"fact": "1.1", "status": "stated", "evidence": [
+{"item": 9, "quote": "which also takes place on the same day as her fatal car crash later that evening"},
+{"item": 2, "quote": "The show also features the pair’s death in a car crash in Paris."}]},
+{"fact": "1.2", "status": "stated", "evidence": [
+{"item": 10, "quote": "were killed on 31 August 1997 when their Mercedes-Benz was pursued by paparazzi and crashed in the Pont de l’Alma tunnel in Paris"}]}
+]},
+{"id": "2a0a9891751ee0f1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [
+{"item": 5, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+{"fact": "0.1", "status": "stated", "evidence": [
+{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+{"fact": "0.2", "status": "stated", "evidence": [
+{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model"}]},
+{"fact": "0.3", "status": "stated", "evidence": [
+{"item": 5, "quote": "won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}]},
+{"fact": "1.0", "status": "stated", "evidence": [
+{"item": 9, "quote": "He will also be tasked with “integrating” the programs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [
+{"item": 9, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs"}]}
+]}
+]

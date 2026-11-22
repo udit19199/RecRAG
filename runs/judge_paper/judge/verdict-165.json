@@ -1,0 +1,36 @@
+[
+{"id": "2828fa925b330cef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]}
+]},
+{"id": "2ea879cf76449672", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "While its usual hours of operation are from 6am to 9pm"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "stores’ opening and closing times on the holiday vary based on location"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+]},
+{"id": "ed2b59af13533328", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "COWBOYS: Dallas' defense lost top cornerback Trevon Diggs and they're still red hot."}]}
+]},
+{"id": "9e7ef4d4111a550c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet with his phone number on it during one of her Eras Tour shows"}, {"item": 3, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "July 26: Kelce makes friendship bracelet for Swift"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []}
+]},
+{"id": "e99d542d85caf318", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,65 @@
+[
+  {"id": "f00eb001e04d2b0a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4f4fab9a77e3f7e8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+  ]},
+  {"id": "cd23caeacc99d93e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}, {"item": 4, "quote": "many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}, {"item": 4, "quote": "many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}, {"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}, {"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}, {"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "47c7623735cce72e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []},
+    {"fact": "2.7", "status": "missing", "evidence": []}
+  ]},
+  {"id": "cacbc199d596c66a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "contradicted", "evidence": [{"item": 7, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+  ]}
+]

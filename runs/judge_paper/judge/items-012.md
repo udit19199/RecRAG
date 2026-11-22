@@ -1,0 +1,812 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=d1e5636126bc6800 ===
+Gold sentences and facts:
+Sentence 0: The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut interest rates next year by less than it earlier expected.
+  Fact 0.0: The Fed's main interest rate is at its highest level since 2001.
+  Fact 0.1: The central bank indicated last week that it may cut interest rates next year.
+  Fact 0.2: The central bank indicated last week that any cut to interest rates next year may be smaller than it earlier expected.
+Sentence 1: Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control.
+  Fact 1.0: Stocks surged through the week.
+  Fact 1.1: Stocks surged on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates.
+  Fact 1.2: The Federal Reserve's hikes to interest rates were market-crunching.
+  Fact 1.3: The Federal Reserve's interest rate hikes were intended to get inflation under control.
+
+Retrieved items:
+<item 1>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+It’s again near its highest level since 2007.
+
+Loading Treasury bonds are seen as some of the safest investments possible, and when they pay higher yields, investors are less likely to pay high prices for
+stocks and other riskier investments. That’s a big reason why the S&P 500 dropped 4.9 per cent in September to drag what had been a big gain for the year down
+to 11.7 per cent. Treasury yields have been climbing sharply as Wall Street accepts a new normal where the Federal Reserve is likely to keep interest rates high
+for longer. The Fed is trying to push still-high inflation down to its target, and its main tool of high interest rates does that by trying to slow the economy
+and hurting prices for investments. The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut
+interest rates next year by less than it earlier expected.
+</item 1>
+
+<item 2>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 2>
+
+<item 3>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 3>
+
+<item 4>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 4>
+
+<item 5>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 5>
+
+<item 6>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 6>
+
+<item 7>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 7>
+
+<item 8>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 8>
+
+<item 9>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 9>
+
+<item 10>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 10>
+=== END ITEM id=d1e5636126bc6800 ===
+
+=== ITEM id=04e52eef3ccb9e41 ===
+Gold sentences and facts:
+Sentence 0: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 0.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 0.1: The leading piece of drama returns.
+Sentence 1: The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley.
+  Fact 1.0: The Big Ten suspended coach Jim Harbaugh for three games.
+  Fact 1.1: The Big Ten suspended Jim Harbaugh on Friday.
+  Fact 1.2: The team was on a plane en route to Penn State when the suspension happened.
+  Fact 1.3: Michigan had hoped to block the suspension.
+  Fact 1.4: The Wolverines (Michigan) will be without their coach on the sidelines in Happy Valley.
+
+Retrieved items:
+<item 1>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Was this old-school Big Ten football or Big Ten West football in disguise?
+
+Michigan's defense clamped on Penn State quarterback Drew Allar (10 of 22, 70 yards, TD), and the Nittany Lions had one play of more than 20 yards. Corum closed
+the drama with a 30-yard TD.
+
+The same-old questions about Nittany Lions coach James Franklin in big games resurfaced, but those are back-page headlines in the Big Ten East race. The quirky
+tiebreaker involving Big Ten West opponents? That's out the door. The winner-take-all showdown between Ohio State and Michigan? There are a full two weeks of
+anticipation for that now.
+
+Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns. Moore's postgame emotion was a headline, but there is a
+reality that set in through a brutal watch of a second half.
+
+McCarthy is a leader.
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+The Conference has confirmed that it is not aware of any information suggesting Coach Harbaugh's involvement in the allegations. The University continues to
+cooperate fully with the NCAA's investigation.
+
+From the Big Ten:
+
+"The Big Ten Conference's commitment to student-athletes, sportsmanship and the commissioner's duty to protect the integrity of competition will never waver.
+Today's decision by the University of Michigan to withdraw its legal challenge against the conference's November 10th notice of disciplinary action is
+indicative of the high standards and values that the conference and the university seek to uphold, the University of Michigan is a valued member of the Big Ten
+Conference and the conference will continue to work cooperatively with the university and the NCAA during this process."
+
+Monday, Nov. 13
+
+Harbaugh says he'll state his case at Friday hearing
+
+Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Within it, the school warned Big Ten commissioner Tony Pettiti against levying "premature" disciplinary action against Jim Harbaugh and alleged that in-person
+scouting and sign-stealing are commonplace across the NCAA.
+
+"The conference should act cautiously when setting precedent given the reality that in-person scouting, collusion among opponents, and other questionable
+practices may well be far more prevalent than believed," the letter read.
+
+Michigan also included with the letter "two attached documents of Michigan's offensive and defensive signs allegedly stolen and shared by other Big Ten teams,"
+per Yahoo Sports.
+
+Conference awaits Michigan response
+
+The Big Ten expects a formal response from Michigan to the notice of discipline by the end of the day Wednesday, ESPN's Pete Thamel reports. His colleague Adam
+Rittenberg adds that a ruling is expected to come down Thursday.
+
+Sources: The Big Ten expects a response from Michigan on the notice of discipline by the end of day on Wednesday. Don’t expect any ruling by the Big Ten on
+Wednesday, as they are expected to take time to absorb Michigan’s response.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+However, the primary difference is Michigan is accused of using in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire
+its information.
+
+Monday, Nov. 6
+
+No connection between Buckeyes coach, Michigan investigation
+
+Ohio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan, Yahoo Sports reported.
+
+A report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes' arch-rivals, but the NCAA told the Big Ten there
+are no ties that it knows of between the Ohio State coach and the investigation.
+
+NCAA shares findings with Big Ten as Harbaugh suspension looms
+
+Yahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the in-person scouting
+and recording of opponents’ sidelines to Harbaugh."
+
+Still, the conference is considering a suspension for Harbaugh and could hand down punishments before the end of the week.
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+pic.twitter.com/Qm9iehYVTR — Pete Thamel (@PeteThamel) November 11, 2023
+
+Harbaugh will not be on the sidelines vs. Penn State
+
+Michigan filed a temporary restraining order against the Big Ten on Friday night, hoping to block Harbaugh's suspension. But there will not be a ruling before
+the Wolverines' game vs. Penn State, with the hearing scheduled for Friday, Nov. 17.
+
+No ruling on Michigan’s TRO filing today, so Jim Harbaugh will not coach vs. Penn State.
+
+
+
+Statement from the school: “We look forward to presenting our case next week where we intend to demonstrate that the Big Ten has not acted legally or fairly.”
+</item 7>
+
+<item 8>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+</item 8>
+
+<item 9>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Who is the good guy? Who is the villain? Ohio State and Michigan locked in their answers a long time ago. More than 17 million people watched last year's
+matchup – a 45-23 Michigan victory where Stalions' involvement continues to be scrutinized through a double-barrel Big Ten and NCAA investigation. Big Ten
+commissioner Tony Petitti's ruling sent a shockwave through the conference Friday, mainly because the third game means Harbaugh will not be on the sideline for
+The Game. Early forecasts say 20 million will tune in for The Game this year.
+
+Will Harbaugh really not be there? That is for the courts to decide, but Moore’s comments suggest Harbaugh, president Santa Ono and athletic director Warde
+Manuel are on a united front; consequences be damned in 2024 and beyond.
+
+In the short term? The College Football Playoff committee could slide Michigan up to No. 2 now, and the debate with the Buckeyes and No.
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Public reprimands/fines are common penalties under B1G sportsmanship policy. — Adam Rittenberg (@ESPNRittenberg) November 9, 2023
+
+Michigan's 10-page letter to Big Ten released
+
+Yahoo Sports' Dan Wetzel posted Michigan's full 10-page letter to the Big Ten on X (formerly Twitter). The letter outlines Michigan's belief that the Big Ten
+would be acting too hastily in suspending Harbaugh or levying any punishment toward Michigan before the completion of a full NCAA investigation.
+
+In the letter, Michigan said the university has not had the chance to review all the evidence and respond, which oversteps the due process allowed for Michigan.
+It said Pettiti should not have unilateral authority to punish violations without first having a completed investigation and then a response from the Compliance
+and Reinstatement Committee, which would recommend penalties for rules violations.
+</item 10>
+=== END ITEM id=04e52eef3ccb9e41 ===
+
+=== ITEM id=75bfd0865cdc7b32 ===
+Gold sentences and facts:
+Sentence 0: However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years.
+  Fact 0.0: Floyd has a massive net worth.
+  Fact 0.1: Canelo has inched closer to Floyd's billionaire status over the years.
+  Fact 0.2: Canelo has inched closer to Floyd's billionaire status over the years despite Floyd's massive net worth.
+Sentence 1: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 1.0: The speaker was the richest person in the world under 30.
+  Fact 1.1: The speaker was going to spend his wealth to save humanity from extinction.
+  Fact 1.2: The speaker said this.
+
+Retrieved items:
+<item 1>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+via Imago RECORD DATE NOT STATED Saul -Canelo- Alvarez MEX vs Jermell Charlo USA – Weigh-in ceremony Saul -Canelo- Alvarez MEX during the weigh-in ceremony
+prior to the Boxing fight against Jermell Charlo USA, at the T-Mobile Arena Explanade on September 29, 2023. brbr Saul -Canelo- Alvarez MEX durante la ceremonia
+de pesaje previo a la pelea de Box contra Jermell Charlo USA, en la Explanada del Arena T-Mobile el 29 de septiembre de 2023. LAS VEGAS NEVADA ESTADOS UNIDOS
+PUBLICATIONxNOTxINxMEXxCHNxRUS Copyright: xDavidxLeahx 20230929183529_BOX_2023_ALV_CHA_WEIGH_ALVAREZ44.
+</item 1>
+
+<item 2>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+So, a fight with McGregor could earn him anywhere from $55 to $60 million, adding to his $180 million. Meaning his total net worth would jump up to $240
+million.
+
+ADVERTISEMENT Article continues below this ad
+
+While matching Floyd’s net worth is no easy feat, if anyone can do it – it’s Canelo Alvarez. However, only time will tell if the fight can ever materialize. In
+case it does, it will be a spectacle the whole world would come together to witness. Do you think McGregor vs. Canelo can happen? Who would win the fight?
+
+Watch This Story: Here’s How $200,000,000 Worth Canelo Alvarez Spent His First Ever Million
+</item 2>
+
+<item 3>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Furthermore, Canelo and McGregor’s careers are intertwined with the legendary Floyd Mayweather. ‘Money’ faced both fighters at one point or the other, leaving
+each with a boxing lesson. When Mayweather defeated Canelo, it pushed him to hone his skills while starting a lifelong rivalry. On the other hand, McGregor made
+his boxing debut against Mayweather, losing the fight but leaving with a fat stack.
+
+Implications of a fight between Canelo Alvarez and Conor McGregor
+
+The excitement and allure of two mammoths of combat sports getting in the ring to pummel each other to the brink of their endurance is undeniable. Not to
+mention, the fight will leave either party significantly wealthier than before. A potential clash between Saul Canelo Alvarez and the ‘Notorious’ Conor McGregor
+would not just be a dream come true for fans everywhere. It would also be a money magnet that would funnel income from a variety of channels.
+</item 3>
+
+<item 4>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+The Aces defeated the Liberty 98-81. NOTE TO USER: User expressly acknowledges and agrees that, by downloading and or using this photograph, User is consenting
+to the terms and conditions of the Getty Images License Agreement. (Photo by Ethan Miller/Getty Images)
+
+However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years. If Canelo vs. McGregor ever manages to
+materialize, it could help Canelo take a significant leap to Mayweather’s net worth. The financial windfall from such a humongous clash would be substantial,
+driving him closer to Mayweather’s level of wealth. If Canelo’s past earnings are any evidence, this fight will be bigger than ever before. Canelo’s biggest
+fight to date is $45 million from the third encounter with Golovkin.
+</item 4>
+
+<item 5>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+It would also be a money magnet that would funnel income from a variety of channels.
+
+A few of those lucrative channels of income would be revenue from pay-per-view sales, live gate revenue, merchandise sales from either party and various
+promotional events from the fight. What’s more, if anyone wondered if people would want to watch the fight. The attention it has gathered in the small span of
+their X (Twitter) feud should be evidence enough. Not to mention, both fighters command a massive fan base, counted in millions across the globe.
+
+Canelo Alvarez and McGregor’s history of massive purses
+
+If Canelo’s PPV pull was ever in question, his history of fight purses should convince everyone. Stepping back in time, Canelo’s fight with Mayweather collected
+2.2 million pay-per-view buys. His 2017 bout against Julio César Chávez Jr. collected 1 million PPV buys.
+</item 5>
+
+<item 6>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+No, we don’t find out who that friend is, nor do we find out if that particular investment was ever made — SBF did raise some $2 billion, including $1 billion
+in 2021, from backers that included Sequoia, Temasek, Tiger Global and dozens more.
+
+But we do find out that another investment, of sorts, was made on that day: Lewis himself was so taken with the idea of SBF and his apparent brilliance that he
+came away with the decision to write about him.
+
+“Eighteen months earlier, he had nothing. Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save
+humanity from extinction,” he said. “My jaw was on the floor.”
+
+The two proceeded to meet more than 100 times over the next two years. As SBF’s fame and his company’s bank account grew, 60 Minutes itself even got involved.
+</item 6>
+
+<item 7>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+If these numbers are any evidence, a Canelo vs. McGregor clash would break all their previous records by a mile.
+
+A substantial step toward Mayweather’s net worth/Billionaire status
+
+It’s no secret that Floyd Mayweather is the richest boxer in the world. The legendary undefeated boxer boasts a staggering net worth of $450 million. It makes
+the retired boxer the richest personality in boxing to ever exist. Despite retiring from the sport, he occasionally fights in exhibition matches, generating
+millions each time. In addition, Floyd has made over a billion dollars in the span of his career.
+
+ADVERTISEMENT Article continues below this ad
+
+via Getty LAS VEGAS, NEVADA – JUNE 29: Floyd Mayweather Jr. attends a game between the New York Liberty and the Las Vegas Aces at Michelob ULTRA Arena on June
+29, 2023 in Las Vegas, Nevada. The Aces defeated the Liberty 98-81.
+</item 7>
+
+<item 8>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Later, the banter further escalated, bringing a potential fight in the picture.
+
+Canelo Alvarez’s earnings and Floyd Mayweather’s influence
+
+ADVERTISEMENT Article continues below this ad
+
+Canelo Alvarez reached his career high by becoming the first boxer to become the undisputed champion at super-middleweight by holding onto the WBA Super, WBC,
+and Ring Magazine super middleweight titles since 2020, and the IBF nd WBO titles since 2021. Meanwhile, his pockets became deeper and deeper, to the point that
+Canelo boasts a $180 million net worth in 2023. The most significant addition to his bank balance came when he signed a lucrative $365 million deal with DAZN
+and Golden Boy Promotions.
+</item 8>
+
+<item 9>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+collected 1 million PPV buys. Canelo’s first battle with Gennady Golovkin gathered 1.3 million PPV sales. In his most recent battle against Jermell Charlo, the
+fight collected 700K PPV sales. These were just to name a few; over the years, Canelo has fought in increasingly profitable bouts.
+
+On the other hand, Conor McGregor has created his own history in MMA as well as boxing. First of all, McGregor’s fight against Mayweather generated 4.3 million
+pay-per-view buys. His second fight against Dustin Poirier collected 1.6 million buys. The infamous fight against Khabib Nurmagomedov saw 2.4 million PPV sales.
+And lastly, his second fight against Nate Diaz collected 1.65 million PPV buys. If these numbers are any evidence, a Canelo vs.
+</item 9>
+
+<item 10>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Crossover boxing matches are all the rage these days. Until a few days ago, the phenomenon was limited to influencers and MMA stars. But after a recent quarrel
+on X (formerly Twitter) between Conor McGregor and Canelo Alvarez, a potential crossover boxing match has the boxing world buzzing with excitement. If the fight
+were to turn into a reality, it could help ‘Cinnamon’ get closer to his former rival Floyd Mayweather in terms of net worth.
+
+America’s Favorite Video Today
+
+The talks of Conor McGregor vs. Floyd Mayweather began with a tweet that launched a fiery exchange of words between these two mammoths of combat sports. The
+brash and confident ‘Notorious’ McGregor turned to X, praising Mayweather’s 2013 performance against Canelo. But he also boasted about landing more punches on
+‘Money’ Mayweather than the Mexican superstar. Canelo quickly retorted, asserting he would need only one hand to make quick work of McGregor.
+</item 10>
+=== END ITEM id=75bfd0865cdc7b32 ===
+
+=== ITEM id=dfe702cbc20ed0ce ===
+Gold sentences and facts:
+Sentence 0: However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years.
+  Fact 0.0: Floyd has a massive net worth.
+  Fact 0.1: Canelo has inched closer to Floyd's billionaire status over the years.
+  Fact 0.2: Canelo has inched closer to Floyd's billionaire status over the years despite Floyd's massive net worth.
+Sentence 1: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 1.0: The speaker was the richest person in the world under 30.
+  Fact 1.1: The speaker was going to spend his wealth to save humanity from extinction.
+  Fact 1.2: The speaker said this.
+
+Retrieved items:
+<item 1>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+So, a fight with McGregor could earn him anywhere from $55 to $60 million, adding to his $180 million. Meaning his total net worth would jump up to $240
+million.
+
+ADVERTISEMENT Article continues below this ad
+
+While matching Floyd’s net worth is no easy feat, if anyone can do it – it’s Canelo Alvarez. However, only time will tell if the fight can ever materialize. In
+case it does, it will be a spectacle the whole world would come together to witness. Do you think McGregor vs. Canelo can happen? Who would win the fight?
+
+Watch This Story: Here’s How $200,000,000 Worth Canelo Alvarez Spent His First Ever Million
+</item 1>
+
+<item 2>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+Yet Lewis’s picture is a little less stark from the looks of the 60 Minutes episode. In fact, I’d say it’s not that clear at all if SBF is getting a kicking or
+a coat of polish in this interview when you consider Lewis’s celebration of SBF’s self-proclaimed (yet not quite proven) idealism, and the “Bankman-Fried-shaped
+hold in the world” that exists.
+
+You could say that confused message is very apt for cryptocurrency, where the process by which it works is forever murky and often misrepresented, at least to
+most people.
+
+If SBF didn’t intentionally aim to cynically defraud a bunch of people, in the long run he became one of the many who disastrously failed to manage the risk
+inherent in crypto speculation. That’s ultimately what happened with FTX, as financial discrepancies racked up between the exchange and its sister company
+Alameda Research (a trader itself on the platform).
+</item 2>
+
+<item 3>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Furthermore, Canelo and McGregor’s careers are intertwined with the legendary Floyd Mayweather. ‘Money’ faced both fighters at one point or the other, leaving
+each with a boxing lesson. When Mayweather defeated Canelo, it pushed him to hone his skills while starting a lifelong rivalry. On the other hand, McGregor made
+his boxing debut against Mayweather, losing the fight but leaving with a fat stack.
+
+Implications of a fight between Canelo Alvarez and Conor McGregor
+
+The excitement and allure of two mammoths of combat sports getting in the ring to pummel each other to the brink of their endurance is undeniable. Not to
+mention, the fight will leave either party significantly wealthier than before. A potential clash between Saul Canelo Alvarez and the ‘Notorious’ Conor McGregor
+would not just be a dream come true for fans everywhere. It would also be a money magnet that would funnel income from a variety of channels.
+</item 3>
+
+<item 4>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+The Aces defeated the Liberty 98-81. NOTE TO USER: User expressly acknowledges and agrees that, by downloading and or using this photograph, User is consenting
+to the terms and conditions of the Getty Images License Agreement. (Photo by Ethan Miller/Getty Images)
+
+However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years. If Canelo vs. McGregor ever manages to
+materialize, it could help Canelo take a significant leap to Mayweather’s net worth. The financial windfall from such a humongous clash would be substantial,
+driving him closer to Mayweather’s level of wealth. If Canelo’s past earnings are any evidence, this fight will be bigger than ever before. Canelo’s biggest
+fight to date is $45 million from the third encounter with Golovkin.
+</item 4>
+
+<item 5>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+It would also be a money magnet that would funnel income from a variety of channels.
+
+A few of those lucrative channels of income would be revenue from pay-per-view sales, live gate revenue, merchandise sales from either party and various
+promotional events from the fight. What’s more, if anyone wondered if people would want to watch the fight. The attention it has gathered in the small span of
+their X (Twitter) feud should be evidence enough. Not to mention, both fighters command a massive fan base, counted in millions across the globe.
+
+Canelo Alvarez and McGregor’s history of massive purses
+
+If Canelo’s PPV pull was ever in question, his history of fight purses should convince everyone. Stepping back in time, Canelo’s fight with Mayweather collected
+2.2 million pay-per-view buys. His 2017 bout against Julio César Chávez Jr. collected 1 million PPV buys.
+</item 5>
+
+<item 6>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Later, the banter further escalated, bringing a potential fight in the picture.
+
+Canelo Alvarez’s earnings and Floyd Mayweather’s influence
+
+ADVERTISEMENT Article continues below this ad
+
+Canelo Alvarez reached his career high by becoming the first boxer to become the undisputed champion at super-middleweight by holding onto the WBA Super, WBC,
+and Ring Magazine super middleweight titles since 2020, and the IBF nd WBO titles since 2021. Meanwhile, his pockets became deeper and deeper, to the point that
+Canelo boasts a $180 million net worth in 2023. The most significant addition to his bank balance came when he signed a lucrative $365 million deal with DAZN
+and Golden Boy Promotions.
+</item 6>
+
+<item 7>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+If these numbers are any evidence, a Canelo vs. McGregor clash would break all their previous records by a mile.
+
+A substantial step toward Mayweather’s net worth/Billionaire status
+
+It’s no secret that Floyd Mayweather is the richest boxer in the world. The legendary undefeated boxer boasts a staggering net worth of $450 million. It makes
+the retired boxer the richest personality in boxing to ever exist. Despite retiring from the sport, he occasionally fights in exhibition matches, generating
+millions each time. In addition, Floyd has made over a billion dollars in the span of his career.
+
+ADVERTISEMENT Article continues below this ad
+
+via Getty LAS VEGAS, NEVADA – JUNE 29: Floyd Mayweather Jr. attends a game between the New York Liberty and the Las Vegas Aces at Michelob ULTRA Arena on June
+29, 2023 in Las Vegas, Nevada. The Aces defeated the Liberty 98-81.
+</item 7>
+
+<item 8>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+No, we don’t find out who that friend is, nor do we find out if that particular investment was ever made — SBF did raise some $2 billion, including $1 billion
+in 2021, from backers that included Sequoia, Temasek, Tiger Global and dozens more.
+
+But we do find out that another investment, of sorts, was made on that day: Lewis himself was so taken with the idea of SBF and his apparent brilliance that he
+came away with the decision to write about him.
+
+“Eighteen months earlier, he had nothing. Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save
+humanity from extinction,” he said. “My jaw was on the floor.”
+
+The two proceeded to meet more than 100 times over the next two years. As SBF’s fame and his company’s bank account grew, 60 Minutes itself even got involved.
+</item 8>
+
+<item 9>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+via Imago RECORD DATE NOT STATED Saul -Canelo- Alvarez MEX vs Jermell Charlo USA – Weigh-in ceremony Saul -Canelo- Alvarez MEX during the weigh-in ceremony
+prior to the Boxing fight against Jermell Charlo USA, at the T-Mobile Arena Explanade on September 29, 2023. brbr Saul -Canelo- Alvarez MEX durante la ceremonia
+de pesaje previo a la pelea de Box contra Jermell Charlo USA, en la Explanada del Arena T-Mobile el 29 de septiembre de 2023. LAS VEGAS NEVADA ESTADOS UNIDOS
+PUBLICATIONxNOTxINxMEXxCHNxRUS Copyright: xDavidxLeahx 20230929183529_BOX_2023_ALV_CHA_WEIGH_ALVAREZ44.
+</item 9>
+
+<item 10>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Crossover boxing matches are all the rage these days. Until a few days ago, the phenomenon was limited to influencers and MMA stars. But after a recent quarrel
+on X (formerly Twitter) between Conor McGregor and Canelo Alvarez, a potential crossover boxing match has the boxing world buzzing with excitement. If the fight
+were to turn into a reality, it could help ‘Cinnamon’ get closer to his former rival Floyd Mayweather in terms of net worth.
+
+America’s Favorite Video Today
+
+The talks of Conor McGregor vs. Floyd Mayweather began with a tweet that launched a fiery exchange of words between these two mammoths of combat sports. The
+brash and confident ‘Notorious’ McGregor turned to X, praising Mayweather’s 2013 performance against Canelo. But he also boasted about landing more punches on
+‘Money’ Mayweather than the Mexican superstar. Canelo quickly retorted, asserting he would need only one hand to make quick work of McGregor.
+</item 10>
+=== END ITEM id=dfe702cbc20ed0ce ===
+
+=== ITEM id=71f290cdac88f26e ===
+Gold sentences and facts:
+Sentence 0: Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury.
+  Fact 0.0: Cameron Carter-Vickers is also included.
+  Fact 0.1: Cameron Carter-Vickers is a defender.
+  Fact 0.2: Cameron Carter-Vickers only just made his debut for Celtic this season.
+  Fact 0.3: Cameron Carter-Vickers's Celtic debut came thanks to a hamstring injury.
+Sentence 1: 30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss.
+  Fact 1.0: The match kickoff is 30 minutes away.
+  Fact 1.1: Paraguay have a new manager.
+  Fact 1.2: Daniel Garnero makes his debut as Paraguay's new permanent boss.
+
+Retrieved items:
+<item 1>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Y Julián es muy molesto. Corre y marca. Son dos grandes 9".
+
+
+
+🗣️ Mario Kempes, en @TyCSports. pic.twitter.com/SIFzdIfrM9 — TR SPORTS ®️ (@trsports_) October 11, 2023
+
+Argentina vs Paraguay starting lineups & team news
+
+Argentina head coach Lionel Scaloni named a bloated 36-man squad for the matches against Paraguay and Peru this month, but Angel Di Maria, Paulo Dybala, and
+Juan Foyth were forced to withdraw due to injury. Lisandro Martinez is also unavailable after having to undergo another foot operation.
+
+Now that Inter Miami's playoff run is officially over, Argentina can feel a little better about deploying Lionel Messi at full 90-minute use despite his recent
+fitness issues, knowing his club season is nearly over and he'll have months of rest upcoming.
+</item 1>
+
+<item 2>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino Dest PSV Eindhoven (NED) 28 2 DEF DeJuan Jones New England Revolution (USA) 7 0 DEF Kristoffer Lund Palermo
+(ITA) 2 0 DEF Kevin Paredes Wolfsburg (GER) 1 0 DEF Tim Ream Fulham (ENG) 52 1 DEF Chris Richards Crystal Palace (ENG) 12 1 DEF Miles Robinson Atlanta United
+(USA) 27 3 DEF Joe Scally Gladbach (GER) 6 0 MID Johnny Cardoso Internacional (BRA) 7 0 MID Luca de la Torre Celta Vigo (SPA) 17 0 MID Lennard Maloney
+Heidenheim (GER) 0 0 MID Weston McKennie Juventus (ITA) 46 11 MID Yunus Musah AC Milan (ITA) 29 0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman
+</item 2>
+
+<item 3>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+He was initially injured while playing for Leeds United back in March, and while he had finally recovered to make his Bournemouth debut in the EFL Cup in late
+September, he played just 20 minutes off the bench before suffering a setback, sidelined again for the foreseeable future.
+
+Gio Reyna has returned from his leg fracture and is called in for the first time under Berhalter since their falling out at the 2022 World Cup. Also included is
+defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury. On the heels of that return just before the
+international break, he is called in.
+
+Goalkeepers Zack Steffen and Sean Johnson remain out of action due to injuries. Additionally, Josh Sargent is sidelined with a long-term ankle injury, while
+Daryl Dike is also out after tearing his Achilles.
+</item 3>
+
+<item 4>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+Nicolas Tagliafico started both matches in September, and while Marcos Acuna is back with the team following an injury, the former retains his starting spot.
+Messi's club teammate Facundo Farias was also included on the roster but it'd be surprising if he saw the field.
+
+MORE: Preview the Argentina vs Paraguay match with picks, predictions, and odds
+
+Argentina starting lineup (4-3-3): E. Martinez (GK) — Molina, Romero, Otamendi, Tagliafico — De Paul, Mac Allister, E. Fernandez — J. Alvarez, L. Martinez, N.
+Gonzalez.
+
+New Paraguay head coach Daniel Garnero, making his debut, has rung the changes after falling to Venezuela last time out, making five alterations to that
+starting lineup. The entire midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+</item 4>
+
+<item 5>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Argentina subs (12): Armani (GK), Musso (GK), Quarta, Montiel, Acuna, Ocampos, Paredes, Lo Celso, Pezzella, G. Rodriguez, Garnacho, Messi.
+
+Paraguay head coach Daniel Garnero has rung the changes after falling to Venezuela last time out, making five alterations to that starting lineup. The entire
+midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+
+Forward Miguel Almiron is Paraguay's most prominent goalscoring threat and is in good form, with three goals in his past five matches for Newcastle United.
+
+Paraguay have questions at goalkeeper, as mainstay Antony Silva has been phased out, leaving three inexperienced internationals currently on the roster. New
+York Red Bulls starter Carlos Coronel earned his first two caps in the September matches and he remains in net here.
+</item 5>
+
+<item 6>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+SGT New Zealand Fri, Oct. 13 11 a.m. NZST
+
+Argentina vs Paraguay starting lineups & team news
+
+Argentina head coach Lionel Scaloni named a bloated 36-man squad for the matches against Paraguay and Peru this month, but Angel Di Maria, Paulo Dybala, and
+Juan Foyth were forced to withdraw due to injury. Lisandro Martinez is also unavailable after having to undergo another foot operation.
+
+Now that Inter Miami's playoff run is officially over, Argentina can feel a little better about deploying Lionel Messi at full 90-minute use despite his recent
+fitness issues, knowing his club season is nearly over and he'll have months of rest upcoming. Messi missed the last match against Bolivia, and missed four
+Inter Miami games after, but he returned for a half-hour of action in their final fixture before the international break. However, he doesn't start, but is
+reportedly fit enough to come off the bench for most or all of the second half.
+</item 6>
+
+<item 7>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+54-year-old Garnero is an Argentine who made one appearance for the national team as a player, and spent most of his career with Argentine club Independiente.
+He's managed at the club level in Paraguay since 2015 with Sol de America, Guarani, and Olimpia before his spell at Libertad.
+
+It's quite the test for Garnero in his debut match, taking on Lionel Messi and the defending World Cup champions Argentina, his home nation. My intention is
+always to play with the ball. We must be smart and aggressive in recoveries." A bold claim by the Paraguay boss.
+
+"Vamos a jugar contra una selección que es la mejor del mundo. No solamente por logros, sino por idea colectiva y rendimientos individuales. Mi intención
+siempre es jugar con la pelota. Debemos ser inteligentes y agresivos en las recuperaciones".
+
+
+
+🗣️ Daniel Garnero.
+</item 7>
+
+<item 8>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+It's far too early to be watching outside results too intently, but regardless, that's a great result for Paraguay, who will want every CONMEBOL nation outside
+the top two to drop as many points as possible.
+
+The messier it gets around Paraguay, the better a chance they have of securing a qualifying spot in the expanded World Cup field.
+
+💥 ¡Qué cierre! Penal, expulsado el portero y Uruguay lo empata con Darwin Núñez pic.twitter.com/csgmJt6yJz — Tigo Sports Costa Rica (@tigosports_cr) October 12,
+2023
+
+30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss. He spent the last two years in charge of
+Paraguayan giants Libertad, taking over for Guillermo Barros Schelotto who was let go after the September qualifiers just three days shy of his two-year hire
+anniversary.
+</item 8>
+
+<item 9>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Messi missed the last match against Bolivia, and missed four Inter Miami games after, but he returned for a half-hour of action in their final fixture before
+the international break. However, he doesn't start, but is reportedly fit enough to come off the bench for most or all of the second half.
+
+Nicolas Tagliafico started both matches in September, and while Marcos Acuna is back with the team following an injury, the former retains his starting spot.
+Messi's club teammate Facundo Farias was also included on the roster but it'd be surprising if he saw the field.
+
+Argentina starting lineup (4-3-3): E. Martinez (GK) — Molina, Romero, Otamendi, Tagliafico — De Paul, Mac Allister, E. Fernandez — J. Alvarez, L. Martinez, N.
+Gonzalez.
+</item 9>
+
+<item 10>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+“I will commit to being the catalyst that will set the tone for our group for every game, to help restore our club to where it deserves to be, I am confident of
+that. We will be back and better.”#NERevs pic.twitter.com/A0mVyGdaAZ — Seth (@SethMan31) November 10, 2023
+
+Jamaica vs Canada lineups & team news
+
+Jamaica manager Hallgrimsson also described his side as being on a mission, but they faced it without New York Red Bulls forward Cory Burke because of a groin
+problem.
+
+Karoy Anderson, who plays for English club Charlton Athletic, was called up for the first time. "I was just shocked," the midfielder told the Addicks' website.
+"I was looking at it for a long time just taking it in and I told my mum and she started crying."
+</item 10>
+=== END ITEM id=71f290cdac88f26e ===

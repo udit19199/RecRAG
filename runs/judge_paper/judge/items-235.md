@@ -1,0 +1,988 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=46d563bb859d24bd ===
+Gold sentences and facts:
+Sentence 0: Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie.
+  Fact 0.0: Zazie Beetz will return in the role of Arthur's neighbor.
+  Fact 0.1: Zazie Beetz's character Sophie is Arthur's love interest.
+  Fact 0.2: Sophie is unwitting about being Arthur's love interest.
+Sentence 1: But then, there’s MJ as well who has made a comeback from the first installment.
+  Fact 1.0: MJ is also in the new installment.
+  Fact 1.1: MJ has made a comeback from the first installment.
+
+Retrieved items:
+<item 1>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+Mary’s gameplay missions end up increasing the overall quality of Spider-Man 2. All things considered, it is great to see Insomniac improving on this aspect
+instead of removing it completely.
+
+ADVERTISEMENT Article continues below this ad
+
+Marvel’s Spider-Man 2 is now available on PlayStation 5 worldwide.
+
+Watch This Story: The Console Wars Are Heating Head-to-Head: Xbox and PlayStation Fans Battle Over Which Custom Controller is Better, Starfield or Spider-Man 2?
+</item 1>
+
+<item 2>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+Coming back to the ‘Wake Up’ mission, she’s seen sneaking past the hunters but she’s also capable of performing Takedowns on them. It wasn’t the case in the
+previous title. Her missions have become better now with the devs actually spending time on giving her a chance to fight.
+
+Coming back to the stun gun part, MJ is pretty skilled in using it, during missions like ‘Good Men’, thanks to her training with Sable. Also, now she’s got the
+option to even run away and hide when spotted by enemies. The playability factor around her has increased a lot compared to being just an observer, for the most
+part, in the first game. That’s the biggest and most visible difference.
+
+Mary Jane and her missions in Spider-Man 2 allow the story to proceed without causing a problem for the central protagonists
+
+The best thing about going through the quests showcasing Mary Jane is that they never try to overpower the ongoing story itself.
+</item 2>
+
+<item 3>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+One can even call her the third unofficial superhero in the latest PS5 exclusive.
+
+A refreshing take on Mary Jane’s stealth missions makes her a strong character in Marvel’s Spider-Man 2
+
+ADVERTISEMENT Article continues below this ad
+
+In the first title, stepping into MJ’s shoes was a great concept, but the devs somehow couldn’t execute the plan flawlessly. As a result, missions featuring her
+as a playable character were heavily criticized by most of the fans. There was nothing too special about those quests whatsoever.
+
+Now, looking at Mary Jane in Marvel’s Spider-Man 2, there’s a very clear difference one can make out. In short, it feels comparing night and day. Being a
+journalist at The Daily Bugle, her character is bound to go places in order to investigate mysteries. The first game had such situations, but the sequel
+improved on them. It gives MJ a lot more strength instead of being someone who always needs to be rescued in the last moment. But how?
+</item 3>
+
+<item 4>
+The future of DC movies in 2022 and beyond (Polygon, 2023-10-24T15:00:36+00:00)
+2024
+
+Joker: Folie à Deux: Oct. 4
+
+Todd Phillips’ acerbic 2019 drama Joker — effectively a DC-themed riff on Martin Scorsese’s King of Comedy — didn’t necessarily call for a sequel. It ends in a
+wide-open place that invites viewers to write their own next chapter. But nothing breeds sequels like success, and the first Joker was a billion-dollar hit for
+DC during a period where it was struggling to find that kind of payday from any of its properties. It feels like DC may have handed Phillips a blank check and a
+free rein — at least, that seems like the best way to explain why the Joker sequel is reportedly a musical thriller with ​​Joaquin Phoenix reprising his role as
+Arthur Fleck/the Joker, and Lady Gaga taking on the role of Harley Quinn. Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest,
+Sophie.
+</item 4>
+
+<item 5>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+The game’s narrative remains intact, no matter what. There never occurs a feeling of the devs trying too hard to make it seem like her missions are stretching
+out of their boundaries.
+
+Although they are designed well this time but one has to commend Insomniac’s team to keep a limit on not making MJ’s gameplay moments seem forced or going
+beyond a certain point. They serve their purpose without affecting the main plot of Marvel’s Spider-Man 2 or overlapping with Peter or Miles’ stories. In a way,
+each character has been given a good amount of time to shine. At times, it may feel like MJ’s playable sequences should have been extended. But it’s nice to see
+that the devs decided to not do that; sometimes less is more and fine.
+
+Despite Spider-Man 2 being more of a Peter’s story (in its entirety), MJ’s role has been given equal significance too. There’s a visible growth in her arc
+especially considering her profession as a journalist.
+</item 5>
+
+<item 6>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+MJ in Spider-Man 2 vs. MJ from Insomniac’s 2018 installment
+
+While there are similarities between the character’s iterations in two titles, a lot of drastic differences are also present. Speaking of similar aspects, the
+first game had a mission where Mary gets to use a taser to shock the guards. Well there’s no taser in Spider-Man 2, she’s got a stun gun now.
+
+Then, there are moments of hiding and sneaking past the enemies. In the original game, there were missions like the one in Grand Central Station where MJ had to
+stay hidden from a number of Mr. Negative’s demons to defuse a bomb. Similarly, in Spider-Man 2, MJ is seen hiding from the hunters during the ‘Wake Up’ quest.
+But what’s actually changed?
+
+Well, the very difference lies in the lack of MJ’s abilities in the first game and how she’s evolved in the second.
+</item 6>
+
+<item 7>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+There’s a visible growth in her arc especially considering her profession as a journalist. Yes, she’s Peter’s love interest, but that’s not everything she’s
+there for. Players can easily see it happening throughout the game’s duration.
+
+The verdict?
+
+ADVERTISEMENT Article continues below this ad
+
+It’s obvious to expect that a lot of fans who didn’t like MJ’s missions in the first installment won’t like her this time as well. But considering how she was
+before and how she’s in Spider-Man 2, the overall change is quite praiseworthy. Things are different this time, thankfully.
+
+MJ’s missions are now having some actual meaning attached to them rather than acting like fillers. Players who want to have a few interesting moments aside from
+the main quests featuring Miles and Peter can have a sense of finishing well-designed stealth quests. Mary’s gameplay missions end up increasing the overall
+quality of Spider-Man 2.
+</item 7>
+
+<item 8>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+With the recent release of Marvel’s Spider-Man 2, Insomniac has witnessed a huge appreciation from fans for delivering a memorable sequel. Not to mention the
+epic portrayal of Peter Parker and Miles Morales fighting against some of the strongest villains. But then, there’s MJ as well who has made a comeback from the
+first installment. And it’s her arc that has actually received an impressive elevation this time. Especially when considering the poorly received missions
+featuring Mary Jane in the original game from 2018.
+
+America’s Favorite Video Today
+
+So what’s actually changed in 2023 that has created a vast difference? There are certain key reasons making Mary Jane in Spider-Man 2 a treat to watch. Not just
+from the perspective of her relationship with Peter, but her own missions showcasing a different side this time. One can even call her the third unofficial
+superhero in the latest PS5 exclusive.
+</item 8>
+
+<item 9>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+(If you can get past the Frankenstein-ification of the boroughs, that is. RIP Chelsea.)
+
+There are hints of greater thematic aspirations within Spider-Man 2. Questions about mass incarceration, recidivism, and reintegration into society for formerly
+incarcerated people; worries about the surveillance state and what we give up when we engage with modern technology. These things appear, however fleetingly, in
+Spider-Man 2, but there isn’t enough time to elaborate on any single one in the unrelenting march of set-piece after glorious set-piece.
+
+But I’m glad they’re there, anyway. Because if we’re going to retell a story, we ought to retell it anew. Canons were made to be broken, and Spider-Man 2 swings
+in that direction. With a sequel teed up by the game’s final act, I’m eager to see where Insomniac goes with that momentum. Next stop: the Bronx.
+
+Marvel’s Spider-Man 2 will be released Oct.
+</item 9>
+
+<item 10>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+But how?
+
+Compared to the lack of interactivity in 2018’s Spider-Man, MJ is now capable of tackling the enemies around her. In the first title, all she could do was to
+move from one point to the other. Now, she’s able to do more than that – make pretty good and lethal moves. To be precise, the devs have given MJ a little
+firepower, if not in too much capacity. Now, she’s got weapons instead of being clueless in moments of being vulnerable against armed enemies. Yes, she hasn’t
+got any superpowers, but she’s got other means to help herself out.
+
+Due to such involvement, players have now got a reason to be more invested into a given mission focusing on MJ. It wasn’t the case at all taking into
+consideration her previous iteration in Insomniac’s original game. Mary Jane can now handle the circumstances in her own manner, thus breaking free from the
+linear approach of just trying to hide and escape.
+</item 10>
+=== END ITEM id=46d563bb859d24bd ===
+
+=== ITEM id=b9db2b3c0e0bfa1d ===
+Gold sentences and facts:
+Sentence 0: The official details have not been reported, though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal.
+  Fact 0.0: The official details have not been reported.
+  Fact 0.1: The report indicated the deal will shatter Mike Trout's record 12-year, $426.5 million deal.
+Sentence 1: According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with the club.
+  Fact 1.0: According to ESPN's Jeff Passan, the deal is for $42 million.
+  Fact 1.1: According to ESPN's Jeff Passan, the deal is over three years.
+  Fact 1.2: According to ESPN's Jeff Passan, the deal includes a club option for a fourth year.
+  Fact 1.3: According to ESPN's Jeff Passan, the deal includes an opt out after his second season with the club.
+
+Retrieved items:
+<item 1>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+The Giants are considered to be an unknown.
+
+In addition to the teams, Passan also reported Ohtani is expecting a contract somewhere between $550 and $600 million, which would be the largest guaranteed
+contract in North American sports.
+
+Blue Jays could alter roster with Ohtani signing
+
+Date: Nov. 30
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays are one of the teams believed to still be among the strongest in the mix for Ohtani. The New York Post's Jon Heyman reported there could be some
+changes if Ohtani signs with the Blue Jays, however, reporting that some rivals believe Bo Bichette and Vladimir Guerrero Jr. could hit the trade block if
+Toronto lands the star.
+
+Trading the two infielders might seem counterproductive to signing Ohtani in the first place. Those two would be the biggest supporting bats in the lineup
+around Ohtani.
+</item 1>
+
+<item 2>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Instead, the Royals will hope the veteran Smith, who had solid underlying numbers in 2023, can serve as a reliable late-inning arm after both Scott Barlow and
+Aroldis Chapman were traded before the deadline this past season.
+
+Shohei Ohtani agrees to mega contract with Dodgers
+
+Date: Saturday, Dec. 9
+
+Source: Shohei Ohtani, Jeff Passan
+
+Two-time MVP Shohei Ohtani announced on Instagram that he is signing with the Los Angeles Dodgers, spurning the Blue Jays and remaining in the city where he
+became a sensation with the Angels.
+
+ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual
+value.
+
+Ohtani joins a Dodgers lineup that already features two former MVPs in Mookie Betts and Freddie Freeman, both of whom were NL MVP finalists in 2023.
+</item 2>
+
+<item 3>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Imagine a lineup consisting of Ohtani, Ronald Acuna Jr., Ozzie Albies, Austin Riley and Matt Olson?
+
+Sources: Braves are among the teams still engaged with Shohei Ohtani’s camp, as I reported in this @MLBNetwork segment. @MLB pic.twitter.com/lP4lISzttN — Jon
+Morosi (@jonmorosi) December 4, 2023
+
+Ohtani has already received several $500+ million offers
+
+Date: Dec. 3
+
+Source: Jon Heyman, NY Post
+
+It's no surprise the bidding for Ohtani is heating up, with the star expected to sign soon. And New York Post's Jon Heyman reported Ohtani has already received
+several deals that have topped $500 million, which could mean he winds up being the first $600 million player in MLB history. He added there are believed to be
+five teams in the running for Ohtani.
+</item 3>
+
+<item 4>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+11
+
+Source: Fabian Ardaya, The Athletic
+
+According to The Athletic, Ohtani will defer a whopping $680 million of his $700 million contract from the Dodgers, receiving only $2 million per year.
+
+While it's important to note the deal will still count as $46 million annually toward the luxury tax thresholds for Los Angeles, Ohtani is still giving the
+organization much more flexibility than expected over the course of the deal.
+
+The two-time MVP will receive $68 million per year, without interest, from 2034-43, making the present-day value of the contract much less than it originally
+appeared.
+
+MORE: Complete breakdown of Shohei Ohtani's Dodgers contract, by the minute
+
+Giants reportedly meet with Yamamoto
+
+Date: Monday, Dec. 11
+
+Source: Buster Olney, ESPN
+
+ESPN's Buster Olney reports the Giants met with Japanese ace Yoshinobu Yamamoto on Sunday, Dec. 10.
+</item 4>
+
+<item 5>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+The Hot Stove dominoes have started to fall, but everyone who loves baseball — fans, players, coaches, front-office types and everyone else — is waiting for
+free agent Shohei Ohtani’s decision. Where will the global superstar sign his next contract?
+
+He’s played his entire six-year MLB career with the Angels, but his teams haven’t even sniffed the postseason and Ohtani’s made his desire to win crystal clear,
+so he won’t be back. Will he chase every dollar possible, going solely by the highest offer? That seems unlikely, too. Remember, Ohtani wants to win.
+
+Lots of teams can meet Ohtani in that middle ground, offering both lots of money — he will absolutely sign the largest contract in baseball history — and lots
+of chances to compete for a World Series title (or two or three). It’s a long list.
+
+MORE: Ranking 15 possible destinations for Shoehei Ohtani
+
+So, the baseball world waits for news.
+</item 5>
+
+<item 6>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Here's the latest on Ohtani's free agency pursuits.
+
+MORE: Projecting Shohei Ohtani's contract in free agency
+
+Shohei Ohtani news: Latest updates, rumors for MLB free agency
+
+Ohtani agrees to 10-year, $700 million deal with Dodgers
+
+Date: Saturday, Dec. 9
+
+Shohei Ohtani announced Saturday that he has agreed to a contract with the Dodgers. It's a colossal 10-year, $700 million deal with "significant deferrals," so
+while Los Angeles won't pay him $70 million per year, the franchise will be paying him beyond those 10 seasons.
+
+While rumors connected Ohtani to the Blue Jays on Friday, it's the Dodgers who hand him a record-shattering contract and pair the two-time MVP with two former
+MVPs in Mookie Betts and Freddie Freeman.
+
+Ohtani not headed to Toronto, at his home in Southern California
+
+Date: Friday, Dec.
+</item 6>
+
+<item 7>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+'Money's great, but winning's better'
+
+Date: Nov. 21
+
+Source: Max Scherzer, Rangers pitcher on Foul Territory
+
+OK, so this isn't necessarily a rumor, but an example of how much players would love for Ohtani to join their team. Scherzer was a guest on Foul Territory on
+Monday.
+
+"Money's great, but winning's better."
+
+
+
+Max Scherzer shares his pitch for Shohei Ohtani to join the @Rangers 🏆
+
+
+
+▶️ https://t.co/6KoSRqSgk2 pic.twitter.com/PHW2jHWj6C — Foul Territory (@FoulTerritoryTV) November 20, 2023
+
+Maybe Ohtani won’t sign quite so soon after all
+
+Date: Nov.
+</item 7>
+
+<item 8>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+20
+
+Source: Ken Rosenthal, The Athletic
+
+Buried at the bottom of Rosenthal’s piece on what an Ohtani contract might look like — incentives, opt-outs and all sorts of stuff — is this little bit of
+reporting:
+
+An agreement at the winter meetings in Nashville the first week of December would be the ideal outcome for MLB, but not necessarily for Ohtani. He perhaps will
+be better off waiting for the signing of Japanese righty Yoshinobu Yamamoto, who is expected to be posted for free agency as soon as Monday, triggering a 45-day
+window for teams to negotiate with him. Losing out on the 25-year-old Yamamoto, who could command more than $200 million, might put certain teams on tilt,
+improving the landscape for Ohtani.
+
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov.
+</item 8>
+
+<item 9>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+But MLB Network's Jon Morosi said it's unlikely the Jays will land both star players, reporting they might land one of the two, but they will not add both this
+offseason.
+
+Ohtani has already received several $500+ million offers
+
+Date: Sunday, Dec. 3
+
+Source: Jon Heyman, NY Post
+
+It's no surprise the bidding for Ohtani is heating up, with the star expected to sign soon. And New York Post's Jon Heyman reported Ohtani has already received
+several deals that have topped $500 million, which could mean he winds up being the first $600 million player in MLB history. He added there are believed to be
+five teams in the running for Ohtani.
+
+Decision near for Ohtani
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+Nothing gets the hot-stove crowd excited like a big move during the winter meetings, and the biggest move of the offseason could come this week in Nashville or
+soon after.
+</item 9>
+
+<item 10>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+The Athletic's Ken Rosenthal reported Gurriel has re-signed a contract with the Diamondbacks.
+
+According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with
+the club.
+
+Yamamoto dines with Mets owner
+
+Date: Sunday, Dec. 17
+
+Source: Joel Sherman, New York Post
+
+The Mets continued their strong push for the top free agent available, Yoshinobu Yamamoto, by hosting the Japanese pitcher for dinner Saturday night at team
+owner Steve Cohen's Connecticut home. Cohen and other top Mets officials previously flew to Japan to meet with Yamamoto on his home turf, so this is at least
+the second time the key players have met face-to-face.
+
+Sherman reports the bidding process for the 25-year-old "is supposed to intensify this week," with the Yankees, Dodgers, Giants, Red Sox, Phillies and Blue Jays
+also in the mix.
+</item 10>
+=== END ITEM id=b9db2b3c0e0bfa1d ===
+
+=== ITEM id=d20afa9ea9b467f7 ===
+Gold sentences and facts:
+Sentence 0: We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.
+  Fact 0.0: People identify with the superhero's struggles.
+  Fact 0.1: People identify with the superhero's little glimmers of connection and triumph.
+  Fact 0.2: Identifying with the superhero makes the superhero the perfect superhero for Thanksgiving.
+Sentence 1: Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends.
+  Fact 1.0: Thanksgiving is a holiday.
+  Fact 1.1: The food is arguably the main component of Thanksgiving day.
+  Fact 1.2: Thanksgiving is a beloved time of year.
+  Fact 1.3: Americans come together during Thanksgiving to celebrate what they are thankful for.
+  Fact 1.4: Americans celebrate what they are thankful for with family or with friends during Thanksgiving.
+
+Retrieved items:
+<item 1>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Aunt May has just gotten out of the hospital, and even noted jerk “Flash” Thompson has given Peter hell for how awful he’s been acting.
+
+Peter, attempting to make things right, opts to cook the Thanksgiving meal all by himself, but mostly succeeds in ruining the kitchen. No worries — Gwen Stacy
+and her father, along with a recuperating Aunt May and her doctor, all help out, and the episode concludes with a pleasant dinner. There are no big turns or
+twists, aside from Aunt May revealing that she’s publishing a cookbook. It’s just simple, earned solace in a life marked by chaos. Peter even gets a kiss from
+Gwen on his porch, a sequence conducted with a John Hughes sense of satisfying romantic flair.
+
+Various Spider-Man comics have also dabbled in seeing what Thanksgiving looks like when you’re young and arachnid-themed, but real life has associated
+Spider-Man with the holiday, too. Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade.
+</item 1>
+
+<item 2>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 2>
+
+<item 3>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+What is Thanksgiving and where did it come from?
+
+Thanksgiving is a national holiday in the United States celebrated every fourth Thursday in November.
+
+The annual feast is in honour of the “first” Thanksgivings in America, in 1619 in Virginia, and in 1621, when colonists in Plymouth, Massachusetts, later known
+as the Pilgrims, allegedly shared a meal with the Wampanoag Indians, who were native to the land.
+
+The later feast was in honour of the help the Pilgrims received from the Native Americans in cultivating crops and surviving their first harsh winter and it
+lasted three days.
+
+Macy's Thanksgiving Day Parade takes place in New York Show all 15 1 / 15 Macy's Thanksgiving Day Parade takes place in New York Macy's Thanksgiving Day Parade
+takes place in New York Performers walk in front of Macy's Tom Turkey float in the Thanksgiving Day Parade in New York AP Macy's Thanksgiving Day Parade takes
+place in New York The Ronald McDonald balloon is inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the
+</item 3>
+
+<item 4>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade. Other Marvel characters have appeared on floats, but only
+Spider-Man has been inflated to 80 feet and pulled through the Upper West Side. (That also makes him the only Marvel character to have his head horrifically
+torn open by a tree branch.)
+
+From his first comic book appearance, Spider-Man has been a reminder that life is hard and complicated, and being a superhero doesn’t preclude anyone from
+experiencing ordinary frustrations, setbacks, and confusion. But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers
+that the holiday is about the hope of mutual connection, support, and nurturing. Even if the girl of your dreams is out of reach and the Green Goblin is on your
+case, a table, some friends, and Aunt May’s rad turkey might just make everything better for a little while.
+</item 4>
+
+<item 5>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feelings of loneliness spike during the holidays, meaning that there’s a good chance you’ll feel even more like Peter Parker when late November rolls
+around.
+
+It’s what makes the Thanksgiving scene in the 2002 Spider-Man film so engaging. That whole movie is an exercise in heart-on-your-sleeve sweetness. Everyone
+who’s seen it knows the Thanksgiving dinner rapidly descends into chaos, with Norman Osborn ominously sticking his fingers into Aunt May’s sweet-potato
+casserole, figuring out Spider-Man’s secret identity, and delivering a grossly sexist diatribe to his son Harry, leaving Harry and Mary Jane at odds with each
+other. Aunt May and Peter clearly wind up with a ton of leftovers after everyone else storms out.
+
+But for Peter, who’s just lost his Uncle Ben and has been facing the initial trials of being Spider-Man, there’s a nice moment of personal respite at the
+opening of that scene, where he walks into a room where he knows he’s loved, bearing an offering of cranberry sauce,.
+</item 5>
+
+<item 6>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Marvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were
+essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable
+to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.
+
+But Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic.
+We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving. And Spider-Man
+writers know it.
+
+Thanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding
+friends and family is perhaps one of the most humane acts we can pursue.
+</item 6>
+
+<item 7>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feeding friends and family is perhaps one of the most humane acts we can pursue. It’s less about the spirit of giving, and more about admitting that people
+have innate, basic needs, like food and social comfort, and that those needs are best fulfilled when people work in tandem. Honestly, we should try to do it
+more on every other day of the year: The number of people volunteering to help feed the homeless and families in need peaks around November and December, but
+that energy needs to be carried through the preceding 10 months, too.
+
+Spider-Man represents these needs, even though very few of us have to balance photojournalist work, a fraught dating life, and pummeling Dr. Octopus. Peter
+Parker is often the most financially strapped among his Avengers buddies, and frequently the loneliest, too. Those are recognizable traits among many young
+people, even those without radioactive-spider powers. When you’re growing up and trying to figure out the world, it’s easy to feel lost and isolated.
+</item 7>
+
+<item 8>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+perform in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York The Tom Turkey float is in place to start the parade Reuters
+
+Later, US Presidents including George Washington, John Adams and James Madison called for days of thanks throughout their presidencies.
+
+However, it was not until 1863, during the Civil War, that President Abraham Lincoln declared a national Thanksgiving Day would be held each November to be
+celebrated by all of the country.
+
+When is Thanksgiving?
+
+Thanksgiving takes place each year on the fourth Thursday of November.
+
+This year, Thanksgiving falls on 23 November.
+
+Why do Americans celebrate it and what do they do?
+
+Although Thanksgiving may originally have had religious significance, the day has become a mostly secular holiday.
+
+Most Americans consider the holiday a day to gather and express their thanks through food, family, and football – with multiple NFL teams playing on the
+holiday.
+
+During some Thanksgiving celebrations, people write down what they are thankful for and then read aloud from the pieces of paper.
+</item 8>
+
+<item 9>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Sure, everyone in that room is trying to hold things together. Mary Jane wants to impress Norman, Harry wants to impress Norman and Mary Jane, Peter loves Mary
+Jane but doesn’t dare hurt Harry, and Aunt May is finishing what’s presumably a dope turkey, in an attempt to care for all of them.
+
+It’s the trying that counts: Life can be hard, weird, and cruel, but while sitting down for a meal with our nearest and dearest, maybe for at least a little
+while, we won’t need to have it all figured out.
+
+Not all Spider-Man Thanksgiving dinners end up falling apart, and some succeed in reminding Peter that he isn’t alone. The first season of The Spectacular
+Spider-Man ends with a bang: One of Peter’s closest pals, Eddie Brock, has become Venom, and has threatened everyone Peter holds dear. This comes just after
+Peter himself was infected by the symbiote, and went through the now-iconic throes of pushing everyone away.
+</item 9>
+
+<item 10>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the parade passes down 6th Avenue Reuters Macy's
+Thanksgiving Day Parade takes place in New York An NYPD officer stands by AP Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon
+flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A marching band takes part in the parade Reuters Macy's Thanksgiving Day
+Parade takes place in New York A balloon flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A performer in the parade AP Macy's
+Thanksgiving Day Parade takes place in New York The Ronald McDonald balloon flies in the parade AP Macy's Thanksgiving Day Parade takes place in New York A
+clown performs in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Olaf balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York Flag wavers take part in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York Clowns on roller blades perform in
+the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is
+</item 10>
+=== END ITEM id=d20afa9ea9b467f7 ===
+
+=== ITEM id=76c24a12d29a0f76 ===
+Gold sentences and facts:
+Sentence 0: The first of these is the fact that tech companies continue to see huge pressure on their valuations.
+  Fact 0.0: The first of these is that tech companies continue to see huge pressure on their valuations.
+Sentence 1: With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation.
+  Fact 1.0: The stock surged 10% this year.
+  Fact 1.1: Seeking Alpha's Quant Rating system suggests a Hold.
+  Fact 1.2: The Quant Rating system expresses concerns about valuation.
+
+Retrieved items:
+<item 1>
+Check Point sees 'fantastic' year ahead even as rival report disappointing billings (Seeking Alpha, 2023-11-18T13:56:00+00:00)
+Palo Alto (PANW) said it nonetheless sees demand for its products.
+
+Earlier this month, Fortinet (NASDAQ:FTNT) got a slew of analyst downgrades over a disappointing fourth-quarter outlook.
+
+The near- to medium-term is uncertain after disappointing results, Cantor Fitzgerald said. Stifel, which likes the company, said moving parts will take time to
+play out and shares are expected trade sideways in coming quarters.
+
+The future
+
+Check Point (CHKP) has made three recent acquisitions to expand its offerings.
+
+It has also invested in R&D and launched new products, like the Rugged Industrial Control Systems Gateway, which provides artificial intelligence security and
+deployments in harsh environments. Other new offerings include Playblocks, which extends the reach of siloed security systems to stop attacks across products,
+people and processes.
+</item 1>
+
+<item 2>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+GitHub
+
+Announced February 9, 10% of its staff will be impacted through the end of the company’s fiscal year. Before this announcement, which was first reported by
+Fortune, GitHub had about 3,000 employees.
+
+Yahoo
+
+Announced on February 9, 20% of its staff, impacting 1,600 employees in its adtech business. Yahoo is the parent company to TechCrunch.
+
+GitLab
+
+Announced February 9 that it’s reducing its headcount by 7%. The round of redundancies will impact around 114 people, though that specific figure is dependent
+on its actual headcount as of February 9.
+
+Affirm
+
+Announced on February 8 that it is reducing its staff by 19%, or about 500 employees, and shutting down its crypto unit.
+
+Zoom
+
+Announced the cut of 15% of its staff, or 1,300 people on February 7.
+</item 2>
+
+<item 3>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+2. Do they disagree on long-term strategy?
+
+Despite being the hottest tech company in the world right now and everyone talking about ChatGPT, OpenAI isn’t exactly a sound business. It’s shoveling money
+into the furnace as fast as it can by serving, by all accounts, a fantastically expensive product at bargain-bin prices.
+
+That’s all well and good for a year or two, but at some point that strategy changes from a growth hack to an existential liability. Could Altman and the board
+have had irreconcilable differences on where that point lies?
+
+This doesn’t seem so likely. The company has been very deliberately pursuing this very publicly, confidently and on a long-term basis. Altman and the board seem
+to be in sync on this, at least for the present.
+
+3. Do the numbers not add up?
+
+On the other hand, could OpenAI be losing even more money than Altman admitted or projected? It seems impossible, but the costs of running this operation have
+no precedent, nor really does the operation itself.
+</item 3>
+
+<item 4>
+Check Point sees 'fantastic' year ahead even as rival report disappointing billings (Seeking Alpha, 2023-11-18T13:56:00+00:00)
+According to McKinsey, companies that improved women’s representation outperformed their industry from 2019 to 2022 when compared to other companies with data
+from the same time period.
+
+“When there is gender parity of the board, that company tends to perform higher than the average,” she said. The question is “why is it the best kept secret and
+why aren’t organizations responding to this faster and better?”
+
+War
+
+Like many companies in Israel, Tel Aviv-based Check Point (CHKP) has been impacted by the war, as Hollenbeck said some of its employees have been killed and
+others have been called to serve.
+
+However, she stressed operations are normal and business is continuing as usual. Check Point (CHK) has levels of redundancy around the world and research and
+development happening in several locations, she said.
+
+In addition, the company’s supply chain is 100% outside of Israel and tech support centers and data centers are found around the world.
+</item 4>
+
+<item 5>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+The search-engine giant has outperformed the broader market index with a 55% growth rate this year, surpassing the S&P 500's 12%.
+
+Following the tech behemoth's upbeat Q2 results, investment firm Bank of America said it is expecting "favorable" headlines, due in part to strength in YouTube,
+search, and artificial intelligence.
+
+Just a few days before the earnings report, Seeking Alpha's Quant Rating system changed its view from Strong Buy to Hold, while Wall Street analysts maintained
+a bullish view on the stock, giving it a Strong Buy rating.
+
+Consensus EPS Estimates: $1.45
+
+Consensus Revenue Estimates: $75.73B
+
+Earnings Insight: Google has topped EPS expectations in 4 of the past 8 quarters, beating revenue estimates in 5 of those reports.
+
+Microsoft (MSFT)
+
+Joining Alphabet on Tuesday, Microsoft (MSFT) is also set to report its Q4 performance after the closing bell.
+</item 5>
+
+<item 6>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+Shares of the now-Virginia-based industrial and defense giant have dropped over 7% over the past 6 months, attracting a cautious view of Hold from Seeking
+Alpha's Quant Rating system, pointing to valuation concerns. Meanwhile, Wall Street analysts rate the stock a Buy.
+
+During the third quarter, Boeing and its supplier Spirit AeroSystems (SPR) determined that the aft pressure bulkhead on many Boeing 737 MAX airplanes had
+erroneously drilled fastening holes. At the 2023 Industrial Conference, CFO Brian West claimed that the current issue will affect 75% of the 220 planes in
+inventory, or 165 planes. Despite persistent 737 manufacturing problems, the firm reiterated its ambitions to boost 787 production from three to four per month
+by the end of 2023.
+
+The company delivered 27 commercial jets to customers in the month of September, raising its yearly total to 371 planes.
+</item 6>
+
+<item 7>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+The stock gets a Hold rating from Seeking Alpha's Quant Rating system, a more cautious view than the consensus Buy rating from Wall Street analysts.
+
+"Cleveland-Cliffs is well-positioned to perform well over time, thanks to its strong position when it comes to supplying automobile companies and due to energy
+cost advantages compared to competitors from markets such as Europe," says investing group leader Jonathan Weber.
+
+Consensus EPS Estimates: $0.44
+
+Consensus Revenue Estimates: $5.53B
+
+Earnings Insight: The company has beaten EPS expectations in 3 of the past 8 quarters and revenue in 5 of those reports.
+
+Also reporting: Logitech International S.A. (LOGI), Koninklijke Philips N.V. (PHG), Packaging Corporation of America (PKG) and more.
+
+Tuesday, October 24
+
+Alphabet (GOOG) (GOOGL)
+
+Alphabet (GOOG) (GOOGL) will be announcing its Q3 results during Tuesday’s post-market session.
+</item 7>
+
+<item 8>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+: Shield AI, a startup specializing in autonomous flying systems for the U.S. military, has raised $200 million in a new funding round, reaching a valuation of
+$2.7 billion.
+
+Eero grows up, with best-in-class Wi-Fi: Amazon’s Eero has launched its most advanced mesh Wi-Fi router yet, the Eero Max 7.
+
+Boksing claver: Danish startup Soundboks released its fourth-generation Bluetooth speaker that has been a hit in Europe’s festival scene but has yet to gain a
+strong foothold in the U.S. market.
+
+Highs and lows in the world of startups
+
+The current bear market in cloud stocks has led to a reversal of revenue multiples from earlier this year, making it difficult for late-stage startups to accrue
+value, Alex writes on TC+. However, early-stage startups that are growing rapidly may still be able to raise funds and demand for a better valuation. The trend
+points toward a favorable environment for startups prioritizing growth over cash preservation.
+</item 8>
+
+<item 9>
+Earnings week ahead: DocuSign, NIO, Broadcom, GameStop and more (Seeking Alpha, 2023-12-03T13:02:00+00:00)
+(GTLB) is due to post its Q3 results after the market closes on Monday. With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a
+Hold, expressing concerns about valuation. This contrasts with Wall Street analysts, who advocate a Buy rating.
+
+Recently, Raymond James has rated the stock with a Market Perform rating, citing potential market exuberance and growth potential in fiscal 2025 due to a large
+total addressable market, healthy customers, and a value proposition favoring consolidation over fragmentation.
+
+On the other hand, Cantor Fitzgerald started coverage with an Overweight rating and a $55 price target, as the company anticipates benefits from product
+consolidation and the generative artificial intelligence wave.
+
+Consensus EPS Estimates: -$0.01
+
+Consensus Revenue Estimates: $141.04M
+
+Earnings Insight: GitLab has beaten EPS and revenue expectations in 8 straight quarters.
+</item 9>
+
+<item 10>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+A comprehensive list of 2023 tech layoffs From major layoffs at Google, Amazon and Microsoft to small fintech startups and apps
+
+Last year’s techwide reckoning continues. The tech industry has seen more than 240,000 jobs lost in 2023, a total that’s already 50% higher than last year and
+growing. Earlier this year, mass workforce reductions were driven by the biggest names in tech like Google, Amazon, Microsoft, Yahoo, Meta and Zoom. Startups
+across many sectors also announced cutbacks through the first half of the year. And while tech layoffs slowed down in the summer and fall, it appears that cuts
+are ramping up yet again.
+
+Many economists have cautioned against fears of a recession, which would seem like a reason for optimism. But the momentum for a tech sector rebound has been
+slow to build, resulting in tech companies continuing to cut back on their workforces and pivot from a growth mindset to one based on efficiency in the face of
+stubborn market conditions.
+</item 10>
+=== END ITEM id=76c24a12d29a0f76 ===
+
+=== ITEM id=b5a85ca09c897baf ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook adjusts when odds change for a legitimate reason.
+  Fact 1.2: An injury or a roster move is an example of a legitimate reason for a line or odds to change.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+</item 1>
+
+<item 2>
+Totals Betting - What is an Over/Under Bet? (Sporting News, 2023-11-01T22:08:31+00:00)
+Bookmakers adjust the line to balance the action and protect themselves from potential losses.
+
+One of the most common reasons for line movement is a significant amount of money being wagered on one side (either over or under). Bookmakers adjust the line
+to balance the action and protect themselves from potential losses. Injury Updates: If a key player is injured or unable to play, this can influence the
+expected total score, leading bookmakers to adjust the line accordingly.
+
+If a key player is injured or unable to play, this can influence the expected total score, leading bookmakers to adjust the line accordingly. Weather
+Conditions: In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a
+lower-scoring game, causing the line to move down.
+
+In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a lower-scoring game,
+causing the line to move down.
+</item 2>
+
+<item 3>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 3>
+
+<item 4>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+These allow bettors to engage with games beyond simple outcomes. For those looking at the bigger picture, DraftKings provides futures bets. Fans can bet on
+potential division victors or take a shot at predicting the next World Series champion.
+
+See more:
+
+FanDuel Sportsbook
+
+FanDuel stands out as a top destination for MLB enthusiasts looking to bet daily. It offers the staple bets such as run lines, where you can bet on the margin
+of victory, and totals, predicting the combined score of both teams.
+
+FanDuel also has dozens of player props, allowing bettors to focus on individual performances, predicting stats like hits, home runs, or strikeouts.
+Additionally, FanDuel presents an array of game props and futures bets, letting fans speculate on longer-term outcomes such as division champions or MVP
+candidates.
+
+See more:
+
+BetMGM Sportsbook
+
+BetMGM provides MLB aficionados with an expansive betting portfolio.
+</item 4>
+
+<item 5>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 5>
+
+<item 6>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 6>
+
+<item 7>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Traditional bet types, such as moneylines, where one bets on the outright winner; run lines, which focus on the margin of victory; and totals that predict
+combined team scores, are all readily available.
+
+For those who relish a deeper drop into the game, BetMGM has a deep lineup of player and team prop bets. Whether it's forecasting a player's strikeouts in a
+game or predicting the cumulative runs scored by a team, there's something for every strategy.
+
+For the long-term visionaries, BetMGM rolls out an impressive array of futures bets. Fans can place wagers on outcomes such as which team will clinch its
+division or which player will be honored as the league's Most Valuable Player.
+
+See more:
+
+Caesars Sportsbook
+
+Caesars has a comprehensive suite of MLB odds to elevate the game-watching experience. That includes run lines, predicting the margin of victory; totals, where
+bettors forecast the combined scores; and player props, focusing on individual milestones such as hits, home runs, or RBIs.
+</item 7>
+
+<item 8>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+You’ll find live betting with top betting sites such as DraftKings, FanDuel, BetMGM, and Caesars.
+
+The key to live betting is using a betting app to make your wagers. Apps allow you to track all of the changes — both on the diamond and in the odds — as they
+happen. You won’t find that response time at a brick-and-mortar sportsbook.
+
+Some common MLB in-game betting lines includes:
+
+Next team to score
+
+Run line and moneyline odds
+
+Total runs scored
+
+Winner of the next inning
+
+Player props, such as total hits or strikeouts
+
+Bet on MLB run lines, moneylines, and totals
+
+Three of the most popular bet types for Major League Baseball games are run lines, moneylines, and totals. In case you’re not familiar, let’s explain all three.
+
+A moneyline wager is as straightforward as they come. You’re betting on which team you believe is going to win the game.
+</item 8>
+
+<item 9>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 9>
+
+<item 10>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Betting apps offer real-time updates on all odds, which allows you to react to game flow as it’s happening.
+
+Your MLB betting app can help you track shifting odds and facilitate live betting. Betting apps offer real-time updates on all odds, which allows you to react
+to game flow as it’s happening. Bet from within legal states: As long as you are in a state that has legal online sports betting, you can use your app to make
+bets, track your account, add or withdraw funds, and more. Remember that you can only place bets when you are in the state lines, but you can access your
+account and monitor wagers from anywhere you have internet access.
+
+MLB live betting
+
+The best sports betting apps offer live, in-game betting for Major League Baseball.
+
+Live betting means you can bet on a game in progress, right down to what the next batter will do with the next pitch or what team will win the inning.
+</item 10>
+=== END ITEM id=b5a85ca09c897baf ===

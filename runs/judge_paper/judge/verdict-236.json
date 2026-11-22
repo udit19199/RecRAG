@@ -1,0 +1,54 @@
+[
+{"id": "bfb0e6f5084ab04d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "including being aware of potential bias and upholding privacy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "YouTube publicly committed to three principles/pledges behind its development of music-based generative AI tools"}, {"item": 10, "quote": "They promised “invest[ment] in the AI-powered technology”"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "They promised “invest[ment] in the AI-powered technology” that, amongst other"}, {"item": 10, "quote": "things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse"}]}
+]},
+{"id": "ec45cdd6ed9be574", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new"}, {"item": 10, "quote": "iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new"}, {"item": 10, "quote": "iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new"}, {"item": 10, "quote": "iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "8673c09bba8023cc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has"}, {"item": 8, "quote": "been more than just a curiosity."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 1, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season."}, {"item": 9, "quote": "They aren’t allegations. It happened,"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "8d784c5938aedfce", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "the All Blacks are playing for themselves as much as anyone – and the generation of players and"}, {"item": 6, "quote": "leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "c0e30b82a89c4634", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 4, "quote": "Everything that could go wrong for Dallas on Sunday did go wrong"}, {"item": 10, "quote": "they were so bad against San Francisco on a big stage in their most recent game."}]}
+]},
+{"id": "11bd0f7d752343b5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

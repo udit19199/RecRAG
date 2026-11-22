@@ -1,0 +1,49 @@
+[
+{"id": "cbc13ed9b6dfa3d4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]},
+{"id": "16b1c206eaa074fd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "7f2dda3d2648d0dd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Wang heard a trader ask Bankman-Fried if it was okay to keep withdrawing money from that account."}, {"item": 3, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "That answer ultimately lies with the jury,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "b9811da03668bd43", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "e363d413f2160eb7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "It’s not the NHL that he was playing in the last few years"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "but the level of performance and how he could control a game and dominate a game in junior"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others"}]}
+]}
+]

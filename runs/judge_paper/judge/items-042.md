@@ -1,0 +1,1030 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ddf1c5cfac9d5a76 ===
+Gold sentences and facts:
+Sentence 0: When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the theft of customer funds to him and a few other employees, Drappi said.
+  Fact 0.0: Changpeng Zhao is the CEO of Binance.
+  Fact 0.1: Changpeng Zhao announced on Twitter that he intended to acquire FTX.
+  Fact 0.2: Ellison confessed the theft of customer funds to Changpeng Zhao and a few other employees when Zhao made that announcement.
+  Fact 0.3: Drappi said this.
+Sentence 1: Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified.
+  Fact 1.0: Ellison was CEO of Alameda Research.
+  Fact 1.1: Ellison testified that her tenure as CEO of Alameda Research was an exercise in optics.
+Sentence 2: In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets.
+  Fact 2.0: This speaker specifically pointed the finger at Ellison.
+  Fact 2.1: Ellison was the former CEO of Alameda.
+  Fact 2.2: The speaker said Ellison did not adequately protect Ellison's hedge fund from the inherent risk of the crypto markets.
+
+Retrieved items:
+<item 1>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+She’d testified on direct about Luna, a cryptocurrency token. It had a sister token, Terra, that was a paired algorithmic stablecoin. (If you don’t understand
+what that means, it doesn’t matter, because they were both nonsense.) Cohen asked her about Terra/Luna and she pointed out she’d only spoken about Luna, leaving
+him to fumble about how to explain the relationship between the two tokens. She kept a straight face on the stand while I chuckled from the press seats.
+
+During the opening statement, Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading. We heard more about this hedge in
+cross-examination, and friends, it was stupid. Forget evaluating the trade itself (hedging being long crypto by selling Nasdaq futures). Was she supposed to
+have taken more customer funds to put on the hedge? Was that the defense, that she didn’t take enough of them? Was it that she should have taken them sooner?
+What the fuck?
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said. Besides telling her about his presidential chances, he also told her that
+if there was a coin flip where tails destroyed the world and heads made the world twice as good, he’d flip the coin. He called this being “risk-neutral,” which
+seems like a fancy way of saying he was a gambling addict.
+
+She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022. The goal, Bankman-Fried told her, was to
+“optically” separate Alameda Research and FTX. “The whole time we were dating, he was my boss at work,” she said. They broke up because she wanted more from the
+relationship; Bankman-Fried was distant and not paying enough attention to her.
+</item 2>
+
+<item 3>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 3>
+
+<item 4>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Was it that she should have taken them sooner? What the fuck?
+
+When Sassoon got up for a quick redirect, she demolished any points Cohen had attempted to make. But I didn’t really appreciate her cleverness until after
+Ellison left the stand, and the jurors left the room. She’d managed to set a neat little trap for Cohen.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval
+
+On the direct examination, near the end, Sassoon asked about an Alameda all-hands meeting, without bringing up many specifics. During the cross, Cohen asked
+Ellison what topics were covered in the meeting, while avoiding details. That opened the door for Sasson on redirect to work in that Ellison had confessed to
+stealing billions of FTX customers’ money, at Bankman-Fried’s direction.
+
+There had been an open question of whether jurors would hear the tapes of Ellison’s remarks. The testimony set up an argument for the prosecution to bring in
+those tapes.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Then a bigger one. Then an effectively limitless one.
+
+Ellison testified to something similar, choking back tears: “When I started working at Alameda, I don’t think I would have believed you if you told me I would
+be sending false balance sheets to our lenders or taking customer money, but over time, it was something I became more comfortable with.”
+
+Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified. Alameda Research was, by then, FTX’s sin-eater. When FTX took a loss in
+the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet. FTX’s “insurance fund,” meant to
+keep traders from getting stuck with other traders’ losses, was totally made up — Alameda simply picked up the tab.
+
+Even that wasn’t good enough.
+</item 6>
+
+<item 7>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+(I did observe him occasionally shaking his head, and sometimes quivering at points during her testimony, but didn’t have a view of his face.)
+
+At one point, Ellison appeared to even be toying with Cohen
+
+As we were approaching lunch, several jurors looked annoyed, and Cohen looked clueless. He asked Ellison to define what “buy on the way down” meant, as though
+it were a term of art. (It means what you think it means, to purchase an asset that’s losing value.) This seemed to puzzle her. At other times, Cohen seemed to
+forget what she had testified to, bringing up things she hadn’t said. I don’t know if this was an attempt to trap her in a lie or just poor preparation, but
+much like FTX employee Adam Yedidia before her, Ellison was fastidious about making sure a question was clear and her answer was precise.
+
+At one point, Ellison appeared to even be toying with Cohen. She’d testified on direct about Luna, a cryptocurrency token.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+“Sam acted in good faith and took reasonable business measures” is a pretty hard pill to swallow with that in mind.
+
+Man, it’s no good when your defense lawyer has just made you sound worse than the prosecution already did. And while Cohen tried to make the common white-collar
+defense argument that Bankman-Fried, as CEO, was simply too busy to oversee what everyone did every day, he just made me more suspicious. That’s why you hire a
+risk officer and delegate! That’s the whole point! I could barely even hear Cohen blaming Caroline Ellison and Changpeng “CZ” Zhao for the debacle over the “no
+risk officer” ringing in my ears.
+
+Following the defense’s opening statements, things got still worse for Bankman-Fried. The prosecution called its first witness, Marc-Antoine Julliard, whose
+money got stuck on FTX. Juilliard, who was born in Paris and lives in London, testified that he trusted FTX because Bankman-Fried came across as a leading
+figure of the industry.
+</item 10>
+=== END ITEM id=ddf1c5cfac9d5a76 ===
+
+=== ITEM id=bf2ca5af84cb4a35 ===
+Gold sentences and facts:
+Sentence 0: They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+  Fact 0.0: Jerry Dipoto is president of baseball operations.
+  Fact 0.1: Those referred to as 'they' would all have significant value if Jerry Dipoto decided to move one for a bat.
+Sentence 1: Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+  Fact 1.0: Aaron Judge came away with a new contract.
+  Fact 1.1: Justin Verlander came away with a new contract.
+  Fact 1.2: Trea Turner came away with a new contract.
+  Fact 1.3: Xander Bogaerts came away with a new contract.
+
+Retrieved items:
+<item 1>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+MLB's winter meetings are always a prime time for moves to happen as many of the top executives, players and agents all come together at the same spot.
+
+Last year's winter meetings wound up being explosive. Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+
+This year's winter meetings could wind up being similarly busy. There is a growing sense Shohei Ohtani could sign during the winter meetings, and a move of that
+magnitude could kick off the next wave of moves. There's also a number of top players on the trade market, including star Padres outfielder Juan Soto.
+
+Starting Sunday, Dec. 3, and running through Wednesday, Dec. 6, expect MLB's offseason to really kick into high gear.
+
+WINTER MEETINGS: Shohei Ohtani rumors, Juan Soto trade destination come to forefront
+
+Sporting News will be tracking all the latest news and rumors from the 2023 Winter Meetings.
+</item 1>
+
+<item 2>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+New York has subsequently walked back some of their statements about a possible retool. They’re still aiming to compete in ’24 even if they’re signaling they
+won’t blow away the top of the free agent market.
+
+First-year president of baseball operations David Stearns has twice publicly said he anticipates Alonso being the Opening Day first baseman in Queens. That
+won’t stop teams from trying, but an offseason deal looks decidedly unlikely.
+
+Others of note
+
+A’s: Seth Brown
+
+Braves: Vaughn Grissom
+
+Brewers: Adrian Houser, Devin Williams, Brandon Woodruff
+
+Cardinals: Alec Burleson, Tommy Edman, Nolan Gorman, Tyler O’Neill
+
+Giants: J.D.
+</item 2>
+
+<item 3>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+16. Mariners SP
+
+We initially had Bryan Woo in this spot. It could just as easily have been Bryce Miller or Emerson Hancock, so we’ll cheat and just mention the Seattle rotation
+in general.
+
+They’re almost certainly not going to trade George Kirby. It’d take a lot to pry away Logan Gilbert. Moving any of Woo, Miller or Hancock could be more
+appealing for a front office that is looking for ways to add long-term offensive upside.
+
+None of that trio has even reached one year of major league service. Hancock only has three big league starts under his belt. Miller and Woo spent more time in
+the rotation this year, starting 25 and 18 games respectively. They both turned in mid-rotation results.
+
+Other clubs probably have differing opinions on which right-hander they prefer. (The Mariners likely have their own slight preferences.) They’d all have
+significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+
+17.
+</item 3>
+
+<item 4>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+While the offseason has gotten rolling, trade season hasn’t quite arrived. The Tigers acquired Mark Canha from Milwaukee in the biggest swap of the first couple
+weeks. Otherwise, the GM Meetings simply served to set the stage for future transactions.
+
+That’ll surely involve some notable trades. Unlike the summer deadline, projecting which players will change hands is difficult at this stage of the offseason.
+
+Aside from the A’s, there aren’t any teams clearly in rebuild mode. Clubs like the Rockies, Royals, White Sox, Nationals and Angels have uphill paths to
+contention, yet none has indicated they’re prepared to punt on the 2024 season entirely.
+
+The Padres, Twins, Rays, Brewers and Guardians are all aiming to contend but have questions about their payroll. That’s standard operating procedure for Tampa
+Bay, Milwaukee and Cleveland. San Diego and, to a lesser extent, Minnesota have shown a willingness to spend in recent years but are scaling back — in both
+cases, likely tied to their uncertain local television rights contracts.
+</item 4>
+
+<item 5>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Rays, Mariners talking trades in winter meetings
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+The Mariners and Rays have been frequent trade partners in recent years, and there's a chance they could be talking shop again at the winter meetings. MLB
+Network's Jon Morosi reported the teams are discussing Rays utility infielder Isaac Paredes, and potentially star left fielder Randy Arozarena, in talks to
+start the winter meetings.
+
+Jays unlikely to land both Ohtani, Soto
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+The Blue Jays have been among the most active names in both the Ohtani and Soto markets. And of course, those talks have had fans dreaming of a lineup that
+features, Ohtani, Soto, Vladimir Guerrero Jr., Bo Bichette and George Springer.
+</item 5>
+
+<item 6>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+3
+
+Source: Susan Slusser, San Francisco Chronicle
+
+The Giants have missed out on big names in the past like Aaron Judge and Carlos Correa, but they are looking to turn that around in 2023 with heavy involvement
+and Ohtani, among others. Per San Francisco Chronicle's Susan Slusser, teams believe the Giants "might have an edge" in the pursuit of Japanese ace Yoshinobu
+Yamamoto.
+
+Dylan Cease trade market heating up
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+One of the biggest names on the market early is White Sox ace Dylan Cease in trade talks. MLB Network's Jon Morosi reported three teams, the Dodgers, Braves and
+Orioles, are among several involved discussing a deal for Cease as the winter meetings begin.
+
+Rays, Mariners talking trades in winter meetings
+
+Date: Sunday, Dec.
+</item 6>
+
+<item 7>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Twins could trade Max Kepler, Jorge Polance
+
+Date: Sunday, Dec. 17
+
+Source: Jon Morosi, MLB Network
+
+The Twins are coming off an AL Central title, but could be looking to deal away two of their key players form the team. Max Kepler and Jorge Polanco could both
+reportedly be on the trade market, per MLB Network's Jon Morosi, though their market could hinge on the status of other infield free agents.
+
+Kepler appeared in 130 games for the Twins, and posted an impressive .260/.332/.484 slash line with 24 homers for Minnesota. Polanco was moved to an infield
+utility role with Edouard Julien and Royce Lewis emerging into regulars, but was still solid in 80 games, logging a .255/.335/.454 slash with 14 homers.
+
+Yamamoto requests meeting with Yankees
+
+Date: Sunday, Dec.
+</item 7>
+
+<item 8>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+Davis, Mike Yastrzemski
+
+Guardians: Josh Naylor, Cal Quantrill
+
+Mariners: Ty France
+
+Marlins: Josh Bell
+
+Mets: Jeff McNeil
+
+Nationals: Hunter Harvey, Lane Thomas
+
+Orioles: Anthony Santander
+
+Padres: Scott Barlow
+
+Phillies: Nick Castellanos
+
+Rays: Manuel Margot, Harold Ramírez
+
+Red Sox: Kenley Jansen, Chris Martin, Nick Pivetta
+
+Rockies: Brendan Rodgers
+
+Royals: Salvador Perez
+
+Tigers: Spencer Turnbull
+
+Twins: Kyle Farmer
+</item 8>
+
+<item 9>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+It also makes him less likely to be traded this offseason.
+
+First-year GM Chris Getz has suggested no one on the roster is truly untouchable, an understandable approach for a team that just lost 101 games. Neither owner
+Jerry Reinsdorf nor Getz has called this a rebuild, though.
+
+Any slim hopes the White Sox may have of competing in 2024 would be dashed by trading Cease, the only above-average starting pitcher on the roster.
+
+7. Alex Verdugo, RF, Red Sox
+
+Verdugo’s name has been floated in trade rumors for a few seasons. The Red Sox have held onto him thus far. They have a new baseball operations leader in Craig
+Breslow, who has acknowledged the team has gotten early calls on the left-handed hitting outfielder.
+
+Jarren Duran and Masataka Yoshida also hit from the left side. Dealing Verdugo could free some at-bats for a right-handed addition while perhaps bringing in
+immediate help for the pitching staff or at second base.
+</item 9>
+
+<item 10>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Verdugo had been the Red Sox's starting outfielder for the last four seasons, coming over as the centerpiece in the trade that sent Mookie Betts to the Dodgers.
+Verdugo hit .281 with 43 home runs, 206 RBI and 16 stolen bases over 2,071 plate appearances with Boston. He also led the American League in outfield assists in
+2020 and 2023.
+
+In return, Boston will get Weissert and two pitching prospects headlined by Fitts — the Yankees' No. 4-ranked pitching prospect and 12-ranked prospect overall.
+
+Relievers Yates, Devenski get one-year deals for 2024
+
+Date: Tuesday, Dec. 5
+
+Source: Ken Rosenthal, The Athletic and Jeff Passan, ESPN
+
+Veteran relievers Kirby Yates and Chris Devenski know where they'll be pitching in 2024, according to reports Tuesday.
+</item 10>
+=== END ITEM id=bf2ca5af84cb4a35 ===
+
+=== ITEM id=9dbabe60d3583f08 ===
+Gold sentences and facts:
+Sentence 0: Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad.
+  Fact 0.0: Microsoft also sells a stripped-down Elite Series 2 'Core' version of its controller.
+  Fact 0.1: The Elite Series 2 Core version costs $129.99.
+  Fact 0.2: The Elite Series 2 Core is the same controller as the full Elite Series 2.
+  Fact 0.3: The Elite Series 2 Core comes in white-and-black, red-and-black, or blue-and-black finishes.
+  Fact 0.4: The Elite Series 2 Core does not include the rear paddles.
+  Fact 0.5: The Elite Series 2 Core does not include the accessory charging case.
+  Fact 0.6: The Elite Series 2 Core does not include the extra stick toppers.
+  Fact 0.7: The Elite Series 2 Core does not include the extra D-pad.
+Sentence 1: While these models are still quite new, versions that actual humans buy have begun receiving discounts.
+  Fact 1.0: The models mentioned are still quite new.
+  Fact 1.1: Versions that actual humans buy have begun receiving discounts.
+
+Retrieved items:
+<item 1>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+You can, of course, spec them up the wazoo if you’re willing to pay more, as exhibited by the review unit Apple sent us of the 16-inch model, which cost an
+eye-watering $7,199.
+
+While these models are still quite new, versions that actual humans buy have begun receiving discounts. The 14-inch MacBook Pro in its base configuration with
+the M3 Pro (11-core CPU / 14-core GPU), 18GB of RAM, and 512GB SSD is currently on sale for $1,749 ($250 off) at B&H Photo. A similar version with 1TB of
+storage and a 12-core / 18-core M3 Pro is down to $2,149 (also $250 off) at B&H Photo. As for the base 16-inch MacBook Pro with the M3 Pro (12-core CPU /
+18-core GPU), 18GB of RAM, and a 512GB SSD, it’s selling for $2,249 ($250 off) at Amazon and B&H Photo.
+</item 1>
+
+<item 2>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+However, it starts with just 8GB of RAM and lacks the third USB-C / Thunderbolt port found on the M3 Pro and M3 Max models (as well as Thunderbolt 4 speeds).
+
+The M3 MacBook Pro may be a bit of an odd middle child in some ways, but it’s still a very good laptop — especially if you can get it on a deal that puts more
+price distance between it and the M3 Pro version. We’ve already seen the base model with 512GB of storage on sale for $150 off during Black Friday and Cyber
+Monday, and right now, it’s actually available for an even better $1,399 ($200 off) at Amazon, Best Buy, and B&H Photo. The 1TB configuration is also selling
+for its all-time low of $1,599 ($200 off) at Best Buy and B&H Photo, while the configuration with base storage and 16GB of RAM is selling for $1,599 ($200 off)
+at B&H Photo.
+</item 2>
+
+<item 3>
+54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods (Wired, 2023-11-25T00:00:29+00:00)
+We recommend the M3 for anyone who wants some of the Pro features but doesn't want to drop almost $2,000 to get it.
+
+This MacBook Pro (9/10, WIRED Recommends) is less than a year old, but we only recommend it if you can find it for under $1,800. It packs all the same features
+as the latest version and the M2 Pro is more than capable of handling graphically demanding and intensive tasks. This is also the lowest price we've tracked for
+this specific configuration.
+
+This M3 Pro MacBook Pro is similar to the other model that's on sale. It just has a larger screen, a more powerful CPU, and slightly better graphics. Apple's
+brand-new M3 chips are available in three different MacBook tiers—the M3, M3 Pro, and M3 Max (9/10, WIRED Recommends). They're all included in our guide to the
+Best Laptops.
+</item 3>
+
+<item 4>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+M2 Pro MacBook Pro
+
+As for the 14- and 16-inch MacBook Pros from early 2023 with M2 Pro / Max processors, they’re still more than capable — they may even be a better buy than the
+new models if you can find them at a steep discount.
+
+For example, the base 14-inch MacBook Pro with an M2 Pro chip, a 512GB SSD, and 16GB of RAM is selling for $1,629 ($370 off) at Amazon, which is a new low price
+that may not last very long. However, the 14-inch model with 1TB of storage, a 12-core M2 Pro CPU, and 19 GPU cores is down to $1,999 (a steep $500 off) at B&H
+Photo. Now we’re talking!
+
+Sadly, the situation isn’t quite as good for the 16-inch MacBook Pro with the M2 Pro.
+</item 4>
+
+<item 5>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+That said, if you plan on going with a higher-spec configuration than that, you’ll likely want to spring for the M3 Pro model instead (see below).
+
+The 14- and 16-inch MacBook Pros for late 2023 are another round of spec-bump models, much like their previous 2022 incarnations. Now starting with the M3 Pro
+chip (or the speedier M3 Max) and 18GB of base RAM instead of 16GB, the new models remain targeted at creatives doing content work like video editing, photo
+processing, and other graphical work. Like their predecessors and the M1 Pro generation before that, they offer MagSafe charging, three USB-C / Thunderbolt 4
+ports, HDMI-out, and a full-size SD card slot, with prices starting at $1,999 for the 14-inch and $2,499 for the 16-inch.
+</item 5>
+
+<item 6>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+The best MacBook Pro deals
+
+The MacBook Pro line is once again in a transitional phase. Apple announced Macs using a new M3 processor at its “Scary Fast” event the night before Halloween,
+including a new 14-inch MacBook Pro that replaces the 13-inch M2 model. That means Touch Bar Macs are finally dead, but some of those outgoing M2 models are
+still available for now. You’ll find any deals on them further down, but first, let’s focus on the new M3 generation.
+
+M3 and M3 Pro MacBook Pro
+
+The new entry point into the MacBook Pro world is a MagSafe-equipped MacBook Pro that uses the existing 14-inch design and slightly pares it down. The 14-inch
+M3 MacBook Pro has the same 3024 x 1964 resolution display and 120Hz refresh rate as its pricier siblings, and in addition to a MagSafe charging port, it has an
+SD card slot and HDMI port.
+</item 6>
+
+<item 7>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+But it differs by having a larger, 15.3-inch notched screen with 2880 x 1864 resolution, six speakers instead of four, a 10-core GPU that costs extra on the
+13-inch, and a higher starting price of $1,299. Bumping up to a larger, faster 512GB of storage will run you $1,499.
+
+Surprisingly, the 15-inch M2 Air started receiving some discounts even before it shipped, which let early adopters save between $50 and $100. As of right now,
+you can get it $300 off by ordering it at Amazon or Best Buy, where it’s currently selling for $999. The expanded 512GB model is also $300 off at Best Buy,
+selling for $1,199.
+
+The best MacBook Pro deals
+
+The MacBook Pro line is once again in a transitional phase.
+</item 7>
+
+<item 8>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+M2 MacBook Air
+
+As for the newer, fancier 13-inch MacBook Air with M2, the base model with 256GB of storage and an eight-core GPU recently got a price drop. Along with
+introducing a 15-inch M2 Air, Apple announced during this year’s WWDC that the 13-inch model now starts at $1,099 instead of $1,199. As for deals, the 13-incher
+is currently selling for $899 ($200 off) at B&H Photo, Additionally, Best Buy and B&H Photo are offering an equal diacount on the upgraded configuration, which
+can be had with a 512GB SSD and 10-core GPU for $1,199 ($200 off).
+
+The M2 MacBook Air is a super slim and light laptop with a 1080p webcam that’s actually usable as well as a handy magnetic charger that frees up one of its
+precious two USB-C ports.
+</item 8>
+
+<item 9>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+The best (and only) deal available right now on the creator-friendly laptop is at Amazon, where you can grab the base M2 Pro model for $2,299.99 ($200 off) with
+512GB storage. That’s not great, but hopefully we see better deals before the laptop is no longer available new.
+
+M1 Pro and M1 Max MacBook Pro
+
+For now, the older 2021 MacBook Pros can occasionally be had for some steep discounts that actually make a two-generation-old laptop still worth considering.
+You’re unlikely to find any base models still kicking around, but if you want a souped-up configuration on the cheap, you may be in luck.
+
+The 16-inch MacBook Pro from 2021 with 16GB of RAM and an expanded 1TB of storage is available at B&H Photo for $1,799 ($900 off).
+</item 9>
+
+<item 10>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+Apple sells MacBooks equipped with its own M-series chips in a wide range of sizes and price points. The offerings start with the 13-inch MacBook Air from 2020
+at $999 and go all the way up to the latest 16-inch MacBook Pro starting at $2,499. But finding a deal on a current Mac with an M1, M2, or even the new M3 chip
+— as well as the higher-end M3 Pro and M3 Max — is actually not that difficult.
+
+While Macs may not experience perpetual discounts, it’s not uncommon to see various current models discounted by as much as $400. Alternatively, purchasing
+refurbished options directly from Apple is another way to save money without as much waiting for the changing winds of deals to blow your way. Apple’s
+refurbished store provides a one-year warranty on all products and generally offers discounts of up to 15 to 20 percent off the price of a new unit.
+</item 10>
+=== END ITEM id=9dbabe60d3583f08 ===
+
+=== ITEM id=35249bc01b1e3496 ===
+Gold sentences and facts:
+Sentence 0: Research shows that even a small reduction in sleep has been shown to impact your immune system, however.
+  Fact 0.0: Research shows that even a small reduction in sleep impacts the immune system.
+Sentence 1: “This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says.
+  Fact 1.0: Dr Browning says this sex difference in insomnia emerges after puberty.
+  Fact 1.1: Dr Browning says the sex difference suggests hormonal differences may be the cause of the increased insomnia risk in women.
+  Fact 1.2: Dr Browning names menstruation, pregnancy and menopause as examples of hormonal differences.
+  Fact 1.3: Dr Browning says hormonal differences such as menstruation, pregnancy and menopause may cause this increased risk in women.
+
+Retrieved items:
+<item 1>
+Sleepy tea, counting backwards and dense earplugs: Inside the lives of insomniacs (The Independent - Life and Style, 2023-10-01T08:55:56+00:00)
+The series was inspired by creator Natalie Walter’s own experience with insomnia, and her late-night Facebook chats with Steve Burge, her co-writer on Still Up.
+“As part of the research for [the show] we visited a sleep clinic, which was fascinating,” she tells me. “Some evolutionary biologists think the reason humans
+have different sleep patterns is that during our early history, a few members of the tribe would always be awake and vigilant during the night, and so could
+protect everyone else from predators. Not that I’d be much use fighting off a woolly mammoth.”
+
+Just like depression or anxiety, insomnia can often be triggered by something. Whether it’s a life event as monumental as becoming a new parent, or something as
+commonplace as jet lag, there are any number of things that can prompt a bout of sleeplessness. The issue, explains sleep therapist Dr Lindsay Browning, is that
+insomnia can often remain long after the trigger has gone.
+</item 1>
+
+<item 2>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+Live your life healthier and happier with our free Living Well newsletter, packed with wellness advice, practical tips and nutritious recipes Live your life
+healthier and happier with our free weekly Living Well newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to
+be emailed about offers, events and updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Living Well email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Winter is coming, as the clocks go backwards one hour at 2am on Sunday 29 October.
+
+This will give us an extra hour in bed as we prepare for the colder months when the sun sets earlier and days get significantly shorter.
+
+The clocks won’t go forward again until Sunday 31 March 2024.
+
+Even so, the debate as to whether we should continue to comply with Daylight Saving Time (DST) protocols continues to run rife.
+</item 2>
+
+<item 3>
+Sleepy tea, counting backwards and dense earplugs: Inside the lives of insomniacs (The Independent - Life and Style, 2023-10-01T08:55:56+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Lavender oil. Eating kiwis. Masturbation. Everyone has their own “hacks” when it comes to falling asleep in 2023; the days of counting sheep are long gone.
+Jennifer Aniston’s top tip for battling insomnia is to “sleep with my phone at least five feet away from me”, while Martha Stewart recommends focusing on your
+breathing.
+</item 3>
+
+<item 4>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+Conversely, the switch from winter to summer time was found to have no effect.
+
+People frequently report an increase in SAD and depressive symptoms in winter (Getty/iStock)
+
+“This study shows that the transition from summer time to standard time was associated with an increase in the incidence rate of unipolar depressive episodes,”
+the study authors concluded. “Distress associated with the sudden advancement of sunset, marking the coming of a long period of short days, may explain this
+finding.”
+
+A drop in heart attacks
+
+Not everyone is convinced, however. Charlie Morley, author of Wake Up to Sleep, cites a 2014 study by the College of Cardiology, which reported a significant
+drop in heart attacks in the 24 hours immediately following turning back the clocks.
+
+“Fascinatingly, each year when the clocks go back for Daylight Saving and 1.6 billion people across 70 countries gain an extra hour in bed, there is a 21 per
+cent decrease in heart attacks the next day,” he says.
+</item 4>
+
+<item 5>
+Sleepy tea, counting backwards and dense earplugs: Inside the lives of insomniacs (The Independent - Life and Style, 2023-10-01T08:55:56+00:00)
+In her 1973 feminist novel Fear of Flying, author Erica Jong notes that, sometimes, the only way to overcome sleeplessness is by pretending you don’t care about
+nodding off. “Then sleep became piqued, like a rejected lover, and crept up to try to seduce you.”
+
+In a world where human sleep patterns have increasingly been plunged into chaos, people are having to turn to ever more creative – and often bizarre – means of
+getting their 40 winks in. Today, the internet is littered with tips and tricks that promise a sound sleep, but not all of them are effective and none are
+foolproof. (Kiwis, by the way, contain serotonin and antioxidants, which is why it’s thought they might have sleep-promoting benefits.) The result is a society
+with a growing problem on its hands: persistent sleeplessness – otherwise known as insomnia.
+</item 5>
+
+<item 6>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+“One of the most important aspects of a healthy sleep schedule is waking up around the same time each morning, so try to limit yourself to a one-hour window if
+you need to adjust when you get up in the morning and when you go to sleep at night. One hour sounds like an insignificant amount of time, but it can completely
+throw our circadian rhythm, or more simply known as internal clock, off balance,” he says.
+
+Despite this, a spokesperson for Sleep School, a science-based sleep education and therapy service, told The Independent that it is “impartial” on the extent to
+which the clocks changing impacts sleep, arguing that the important factor is the duration of time asleep and a consistent schedule.
+
+Fewer depressive episodes
+
+A Danish study from 2017 of more than 185,000 people over 15 years found that the transition from summer time to standard time was associated with an 11 per
+cent rise in depressive episodes. Conversely, the switch from winter to summer time was found to have no effect.
+</item 6>
+
+<item 7>
+Sleepy tea, counting backwards and dense earplugs: Inside the lives of insomniacs (The Independent - Life and Style, 2023-10-01T08:55:56+00:00)
+“At this point, you’re no longer worried about the traumatic incident; you’re now worried about not being able to sleep.” It’s a self-fulfilling prophecy.
+
+Social media consultant and mother of two, Amy Fieldhouse-Downes, started suffering from insomnia after the birth of her second son in 2019. She believes the
+affliction was rooted in anxiety. “If you Google how to go to sleep, I’ve probably tried everything on there,” she says. “Going to bed earlier, going to bed
+later, meditations that would get cut off by an advert, lavender products, sleep cream, eye masks, Sominex sleep tablets. And I even used it as an excuse to
+have a few glasses of wine.” It wasn’t until she tried sleeping with specialised earplugs that she was finally able to get some rest.
+</item 7>
+
+<item 8>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+The Society has urged the UK government to adopt British Summer Time on a permanent basis.
+
+“RoSPA is in favour of this proposal, and is calling for the government to adopt British Summer Time (GMT+1) all year,” the society states.
+
+Dark, icy roads can be dangerous (Getty)
+
+“This would mean road users will no longer experience the sudden onset of darkness during their autumn commutes, potentially saving many lives.”
+
+And they’re not alone. The Royal Society for the Prevention of Accidents also supports the call to abolish DST, citing figures from the RAC Foundation which
+state that road traffic collisions increase by 19 per cent in the fortnight after putting the clocks back one hour from British Summer Time, reducing by 11 per
+cent when we put the clocks forward.
+
+Increased immunity
+
+Getting a good night’s sleep during the winter months is essential in protecting us against the seasonal increase in colds and flu. Research shows that even a
+small reduction in sleep has been shown to impact your immune system, however.
+</item 8>
+
+<item 9>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+Research shows that even a small reduction in sleep has been shown to impact your immune system, however.
+
+Making the move from daylight saving time interferes with your natural circadian rhythm, the 24-hour biological cycle that is influenced by morning light and
+evening darkness, however.
+
+“It’s hard to understate the importance of a good night’s sleep,” says Giulia Guerrini, lead pharmacist of digital pharmacy Medino. “Having too much or too
+little sleep can have adverse side effects, so you should aim to get between seven and eight hours of sleep as consistently as possible.”
+
+Never underestimate the value of a good night’s sleep (Getty)
+
+“One of the biggest disruptors to our sleep is when UK clocks go forward one hour at 1am on the last Sunday in March and go back one hour at 2am on the last
+Sunday in October, which is rapidly approaching on 30 October.
+</item 9>
+
+<item 10>
+Sleepy tea, counting backwards and dense earplugs: Inside the lives of insomniacs (The Independent - Life and Style, 2023-10-01T08:55:56+00:00)
+The symptoms of insomnia can last a long time; a longitudinal study conducted in the UK found that 69 per cent of respondents affected by the sleep disorder at
+the start of the study still had insomnia 12 months later.
+
+This may go to show how complex treating insomnia can be. Explaining the appeal of quick fixes, Dr Browning says, “In the short term you’re changing something,
+so [they] can often [work] like a placebo. If hunger is keeping you awake, eating before bed will help. If your mattress is uncomfortable, sleeping on the floor
+will help.” But the problem isn’t just that these methods don’t necessarily work – it’s that they could be used to exploit vulnerable insomniacs.
+
+“I’m a sleep therapist, my doctorate is in insomnia and it’s very, very frustrating,” she says. “People who have insomnia are desperate.
+</item 10>
+=== END ITEM id=35249bc01b1e3496 ===
+
+=== ITEM id=889fd1f647960ad3 ===
+Gold sentences and facts:
+Sentence 0: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 0.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 0.1: The leading piece of drama returns.
+Sentence 1: The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley.
+  Fact 1.0: The Big Ten suspended coach Jim Harbaugh for three games.
+  Fact 1.1: The Big Ten suspended Jim Harbaugh on Friday.
+  Fact 1.2: The team was on a plane en route to Penn State when the suspension happened.
+  Fact 1.3: Michigan had hoped to block the suspension.
+  Fact 1.4: The Wolverines (Michigan) will be without their coach on the sidelines in Happy Valley.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Nicole Auerbach (@NicoleAuerbach) November 11, 2023
+
+Harbaugh hearing coming down to wire before Penn State game
+
+ESPN's Pete Thamel reported it's unclear Harbaugh will be granted a hearing in time to be able to coach against Penn State. With kickoff scheduled for noon ET,
+Thamel said "the drama's going to go right up 'till noon."
+
+Latest from ⁦@CollegeGameDay⁩ on Jim Harbaugh’s TRO legal filing. Will he coach Michigan at Penn State today? pic.twitter.com/bz3R1eYxI9 — Pete Thamel
+(@PeteThamel) November 11, 2023
+
+The case is reportedly in the hands of Judge Carol Kunhke, a Michigan alumnus.
+
+Harbaugh was not on the Michigan team bus with other coaches and players when it arrived at Beaver Stadium Saturday morning.
+
+Michigan players and coaches arrive. No Jim Harbaugh on the bus.
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+However, the primary difference is Michigan is accused of using in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire
+its information.
+
+Monday, Nov. 6
+
+No connection between Buckeyes coach, Michigan investigation
+
+Ohio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan, Yahoo Sports reported.
+
+A report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes' arch-rivals, but the NCAA told the Big Ten there
+are no ties that it knows of between the Ohio State coach and the investigation.
+
+NCAA shares findings with Big Ten as Harbaugh suspension looms
+
+Yahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the in-person scouting
+and recording of opponents’ sidelines to Harbaugh."
+
+Still, the conference is considering a suspension for Harbaugh and could hand down punishments before the end of the week.
+</item 4>
+
+<item 5>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Will Harbaugh be on the field before the end of the regular season? The Big Ten made a Friday ruling that will prohibit Harbaugh from being on the field for the
+final three regular-season games as a result of the in-person scouting and sign-stealing scandal that led to the resignation of staffer Conor Stallions. ESPN
+reported there will be a temporary restraining order hearing on Nov. 17 that will answer that question.
+
+On the field, Michigan answered the question about its College Football Playoff. Sort of. The Wolverines proved they could beat Penn State (8-2, 5-2) in a
+20-yard box. Neither team completed a pass of 20 yards or more. Michigan trailed 3-0 after the first quarter. The Wolverines had eight carries for 10 yards, and
+Penn State's Abdul Carter set the tone with a jarring hit on Blake Corum that nearly resulted in a fumble.
+
+Michigan took control with the running game.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Within it, the school warned Big Ten commissioner Tony Pettiti against levying "premature" disciplinary action against Jim Harbaugh and alleged that in-person
+scouting and sign-stealing are commonplace across the NCAA.
+
+"The conference should act cautiously when setting precedent given the reality that in-person scouting, collusion among opponents, and other questionable
+practices may well be far more prevalent than believed," the letter read.
+
+Michigan also included with the letter "two attached documents of Michigan's offensive and defensive signs allegedly stolen and shared by other Big Ten teams,"
+per Yahoo Sports.
+
+Conference awaits Michigan response
+
+The Big Ten expects a formal response from Michigan to the notice of discipline by the end of the day Wednesday, ESPN's Pete Thamel reports. His colleague Adam
+Rittenberg adds that a ruling is expected to come down Thursday.
+
+Sources: The Big Ten expects a response from Michigan on the notice of discipline by the end of day on Wednesday. Don’t expect any ruling by the Big Ten on
+Wednesday, as they are expected to take time to absorb Michigan’s response.
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Pete Thamel (@PeteThamel) November 8, 2023
+
+Tuesday, Nov. 7
+
+Michigan says three other Big Ten schools shared decoded Wolverines signals
+
+While Michigan tries to navigate the storm around its program, the Wolverines are also trying to make one thing clear: they're hardly alone in trying to
+decipher opponents' signals.
+
+Michigan has shared evidence with the Big Ten and NCAA showing staff members at Ohio State, Purdue and Rutgers shared intelligence on the Wolverines' signals
+prior to last year's Michigan-Purdue Big Ten Championship Game, The Athletic reported.
+
+Documents breaking down Michigan's signals for numerous plays were compiled by Purdue staffers ahead of the game based on information provided by Ohio State and
+Rutgers football personnel, the report says. The person who supplied the documents told The Athletic he spent 10 to 12 hours per week trying to decode signals
+based on game video and said the practice of sharing decoded signals with other schools is common.
+</item 7>
+
+<item 8>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Did Michigan really need Jim Harbaugh on Saturday?
+
+Perhaps the result provides the short-term answer. No. 3 Michigan beat No. 10 Penn State 24-15 at Beaver Stadium on Saturday. The Wolverines threw one pass in
+the second half – and that didn't even technically count – in a risk-averse game plan under acting coach Sherrone Moore. The defense smothered the Nittany
+Lions, and that will lead to more buildup ahead of the showdown with No. 1 Ohio State on Nov. 25.
+
+Then Moore let it all there in the Fox postgame interview with Jenny Taft. Even if the answer is no, Harbaugh was ever-present.
+
+"I want to thank the Lord and I want to thank Coach Harbaugh," Moore said. "I f------ love you man. I love the s--- out of you, man. I did this for you, for
+this university, the president, our AD.
+</item 8>
+
+<item 9>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Will Harbaugh finally take the parachute to the NFL? Those are questions bound to come up at the end of the 2023 season.
+
+BENDER: Michigan will need Jim Harbaugh against Ohio State
+
+Big Ten
+
+This is the fourth football scandal in less than a calendar year.
+
+Three former Iowa football players and a student manager were charged in an illegal sports wagering scandal. Several student-athletes face allegations of
+placing bets on games in which they played in. Northwestern coach Pat Fitzgerald was fired on July 10 after a hazing investigation into the program. Fitzgerald
+is suing the university for wrongful termination. Michigan State fired Mel Tucker on Sept. 27 after allegations of sexual misconduct from Brenda Tracy, a
+speaker on sexual assault awareness.
+
+Now, Michigan has a scandal on the field, and they countered with allegations that Ohio State and Rutgers leaked Michigan's signs to Purdue in last year's Big
+Ten championship game.
+</item 10>
+=== END ITEM id=889fd1f647960ad3 ===
+
+=== ITEM id=3a81a8a7155786ed ===
+Gold sentences and facts:
+Sentence 0: Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount.
+  Fact 0.0: Hope has been rising on Wall Street recently.
+  Fact 0.1: The hope on Wall Street is that the US economy is slowing from its recent hot pace.
+  Fact 0.2: The hope on Wall Street is that the US economy is slowing by just the right amount.
+Sentence 1: A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns.
+  Fact 1.0: A shutdown would drag on the US economy.
+  Fact 1.1: A shutdown would raise the risk of a recession.
+  Fact 1.2: Financial markets have held up relatively well through past shutdowns.
+
+Retrieved items:
+<item 1>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives. The unprecedented move to remove a speaker from the
+position likely doesn’t change much in the short term, with funding for the US government set until November 17.
+
+“That said, a leadership vacuum in the House raises the odds of a government shutdown when the current funding extension expires,” according to economists at
+Goldman Sachs. A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past
+shutdowns. On Wall Street, big tech stocks helped to support the market after leading it lower a day earlier. They tend to move more sharply with expectations
+for rates because high-growth stocks are seen as some of the biggest victims of high yields. In markets abroad, stock indexes were mixed across much of Europe.
+</item 1>
+
+<item 2>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+Too much strength would give inflation more fuel, but too little would mean a recession.
+
+With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest
+rates and could soon turn to cutting them. That could help the economy avoid a recession and give a boost to all kinds of investment prices. Investors have been
+looking for a slowdown in the job market in particular. The hope is that it can cool more through employers cutting back on open positions than on employers
+laying off workers. Tuesday’s report showed that employers advertised just 8.7 million jobs on the last day of October, down by 617,000 from a month earlier. In
+the bond market, US Treasury yields continued to sag further from the heights they reached during late October. The yield on the 10-year Treasury fell to 4.18
+per cent from 4.26 per cent late on Monday, offering more breathing space for stocks and other markets.
+</item 2>
+
+<item 3>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+That growing understanding has sent yields in the bond market to their highest levels in more than a decade, which in turn has undercut prices for stocks and
+other investments. Treasury yields rose again on Tuesday following a mixed batch of reports on the economy. The yield on the 10-year Treasury edged up to 4.55
+per cent from 4.54 per cent late on Monday and is near its highest level since 2007. It’s up sharply from about 3.5 per cent in May and from 0.5 per cent about
+three years ago. One economic report on Tuesday showed confidence among consumers was weaker than economists expected. That’s concerning because strong spending
+by US households has been a bulwark keeping the economy out of a long-predicted recession.
+
+Besides high interest rates, a long list of other worries is also tugging at Wall Street. The most immediate is the threat of another US government shutdown as
+Capitol Hill threatens a stalemate that could shut off federal services across the country.
+</item 3>
+
+<item 4>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+“Considering the damage overnight in the US, Australian markets held on pretty well,” he said. “I thought it would be a bigger down day across the board.”
+Glover said the market was volatile but quite range-bound, similar to previous periods of high inflation in the 1940s and 1970s. Elsewhere, Wall Street’s ugly
+September got even worse on Tuesday, as a sharp drop for stocks brought them back to where they were in June. The S&P 500 tumbled 1.5 per cent for its fifth
+loss in the last six days. The Dow Jones dropped 1.1 per cent, and the Nasdaq composite lost 1.6 per cent.
+
+Loading September has brought a loss of 5.2 per cent so far for the S&P 500, putting it on track to be the worst month of the year by far, as the realisation
+sets in that the Federal Reserve will indeed keep interest rates high for a long time.
+</item 4>
+
+<item 5>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+The National Australia Bank has forecast another rate hike to 4.35 per cent in November. Elsewhere, Wall Street closed out its worst month and quarter of the
+year with more losses on Friday. The S&P 500 slipped 0.3 per cent and the majority of stocks within the index sank. The Dow Jones fell 0.5 per cent and the
+Nasdaq composite edged 0.1 per cent higher. The Australian sharemarket is set to retreat, with futures pointing to a fall of 38 points, or 0.5 per cent, at the
+open. Solid gains for stocks early on faded as pressure built from within the bond market. After easing earlier in the day on encouraging signals about
+inflation, Treasury yields got back to rising as the day progressed. The yield on the 10-year Treasury yield returned to 4.58 per cent, where it was late
+Thursday, after dipping to 4.52 per cent. It’s again near its highest level since 2007.
+</item 5>
+
+<item 6>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+Loading Wall Street has dealt with such shutdowns in the past, and stocks have historically been turbulent in the run-up to them, according to Lori Calvasina,
+strategist at RBC Capital Markets. After looking at the seven shutdowns that lasted 10 days or more since the 1970s, she found the S&P 500 dropped an average of
+roughly 10 per cent in the three months heading into them. But stocks managed to hold up rather well during the shutdowns, falling an average of just 0.3 per
+cent, before rebounding meaningfully afterward. Wall Street is also contending with higher oil prices, shaky economies around the world, a strike by US
+autoworkers that could put more upward pressure on inflation and a resumption of US student-loan repayments that could dent spending by households.
+
+On Wall Street, the vast majority of stocks fell under such pressures, including 90 per cent of those within the S&P 500.
+</item 6>
+
+<item 7>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+They also continued to decelerate from earlier months. A second economic report from the morning likewise offered both encouragement and caution for financial
+markets. It said slightly fewer US workers than expected applied for unemployment benefits last week. On one hand, it indicates a job market with few lay-offs,
+which means strength for the overall economy. But it could also be adding fuel to keep upward pressure on inflation.
+
+After the reports, the 10-year Treasury yield rose to 4.7 per cent from 4.56 per cent late Wednesday. The two-year Treasury yield, which more closely tracks
+expectations for the Fed, climbed to 5.06 per cent from 4.99 per cent. Yields are still down slightly for the week so far. After jumping last week to their
+highest levels in more than a decade, yields regressed following speeches that investors saw as hints that the Fed may not raise its main overnight interest
+rate further.
+</item 7>
+
+<item 8>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+Friday’s economic data shows that not only was inflation a touch cooler than expected in August, so was growth in spending by US consumers. That can be a
+positive for inflation because it means not as many dollars are pouring into purchases. That in turn could give companies less encouragement to try to raise
+prices further. But it may also dent what’s been a big driver keeping the US economy out of a recession.
+
+“It came to a boil during a hot summer, and the temperature is really starting to come down,” said Brian Jacobsen, chief economist at Annex Wealth Management,
+of spending growth by US consumers. “Higher energy prices, student loan debt repayments and real disposable incomes that have been on a declining trajectory
+since June doesn’t bode well.” Oil prices have jumped to their highest level in more than a year, which is pressuring the economy by raising fuel costs for
+everyone. A barrel of US crude sank 92¢ Friday to settle at $US90.79, but it’s still up sharply from $US70 in June.
+</item 8>
+
+<item 9>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 9>
+
+<item 10>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 10>
+=== END ITEM id=3a81a8a7155786ed ===

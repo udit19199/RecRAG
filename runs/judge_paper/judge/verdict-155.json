@@ -1,0 +1,65 @@
+[
+  {"id": "d63e4f5ab0a473ce", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "he confessed on his podcast that he tried and failed to give her a friendship bracelet with"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "tried and failed to give her a friendship bracelet with his phone number on it"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "July 26: Kelce makes friendship bracelet for Swift"}, {"item": 7, "quote": "tried and failed to give her a friendship bracelet"}]},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "when she famously first attended Kelce’s game at Arrowhead Stadium in September"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 2, "quote": "Swift took Kelce up on his offer and attended"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "when she famously first attended Kelce’s game at Arrowhead Stadium in September"}, {"item": 2, "quote": "Swift took Kelce up on his offer and attended"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "Taylor Swift reveals secret start to her relationship with Travis Kelce"}]}
+  ]},
+  {"id": "a756ee8d92a2d835", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "3cdaa76a5a85f34b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "91f626ebba71e742", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "67fea8a6b57f492a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d36e06ce93da1f8d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "or an over/under bet on the total number of points the team will score in the game."}]}
+  ]}
+]

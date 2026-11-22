@@ -1,0 +1,66 @@
+[
+{"id": "c3fc17ef2fa5b2ac", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "the former CEO and co-founder of collapsed crypto exchange FTX"}, {"item": 4, "quote": "FTX’s bankruptcy for BlockFi’s subsequent bankruptcy"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 2, "quote": "seven counts tied to fraud and money laundering"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "according to Mark Cohen, one of his lawyers"}, {"item": 1, "quote": "a nerdy startup founder who acted in “good faith,”"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "b04e0399e3f77b70", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "president of baseball operations Jerry Dipoto decided to move one for a bat"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Moving any of Woo, Miller or Hancock could be more"}, {"item": 9, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts"}]}
+]},
+{"id": "c64e51fed438a3e1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Kenneth Walker III remains out with his oblique injury"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "You're probably starting him if Kenneth Walker III remains out with his oblique injury"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "consider other options if you have the depth"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "With Kenneth Walker III's oblique injury comes opportunity for the rookie"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Seattle's narrow Week 11 loss to the Rams"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury"}]}
+]},
+{"id": "6c265ea04889aab1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 5, "quote": "Ohtani has agreed to a colossal 10-year, $700 million contract shattering the MLB record for both total value and average annual value"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "68fa76c2db461a9e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "And if the Braves let this be the story of their series, that's on them"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "it also uses major pieces of lore from Konami’s Castlevania: Rondo of Blood and Symphony of the Night games"}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "14186a34680a19e8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "his on-again off-again girlfriend and the CEO of Alameda"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "customer money—both cash and crypto—the government claimed"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed"}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

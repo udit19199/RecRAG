@@ -1,0 +1,45 @@
+[
+{"id": "e50ab130ce601192", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]}
+]},
+{"id": "17d71d636b8d7da8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]},
+{"id": "cfc3cba71ddf5cdb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "SBF’s trial has started, this is how he and FTX got here"}, {"item": 5, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "seven counts of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "26929288c02c9bd7", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+]},
+{"id": "34f2c68bddcbc025", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]}
+]

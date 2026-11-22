@@ -1,0 +1,59 @@
+[
+{"id": "e831b72df0376263", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 7, "quote": "After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "80131b47bd94d140", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "all of that, all of it, was built on lies,” Rehn declared to the jury"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 4, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "47c04268bb294b1b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 2, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 2, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]}
+]},
+{"id": "50164ff9efb62c54", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 9, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "e0cc6c454650914b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Their 0-3 and 1-4 starts are distant memories"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "But they've also seen the fourth-lowest ADOT from tight ends (5.0 yards per target)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "almost as if teams know they won't be able to succeed on downfield shots against them"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "zero completions of 20-plus yards from tight ends"}]}
+]},
+{"id": "111145263d34f018", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]}
+]}
+]

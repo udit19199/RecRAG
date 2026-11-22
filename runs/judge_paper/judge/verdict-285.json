@@ -1,0 +1,64 @@
+[
+  {"id": "ee21536ed38a11d7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}, {"item": 4, "quote": "FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day."}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "d2041f726e2bbe13", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 1, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press"}]}
+  ]},
+  {"id": "cc5b85399fce1850", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access”"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence,"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.5", "status": "stated", "evidence": [{"item": 2, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.6", "status": "stated", "evidence": [{"item": 2, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "58e2aa596295e74e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Postponements of such reports could complicate things for the Fed"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "With inflation down from its peak two summers ago"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]}
+  ]},
+  {"id": "7ef2744b381cad2f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "contradicted", "evidence": [{"item": 10, "quote": "See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at all."}, {"item": 10, "quote": "It didn’t have anything to do with the money Alameda owed FTX at all."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,834 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=3d3e265399384601 ===
+Gold sentences and facts:
+Sentence 0: Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills.
+  Fact 0.0: Today, social networks are often run by large corporations.
+  Fact 0.1: Meta, Snap and Google are examples of large corporations that run social networks.
+  Fact 0.2: On social networks run by large corporations, advertisers pay the bills.
+Sentence 1: By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter.
+  Fact 1.0: By the end of 2012, Google and Facebook were angling to acquire the London lab.
+  Fact 1.1: Three people familiar with the matter said Google and Facebook were angling to acquire the London lab by the end of 2012.
+
+Retrieved items:
+<item 1>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 1>
+
+<item 2>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+This got the attention of another Silicon Valley powerhouse, Google, and specifically Page. He saw a demonstration of DeepMind’s machine playing Atari games. He
+wanted in. The talent auction In the spring of 2012, Geoffrey Hinton, a 64-year-old professor at the University of Toronto, and two graduate students published
+a research paper that showed the world what AI could do. They trained a neural network to recognise common objects such as flowers, dogs and cars.
+
+Scientists were surprised by the accuracy of the technology built by Hinton and his students. One who took particular notice was Yu Kai, an AI researcher who
+had met Hinton at a research conference and had recently started working for Baidu, a giant Chinese internet company. Baidu offered Hinton and his students
+$US12 million to join the company in Beijing, according to three people familiar with the offer. Hinton turned Baidu down, but the money got his attention.
+</item 2>
+
+<item 3>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+AI was once laughed off. Now the richest men in Silicon Valley were shelling out billions to keep from being left behind. The lost ethics board
+
+When Musk invested in DeepMind, he broke his own informal rule – that he would not invest in any company he didn’t run himself. The downsides of his decision
+were already apparent when, only a month or so after his birthday spat with Page, he again found himself face to face with his former friend and fellow
+billionaire. Larry Page, co-founder of Google. Credit: Bloomberg The occasion was the first meeting of DeepMind’s ethics board, on August 14, 2015. The board
+had been set up at the insistence of the startup’s founders to ensure that their technology did no harm after the sale. The members convened in a conference
+room just outside Musk’s office at SpaceX. But that’s where Musk’s control ended. When Google bought DeepMind, it bought the whole thing. Musk was out.
+</item 3>
+
+<item 4>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+But years before OpenAI’s near meltdown, there was a little-publicised but ferocious competition in Silicon Valley for control of the technology that is now
+quickly reshaping the world, from how children are taught to how wars are fought. The birth of DeepMind Five years before the Napa Valley party and two before
+the cat breakthrough on YouTube, Demis Hassabis, a 34-year-old neuroscientist, walked into a cocktail party at Thiel’s San Francisco town house and realised he
+had hit pay dirt. There in Thiel’s living room, overlooking the city’s Palace of Fine Arts and a swan pond, was a chessboard. Hassabis had once been the
+second-best player in the world in the under-14 category. “I was preparing for that meeting for a year,” Hassabis said. “I thought that would be my unique hook
+in: I knew that he loved chess.”
+</item 4>
+
+<item 5>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter. Hassabis and his co-founders
+insisted on two conditions: No DeepMind technology could be used for military purposes, and its AGI technology must be overseen by an independent board of
+technologists and ethicists.
+
+Google offered $US650 million. Zuckerberg of Facebook offered a bigger payout to DeepMind’s founders but would not agree to the conditions. DeepMind sold to
+Google. Zuckerberg was determined to build an AI lab of his own. He hired Yann LeCun, a French computer scientist who had also done pioneering AI research, to
+run it. A year after Hinton’s auction, Zuckerberg and LeCun flew to Lake Tahoe for the same AI conference. While padding around a suite at the Harrah’s casino
+in his socks, Zuckerberg personally interviewed top researchers, who were soon offered millions of dollars in salary and stock. AI was once laughed off.
+</item 5>
+
+<item 6>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+Hassabis replied that the plan would work – so long as superintelligent machines didn’t follow and destroy humanity on Mars, too. Musk was speechless. He hadn’t
+thought about that particular danger. Musk soon invested in DeepMind alongside Thiel, so he could be closer to the creation of this technology.
+
+Flush with cash, DeepMind hired researchers who specialised in neural networks, complex algorithms created in the image of the human brain. A neural network is
+essentially a giant mathematical system that spends days, weeks or even months identifying patterns in large amounts of digital data. First developed in the
+1950s, these systems could learn to handle tasks on their own. After analysing names and addresses scribbled on hundreds of envelopes, for instance, they could
+read handwritten text. DeepMind took the concept further. It built a system that could learn to play classic Atari games such as Space Invaders, Pong and
+Breakout to illustrate what was possible.
+</item 6>
+
+<item 7>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+As the price passed $US30 million, Microsoft quit, but it rejoined the bidding at $US37 million. “We felt like we were in a movie,” Hinton said. Then Microsoft
+dropped out a second time. Only Baidu and Google were left, and they pushed the bidding to $US42 million, $US43 million. Finally, at $US44 million, Hinton and
+his students stopped the auction. The bids were still climbing, but they wanted to work for Google. And the money was staggering. It was an unmistakable sign
+that deep-pocketed companies were determined to buy the most talented AI researchers, which was not lost on Hassabis at DeepMind. He had always told his
+employees that DeepMind would remain an independent company. That was, he believed, the best way to ensure its technology didn’t turn into something dangerous.
+But as Big Tech entered the talent race, he decided he had no choice: It was time to sell.
+</item 7>
+
+<item 8>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+His strategy was to arrange another meeting. There was a deep tension between the bishop and the knight, he told Thiel. The two pieces carried the same value,
+but the best players understood that their strengths were vastly different. It worked. Charmed, Thiel invited the group back the next day, where they gathered
+in the kitchen. Their host had just finished his morning workout and was still sweating in a shiny tracksuit. A butler handed him a Diet Coke. The three made
+their pitch, and soon Thiel and his venture capital firm agreed to put £1.4 million ($A2.7 million) into their startup. He was their first major investor.
+
+They named their company DeepMind, a nod to “deep learning,” a way for AI systems to learn skills by analysing large amounts of data; to neuroscience; and to
+the Deep Thought supercomputer from the sci-fi novel The Hitchhiker’s Guide to the Galaxy. By the spring of 2010, they were building their dream machine.
+</item 8>
+
+<item 9>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+When Google bought DeepMind, it bought the whole thing. Musk was out. Financially, he had come out ahead, but he was unhappy. Three Google executives now firmly
+in control of DeepMind were there: Page; Sergey Brin, a Google co-founder and Tesla investor; and Eric Schmidt, Google’s chair. Among the other attendees were
+Reid Hoffman, another PayPal founder; and Toby Ord, an Australian philosopher studying “existential risk”.
+
+The DeepMind founders reported that they were pushing ahead with their work but that they were aware the technology carried serious risks. Suleyman, the
+DeepMind co-founder, gave a presentation called “The Pitchforkers Are Coming.” AI could lead to an explosion in disinformation, he told the board. He fretted
+that as the technology replaced countless jobs in the coming years, the public would accuse Google of stealing their livelihoods. Google would need to share its
+wealth with the millions who could no longer find work and provide a “universal basic income,” he argued. Musk agreed.
+</item 9>
+
+<item 10>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+“This is another indication that AI is progressing faster than even many experts anticipated,” Victoria Krakovna, who would soon join DeepMind as an “AI safety”
+researcher, wrote in a blog post. DeepMind’s founders were increasingly worried about what Google would do with their inventions. In 2017, they tried to break
+away from the company. Google responded by increasing the salaries and stock award packages of the DeepMind founders and their staff. They stayed put. The
+ethics board never had a second meeting. The Breakup
+
+Convinced that Page’s optimistic view of AI was dead wrong, and angry at his loss of DeepMind, Musk built his own lab. OpenAI was founded in late 2015, just a
+few months after he met with Altman at the Rosewood hotel in Silicon Valley. Sam Altman Credit: Bloomberg Businessweek Musk pumped money into the lab, and his
+former PayPal buddies – Hoffman and Thiel – came along for the ride.
+</item 10>
+=== END ITEM id=3d3e265399384601 ===
+
+=== ITEM id=79c76b5704ed835e ===
+Gold sentences and facts:
+Sentence 0: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 0.0: The parties in question receive other benefits from Android
+  Fact 0.1: Google could solve this problem today if it wanted to
+Sentence 1: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 1.0: It will attempt to argue that Google restrains competition within two separate markets
+  Fact 1.1: One of the two markets is the distribution of apps to Android users
+  Fact 1.2: The other market is the market for payment processing solutions for content inside Android apps
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle
+  Fact 2.1: The case argues that Google siphons off news publishers' content
+  Fact 2.2: The case argues that Google siphons off news publishers' readers
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue
+  Fact 2.4: The case argues that Google does this through anticompetitive means
+
+Retrieved items:
+<item 1>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Epic also claims that Google is illegally tying its Google Play payments platform to the Google Play app store, keeping other potential app payment mechanisms
+from competing as well.
+
+So, does Google have a monopoly?
+
+A monopoly on what? That’s one of the biggest questions the court will decide. Epic claims that Google has illegal monopolies in “Android app distribution” and
+“Android in-app payment processing.” It’ll argue that if you buy or develop for Android phones, you’re stuck paying the Google tax.
+
+But Google will say the real competition is from Apple, because people can choose to buy an iPhone instead. It’s pretty tough to argue Google has a monopoly on
+app stores in general.
+
+This whole line of argument is called “market definition.” If the court decides the relevant market is phones and app stores, not specifically Android ones,
+then Google’s on the road to victory. If it accepts that Android apps are their own market, Epic will be in better shape. Or, it could pick a different market
+definition entirely, like the judge in the Apple case ended up doing.
+</item 1>
+
+<item 2>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 3>
+
+<item 4>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+It’s always been in Google’s power to solve this problem. They make several billion dollars a year in unfairly earned profits from imposing this tax, which is
+nothing compared to the money they make from search. For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+
+Do you today believe that Activision Blizzard was really intending to build its own app store?
+
+I don’t know about Supercell, but we know from the documents in the case that Riot was planning to distribute League of Legends directly through their website,
+on mobile, exactly as they do on PC. And that’s what they planned to do until Google paid them off to not do that. Google’s payoff at the minimum dissuaded Riot
+from distributing off Google Play.
+
+I think they’re the strongest example of the three, but I’m curious about Activision.
+
+Activision was building a store! We know they had a large team of dozens of engineers building a mobile app store to launch on Android.
+</item 4>
+
+<item 5>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 5>
+
+<item 6>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Google spent its 45 minutes attempting to explain that its dominance over the Android app market isn’t anything nefarious but simply the natural outcome of
+Google fiercely competing with the iPhone and its iOS App Store, where Google would like the court to believe that competition truly lies.
+
+If Google can convince the jury of that, it could be a winning argument in the case — because obviously, Google doesn’t have a monopoly on app stores or phones
+in general. “You cannot separate the quality of a phone from the quality of the apps in its app store, and that means Google and Apple compete against each
+other,” began Google lead attorney Glenn Pomerantz.
+
+But Google wound up spending much of its opening statement attempting to explain away its seemingly bad behavior as normal business practices and didn’t always
+succeed out of the gate.
+</item 6>
+
+<item 7>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 7>
+
+<item 8>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+I did like Pomerantz’s commonsense argument that Google can’t possibly have a monopoly on Android app stores when “every single Samsung phone comes with two app
+stores right on the homescreen,” which continued:
+
+When they show these charts that show all these downloads from Play and not from the Galaxy Store, that’s what the Samsung phone users are choosing. They’re
+touching Play. Nothing’s keeping them from touching the Galaxy Store; it’s just what works for them.
+
+I called Google “comparatively open” earlier, and that openness will likely be heavily debated in the weeks to come. Epic promised to “show that Google has
+closed off each and every other option” to the Play Store during this trial. But Google points to the simple fact that it allows alternate app channels at all —
+something Android rival iOS doesn’t.
+
+Pomerantz boasted that over a billion people have gone through the process Epic portrays as needlessly onerous to get apps outside the Play Store.
+</item 8>
+
+<item 9>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 9>
+
+<item 10>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+That sounds fascinating, but if I don’t care about Fortnite or rich companies suing each other, what’s in it for me?
+
+The future of Google’s app store could depend on this trial — both Epic and Google agree on that. Epic wants to break up Google’s alleged monopoly on Android
+app stores and payment methods, so developers aren’t stuck paying the “Google Tax” or passing that fee along to you.
+
+But if Epic wins — according to Google, anyhow — it could make Android phones less safe by dismantling basic protections against sideloaded apps, and damage
+Android’s ability to compete with the iPhone because it (arguably) can’t run a competitive app store by giving it away for free.
+
+Or maybe you just want juicy dirt on both companies? More on that later!
+
+What exactly is Epic claiming?
+
+Epic argues that Google makes it so difficult for developers and users to get around its Android app store, and that app store’s standard fees, that it’s
+created an illegal monopoly that unjustly enriches Google while artificially driving up app prices because other stores can’t compete.
+</item 10>
+=== END ITEM id=79c76b5704ed835e ===
+
+=== ITEM id=ccec486009381861 ===
+Gold sentences and facts:
+Sentence 0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 0.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+Sentence 1: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 1.0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 1.1: Israel is reportedly preparing for a ground invasion.
+
+Retrieved items:
+<item 1>
+Israel’s startup ecosystem: down but not out (TechCrunch, 2023-10-13T19:10:07+00:00)
+The world is still coming to terms with Hamas’ deadly attacks on Israelis last weekend — and everything else that has unfolded so far in the aftermath,
+including the barrage of retaliation strikes on Gaza.
+
+Undoubtedly, the ramifications for the technology ecosystem pale in comparison to the human toll that the fighting is taking, on both sides. But when
+considering how the wider region will weather the destruction, and one day recover, it’s an important industry to consider. Please also read here about how this
+is playing out for Palestinians in Gaza and beyond. And a below, we show how a look at how the situation is playing out in the startup ecosystem in Israel sheds
+light on its impact to the country as a whole.
+
+In such a small country, just about everyone knows someone who was directly affected by the attacks, or someone involved in the subsequent defense and
+retaliation — and often all three.
+
+Technology is, without question, a giant part of Israel’s economy.
+</item 1>
+
+<item 2>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+Some Republican politicians have said that UNRWA has “cozied up” to Hamas. And an internal UNRWA ethics committee has accused top staff at the agency of “sexual
+misconduct, nepotism, retaliation … and other abuses of authority” that created a toxic work environment.
+
+Meanwhile, since the war between Israel and Hamas began on Oct. 8, more than 1,500 Gazans have been killed and more than 5,300 injured, while Hamas attacks have
+killed more than 1,300 people in Israel and injured about 3,200 others.
+
+International aid groups and European Union officials have called for a humanitarian corridor to be set up in Gaza – meaning a protected path specifically for
+civilians, aid workers and necessary basic items to pass through safely back and forth from Gaza to Israel and Egypt. So far, there are no clear plans for such
+a protected pathway.
+
+Topher L. McDougal is Professor of Economic Development & Peacebuilding, University of San Diego.
+</item 2>
+
+<item 3>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 3>
+
+<item 4>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+With them and with the US, we established a kind of task force, which is not subject to any country or unifying body, countries that are working in
+coordination, and meet every few days to exchange intelligence, and advance the struggle."
+
+In general, following an appeal by IMPA to its counterparts around the world, there has been a dramatic increase in intelligence coming to Israel from abroad.
+"The amount of information doubled in the month of fighting, compared with the monthly average. Before the war, we received about 24 intelligence reports a
+month from parallel authorities, compared with 50 today."
+
+Countries around the world cooperating with Israel to fight terrorism sounds almost ideal, but it’s hard not to wonder where they were before.
+
+"Many countries felt this had nothing to do with them, that it wasn’t their struggle.
+</item 4>
+
+<item 5>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+This is a real-time deterrence," reveals IMPA director general Adv. Ilit Ostrovitch-Levi. "And then there was a domino effect. Following this blocking, more
+countries began to look around, and blocked funds intended for terror. All this information, which is now shared at an international level, leads to the closing
+of more and more Hamas funding pipelines, in real time. With worldwide cooperation, Israel’s security and enforcement authorities are thwarting the transfer of
+millions of dollars earmarked for terrorism, every day."
+
+Headed by Ostrovitch-Levi since May 2022, IMPA is an intelligence body that conducts the most complex of international economic investigations, and fights
+terror financing routinely. On October 7, Ostrovitch-Levi received a painful reminder of the vital importance of her work. "Already on that Saturday night, with
+Israeli under heavy rocket fire, we talked about preparing ourselves for the campaign we’re now entering, the fight against terror financing channels.
+</item 5>
+
+<item 6>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+Dozens of our staff have been called up to reserve duty, in large part managers working regularly in the fight against terror financing."
+
+Since then, most of IMPA’s work has focused on identifying and blocking the terror money pipelines. "We work very reactively - we see a fundraising campaign,
+try to deter it, and stop it from happening again. There are no breaks, because they are constantly active. It’s a daily struggle. Our analysts have been
+sitting on the social networks from day two of the war, just manually monitoring visible sources of information on these networks to locate fundraising
+campaigns for terrorist organizations operating in Gaza."
+
+Three days after the war began, IMPA also issued a call to all global regulated entities for increased vigilance towards terrorism financing campaigns in
+response to the ongoing war and state of emergency, and to report all activities that raise suspicion of terror support and terror financing, in an effective
+and immediate manner.
+</item 6>
+
+<item 7>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+International aid groups are warning that they cannot deliver food and other basic services to people in the Gaza Strip and that a “dire” humanitarian crisis is
+set to worsen.
+
+International aid groups provide food and other means of support to about 63% of people in Gaza.
+
+Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground
+invasion.
+
+On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential
+ground invasion.
+
+I am a scholar of peace and conflict economics and a former World Bank consultant, including during the 2014 war between Hamas and Israel.
+</item 7>
+
+<item 8>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+RELATED ARTICLES Tech experts battle to shut down Gaza financial pipeline
+
+"Overnight, we started receiving hundreds of reports about unusual activity by customers of financial institutions in the State of Israel," she says. Before
+October 7, IMPA received about 100 reports a day dealing with terror financing. That number jumped to about 1,000. "There is a 900% increase in reports on
+terror financing, and we don't waste time, everything happens very, very quickly. As we receive the information, we simultaneously pass it on to the operational
+professionals who locate the money pipelines, and block them. Some information will not necessarily lead to terror financing, but we don’t have time to waste.
+Bank CEOs call and draw our attention to the information they convey to us that warrants special attention."
+
+Has information from banks and financial institutions led to blocking the money pipeline for terrorism?
+
+"There was very high-quality intelligence that we passed on to the security agencies. We don't always know the results."
+</item 8>
+
+<item 9>
+Palestine’s growing tech industry has been literally blown apart by Israel’s war on Hamas (TechCrunch, 2023-10-14T07:46:27+00:00)
+Sturgill said that as well as the intensely difficult conditions in Gaza, which is being hit by Israeli missiles, the situation in Ramallah is “super tense. I
+feel like the situation is going to get significantly worse there over the coming weeks.”
+
+Iliana Montauk, co-founder and CEO of Manara — a social impact startup funded by Y Combinator, Seedcamp, Reid Hoffman, Eric Ries, Marc Benioff, Paul Graham, and
+Jessica Livingston, among others — told TechCrunch via email that connectivity has decreased significantly in the past 24 hours.
+
+“Though Gaza has been bombed many times before, this time is completely different for the tech sector for several reasons. Electricity was cut off to the entire
+[Gaza] strip. A significant amount of infrastructure has been bombed (including both ISPs and many tall apartment buildings that hold cell phone towers). Entire
+middle-class neighborhoods are being destroyed.”
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 10>
+=== END ITEM id=ccec486009381861 ===
+
+=== ITEM id=54e09ecc6c184111 ===
+Gold sentences and facts:
+Sentence 0: We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.
+  Fact 0.0: People identify with the superhero's struggles.
+  Fact 0.1: People identify with the superhero's little glimmers of connection and triumph.
+  Fact 0.2: Identifying with the superhero makes the superhero the perfect superhero for Thanksgiving.
+Sentence 1: Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends.
+  Fact 1.0: Thanksgiving is a holiday.
+  Fact 1.1: The food is arguably the main component of Thanksgiving day.
+  Fact 1.2: Thanksgiving is a beloved time of year.
+  Fact 1.3: Americans come together during Thanksgiving to celebrate what they are thankful for.
+  Fact 1.4: Americans celebrate what they are thankful for with family or with friends during Thanksgiving.
+
+Retrieved items:
+<item 1>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feelings of loneliness spike during the holidays, meaning that there’s a good chance you’ll feel even more like Peter Parker when late November rolls
+around.
+
+It’s what makes the Thanksgiving scene in the 2002 Spider-Man film so engaging. That whole movie is an exercise in heart-on-your-sleeve sweetness. Everyone
+who’s seen it knows the Thanksgiving dinner rapidly descends into chaos, with Norman Osborn ominously sticking his fingers into Aunt May’s sweet-potato
+casserole, figuring out Spider-Man’s secret identity, and delivering a grossly sexist diatribe to his son Harry, leaving Harry and Mary Jane at odds with each
+other. Aunt May and Peter clearly wind up with a ton of leftovers after everyone else storms out.
+
+But for Peter, who’s just lost his Uncle Ben and has been facing the initial trials of being Spider-Man, there’s a nice moment of personal respite at the
+opening of that scene, where he walks into a room where he knows he’s loved, bearing an offering of cranberry sauce,.
+</item 1>
+
+<item 2>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 2>
+
+<item 3>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the parade passes down 6th Avenue Reuters Macy's
+Thanksgiving Day Parade takes place in New York An NYPD officer stands by AP Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon
+flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A marching band takes part in the parade Reuters Macy's Thanksgiving Day
+Parade takes place in New York A balloon flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A performer in the parade AP Macy's
+Thanksgiving Day Parade takes place in New York The Ronald McDonald balloon flies in the parade AP Macy's Thanksgiving Day Parade takes place in New York A
+clown performs in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Olaf balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York Flag wavers take part in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York Clowns on roller blades perform in
+the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is
+</item 3>
+
+<item 4>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feeding friends and family is perhaps one of the most humane acts we can pursue. It’s less about the spirit of giving, and more about admitting that people
+have innate, basic needs, like food and social comfort, and that those needs are best fulfilled when people work in tandem. Honestly, we should try to do it
+more on every other day of the year: The number of people volunteering to help feed the homeless and families in need peaks around November and December, but
+that energy needs to be carried through the preceding 10 months, too.
+
+Spider-Man represents these needs, even though very few of us have to balance photojournalist work, a fraught dating life, and pummeling Dr. Octopus. Peter
+Parker is often the most financially strapped among his Avengers buddies, and frequently the loneliest, too. Those are recognizable traits among many young
+people, even those without radioactive-spider powers. When you’re growing up and trying to figure out the world, it’s easy to feel lost and isolated.
+</item 4>
+
+<item 5>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Aunt May has just gotten out of the hospital, and even noted jerk “Flash” Thompson has given Peter hell for how awful he’s been acting.
+
+Peter, attempting to make things right, opts to cook the Thanksgiving meal all by himself, but mostly succeeds in ruining the kitchen. No worries — Gwen Stacy
+and her father, along with a recuperating Aunt May and her doctor, all help out, and the episode concludes with a pleasant dinner. There are no big turns or
+twists, aside from Aunt May revealing that she’s publishing a cookbook. It’s just simple, earned solace in a life marked by chaos. Peter even gets a kiss from
+Gwen on his porch, a sequence conducted with a John Hughes sense of satisfying romantic flair.
+
+Various Spider-Man comics have also dabbled in seeing what Thanksgiving looks like when you’re young and arachnid-themed, but real life has associated
+Spider-Man with the holiday, too. Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade.
+</item 5>
+
+<item 6>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Marvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were
+essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable
+to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.
+
+But Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic.
+We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving. And Spider-Man
+writers know it.
+
+Thanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding
+friends and family is perhaps one of the most humane acts we can pursue.
+</item 6>
+
+<item 7>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade. Other Marvel characters have appeared on floats, but only
+Spider-Man has been inflated to 80 feet and pulled through the Upper West Side. (That also makes him the only Marvel character to have his head horrifically
+torn open by a tree branch.)
+
+From his first comic book appearance, Spider-Man has been a reminder that life is hard and complicated, and being a superhero doesn’t preclude anyone from
+experiencing ordinary frustrations, setbacks, and confusion. But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers
+that the holiday is about the hope of mutual connection, support, and nurturing. Even if the girl of your dreams is out of reach and the Green Goblin is on your
+case, a table, some friends, and Aunt May’s rad turkey might just make everything better for a little while.
+</item 7>
+
+<item 8>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+In addition, vendors are also selling a range of goodies – from ornaments to jewellery to scarves – which is the perfect chance to do some early holiday
+shopping.
+
+Hosting a movie marathon
+
+Instead of hosting a big dinner, you could opt for another budget-friendly activity at your home: hosting a movie marathon. With the help of your friends, you
+can make a list of any horror, romance, or comedy movies that you want to watch for the day. You could also top off the activity off by supplying an assortment
+of snacks for your pals, or by cooking a meal all together.
+
+Your movie options can also match the theme of Thanksgiving, with films like A Beautiful Day in the Neighborhood (2019), Toy Story (1995), Addams Family Values
+(1993) and A Charlie Brown Thanksgiving (1973). If you want, you could add some Christmas movies to the mix, including Elf (2003), It’s A Wonderful Life (1947)
+and Steel Magnolias (1989).
+</item 8>
+
+<item 9>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Sure, everyone in that room is trying to hold things together. Mary Jane wants to impress Norman, Harry wants to impress Norman and Mary Jane, Peter loves Mary
+Jane but doesn’t dare hurt Harry, and Aunt May is finishing what’s presumably a dope turkey, in an attempt to care for all of them.
+
+It’s the trying that counts: Life can be hard, weird, and cruel, but while sitting down for a meal with our nearest and dearest, maybe for at least a little
+while, we won’t need to have it all figured out.
+
+Not all Spider-Man Thanksgiving dinners end up falling apart, and some succeed in reminding Peter that he isn’t alone. The first season of The Spectacular
+Spider-Man ends with a bang: One of Peter’s closest pals, Eddie Brock, has become Venom, and has threatened everyone Peter holds dear. This comes just after
+Peter himself was infected by the symbiote, and went through the now-iconic throes of pushing everyone away.
+</item 9>
+
+<item 10>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 10>
+=== END ITEM id=54e09ecc6c184111 ===
+
+=== ITEM id=44ce05a82da66709 ===
+Gold sentences and facts:
+Sentence 0: You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform.
+  Fact 0.0: Value can be found in player and team props.
+  Fact 0.1: Value in player and team props can be found by gathering information from multiple sources.
+  Fact 0.2: Value in player and team props can be found by tracking how players and their teammates perform.
+Sentence 1: These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects.
+  Fact 1.0: Props can be team prop bets.
+  Fact 1.1: Props can be individual player prop bets.
+  Fact 1.2: A prop bet can be on which team is winning at halftime.
+  Fact 1.3: A prop bet can be on the total number of receptions a player collects.
+
+Retrieved items:
+<item 1>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+Consider them side bets made with the sportsbook about events or statistical milestones that happen in the game.
+
+These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects. Consider them
+side bets made with the sportsbook about events or statistical milestones that happen in the game. Bowl game parlays: Parlays are multi-leg bets on a single bet
+slip. All parts of the parlay must be successful for the bet to win. These offer larger payouts, but the chances of winning compared with those of an individual
+bet are greatly reduced.
+
+How to bet on college football bowl games
+
+Betting on NCAA football bowl games has never been easier, thanks to online betting sites sprouting up across the country.
+
+Create an account with any of the best sports betting apps to start betting. It’s a quick process. Below, we outline the steps for opening your own account.
+</item 1>
+
+<item 2>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+What bets can I make on the CFP and bowl games?
+
+Because of football’s popularity at top online betting sites, most bowl games will feature expanded selections of betting markets. These are the common college
+football betting lines:
+
+Bowl game moneylines: The moneyline is the simplest bet you can make on a college football bowl game. Your only responsibility is to choose which team you
+believe will win. The favorites are indicated by negative odds, while the underdog will have positive odds.
+
+The moneyline is the simplest bet you can make on a college football bowl game. Your only responsibility is to choose which team you believe will win. The
+favorites are indicated by negative odds, while the underdog will have positive odds. Bowl game point spreads: In point spread betting, you’re wagering on the
+game with a spread factored in. The favorite must win by the point spread or more, while the underdog needs to either lose by fewer points than the spread or
+win the game outright.
+</item 2>
+
+<item 3>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Let’s say you’re keeping an eye on the New York Jets vs. the Buffalo Bills, and you see the total shift due to an incoming winter storm. While many bettors will
+scramble to get their bet in on the ‘under’ before the lines move too much, it’s a good idea to scope out the prop bets for individual players. The main lines
+are shifting, but most of the best sports betting sites don’t have the personnel to keep tabs on every possible player, so you could find value in an ‘under’ on
+a quarterback’s passing yards because the lines haven’t caught up yet. There’s greater variety: The three main bet types—moneylines, point spreads, and
+totals—are constant in every major sport, but they don’t offer a lot in the way of variety. Prop bets do. They can add interest to a game that may seem
+one-sided in the major markets. Larger sporting events, especially the Super Bowl, offer a massive variety of bets, ranging from the typical to the exotic and
+everything in between.
+</item 3>
+
+<item 4>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+In point spread betting, you’re wagering on the game with a spread factored in. The favorite must win by the point spread or more, while the underdog needs to
+either lose by fewer points than the spread or win the game outright. Bowl game totals: The totals bet, commonly known as the over/under, requires you to
+determine whether the combined score of both teams will end up over or under a predicted total. With this bet type, you’re not concerned with which team wins or
+loses the game.
+
+The totals bet, commonly known as the over/under, requires you to determine whether the combined score of both teams will end up over or under a predicted
+total. With this bet type, you’re not concerned with which team wins or loses the game. Bowl game props: These can be team or individual player prop bets, such
+as which team is winning at halftime or the total number of receptions a player collects.
+</item 4>
+
+<item 5>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 5>
+
+<item 6>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+In the NBA, prop bets deal with both players and teams.
+
+Some examples of NBA player props are:
+
+How many points a player will score
+
+Number of rebounds a player will have
+
+How many assists a player will get
+
+Rebounds and assists combined
+
+Points, rebounds, and assists combined
+
+How many steals a player will get
+
+Number of three-pointers made
+
+Some examples of NBA team props include:
+
+Which team will reach 10 points first
+
+Which team will have the highest-scoring period
+
+Which team will score first
+
+Which team will win the first half
+
+Which team will win the second half
+
+Will there be a fourth-quarter comeback victory
+
+All of the best sports betting sites have their selection of prop bets for each NBA game, so shop around to find the sportsbooks that best suit your needs.
+
+How to bet on NBA props
+
+The first step to betting on NBA props is opening an account at an online sportsbook. The process is simple, free, and doesn’t take very long.
+</item 6>
+
+<item 7>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Use most of your budget on more stable bet types, such as moneylines, spreads, or totals. Focus only a small percentage of your bankroll on props.
+
+We wouldn’t recommend using prop bets as your main bet type when building your strategy. Use most of your budget on more stable bet types, such as moneylines,
+spreads, or totals. Focus only a small percentage of your bankroll on props. Exotic props are a guessing game: When large events like the Super Bowl roll
+around, you’ll be inundated with exotic and entertaining prop bets. These are almost impossible to research, and pure guessing isn’t good for anyone’s bankroll
+or betting strategy.
+
+Prop bet examples for major sports
+
+Every major sport with odds at the best sports betting apps will have prop bets. Below, we give examples of prop bets you might find when betting on major
+American sports.
+
+NBA prop bets
+
+The NBA offers a wide range of prop bets. They vary from player to team bets and lean heavily on the statistical side of the game.
+</item 7>
+
+<item 8>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+For the most part, you won’t come across too many exotic prop bets when using US sportsbooks, as many are just not legal bets. However, the largest sporting
+events, such as the Super Bowl or March Madness, will find sportsbooks offering up a wider range of prop bets. That’s usually when you’ll find more exotic
+props.
+
+Sportsbook rules for prop bets
+
+Before placing any kind of bet, we highly recommend you read the sportsbook’s terms and conditions. There, you will find all the rules for the various bets you
+will make.
+
+While most sportsbooks’ rules are similar, there are always small variations in how they handle certain situations that could impact your bets.
+
+One rule that is typically used by most sportsbooks involves player props. If you bet on a player and they don’t play in the game, most sportsbooks void the bet
+and refund your wager. But if that player is involved in the game even for a single play, then the bet stands.
+</item 8>
+
+<item 9>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+The NBA is one of the most popular sports to bet on in the US. NBA prop bets are an easy way to jump into basketball betting.
+
+Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props to give you plenty of variety.
+
+Below, we look at betting NBA props at the best NBA betting sites and share some key information to make informed bets.
+
+What are NBA props?
+
+A prop bet is a side wager on an aspect of a game that usually doesn’t tie directly to the result. In the NBA, prop bets deal with both players and teams.
+</item 9>
+
+<item 10>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+They vary from player to team bets and lean heavily on the statistical side of the game. Some NBA prop examples include:
+
+How many points a player will score
+
+Number of assists or three-pointers a player will have
+
+Which player will score the first basket of a game
+
+You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team
+will score in the game.
+
+See more: NBA prop bets
+
+NFL prop bets
+
+The National Football League is the king of sports betting, and NFL betting sites have no qualms about showcasing every kind of possible bet type for it.
+
+Bettors will find many prop bet opportunities, especially for the Super Bowl. During the regular season, one of the most popular prop bet options includes the
+“anytime touchdown scorer” bet, where you can wager on a player to score a TD at any point in the game. Other prop bets can be focused on the team or even both
+teams.
+</item 10>
+=== END ITEM id=44ce05a82da66709 ===

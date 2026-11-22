@@ -1,0 +1,7 @@
+{
+ "record_ids": [
+  "-523277872531613341",
+  "-6485399290736921293"
+ ],
+ "reason": "Natural Questions questions whose gold long answer is a large table: 965 and 1,525 frozen facts. Two Haiku attempts could not judge them (one fact entry with a checked quote per fact); they get no gold-fact numbers for any method or repeat. They stay in Answered right. DECISIONS 34."
+}

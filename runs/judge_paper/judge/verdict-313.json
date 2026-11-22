@@ -1,0 +1,65 @@
+[
+{"id": "a9aa840a1ebb874a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "06d2afd8f681cbf0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "b0285d5d77f9a2ce", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 6, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 5, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games"}]}
+]},
+{"id": "68af0d8fbef98770", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "62504fa61deaa590", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+]},
+{"id": "806486b04f08d5c4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "he told Fox News Digital."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+]}
+]

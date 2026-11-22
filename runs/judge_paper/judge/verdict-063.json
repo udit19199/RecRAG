@@ -1,0 +1,50 @@
+[
+{"id": "ec6d7de703e68291", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "claiming that the model meets or exceeds"}, {"item": 3, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "the performance of other leading gen AI models like OpenAI’s GPT-4."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Google spent most of its first day attempting to"}, {"item": 9, "quote": "Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog."}, {"item": 9, "quote": "He did so by basically calling Google a bully"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "440c3eafd7a3d940", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "his phone number on it during one of her Eras Tour shows."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "after he confessed on his podcast that he tried and failed to give her a friendship bracelet with"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 6, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]}
+]},
+{"id": "14da08c2f013d1d8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the above scenario, supply disruption will lead to higher inflation"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "central bankers will have to adjust their policies"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "central bankers will have to adjust their policies and hold rates higher for longer"}, {"item": 5, "quote": "than anticipated."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Back then, Fed Chair Paul Volcker fought inflation"}, {"item": 10, "quote": "through aggressive interest rate hikes"}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "4c91bf2c16d4b51a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has"}, {"item": 1, "quote": "been more than just a curiosity."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "04e955bfdab4391c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "weak US data is “the"}, {"item": 3, "quote": "only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

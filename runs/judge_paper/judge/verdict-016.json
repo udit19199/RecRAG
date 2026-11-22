@@ -1,0 +1,59 @@
+[
+{"id": "b389bc8d7fa45f7e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "12db2dc8eabdf461", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The pastor went on to explain that Jesus brought more positivity than anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "which is why it's important to keep faith aligned with that practice of positive thinking."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 7, "quote": "Roumie said that building a habit of prayer \"is easier than people think.\""}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 7, "quote": "Roumie said that building a habit of prayer \"is easier than people think.\""}, {"item": 7, "quote": "you find your relationship with Jesus growing deeper and deeper, just automatically."}]}
+]},
+{"id": "6c5ec28fa4f9f81d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The Commission said it is looking at X’s compliance with the DSA across a number of areas"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "EU regulators are also set to assess Musk & co’s claims"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]},
+{"id": "1fecd01c2772c0d4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "84cfa4bcaf1baaef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]}
+]},
+{"id": "c0285d5924459b3b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]}
+]}
+]

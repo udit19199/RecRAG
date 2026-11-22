@@ -1,0 +1,53 @@
+[
+{"id": "20fdde8b48f5fcff", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "He will also be tasked with “integrating” the programs"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs"}]}
+]},
+{"id": "8b9bacfe77a472fc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper."}, {"item": 7, "quote": "the most noticeable upgrade to the Steam Deck OLED is the display"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "The Steam Deck OLED arrives November 16 with an improved screen and longer battery life"}, {"item": 5, "quote": "it has improved practically everything else"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "e95f4afe979090d5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "They aren’t allegations. It happened,"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "abead37d485db73c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "For the masses of NFL fans across the U.S."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "For the masses of NFL fans across the U.S."}]}
+]},
+{"id": "3debf14edac19203", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "43eb65d691798876", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "It would be Harbaugh's second suspension of the season"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "an NCAA investigation that found Harbaugh lied to investigators"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

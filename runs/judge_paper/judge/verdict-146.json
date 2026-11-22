@@ -1,0 +1,51 @@
+[
+  {"id": "991e1ff3fd36140b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2c78648362a6ce50", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins), Puka Nacua and Tutu Atwell (vs."}, {"item": 5, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b124d6e83c18b2a3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]}
+  ]},
+  {"id": "2fee6696c18c48c8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "OFFICIAL: Jim Harbaugh suspended for the remaining three regular season games."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 5, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}, {"item": 9, "quote": "OFFICIAL: Jim Harbaugh suspended for the remaining three regular season games."}]},
+    {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 5, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b6b1fdbc042ca456", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "he told Fox News Digital."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+  ]}
+]

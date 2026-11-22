@@ -1,0 +1,48 @@
+[
+{"id": "180dbca9b5c012d6", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "b3efe7db77750582", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "cfcb3d7dfa27b595", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "2bc9db05661f663c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "893bbdd57bb65b32", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "although Michigan had hoped to block the suspension"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+]}
+]

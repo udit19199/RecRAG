@@ -1,0 +1,79 @@
+[
+  {
+    "id": "5849861ad2f82f5c",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+    ]
+  },
+  {
+    "id": "eb5b788a4c793422",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "9:20 p.m. — Nathaniel Lowe makes the play to retire Carroll, and that will bring the Rangers back up to bat with a 10-0 lead."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "9:20 p.m. — Nathaniel Lowe makes the play to retire Carroll, and that will bring the Rangers back up to bat with a 10-0 lead."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "9:20 p.m. — Nathaniel Lowe makes the play to retire Carroll, and that will bring the Rangers back up to bat with a 10-0 lead."}]}
+    ]
+  },
+  {
+    "id": "5380ac6b5543b772",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]}
+    ]
+  },
+  {
+    "id": "0a6f906cdf42ff5c",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the tune of $5K+ in bonus bets!"}, {"item": 6, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Caesars Sportsbook promo code NEWS1000 gives new users a First Bet up to $1,000 on Caesars!"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the tune of $5K+ in bonus bets!"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the tune of $5K+ in bonus bets!"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the tune of $5K+ in bonus bets!"}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the tune of $5K+ in bonus bets!"}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 8, "quote": "Top-rated sportsbooks -- BetMGM, Bet365, FanDuel, Caesars Sportsbook, DraftKings and BetRivers -- make it worth your while when signing up as a new user to the tune of $5K+ in bonus bets!"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "From there, you can claim your welcome bonus, which can come in many forms"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Once you’ve chosen your sportsbook, signing up for a new account takes a few simple steps."}, {"item": 5, "quote": "From there, you can claim your welcome bonus, which can come in many forms"}]}
+    ]
+  },
+  {
+    "id": "2c1cccfb32c2b075",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in Ramaswamy’s favor, though."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in Ramaswamy’s favor, though."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+    ]
+  },
+  {
+    "id": "d365376961e36828",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  }
+]

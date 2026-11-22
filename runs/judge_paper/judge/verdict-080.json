@@ -1,0 +1,68 @@
+[
+  {"id": "7d0fd9f0eeafe6a1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "83139633b11a9ed4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d5abb74714f07d2a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "his phone number on it during one of her Eras Tour shows."}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "c37b8332cdac3607", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}, {"item": 8, "quote": "The $65 billion line of credit Alameda Research had meant that it did not have to"}]},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}, {"item": 4, "quote": "Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and"}, {"item": 4, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0aa9605dc11f1902", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "When registering your new Caesars Sportsbook account, enter the bonus code NEWS1000"}, {"item": 7, "quote": "Place a first bet within 30 days and if it loses, receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Place a first bet within 30 days and if it loses, receive back the equivalent amount in the form of a Bonus Bet worth up to $1,000"}]}
+  ]},
+  {"id": "b6226ad8e641ab45", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]}
+  ]}
+]

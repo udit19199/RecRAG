@@ -1,0 +1,71 @@
+[
+  {"id": "e1b033479914f700", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "they need a top blueprint not only for now but for the next five years"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "not only for now but for the next five years, and work towards that"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "and sometimes on that journey there are hard moments when you don't get the right results"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "even though you're doing the right things"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 8, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+  ]},
+  {"id": "d3d2b85cc27d0bdd", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+  ]},
+  {"id": "61600ec2a2452713", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "though he mostly avoided addressing the only topic on anyone's mind"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "as the Wolverines self-imposed a three-game ban on Harbaugh to start the season"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2a1ae73a5441e92d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "But while this will probably come up later in the trial"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "that model, Gemini Ultra, is set to launch sometime next year in Bard and other products"}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "976533eef2b3c2fa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+  ]},
+  {"id": "f07eec270e6c4192", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "contradicted", "evidence": [{"item": 8, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them."}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 4, "quote": "depicted SBF and his colleagues as in over their heads"}]}
+  ]}
+]

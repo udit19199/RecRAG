@@ -1,0 +1,60 @@
+[
+{"id": "80626ac34be388ab", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September."}]}
+]},
+{"id": "f3560519c4488561", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "while San Francisco's unit ranks second in points (16.7)"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+]},
+{"id": "4a65b1240dd5a7de", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]}
+]},
+{"id": "5d4b0e2c659cd55f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "echoing Bankman-Fried and Ellison’s romantic relationship"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}, {"item": 7, "quote": "Ellison confessed the theft of customer funds to him and a few other employees"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 7, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]}
+]},
+{"id": "07a9600ab3059773", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "1ee7a549c47f5292", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]}
+]

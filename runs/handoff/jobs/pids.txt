@@ -1,0 +1,9 @@
+A2_graph_top10 1 3466
+A2_graph_top10 2 3470
+A2_graph_top10 3 3474
+A0_vector_top10 1 25789
+A0_vector_top10 2 25793
+A0_vector_top10 3 26804
+A3_picks_no_graph_rows 1 48056
+A3_picks_no_graph_rows 2 48060
+A3_picks_no_graph_rows 3 49076
