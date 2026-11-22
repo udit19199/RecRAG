@@ -1,0 +1,78 @@
+[
+{"id": "b2702e8b15125f77", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "bc5ea35727a4e23f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+{"fact": "1.6", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]},
+{"fact": "1.7", "status": "stated", "evidence": [{"item": 6, "quote": "Fueled by a stout defensive showing, a gritty run game and a bit of fairy dust from the likes of St. Brown, Sam LaPorta and Josh Reynolds, the Lions cruised to a 34-20 win over their hated NFC North rivals, Green Bay."}]}
+]},
+{"id": "14e21da674328cbf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "37a01a683e63f950", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]},
+{"id": "0927dfc040e9f000", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Google unveils new hardware: This week was Google’s annual hardware event"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Google unveils new hardware: This week was Google’s annual hardware event"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "where the search and consumer tech giant showed off what it’s been working on."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 10, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "d652e933f9391530", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "And if the Braves let this be the story of their series, that's on them."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity."}]}
+]}
+]

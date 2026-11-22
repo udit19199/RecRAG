@@ -1,0 +1,68 @@
+[
+  {"id": "235a944e8d6c2af0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+  ]},
+  {"id": "dc6d6def78a717a7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law"}, {"item": 1, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "content “misappropriated from Publishers,” the complaint alleges."}, {"item": 4, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 5, "quote": "were also cited as shifting traffic away from publishers’ websites."}, {"item": 4, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition"}]},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d1e453b06a8a1b6a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "while she and Bankman-Fried were broken up"}, {"item": 7, "quote": "The whole time we were dating, he was my boss at work"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022."}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "3350df3cfa896cee", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d1cbb58ec37e3af3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "echoing Bankman-Fried and Ellison’s romantic relationship"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX."}, {"item": 1, "quote": "which Ellison said were customer funds."}]},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "By 2022, Alameda’s negative balance on FTX was a cause for concern for Caroline Ellison, Singh, and Wang."}]},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Alameda was using FTX’s customers’ funds"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0ed5ef10e560a77f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]}
+]
