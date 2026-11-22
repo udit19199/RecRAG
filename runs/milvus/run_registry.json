@@ -12,5 +12,33 @@
    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/graphrag/20261122T171026691933Z",
    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/graphrag/20261122T172802677769Z"
   ]
+ },
+ "B0_milvus": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T174627171163Z",
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T175002792945Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T175340421220Z",
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T175730268712Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T180123617764Z",
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T180509881632Z"
+  ]
+ },
+ "B2_milvus": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T180900390855Z",
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T181852983787Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T182916637701Z",
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T183900611455Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T192737971172Z",
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/milvus/runs/rag/20261122T193831123003Z"
+  ]
  }
 }
