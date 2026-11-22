@@ -1,0 +1,42 @@
+[
+{"id": "aca2d17262d2e141", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "But while this will probably come up later in the trial"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}, {"item": 2, "quote": "The Epic v. Google trial may come down to simple v. complicated"}]}
+]},
+{"id": "e6d4568c56f14c36", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "he told Fox News Digital."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+]},
+{"id": "e932be28a9dfcd2c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 9, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 9, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 9, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]}
+]},
+{"id": "56525c534a09fdd8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "e7e56b81ddb7b243", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "YouTube publicly committed to three principles/pledges behind its development of music-based generative AI tools"}, {"item": 5, "quote": "They promised “invest[ment] in the AI-powered technology”"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}]}
+]}
+]
