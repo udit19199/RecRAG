@@ -1,0 +1,57 @@
+[
+{"id": "595f1853e84d4e19", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "seemingly expressing his interest in Swift"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "68fac00482805584", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with"}, {"item": 6, "quote": "Russia’s most recent invasion of Ukraine."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with"}, {"item": 6, "quote": "Russia’s most recent invasion of Ukraine."}]}
+]},
+{"id": "81aab2cacb330046", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "cb4535fcd56e7246", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 2, "quote": "repay debts to lenders, using them as a line of credit under the instruction of SBF."}]}
+]},
+{"id": "ebc456cf58da8047", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards, but the degree to which"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "Wired removed the article for not meeting its standards, but the degree to which"}, {"item": 3, "quote": "it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "e69087c2f0361769", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+]}
+]

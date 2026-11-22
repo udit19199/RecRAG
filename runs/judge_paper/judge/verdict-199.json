@@ -1,0 +1,45 @@
+[
+  {"id": "c7411c41bf7b07c1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4a7c733f1313a195", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 6, "quote": "although Michigan had hoped to block the suspension"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 6, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+  ]},
+  {"id": "d4b9fa0754c1b011", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "7fb6f62ab833038a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "the generation of players and leaders that will call time on their international careers at week’s end."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "dc51398443626bca", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+  ]}
+]

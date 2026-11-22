@@ -1,0 +1,61 @@
+[
+  {"id": "d54a2a70ad37b15d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "San Francisco's unit ranks second in points (16.7)"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "and 10th in yardage (310 per game)"}]}
+  ]},
+  {"id": "d72cc7c003fc3fde", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "8b8b7852bc9867ad", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Google’s public documentation says it uses three categories to rank results that are local to a searcher"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "three categories to rank results that are local to a searcher: relevance, distance, and prominence"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "af8298d893765ee1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It gave the JackJumpers a game-high 19-point lead"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "just about put the result to bed after Sydney had lost Jaylin Galloway"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "after Sydney had lost Jaylin Galloway (shoulder)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "and Jonah Bolden (fouled out)"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f68f339ae8daeca3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Gemini Ultra, is set to launch sometime next year in Bard and other products"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Certainly there wasn’t a valid alternative to Google at the time"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "824c45e448edac67", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Fed’s main interest rate is at its highest level since 2001"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control"}]}
+  ]}
+]

@@ -1,0 +1,55 @@
+[
+{"id": "44bd296c43a44c36", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Geno Smith (Seahawks) suffered an injury to his throwing arm"}, {"item": 6, "quote": "Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "backup Drew Lock took over under center with 18 seconds left"}]}
+]},
+{"id": "567115bebb8591b4", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "bc9bf2358f20a18b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "8c77ae1ea84f0ae8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Those yields were in turn catching up to the Fed’s main interest rate, which is above 5.25 per cent and at its highest level since 2001."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "Higher rates and yields slow the economy, hurt prices for investments"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel."}]}
+]},
+{"id": "b7d1ab1923f52cc9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 1, "quote": "and is reportedly preparing for a ground invasion."}]}
+]},
+{"id": "9c033e6a3a952007", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to"}, {"item": 7, "quote": "average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "to reach his stated goal of 2,000 receiving yards this season."}]}
+]}
+]

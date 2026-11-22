@@ -1,0 +1,53 @@
+[
+  {"id": "f738ffffb04b0d56", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "b6a6bcecb2c7c7b9", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "2 hours to kickoff"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "A report from well-connected Argentine journalist Gaston Edul"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+  ]},
+  {"id": "c0d92c66f9277205", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "It could, though, mean some sort of progress"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "if the Manchester born Ratcliffe"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "follows through with his vision to revolutionise the club"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Manchester United out of Europe"}, {"item": 8, "quote": "they find themselves out of Europe altogether"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Another infamous European night at Old Trafford"}, {"item": 5, "quote": "this 1-0 defeat to Bayern Munich was how grimly routine it all felt"}, {"item": 8, "quote": "There was nothing much at all. Where was the energy? Where was the intensity?"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "66bcda027f6d769e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "he came to the music biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e3bf2c0d9ccfadbf", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "“The defendant lied to the world,” Rehn alleged."}, {"item": 7, "quote": "but a “man” who “stole billions of dollars from thousands of victims,” Rehn said."}]},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []}
+  ]}
+]

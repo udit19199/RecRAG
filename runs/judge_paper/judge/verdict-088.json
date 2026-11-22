@@ -1,0 +1,36 @@
+[
+  {"id": "090f978c1c479ed8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "but not all of them are effective"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "and none are foolproof."}]}
+  ]},
+  {"id": "08593dec9f69b2ae", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Establishing himself as the millennial politician who’s cool enough to use TikTok"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "making their songs trend on TikTok, which audiences have started to resist."}]}
+  ]},
+  {"id": "7f1988cb4f35fd67", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."}, {"item": 10, "quote": "Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+  ]},
+  {"id": "07a95f819e7e1c08", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9c5bbd4e7cd36b21", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]}
+]

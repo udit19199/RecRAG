@@ -1,0 +1,63 @@
+[
+{"id": "fe76a4be2cf3983f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 8, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 8, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "7b4a2855b6f85ddd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "But while this will probably come up later in the trial"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]}
+]},
+{"id": "3839cbffebf45836", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "that they don't know everything that happened in that relationship"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "and I can have something really major and traumatic happen to me and they don't know about it"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "she told NPR."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "36ab302765c91b99", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}, {"item": 9, "quote": "The $65 billion line of credit Alameda Research had meant that it did not have to post collateral."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 8, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "6a8d898cddea0291", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "who recorded their second win over Sydney in as many attempts this season."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 3, "quote": "who recorded their second win over Sydney in as many attempts this season."}]}
+]},
+{"id": "8ee7c1c52ae20576", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]}
+]}
+]

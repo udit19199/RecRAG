@@ -1,0 +1,60 @@
+[
+{"id": "df24475123ff50f2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "f360d78b999eadea", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "While its usual hours of operation are from 6am to 9pm"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}]}
+]},
+{"id": "b9b323d15e47526f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "0e2784b3dff974ff", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 1, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "62d03d70e99112e9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "It's quite the test for Garnero in his debut match, taking on Lionel Messi and the defending World Cup champions Argentina, his home nation."}, {"item": 9, "quote": "A bold claim by the Paraguay boss."}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "a1ec4fceac40b697", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "His career has only blossomed in the years since he took that trip"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "while some artists might feel trepidation at the attainment of so much success from such an early age"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Mitchell is clear-eyed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]}
+]}
+]

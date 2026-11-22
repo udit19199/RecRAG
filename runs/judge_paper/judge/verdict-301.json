@@ -1,0 +1,47 @@
+[
+  {"id": "a675ec83bbce6001", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "740202123f2e168d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "FTX co-founder and former CTO Gary Wang"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 2, "quote": "FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse."}]}
+  ]},
+  {"id": "1d27b42808b0b29f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]}
+  ]},
+  {"id": "888885f418b51a48", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "b389e6f88b2de16d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+  ]},
+  {"id": "00def04c7b5a606e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Goellers are now seeking support again, launching the \"Save Lucas\" campaign across social media."}]}
+  ]}
+]

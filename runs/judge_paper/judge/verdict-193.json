@@ -1,0 +1,48 @@
+[
+  {"id": "29e35bc60ca9ade2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "and I can have something really major and traumatic happen to me and they don't know about it,"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "she told NPR"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+  ]},
+  {"id": "cea90b89aa78984c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "making a car is taking small bits of metal and banging them up, welding them together and attaching them,"}, {"item": 6, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+  ]},
+  {"id": "be6f2d7f0801f328", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "aca2121aa035b1a6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}, {"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+  ]},
+  {"id": "00268c5bd4b08f0c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]}
+  ]}
+]
