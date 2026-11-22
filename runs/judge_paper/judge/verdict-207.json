@@ -1,0 +1,104 @@
+[
+  {"id": "3cb70b028d98e5a4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 2, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"},
+      {"item": 8, "quote": "the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the biggest checks?"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 5, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}
+    ]},
+    {"fact": "0.3", "status": "stated", "evidence": [
+      {"item": 5, "quote": "he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla"}
+    ]},
+    {"fact": "0.4", "status": "stated", "evidence": [
+      {"item": 2, "quote": "including its deal with Apple and other partners to make Google the default search engine"}
+    ]},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 5, "quote": "the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 5, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}
+    ]}
+  ]},
+  {"id": "09c533e7acc97605", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 4, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 1, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 1, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 1, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}
+    ]},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google"}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.3", "status": "stated", "evidence": [
+      {"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.4", "status": "stated", "evidence": [
+      {"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]}
+  ]},
+  {"id": "98d16b08a50d4dfa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 6, "quote": "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 6, "quote": "“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward."}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "4ecc559f7281aabc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 6, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "22dca3cac9263e1d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 5, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 5, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}
+    ]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [
+      {"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google"}
+    ]},
+    {"fact": "2.1", "status": "stated", "evidence": [
+      {"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.2", "status": "stated", "evidence": [
+      {"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]},
+    {"fact": "2.3", "status": "stated", "evidence": [
+      {"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}
+    ]}
+  ]}
+]
