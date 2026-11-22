@@ -1,0 +1,973 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=2cfc282ccd5b97f8 ===
+Gold sentences and facts:
+Sentence 0: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 0.0: The full model, Gemini Ultra, was not released.
+  Fact 0.1: Only a 'lite' version called Gemini Pro was released.
+Sentence 1: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 1.0: Google's public documentation says Google uses three categories to rank results.
+  Fact 1.1: The three categories are relevance, distance, and prominence.
+  Fact 1.2: The categories rank results that are local to a searcher.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues these actions are anticompetitive means.
+
+Retrieved items:
+<item 1>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Most read
+
+AI, faked: Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called
+Gemini Pro. In a press briefing and blog posts, Google touted Gemini’s coding capabilities and multimodal prowess, claiming that the model can understand
+images, audio and videos just as well as text. But Gemini Pro — which is strictly text-in, text-out — has proven to be mistake-prone. And in a worse look for
+Google, the company was caught faking a Gemini demo by tuning text prompts with still images off camera.
+
+Offensive notebooks: In another Google PR blunder, people who attended the company’s K&I Black Summit in August were given third-party notebooks containing
+highly insensitive language. My colleague Dominic-Madori writes that the inside of the notebooks were printed with the phrase “I was just cotton the moment, but
+I came back to take your notes” (emphasis ours).
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 8>
+
+<item 9>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 10>
+=== END ITEM id=2cfc282ccd5b97f8 ===
+
+=== ITEM id=5c7629223c79d6e1 ===
+Gold sentences and facts:
+Sentence 0: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 0.0: The speaker was the richest person in the world under 30.
+  Fact 0.1: The speaker was going to spend that wealth to save humanity from extinction.
+  Fact 0.2: The speaker said this.
+Sentence 1: Because FTX had grown so much, he could no longer run both companies, he said.
+  Fact 1.0: FTX had grown so much.
+  Fact 1.1: Because FTX had grown so much, the speaker could no longer run both companies.
+  Fact 1.2: The speaker said this.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth, power and influence.
+  Fact 2.2: The defense countered that the FTX founder acted in good faith.
+  Fact 2.3: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.4: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 1>
+
+<item 2>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 3>
+
+<item 4>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+No, we don’t find out who that friend is, nor do we find out if that particular investment was ever made — SBF did raise some $2 billion, including $1 billion
+in 2021, from backers that included Sequoia, Temasek, Tiger Global and dozens more.
+
+But we do find out that another investment, of sorts, was made on that day: Lewis himself was so taken with the idea of SBF and his apparent brilliance that he
+came away with the decision to write about him.
+
+“Eighteen months earlier, he had nothing. Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save
+humanity from extinction,” he said. “My jaw was on the floor.”
+
+The two proceeded to meet more than 100 times over the next two years. As SBF’s fame and his company’s bank account grew, 60 Minutes itself even got involved.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 6>
+
+<item 7>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 9>
+
+<item 10>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 10>
+=== END ITEM id=5c7629223c79d6e1 ===
+
+=== ITEM id=42d2f265236bda0e ===
+Gold sentences and facts:
+Sentence 0: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 0.0: Swift has shared that she has nothing to hide.
+  Fact 0.1: Swift is in a new relationship with Kelce.
+  Fact 0.2: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: The podcast host, referred to as 'he', later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The invitation was to a game at Arrowhead Stadium.
+  Fact 1.2: The 'Anti-Hero' singer accepted the invitation.
+  Fact 1.3: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+
+Retrieved items:
+<item 1>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+“OF ALL 230 SONGS IN THE DISCOGRAPHY I’M SICK,” one fan commented, while another person wrote: “It’s unbelievable how invested I am in this.”
+
+“I’m gonna need to go back and see all photos of him from the last three months and dissect if he’s wearing friendship bracelets,” a third wrote.
+
+In other photos from the charity event - which were shared to Instagram by Jordan’s KC photography - Kelce wasn’t seen wearing the friendship bracelet, leading
+many people to believe that he received the bracelet from a fan that day.
+
+Two days after his charity event, the “All Too Well” singer was spotted cheering for the Kansas City Chiefs tight end from the box seats at Arrowhead Stadium in
+Kansas City, Missouri. Not only was she seen sitting next to Kelce’s mother, Donna, but she also appeared to yell “let’s f***ing go” in response to Kelce’s
+third-quarter touchdown reception.
+</item 1>
+
+<item 2>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 3>
+
+<item 4>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Fans have spotted Travis Kelce wearing a friendship bracelet with Taylor Swift lyrics on it, just days before she attended his Kansas City Chiefs game.
+
+In a video posted to TikTok on 25 September, a fan shared a photo of Kelce posing with the piece of jewellery on his wrist. The post came after Swift was seen
+enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating.
+</item 4>
+
+<item 5>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in." - Gold Rush
+
+While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.
+
+"It is hilarious how much traction this has actually got," he said of all the talk. "It's like that old game in school called telephone where everybody is just
+whispering in each others ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."
+
+He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the
+Chiefs.
+
+"I threw it out there, I threw the ball in her court and I told her you know, I've seen you rock the stage in Arrowhead you might have to come see me rock the
+stage in Arrowhead and see which one is a little more lit. We will see what happens in the near future."
+</item 5>
+
+<item 6>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+After the game, which saw the Chiefs beat the Chicago Bears 41-10, Kelce was seen leaving the stadium in a blue and white splatter-paint denim suit. Eagle-eyed
+fans were quick to believe that Kelce’s outfit paid homage to Swift’s forthcoming album, 1989 (Taylor’s Version), which is due for re-release on 27 October.
+
+After the two escaped the crowd at Arrowhead Stadium in Kelce’s convertible, according to photos and videos posted online, the football star reportedly rented
+out Prime Social Rooftop in Kansas City for a post-game celebration with his family, his teammates, and Swift.
+
+“Travis bought out the restaurant for his family and team. Taylor arrived, wearing a denim dress, and was seen snacking, having some cocktails and dancing
+alongside Travis,” the witness told Entertainment Tonight. “The two were very affectionate with one another but kept things fun and lighthearted.
+</item 6>
+
+<item 7>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Oct. 15: Kelce, Swift make 'SNL' cameos
+
+The two were spotted out in NYC together and then had a surprise appearance on "Saturday Night Live." Kelce had a cameo in a skit about how much coverage Swift
+was getting during games, while the singer introduced the musical act of the night, Ice Spice.
+
+Oct. 22: Swift attends fifth Chiefs game
+
+Swift has now attended games broadcast across all five networks (CBS, NBC, Fox, ESPN and Amazon). This week, she is watching the Chiefs face the Chargers and
+will be shown on CBS. She is sporting a Chiefs sweatshirt and is seated next to Kansas City quarterback Patrick Mahomes' wife, Brittany.
+</item 7>
+
+<item 8>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 8>
+
+<item 9>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce believes the National Football League’s coverage of his rumoured girlfriend Taylor Swift is a bit too much.
+
+Following his game against the New York Jets on 1 October, the 33-year-old Kansas City Chiefs tight end opened up about the NFL broadcast on the most recent
+episode of his podcast, New Heights with Jason and Travis Kelce.
+</item 9>
+
+<item 10>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+“I threw it out there, I threw the ball in her court,” he said. “I told her, you know, I’ve seen you rock the stage in Arrowhead [Stadium], you might have to
+come see me rock the stage in Arrowhead and see which one’s a little more lit. So, we’ll see what happens in the near future.”
+
+Back in July, Kelce first confessed that he tried - and failed - to give Swift his number by giving her a friendship bracelet at one of her Eras Tour concerts.
+“I was disappointed that she doesn’t talk before or after her shows, because she has to save her voice for the 44 songs that she sings,” he explained to his
+brother on their podcast.
+
+“So I was a little butthurt I didn’t get to hand her one of the bracelets I made for her,” Kelce said.
+</item 10>
+=== END ITEM id=42d2f265236bda0e ===
+
+=== ITEM id=ea4b3ee857e154c6 ===
+Gold sentences and facts:
+Sentence 0: However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years.
+  Fact 0.0: Floyd has a massive net worth.
+  Fact 0.1: Canelo has inched closer to Floyd's billionaire status over the years.
+  Fact 0.2: Canelo has inched closer to Floyd's billionaire status over the years despite Floyd's massive net worth.
+Sentence 1: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 1.0: The speaker was the richest person in the world under 30.
+  Fact 1.1: The speaker was going to spend his wealth to save humanity from extinction.
+  Fact 1.2: The speaker said this.
+
+Retrieved items:
+<item 1>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+via Imago RECORD DATE NOT STATED Saul -Canelo- Alvarez MEX vs Jermell Charlo USA – Weigh-in ceremony Saul -Canelo- Alvarez MEX during the weigh-in ceremony
+prior to the Boxing fight against Jermell Charlo USA, at the T-Mobile Arena Explanade on September 29, 2023. brbr Saul -Canelo- Alvarez MEX durante la ceremonia
+de pesaje previo a la pelea de Box contra Jermell Charlo USA, en la Explanada del Arena T-Mobile el 29 de septiembre de 2023. LAS VEGAS NEVADA ESTADOS UNIDOS
+PUBLICATIONxNOTxINxMEXxCHNxRUS Copyright: xDavidxLeahx 20230929183529_BOX_2023_ALV_CHA_WEIGH_ALVAREZ44.
+</item 1>
+
+<item 2>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+No, we don’t find out who that friend is, nor do we find out if that particular investment was ever made — SBF did raise some $2 billion, including $1 billion
+in 2021, from backers that included Sequoia, Temasek, Tiger Global and dozens more.
+
+But we do find out that another investment, of sorts, was made on that day: Lewis himself was so taken with the idea of SBF and his apparent brilliance that he
+came away with the decision to write about him.
+
+“Eighteen months earlier, he had nothing. Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save
+humanity from extinction,” he said. “My jaw was on the floor.”
+
+The two proceeded to meet more than 100 times over the next two years. As SBF’s fame and his company’s bank account grew, 60 Minutes itself even got involved.
+</item 2>
+
+<item 3>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+It would also be a money magnet that would funnel income from a variety of channels.
+
+A few of those lucrative channels of income would be revenue from pay-per-view sales, live gate revenue, merchandise sales from either party and various
+promotional events from the fight. What’s more, if anyone wondered if people would want to watch the fight. The attention it has gathered in the small span of
+their X (Twitter) feud should be evidence enough. Not to mention, both fighters command a massive fan base, counted in millions across the globe.
+
+Canelo Alvarez and McGregor’s history of massive purses
+
+If Canelo’s PPV pull was ever in question, his history of fight purses should convince everyone. Stepping back in time, Canelo’s fight with Mayweather collected
+2.2 million pay-per-view buys. His 2017 bout against Julio César Chávez Jr. collected 1 million PPV buys.
+</item 3>
+
+<item 4>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Crossover boxing matches are all the rage these days. Until a few days ago, the phenomenon was limited to influencers and MMA stars. But after a recent quarrel
+on X (formerly Twitter) between Conor McGregor and Canelo Alvarez, a potential crossover boxing match has the boxing world buzzing with excitement. If the fight
+were to turn into a reality, it could help ‘Cinnamon’ get closer to his former rival Floyd Mayweather in terms of net worth.
+
+America’s Favorite Video Today
+
+The talks of Conor McGregor vs. Floyd Mayweather began with a tweet that launched a fiery exchange of words between these two mammoths of combat sports. The
+brash and confident ‘Notorious’ McGregor turned to X, praising Mayweather’s 2013 performance against Canelo. But he also boasted about landing more punches on
+‘Money’ Mayweather than the Mexican superstar. Canelo quickly retorted, asserting he would need only one hand to make quick work of McGregor.
+</item 4>
+
+<item 5>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+So, a fight with McGregor could earn him anywhere from $55 to $60 million, adding to his $180 million. Meaning his total net worth would jump up to $240
+million.
+
+ADVERTISEMENT Article continues below this ad
+
+While matching Floyd’s net worth is no easy feat, if anyone can do it – it’s Canelo Alvarez. However, only time will tell if the fight can ever materialize. In
+case it does, it will be a spectacle the whole world would come together to witness. Do you think McGregor vs. Canelo can happen? Who would win the fight?
+
+Watch This Story: Here’s How $200,000,000 Worth Canelo Alvarez Spent His First Ever Million
+</item 5>
+
+<item 6>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Furthermore, Canelo and McGregor’s careers are intertwined with the legendary Floyd Mayweather. ‘Money’ faced both fighters at one point or the other, leaving
+each with a boxing lesson. When Mayweather defeated Canelo, it pushed him to hone his skills while starting a lifelong rivalry. On the other hand, McGregor made
+his boxing debut against Mayweather, losing the fight but leaving with a fat stack.
+
+Implications of a fight between Canelo Alvarez and Conor McGregor
+
+The excitement and allure of two mammoths of combat sports getting in the ring to pummel each other to the brink of their endurance is undeniable. Not to
+mention, the fight will leave either party significantly wealthier than before. A potential clash between Saul Canelo Alvarez and the ‘Notorious’ Conor McGregor
+would not just be a dream come true for fans everywhere. It would also be a money magnet that would funnel income from a variety of channels.
+</item 6>
+
+<item 7>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+The Aces defeated the Liberty 98-81. NOTE TO USER: User expressly acknowledges and agrees that, by downloading and or using this photograph, User is consenting
+to the terms and conditions of the Getty Images License Agreement. (Photo by Ethan Miller/Getty Images)
+
+However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years. If Canelo vs. McGregor ever manages to
+materialize, it could help Canelo take a significant leap to Mayweather’s net worth. The financial windfall from such a humongous clash would be substantial,
+driving him closer to Mayweather’s level of wealth. If Canelo’s past earnings are any evidence, this fight will be bigger than ever before. Canelo’s biggest
+fight to date is $45 million from the third encounter with Golovkin.
+</item 7>
+
+<item 8>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Later, the banter further escalated, bringing a potential fight in the picture.
+
+Canelo Alvarez’s earnings and Floyd Mayweather’s influence
+
+ADVERTISEMENT Article continues below this ad
+
+Canelo Alvarez reached his career high by becoming the first boxer to become the undisputed champion at super-middleweight by holding onto the WBA Super, WBC,
+and Ring Magazine super middleweight titles since 2020, and the IBF nd WBO titles since 2021. Meanwhile, his pockets became deeper and deeper, to the point that
+Canelo boasts a $180 million net worth in 2023. The most significant addition to his bank balance came when he signed a lucrative $365 million deal with DAZN
+and Golden Boy Promotions.
+</item 8>
+
+<item 9>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+collected 1 million PPV buys. Canelo’s first battle with Gennady Golovkin gathered 1.3 million PPV sales. In his most recent battle against Jermell Charlo, the
+fight collected 700K PPV sales. These were just to name a few; over the years, Canelo has fought in increasingly profitable bouts.
+
+On the other hand, Conor McGregor has created his own history in MMA as well as boxing. First of all, McGregor’s fight against Mayweather generated 4.3 million
+pay-per-view buys. His second fight against Dustin Poirier collected 1.6 million buys. The infamous fight against Khabib Nurmagomedov saw 2.4 million PPV sales.
+And lastly, his second fight against Nate Diaz collected 1.65 million PPV buys. If these numbers are any evidence, a Canelo vs.
+</item 9>
+
+<item 10>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+If these numbers are any evidence, a Canelo vs. McGregor clash would break all their previous records by a mile.
+
+A substantial step toward Mayweather’s net worth/Billionaire status
+
+It’s no secret that Floyd Mayweather is the richest boxer in the world. The legendary undefeated boxer boasts a staggering net worth of $450 million. It makes
+the retired boxer the richest personality in boxing to ever exist. Despite retiring from the sport, he occasionally fights in exhibition matches, generating
+millions each time. In addition, Floyd has made over a billion dollars in the span of his career.
+
+ADVERTISEMENT Article continues below this ad
+
+via Getty LAS VEGAS, NEVADA – JUNE 29: Floyd Mayweather Jr. attends a game between the New York Liberty and the Las Vegas Aces at Michelob ULTRA Arena on June
+29, 2023 in Las Vegas, Nevada. The Aces defeated the Liberty 98-81.
+</item 10>
+=== END ITEM id=ea4b3ee857e154c6 ===
+
+=== ITEM id=732af464c9a537b2 ===
+Gold sentences and facts:
+Sentence 0: He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line.
+  Fact 0.0: He is helping to usher in a youth movement up front for Argentina.
+  Fact 0.1: Julian Alvarez is considered the future of the forward line.
+  Fact 0.2: Alejandro Garnacho is considered the future of the forward line.
+Sentence 1: 2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity.
+  Fact 1.0: The kickoff is 2 hours away.
+  Fact 1.1: Argentine journalist Gaston Edul is well-connected.
+  Fact 1.2: A report from Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity.
+
+Retrieved items:
+<item 1>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+MORE: Inter Miami season tickets for 2024 season see unprecedented jump in price
+
+(Also, you'll notice a photo of Lionel Messi's jersey hanging in his locker in that tweet below, a pretty good indication that he'll return tonight)
+
+Scene is set for Fan Appreciation Night 🏟️#MIAvCIN | 7:30 PM ET pic.twitter.com/9I07uq9hGW — Inter Miami CF (@InterMiamiCF) October 7, 2023
+
+2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for
+this match in some capacity. Edul reported that "the idea is for Leo Messi to get minutes when Inter Miami plays FC Cincinnati".
+
+That makes it sound like Messi will only be available off the bench, but it's better than nothing to have a game-changer like him available at all.
+</item 1>
+
+<item 2>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+@fccincinnati goalkeeper @roman_413 had nothing but praise for @LuchoAcosta94 and Pat Noonan 🟠🔵 pic.twitter.com/Xyp2ozr7n5 — CBS Sports Golazo ⚽️
+(@CBSSportsGolazo) October 3, 2023
+
+1 hour 15 mins to kick: Lionel Messi was nominated for not only MLS Newcomer of the Year for the 2023 season, but also 2023 MLS MVP.
+
+Laughable doesn't even begin to describe that blatant PR move, considering that most of the damage Messi has done for Inter Miami has come in Cup competitions.
+He has one goal and two assists in 247 minutes of play in actual MLS competition. Lionel Messi has been fun, but let's hope the league doesn't make a mockery of
+itself by actually giving Messi either honor.
+</item 2>
+
+<item 3>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+With the 2023 MLS season closing earlier than expected for Inter Miami, eliminated from playoff contention, Lionel Messi will have significant time off before
+the new campaign begins in February 2024.
+
+With every new season come preseason friendlies, as the players hope to ramp up their match fitness prior to the start of the coming campaign. Players need game
+time to build their bodies to the point where they can play full 90-minute matches, especially when they are contesting multiple games a week.
+
+Inter Miami's preseason will be watched with extra observation as Messi draws considerable attention wherever he goes, home or abroad. The Argentina star had
+looked like being part of a tour of China, although that's no longer the case, while the prospect of facing a familiar side from home is a tantalising one.
+
+The Sporting News has compiled all the known preseason matches either confirmed or reported prior to the start of Inter Miami's 2024 season.
+</item 3>
+
+<item 4>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+🤔 pic.twitter.com/Svq79fvbBG — Major League Soccer (@MLS) October 4, 2023
+
+1 hour to kickoff: With lineups not yet released, there is finally a report regarding Lionel Messi's availability. According to Michelle Kaufman of the Miami
+Herald, Messi "did not arrive with the team" to Soldier Field. While that's not outright confirmation that he will not take part in the match, it's a very
+strong indication that he will not be involved tonight.
+
+1 hour 15 mins to kick: With lineups due imminently, and nothing to indicate if Lionel Messi is involved tonight or not, the Chicago Fire media team has jokes.
+</item 4>
+
+<item 5>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+MORE: Details on Lionel Messi's injury as he battles "fatigue" and a "scar tissue issue".
+
+La idea es que Leo Messi vuelva a sumar minutos mañana cuando Inter Miami juegue contra Cincinnati. pic.twitter.com/ePNWHb4vSs — Gastón Edul (@gastonedul)
+October 6, 2023
+
+Inter Miami vs FC Cincinnati lineups & team news
+
+There was a report that Lionel Messi could finally make his return from injury, and while it felt unlikely that Messi would start three days after missing out
+entirely, he appears on the bench today and could be available for a second half appearance if required.
+
+Jordi Alba remains sidelined with a hamstring injury, missing since his injury just minutes before Messi, and without a publicly known timeline for a return.
+Also missing is striker Leonardo Campana who was absent from the midweek defeat to the Chicago Fire with a muscle injury, although Gerardo Martino described his
+issue as "minor."
+</item 5>
+
+<item 6>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Had Inter Miami been still in the playoff hunt, with a potential postseason run on the horizon, Argentina might have played it a bit safer with Messi in this
+international window. Yet now that his long offseason break is confirmed, Messi may be more aggressive with his minutes here knowing that, after Inter Miami's
+final two meaningless regular-season matches, he will only have international breaks to keep him sharp until February.
+
+According to a report earlier today, Messi will not start tonight, but is likely to play much or all of the second half, while Lautaro Martinez and Julian
+Alvarez both start a national team match for the first time. World Cup hero Mario Kempes is a big fan of that.
+
+"No deberíamos entrar en la polémica, como pasó con Batistuta y Crespo. Lautaro tuvo un bajón en el Mundial, entró Julián y cambió muchos las cosas, pero ahora
+volvió a hacer goles. Y Julián es muy molesto.
+</item 6>
+
+<item 7>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+Inter Miami no va a viajar a China. La gira que incluía dos amistosos se cae por temas burocráticos/comerciales. pic.twitter.com/8I0jBxg4Zz — Gastón Edul
+(@gastonedul) October 30, 2023
+
+Instead, Inter Miami met NYCFC in a hastily arranged friendly at DRV PNK Stadium on November 10 to honor Lionel Messi's most recent Ballon d'Or. The friendly is
+being dubbed the "Noche d'Or" or "Night of Gold" as a nod to his latest achievement.
+</item 7>
+
+<item 8>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Meanwhile, Fabrizio Romano also shot it down from a journalistic standpoint.
+
+There isn't enough of a break for him to reasonably integrate with Barcelona, and at 36 years old he's sure to welcome the extended time off.
+
+Tata Martino on rumors of Messi playing on loan with Barcelona this winter:
+
+
+
+"Is he going for fun? Maybe he's going to visit Barcelona. Other than that, I don't know anything else about it." pic.twitter.com/qJwoJOwkC6 — Felipe Cárdenas
+(@FelipeCar) October 8, 2023
+
+2 hours to kickoff: Lionel Messi's club Inter Miami were eliminated from MLS playoff contention after their latest defeat, a 1-0 loss to FC Cincinnati last
+weekend. Messi had missed the previous four matches but returned to the field for the final 30 minutes. He was powerless to turn the tide of the game, after
+Inter Miami had missed so many gilt-edged chances in the first half.
+</item 8>
+
+<item 9>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+The team from Argentina hold a special place in the heart of Messi and Martino. Not only are both men from the city of Rosario, where Newell's are based, but
+Messi developed at the club's youth academy and Martino played more than 400 senior games for the club before becoming head coach in 2012.
+
+"I am delighted to welcome my beloved Newell's to our home here in Miami. It will be a special match due to everything Newell's Old Boys means to me," said the
+Inter Miami coach. "It will also be a good opportunity to prepare for what will surely be an exciting season."
+
+Messi signed for Barcelona after spending six years as a youth player at Newell's, during which time he reportedly scored 234 goals.
+
+Will Inter Miami face River Plate in Dallas?
+
+In late November, it was reported that Inter Miami have arranged to contest a friendly against Argentine giants River Plate in Dallas, Texas in late January.
+</item 9>
+
+<item 10>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+@MiamiHerald @HeraldSports @InterMiamiCF #InterMiamiCF #Messi𓃵 #cf97 #MLS pic.twitter.com/hp8KHzkwNB — Michelle Kaufman (@kaufsports) October 4, 2023
+
+2 hours to kickoff: Tata Martino has played his cards extremely close to his chest when it comes to the fitness of Lionel Messi. Each week we see how
+tight-lipped the Inter Miami boss has been regarding Messi's injury.
+
+Prior to tonight's match against the Chicago Fire, Martino was asked about the return of Jordi Alba, and he stated that there is a timeline in place for Alba's
+return. When asked if there's a timeline for Messi's return, Martino refused to acknowledge if there is.
+
+Tata Martino when I asked about Lionel Messi's return timeline:
+
+
+
+"I understand your desire to know the exact timelines, but if I had the exact timelines I would share them.
+
+
+
+"I just don't have them."
+</item 10>
+=== END ITEM id=732af464c9a537b2 ===
+
+=== ITEM id=4a6d2c0700ad6f7f ===
+Gold sentences and facts:
+Sentence 0: The first of these is the fact that tech companies continue to see huge pressure on their valuations.
+  Fact 0.0: The first of these is that tech companies continue to see huge pressure on their valuations.
+Sentence 1: With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation.
+  Fact 1.0: The stock surged 10% this year.
+  Fact 1.1: Seeking Alpha's Quant Rating system suggests a Hold.
+  Fact 1.2: The Quant Rating system expresses concerns about valuation.
+
+Retrieved items:
+<item 1>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+Cowards.
+
+A swan song from the bird sanctuary: X has marked its value at $19 billion, according to internal documents, marking a 56% decrease in value since Elon Musk’s
+purchase last year. Bad for shareholders and Musk, but potentially good for executives and employees, Amanda explains.
+</item 1>
+
+<item 2>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The latest funding round brings QI Tech’s total capital raised to $262 million.
+
+New Web Summit CEO appointed: Former Wikimedia Foundation CEO Katherine Maher has been appointed as the new CEO of Web Summit, following the controversial
+departure of its previous leader, Paddy Cosgrave. Maher’s appointment comes as the tech conference faces a challenge to rebuild relationships and trust within
+the tech community.
+
+Top reads on TechCrunch this week
+
+Shinier, smarter maps: Google is rolling out a variety of updates for Maps, incorporating AI technology to enhance user experience. The feature is currently
+available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.
+
+From stop-and-start to charging ahead: Over on TC+, Tim has had it with U.S. automakers hesitating on EVs, as Ford and GM are showing signs of backing away from
+their commitment to electric vehicles. Cowards.
+</item 2>
+
+<item 3>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+Driven by a confluence of factors, from China’s crackdown on the tech industry to escalating U.S.-China tensions, some of these investors are now turning their
+gaze to opportunities abroad, tracing the footsteps of a new generation of Chinese-founded startups that are expanding overseas.
+
+Between a rock and a hard place
+
+Since their entry into China in the late 1990s, American venture capital firms, led by powerhouses like Sequoia Capital, IDG Capital and GGV, have played a
+major role in funding high-risk, high-reward startups in the country’s consumer internet sector. This two-decade-long mutually beneficial relationship, however,
+now hangs in the balance as changes at home and abroad diminish the pool of investment opportunities for outside financiers.
+
+In recent years, Beijing’s sweeping tech crackdowns have introduced a new sense of uncertainty to investors.
+</item 3>
+
+<item 4>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The trend points toward a favorable environment for startups prioritizing growth over cash preservation.
+
+At the same time, we wouldn’t be surprised if WeWork ends up filing for bankruptcy (TC+). The company has been grappling with significant challenges. WeWork’s
+stock hit a new low, dropping over 47% after hours to just $1.21, which brings the company’s market cap down to a mere $121 million. This is a drastic fall from
+the $47 billion valuation it achieved after its SoftBank-led Series H round in early 2019.
+
+Hope for the best, prepare for the worst: Startup co-founders don’t always make it, and in her fantastic TC+ piece, Rebecca explores what you can do to prepare
+today, should a co-founder breakup be on your startup journey’s path.
+
+Bumper banking backing in Brazil: Brazilian startup QI Tech, a banking-as-a-service platform, has raised $200 million in a Series B funding round, marking the
+largest raise in Brazil this year across all sectors.
+</item 4>
+
+<item 5>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+But tracking these layoffs helps us to understand the impact on innovation, which companies are facing tough pressures and who is available to hire for the
+businesses lucky to be growing right now. Unfortunately, it also serves as a reminder of the deeply human impact of layoffs and how risk profiles could evolve
+from here.
+
+Below you’ll find a comprehensive list of all the known layoffs in tech that have occurred in 2023, to be updated monthly. If you have a tip on a layoff,
+contact us here. If you prefer to remain anonymous, you can contact us here.
+
+The running total of layoffs for 2023 based on full months to date is 224,503, according to Layoffs.fyi. Tech layoffs conducted to date this year currently
+exceed the total number of tech layoffs in 2022, according to the data in the tracker.
+
+Data visualization by Miranda Halpern, created with Flourish
+
+December 2023
+
+ShareChat
+
+Is cutting 15% of its workforce in a “strategic restructuring” effort for 2024.
+</item 5>
+
+<item 6>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 6>
+
+<item 7>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+A comprehensive list of 2023 tech layoffs From major layoffs at Google, Amazon and Microsoft to small fintech startups and apps
+
+Last year’s techwide reckoning continues. The tech industry has seen more than 240,000 jobs lost in 2023, a total that’s already 50% higher than last year and
+growing. Earlier this year, mass workforce reductions were driven by the biggest names in tech like Google, Amazon, Microsoft, Yahoo, Meta and Zoom. Startups
+across many sectors also announced cutbacks through the first half of the year. And while tech layoffs slowed down in the summer and fall, it appears that cuts
+are ramping up yet again.
+
+Many economists have cautioned against fears of a recession, which would seem like a reason for optimism. But the momentum for a tech sector rebound has been
+slow to build, resulting in tech companies continuing to cut back on their workforces and pivot from a growth mindset to one based on efficiency in the face of
+stubborn market conditions.
+</item 7>
+
+<item 8>
+Meltwater, the media monitoring startup, gets a $65M investment from Verdane (TechCrunch, 2023-12-18T10:54:31+00:00)
+The deal underscores a couple of important themes in the world of European tech and VC.
+
+The first of these is the fact that tech companies continue to see huge pressure on their valuations. Meltwater’s current market cap of just under $600 million
+is actually less than the company raised over the years when it was a privately held startup (over $700 million, per PitchBook data), and less than half of its
+valuation when it went public in December 2020 at over $1 billion.
+
+The second is the nature of dealmaking at the moment and the efforts that investors are making to de-risk. The market is particularly tight at the moment in
+Europe: VC firm Atomico’s annual deep dive into the funding landscape in Europe (which it puts together with a number of third-party research firms and
+particpation from others in the ecosystem) found that funding in 2023 halved to just $43 billion, and private equity firms are making a much bigger appearance
+in deals to make up some of the drop from VC.
+</item 8>
+
+<item 9>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+: Shield AI, a startup specializing in autonomous flying systems for the U.S. military, has raised $200 million in a new funding round, reaching a valuation of
+$2.7 billion.
+
+Eero grows up, with best-in-class Wi-Fi: Amazon’s Eero has launched its most advanced mesh Wi-Fi router yet, the Eero Max 7.
+
+Boksing claver: Danish startup Soundboks released its fourth-generation Bluetooth speaker that has been a hit in Europe’s festival scene but has yet to gain a
+strong foothold in the U.S. market.
+
+Highs and lows in the world of startups
+
+The current bear market in cloud stocks has led to a reversal of revenue multiples from earlier this year, making it difficult for late-stage startups to accrue
+value, Alex writes on TC+. However, early-stage startups that are growing rapidly may still be able to raise funds and demand for a better valuation. The trend
+points toward a favorable environment for startups prioritizing growth over cash preservation.
+</item 9>
+
+<item 10>
+Earnings week ahead: DocuSign, NIO, Broadcom, GameStop and more (Seeking Alpha, 2023-12-03T13:02:00+00:00)
+(GTLB) is due to post its Q3 results after the market closes on Monday. With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a
+Hold, expressing concerns about valuation. This contrasts with Wall Street analysts, who advocate a Buy rating.
+
+Recently, Raymond James has rated the stock with a Market Perform rating, citing potential market exuberance and growth potential in fiscal 2025 due to a large
+total addressable market, healthy customers, and a value proposition favoring consolidation over fragmentation.
+
+On the other hand, Cantor Fitzgerald started coverage with an Overweight rating and a $55 price target, as the company anticipates benefits from product
+consolidation and the generative artificial intelligence wave.
+
+Consensus EPS Estimates: -$0.01
+
+Consensus Revenue Estimates: $141.04M
+
+Earnings Insight: GitLab has beaten EPS and revenue expectations in 8 straight quarters.
+</item 10>
+=== END ITEM id=4a6d2c0700ad6f7f ===

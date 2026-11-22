@@ -1,0 +1,997 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=cc0c31b4be3e96be ===
+Gold sentences and facts:
+Sentence 0: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 0.0: SBF is known as SBF.
+  Fact 0.1: SBF has pleaded not guilty to some seven charges.
+  Fact 0.2: The charges are of fraud and conspiracy.
+Sentence 1: Because FTX had grown so much, he could no longer run both companies, he said.
+  Fact 1.0: FTX had grown so much.
+  Fact 1.1: SBF said he could no longer run both companies because FTX had grown so much.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 1>
+
+<item 2>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Much of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make
+investments or direct funding toward political causes and charities.
+
+SBF trial: What we learned in week two
+
+The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to
+repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX
+Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.
+
+And though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in
+frozen trading accounts.
+
+SBF trial: What we learned in the week one
+
+As expected, the opening statements in the SBF trial were spicy.
+</item 2>
+
+<item 3>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 3>
+
+<item 4>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+regulators and government officials, many of whom he donated to.
+
+Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+
+But in early November 2022, that all changed.
+
+FTX’s collapse
+
+Concerns surrounding FTX’s liquidity grew after CoinDesk published a copy of Alameda’s balance sheet, showing the firm held $14.6 billion in assets and $8
+billion in liabilities as of June 30, 2022.
+
+But there was a problem: The report showed Alameda’s largest asset was $3.66 billion of “unlocked FTT” and $2.16 billion of “FTT collateral.” FTT was the token
+behind FTX.
+
+The balance sheet showed that the $5.82 billion in FTT tokens that Alameda owned was 193% higher than the total FTT market cap, which was about $3 billion at
+the time.
+</item 4>
+
+<item 5>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+That means it purported to have more FTT tokens on its balance sheet than what existed in the world.
+
+Around the same time it was exposed, the world’s largest crypto exchange, Binance, started pulling out its remaining $2.1 billion equivalent of cash in BUSD and
+FTT. (It had an equity position in FTX from 2019 to 2021.) This essentially triggered a bank run on FTX.
+
+FTX and Alameda filed for Chapter 11 bankruptcy in the U.S. mid-November 2022. Bankman-Fried resigned, and John J. Ray III, the Enron turnaround veteran, was
+appointed its new CEO.
+
+Bankman-Fried, however, maintained his innocence. At The New York Times’ DealBook Summit, he appeared virtually from the Bahamas, saying “I didn’t ever try to
+commit fraud on anyone; I was shocked by what happened this month.”
+</item 5>
+
+<item 6>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 7>
+
+<item 8>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+He, like many of SBF’s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical “legal justification” for
+the use of billions in consumer funds just days before FTX filed for bankruptcy.
+
+Robert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately
+resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a
+relationship, he testified that Third Point would not have invested in FTX in the first place.
+
+And earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he
+uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.
+</item 8>
+
+<item 9>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 9>
+
+<item 10>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Read a recap of the prosecution and defense’s full arguments here.
+
+FTX’s co-founder and CTO Gary Wang testified Thursday on the extent to which Alameda Research was used for whatever purposes he and SBF saw fit. The crypto
+trading firm, according to Wang, pulled funding directly from FTX customers, whose transactions would be funneled toward Alameda and then directed elsewhere.
+
+Check here for our rundown of Wang’s testimony so far, resulting from a guilty plea in December 2022.
+
+Thursday also brought in testimony from Matt Huang, co-founder and managing partner at crypto investment firm Paradigm. That firm invested $278 million in FTX
+across 2021 and 2022, and is part of a class-action lawsuit accusing it and others of defrauding customers by promoting FTX.
+
+His testimony centered around being left uninformed about FTX’s utilization of customer money to keep the Alameda Research afloat, a practice that Huang says
+would have halted his involvement.
+</item 10>
+=== END ITEM id=cc0c31b4be3e96be ===
+
+=== ITEM id=2c474c9ccce8b39d ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.1: Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.2: Caroline Ellison was the CEO of Alameda.
+  Fact 0.3: Bankman-Fried had 'secret access' to customer money, both cash and crypto.
+  Fact 0.4: The government claimed that Bankman-Fried had this secret access to customer money.
+Sentence 1: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 1.0: A quoted speaker said Bankman-Fried was the richest person in the world under 30.
+  Fact 1.1: A quoted speaker said Bankman-Fried was going to spend his wealth to save humanity from extinction.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great power.
+  Fact 2.3: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that Bankman-Fried, the FTX founder, acted in good faith.
+  Fact 2.5: The defense countered that Bankman-Fried, the FTX founder, never meant to commit fraud or steal.
+  Fact 2.6: The defense countered that Bankman-Fried, the FTX founder, basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 3>
+
+<item 4>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That was the basis of the worst of her testimony — and the spreadsheet from hell.
+
+Ellison said she’d prepared the spreadsheet at Bankman-Fried’s request in the fall of 2021 and shared it with him. The point was risk analysis around paying
+back Alameda’s loans if they were abruptly recalled by Genesis, their lender. Bankman-Fried wanted to use $3 billion for venture investments, so Ellison was
+ballparking what that would do to Alameda’s risk. In the as-is scenario, if things went south, she figured there was a 30 percent chance they wouldn’t be able
+to meet the loan recalls. If Bankman-Fried used $3 billion to make investments, there was a 100 percent chance they couldn’t meet the recalls, even with FTX
+customer funds.
+
+Echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length
+
+The problem here wasn’t really the math, which seemed pretty arbitrary.
+</item 9>
+
+<item 10>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 10>
+=== END ITEM id=2c474c9ccce8b39d ===
+
+=== ITEM id=4e294e87b4d3c62a ===
+Gold sentences and facts:
+Sentence 0: While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.
+  Fact 0.0: Altman is not trained as an AI engineer.
+  Fact 0.1: Altman is now 38 years old.
+  Fact 0.2: Altman has been seen as a Silicon Valley wunderkind since his early 20s.
+Sentence 1: Altman has been telling investors that he’s planning to launch a new venture, according to The Information.
+  Fact 1.0: Altman has been telling investors that he is planning to launch a new venture.
+  Fact 1.1: The Information reported that Altman has been telling investors about a new venture.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The prevailing theory floating around right now is based on the board's language.
+  Fact 2.1: The prevailing theory floating around right now is based on the way these giant tech companies work.
+
+Retrieved items:
+<item 1>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman also co-founded Worldcoin, a biometric and cryptocurrency project that’s been scanning people’s eyeballs with the goal of creating a vast digital
+identity and financial network.
+
+___
+
+Associated Press business writers Haleluya Hadero in New York, Kelvin Chan in London and Michael Liedtke and David Hamilton in San Francisco contributed to this
+report.
+</item 1>
+
+<item 2>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 2>
+
+<item 3>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Altman has a long history steering OpenAI. After co-founding the company alongside Peter Thiel, LinkedIn cofounder Reid Hoffman and others, Altman, who formerly
+headed startup accelerator Y Combinator and also holds a seat on the board at Worldcoin, the ambitious cryptocurrency project, initially served as a co-chair of
+OpenAI alongside Elon Musk. Musk left in 2018 to avoid a conflict of interest with Tesla.
+
+Altman over the past several months played an active role in attempting to shape regulators’ responses to AI, appearing at U.S. congressional hearings and
+meeting personally with world leaders including President Joe Biden, German Chancellor Olaf Scholz and French President Emmanuel Macron, among others, on an
+international policy tour.
+
+More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+I've never met someone who has supported and lifted up more people around them than him. Couldn't be a prouder brother.
+</item 3>
+
+<item 4>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 4>
+
+<item 5>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Later Monday, that number climbed to over 650.
+
+Altman and Brockman considering return
+
+As reported by The Verge, Altman’s move to Microsoft isn’t a done deal — and both Altman and Brockman are still open to returning to OpenAI. That is, if the
+remaining board members who initially fired him step aside.
+
+OpenAI board considers merger
+
+OpenAI’s board of directors approached Dario Amodei, the co-founder and CEO of rival large-language model developer Anthropic, about a potential merger of the
+two companies, The Information reports. The approach was part of an effort by OpenAI to persuade Amodei to replace Altman as CEO — but Amodei quickly turned
+down the CEO offer.
+
+—
+
+November 19
+
+Altman to meet at OpenAI HQ
+
+According to The Information, Altman is expected to meet at OpenAI’s San Francisco headquarters as executives at OpenAI push to have him reinstated as CEO.
+</item 5>
+
+<item 6>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+We are collaborating to figure out the details. Thank you so much for your patience through this. — OpenAI (@OpenAI) November 22, 2023
+
+Altman also posted about the new deal, giving some insight into the roller coaster that we’ve all been riding since his firing was revealed Friday. In his
+words, his decision to join Microsoft on Sunday “was the best path for me and the team.” Since then, the new board’s composition and Microsoft’s support appear
+to have been enough to bring him back to the AI company he co-founded.
+
+Altman and board in talks
+
+OpenAI’s board of directors is reportedly in talks with Sam Altman, ex-Y Combinator president and an OpenAI co-founder, to return to OpenAI as CEO as soon as
+this week.
+</item 6>
+
+<item 7>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Could Altman have been working with — or against — OpenAI’s patron in secret? If Altman wanted to kill the golden goose by going independent, that might have
+activated the board’s fiduciary or otherwise statutory duty. On the other hand, if he was negotiating some other deal, like an acquisition or deeper and more
+exclusive integration, it could also have caused the board to bristle, either at the idea itself or at being excluded.
+
+But if Microsoft was as shocked as the rest of us, as one report has it, it could hardly be the kind of high-stakes conspiracy some seem to be hoping for. But
+one must assume that Microsoft would say that either way. Even if they’d been working with Altman on some kind of secret plan, they can truthfully say they were
+surprised by his firing. (And they “remain committed to our partnership.”)
+
+2. Do they disagree on long-term strategy?
+</item 7>
+
+<item 8>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+But later on X, formerly Twitter, Brockman posted a message he sent to OpenAI employees in which he wrote, “based on today’s news, i quit.”
+
+In another X post on Friday night, Brockman said Altman was asked to join a video meeting at noon Friday with the company’s board members, minus Brockman,
+during which OpenAI co-founder and Chief Scientist Ilya Sutskever informed Altman he was being fired.
+
+“Sam and I are shocked and saddened by what the board did today,” Brockman wrote, adding that he was informed of his removal from the board in a separate call
+with Sutskever a short time later.
+
+OpenAI declined to answer questions on what Altman’s alleged lack of candor was about. The statement said his behavior was hindering the board’s ability to
+exercise its responsibilities.
+
+Altman posted Friday on X: “i loved my time at openai.
+</item 8>
+
+<item 9>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+The Information, speaking to three sources formerly with the company, reports that they no longer expect the sale — led by Thrive Capital — to happen, or, if it
+does, to come with a lesser valuation because of the recent turn of events.
+
+Altman planning new venture
+
+Altman has been telling investors that he’s planning to launch a new venture, according to The Information. Brockman is expected to join the effort — whatever
+form it takes. (Possibly an AI chip startup.)
+
+i love you all. today was a weird experience in many ways. but one unexpected one is that it has been sorta like reading your own eulogy while you’re still
+alive. the outpouring of love is awesome. one takeaway: go tell your friends how great you think they are.
+</item 9>
+
+<item 10>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+After sending a Google Meet link, Brockman was told that he was being removed from the board as chairman “but was vital to the company and would retain his
+role” as president, and that Altman had been fired.
+
+Altman’s firing publicly announced
+
+OpenAI published a post on its blog announcing the executive shake-up. The company’s management team was aware shortly after.
+
+i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved working with such talented people.
+will have more to say about what’s next later. 🫡 — Sam Altman (@sama) November 17, 2023
+
+All-hands meeting
+
+OpenAI held an all-hands meeting Friday afternoon during which Sutskever defended Altman’s ouster. He dismissed suggestions that pushing Altman out amounted to
+a “hostile takeover,” and claimed that it was necessary to protect OpenAI’s mission of “making AI beneficial to humanity.”
+</item 10>
+=== END ITEM id=4e294e87b4d3c62a ===
+
+=== ITEM id=b16649cc37b85cc2 ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.1: Caroline Ellison was Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.2: Caroline Ellison was the CEO of Alameda.
+  Fact 0.3: Bankman-Fried had 'secret access' to customer money, both cash and crypto.
+  Fact 0.4: The government claimed that Bankman-Fried had this secret access to customer money.
+Sentence 1: He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said.
+  Fact 1.0: A quoted speaker said Bankman-Fried was the richest person in the world under 30.
+  Fact 1.1: A quoted speaker said Bankman-Fried was going to spend his wealth to save humanity from extinction.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great power.
+  Fact 2.3: The prosecution portrayed Bankman-Fried as someone who committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that Bankman-Fried, the FTX founder, acted in good faith.
+  Fact 2.5: The defense countered that Bankman-Fried, the FTX founder, never meant to commit fraud or steal.
+  Fact 2.6: The defense countered that Bankman-Fried, the FTX founder, basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 1>
+
+<item 2>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 4>
+
+<item 5>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 8>
+
+<item 9>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 9>
+
+<item 10>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 10>
+=== END ITEM id=b16649cc37b85cc2 ===
+
+=== ITEM id=e52864c8e856ad6a ===
+Gold sentences and facts:
+Sentence 0: Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve.
+  Fact 0.0: Inflation is expected to fade eventually.
+  Fact 0.1: The Fed is expected to cut interest rates as inflation fades.
+  Fact 0.2: Eventually, housing affordability will improve.
+Sentence 1: While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse.
+  Fact 1.0: Some economic factors are stronger today than they were during the GFC.
+  Fact 1.1: Housing affordability is undeniably worse than it was during the GFC.
+
+Retrieved items:
+<item 1>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+Adjustable-rate mortgages can lead to higher default rates when interest rates rise, but they now represent less than 5% of total purchase and refinance loans,
+compared with over 35% at the peak of the pre-GFC housing cycle.
+
+“We reiterate that we do not expect another housing crash like 2008,” Park and her team concluded after presenting this evidence.
+
+Is it a repeat of the ‘turbulence’ of the 1980s?
+
+According to Bank of America, today’s housing market looks a lot more like the early 1980s than it does 2008. Back then, just like today, home prices had boomed
+for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.
+</item 1>
+
+<item 2>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+And he’s not hopeful we’ll see home prices drop anytime soon: “Absent any negative shocks to the broader economy that would either boost excess supply of homes
+on the market or fuel an uptick in unemployment, we continue to expect home prices to rise at a slow pace.” In fact, he predicts we’ll see home prices rise by
+1.8% by the end of the year, with a 3.5% increase by the end of 2024.
+
+Looking at more recent housing inventory data makes the issue even more stark. Between September 2018 and September 2023, the average number of homes on the
+market dropped a whopping 60% to fewer than 700,000 active listings, according to Realtor.com.
+
+“Unlike the turn of the millennium, house prices today are rising alongside mortgage rates, primarily due to low inventory,” Sam Khater, Freddie Mac’s chief
+economist, said in a statement released Sept. 29.
+</item 2>
+
+<item 3>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+And while we haven’t seen home sales activity levels this low since the 2000s, the housing market more closely mimics that of the ’80s, according to a report
+published this week by Fortune 500 financial services company First American.
+
+“Today’s housing market isn’t anything like the housing market of the mid-2000s,” First American’s Fleming wrote in a Tuesday report titled “1980s Déjà Vu for
+the Housing Market.” “The housing market today is not overbuilt, nor is it driven by loose lending standards, subprime mortgages, or homeowners who are highly
+leveraged.”
+
+While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse.
+
+“While housing and more generally consumer fundamentals are in a much stronger position today, affordability for the incremental buyer is worse than it was at
+the peak in 2006 before the crash,” Roger Ashworth, a managing director at Goldman Sachs, wrote in a credit strategy research paper released last week.
+</item 3>
+
+<item 4>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+housing market set off the dominoes that became the Great Financial Crisis that defined a whole decade economically—and in some ways, our current predicament.
+
+In 2010, the last time existing home sales were so low, the global economy was on life support and the Fed slashed interest rates down to zero to revive the
+flatlining patient—fueling an “everything bubble” that inflated all kinds of assets along the way, not the least, housing. The zero-rate regime persisted until
+the highest inflation in 40 years surprised many economists and prompted the massive series of rate hikes that have brought us to the once-unthinkable 8%
+mortgage.
+
+Some onlookers saw what was coming, for instance Zillow, which warned in May that housing would enter a “deep freeze” if the debt limit standoff failed to
+resolve and America defaulted, as that would send mortgage rates up to 8%. Of course, the default was averted, but here we have arrived at 8% mortgage rates
+anyway.
+</item 4>
+
+<item 5>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+Housing market pessimists have been sounding the alarm for years about a pending crash in the U.S. residential real estate market. Even before the Federal
+Reserve began hiking interest rates to fight inflation last year, pushing mortgage rates to a 23-year high this month, years of surging home prices left some
+experts warning that the housing market was a massive bubble ready to pop.
+
+However, despite a widely bearish outlook in the industry, most real estate veterans have avoided arguing that home prices will drop like they did during the
+2008 crash that kicked off the Global Financial Crisis (GFC). And so far, that’s been a wise decision.
+
+It took until June 2022 for national home prices to peak, even as mortgage rates soared and purchase applications plummeted amid the Fed’s first interest rate
+hikes. And while prices fell more than 5% from that peak by January of this year, they returned to a record high in July.
+</item 5>
+
+<item 6>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+Indeed, existing-home sales prices topped $306,000, a 5% increase since the year began, according to the Case-Shiller U.S. National Home Price Index.
+
+“As has been the case throughout this year, limited inventory and low housing affordability continue to hamper home sales,” NAR chief economist Lawrence Yun
+said in a statement. “The Federal Reserve simply cannot keep raising interest rates in light of softening inflation and weakening job gains.” The Fed has raised
+rates several times this year, with Chair Jerome Powell arming his “higher for longer” stance.
+
+Declining housing inventory levels also contribute to the drop in housing transactions. Housing inventory is down 8.1% from this time last year, according to
+NAR. Some real-estate experts and economists argue that housing affordability is even worse now than during 2008, when a damaging downturn in the U.S.
+</item 6>
+
+<item 7>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+This can help the housing market retain some of its momentum without falling apart.”
+
+Bank of America economists believe that low inventory of existing homes for sale combined with solid home sales to millennials could help put a “floor beneath
+home prices,” but that doesn’t mean there won’t be some near-term pain due to higher mortgage rates.
+
+“With rates likely staying higher for longer, we are cautious of potential turbulence ahead,” the group warned. Bank of America has previously forecast 0% home
+price growth and falling home sales for the full year 2023, but it didn’t offer a new prediction in its latest note.
+
+Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve. “At that stage, we should see a more stable and
+healthy housing market,” Park and her team wrote. “Until then, hang tight, it may be a bumpy ride.”
+
+This article has been updated to correct a mistaken term used to refer to Jeseo Park.
+</item 7>
+
+<item 8>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+Park and her team noted that there are no “noticeable signs” of excess housing development today like there were back then, and households aren’t nearly as
+burdened by mortgage debt. Household mortgage debt represented roughly 65% of U.S. consumers’ disposable income in the second quarter, compared to 100% before
+the GFC. And the ratio of Americans’ mortgage debt to their real estate assets—also called loan-to-value—was just 27% in the second quarter, compared to over
+40% in 2008 and roughly 50% in 2010, Bank of America’s data shows.
+
+New legislation was also enacted since the GFC to help prevent worst-case scenarios in the housing market. One of the most obvious effects of these new laws is
+that there are far fewer risky adjustable-rate mortgages today.
+</item 8>
+
+<item 9>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+29. “These headwinds are causing both buyers and sellers to hold out for better circumstances.”
+
+But with the development that home sales transactions are at their lowest level in the past 13 years coupled with century-high mortgage rates of 8%, many real
+estate experts and economists aren’t hopeful that affordability constraints will let up soon.
+
+Out of fear of losing their lower interest rates, current homeowners are resistant to putting their homes on the market, ultimately leading to the abysmal
+inventory levels—leaving fewer and fewer properties exchanging hands. Indeed, more than 90% of existing-home owners are locked into mortgage rates below 6%,
+Odeta Kushi, deputy chief economist at First American, previously told Fortune.
+
+“These homeowners do not have a financial incentive to sell,” Kushi says. “The combination of reduced affordability and an even stronger rate lock-in effect
+suppresses home sales because you can’t buy what’s not for sale, even if you can afford it.”
+</item 9>
+
+<item 10>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+The average 30-year fixed mortgage rate, the most common type of mortgage in the U.S., has soared from 3.8% in March 2022 to over 7.5% today as a result. This,
+in turn, has slowed mortgage purchase applications and caused home sales to plummet, just as it did in the ’80s; but home prices, echoing the dynamic of that
+era, have yet to collapse.
+
+One of the key reasons for the resilience of the housing market in both of these periods is demographics. “Noticeably, demographics were favorable back then,
+with baby boomers having entered the prime homebuying age,” Park and her team wrote Thursday, arguing millennials are in a similar position today. “Some sales
+activity should be supported by millennials reaching the prime homebuying age, and single-family building permits have steadily held up. This can help the
+housing market retain some of its momentum without falling apart.”
+</item 10>
+=== END ITEM id=e52864c8e856ad6a ===
+
+=== ITEM id=9a44b0f1fd875f48 ===
+Gold sentences and facts:
+Sentence 0: While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it.
+  Fact 0.0: Ramaswamy's Republican colleagues have largely shunned TikTok.
+  Fact 0.1: Ramaswamy is presenting himself as one of the Cool Politicians.
+  Fact 0.2: The Cool Politicians are politicians who will actually use TikTok.
+Sentence 1: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist.
+  Fact 1.0: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok.
+  Fact 1.1: Audiences have started to resist artists making their songs trend on TikTok.
+
+Retrieved items:
+<item 1>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+), the Empire State Building and countless others posted their versions of Gag City.
+
+On one hand, memes tend to die the minute brand accounts start co-opting them — nothing is more tiresome than seeing a fun joke turn into a corporate-friendly
+marketing ploy. AI-generated images are already ethically fraught, and critics have raised concerns over AI generators trained on artwork without the consent of
+the work’s artists. Artists have also criticized brands for using AI-generated art instead of commissioning work from a real, human artist. Though using
+AI-generated art for commercial use is legal, as copyright laws pertaining to AI are virtually non-existent, it’s generally seen as a shitty move by many in the
+art world.
+
+On the other, it’s free promotion for Minaj, and as a lifelong Barb who spent her adolescence running a stan account for “Pink Friday,” I consider it a win.
+</item 1>
+
+<item 2>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Welcome to Gag City, the pink metropolis inhabited by stans and brands alike.
+
+In the days leading up to the release of “Pink Friday 2,” Nicki Minaj’s fifth studio album and sequel to her debut record “Pink Friday” that dropped on Friday,
+Twitter was flooded with AI-generated images of pink-toned cityscapes. Gag City, the dreamy false utopia ruled by Minaj and her Barbz, broke through stan
+Twitter and became a viral meme that brand accounts immediately used for their own marketing — promoting Minaj’s album for free.
+
+Is it an authentic stan-led campaign to build hype for Minaj? Is it a plant to game engagement for both the album and brands? What’s clear is that the viral
+moment is a win for Minaj, manufactured or not.
+
+It started in September, when Minaj teased the album’s cover art online. The image features Minaj on a pink subway car, drifting through pink clouds with a
+futuristic (and obviously, pink) city skyline in the background.
+</item 2>
+
+<item 3>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Though some may believe that Gag City is a utopia, one account posted an image of a matronly Minaj handing out CDs of her album to impoverished children “on the
+outskirts of Gag City,” implying that the pink society also has a class divide problem.
+
+Gag City is also riddled with stan wars, as fans of rival pop stars posted images of their faves vying for Minaj’s seat at the head of her city’s government. In
+a nod to Greek mythology, one account posted an image of a Trojan horse decorated in Beyoncé’s “Renaissance” disco motif.
+
+🚨 BREAKING: The Barbz have discovered a mysterious, metallic horse at the front gates of Gag City. An inscription reads “For their return home, the Hive
+dedicate this offering to Onika.”
+</item 3>
+
+<item 4>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Nicki Minaj is an artist who’s been embroiled in controversy throughout her career, from posting bad takes about COVID vaccines to defending her husband Kenneth
+Petty, a convicted sex offender. She may be a brilliant artist, but her problematic history makes her far from the family-friendly public figure that brands are
+more likely to endorse.
+
+But with Gag City, Minaj has brands doing all of her marketing for her. “Pink Friday 2” is an artistic marvel in itself (though I am probably biased), but the
+free promotion that it’s been getting as a viral meme is particularly astounding. Artists have spent the last few years trying to drum up engagement for their
+work by making their songs trend on TikTok, which audiences have started to resist. Gag City doesn’t bank on being the viral song of the summer to drive
+streaming numbers — the bit is removed enough for non-stans to enjoy it, while still revolving around the album it’s promoting.
+</item 4>
+
+<item 5>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+A similar pattern was found in the four other countries they study looked at.
+
+The study also found that the TikTok audience can be an effective marketing tool for artists, as TikTok users, in particular, are considerably more likely to
+discover and share music than overall social media and short video platform (SFV) users.
+
+In the UK, TikTok users were 108% more likely to discover and share music than other social media users, while in Germany, they were 100% more likely. US TikTok
+users were 71% more likely to discover and share music.
+
+“In doing so, TikTok users help both emerging and established artists to reach new audiences,” the Luminate report stated.
+
+The study found that TikTok’s platform appears to be a major driver of the glocalization of music – the trend of local artists, performing in local languages,
+being elevated to a regional or global platform.
+
+“TikTok users have a stronger preference for international music than the average music listener,” the report said.
+</item 5>
+
+<item 6>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“Gen Z does not put up with bullshit,” Henry said. “That’s so much of what platforms like TikTok and Twitch cater to, and why they thrive on those platforms,
+because you can just pull out your phone and be talking while you’re getting ready with the worst angle possible. Republicans in general, it goes against so
+much of how they act otherwise and young people know that.”
+
+Ramaswamy’s TikTok strategy is puzzling; he appears to be trying to replicate the success of previous candidates who became social media stars over the course
+of their campaigns, but his TikTok presence conflicts with his own stances on social media and young voters. His communications director, Tricia McLaughlin, did
+not immediately respond to TechCrunch’s request for comment.
+
+Like many of his Republican colleagues, Ramaswamy has accused TikTok of being a threat to national security, and during a town hall days before he launched his
+account, described the platform as “digital fentanyl” from China.
+</item 6>
+
+<item 7>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Brand Twitter tends to turn fun trends into advertising opportunities, taking organic community interactions and spitting out contrived versions clearly made to
+go viral. It may be grating, but in this case, it’s working in Minaj’s favor. This week, everyone wants to go to Gag City.
+</item 7>
+
+<item 8>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Only the occasional tweets. Meet @Vivek Ramaswamy ♬ original sound – GenosPicks
+
+Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in
+Ramaswamy’s favor, though.
+
+His account, which has amassed over 50,000 followers in the weeks since he joined, has been barraged with comments either criticizing his positions or trolling
+him. He’s been the butt of Gen Z’s relentless comments about getting off to his content (the top comments on his videos are consistently jokes about edging). He
+also incited the wrath of witchtok creators, who filmed themselves casting hexes upon him and other conservatives.
+
+Ramaswamy is raking in TikTok engagement — even if it’s not how he intended — but Democrats are still dominating the Republican party in digital strategy.
+Ocasio-Cortez’s Instagram Stories garnered her nationwide popularity when she campaigned in 2018, reaching further than her local constituency.
+</item 8>
+
+<item 9>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+pic.twitter.com/vYMBgm4vd4 — JB 🪩🐻🍉 (@JBfromDC89) December 7, 2023
+
+fun fact: katy perry is actually the first artist that ever recorded a music video in gag city (2010) pic.twitter.com/ZIMZ59fuiS — fazpo🦭 (@fazpo) December 7,
+2023
+
+X (formerly Twitter) users began crafting elaborate narratives about Gag City’s inhabitants and government. One posted an image of Barbz storming the Pink
+House, which another user described as the fandom’s own January 6th. Another posted an image of pink-clad citizens protesting in the streets of Gag City,
+calling for Minaj to release the album’s track list.
+</item 9>
+
+<item 10>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“This preference, combined with the high volume of music discovery and sharing activity on TikTok, can be harnessed to grow a fanbase without borders and has
+helped to launch global artists from genres such as Reggaeton, Afrobeats and K-Pop.”
+
+The report added: “TikTok users‘ interest in international music is evident in their music streaming preferences. Compared to the average music listener across
+each market, this audience is more likely to indicate that ‘access to music by global artists’ is an extremely important factor when selecting a music streaming
+service.”
+
+“TikTok is already famous for being the launchpad for creating viral hits and breaking new artists, but we wanted to understand how TikTok and its users impact
+the music industry more broadly,” Ole Obermann, TikTok’s Global Head of Music, said in a statement.
+</item 10>
+=== END ITEM id=9a44b0f1fd875f48 ===

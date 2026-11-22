@@ -1,0 +1,1027 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=4ed5786252ac2363 ===
+Gold sentences and facts:
+Sentence 0: For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together.
+  Fact 0.0: Bayern have their own flaws.
+  Fact 0.1: Bayern are basically a good version of whatever Manchester United are attempting to piece together.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United put in a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+With United out of Europe, there are questions about Erik ten Hag’s ability to coach the team (AFP via Getty Images)
+
+These are not the sounds we are used to hearing after that Champions League theme. Something does stir when the anthem is played at Old Trafford amid the
+lights. Well, for most, that is, except the players.
+
+This is why there are growing questions for Erik ten Hag himself, even if everyone is constantly keen to put it in a wider context.
+
+Manchester United should not be performing like this on what is supposed to be the classic European night at Old Trafford. This just reminded that all they are
+going to have for some time are their memories.
+
+It was another utterly forgettable display.
+
+Bayern, already through but perhaps looking to make a point after their own 5-1 defeat to Eintracht Frankfurt, didn’t even need to step it up to win. They were
+quite low-intensity themselves, Kingsley Coman’s winning goal coming from the forward almost walking through the middle of their team.
+</item 1>
+
+<item 2>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+Harry Kane, for so long billed as a potential United player, didn’t score but did set it up.
+
+This game showed one reason why he is at Germany’s biggest club rather than England’s. His side are through with ease, among the favourites for the competition
+even if they do look lacking in a few areas.
+
+Harry Kane’s assist was another reminder of what could have been for United (PA)
+
+Not that you could judge from this game. It was almost a kickabout for them.
+
+Bayern were still having more of the ball and the attacks. This was another tension for Ten Hag to overcome on the night. United were playing in quite a
+controlled way when they were going to eventually have to go for it, but Bayern were still getting through that with relative ease.
+
+It meant the team almost looked like they were in two minds, to go with how thoughts were always going to be in Copenhagen. The news came through shortly before
+the hour that Lukas Lerager had scored for the Danish side, although it didn’t really change the atmosphere or the energy.
+</item 2>
+
+<item 3>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+Photograph: Adam Vaughan/EPA
+
+They held the ball nicely, probed in neat, clipped, mannered attacks. A lot seemed to hinge on how desperately Bayern felt the need to twist that scalpel,
+whether they could really be bothered to take this thing to the wall. United defended well. Their waves of pressing drew waves of applause. Everyone here seemed
+to be trying.
+
+But with 58 minutes gone Copenhagen scored and United’s hopes began to slip beneath the waves. Just over 10 minutes later Bayern made it 1-0 in Manchester.
+Kingsley Coman got it, granted a huge expanse of time and space in front of the United goal, enough to set himself, as though taking a penalty, and belt the
+ball into the corner. The moment was made by a delightfully sneaky round‑the‑corner pass from Kane. After all that pressure, all that tender hope, it looked a
+bit like a training goal.
+</item 3>
+
+<item 4>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+This is the current reality for United. They obviously have many more issues than the goalkeeper – as illustrated by the goal itself – but a strange season for
+Ten Hag’s primary signing only continues. United’s problems meanwhile combined. There were so many errors leading to the goal, to go with all of those that have
+characterised this entire European campaign.
+
+That can now be talked about definitively, since it has been decisively ended. It is a low but just part of a decade of disappointment in the competition that
+has seen this club rise to its most emotional heights.
+
+This game never threatened to do that. United never threatened at all. They’d been involved in so many ludicrously chaotic matches that the biggest of all ended
+up being a non-event.
+</item 4>
+
+<item 5>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+We remember Onana also diving out of the way of the ball in Istanbul. Casemiro’s red card, lost leads in Manchester, Marcus Rashford unfairly convicted of a
+venomous stamp in Copenhagen, when frankly, he’s just not that kind of semi-interested footballer.
+
+And yet with both group games blank at half-time United were still just one goal away here from going through to the last 16, which really would have made for
+an excellent punchline. It wasn’t to be. For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together.
+Kimmich‑Goretzka‑Musiala is an A grade version of Amrabat‑McTominay‑Fernandes. Manuel Neuer is the thing Onana is trying so earnestly to be. Bayern actually did
+go ahead and sign Harry Kane.
+
+Harry Kane (centre) and his Bayern Munich teammates applaud fans after their Champions League victory at Old Trafford.
+</item 5>
+
+<item 6>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+The performance this season was so bad that they find themselves out of Europe altogether as the bottom team in the group, although some at the club might find
+solace from that. There wasn’t much else. The second place they aimed for has instead gone to Copenhagen, a club with a fraction of United’s budget. That is
+where the damage was done.
+
+While that meant there was only ever a slim hope of going through – and the Danish side’s victory over Galatasaray ensured any win would be irrelevant – the
+club’s rich legacy in this competition was built on such defiance. There was absolutely none of it here.
+
+There was nothing much at all. Where was the energy? Where was the intensity? The Stretford End eventually implored United to “attack attack attack” but the
+complete absence of any such impulses eventually left some of the stadium booing the side off at the end.
+</item 6>
+
+<item 7>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+Sign up to Miguel Delaney’s Reading the Game newsletter sent straight to your inbox for free Sign up to Miguel’s Delaney’s free weekly newsletter Please enter a
+valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our
+privacy notice Thanks for signing up to the
+
+Football email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Another infamous European night at Old Trafford. It should be a landmark low, but almost the most deflating element of this 1-0 defeat to Bayern Munich was how
+grimly routine it all felt.
+
+Manchester United, one of the grandest and richest names in this competition, have again gone out of the Champions League at the group stage. It is the third
+time it has happened since Sir Alex Ferguson, meaning it’s their most common round of exit in that period.
+</item 7>
+
+<item 8>
+Champions League permutations, scenarios: What teams need to qualify from groups for 2023/24 Round of 16 stage (Sporting News, 2023-12-12T21:28:00+00:00)
+Galatasaray knew that if they beat Copenhagen at Parken they would go through but Lukas Lerager scored the only goal in a 1-0 win for the hosts
+
+Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's
+side.
+
+Results
+
+Date Fixture/Result Sept. 20 Galatasaray 2-2 FC Copenhagen Sept. 20 Bayern Munich 4-3 Manchester United Oct. 3 Manchester United 2-3 Galatasaray Oct. 3 FC
+Copenhagen 1-2 Bayern Munich Oct. 24 Galatasaray 1-3 Bayern Munich Oct. 24 Manchester United 1-0 FC Copenhagen Nov. 8 Bayern Munich 2-1 Galatasaray Nov. 8 FC
+Copenhagen 4-3 Manchester United Nov. 29 Galatasaray 3-3 Manchester United Nov.
+</item 8>
+
+<item 9>
+Manchester United face Galatasaray with high hopes but bad memories (The Guardian, 2023-11-27T22:30:42+00:00)
+The match on Wednesday is not a knockout game but in truth the scenario is not much different. Defeat against Galatasaray would again end United’s Champions
+League’s campaign prematurely while a win, assuming Copenhagen lose against Bayern Munich, would put qualifying for the latter stages back in their hands.
+United will face the same atmosphere as they did 30 years ago because the home fans know victory would turn their subsequent trip to Denmark into a potential
+shootout for who goes through with Bayern, with the achievement of knocking out a club with the storied history of United only adding to the pleasure.
+
+In 1993 everyone was on a learning curve at United. It was their first return to Europe’s top table after an absence of 24 years. Much of the squad had won the
+European Cup Winners’ Cup in 1990‑91 but this was a clear step up.
+</item 9>
+
+<item 10>
+Manchester United out of Europe after defeat to Bayern Munich (The Independent - Sports, 2023-12-12T22:38:05+00:00)
+It was already a drab game, with a muted crowd.
+
+It didn’t help that Bruno Fernandes blazed United’s best opportunity over the bar after good work from Aaron Wan Bissaka. It looked like it was going to be one
+of those games. It certainly wasn’t one of those big European nights at Old Trafford.
+
+On 71 minutes, Bayern managed what they had been half-heartedly threatening all game. They also did it at near walking pace. Kingsley Coman had weaved his way
+through the centre, for the ball to eventually be worked to Harry Kane. The English forward clipped an artful ball back through for Coman who finished
+emphatically.
+
+Kingsley Coman’s goal ensured Manchester United were knocked out of Europe (PA)
+
+It was almost too easy for him. Why did Andre Onana stay so close to his line? If that sounds like the set-up for a joke… well, you can write your own
+punchline.
+
+This is the current reality for United.
+</item 10>
+=== END ITEM id=4ed5786252ac2363 ===
+
+=== ITEM id=43ab13879bda0e3d ===
+Gold sentences and facts:
+Sentence 0: He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift.
+  Fact 0.0: A man revealed that he made a friendship bracelet.
+  Fact 0.1: Friendship bracelets are a fan tradition at Taylor Swift's concerts.
+  Fact 0.2: The friendship bracelet had his number on it.
+  Fact 0.3: He made the friendship bracelet to give to Swift.
+  Fact 0.4: The friendship bracelet seemingly expressed his interest in Swift.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: The man later invited Swift to one of his games on his podcast.
+  Fact 1.1: Swift is the Anti-Hero singer.
+  Fact 1.2: The game was at Arrowhead Stadium.
+  Fact 1.3: Swift accepted the invitation on 24 September.
+  Fact 1.4: Swift famously accepted the invitation.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide.
+  Fact 2.1: Swift is in a new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 4>
+
+<item 5>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 5>
+
+<item 6>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 6>
+
+<item 7>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 7>
+
+<item 8>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But before he could even answer, the answer was given for him.
+
+Sept. 14: Rumors aren't denied
+
+"The rumors are terrible and cruel, but honey, most of them are true." - New Romantics
+
+Of course people were going to ask Jason, who is very close with his brother, whether rumors of the two hanging out were true. He did not confirm them, but he
+also did not deny them.
+
+Sept. 17: The references begin
+
+"I watched it begin again." - Begin Again
+
+The rumors began to pick up, and now there were a lot of people, commentators included, making Swift references around Kelce.
+
+When the tight end caught a touchdown pass from Patrick Mahomes, CBS Sports' Ian Eagle said, "Kelce finds a blank space for the score."
+
+This was only the start to many, many, Swift lyrics being referenced during NFL games.
+
+Sept. 21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in."
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 10>
+=== END ITEM id=43ab13879bda0e3d ===
+
+=== ITEM id=20f9002dd3d01e91 ===
+Gold sentences and facts:
+Sentence 0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 0.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 0.1: The defense countered that the FTX founder acted in good faith.
+  Fact 0.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 0.3: The defense countered that the FTX founder basically got in over his head.
+Sentence 1: It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.
+  Fact 1.0: A speaker referred to as 'she' said it was Bankman-Fried's decision.
+  Fact 1.1: The speaker said Bankman-Fried was the CEO of FTX.
+  Fact 1.2: The speaker said it was Bankman-Fried's decision as he was the CEO of FTX.
+
+Retrieved items:
+<item 1>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 6>
+
+<item 7>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 7>
+
+<item 8>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Joe Bankman, Bankman-Fried’s father. He is among the people included in the “small group chat,” the Signal group where the FTX inner circle strategized during
+the exchange’s last days.
+
+Barbara Fried’s political action committee, Mind the Gap. It is among the entities that received FTX customer money as political donations. Fried and Bankman
+lived together in a Bahamas house purchased for them using FTX investor funds, according to a financial expert called by the prosecution; in a lawsuit filed by
+FTX’s bankruptcy estate, Bankman and Fried are alleged to have been given $10 million of FTX customer funds.
+
+Gabe Bankman-Fried’s nonprofit, Guarding Against Pandemics, which got millions from FTX. He was also in a Signal group chat, Donations Processing, that Singh
+says was used to coordinate the transfer of FTX and Alameda money to various political causes. In that chat, he can be seen recommending some donations be made
+“in the dark” to avoid public relations headaches.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 9>
+
+<item 10>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 10>
+=== END ITEM id=20f9002dd3d01e91 ===
+
+=== ITEM id=aee2065200e1ae3a ===
+Gold sentences and facts:
+Sentence 0: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 0.0: The parties in question receive other benefits from Android
+  Fact 0.1: Google could solve this problem today if it wanted to
+Sentence 1: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 1.0: It will attempt to argue that Google restrains competition within two separate markets
+  Fact 1.1: One of the two markets is the distribution of apps to Android users
+  Fact 1.2: The other market is the market for payment processing solutions for content inside Android apps
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle
+  Fact 2.1: The case argues that Google siphons off news publishers' content
+  Fact 2.2: The case argues that Google siphons off news publishers' readers
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue
+  Fact 2.4: The case argues that Google does this through anticompetitive means
+
+Retrieved items:
+<item 1>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 1>
+
+<item 2>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 3>
+
+<item 4>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+It’s always been in Google’s power to solve this problem. They make several billion dollars a year in unfairly earned profits from imposing this tax, which is
+nothing compared to the money they make from search. For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+
+Do you today believe that Activision Blizzard was really intending to build its own app store?
+
+I don’t know about Supercell, but we know from the documents in the case that Riot was planning to distribute League of Legends directly through their website,
+on mobile, exactly as they do on PC. And that’s what they planned to do until Google paid them off to not do that. Google’s payoff at the minimum dissuaded Riot
+from distributing off Google Play.
+
+I think they’re the strongest example of the three, but I’m curious about Activision.
+
+Activision was building a store! We know they had a large team of dozens of engineers building a mobile app store to launch on Android.
+</item 4>
+
+<item 5>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 5>
+
+<item 6>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Epic also claims that Google is illegally tying its Google Play payments platform to the Google Play app store, keeping other potential app payment mechanisms
+from competing as well.
+
+So, does Google have a monopoly?
+
+A monopoly on what? That’s one of the biggest questions the court will decide. Epic claims that Google has illegal monopolies in “Android app distribution” and
+“Android in-app payment processing.” It’ll argue that if you buy or develop for Android phones, you’re stuck paying the Google tax.
+
+But Google will say the real competition is from Apple, because people can choose to buy an iPhone instead. It’s pretty tough to argue Google has a monopoly on
+app stores in general.
+
+This whole line of argument is called “market definition.” If the court decides the relevant market is phones and app stores, not specifically Android ones,
+then Google’s on the road to victory. If it accepts that Android apps are their own market, Epic will be in better shape. Or, it could pick a different market
+definition entirely, like the judge in the Apple case ended up doing.
+</item 6>
+
+<item 7>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+That sounds fascinating, but if I don’t care about Fortnite or rich companies suing each other, what’s in it for me?
+
+The future of Google’s app store could depend on this trial — both Epic and Google agree on that. Epic wants to break up Google’s alleged monopoly on Android
+app stores and payment methods, so developers aren’t stuck paying the “Google Tax” or passing that fee along to you.
+
+But if Epic wins — according to Google, anyhow — it could make Android phones less safe by dismantling basic protections against sideloaded apps, and damage
+Android’s ability to compete with the iPhone because it (arguably) can’t run a competitive app store by giving it away for free.
+
+Or maybe you just want juicy dirt on both companies? More on that later!
+
+What exactly is Epic claiming?
+
+Epic argues that Google makes it so difficult for developers and users to get around its Android app store, and that app store’s standard fees, that it’s
+created an illegal monopoly that unjustly enriches Google while artificially driving up app prices because other stores can’t compete.
+</item 7>
+
+<item 8>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 9>
+
+<item 10>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 10>
+=== END ITEM id=aee2065200e1ae3a ===
+
+=== ITEM id=837c0f7e00f63c47 ===
+Gold sentences and facts:
+Sentence 0: Rangers also make a lot of choices during character creation (and leveling up) that determine how they play.
+  Fact 0.0: Rangers make a lot of choices during character creation.
+  Fact 0.1: Rangers make a lot of choices during leveling up.
+  Fact 0.2: The choices Rangers make during character creation and leveling up determine how they play.
+Sentence 1: During character creation, you must pick the otherworldy patron that you’ve decided to serve.
+  Fact 1.0: During character creation, you must pick an otherworldly patron.
+  Fact 1.1: The patron you must pick during character creation is the one you have decided to serve.
+
+Retrieved items:
+<item 1>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+Picking the best class in Baldurs Gate 3 is one of the most important decisions you’ll make in the game — and you have to do it right at the start, with minimal
+context to work off.
+
+Your class mostly determines how your character will fight in Baldur’s Gate, but with 12 classes — and 46 subclasses total across them all — it’s not really an
+easy decision. Here’s what to know about finding the best class (and the best subclass) for you in Baldur’s Gate 3.
+
+All BG3 classes are ‘good’
+
+The classes in Baldur’s Gate 3 — and in pen-and-paper D&D, for that matter — are all fairly well-balanced. There’s no single best class (barrelmancer aside) in
+Baldur’s Gate 3, and the game gives you as many opportunities for creative problem solving as it does for punching. Finding the best class really just boils
+down to how you want to play.
+</item 1>
+
+<item 2>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+They also get a way to heal themselves and way to get a second attack once per short rest.
+
+At level 3, you get to choose a subclass from Battle Master, Eldritch Knight, and Champion. Battlemasters get a set of Superiority Dice that let you perform
+Maneuvers to control the flow of battle and the battlefield. Eldritch Knights add magic into the Fighter’s arsenal. Champions keep it simple with a better
+change to deal a Critical Hit (for double damage).
+
+Champion is the best subclass for a Fighter. Consult our Fighter build guide for more details on why, and to see which skills and feats to pick.
+
+Best ranged class for beginners: Ranger
+
+Rangers are agile hunters that focus on Dexterity as their primary Ability. Rangers are an interesting mix of melee, stealth, skills, and magic. That also makes
+it harder to get the most out of the class. Rangers get Light and Medium Armors and some of the more basic weapons.
+</item 2>
+
+<item 3>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+Most of their magic is nature- or animal-themed and they get Skills to match. What they lack in armor proficiencies — they only get Light and Medium Armor —
+they make up for with the ability to shapeshift into a badger, wolf, spider, or cat.
+
+At level 3, Druids pick from the Circle of the Land, Circle of the Moon, and Circle of Spores subclasses. Circle of Land gets you some extra magic and the
+ability to cast more spells throughout the day, Circle of the Moon adds a bear to the repertoire of animal shapes you can shift into, and Circle of Spores adds
+in some extra fungus- and decay-based magic.
+
+Circle of the Moon is the best subclass for a Druid. Consult our Druid build guide for more details on why, and to see which skills and feats to pick.
+
+Best class for stealth: Rogue
+
+Rogues are Dexterity-based, sneaky fighters. They only get Light Armor, so they have to focus on staying unseen and quick.
+</item 3>
+
+<item 4>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+Where Bards come into their own, though, is with Bardic Inspiration — a way to boost the rolls of their allies — and their spells that are a nice mix of utility
+and offensive magic.
+
+Bards get three subclasses at level 3: College of Lore, College of Valor, and College of Swords. College of Lore Bards get a lot of useful skills to use outside
+of combat and get to use their Bardic Inspiration to make enemies weaker, College of Valor Bards help their allies hit even harder, and College of Swords Bards
+focus on a swashbuckling style of combat.
+
+College of Valor is the best subclass for a Bard. Consult our Bard build guide for more details on why, and to see which skills and feats to pick.
+
+Best class for magic damage: Wizard
+
+Wizards are the archetypical caster class. They are the only Intelligence-based class in Baldur’s Gate 3 and have the most spells — and the most spell slots to
+cast them — of all of the casters.
+</item 4>
+
+<item 5>
+The best Warlock subclass, feats, and build in Baldur’s Gate 3 (Polygon, 2023-12-01T22:53:00+00:00)
+For Warlocks, it’s best to focus on weapon and armor proficiencies:
+
+Drow ’s Drow Weapon Training adds weapons like the rapiers and hand crossbows
+
+’s Drow Weapon Training adds weapons like the rapiers and hand crossbows Humans ’ and Half-Elves ’ Civil Militia add spears, pikes, halberds, and glaives along
+with shields
+
+’ and ’ Civil Militia add spears, pikes, halberds, and glaives along with shields Githyanki Martial Prodigy means you get medium armor along with longswords and
+greatswords
+
+Martial Prodigy means you get medium armor along with longswords and greatswords Dwarven Combat Training gets you battleaxes, handaxes, light hammers, and
+warhammers. The Shield Dwarf subrace also gets you Medium Armor
+
+When you’re creating and leveling up your Warlock, Charisma (for spellcasting) is your most important stat.
+</item 5>
+
+<item 6>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+For weapons, Barbarians get a wide range of heavy hitters like battleaxes and warhammers. Every Barbarian gets the Rage ability that lets them hit even harder
+and reduce damage during combat (and only during combat).
+
+When you hit level 3, you get to choose from the Wildheart, Berserker, or Wild Magic subclasses. Wildheart lets you modify your Rage ability with animal-themed
+tweaks like healing, jumping, or a stampede. Berserker is a lot more straightforward and focuses on hitting (extra) things and throwing. And Wild Magic adds a
+magical flair to your Rage with a random magical effect and improved saving throws against magic for you and your allies.
+
+Berserker is the best subclass for a Barbarian. Consult our Barbarian build guide for more details on why, and to see which skills and feats to pick.
+
+Best class for magic: Druid
+
+Druids are the nature-based casters of Baldur’s Gate 3.
+</item 6>
+
+<item 7>
+The best Warlock subclass, feats, and build in Baldur’s Gate 3 (Polygon, 2023-12-01T22:53:00+00:00)
+The Warlock is one of twelve classes in Baldur’s Gate 3. Warlocks are extreme knowledge-seekers who are willing to form a pact with otherwordly beings in order
+to gain ancient secrets that’ll bolster their magical arsenal.
+
+To deal with such powerful creatures, Warlocks need to have strong mental power. They need to be able to make a deal with the devil and survive. As such, their
+primary ability score is Charisma.
+
+There’s no single best class in Baldur’s Gate 3, and the game gives you as many opportunities for creative problem solving as it does for punching. Finding the
+best class really just boils down to how you want to play. Even when playing solo, you’ll still manage the rest of your party, so you’ll get to experiment with
+multiple classes at once.
+
+Read on to find out everything you need to know about the Warlock class in Baldur’s Gate 3, and learn all about the best Warlock subclass, feats, and build.
+</item 7>
+
+<item 8>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+Rangers get Light and Medium Armors and some of the more basic weapons.
+
+Rangers also make a lot of choices during character creation (and leveling up) that determine how they play. At level 1, you’ll choose a Favored Enemy — a
+preferred quarry — and a preferred environment that grants you some magical spells.
+
+At level 3, you get to choose a Ranger subclass from Beast Master, Gloom Stalker, or Hunter. Beast Masters get a Companion animal that fights along side you,
+Gloom Stalkers focus on stealth, and Hunters get to specialize their melee abilities.
+
+Hunter is the best subclass for a Ranger. Consult our Ranger build guide for more details on why, and to see which skills and feats to pick.
+
+Best class for damage: Barbarian
+
+Barbarians are all about combat. They get light and medium armor (and shields), but they’ve also got the option to keep their AC up even without wearing armor.
+</item 8>
+
+<item 9>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+For more information on the classes in Baldur’s Gate 3, consult our overviews on the Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue,
+Sorcerer, Warlock, and Wizard classes.
+</item 9>
+
+<item 10>
+How to choose the best class for you in Baldur’s Gate 3 (Polygon, 2023-12-18T17:14:20+00:00)
+Finding the best class really just boils down to how you want to play. Even when playing solo, you’ll still manage the rest of your party, so you’ll get to
+experiment with multiple classes at once.
+
+BG3 classes have strengths outside of combat
+
+Your character’s class is mostly about combat, but the underlying Ability Score that it relies on affects the other skills you’ll use to interact with the
+world. Baldur’s Gate 3 assigns your Ability Scores automatically (though you can tweak it in the character creator), so each class’s primary ability will be
+your highest score.
+
+Bards and Sorcerers are both Charisma-based classes, for example. Their high Charisma will also make them good at skills like Persuasion, Deception, and
+Intimidation. Out of combat, those classes will be better at talking their way out of (and into) trouble and lying. Wisdom-based classes like Clerics or Druids
+will be more insightful and perceptive of their surroundings.
+</item 10>
+=== END ITEM id=837c0f7e00f63c47 ===
+
+=== ITEM id=d45a5cd0451721f2 ===
+Gold sentences and facts:
+Sentence 0: At the time, the music video for the song – which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.
+  Fact 0.0: At the time, the music video for the song featured a woman with blonde hair.
+  Fact 0.1: The music video sparked rumours that he and Spears broke up.
+  Fact 0.2: The rumours said the breakup happened because Spears allegedly cheated on him.
+Sentence 1: Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight.
+  Fact 1.0: Danis’s first press conference for the Logan Paul fight hints towards the breakup.
+  Fact 1.1: Danis held a first press conference for the Logan Paul fight.
+
+Retrieved items:
+<item 1>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+In her forthcoming memoir, The Woman in Me, Britney Spears is expected to reflect on some of the most pivotal moments in her life, including her relationships.
+
+Over the years, the pop star’s love life has continued to make headlines. Most recently, her ex-husband Sam Asghari filed for divorce after only 14 months of
+marriage.
+</item 1>
+
+<item 2>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+They haven’t made any claims of breakup and have been silent about their relationship with each other. The only things that have changed are Savannah’s
+Instagram feed. She has stopped posting pictures with Danis, which were quite prevalent back in 2020. Also, another thing that hints towards their breakup is
+Danis’s first press conference for the Logan Paul fight.
+
+ADVERTISEMENT Article continues below this ad
+
+During the fight, Logan Paul brought up the topic of Montano, when Danis pointedly mentioned their breakup. Paul said, “Yo you’ve been so salty ever since
+Savannah rejected your a** to go hook up with real athletes. You don’t gotta take that s**t out on me because my brother hooked up with your ex.” Danis scoffed
+at Maverick’s claim and clapped back, “At least I got rid of the sl*t, you’re marrying one.”
+</item 2>
+
+<item 3>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+Savannah, how you doing? What’s good?” However, Montano completely denied any relation with the Influencer boxer whatsoever. She responded to Paul’s stories
+through a video and gave her side of the story.
+
+She said, “I’m dead confused at some of you guys going, ‘Oh, but why did you answer his call?’ As if I have his f**king number saved in my phone! It was
+literally a random number. You can literally see in the video, I’m like, ‘Who is this?’” So she denied the accusations of hooking up with Paul and even felt
+disgusted by the speculations.
+
+However, her current relationship status is unknown. Even three years later, many followers are still not convinced about her breakup with Dillon Danis.
+
+Dillon Danis and Savannah Montano breakup reality
+
+As of now, it’s not completely clear whether the couple is still together or not.
+</item 3>
+
+<item 4>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+At the time, her representative also confirmed to People: “Yes, she’s single.”
+
+The news of the breakup came asTMZ alleged that Lucado had cheated on Spears, with claims that her father had purchased a video of the infidelity incident. The
+publication later alleged that Lucado denied the cheating allegations, with claims that he was seeing the other woman while he and Spears were broken up.
+
+Despite their seemingly rocky history, Lucado showed his support for his ex in a 2016 interview with theNew York Times about her conservatorship. Speaking to
+the publication, he said: “If anyone knew the real Britney, they would know that she would rather be remembered for being the great mother she is rather than
+the artist she is.”
+
+The publication also noted that Lucado denied the infidelity claims from Spears’ father, before he added: “And if anyone could see her interactions with her
+kids, they would know that there is no need for a conservatorship over Britney’s personal life.”
+</item 4>
+
+<item 5>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Justin Timberlake: 1998 to 2002
+
+(Getty Images)
+
+Spears’ first highly public relationship was with her co-star in the Mickey Mouse Club, Justin Timberlake. The pair made many appearances together while dating,
+including the iconic moment Spears and Timberlake wore matching, all-denim outfits to the American Music Awards in 2001.
+
+They broke up in 2002, shortly after Timberlake and his boy band NSYNC released their hit tune, “Cry Me a River”. At the time, the music video for the song –
+which featured a woman with blonde hair - sparked rumours that he and Spears broke up because she allegedly cheated on him.
+
+Although the former couple never acknowledged the breakup rumours, the 2021 Framing Britney documentary addressed some of the public scrutiny that Spears faced
+during the 2000s. Following the documentary’s release, Timberlake came under criticism for the way he acted following his breakup with Spears.
+</item 5>
+
+<item 6>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+At the time, the name that popped up the most was 2-0 Dillon Danis. So, when he shared the screenshot of the FaceTime with Danis’s ex-girlfriend, the fans
+started drawing connections.
+
+Paul somehow found the model’s number and sent her a FaceTime request. Many started to believe that Montano was having an affair and cheating on her
+then-boyfriend Danis. Paul posted two stories. In the first one, he wrote, “Aye [Dillon Danis], come get your girl back.” And then in the second one, he took
+another hit at the fighter by writing, “Can’t wait to see you soon.” So this begs the question, is it true? Was Paul actually involved in an affair with
+Savannah Montano?
+
+Did Jake Paul and Savannah Montano hook up?
+
+This callout didn’t help much, as Jake Paul never could finalize his fight with Dillon Danis.
+</item 6>
+
+<item 7>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Jason Trawick: 2009 to 2013
+
+(Getty Images)
+
+Spears and Jason Trawick, a Hollywood agent who worked at WME, started dating in 2009 before getting engaged in December 2011. However, they called off their
+engagement in January 2013 and announced they were going their separate ways.
+
+"Jason and I have decided to call off our engagement. I’ll always adore him and we will remain great friends," Spears said in a statement sent by her
+representative to ABC News.
+
+Trawick also issued a statement at the time, saying: “As this chapter ends for us a new one begins. I love and cherish her and her boys and we will be close
+forever."
+
+David Lucado: 2013 to 2014
+
+Two months after ending her engagement with Trawick, Spears started dating David Lucado, who worked at a legal firm. In August 2014, Spears announced their
+split, tweeting: “Ahhhh the single life!”
+</item 7>
+
+<item 8>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Spears went on to file for divorce from Federline in November 2006, citing “irreconcilable differences” as the reason for their split. In the couple’s initial
+divorce settlement, they were granted joint legal and physical custody over their two children. While it appeared they were on good terms after their
+separation, things took a turn in 2018 when Federline requested an increase of $20,000 a month more child support payments from Spears.
+
+After months of court discussions, Federline rejected Spears’s child support proposal and instead doubled his request to $40k a month. A settlement was finally
+reached between the two parties in September 2018, with Spears increasing her child support payments to Federline from $20,000 to $35,000 a month.
+
+Federline has since moved on from the relationship, as he married volleyball player Victoria Prince in 2013. They now share two daughters, Jordan, 10, and
+Peyton, eight.
+</item 8>
+
+<item 9>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+They made their relationship Instagram official in 2017 and went on to support each other through different milestones - including the 29th annual GLAAD Media
+Awards, where Spears accepted the Vanguard Award for her work promoting equality and acceptance.
+
+In April 2022, Spears announced she was pregnant with her and Asghari’s first child together, and her third child. However, the following month, she said in a
+statement posted to Instagram that she had suffered a miscarriage. The couple wrote: “We have lost our miracle baby.”
+
+That June, they held their lavish nuptials at her home in California with a star-studded guest list, which included Selena Gomez, Paris Hilton, Drew Barrymore,
+and Donatella Versace - who designed Spears’ wedding dress.
+
+In August, months after Asghari shut down speculation about getting a divorce, TMZ claimed that he had confronted Spears about rumours she cheated on him.
+</item 9>
+
+<item 10>
+Truth Behind Jake Paul Dating Dillon Danis’ Ex-girlfriend: Did MMA Star Break Up With Savannah Montano? (Essentially Sports, 2023-10-07T21:14:09+00:00)
+Instead, he ended up taking the fight against the former Olympic MMA artist, Ben Askren in 2021. He again won the fight by a knockout, while many fans still
+thought that Danis was smart to not respond to the Youtuber-turned-boxer. Still, Paul tried his best to involve Montano in their non-existent tussle.
+
+via Getty TAMPA, FLORIDA – DECEMBER 18: Jake Paul fights Tyron Woddley during a rematch of an eight-round cruiserweight bout at the Amalie Arena on December 18,
+2021 in Tampa, Florida. (Photo by Mike Ehrmann/Getty Images)
+
+Besides the Instagram Stories, Jake Paul also told TMZ, about the entanglement with Savannah Montano. He said, “Dillon, I know you’re watching this … Just
+remember you’re still a bitch and I hooked up with your girlfriend. Savannah, how you doing? What’s good?”
+</item 10>
+=== END ITEM id=d45a5cd0451721f2 ===

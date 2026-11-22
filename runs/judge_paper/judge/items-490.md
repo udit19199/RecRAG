@@ -1,0 +1,827 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=2f519e17b66fa24c ===
+Gold sentences and facts:
+Sentence 0: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 0.0: Judge Lewis Kaplan intervened and asked whether Bankman-Fried had ever been told by Yedidia about that money
+  Fact 0.1: The question asked whether Bankman-Fried had been told about that money in words or in substance
+  Fact 0.2: Bankman-Fried admitted he had been told about that money
+  Fact 0.3: Bankman-Fried admitted being told about that money only after Judge Lewis Kaplan's question
+Sentence 1: Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.
+  Fact 1.0: Before his fall, Bankman-Fried presented himself as the Good Boy of crypto
+  Fact 1.1: Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry, crypto
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud
+  Fact 2.1: The prosecution said the fraud was committed to achieve great wealth, power and influence
+  Fact 2.2: The defense argued that the FTX founder, Bankman-Fried, acted in good faith
+  Fact 2.3: The defense argued that Bankman-Fried never meant to commit fraud or steal
+  Fact 2.4: The defense argued that Bankman-Fried basically got in over his head
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Instead, Bankman-Fried directed alleged co-conspirator Caroline Ellison to repay third-party loans and went on making investments.
+
+Bankman-Fried said that he found out about the fiat@ftx account — that’s the one that tracked how much Alameda owed FTX — in June 2022 while his senior staff
+was focused on fixing the software bug. He did not, however, discover what the account was for until October. I know this sounds unbelievable, but this is his
+actual testimony.
+
+His employees told him “they were busy and I should stop asking questions because it was distracting.”
+
+Simple questions nailed Bankman-Fried to the wall. Had he given his employees at Alameda the direction not to spend FTX customer deposits? Had he put in any
+policies to prevent Alameda employees from spending FTX customer money? Did he put in place any measures at Alameda to protect the FTX customer money? No, no,
+and no. Oh, but he was testifying to Congress about keeping customer funds safe.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 2>
+
+<item 3>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 3>
+
+<item 4>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 6>
+
+<item 7>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 7>
+
+<item 8>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+He did. But — I did hear these words uttered aloud in a court of law this morning, I am not creative enough to make this kind of thing up — his employees told
+him “they were busy and I should stop asking questions because it was distracting.”
+
+Yedidia — Bankman-Fried’s college friend, Bahamas roommate, and employee at FTX — had testified that he’d asked Bankman-Fried about the $8 billion hole on a
+padel tennis court in their luxury complex in June or July. Today, in testimony, Bankman-Fried seemed to be trying to deny that conversation had ever taken
+place. It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that
+Bankman-Fried admitted he’d been told.
+</item 8>
+
+<item 9>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 9>
+
+<item 10>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 10>
+=== END ITEM id=2f519e17b66fa24c ===
+
+=== ITEM id=4bc393c44ffa9d56 ===
+Gold sentences and facts:
+Sentence 0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together.
+  Fact 0.0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies.
+  Fact 0.1: In this innovation cycle, there is a strong need for technologists and designers to be in the process together.
+Sentence 1: Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere.
+  Fact 1.0: Ric Lipson is a partner at Stufish.
+  Fact 1.1: Ric Lipson collaborated on the U2 project for Sphere.
+  Fact 1.2: Es Devlin, an artist, collaborated with Ric Lipson on the U2 project for Sphere.
+  Fact 1.3: Brian Eno, a producer, collaborated with Ric Lipson on the U2 project for Sphere.
+
+Retrieved items:
+<item 1>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Product design is in a moment of profound change and redefinition as technologies like artificial intelligence (AI) and spatial computing dramatically affect
+computing experiences. AI, especially, may have only minor impacts on interface design but will significantly impact the holistic product or ecosystem
+experience. Spatial computing, on the other hand, will change human-computer interactions and unmoor our understanding of what a computer is.
+
+In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for
+technologists and designers to be in the process together.
+
+For successful products and businesses, innovation is perpetual. There is a never-ending search to find the next new thing that enhances the user experience,
+extends product reach, expands revenue, or all three simultaneously. Product design makes innovation less daunting and increases chances for success because it
+is a multidisciplinary process with structures and frameworks to catalyze innovation. Technologists have a role in the process that expands beyond simply
+validating the technology or concept, which is their customary responsibility.
+</item 1>
+
+<item 2>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+For most technical leads and software developers, this is a mode inversion from our traditional tactical and direct interaction with technology. The context
+switch from daily build-and-operate is challenging but is paramount to developing successful and innovative products. We are uniquely positioned to generate
+strategic insights translated from dense technical minutiae that drive innovative business cases and product experiences.
+
+A technology innovation must solve a business problem, such as improving operational efficiency, growing existing revenue streams, or generating new ones. The
+problem space may be customer-facing (e.g., how can we deliver a new feature?) or internal-facing (e.g., how can we make a process more efficient?). The problem
+is the paramount concern. The specific technologies or innovations used to solve the problem are often less critical. We cannot lose perspective of the business
+needs; otherwise, the activities become too academic or a paid hobby.
+
+An ordinary domestic analogy is hanging a picture. The hole size, bracket, or tools used to hang the picture are immaterial as long as the picture is on the
+wall and straight.
+</item 2>
+
+<item 3>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+U2 perform at the Sphere in Las Vegas. Credit: Stufish Entertainment Architects These are the technical specs: an interior 16K x 16K spherical video surface,
+the highest-resolution LED screen ever made with 268,435,456 pixels, and an exterior covered by 1.2 million hockey-puck-sized LEDs. There are 157,000
+ultra-directional speakers – the boffins call it “beam-forming acoustics” – and there are “infrasound haptics”, which means the soundwaves are shaped to create
+both vibrations and waves of air pressure.
+
+The comparison to ABBA’s show in London is perhaps the only approximate one: both are wholly enveloping experiences where the lights, sound and special effects
+are blended to push the audience’s senses to the limit. They differ in one key way; ABBA pushes its effects out toward you, largely to play smoke and mirrors
+with the on-stage simulacrums. Sphere, in contrast, more wholly and subtly envelops you.
+</item 3>
+
+<item 4>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Critically, says Lipson, the staging for the U2 show is elementary in real terms, despite its technological complexity. “And what’s interesting is that the
+Sphere, like ABBA Arena, is only touching the sides of what you can do,” he says. “In five years’ time and 10 years’ time, two years’ time, whenever the
+technology shifts, you’ll be able to do more.” By the numbers ... U2 perform at the Sphere in Las Vegas. Credit: Stufish Entertainment Architects The screens,
+for example, are a bespoke assembly of state-of-the-art screens. But behind those screens are “a whole new kind of speaker,” Lipson says. “In a regular show,
+the speakers are at one end pushing the sound down the room, so it’s louder at the stage end and quieter further away. [But here] because everybody’s sort of
+getting their own feed, everybody’s getting an equal volume. So hearing the show in there, sonically, may be better than anywhere.”
+</item 4>
+
+<item 5>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+The specifics of the process and technologies are only important as they pertain to how well they solve the problem, the costs to do so, and the overall end
+user experience.
+
+Product innovation is experimental and should not always be expected to yield productive results. It requires a learning curve and patience, as the outcomes are
+often ambiguous and unknown. Business leadership can struggle with this perspective because it is indefinite (in terms of results and timelines), and it is
+challenging to translate pure technology innovation into value creation. A gap opens between technology and product teams wherein technology teams strain to
+articulate the capabilities and value of a technology innovation, leading to unfilled promises and the perception of “technology for the sake of technology” or
+quips like “a solution looking for a problem.”
+
+The current hype cycle in AI serves as a great concrete example. For technology or product executives, the challenge is how to do more than check the AI box —
+it’s about how to meaningfully incorporate AI into a product. Instead of forcing a technology onto a product, the design process flows to the technologies.
+</item 5>
+
+<item 6>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+As experts on a technology or technology stack, we can communicate abstract insights or contribute in more conceptual contexts. Technologists add value to the
+product design process by sharing their expertise on a technology’s characteristics. Designers use this information to shape and exploit technologies in the
+visual and interaction design process. In this way, technologists inform new interaction models, interface metaphors, and product channels. This involvement
+gives confidence and conviction to the promises of design.
+
+Think of digital technologies as a material like paint, stone, or wood. For artisans to create with materials, they must understand the material’s ontology and
+phenomenology. An artist must know the differences between oil, acrylic, or watercolor paints because each material has different properties that affect how and
+what can be created. Technologists must “find the grain” of a technology.
+</item 6>
+
+<item 7>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Technologists must “find the grain” of a technology. In this way, they become an intermediary between the abstract nature of design and the pedantic nature of
+technology. This philosophical perspective is especially important when a product is in a growth stage or when using emerging technologies.
+
+Regardless of whether your product is growing or in a stable stage or employs established or emerging technologies, integrating technologists into the product
+strategy and design process enriches the final outcome. There is a technology perspective extending beyond the operations and mechanics of the code “factory
+floor,” which provokes innovation. Sometimes this leads to small, impactful moments of innovation — and sometimes it is a brilliant revolution.
+</item 7>
+
+<item 8>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Too often, design is minimized to only the act of making user interfaces pretty. Product design is much deeper and broader in scope than visual design assets.
+For example, product design can give direction and focus to a business strategy, user experience strategy, or technology explorations.
+
+The process establishes a guide rail throughout any innovation initiative. The core of product design is decision-making with an astute instinct for making the
+best decisions at the most opportune time. Product design helps reduce risk and leads to more effective innovation through quality decision-making.
+
+A progressive role for technologists
+
+Technologists play a strategic role in product innovation and should bring a metaphysical perspective in addition to being punctilious. Our job is to
+communicate the essence of a technology and think strategically about the application of technologies to problem spaces. We are most constructive when we
+translate the technicals of “how to make X do Y” to “these are the types of products and services realizable with technology X.”
+</item 8>
+
+<item 9>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Sphere, in contrast, more wholly and subtly envelops you. “They are both legacy projects made by artists who have the career and track record to be able to look
+at these things objectively in a way that a younger performer perhaps wouldn’t because it takes an entire lifetime of experience to make those kinds of choices
+and make it work,” Williams says. The two shows also share British music stage architecture firm Stufish whose work ranges from the Queen’s Platinum Jubilee,
+tours for Beyoncé and Jay-Z, Michael Bublé, Elton John and Madonna as well as the ABBA Arena in London. Stufish partner Ric Lipson (along with artist Es Devlin
+and producer Brian Eno) collaborated on the U2 project for Sphere. “With the ABBA Arena, it’s absolutely designed for that show, but you could also imagine that
+building having another avatar show in there, or indeed a live performance where people would use the technology that’s in the building as an immersive
+environment,” Lipson says.
+</item 9>
+
+<item 10>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Before discussing the nontraditional ways technologists participate in product innovation, let’s conceptually examine innovation and product design.
+
+The word innovation has a simple meaning — to introduce something new or a novel method of doing something — yet we frequently inflate it to mean something
+magical, grandiose, and world-changing. Innovation can just as easily be mundane and straightforward. The key to innovation is being “new.” The “new” can be
+localized to a team, product, process, or business unit. The “novel” can be well-known and established practices not incorporated into your workflow or product.
+Sometimes, innovation comes from closing small gaps and isn’t always a grand eureka moment.
+
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+Product design is a process and not a discipline or deliverable. It is (understandably) easy to limit the scope of product design to color choices, content
+layout, and aesthetics.
+</item 10>
+=== END ITEM id=4bc393c44ffa9d56 ===
+
+=== ITEM id=c16f667749f47c65 ===
+Gold sentences and facts:
+Sentence 0: In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence and his sudden and mostly unexplained exit brought uncertainty to the industry’s future.
+  Fact 0.0: A year has passed since Altman catapulted ChatGPT to global fame.
+  Fact 0.1: Altman has become Silicon Valley's sought-after voice on the promise of artificial intelligence.
+  Fact 0.2: Altman has become Silicon Valley's sought-after voice on the potential dangers of artificial intelligence.
+  Fact 0.3: Altman's sudden exit was mostly unexplained.
+  Fact 0.4: Altman's exit brought uncertainty to the industry's future.
+Sentence 1: This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout.
+  Fact 1.0: The piece covers this week's topics.
+  Fact 1.1: Sam Altman is backing a teen's AI startup.
+  Fact 1.2: Google held a hardware event.
+  Fact 1.3: First impressions of the Pixel 8 Pro are covered.
+  Fact 1.4: Flexport drama is covered.
+  Fact 1.5: The ongoing FTX fallout is covered.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The board's language is a basis for the prevailing theory.
+  Fact 2.1: The way giant tech companies work is a basis for the prevailing theory.
+  Fact 2.2: The prevailing theory currently floating around is based on the board's language and how giant tech companies work.
+
+Retrieved items:
+<item 1>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Any significant snafu in that department would reflect on her, as well as Altman.
+
+5. Perhaps a difference of AI ethics or philosophy?
+
+Altman is a proud techno-optimist, and often speaks fondly of the possibilities of AGI, or artificial general intelligence, a theoretical software system that
+achieves human-like intellect and versatility.
+
+The board’s statement pointedly includes that “OpenAI was deliberately structured to advance our mission: to ensure that artificial general intelligence
+benefits all humanity” and that new leadership was necessary. It’s possible that Sam’s zeal for AGI, even absent a secret project or agreement, led to a major
+rift between him and the board.
+
+It’s been obvious to all that Altman took the company in a much more corporate direction from its origins, changing its legal status and aggressively pursuing
+enterprise and consumer applications. That doesn’t sound a lot like the “mission” the board wants to advance.
+</item 1>
+
+<item 2>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman posted Friday on X: “i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved
+working with such talented people. will have more to say about what’s next later.”
+
+The Associated Press and OpenAI have a licensing and technology agreement allowing OpenAI access to part of the AP’s text archives.
+
+Altman helped start OpenAI as a nonprofit research laboratory in 2015. But it was ChatGPT’s explosion into public consciousness that thrust Altman into the
+spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media. On a world tour this year, he was mobbed by
+a crowd of adoring fans at an event in London.
+
+He’s sat with multiple heads of state to discuss AI’s potential and perils.
+</item 2>
+
+<item 3>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Sam Altman has been fired from OpenAI, Inc., the 501(c)(3) nonprofit that acts as the governing body for OpenAI, the AI startup behind ChatGPT, DALL-E 3, GPT-4
+and other highly capable generative AI systems. He’ll both leave the company’s board of directors and step down as CEO.
+
+In a post on OpenAI’s official blog, the company writes that Altman’s departure follows a “deliberative review process by the board” that concluded that Altman
+“wasn’t consistently candid in his communications” with other board members, “hindering its ability to exercise its responsibilities.”
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+“The board no longer has confidence in [Altman’s] ability to continue leading OpenAI,” the blog post reads.
+</item 3>
+
+<item 4>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Altman has a long history steering OpenAI. After co-founding the company alongside Peter Thiel, LinkedIn cofounder Reid Hoffman and others, Altman, who formerly
+headed startup accelerator Y Combinator and also holds a seat on the board at Worldcoin, the ambitious cryptocurrency project, initially served as a co-chair of
+OpenAI alongside Elon Musk. Musk left in 2018 to avoid a conflict of interest with Tesla.
+
+Altman over the past several months played an active role in attempting to shape regulators’ responses to AI, appearing at U.S. congressional hearings and
+meeting personally with world leaders including President Joe Biden, German Chancellor Olaf Scholz and French President Emmanuel Macron, among others, on an
+international policy tour.
+
+More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+I've never met someone who has supported and lifted up more people around them than him. Couldn't be a prouder brother.
+</item 4>
+
+<item 5>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He was recruited in 2014 to take lead of the startup incubator YCombinator.
+
+“Sam is one of the smartest people I know, and understands startups better than perhaps anyone I know, including myself,” read YCombinator co-founder Paul
+Graham’s 2014 announcement that Altman would become its president. Graham said at the time that Altman was “one of those rare people who manage to be both
+fearsomely effective and yet fundamentally benevolent.”
+
+OpenAI started out as a nonprofit when it launched with financial backing from Tesla CEO Elon Musk and others. Its stated aims were to “advance digital
+intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return.”
+
+That changed in 2018 when it incorporated a for-profit business Open AI LP, and shifted nearly all its staff into the business, not long after releasing its
+first generation of the GPT large language model for mimicking human writing.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 6>
+
+<item 7>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He’s sat with multiple heads of state to discuss AI’s potential and perils. Just Thursday, he took part in a CEO summit at the Asia-Pacific Economic Cooperation
+conference in San Francisco, where OpenAI is based.
+
+He predicted AI will prove to be “the greatest leap forward of any of the big technological revolutions we’ve had so far.” He also acknowledged the need for
+guardrails, calling attention to the existential dangers future AI could pose.
+
+Some computer scientists have criticized that focus on far-off risks as distracting from the real-world limitations and harms of current AI products. The U.S.
+Federal Trade Commission has launched an investigation into whether OpenAI violated consumer protection laws by scraping public data and publishing false
+information through its chatbot.
+</item 7>
+
+<item 8>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI, the company behind viral AI hits like
+ChatGPT, GPT-4 and DALL-E 3, by OpenAI’s board of directors. Then, the company’s longtime president and co-founder, Greg Brockman, resigned — as did three
+senior OpenAI researchers. And the fallout continues.
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+It’s a fast-moving situation that we’re still trying to get to the bottom of. No doubt more will become clear as time goes on. To make it easier to follow all
+that’s happened in the meantime, though, we’ve put together a timeline; we’ll do our best to keep it current.
+</item 8>
+
+<item 9>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 9>
+
+<item 10>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 10>
+=== END ITEM id=c16f667749f47c65 ===
+
+=== ITEM id=fe5e81cdaaa5a787 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: Google makes deals with Apple.
+  Fact 0.2: Google makes deals with Samsung.
+  Fact 0.3: Google makes deals with Mozilla.
+  Fact 0.4: Google makes deals with many others.
+  Fact 0.5: The deals are meant to ensure Google is the default search engine on practically every platform.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The Google deals will probably come up later in the trial.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy on day one.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google siphons off news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 3>
+
+<item 4>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 4>
+
+<item 5>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 5>
+
+<item 6>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 9>
+
+<item 10>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 10>
+=== END ITEM id=fe5e81cdaaa5a787 ===
+
+=== ITEM id=5e42245d956e028a ===
+Gold sentences and facts:
+Sentence 0: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 0.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 0.1: The case argues that Google "siphons off" news publishers' content.
+  Fact 0.2: The case argues that Google siphons off news publishers' readers.
+  Fact 0.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 0.4: The case argues that Google does this through anticompetitive means.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The argument in the case will probably come up later in the trial.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy.
+  Fact 1.2: Epic made this choice on day one of the trial.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 5>
+
+<item 6>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 7>
+
+<item 8>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 8>
+
+<item 9>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Both Epic and Google spent a long, long time on subtle lines of questioning. You really had to read between the lines to see that Epic was trying to make a
+point about how Google’s 70/30 revenue split is probably based on an arbitrary decision Valve made two decades ago with Steam or how Google was trying to make a
+point that Epic, too, likely believed that an app store provides more value than just payment processing and maybe deserves more money.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 10>
+=== END ITEM id=5e42245d956e028a ===

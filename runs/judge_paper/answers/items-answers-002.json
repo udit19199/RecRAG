@@ -1,0 +1,348 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "f506c374824fd620",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralizing high-performance, but QRU wants to retain control of its commercial and corporate functions."
+  },
+  {
+   "id": "c2a200b6b5c6d546",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both allege SBF’s involvement; TechCrunch says Ellison took the funds under his instruction."
+  },
+  {
+   "id": "8b6738cd4a32c270",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "eBay offers price matching outside the Thanksgiving and Cyber Monday period."
+  },
+  {
+   "id": "2651757361853e76",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from long-term planning for sustainable success to poor results and European failure."
+  },
+  {
+   "id": "9b137a5a1634d73f",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "They align: both express concern that rising debt and a high debt-to-GDP ratio could pose economic risks."
+  },
+  {
+   "id": "c5deec18a25a0e25",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both portray challenges in the All Blacks’ performance, though in different matches."
+  },
+  {
+   "id": "95683a920b4e187a",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Altman's involvement with a teen's AI startup published on October 7, 2023, and the TechCrunch article suggesting doubts about Sam Altman's truthfulness with the board published on November 18, 2023, was there a change in the portrayal of Sam Altman's professional conduct?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from startup backer to someone alleged to have been less than candid with OpenAI’s board."
+  },
+  {
+   "id": "8ca332d6b2e61f6d",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages and versions: Gemini Pro rolled out first, while the more capable Gemini Ultra was expected later."
+  },
+  {
+   "id": "f3690dd0653b04c1",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralising high-performance programs, but QRU wants to retain control of its commercial and corporate functions."
+  },
+  {
+   "id": "e0c4d3e164f57327",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different versions and stages of Gemini."
+  },
+  {
+   "id": "467e99d5f54eb043",
+   "kind": "answer",
+   "question": "Between the report by The Verge on November 7, 2023, portraying Google as the antagonist in the Epic v. Google trial, and the report by TechCrunch on December 9, 2023, regarding Google's release of only a \"lite\" version of their AI model, was there a change in the portrayal of Google's actions from the perspective of these news sources? \n\nBetween the report by TechCrunch on December 9, 2023, about Google releasing only a \"lite\" version of their AI model, and the report by TechCrunch on December 15, 2023, filing a class action antitrust suit against Google, was the consistency in reporting Google's competitive practices by TechCrunch maintained?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "c464f4ebc0342b03",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay offers price matching, with some seasonal exclusions."
+  },
+  {
+   "id": "172c456a0de862f9",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different versions and stages of the same Gemini project."
+  },
+  {
+   "id": "a04087a9feee9af9",
+   "kind": "answer",
+   "question": "Did the 'Sporting News' report on the Michigan sign-stealing scandal involving the Wolverines indicate a consistent or inconsistent portrayal of the situation compared to the earlier report by 'The New York Times' on the reactions of college football coaches to the alleged espionage?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "3f961f136f66501a",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's actions published before October 31, 2023, and The Verge report on Sam Bankman-Fried's acknowledgment of financial discrepancies, was there a change in the narrative regarding Sam Bankman-Fried's awareness of the financial issues?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—earlier reports tied him to directing customer-fund use, while he later claimed he didn’t understand the account’s purpose until October."
+  },
+  {
+   "id": "a124e34a2201da30",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes— the focus shifted from long-term planning for sustainable success to Manchester United’s poor European performance and elimination."
+  },
+  {
+   "id": "f92aea2bd589f39b",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: past losses to Argentina versus execution problems in the World Cup final."
+  },
+  {
+   "id": "3078f605f595c4f9",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there a change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from search-default dominance to broader alleged anticompetitive harms to publishers and competition."
+  },
+  {
+   "id": "2fdd8ee9d84d862e",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there a change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from scrutiny of default-search deals to broader allegations of anticompetitive conduct and market harm."
+  },
+  {
+   "id": "a6b3d0c17df2c9c6",
+   "kind": "answer",
+   "question": "Does the article from The Verge suggest that Google's deals with companies to be the default search engine are without valid alternatives, while the TechCrunch article quantifies Google's spending on these deals at $26.3 billion in 2021, indicating a significant investment to maintain this status?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "a4da177b55178407",
+   "kind": "answer",
+   "question": "Does 'The Age' article claim that Taylor Swift was merely seen cheering at Arrowhead Stadium, while the 'CBSSports.com' article states that she has both performed and attended a game there, and does 'The Independent - Life and Style' suggest a different aspect of her life by discussing her openness about her relationship with Travis Kelce?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No."
+  },
+  {
+   "id": "9bab4a168b19b120",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralizing high-performance programs but differ on control of commercial and corporate functions."
+  },
+  {
+   "id": "177200eabeff2b67",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: errors in the final versus challenges from past encounters with Argentina."
+  },
+  {
+   "id": "70b595bbcbfbe3de",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay continued offering price matching for qualifying items."
+  },
+  {
+   "id": "9f9c8bcf68c86f60",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay offered price matching for qualifying purchases."
+  },
+  {
+   "id": "f89768bb9fb78f33",
+   "kind": "answer",
+   "question": "Has the perspective on managing dementia in 'The Guardian' articles shown a change from the time Susan Saunders was reported to be caring for her mother with dementia (published at '2023-10-10') to the more recent report on new Alzheimer’s drugs (published at '2023-12-17')?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from lifestyle and research-trial advice to cautious optimism about disease-slowing drugs and earlier diagnosis."
+  },
+  {
+   "id": "ed2c9289abecd1b9",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles assert SBF’s involvement, though in different ways."
+  },
+  {
+   "id": "b8c6b317da0ea957",
+   "kind": "answer",
+   "question": "Between the report from Fortune published on October 4, 2023, which discussed Mark Cohen's claims about Caroline Ellison, and the subsequent reports from The Verge regarding statements made by Caroline Ellison, was there a change in the narrative concerning her role and actions as the CEO of Alameda Research?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from being blamed for inadequate hedging to testifying that she took customer funds at Bankman-Fried’s direction."
+  },
+  {
+   "id": "3af98e3c92af0197",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: the final article describes in-game struggles, while the Argentina article discusses past losses and the upcoming semi-final."
+  },
+  {
+   "id": "a609bbfe33577a6c",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages and versions: Gemini Pro rolled out first, while Gemini Ultra was expected later."
+  },
+  {
+   "id": "066549ee39a8429a",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles assert SBF’s involvement, though they describe it differently."
+  },
+  {
+   "id": "84a7c7cfd5e7702f",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there a change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from scrutiny of Google’s default-search deals to explicit allegations of anticompetitive conduct harming publishers."
+  },
+  {
+   "id": "138a750ae521fb23",
+   "kind": "answer",
+   "question": "Between the report from Fortune published on October 4, 2023, which discussed Mark Cohen's claims about Caroline Ellison, and the subsequent reports from The Verge regarding statements made by Caroline Ellison, was there a change in the narrative concerning her role and actions as the CEO of Alameda Research?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes. The narrative shifted from Cohen blaming Ellison’s risk management to her testimony describing customer-fund misuse at Bankman-Fried’s direction."
+  },
+  {
+   "id": "2ba639b041068fa1",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on high-performance centralization but differ on commercial and corporate control."
+  },
+  {
+   "id": "8041e218e957b1b1",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present challenges: the final highlights handling errors, while the Argentina articles reference previous defeats."
+  },
+  {
+   "id": "4fccd97ddbd32cfb",
+   "kind": "answer",
+   "question": "Between the report from The Age on October 22, 2023, claiming that Google manipulates Search to minimize ad revenue, and the report from TechCrunch on December 15, 2023, alleging that Google \"siphons off\" news publishers' content and ad revenue through anticompetitive means, is there consistency in the portrayal of Google's influence on ad revenue and content distribution?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes—both portray Google as influencing ad revenue and content distribution, though through different alleged mechanisms."
+  },
+  {
+   "id": "e53147ae5ad41dd9",
+   "kind": "answer",
+   "question": "After TechCrunch reported on the U.K. Judicial Office issuing guidance for judges on the responsible use of AI tools like ChatGPT on September 28, 2023, and Music Business Worldwide discussed YouTube's investment in AI-powered technology to protect its community from trademark and copyright abuse on November 23, 2023, is the stance on the use of AI for regulatory or protective purposes within these reports consistent or inconsistent?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "25baa1fd56c811d5",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from long-term planning for sustainable success to European elimination after a poor campaign."
+  }
+ ],
+ "evidence": []
+}

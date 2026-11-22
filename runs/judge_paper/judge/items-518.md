@@ -1,0 +1,1037 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=8349212eec9ef62f ===
+Gold sentences and facts:
+Sentence 0: Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense, especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+  Fact 0.0: Todd Boehly is American.
+  Fact 0.1: Todd Boehly is a co-owner of Chelsea.
+  Fact 0.2: Expanding Chelsea's profile and reach in the U.S. would make sense under Todd Boehly's co-ownership.
+  Fact 0.3: Catarina Macario is a USWNT international.
+  Fact 0.4: Mia Fishel is a USWNT international.
+  Fact 0.5: Catarina Macario plays her club football in the U.S.
+  Fact 0.6: Mia Fishel plays her club football in the U.S.
+  Fact 0.7: CBS Sports holds WSL rights.
+Sentence 1: It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again.
+  Fact 1.0: The date was 24 September.
+  Fact 1.1: Chelsea suffered a home Premier League defeat on 24 September.
+  Fact 1.2: The 24 September defeat was Chelsea's second home Premier League defeat in a row.
+  Fact 1.3: Chelsea's home Premier League defeat before the 24 September defeat was against Nottingham Forest.
+  Fact 1.4: Chelsea were booed off again after the 24 September defeat.
+Sentence 2: Late checks will be made on the fitness of Reece James, Axel Disasi and Nicolas Jackson, while Benoit Badiashile could return from a long-term injury.
+  Fact 2.0: Late fitness checks will be made on Reece James.
+  Fact 2.1: Late fitness checks will be made on Axel Disasi.
+  Fact 2.2: Late fitness checks will be made on Nicolas Jackson.
+  Fact 2.3: Benoit Badiashile could return from a long-term injury.
+
+Retrieved items:
+<item 1>
+Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn (The Guardian, 2023-11-01T22:03:18+00:00)
+For more information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our
+Privacy Policy . We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+But the Swedish goalkeeper was at fault when Chelsea finally found the goal they were looking for, palming Gallagher’s cross after he had combined with Palmer
+straight to the feet of Badiashile and he calmly sidefooted home.
+
+Blackburn’s supporters then felt aggrieved when a Callum Brittain cross struck Gallagher’s trailing arm but once again Robinson waved away strong appeals for a
+penalty.
+
+The visitors showed they had no intention of surrendering without a fight when Harry Leonard caught Axel Disasi napping and raced onto a long ball at the start
+of the second half, only to curl his shot wide of the post. Not for the first time, Robert Sánchez was then far too casual as the Chelsea goalkeeper’s pass was
+almost intercepted.
+</item 1>
+
+<item 2>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Soccer’s planned combined headquarters and national training facility in Georgia. As of yet, there’s no targeted date set for the move.
+
+Hayes, too, will benefit in ways other than compensation and prestige. She spoke to reporters about looking forward to spending more time with her five-year-old
+son, Harry. She has never been to one of his sports days, picked him up from school or taken him to an after-school club and she wants to do that.
+
+The main visible wrinkle in the process was Chelsea’s surprise move of announcing Hayes’ departure on Saturday, Nov. 4. With the contract not yet finalized and
+U.S. Soccer board approval still needed, Chelsea issued their statement at 11 a.m. ET in the U.S. in which it noted she would leave at the end of the season “to
+pursue a new opportunity outside of the WSL and club football.” The club feared that the news was starting to leak and wanted to share the news on its own.
+</item 2>
+
+<item 3>
+Arteta reveals Pochettino influence on his career | Poch: He is family (Sky Sports, 2023-10-20T21:30:00+00:00)
+Havertz will command particular focus after his early struggles at Arsenal. With just one goal in 12 appearances for the club there are questions about his form
+and role.
+
+Please use Chrome browser for a more accessible video player Ahead of Kai Havertz's return to Stamford Bridge, Sam Blitz takes a forensic look at his tactical
+role at Arsenal
+
+Armando Broja will miss Chelsea's game against Arsenal due to "irritation" in his knee. Late checks will be made on the fitness of Reece James, Axel Disasi and
+Nicolas Jackson, while Benoit Badiashile could return from a long-term injury.
+
+Enzo Fernandez and Moises Caicedo should be available despite travelling to South America during the international break.
+
+Ben Chilwell, Carney Chukwuemeka, Christopher Nkunku, Romeo Lavia, Wesley Fofana and Trevoh Chalobah remain unavailable.
+
+Arsenal will make a late call on the fitness of Bukayo Saka, William Saliba and Leandro Trossard.
+</item 3>
+
+<item 4>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+But he also pops up in the channels, on the wing, either supporting the man in possession or offering himself for the quick switch of play.
+
+Great times for a great guy. But, of course, if you commit a midfielder to this role, then you leave gaps elsewhere. One of the reasons Chelsea found it so easy
+to play through United was that, with the forwards pushed high and McTominay as the secret sauce in the final third, there were open spaces every time they
+played through the press. Chelsea’s goal was a case in point: two simple vertical passes straight through the centre via Mykhailo Mudryk to Cole Palmer, passes
+that McTominay could see coming but could do precious little to stop.
+
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties.
+</item 4>
+
+<item 5>
+Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn (The Guardian, 2023-11-01T22:03:18+00:00)
+“We should be proud of this performance.”
+
+Blackburn certainly managed to cause problems for Chelsea even after the hosts made their intentions clear straight from the kick-off when Nicolas Jackson
+forced a corner when his shot was blocked. Travis was very lucky not to concede a penalty when he slid in against Sterling after 10 minutes, with no VAR to
+overrule what looked like a clear and obvious error from the referee Tim Robinson.
+
+It took a good save from Leopold Wahlstedt to deny James but Blackburn then enjoyed a good period of possession in their opponents’ half. James was inches away
+from breaking the deadlock midway through the first half but his shot just eluded the far post before Enzo Fernández forced Wahlstedt to palm away his effort
+soon afterwards.
+
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties.
+</item 5>
+
+<item 6>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+There is the possibility of Hayes retaining a connection to the club via some sort of ambassadorial role, but it’s likely contingent upon a lack of conflict
+with the USWNT role and responsibilities. Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,
+especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+
+There is, for now, an immediate task for Hayes to focus on. Chelsea faces off against Real Madrid on Wednesday for their first match of the UWCL Champions
+League group stage. Her full American arrival will not come for another half a year after that.
+
+(Top photo: Julian Finney/Getty Images)
+</item 6>
+
+<item 7>
+Chelsea and England star Cole Palmer: ‘The most annoying thing about moving down south? The traffic’ (The Independent - Sports, 2023-11-15T22:32:05+00:00)
+That is an understatement. And if there seemed a risk involved in swapping the stability of City for the seeming madhouse of Stamford Bridge, there was evidence
+of more cool-headed thinking from a 21-year-old. Chelsea have been manic buyers but he said: “I did look at how many players were there but I don’t think people
+realise how many players they actually got rid off, as well.”
+
+The departures of, among others, Mason Mount, Kai Havertz, Christian Pulisic and Joao Felix, meant there could be opportunities in the attacking midfield
+positions. “I looked at the squad and thought: ‘If I go there and know what I can do then I’ll have the chance of playing’,” he said. “And thankfully it’s
+happened.” If there seemed plenty of traffic in the queue for places in Southgate’s attack, Palmer seems to have accelerated past several rivals. Now an England
+debut could follow in the next week.
+</item 7>
+
+<item 8>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+GO DEEPER USWNT's Emma Hayes hire could create a problem in preparation for the Olympics
+
+What’s next for Chelsea?
+
+Questions surrounding Hayes’ future have cropped up previously in her tenure at Chelsea. She was linked to several jobs in the men’s English Football League in
+the past and has always been interested in managing Spain’s national team, although there was never an official conversation with Spain’s federation. So it was
+a question of when, not if, Hayes would leave. Still, news of her decision came as a shock to her staff and players.
+
+A few staff members were told on the morning of Nov. 4 before Chelsea’s away game at Aston Villa kicked off at 12.30 p.m. UK time. Most of the other staff
+members found out with the players in the post-match meeting minutes before the official club statement, which Hayes had no hand in writing and did not even see
+before publication, was released at 3 p.m.
+</item 8>
+
+<item 9>
+Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn (The Guardian, 2023-11-01T22:03:18+00:00)
+It is no wonder Mauricio Pochettino spends most of his time watching Chelsea on the edge of the touchline with his hands clasped tightly in his pockets and a
+tense expression on his face.
+
+Even with his side 2-0 up and cruising against Blackburn thanks to goals from Benoît Badiashile and a rejuvenated Raheem Sterling, the Chelsea manager was a
+bundle of nerves throughout what turned out to be a comfortable victory in the end.
+
+But while the lack of cutting edge that has become a hallmark of the Todd Boehly-era in west London still looms large as he prepares for his first return to
+table-topping Tottenham on Monday night, Pochettino could take heart from Cole Palmer’s brilliant performance as the former Manchester City forward helped to
+dispatch Jon Dahl Tomasson’s inexperienced side.
+</item 9>
+
+<item 10>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+England and Chelsea captain Millie Bright was “devastated,” and most players were understandably sad — many of whom owe their career progression to Hayes — but
+know they still have a job to do this season.
+
+“It’s been a bit of a whirlwind. As a player and a person, I was devastated. I’ve been here nine years under Emma and the things I’ve learned,” Bright said.
+“She’s a mentor, a coach, a friend, a life coach. It’s more than just football playing under her.”
+
+Bright credits Hayes for her on and off-field guidance. (Photo by Marc Atkins, Getty Images)
+
+Hayes’ American assistant Denise Reddy, born in New Jersey, is likely to follow her across the pond. The former United States Under-20 coach has remained
+faithful to her friend of 20 years and voluntarily quit her job as assistant at Chicago Red Stars in 2010 when Hayes was fired as head coach. Chelsea’s general
+manager Paul Green will stay at the club.
+</item 10>
+=== END ITEM id=8349212eec9ef62f ===
+
+=== ITEM id=941473a67e562b23 ===
+Gold sentences and facts:
+Sentence 0: Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+  Fact 0.0: Google unveiled new hardware.
+  Fact 0.1: Google held its annual hardware event this week.
+  Fact 0.2: Google is a search and consumer tech giant.
+  Fact 0.3: At its annual hardware event, Google showed off what it has been working on.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed the article for not meeting its standards.
+  Fact 1.1: The article was shared widely on social media.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The extent to which the article was shared and boosted shows how willing people are to accept foul play on Google's part.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google "siphons off" news publishers' content.
+  Fact 2.2: The case argues that Google "siphons off" news publishers' readers.
+  Fact 2.3: The case argues that Google "siphons off" news publishers' ad revenue.
+  Fact 2.4: The case argues that Google obtains these through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 2>
+
+<item 3>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 10>
+=== END ITEM id=941473a67e562b23 ===
+
+=== ITEM id=c43362a1e7db1169 ===
+Gold sentences and facts:
+Sentence 0: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 0.0: SBF, as he is known, has pleaded not guilty to some seven charges.
+  Fact 0.1: The charges SBF pleaded not guilty to are charges of fraud and conspiracy.
+Sentence 1: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 1.0: Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money.
+  Fact 1.1: The question asked whether Bankman-Fried had been told about that money in words or in substance.
+  Fact 1.2: Bankman-Fried did not admit he had been told about that money until Judge Lewis Kaplan intervened.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 1>
+
+<item 2>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 2>
+
+<item 3>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Instead, Bankman-Fried directed alleged co-conspirator Caroline Ellison to repay third-party loans and went on making investments.
+
+Bankman-Fried said that he found out about the fiat@ftx account — that’s the one that tracked how much Alameda owed FTX — in June 2022 while his senior staff
+was focused on fixing the software bug. He did not, however, discover what the account was for until October. I know this sounds unbelievable, but this is his
+actual testimony.
+
+His employees told him “they were busy and I should stop asking questions because it was distracting.”
+
+Simple questions nailed Bankman-Fried to the wall. Had he given his employees at Alameda the direction not to spend FTX customer deposits? Had he put in any
+policies to prevent Alameda employees from spending FTX customer money? Did he put in place any measures at Alameda to protect the FTX customer money? No, no,
+and no. Oh, but he was testifying to Congress about keeping customer funds safe.
+</item 5>
+
+<item 6>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 9>
+
+<item 10>
+SBF, riding high on FTX, reportedly offered $5B to Trump to cancel President re-run (TechCrunch, 2023-10-02T13:11:07+00:00)
+We find out that the gravitational pull of cargo shorts was a tough one to pull away from: The suit SBF brought to wear to the McConnell meeting was tightly
+balled up under his arm with his dress shoes falling out of the middle of the bundle. We’ve all been there, Sam. (Well, perhaps not Anna.)
+
+Lewis also claimed that SBF had concocted a plan to buy off Trump, to get him not to run again for president.
+
+“Like how much would it take to get an answer?” Lewis recounted. “There was a number that was kicking around… this was $5 billion.” He said that Sam was never
+sure whether that figure came directly from Trump. And no, we don’t find out if he ever did wire anything to camp Trump. That would be a wonderful detail to get
+teased out in the trial, though.
+</item 10>
+=== END ITEM id=c43362a1e7db1169 ===
+
+=== ITEM id=0123ecd14b04629b ===
+Gold sentences and facts:
+Sentence 0: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 0.0: The answer ultimately lies with the jury.
+  Fact 0.1: The jury was selected on Wednesday morning.
+  Fact 0.2: The jury was selected before lawyers for the government.
+  Fact 0.3: Bankman-Fried then swapped two very different stories of the former crypto mogul's sudden rise and almost instantaneous fall.
+Sentence 1: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 1.0: The highly anticipated criminal trial of Sam Bankman-Fried started on Tuesday.
+  Fact 1.1: Sam Bankman-Fried is the former CEO of bankrupt crypto exchange FTX.
+  Fact 1.2: The trial is to determine whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I was ready to hear this pursued further — but then it, too, was dropped.
+
+I think the defense was also trying to suggest that the government had coerced Ellison’s testimony, by suggesting that she had pleaded guilty to a charge of
+defrauding investors that she couldn’t have been involved in. After all, she didn’t prepare materials for them. Unfortunately, she did say that she had
+conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine. This
+line of questioning felt like a waste of time.
+
+There were rather a lot of sidebars during the cross-examination, to the point that when one occurred, several jurors looked entertained. There were a few
+yesterday, too, including one in which the prosecution complained that Bankman-Fried was visibly scoffing at Ellison’s answers, according to the court
+transcript.
+</item 1>
+
+<item 2>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 2>
+
+<item 3>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 3>
+
+<item 4>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+How much? Almost $100,000, he said. And was he ever able to? “Never,” he told prosecutors.
+
+Shortly afterward, as the trial neared late afternoon, the government called Adam Yedidia to the stand. A fast-talking graduate of MIT, he and Bankman-Fried
+were close friends in college, he said. And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in
+finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+
+When Yedidia first took the stand, Danielle Sassoon, one of the lead prosecutors, said that the college friend of Bankman-Fried had legal immunity during his
+testimony. Why did he make such a deal with the government, she asked.
+
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 7>
+
+<item 8>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 8>
+
+<item 9>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+I have never seen Sam Bankman-Fried so still as he was during the prosecution’s opening statement. The characteristic leg-jiggling was absent. He barely moved
+as the prosecutor listed the evidence against him: internal company files, what customers were told, the testimony of his co-conspirators and his own words.
+
+His hair was shorn, the result of a haircut from a fellow prisoner, the Wall Street Journal reported. He wore a suit bought at a discount at Macy’s, per the
+Journal; it hung on him. He appeared to have lost some weight.
+
+“All of that was built on lies.”
+
+Bankman-Fried, at this time last year, had a luxury lifestyle as the CEO of crypto exchange FTX, said the assistant US attorney, Thane Rehn, in the cadence of a
+high schooler delivering his lines in a student play. Bankman-Fried hung out with Tom Brady. He was on magazine covers, lived in a $30 million penthouse, and
+spent time with world politicians.
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 10>
+=== END ITEM id=0123ecd14b04629b ===
+
+=== ITEM id=fd9259df715d4a80 ===
+Gold sentences and facts:
+Sentence 0: Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.
+  Fact 0.0: Miami has five remaining opponents.
+  Fact 0.1: Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight.
+Sentence 1: -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+  Fact 1.0: Tyreek Hill missed last week's game.
+  Fact 1.1: Tyreek Hill now needs to average almost 153 yards per game in his final three games.
+  Fact 1.2: Tyreek Hill's stated goal is 2,000 receiving yards this season.
+  Fact 1.3: Tyreek Hill needs to reach his 2,000-yard goal this season.
+
+Retrieved items:
+<item 1>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+1 seed in the conference.
+
+Compared to the 49ers, Cowboys and Eagles, Goff and the Lions may have the easiest schedule to finish the season.
+
+But bettors should also pay attention to C.J. Stroud. He leads the league in passing yards, is one of four quarterbacks eho have started the whole season with a
+passer rating over 100, and his touchdown to interception ratio is the best in the NFL (4 to 1)
+
+As for the value of his play, Stroud has taken one of the worst teams in the NFL (11 total wins the last three seasons) and turned it into a playoff contender
+and potential division champion.
+
+Offensive Player of the Year
+
+Current favorite: Tyreek Hill
+
+Longshot: CeeDee Lamb
+
+There's a good reason why Tyreek Hill is such a heavy favorite to win OPOY. The Dolphins wide receiver is on track to become the first player with 2,000-plus
+receiving yards in a single season.
+</item 1>
+
+<item 2>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+Chiefs (Germany game)
+
+We get it — the Dolphins have yet to defeat a true contender this season and the Chiefs are the reigning champions of the NFL. However, Kansas City just got its
+doors blown off by Russell Wilson and the lowly Broncos, a game in which Patrick Mahomes and company suffered five turnovers and three sacks.
+
+We expect a statement win from Mike McDaniel and the Dolphins on neutral ground. The Dolphins have been in Frankfurt since early this week, having flown
+overnight on Monday to give them multiple days to acclimate to the time difference and their surroundings. The Chiefs, meanwhile, waited until after practice on
+Thursday to take the 11-hour voyage.
+
+This also happens to be a revenge game for former Chiefs receiver Tyreek Hill, who's on pace for multiple single-season receiving records and poised for his
+first Offensive Player of the Year award.
+</item 2>
+
+<item 3>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+MORE SUPERDRAFT DFS & FANTASY PROPS: How to play SuperDraft
+
+This one should be a tightly-contested, high-scoring game — with heavy playoff implications, because we all know this could be an AFC Championship preview — so
+expect Rice to be very busy through all four frames in Frankfurt. The Dolphins have allowed the fifth-most receptions and the 12th-most yards to wideouts this
+season. If a bounce-back week is meant to be, Sir Rashee is our destiny.
+
+Austin Ekeler, RB, Chargers @ Jets — OVER 29.5 receiving yards
+
+Guess who's back? Back again...Ek is back....tell a friend. The Chargers finally got their best player back to full health, with Ekeler exploding for 123 yards
+and a TD against the Bears last weekend. A whopping 94 of those 123 yards came through the air, as the PPR god gashed Chicago for chunk yardage a handful of
+times.
+</item 3>
+
+<item 4>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:43 p.m. — Hill is up to 65 yards on eight catches. No other Dolphins receiver has more than two catches, and Hill now has 879 yards on the season.
+
+Eagles 17, Dolphins 10
+
+9:39 p.m. TOUCHDOWN — Tagovailoa hits Hill in the end zone for a touchdown! Hill was facing double coverage but simply beat both defenders. Miami has the
+deficit back to one possession.
+
+9:38 p.m. — Rookie Nolan Smith sacks Tagovailoa with 44 seconds remaining in the half.
+
+9:37 p.m. — The Dolphins are down to the Eagles' 29-yard line after catches by Braxton Berrios and Tyreek Hill. They have a chance to score on back-to-back
+possessions, as they get the ball out of halftime.
+
+9:33 p.m. TWO-MINUTE WARNING — Woah!
+</item 4>
+
+<item 5>
+MVPs for all 16 AFC teams at the midpoint (Yardbarker, 2023-11-09T21:51:02+00:00)
+MIAMI DOLPHINS | WR Tyreek Hill: Arguably the best wide receiver in the NFL, Hill has somehow reached a new level of dominance in his age-29 season. The
+seven-time Pro Bowler leads the NFL in receiving yards (1,076) and TD catches (eight). As long as the Dolphins maintain their success on offense down the
+stretch, Hill should earn Offensive Player of the Year honors. He's on pace to break Calvin Johnson's season record for receiving yards (1,964).
+
+
+
+NEW YORK JETS | LB Quincy Williams: While his brother, Quinnen, may be the better-known Jets defender in the family, Williams — the AFC Defensive Player of the
+Month for October — is also making a name for himself. Aside from being the fifth-highest-rated linebacker in the NFL by Pro Football Focus, Williams is tied
+for 17th in tackles (74) and tied for ninth in TFLs (nine) among all defenders.
+</item 5>
+
+<item 6>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+The league's leading receiver, Tyreek Hill (vs. Titans in Week 14), stands as the unquestioned WR1 for Week 14 after torching the Commanders to the tune of five
+catches, 157 yards, and two TDs. CeeDee Lamb (vs. Eagles) and the Cowboys look to avenge their road loss to the Eagles in Week 9, as Dallas' WR1 routinely has
+double-digit reception potential.
+
+Amon-Ra St. Brown (@ Bears) was relatively quiet this past week, but he's likely to rebound against a Bears defense that he totaled nine catches for 95 yards
+against in Week 11. A.J. Brown (@ Cowboys) reached the century mark for the first time in four games in Week 13, and another high-usage day looks to be in store
+for a potential shootout.
+
+Keenan Allen (vs. Broncos) caught just five-of-nine targets last week, but as L.A.
+</item 6>
+
+<item 7>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP @ MIA MIA -1.5 O/U 51 OPP VS WR 15th PROJ PTS 19.4 WR RNK 2nd YTD Stats REC 103 TAR 141 REYDS 1306 TD 10 FPTS/G 21.6 The choice between
+Lamb and Tyreek Hill will not be an easy one. The tiebreaker for me is that Lamb is $900 cheaper and Hill may still not be 100% by the time the Cowboys and
+Dolphins kick off. Last week was the first time since Week 9 that Lamb failed to reach the end zone and the second time since Week 5 that he didn't score at
+least 17 PPR Fantasy points.
+
+Contrarian DFS Play (WR Preview) Projections powered by Sportsline Jaylen Waddle WR MIA Miami • #17
+
+Age: 25 • Experience: 3 yrs.
+</item 7>
+
+<item 8>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson.
+
+-- Deebo Samuel is on pace to become just the fourth player since 1992 to average more than 11 yards per target with at least 60 targets in multiple seasons.
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson. 18 -- Puka Nacua needs 18 more catches to set the rookie record for most catches in a
+season.
+
+-- Puka Nacua needs 18 more catches to set the rookie record for most catches in a season. 152.67 -- After missing last week's game, Tyreek Hill now needs to
+average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+
+-- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving
+yards this season.
+</item 8>
+
+<item 9>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Six of the 17 won anyway. The Dolphins were the only one of those 223 teams to win and cover the spread, which was 13.5 for this game.
+
+• Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games. That ranks second in NFL
+history to Hall of Famer Don Hutson, who had 819 yards through six with Green Bay in 1942.
+</item 9>
+
+<item 10>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Tyreek Hill (@ Commanders in Week 13) did his thing despite a tough matchup in Week 12, resulting in Miami's WR1 returning to the top spot against a putrid
+Washington stop unit. CeeDee Lamb (vs. Seahawks) isn't far behind, as Dallas' WR1 aims to maintain his efficient play against Seattle.
+
+Amon-Ra St. Brown (@ Saints) has been a target hog the past several weeks, seeing at least nine looks in each of his past six games. Don't expect his workload
+to decrease in a bounce-back game for the Lions. Keenan Allen (@ Patriots) looks to continue his dominant ways, as Justin Herbert's go-to target routinely has
+double-digit target potential.
+
+Mike Evans (vs. Panthers) sits in our top five for Week 13, totaling four TDs over the past three weeks. A.J. Brown (vs.
+</item 10>
+=== END ITEM id=fd9259df715d4a80 ===
+
+=== ITEM id=c0334591f82d53f7 ===
+Gold sentences and facts:
+Sentence 0: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 0.0: It comes despite Argentina knocking over the All Blacks last year in Christchurch.
+  Fact 0.1: It comes despite a maiden defeat in 2020 in Sydney.
+Sentence 1: The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions.
+  Fact 1.0: The All Blacks had their chances.
+  Fact 1.1: The All Blacks' usual safe handling was a feature throughout the World Cup.
+  Fact 1.2: The All Blacks lost their first game of the World Cup to France.
+  Fact 1.3: The All Blacks' usual safe handling evaded them against the Springboks' blitz defence.
+  Fact 1.4: The match took place in wet conditions.
+
+Retrieved items:
+<item 1>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The All Blacks will experience a changing of the guard next season.
+
+Indeed, the All Blacks’ social media channels described the team selection for the World Cup final as the “Last Dance”.
+
+2015 World Cup winner Dane Coles will call time on his career, while his tight-five teammates Brodie Retallick and Sam Whitelock, who is bidding to become the
+first player to win the Webb Ellis Cup for a third time, will head overseas.
+
+Fellow World Cup winners Aaron Smith and Beauden Barrett will also head to Japan.
+
+Coles, who was labelled by Samisoni Taukei’aho as a “Grandad” type figure in the All Blacks, has even been denied the chance of a farewell send-off after
+missing selection.
+
+Advertisement
+
+“Yeah, tough,” said coach Ian Foster of the conversation with the 36-year-old around leaving him out.
+</item 1>
+
+<item 2>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 2>
+
+<item 3>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 3>
+
+<item 4>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“There were a few tears and I think that’s awesome to see, players showing vulnerability, just opening up about how much this tour and this sort of game means.
+
+
+
+“There were some (people) saying this is probably one of the most important games of All Blacks history. (The) All Blacks went through a bit of a hard path to
+get here, media, friends, family even criticising us and all that, and we stuck together. We weren’t even said to be in the final and now look at us, we’re
+here.
+
+Advertisement
+
+“Different players take it differently and some of the older players probably were hit a little bit harder and it was good to see just a bit of emotion and the
+want from them. Seeing that gives all the other players an extra two, three per cent to think ‘OK, we are going to the well and we’ve got to give it our all’.”
+
+The All Blacks will experience a changing of the guard next season.
+</item 4>
+
+<item 5>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 5>
+
+<item 6>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“To inspire is not about results, it’s not just one player who played well; no, it’s about our behaviour in general, our ability to be ready to come back from
+difficult times and seizing our opportunities.
+
+“There are not a lot of opportunities in life – us playing in a semi-final is even rarer and we want to have no regrets.”
+</item 6>
+
+<item 7>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 7>
+
+<item 8>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Minutes later and Kolisi was off, as he cannoned into Savea. He would later return, much to the anger of the New Zealanders in the crowd who were calling for
+justice.
+
+Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide. It came back to haunt them, as their
+usually silky and composed skill sets failed them.
+
+That much was true when the TMO intervened after Smith thought he had a try in his final Test, but an error at the lineout cancelled out the five-pointer.
+
+Advertisement
+
+Eventually the All Blacks did have a try, as Mark Telea, the All Blacks’ best and biggest attacking threat all night, managed to get on the outside and draw in
+two defenders before offloading to Beauden Barrett. But Mo’unga missed the conversion to leave them trailing by a point.
+</item 8>
+
+<item 9>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+The penalty allowed Pollard to step up and bang over three points.
+
+The All Blacks were on the backfoot much of the opening quarter and, after Ethan de Groot was pinged for not rolling away, the Springboks moved further ahead
+after 12 minutes.
+
+A wicked bounce following a lovely Jordie Barrett chip kick denied Savea a try soon after. But the All Blacks were on the scoreboard via Mo’unga moments later
+as Barnes was playing advantage.
+
+But the Springboks restored their six-point lead soon after as Savea was pinged for not releasing. Barnes later apologised, with the No.8 having a split-second
+separation.
+
+The Springboks’ rush defence caused the All Blacks problems all evening, as Damian de Allende and Kriel forced their opponents into errors. Will Jordan, the
+impressive young outside back who scored eight tries, had a difficult night and was replaced midway through the second half.
+</item 9>
+
+<item 10>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“We don’t want to talk too much about post-game stuff, but that was a tough one, probably the toughest I have had as a coach. He took it the way I expected him
+to. He’s a champion.”
+
+Papali’i said the All Blacks were intent on sending their leaders out on a high.
+
+“There’s a few leaders in the team, it’s going to be their last game in the jersey, so it’s a big game for us and even the other players that are staying,
+knowing that we want to send those boys out on a high,” he said.
+
+“How much they put into the jersey. We are standing on their…what’s that quote? It’s standing on the shoulders of giants.”
+
+The generational change isn’t just occurring on the field but off it, too.
+
+Advertisement
+
+Foster will depart the All Blacks set up after 12 years, the last four as head coach.
+</item 10>
+=== END ITEM id=c0334591f82d53f7 ===

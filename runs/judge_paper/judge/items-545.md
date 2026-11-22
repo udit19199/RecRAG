@@ -1,0 +1,1007 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=91e3c27627800faa ===
+Gold sentences and facts:
+Sentence 0: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 0.0: Al Saadi said her frustration with Meta is common among Palestinians.
+  Fact 0.1: Al Saadi said her frustration with Meta is common among Palestinians in occupied territories.
+  Fact 0.2: Al Saadi said her frustration with Meta is common among Palestinians across the diaspora.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores.
+  Fact 1.1: Meta wants to shift the burden of monitoring social media usage among teens back to parents.
+
+Retrieved items:
+<item 1>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+At the recommendation of its Oversight Board, Meta conducted a third-party due diligence report about the platform’s moderation during the May 2021 conflict.
+The report found that Arabic content was flagged as potentially violating at significantly higher rates than Hebrew content was, and was more likely to be
+erroneously removed. The report noted that Meta’s moderation system may not be as precise for Arabic content as it was for Hebrew content, because the latter is
+a “more standardized language,” and suggested that reviewers may lack the linguistic and cultural competence to understand less common Arabic dialects like
+Palestinian Arabic.
+
+Has anything improved?
+
+Meta committed to implementing policy changes based on the report’s recommendations, such as updating its keywords associated with dangerous organizations,
+disclosing government requests to remove content and launching a hostile speech classifier for Hebrew content. Abukhater added that Meta has improved its
+response to harassment, at least in comparison to other social media platforms like X (formerly Twitter).
+</item 1>
+
+<item 2>
+Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges (TechCrunch, 2023-11-27T21:20:32+00:00)
+A newly unredacted version of the multi-state lawsuit against Meta alleges a troubling pattern of deception and minimization in how the company handles kids
+under 13 on its platforms. Internal documents appear to show that the company’s approach to this ostensibly forbidden demographic is far more laissez-faire than
+it has publicly claimed.
+
+The lawsuit, filed last month, alleges a wide spread of damaging practices at the company relating to the health and well-being of younger people using it. From
+body image to bullying, privacy invasion to engagement maximization, all the purported evils of social media are laid at Meta’s door — perhaps rightly, but it
+also gives the appearance of a lack of focus.
+
+In one respect at least, however, the documentation obtained by the attorneys general of 42 states is quite specific, “and it is damning,” as AG Rob Bonta of
+California put it. That is in paragraphs 642 through 835, which mostly document violations of the Children’s Online Privacy Protection Act, or COPPA.
+</item 2>
+
+<item 3>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+“U.S. states are passing a patchwork of different laws, many of which require teens (of varying ages) to get their parent’s approval to use certain apps, and
+for everyone to verify their age to access them,” she wrote. “Teens move interchangeably between many websites and apps, and social media laws that hold
+different platforms to different standards in different states will mean teens are inconsistently protected,” Davis said.
+
+Meta’s proposed “better way” of requiring parents to manage a teen’s app downloads pushes the burden back to the app stores and to parents, who often today do
+not monitor or manage their teens’ smartphone use. But while it’s true that the app stores and smartphone makers would know the ages of their users, requiring
+parents to approve apps is the equivalent of overriding parental discretion and choice.
+
+Other entertainment ratings — like those for TV, movies or video games — are meant to be guidelines for parents, not laws. Meta’s position that apps are somehow
+different, then, is a fairly extreme position to take.
+</item 3>
+
+<item 4>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+His argument essentially was that the improvements and safety features Meta was implementing were not enough and not effective.
+
+However, a policy position like the one Meta announced today is not something that would have been rushed out in a matter of days as a PR response to Bejar’s
+claims, but something Meta has been stewing on for some time. After all, the app stores already have age guidelines, so it would seem to follow that they should
+also enforce them, if enforcement is to be regulated — or that seems to be Meta’s thinking.
+
+If anything, the call to bring the app stores into the fight is a response to the lack of action in Congress to pass online child safety regulations, like the
+hotly debated KOSA (the Kids Online Safety Act) leaving U.S. states to individually create laws due to a void of federal guidelines.
+
+Utah, for instance, passed a measure that will require social networks to give Utah parents access to their children’s posts, messages and comments, and would
+block social media access during certain hours.
+</item 4>
+
+<item 5>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta’s position that apps are somehow different, then, is a fairly extreme position to take.
+
+“Instead of designing its products with kids’ safety and privacy in mind, Meta would rather push blame onto parents and other companies to obscure the damage
+they’ve already done to young people,” said Sacha Haworth, executive director of the Tech Oversight Project, a nonprofit devoted to reigning in Big Tech, in
+reaction to the news. “No one disputes that Google and Apple need to do more to protect children on their platforms, apps and devices. That fact does not
+absolve Mark Zuckerberg or Meta for years of willful negligence, and this announcement shows that the company’s outright hostility toward protecting kids is
+sewn into the fabric of its profit model.”
+
+Apple and Google did not return requests for comment.
+
+Updated, 11/15/23, 4:40 PM ET, with comment from Tech Oversight Project.
+</item 5>
+
+<item 6>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents. In a blog post published today, Meta’s
+global head of Safety, Antigone Davis, argues that parents should be responsible for approving their teens’ app downloads and staked Meta’s position in
+supporting federal legislation that would require parental approval for app downloads for users under the age of 16.
+
+Guiding its reasoning, Meta pointed to recent Pew research that indicated that 81% of U.S. adults were in favor of requiring parental consent for teens to
+create social media accounts. While this may speak to popular opinion around parental sentiment, it doesn’t mean that parents have thought through who should be
+responsible for preventing or allowing teens’ access to social media, or how those apps should operate to protect teens.
+
+A coalition of 42 states and D.C. are currently suing Meta over its harms to teens and young users, in part referencing findings from Meta whistleblower Frances
+Haugen.
+</item 6>
+
+<item 7>
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices (TechCrunch, 2023-10-19T23:43:15+00:00)
+Meta has a moderation bias problem, not just a ‘bug,’ that’s suppressing Palestinian voices Instagram users suspect Meta of shadowbanning content about
+Palestine. The platform has a history of inherent bias.
+
+Earlier this year, Palestinian-American filmmaker Khitam Jabr posted a handful of Reels about her family’s trip to the West Bank. In the short travel vlogs,
+Jabr shared snippets of Palestinian culture, from eating decadent meals to dancing at her niece’s wedding.
+
+“I hadn’t been in a decade, so it’s just like, life abroad,” Jabr told TechCrunch.
+
+“I would get [anti-Palestine] comments,” she recalled. “And I couldn’t respond [to them] or use my account for 24 hours. I wasn’t even posting anything about
+the occupation. But fast forward to now and the same shit’s happening.”
+
+In the aftermath of Hamas’ attack on Israelis, Israel’s retaliatory airstrikes and total blockade — cutting access to electricity, water and vital supplies —
+have devastated Gaza.
+</item 7>
+
+<item 8>
+Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges (TechCrunch, 2023-11-27T21:20:32+00:00)
+One stated goal, according to the lawsuit, was specifically to “grow [Monthly Active People], [Daily Active People] and time spent among U13 kids.”
+
+It’s important to note here that while Meta does not permit accounts to be run by people under 13, there are plenty of ways it can lawfully and safely engage
+with that demographic. Some kids just want to watch videos from SpongeBob Official, and that’s fine. However, Meta must verify parental consent and the ways it
+can collect and use their data is limited.
+
+But the redactions suggest these under-13 users are not of the lawfully and safely engaged type. Reports of underage accounts are reported to be automatically
+ignored, and Meta “continues collecting the child’s personal information if there are no photos associated with the account.” Of 402,000 reports of accounts
+owned by users under 13 in 2021, fewer than 164,000 were disabled.
+</item 8>
+
+<item 9>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+The governor also signed a bill to prevent social media companies from adding features designed to addict minors to their platforms. A judge in Arkansas
+recently blocked a law that would have required parental permission for minors to create social media accounts.
+
+Beyond Meta, Montana also became the first state to ban TikTok, claiming it was being used by the Chinese Communist Party using TikTok to spy on Americans. But
+Meta’s threat, in terms of teen usage, isn’t one of a foreign power collecting private data on users, but rather risks to teen mental health, body comparison
+issues and exposure to sexual predators. Montana could easily turn its eyes to Meta next, after the TikTok bill went through.
+
+The overhead of managing apps to meet individual state regulations would be a headache for Meta, but Davis also argues it would lead to a lack of teen
+protection, in some cases.
+
+“U.S.
+</item 9>
+
+<item 10>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+The former employee had provided to news outlets a treasure trove of documents that appeared to indicate Meta understood the harms it was causing — including
+things like body image issues among teens — but didn’t take action. Instagram head Adam Mosseri was later hauled before Congress in December 2021 to defend the
+app’s teen safety record, but so far, legislators have not come to any decision about how to regulate teen usage of these platforms.
+
+Instead, Meta began regulating itself, adding new defaults and features that would restrict teens’ access to content on its apps, protect their privacy and
+limit ad targeting to teens, as well as introducing parental controls.
+
+In more recent weeks, a second Meta whistleblower, Arturo Bejar, has come forward to express concerns that Instagram’s approach to protecting teens wasn’t
+working to keep them safe from sexual predators and unwanted sexual advances and harassment. Hired as a consultant on the matter, Bejar eventually blew the
+whistle on Meta after seeing issues remain unresolved following years of work.
+</item 10>
+=== END ITEM id=91e3c27627800faa ===
+
+=== ITEM id=20846dcba4f27bf7 ===
+Gold sentences and facts:
+Sentence 0: Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people.
+  Fact 0.0: The Fortnite maker announced on September 28 that it is laying off 16% of its workforce.
+  Fact 0.1: The layoff amounts to 870 people.
+Sentence 1: Because while Google spent most of its first day attempting to explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog.
+  Fact 1.0: Google spent most of its first day attempting to explain complicated ins and outs of business.
+  Fact 1.1: Epic was able to paint a black-and-white picture of good and evil.
+  Fact 1.2: In that picture Epic itself was the clear underdog.
+  Fact 1.3: Epic was able to do this because Google spent most of its first day on those explanations.
+
+Retrieved items:
+<item 1>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+So there are absolutely no hard feelings, and we’re grateful that they joined the case because they did help in critical ways. Epic will continue to fight for
+all developers, seeking remedies, and... I don’t know if Sundar is going to be calling me, but if he does, all of our discussions will be directed toward
+solving the problem for everyone.
+
+A lot has changed since you filed the original lawsuit over three years ago. For a bit there, it seemed like Epic had an interest in expanding outside of games
+with acquisitions like Houseparty and Bandcamp. What changed? And did app store restrictions play into that at all?
+
+Let’s see. No... well, not directly, anyway. We have a really broad strategy of building games and technology. We’ve had huge success in recent years with the
+Unreal Engine gaining adoption among all kinds of industries even beyond games. We’ve also run into our own financial limitations. You know, we expanded the
+company to nine times the size we were before Fortnite took off.
+</item 1>
+
+<item 2>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 2>
+
+<item 3>
+Video games in 2023: Acquisitions, layoffs, unions (Engadget, 2023-12-19T14:30:37+00:00)
+This wasn’t the only layoff round of the year. Unity lowered its headcount three times in 2023, affecting about 900 jobs. In its quarterly financial results in
+November, Unity reported a yearly revenue increase of 69 percent and it told investors, “We continued to manage costs well.”
+
+Sony cut 100 jobs at Bungie, a company it bought for $3.6 billion in 2022. According to developers that are still there, Sony executives are attempting to use
+this upheaval to wrest more control of the studio from Bungie founders and leaders.
+
+Epic Games fired roughly 830 people this year, or 16 percent of its staff. This included significant job cuts at Mediatonic, the studio behind Fall Guys that
+Epic purchased in 2021.
+
+Mediatonic
+
+“For a while now, we've been spending way more money than we earn,” CEO Tim Sweeney wrote about the layoffs.
+</item 3>
+
+<item 4>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+On Monday, Fortnite publisher Epic Games will drag a tech giant into court, alleging that its mobile app store is an illegal monopoly. You may be feeling some
+déjà vu!
+
+After all, didn’t Epic already go to trial with Apple, resulting in a ruling where Apple (mostly) won? Didn’t Epic fail to #FreeFortnite with its Llamacorn
+legal gambit? Didn’t that all happen years ago? What are we doing here again?
+
+The short answer: while Epic’s antitrust claims against Apple got their day in court, a similar lawsuit against Google never did. On November 6th, Epic v.
+Google will finally go to trial... a mere 1,180 days after Epic originally sued.
+
+Hi, I’m Sean, and I’ll be your guide to this whole delightful mess.
+
+Update, December 15th, 2023: It’s basically over now. What happened? Read this, this, and this to get the whole picture.
+
+Original story continues:
+
+Llamacorn what now? What is happening?
+</item 4>
+
+<item 5>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 5>
+
+<item 6>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+And when we tried to bundle Fortnite with other smartphone manufacturers like OnePlus and carriers of all sorts, they told us they couldn’t do a deal because
+Google had done a secret deal with them.
+
+It was really disconcerting to see the extent of bad faith efforts that were going on in a company of Google’s size. You’d think a trillion-dollar company would
+develop to the point where they have pretty respectable processes and leadership structures that provide a check and balance against wrongdoing, but they were
+rampantly destroying all their chats on these topics.
+
+You’d see long conversation threads would start to get into a spicy antitrust issue, and suddenly somebody points out the history’s on and the chat goes silent.
+They just turned it off to have the documents destroyed. It was great to see that all called out in detail.
+
+Any particular evidence where you’re like, “Oh wow, I never saw that, and now that specific thing came out for the world to see”?
+
+As an employee of Epic, I’ve not been able to see Google’s internal documents until the trial started.
+</item 6>
+
+<item 7>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+We established a market worldwide, excluding China. So any remedies, we would presume, would be worldwide. We also have the European DMA; we have Epic v. Apple
+and Epic v. Google cases coming up in Australia, and another one in the UK.
+
+It’s not just Epic anymore, there’s a lot of legislators, there’s a lot of regulators, and there’s other litigation all pushing in the direction of openness.
+And we’re going to do absolutely everything we can.
+
+Do you have anything to say to your former partners in litigation, Match Group, that abandoned you at the last minute and may now be regretting it?
+
+Oh, yeah, no. Match has been an awesome partner and a fellow member of the Coalition for App Fairness. I really hope that they got out of their settlement what
+they needed to get for their business. Very few companies have the resources that Epic has to fight multinational litigation against the world’s two most
+powerful companies.
+</item 7>
+
+<item 8>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+First, Epic announced it was bypassing Apple and Google’s app store fees. It deployed a hotfix update to Fortnite without either company’s knowledge, letting
+you purchase V-Bucks directly through its own payment processing option at a discount. Apple and Google almost immediately reacted by kicking Fortnite off their
+app stores for breaking the rules.
+
+Then: surprise! Epic was ready and waiting with two lawsuits and an attack ad, depicting a Fortnite hero throwing a unicorn-llama hammer into a giant screen
+reminiscent of Apple’s famous “1984” Macintosh ad.
+
+It was a striking publicity blitz followed by a lot of slow-moving court proceedings. While the Apple lawsuit went to court in 2021, the Google one was delayed
+again and again. A ruling came down for the Apple trial that September, and it was mostly decided in Apple’s favor, though both parties are waiting for the
+Supreme Court to potentially weigh in. Meanwhile, the machinations for its fight against Google continued, and now…
+
+It is time for trial number two.
+</item 8>
+
+<item 9>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+September 2023
+
+IronNet
+
+In a regulatory filing published September 29, the cybersecurity startup has ceased all business activities as it prepares for Chapter 7 bankruptcy and has laid
+off its remaining staff.
+
+Naughty Dog
+
+Is reportedly cutting at least 25 contract developers, two sources familiar with the situation told Kotaku.
+
+Epic Games
+
+Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people.
+
+Talkdesk
+
+An impacted employee confirmed on September 27 that at least 140 people, if not more, were affected by Talkdesk’s third round of layoffs in less than 14 months.
+
+Byju’s
+
+Announced on September 26, the company plans to cut 5,000 jobs due to restructuring efforts. The startup has eliminated more than 10,000 positions in the past
+two years.
+
+Roblox
+
+Confirmed to TechCrunch on September 21, Roblox let go of 30 employees in its talent acquisition organization. No other teams are impacted.
+</item 9>
+
+<item 10>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+The lawyers can see them, but I saw almost all the key elements in this case at the same time the jury saw them. Two things stand out big time. Google’s Project
+Hug was an astonishingly corrupt effort at a massive scale — the same corrupt deal structure they tried to do with Epic when they wanted to pay us off to launch
+Fortnite on Google Play and not launch our own store.
+
+As soon as we thwarted their effort, they went around to 27 different developers and offered each one a payoff to undermine any effort we had to get their games
+onto our store exclusively. Activision and Riot and Supercell had direct distribution plans that they were planning on; Google paid them not to pursue those
+plans. Just direct blatant violations of anti-competition law, it’s crazy a company of Google’s scale would do that.
+
+“If you’re a smaller developer than Spotify, you get screwed.”
+
+The other astonishing one was the Spotify deal. Spotify is the one company that had comparable negotiating power to Fortnite.
+</item 10>
+=== END ITEM id=20846dcba4f27bf7 ===
+
+=== ITEM id=6e50765257e5ac76 ===
+Gold sentences and facts:
+Sentence 0: Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+  Fact 0.0: Google unveiled new hardware.
+  Fact 0.1: Google held its annual hardware event this week.
+  Fact 0.2: Google is a search and consumer tech giant.
+  Fact 0.3: At its annual hardware event, Google showed off what it has been working on.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed the article for not meeting its standards.
+  Fact 1.1: The article was shared widely on social media.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The extent to which the article was shared and boosted shows how willing people are to accept foul play on Google's part.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google "siphons off" news publishers' content.
+  Fact 2.2: The case argues that Google "siphons off" news publishers' readers.
+  Fact 2.3: The case argues that Google "siphons off" news publishers' ad revenue.
+  Fact 2.4: The case argues that Google obtains these through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 5>
+
+<item 6>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 10>
+=== END ITEM id=6e50765257e5ac76 ===
+
+=== ITEM id=adcf300bb1396757 ===
+Gold sentences and facts:
+Sentence 0: “She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.
+  Fact 0.0: The quoted woman (not named in this sentence) has the Eras Tour booked all through next year.
+  Fact 0.1: The quoted woman would rather die than cancel a show.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker (a woman not named in this sentence) said that it was almost like a very strange, subtle clue to the media.
+  Fact 1.1: The speaker said the media do not know everything that happened in that relationship.
+  Fact 1.2: The speaker said she can have something really major and traumatic happen to her without the media knowing about it.
+  Fact 1.3: The speaker told NPR this.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has now shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.1: Swift has a new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+No-one, it turns out.
+
+The song is thematically similar to Blank Space, commenting on the media's portrayal of Taylor's relationships: "But if I'm all dressed up / They might as well
+be lookin' at us / And if they call me a slut / You know it might be worth it for once."
+
+The best of the new tracks is Is It Over Now. An angrier take on 1989's philosophical break-up songs, it calls back to the Harry Styles snowmobile incident (see
+also, Out Of The Woods) then, deliciously, references the "Sad Taylor Boat" meme - a photo of Taylor fleeing a vacation alone after the couple split up.
+
+She goes on to call an ex a "lying traitor", accuses them of parading their new relationships in public, and noting that every new girlfriend looks like her.
+
+"If she's got blue eyes, I will surmise that you'll probably date her."
+</item 1>
+
+<item 2>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 2>
+
+<item 3>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+Taylor Swift's biggest album 1989 returns with new tracks from the vault Published 27 October
+
+Image source, Getty Images Image caption, Taylor Swift's 1989 tour sold 2.2m tickets and earned more than $250m at the box office
+
+On Friday, Taylor Swift released a new version of 1989 - the biggest-selling album of her career, and the one that definitively turned her into a pop star.
+
+Featuring hits like Shake It Off, Blank Space and Style, it was originally written during the 2013-14 Red Tour, with demos stored on her phone in a folder named
+"Sailor Twips".
+
+Awarded a Grammy for album of the year, it has spent 325 weeks in the UK charts.
+
+But now she has re-recorded it as the latest part of an ongoing campaign to regain control of her work, after an investment company bought her master tapes in
+2019.
+
+This is the biggest and riskiest part of the project.
+</item 3>
+
+<item 4>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+It's so weird to look back on that - you've got heaping piles of discarded songs that I really loved when I wrote them and I still love now.
+
+"I just need each album to have its own sound and if it doesn't fit that sound, it doesn't matter if it's a great song to me."
+</item 4>
+
+<item 5>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+All proceeds from the track are donated to New York City's Public Schools.
+
+Image source, Getty Images Image caption, The original version of 1989 won three Grammy Awards, including Album of the Year
+
+2) Blank Space
+
+Pretty much the perfect Taylor Swift song, Blank Space takes every horrible rumour that was being spread about her love life, and amplifies it with satirical
+relish.
+
+"In the last couple of years the media have had a wonderful fixation on painting me as the psycho serial dater girl," she told the Grammy Museum. "Every article
+was like, 'Here's Taylor Swift standing near some guy. WATCH OUT GUY!'
+
+"My first reaction was to be like, 'That's a bummer. This isn't fun for me'.
+</item 5>
+
+<item 6>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+Only this time, she got to say everything she wanted.
+
+Image source, Universal Music Group Image caption, The video for Shake It Off was filmed under intense secrecy
+
+6) Shake It Off
+
+Rattling like a bag of spanners, Shake It Off is a 21st Century Hey Mickey, a honking great party record with a chorus that drills so far into your brain you
+start seeing lights.
+
+It was the last song recorded for 1989, and Taylor arrived at the studio with a challenge for her co-writers Max Martin and Johan "Shellback" Schuster: "We need
+drums that make even the person who's having a terrible night at the wedding [go], 'Oh, it's my song!'"
+
+Like Blank Space, Shake It Off is a response to celebrity takedown culture. Taylor lists all of her supposed flaws ("She's an airhead!' 'She dates too many
+men!") with a defiant "so what?
+</item 6>
+
+<item 7>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 7>
+
+<item 8>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+In interviews, Taylor delighted in revealing this was based on a true story.
+
+"It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something
+really major and traumatic happen to me and they don't know about it," she told NPR.
+
+In her Rolling Stone cover story, Taylor said the crash actually occurred on a snowmobile "with an ex who lost control and wrecked it so badly that she saw her
+life flash before her eyes".
+
+That prompted speculation the track was also about Styles: The couple had gone skiing with Justin Bieber and Selena Gomez in late 2012.
+
+The lyrics also reference their identical aeroplane necklaces and a December break-up, which ties in with the "Sad Taylor on a boat" meme.
+
+But the singer steadfastly refuses to name names: "The fact that I've never confirmed who those songs are about makes me feel like there is still one card I'm
+holding," she told GQ.
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 9>
+
+<item 10>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+But that's for another article..
+
+17-21) Tracks from the vault
+
+In 2014, Taylor said she had recorded more than 100 songs for 1989 - so the relative scarcity of vault tracks is intriguing.
+
+Whereas previous re-recordings have featured full discs of bonus material, this album gets just five new additions: Slut!, Say Don't Go, Now That We Don't Talk,
+Suburban Legends and Is It Over Now?
+
+As a whole, they feel like dry runs for the songs that made the cut. The melodies aren't as crisp, the lyrics aren't as sharp. Suburban Legends has a
+particularly clunky line about letting a partner's indiscretions slide "like a hose on a slippery plastic summer".
+
+Slut! has piqued fans' interest for its title alone - who might she be talking about? No-one, it turns out.
+</item 10>
+=== END ITEM id=adcf300bb1396757 ===
+
+=== ITEM id=6b4e5f3cf0c3d673 ===
+Gold sentences and facts:
+Sentence 0: India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26.
+  Fact 0.0: India played against Australia in the second semi-final of the 2015 World Cup.
+  Fact 0.1: The India versus Australia match was held in Sydney.
+  Fact 0.2: The India versus Australia match was played on March 26.
+Sentence 1: It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+  Fact 1.0: It is crunch time for England in the World Cups.
+  Fact 1.1: England faces South Africa in the semi-final of the Rugby World Cup.
+  Fact 1.2: England faces South Africa in the semi-final of the ODI Cricket World Cup.
+
+Retrieved items:
+<item 1>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The 2019 Rugby World Cup final between England and South Africa was one of many firsts: the game itself capped off a sensational tournament played outside of
+the sport's traditional strongholds for the first time; it was the first final in which South Africa scored a try, and by full-time, the 32-12 score in the
+Springboks' favour sealed a record-equalling third title for the Rainbow Nation.
+
+Fast forward four years, and South Africa once again prepare to take on England in an all-or-nothing match to decide which nation gets a shot at World Cup glory
+— but this time around, the pair meet in the semi-finals of the 2023 tournament, rather than the decider.
+
+That won't make an ounce of difference for either camp, though, as these two long-time rivals prepare for a battle that could re-define the definition of a
+'physical encounter.'
+</item 1>
+
+<item 2>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+In reply, Mohinder Amarnath played a useful innings of 46, while Yashpal Sharma scored a fine 61.
+
+Sandeep Patil played a fiery innings of 51 not out in just 32 balls as India stormed into semifinals for the first time, beating England by six wickets with 5.2
+overs to spare.
+
+Also Read: ICC World Cup 2023: List of centuries; Most tons in World Cup so far
+
+1987 Reliance Cup, against England
+
+Four years later, the World Cup was being played outside England for the first time, and it was India which was hosting it.
+
+In a co-incidence, India was against England in the semi-finals once again, at the Wankhede Stadium, Mumbai, on November 5.
+
+This time, England's Man-of-the-Match skipper Graham Gooch smashed 115 runs in 136 balls to lay a solid foundation for his team's fighting total of 254 for 6
+wickets.
+</item 2>
+
+<item 3>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+In short, this semi-final requires a huge step up in quality for Borthwick's side, and that's why we think that the Springboks will be victorious at the Stade
+de France. South Africa have already shown they can match, and beat, the world's best, and we think that they'll do the latter in Saint-Denis.
+</item 3>
+
+<item 4>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+Also Read: IND vs NZ FREE Live Streaming: When and How to watch India vs New Zealand Cricket World Cup 2023 Semi-Final Match Live on Web, TV, mobile apps online
+
+Also Read: AUS vs SA FREE Live Streaming: When and How to watch Australia vs South Africa Cricket World Cup 2023 Semi-Final Match Live on Web, TV, mobile apps
+online
+
+1983 Prudential Cup, against England
+
+Having lost in the first round of the 1975 and 1979 World Cups, India were underdogs in the third World Cup, which was being held in England for the third
+consecutive time.
+
+However, in the World Cup, India wronged many of their critics, reaching semi-finals and playing against mighty hosts England in Manchester on June 22.
+
+Skipper Kapil Dev struck three wickets while Roger Binny and Man-of-the-Match Mohinder Amarnath took two each as India restricted England to 213 all out in 60
+overs.
+</item 4>
+
+<item 5>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The last time Cheslin Kolbe played England at a Rugby World Cup... 🇿🇦 🏆#RWC2023 | #ENGvRSA pic.twitter.com/Riw2uaSaKa — Rugby World Cup (@rugbyworldcup) October
+19, 2023
+
+Both sides' journeys have seen twists, turns, and bumps in the road, but it's led them both to within 80 minutes of a Rugby World Cup final. England will no
+doubt be looking to echo the spirit of 2019, when they beat the All Blacks 19-7 to reach the final, but in South Africa, they face a side who have taken their
+game to new heights just to reach the semis.
+
+MORE: 2023 Rugby World Cup final: Details, kick-off time and every team's route
+
+What time does England vs South Africa kick off?
+</item 5>
+
+<item 6>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The #Springboks are gearing up for another tough challenge this week with a semi-final clash against England 🇿🇦🏴󠁧󠁢󠁥󠁮󠁧󠁿#StrongerTogether #RWC2023
+pic.twitter.com/HLSnnjWggB — Springboks (@Springboks) October 18, 2023
+
+England are the only side still competing who are yet to lose a game, and that will stand them in good stead coming into this semi-final. Dominant wins over
+Argentina, Japan and Chile sealed passage to the last eight, and after being given an almighty scare by Samoa in their final pool match, England overcame a
+Fijian fightback in Marseille to triumph 30-24. Despite being outscored by three tries to two, captain Owen Farrell kicked 20 points, sending his side into the
+last four at the expense of 2023's breakout stars.
+</item 6>
+
+<item 7>
+ICC World Cup 2023: India at Cricket World Cup semi-finals so far (Zee Business, 2023-11-11T19:12:00+00:00)
+India moved to finals and beat Sri Lanka to win their second World Cup title.
+
+
+
+2015 World Cup, against Australia
+
+India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26. Australia outplayed India in almost all departments
+of the game.
+
+Australian Man-of-the-Match Steve Smith (105 runs in 93 balls) and Aaron Finch (81 runs in 116 balls) were the guiding forces in taking Australia to 328 runs
+for 7 wickets in 50 overs.
+
+In reply, India needed a few big innings, but apart from skipper MS Dhoni (65 runs in 65 balls), Shikhar Dhawan (45 runs in 34 balls), and Ajinkya Rahane (44
+runs in 68 balls), the batting order collapsed miserably as India lost the match by 95 runs.
+
+
+
+2019 World Cup, against New Zealand
+
+The cricket World Cup returned to England for the fifth time.
+</item 7>
+
+<item 8>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+TV channel Streaming USA — Peacock Canada TSN TSN+ UK ITV ITV X Australia Channel 9 Stan Sport, 9Now New Zealand Sky GO Sky GO India — Fan Code Hong Kong BeIN
+Sports BeIN Sports Malaysia BeIN Sports BeIN Sports Singapore BeIN Sports BeIN Sports
+
+MORE: Every single team to have lifted the Rugby World Cup trophy
+
+England vs South Africa lineups, team news
+
+"The start is crucial, the end is vital..."
+
+
+
+- Steve Borthwick explains changing 3️⃣ of his England starters for Saturday's Rugby World Cup semi-final, from Liam Heagney 👨‍💻 in Paris. #RWC2023 #ENGvRSA
+#EnglandRugby
+</item 8>
+
+<item 9>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England vs. South Africa betting odds, prediction
+
+The last time these two sides met was a tumultuous period to say the least, particularly for English rugby. South Africa's dominant 27-13 victory at Twickenham
+proved to be the last game in charge for Eddie Jones, the coach who had taken England to the 2019 World Cup final. In his place, Steve Borthwick was hired, and
+he's just one game away from repeating that feat.
+
+England's form at this tournament has been perfect — at face value. Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in
+the semi-finals — and England have beaten all of them. However, only Japan and Chile were defeated with bonus points, and the narrow wins over both Samoa and
+Fiji in their last two games showed that England are certainly gettable.
+</item 9>
+
+<item 10>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The Springboks have done it tough, too, having already faced two of the tournament favourites on their way to the semi-finals. Comfortable defeats of Scotland,
+Romania and Tonga couldn't mask the disappointment of the 13-8 loss to Ireland, which consigned South Africa to second in Pool B. However, with Ireland sent
+home by the All Blacks in the quarters, the Bokke showed their World Cup mettle to edge the hosts 29-28 at the Stade de France, sneaking past Les Bleus in one
+of the best games of rugby you're ever likely to see.
+</item 10>
+=== END ITEM id=6b4e5f3cf0c3d673 ===
+
+=== ITEM id=0b38ab8cb5efc219 ===
+Gold sentences and facts:
+Sentence 0: Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine.
+  Fact 0.0: It was unfortunate that the woman said she had conversations with investors as part of their due diligence.
+  Fact 0.1: Alameda was taking on losses from FTX.
+  Fact 0.2: Alameda was taking on losses from FTX to keep FTX's balance sheet pristine.
+Sentence 1: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts.
+  Fact 1.0: During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue.
+  Fact 1.1: Huang said Paradigm was told that Bankman-Fried did not want investors as directors.
+  Fact 1.2: Huang said Bankman-Fried did plan on having a board with experts.
+
+Retrieved items:
+<item 1>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+In late 2019, Alameda had a negative balance on FTX. Because they sat in an open-plan office, Wang heard a trader ask Bankman-Fried if it was okay to keep
+withdrawing money from that account. Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue. He was the CEO of both companies
+at the time.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses.
+
+The amount that Alameda was allowed to go negative began to creep up. Around 2019 or 2020, Wang checked the database and discovered that Alameda was negative by
+about $200 million, which was more than the $150 million FTX made in revenue. That had to mean Alameda was taking customer money. It surprised him and he says
+he discussed it with Bankman-Fried, who told him that he just needed to take into account the value of FTT. Wang said he trusted Bankman-Fried’s judgment and
+didn’t pursue the issue further.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 2>
+
+<item 3>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+FTX lied about how much money was in the backstop fund
+
+In the process of liquidating, FTX would try to sell the collateral on the open market, but if it couldn’t finish, then backstop liquidity providers would step
+in. These were market makers, including Alameda, which could be compensated for the losses they take from a “backstop fund,” Wang said.
+
+But FTX lied about how much money was in the backstop fund, Wang said. In court we saw the code that generated the fake number published on the website: it took
+the daily trading volume on FTX, multiplied it by a random number, divided it by a billion, and added it to the existing number displayed on the site. It had
+nothing to do with the actual amount of money in the insurance fund.
+
+And when there wasn’t enough money in the fund, money was moved there from Alameda’s accounts in order to pay the insurance out, Wang said.
+
+In late 2019, Alameda had a negative balance on FTX.
+</item 3>
+
+<item 4>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 4>
+
+<item 5>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+Other customers didn’t have the same privileges.
+
+Alameda also allegedly kept FTX from looking bad by assuming some of its losses. In 2021, FTX was facing a “several hundred million dollar” loss from an exploit
+in MobileCoin, Wang said. (This seems to have happened in April 2021, though Wang didn’t give a month.) Bankman-Fried directed him to have Alameda take it on
+instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t.
+
+Yesterday, Paradigm Capital’s Matt Huang showed us the balance sheets he received from Bankman-Fried. They didn’t include the loss, which should have been
+included in the second quarter numbers he’d received — they showed $63 million in trading expenses and $63 million in “other expenses” in that quarter, and an
+estimated profit of $732 million.
+
+“FTX was not fine and assets were not fine.”
+
+By 2022, Alameda’s negative balance on FTX was a cause for concern for Caroline Ellison, Singh, and Wang.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Then a bigger one. Then an effectively limitless one.
+
+Ellison testified to something similar, choking back tears: “When I started working at Alameda, I don’t think I would have believed you if you told me I would
+be sending false balance sheets to our lenders or taking customer money, but over time, it was something I became more comfortable with.”
+
+Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified. Alameda Research was, by then, FTX’s sin-eater. When FTX took a loss in
+the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet. FTX’s “insurance fund,” meant to
+keep traders from getting stuck with other traders’ losses, was totally made up — Alameda simply picked up the tab.
+
+Even that wasn’t good enough.
+</item 6>
+
+<item 7>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Those privileges ultimately resulted in Alameda owing FTX $8 billion worth of customer deposits. "We gave special privileges on FTX that gave unlimited
+withdrawals on the platform to Alameda," Wang said. Alameda was allowed to withdraw and transfer those funds and had a $65 billion line of credit. "When
+customers deposited USD, it went to Alameda," he said. "It existed in the computer code. Alameda could have negative balances and unlimited withdrawals." That
+"bug" in the code was written by Nishad Singh, who was FTX's director of engineering, and reviewed by Wang. Bankman-Fried was calling the shots, Wang said. Wang
+also told the court about a $1 million personal loan he received and a $200 million to $300 million loan in his name from Alameda that was never deposited into
+his account, but rather was used to make investments into other companies on behalf of FTX.
+</item 7>
+
+<item 8>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Additionally, he was promised that Alameda had no preferential treatment on the FTX platform, even though the hedge fund was one of its top traders. Huang said
+he was concerned about FTX's lack of a board of directors, but he eventually invested anyway. During cross-examination, Huang said Paradigm pressed
+Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts. — CNBC's Dawn Giel
+contributed to this report.
+</item 8>
+
+<item 9>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+The one Wang said Alameda took to keep off FTX’s balance sheet? Yeah, so it was a totally innocent thing where what actually happened was that Bankman-Fried
+thought it was appropriate that Alameda take the position as a backstop liquidity provider, that’s all.
+
+In June 2022, Bankman-Fried heard about the account called “fiat@ftx” tracking how much money Alameda owed to FTX, he testified. He did not know what it was and
+did not bother to find out. He was busy! That was when Bankman-Fried directed Ellison to repay Alameda’s lenders, because he thought Alameda was good for it. He
+also gave BlockFi and Voyager, two crypto lenders, some capital infusions for good measure.
+
+He was “very surprised!”
+
+Remember that testimony Adam Yedidia gave about a conversation with Bankman-Fried in August 2022 about the enormous amount of money Alameda owed FTX? Well,
+Bankman-Fried remembers it differently.
+</item 9>
+
+<item 10>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+That was all done by Bankman-Fried, he testified. In early 2020, Wang said he discovered for the first time Alameda's negative balance exceeded FTX's revenue,
+an indication that Alameda was taking customer funds. Wang said he brought this to Bankman-Fried's attention several times. In late 2021, Wang discovered
+Alameda had withdrawn $3 billion from its $65 billion line of credit. Wang's compensation was a base salary of $200,000 per year plus stock. He owned roughly
+17% of FTX. Even though they were co-founders, "ultimately it was Sam's decision to make" when there were disagreements, he said.
+</item 10>
+=== END ITEM id=0b38ab8cb5efc219 ===

@@ -1,0 +1,1049 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=a858685aaca0b0d2 ===
+Gold sentences and facts:
+Sentence 0: “Certainly there wasn’t a valid alternative to Google at the time,” Cue said.
+  Fact 0.0: Cue said there certainly wasn't a valid alternative to Google at the time.
+Sentence 1: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 1.0: Google could solve this problem today if it wanted to.
+  Fact 1.1: Google gets other benefits from Android.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google “siphons off” news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that this is done through anticompetitive means.
+
+Retrieved items:
+<item 1>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 1>
+
+<item 2>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 5>
+
+<item 6>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 10>
+=== END ITEM id=a858685aaca0b0d2 ===
+
+=== ITEM id=b5621f619f261eaa ===
+Gold sentences and facts:
+Sentence 0: “But nah, it was awesome.” On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+  Fact 0.0: A speaker said 'But nah, it was awesome.'
+  Fact 0.1: On Saturday, the competition said goodbye to a range of players.
+  Fact 0.2: On Saturday, the competition said goodbye to Western Bulldogs forward Richelle Cranston.
+  Fact 0.3: Richelle Cranston has battled stage five chronic kidney disease while playing this season.
+  Fact 0.4: On Saturday, the competition said goodbye to Hawthorn's Akec Makur Chuot.
+  Fact 0.5: Akec Makur Chuot is a Hawthorn player.
+  Fact 0.6: Akec Makur Chuot played 40 games for three clubs.
+Sentence 1: The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year.
+  Fact 1.0: The Dogs are Richelle Cranston's third club.
+  Fact 1.1: Richelle Cranston started at Melbourne.
+  Fact 1.2: Richelle Cranston had a stint with Geelong.
+  Fact 1.3: Richelle Cranston joined the Bulldogs last year.
+
+Retrieved items:
+<item 1>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Richmond were just absolute beasts, especially their midfielders. They really worked hard all night,” Hawthorn coach Bec Goddard said after the game. “Our work
+rate really dropped off and we just watched them play some really good footy. “If you’re a Hawks fan, you would’ve seen some really exciting moments of footy
+tonight.
+
+“Keep getting excited. We are coming, we’re growing, we’re getting better.” Hawthorn’s Irish ace Aine McDonagh kicked the opening goal before Tigers skipper
+Katie Brennan slotted two unanswered majors to celebrate her 50th game in style. Fellow 50-gamer Greta Bodey put boot to ball to snatch her own goal before
+quarter-time. A skirmish erupted in the second term after Brennan took exception to a tackle by Mattea Breed on Laura McClelland. McClelland was gifted a
+50-metre penalty following a bump against Sarah Hosking by Sophie Locke and converted from inside the goal square while players were occupied by the tussle.
+</item 1>
+
+<item 2>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Molloy, the Swans’ star off-season recruit, turned on one of the best performances of her career to demolish their injury-hit hosts.
+
+The former Collingwood ace was a class above as she kicked 3.4 from her 28 possessions and played a crucial role in setting up numerous other Sydney goals.
+Loading “She [Molloy] was itching to get in there [in the midfield],” Swans coach Scott Gowans said. “We kept her forward deliberately. It was important Chloe
+played a good block of time forward so we could have a look at it.” The Blues lost to Greater Western Sydney by two points on Saturday afternoon, denying them
+the chance to leapfrog into the top eight, 8.1 (49) to 7.5 (47).
+
+Narrm reclaim top spot Reigning premiers Narrm have reclaimed top spot on the ladder and their position as flag favourites after defeating third-placed North
+Melbourne by 23 points at Ikon Park on Saturday night.
+</item 2>
+
+<item 3>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I don’t think I’ve been as nervous to kick a goal in my life, to be honest,” she joked. “But nah, it was awesome.” On Saturday, the competition also said
+goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season,
+and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+
+Cranston, who was an inaugural AFLW player, will start kidney dialysis in January so had no option but to hang up the boots and focus on her treatment and
+health. “[I’m feeling] sad. Emotions hit me when the siren went. It’s been a really emotional week, the girls have really gotten around me. But yeah, my health
+has sort of deteriorated, it’s been a really hard year,” Cranston told Fox Footy after the Bulldogs lost to North Melbourne 7.13 (55) to 1.3 (9).
+</item 3>
+
+<item 4>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+If the Lions had lost, they were at risk of falling out of the top four with second-season side Essendon chasing their spot. Last season’s best and fairest Ally
+Anderson said her side loved playing at its training ground in Springfield, which it has made a fortress, and work well in hot conditions . “It was really hot.
+It was a grind… But yeah, it was a good finish,” Anderson told Fox Footy post-game. “Every week that we play here, every time that we play here, we get better
+and better. So, it was just a matter of time before we finally got the first win and then it hopefully [will] open the floodgates a bit.”
+
+The Lions next play St Kilda before taking on the reigning premiers Melbourne in the final round. After this weekend, they have staked their claim as being
+premiership contenders again. Adelaide will play top-four side North Melbourne next weekend before 18th-placed Western Bulldogs.
+</item 4>
+
+<item 5>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Tackled above waist and below shoulders. No sling or double motion. Sheppard lands on her back. ′ ‘Girls’ play hard too,” Harford said on X, the social media
+site formerly known as Twitter. This echoed Collingwood defender and Fox Footy commentator Ruby Schleicher’s thoughts at the time, who called it a “monster
+tackle” but believed it was “fair”. “I don’t see any dirtiness in that,” Schleicher said on Fox Footy. “It was pretty heavy on her head, wasn’t it? I look at
+that – I still see a fair tackle. There’s no doubt the match review [officer] will look at it because they have to I guess. The duty of care for the player.”
+
+The decision a week comes after Adelaide premiership defender Najwa Allen was handed a three-ban suspension, the longest ban in AFLW history, for a high bump on
+Western Bulldog Kirsten McLeod. The Crows elected not to challenge the decision.
+</item 5>
+
+<item 6>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Dogs forward reveals battle with kidney disease Western Bulldogs forward Richelle Cranston has revealed she’s been living, and playing, with stage five chronic
+kidney disease. “I still manage to do the things I love,” the inaugural AFLW player posted to Instagram. “It’s just really hard sometimes.” Richelle Cranston of
+the Bulldogs: “It’s just really hard sometimes.” Credit: Getty Images The 34-year-old posted the caption along with a video detailing her life with the disease
+including weekly blood tests and daily blood pressure checks, tracking water and food intake, taking medications including resonium (to lower potassium levels),
+all while training in the high-performance environment.
+
+The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year. Cranston lined up for
+the Bulldogs in her side’s 57-point loss to Sydney on Saturday at Whitten Oval, 14.12 (96) to 6.3 (39).
+</item 6>
+
+<item 7>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“But I go out with on a happy note. I love these girls and I’ll be over at the pancake pocket [Pancake Parlour at Whitten Oval] watching them from now on and
+have a few bevs on the sideline.” Roos’ lock in top-four spot; Dogs have issues to work through in off-season North Melbourne secured third spot on the ladder
+and the double chance in finals after downing the Western Bulldogs by a whopping 46 points. They will head into finals with momentum but a glaring issue to work
+on: kicking accuracy. Despite the comfortable win, they could have done a lot more damage after booting double the number of behinds to goals.
+
+Star midfielder Ash Riddell, who had 36 touches and seven clearances, said she was excited to go up against Melbourne or Adelaide in the first weekend of finals
+depending on other results this round, as they were the only two sides who beat them this year.
+</item 7>
+
+<item 8>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I’m excited like I think the group’s coming together really nicely and where really well-prepared compared to previous years,” Riddell told Fox Footy. “So, I
+can’t wait I think it’s an exciting time for us.” The game was one-way traffic against the Dogs with the game played almost entirely in the Roos’ attacking
+half. Riddell credited her side’s “team performance” after two losses to the Dees and Crows. North Melbourne have secured a top-four spot for finals. Credit:
+Getty For the Western Bulldogs, it was another tough day out as they notched their ninth loss of the season. They won just one game this year, an eight-point
+victory last weekend over 17th-placed West Coast.
+
+Britney Gutknecht kicked the Dogs’ only goal against the Kangaroos, which came early in the final term to avoid a record for the lowest AFLW score in the
+history of the competition.
+</item 8>
+
+<item 9>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Geelong coach Daniel Lowther said the strong winds made it hard for his side to clear the ball out of their defensive 50-metre zone and to move the ball with
+any certainty around the ground.
+
+Loading “At one point the rain hit our box, it was flowing,” Lowther said. “Both teams had to fight in the conditions, but it didn’t help the game. “Our marking
+contest wasn’t too flash, our ground ball representation was a bit hit and miss, so our defence were under a bit more pressure than they should have been, but
+they fought back really well,” Lowther said. Collingwood next play a Sydney line-up including former Magpies star Chloe Molloy, while Geelong will take on
+Richmond at Ikon Park.
+
+Dockers spoil Saints’ finals hopes Fremantle recorded a comfortable 24-point win yesterday to bring an abrupt end to St Kilda’s four-game streak and dash their
+AFLW finals hopes. J’Noemi Anderson is tackled by a group of Dockers.
+</item 9>
+
+<item 10>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“It was an awesome game and four quarters of Port Adelaide footy … It was awesome to finish up like that,” Phillips told Fox Footy after the 13.10 (88) to 4.6
+(30) win over the Giants. Erin Phillips celebrates a goal during her final AFLW match. Credit: AFL Photos Earlier, she told the ABC that she wanted her legacy
+to include doing everything she could to grow the game.
+
+“Hopefully I can be remembered as someone who took their opportunities, loved the game and was willing to do whatever it took to ensure the next generation was
+in a better position,” she said. Richelle Cranston of the Bulldogs is chaired off the ground by teammates Isabelle Pritchard and Ellie Blackburn after
+announcing her retirement. Credit: Getty The 38-year-old kicked a momentous goal from a set shot in the final quarter, and she was smothered by her jubilant
+teammates afterwards.
+</item 10>
+=== END ITEM id=b5621f619f261eaa ===
+
+=== ITEM id=4a1ae61b5a6a7bba ===
+Gold sentences and facts:
+Sentence 0: From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.
+  Fact 0.0: The Netflix description states that Jess and Bill Walker are doing their best to keep their family connected.
+  Fact 0.1: Jess and Bill Walker are doing their best to keep their family connected as their children grow older.
+  Fact 0.2: Jess and Bill Walker's children are growing more independent.
+  Fact 0.3: Jess and Bill Walker's children are growing more distant.
+Sentence 1: Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that "the holidays are a time for families to come together.
+  Fact 1.0: McLean spoke about the Christmas season.
+  Fact 1.1: McLean was born in New Rochelle, New York.
+  Fact 1.2: McLean said that the holidays are a time for families to come together.
+
+Retrieved items:
+<item 1>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"We have our lists and we like to get things done."
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+"I also remember the first time we met — ee were getting ready to go out and she dug in her purse and pulled out all these tubes of lipstick. I said, ‘Oh my
+God. You've surpassed me.’ We both constantly put on lipstick. It's so funny."
+
+Bazella continued, "We both like [garden] gnomes and we’re kind of collecting them now. Our mannerisms are similar. We have the same sense of humor."
+
+"One of the main dreams is that we stay healthy and I live long enough … so we can make up some of this time." — Sherri Geerts
+
+Bazella said she has met all four of her siblings — and also has formed a relationship with her birth father, Victor Rebeck, 84.
+</item 1>
+
+<item 2>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I think anytime that emotions are heightened, with the holidays certainly being one of those times, our expectations are really high,” she said. “We’re
+expecting it to be this joyful, happy, perfect occasion. So, we sometimes forget that the holidays come with a lot of stress.”
+
+Despite tensions between relatives at the dinner table, that doesn’t mean your relationship shouldn’t be celebrated. Saba Lurie is a licensed marriage and
+family therapist at Take Root Thereapy in California. She explained to The Independent that while there isn’t a right or wrong time to introduce your partner to
+your family, the intentions of such an introduction must be clear. Not only should you have already discussed where your relationship is headed, but you should
+also tell your partner everything they need to know about your family.
+
+“I think you should tell the person why you’re bringing them home for the holidays, so you’re on the same page about the intentions and what’s motivating the
+decision to include,” she said.
+</item 2>
+
+<item 3>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+In a recent poll from the American Psychological Association, 41 per cent of US adults said their stress levels increased from November to January when compared
+to other months of the year. Nearly 50 per cent of Americans also described their stress level during the season as “moderate”.
+
+Everyone has different concerns leading up to Christmas, Hanukkah, or New Years - from family drama at the dinner table to a small spats with your mother about
+decorations. With what can be stressful events, it only begs the question: do you really want to bring your partner into the mix? While it’s important to
+eventually introduce your loved ones to your significant other, relationship experts believe there are some discussions you should have beforehand, especially
+during the holidays.
+
+Speaking to The Independent, Rachel Zar - a licensed marriage and family therapist at Spark Chicago Therapy - acknowledged that while every family is different,
+there’s a variety of problems that could arise during the holiday season - mainly because we put too much pressure on having a joyful holiday.
+</item 3>
+
+<item 4>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’ Like a temperature check,” she added. “Those are points where the two of you can come
+and remind each other: ‘We are a team in this.’ Or, the two of you could go on a walk and separate from the family, just for a little bit of time to reset
+within the relationship.”
+
+During the holiday season, your partner may be seeing how you interact with your family for the first time. But that’s not necessarily a bad thing, according to
+the relationship experts. “I think introducing a significant other to family is a really vulnerable act, and that vulnerability is going to be what allows for
+greater intimacy,” Lurie said. “When your significant other sees you with your family, they may see another side of you that they may not have had access to
+before.”
+
+(Getty Images)
+
+On the other hand, your partner could learn that your relationship with your parents and extended family members is complex.
+</item 4>
+
+<item 5>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“Sometimes it can be helpful for them to know about the dynamics that they’re stepping into and how they can best support you. Frankly, they should be aware if
+there is tension or if there is stress within your family.”
+
+(Getty Images)
+
+Communication before the holidays goes both ways, and there are things that your family should know about your significant other too. “If there’s something
+about your partner that could be surprising to your family, or that’s a notable difference from who someone you’ve brought home before, tell your relatives
+that,” Zar said. “Let’s set your family and partner up for success.”
+
+Before bringing your significant other home for the holidays, you may want to express to your family how you wish for them to feel included - such as
+incorporating your partner’s family traditions into your own celebration. However, Zar advised against oversharing information before Christmas. You still want
+your family and partner to connect in person, rather than hearing about each other through the grapevine.
+</item 5>
+
+<item 6>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+While she has found a place with her birth parents, Bazella knows she may never solve the mystery of how she was switched at birth.
+
+"I lost 39 years," Bazella said. "There’s a lot of grieving with that."
+
+Still, Bazella said she believes she's found unconditional love with her mother.
+
+"It's overwhelming for me coming from where I have been," she added.
+
+"I always felt like I was kind of in survival mode and alone. I finally feel at peace with everything, which is really nice."
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+As for Geerts, she said she hopes to make up for lost time.
+
+"One of the main dreams is that we stay healthy and I live long enough, like a hundred years at least — so we can make up some of this time," Geerts said.
+</item 6>
+
+<item 7>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+With this in mind, parents should avoid "processing their frustration around the holidays audibly around the children," she said.
+
+"The ‘mom brain’ is wired to process problems rapidly and move on to solutions," she said. "The ‘child brain,’ however, is wired to process a problem internally
+and take on the responsibility."
+
+Said Keeley, "Knowing this, make sure you don’t do any ‘grinchy griping’ out loud to the children. You may see it as temporary venting, but they see it as, ‘Mom
+is upset and I’m probably the reason.’"
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+Instead, parents should stay calm, find a reason to be grateful and vocalize it, even when frustrations accumulate.
+
+5. Neglecting the ‘give list’
+
+While building a wish list is fun for kids, Keeley emphasized the moral importance of the "give list."
+</item 7>
+
+<item 8>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+When it comes to introducing your partner to your family, there’s still some extra planning to be done ahead of time. If you’re travelling this month, you may
+need to decide on sleeping arrangements - as opposed to residing in your parent’s house - in order to minimise family stress.
+
+“It would be really helpful to have conversations beforehand, so it’s clear what you are agreeing or not agreeing to,” Lurie explained. “For example, if your
+family isn’t comfortable with you bringing someone home and sleeping in the same bedroom, then you and your partner may stay elsewhere. But those would be
+conversations that you all need to have together. It really depends on your relationship with your family and with your partner.”
+
+It’s also important to be checking in with your partner while spending time with your family. These check-ins may include some quality time together, so that
+any family drama that may arise isn’t hurting your relationship.
+
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’
+</item 8>
+
+<item 9>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"I do remember the day I had to give her up," Geerts told Fox News Digital.
+
+"I got to name her and I got to dress her. There was a lady there to take her away, and she was kind of shaky and it scared me because I didn’t want her to pick
+her up."
+
+Geerts said she thought about her daughter every single year on her birthday.
+
+Now that the two have met, they've been getting together several times a year, either in California or Minnesota.
+
+COUPLE OF 60 YEARS, SEPARATED FOR 215 DAYS AMID PANDEMIC, REUNITES IN TOUCHING VIDEO: 'I MISSED YOU SO MUCH'
+
+And from the first time they met in person, they began discovering things they have in common.
+
+"We both keep things in order," Bazella said. "We have our lists and we like to get things done."
+</item 9>
+
+<item 10>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+That isn’t necessarily a cause for concern, as long as you inform your significant other about the interworkings of your family dynamics.
+
+“I think that we tend to be our best relational self when we’ve really done the work around understanding all of our past relationships,” Zar explained. “You
+can tell your partner: ‘I don’t have a close relationship with my brother, and here’s why. Here are the intentional choices that I’ve made around it.’ Or you
+can say: ‘Here’s my chosen family. These are the people who are important to me.’ Your significant other will see that you’ve been introspective and have
+takeaways around how you’ve navigated your family’s origin.”
+
+As long as you and your partner have discussed your relationship expectations - both before and during the holidays – introducing them to your family may deepen
+your relationship and could be a step in the right direction.
+</item 10>
+=== END ITEM id=4a1ae61b5a6a7bba ===
+
+=== ITEM id=da267331352b977e ===
+Gold sentences and facts:
+Sentence 0: 10:03 p.m.: Love hits Dillon out in the front, who makes his defender miss before racing beyond the marker for a first down.
+  Fact 0.0: At 10:03 p.m., Love hits Dillon out in the front.
+  Fact 0.1: Dillon makes his defender miss.
+  Fact 0.2: Dillon races beyond the marker for a first down.
+Sentence 1: 7:06 p.m. – Anthony Hankerson gets two first downs for the Buffs on a four-yard run and a 12-yard run.
+  Fact 1.0: At 7:06 p.m., Anthony Hankerson gets two first downs for the Buffs.
+  Fact 1.1: Anthony Hankerson's first downs come on a four-yard run.
+  Fact 1.2: Anthony Hankerson's first downs come on a 12-yard run.
+
+Retrieved items:
+<item 1>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+Keep rolling with Alexander Mattison (vs. Bears), too, against another below-average run defense.
+
+Welcome to the top 25, Zach Charbonnet (vs. 49ers)! With Kenneth Walker III's oblique injury comes opportunity for the rookie, who already looked strong in the
+month leading up to Seattle's narrow Week 11 loss to the Rams. Sure, Charbs' 69-yard effort in Los Angeles last week was a bit underwhelming, but we love his
+upside with a full game as the Seahawks' bell-cow.
+
+Speaking of bell-cow backs, things are looking very promising for the short-term workload of Green Bay's AJ Dillon (@ Lions). Veteran Aaron Jones (knee) and
+rookie Emanuel Wilson (shoulder) both got hurt in Week 11, so Dillon should be the main man in Motown for the Pack.
+</item 1>
+
+<item 2>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Receiving Yards Through Six NFL Games Rk Player Season Yds 1 Don Hutson 1942 819 2 Tyreek Hill 2023 812 3 Wes Welker 2011 785 4 Elroy Hirsch 1951 766 5 Santana
+Moss 2005 743 6 DeAndre Hopkins 2015 726 7 Raymond Berry 1960 725 8 Jerry Rice 1986 723 9 Bob Boyd 1954 718 10 Bobby Mitchell 1962 714
+
+• Jared Goff is enjoying the second-best start to a season for his career from a statistical standpoint, behind only his 2018 Super Bowl season with the Rams.
+With the Lions at 5-1 and Goff heading toward a likely contract extension, could another team come after his injured backup, former University of Tennessee
+quarterback Hendon Hooker?
+</item 2>
+
+<item 3>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+49ers
+
+26 Javonte Williams, Broncos vs. Browns
+
+27 AJ Dillon, Packers @ Lions
+
+28 Jerome Ford, Browns @ Broncos
+
+29 Devin Singletary, Texans vs. Jaguars
+
+30 Kareem Hunt, Browns @ Broncos
+
+31 James Cook, Bills @ Eagles
+
+32 Jaylen Warren, Steelers @ Bengals
+
+33 Najee Harris, Steelers @ Bengals
+
+34 Khalil Herbert, Bears @ Vikings
+
+35 Tyler Allgeier, Falcons vs. Saints
+
+36 Chuba Hubbard, Panthers @ Titans
+
+37 Ezekiel Elliott, Patriots @ Giants
+
+38 Latavius Murray, Bills @ Eagles
+
+39 Roschon Johnson, Bears @ Vikings
+
+40 Joshua Kelley, Chargers vs. Ravens
+
+41 Keaton Mitchell, Ravens @ Chargers
+
+42 Ty Chandler, Vikings vs. Bears
+
+43 Dameon Pierce, Texans vs.
+</item 3>
+
+<item 4>
+NFL DFS picks Week 15: Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups (Sporting News, 2023-12-13T20:32:00+00:00)
+Antonio Gibson, Commanders at Rams (DK: $5,200 | FD: $5,600 | SD: 1.4x)
+
+Aaron Donald and friends will be attacking the pocket early and often in pursuit of Sam Howell, who has been sacked 10 more times than any other QB. Dump-offs
+and screens will be plentiful for Gibson, who comes at a major discount, at least in PPR formats.
+
+More solid Week 15 RB values: Ezekiel Elliott, Patriots vs. Chiefs (DK: $5,800 | FD: $6,500 | SD: 1.35x); Jerick McKinnon, Chiefs at Patriots (DK: $5,100 | FD:
+$5,500 | SD: 1.45x); Jordan Mason, 49ers at Cardinals (DK: $4,600 | FD: $4,200 | SD: 1.6x); Tyler Allgeier, Falcons at Panthers (DK: $4,
+</item 4>
+
+<item 5>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+I'd rather start Breece Hall, Rhamondre Stevenson, Dameon Pierce and Jaleel McLaughlin (if Javonte Williams sits out).
+
+LAST WEEK: Harris had his first game with over 100 total yards against the Texans and averaged 5.1 yards per rush, just shy of the season-high he technically
+had on six carries against the 49ers in Week 1. A 32-yard reception helped him cross the triple-digit barrier.
+
+HARRIS: This might shock you, but Harris is averaging 4.3 yards per run this year with a 12.2% explosive run rate. Would you believe the explosive run rate,
+which reflects the frequency of his 12-plus-yard runs, is fifth-best among 44 qualifying running backs?! He's also 13th in avoided tackle rate and top-10 in
+yards after contact per carry at 3.53.
+
+TOUCHDOWNS: Harris has zero.
+</item 5>
+
+<item 6>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+He's still a decent start ahead of Najee Harris, Khalil Herbert and Jahmyr Gibbs but I'd rather chance my lineup with someone who has upside like Jaleel
+McLaughlin (if Javonte Williams sits out) or Alexander Mattison.
+
+FILM: The numbers don't quite match the talent -- Stevenson is a capable runner with great vision, balance and power to go with good speed. He struggled on
+lateral runs last week and his line failed him plenty on north-south runs. Game script kept him from finding a lot of work last week (one fourth-quarter touch).
+
+THIS SEASON: Stevenson has at least 16 touches in every game, which is good. Unfortunately he has yet to total 100 yards and has been under 70 yards three
+times, which is definitely the opposite of good.
+</item 6>
+
+<item 7>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+Both Darrell Henderson and Royce Freeman (@ Cardinals) would be decent dart throws in a week filled with byes, but their floors in a zero-bye week seem too low
+to trust them if Kyren Williams is back and at 100 percent. The matchup is juicy, but we have no idea what to expect from a touch-share perspective, so these
+guys are no better than desperation, TD-dependent flexes.
+
+Speaking of guys coming back from injury, we saw Khalil Herbert (@ Vikings) return to the field for Chicago against the Lions last week. However, his
+performance left a lot to be desired. He finished with just 35 yards on 16 carries and wound up vastly overshadowed by Justin Field's 100-yard rushing effort.
+Even worse, D'Onta Foreman scored the Chi's lone rushing TD on the afternoon.
+
+I don't care what your team looks like — you shouldn't be starting Chuba Hubbard or Miles Sanders (@ Titans).
+</item 7>
+
+<item 8>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+It wouldn't make much sense for a four-win team to rush back its franchise player.
+
+Patriots dual-purpose back Rhamondre Stevenson (ankle) suffered an injury on a nasty hip-drop tackle in New England's Week 13 loss to the Chargers. Bill
+Belichick and company already noted that 'Mondre would miss multiple weeks, so we're bumping Ezekiel Elliott way up against the Steelers.
+
+D'Andre Swift took a hard hit and exited Philadelphia's game late against the 49ers, but it's tough to know if he's actually hurt or was just kept out because
+of the lopsided score. If Swift can't go in Week 14 against Dallas, Kenneth Gainwell and Boston Scott will split touches, with Gainwell likely garnering flex
+value.
+
+Jonathan Taylor underwent thumb surgery last week and is expected to miss a few weeks. Tough for Taylor owners to ride the home stretch of the regular season
+without JT, but at least they could get him back for the end of the fantasy playoffs.
+</item 8>
+
+<item 9>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+With Pickett nursing an ankle injury we could see the Steelers run the ball aplenty.
+
+STARTS: Najee Harris, Kyler Murray, Trey McBride, Marquise Brown, Pat Freiermuth, Diontae Johnson (PPR flex), Jaylen Warren (PPR only), Steelers DST
+
+Najee Harris, Kyler Murray, Trey McBride, Marquise Brown, Pat Freiermuth, Diontae Johnson (PPR flex), Jaylen Warren (PPR only), Steelers DST SITS: Kenny
+Pickett, James Conner, Rondale Moore, Cardinals DST
+
+Kenny Pickett, James Conner, Rondale Moore, Cardinals DST SLEEPERS: Greg Dortch (PPR only), George Pickens
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline James Conner RB ARI Arizona • #6
+
+Age: 28 • Experience: 7 yrs.
+</item 9>
+
+<item 10>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Eagles
+
+15 Kyren Williams, Rams @ Ravens
+
+16 Joe Mixon, Bengals vs. Colts
+
+17 Javonte Williams, Broncos @ Chargers
+
+18 Derrick Henry, Titans @ Dolphins
+
+19 D'Andre Swift, Eagles @ Cowboys
+
+20 Jaylen Warren, Steelers vs. Patriots
+
+21 Alexander Mattison, Vikings @ Raiders
+
+22 Jerome Ford, Browns vs. Jaguars
+
+23 Kenneth Walker III, Seahawks
+
+24 Najee Harris, Steelers vs. Patriots
+
+25 James Cook, Bills @ Chiefs
+
+26 Zack Moss, Colts @ Bengals
+
+27 Keaton Mitchell, Ravens vs. Rams
+
+28 AJ Dillon, Packers @ Giants
+
+29 Ezekiel Elliott, Patriots @ Steelers
+
+30 Aaron Jones, Packers @ Giants
+
+31 Jerick McKinnon, Chiefs @ Bills
+
+32 Tyjae Spears, Titans @ Dolphins
+
+33 Gus Edwards, Ravens vs. Rams
+
+34 Dameon Pierce, Texans @ Jets
+
+35 Roschon Johnson, Bears vs.
+</item 10>
+=== END ITEM id=da267331352b977e ===
+
+=== ITEM id=89bf44166e7f87bd ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that “all of that, all of it, was built on lies.”
+Sentence 1: FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+  Fact 1.0: Gary Wang is an FTX co-founder.
+  Fact 1.1: Gary Wang is the former CTO of FTX.
+  Fact 1.2: Caroline Ellison is the former CEO of Alameda Research.
+  Fact 1.3: Gary Wang pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+  Fact 1.4: Caroline Ellison pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+
+Retrieved items:
+<item 1>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Sam Bankman-Fried, the founder of bankrupt cryptocurrency exchange FTX, is seen during a hearing as a U.S judge revoked his bail, at a courthouse in New York,
+U.S., August 11, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+$65 billion line of credit
+
+For months, Bankman-Fried has known that Wang and Ellison, who were integral members of his personal and professional inner circles, had turned on him. Both
+pleaded guilty in December and have since been cooperating with the U.S. attorney's office in Manhattan. Wang's testimony, which stretched into Friday, was
+given under a cooperation agreement with the government. Ellison is expected to take the stand under a similar arrangement.
+
+U.S.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 2>
+
+<item 3>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+We have some inkling of what the government will be arguing thanks to the filings prosecutors are making in this case. They argue that Bankman-Fried lied about
+consumer protection and that Bankman-Fried’s statements that FTX was “avoiding or managing conflicts of interest” and that “as a general principle FTX
+segregates customer assets from its own assets across our platforms” were lies, in a superseding indictment filed August 14th.
+
+The indictment also says that there were special features in FTX’s code that “permitted Alameda to spend and withdraw unlimited amounts of money from FTX,”
+which were created at Bankman-Fried’s direction. That effectively exempted Alameda from the kinds of risk management other customers faced. At the same time,
+the government alleges, “Bankman-Fried publicly and repeatedly asserted that Alameda did not have privileged access to FTX.”
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 4>
+
+<item 5>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 7>
+
+<item 8>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 9>
+
+<item 10>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 10>
+=== END ITEM id=89bf44166e7f87bd ===
+
+=== ITEM id=6dc9e10bbb42aa68 ===
+Gold sentences and facts:
+Sentence 0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.
+  Fact 0.0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night.
+  Fact 0.1: The Cowboys kept the heat on the Eagles.
+  Fact 0.2: The Eagles lost their game.
+  Fact 0.3: The Eagles were ahead of the Cowboys.
+  Fact 0.4: The Cowboys hosted the Eagles in Dallas in Week 14.
+Sentence 1: Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart football every step of the way down the stretch.
+  Fact 1.0: Philadelphia beat Miami 31-17.
+  Fact 1.1: Philadelphia's win over Miami was on "Sunday Night Football".
+  Fact 1.2: Philadelphia rolled to the win.
+  Fact 1.3: Philadelphia kept the Dolphins' offense off the scoreboard in the second half.
+  Fact 1.4: Philadelphia played smart football every step of the way down the stretch.
+
+Retrieved items:
+<item 1>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Check out all of the key moments you might have missed.
+
+Dolphins vs. Eagles final score
+
+1 2 3 4 F Dolphins 3 7 7 0 17 Eagles 3 14 7 7 31
+
+Dolphins vs. Eagles results, highlights from 'Sunday Night Football'
+
+(All times Eastern)
+
+Final: Eagles 31, Dolphins 17
+
+11:16 p.m. — And that'll do it. The Eagles finish strong and get back on track with an impressive win over the Dolphins.
+
+11:12 p.m. — D'Andre Swift goes 22 yards for a first down, so the Eagles will simply kneel it the rest of the way.
+
+11:09 p.m. — The Eagles take over on downs and will have the chance to just run out the clock on Miami.
+
+11:07 p.m.
+</item 1>
+
+<item 2>
+Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown tournaments (Sporting News, 2023-12-18T22:47:00+00:00)
+The Seahawks are just about hanging on by a thread. At 6-7, the team is on the outside looking in when it comes to the playoff picture. A win on Monday night
+against the suddenly reeling Eagles could be a big boost in their chances going forward -- a matchup that is actually a pretty good one after looking beneath
+the surface. The Eagles come in as losers of two straight, losing in blowout fashion both times no less. Suddenly the sky is falling as the Cowboys have taken
+over the NFC East division lead, complicating matters as the regular season winds down. The sense of urgency for both sides means we are looking at two teams
+with plenty to lose, setting up for a fun Monday night under the lights at Lumen Field.
+</item 2>
+
+<item 3>
+Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel  (Sporting News, 2023-12-18T21:00:03+00:00)
+For a good stretch of the season, the Eagles appeared unstoppable and have been a favorite to return to the Super Bowl. After a surprising loss to the Jets in
+Week 6 (their first of the season), Philadelphia went on a five-game winning streak, impressively taking down top teams like the Dolphins, Cowboys and Chiefs.
+Most of those games were gritty, close wins, but then the Eagles dropped back-to-back games in blowout fashion to the 49ers and Cowboys, raising alarm bells
+amongst the Philly fanbase.
+
+The Eagles are looking to rebound against a Seahawks team that has been reeling even worse, losing four straight. Sitting four games behind the 49ers in the NFC
+West, despite a disappointing season, Seattle still has a shot at a wild card playoff spot.
+</item 3>
+
+<item 4>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Game: Dolphins vs. Eagles
+
+Dolphins vs. Eagles Date: Sunday, Oct. 22
+
+Sunday, Oct. 22 TV channel: NBC
+
+NBC Live stream: Peacock | NBCSports.com | Fubo (U.S.) | DAZN (Canada)
+
+Dolphins vs. Eagles can be watched on NBC, which has long held the broadcast rights to "Sunday Night Football."
+
+Mike Tirico (play-by-play) and Cris Collinsworth (color analyst) will be on the call from Levi's Stadium while Melissa Stark will serve as the sideline
+reporter. The crew is in its second season together after Tirico replaced play-by-play legend Al Michaels in 2022 while Stark took over for Michele Tafoya.
+
+Fans can also stream the game via Peacock or NBCSports.com with a subscription, along with Fubo, which offers a free trial.
+
+Viewers in Canada can stream every NFL game via DAZN.
+
+Dolphins vs.
+</item 4>
+
+<item 5>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The 49ers knocked the Cowboys out of the playoffs in both of the last two seasons, so a win for Dallas on Sunday could be helpful just from a psychological
+standpoint.
+</item 5>
+
+<item 6>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Viewers in Canada can stream every NFL game via DAZN.
+
+Dolphins vs. Eagles start time
+
+Date: Sunday, Oct. 22
+
+Sunday, Oct. 22 Start time: 8:20 p.m. ET
+
+Sunday night's game between the Dolphins and Eagles is set to kick off at 8:20 p.m. ET from Lincoln Financial Field in Philadelphia, Penn.
+
+The Eagles haven't beaten the Dolphins since 2011, when Miami's loss resulted in the firing of coach Tony Sparano the following day. The Dolphins got the better
+of Philadelphia in both 2015 and 2019, but none of those matchups carried the anticipation that this one does.
+</item 6>
+
+<item 7>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+It'll be a field goal try for Jake Elliott.
+
+8:30 p.m. — Jalen Hurts is celebrating National Tight Ends Day by hitting Dallas Goedert on back-to-back passes for a total of 45 yards. The Eagles are into the
+red zone.
+
+Fitting that the first big play of the game goes to Dallas Goedert on #NationalTightEndsDay
+
+
+
+📺: #MIAvsPHI on NBC
+
+📱: Stream on #NFLPlus https://t.co/0rIJPFKW6L pic.twitter.com/DPfTTVQbnz — NFL (@NFL) October 23, 2023
+
+8:28 p.m. — Swift has five touches already. No one else has seen the ball.
+
+8:26 p.m. — The Eagles are riding D'Andre Swift early, as the running back is up to three carries through three snaps. He gets Philadelphia a first down.
+
+8:23 p.m.
+</item 7>
+
+<item 8>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Deion Sanders once said, “If you look good, you feel good, and if you feel good, you play good." The Eagles looked good on Sunday night, donning Kelly Green
+jerseys and helmets for their matchup with the Dolphins.
+
+And their play absolutely matched the look.
+
+Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart
+football every step of the way down the stretch.
+
+The Dolphins quickly made up a 17-3 deficit, scoring a touchdown just before halftime and finding the end zone again in the third quarter when Jerome Baker
+intercepted a deflected pass from Jalen Hurts for a pick-six.
+
+MORE: How Mike McDaniel overcame alcoholism to become rising NFL coach
+
+The defining series of the game came right after the pick-six when Hurts shrugged off the turnover and led a surgical touchdown drive.
+</item 8>
+
+<item 9>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+After the Eagles' defense clamped down on Tagovailoa and the Dolphins, the offense pieced together a touchdown drive spanning nearly seven minutes to ice the
+game.
+
+A.J. Brown overcame a slow start and shined for the Eagles, posting 137 yards and a touchdown in the win. Brown has now ripped off five consecutive games of at
+least 125 yards and seems to be on his way to a career-best season.
+
+Hurts, Brown and the Eagles have higher goals than just individual success, and a win over one of the AFC's best teams is one way to make a statement.
+Philadelphia moves to 6-1, while the Dolphins miss a chance to open up a two-game lead in the AFC East and fall to 5-2 ahead of a matchup with the Patriots.
+
+MORE: Latest injury updates on Dolphins WR Jaylen Waddle
+
+The Sporting News tracked live scoring updates and highlights from "Sunday Night Football" between the Dolphins and Eagles. Check out all of the key moments you
+might have missed.
+</item 9>
+
+<item 10>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Eagles 24, Dolphins 17
+
+10:35 p.m. TOUCHDOWN — What an answer from the Eagles! A.J. Brown breaks a tackle and goes right into the end zone to put the Eagles back in front. It's 24-17.
+
+10:34 p.m. — Goedert comes through with a huge catch to extend the Eagles' drive and enter the red zone.
+
+10:33 p.m. — The Eagles are getting chunks of yards early on this drive, including a 25-yard catch by DeVonta Smith as they barrel into Dolphins territory.
+
+10:30 p.m. — Jevon Holland and David Long were both injured on the kickoff, resulting in a bit of a delay. They both were able to walk off.
+
+Dolphins 17, Eagles 17
+
+10:23 p.m. TOUCHDOWN — Watch out! Kader Kohou deflects a pass from Hurts and it's returned by Jerome Baker for a touchdown.
+</item 10>
+=== END ITEM id=6dc9e10bbb42aa68 ===

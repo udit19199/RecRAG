@@ -1,0 +1,1028 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=4e42ca62557fd9ee ===
+Gold sentences and facts:
+Sentence 0: "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen," he told Fox News Digital.
+  Fact 0.0: A speaker said that they all found themselves at home looking at the people they worked with, the people they went out for drinks with, and the people in their extended family on a computer screen.
+  Fact 0.1: The speaker told Fox News Digital this.
+Sentence 1: We used to play in person, but since the pandemic I run the game virtually online from my house.
+  Fact 1.0: The speaker used to play the game in person.
+  Fact 1.1: Since the pandemic, the speaker runs the game virtually online from their house.
+
+Retrieved items:
+<item 1>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+CAN YOU AVOID END-OF-THE-YEAR CAREER BURNOUT? JOB EXPERTS REVEAL SECRETS
+
+Corcoran agreed, noting that many report feeling livelier, happier and more active during in-person meetings.
+
+"Because video platforms artificially limit our perspective, we miss the cues we’re used to from live, in-person interactions," she told Fox News Digital.
+
+"As social beings, we’re highly attuned to these cues, and it takes more work for us to look for and process them in the virtual environment, leading to the
+fatigue we experience."
+
+Even beyond the workplace, Elliott noted that people are using video in more personal contexts than ever before, such as sharing reels on social media and
+calling loved ones on FaceTime.
+
+"Because video platforms artificially limit our perspective, we miss the cues we’re used to from live, in-person interactions."
+
+"This can further exacerbate the problem if you're already spending a significant portion of your day on Zoom," he said.
+</item 1>
+
+<item 2>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+It is not as much of a heroic power fantasy as D&D 5e or Pathfinder, but neither is it as minimalist as many old-school games. With fickle gods, mutating
+magics, lucky scoundrels, and ferocious fighters, DCC feels like playing through a Bal-Sagoth or Eternal Champion song. It’s also easy to pick up if your group
+has any experience with D&D’s third edition or Pathfinder. DCC rocks! Its focus on simple, impactful rules was a core design inspiration for the (almost
+system-neutral) Survivalist’s Guide to Spelunking for 5e, a book I wrote with Douglas Niles and Stephen Yeardley. It warms my heart to know that DCC authors,
+judges, and players use the book as well!
+
+Dungeons & Dragons
+
+Mike Haracz, corporate R&D chef and host of Heroes’ Feast
+
+I’m lucky enough to be in the seventh year of a homebrew Dungeons & Dragons campaign, one I play with friends locally in the Chicagoland area.
+</item 2>
+
+<item 3>
+VTubers have reached their inevitable conclusion (Polygon, 2023-10-19T16:01:50+00:00)
+Brands, too: Remember the Tony the Tiger VTuber in August of 2022?
+
+Many creators that jumped on the trend have since stopped using their avatars, but at the start of the COVID-19 pandemic, there was a large increase in VTubers
+on Twitch and other streaming platforms, like YouTube, as models and equipment became more accessible to the general public. Twitch has since gone on to
+highlight a wide variety of VTubers through its VTuber Takeover promotion, which most recently ran in August. Twitch also reported that VTubing-related content
+on the platform shot up by some 350% between January and August 2022. Despite this, some have argued that the VTubing bubble has all but burst.
+
+Polygon is celebrating TwitchCon 2023 with a package of stories covering streaming trends and news from the show. Check it out!
+
+“I do feel that VTubing has become less novel as the market has become more saturated,” says a streamer with agency Nijisanji who is not approved to speak
+publicly.
+</item 3>
+
+<item 4>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Thankfully, in the doldrums of 2020, someone I knew knew someone who knew someone (that’s literally what the connection was) who was interested in running a
+game. That kicked off my D&D career, but was this year that everything finally clicked in my brain and it went from a hobby I enjoyed to one that I spend every
+free minute of my spare time thinking about.
+
+Part of it is finally having reliable groups. After some initial shuffling of members, in 2023 I’ve been blessed to have not one but two separate D&D groups,
+both with enthusiastic members who are committed to at least trying to meet regularly. And yes, part of it is Baldur’s Gate 3, which helped me to understand
+some of the more complicated D&D mechanics and just generally made me very excited about combat in a way I never was before.
+
+I’ve still yet to actually have a game in person! My groups are spread out across North America, but I’m hoping to manifest an in-person session soon.
+</item 4>
+
+<item 5>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+Julia Corcoran, a licensed clinical psychologist and board-certified coach, who is currently serving as the director of clinical strategy and experience at
+Modern Health in San Francisco.
+
+The challenge isn’t exclusive to Zoom; other videoconferencing platforms can have the same effect.
+
+The pandemic's effect
+
+With the COVID-19 pandemic, Zoom and other videoconferencing platforms "exploded in popularity," said Dr. Carl Nassar, PhD, a professional counselor based in
+Denver, Colorado.
+
+"We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer
+screen," he told Fox News Digital.
+
+WORKERS FIRED ON ZOOM: HERE'S HOW TO NAVIGATE A 'DEVASTATING' EXPERIENCE AND COME OUT ON THE OTHER SIDE
+
+"Our work went virtual, our social life went virtual, our doctors' appointments went virtual, and even our intimate relationships sometimes went virtual," he
+said.
+</item 5>
+
+<item 6>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+It feels forbidden somehow, even as it’s obviously harmless.
+
+But Dixon also captures something ephemeral and nostalgic about what it’s like to be in a niche online community and group chat, and the magic of making
+discoveries in those spaces. On an increasingly centralized internet, that experience has become rare, and I miss it.
+
+Exquisite Biome
+
+Everest Pipkin, game and software developer
+
+I’ve heard Exquisite Biome described as “Spore for the kitchen table,” and if that isn’t a great pitch I don’t know what is.
+
+Coming from Caro Asercion (game designer) and Si Sweetman (illustrator), Exquisite Biome is in the world-building TTRPG tradition, but it focuses specifically
+on ecological biomes and the creatures that populate them. Through short generative prompts tied to a deck of playing cards, you build and witness the lives of
+animals far beyond the edge of our own world. Playing Exquisite Biome feels a little bit like being David Attenborough on an alien planet.
+</item 6>
+
+<item 7>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Our campaign is called The Heartsguard Saga, and it’s based off Deven Rue’s map of a place called Euphoros. My players are at around level 15 and I frequently
+give them a variety of amazing and unique gear that I’ve dreamed up all on my own... which they go on to forget they have, and never use. We used to play in
+person, but since the pandemic I run the game virtually online from my house. I put a camera hovering over my gaming mat, and make a labeled grid for the
+players so they call out, “Move me from A5 to B10.” During important rolls, I even make my players face their camera toward their dice for added suspense!
+
+Petrana Radulovic, entertainment reporter
+
+I’d wanted to play Dungeons & Dragons since I was in high school, but I never knew how to get into it.
+</item 7>
+
+<item 8>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Players take on the role of soldiers and other hangers-on just trying to make it out alive. The heady mix of dice-driven gunplay and a playing-card-style
+encounter creation makes it easy to run. But the fun begins even before that with character generation, which uses old school randomized tables to simulate an
+entire military career. If you’re looking to get your video gaming buddies around the table for something that doesn’t require a headset or shouting down
+pre-teens in a glitchy public lobby, the all-inclusive starter set comes highly recommended.
+
+Project ECCO
+
+It’s a near-impossible task to get a consistent group together, so solo TTRPGs have become my primary method of gaming. However, the barrier for me is finding a
+game with a balance of narrative and mechanics that isn’t overwhelmingly crunchy, but also isn’t open-ended to the point of choice paralysis. For me, Project
+ECCO found that balance.
+</item 8>
+
+<item 9>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+"And this meant a lot of time looking at each other on-screen instead of in person."
+
+Long after the pandemic, many of these habits have persisted.
+
+"This video-ing of each other, it turns out, is far more tiring to humans than actually being together," said Nassar.
+
+"One reason is that our brains are wired for actual in-person interactions, not wired for interactions on the screen."
+
+Impacts of Zoom fatigue
+
+While video calls can be convenient, Elliott warned that staring at a computer or phone screen for extended periods of time can result in negative mental health
+consequences .
+
+"Zoom fatigue can aggravate stress, anxiety and burnout among workers," he told Fox News Digital.
+
+"Our brains are wired for actual in-person interactions, not wired for interactions on the screen."
+
+"Some people share that spending so much time interacting on screens makes it difficult to interact in real life."
+
+CAN YOU AVOID END-OF-THE-YEAR CAREER BURNOUT?
+</item 9>
+
+<item 10>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+The second, just launched, is the wild Season of Discovery, which remixes and restructures the original WoW experience — interpolating staggered level caps,
+shuffling class roles — in ways that might just change MMO design forever. WoW Classic is quietly, and paradoxically, where Blizzard is doing its most
+forward-thinking work right now. —Oli Welsh
+
+39. Fire Emblem Engage
+
+Developer: Intelligent Systems
+
+Where to play: Nintendo Switch
+
+Fire Emblem Engage was designed for a very specific kind of sicko: one not particularly interested in the origin stories of a horde of teenagers, or the
+politics of a bourgeoise academy, or what kind of tea a teacher prefers, but instead one obsessed with the endless minutiae of combat stats, weapon loadouts,
+and team composition. I know this because I am one such sicko.
+
+If you’ve read any of my reviews or essays on Polygon, then you know I prefer strategy games that can get out of their own way.
+</item 10>
+=== END ITEM id=4e42ca62557fd9ee ===
+
+=== ITEM id=1ee2c2d849a1107e ===
+Gold sentences and facts:
+Sentence 0: “It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward.
+  Fact 0.0: A former Denmark forward reflected on a match.
+  Fact 0.1: The former Denmark forward said it was the millionaires of the Premier League against the youngsters of the Championship.
+Sentence 1: MLB Network's Jon Morosi reports the superstar is "likely to decide on a team within the next week," according to a source.
+  Fact 1.0: MLB Network's Jon Morosi reports that the superstar is likely to decide on a team within the next week.
+  Fact 1.1: Jon Morosi's report is according to a source.
+
+Retrieved items:
+<item 1>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+'Money's great, but winning's better'
+
+Date: Nov. 21
+
+Source: Max Scherzer, Rangers pitcher on Foul Territory
+
+OK, so this isn't necessarily a rumor, but an example of how much players would love for Ohtani to join their team. Scherzer was a guest on Foul Territory on
+Monday.
+
+"Money's great, but winning's better."
+
+
+
+Max Scherzer shares his pitch for Shohei Ohtani to join the @Rangers 🏆
+
+
+
+▶️ https://t.co/6KoSRqSgk2 pic.twitter.com/PHW2jHWj6C — Foul Territory (@FoulTerritoryTV) November 20, 2023
+
+Maybe Ohtani won’t sign quite so soon after all
+
+Date: Nov.
+</item 1>
+
+<item 2>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+The Giants are considered to be an unknown.
+
+In addition to the teams, Passan also reported Ohtani is expecting a contract somewhere between $550 and $600 million, which would be the largest guaranteed
+contract in North American sports.
+
+Blue Jays could alter roster with Ohtani signing
+
+Date: Nov. 30
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays are one of the teams believed to still be among the strongest in the mix for Ohtani. The New York Post's Jon Heyman reported there could be some
+changes if Ohtani signs with the Blue Jays, however, reporting that some rivals believe Bo Bichette and Vladimir Guerrero Jr. could hit the trade block if
+Toronto lands the star.
+
+Trading the two infielders might seem counterproductive to signing Ohtani in the first place. Those two would be the biggest supporting bats in the lineup
+around Ohtani.
+</item 2>
+
+<item 3>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+The Hot Stove dominoes have started to fall, but everyone who loves baseball — fans, players, coaches, front-office types and everyone else — is waiting for
+free agent Shohei Ohtani’s decision. Where will the global superstar sign his next contract?
+
+He’s played his entire six-year MLB career with the Angels, but his teams haven’t even sniffed the postseason and Ohtani’s made his desire to win crystal clear,
+so he won’t be back. Will he chase every dollar possible, going solely by the highest offer? That seems unlikely, too. Remember, Ohtani wants to win.
+
+Lots of teams can meet Ohtani in that middle ground, offering both lots of money — he will absolutely sign the largest contract in baseball history — and lots
+of chances to compete for a World Series title (or two or three). It’s a long list.
+
+MORE: Ranking 15 possible destinations for Shoehei Ohtani
+
+So, the baseball world waits for news.
+</item 3>
+
+<item 4>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov. 17
+
+Source: Daniel Kramer, MLB.com
+
+Here’s the key piece of the article: “Industry sources told MLB.com this week that landing Ohtani doesn’t appear to be within the Mariners’ realistic agenda
+this offseason.”
+
+In a way, that’s surprising. The Mariners seem to check a lot of boxes for Ohtani. They’re set up to win for a long time with a bunch of young starting pitchers
+and a co-superstar in Julio Rodriguez. Plus, Ohtani would get to be part of the quest for the franchise’s first World Series title, he’d get to wear the same
+uniform as his baseball hero, Ichiro, and he’s lived there in the offseason. So it must be about the money, and Seattle’s reluctance to even get in the
+conversation. That’s gotta be super disappointing for Mariners fans starved for a title, right?
+</item 4>
+
+<item 5>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+Imagine a lineup consisting of Ohtani, Ronald Acuna Jr., Ozzie Albies, Austin Riley and Matt Olson?
+
+Sources: Braves are among the teams still engaged with Shohei Ohtani’s camp, as I reported in this @MLBNetwork segment. @MLB pic.twitter.com/lP4lISzttN — Jon
+Morosi (@jonmorosi) December 4, 2023
+
+Ohtani has already received several $500+ million offers
+
+Date: Dec. 3
+
+Source: Jon Heyman, NY Post
+
+It's no surprise the bidding for Ohtani is heating up, with the star expected to sign soon. And New York Post's Jon Heyman reported Ohtani has already received
+several deals that have topped $500 million, which could mean he winds up being the first $600 million player in MLB history. He added there are believed to be
+five teams in the running for Ohtani.
+</item 5>
+
+<item 6>
+Unraveling Potential Reasons Why the Dodgers May Not Pursue Shohei Ohtani and Mike Trout in Free Agency Despite Their Availability (Essentially Sports,
+2023-11-18T21:21:03+00:00)
+He still has a lot left to give to the diamond for approximately 6 more years. If the Dodgers have the chance to draft them, should they go with Ohtani, Trout,
+both, or neither? Let us know your opinions in the comment box.
+
+Watch This Story: Shohei Ohtani’s Two-Way Dream: Before Injury, He Always Wanted Both!
+</item 6>
+
+<item 7>
+Chelsea secure last-eight spot after Raheem Sterling sinks Blackburn (The Guardian, 2023-11-01T22:03:18+00:00)
+“But we need to be careful and little by little he will get back to full fitness.”
+
+Blackburn’s fortunes since Andy Cole scored the winning goal that saw off Tottenham in the final of this competition more than 20 years ago under Graeme Souness
+have seen the Lancashire club drop down to the third tier for a season before coming close to reaching the Championship playoffs in the past two campaigns.
+
+They currently find themselves 12th after an inconsistent start but Tomasson opted against sending out his first-choice team despite Chelsea’s recent
+vulnerabilities at home, with the 26-year-old captain Lewis Travis the oldest player he selected.
+
+Benoît Badiashile opens the scoring for Chelsea from close range in the first half. Photograph: Javier García/Shutterstock
+
+“It was the millionaires of the Premier League against the youngsters of the Championship,” reflected the former Denmark forward. “We should be proud of this
+performance.”
+</item 7>
+
+<item 8>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+Passan wrote a piece about 10 teams to watch the rest of the offseason, and he threw this little note in the section about the Red Sox, and how they needed to
+sign Yoshinobu Yamamoto.
+
+Boston's bats are good, or good enough at least, to avoid having to spend like mad in a down year for free agent hitters -- unless, of course, it's for Ohtani,
+who has an affinity for Boston. If the Red Sox don't hit that jackpot, they're backfilled nicely with a system that includes outfielder Roman Anthony, shortstop
+Marcelo Mayer and catcher Kyle Teel, among the best trios of offensive prospects in baseball.
+
+It's cool when the best player in the world is a free agent and has an "affinity" for your town.
+
+'Money's great, but winning's better'
+
+Date: Nov.
+</item 8>
+
+<item 9>
+Unraveling Potential Reasons Why the Dodgers May Not Pursue Shohei Ohtani and Mike Trout in Free Agency Despite Their Availability (Essentially Sports,
+2023-11-18T21:21:03+00:00)
+The Los Angeles Angels have gone through a tough year. After a heartbreaking 2023 season, they now have to cope with the impending exit of their star two-way
+star, Shohei Ohtani. The team is also open to trading their nine-time Silver Slugger hitter Mike Trout, should he request it. In a huge miss, a team that
+couldn’t do well even with two of the league’s biggest talents on their roster may lose said stars at the same time. Will they choose to stay in LA?
+
+America’s Favorite Video Today
+
+The Halos’ cross-town rivals, the Los Angeles Dodgers, have been eyeing the dynamic Troutani duo for a long time. However, despite fans’ expectations, the
+Dodgers’ Ohtani-Trout conquest might not take place—and for good reasons.
+
+Do the Dodgers have the budget to afford Ohtani and Trout on the same roster?
+</item 9>
+
+<item 10>
+M.L.B. Superstar Shohei Ohtani to Sign $700 Million Deal With Dodgers (The New York Times, 2023-12-09T22:04:02+00:00)
+Since he was a teenager, Ohtani has ignored suggestions that he focus on only one pursuit.
+
+Ohtani demonstrated his potential as the American League Rookie of the Year in 2018, but his two-way hopes were delayed after his first elbow surgery. It was
+not until 2021 that the full flower of his ability bloomed. He has won the American League MVP in two of the past three seasons; in the intervening season, he
+led all American League pitchers in strikeout rate while hitting 34 home runs with an .875 OPS. To create a comparison for him involves inventions that sound
+freakish. “It’s like if Judge went out and was a 20-game winner as well,” former teammate Kole Calhoun said.
+
+Ohtani will not pitch in 2024 after undergoing Tommy John surgery, but his agent stressed he’s committed to returning to the mound. (Photo: Michael Owens /
+Getty Images)
+
+Ohtani is committed to being a starting pitcher.
+</item 10>
+=== END ITEM id=1ee2c2d849a1107e ===
+
+=== ITEM id=5aa0f2a6baa56aa5 ===
+Gold sentences and facts:
+Sentence 0: 13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+  Fact 0.0: The 12th over is timestamped 13 Dec 2023 00.58 GMT.
+  Fact 0.1: At the end of the 12th over, West Indies were 102-4.
+  Fact 0.2: At the end of the 12th over, Hope had 26 runs.
+  Fact 0.3: At the end of the 12th over, Hetmyer had 1 run.
+  Fact 0.4: The 12th over had just a single and a wicket.
+  Fact 0.5: Shai Hope could not break the legspin shackles in the 12th over.
+Sentence 1: 6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary.
+  Fact 1.0: The 16th over is timestamped 6d ago, 22.54 GMT.
+  Fact 1.1: At the end of the 16th over, West Indies were 112-4.
+  Fact 1.2: At the end of the 16th over, Hope had 29 runs.
+  Fact 1.3: At the end of the 16th over, Powell had 8 runs.
+  Fact 1.4: Hope is playing an exemplary innings.
+  Fact 1.5: Hope opens the face to steer Rehan for Hope's first boundary.
+
+Retrieved items:
+<item 1>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+That made it 70 for four and the game was one ball into its ninth over, at which point Liam Livingstone and Moeen Ali had to focus for a while on disaster
+prevention rather than entertainment.
+
+Gudakesh Motie is embraced his his West Indies teammates after dismissing England’s in-form Phil Salt. Photograph: Randy Brooks/AFP/Getty Images
+
+Suddenly bowlers were energised by the prospect of posting, for a change, less-than-humiliating figures. Akeal Hosein’s were outstanding, his four overs going
+for just 20 and bringing the wickets of Will Jacks and Moeen, undone by a relay catch on the boundary after combining with Livingstone to add 40 for the fifth
+wicket. Livingstone followed precisely two overs later, prodding the ball limply back into the hands of Motie, at which point things really fell apart, the last
+five wickets surrendered in 20 balls for just 11 runs.
+</item 1>
+
+<item 2>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.45 GMT 14th over: West Indies 94-3 (Hope 19, Rutherford 30) West Indies are rushing towards a series victory. Rutherford hooks the new bowler Sam
+Curran for six more, and there are 11 from the over in total. Rutherford has 30 from 23 balls, Hope 19 from 28. They’re playing their roles to perfection.
+
+
+
+6d ago 22.40 GMT 13th over: West Indies 83-3 (Hope 17, Rutherford 21) Rehan Ahmed returns, perhaps in the hope of tempting Rutherford into one big shot too
+many. Instead it’s Shai Hope, who is happily playing the anchor role, who faces five of the six deliveries. England are running out of time.
+</item 2>
+
+<item 3>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+A wicket once so true turned untrustworthy and they struggled to a score of 132, less than half the 267 to which they had joyously motored just 48 hours
+previously. And though the home side’s response was anything but overwhelming, neither was the result ever in significant doubt.
+
+“We’ve had some high-scoring games, but the last game was almost the complete opposite of what happened here,” Reece Topley said. “We were probably just under
+par with the first-innings score but with the ball we were excellent, pushed them right to the end. I think it’s been an amazing series. Both teams have played
+some unbelievable cricket. I was so excited turning up today, because it was basically a final and those are the games you want to play in and be on the right
+side of. The bottom line is you want to win this series, I want to win every series I can for England.”
+</item 3>
+
+<item 4>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+12.4 overs: West Indies 108-4 (Hope 27, Powell 6)
+
+Updated at 01.09 GMT
+
+13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+Windies skipper Rovman Powell is the new man and Buttler cranks the pressure by inserting a slip.
+
+Updated at 01.04 GMT
+
+13 Dec 2023 00.52 GMT WICKET! Hetmyer c Duckett b Rashid 1 (West Indies 101-4) Adil Rashid takes his 100th T20I wicket! A crucial one in the context of the game
+too – the dangerous Hetmyer is sent on his way for just a single as England look to ramp up the pressure heading into the nub end of this match.
+</item 4>
+
+<item 5>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Just as surely as when they came out on Tuesday facing an almost unachievable task, the outcome of the West Indies’ run chase seemed inevitable from the start.
+With such a meagre target they needed little more than to keep their heads, and though both Topley and Sam Curran conceded only two with their final overs to
+push the contest into its final over, that never looked in doubt.
+
+skip past newsletter promotion Sign up to The Spin Free weekly newsletter Subscribe to our cricket newsletter for our writers' thoughts on the biggest stories
+and a review of the week’s action Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more
+information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy
+. We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts?
+</item 5>
+
+<item 6>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Often there is a sense as a tour enters its final days of thoughts turning to home, and perhaps the focus was not as laser-sharp as it might have been for this
+game, determination less than absolute to grasp this opportunity to end England’s run of reverses in the Caribbean. Whatever the reason, the pyrotechnics that
+rocketed England to victory in the two previous matches never sparked in this one. It took a fabulous delivery from Gudakesh Motie to end Phil Salt’s run of
+absurd form with his score a modest 38, but some of the other wickets that fell during the period that defined England’s innings and the game seemed a little
+careless.
+
+In the fourth over Jos Buttler casually turned a Jason Holder delivery to fine leg, where Oshane Thomas was positioned, hands cupped. Harry Brook tried to
+paddle-sweep Motie but sent the ball only a few feet into the air, giving Nicholas Pooran an easy catch.
+</item 6>
+
+<item 7>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts? Show Download the Guardian app from the iOS App Store on iPhone or the Google Play store on Android
+by searching for 'The Guardian'.
+
+If you already have the Guardian app, make sure you’re on the most recent version.
+
+In the Guardian app, tap the Menu button at the bottom right, then go to Settings (the gear icon), then Notifications.
+
+Turn on sport notifications. Was this helpful? Thank you for your feedback.
+
+Halfway through their innings they were 62 for three, and if England had 15 more runs at the same point they had also made a complete hash of the rest of it.
+That was a trap which, thanks to Hope’s 43-ball 43 as he again steered his side to their target, West Indies avoided. This batting display may have lacked their
+usual flamboyance but until the final ball it was entirely appropriate for the occasion.
+
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant.
+</item 7>
+
+<item 8>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+What a difference two days make. Somehow Tuesday’s ludicrous, record-smashing, high-scoring entertainment was followed by a sequel on the same surface that
+eventually delivered thrilling low-scoring entertainment, and a different result claimed in very different style. It was eventually won for West Indies with
+four balls to spare and in the most unfitting of ways – with a massive six – by Shai Hope, again proving himself the right man for a run-chase.
+
+So a series marked by stunning power hitting, roaring run rates and an unexpected midway transformation in England’s performances and prospects concluded with a
+3-2 triumph for West Indies, who extended their supremacy over England at home to four series in three formats across nearly five years.
+
+England assembled exactly the same players in exactly the same place and exactly the same situation – losing the toss, put in to bat – but this was an entirely
+different performance.
+</item 8>
+
+<item 9>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.57 GMT WICKET! West Indies 113-5 (Powell c Rashid b Topley 8) England haven’t given this up. Powell edges Topley to short third man, where Rashid
+takes a smart low catch to his left. West Indies need 20 from 21 balls. Reece Topley (right) celebrates the dismissal of Rovman Powell. Photograph: Randy
+Brooks/AFP/Getty Images
+
+Updated at 23.07 GMT
+
+6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first
+boundary. Rehan has struggled as the series has progressed, an d later in the over Powell muscles him over long-on for six. West Indies are 21 runs away from a
+hat-trick of T20 series wins this year: South Africa away, India and England at home.
+</item 9>
+
+<item 10>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant. The 35-year-old, who rose to the top of the T20 bowling rankings for the first
+time on Wednesday, took two wickets and conceded just 21 while Topley was even better, also claiming a pair of victims but conceding only 17. England take
+plenty of positives from this series, but the result was not one.
+</item 10>
+=== END ITEM id=5aa0f2a6baa56aa5 ===
+
+=== ITEM id=ce409513912204a6 ===
+Gold sentences and facts:
+Sentence 0: For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity.
+  Fact 0.0: For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme.
+  Fact 0.1: Inside the Big Ten, the alleged Michigan sign-stealing scheme has been more than just a curiosity.
+Sentence 1: While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough stain to erase knowing those violations are now on the Big Ten record.
+  Fact 1.0: It is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons.
+  Fact 1.1: The in-person scouting and sign-stealing are alleged violations.
+  Fact 1.2: The alleged violations are now on the Big Ten record.
+  Fact 1.3: Knowing the alleged violations are on the Big Ten record will be a tough stain to erase.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+ESPN reported that Big Ten coaches and athletic directors encouraged Big Ten commissioner Petitti to act last week, but that resulted in action before the NCAA
+investigation concluded.
+
+Do you wonder what the SEC and commissioner Greg Sankey privately think about all this? For the Big Ten, it is an ugly run of bad behavior on and off the field
+for a conference that is welcoming four new members next season in Oregon, UCLA, USC and Washington.
+
+To be determined
+
+Michigan
+
+Michigan is 10-0 and on track to meet No. 1 Ohio State for another blockbuster matchup in college football’s best rivalry. On the field, the Wolverines remain
+on track for a third straight Big Ten championship and shot at the College Football Playoff.
+
+But this is about more than football.
+
+Will more penalties come from the Big Ten and NCAA as a result of the in-person scouting scandal that has not left the college football consciousness this
+month? Will the Harbaugh-Petitti battle lead to an unsettling end for Michigan?
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Will the Harbaugh-Petitti battle lead to an unsettling end for Michigan? President Santa Ono and athletic director Warde Manuel have voiced their support for
+Harbaugh, but that has been more about due process than admitting to any wrongdoing.
+
+It has thrust the Wolverines – a talented team led by J.J. McCarthy, Blake Corum and a defense that allows 7.5 points per game – into a villain role, complete
+with visits from Ric Flair. That only works when you are winning. One loss, and all this could unravel, and the Terps and Buckeyes still remain on the schedule.
+
+Will a national championship outweigh the stain on their reputation? The answer is almost always yes for the fans, but the program might feel a different
+long-term result.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+1 Ohio State is a huge television draw and Petitti has a background in TV with the MLB Network. Petitti went heavy-handed instead, maybe a little too heavy
+considering the pending legal response from Michigan.
+
+This no doubt is risky on several fronts. The Big Ten made it clear that they still have not linked Harbaugh to any wrongdoing and that this an institutional
+penalty based on the findings. The NCAA also will continue its investigation into the Wolverines. The timing of Friday's announcement also was poor – less than
+24 hours before the game against Penn State. Petitti upheld sportsmanship within the conference, but it could lead to a long-term rift with Michigan.
+
+Regardless, Petitti did the right thing.
+
+DECOURCY: Michigan got off easy with Harbaugh suspension
+
+Ohio State-Michigan TV ratings
+
+With or without Harbaugh, The Game will draw ridiculous television ratings.
+
+According to Sports Media Watch, three college football games have drew a Nielsen rating of 5.0 or better this season.
+</item 3>
+
+<item 4>
+Michigan’s Rivals Fume About Sign-Stealing: ‘This Was Damn Near Espionage’ (The New York Times, 2023-11-03T22:07:31+00:00)
+… No doubt this all has had a profound effect.
+
+“This guy’s being investigated for three different things now between the (alleged) illegal signal stealing, the (alleged) illegal recruiting during COVID and
+that investigation into the offensive coordinator and alleged computer hacking. There are guys (on that call) who could lose jobs, and then there’s this guy
+over here (Harbaugh) who is gonna get a new, bigger contract now, and they won’t do anything about him.”
+
+Asked to describe the tone of the coaches’ sentiment expressed to Petitti, another Big Ten coach called it “angry” — particularly at the Big Ten’s lack of
+action, or even apparent interest in taking any.
+
+“Everybody’s upset,” that coach told The Athletic. “Why is nothing being done? We want to know, what else do you need to know to take action? We (the Big Ten
+head coaches) want something done now.
+</item 4>
+
+<item 5>
+Michigan’s Rivals Fume About Sign-Stealing: ‘This Was Damn Near Espionage’ (The New York Times, 2023-11-03T22:07:31+00:00)
+We (the Big Ten head coaches) want something done now. I don’t think people understand the advantage that what they’re (allegedly) doing gives you. People
+think, ‘OK, now that everybody knows, we all can just move on.’ Like, ‘now, it’s fair.’ Well, no, it isn’t. Not at all. This changes the way you operate. A lot
+of teams have been doing things a certain way for years. Now, it’s forcing you to teach your players a whole new way to communicate just for them. People think
+that this is just advanced scouting. This was damn near espionage.”
+
+A third Big Ten head coach told The Athletic that this is “one of the most egregious breaches in the spirit of the game” he’s ever heard of.
+
+“They (Michigan) have been manipulating the game and cheating the game for two-and-a-half years.
+</item 5>
+
+<item 6>
+Michigan’s Rivals Fume About Sign-Stealing: ‘This Was Damn Near Espionage’ (The New York Times, 2023-11-03T22:07:31+00:00)
+For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has
+been more than just a curiosity. On Wednesday’s Big Ten coaches video call with commissioner Tony Petitti, and after Jim Harbaugh left the call, that
+frustration was voiced loud and clear, according to conference coaches, who said they don’t feel like the new Big Ten commissioner is “motivated” to do anything
+about the Wolverines.
+
+Advertisement
+
+“There is just a ton of frustration,” a Big Ten coach told The Athletic on Thursday morning. “Look at Jim Harbaugh’s record before this started. The guy was on
+the hot seat before 2021, and now he’s like the king of college football. … No doubt this all has had a profound effect.
+</item 6>
+
+<item 7>
+Michigan’s Rivals Fume About Sign-Stealing: ‘This Was Damn Near Espionage’ (The New York Times, 2023-11-03T22:07:31+00:00)
+The Big Ten does have the ability to act under its sportsmanship policy, but that doesn’t mean that it would want to act quickly or decisively before the NCAA
+completes its entire investigation and allows Michigan a chance to respond to its findings.
+
+This is an unprecedented situation; whatever Petitti decides to do (or not do) will set a precedent. The Big Ten itself doesn’t have investigators, so it needs
+to rely upon the NCAA to do that part — and to determine who else was involved in the alleged scouting scheme. It’s not clear exactly what the coaches would
+want the league to do to punish Michigan; banning the team from competing in the Big Ten championship, for example, would harm players who had nothing to do
+with the sign-stealing apparatus.
+
+A source briefed on the coaches’ call said Big Ten coaches are concerned about whether Michigan “should represent the Big Ten.”
+
+“No matter what happens, if Michigan continues to move forward, the clouds will follow,” the source said.
+</item 7>
+
+<item 8>
+Michigan’s Rivals Fume About Sign-Stealing: ‘This Was Damn Near Espionage’ (The New York Times, 2023-11-03T22:07:31+00:00)
+“They’re reading the tea leaves and wondering why the Big Ten hasn’t done anything yet. Every week and every day that goes by, people are like, ‘Something’s
+gotta give.’ It’s getting a little bit out of hand when you see him (allegedly) on the Central Michigan sideline. The playing field is not level right now. How
+can you have a team that you know has a competitive advantage over you still being allowed to play? That’s what the coaches are grappling with.”
+
+Advertisement
+
+“It feels like (former commissioner) Kevin (Warren) taking over and then COVID,” the source continued. “Tony’s walking into this situation, and people are
+calling for the league to make a statement before they have all the facts.”
+
+Despite frustration from all corners of the conference, sources at four different Big Ten schools said they do not expect the conference to levy any sort of
+punishment against Michigan before the season ends.
+</item 8>
+
+<item 9>
+Michigan’s Rivals Fume About Sign-Stealing: ‘This Was Damn Near Espionage’ (The New York Times, 2023-11-03T22:07:31+00:00)
+The Big Ten said it would monitor the NCAA’s investigation into Michigan.
+
+Advertisement
+
+“The Big Ten is so much more powerful than the NCAA,” that third Big Ten coach said. “Why are you just sitting back and doing nothing about this? The Big Ten
+can’t pound its chest for the last 30 years about how it does the right thing ethically (when other conferences like the SEC won’t) and then have this go on. If
+this were a team in the bottom half of the Big Ten, would this be handled in the same way?
+
+“When a running back gets hurt against Michigan because they knew exactly what play was coming, will that kid and his family have the ability to sue the Big
+Ten?”
+
+The NCAA investigation is ongoing, a process that typically moves slowly, which makes it difficult to imagine it will reach a resolution by the time the
+postseason begins.
+</item 9>
+
+<item 10>
+Michigan’s Rivals Fume About Sign-Stealing: ‘This Was Damn Near Espionage’ (The New York Times, 2023-11-03T22:07:31+00:00)
+To know exactly what the other team is doing, Michigan might as well have been playing with 15 guys on the field,” he said. “What’s the message the Big Ten is
+sending now by doing nothing? Win now, pay later? We might as well just send people to (scout) their practices and their games. It doesn’t encourage anybody to
+follow the rules. It’s just telling them to do the opposite and say, f— it.”
+
+GO DEEPER Michigan should be punished, say 94% of CFB coaches in our poll. What else did it reveal?
+
+The NCAA is investigating Michigan’s football program amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal
+signs this season. Ahead of the Michigan-Michigan State game on Oct. 21, the Big Ten approached MSU and said it was made aware of “credible evidence” regarding
+the sign-stealing allegations. The Big Ten said it would monitor the NCAA’s investigation into Michigan.
+</item 10>
+=== END ITEM id=ce409513912204a6 ===
+
+=== ITEM id=a24faf61293e0041 ===
+Gold sentences and facts:
+Sentence 0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 0.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 0.1: The defense argued that the FTX founder acted in good faith.
+  Fact 0.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 0.3: The defense argued that the FTX founder basically got in over his head.
+Sentence 1: It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told.
+  Fact 1.0: Judge Lewis Kaplan intervened to ask whether Bankman-Fried had ever been told by Yedidia about that money, in words or in substance.
+  Fact 1.1: Bankman-Fried did not admit being told about that money until Judge Lewis Kaplan intervened.
+  Fact 1.2: Bankman-Fried admitted he had been told about that money.
+
+Retrieved items:
+<item 1>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 1>
+
+<item 2>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+He did. But — I did hear these words uttered aloud in a court of law this morning, I am not creative enough to make this kind of thing up — his employees told
+him “they were busy and I should stop asking questions because it was distracting.”
+
+Yedidia — Bankman-Fried’s college friend, Bahamas roommate, and employee at FTX — had testified that he’d asked Bankman-Fried about the $8 billion hole on a
+padel tennis court in their luxury complex in June or July. Today, in testimony, Bankman-Fried seemed to be trying to deny that conversation had ever taken
+place. It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that
+Bankman-Fried admitted he’d been told.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 4>
+
+<item 5>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 6>
+
+<item 7>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 7>
+
+<item 8>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 8>
+
+<item 9>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 9>
+
+<item 10>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 10>
+=== END ITEM id=a24faf61293e0041 ===
+
+=== ITEM id=cd08e36824381222 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: Google makes deals with Apple.
+  Fact 0.2: Google makes deals with Samsung.
+  Fact 0.3: Google makes deals with Mozilla.
+  Fact 0.4: Google makes deals with many others.
+  Fact 0.5: The deals are meant to ensure Google is the default search engine on practically every platform.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The trial will probably bring up the deals later on.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy on day one.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 2>
+
+<item 3>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 5>
+
+<item 6>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 10>
+=== END ITEM id=cd08e36824381222 ===

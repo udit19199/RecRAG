@@ -1,0 +1,989 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=ea880aadfa4e7c2e ===
+Gold sentences and facts:
+Sentence 0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 0.0: Israel stopped allowing deliveries of food to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.1: Israel stopped allowing deliveries of fuel to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.2: Israel stopped allowing deliveries of other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.3: Israel is reportedly preparing for a ground invasion.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Israel reached understandings with Hamas in 2012.
+  Fact 1.1: The understandings were made to stop the fighting, according to Ortal.
+  Fact 1.2: The understandings were made to get life back to normal as quickly as possible, according to Ortal.
+Sentence 2: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 2.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+There had been a second line of defense, observation balloons, but for unknown reasons, all three had stopped working some weeks before the attack, and repairs
+were postponed until "after the holidays."
+
+Israel’s drone warfare fleet, which is capable of jamming signals of a hostile drone, and the attack drone fleet, known for warfare against incendiary balloons,
+also did not work for unknown reasons, and dozens of Hamas drones operated without interruption. The IDF's Iron Beam high energy laser (HEL) interception
+system, which was developed for such cases, among other things, has not yet entered into operational activity after many years of development. All allowed the
+Hamas terrorists to quickly reach the IDF bases along the Gaza border, disable the information and communications technology (ICT) systems, neutralizing the
+ability to call reinforcements without arousing much suspicion at IDF Kirya headquarters in Tel Aviv.
+
+Above all there was a sense of security and belief in technology and the sophisticated barrier’s ability to prevent any form of intrusion.
+</item 1>
+
+<item 2>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Published by Globes, Israel business news - en.globes.co.il - on November 5, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 3>
+
+<item 4>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 4>
+
+<item 5>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+On Saturday, October 7, for example, suspicious movement in Gaza convinced the Shin Bet head to send a special team to the southern border, but he was unable to
+convince the top IDF echelons to prepare accordingly. To handle those weak signals, Eiland claims, one must use "scenario theory", meaning, taking into account
+scenarios that have a low probability of occurring, but with devastating results should they occur, and the simple way to prepare for them.
+
+Eiland explains: "You detect certain noises on Friday night, but conclude that the probability of an attack is low, let's say only 10%. Those who act only on
+the probability do not consider the question: if this attack happens - will you be able to live with yourself for eliminating this threat? There’s also a third
+consideration, which is ease of effort: what is the effort required of me to prepare for this unlikely but dangerous scenario?
+</item 5>
+
+<item 6>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 7>
+
+<item 8>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Shiloh, which is currently subordinate to the Ministry of Defense, was established following State Comptroller reports about the lack of coordination and
+synchronization between the Ministry of Defense and the IDF units; and lead a new border defense concept based on sensors and other technologies for gathering
+intelligence and thwarting infiltration; strengthening the Air Force in the form of additional aircraft and armaments; and strengthening the operational end of
+the regular front units.
+
+All this, while at the same time closing down armored battalions and consolidating helicopter squadrons. Ground force technological capabilities were also
+addressed, such as improved coordination between the infantry and air forces in air-to-ground actions, or identifying terrorists and weapons in an urban
+environment. However, there is a problem at the outset, says, Prof. Eviatar Matania of Tel Aviv University School of Political Sciences, Government and
+International Affairs, and founder and first director general of the Israel National Cyber Directorate: a large gap between the technology and the officers
+expected to implement it as part of the security concept.
+</item 8>
+
+<item 9>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas' surprise attack on Israel has shocked many who are now questioning the country's famed intelligence agency Mossad, which is known for its
+intelligence-gathering capability. For some, the belief that Mossad was among the best in the spying world was shattered today when Hamas carried out the
+biggest coordinated attack in Israel and captured some territory in southern Israel. It is not the attack that has surprised people but the scale at which Hamas
+operated and got control of some military bases and soldiers.
+
+Also Read: Israel at war: Hamas cells, military compounds destroyed, US backs Tel Aviv; all you need to know
+
+Younis Tirawi, who reports on Palestinian Affairs, said that Hamas militants had taken over Sderot police HQ and armored vehicles in the town. An analyst wrote
+that some of the images coming out of Sderot over the last few hours were reaching degrees of horror "that I don't really think I can use words to properly
+describe.
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 10>
+=== END ITEM id=ea880aadfa4e7c2e ===
+
+=== ITEM id=750e6e4e6f737560 ===
+Gold sentences and facts:
+Sentence 0: 9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.
+  Fact 0.0: At 9:47 p.m., the Bears answer right back and sack Dobbs.
+  Fact 0.1: Sweat and Brisker are in there to take Dobbs down.
+Sentence 1: The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game).
+  Fact 1.0: The Ravens defense has allowed the fewest points per game this season, 16.1.
+  Fact 1.1: The Ravens defense has allowed the second-fewest total yards this season, 4,030.
+  Fact 1.2: San Francisco's defense ranks second in points, at 16.7.
+  Fact 1.3: San Francisco's defense ranks 10th in yardage, at 310 yards per game.
+
+Retrieved items:
+<item 1>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+• Baltimore Ravens: Are the Ravens better off shifting to more of a pass-oriented offense?
+
+What I think: Baltimore has never scored fewer points or amassed less offensive EPA through the first six games of a season with Lamar Jackson in the lineup.
+The schedule and injuries have played roles, but with the Ravens shifting toward a more conventional pass offense, are the explosive quarterback runs mostly in
+the past? Jackson has one rush longer than 20 yards (he’s had four or five by now previously). He’s gaining at least eight yards on 15 percent of carries, half
+his previous rate. I’m not expecting a consistent precision passing game to suddenly materialize. Will this new offense be tougher to defend?
+
+Advertisement
+
+Exec comment: “The defense keeps them in it, but I don’t necessarily think this offensive change is going to make them any better when it counts. Lamar Jackson
+does not appear as dynamic as a runner, but in this offense, he does not need to be.
+</item 1>
+
+<item 2>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+TOUCHDOWNS: Harris has zero. Somehow it gets worse: He has one carry inside the 15-yard line. The Steelers have run the second-fewest red-zone plays (18, one
+more than New England) and second-fewest plays inside the 5-yard line (two, one more than New England). The Steelers have played four games! This is nuts.
+
+RAVENS: Have yet to allow a rushing score to a running back this year. They've been otherwise solid against RBs, holding them to 4.0 yards per carry on the
+season and roughly league-average in other metrics including missed tackles (15).
+</item 2>
+
+<item 3>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+the Patriots. At least Jonathan Taylor is doing his normal things and the defense is playing well again while Gardner Minshew looks meh.
+
+18. Los Angeles Chargers 4-5 (17)
+
+The Chargers got well offensively with Justin Herbert, Keenan Allen and Austin Ekeler against the Lions. But the defense went back to crumbling vs. big pass
+plays and added wilting against the run. The pressure is right back on Brandon Staley with a trip to Green Bay next.
+
+20. Tampa Bay Buccaneers 4-5 (23)
+
+Baker Mayfield and the offense is back on track to move the ball well after a brief midseason slump. They're still not lighting it up, but the Bucs are back to
+playing smart complementary football with their defense rebounding and still might have found a long-term QB answer.
+
+21.
+</item 3>
+
+<item 4>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+8:00 p.m. — Will the Josh Dobbs show continue tonight? He’s had good command of the Vikings’ offense in three games since a trade out of Arizona, flashing an
+especially strong connection with T.J. Hockenson.
+
+7:45 p.m. — It’s 15 degrees in Minnesota with a feels like of 2, so the roof will come in handy tonight at U.S. Bank Stadium.
+
+7:25 p.m. — Vikings legend Adrian Peterson is in the building to watch his former team.
+
+7:17 p.m. — The Bears enter tonight with the No. 1 and No. 4 picks in the 2024 NFL Draft, and they'll remain in those slots with or without a loss thanks to the
+strength of schedule tiebreaker.
+
+7:10 p.m. — Heading into Week 13, tonight's game is the difference between the No. 6 and No. 7 seed for the Vikings.
+</item 4>
+
+<item 5>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in
+points (16.7) and 10th in yardage (310 per game).
+
+The 49ers defense might be slightly inferior statistically, but it could have more of an impact in this matchup. San Francisco has racked up an NFL-leading 25
+turnovers and has given up the second-fewest rushing yards (1,252), which should help slow down the team with the league's most effective running game.
+</item 5>
+
+<item 6>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+32. Carolina Panthers 1-8 (31)
+
+The Panthers found better defense and special teams to keep them in the game in Chicago, but Bryce Young still can't unlock a limited passing game and the
+offensive line and running game hasn't help nearly enough.
+</item 6>
+
+<item 7>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+But the reeling defense and pass protection continue to be un-winnable assets.
+
+24. Atlanta Falcons 4-5 (20)
+
+The Falcons were forced into another QB change because of injury. They found a few more answers offensively but that position still made it an overall mess. The
+defense also doesn't seem to be well prepared to different styles of offenses.
+
+25. Green Bay Packers 3-6 (25)
+
+The Packers saw some improved work from Jordan Love and his young weapons as they spread the ball well in the passing game, but the run defense woes and key
+holes in coverage have all but doomed their playoff hopes.
+
+26. Los Angeles Rams 3-6 (26)
+
+The Rams are hoping to find a few more answers during a bye, as Sean McVay has seen his good coaching job earlier in the season go by the wayside with key
+offensive injuries.
+</item 7>
+
+<item 8>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+McCaffrey, who seems poised to win the Offensive Player of the Year Award, leads the NFL in rushing (1,292 yards) and total yards per game (128.6) this season
+and is tied for first in touchdowns (20).
+
+Ravens TE Isaiah Likely thriving in the starting role: The Ravens offense hasn't lost a step since losing one of the team's top weapons in tight end Mark
+Andrews (ankle) in Week 11, largely due to Likely's emergence.
+
+The second-year tight end has averaged 64.3 yards over his last three games, which is particularly noteworthy since Andrews averaged 54.4 yards per game before
+sustaining his injury.
+
+Should we expect a defensive battle?: While both teams boast offenses that rank in the top five in yardage and scoring, this may not turn into a shootout.
+</item 8>
+
+<item 9>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+They can win with offense or defense. Dan Campbell is coach of the year.
+
+4. San Francisco 49ers 6-3 (8)
+
+The 49ers had a surprise offensive get-well game in Jacksonville with Brock Purdy leading the way and all his key supporting weapons doing damage, even without
+Christian McCaffrey scoring. The biggest development was the defense going back to dominating a good offense.
+
+5. Baltimore Ravens 7-3 (2)
+
+The Ravens' offense is just fine with the running and passing of Lamar Jackson, but he still can't afford to make big mistakes, which he did vs. the Browns. The
+defense needs to pick up the pieces, too, stat, ahead of facing the Bengals on a short week.
+
+6. Miami Dolphins 6-3 (6)
+
+The Dolphins got a much-needed bye to figure out how to beat the better teams in the league.
+</item 9>
+
+<item 10>
+Bears vs. Vikings live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-11-27T23:32:04+00:00)
+The honeymoon period is over for Joshua Dobbs in Minnesota.
+
+The folk hero quarterback threw four interceptions in the Vikings' 12-10 "Monday Night Football" loss to the Bears, leading a sluggish offense that didn't find
+its footing until the fourth quarter in a game that Minnesota wouldn't have needed many points to win.
+
+The Bears' defense swarmed Dobbs throughout the night, sacking him only twice but bringing a great deal of pressure as the defensive backs made plays. Despite
+the barrage of turnovers, Chicago largely failed to take advantage. The Bears scored only three points off of the four Dobbs interceptions.
+
+MORE: How Joshua Dobbs got his 'Passtronaut' nickname
+
+Meanwhile, Chicago's first turnover of the night — a deflating fumble by Fields when the Bears had a chance to extend their lead to two possessions — was
+quickly turned into a touchdown by the Vikings.
+</item 10>
+=== END ITEM id=750e6e4e6f737560 ===
+
+=== ITEM id=4593f5ed7b94b02b ===
+Gold sentences and facts:
+Sentence 0: Here's your chance to claim $5,000+ in bonuses as a new user from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, and BetRivers.
+  Fact 0.0: The reader has a chance to claim $5,000+ in bonuses as a new user.
+  Fact 0.1: A new user can claim bonuses from Caesars Sportsbook.
+  Fact 0.2: A new user can claim bonuses from BetMGM.
+  Fact 0.3: A new user can claim bonuses from Bet365.
+  Fact 0.4: A new user can claim bonuses from FanDuel.
+  Fact 0.5: A new user can claim bonuses from DraftKings.
+  Fact 0.6: A new user can claim bonuses from BetRivers.
+Sentence 1: Collect your welcome bonus: As a new customer, you’ll receive a welcome bonus.
+  Fact 1.0: The reader can collect a welcome bonus.
+  Fact 1.1: A new customer receives a welcome bonus.
+
+Retrieved items:
+<item 1>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+That means wagering requirements are attached, and payouts don't include the stake.
+
+Odds boosts
+
+You’ll receive better than the usual odds on specific bets. Daily odds boosts are available, but provide no value if the boosted bet isn't a winner.
+
+Bet insurance
+
+Get a refund if you lose a specific bet or your parlay comes up one leg short. Sportsbooks will limit the size of the refund you can claim, and most refunds are
+bonus bets or site credit, not cash. That means wagering requirements are attached, and payouts don't include the stake.
+
+Bet & get bonuses
+
+Here, you’ll get a bonus when you place a specific bet. Most bet & get bonuses are bonus bets or site credit. That means wagering requirements are attached, and
+payouts don't include the stake.
+
+App-only offers
+
+Place a specific bet with one of the best sports betting apps to receive a bonus. This won’t be available on the sportsbook website.
+</item 1>
+
+<item 2>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Use Bet365 bonus code VATSN in Virginia or NJTSN in New Jersey.
+
+Claim here: Bet365 bonus code TSNCO for promo of your choice
+
+FanDuel promo code for Bet any $5 moneyline, Get $150 in bonus bets if your team wins in CBK game
+
+FanDuel has a new offer when using our exclusive FanDuel promo code link. Bet $5 on any moneyline, and Get $150 in bonus bets if your team wins!
+
+It's important to note that there are no odds restrictions, so it'd be prudent to bet a big favorite over an outmatched underdog on the CBK schedule. You need
+to win the wager to receive $150 in bonus bets.
+</item 2>
+
+<item 3>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+There’s also the BetMGM Rewards program for added benefits.
+
+Here’s how that welcome offer works at BetMGM Sportsbook:
+
+Start by entering the bonus code SPORTSPICK when you create your BetMGM Sportsbook account.
+
+when you create your BetMGM Sportsbook account. Deposit at least $10 .
+
+. Make a first bet and if you lose get back the equivalent amount in Bonus Bets up to $1,500 within 24 hours of the bet being settled.
+
+within 24 hours of the bet being settled. For losing bets up to $50, you receive the Bonus Bet as a single bet . If you bet more than $50 and lose, you’ll get
+your refund (up to $1,500) in five Bonus Bets divided equally (20% each).
+
+. If you bet more than $50 and lose, you’ll get your refund (up to $1,500) in divided equally (20% each). You’ll have seven days to use your Bonus Bet(s).
+
+to use your Bonus Bet(s).
+</item 3>
+
+<item 4>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+into your FanDuel account and place a qualifying . Whether your bet wins or loses, you receive $200 in Bonus Bets .
+
+. You can use your Bonus Bets in whatever increments you like, but you have to use your Bonus Bets within seven days or they will expire.
+
+or they will expire. Winning wagers with Bonus Bets award the winnings only and not the bet amounts.
+</item 4>
+
+<item 5>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Start by clicking on our exclusive DraftKings promo code link
+
+Register as a new user by supplying personal info including your name, email, last four of your SSN#, and mailing address
+
+Deposit $5 to activate $50 bonus bet
+
+Bet $5 and Get $150 in bonus bets
+
+To max out DraftKings' deposit match at $1,000, make a minimum deposit of $5,000 and meet the 25X playthrough requirement.
+
+Claim here: DraftKings promo code for $1,200 in bonus bets
+
+BetRivers promo code SPORTSRIV unlocks 2nd chance bet for CBK games including Duke vs. Arkansas
+
+The BetRivers promo code SPORTSRIV gives new users a 2nd chance bet up to $500 depending on your state.
+
+If your first bet settles as a loss, BetRivers will refund your account in bonus bets.
+</item 5>
+
+<item 6>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+The promo codes on this page get you the best bonuses available. When you plug in the code during registration, the sportsbook knows we sent you and gives you
+the bonus we negotiated for you.
+
+Are these promo codes for regular customers, too?
+
+The promo codes on this page are for new customers only. Once you’ve got an account with a sportsbook, you can take advantage of other bonus offers and ongoing
+promos.
+
+Related Pages:
+</item 6>
+
+<item 7>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+DraftKings | BetMGM vs. FanDuel | Caesars vs. BetMGM
+</item 7>
+
+<item 8>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+Start by clicking our Caesars Sportsbook promo code link and sign up for a new account. If your first bet loses, Caesars will credit your account with bonus
+bets in the amount of your wager up to $1,000.
+
+Click to claim: Caesars Sportsbook promo code NEWS1000 for First Bet up to $1K on Caesars
+
+BetMGM bonus code TSN50 unlocks $1,550 in bonus bets for Blue Devils vs. Razorbacks
+
+Use our exclusive BetMGM bonus code TSN50 to claim a First Bet bonus of up to $1,500, and a $50 bonus bet for customers in select states.
+
+Click our BetMGM bonus code link and register for your new account with promo code TSN50 to unlock this bonus.
+</item 8>
+
+<item 9>
+Vermont Sportsbook Promos and Sports Betting Launch News (Sporting News, 2023-09-26T22:53:28+00:00)
+Here are more details on the offer explaining how each part of the DraftKings Sportsbook welcome offer works:
+
+Sign up for a DraftKings Sportsbook account via the links on this page .
+
+. Make a first deposit of at least $5 and get a $50 Bonus Bet .
+
+and get a . When you make your first deposit, DraftKings will give you a 20% deposit match bonus worth up to $1,000 in Bonus Bets . Be aware this bonus comes
+with a 25x wagering requirement .
+
+worth up to . Be aware this bonus comes with a . Finally, when you place an initial bet of at least $5 , you get $150 more in Bonus Bets delivered as eight $25
+Bonus Bets that you’ll have seven days to use.
+
+, you get delivered as eight $25 Bonus Bets that you’ll have seven days to use. If you go for the full deposit match bonus, you can receive as much as $1,200 in
+Bonus Bets all told.
+</item 9>
+
+<item 10>
+Best sports betting promo codes for college basketball: Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers
+(Sporting News, 2023-11-29T21:00:04+00:00)
+This offer requires a minimum $10 deposit, but you can deposit up to the amount of your first bet to $1,500 to maximize your potential winnings. If your first
+bet on the app loses, BetMGM will refund your account with bonus bets in the amount of the original wager up to $1,500.
+
+The extra $50 bonus bet offer is not available in Washington D.C., Kentucky, Mississippi, Nevada, New York, Puerto Rico and Ontario. Customers in those areas
+can use BetMGM bonus code SPORTSPICK for the $1,500 First Bet offer.
+</item 10>
+=== END ITEM id=4593f5ed7b94b02b ===
+
+=== ITEM id=0b7ccf2a6395a60a ===
+Gold sentences and facts:
+Sentence 0: In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively.
+  Fact 0.0: Scientists point to a number of recent developments in the long term.
+  Fact 0.1: The recent developments have raised hopes that dementia may be possible to tackle more directly.
+  Fact 0.2: The recent developments have raised hopes that dementia may be possible to tackle more effectively.
+Sentence 1: Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies.
+  Fact 1.0: Health coach Susan Saunders found herself parenting her mother.
+  Fact 1.1: Susan Saunders's mother had dementia.
+  Fact 1.2: Susan Saunders's own daughters were babies at the time.
+
+Retrieved items:
+<item 1>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+Both drugs are to be considered for approval in the UK next year. The Medicines & Healthcare products Regulatory Agency (MHRA) will first decide if they are
+safe and effective, then the National Institute for Health and Care Excellence (Nice) will rule on whether they offer value for money.
+
+Both medicines are expensive – lecanemab costs about $25,000 (£19,700) a year – and are given by regular intravenous infusions. “That is a challenge from a
+health-service point of view, because you need to find the space and time to put someone in an infusion suite to treat them,” added Thomas.
+
+However, the main problem facing doctors is the difficulty involved in pinpointing dementia not just in its early stages but even in its later phases. Most
+cases are first presented to GPs, who will then refer patients to memory clinics for a dementia test. However there are long waiting times – up to two years on
+average – for appointments at these centres.
+</item 1>
+
+<item 2>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+It took 10 years for Mike Mackenzie-Smith to get a diagnosis of young-onset Alzheimer’s.
+
+Another grim illustration of the problem facing patients is provided by Graeme Armstrong. His wife, Trina, began having trouble recognising faces and reading
+telephone numbers in 2006 and was told, after a CT scan three years later, that she had probably had a stroke – although her symptoms did not suggest such a
+diagnosis. It took another three years before she was diagnosed with posterior cortical atrophy, a rare variant of Alzheimer’s disease that affects the way the
+brain interprets information from the eyes.
+
+“Had we had an accurate diagnosis four years earlier, Trina could have been placed on the correct medication, which may have been more effective and helped her
+day to day,” Armstrong said.
+
+One solution sought by doctors involves the creation of blood tests which could pinpoint the disease quickly and effectively. “These are under research, but we
+are several years away from having them in widespread use,” said Thomas.
+</item 2>
+
+<item 3>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+“Dairy, fish or non-processed meat can help maintain muscle strength and function, reducing the risk of frailty as we age.”
+
+In truth, anyone over 50 would do well to follow these simple guidelines: engage with something new every day, take a daily walk of at least 20 minutes,
+socialise regularly, take a daily multivitamin for seniors and check the protein content of our meals. Perhaps we should think of it as self-parenting.
+</item 3>
+
+<item 4>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+However there are long waiting times – up to two years on average – for appointments at these centres.
+
+In addition, diagnosing Alzheimer’s and other forms of dementia is usually based on pen-and-paper tests, followed by lumbar punctures and brain scans before a
+final diagnosis.
+
+About 65% of cases are confirmed this way. The remaining third of dementia cases are never diagnosed. Yet patients can only expect to receive treatments –
+including the new drugs – if their condition is identified.
+
+Eleanor Mackenzie-Smith’s father, Mike, has young-onset Alzheimer’s. His first symptoms were spotted 17 years ago, when Eleanor was 11. “However, it took over
+10 years from the start of his symptoms and four separate tests between 2009 and 2017 to get my dad’s final diagnosis, when he was 65. It was distressing not
+knowing what was happening. Too many families, like mine, have had to watch as dementia takes hold of our loved ones while we are left without a diagnosis and
+the support and access to treatments.”
+</item 4>
+
+<item 5>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+Until now doctors have only been able to prescribe medicines that help patients manage their symptoms, so the arrival of the first drugs that treat the actual
+cause of the condition has been welcomed – although experts have warned that their use should be treated with some caution.
+
+After decades of research, these are the first drugs to improve patients’ lives directly. If nothing else, they suggest we’re on the right road to tackling
+Alzheimer’s
+
+“The new drugs slow down the development of Alzheimer’s by six months to a year and are useful only for those in the early stages of the condition, so they are
+certainly not miracle medicines,” said David Thomas, head of policy at Alzheimer’s Research UK.
+
+“However, after decades of research, they are the first to improve patients’ lives directly, and that is a justifiable cause for excitement. If nothing else,
+they suggest we are probably on the right road to tackling Alzheimer’s.”
+
+This point was backed by neurologist Cath Mummery, of the Dementia Research Centre at University College London.
+</item 5>
+
+<item 6>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+“Anyone with older parents should be urging them out for a walk five days a week – and when they have a companion, the walk also doubles as a social occasion,”
+he explained. “If they can walk for longer than 20 minutes, even better. Our study showed that the risk of depression fell in proportion to the time spent
+walking.”
+
+As well as a daily walk, Laird recommends vitamin D and B12 supplements – both of which appear to moderate the chance of depression in older people. “Depression
+matters,” he added. “Not just because it reduces quality of life, but because in older people there seems to be a link between depression and dementia which
+we’re still unpacking.”
+
+Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies. “I’d advise anyone with a parent in the
+early stages of dementia to investigate all the available research trials. Start by joining Dementia Research, a nationwide register that matches volunteers to
+research programmes.”
+</item 6>
+
+<item 7>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+“Meanwhile, we have got to get the NHS to a state where it is much more focused and better organised in getting better and earlier dementia diagnoses. That will
+be crucial in our battle against the condition.”
+
+Mummery agreed: “By the time you have dementia, you will have had Alzheimer’s disease developing in your brain for at least 20 years. Dementia is the latest
+stage; we need to pick up signals much earlier. So we need to be thinking about how to diagnose people at the very earliest stages of disease, when they may
+only have very, very subtle symptoms.
+
+We are now exploring ways of helping drugs get into the brain much more efficiently, and that could have a major impact Cath Mummery
+
+“Our current service isn’t good for doing that, and we need to develop brain health clinics where we can pinpoint the disease much earlier, then help to build
+resilience against dementia in a patient when it is only in a very early stage.”
+</item 7>
+
+<item 8>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and
+effectively. One major challenge they have faced is the problem of getting drugs to pass through the blood-brain barrier, which controls the movement of ions
+and molecules from our bodies to our brains. That makes it difficult to get drugs into the central nervous system to tackle problems such as amyloid plaques.
+
+“However, researchers are developing active transport methods for getting drugs across the blood-brain barrier,” said Mummery. “For example, we are now
+exploring ways of helping drugs get into the brain much more efficiently, and that could have a major impact.”
+
+Such developments will take years to realise, scientists caution, and a great deal needs to be done in the short term to deal with dementia.
+
+“It is clear we have taken a step in the right direction but there is much more to do before we can have successfully dealt with these processes that are
+happening to our brains,” said Thomas.
+</item 8>
+
+<item 9>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+People in Britain could benefit from a key medical breakthrough next year. They may be given access to the first drugs ever developed to slow the impact of
+Alzheimer’s disease.
+
+The first of these medicines – lecanemab – was recently approved in the US and Japan, where treatments using it have already been launched. A second drug,
+donanemab, is expected to follow soon, and next year it is anticipated that the UK medical authorities will consider both of them for approval in Britain.
+
+The prospect has raised hopes that, after years of effort, scientists may be closing in on ways to directly tackle the UK’s dementia crisis. About a million
+people are living with the condition in this country, and this is expected to rise to about 1.7 million by 2040 – with potentially grim consequences. Last year
+dementia took the lives of 66,000 people in England and Wales, and it is now the leading cause of death in Britain, with Alzheimer’s accounting for two-thirds
+of cases.
+</item 9>
+
+<item 10>
+New Alzheimer’s drugs bring hope of slowing disease for UK patients (The Guardian, 2023-12-17T10:00:23+00:00)
+“It is a challenge, and a very important one.”
+</item 10>
+=== END ITEM id=0b7ccf2a6395a60a ===
+
+=== ITEM id=38969613e37ed4fa ===
+Gold sentences and facts:
+Sentence 0: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 0.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 0.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 0.2: The case argues that Google siphons off news publishers' readers through anticompetitive means.
+  Fact 0.3: The case argues that Google siphons off news publishers' ad revenue through anticompetitive means.
+Sentence 1: Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+  Fact 1.0: Google unveiled new hardware.
+  Fact 1.1: This week was Google's annual hardware event.
+  Fact 1.2: At the event, Google showed off what it has been working on.
+  Fact 1.3: Google is a search and consumer tech giant.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 4>
+
+<item 5>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 7>
+
+<item 8>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+</item 8>
+
+<item 9>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 9>
+
+<item 10>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 10>
+=== END ITEM id=38969613e37ed4fa ===
+
+=== ITEM id=45780a40457b3d93 ===
+Gold sentences and facts:
+Sentence 0: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 0.0: The second week of the trial had standout testimony.
+  Fact 0.1: The standout testimony of the second week came from Alameda Research's former CEO Caroline Ellison.
+  Fact 0.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 0.3: Caroline Ellison claimed she used the $14 billion to repay debts to lenders.
+  Fact 0.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 0.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 1: SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy.
+  Fact 1.0: SBF is the name by which he is known.
+  Fact 1.1: SBF has pleaded not guilty to some seven charges of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+In a published DM exchange with a Vox reporter, he said he regretted filing for bankruptcy and thought that “regulators make everything worse.”
+
+SBF arrested
+
+Bankman-Fried was arrested in December 2022 in the Bahamas, where FTX was based. He was then extradited to the U.S. to face a number of criminal charges. He was
+released on a $250 million bail bond, and he remained under house arrest at his parents’ home in Palo Alto. This was revoked in August after he was accused of
+intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary.
+
+Ray represented the company during a House Financial Services Committee hearing regarding FTX. When asked whether the firm had significant risk management
+systems, Ray said at the time that “there were virtually no internal controls and no separateness whatsoever” and added that he did not “trust a single piece of
+paper” in the exchange’s organization. U.S.
+</item 1>
+
+<item 2>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+He, like many of SBF’s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical “legal justification” for
+the use of billions in consumer funds just days before FTX filed for bankruptcy.
+
+Robert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately
+resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a
+relationship, he testified that Third Point would not have invested in FTX in the first place.
+
+And earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he
+uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.
+</item 2>
+
+<item 3>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 3>
+
+<item 4>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 4>
+
+<item 5>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+I’ve got some shitty ex-boyfriends, but none of them made me the CEO of their sin-eater hedge fund while refusing to give me equity and bragging about how there
+was a 5 percent chance they’d become the president of the United States, you know? Absolutely counting my blessings after Caroline Ellison’s first day on the
+stand. I wonder how many of the nine women on the jury are doing the same.
+
+Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX. She’s already pleaded guilty to criminal charges
+stemming from one of the worst romantic relationships I’ve ever heard of, and her testimony was widely anticipated before the trial. Today, that took the form
+of discussing a damning spreadsheet — one she prepared for her ex and boss Sam Bankman-Fried, now the defendant in a criminal fraud trial.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy.
+</item 5>
+
+<item 6>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+The prosecution painted a picture of an empire “built on lies” and made a point to show actual pictures of SBF alongside rich and powerful figures to illustrate
+the peak of his power and influence prior to FTX’s implosion.
+
+“This man stole billions of dollars from thousands of people,” prosecutor Thane Rehn told the court. “He defrauded sophisticated investors and lenders, and he
+emptied the accounts of ordinary customers, too. He bought himself wealth, power and influence.”
+
+The defense, on the other hand, depicted SBF and his colleagues as in over their heads, without ill-will as FTX collapsed around them.
+
+“Sam and his colleagues were building the plane as they were flying it,” defense attorney Mark Cohen said. “They had to figure out how to navigate a world where
+they were running FTX, building out its systems, dealing with hacking threats, managing the credit risk of their customers, managing hundreds of employees, all
+while building up their actual exchange.”
+
+Read a recap of the prosecution and defense’s full arguments here.
+</item 6>
+
+<item 7>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Sam Bankman-Fried, the founder of bankrupt cryptocurrency exchange FTX, is seen during a hearing as a U.S judge revoked his bail, at a courthouse in New York,
+U.S., August 11, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+$65 billion line of credit
+
+For months, Bankman-Fried has known that Wang and Ellison, who were integral members of his personal and professional inner circles, had turned on him. Both
+pleaded guilty in December and have since been cooperating with the U.S. attorney's office in Manhattan. Wang's testimony, which stretched into Friday, was
+given under a cooperation agreement with the government. Ellison is expected to take the stand under a similar arrangement.
+
+U.S.
+</item 7>
+
+<item 8>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 8>
+
+<item 9>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 9>
+
+<item 10>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Much of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make
+investments or direct funding toward political causes and charities.
+
+SBF trial: What we learned in week two
+
+The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to
+repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX
+Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.
+
+And though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in
+frozen trading accounts.
+
+SBF trial: What we learned in the week one
+
+As expected, the opening statements in the SBF trial were spicy.
+</item 10>
+=== END ITEM id=45780a40457b3d93 ===

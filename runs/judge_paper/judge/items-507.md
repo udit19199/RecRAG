@@ -1,0 +1,1010 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=a0e925d2962e70d3 ===
+Gold sentences and facts:
+Sentence 0: It was a Michigan quarterback that led the Buccaneers to the promised land last time so perhaps lightning strikes twice.
+  Fact 0.0: A Michigan quarterback led the Buccaneers to the promised land last time.
+  Fact 0.1: Lightning may strike twice.
+Sentence 1: Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh.
+  Fact 1.0: The source for this is the Big Ten.
+  Fact 1.1: The Big Ten is reviewing lengthy written responses.
+  Fact 1.2: The written responses are from Michigan.
+  Fact 1.3: The written responses are from Jim Harbaugh.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+The Conference has confirmed that it is not aware of any information suggesting Coach Harbaugh's involvement in the allegations. The University continues to
+cooperate fully with the NCAA's investigation.
+
+From the Big Ten:
+
+"The Big Ten Conference's commitment to student-athletes, sportsmanship and the commissioner's duty to protect the integrity of competition will never waver.
+Today's decision by the University of Michigan to withdraw its legal challenge against the conference's November 10th notice of disciplinary action is
+indicative of the high standards and values that the conference and the university seek to uphold, the University of Michigan is a valued member of the Big Ten
+Conference and the conference will continue to work cooperatively with the university and the NCAA during this process."
+
+Monday, Nov. 13
+
+Harbaugh says he'll state his case at Friday hearing
+
+Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Here is Michigan’s 10-page letter to the Big Ten responding to the sportsmanship investigation, reporting with @RossDellenger 1/3 pic.twitter.com/P0oYgIbS67 —
+Dan Wetzel (@DanWetzel) November 9, 2023
+
+No timetable for Big Ten decision
+
+The Big Ten is reviewing the "lengthy" official response from Michigan and Jim Harbaugh and it's unclear when a potential ruling might come down, says ESPN's
+Pete Thamel. His colleague Adam Rittenberg reported Wednesday that a decision was expected by Thursday.
+
+Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh. There’s no indication of any timetable on a decision on
+potential Big Ten discipline in the case of Michigan’s alleged illegal signal stealing.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+He said while the program has been disappointed to hear about the allegations, it also feels that the conference skipped due process of a complete investigation
+in suspending Harbaugh on Friday.
+
+Manuel described the suspension as "completely unethical" and "an assault on the rights of everyone (especially in the Big Ten) to be judged by a fair and
+complete investigation."
+
+"All of the Head Coaches in the Big Ten (some who have been accused of actively participating in the trading of signals of opponents) and my Big Ten AD
+colleagues can rejoice today that someone was 'held accountable,' but they should be worried about the new standard of judgment (without complete investigation)
+that has been unleashed in this conference," Manuel said.
+
+Statement from Michigan AD Warde Manuel. “I find that completely unethical, insulting to a well-established process within the NCAA, and an assault on the
+rights of everyone (especially in the Big Ten) to be judged by a fair and complete investigation.”
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Within it, the school warned Big Ten commissioner Tony Pettiti against levying "premature" disciplinary action against Jim Harbaugh and alleged that in-person
+scouting and sign-stealing are commonplace across the NCAA.
+
+"The conference should act cautiously when setting precedent given the reality that in-person scouting, collusion among opponents, and other questionable
+practices may well be far more prevalent than believed," the letter read.
+
+Michigan also included with the letter "two attached documents of Michigan's offensive and defensive signs allegedly stolen and shared by other Big Ten teams,"
+per Yahoo Sports.
+
+Conference awaits Michigan response
+
+The Big Ten expects a formal response from Michigan to the notice of discipline by the end of the day Wednesday, ESPN's Pete Thamel reports. His colleague Adam
+Rittenberg adds that a ruling is expected to come down Thursday.
+
+Sources: The Big Ten expects a response from Michigan on the notice of discipline by the end of day on Wednesday. Don’t expect any ruling by the Big Ten on
+Wednesday, as they are expected to take time to absorb Michigan’s response.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 7>
+
+<item 8>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+“We went through and made sure we asked all the questions and got our compliance people involved. None of that came back at all. I can answer very strongly that
+that did not happen.”
+
+Michigan submits response to Big Ten
+
+In the latest step toward a resolution, Michigan has submitted its response to the Big Ten's notice of discipline. ESPN reported earlier Wednesday that no
+ruling from the conference is expected until Thursday, as the Big Ten is planning to "take time to absorb" what Michigan has to say.
+
+Michigan has sent its response to the Big Ten, a school official tells ESPN. Commissioner Tony Petitti now must decide how to proceed with potential discipline.
+— Adam Rittenberg (@ESPNRittenberg) November 8, 2023
+
+Yahoo Sports obtained a copy of the 10-page letter sent by Michigan to the Big Ten.
+</item 8>
+
+<item 9>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Pete Thamel (@PeteThamel) November 8, 2023
+
+Tuesday, Nov. 7
+
+Michigan says three other Big Ten schools shared decoded Wolverines signals
+
+While Michigan tries to navigate the storm around its program, the Wolverines are also trying to make one thing clear: they're hardly alone in trying to
+decipher opponents' signals.
+
+Michigan has shared evidence with the Big Ten and NCAA showing staff members at Ohio State, Purdue and Rutgers shared intelligence on the Wolverines' signals
+prior to last year's Michigan-Purdue Big Ten Championship Game, The Athletic reported.
+
+Documents breaking down Michigan's signals for numerous plays were compiled by Purdue staffers ahead of the game based on information provided by Ohio State and
+Rutgers football personnel, the report says. The person who supplied the documents told The Athletic he spent 10 to 12 hours per week trying to decode signals
+based on game video and said the practice of sharing decoded signals with other schools is common.
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Public reprimands/fines are common penalties under B1G sportsmanship policy. — Adam Rittenberg (@ESPNRittenberg) November 9, 2023
+
+Michigan's 10-page letter to Big Ten released
+
+Yahoo Sports' Dan Wetzel posted Michigan's full 10-page letter to the Big Ten on X (formerly Twitter). The letter outlines Michigan's belief that the Big Ten
+would be acting too hastily in suspending Harbaugh or levying any punishment toward Michigan before the completion of a full NCAA investigation.
+
+In the letter, Michigan said the university has not had the chance to review all the evidence and respond, which oversteps the due process allowed for Michigan.
+It said Pettiti should not have unilateral authority to punish violations without first having a completed investigation and then a response from the Compliance
+and Reinstatement Committee, which would recommend penalties for rules violations.
+</item 10>
+=== END ITEM id=a0e925d2962e70d3 ===
+
+=== ITEM id=97e073ffc330ff07 ===
+Gold sentences and facts:
+Sentence 0: Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.
+  Fact 0.0: Miami has five remaining opponents.
+  Fact 0.1: Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight.
+Sentence 1: -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+  Fact 1.0: Tyreek Hill missed last week's game.
+  Fact 1.1: Tyreek Hill now needs to average almost 153 yards per game in his final three games.
+  Fact 1.2: Tyreek Hill's stated goal is 2,000 receiving yards this season.
+  Fact 1.3: Tyreek Hill needs to reach his 2,000-yard goal this season.
+
+Retrieved items:
+<item 1>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP @ MIA MIA -1.5 O/U 51 OPP VS WR 15th PROJ PTS 19.4 WR RNK 2nd YTD Stats REC 103 TAR 141 REYDS 1306 TD 10 FPTS/G 21.6 The choice between
+Lamb and Tyreek Hill will not be an easy one. The tiebreaker for me is that Lamb is $900 cheaper and Hill may still not be 100% by the time the Cowboys and
+Dolphins kick off. Last week was the first time since Week 9 that Lamb failed to reach the end zone and the second time since Week 5 that he didn't score at
+least 17 PPR Fantasy points.
+
+Contrarian DFS Play (WR Preview) Projections powered by Sportsline Jaylen Waddle WR MIA Miami • #17
+
+Age: 25 • Experience: 3 yrs.
+</item 1>
+
+<item 2>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Six of the 17 won anyway. The Dolphins were the only one of those 223 teams to win and cover the spread, which was 13.5 for this game.
+
+• Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games. That ranks second in NFL
+history to Hall of Famer Don Hutson, who had 819 yards through six with Green Bay in 1942.
+</item 2>
+
+<item 3>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Tyreek Hill (@ Commanders in Week 13) did his thing despite a tough matchup in Week 12, resulting in Miami's WR1 returning to the top spot against a putrid
+Washington stop unit. CeeDee Lamb (vs. Seahawks) isn't far behind, as Dallas' WR1 aims to maintain his efficient play against Seattle.
+
+Amon-Ra St. Brown (@ Saints) has been a target hog the past several weeks, seeing at least nine looks in each of his past six games. Don't expect his workload
+to decrease in a bounce-back game for the Lions. Keenan Allen (@ Patriots) looks to continue his dominant ways, as Justin Herbert's go-to target routinely has
+double-digit target potential.
+
+Mike Evans (vs. Panthers) sits in our top five for Week 13, totaling four TDs over the past three weeks. A.J. Brown (vs.
+</item 3>
+
+<item 4>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP vs DAL MIA -1.5 O/U 51 OPP VS WR 7th PROJ PTS 14.2 WR RNK 16th YTD Stats REC 71 TAR 99 REYDS 964 TD 4 FPTS/G 14.8 We expect Hill to
+return this week, which should drive people off of Waddle. But there is at least a chance that Hill won't be 100% and Waddle will still be Tua Tagovailoa's top
+target. Waddle has been the quintessential DFS tournament play as of late with three of seven games over 19 PPR Fantasy points, topping 26 twice.
+
+WR Preview Heath's Projections
+
+My full set of Week 16 Fantasy Football projections for every position are now available on SportsLine. Find out which of my favorite plays are projected to
+score higher than consensus rankings and which don't live up to their draft hype, at least in Week 16.
+</item 4>
+
+<item 5>
+MVPs for all 16 AFC teams at the midpoint (Yardbarker, 2023-11-09T21:51:02+00:00)
+MIAMI DOLPHINS | WR Tyreek Hill: Arguably the best wide receiver in the NFL, Hill has somehow reached a new level of dominance in his age-29 season. The
+seven-time Pro Bowler leads the NFL in receiving yards (1,076) and TD catches (eight). As long as the Dolphins maintain their success on offense down the
+stretch, Hill should earn Offensive Player of the Year honors. He's on pace to break Calvin Johnson's season record for receiving yards (1,964).
+
+
+
+NEW YORK JETS | LB Quincy Williams: While his brother, Quinnen, may be the better-known Jets defender in the family, Williams — the AFC Defensive Player of the
+Month for October — is also making a name for himself. Aside from being the fifth-highest-rated linebacker in the NFL by Pro Football Focus, Williams is tied
+for 17th in tackles (74) and tied for ninth in TFLs (nine) among all defenders.
+</item 5>
+
+<item 6>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+1 seed in the conference.
+
+Compared to the 49ers, Cowboys and Eagles, Goff and the Lions may have the easiest schedule to finish the season.
+
+But bettors should also pay attention to C.J. Stroud. He leads the league in passing yards, is one of four quarterbacks eho have started the whole season with a
+passer rating over 100, and his touchdown to interception ratio is the best in the NFL (4 to 1)
+
+As for the value of his play, Stroud has taken one of the worst teams in the NFL (11 total wins the last three seasons) and turned it into a playoff contender
+and potential division champion.
+
+Offensive Player of the Year
+
+Current favorite: Tyreek Hill
+
+Longshot: CeeDee Lamb
+
+There's a good reason why Tyreek Hill is such a heavy favorite to win OPOY. The Dolphins wide receiver is on track to become the first player with 2,000-plus
+receiving yards in a single season.
+</item 6>
+
+<item 7>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+MORE SUPERDRAFT DFS & FANTASY PROPS: How to play SuperDraft
+
+This one should be a tightly-contested, high-scoring game — with heavy playoff implications, because we all know this could be an AFC Championship preview — so
+expect Rice to be very busy through all four frames in Frankfurt. The Dolphins have allowed the fifth-most receptions and the 12th-most yards to wideouts this
+season. If a bounce-back week is meant to be, Sir Rashee is our destiny.
+
+Austin Ekeler, RB, Chargers @ Jets — OVER 29.5 receiving yards
+
+Guess who's back? Back again...Ek is back....tell a friend. The Chargers finally got their best player back to full health, with Ekeler exploding for 123 yards
+and a TD against the Bears last weekend. A whopping 94 of those 123 yards came through the air, as the PPR god gashed Chicago for chunk yardage a handful of
+times.
+</item 7>
+
+<item 8>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson.
+
+-- Deebo Samuel is on pace to become just the fourth player since 1992 to average more than 11 yards per target with at least 60 targets in multiple seasons.
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson. 18 -- Puka Nacua needs 18 more catches to set the rookie record for most catches in a
+season.
+
+-- Puka Nacua needs 18 more catches to set the rookie record for most catches in a season. 152.67 -- After missing last week's game, Tyreek Hill now needs to
+average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+
+-- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving
+yards this season.
+</item 8>
+
+<item 9>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+But there is a solid chance he does not hit that mark. Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight. If he
+slows down, someone like CeeDee Lamb could catch up.
+
+Based on his current season average, Lamb is on track for close to 1,600 yards, but based on his production over the last seven games, he could finish with
+closer to 1,800 yards.
+
+He will probably need Hill to fade down the stretch to have a shot. But if Hill does and he continues to produce, Lamb could steal OPOY from Hill.
+
+Defensive Player of the Year
+
+Current favorite(s): Micah Parsons , Myles Garrett , and T.J. Watt
+
+, Myles Garrett , and T.J. Watt Longshot: Danielle Hunter
+
+Hunter leads the league in tackles for a loss and is third in sacks with 13.5 (behind Khalil Mack and Watt).
+</item 9>
+
+<item 10>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:43 p.m. — Hill is up to 65 yards on eight catches. No other Dolphins receiver has more than two catches, and Hill now has 879 yards on the season.
+
+Eagles 17, Dolphins 10
+
+9:39 p.m. TOUCHDOWN — Tagovailoa hits Hill in the end zone for a touchdown! Hill was facing double coverage but simply beat both defenders. Miami has the
+deficit back to one possession.
+
+9:38 p.m. — Rookie Nolan Smith sacks Tagovailoa with 44 seconds remaining in the half.
+
+9:37 p.m. — The Dolphins are down to the Eagles' 29-yard line after catches by Braxton Berrios and Tyreek Hill. They have a chance to score on back-to-back
+possessions, as they get the ball out of halftime.
+
+9:33 p.m. TWO-MINUTE WARNING — Woah!
+</item 10>
+=== END ITEM id=97e073ffc330ff07 ===
+
+=== ITEM id=b8f43dc77fc227bf ===
+Gold sentences and facts:
+Sentence 0: While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s.
+  Fact 0.0: Altman is not trained as an AI engineer.
+  Fact 0.1: Altman is now 38 years old.
+  Fact 0.2: Altman has been seen as a Silicon Valley wunderkind since his early 20s.
+Sentence 1: Altman has been telling investors that he’s planning to launch a new venture, according to The Information.
+  Fact 1.0: Altman has been telling investors that he is planning to launch a new venture.
+  Fact 1.1: The Information reported that Altman has been telling investors about a new venture.
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The prevailing theory floating around right now is based on the board's language.
+  Fact 2.1: The prevailing theory floating around right now is based on the way these giant tech companies work.
+
+Retrieved items:
+<item 1>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Altman has a long history steering OpenAI. After co-founding the company alongside Peter Thiel, LinkedIn cofounder Reid Hoffman and others, Altman, who formerly
+headed startup accelerator Y Combinator and also holds a seat on the board at Worldcoin, the ambitious cryptocurrency project, initially served as a co-chair of
+OpenAI alongside Elon Musk. Musk left in 2018 to avoid a conflict of interest with Tesla.
+
+Altman over the past several months played an active role in attempting to shape regulators’ responses to AI, appearing at U.S. congressional hearings and
+meeting personally with world leaders including President Joe Biden, German Chancellor Olaf Scholz and French President Emmanuel Macron, among others, on an
+international policy tour.
+
+More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+I've never met someone who has supported and lifted up more people around them than him. Couldn't be a prouder brother.
+</item 1>
+
+<item 2>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 2>
+
+<item 3>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 3>
+
+<item 4>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman posted Friday on X: “i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved
+working with such talented people. will have more to say about what’s next later.”
+
+The Associated Press and OpenAI have a licensing and technology agreement allowing OpenAI access to part of the AP’s text archives.
+
+Altman helped start OpenAI as a nonprofit research laboratory in 2015. But it was ChatGPT’s explosion into public consciousness that thrust Altman into the
+spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media. On a world tour this year, he was mobbed by
+a crowd of adoring fans at an event in London.
+
+He’s sat with multiple heads of state to discuss AI’s potential and perils.
+</item 4>
+
+<item 5>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Later Monday, that number climbed to over 650.
+
+Altman and Brockman considering return
+
+As reported by The Verge, Altman’s move to Microsoft isn’t a done deal — and both Altman and Brockman are still open to returning to OpenAI. That is, if the
+remaining board members who initially fired him step aside.
+
+OpenAI board considers merger
+
+OpenAI’s board of directors approached Dario Amodei, the co-founder and CEO of rival large-language model developer Anthropic, about a potential merger of the
+two companies, The Information reports. The approach was part of an effort by OpenAI to persuade Amodei to replace Altman as CEO — but Amodei quickly turned
+down the CEO offer.
+
+—
+
+November 19
+
+Altman to meet at OpenAI HQ
+
+According to The Information, Altman is expected to meet at OpenAI’s San Francisco headquarters as executives at OpenAI push to have him reinstated as CEO.
+</item 5>
+
+<item 6>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+We are collaborating to figure out the details. Thank you so much for your patience through this. — OpenAI (@OpenAI) November 22, 2023
+
+Altman also posted about the new deal, giving some insight into the roller coaster that we’ve all been riding since his firing was revealed Friday. In his
+words, his decision to join Microsoft on Sunday “was the best path for me and the team.” Since then, the new board’s composition and Microsoft’s support appear
+to have been enough to bring him back to the AI company he co-founded.
+
+Altman and board in talks
+
+OpenAI’s board of directors is reportedly in talks with Sam Altman, ex-Y Combinator president and an OpenAI co-founder, to return to OpenAI as CEO as soon as
+this week.
+</item 6>
+
+<item 7>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman also co-founded Worldcoin, a biometric and cryptocurrency project that’s been scanning people’s eyeballs with the goal of creating a vast digital
+identity and financial network.
+
+___
+
+Associated Press business writers Haleluya Hadero in New York, Kelvin Chan in London and Michael Liedtke and David Hamilton in San Francisco contributed to this
+report.
+</item 7>
+
+<item 8>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Couldn't be a prouder brother. — Jack Altman (@jaltma) November 17, 2023
+
+It’s unclear what missteps Altman might’ve made helming OpenAI… at present. But they evidently relate to his relationship with OpenAI’s rather unusual board
+makeup and corporate governance structure — and perhaps OpenAI’s active talks to raise substantial new capital.
+
+As a recent piece in VentureBeat explored, OpenAI’s for-profit subsidiary, OpenAI Global, LLC, is fully controlled by OpenAI’s nonprofit. While the for-profit
+subsidiary is permitted to commercialize its tech, it’s subject to the nonprofit’s mission: attaining artificial general intelligence (AGI), or AI that can — as
+OpenAI defines it — “outperform humans at most economically valuable work.”
+
+The nonprofit OpenAI’s board has the power to both determine when the company has achieved AGI and exclude this AGI from IP licenses and other commercial terms,
+including with Microsoft, one of OpenAI’s biggest investors and a steadfast integrator of OpenAI’s various technologies.
+</item 8>
+
+<item 9>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+The Information, speaking to three sources formerly with the company, reports that they no longer expect the sale — led by Thrive Capital — to happen, or, if it
+does, to come with a lesser valuation because of the recent turn of events.
+
+Altman planning new venture
+
+Altman has been telling investors that he’s planning to launch a new venture, according to The Information. Brockman is expected to join the effort — whatever
+form it takes. (Possibly an AI chip startup.)
+
+i love you all. today was a weird experience in many ways. but one unexpected one is that it has been sorta like reading your own eulogy while you’re still
+alive. the outpouring of love is awesome. one takeaway: go tell your friends how great you think they are.
+</item 9>
+
+<item 10>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Sam Altman has been fired from OpenAI, Inc., the 501(c)(3) nonprofit that acts as the governing body for OpenAI, the AI startup behind ChatGPT, DALL-E 3, GPT-4
+and other highly capable generative AI systems. He’ll both leave the company’s board of directors and step down as CEO.
+
+In a post on OpenAI’s official blog, the company writes that Altman’s departure follows a “deliberative review process by the board” that concluded that Altman
+“wasn’t consistently candid in his communications” with other board members, “hindering its ability to exercise its responsibilities.”
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+“The board no longer has confidence in [Altman’s] ability to continue leading OpenAI,” the blog post reads.
+</item 10>
+=== END ITEM id=b8f43dc77fc227bf ===
+
+=== ITEM id=1e6e3f851e2ffa15 ===
+Gold sentences and facts:
+Sentence 0: And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.0: Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.1: Valve has made these minor physical upgrades alongside the big improvements.
+  Fact 0.2: Valve's new iteration includes big improvements.
+Sentence 1: We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.
+  Fact 1.0: The writer looks at Valve and sees a store that could be both.
+  Fact 1.1: Valve has decided to focus exclusively on games.
+Sentence 2: The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day.
+  Fact 2.0: The Steam Deck OLED will go on sale on November 16th at 1pm ET.
+  Fact 2.1: Valve has units of the Steam Deck OLED ready to ship on that same day.
+
+Retrieved items:
+<item 1>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Other improvements include support for both Wi-Fi 6E and Bluetooth 5.3, together with a new antenna array that will give a better experience when using both at
+the same time. There’s also a reworked power supply (it has a logo now!) with a longer 2.5m cable that will charge the OLED model from 20 to 80 percent in “as
+little as 45 minutes.” The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper.
+
+Valve
+
+The Steam Deck OLED starts at $549, and will replace all but the entry-level model in the range.
+</item 1>
+
+<item 2>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Surprise! Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it. It might not look like a big change from the outside, but the
+Steam Deck OLED is a thorough mid-cycle refresh of a machine that’s not even two years old. At the same time, Valve is also adjusting the configuration of its
+entry-level model, making it a far more compelling option. Apologies to anyone who literally bought a Steam Deck yesterday.
+
+At an event held for press prior to the device's launch, Greg Coomer, a product designer at Valve, called the new model "the definitive version of the Steam
+Deck." He explained that the device contains many things the company wanted to include at the LCD model's launch but wasn't able to, along with some additions
+based on community feedback.
+
+As its name suggests, the most noticeable upgrade to the Steam Deck OLED is the display. The original Steam Deck had a 7-inch 800p LCD running at 60Hz.
+</item 2>
+
+<item 3>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The OLED screen makes for a fancier Steam Deck, but it’s the battery life (and some tweaks throughout the design to carve out more of it) that lets Valve’s new
+handheld truly deliver on its promise of a portable gaming PC.
+
+All the tiny, delightful improvements of Steam Deck OLED
+
+Since the original Steam Deck launched, Valve has been improving the hardware through updates — its team estimates around 300 to date. That will continue with
+both the Steam Deck OLED and the original Steam Deck, the latter of which will get a fresh BIOS update to align itself with some of the former’s upgrades. The
+original device will see some battery life improvement; just don’t expect the OLED model’s jump of 30-50%.
+
+Some changes — even smallish ones — demand new hardware. And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new
+iteration.
+</item 3>
+
+<item 4>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+When asked about the potential for future hardware — like a return of the Steam Machine or an updated Steam Controller — there were no firm updates, but there
+does seem to be something happening. Griffais agreed that enabling the Steam Deck to work as a hybrid living room console was a "side goal" of the team, and
+noted that everything Valve does to improve SteamOS will benefit other devices. Coomer added that Valve is still working internally on "a bunch of controllers
+and prototypes." If SteamOS is being used on larger displays, the team would want to augment that experience with better input options. "We don't have any
+announcements on that front, but it's why we're building prototypes and thinking about the future there," Coomer said.
+
+The Steam Deck OLED will be available to order on November 16th at 1PM ET. Valve expects units to begin shipping as soon as orders start to roll in. The updated
+pricing on the existing LCD models is already in effect.
+</item 4>
+
+<item 5>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The Steam Deck OLED now includes a Wi-Fi 6E radio (great if you have a modern router and connection to make use of it) and a dedicated Bluetooth module, which
+allows for improved audio quality with wireless headphones, the option to wake the Steam Deck from a controller, and the capability to connect many Bluetooth
+controllers for multiplayer. The haptics are noticeably improved, with a wider frequency range. And the touchscreen is markedly better — it’s responsive to the
+point where I don’t feel the need to plug in a USB-C keyboard anytime I need to type a few words.
+
+A review for spec specifics If you’re the sort of person who likes the nitty-gritty technical details of screens and batteries, we also recommend reading The
+Verge’s review.
+
+Valve also claims that the Steam Deck OLED is more repairable, which, mercifully, I didn’t have the need to test for myself. (Parts will once again be sold
+through iFixit.)
+</item 5>
+
+<item 6>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The range still tops out at $649, but you’re getting a lot more for your money: All of the hardware improvements, 1TB of storage instead of 512GB and an
+improved carry case that can pop out into a slimmer shell that’s smaller and easier to fit in a bag. As mentioned, it also has the same anti-glare etched glass
+as the outgoing 512GB LCD model.
+
+Finally, there’s also a Limited Edition version of the 1TB model, with a translucent shell and a customized carry case, which will be sold at $679. We imagine
+stocks will not last very long, as it looks pretty rad:
+
+Valve
+
+While there are no concrete updates on future hardware developments, Valve engineer Pierre-Loup Griffais noted that, so long as interest in handheld gaming
+remains high, the company has "plans for successive generations of handhelds." For now, Griffais explained, it's important to Valve that developers don't need
+to "split their attention" between different performance targets.
+</item 6>
+
+<item 7>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+When we award the Polygon Recommends badge, it’s because we believe the recipient is uniquely thought-provoking, entertaining, inventive, or fun — and worth
+fitting into your schedule. If you want curated lists of our favorite media, check out What to Play and What to Watch .
+
+It appears, at first glance, that Valve cribbed from Nintendo’s playbook with the Switch OLED, for which Nintendo upgraded the device’s screen but not its guts.
+In terms of raw power, the Steam Deck OLED is identical to the original Steam Deck. Valve says this synchronicity is meant in part to continue to provide
+developers with a single goal when optimizing their games — though it promises that the Steam Deck 2 (which the company hopes to release in two to three years)
+will have a generational power leap.
+
+For those who haven’t tried a Steam Deck, though, I wouldn’t wait for its sequel. Because while Valve hasn’t upped the horsepower, it has improved practically
+everything else.
+</item 7>
+
+<item 8>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+I think the philosophy change would do both of those companies much good.
+
+If you get your way in terms of being able to freely put your own store on Android, do you believe that would only be a game store or would it also be an app
+store? We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.
+
+So the Epic Games Store isn’t a games store, right? It’s the store operated by Epic Games. So we have a lot of non-games there already. We have the Brave web
+browser, we have a number of software creation tools including Unreal Engine, and there’s more coming, including some other awesome creation tools and
+productivity tools. We’ll host any app anybody wants of any sort.
+
+I think the gaming market is something we’re uniquely close to, and so I think we would likely be able to forge closer partnerships and opportunities in gaming,
+but we’ll be open to everybody on Android as we are on PC.
+</item 8>
+
+<item 9>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+Yes. But you might find that the screen and the battery justify the double dip. For someone like me, who puts hundreds of hours into the Steam Deck each year,
+the upgrade is inescapable.
+
+And if you don’t have a Steam Deck? How many times can I say it: This is my favorite console ever. And it just got better.
+
+The Steam Deck OLED will be available Nov. 16 to purchase through the Steam storefront. The hardware was reviewed with a unit provided by Valve. Vox Media has
+affiliate partnerships. These do not influence editorial content, though Vox Media may earn commissions for products purchased via affiliate links. You can find
+additional information about Polygon’s ethics policy here .
+</item 9>
+
+<item 10>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Currently, more than 10,000 titles on Steam fall under the playable or verified labels, with more added every day.
+
+When will the Steam Deck OLED be available?
+
+The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day. The company has lowered the price of its LCD
+lineup and will sell through its backstock of 64GB and 512GB models until they’re all gone. It’ll continue selling the 256GB LCD model at a reduced price of
+$400, while the 512GB OLED model will cost $550 and the 1TB OLED model will cost $650. There’s also a limited edition 1TB OLED version priced at $680 that comes
+with a special carrying case, a translucent gray body and orange accents.
+
+Valve
+
+Wrap-up
+
+According to the developers I spoke with at Valve, this is the definitive version of the Steam Deck.
+</item 10>
+=== END ITEM id=1e6e3f851e2ffa15 ===
+
+=== ITEM id=b9da1967f4367982 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: The deals Google makes include deals with Apple, Samsung, Mozilla, and many others.
+  Fact 0.2: The Justice Department is focused on these deals to ensure Google is the default search engine on practically every platform.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The last roundup reported how Google spent $26.3 billion in 2021 making Google the default search engine across platforms.
+  Fact 1.1: The last roundup reported how Google tried to have Chrome preinstalled on iPhones.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“We try to get people up and running as fast as possible.”
+
+Cue acknowledged that the ISA didn’t allow Apple to offer users a choice of search engines during setup but also said he wouldn’t want to do that anyway. “We
+try to get people up and running as fast as possible,” he said. “Setup is just critical stuff.” Showing people a bunch of search engines they’ve never heard of
+would just be a bad user experience, he argued; even Cue couldn’t remember the names of some of the alternatives to Google. “We make Google be the default
+search engine,” he said, “because we’ve always thought it was the best. We pick the best one and let users easily change it.” (“Easily” is a persistent point of
+contention in this trial — DuckDuckGo’s CEO, who testified last week, claimed it takes “too many steps” to switch.)
+
+As for the privacy pop-ups? This is where Bellshaw began to press on how exactly Apple decided Google had the best product.
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 4>
+
+<item 5>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 5>
+
+<item 6>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+“This lawsuit simply ignores how intensely competitive and dynamic the technology industry is today.” Walker also points out that, when faced with a situation
+where Google is not the default, users tend to spend some effort putting Google back in charge. When Mozilla made Yahoo! the default on Firefox, most users
+changed it to Google. And when people set up a Windows device for the first time they frequently sidestep the Microsoft default — “Google” was the number one
+search query on Bing in 2021 — despite Microsoft making that very annoying to do. This is a compelling point, and many of us will be well accustomed to dodging
+all of Microsoft’s pleading while trying to get Chrome and Google set as defaults whenever we set up a new PC. But all of these arguments do ignore the fact
+that Google and its competitors are not on an even playing field. The question remains, why do users prefer Google?
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 8>
+
+<item 9>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+and it replied with more options that were all over $300. Another observation from this test is that I tend to use the Google Search bar as much for returning
+to familiar sites as I do for searching for information, which means switching to another provider could be temporarily annoying simply because it wouldn’t
+remember all the places I’ve been. Is Google as the default unfair?
+
+In a response to the trial on Google’s blog, president of global affairs Kent Walker said the company’s search product was the favourite of users, browsers and
+device makers simply because it was the best in the business. And being default was not determinative, he said; changing from Google Search to any other search
+provider was easy, and the company competes with many others on phones and PCs. “People don’t use Google because they have to, they use it because they want
+to,” he said. “This lawsuit simply ignores how intensely competitive and dynamic the technology industry is today.”
+</item 9>
+
+<item 10>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 10>
+=== END ITEM id=b9da1967f4367982 ===
+
+=== ITEM id=4af428926209c360 ===
+Gold sentences and facts:
+Sentence 0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together.
+  Fact 0.0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies.
+  Fact 0.1: In this innovation cycle, there is a strong need for technologists and designers to be in the process together.
+Sentence 1: Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere.
+  Fact 1.0: Ric Lipson is a partner at Stufish.
+  Fact 1.1: Ric Lipson collaborated on the U2 project for Sphere.
+  Fact 1.2: Es Devlin, an artist, collaborated with Ric Lipson on the U2 project for Sphere.
+  Fact 1.3: Brian Eno, a producer, collaborated with Ric Lipson on the U2 project for Sphere.
+
+Retrieved items:
+<item 1>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Product design is in a moment of profound change and redefinition as technologies like artificial intelligence (AI) and spatial computing dramatically affect
+computing experiences. AI, especially, may have only minor impacts on interface design but will significantly impact the holistic product or ecosystem
+experience. Spatial computing, on the other hand, will change human-computer interactions and unmoor our understanding of what a computer is.
+
+In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for
+technologists and designers to be in the process together.
+
+For successful products and businesses, innovation is perpetual. There is a never-ending search to find the next new thing that enhances the user experience,
+extends product reach, expands revenue, or all three simultaneously. Product design makes innovation less daunting and increases chances for success because it
+is a multidisciplinary process with structures and frameworks to catalyze innovation. Technologists have a role in the process that expands beyond simply
+validating the technology or concept, which is their customary responsibility.
+</item 1>
+
+<item 2>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Before discussing the nontraditional ways technologists participate in product innovation, let’s conceptually examine innovation and product design.
+
+The word innovation has a simple meaning — to introduce something new or a novel method of doing something — yet we frequently inflate it to mean something
+magical, grandiose, and world-changing. Innovation can just as easily be mundane and straightforward. The key to innovation is being “new.” The “new” can be
+localized to a team, product, process, or business unit. The “novel” can be well-known and established practices not incorporated into your workflow or product.
+Sometimes, innovation comes from closing small gaps and isn’t always a grand eureka moment.
+
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+Product design is a process and not a discipline or deliverable. It is (understandably) easy to limit the scope of product design to color choices, content
+layout, and aesthetics.
+</item 2>
+
+<item 3>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Critically, says Lipson, the staging for the U2 show is elementary in real terms, despite its technological complexity. “And what’s interesting is that the
+Sphere, like ABBA Arena, is only touching the sides of what you can do,” he says. “In five years’ time and 10 years’ time, two years’ time, whenever the
+technology shifts, you’ll be able to do more.” By the numbers ... U2 perform at the Sphere in Las Vegas. Credit: Stufish Entertainment Architects The screens,
+for example, are a bespoke assembly of state-of-the-art screens. But behind those screens are “a whole new kind of speaker,” Lipson says. “In a regular show,
+the speakers are at one end pushing the sound down the room, so it’s louder at the stage end and quieter further away. [But here] because everybody’s sort of
+getting their own feed, everybody’s getting an equal volume. So hearing the show in there, sonically, may be better than anywhere.”
+</item 3>
+
+<item 4>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Breathtaking is fair. Like the ABBA Voyage show in London, it is hard to capture in words. In many ways, it’s a conventional space: there is tiered seating
+inside, and wallet-bruising bar snacks and merchandise for sale outside. Some parts of the rock concert experience will never change. But when the lights go
+down, everything changes. Around you, Sphere splits open to reveal a succession of environments, each more stunning than the one before. Though the structure is
+familiar - the audience seated in rows, the band on a single, central stage - the effect is overwhelming. In U2’s show, we journey through a succession of
+environments referencing the band’s creative history. For other projects, such as Darren Aronofsky’s Postcard From Earth, the Sphere’s sound system uses
+“haptics” to make the audience feel the sounds. U2 perform at the Sphere in Las Vegas.
+</item 4>
+
+<item 5>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+U2 perform at the Sphere in Las Vegas. Credit: Stufish Entertainment Architects These are the technical specs: an interior 16K x 16K spherical video surface,
+the highest-resolution LED screen ever made with 268,435,456 pixels, and an exterior covered by 1.2 million hockey-puck-sized LEDs. There are 157,000
+ultra-directional speakers – the boffins call it “beam-forming acoustics” – and there are “infrasound haptics”, which means the soundwaves are shaped to create
+both vibrations and waves of air pressure.
+
+The comparison to ABBA’s show in London is perhaps the only approximate one: both are wholly enveloping experiences where the lights, sound and special effects
+are blended to push the audience’s senses to the limit. They differ in one key way; ABBA pushes its effects out toward you, largely to play smoke and mirrors
+with the on-stage simulacrums. Sphere, in contrast, more wholly and subtly envelops you.
+</item 5>
+
+<item 6>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+As experts on a technology or technology stack, we can communicate abstract insights or contribute in more conceptual contexts. Technologists add value to the
+product design process by sharing their expertise on a technology’s characteristics. Designers use this information to shape and exploit technologies in the
+visual and interaction design process. In this way, technologists inform new interaction models, interface metaphors, and product channels. This involvement
+gives confidence and conviction to the promises of design.
+
+Think of digital technologies as a material like paint, stone, or wood. For artisans to create with materials, they must understand the material’s ontology and
+phenomenology. An artist must know the differences between oil, acrylic, or watercolor paints because each material has different properties that affect how and
+what can be created. Technologists must “find the grain” of a technology.
+</item 6>
+
+<item 7>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Technologists must “find the grain” of a technology. In this way, they become an intermediary between the abstract nature of design and the pedantic nature of
+technology. This philosophical perspective is especially important when a product is in a growth stage or when using emerging technologies.
+
+Regardless of whether your product is growing or in a stable stage or employs established or emerging technologies, integrating technologists into the product
+strategy and design process enriches the final outcome. There is a technology perspective extending beyond the operations and mechanics of the code “factory
+floor,” which provokes innovation. Sometimes this leads to small, impactful moments of innovation — and sometimes it is a brilliant revolution.
+</item 7>
+
+<item 8>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Too often, design is minimized to only the act of making user interfaces pretty. Product design is much deeper and broader in scope than visual design assets.
+For example, product design can give direction and focus to a business strategy, user experience strategy, or technology explorations.
+
+The process establishes a guide rail throughout any innovation initiative. The core of product design is decision-making with an astute instinct for making the
+best decisions at the most opportune time. Product design helps reduce risk and leads to more effective innovation through quality decision-making.
+
+A progressive role for technologists
+
+Technologists play a strategic role in product innovation and should bring a metaphysical perspective in addition to being punctilious. Our job is to
+communicate the essence of a technology and think strategically about the application of technologies to problem spaces. We are most constructive when we
+translate the technicals of “how to make X do Y” to “these are the types of products and services realizable with technology X.”
+</item 8>
+
+<item 9>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Sphere, in contrast, more wholly and subtly envelops you. “They are both legacy projects made by artists who have the career and track record to be able to look
+at these things objectively in a way that a younger performer perhaps wouldn’t because it takes an entire lifetime of experience to make those kinds of choices
+and make it work,” Williams says. The two shows also share British music stage architecture firm Stufish whose work ranges from the Queen’s Platinum Jubilee,
+tours for Beyoncé and Jay-Z, Michael Bublé, Elton John and Madonna as well as the ABBA Arena in London. Stufish partner Ric Lipson (along with artist Es Devlin
+and producer Brian Eno) collaborated on the U2 project for Sphere. “With the ABBA Arena, it’s absolutely designed for that show, but you could also imagine that
+building having another avatar show in there, or indeed a live performance where people would use the technology that’s in the building as an immersive
+environment,” Lipson says.
+</item 9>
+
+<item 10>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+The specifics of the process and technologies are only important as they pertain to how well they solve the problem, the costs to do so, and the overall end
+user experience.
+
+Product innovation is experimental and should not always be expected to yield productive results. It requires a learning curve and patience, as the outcomes are
+often ambiguous and unknown. Business leadership can struggle with this perspective because it is indefinite (in terms of results and timelines), and it is
+challenging to translate pure technology innovation into value creation. A gap opens between technology and product teams wherein technology teams strain to
+articulate the capabilities and value of a technology innovation, leading to unfilled promises and the perception of “technology for the sake of technology” or
+quips like “a solution looking for a problem.”
+
+The current hype cycle in AI serves as a great concrete example. For technology or product executives, the challenge is how to do more than check the AI box —
+it’s about how to meaningfully incorporate AI into a product. Instead of forcing a technology onto a product, the design process flows to the technologies.
+</item 10>
+=== END ITEM id=4af428926209c360 ===

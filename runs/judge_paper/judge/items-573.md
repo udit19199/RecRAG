@@ -1,0 +1,861 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=db61365327a90d7f ===
+Gold sentences and facts:
+Sentence 0: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 0.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 0.1: The leading piece of drama returns.
+Sentence 1: The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley.
+  Fact 1.0: The Big Ten suspended coach Jim Harbaugh for three games.
+  Fact 1.1: The Big Ten suspended Jim Harbaugh on Friday.
+  Fact 1.2: The team was on a plane en route to Penn State when the suspension happened.
+  Fact 1.3: Michigan had hoped to block the suspension.
+  Fact 1.4: The Wolverines (Michigan) will be without their coach on the sidelines in Happy Valley.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+The Big Ten announced Michigan coach Jim Harbaugh will be prohibited from coaching on the sideline for the remainder of the regular season.
+
+At least, in theory. The Friday ruling is the next chapter in an NCAA investigation into Michigan for in-person scouting and sign stealing in a scandal that led
+to the resignation of staffer Connor Stallions on Nov. 3. Harbaugh will be allowed to coach during the week but will not be able to be on the sideline. Michigan
+did not get a ruling on a temporary restraining order ahead of the showdown against No. 10 Penn State.
+
+The Wolverines still won 24-15 under interim coach Sherrone Moore, but the fallout from the scandal continues to have a far-reaching impact on the Big Ten,
+Michigan and college football beyond this year's College Football Playoff race.
+
+A look at the winners and losers from the scandal to date:
+
+Michigan scandal winners and losers
+
+Winners
+
+Tony Petitti
+
+Petitti certainly did not hit Michigan with a "slap on the wrist."
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 2>
+
+<item 3>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+The Conference has confirmed that it is not aware of any information suggesting Coach Harbaugh's involvement in the allegations. The University continues to
+cooperate fully with the NCAA's investigation.
+
+From the Big Ten:
+
+"The Big Ten Conference's commitment to student-athletes, sportsmanship and the commissioner's duty to protect the integrity of competition will never waver.
+Today's decision by the University of Michigan to withdraw its legal challenge against the conference's November 10th notice of disciplinary action is
+indicative of the high standards and values that the conference and the university seek to uphold, the University of Michigan is a valued member of the Big Ten
+Conference and the conference will continue to work cooperatively with the university and the NCAA during this process."
+
+Monday, Nov. 13
+
+Harbaugh says he'll state his case at Friday hearing
+
+Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Within it, the school warned Big Ten commissioner Tony Pettiti against levying "premature" disciplinary action against Jim Harbaugh and alleged that in-person
+scouting and sign-stealing are commonplace across the NCAA.
+
+"The conference should act cautiously when setting precedent given the reality that in-person scouting, collusion among opponents, and other questionable
+practices may well be far more prevalent than believed," the letter read.
+
+Michigan also included with the letter "two attached documents of Michigan's offensive and defensive signs allegedly stolen and shared by other Big Ten teams,"
+per Yahoo Sports.
+
+Conference awaits Michigan response
+
+The Big Ten expects a formal response from Michigan to the notice of discipline by the end of the day Wednesday, ESPN's Pete Thamel reports. His colleague Adam
+Rittenberg adds that a ruling is expected to come down Thursday.
+
+Sources: The Big Ten expects a response from Michigan on the notice of discipline by the end of day on Wednesday. Don’t expect any ruling by the Big Ten on
+Wednesday, as they are expected to take time to absorb Michigan’s response.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+However, the primary difference is Michigan is accused of using in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire
+its information.
+
+Monday, Nov. 6
+
+No connection between Buckeyes coach, Michigan investigation
+
+Ohio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan, Yahoo Sports reported.
+
+A report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes' arch-rivals, but the NCAA told the Big Ten there
+are no ties that it knows of between the Ohio State coach and the investigation.
+
+NCAA shares findings with Big Ten as Harbaugh suspension looms
+
+Yahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the in-person scouting
+and recording of opponents’ sidelines to Harbaugh."
+
+Still, the conference is considering a suspension for Harbaugh and could hand down punishments before the end of the week.
+</item 6>
+
+<item 7>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Was this old-school Big Ten football or Big Ten West football in disguise?
+
+Michigan's defense clamped on Penn State quarterback Drew Allar (10 of 22, 70 yards, TD), and the Nittany Lions had one play of more than 20 yards. Corum closed
+the drama with a 30-yard TD.
+
+The same-old questions about Nittany Lions coach James Franklin in big games resurfaced, but those are back-page headlines in the Big Ten East race. The quirky
+tiebreaker involving Big Ten West opponents? That's out the door. The winner-take-all showdown between Ohio State and Michigan? There are a full two weeks of
+anticipation for that now.
+
+Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns. Moore's postgame emotion was a headline, but there is a
+reality that set in through a brutal watch of a second half.
+
+McCarthy is a leader.
+</item 7>
+
+<item 8>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+🗣️ "Bet" pic.twitter.com/ENB7O8MyPv — The Sporting News (@sportingnews) November 10, 2023
+
+Michigan announces intention to dispute suspension
+
+Michigan has released a statement expressing frustration with the Big Ten's process and says it plans to seek a court order to block Harbaugh's suspension from
+taking effect.
+
+NEWS: Michigan says it intends to seek a court order with Jim Harbaugh preventing disciplinary action from taking effect.
+
+
+
+Full statement: pic.twitter.com/p92yUCLsTX — Matt Fortuna (@Matt_Fortuna) November 10, 2023
+
+Big Ten claims no evidence Harbaugh was aware of scheme
+
+While the Big Ten says it's "proven" that an illegal sign-stealing scheme existed, the conference could not prove that Harbaugh knew about it. So, why was
+Harbaugh suspended? The Big Ten asserts that, because he is the head coach, he has a responsibility for preventing this kind of scheme from taking place.
+</item 8>
+
+<item 9>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Did Michigan really need Jim Harbaugh on Saturday?
+
+Perhaps the result provides the short-term answer. No. 3 Michigan beat No. 10 Penn State 24-15 at Beaver Stadium on Saturday. The Wolverines threw one pass in
+the second half – and that didn't even technically count – in a risk-averse game plan under acting coach Sherrone Moore. The defense smothered the Nittany
+Lions, and that will lead to more buildup ahead of the showdown with No. 1 Ohio State on Nov. 25.
+
+Then Moore let it all there in the Fox postgame interview with Jenny Taft. Even if the answer is no, Harbaugh was ever-present.
+
+"I want to thank the Lord and I want to thank Coach Harbaugh," Moore said. "I f------ love you man. I love the s--- out of you, man. I did this for you, for
+this university, the president, our AD.
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Public reprimands/fines are common penalties under B1G sportsmanship policy. — Adam Rittenberg (@ESPNRittenberg) November 9, 2023
+
+Michigan's 10-page letter to Big Ten released
+
+Yahoo Sports' Dan Wetzel posted Michigan's full 10-page letter to the Big Ten on X (formerly Twitter). The letter outlines Michigan's belief that the Big Ten
+would be acting too hastily in suspending Harbaugh or levying any punishment toward Michigan before the completion of a full NCAA investigation.
+
+In the letter, Michigan said the university has not had the chance to review all the evidence and respond, which oversteps the due process allowed for Michigan.
+It said Pettiti should not have unilateral authority to punish violations without first having a completed investigation and then a response from the Compliance
+and Reinstatement Committee, which would recommend penalties for rules violations.
+</item 10>
+=== END ITEM id=db61365327a90d7f ===
+
+=== ITEM id=13af3ad476f797a2 ===
+Gold sentences and facts:
+Sentence 0: Halloween isn’t the only holiday on the horizon now that October is drawing to a close.
+  Fact 0.0: Halloween is not the only holiday on the horizon.
+  Fact 0.1: October is drawing to a close.
+Sentence 1: If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family.
+  Fact 1.0: The reader may be in a new relationship this holiday season.
+  Fact 1.1: The reader may be faced with the opportunity to introduce their significant other to their family this holiday season.
+
+Retrieved items:
+<item 1>
+Govee’s colorful LED light strips are on sale just in time for Halloween (The Verge, 2023-10-28T16:40:43+00:00)
+What’s particularly great about this strip, though, is that it supports the newer Matter protocol, which allows you to control the lights with a wide array of
+smart home platforms.
+
+Govee LED Strip Light M1 Matter $ 45 $ 60 25 % off $ 45 $ 45 $ 60 25 % off The customizable Govee M1 Matter Compatible LED Strip Light is 6.56 feet long and can
+display millions of colors and shades of white. You can also use it to create light patterns that sync with music. $45 at Amazon$48 at Govee
+
+Though they launched last year, Google’s flagship wireless earbuds continue to impress us with their terrific sound quality and good noise cancellation, which
+is why they’re one of our favorite pairs of wireless earbuds. We’re also fans because of all the other perks they offer, like multipoint connectivity, long
+battery life, and a good transparency mode.
+</item 1>
+
+<item 2>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+When it comes to introducing your partner to your family, there’s still some extra planning to be done ahead of time. If you’re travelling this month, you may
+need to decide on sleeping arrangements - as opposed to residing in your parent’s house - in order to minimise family stress.
+
+“It would be really helpful to have conversations beforehand, so it’s clear what you are agreeing or not agreeing to,” Lurie explained. “For example, if your
+family isn’t comfortable with you bringing someone home and sleeping in the same bedroom, then you and your partner may stay elsewhere. But those would be
+conversations that you all need to have together. It really depends on your relationship with your family and with your partner.”
+
+It’s also important to be checking in with your partner while spending time with your family. These check-ins may include some quality time together, so that
+any family drama that may arise isn’t hurting your relationship.
+
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’
+</item 2>
+
+<item 3>
+Govee’s colorful LED light strips are on sale just in time for Halloween (The Verge, 2023-10-28T16:40:43+00:00)
+Blink Video Doorbell (with Blink Outdoor 4) $ 90 $ 180 50 % off $ 90 $ 90 $ 180 50 % off Blink’s Video Doorbell is the best if you’re looking for a
+budget-friendly buzzer that offers motion-activated recording and alerts, night vision, two-way audio, and up to two years of battery life. $90 at Amazon
+
+Verge Deals on X (formerly known as Twitter) / Join more than 51,000 followers and keep up with the best daily tech deals with @vergedeals Follow us!
+
+Some more deals to kickstart your weekend
+</item 3>
+
+<item 4>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family.
+However, it’s likely you’ve found yourself mulling over an array of reasons why the holidays may not be the right time for such an introduction.
+
+The holiday season is often perceived as the most wonderful time of year, but that’s not necessarily the case for everyone.
+</item 4>
+
+<item 5>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+Love Letter is on sale at Amazon for $6.29 (around $9 off). The fairly simple card game for two to six players is easy to get into and acts as a great intro to
+more elaborate tabletop games.
+
+Govee 100ft Smart LED Strip Lights $ 15 $ 25 40 % off $ 15 $ 15 $ 25 40 % off Govee’s basic 100ft LED smart light strip comes with 64 preset scenes so you can
+create different vibes based on your emotions, holidays, nature, and more. It also offers various music modes and connects to your phone via Bluetooth or the
+Govee Home app. $15 at Amazon
+
+Tekton Everybit Tech Rescue Kit $ 22 $ 29 24 % off $ 22 $ 22 $ 29 24 % off A 46-piece screwdriver kit that can help you repair practically any tech device out
+there.
+</item 5>
+
+<item 6>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I think anytime that emotions are heightened, with the holidays certainly being one of those times, our expectations are really high,” she said. “We’re
+expecting it to be this joyful, happy, perfect occasion. So, we sometimes forget that the holidays come with a lot of stress.”
+
+Despite tensions between relatives at the dinner table, that doesn’t mean your relationship shouldn’t be celebrated. Saba Lurie is a licensed marriage and
+family therapist at Take Root Thereapy in California. She explained to The Independent that while there isn’t a right or wrong time to introduce your partner to
+your family, the intentions of such an introduction must be clear. Not only should you have already discussed where your relationship is headed, but you should
+also tell your partner everything they need to know about your family.
+
+“I think you should tell the person why you’re bringing them home for the holidays, so you’re on the same page about the intentions and what’s motivating the
+decision to include,” she said.
+</item 6>
+
+<item 7>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“Sometimes it can be helpful for them to know about the dynamics that they’re stepping into and how they can best support you. Frankly, they should be aware if
+there is tension or if there is stress within your family.”
+
+(Getty Images)
+
+Communication before the holidays goes both ways, and there are things that your family should know about your significant other too. “If there’s something
+about your partner that could be surprising to your family, or that’s a notable difference from who someone you’ve brought home before, tell your relatives
+that,” Zar said. “Let’s set your family and partner up for success.”
+
+Before bringing your significant other home for the holidays, you may want to express to your family how you wish for them to feel included - such as
+incorporating your partner’s family traditions into your own celebration. However, Zar advised against oversharing information before Christmas. You still want
+your family and partner to connect in person, rather than hearing about each other through the grapevine.
+</item 7>
+
+<item 8>
+Govee’s colorful LED light strips are on sale just in time for Halloween (The Verge, 2023-10-28T16:40:43+00:00)
+Halloween isn’t the only holiday on the horizon now that October is drawing to a close. Once the clock strikes midnight on October 31st, Mariah Carey will
+defrost, peppermint mochas will inevitably return, and the 2023 holiday season will have officially begun.
+
+Thankfully for those looking to get in the festive spirit, Govee’s Matter-ready LED Strip Light M1 is on sale for an all-time low of $44.99 ($15 off) at Amazon
+when you clip the on-page coupon. You can also buy it for $3 more direct from Govee through October 31st, which is still one of its better prices to date.
+
+While handy throughout the year, Govee’s 6.56-foot (2m) light strip is particularly convenient during Halloween and other holidays. Not only can the bright,
+tunable LEDs flash and blink to the beat of your music, but they can also act as a festive piece of decor that adds a pop of color to your holiday parties.
+</item 8>
+
+<item 9>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+In a recent poll from the American Psychological Association, 41 per cent of US adults said their stress levels increased from November to January when compared
+to other months of the year. Nearly 50 per cent of Americans also described their stress level during the season as “moderate”.
+
+Everyone has different concerns leading up to Christmas, Hanukkah, or New Years - from family drama at the dinner table to a small spats with your mother about
+decorations. With what can be stressful events, it only begs the question: do you really want to bring your partner into the mix? While it’s important to
+eventually introduce your loved ones to your significant other, relationship experts believe there are some discussions you should have beforehand, especially
+during the holidays.
+
+Speaking to The Independent, Rachel Zar - a licensed marriage and family therapist at Spark Chicago Therapy - acknowledged that while every family is different,
+there’s a variety of problems that could arise during the holiday season - mainly because we put too much pressure on having a joyful holiday.
+</item 9>
+
+<item 10>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’ Like a temperature check,” she added. “Those are points where the two of you can come
+and remind each other: ‘We are a team in this.’ Or, the two of you could go on a walk and separate from the family, just for a little bit of time to reset
+within the relationship.”
+
+During the holiday season, your partner may be seeing how you interact with your family for the first time. But that’s not necessarily a bad thing, according to
+the relationship experts. “I think introducing a significant other to family is a really vulnerable act, and that vulnerability is going to be what allows for
+greater intimacy,” Lurie said. “When your significant other sees you with your family, they may see another side of you that they may not have had access to
+before.”
+
+(Getty Images)
+
+On the other hand, your partner could learn that your relationship with your parents and extended family members is complex.
+</item 10>
+=== END ITEM id=13af3ad476f797a2 ===
+
+=== ITEM id=383e4f81760a1c65 ===
+Gold sentences and facts:
+Sentence 0: In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds the performance of other leading gen AI models like OpenAI’s GPT-4.
+  Fact 0.0: Google touted Gemini's superior architecture and capabilities in blog posts and press materials.
+  Fact 0.1: Google claimed that Gemini meets or exceeds the performance of other leading gen AI models.
+  Fact 0.2: OpenAI's GPT-4 is one of the other leading gen AI models Google named.
+Sentence 1: She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.
+  Fact 1.0: The woman admits that she may have misinterpreted the evidence.
+  Fact 1.1: The woman maintains that Google manipulates Search to maximise ad revenue.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+But Google denies pushing users towards the most monetisable subjects.
+
+Similarly, it’s also pretty common to see people complaining on the internet with some variation of “Google Search was a lot better 10 years ago”, which could
+absolutely be true. But it would be a stretch to assume that’s because of the company’s monetisation practices, when there’s a much simpler explanation. In
+2013, people were creating around 9 ZB of data every year (that’s nine zettabytes, or nine trillion gigabytes), which Google had to index constantly, whereas in
+2023 it’s more like 120 ZB. And not a whole lot of that is static websites like it was a decade ago, it’s live information that may be nested within various
+services and apps. What really happens when we search? Google has published extensive information about its Search procedures, so it’s not difficult to get its
+own take on what happens in the background when you send off a query.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 4>
+
+<item 5>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 6>
+
+<item 7>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 9>
+
+<item 10>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Some critics, including Megan Grey, contend that Google uses semantic keyword matching to make searches less precise on purpose, which widens the pool of
+content served and increases auctions for its ads. The quality tests, then, would ensure that the systems were still returning results that were justifiably
+related to the input.
+</item 10>
+=== END ITEM id=383e4f81760a1c65 ===
+
+=== ITEM id=49a6f9bd57b8ce32 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: Google makes deals with Apple.
+  Fact 0.2: Google makes deals with Samsung.
+  Fact 0.3: Google makes deals with Mozilla.
+  Fact 0.4: Google makes deals with many others.
+  Fact 0.5: The deals are meant to ensure Google is the default search engine on practically every platform.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The trial will probably bring up the deals later on.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy on day one.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 3>
+
+<item 4>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 5>
+
+<item 6>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 10>
+=== END ITEM id=49a6f9bd57b8ce32 ===
+
+=== ITEM id=191bab19e5b8ac76 ===
+Gold sentences and facts:
+Sentence 0: McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund.
+  Fact 0.0: McTominay is now United's top scorer for the season.
+  Fact 0.1: McTominay has six goals for the season.
+  Fact 0.2: McTominay is one goal ahead of Bruno Fernandes.
+  Fact 0.3: McTominay is one goal ahead of Rasmus Hojlund.
+Sentence 1: He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages.
+  Fact 1.0: McTominay has already been firing in many top-flight goals this term.
+  Fact 1.1: McTominay is also the joint-leading scorer from the Champions League group stages.
+
+Retrieved items:
+<item 1>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+With two games left for City in 2023, Haaland has time to be the overall top scorer, though it remains to be seen if Pep Guardiola will play him against Everton
+and Sheffield United.
+
+Haaland has missed City's last five games with a foot injury, but it is believed he could be in contention now to return to action.
+
+8 Haaland is the leading goalscorer in the Premier League this season
+
+2*. Kylian Mbappe (Paris Saint-Germain/France) - 52 goals
+
+Paris Saint Germain's all-time record scorer with 233 goals, it's easy to forget that the ex-Monaco man is still just 24 years old.
+
+He has added even more goals to his tally for Les Parisiens this term, while he has fired in ten times for the French national team.
+
+Mbappe's overall tally of 46 goals for Les Bleus is just ten shy of Giroud's current record.
+</item 1>
+
+<item 2>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+Manchester United got themselves back to winning ways thanks to a superb Scott McTominay brace against Chelsea.
+
+The victory remarkably puts them within three points of rivals Manchester City, after the reigning champions were defeated by Aston Villa, and keeps them in
+reach of the top four places.
+
+McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund. The Red Devils' captain had a first-half
+penalty saved by Robert Sanchez and United's Danish striker was substituted after another Premier League game without a goal, despite making 11 appearances.
+
+Erik ten Hag's side were dominant in the first half and finally pounced on Chelsea's inability to take control in midfield. Mauricio Pochettino's men attempted
+to break at pace but Sofyan Amrabat made a vital interception and Fernandes found Alejandro Garnacho out wide.
+</item 2>
+
+<item 3>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+The Portugal international Ronaldo has been battling with with Kylian Mbappe, Erling Haaland and Harry Kane for the title of the best goalscorer of 2023..
+
+Here talkSPORT.com runs you through how Ronaldo compares to the top six highest scoring European based footballers this year...
+
+7. Lautaro Martinez (Inter Milan) - 37 goals
+
+All of Martinez's goals this year have come at club level for Inter Milan, with none coming on the international scene for Argentina.
+
+With so many goals this campaign, it's no surprise that the Serie A giants are desperate to tie him down to a new deal.
+
+He currently leads the Scudetto Golden Boot race - six more than closest rival Domenico Berardi.
+
+8 Inter striker Martinez has carried on from last season by banging them in for fun Credit: Getty
+
+6.
+</item 3>
+
+<item 4>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+Santiago Gimenez (Feyenoord/Mexico) - 39 goals
+
+One of the most exciting strikers in world football, the 22-year-old has taken European football by storm.
+
+Joining Dutch side Feyenoord in the summer of 2022, he fired Arne Slot's men to the Eredivisie championship with 15 goals.
+
+With 20 goals this season along with two strikes for Mexico, it's clear to see why Arsenal, Tottenham and Chelsea have all been linked with a move.
+
+8 Gimenez seems destined for a big move in the near future Credit: Getty
+
+5. Romelu Lukaku (Roma/Belgium) - 40 goals
+
+After reuniting with Jose Mourinho at Roma in the summer, Lukaku has found his goalscoring form once again.
+
+The Belgian has been firing back in Serie A following another loan move from Chelsea, netting in almost all of his starts this season.
+</item 4>
+
+<item 5>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+70th minute: GOAL! 2-1 United! And it's McTominay who has a brace! It's a great ball to the back post by Garnacho and McTominay meets the header from inside the
+six-yard box. He's in terrific goalscoring form and becomes United's top scorer this season.
+
+69th minute: Antony tries one of his trademark curling efforts from the right after cutting in on his left but it's wide of the goal.
+
+62nd minute: Penalty appeal for United! Shaw rockets an attempt goalwards and it looked as though Colwill may have blocked it with his hand. VAR took a quick
+look and play continues.
+
+61st minute: Antony's trivela is deflected for a corner, it may have been going wide.
+
+54th minute: Unfortunately for Garnacho, lightning doesn't strike twice. His latest acrobatic effort is well wide of the goal.
+</item 5>
+
+<item 6>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+United fans will no doubt note the rich irony in the fact that these days McTominay is basically doing the job they once paid Paul Pogba to do. Marauding
+midfield engine and late-running goal threat; the all-action superhero who can chip in with 10 goals a season and pull off slide tackles that make the highlight
+reels. It never quite worked out for Pogba at United, largely – if you believe his most vehement critics – on account of his hair. McTominay is a different kind
+of player with a different kind of skillset. But for all the undoubted leadership qualities of Bruno Fernandes and Harry Maguire, tactically it is McTominay
+running the show right now: a development with numerous interesting consequences.
+
+Here he scored his fifth and sixth goals of the season. Previously he has never got more than seven. Where is this coming from?
+</item 6>
+
+<item 7>
+The Soccer Star on the Verge of Breaking an 89-Year-Old Record (The New York Times, 2023-11-17T21:47:19+00:00)
+They are, at least, likely to qualify for the play-offs, and therefore will have two must-win games in March to secure their first major tournament appearance
+since 2000 — the summer when Haaland was born. But there’s been little in recent performances to think Norway will breeze through those play-offs.
+
+Juve’s individual record will soon be surpassed, but captaining his side to a bronze medal at the Olympics may stand as his nation’s greatest achievement for
+much longer.
+
+GO DEEPER Erling Haaland is phenomenal - so why hasn’t he made Manchester City better?
+
+(Top photo: Sebastian Widmann – UEFA/UEFA via Getty Images)
+</item 7>
+
+<item 8>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+Al Nassr striker Cristiano Ronaldo looks set to be the top scorer in 2023 after his Boxing Day double against Al Ittihad.
+
+The 38-year-old may have swapped Europe for the Middle East, but he has showed no signs of slowing down in Saudi Arabia.
+
+8 Ronaldo has been in lethal form for club and country in 2023 Credit: Getty
+
+Ronaldo linked up with Al Nassr in the winter transfer window after parting ways with Manchester United following his explosive interview with Piers Morgan.
+
+Liverpool legend Jamie Carragher described the five-time Ballon d'Or winner's switch to the Gulf nation as a 'sad end' to his career, but Ronaldo continues to
+prove his doubters wrong.
+
+But he isn't the only star that has been in great form, with players across Europe banging them in for fun.
+</item 8>
+
+<item 9>
+Top goalscorers of 2023: Cristiano Ronaldo brings up 50 goals with Erling Haaland and Harry Kane also high on list (TalkSport, 2023-12-12T22:36:24+00:00)
+He has also found his shooting boots for his country, most notably scoring four in a 5-0 win over Azerbaijan in November.
+
+Lukaku's career seems to have reignited and that has seen him close to claiming a place as one of the highest goalscorers this year.
+
+8 Lukaku ended the Euro 2024 qualifying campaign as top scorer Credit: AFP
+
+4. Erling Haaland (Manchester City/Norway) - 50 goals
+
+No player in Premier League history has made more of an impact following their arrival than Haaland, who broke the goal record for a single season with 36
+strikes last term.
+
+He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages.
+
+Just six out of his 50 goals in 2023 have been for his national side Norway, with Haaland helping the Citizens to a historic treble last campaign.
+</item 9>
+
+<item 10>
+Man United vs Chelsea final score, result and highlights as Scott McTominay brace gives Ten Hag vital win (Sporting News, 2023-12-06T23:27:00+00:00)
+The youngster then cut the ball back to Harry Maguire whose effort rebounded perfectly into the path of McTominay. The Scotland international took one touch
+before blasting past Sanchez.
+
+United led for the majority of the first 45 minutes but failed to build on their lead and were pegged back by the former Manchester City man, Cole Palmer. The
+21-year-old, who made the transfer from the Etihad Stadium to Stamford Bridge in August, stroked the ball into the far corner with deadly accuracy. It was his
+fifth Premier League goal of the season and his first from open play.
+
+But United continued to put Chelsea under pressure in the second half and after numerous attempts, McTominay headed powerfully past Sanchez. The Scotsman had
+seven shots, his most ever in a league game. Despite a flurry of late attacks driven by Reece James, Ten Hag's team stood strong and held on to see out the
+victory.
+</item 10>
+=== END ITEM id=191bab19e5b8ac76 ===

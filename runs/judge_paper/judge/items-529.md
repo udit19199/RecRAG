@@ -1,0 +1,957 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=0effdda3900efc05 ===
+Gold sentences and facts:
+Sentence 0: For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video.
+  Fact 0.0: Thursday's game between the Lions and Packers will be aired on Amazon Prime Video.
+  Fact 0.1: The broadcast is for NFL fans across the U.S.
+Sentence 1: For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video.
+  Fact 1.0: Thursday's game between the Bears and Panthers will be aired on Amazon Prime Video.
+  Fact 1.1: The broadcast is for NFL fans across the U.S.
+
+Retrieved items:
+<item 1>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+NFL WEEK 4 PICKS: Straight up | Against the spread | Projection model
+
+The Sporting News tracked live updates from Thursday's clash between the Lions and the Packers. Scroll below to check out highlights and live results as two of
+the NFC's oldest sides faced off for NFC North glory.
+
+Lions vs. Packers score
+
+1 2 3 4 F Lions 14 13 0 7 34 Packers 3 0 8 9 20
+
+Lions vs. Packers live updates, highlights from Thursday Night Football
+
+(All times Eastern)
+
+End of fourth quarter: Lions 34, Packers 20
+
+11:19 p.m.: Lions complete yet another fourth down, officially putting the game on ice.
+
+11:12 p.m.: Onside kick spills out of bounds, and it's looking like that might be that. Packers have one timeout remaining but Montgomery's fiery run through
+the tackles should make that obsolete.
+
+11:11 p.m.: FIELD GOAL!
+</item 1>
+
+<item 2>
+Bears vs. Panthers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-11-09T23:04:33+00:00)
+Bears vs. Panthers start time
+
+Date: Thursday, Nov. 9
+
+Thursday, Nov. 9 Start time: 8:15 p.m. ET
+
+Thursday night's game between the Bears and Panthers is set to kick off at 8:15 p.m. ET (7:15 p.m. local time) from Soldier Field in Chicago.
+
+What channel is Bears vs. Panthers on today?
+
+Game: Chicago Bears vs. Carolina Panthers
+
+Chicago Bears vs. Carolina Panthers Date: Thursday, Nov. 9
+
+Thursday, Nov. 9 TV channel (Chicago) : WFLD (Channel 32)
+
+: WFLD (Channel 32) TV channel (Charlotte) : WSOC (Channel 9)
+
+: WSOC (Channel 9) Live stream: Amazon Prime Video | DAZN (in Canada)
+
+For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video.
+</item 2>
+
+<item 3>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+11:11 p.m.: FIELD GOAL! Carlson's try from distance makes the deficit two possessions.
+
+11:08 p.m.: Not so fast. ... A quick three-and-out gives Green Bay a glimmer. That glimmer grows even brighter after an impressive return by Keisean Nixon.
+Let's see what they can do with 3:30 left.
+
+11:04 p.m.: INTERCEPTION! That's wraps. Love misses his target, instead finding the mitts of Jacobs for his second pick of the day. Strong showing by this
+Detroit defense. And that should put things to bed.
+
+10:54 p.m.: TOUCHDOWN! Walker's penalty proves vital as Montgomery finds pay dirt from a couple yards out on fourth down. Gutsy call by Campbell. And one that
+pays off in spades for Detroit, which extends its lead to 17.
+
+Lions 34, Packers 17
+
+10:50 p.m.
+</item 3>
+
+<item 4>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+Sideline reporter Kaylee Hartung will offer updates throughout the affair.
+
+Fans in the Detroit and Green Bay markets can watch the Amazon broadcast over the air on local channels.
+
+Those in Canada can stream it on DAZN, which carries every NFL game all season.
+</item 4>
+
+<item 5>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+: Jordan Love and the Packers heading onto the field ahed of tonight's game! We're about 45 minutes from kickoff at the Pantheon of football excellence, Lambeau
+Field.
+
+Lions vs. Packers start time
+
+Date: Thursday, Sept. 28
+
+Thursday, Sept. 28 Start time: 8:15 p.m. ET
+
+Thursday night's game between the Lions and Packers will feature in the primetime slot of 8:15 p.m. ET.
+
+What channel is Lions vs. Packers on today?
+</item 5>
+
+<item 6>
+Thursday Night Football FanDuel Picks: NFL DFS lineup advice for Week 4 Lions-Packers single-game tournaments (Sporting News, 2023-09-26T21:53:00+00:00)
+For Detroit, it's all about courage. For a team that was once down and out, much like their city, they are now once again on the rise. The Lions are supposed to
+be the kings of the jungle and hope to become the NFL's version in 2023. In terms of the food chain, a basic concept taught in science classes across the
+country, lions are the hunter rather than the hunted, but it's been the other way around for far too long, as 31 other teams have feasted on a once proud
+franchise.
+
+Their motors have been restored and the team has been rebuilt with an attitude and moxie that would make even the most "football guy" of "football guys" blush.
+It's a combination of quiet confidence and a downright arrogant confidence that draws people in to root for -- or against -- an underdog.
+
+While the Packers have packed up the Lions for years, that all began to change in 2022.
+</item 6>
+
+<item 7>
+Thursday Night Football FanDuel Picks: NFL DFS lineup advice for Week 4 Lions-Packers single-game tournaments (Sporting News, 2023-09-26T21:53:00+00:00)
+TNF INJURY UPDATES: Montgomery | Jones | Watson
+
+Lions-Packers FanDuel Picks Week 4: NFL DFS lineup for GPP tournaments
+
+Lions-Packers TNF, $60,000 budget
+
+MVP (1.5x points) QB Jared Goff, Lions ($15,500). The Lions might not be the Super Bowl contenders we thought they could be, but that doesn't mean we aren't in
+for a treat on Thursday night at Lambeau Field. Detroit is finding its footing in 2023 and should be able to have some success against the Packers. On the
+surface, Green Bay's pass defense is playing around league average, allowing 207.3 passing yards per game. That slots them in at No. 18, while Pro Football
+Focus grades them the No. 8 team in coverage with an 81.5. Let's look beneath the surface a little more. The Packers' first three games have come against the
+No.
+</item 7>
+
+<item 8>
+Thursday Night Football FanDuel Picks: NFL DFS lineup advice for Week 4 Lions-Packers single-game tournaments (Sporting News, 2023-09-26T21:53:00+00:00)
+Aaron Rodgers is no longer in Green Bay, and a new love interest is now under center, Jordan Love. It was these Lions that ended the Rodgers era and swept Green
+Bay last season. Now they meet again in prime time on one of the league's most hallowed grounds in a battle for NFC North supremacy. The tundra won't be frozen
+at Lambeau Field at this point in the season, but the game sure is important, and for a game like this, there's no way we could pass up the chance to win some
+cash with our FanDuel single-game DFS lineup.
+
+MORE THURSDAY NIGHT FOOTBALL:
+
+DK lineup | Best props | Betting preview | Start-Sit
+
+Before we break down our picks and strategy, here are the most notable scoring rules for FanDuel contests: four-point passing TDs and half-point PPR.
+</item 8>
+
+<item 9>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+ET.
+
+What channel is Lions vs. Packers on today?
+
+Game: Detroit Lions at Green Bay Packers
+
+Detroit Lions at Green Bay Packers Date: Thursday, September 28
+
+Thursday, September 28 TV channel (Detroit) : WJBK (Channel 2)
+
+: WJBK (Channel 2) TV channel (Green Bay) : WITI (Channel 6) or WGBA (Channel 26)
+
+: WITI (Channel 6) or WGBA (Channel 26) Live stream: Amazon Prime Video | DAZN (in Canada)
+
+For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video. The broadcast will be
+spearheaded by legendary play-by-play announcer Al Michaels. He'll be joined by longtime ESPN college football commentator Kirk Herbstreit, who will offer
+occasional musings as an analyst. Sideline reporter Kaylee Hartung will offer updates throughout the affair.
+</item 9>
+
+<item 10>
+Bears vs. Panthers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-11-09T23:04:33+00:00)
+The broadcast will be spearheaded by play-by-play announcer Al Michaels and color commentator Kirk Herbstreit. Sideline reporter Kaylee Hartung will offer
+sideline updates throughout the game.
+
+Fans in the Chicago and Charlotte markets can watch the Amazon broadcast over the air on local channels.
+
+Those in Canada can stream it on DAZN, which carries every NFL game all season.
+</item 10>
+=== END ITEM id=0effdda3900efc05 ===
+
+=== ITEM id=f11eb175a25db4a2 ===
+Gold sentences and facts:
+Sentence 0: And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.0: Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.1: Valve has made big improvements with its new iteration.
+  Fact 0.2: The minor physical upgrades are part of the new iteration alongside the big improvements.
+Sentence 1: We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.
+  Fact 1.0: Valve looks at a store that could be both.
+  Fact 1.1: Valve decided to focus exclusively on games.
+Sentence 2: The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day.
+  Fact 2.0: The Steam Deck OLED will go on sale on November 16th at 1pm ET.
+  Fact 2.1: Valve has units ready to ship on November 16th.
+
+Retrieved items:
+<item 1>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses. More
+importantly, this is Valve renewing its commitment to portable PC gaming, and that’s a relief to see. The Steam Deck is the granddaddy of handheld PCs and Valve
+has the resources to continue innovating in this space. For now, the OLED model is a half-step toward the Steam Deck 2, which may be the final version of the
+device — unless Valve finally learns how to count to three.
+</item 1>
+
+<item 2>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+Because while Valve hasn’t upped the horsepower, it has improved practically everything else. The Steam Deck OLED has longer battery life, faster Wi-Fi, and a
+stand-alone Bluetooth module. And the screen isn’t just OLED; it’s HDR OLED — the first HDR OLED screen on any gaming portable, with a peak brightness of 1,000
+nits for HDR content and 600 nits for SDR (for comparison, the original screen’s peak brightness was 400 nits). And somehow, with all of these additions, the
+Steam Deck OLED is lighter.
+
+So, goodbye, old Steam Deck; hello, new Steam Deck.
+
+The Steam Deck OLED delivers on Valve’s original promise
+
+OLED is in the name for a reason.
+
+The OLED panel in the new Steam Deck is lighter, thinner, and more power efficient than its LCD predecessor. It’s also bigger and faster. Though the device has
+the same shape as the original Steam Deck, smaller screen bezels allow for a display that’s slightly larger, at 7.4 inches compared to 7 inches.
+</item 2>
+
+<item 3>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The OLED screen makes for a fancier Steam Deck, but it’s the battery life (and some tweaks throughout the design to carve out more of it) that lets Valve’s new
+handheld truly deliver on its promise of a portable gaming PC.
+
+All the tiny, delightful improvements of Steam Deck OLED
+
+Since the original Steam Deck launched, Valve has been improving the hardware through updates — its team estimates around 300 to date. That will continue with
+both the Steam Deck OLED and the original Steam Deck, the latter of which will get a fresh BIOS update to align itself with some of the former’s upgrades. The
+original device will see some battery life improvement; just don’t expect the OLED model’s jump of 30-50%.
+
+Some changes — even smallish ones — demand new hardware. And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new
+iteration.
+</item 3>
+
+<item 4>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The first thing to know about the Steam Deck OLED is that it’s not the Steam Deck 2. The Steam Deck OLED is a mid-cycle refresh from Valve, similar to the
+Switch OLED upgrade, but there’s a lot more going on internally here. Its screen is better, its battery life is better, its thumbsticks are better, the haptics
+are better, and its chip and thermals are better. One thing that hasn’t changed is its form factor — this is still one of the biggest babies on the handheld
+block.
+
+The new Steam Deck’s main upgrade is its OLED screen, which replaces the original LCD and, crucially, has native support for HDR and faster frame rates. The
+OLED also has smaller bezels, making the display larger at 7.4 inches, compared with the original 7-inch screen.
+</item 4>
+
+<item 5>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Playing the Steam Decks back-to-back highlighted another significant quality-of-life improvement: heat management. My palms have gotten toasty playing the OLED
+model, but they haven’t broken a sweat like they often do with the original. The new fan may be larger, but it’s not any louder, and it clearly works a treat.
+
+The Steam Deck OLED has a new Wi-Fi 6E module and improved antennas that should enable faster downloads for anyone with a compatible router. I don’t have a 6E
+router or multi-gigabit Wi-Fi, but with a regular Wi-Fi 6 router, the top download speed I saw on the new Steam Deck was 562mbps, which was about 10 percent
+faster than the old Steam Deck, and 10 percent slower than the speeds I get on my MacBook Pro. The device uses Bluetooth 5.3 and adds a dedicated antenna, which
+should improve functionality when using Wi-Fi and Bluetooth at the same time.
+</item 5>
+
+<item 6>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Surprise! Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it. It might not look like a big change from the outside, but the
+Steam Deck OLED is a thorough mid-cycle refresh of a machine that’s not even two years old. At the same time, Valve is also adjusting the configuration of its
+entry-level model, making it a far more compelling option. Apologies to anyone who literally bought a Steam Deck yesterday.
+
+At an event held for press prior to the device's launch, Greg Coomer, a product designer at Valve, called the new model "the definitive version of the Steam
+Deck." He explained that the device contains many things the company wanted to include at the LCD model's launch but wasn't able to, along with some additions
+based on community feedback.
+
+As its name suggests, the most noticeable upgrade to the Steam Deck OLED is the display. The original Steam Deck had a 7-inch 800p LCD running at 60Hz.
+</item 6>
+
+<item 7>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The HDR OLED model is what they would have released the first time around, if the technology had existed before 2022. The handheld market has evolved quickly —
+in just over a year, the Steam Deck proved there’s widespread demand for handheld PCs, and its success helped drive chip makers and display manufacturers to
+build hardware specifically for high-fidelity mobile play. This is great news for Valve and the Steam Deck, and also the other handhelds coming out of companies
+like Ayaneo, ASUS, Ayn, Logitech, Retroid and Razer. Hell, maybe even Playdate will get an HDR OLED display one day. (Just kidding; Playdate is literally
+perfect).
+
+So, no, the HDR OLED refresh isn't the Steam Deck 2, but it is a welcome improvement on an already good device. The Steam Deck OLED is the facetuned,
+photoshopped, spit-shined version of Valve’s handheld, and it features tangible, clever improvements.
+</item 7>
+
+<item 8>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+When we award the Polygon Recommends badge, it’s because we believe the recipient is uniquely thought-provoking, entertaining, inventive, or fun — and worth
+fitting into your schedule. If you want curated lists of our favorite media, check out What to Play and What to Watch .
+
+It appears, at first glance, that Valve cribbed from Nintendo’s playbook with the Switch OLED, for which Nintendo upgraded the device’s screen but not its guts.
+In terms of raw power, the Steam Deck OLED is identical to the original Steam Deck. Valve says this synchronicity is meant in part to continue to provide
+developers with a single goal when optimizing their games — though it promises that the Steam Deck 2 (which the company hopes to release in two to three years)
+will have a generational power leap.
+
+For those who haven’t tried a Steam Deck, though, I wouldn’t wait for its sequel. Because while Valve hasn’t upped the horsepower, it has improved practically
+everything else.
+</item 8>
+
+<item 9>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The panel has a wider color gamut (110% DCI-P3, for the visual obsessives) and the beautiful, inky blacks that OLED dorks like myself adore.
+
+Steam Deck OLED’s bigger, better battery Valve’s promise of 30-50% more battery raised one obvious question: Is that comparing the OLED model with a Steam Deck
+running its original firmware (which had poor battery life), or a Steam Deck using the latest firmware? Valve’s answer: the latter! So if you’re a Steam Deck
+owner, expect those big battery improvements over your current Steam Deck experience.
+
+The OLED panel also has a 90 Hz refresh rate — perfect for frame doubling from 45 frames per second. In case that jargon means nothing to you, suffice it to say
+that gameplay on the Steam Deck OLED looks smoother.
+</item 9>
+
+<item 10>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The updated display is smooth, crisp and bright, like a perfect lemon tart. (Even then, I do not recommend licking the screen.)
+
+Battery life
+
+One of the downsides of the first Steam Deck was its short battery life, which maxed out at eight hours, and that was only under ideal conditions. Valve says
+the new Steam Deck battery will last 30 to 50 percent longer, depending on how you’re playing, and it charges faster — the company claims it will go from 20
+percent to 80 percent in 45 minutes.
+
+Custom AMD APU
+
+The Steam Deck OLED has a die-shrunk version of the custom AMD APU found in the original Steam Deck — same CPU and GPU, just more efficient. This is the process
+Sony takes advantage of to build the PS4 Slim and PS5 Slim, but instead of collapsing the Steam Deck around smaller hardware, Valve chose to add a bigger
+battery and larger fan to its existing chassis.
+</item 10>
+=== END ITEM id=f11eb175a25db4a2 ===
+
+=== ITEM id=96516c5083e46c81 ===
+Gold sentences and facts:
+Sentence 0: And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.0: Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.1: Valve has made these minor physical upgrades alongside the big improvements.
+  Fact 0.2: Valve's new iteration includes big improvements.
+Sentence 1: We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.
+  Fact 1.0: The writer looks at Valve and sees a store that could be both.
+  Fact 1.1: Valve has decided to focus exclusively on games.
+Sentence 2: The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day.
+  Fact 2.0: The Steam Deck OLED will go on sale on November 16th at 1pm ET.
+  Fact 2.1: Valve has units of the Steam Deck OLED ready to ship on that same day.
+
+Retrieved items:
+<item 1>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The original Steam Deck had a 7-inch 800p LCD running at 60Hz. The new model squeezes a 7.4-inch OLED screen into the same space, significantly shrinking the
+bezels around the display. The new panel runs at the same resolution, but with a refresh rate of up to 90Hz. It’s also HDR, covering 110 percent of the P3 color
+space with a peak brightness of 1,000 nits — the old model maxed out at around 400 nits. Like all OLED screens, it has pure blacks and near-instantaneous
+response times. As before, anti-glare etched glass is available, but only on the premium model.
+
+The Steam Deck OLED has a die-shrunk version of the same custom APU found in the original Steam Deck. The new APU is produced on a 6nm process, rather than the
+older 7nm process.
+</item 1>
+
+<item 2>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The range still tops out at $649, but you’re getting a lot more for your money: All of the hardware improvements, 1TB of storage instead of 512GB and an
+improved carry case that can pop out into a slimmer shell that’s smaller and easier to fit in a bag. As mentioned, it also has the same anti-glare etched glass
+as the outgoing 512GB LCD model.
+
+Finally, there’s also a Limited Edition version of the 1TB model, with a translucent shell and a customized carry case, which will be sold at $679. We imagine
+stocks will not last very long, as it looks pretty rad:
+
+Valve
+
+While there are no concrete updates on future hardware developments, Valve engineer Pierre-Loup Griffais noted that, so long as interest in handheld gaming
+remains high, the company has "plans for successive generations of handhelds." For now, Griffais explained, it's important to Valve that developers don't need
+to "split their attention" between different performance targets.
+</item 2>
+
+<item 3>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Currently, more than 10,000 titles on Steam fall under the playable or verified labels, with more added every day.
+
+When will the Steam Deck OLED be available?
+
+The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day. The company has lowered the price of its LCD
+lineup and will sell through its backstock of 64GB and 512GB models until they’re all gone. It’ll continue selling the 256GB LCD model at a reduced price of
+$400, while the 512GB OLED model will cost $550 and the 1TB OLED model will cost $650. There’s also a limited edition 1TB OLED version priced at $680 that comes
+with a special carrying case, a translucent gray body and orange accents.
+
+Valve
+
+Wrap-up
+
+According to the developers I spoke with at Valve, this is the definitive version of the Steam Deck.
+</item 3>
+
+<item 4>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Manufacturers typically use die-shrinks to either improve performance or efficiency, and Valve has chosen the latter. The max frequency of both the GPU and CPU
+are identical between the LCD and OLED models, so for developers tuning their games for Steam Decks, they only have a single performance target.
+
+In concert with the more-efficient processor, there’s also a 25 percent larger battery with a 50Whr capacity, compared to the original’s 40Whr. According to
+Valve, these changes combined result in a 30-50 percent increase in longevity between the two generations — the official battery life claim is "three to 12
+hours." In our review, we measured a playtime increase of 62 percent when playing Hades on the OLED model versus our 18-month-old original. (Batteries degrade
+over time, which explains why our gains were more pronounced.)
+
+The new internals make the Steam Deck OLED marginally lighter, and also cooler to the touch when playing games, aided by a slightly larger fan.
+</item 4>
+
+<item 5>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The HDR OLED model is what they would have released the first time around, if the technology had existed before 2022. The handheld market has evolved quickly —
+in just over a year, the Steam Deck proved there’s widespread demand for handheld PCs, and its success helped drive chip makers and display manufacturers to
+build hardware specifically for high-fidelity mobile play. This is great news for Valve and the Steam Deck, and also the other handhelds coming out of companies
+like Ayaneo, ASUS, Ayn, Logitech, Retroid and Razer. Hell, maybe even Playdate will get an HDR OLED display one day. (Just kidding; Playdate is literally
+perfect).
+
+So, no, the HDR OLED refresh isn't the Steam Deck 2, but it is a welcome improvement on an already good device. The Steam Deck OLED is the facetuned,
+photoshopped, spit-shined version of Valve’s handheld, and it features tangible, clever improvements.
+</item 5>
+
+<item 6>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+Yes. But you might find that the screen and the battery justify the double dip. For someone like me, who puts hundreds of hours into the Steam Deck each year,
+the upgrade is inescapable.
+
+And if you don’t have a Steam Deck? How many times can I say it: This is my favorite console ever. And it just got better.
+
+The Steam Deck OLED will be available Nov. 16 to purchase through the Steam storefront. The hardware was reviewed with a unit provided by Valve. Vox Media has
+affiliate partnerships. These do not influence editorial content, though Vox Media may earn commissions for products purchased via affiliate links. You can find
+additional information about Polygon’s ethics policy here .
+</item 6>
+
+<item 7>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The OLED screen makes for a fancier Steam Deck, but it’s the battery life (and some tweaks throughout the design to carve out more of it) that lets Valve’s new
+handheld truly deliver on its promise of a portable gaming PC.
+
+All the tiny, delightful improvements of Steam Deck OLED
+
+Since the original Steam Deck launched, Valve has been improving the hardware through updates — its team estimates around 300 to date. That will continue with
+both the Steam Deck OLED and the original Steam Deck, the latter of which will get a fresh BIOS update to align itself with some of the former’s upgrades. The
+original device will see some battery life improvement; just don’t expect the OLED model’s jump of 30-50%.
+
+Some changes — even smallish ones — demand new hardware. And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new
+iteration.
+</item 7>
+
+<item 8>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Other improvements include support for both Wi-Fi 6E and Bluetooth 5.3, together with a new antenna array that will give a better experience when using both at
+the same time. There’s also a reworked power supply (it has a logo now!) with a longer 2.5m cable that will charge the OLED model from 20 to 80 percent in “as
+little as 45 minutes.” The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper.
+
+Valve
+
+The Steam Deck OLED starts at $549, and will replace all but the entry-level model in the range.
+</item 8>
+
+<item 9>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Surprise! Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it. It might not look like a big change from the outside, but the
+Steam Deck OLED is a thorough mid-cycle refresh of a machine that’s not even two years old. At the same time, Valve is also adjusting the configuration of its
+entry-level model, making it a far more compelling option. Apologies to anyone who literally bought a Steam Deck yesterday.
+
+At an event held for press prior to the device's launch, Greg Coomer, a product designer at Valve, called the new model "the definitive version of the Steam
+Deck." He explained that the device contains many things the company wanted to include at the LCD model's launch but wasn't able to, along with some additions
+based on community feedback.
+
+As its name suggests, the most noticeable upgrade to the Steam Deck OLED is the display. The original Steam Deck had a 7-inch 800p LCD running at 60Hz.
+</item 9>
+
+<item 10>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+When asked about the potential for future hardware — like a return of the Steam Machine or an updated Steam Controller — there were no firm updates, but there
+does seem to be something happening. Griffais agreed that enabling the Steam Deck to work as a hybrid living room console was a "side goal" of the team, and
+noted that everything Valve does to improve SteamOS will benefit other devices. Coomer added that Valve is still working internally on "a bunch of controllers
+and prototypes." If SteamOS is being used on larger displays, the team would want to augment that experience with better input options. "We don't have any
+announcements on that front, but it's why we're building prototypes and thinking about the future there," Coomer said.
+
+The Steam Deck OLED will be available to order on November 16th at 1PM ET. Valve expects units to begin shipping as soon as orders start to roll in. The updated
+pricing on the existing LCD models is already in effect.
+</item 10>
+=== END ITEM id=96516c5083e46c81 ===
+
+=== ITEM id=5044657b7539d752 ===
+Gold sentences and facts:
+Sentence 0: Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve.
+  Fact 0.0: Inflation is expected to fade eventually.
+  Fact 0.1: The Fed is expected to cut interest rates as inflation fades.
+  Fact 0.2: Eventually, housing affordability will improve.
+Sentence 1: While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse.
+  Fact 1.0: Some economic factors are stronger today than they were during the GFC.
+  Fact 1.1: Housing affordability is undeniably worse than it was during the GFC.
+
+Retrieved items:
+<item 1>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+The average 30-year fixed mortgage rate, the most common type of mortgage in the U.S., has soared from 3.8% in March 2022 to over 7.5% today as a result. This,
+in turn, has slowed mortgage purchase applications and caused home sales to plummet, just as it did in the ’80s; but home prices, echoing the dynamic of that
+era, have yet to collapse.
+
+One of the key reasons for the resilience of the housing market in both of these periods is demographics. “Noticeably, demographics were favorable back then,
+with baby boomers having entered the prime homebuying age,” Park and her team wrote Thursday, arguing millennials are in a similar position today. “Some sales
+activity should be supported by millennials reaching the prime homebuying age, and single-family building permits have steadily held up. This can help the
+housing market retain some of its momentum without falling apart.”
+</item 1>
+
+<item 2>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+And while we haven’t seen home sales activity levels this low since the 2000s, the housing market more closely mimics that of the ’80s, according to a report
+published this week by Fortune 500 financial services company First American.
+
+“Today’s housing market isn’t anything like the housing market of the mid-2000s,” First American’s Fleming wrote in a Tuesday report titled “1980s Déjà Vu for
+the Housing Market.” “The housing market today is not overbuilt, nor is it driven by loose lending standards, subprime mortgages, or homeowners who are highly
+leveraged.”
+
+While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse.
+
+“While housing and more generally consumer fundamentals are in a much stronger position today, affordability for the incremental buyer is worse than it was at
+the peak in 2006 before the crash,” Roger Ashworth, a managing director at Goldman Sachs, wrote in a credit strategy research paper released last week.
+</item 2>
+
+<item 3>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+housing market set off the dominoes that became the Great Financial Crisis that defined a whole decade economically—and in some ways, our current predicament.
+
+In 2010, the last time existing home sales were so low, the global economy was on life support and the Fed slashed interest rates down to zero to revive the
+flatlining patient—fueling an “everything bubble” that inflated all kinds of assets along the way, not the least, housing. The zero-rate regime persisted until
+the highest inflation in 40 years surprised many economists and prompted the massive series of rate hikes that have brought us to the once-unthinkable 8%
+mortgage.
+
+Some onlookers saw what was coming, for instance Zillow, which warned in May that housing would enter a “deep freeze” if the debt limit standoff failed to
+resolve and America defaulted, as that would send mortgage rates up to 8%. Of course, the default was averted, but here we have arrived at 8% mortgage rates
+anyway.
+</item 3>
+
+<item 4>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+Housing market pessimists have been sounding the alarm for years about a pending crash in the U.S. residential real estate market. Even before the Federal
+Reserve began hiking interest rates to fight inflation last year, pushing mortgage rates to a 23-year high this month, years of surging home prices left some
+experts warning that the housing market was a massive bubble ready to pop.
+
+However, despite a widely bearish outlook in the industry, most real estate veterans have avoided arguing that home prices will drop like they did during the
+2008 crash that kicked off the Global Financial Crisis (GFC). And so far, that’s been a wise decision.
+
+It took until June 2022 for national home prices to peak, even as mortgage rates soared and purchase applications plummeted amid the Fed’s first interest rate
+hikes. And while prices fell more than 5% from that peak by January of this year, they returned to a record high in July.
+</item 4>
+
+<item 5>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+The rise in the consumer price index peaked at around 14% in 1980 before then–Fed Chair Paul Volcker’s hawkish policies sent mortgage rates to 18% in a year’s
+time, cooling inflation, but sparking a recession. This caused a serious downturn in the housing market in which home sales and building levels cratered.
+However, national home prices actually remained stable.
+
+At the start of Volcker’s term as Fed chair in August 1979, the median U.S. home sales price was $64,700. And even after a near doubling of mortgage rates, that
+figure rose to $69,400 by the second quarter of 1981.
+
+Over the past 18 months, the Fed’s current chair, Jerome Powell, has been following a very similar game plan to Volcker’s, raising interest rates aggressively
+to quash inflation.
+</item 5>
+
+<item 6>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+And he’s not hopeful we’ll see home prices drop anytime soon: “Absent any negative shocks to the broader economy that would either boost excess supply of homes
+on the market or fuel an uptick in unemployment, we continue to expect home prices to rise at a slow pace.” In fact, he predicts we’ll see home prices rise by
+1.8% by the end of the year, with a 3.5% increase by the end of 2024.
+
+Looking at more recent housing inventory data makes the issue even more stark. Between September 2018 and September 2023, the average number of homes on the
+market dropped a whopping 60% to fewer than 700,000 active listings, according to Realtor.com.
+
+“Unlike the turn of the millennium, house prices today are rising alongside mortgage rates, primarily due to low inventory,” Sam Khater, Freddie Mac’s chief
+economist, said in a statement released Sept. 29.
+</item 6>
+
+<item 7>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+Indeed, existing-home sales prices topped $306,000, a 5% increase since the year began, according to the Case-Shiller U.S. National Home Price Index.
+
+“As has been the case throughout this year, limited inventory and low housing affordability continue to hamper home sales,” NAR chief economist Lawrence Yun
+said in a statement. “The Federal Reserve simply cannot keep raising interest rates in light of softening inflation and weakening job gains.” The Fed has raised
+rates several times this year, with Chair Jerome Powell arming his “higher for longer” stance.
+
+Declining housing inventory levels also contribute to the drop in housing transactions. Housing inventory is down 8.1% from this time last year, according to
+NAR. Some real-estate experts and economists argue that housing affordability is even worse now than during 2008, when a damaging downturn in the U.S.
+</item 7>
+
+<item 8>
+The housing winter arrives early as existing home sales crash to Great Recession levels and the long-feared ‘deep freeze’ sets in (Fortune,
+2023-10-20T20:30:29+00:00)
+Plus, the raising of interest rates in an effort to combat inflation is strikingly similar to the ’80s. Back then, Fed Chair Paul Volcker fought inflation
+through aggressive interest rate hikes, with the average 30-year fixed mortgage peaking at about 18% by late 1981. Sound familiar? Current Fed Chair Jerome
+Powell has set the tone for the most aggressive global hiking of rates in the modern era. And in due course, this week, mortgage rates hit 8%, the highest
+they’ve been in more than 20 years.
+
+All things considered, home sales activity also plummeted from 1978 to 1982. Existing-home sales dropped 50% during that period, according to the Office of
+Policy Development and Research.
+</item 8>
+
+<item 9>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+Park and her team noted that there are no “noticeable signs” of excess housing development today like there were back then, and households aren’t nearly as
+burdened by mortgage debt. Household mortgage debt represented roughly 65% of U.S. consumers’ disposable income in the second quarter, compared to 100% before
+the GFC. And the ratio of Americans’ mortgage debt to their real estate assets—also called loan-to-value—was just 27% in the second quarter, compared to over
+40% in 2008 and roughly 50% in 2010, Bank of America’s data shows.
+
+New legislation was also enacted since the GFC to help prevent worst-case scenarios in the housing market. One of the most obvious effects of these new laws is
+that there are far fewer risky adjustable-rate mortgages today.
+</item 9>
+
+<item 10>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+This can help the housing market retain some of its momentum without falling apart.”
+
+Bank of America economists believe that low inventory of existing homes for sale combined with solid home sales to millennials could help put a “floor beneath
+home prices,” but that doesn’t mean there won’t be some near-term pain due to higher mortgage rates.
+
+“With rates likely staying higher for longer, we are cautious of potential turbulence ahead,” the group warned. Bank of America has previously forecast 0% home
+price growth and falling home sales for the full year 2023, but it didn’t offer a new prediction in its latest note.
+
+Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve. “At that stage, we should see a more stable and
+healthy housing market,” Park and her team wrote. “Until then, hang tight, it may be a bumpy ride.”
+
+This article has been updated to correct a mistaken term used to refer to Jeseo Park.
+</item 10>
+=== END ITEM id=5044657b7539d752 ===
+
+=== ITEM id=20c360d1b7fb0dd8 ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that 'all of that, all of it, was built on lies.'
+Sentence 1: And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+  Fact 1.0: Bankman-Fried left Jane Street.
+  Fact 1.1: Jane Street is a high-frequency trading firm.
+  Fact 1.2: Bankman-Fried was a former billionaire.
+  Fact 1.3: Bankman-Fried got his start in finance at Jane Street.
+  Fact 1.4: Bankman-Fried got his start in finance after MIT.
+  Fact 1.5: After leaving Jane Street, Bankman-Fried persuaded Yedidia to join him as a trader at Alameda.
+  Fact 1.6: Bankman-Fried later persuaded Yedidia to join him as a developer at FTX.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder, Bankman-Fried, acted in good faith.
+  Fact 2.2: The defense said Bankman-Fried never meant to commit fraud or steal.
+  Fact 2.3: The defense said Bankman-Fried basically got in over his head.
+
+Retrieved items:
+<item 1>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+We have some inkling of what the government will be arguing thanks to the filings prosecutors are making in this case. They argue that Bankman-Fried lied about
+consumer protection and that Bankman-Fried’s statements that FTX was “avoiding or managing conflicts of interest” and that “as a general principle FTX
+segregates customer assets from its own assets across our platforms” were lies, in a superseding indictment filed August 14th.
+
+The indictment also says that there were special features in FTX’s code that “permitted Alameda to spend and withdraw unlimited amounts of money from FTX,”
+which were created at Bankman-Fried’s direction. That effectively exempted Alameda from the kinds of risk management other customers faced. At the same time,
+the government alleges, “Bankman-Fried publicly and repeatedly asserted that Alameda did not have privileged access to FTX.”
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 3>
+
+<item 4>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 5>
+
+<item 6>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“You will see the full picture.”
+
+…or a well-meaning founder?
+
+But Bankman-Fried, whose cheekbones were more prominent after spending about seven weeks in a Brooklyn prison, was no liar, according to Mark Cohen, one of his
+lawyers. “Sam didn’t defraud anyone,” he said early on in his opening statement.
+
+What the jury will see is a nerdy startup founder who acted in “good faith,” not the prosecution’s “cartoon of a villain.” (Cohen repeatedly harped on
+Bankman-Fried’s allegedly good-faith actions throughout his address to the jury.)
+
+Alameda was not subterranean or shady. It was a successful hedge fund, he said. FTX was no Ponzi scheme. It was a “very innovative, successful company.”
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+The trial of Sam Bankman-Fried is likely to be more consequential than just whether the man himself is found guilty. Depending on what evidence is introduced
+during the trial, it could be rough for the entire crypto industry.
+
+“How much damage can this trial do to the already beaten-down reputation of the industry at this point?” asks Yesha Yadav, a law professor at Vanderbilt
+University. “This trial is going to be an excruciating moment for the industry because no one knows what kind of evidence might come out.”
+
+Bankman-Fried, the founder of FTX and Alameda Research, is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy
+charges. FTX was a failed cryptocurrency exchange founded in 2019. According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded
+because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm.
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 10>
+=== END ITEM id=20c360d1b7fb0dd8 ===
+
+=== ITEM id=8579cc6808cf64af ===
+Gold sentences and facts:
+Sentence 0: Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad.
+  Fact 0.0: Johnny Cardoso had to pull out of the September camp due to an ankle injury.
+  Fact 0.1: Johnny Cardoso has returned to action with Brazilian club Internacional.
+  Fact 0.2: Johnny Cardoso's return to action indicates a return to fitness.
+  Fact 0.3: Johnny Cardoso has been included on the squad.
+Sentence 1: He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury.
+  Fact 1.0: Johnny Cardoso and his fresh legs are back just in time.
+  Fact 1.1: Rookie sensation De'Von Achane hit Injured Reserve this week.
+  Fact 1.2: De'Von Achane hit Injured Reserve with a knee injury.
+
+Retrieved items:
+<item 1>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+However, even a moderate MCL sprain could mean a multi-week absence for the injury-prone veteran back, especially in a lost season for the 4-6 Pack. Rookie
+Emanuel Wilson also hurt his shoulder in Week 11, so AJ Dillon could be getting the keys to Green Bay's backfield castle (although it's more of an oversized
+shack, at this point).
+
+Dolphins rookie De'Von Achane, who looked like the runaway Offensive Rookie of the Year earlier this season, looked to have aggravated his MCL injury upon his
+Week 11 return against the Raiders. Achane has a chance to return for Miami's Week 12 tilt with the Jets on Friday, but we wouldn't be surprised if the 7-3
+'Fins play it safe and keep him out until he's back to 100 percent. Meanwhile, Miami placed backup Salvon Ahmed on IR with a foot injury, so Jeff Wilson Jr.
+could be back in play as a handcuff stash.
+</item 1>
+
+<item 2>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+Achane is clearly far ahead of Mostert.
+
+LAST WEEK: Before he fumbled the ball away twice, Mostert was splitting reps with De'Von Achane in a way that was unfavorable for him. Before the Dolphins got
+inside the 10-yard line Mostert had a 16-to-9 edge, then Achane played every single snap inside the 10. Then after Mostert's second fumble of the half, Mostert
+played just nine of the remaining 35 snaps including nothing near the end zone. Coach Mike McDaniel preached the importance of his offense not having
+"self-inflicted wounds" immediately after the game.
+
+LAST TWO WEEKS: Achane played all but two snaps inside the 10-yard line for Miami, so that seems like a big part of his role that will stick. As for third
+downs, Mostert has a one-snap edge over Achane at 6 to 5, which means they're splitting those valuable touches.
+</item 2>
+
+<item 3>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+MORE: All players in U.S. national team pool currently playing for a European club
+
+Gio Reyna to make USMNT return under Gregg Berhalter
+
+The ability of Berhalter and Reyna to work together moving forward has been a major talking point since the fallout of their saga after the 2022 World Cup.
+
+Reyna's lack of playing time at the World Cup was exacerbated by the actions of his parents in the weeks that followed, which sparked a domestic violence
+investigation of Berhalter before his eventual re-hire as national team head coach.
+
+Now, having recovered from a leg fracture suffered in summer Nations League duty under an interim USMNT head coach, the 20-year-old Borussia Dortmund playmaker
+returns to the international fold under Berhalter for the first time.
+
+The USMNT head coach has been forthcoming about the situation, admitting upon his re-hire that the two have a "lot of work to do" but insisting time was needed
+to broach the situation.
+</item 3>
+
+<item 4>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 4>
+
+<item 5>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+For Taylor, he underwent surgery on his thumb this week and is expected to miss at least a couple of weeks, which will thrust Zack Moss into a more prominent
+role in the Colts backfield.
+
+Burks is the only Titan to have an injury designation entering the weekend, but the wideout was a full participant in Friday's practice. However, he will need
+to clear the final stages of concussion protocol in order to play.
+
+Dolphins (-9.5) at Commanders
+
+Every player who the Dolphins listed as questionable for Sunday's game against Washington was able to practice on a limited basis on Friday. That includes
+Cotton and Lamm, who both were DNPs earlier in the week. Rookie running back De'Von Achane was a full participant in Friday's practice and head coach Mike
+McDaniel said he will play this week after missing time with a knee injury.
+
+Washington could be without its starting center this weekend as it plays host to Miami.
+</item 5>
+
+<item 6>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman PSV Eindhoven (NED) 6 0 FWD Brenden Aaronson Union Berlin (GER) 34 8 FWD Folarin Balogun Arsenal
+(ENG) 4 2 FWD Ricardo Pepi PSV Eindhoven (NED) 18 9 FWD Christian Pulisic AC Milan (ITA) 62 26 FWD Tim Weah Juventus (ITA) 33 5 FWD Alex Zendejas Club America
+(MEX) 7 1
+
+Tyler Adams, Antonee Robinson injured for October camp
+
+Gregg Berhalter largely has the entire first-choice player pool available for selection, with only a few injuries to work around.
+
+There is one notable absence, as captain Tyler Adams remains sidelined with a frustrating long-term hamstring injury.
+</item 6>
+
+<item 7>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+He and his fresh legs are back just in time as rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury.
+
+DOLPHINS: Aren't quite the bastion of rushing that some headlines have made them out to be, but they're just over league average in rush rate at 43.7% and above
+league average in RB runs per game at 22.6. All of these numbers are weighted heavily by their 50-point win over Denver in Week 3 when they ran the ball 42
+times with their running backs. Their 7.6 yard per carry average is due to Achane's breakout start more than anything else.
+</item 7>
+
+<item 8>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Also missing is Antonee Robinson, who Gregg Berhalter said is dealing with a sports hernia, and while he played through it last camp and recently for his club,
+it's affecting him and therefore rest is the best option here.
+
+Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a
+return to fitness, and has been included on the squad.
+
+With Adams injured, there has been some noise on social media calling for Heidenheim midfielder Lennard Maloney to be brought into the squad in October, and he
+was given the call-up here. The 23-year-old was born in Berlin to an American father, appearing for the U.S. at the U-20 level in the past and stating his
+desire to reach the USMNT senior squad.
+
+MORE: All players in U.S.
+</item 8>
+
+<item 9>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino Dest PSV Eindhoven (NED) 28 2 DEF DeJuan Jones New England Revolution (USA) 7 0 DEF Kristoffer Lund Palermo
+(ITA) 2 0 DEF Kevin Paredes Wolfsburg (GER) 1 0 DEF Tim Ream Fulham (ENG) 52 1 DEF Chris Richards Crystal Palace (ENG) 12 1 DEF Miles Robinson Atlanta United
+(USA) 27 3 DEF Joe Scally Gladbach (GER) 6 0 MID Johnny Cardoso Internacional (BRA) 7 0 MID Luca de la Torre Celta Vigo (SPA) 17 0 MID Lennard Maloney
+Heidenheim (GER) 0 0 MID Weston McKennie Juventus (ITA) 46 11 MID Yunus Musah AC Milan (ITA) 29 0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman
+</item 9>
+
+<item 10>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+He was initially injured while playing for Leeds United back in March, and while he had finally recovered to make his Bournemouth debut in the EFL Cup in late
+September, he played just 20 minutes off the bench before suffering a setback, sidelined again for the foreseeable future.
+
+Gio Reyna has returned from his leg fracture and is called in for the first time under Berhalter since their falling out at the 2022 World Cup. Also included is
+defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury. On the heels of that return just before the
+international break, he is called in.
+
+Goalkeepers Zack Steffen and Sean Johnson remain out of action due to injuries. Additionally, Josh Sargent is sidelined with a long-term ankle injury, while
+Daryl Dike is also out after tearing his Achilles.
+</item 10>
+=== END ITEM id=8579cc6808cf64af ===

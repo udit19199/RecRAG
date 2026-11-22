@@ -1,0 +1,985 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=160a6eb7bb180b48 ===
+Gold sentences and facts:
+Sentence 0: “I’m here until the end,” she said in her press conference on Friday.
+  Fact 0.0: A female speaker said 'I'm here until the end' in her press conference on Friday.
+Sentence 1: He has been out of work since his Blues tenure came to a close back in April, but it would be a hard sell to fans after his time with the London club went so poorly.
+  Fact 1.0: A man has been out of work since his tenure with the Blues came to a close back in April.
+  Fact 1.1: It would be a hard sell to fans for this man to return, since his time with the London club went so poorly.
+
+Retrieved items:
+<item 1>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+“Of course, I’m disappointed to hear things being said in the press. I want to make sure I maintain my own professionalism in everything I do.”
+
+Advertisement
+
+U.S Soccer’s annual financial reports reveal the salaries of their head coaches and other executives. While Berhalter received a new contract this year, his
+previous deal that ran from April 2021 to March 2022, earned him $1.6 million, including $300,000 in bonuses. During that same time, Andonovski earned $446,495,
+of which only $50,000 was bonus money. With Hayes expected to earn close to $2 million per year in her deal, this will likely create a knock-on effect for other
+international women’s coaches negotiating their next contracts.
+
+U.S. Soccer’s rollout of their new head coach has not been an easy one for the federation’s communications staff, considering that Hayes is essentially
+unavailable for any formal ceremonies or media appearances until her time with Chelsea is complete.
+</item 1>
+
+<item 2>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Chelsea Women had created a frenzy. On Nov. 4, the English club released a statement saying their coach Emma Hayes was leaving at the end of the season to
+“pursue a new opportunity outside of the Women’s Super League and club football.” Hayes had just entered her second decade in charge of the club, and few knew
+where she would land next.
+
+Advertisement
+
+That same day The Athletic, among others, reported that Hayes’ next job would be with the U.S. women’s national team, leading a four-time World Cup and Olympic
+gold medal-winning program into a new era. On Tuesday, U.S. Soccer made her appointment official.
+
+Hayes, who previously won six WSL titles in England, will become the 10th full-time coach of the U.S., but not until her final season with Chelsea is complete
+next May.
+</item 2>
+
+<item 3>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+GO DEEPER USWNT's Emma Hayes hire could create a problem in preparation for the Olympics
+
+What’s next for Chelsea?
+
+Questions surrounding Hayes’ future have cropped up previously in her tenure at Chelsea. She was linked to several jobs in the men’s English Football League in
+the past and has always been interested in managing Spain’s national team, although there was never an official conversation with Spain’s federation. So it was
+a question of when, not if, Hayes would leave. Still, news of her decision came as a shock to her staff and players.
+
+A few staff members were told on the morning of Nov. 4 before Chelsea’s away game at Aston Villa kicked off at 12.30 p.m. UK time. Most of the other staff
+members found out with the players in the post-match meeting minutes before the official club statement, which Hayes had no hand in writing and did not even see
+before publication, was released at 3 p.m.
+</item 3>
+
+<item 4>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Chelsea’s general manager Paul Green will stay at the club. It is unclear whether any other members of Chelsea’s technical staff are expected to depart.
+
+GO DEEPER What next for Chelsea after Emma Hayes?
+
+The relentless nature of managing a club takes its toll and after what will be 12 years at Chelsea come the end of the season, Hayes, a single parent whose
+father died last month, decided that it was the right time for a change, professionally and personally.
+
+Advertisement
+
+“The biggest factors are my son, leaving at the top and giving the club enough time to be able to transition without there being too much disruption,” she said
+in her press conference.
+
+The club has received several applications regarding Hayes’ replacement but has not yet started an official recruitment process. She will meet with Chelsea’s
+technical directors once a week to create a succession plan and will have a say in who takes the job after her.
+</item 4>
+
+<item 5>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+A representative from her camp declined to comment for this story.
+
+Crocker said in September that the final interviews would include lengthy technical and tactical assessments, as well as questions to determine the candidates’
+cultural fit. He and the federation stayed fairly consistent on their desired start date since the head coach role opened in August, but that became one of the
+major concessions made by U.S. Soccer in selecting Hayes.
+
+She’s headed Stateside 🇺🇸 U.S. Soccer has appointed Emma Hayes as the 10th full-time head coach in #USWNT history » https://t.co/sR7qfSnWVx Welcome, Emma!
+pic.twitter.com/WYn6Sg9RmX — U.S. Women's National Soccer Team (@USWNT) November 14, 2023
+
+Hayes will remain exclusively with Chelsea through the end of their WSL campaign and the Champions League season. She will not work with the U.S. in
+international windows.
+</item 5>
+
+<item 6>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+England and Chelsea captain Millie Bright was “devastated,” and most players were understandably sad — many of whom owe their career progression to Hayes — but
+know they still have a job to do this season.
+
+“It’s been a bit of a whirlwind. As a player and a person, I was devastated. I’ve been here nine years under Emma and the things I’ve learned,” Bright said.
+“She’s a mentor, a coach, a friend, a life coach. It’s more than just football playing under her.”
+
+Bright credits Hayes for her on and off-field guidance. (Photo by Marc Atkins, Getty Images)
+
+Hayes’ American assistant Denise Reddy, born in New Jersey, is likely to follow her across the pond. The former United States Under-20 coach has remained
+faithful to her friend of 20 years and voluntarily quit her job as assistant at Chicago Red Stars in 2010 when Hayes was fired as head coach. Chelsea’s general
+manager Paul Green will stay at the club.
+</item 6>
+
+<item 7>
+Man United next manager: Assessing candidates to replace Erik ten Hag if Red Devils sack Dutch boss (Sporting News, 2023-12-13T20:52:15+00:00)
+The 44-year-old Italian has led the tiny club to new heights, qualifying for the Europa League for the first time in club history and establishing themselves as
+top-four contenders, building upon the success under Graham Potter. Yet could Potter's failure at Chelsea cause some trepidation around another Brighton success
+story moving on up?
+
+Michael Carrick
+
+This list wouldn't be complete without mention of the likeliest of those with direct Manchester United links. Former United midfielder Michael Carrick, who made
+316 appearances for the club over a 12-year Old Trafford tenure, is at Championship club Middlesbrough, his first permanent managerial appointment. They sit
+11th in the second tier as of mid-December, just three points back of the playoff spots in a crowded top half.
+
+Carrick's lack of experience is glaring, but hiring someone with deep knowledge of the club could be very enticing, and the fact he hasn't bombed in his first
+job is notable.
+</item 7>
+
+<item 8>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Soccer’s planned combined headquarters and national training facility in Georgia. As of yet, there’s no targeted date set for the move.
+
+Hayes, too, will benefit in ways other than compensation and prestige. She spoke to reporters about looking forward to spending more time with her five-year-old
+son, Harry. She has never been to one of his sports days, picked him up from school or taken him to an after-school club and she wants to do that.
+
+The main visible wrinkle in the process was Chelsea’s surprise move of announcing Hayes’ departure on Saturday, Nov. 4. With the contract not yet finalized and
+U.S. Soccer board approval still needed, Chelsea issued their statement at 11 a.m. ET in the U.S. in which it noted she would leave at the end of the season “to
+pursue a new opportunity outside of the WSL and club football.” The club feared that the news was starting to leak and wanted to share the news on its own.
+</item 8>
+
+<item 9>
+Man United next manager: Assessing candidates to replace Erik ten Hag if Red Devils sack Dutch boss (Sporting News, 2023-12-13T20:52:15+00:00)
+It is a global context." Does he still feel the same way?
+
+Graham Potter
+
+While Potter's time at Chelsea crashed and burned, many still rate the former Brighton & Hove Albion boss highly and he could be in line for a project job such
+as this. Indeed, there have previously been rumours that Sir Jim Ratcliffe, the INEOS founder on the brink of purchasing a 25 per cent stake in United, would
+like Potter at the club. He has been out of work since his Blues tenure came to a close back in April, but it would be a hard sell to fans after his time with
+the London club went so poorly.
+
+Roberto De Zerbi
+
+One of the fastest rising managers in the game, Brighton manager Roberto De Zerbi is known for his tactical innovation in transitional play, and his name has
+cropped up a number of times when big clubs have an opening.
+</item 9>
+
+<item 10>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+She will not work with the U.S. in international windows.
+
+“I’m here until the end,” she said in her press conference on Friday. “I haven’t died, I haven’t gone anywhere. I’m here, doing this job. My full focus and
+attention is on what I do for Chelsea.”
+
+Advertisement
+
+Hayes could be tied up with Chelsea as late as May 25 if the London club makes the Champions League final; notably, an international window that would
+theoretically be Hayes’ first in charge begins just two days later, on May 27.
+
+However, there are ways in which the arrangement will benefit U.S. Soccer. The federation won’t owe any compensation to Chelsea, and Hayes will be fully
+committed to the program, with a move to Chicago in the works for next year following the completion of her time in London. Eventually, she’s expected to
+relocate to Atlanta thanks to U.S. Soccer’s planned combined headquarters and national training facility in Georgia.
+</item 10>
+=== END ITEM id=160a6eb7bb180b48 ===
+
+=== ITEM id=8cc3e5768825bc65 ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves for a legitimate reason.
+  Fact 1.1: Every sportsbook adjusts when odds change for a legitimate reason.
+  Fact 1.2: An injury or a roster move is an example of a legitimate reason for a line or odds to change.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+By doing this research, you’ll find the best odds for the bets you were already planning on making, which means you can maximize your potential return on your
+wager.
+
+This can be a time-consuming process, but it also helps you boost your bankroll and give yourself the largest possible profit.
+
+MLB betting rules at online sportsbooks
+
+Every sportsbook has terms and conditions for all bets, MLB included. While those rules may be specific to each sportsbook, there are some general rules that
+should apply everywhere.
+
+For example, MLB First 5 Innings bets are usually considered actionable after five innings of play, or 4.5 innings in the case of the home team having the lead.
+
+Another rule many sportsbooks follow for baseball bets is weather-related, such as if a game is suspended due to rain or other weather conditions. These delays
+may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+
+Here are some other rules found at online sportsbooks for MLB betting.
+
+Wagers include extra innings unless specified otherwise.
+</item 1>
+
+<item 2>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 2>
+
+<item 3>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 3>
+
+<item 4>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 4>
+
+<item 5>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on one side might indicate that the
+initial odds were potentially "off," prompting an adjustment. Event Dynamics: For live betting, where bets are placed while the event is in progress, the
+evolving dynamics of the match can lead to frequent changes in the odds.
+
+Sportsbooks adjust moneyline odds to ensure they remain profitable, balance their book, and reflect the most current information about the event.
+
+Related Pages:
+</item 5>
+
+<item 6>
+Totals Betting - What is an Over/Under Bet? (Sporting News, 2023-11-01T22:08:31+00:00)
+Bookmakers adjust the line to balance the action and protect themselves from potential losses.
+
+One of the most common reasons for line movement is a significant amount of money being wagered on one side (either over or under). Bookmakers adjust the line
+to balance the action and protect themselves from potential losses. Injury Updates: If a key player is injured or unable to play, this can influence the
+expected total score, leading bookmakers to adjust the line accordingly.
+
+If a key player is injured or unable to play, this can influence the expected total score, leading bookmakers to adjust the line accordingly. Weather
+Conditions: In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a
+lower-scoring game, causing the line to move down.
+
+In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a lower-scoring game,
+causing the line to move down.
+</item 6>
+
+<item 7>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+This includes your initial $10 wager, along with a profit of $15.30.
+
+It's essential to note that this calculation gives you the total payout, not just your earnings. If you're keen on tracking your profits from betting, remember
+to subtract your original stake from the payout to get an accurate figure.
+
+Why do moneyline odds change?
+
+Lines at the best sports betting apps change quickly due to two primary reasons:
+
+Public betting
+
+New information
+
+Before setting odds for an event, oddsmakers gather extensive data. Once they finalize the odds, they release them to the public.
+
+As a bettor, you can bet immediately or wait for potential shifts in the odds, although predicting these shifts is challenging.
+
+For instance, when examining odds for the next Super Bowl champion released shortly after the previous Super Bowl, these odds are based mostly on the recently
+concluded season.
+
+As the new season approaches and teams make changes, odds adjust based on perceived championship chances. As games progress, lines continue to evolve based on
+team performances.
+
+Public betting can also sway lines.
+</item 7>
+
+<item 8>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 8>
+
+<item 9>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 9>
+
+<item 10>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 10>
+=== END ITEM id=8cc3e5768825bc65 ===
+
+=== ITEM id=8a89250ce6273342 ===
+Gold sentences and facts:
+Sentence 0: For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report.
+  Fact 0.0: Investors around the world consider the Fed to matter more than other central banks.
+  Fact 0.1: Foreign-exchange strategists at Bank of America say weak US data is the only game-changer for markets.
+  Fact 0.2: The Bank of America foreign-exchange strategists wrote this in a BofA Global Research report.
+Sentence 1: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 1.0: Postponements of such reports could complicate things for the Fed.
+  Fact 1.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+
+Retrieved items:
+<item 1>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+That growing understanding has sent yields in the bond market to their highest levels in more than a decade, which in turn has undercut prices for stocks and
+other investments. Treasury yields rose again on Tuesday following a mixed batch of reports on the economy. The yield on the 10-year Treasury edged up to 4.55
+per cent from 4.54 per cent late on Monday and is near its highest level since 2007. It’s up sharply from about 3.5 per cent in May and from 0.5 per cent about
+three years ago. One economic report on Tuesday showed confidence among consumers was weaker than economists expected. That’s concerning because strong spending
+by US households has been a bulwark keeping the economy out of a long-predicted recession.
+
+Besides high interest rates, a long list of other worries is also tugging at Wall Street. The most immediate is the threat of another US government shutdown as
+Capitol Hill threatens a stalemate that could shut off federal services across the country.
+</item 1>
+
+<item 2>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 2>
+
+<item 3>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 3>
+
+<item 4>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 4>
+
+<item 5>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 5>
+
+<item 6>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 6>
+
+<item 7>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 7>
+
+<item 8>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Infratil (down 3.6 per cent), Meridian Energy (down 2.7 per cent) and Resmed (down 2 per cent) were among the biggest large-cap decliners. The lowdown The
+Australian sharemarket shook off a positive lead from Wall Street on Wednesday after hotter-than-expected inflation data raised the prospect of another interest
+rate rise at the Reserve Bank’s next meeting, which would weigh on the equity market. Interest-rate sensitive sectors, including REITS and consumer companies,
+were among the weakest on the local bourse as investors digested the news.
+
+GSFM investment strategist Stephen Miller said the inflation data, taken with the October Reserve Bank board meeting minutes, which revealed the board had “low
+tolerance for a slower return of inflation to target than currently expected”, made the possibility of an interest rate rise from the central bank in November a
+“near certainty”. However, commodity prices supported mining companies as iron ore prices increased 2.9 per cent overnight, bolstering Australia’s iron ore
+giants.
+</item 8>
+
+<item 9>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 9>
+
+<item 10>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 10>
+=== END ITEM id=8a89250ce6273342 ===
+
+=== ITEM id=d2fd745219bb8a9a ===
+Gold sentences and facts:
+Sentence 0: 13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+  Fact 0.0: The 12th over is timestamped 13 Dec 2023 00.58 GMT.
+  Fact 0.1: At the end of the 12th over, West Indies were 102-4.
+  Fact 0.2: At the end of the 12th over, Hope had 26 runs.
+  Fact 0.3: At the end of the 12th over, Hetmyer had 1 run.
+  Fact 0.4: The 12th over had just a single and a wicket.
+  Fact 0.5: Shai Hope could not break the legspin shackles in the 12th over.
+Sentence 1: 6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary.
+  Fact 1.0: The 16th over is timestamped 6d ago, 22.54 GMT.
+  Fact 1.1: At the end of the 16th over, West Indies were 112-4.
+  Fact 1.2: At the end of the 16th over, Hope had 29 runs.
+  Fact 1.3: At the end of the 16th over, Powell had 8 runs.
+  Fact 1.4: Hope is playing an exemplary innings.
+  Fact 1.5: Hope opens the face to steer Rehan for Hope's first boundary.
+
+Retrieved items:
+<item 1>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Just as surely as when they came out on Tuesday facing an almost unachievable task, the outcome of the West Indies’ run chase seemed inevitable from the start.
+With such a meagre target they needed little more than to keep their heads, and though both Topley and Sam Curran conceded only two with their final overs to
+push the contest into its final over, that never looked in doubt.
+
+skip past newsletter promotion Sign up to The Spin Free weekly newsletter Subscribe to our cricket newsletter for our writers' thoughts on the biggest stories
+and a review of the week’s action Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more
+information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy
+. We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts?
+</item 1>
+
+<item 2>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+Updated at 23.20 GMT
+
+6d ago 23.16 GMT I suppose it’s appropriate that it ended with a six, the 120th of the series. Hope played a gem of an innings there, calmly anchoring West
+Indies in an increasingly nervous chase with a run-a-ball 43. England fought admirably to defend a below-par total; but for Hope, they would probably have done
+it.
+
+Updated at 23.17 GMT
+
+6d ago 23.14 GMT WEST INDIES WIN THE SERIES 3-2! 19.2 overs: West Indies 133-6 (Hope 43, Holder 4) That’s it! Hope pings Woakes over extra cover for six to seal
+another series victory for West Indies! West Indies’ Shai Hope (right) celebrates with Jason Holder after hitting a six to win the match by 4 wickets.
+</item 2>
+
+<item 3>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant. The 35-year-old, who rose to the top of the T20 bowling rankings for the first
+time on Wednesday, took two wickets and conceded just 21 while Topley was even better, also claiming a pair of victims but conceding only 17. England take
+plenty of positives from this series, but the result was not one.
+</item 3>
+
+<item 4>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 23.00 GMT 17th over: West Indies 114-5 (Hope 30, Russell 1) The wicket England really need is that of Shai Hope, who is quietly guiding West Indies
+towards the finish line.
+</item 4>
+
+<item 5>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+12.4 overs: West Indies 108-4 (Hope 27, Powell 6)
+
+Updated at 01.09 GMT
+
+13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+Windies skipper Rovman Powell is the new man and Buttler cranks the pressure by inserting a slip.
+
+Updated at 01.04 GMT
+
+13 Dec 2023 00.52 GMT WICKET! Hetmyer c Duckett b Rashid 1 (West Indies 101-4) Adil Rashid takes his 100th T20I wicket! A crucial one in the context of the game
+too – the dangerous Hetmyer is sent on his way for just a single as England look to ramp up the pressure heading into the nub end of this match.
+</item 5>
+
+<item 6>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+That made it 70 for four and the game was one ball into its ninth over, at which point Liam Livingstone and Moeen Ali had to focus for a while on disaster
+prevention rather than entertainment.
+
+Gudakesh Motie is embraced his his West Indies teammates after dismissing England’s in-form Phil Salt. Photograph: Randy Brooks/AFP/Getty Images
+
+Suddenly bowlers were energised by the prospect of posting, for a change, less-than-humiliating figures. Akeal Hosein’s were outstanding, his four overs going
+for just 20 and bringing the wickets of Will Jacks and Moeen, undone by a relay catch on the boundary after combining with Livingstone to add 40 for the fifth
+wicket. Livingstone followed precisely two overs later, prodding the ball limply back into the hands of Motie, at which point things really fell apart, the last
+five wickets surrendered in 20 balls for just 11 runs.
+</item 6>
+
+<item 7>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 00.20 GMT 5th over: West Indies 56-1 (Mayers 20, Hope 12) Woakes continues, after five balls he’s gone for just three runs. Can he get out of the
+over cheaply? No – A length ball is clubbed down the ground for SIX with a minimum of fuss by Shai Hope. West Indies have come out of the traps as well as
+England did, one over of the Powerplay left.
+</item 7>
+
+<item 8>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+What a difference two days make. Somehow Tuesday’s ludicrous, record-smashing, high-scoring entertainment was followed by a sequel on the same surface that
+eventually delivered thrilling low-scoring entertainment, and a different result claimed in very different style. It was eventually won for West Indies with
+four balls to spare and in the most unfitting of ways – with a massive six – by Shai Hope, again proving himself the right man for a run-chase.
+
+So a series marked by stunning power hitting, roaring run rates and an unexpected midway transformation in England’s performances and prospects concluded with a
+3-2 triumph for West Indies, who extended their supremacy over England at home to four series in three formats across nearly five years.
+
+England assembled exactly the same players in exactly the same place and exactly the same situation – losing the toss, put in to bat – but this was an entirely
+different performance.
+</item 8>
+
+<item 9>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Often there is a sense as a tour enters its final days of thoughts turning to home, and perhaps the focus was not as laser-sharp as it might have been for this
+game, determination less than absolute to grasp this opportunity to end England’s run of reverses in the Caribbean. Whatever the reason, the pyrotechnics that
+rocketed England to victory in the two previous matches never sparked in this one. It took a fabulous delivery from Gudakesh Motie to end Phil Salt’s run of
+absurd form with his score a modest 38, but some of the other wickets that fell during the period that defined England’s innings and the game seemed a little
+careless.
+
+In the fourth over Jos Buttler casually turned a Jason Holder delivery to fine leg, where Oshane Thomas was positioned, hands cupped. Harry Brook tried to
+paddle-sweep Motie but sent the ball only a few feet into the air, giving Nicholas Pooran an easy catch.
+</item 9>
+
+<item 10>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts? Show Download the Guardian app from the iOS App Store on iPhone or the Google Play store on Android
+by searching for 'The Guardian'.
+
+If you already have the Guardian app, make sure you’re on the most recent version.
+
+In the Guardian app, tap the Menu button at the bottom right, then go to Settings (the gear icon), then Notifications.
+
+Turn on sport notifications. Was this helpful? Thank you for your feedback.
+
+Halfway through their innings they were 62 for three, and if England had 15 more runs at the same point they had also made a complete hash of the rest of it.
+That was a trap which, thanks to Hope’s 43-ball 43 as he again steered his side to their target, West Indies avoided. This batting display may have lacked their
+usual flamboyance but until the final ball it was entirely appropriate for the occasion.
+
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant.
+</item 10>
+=== END ITEM id=d2fd745219bb8a9a ===
+
+=== ITEM id=9f707136faca3a53 ===
+Gold sentences and facts:
+Sentence 0: In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City.
+  Fact 0.0: In July, Kelce spoke on the podcast he shares with his brother, New Heights.
+  Fact 0.1: Kelce said he intended to give Swift a friendship bracelet with his number on it.
+  Fact 0.2: Kelce said he intended to give the bracelet during Swift's Eras Tour concert in Kansas City.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: On his podcast, Kelce later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Could they have been driving off into the sunset? Of course, none of this actually confirms Swift and Kelce are actually dating. But regardless of whether it’s
+a friendship or a romantic relationship, it has sent shockwaves through two massive cultural franchises, expanding the NFL’s audience into uncharted territory.
+It’s a cultural pairing on par with – and perhaps even bigger than – Kim Kardashian and Kanye West.
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 2>
+
+<item 3>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 4>
+
+<item 5>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+</item 5>
+
+<item 6>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the
+classic game “Kiss, Marry, Kill”. Speaking with AfterBuzz TV, Kelce was given the options of Swift, Katy Perry and Ariana Grande. He said he’d ultimately kill
+Grande, marry Perry and kiss Swift. That was about six years ago, but it has more recently set tongues wagging as fans wondered how long the plan for them to
+meet has been in the works. Cruel Summer Fast-forward seven years, and things started to heat up. In July, speaking on the podcast he shares with his brother,
+New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City. Unfortunately, the
+bracelet never made it to her wrist or his digits to her phone.
+</item 6>
+
+<item 7>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 7>
+
+<item 8>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 8>
+
+<item 9>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Head coach Andy Reid was also asked about his star tight end's supposed relationship, to which he quipped, "I set them up."
+
+Sept. 24: Kelce and Swift leave stadium together
+
+"You know when it's time to go." - It's Time To Go
+
+This was the first time the two were photographed together. They walked side by side, Kelce fittingly wearing an outfit with "1989" in the title and Swift
+wearing a Chiefs zip-up.
+
+Sept. 24: The two leave in a convertible
+
+"Nothing good starts in the getaway car." - Getaway Car
+
+Swift and Swift were spotted in a convertible, with the tight end driving, after the Chiefs' win. Kelce reportedly rented out a restaurant for a private party
+with Swift and his teammates.
+
+"Taylor Swift likes that Travis Kelce 'pursued her' and the two are having a 'great time getting to know each other,'" a source told Entertainment Tonight.
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Here's a look at how it all started and where it has gone since:
+
+June 29: Kelce makes friendship bracelets for fellow TEs
+
+Is this where it all begin? Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends. He said he was "taking a page out of Taylor
+Swift's book."
+
+July 26: Kelce makes friendship bracelet for Swift
+
+"So make the friendship bracelets, take the moment and taste it." - You're On Your Own Kid
+
+Kelce announced that he went to Swift's highly anticipated concert, but said he did not have the chance to meet the 12-time Grammy winner.
+</item 10>
+=== END ITEM id=9f707136faca3a53 ===
+
+=== ITEM id=187d4cf73299e744 ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that “all of that, all of it, was built on lies.”
+Sentence 1: FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+  Fact 1.0: Gary Wang is an FTX co-founder.
+  Fact 1.1: Gary Wang is the former CTO of FTX.
+  Fact 1.2: Caroline Ellison is the former CEO of Alameda Research.
+  Fact 1.3: Gary Wang pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+  Fact 1.4: Caroline Ellison pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+
+Retrieved items:
+<item 1>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 2>
+
+<item 3>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Bankman-Fried faces seven federal charges, including wire fraud, securities fraud and money laundering, that could put him in prison for the rest of his life.
+Thus far, Bankman-Fried, 31, has remained mostly quiet in court intently listening to witnesses and at times writing notes to his attorneys. But as Wang
+testified against him, Bankman-Fried looked visibly upset, shifting his gaze from his former friend to the ground, and at one point putting his head in his
+hands.
+
+Sam Bankman-Fried listens as Assistant U.S. Attorney Nicolas Roos questions Gary Wang during Bankman-Fried's fraud trial over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Wang, 30, was technology chief for FTX, which spiraled into bankruptcy in November.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 4>
+
+<item 5>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 5>
+
+<item 6>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Sam Bankman-Fried, the founder of bankrupt cryptocurrency exchange FTX, is seen during a hearing as a U.S judge revoked his bail, at a courthouse in New York,
+U.S., August 11, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+$65 billion line of credit
+
+For months, Bankman-Fried has known that Wang and Ellison, who were integral members of his personal and professional inner circles, had turned on him. Both
+pleaded guilty in December and have since been cooperating with the U.S. attorney's office in Manhattan. Wang's testimony, which stretched into Friday, was
+given under a cooperation agreement with the government. Ellison is expected to take the stand under a similar arrangement.
+
+U.S.
+</item 6>
+
+<item 7>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 7>
+
+<item 8>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+"FTX defrauded all its customers," he said.
+
+Matt Huang, co-founder of Paradigm Operations LP, right, arrives at court in New York, US, on Thursday, Oct. 5, 2023. Former FTX Co-Founder Sam Bankman-Fried is
+charged with seven counts of fraud and money laundering following the collapse of his cryptocurrency empire last year. Photographer: Yuki Iwamura/Bloomberg via
+Getty Images Yuki Iwamura | Bloomberg | Getty Images
+
+Investment to zero
+
+The third witness to take the stand was Matt Huang, co-founder and managing partner of Paradigm, a crypto venture capital firm that invested over $275 million
+in FTX. That stake was wiped out. Huang testified about his firm's due diligence on FTX, and he told the court that Bankman-Fried assured him that funds would
+be used for FTX and not Alameda.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 9>
+
+<item 10>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 10>
+=== END ITEM id=187d4cf73299e744 ===

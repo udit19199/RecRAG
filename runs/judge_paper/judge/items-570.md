@@ -1,0 +1,1028 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 6 items.
+
+=== ITEM id=3a33c3351a0ab9df ===
+Gold sentences and facts:
+Sentence 0: With this sale, they offer some of the best value in their class from one of the top names in the business.
+  Fact 0.0: With this sale, they offer some of the best value in their class.
+  Fact 0.1: They are from one of the top names in the business.
+Sentence 1: “Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low,” CMA CGM Chief Financial Officer Ramon Fernandez told reporters Friday.
+  Fact 1.0: Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low.
+  Fact 1.1: Ramon Fernandez is the Chief Financial Officer of CMA CGM.
+  Fact 1.2: Ramon Fernandez told reporters on Friday that each actor will have to be responsible to ensure the market remains reasonable amid relatively low rates.
+
+Retrieved items:
+<item 1>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Black Friday is often a boon for deals on headphones and earbuds, and this year is no different. The shopping holiday has brought a plethora of deals on all
+kinds of headphones, include several top picks from our guides to the best wireless headphones, wireless earbuds, budget wireless earbuds and gaming headsets.
+Other popular models from the likes of Sony, Beats, Bose and Apple are discounted as well. All of this means it's an ideal time to pick up a new set, whether
+it's to give as a gift to someone on your holiday shopping list or just to replace your own aging cans. To help you get a good bargain, we've rounded up the
+best Black Friday deals on headphones and earbuds we could find for 2023.
+</item 1>
+
+<item 2>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Photograph: Technics
+
+The Technics EAH-AZ80 (9/10, WIRED Recommends) are some of our favorite top-shelf earbuds thanks to their fantastic sound alongside great features and noise
+canceling, and their ability to connect to up to three devices at once. This is one of the few sales we've seen all year, which makes their very high asking
+price a lot more palatable.
+
+Soundcore's Life Q30 are already impressive at full price thanks to noise canceling that punches well above its class, so this deal makes them something of a
+steal. They add to the package with accessible and adjustable sound quality, good features, and great battery life.
+
+Jump to a Topic: PC and Gaming Deals, Home and Kitchen Deals, TV Deals, Watch and Fitness Tracker Deals, Headphone and Earbud Deals, Smart Home Deals, Speaker
+Deals
+
+Smart Home Deals
+
+Want to smarten up your home? See our guides to setting up your smart home, the best smart lighting, and the best mesh routers to get started.
+</item 2>
+
+<item 3>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+Anker's Liberty 4 NC earbuds (8/10, WIRED Recommends) are another feature-packed pair of buds with great noise canceling, and are on sale for $80 ($20 off).
+
+The Beats Studio Pro (7/10, WIRED Review) were released just a couple of months ago. We wish the battery life was longer and that the controls and EQ options
+were more robust. But this price makes them more worthwhile, and they do have excellent noise canceling.
+
+Photograph: Bose
+
+These noise-cancelling headphones are our favorite for the office. With advanced signal processing and four microphones built in, these will limit any sound
+around you, making them great for focusing on work in a busy environment and for Zoom calls. These often fluctuate in price, but we think it's a great deal.
+
+We like Sony's standard LinkBuds (8/10, WIRED Recommends) for the open-ear design that allows you to hear what's going on around you.
+</item 3>
+
+<item 4>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Engadget Editor Jon Turi found this pair to deliver more low-end depth than most of its peers, however. It can also last up to 10 hours per charge.
+
+Your Black Friday Shopping Guide: See all of Yahoo’s Black Friday coverage, here. Follow Engadget for Black Friday tech deals. Learn about Black Friday trends
+on In The Know. Hear from Autoblog’s experts on the best Black Friday deals for your car, garage, and home, and find Black Friday sales to shop on AOL,
+handpicked just for you.
+</item 4>
+
+<item 5>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Like many Sony headphones, it also comes with a number of useful bonus features; “Speak-to-Chat,” for instance, automatically pauses your music when you start
+speaking.
+
+Sony WF-1000XM5
+
+For an in-ear pair, the Sony WF-1000XM5 is also on sale for $248 at Amazon, B&H and others. (Yes, Sony’s headphone naming scheme is bad.) That matches the
+lowest price we’ve seen and comes in $52 below Sony’s usual list price. This set tops our list of the best wireless earbuds and earned a score of 87 in our
+review this past July. Like the over-ear XM5 above, it offers a host of useful features, a warm yet customizable sound, powerful ANC and a comfortably snug fit
+that naturally isolates a good chunk of outside noise on its own. Battery life should sit around seven to eight hours with average use.
+</item 5>
+
+<item 6>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Sony's WF-1000XM5 (7/10, WIRED Review) source multiple generations of great sound, top features, and excellent noise canceling, all wrapped into their most
+compact presentation yet. They're not cheap, so this discount is key if you're looking to be an earlier adopter of Sony's latest flagship buds.
+
+The only issues we had with Sennheiser's HD 660S2 (7/10, WIRED Review) bass-enriched audiophile beauties were their high price and stiff clamping force. At this
+price, we can live with a tighter fit, especially since the payoff is gloriously clear and richly detailed sound.
+
+Sony's working-class noise cancelers offer solid performance. clear sound, and impressive battery life at a much more reasonable price than the brand's top
+offerings. With this sale, they offer some of the best value in their class from one of the top names in the business.
+</item 6>
+
+<item 7>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+However, there’s no wireless charging, the battery life (five or so hours per charge) is mediocre and the IPX2 sweat-resistance rating is too weak for the gym.
+Amazon’s companion app is rather bloated too. But those shouldn’t be deal-breakers for $35. We gave the Echo Buds a review score of 77 in July.
+
+Anker Soundcore Space A40
+
+The Anker Soundcore Space A40 is one of the best values in wireless earphones at its normal price of $79, but now it’s down to $54 for Black Friday. That ties
+the lowest price we’ve tracked. The Space A40 tops our guide to the best budget wireless earbuds because it delivers most of the features we expect from
+headphones that cost twice as much. It’s comfortable, its ANC is genuinely capable, its battery lasts up to 10 hours per charge, its tiny case supports wireless
+charging and it can pair with two devices at once.
+</item 7>
+
+<item 8>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+As Sony’s priciest wireless headphones, the WH-1000XM5 had a lot to live up to following the remarkably popular WH-1000XM4. Luckily they deliver the goods with
+upgraded noise canceling, a posh new design, and a more refined sound signature that adds up to a great package – especially on sale.
+
+Bose’s aptly named QuietComfort Ultra (9/10, WIRED Recommends) arrived in October with only one notable problem: they’re very pricey. Luckily they’ve already
+gotten a discount, which makes it easier to land their class-leading noise canceling, great sound, and luxuriously comfy design that’s loaded with modern
+features.
+
+Photograph: Sony
+
+Sony's WH-1000XM4 headphones (9/10, WIRED Recommends) have been a stalwart pair of wireless headphones for years now, and there's no secret to their success.
+Offering excellent noise canceling, warm and detailed sound, and a ton of modern features in a comfy design, they're among the best travel headphones you can
+buy.
+</item 8>
+
+<item 9>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+That's another $50 discount and an all-time low. We gave these in-ears a review score of 88 in September and recently named them the “best for noise
+cancellation” pick in our wireless earbuds buying guide. As that title suggests, the main reason to consider this pair over the Sony WF-1000XM5 is its ANC
+performance, which is the strongest we’ve tested from a true wireless model. We also enjoy Bose’s spatial audio tech. But the earpieces are on the larger side,
+the call quality and battery life (at six-ish hours) are just OK and there’s no support for multi-device pairing.
+
+Beats Fit Pro
+
+The Beats Fit Pro is back down to $159, which isn’t an all-time low but is still roughly $20 below its average street price. This is the “best for workouts”
+pick in our wireless earbuds buying guide, as it packs many of the iOS-friendly conveniences of Apple’s AirPods in a sportier and more stable design.
+</item 9>
+
+<item 10>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+If you prefer this kind of bulkier but easier-to-remove shape, this is an excellent value.
+
+Anker Soundcore Space Q45
+
+If you’re after a wallet-friendly pair of noise-canceling over-ear headphones, Anker’s Soundcore Space Q45 is worth a look at its Black Friday price of $100.
+For that amount, this pair’s better-than-average ANC, softly padded design and multi-device pairing make for a strong value. Its V-shaped sound profile isn’t
+especially detailed, but it can work well enough for pop music and it’s customizable through Anker’s app. Call quality is mediocre, however. This $50 discount
+matches the lowest price we’ve tracked, and it's available at both Amazon and Anker's online store; just use the on-page coupon for the latter.
+
+Audio-Technica ATH-M20xBT
+
+The Audio-Technica ATH-M20xBT is a modest $10 off for Black Friday, bringing the wireless headphones down to $69.
+</item 10>
+=== END ITEM id=3a33c3351a0ab9df ===
+
+=== ITEM id=62dd4f6962615259 ===
+Gold sentences and facts:
+Sentence 0: Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+  Fact 0.0: Kenneth Walker III plays for the Seahawks.
+  Fact 0.1: Kenneth Walker III took four carries against the Rams.
+  Fact 0.2: Kenneth Walker III took four carries against the Rams before leaving.
+  Fact 0.3: Kenneth Walker III left with an oblique injury.
+Sentence 1: Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries.
+  Fact 1.0: Entering Week 12, Tee Higgins failed to suit up due to a nagging hamstring injury.
+  Fact 1.1: Entering Week 12, Noah Brown failed to suit up due to a nagging knee injury.
+  Fact 1.2: Entering Week 12, Treylon Burks failed to suit up due to a nagging concussion.
+  Fact 1.3: Entering Week 12, Kadarius Toney failed to suit up due to a nagging ankle injury.
+  Fact 1.4: Entering Week 12, Kadarius Toney failed to suit up due to a nagging hip injury.
+
+Retrieved items:
+<item 1>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Geno Smith's struggles complicate their fantasy prospects, as well.
+
+What are the biggest WR injuries in Week 13?
+
+Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging
+injuries. For now, we've placed Higgins and Brown in our Week 13 list and omitted Burks and Toney. We'll also be eyeing the Chargers' Josh Palmer (knee), who's
+eligible to come off the IR this week but probably won't suit up against New England.
+
+Last week, the most notable WRs to exit their respective games with injuries include Chris Olave (concussion), Amari Cooper (ribs), Demario Douglas
+(concussion), and Rashid Shaheed (thigh). We've left all four WRs out of our initial Week 13 list but will closely monitor their teams' injury reports to gauge
+their playing prospects.
+</item 1>
+
+<item 2>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Bengals at Jaguars (-8.5), Monday
+
+Bengals : CB Cam Taylor-Britt (quad/ankle), D'Ante Smith (knee), Jay Tufele (illness) OUT
+
+: CB Cam Taylor-Britt (quad/ankle), D'Ante Smith (knee), Jay Tufele (illness) OUT Jaguars: CB Tyson Campbell (hamstring), RB Travis Etienne (ribs), TE Brenton
+Strange (foot), TE Luke Farrell (toe) QUESTIONABLE
+
+The Bengals got good news on the injury front ahead of Monday's game against the Jaguars. Wide receiver Tee Higgins (hamstring/ankle) and linebacker Logan
+Wilson (ankle/foot) are set to play, according to head coach Zac Taylor. Higgins and Wilson were full participants in practice. Cornerback Cam Taylor-Britt hurt
+his foot in practice and is out.
+</item 2>
+
+<item 3>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Smith did return, however, for the final drive of the game in the losing effort. Head coach Pete Carroll said that Smith will "make it back." When asked if that
+means for Thursday's matchup against San Francisco, the coach said, "I would think so."
+
+Sam Howell (Commanders) received medical attention on the sidelines after enduring several hard hits to the upper body on a touchdown run against the Giants. He
+was quickly cleared of a potential concussion, however, and remained in the game. Veteran journeyman Jacoby Brissett is Washington's backup.
+
+RB
+
+Aaron Jones (Packers) suited up against the Chargers despite a lingering hamstring issue, only to manage just five carries before suffering a knee injury. The
+former Pro Bowler needed help to leave the field and was then carted to the locker room, replaced by A.J. Dillon.
+</item 3>
+
+<item 4>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+He was seen walking on the sidelines shortly afterward but ruled doubtful to return. Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing
+yards on the year, replaced Walker as Seattle's top ball carrier. Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an
+"oblique strain that was legit" and could miss time.
+
+D'Onta Foreman (Bears) remained a headliner of Chicago's backfield against the Lions, even with Khalil Herbert back from injured reserve, but managed just 14
+yards on the ground before suffering an ankle injury. He walked off with a limp and attempted to run on the sidelines but did not return to the field after the
+Bears ruled him questionable.
+
+Pick Six Newsletter Crafted By The Best NFL Experts Get the day's big stories + fun stuff you love like mock drafts, picks and power rankings.
+</item 4>
+
+<item 5>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Cardinals at Steelers (-5.5)
+
+Despite missing the entire week of practice, the Cardinals are holding out hope for Brown to play by listing him as questionable. McBride is also questionable
+after being limited on Thursday and Friday, but told reporters that he's "good to go."
+
+Pittsburgh has listed Adams as its lone player with a game designation to wrap up the week. Safety Minkah Fitzpatrick (hamstring) practiced fully throughout the
+week, carries no designation, and told reporters Friday that he will play this weekend.
+
+Colts (-1) at Titans
+
+Colts : CB JuJu Brents (quad), RB Jonathan Taylor (thumb) OUT
+
+: CB JuJu Brents (quad), RB Jonathan Taylor (thumb) OUT Titans: WR Treylon Burks (concussion) QUESTIONABLE
+
+Indianapolis ruled out Brents and Taylor after they both missed the entire week of practice.
+</item 5>
+
+<item 6>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Week 11 of the 2023 NFL season has provided plenty of drama, from the Bears hanging with the Lions to the Giants getting a rebound from emergency quarterback
+Tommy DeVito. But the latest round of regular-season action has also brought another wave of unfortunate injuries. Here's a roundup of the latest big names to
+go down around the league:
+
+QB
+
+C.J. Stroud (Texans) left for a single play against the Cardinals after absorbing a hard hit, with backup Davis Mills entering in relief. Stroud did not receive
+an injury designation, however, and returned after a quick check-in from trainers.
+
+Geno Smith (Seahawks) suffered an injury to his throwing arm after guiding a 16-7 lead over the Rams, showing frustration while trying to stretch the arm after
+a hit from Aaron Donald. Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left
+in the third quarter.
+</item 6>
+
+<item 7>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+I agree to receive the "Pick Six Newsletter" and marketing communications, updates, special offers (including partner offers), and other information from CBS
+Sports and the Paramount family of companies. By pressing sign up, I confirm that I have read and agree to the Terms of Use and acknowledge Paramount's Privacy
+Policy See All Newsletters Please check the opt-in box to acknowledge that you would like to subscribe. Thanks for signing up! Keep an eye on your inbox. Sorry!
+There was an error processing your subscription.
+
+WR
+
+Tyreek Hill (Dolphins) briefly left Miami's game against the Raiders while nursing a hand injury and was ruled questionable to return, but he took the field
+again soon afterward, securing seven catches for 80 yards and a score before halftime. Hill has left multiple games this year, only to return in all of them.
+
+Cooper Kupp (Rams) had just a single catch against the Seahawks before suffering an ankle injury while blocking.
+</item 7>
+
+<item 8>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Chase put a scare into the fantasy community on Wednesday when he was listed as a DNP, but after logging back-to-back limited practices, there is a lot more
+optimism heading into Sunday. With Tee Higgins (hamstring) already ruled out, Cincinnati will be hoping Chase can feel healthy enough to play when they host the
+Texans at 1 p.m. ET on Sunday.
+
+The Bengals, despite getting a win over the Bills last Sunday, are a beaten-down bunch. Their defense will also be without a prominent edge rusher, Sam Hubbard,
+complicating matters for a team hoping to stack wins as they compete for an AFC North crown. On the bright side, Joe Burrow appears to be finally healthy and
+should have no problems targeting Tyler Boyd, Trenton Irwin, and Andrei Iosivas in the passing game. If Chase does end up suiting up, fantasy owners should
+enjoy an even larger workload than the receiver already had.
+</item 8>
+
+<item 9>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 9>
+
+<item 10>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning back the clocks last week, it now gets darker earlier for the foreseeable future. That darkness allows us to see the stars on a clear night, so
+it's only natural to wonder if the pass-catching stars will shine bright in Week 10 of the NFL season. We already know Tee Higgins and Nico Collins are OUT,
+while Justin Jefferson, Ja'Marr Chase, and T.J. Hockenson are among the other star pass-catchers beaten up heading into the week. Can we expect them on the
+field when the action kicks off Sunday?
+
+Below, we'll give you the latest news on these ailing pass-catchers and break down how their injuries could potentially affect the Week 10 fantasy landscape.
+
+WEEK 10 INJURY UPDATES: Early WRs | RBs
+
+Is Justin Jefferson playing Week 10?
+
+UPDATE: The Vikings will not activate Jefferson before Sunday's game and have officially ruled him OUT, according to NFL Network's Tom Pelissero.
+</item 10>
+=== END ITEM id=62dd4f6962615259 ===
+
+=== ITEM id=d01600b2e7adcc5b ===
+Gold sentences and facts:
+Sentence 0: The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line.
+  Fact 0.0: The Springboks took a 12-3 lead after 34 minutes.
+  Fact 0.1: The Springboks took the lead when the All Blacks once again failed to release on their goal line.
+  Fact 0.2: The All Blacks failed to release on their goal line once again.
+Sentence 1: Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide.
+  Fact 1.0: The All Blacks sensed an opportunity to strike against 14 men.
+  Fact 1.1: On a couple of occasions, the All Blacks kicked for the corner out wide.
+Sentence 2: It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+  Fact 2.0: This comes despite Argentina beating the All Blacks last year in Christchurch.
+  Fact 2.1: Argentina also gave the All Blacks a maiden defeat in 2020 in Sydney.
+
+Retrieved items:
+<item 1>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 1>
+
+<item 2>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+The penalty allowed Pollard to step up and bang over three points.
+
+The All Blacks were on the backfoot much of the opening quarter and, after Ethan de Groot was pinged for not rolling away, the Springboks moved further ahead
+after 12 minutes.
+
+A wicked bounce following a lovely Jordie Barrett chip kick denied Savea a try soon after. But the All Blacks were on the scoreboard via Mo’unga moments later
+as Barnes was playing advantage.
+
+But the Springboks restored their six-point lead soon after as Savea was pinged for not releasing. Barnes later apologised, with the No.8 having a split-second
+separation.
+
+The Springboks’ rush defence caused the All Blacks problems all evening, as Damian de Allende and Kriel forced their opponents into errors. Will Jordan, the
+impressive young outside back who scored eight tries, had a difficult night and was replaced midway through the second half.
+</item 2>
+
+<item 3>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 3>
+
+<item 4>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 4>
+
+<item 5>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 5>
+
+<item 6>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Sam Cane – the All Blacks captain – was forced to watch the match from the sidelines for 53 minutes after having his yellow card for a high shot on Jesse Kriel
+upgraded to red. His opposite in the number seven jersey, Siya Kolisi, was later shown a yellow card for a high shot on Ardie Savea, but returned.
+
+Cheslin Kolbe – the magnificent winger who sealed their World Cup triumph four years earlier against England – meanwhile couldn’t bare to watch from the
+sidelines after being shown a yellow card for a deliberate knockdown in the 73rd minute.
+
+Advertisement
+
+It was that kind of evening, where the margins were tiny and the outcomes almighty.
+
+“There are no ways I can explain it,” Kolisi said.
+
+“I want to give credit to the All Blacks. They took us to the end, they took us to a dark place. It shows what kind of team they are, to fight with a man down
+from early in the game.
+</item 6>
+
+<item 7>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Minutes later and Kolisi was off, as he cannoned into Savea. He would later return, much to the anger of the New Zealanders in the crowd who were calling for
+justice.
+
+Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide. It came back to haunt them, as their
+usually silky and composed skill sets failed them.
+
+That much was true when the TMO intervened after Smith thought he had a try in his final Test, but an error at the lineout cancelled out the five-pointer.
+
+Advertisement
+
+Eventually the All Blacks did have a try, as Mark Telea, the All Blacks’ best and biggest attacking threat all night, managed to get on the outside and draw in
+two defenders before offloading to Beauden Barrett. But Mo’unga missed the conversion to leave them trailing by a point.
+</item 7>
+
+<item 8>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“To inspire is not about results, it’s not just one player who played well; no, it’s about our behaviour in general, our ability to be ready to come back from
+difficult times and seizing our opportunities.
+
+“There are not a lot of opportunities in life – us playing in a semi-final is even rarer and we want to have no regrets.”
+</item 8>
+
+<item 9>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+PARIS – The All Blacks have downplayed Rieko Ioane’s gestures towards Ireland fans and retiring great Johnny Sexton, as the three-time world champions said they
+have learned to “respect Argentina” ahead of their semi-final on Saturday (6am AEDT).
+
+It comes as Michael Cheika embraced the underdog status and said he was hoping Los Pumas “inspired” Argentina “not by our results but by our ambition”, as the
+former Wallabies coach readies for another clash against the All Blacks and a second semi-final.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+Ioane copped a spray from Sexton following their 28-24 nail-biting win over Ireland.
+
+It came after the lethal back cupped his ear at Irish supporters at the Stade de France after the final whistle, as well as putting his finger to his lips in a
+‘shush gesture’.
+</item 9>
+
+<item 10>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The All Blacks will experience a changing of the guard next season.
+
+Indeed, the All Blacks’ social media channels described the team selection for the World Cup final as the “Last Dance”.
+
+2015 World Cup winner Dane Coles will call time on his career, while his tight-five teammates Brodie Retallick and Sam Whitelock, who is bidding to become the
+first player to win the Webb Ellis Cup for a third time, will head overseas.
+
+Fellow World Cup winners Aaron Smith and Beauden Barrett will also head to Japan.
+
+Coles, who was labelled by Samisoni Taukei’aho as a “Grandad” type figure in the All Blacks, has even been denied the chance of a farewell send-off after
+missing selection.
+
+Advertisement
+
+“Yeah, tough,” said coach Ian Foster of the conversation with the 36-year-old around leaving him out.
+</item 10>
+=== END ITEM id=d01600b2e7adcc5b ===
+
+=== ITEM id=f9fecbf2409b374b ===
+Gold sentences and facts:
+Sentence 0: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 0.0: The planned argument will attempt to argue that Google restrains competition within two separate markets.
+  Fact 0.1: The two markets include the distribution of apps to Android users.
+  Fact 0.2: The two markets include the market for payment processing solutions for content inside Android apps.
+Sentence 1: Wired removed the article for not meeting its standards, but the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part.
+  Fact 1.0: Wired removed the article for not meeting its standards.
+  Fact 1.1: The degree to which the article was shared on social media shows just how willing people are to accept foul play on Google's part.
+  Fact 1.2: The article was boosted in write-ups at other outlets.
+  Fact 1.3: The degree to which the article was boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google's part.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content through anticompetitive means.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers through anticompetitive means.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue through anticompetitive means.
+
+Retrieved items:
+<item 1>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 1>
+
+<item 2>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 2>
+
+<item 3>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 3>
+
+<item 4>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+As an example, Epic will point to Activision Blizzard, the owner of King.com and maker of Candy Crush and Call of Duty, as one developer that wanted to go the
+route of opening its own app store. Google and Activision Blizzard then entered into a three-year agreement in January 2020, worth approximately $360 million,
+to keep the developer on Google Play, Epic will argue.
+
+Google, however, will characterize this program as a way to incentivize developers to launch their apps on Android at the same time as they launch on iOS and
+plans to dispute Epic’s claims that it prevented developers from opening their own app stores.
+
+Android allows sideloading
+
+Google will make note that, unlike Apple, it also allows apps to be sideloaded on Android devices — something Epic takes advantage of today. It will note this
+process is streamlined and helps keep users safe.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 5>
+
+<item 6>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 6>
+
+<item 7>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 7>
+
+<item 8>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Epic also claims that Google is illegally tying its Google Play payments platform to the Google Play app store, keeping other potential app payment mechanisms
+from competing as well.
+
+So, does Google have a monopoly?
+
+A monopoly on what? That’s one of the biggest questions the court will decide. Epic claims that Google has illegal monopolies in “Android app distribution” and
+“Android in-app payment processing.” It’ll argue that if you buy or develop for Android phones, you’re stuck paying the Google tax.
+
+But Google will say the real competition is from Apple, because people can choose to buy an iPhone instead. It’s pretty tough to argue Google has a monopoly on
+app stores in general.
+
+This whole line of argument is called “market definition.” If the court decides the relevant market is phones and app stores, not specifically Android ones,
+then Google’s on the road to victory. If it accepts that Android apps are their own market, Epic will be in better shape. Or, it could pick a different market
+definition entirely, like the judge in the Apple case ended up doing.
+</item 8>
+
+<item 9>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 9>
+
+<item 10>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+That sounds fascinating, but if I don’t care about Fortnite or rich companies suing each other, what’s in it for me?
+
+The future of Google’s app store could depend on this trial — both Epic and Google agree on that. Epic wants to break up Google’s alleged monopoly on Android
+app stores and payment methods, so developers aren’t stuck paying the “Google Tax” or passing that fee along to you.
+
+But if Epic wins — according to Google, anyhow — it could make Android phones less safe by dismantling basic protections against sideloaded apps, and damage
+Android’s ability to compete with the iPhone because it (arguably) can’t run a competitive app store by giving it away for free.
+
+Or maybe you just want juicy dirt on both companies? More on that later!
+
+What exactly is Epic claiming?
+
+Epic argues that Google makes it so difficult for developers and users to get around its Android app store, and that app store’s standard fees, that it’s
+created an illegal monopoly that unjustly enriches Google while artificially driving up app prices because other stores can’t compete.
+</item 10>
+=== END ITEM id=f9fecbf2409b374b ===
+
+=== ITEM id=4562e98f78010523 ===
+Gold sentences and facts:
+Sentence 0: In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income.
+  Fact 0.0: In the third quarter, Uber generated $394 million in operating income.
+  Fact 0.1: In the third quarter, Uber generated $219 million worth of net income.
+Sentence 1: The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports.
+  Fact 1.0: The ride-hail company claims that the rate of sexual assault reported on the app decreased 38%.
+  Fact 1.1: The 38% decrease was between the ride-hail company's first and second reports.
+
+Retrieved items:
+<item 1>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+In business segment terms, Uber generated $17.9 billion in ride-hailing bookings (+31% year over year), and $16.1 billion worth of delivery bookings (+18%).
+Those key business groups at the company generated $5.1 billion and $2.9 billion in revenue, respectively, during the September quarter.
+
+There’s nuance to the revenue figures that we need to consider as the rule-changes in question do affect startups that operate in related categories. On the
+ride-hailing front, Uber told its investors that its Q3 2023 revenue was “negatively impacted by business model changes in some countries that classified
+certain sales and marketing costs as contra revenue by $161 million.” That was not the only legal change that led to Uber’s results changing shape. Under its
+delivery business results, the company added that its revenue result was “negatively impacted by business model changes that classified certain sales and
+marketing costs as contra revenue by $360 million.”
+
+The combined impact of those two items was 8 percentage points of growth.
+</item 1>
+
+<item 2>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+After reporting, shares of Uber are up 1.6% in trading, after an up-and-down morning of shares exchange.
+
+Against a backdrop of macroeconomic uncertainty, the former startup darling’s results can be viewed as an indication that its business model has matured and is
+now in a stable, profitable and cash-generating position. On the other hand, under-performing demand results from a company as global as Uber could indicate
+that consumer spend is coming in lighter than anticipated.
+
+For startups in the transport and on-demand sectors, Uber’s earnings are a regular informational zeitgeist. So let’s work to understand where Uber’s revenue
+came from in the third quarter, and how each of its top-line sources converted — or not — to bottom-line results.
+
+Where did the money come from?
+
+In the third quarter, Uber saw total bookings rise from $29.1 billion to $35.3 billion, a gain of around 21%.
+</item 2>
+
+<item 3>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+The question is whether Uber believes in the long-term income potential of freight.
+
+So what?
+
+When discussing Uber’s results internally, our vibe was that it is a very profitable and healthy company today, albeit one that is not growing as fast as the
+market had hoped. The fact that Uber’s share price is up as we write this indicates that investors are content thus far to excuse the small Q3 misses and keep
+their eyes more focused on its year-over-year improvements and forward guidance. More when we get Lyft’s numbers.
+</item 3>
+
+<item 4>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+The combined impact of those two items was 8 percentage points of growth.
+
+The profit perspective
+
+From bookings to revenues to profits: How did the main portions of Uber’s business generate black ink?
+
+Turning to what Uber calls “segment adjusted EBITDA,” it’s not hard to see how the company managed to rack up more income in its most recent quarter.
+Ride-hailing adjusted profit rose to $1.29 billion, up 43% from $898 million in the year-ago quarter, while delivery saw its own profitability skyrocket from
+$181 million in Q3 2022 to $413 million in its most recent fiscal period.
+
+Uber did spend more during Q3 2023 when compared to its Q3 2022 result, but the 5% gain in “Corporate G&A and Platform R&D” costs to $595 million was far less
+than the gains we saw above. So, Uber’s adjusted EBITDA rose from $516 million in aggregate to $1.09 billion in the third quarter of this year.
+</item 4>
+
+<item 5>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+The number of incidents increased in the categories of nonconsensual kissing, nonconsensual touching and nonconsensual penetration, or rape, between 2017 and
+2019.
+
+The total number of rape incidents also rose from 2017 to 2019. And while the number of reported rapes dropped in 2020, the rate has remained the same since
+2017. In other words, there has not been an improvement in the rate of rapes on the platform.
+
+Sexual assaults are an ongoing problem for Uber
+
+Uber has been sued numerous times over the past few years by passengers who claim they were sexually assaulted during a ride. Lyft has faced similar lawsuits
+and accusations.
+
+Under Uber’s terms of use, class action lawsuits can’t be filed against the company in cases of sexual assault, so each case has to be heard individually. This
+has prevented survivors from advocating for themselves collectively.
+
+Judge Charles Breyer in the Northern District of California will preside over pretrial hearings.
+</item 5>
+
+<item 6>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+On a quarter-over-quarter basis, Uber Freight had a 1% gain in revenue.
+
+The results don’t get any better once we turn to net income. On an adjusted basis, Uber Freight lost $13 million in the third quarter compared to a $1 million
+profit in the same quarter last year.
+
+Uber said the dismal year-over-year revenue results for its freight business was driven by lower revenue per load and volume. Both are consequences of the
+challenging freight market cycle.
+
+Uber Freight isn’t alone. Other more recent entrants to the freight and logistics industry such as Flexport and Convoy have struggled this year. In Convoy’s
+case, the business was forced to shut down with its assets gobbled up by Flexport.
+
+Uber Freight continues to plug along, despite these economic headwinds. The question is whether Uber believes in the long-term income potential of freight.
+
+So what?
+</item 6>
+
+<item 7>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+Of course, adjusted EBITDA is to profit as hidden heels in men’s shoes are to height, so we’ll want some harder figures as well. In the third quarter, Uber
+generated $394 million in operating income and $219 million worth of net income. Mix in $966 million worth of positive operating cash flow, and Uber looks very
+healthy, given that all of the figures in this paragraph were improvements on its year-ago results.
+
+But while food delivery and scooting humans about town were profitable for Uber in the quarter, the final major portion of its business had a more lackluster
+quarter.
+
+Freight falls
+
+One area that continues to drag on Uber is its freight business.
+
+While Uber’s ride-hailing and delivery business saw an uptick in gross bookings in the third quarter, Uber Freight experienced a 27% drop year-over-year.
+Revenue, as a result, had a similar fall.
+
+The business unit reported revenue of $1.3 billion in the third quarter, a 27% drop from the same period last year.
+</item 7>
+
+<item 8>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+Uber reported third-quarter earnings on Tuesday that show a profitable ride-hail and delivery company that’s chugging along in spite of slowing growth in some
+sectors.
+
+The company reported revenue of $9.3 billion, an 11% increase year over year. Investors had expected Uber to report revenues of around $9.5 billion (FactSet,
+Refinitiv), meaning that despite the company’s growth, it fell short of estimates. Turning to profitability, Uber reported net income of $221 million in the
+third quarter, or 10 cents per share, compared with a net loss of $1.2 billion, or 61 cents per share, in the same quarter last year. Again, the company fell
+short of expectations that it would generate 12 cents in per-share profit.
+
+Looking ahead, Uber anticipates gross bookings of $36.5 billion to $37.5 billion, up just 6% at the top-end from its Q3 result.
+</item 8>
+
+<item 9>
+Uber sexual assault survivors call for in-car cameras, tech upgrades (TechCrunch, 2023-10-13T19:26:48+00:00)
+Uber hasn’t released safety data for 2021 and 2022, and won’t say when it plans to do so. Older data backs up some of Abrams’ claims.
+
+Uber has published two safety reports — one containing data from 2017 to 2018 and another with data from 2019 to 2020. The ride-hail company claims that the
+rate of sexual assault reported on the app decreased 38% between its first and second reports.
+
+While the rate decrease is positive, not all the data delivers the same message. Over that same time period, the total number of sexual assault reports across
+five categories fell from 5,981 to 3,824. That drop could be explained by the decrease of trips from 1.4 billion in 2019 to 650 million in 2020.
+
+And while the total number of incidents as a percentage of total number of rides does decrease through the years, the number of incidents in certain categories
+actually increases.
+</item 9>
+
+<item 10>
+Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle (TechCrunch, 2023-10-22T19:15:29+00:00)
+Tesla’s shares, which are priced more as a tech stock than as an automaker’s stock, were down after Q3 earnings. Investors were clearly feeling skittish after
+Tesla reported a gross margin of 17.9%, down from 25.1% in the same period last year. That’s also down from Q2’s margins of 18.2%. As a result, profits fell 44%
+to $1.85 billion in Q3 from the same year-ago period.
+
+Investors see the falling margins and Tesla’s price cuts as proof that demand is lessening for the vehicles as other EVs take market share and rising interest
+rates make it difficult for many buyers to afford big ticket purchases. The company also reported that solar deployments slipped 48% in Q3 from the same period
+last year. But the company made up for it by pulling in a 90% spike in energy storage deployments.
+
+Tesla also gave some updates about its long-delayed Cybertruck.
+</item 10>
+=== END ITEM id=4562e98f78010523 ===
+
+=== ITEM id=7a4a27ddfaf83290 ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.2: Caroline Ellison is the CEO of Alameda.
+  Fact 0.3: Bankman-Fried had "secret access" to customer money, both cash and crypto.
+  Fact 0.4: The government claimed this.
+Sentence 1: Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry.
+  Fact 1.0: Before his fall, Bankman-Fried presented himself as the Good Boy of crypto.
+  Fact 1.1: Bankman-Fried presented himself as the trustworthy face of a sometimes-shady industry.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 2>
+
+<item 3>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 5>
+
+<item 6>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 10>
+=== END ITEM id=7a4a27ddfaf83290 ===
