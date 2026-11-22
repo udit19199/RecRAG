@@ -1,0 +1,32 @@
+run | type | questions | gold facts found >=50% / >=75% / 100%
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r1 | comparison_query | 125 | 73 / 42 / 26
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r1 | temporal_query | 125 | 75 / 41 / 30
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r2 | comparison_query | 125 | 81 / 47 / 31
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r2 | temporal_query | 125 | 72 / 37 / 26
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r3 | comparison_query | 125 | 70 / 45 / 32
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A0_vector_top10/r3 | temporal_query | 125 | 83 / 38 / 31
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r1 | comparison_query | 125 | 76 / 43 / 32
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r1 | temporal_query | 125 | 85 / 45 / 31
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r2 | comparison_query | 125 | 76 / 47 / 32
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r2 | temporal_query | 125 | 84 / 39 / 28
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r3 | comparison_query | 125 | 67 / 41 / 27
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A2_graph_top10/r3 | temporal_query | 125 | 85 / 41 / 29
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r1 | comparison_query | 125 | 92 / 61 / 47
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r1 | temporal_query | 125 | 93 / 58 / 42
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r2 | comparison_query | 125 | 94 / 63 / 46
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r2 | temporal_query | 125 | 97 / 50 / 36
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r3 | comparison_query | 125 | 92 / 64 / 45
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/handoff/runs/A3_picks_no_graph_rows/r3 | temporal_query | 125 | 89 / 53 / 39
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T091956008107Z | comparison_query | 125 | 105 / 78 / 60
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T091956008107Z | temporal_query | 125 | 90 / 53 / 36
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T092000929032Z | comparison_query | 125 | 106 / 81 / 64
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T092000929032Z | temporal_query | 125 | 87 / 53 / 36
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T094637209296Z | comparison_query | 125 | 108 / 78 / 60
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T094637209296Z | temporal_query | 125 | 86 / 54 / 39
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T094642087919Z | comparison_query | 125 | 107 / 70 / 54
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T094642087919Z | temporal_query | 125 | 92 / 54 / 37
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T101418828562Z | comparison_query | 125 | 108 / 71 / 52
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T101418828562Z | temporal_query | 125 | 93 / 58 / 39
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T103425179365Z | comparison_query | 125 | 108 / 71 / 52
+/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261121T103425179365Z | temporal_query | 125 | 90 / 55 / 34
+judge statuses {'stated': 14882, 'missing': 9532, 'contradicted': 229}; stated but quote not found in text: 76
