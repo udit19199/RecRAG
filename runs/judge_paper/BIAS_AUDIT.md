@@ -1,0 +1,15 @@
+# Independent bias audit (22 Nov 2026)
+
+A fresh Claude subagent with no context from this work read the code and the saved runs (read-only, no API calls) and looked for anything that makes the method comparison unfair. Its check scripts were kept outside the repo (/tmp/recrag_review/).
+
+## Findings (ranked)
+1. **Test questions overlap tuning.** 200 of the 250 questions were looked at while the agent was being tuned (runs/final500/tuning_questions.json, heldout400_analysed). Only 50 were never seen. The evidence-picking rule (graphrag_retrieval.py:492) came from those failures. The LLM-pick baselines reuse it word for word. Answered right, tuned 200 vs never-seen 50 (r1/r2/r3): Normal RAG .49/.52/.50 vs .44/.46/.50; agent .76/.74/.73 vs .66/.72/.70; LLM picks from top 50 .82/.78/.81 vs .74/.74/.70. Every method scores lower on the 50 and the order holds. Change: report the never-seen 50 next to the 250, and state the tuning in the paper.
+2. **The fill rule supplies about 7 of the 10 passages.** The agent and the LLM pickers choose about 3 passages each. The agent fills the rest by best vector score over its searches; "LLM picks from top 50" fills by vector rank (the same rule). "LLM searches, then picks" fills in pooled order: the question's top 20 first, so its fill is close to Normal RAG's top 10.
+3. **Cost depends on run order through OpenAI prompt caching.** Later repeats look cheaper because their prompts were cached. Compare cost on list price (list_question_cost_usd).
+4. **One silent failure: LLM picks from top 50, repeat 1, multihop-rag-1774.** The pick call returned empty text, the question got no passages and an empty answer, and it was scored wrong (1 of 750). The spec says to use the first 10 instead.
+5. **Answers were made weeks apart.** 200 of the 250 Normal RAG answers per repeat are from 1–2 Nov; the agent and baseline answers are from 18–21 Nov. The model is the gpt-6-luna alias. Agreement on identical prompts (83%) is close to repeat-to-repeat agreement (89%), so there is no clear sign of drift.
+6. **Naming.** The replay "A2_graph_top10" never sent a graph row (build_check.json), so it is the top 10 of the full agent's searches. On the slides it is called "Agent searches, top 10". Graph rows reach the answer model as raw JSON and the judge as "key: value" text (37–43 questions per repeat).
+7. **Milvus.** HNSW is approximate and the llama-index store is exact. Measure the top-10/50 overlap with exact search before reading Milvus differences.
+
+## Checked and fine
+Same 250 questions in every run; same answer model, reasoning setting, prompt and 10 passages; no gold or question-type leakage; the judge never sees method or run, and passage order is shuffled; verdict reuse is keyed on the question, its facts and the exact text; judge consistency was 98.9% on 1,525 re-judged cases; no missing answer verdicts; no retrieval errors in Normal RAG, the agents or the replays; 1,496 of 1,500 replay rows rebuilt exactly; the same score() cut-offs everywhere.
