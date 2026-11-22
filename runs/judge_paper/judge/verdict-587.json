@@ -1,0 +1,59 @@
+[
+  {"id": "4ed5786252ac2363", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 8, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+  ]},
+  {"id": "43ab13879bda0e3d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "tried and failed to give her a friendship bracelet with his phone number on it"}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "the “Anti-Hero” singer said that she tries not to let the paparazzi get to her"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "famously first attended Kelce’s game at Arrowhead Stadium in September"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 10, "quote": "Swift took Kelce up on his offer"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 3, "quote": "famously first attended Kelce’s game"}, {"item": 10, "quote": "Swift took Kelce up on his offer"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "her relationship with Travis Kelce really started."}]}
+  ]},
+  {"id": "20f9002dd3d01e91", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The prosecution painted Bankman-Fried as someone who knowingly"}, {"item": 1, "quote": "committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}, {"item": 1, "quote": "or steal and basically got in over his head."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}, {"item": 1, "quote": "or steal and basically got in over his head."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "It was Bankman-Fried’s decision, she said,"}, {"item": 6, "quote": "as he was the"}, {"item": 6, "quote": "CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "It was Bankman-Fried’s decision, she said,"}, {"item": 6, "quote": "as he was the"}, {"item": 6, "quote": "CEO of FTX."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "It was Bankman-Fried’s decision, she said,"}, {"item": 6, "quote": "as he was the"}, {"item": 6, "quote": "CEO of FTX."}]}
+  ]},
+  {"id": "aee2065200e1ae3a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}, {"item": 5, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}, {"item": 5, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "It will attempt to argue that Google restrains competition within two separate markets, including the"}, {"item": 5, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "837c0f7e00f63c47", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d45a5cd0451721f2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song"}, {"item": 5, "quote": "which featured a woman with blonde hair"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "At the time, the music video for the song"}, {"item": 5, "quote": "sparked rumours that he and Spears broke up"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Also, another thing that hints towards their breakup is"}, {"item": 2, "quote": "Danis’s first press conference for the Logan Paul fight."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Also, another thing that hints towards their breakup is"}, {"item": 2, "quote": "Danis’s first press conference for the Logan Paul fight."}]}
+  ]}
+]
