@@ -81,3 +81,5 @@ answer model: gpt-6-luna, reasoning effort medium, Normal RAG answer prompt (ben
 scoring: answered right (exact match, then Claude Haiku answer judge); gold facts found for B4_100 only (Claude Haiku fact judge, frozen runs/final500 claims)
 where: Instabox VM, runs/selection/scripts/vm_new.sh, 2 lanes in parallel
 estimated cost: about $5 at list price (B4_100 about 33,000 input tokens per question; WRONG10 about 3,000)
+
+CLOSED (25 Nov 2026, Udit: "you said we need a closed box run as well"): closed book. The answer model gets the question and no chunks at all (empty context), same answer prompt and settings; 250 questions, 3 repeats; answered right only (Haiku answer judge). Run: runs/selection/scripts/vm_closed.sh on the Instabox VM (wrong10.py with CLOSED=1). With the Normal RAG prompt the model is told to say 'Insufficient Information' when the context cannot answer, so this run shows how much it answers from the question alone; WRONG10 shows the same with unrelated chunks in the context.

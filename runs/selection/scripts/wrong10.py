@@ -7,6 +7,8 @@ sentence. The donor map is fixed (seed 20261125) and the same in all 3 repeats, 
 in the answer call. Normal RAG's top 10 is B4 repeat 1's first 10 chunks (checked identical, 250/250,
 in runs/selection/ceiling.json).
 
+With CLOSED=1 the context is empty (closed book, same prompt): the model answers from the question alone.
+
 Usage (repo root): PYTHONPATH=. .venv/bin/python runs/selection/scripts/wrong10.py REP [LIMIT]
 Writes runs/selection/runs/rag/<stamp>Z/ (settings.json, retrieval.jsonl, results.jsonl, variant.json),
 runs/selection/paired/wrong10_donors.json, prints "RESULTS <run dir>".
@@ -22,6 +24,7 @@ from evals.retrieval_quality import any_overlap, load_corpus, locate_gold, ranke
 
 ROOT = Path(__file__).resolve().parents[3]
 rep = sys.argv[1]
+CLOSED = __import__("os").environ.get("CLOSED") == "1"
 limit = int(sys.argv[2]) if len(sys.argv) > 2 else None
 reg = json.loads((ROOT / "runs/selection/run_registry.json").read_text())["B4"]["1"][0]
 src = ROOT / reg[reg.index("runs/"):]
@@ -78,12 +81,13 @@ run_dir.mkdir(parents=True)
 out = []
 for q in rows[:limit]:
     d = by_id[donors[q.record_id]]
-    r = q.retrieval.model_copy(update={"passages": d.retrieval.passages[:10], "scores": d.retrieval.scores[:10],
-                                       "evidence": [], "trace": [{"tool": "wrong_chunks", "donor": d.record_id}]})
+    r = q.retrieval.model_copy(update={"passages": [] if CLOSED else d.retrieval.passages[:10],
+                                       "scores": [] if CLOSED else d.retrieval.scores[:10], "evidence": [],
+                                       "trace": [{"tool": "closed_book" if CLOSED else "wrong_chunks", "donor": None if CLOSED else d.record_id}]})
     out.append(q.model_copy(update={"retrieval": r, "question_cost": None, "llm_usage": [],
                                     "options": q.options.model_copy(update={"top_k": 10})}).model_dump_json())
 (run_dir / "retrieval.jsonl").write_text("\n".join(out) + "\n")
 path = answer_saved(run_dir / "retrieval.jsonl")
-(run_dir / "variant.json").write_text(json.dumps({"variant": "WRONG10", "rep": rep, "limit": limit, "passages_to_answer": 10,
+(run_dir / "variant.json").write_text(json.dumps({"variant": "CLOSED" if CLOSED else "WRONG10", "rep": rep, "limit": limit, "passages_to_answer": 0 if CLOSED else 10,
                                                   "donors": "runs/selection/paired/wrong10_donors.json"}) + "\n")
 print("RESULTS", path, flush=True)
