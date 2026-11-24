@@ -10,6 +10,12 @@ VARIANT:
   B3  GPT-6 Luna writes up to 3 search queries; the question's top 20 plus each
       query's top 10 are pooled (duplicates dropped, at most 50); GPT-6 Luna picks
       up to 10 by ID, as in B2.
+  B4      Normal RAG, top 50 by vector score (B2's candidates), all 50 sent to the
+          answer model in retrieval order. No picking call. (Bhanu, 24 Nov 2026)
+  B4_20   as B4, top 20.      B4_30   as B4, top 30.
+  B4_rev  as B4, the 50 in reversed order (best-scoring last).
+  B4_shuf as B4, the 50 shuffled; the order is fixed per question (seeded by the
+          question text), so the 3 repeats differ only in the answer call.
 
 Same 250 MultiHop-RAG comparison and temporal questions as runs/nograph
 (runs/nograph/questions.json), same Normal RAG index (never rebuilt), same
@@ -35,7 +41,8 @@ variant, rep = sys.argv[1], sys.argv[2]
 shard, shards = int(sys.argv[3]), int(sys.argv[4])
 limit = int(sys.argv[5]) if len(sys.argv) > 5 else None
 MILVUS = os.environ.get("RECRAG_VECTOR_DB") == "milvus"
-assert variant in ("B1", "B2", "B3") or (MILVUS and variant == "B0")
+B4 = {"B4": 50, "B4_20": 20, "B4_30": 30, "B4_rev": 50, "B4_shuf": 50}
+assert variant in ("B1", "B2", "B3", *B4) or (MILVUS and variant == "B0")
 os.environ["RECRAG_RUN_NAMESPACE"] = "milvus/runs" if MILVUS else "selection/runs"
 indices = json.loads((ROOT / "runs/nograph/questions.json").read_text())["indices"][shard::shards]
 if limit:
@@ -190,8 +197,30 @@ def select(question, initial, search, llm, options, reranker):
     return [ReasoningStep(retrieval_query=t.get("query", t["tool"]), text=t.get("output", "")) for t in trace]
 
 
+def reorder(question, initial, search, llm, options, reranker):
+    """B4_rev / B4_shuf: same top 50, different order; no model call."""
+    import random
+    from hashlib import sha256
+
+    order = list(range(len(initial.passages)))
+    if variant == "B4_rev":
+        order.reverse()
+    else:
+        random.Random(sha256(question.encode()).hexdigest()).shuffle(order)
+    initial.passages = [initial.passages[i] for i in order]
+    initial.scores = [initial.scores[i] for i in order]
+    initial.trace = [{"tool": "reorder", "order": order}]
+    return [ReasoningStep(retrieval_query="reorder", text=" ".join(map(str, order)))]
+
+
 if variant == "B0":
     options = RetrievalOptions(top_k=TOP)
+elif variant in B4:
+    # Same retrieval call as B2 (Normal RAG index, question top k by vector
+    # score), but the picking call is skipped: every candidate goes to the answer.
+    options = RetrievalOptions(top_k=B4[variant])
+    if variant in ("B4_rev", "B4_shuf"):
+        benchmark.refine_retrieval = reorder
 elif variant == "B1":
     options = RetrievalOptions(top_k=TOP, rerank=True, rerank_candidate_k=50, rerank_top_k=TOP)
 else:
@@ -203,7 +232,9 @@ path = benchmark.run("rag", "multihop_rag", 0, len(indices), options=options, re
 run_dir = Path(path).parent if Path(path).is_file() else Path(path)
 (run_dir / "variant.json").write_text(
     json.dumps({"variant": variant, "vector_db": "milvus 2.5.10 rag_chunks" if MILVUS else "llama-index", "rep": rep, "shard": shard, "shards": shards, "limit": limit,
-                "select_instruction": SELECT_INSTRUCTION if variant != "B1" else None,
-                "query_instruction": QUERY_INSTRUCTION if variant == "B3" else None}) + "\n"
+                "select_instruction": SELECT_INSTRUCTION if variant in ("B2", "B3") else None,
+                "query_instruction": QUERY_INSTRUCTION if variant == "B3" else None,
+                "passages_to_answer": B4.get(variant, TOP),
+                "order": {"B4_rev": "reversed", "B4_shuf": "shuffled, seed sha256(question)"}.get(variant, "retrieval")}) + "\n"
 )
 print("RESULTS", path, flush=True)
