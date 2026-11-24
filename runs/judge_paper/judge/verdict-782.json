@@ -1,0 +1,19 @@
+[
+{"id": "8189eedecf94475b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "he has returned to action with Brazilian club Internacional, indicating a return to fitness"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 13, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "439ed55d9310e403", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "developments which have raised hopes that it may be possible to tackle dementia more directly"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "developments which have raised hopes that it may be possible to tackle dementia more directly and effectively"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 33, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 33, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 33, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}]}
+]}
+]

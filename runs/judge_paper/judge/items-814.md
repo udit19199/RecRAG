@@ -1,0 +1,2099 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=0ef79c061247fe79 ===
+Gold sentences and facts:
+Sentence 0: He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift.
+  Fact 0.0: He revealed that he made a friendship bracelet.
+  Fact 0.1: A friendship bracelet is a fan tradition at Swift's concerts.
+  Fact 0.2: The friendship bracelet had his number on it.
+  Fact 0.3: He made the friendship bracelet to give to Swift.
+  Fact 0.4: The friendship bracelet seemingly expresses his interest in Swift.
+Sentence 1: “She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.
+  Fact 1.0: Swift has the Eras Tour booked all through next year.
+  Fact 1.1: Swift would rather die than cancel a show.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has now shared that she has nothing to hide.
+  Fact 2.1: Swift has a new relationship with Kelce.
+  Fact 2.2: Swift has now shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Here's a look at how it all started and where it has gone since:
+
+June 29: Kelce makes friendship bracelets for fellow TEs
+
+Is this where it all begin? Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends. He said he was "taking a page out of Taylor
+Swift's book."
+
+July 26: Kelce makes friendship bracelet for Swift
+
+"So make the friendship bracelets, take the moment and taste it." - You're On Your Own Kid
+
+Kelce announced that he went to Swift's highly anticipated concert, but said he did not have the chance to meet the 12-time Grammy winner.
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 2>
+
+<item 3>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Head coach Andy Reid was also asked about his star tight end's supposed relationship, to which he quipped, "I set them up."
+
+Sept. 24: Kelce and Swift leave stadium together
+
+"You know when it's time to go." - It's Time To Go
+
+This was the first time the two were photographed together. They walked side by side, Kelce fittingly wearing an outfit with "1989" in the title and Swift
+wearing a Chiefs zip-up.
+
+Sept. 24: The two leave in a convertible
+
+"Nothing good starts in the getaway car." - Getaway Car
+
+Swift and Swift were spotted in a convertible, with the tight end driving, after the Chiefs' win. Kelce reportedly rented out a restaurant for a private party
+with Swift and his teammates.
+
+"Taylor Swift likes that Travis Kelce 'pursued her' and the two are having a 'great time getting to know each other,'" a source told Entertainment Tonight.
+</item 3>
+
+<item 4>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Oct. 15: Kelce, Swift make 'SNL' cameos
+
+The two were spotted out in NYC together and then had a surprise appearance on "Saturday Night Live." Kelce had a cameo in a skit about how much coverage Swift
+was getting during games, while the singer introduced the musical act of the night, Ice Spice.
+
+Oct. 22: Swift attends fifth Chiefs game
+
+Swift has now attended games broadcast across all five networks (CBS, NBC, Fox, ESPN and Amazon). This week, she is watching the Chiefs face the Chargers and
+will be shown on CBS. She is sporting a Chiefs sweatshirt and is seated next to Kansas City quarterback Patrick Mahomes' wife, Brittany.
+</item 4>
+
+<item 5>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.
+
+In addition to the kiss, the football star also had the perfect reaction to a fan calling him Swift’s boyfriend. After a fan shouted: “Let’s go Taylor’s
+boyfriend” while Kelce was waiting for an elevator, he responded with a small smile on his face and by pumping his fist into the air.
+
+Aside from their appearances at sports events, Swift and Kelce have also been photographed together on other occasions, including a date earlier this month in
+New York City after their surprise appearances on the season 49 premiere of Saturday Night Live. At the time, sources alleged to Entertainment Tonight that,
+during the date, Kelce got a little too close to Swift’s security personnel and allegedly told her bodyguard to step aside.
+
+However, during an episode of his podcast, Kelce explained what he said to the security, and clarified that he didn’t push the bodyguard.
+</item 5>
+
+<item 6>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But before he could even answer, the answer was given for him.
+
+Sept. 14: Rumors aren't denied
+
+"The rumors are terrible and cruel, but honey, most of them are true." - New Romantics
+
+Of course people were going to ask Jason, who is very close with his brother, whether rumors of the two hanging out were true. He did not confirm them, but he
+also did not deny them.
+
+Sept. 17: The references begin
+
+"I watched it begin again." - Begin Again
+
+The rumors began to pick up, and now there were a lot of people, commentators included, making Swift references around Kelce.
+
+When the tight end caught a touchdown pass from Patrick Mahomes, CBS Sports' Ian Eagle said, "Kelce finds a blank space for the score."
+
+This was only the start to many, many, Swift lyrics being referenced during NFL games.
+
+Sept. 21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in."
+</item 6>
+
+<item 7>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+“Well I know for DAMN SURE that s*** about ‘having kids within the next year’ is NOT coming from Taylor’s side,” one claimed. “She’s got the Eras Tour booked
+all through next year, and she’d rather die than cancel a show. But we do know who’s been public about looking for a ‘BREEDER.’”
+
+The comments about Travis and Swift’s romance came days after they seemingly confirmed their relationship. On 22 October, Swift made her return to Arrowhead
+Stadium to watch as the Kansas City Chiefs won their game against the Los Angeles Chargers. The occasion marked Swift’s fourth time attending one of Kelce’s
+games, amid ongoing reports that they are dating.
+
+Following the event, Chariah Gordon, the partner of Kelce’s teammate Mecole Hardman Jr, took to Instagram to share a snap of the singer and NFL player’s sweet
+PDA moment. In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.
+</item 7>
+
+<item 8>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Travis’ teammates also showed up to the after-party, as well as his mom, Donna Kelce. The party lasted until 2 am.”
+
+The late-night outing came days after the NFL star officially addressed ongoing dating rumours about him and the “Anti-Hero” singer. During an episode of The
+Pat McAfee Show on 21 September, he mocked his brother Jason Kelce for joking that he “100 per cent” believed his younger sibling was dating Swift.
+
+“It’s hilarious how much traction this has actually gotten, right now it’s like a game of telephone,” Kelce said. “Where everybody’s whispering in each other’s
+ears and hearing random stuff. No one actually knows what’s going on, especially when you got Jason Kelce on live television telling people just both sides - he
+doesn’t know, it’s true, this and that.”
+
+He also noted that he was still open to pursuing a relationship with Swift, revealing that he subtly asked if she’d want to attend one of his football games.
+</item 8>
+
+<item 9>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in." - Gold Rush
+
+While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.
+
+"It is hilarious how much traction this has actually got," he said of all the talk. "It's like that old game in school called telephone where everybody is just
+whispering in each others ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."
+
+He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the
+Chiefs.
+
+"I threw it out there, I threw the ball in her court and I told her you know, I've seen you rock the stage in Arrowhead you might have to come see me rock the
+stage in Arrowhead and see which one is a little more lit. We will see what happens in the near future."
+</item 9>
+
+<item 10>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 10>
+
+<item 11>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 11>
+
+<item 12>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+</item 12>
+
+<item 13>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Some found issue with these changes, but the NFL said this is a "pop cultural moment" and they are acting as such.
+
+"We frequently change our bios and profile imagery based on what's happening in and around our games, as well as culturally," the NFL wrote in a statement. "The
+Taylor Swift and Travis Kelce news has been a pop cultural moment we've leaned into in real time, as it's an intersection of sport and entertainment, and we've
+seen an incredible amount of positivity around the sport."
+
+Oct. 6: Travis and Jason think the NFL is doing too much
+
+The NFL is really digging into the Swift-Kelce coverage, and not everyone is a fan, including the people involved.
+
+"I think it's fun when they show who's at the game," Travis said. "I think it brings a little bit more to the atmosphere, brings a little bit more to what
+you're watching. But at the same time, they're overdoing it a little bit."
+</item 13>
+
+<item 14>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"'Taylor wants a guy that's into his career, does his own thing, but is also supportive and understands her,' the source added, "and Travis fits those
+qualities.'"
+
+Sept. 25: Kelce jersey sales skyrocket
+
+Call it what you want; I'll call it the Taylor Swift effect. Since Swift attended the Chiefs game, there was a 400% increase in Kelce jersey sales, his podcast
+is No. 1 overall on Apple, he gained over 380,000 Instagram followers, and 24.3 million people watched the game, making it the No. 1 game last week, according
+to Front Office Sports.
+
+There has also been triple the "Chiefs" searches on web and triple the Chiefs ticket sales on Stubhub.
+
+Sept. 25: Belichick weighs in on the matter
+
+
+
+New England Patriots head coach does not always comment on situations that take place in the game, but he was fully ready with a sound bite on the Kelce-Swift
+situation.
+</item 14>
+
+<item 15>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+In an interview withWSJ Magazine, published on 20 November, he described how much he admires her skills as a musician. “I’ve never been a man of words. Being
+around her, seeing how smart Taylor is, has been f***ing mind-blowing. I’m learning every day,” he explained.
+
+However, he also acknowledged the heavy public attention around his private life as a result of his relationship, noting he’s “never dated anyone with that kind
+of aura around them”. But, according to Kelce, he’s not letting the media affect his relationship.
+
+“But at the same time, I’m not running away from any of it,” he said. “The scrutiny she gets, how much she has a magnifying glass on her, every single day,
+paparazzi outside her house, outside every restaurant she goes to, after every flight she gets off, and she’s just living, enjoying life. When she acts like
+that I better not be the one acting all strange.”
+</item 15>
+
+<item 16>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"I was disappointed that she doesn't talk before or after her shows because she has to save her voice for the 44 songs she sings ... She doesn't meet anybody,
+or at least she didn't want to meet me, so I took it personal," Kelce said on an episode of the "New Heights" podcast he does with his brother, Philadelphia
+Eagles center Jason Kelce.
+
+He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in
+Swift. When his brother asked if it was his jersey number or his phone number, Kelce replied, "you know which one."
+
+"If you're up on Taylor Swift concerts, there are friendship bracelets and I had received a bunch of them, but I wanted to give Taylor Swift one with my number
+on it."
+
+Aug. 5: Kelce names his celebrity crush
+
+Well before the two were rumored to be dating, Kelce was asked his crush.
+</item 16>
+
+<item 17>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 17>
+
+<item 18>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 18>
+
+<item 19>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 19>
+
+<item 20>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 20>
+=== END ITEM id=0ef79c061247fe79 ===
+
+=== ITEM id=8ba2cc6897d071bb ===
+Gold sentences and facts:
+Sentence 0: After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week 9 as a big part of the offense with Josh Dobbs under center.
+  Fact 0.0: Hockenson has had three limited practices this week.
+  Fact 0.1: The writer will trust that Hockenson is ready to go.
+  Fact 0.2: Hockenson continued to play through the ailment in Week 9.
+  Fact 0.3: Hockenson was a big part of the offense in Week 9.
+  Fact 0.4: Josh Dobbs was under center for the offense when Hockenson played in Week 9.
+Sentence 1: Kincaid was a limited participant in practice on Wednesday due to a shoulder injury, but it’s been reported he’s likely to suit up on Saturday at less than 100%.
+  Fact 1.0: Kincaid was a limited participant in practice on Wednesday.
+  Fact 1.1: Kincaid's limited practice participation was due to a shoulder injury.
+  Fact 1.2: It has been reported that Kincaid is likely to suit up on Saturday.
+  Fact 1.3: It has been reported that Kincaid is likely to play on Saturday at less than 100%.
+
+Retrieved items:
+<item 1>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+It can be tough to trust Taysom Hill (vs. Panthers) in full-point PPR leagues, but a matchup against the league's second-worst run defense gives him a high
+ceiling regardless of format. He's been more involved as a receiver this year, so he'll get a few catches to go along with the rushing stats, too. With Derek
+Carr (concussion) banged up, Hill might throw more this week, too.
+
+Gerald Everett (vs. Broncos) and Isaiah Likely (vs. Rams) have matchups against bottom-six TE defenses, and Cole Kmet (vs. Lions), Jake Ferguson (vs. Eagles),
+and Kyle Pitts (vs. Buccaneers) also have above-average matchups that give them higher floors and higher ceilings than usual.
+
+For those in deeper leagues, Tyler Conklin (vs.
+</item 1>
+
+<item 2>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Chase put a scare into the fantasy community on Wednesday when he was listed as a DNP, but after logging back-to-back limited practices, there is a lot more
+optimism heading into Sunday. With Tee Higgins (hamstring) already ruled out, Cincinnati will be hoping Chase can feel healthy enough to play when they host the
+Texans at 1 p.m. ET on Sunday.
+
+The Bengals, despite getting a win over the Bills last Sunday, are a beaten-down bunch. Their defense will also be without a prominent edge rusher, Sam Hubbard,
+complicating matters for a team hoping to stack wins as they compete for an AFC North crown. On the bright side, Joe Burrow appears to be finally healthy and
+should have no problems targeting Tyler Boyd, Trenton Irwin, and Andrei Iosivas in the passing game. If Chase does end up suiting up, fantasy owners should
+enjoy an even larger workload than the receiver already had.
+</item 2>
+
+<item 3>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+The hope is we keep seeing that for Smith, especially if the game is competitive like most Falcons games tend to be. He certainly hasn't done anything to lose
+his role. I don't mind chancing it with Smith as a streaming tight end, though I just don't have the conviction to start him over Pitts.
+
+LAST WEEK: Was the second time in three weeks where Smith outproduced Pitts, but the first time it was so lopsided. The difference in snaps played and routes
+run is marginal -- Pitts did more of both -- but Smith is taking advantage of shorter routes with a quarterback who doesn't like to challenge downfield all that
+much. What's more, Smith averaged more yards per catch not just in Week 4 but also in Week 2, and he was behind Pitts by less than a yard in Week 3 when both
+had at least eight targets.
+
+FILM ON PITTS: There's no change in his explosiveness whatsoever.
+</item 3>
+
+<item 4>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+The wideout still has another hurdle to pass to be cleared to play on Sunday so his status is still very much up in the air.
+
+Falcons (-2) at Jets
+
+Atlanta is relatively healthy coming into this matchup. Hollins, who injured his ankle in Week 9, participated on a limited basis every day this week, which is
+encouraging for his prospects to play on Sunday. As for Hughes, he practiced fully all week after suffering a hand injury last weekend against the Saints.
+Linebacker Nate Landman (thigh) missed practice on Wednesday but will play vs. New York.
+
+Rodgers was once again limited in practice but, as expected, will not be activated this week and will be sidelined as he continues his recovery from a torn
+Achilles just a few months ago. Meanwhile, Cook popped up on the injury report due to a shoulder injury, but head coach Robert Saleh told reporters Friday that
+the back should be fine.
+</item 4>
+
+<item 5>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Weekly Breakdown MATCHUP @ CHI MIN -2.5 O/U 44.5 OPP VS WR 20th PROJ PTS 10.7 WR RNK 33rd YTD Stats REC 13 TAR 26 REYDS 166 TD 2 FPTS/G 8.3 No doubt there's
+some potential here, but some hunches keep me from falling for Osborn this week. One: I think the Vikings will try to get their run game going since they don't
+have Justin Jefferson. Two: Jordan Addison is far more explosive and T.J. Hockenson has been a much more relied-upon weapon. They should have more targets than
+Osborn. And the expected zone coverage Chicago will play further will limit Osborn unless he sees more targets than expected.
+</item 5>
+
+<item 6>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Perhaps it's all health related and Thomas' volume from last week will stick.
+
+ZONE COVERAGE: Atlanta usually plays a lot of zone coverage early on and if it works they stick with it for the whole game (Week 5 was an example of that). In
+Weeks 3 and 4 against the Lions and Jaguars they played much more man coverage, especially when they needed a fourth-quarter turnover. And because Howell is
+much less explosive against zone looks, I expect the Falcons to stick with zone much more this week.
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Kyle Pitts TE ATL Atlanta • #8
+
+Age: 23 • Experience: 3 yrs.
+</item 6>
+
+<item 7>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+But they float around league average in catch rate allowed (77.8%, below league average) and yards per catch (8.9, better than league average). However, no team
+has allowed more first-down receptions to tight ends (17). Keep in mind, this defense hasn't seen tight ends better than Evan Engram, Sam LaPorta or Dalton
+Schultz.
+
+COMMANDERS: Throw to their tight ends on 26.3% of their throws, fourth-most in football. But that hasn't always meant a huge target share for Thomas. In Weeks 1
+and 5 he saw at least 22.9% of Sam Howell's targets. He left Week 2 after suffering a concussion and was absent in Week 3; then was not part of the game plan
+much in Week 4 (7.7% target share against Philadelphia). Perhaps it's all health related and Thomas' volume from last week will stick.
+</item 7>
+
+<item 8>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Jefferson (hamstring) is officially listed as "questionable" for Sunday's game against the Saints. Kickoff is slated for 1 p.m. ET, but fantasy owners won't
+have to wait long for news on the star receiver. In order to be eligible to play, Jefferson will need to be activated by 4 p.m. ET on Saturday. Earlier in the
+week head coach Kevin O'Connell said that it would be "a little aggressive" for Jefferson to get back on the field this week. However, the receiver's three
+straight limited practices were enough for the team to at least weigh the decision, but thankfully, an early answer awaits.
+
+WEEK 10 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start 'em, sit 'em
+
+Jefferson's fantasy outlook is always through the roof, but it will be interesting to see if that changes with Josh Dobbs under center instead of Kirk Cousins.
+</item 8>
+
+<item 9>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+In addition, K.J. Osborn (concussion) is also listed as "questionable," though his status steadily improved throughout the week from DNP on Wednesday to full
+practice on Friday. If Jefferson is back, he's a must-start. If Jefferson is out but Osborn returns, both Osborn and Jordan Addison are worth using.
+
+WEEK 10 PPR RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is Ja'Marr Chase playing Week 10?
+
+UPDATE: ESPN's Jeremy Fowler reported late Saturday that the Bengals are "hopeful" that Chase will play against Houston, but they won't know for sure until
+after a pre-game workout.
+
+UPDATE 2: Chase is officially ACTIVE.
+
+Chase (back) appears ready to take his status down to kickoff. According to The Athletic's Dianna Russini, the Bengals' star receiver will work out on Sunday
+morning and his status will be determined afterward.
+</item 9>
+
+<item 10>
+DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments (Sporting News, 2023-12-07T22:18:00+00:00)
+If they're trailing, JSN should see action with a negative game script.
+
+WEEK 14 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+TE Brevin Jordan, Texans @ Jets ($3,100). Jordan was a great streaming option and fill-in for the crowd that lost Dalton Schultz (hamstring) on Sunday, hauling
+in three-of-four targets for 64 yards against the Broncos. If Schultz is out again, Jordan is a serviceable option that has touchdown upside against a reeling
+Jets team that is busy booking vacations or plotting how to find themselves on a different roster in 2024. If Schultz does play, we'll pivot to the Jets' Tyler
+Conklin, who is $100 less and has plenty of opportunity in an even better matchup.
+
+FLEX WR Jameson Williams, Lions @ Bears ($3,500).
+</item 10>
+
+<item 11>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+I'm pretty certain they're not bad enough to make Tim Boyle look like Tim Tebow or even Tim Hasselbeck, but I do wonder if they're juuust bad enough to give
+better-than-normal numbers to Garrett Wilson and Breece Hall. Reinforcements along the O-line should help the Jets' cause against a Falcons defense that's
+blitzed at a league-average rate, is eighth-lowest in pass rush pressure rate and is fifth-lowest in sacks (28).
+</item 11>
+
+<item 12>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+If he's out, Boyd is a must-start, and you can try one of Cincinnati's secondary receivers in deep leagues.
+
+WEEK 10 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is T.J. Hockenson playing Week 10?
+
+UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans.
+
+UPDATE 2: Hockenson is officially ACTIVE.
+
+Hockenson (ribs) is listed as "questionable" for Week 10, but he's already said he plans to play on Sunday. The tight end has dealt with his fair share of
+injury woes this season, however, he's yet to miss a game.
+</item 12>
+
+<item 13>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week
+9 as a big part of the offense with Josh Dobbs under center.
+
+As long as Hockenson is playing, he's not being benched in any fantasy format. The tight end projects as a top option at the position and remains the Vikings'
+leader in targets with 80 on the season. Dobbs enjoyed targeting the tight ends in Arizona and continued that trend in his Minnesota debut. The floor for
+Hockenson is equivalent to that of a rooftop bar.
+
+WEEK 10 DFS: DK lineup | FD lineup | Best values | Best stacks
+
+Is Curtis Samuel playing Week 10?
+
+UPDATE: Samuel is officially ACTIVE.
+
+Samuel (toe) is expected to play on Sunday when the Commanders take on the Seahawks at 4:25 p.m. ET, according to ESPN's Jeremy Fowler.
+</item 13>
+
+<item 14>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+Packers) always has a high ceiling as the Giants' de facto No. 1 receiver.
+
+Tyler Higbee (neck) was banged up last week, and he's no sure thing to suit up this week against Baltimore. Even if he does, he's not a recommended play against
+the Ravens' top-10 TE defense.
+
+We'll be updating these TE PPR rankings throughout the week, so check back for the latest player movement and analysis.
+
+Fantasy TE PPR Rankings Week 14: Who to start, sit at tight end
+
+Rankings based on full-point PPR formats
+
+Rank Player
+
+1 Travis Kelce, Chiefs vs. Bills
+
+2 T.J. Hockenson, Vikings @ Raiders
+
+3 Sam LaPorta, Lions @ Bears
+
+4 David Njoku, Browns vs. Jaguars
+
+5 Dalton Kincaid, Bills @ Chiefs
+
+6 George Kittle, 49ers vs. Seahawks
+
+7 Isaiah Likely, Ravens vs.
+</item 14>
+
+<item 15>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+Who are the TEs on bye in Week 14?
+
+Few would've expected Week 14's two-team bye to be as problematic as it is, but losing Logan Thomas and Trey McBride this late in the season could have some
+fantasy owners scrambling.
+
+WEEK 14 PPR RANKINGS:
+
+QBs | RBs | WRs | D/STs | Kickers
+
+Fortunately, both the Commanders and Cardinals have above-average TE defenses, so taking those off the board only helps the position this week.
+
+WEEK 14 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Who are the best fantasy TEs in Week 14?
+
+As usual, Travis Kelce (vs. Bills in Week 14) tops our rankings, but T.J. Hockenson (@ Raiders), Sam LaPorta (@ Bears), David Njoku (vs. Jaguars), and Dalton
+Kincaid (@ Chiefs) aren't far behind.
+</item 15>
+
+<item 16>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Geno Smith's struggles complicate their fantasy prospects, as well.
+
+What are the biggest WR injuries in Week 13?
+
+Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging
+injuries. For now, we've placed Higgins and Brown in our Week 13 list and omitted Burks and Toney. We'll also be eyeing the Chargers' Josh Palmer (knee), who's
+eligible to come off the IR this week but probably won't suit up against New England.
+
+Last week, the most notable WRs to exit their respective games with injuries include Chris Olave (concussion), Amari Cooper (ribs), Demario Douglas
+(concussion), and Rashid Shaheed (thigh). We've left all four WRs out of our initial Week 13 list but will closely monitor their teams' injury reports to gauge
+their playing prospects.
+</item 16>
+
+<item 17>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning back the clocks last week, it now gets darker earlier for the foreseeable future. That darkness allows us to see the stars on a clear night, so
+it's only natural to wonder if the pass-catching stars will shine bright in Week 10 of the NFL season. We already know Tee Higgins and Nico Collins are OUT,
+while Justin Jefferson, Ja'Marr Chase, and T.J. Hockenson are among the other star pass-catchers beaten up heading into the week. Can we expect them on the
+field when the action kicks off Sunday?
+
+Below, we'll give you the latest news on these ailing pass-catchers and break down how their injuries could potentially affect the Week 10 fantasy landscape.
+
+WEEK 10 INJURY UPDATES: Early WRs | RBs
+
+Is Justin Jefferson playing Week 10?
+
+UPDATE: The Vikings will not activate Jefferson before Sunday's game and have officially ruled him OUT, according to NFL Network's Tom Pelissero.
+</item 17>
+
+<item 18>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+Jaguars), and Dalton Kincaid (@ Chiefs) aren't far behind. LaPorta and Njoku both have great matchups against defenses that entered last week in the top 10 in
+fantasy points per game (FPPG) allowed to TEs, and we know what Kelce, Hockenson, and Kincaid do every week in PPR formats.
+
+George Kittle (vs. Seahawks) doesn't have a great matchup -- especially when you remember that he had just three catches for 19 yards against Seattle in Week 12
+-- but he remains a must-start given his high ceiling in any matchup.
+
+WEEK 14 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start-sit
+
+Who are the best fantasy TE sleepers, pickups, & streamers in Week 14?
+
+It can be tough to trust Taysom Hill (vs.
+</item 18>
+
+<item 19>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+ET, according to ESPN's Jeremy Fowler. The receiver was limited in practice thanks to the toe injury that has plagued him since leaving Week 8's game against
+the Eagles, but barring a setback, he will return to action this weekend.
+
+The receiver was working his way into flex territory with a couple of good performances before picking up the injury. However, we wouldn't consider him to be
+worthy of a fantasy start this week unless you're in a bind. It's unclear whether Samuel will regain the same workload or if he'll be playing in limited action
+as he works his way back. Jamison Crowder emerged in Samuel's absence and Jahan Dotson has seen his production drastically increase, as well. The wait-and-see
+approach is the preferred one heading into Week 10.
+</item 19>
+
+<item 20>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+For those in deeper leagues, Tyler Conklin (vs. Texans), and Cade Otton (@ Falcons) both have matchups against defenses that entered last week in the top five
+for FPPG allowed to TEs. Brevin Jordan (@ Jets) and Tanner Hudson (vs. Colts) also have highly favorable matchups and can work as deep-league PPR plays, though
+Jordan's outlook is entirely dependent on whether Dalton Schultz (hamstring) is healthy.
+
+WEEK 14 DFS:
+
+DK lineup | FD lineup | Best values | Best stacks
+
+Who are the biggest potential fantasy TE busts in Week 14?
+
+Dallas Goedert (@ Cowboys) isn't a "must-start" if he returns from his forearm injury this week. That said, he's also not a "must-sit." He had three catches and
+50 yards against Dallas in Week 9 before exiting early with the forearm injury, so he can clearly produce against this defense.
+</item 20>
+=== END ITEM id=8ba2cc6897d071bb ===
+
+=== ITEM id=7a133bc137777966 ===
+Gold sentences and facts:
+Sentence 0: It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out).
+  Fact 0.0: It gave the JackJumpers a game-high 19-point lead.
+  Fact 0.1: The lead just about put the result to bed.
+  Fact 0.2: Sydney had lost Jaylin Galloway (shoulder).
+  Fact 0.3: Sydney had lost Jonah Bolden, who fouled out.
+  Fact 0.4: The lead came after Sydney had lost Jaylin Galloway and Jonah Bolden.
+Sentence 1: 9:20 p.m. — Nathaniel Lowe makes the play to retire Carroll, and that will bring the Rangers back up to bat with a 10-0 lead.
+  Fact 1.0: At 9:20 p.m., Nathaniel Lowe makes the play to retire Carroll.
+  Fact 1.1: The play by Nathaniel Lowe will bring the Rangers back up to bat.
+  Fact 1.2: The Rangers will be back up to bat with a 10-0 lead.
+
+Retrieved items:
+<item 1>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4 (Sporting News, 2023-10-31T22:00:04+00:00)
+😱
+
+
+
+📺: FOX pic.twitter.com/83qi1EGjO2 — FOX Sports: MLB (@MLBONFOX) November 1, 2023
+
+Rangers 7, Diamondbacks 0
+
+9:08 p.m. 2-RUN DOUBLE — Who needs Adolis Garcia? Jankowski comes through with a massive 2-run double and puts the Rangers up 7-0. Texas is all over the
+Diamondbacks' bullpen.
+
+The Rangers tack on two more runs 😳
+
+
+
+📺: FOX pic.twitter.com/AWYICKRMiq — FOX Sports: MLB (@MLBONFOX) November 1, 2023
+
+9:06 p.m. — Luis Frias strikes out Taveras and has a chance to wiggle out of this against Jankowski.
+
+9:03 p.m. — Disaster. Christian Walker had a chance to turn two but couldn't hold onto the ball.
+</item 1>
+
+<item 2>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Williams produced 21 points and six rebounds for South East Melbourne but Brisbane will still be without Baynes for next weekend’s double-header away to Perth
+and at home to Tasmania, and he needs to find some answers.
+
+“We’ve got to have solutions right now for two more games without Banger (Baynes) and that’s the thing that’s sitting right in the front of my head, but scoring
+73 points isn’t enough to get it done in this league,” Schueller said.
+
+“Then giving them 96 is way too many as well so we have a lot of stuff that we still have to work on.”
+
+JLA return lifts United to win in Wollongong
+
+Advertisement
+
+Melbourne United have celebrated the long-awaited return of Jo Lual-Acuil but it was fellow centre Ariel Hukporti who starred in a 101-91 defeat of the
+lllawarra Hawks.
+</item 2>
+
+<item 3>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Melbourne led by as many as 16 points midway through the fourth quarter on the back of a three ball from Luke Travers (14 points, 13 rebounds), having outscored
+the JackJumpers by 78 points to 49 after the first five minutes.
+
+The JackJumpers pulled off a remarkable comeback on Melbourne back in round two and got as close as four points in the final minute, but United held firm for a
+fifth straight win to stay on top at 7-1.
+
+Dean Vickerman was celebrating his 300th game coaching in the NBL, and the Melbourne boss was full of praise for his team.
+
+“Tonight was a little bit like my career,” he said.
+
+“We didn’t start great but once we found our rhythm and especially the way we came out of the half and had a great third quarter, and held on down a few players
+at the end there. But we held on.”
+</item 3>
+
+<item 4>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+A third straight defeat for the Wildcats has them struggling at 2-4 this season.
+
+Coach John Rillie is focused know they aren’t playing well and the improvement needs to start offensively.
+
+“We’re not playing good basketball at this point in time,” Rillie said.
+
+“An area we need to improve on is our offence. That’s where we have to find some type of rhythm and we’ve yet to do that in these last couple of games.
+
+Advertisement
+
+“The game’s played at both ends and you need to find a rhythm to generate some natural enthusiasm, and we haven’t been able to do that for good stretches.”
+
+Brisbane coach Justin Schueller always knew losing his superstar centre Baynes with a five-game suspension was going to be challenging, but that was magnified
+on Saturday night.
+</item 4>
+
+<item 5>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+But the Sixers went on a 10-0 run straight after the American went off, then moved in front for the first time since the opening quarter.
+
+Sunday Dech nailed a three-pointer to give what was then the 36ers’ biggest lead of the day (seven points).
+
+They never again trailed, clinching the final quarter 27-14.
+
+Advertisement
+
+“Zylan’s a focal point for us in everything that we do, he’s also one of our leaders, one of our best competitors,” Maor said.
+
+“To see him go down like this, I think deflated us.
+
+“New team, new people, new leaders, these are the kinds of things that we need to learn to deal with.”
+
+The 36ers, tipped as possible wooden spooners in the pre-season, have now won three of their past four games.
+</item 5>
+
+<item 6>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Stepping up were acting skipper Bul Kuol (24, played all 40 minutes) and big Sam Waardenburg (22) for the Snakes, who shrugged off last Thursday’s
+buzzer-beating heartbreak in Illawarra by taking the NBL’s most prized scalp.
+
+Advertisement
+
+It shot them from fifth to third on the ladder, while sending the Kings slumping from second to fourth.
+
+“We kept moving down the bench to bring guys in,” Cairns coach Adam Forde said. “Everyone responded.
+
+“I’m super happy for the group that they could fill some short-term reward with a win at home.”
+</item 6>
+
+<item 7>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+The United lead grew to 16 before the JackJumpers showed their trademark fight with a 14-2 run – but they couldn’t quite complete the job.
+
+Harvey’s Hawks buzzer beater sinks Taipans
+
+Illawarra Hawks import Tyler Harvey has sealed an 84-83 upset defeat of the Cairns Taipans with a clutch three-pointer in the final seconds at WIN Entertainment
+Centre.
+
+Staring down the possibility of a 1-5 start to the NBL season, last year’s wooden spooners looked intent on staging an ambush on Thursday night as captain Sam
+Froling fired early.
+
+But the Taipans chased down a 13-point lead and edged in front in the final quarter, with Patrick Miller (24 points, seven assists) leading the charge.
+
+Advertisement
+
+Miller’s jump shot in the final 10 seconds gave the Taipans a two-point lead that looked as though it could have been match-winning.
+</item 7>
+
+<item 8>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4 (Sporting News, 2023-10-31T22:00:04+00:00)
+The @Rangers came out swinging!
+
+
+
+📺: FOX pic.twitter.com/Je43lpXXMi — FOX Sports: MLB (@MLBONFOX) November 1, 2023
+
+8:37 p.m. — Taveras walks, and Travis Jankowski quickly singles up the middle to give the Rangers runners on first and second with two outs. Semien is up with a
+chance to extend Texas' lead.
+
+Rangers 1, Diamondbacks 0
+
+8:35 p.m. WILD PITCH — Jung scores on a ball that gets away from Moreno! Castro's pitch in the dirt took a bad bounce, and there was no play at the plate. The
+Rangers lead early.
+
+The @Rangers strike first in Game 4!
+
+
+
+📺: FOX pic.twitter.com/E5FCruQby7 — FOX Sports: MLB (@MLBONFOX) November 1, 2023
+
+8:33 p.m.
+</item 8>
+
+<item 9>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+The result was Melbourne’s ninth consecutive home win over New Zealand and gave them a 6-1 record for the season.
+
+The Breakers (1-2) led by six points midway through the third period but ran out of steam in a tough loss that ended a gruelling road trip, which included two
+exhibition matches against NBA opposition in the United States.
+
+Advertisement
+
+Zylan Cheatham (30 points) and Parker Jackson-Cartwright (18) threatened to drive the Breakers to a rousing victory until the guard fouled out inside the last
+four minutes.
+
+Former NBA forward Anthony Lamb had 15 points and five rebounds on his NBL debut for New Zealand after signing as a replacement for injured import Justinian
+Jessup.
+
+But Breakers coach Mody Maor was in no mood to look for positives in his team’s performance.
+
+“We have very high standards for how we want to play and this isn’t it,” Maor said.
+</item 9>
+
+<item 10>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+NBL heavyweights United only kicked clear from last season’s wooden spooners towards the end of the third quarter following a high-scoring first half at WIN
+Entertainment Centre on Friday.
+
+Again sloppy from the field, the Hawks missed nine consecutive shots to finish the third period as United (5-1) opened up a 14-point lead that proved
+match-winning.
+
+“We just have these patches against really good basketball teams that let us down,” said Hawks coach Jacob Jackomas.
+
+“The shots weren’t disgusting today, just some little things right now. We said that before with the team is that we need to do all the little things right
+against this basketball team and we didn’t.”
+
+Big man Gary Clark (17 points) was one of few Hawks who got his eye in, with imports Tyler Harvey (19 points, six from 16 attempts) and Justin Robinson (nine
+points, two from eight) again struggling.
+</item 10>
+
+<item 11>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+But the Hawks belted down the court and the ball found itself in Harvey’s hands for their final roll of the dice.
+
+His deep three swished through the net with one second remaining, sending the home crowd into raptures and improving the Hawks to 2-4.
+
+“I turned around to my assistants and I said, ‘That’s why we have him (Harvey)’,” said Hawks coach Jacob Jackomas.
+
+“It’s good that people can be reminded how special he is at the end of the clock.
+
+“In that space, he always gives us a chance.”
+
+The Taipans are now 2-2 to start the season, having also dropped their two games against NBA sides as part of that league’s pre-season.
+
+Advertisement
+
+“It’s a tall order to expect us to win if we keep giving up second-chance points,” said Taipans coach Adam Forde.
+</item 11>
+
+<item 12>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Robinson was one of three Hawks to foul out, alongside big men Sam Froling and Lachlan Olbrich.
+
+Advertisement
+
+Despite Illawarra’s shooting issues, United gave up more first half points (51) than in any other of their games this season.
+
+The Hawks dominated the offensive glass (18-10) and punished United with 21 points from turnovers.
+
+But they finished the day shooting at 38 per cent from the field to United’s 53, which made things difficult, especially when United locked the paint down in
+the third quarter.
+
+“It took us a little bit of time to wake up with their physicality and the way they got after it,” said United coach Dean Vickerman.
+
+NBL champion Lual-Acuil returned from a wrist injury for the first minutes of his United comeback, while NBA hopeful Hukporti (21 points, 10 rebounds) shone for
+the visitors.
+</item 12>
+
+<item 13>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Molloy, the Swans’ star off-season recruit, turned on one of the best performances of her career to demolish their injury-hit hosts.
+
+The former Collingwood ace was a class above as she kicked 3.4 from her 28 possessions and played a crucial role in setting up numerous other Sydney goals.
+Loading “She [Molloy] was itching to get in there [in the midfield],” Swans coach Scott Gowans said. “We kept her forward deliberately. It was important Chloe
+played a good block of time forward so we could have a look at it.” The Blues lost to Greater Western Sydney by two points on Saturday afternoon, denying them
+the chance to leapfrog into the top eight, 8.1 (49) to 7.5 (47).
+
+Narrm reclaim top spot Reigning premiers Narrm have reclaimed top spot on the ladder and their position as flag favourites after defeating third-placed North
+Melbourne by 23 points at Ikon Park on Saturday night.
+</item 13>
+
+<item 14>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+“Lack of focus, missing key players, making mistakes on covers.
+
+“I don’t care where we flew from, what our schedule is, what happened the day before – I care zero. This isn’t the level of execution that we expect from
+ourselves.”
+
+Shea Ili (16 points, four assists) was important for Melbourne and Luke Travers finished with 16 points, including 15 in the first half.
+
+Sixers, Phoenix continue to rise
+
+Advertisement
+
+The Adelaide 36ers have told each other some hard truths before responding in style to heap more pressure on the Perth Wildcats with their 89-78 victory.
+
+In the other NBL match on Saturday, South East Melbourne Phoenix made it three straight wins, beating the Bullets 96-73 as Alan Williams led the way against a
+side looking lost without the suspended Aron Baynes.
+</item 14>
+
+<item 15>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4 (Sporting News, 2023-10-31T22:00:04+00:00)
+The Rangers found themselves one strike away from a championship twice in 2011. They couldn't finish the job. On Wednesday night, they'll have a chance to
+avenge that painful finish.
+
+Texas found out before Tuesday's Game 4 that slugger Adolis Garcia's season was over, but a talented lineup didn't miss a beat. The Rangers erupted for five
+runs in the second inning and five more in the third, bludgeoning Arizona's bullpen to take a 10-0 lead in the blink of an eye.
+
+Corey Seager came through with his third home run of the series, while Marcus Semien drove in five of the Rangers' first 10 runs — including a three-run blast
+that put Texas up by double digits.
+
+FAGAN: Three things Diamondbacks need to flip script on World Series
+
+The Diamondbacks have earned a reputation for not backing down, and to their credit, they didn't.
+</item 15>
+
+<item 16>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+The JackJumpers, who trailed by seven at three-quarter time, kept alive their record of winning every fourth term this season, but it wasn’t enough.
+
+Brisbane captain Sobey led from the front as defensive specialist Mitch Norton kept Tasmania’s import Crawford (16 points) relatively quiet until the final
+period.
+
+Tyrrell Harrison and Josh Bannan (10 points each) were important for the Bullets, while Chris Smith (11) and Isaac White (10) gave solid contributions off the
+bench.
+
+The gut-wrenching loss ended a horror round five for the JackJumpers, who lost at home to Melbourne United before going down to the Bullets.
+
+Advertisement
+
+It left them with a 4-4 record after a strong 4-2 start to the season.
+</item 16>
+
+<item 17>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+The guys are going in the right direction. “I’m not disappointed, I’m stoked.”
+
+Bullets shoot down weakened Wildcats
+
+Advertisement
+
+The Brisbane Bullets have shrugged off the absence of two important players to outwork the Wildcats at their home RAC Arena in Perth and produce a performance
+full of heart for their 84-79 NBL win.
+
+Both teams were 2-4 coming into Friday’s match and on losing slides, but it was the Wildcats who had the pressure building, even with the Bullets being without
+key pair, the suspended Aron Baynes and injured Shannon Scott.
+
+Brisbane scored the first seven points before opening up a 20-point lead in the third quarter and going on to win by five after holding out against a furious
+late charge from the home team.
+
+The team effort of the Bullets was outstanding as they got another 17 points from captain Nathan Sobey.
+</item 17>
+
+<item 18>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3 (Sporting News, 2023-10-30T22:00:02+00:00)
+The Rangers continue to be unstoppable road warriors.
+
+Texas picked up its ninth consecutive road victory in these playoffs after defeating the Diamondbacks in Game 3 of the World Series, 3-1.
+
+The Rangers were powered by some two-out magic in the third inning, as Marcus Semien finally found his bat with an RBI single before Corey Seager demolished a
+two-run home run 421 feet to right field.
+
+Jon Gray got credited with the win after Max Scherzer was pulled from the contest with a lower back injury through three scoreless innings. Gray was fantastic
+in a surprise relief appearance, throwing three scoreless innings with three strikeouts and just one hit allowed.
+
+The Diamondbacks' offense struggled to string together hits and couldn't cash in when they had runners in scoring position. Even though they out-hit the
+Rangers, Arizona's bats hardly put any pressure on Texas' pitching.
+</item 18>
+
+<item 19>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+McVeigh (18 points) and Deng (17) gave strong offensive contributions for Tasmania, who lost Marcus Lee for the final few minutes after the starting centre
+fouled out.
+
+Taipans import injured in win over Kings
+
+A nasty back injury to first-year import sensation Patrick Miller has marred the Taipans’ otherwise impressive 87-80 win over Sydney at the Cairns Convention
+Centre.
+
+Miller, who entered Saturday night’s clash ranked second in the NBL in scoring and fourth in assists, had the hosts in control before an explosive drive to the
+bucket ended with him crashing to the floor, 1:09 out from halftime.
+
+The American’s head whip-lashed onto the floor before he got up gingerly and walked slowly to the bench holding his lower back, unable to continue.
+</item 19>
+
+<item 20>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+But lapses in concentration threatened to cost the Hawks.
+
+They invited Cairns back into the game by shooting only one of their last nine attempts from the field in the third quarter, having gone almost four minutes
+without scoring from the field in the second.
+
+After the break, a free-throw from Sam Waardenburg tied things up, one of nine occasions in the final quarter alone that scores were level.
+
+It took Harvey’s moment of magic to split the sides late.
+
+“I’m really happy for the guys,” Jackomas said.
+
+Advertisement
+
+“It is a bit of a relief, but we need to move on into being a basketball team now, not the team that’s relieved to win.
+
+“I’m really confident in these guys.”
+
+Cheatham injured as 36ers upset Breakers
+
+The New Zealand Breakers face a nervous wait after losing import Zylan Cheatham to a leg injury in the 97-85 upset loss to the Adelaide 36ers.
+</item 20>
+
+<item 21>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Without Miller running the point, the home side’s offence suddenly looked shaky in the third term as Sydney briefly took the lead on a Hogg triple.
+
+The undermanned Taipans responded with a 15-0 burst either side of three-quarter time, highlighted by Swedish young gun Bobi Klintman’s thunderous dunk down the
+middle over rival Next Star Alex Toohey.
+
+Down by 14, Sydney closed the gap to four points before unsportsmanlike fouls against Denzel Valentine and Makuach Maluach ended their revival.
+
+Lamenting “the defensive mistakes that we made”, Kings coach Mahmoud Abdelfattah added: “They made more plays than we did, they got to the 50/50 balls and they
+stuck together.
+
+“Kudos to them, they deserved it.”
+</item 21>
+
+<item 22>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+“When you’re missing a ton of shots you’ve got to win the offensive rebounding battle and they beat us on that.”
+
+Tasmania burst out to a double-figure lead when they piled on 36 points during the opening period, and the margin blew out to 18 before halftime.
+
+Doyle (12 points), Deng and Jack McVeigh (both 10) all did plenty of damage on the scoreboard in the first half for the visitors, who never trailed. Galloway’s
+huge dunk sparked Sydney early in the third period and they cut the margin to three.
+
+Advertisement
+
+But he and Bolden soon exited and Crawford’s scintillating run gave the JackJumpers the upper hand. The Kings are hopeful Galloway will be fit for Saturday’s
+trip to take on the Cairns Taipans.
+
+“The doctors may have other plans, but he’s doing alright,” Abdelfattah said.
+</item 22>
+
+<item 23>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4 (Sporting News, 2023-10-31T22:00:04+00:00)
+Christian Walker had a chance to turn two but couldn't hold onto the ball. The Rangers have the bases loaded with one out.
+
+8:59 p.m. — Lowe keeps the line moving and laces a single up the middle. The Rangers have two runners on with one out. This one could get even more out of hand
+for Arizona. Kyle Nelson's night is done.
+
+8:58 p.m. — Jung hits a one-out single for his second hit of the night.
+
+8:53 p.m. — Thomas flies out to left to end the inning.
+
+8:51 p.m. — Gurriel hits a two-out single to give the Diamondbacks a pulse. That'll bring up Alek Thomas.
+
+8:49 p.m. — Heaney notches two quick outs to start the bottom of the second.
+
+8:44 p.m. — The inning ends on a nice throw by Emmanuel Rivera, but what an inning it was for Texas with five runs.
+</item 23>
+
+<item 24>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+“I don’t want to discredit Illawarra (but) during the game, I felt like we were better-equipped to close it out, but we didn’t and Illawarra did. It’s the one
+that got away.”
+
+Nine first-quarter points from Froling helped the Hawks to a nine-point lead at the first change.
+
+Froling (16 points, 13 rebounds) had his double-double with seven minutes remaining in the third quarter.
+
+But Cairns did a better job at targeting him later on, keeping the rangy centre scoreless in the second half.
+
+“He had a great game,” Jackomas said.
+
+Advertisement
+
+Import Justin Robinson, who had struggled from the field to begin the season, hit a three that forced a timeout and restored a game-high 13-point lead in the
+third quarter.
+
+But lapses in concentration threatened to cost the Hawks.
+</item 24>
+
+<item 25>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Hukporti was United’s rock under the basket and a defensive board in the final minute sealed his third double-double from five games this season.
+
+Advertisement
+
+“I think I’ve found my role in the team now, it took me a while because I’m coming off the (achilles) injury and it was a year out,” Hukporti said.
+
+That is vintage Tyler Harvey ????
+
+
+
+Can he pull the Hawks back into this one?
+
+
+
+Catch the last quarter live on ESPN via Kayo ???? pic.twitter.com/40zoswVyPh — NBL (@NBL) October 20, 2023
+
+“I’ve got it now, I know what my role is and I think I did a great job today.”
+
+Lual-Acuil had a scratchy start, missing his first two free-throws and subbing out to change out of an incorrect pair of shorts, but went on to register 12
+points on a minutes restriction.
+</item 25>
+
+<item 26>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+But we held on.”
+
+NBA and NBL champion Ian Clark top-scored with 19 points, with rookie Kyle Bowen adding a career-best 17 as did Jo Lual-Acuil along with 10 rebounds.
+
+Advertisement
+
+Jack McVeigh led the way for Tasmania with 20 points and seven rebounds, with Jordon Crawford contributing 16 points and four assists, and Milton Doyle 12
+points and five assists.
+
+Tasmania coach Scott Roth was philosophical afterwards, having given up 18 offensive rebounds and lost the battle on the glass by 16.
+
+“We got a little uncharacteristic with our shot selection, which was a credit to them,” he said.
+
+“Then they beat us up on the glass. It’s just little things when you get in those kind of games that are going to make the separation points.”
+</item 26>
+
+<item 27>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Without a hand being laid on him, ex-NBA forward Cheatham pulled up sore changing direction early in the fourth quarter at Auckland’s Spark Arena on Thursday
+night.
+
+Cheatham was unable to put weight on his right leg as Breakers staff helped him from the floor.
+
+He played no further part in the match, but there was no immediate update on his condition after full-time.
+
+Advertisement
+
+“It’s too early. We’ll pray for good news,” said Breakers coach Mody Maor.
+
+Any long-term injury would be troublesome for last season’s runners-up, who have begun the campaign with only one win from four games.
+
+Cheatham’s injury proved a turning point. The Breakers had maintained a slim lead for most of the night as Cheatham (17 points, eight rebounds) combined with
+guard Will McDowell-White to strong effect.
+</item 27>
+
+<item 28>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Gun import Jordon Crawford has exploded late to lead the Tasmania JackJumpers to a club-record score in a 105-95 NBL road win over the defending champion Sydney
+Kings.
+
+The American guard opened the final period at Qudos Bank Arena on Sunday with four consecutive three-pointers and scored all of his team’s points on a stunning
+14-2 run.
+
+It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled
+out).
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The Kings never gave up but could not close the gap as Crawford finished with a game-high 32 points.
+
+Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania, who recorded their second win over Sydney in as many attempts this season.
+
+“I had a couple of opportunities where I’m open and I shot the ball,” Crawford said.
+</item 28>
+
+<item 29>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Advertisement
+
+But their hard work was undone when Creek, who helped himself to 13 points for the term, drained an uncontested three on the three-quarter-time buzzer to push
+Phoenix out to 77-65, before Williams and Browne continued on their merry way in the fourth.
+
+“Disappointing – that’s what that was,” Sixers coach CJ Bruton said.
+
+“Our effort left, our communication left, and everyone was a step too slow.”
+
+The Phoenix rose to 3-3 with their second straight win, while Adelaide (1-5) remain anchored to the bottom of the ladder.
+
+CJ claims Kings didn’t look after DJ
+
+Adelaide coach CJ Bruton has accused Sydney of not looking after Dejan Vasiljevic, as the war of words between the 36ers and Kings over the sharpshooting guard
+escalated.
+
+Vasiljevic, a two-time championship winner with Sydney, had originally been released from his Kings contract to chase his NBA dream.
+</item 29>
+
+<item 30>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+In Adelaide, the 36ers responded to a disappointing loss on Thursday night, also at home to the Phoenix, and handed the Wildcats a third straight defeat with
+their 11-point win.
+
+Sitting in bottom spot with one win from five games coming into the macth, the players got together to draw a line in the sand.
+
+It certainly worked and their effort, energy and desperation was dramatically improved against Perth, but so was the execution and a focus on getting Isaac
+Humphries more involved inside.
+
+He put up 26 points and eight rebounds in a match-winning performance but the shortening of the rotation to use just eight players from coach CJ Bruton worked
+too.
+
+Advertisement
+
+“We met as a playing group yesterday and talked through a lot of stuff,” Humphries said.
+
+“We just wanted to come out today and put into action everything we talked about.
+
+“We executed what the coaches needed from us tonight and we executed what we, as a playing group, wanted to execute as well.”
+</item 30>
+
+<item 31>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4 (Sporting News, 2023-10-31T22:00:04+00:00)
+— Semien strikes out to end the inning for the Rangers.
+
+10:33 p.m. — The game was briefly paused while the public address announcer asked fans to stop throwing paper airplanes onto the field. That's where this game
+is right now.
+
+Rangers 11, Diamondbacks 1
+
+10:29 p.m. HOME RUN — For the first time since the third inning, the Rangers have a run. Jonah Heim blasts a home run to right field to extend Texas' lead back
+to 10.
+
+The Heim Hammer 💥
+
+
+
+📺: FOX pic.twitter.com/G4pO4pz9jv — FOX Sports: MLB (@MLBONFOX) November 1, 2023
+
+10:24 p.m. — Jankowski collides with Semien in foul territory but makes a nice catch for the final out of a quick inning for Bradford.
+
+10:20 p.m. — Cody Bradford is into the game to pitch for Texas.
+</item 31>
+
+<item 32>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Cummings scored at will in the second stanza before Creek inspired a 16-0 third-quarter burst for the home side, whose advantage swelled to 80-54.
+
+NZ reverted to a zone defence and centre Mangok Mathiang impacted at both ends as the Breakers went 17-2 either side of three-quarter-time to haul themselves
+back into the contest.
+
+Quicksilver Cartwright-Jackson poured in 10 points inside three minutes to reduce the margin to three points down the stretch before Williams’ hook and Browne’s
+free throw iced it narrowly.
+
+“It was frustrating to see the lead dwindle,” Phoenix coach Mike Kelly said. “But it’s a win. The guys are going in the right direction. “I’m not disappointed,
+I’m stoked.”
+</item 32>
+
+<item 33>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Vasiljevic, fronting the press as a 36er for the first time on Wednesday, fired back at the Kings, saying “they made me look like a villain, they made Adelaide
+look like the villain”.
+
+But on Thursday night, Bruton called for Sydney to “move on”.
+
+Advertisement
+
+“I’ve only got my perspective – you (Kings) had the chance to have him, you chose not to have him,” he said.
+
+“He’s moved on. Move on.
+
+“If you wanted to do something more, look after the kid.
+
+“Talk to him, championship ceremony or whatever … but that’s on them (Sydney).
+
+“That’s not on us or me.”
+
+Vasiljevic scored 17 points in his Adelaide debut on Thursday, including 11 in a productive first quarter, but he couldn’t prevent the bottom-placed Sixers from
+suffering a 102-85 loss to South East Melbourne Phoenix.
+</item 33>
+
+<item 34>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3 (Sporting News, 2023-10-30T22:00:02+00:00)
+Even though they out-hit the Rangers, Arizona's bats hardly put any pressure on Texas' pitching.
+
+MORE: Watch 2023 World Series games live with Fubo (free trial)
+
+If you missed any of the action from Game 3 where the Rangers took a 2-1 series lead over the Diamondbacks, The Sporting News had you covered with live updates
+and highlights below.
+
+Rangers vs. Diamondbacks final score
+
+1 2 3 4 5 6 7 8 9 F Rangers 0 0 3 0 0 0 0 0 0 3 Diamondbacks 0 0 0 0 0 0 0 1 0 1
+
+World Series result, highlights from Game 3
+
+(All times are Eastern.)
+
+Ninth inning: Rangers 3, Diamondbacks 1
+
+10:56 p.m.
+</item 34>
+
+<item 35>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Sobey and Smith then knocked down shots as the Bullets lead ballooned to 20.
+
+The Wildcats did make a charge with a Pinder-inspired 11-0 run in the fourth to cut the deficit to three, but the Bullets answered with strong inside finishes
+from Harrison and Bannan to secure the win.
+
+United flex muscles in road win over JackJumpers
+
+Melbourne United have had to withstand a hot start and finish from the Tasmania JackJumpers but in between were outstanding on the way to a 90-82 victory in the
+NBL.
+
+Advertisement
+
+The league’s top two teams locked horns at a sold out MyState Bank Arena on Friday night and it was the JackJumpers who raced out of the blocks with a 17-4
+start, but United took control from there.
+</item 35>
+
+<item 36>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 4 (Sporting News, 2023-10-31T22:00:04+00:00)
+7:35 p.m. — For all of the Rangers' losses, a win tonight with Nathan Eovaldi and Jordan Montgomery in line to start the next two games would put Texas in a
+terrific position.
+
+7:18 p.m. — Max Scherzer is also off the World Series roster for Texas. He's been replaced by Brock Burke.
+
+7:07 p.m. — It's being reported that Adolis Garcia is off the World Series roster. His season is over. Ezequiel Duran has been added to the roster.
+
+6:45 p.m. — Look who spent some time together before Game 4? The Diamondbacks are earning Chris Russo's trust.
+
+6:25 p.m. — Bruce Bochy said he's anticipating making a roster decision on Adolis Garcia tonight. Garcia has a moderate oblique strain.
+
+5:10 p.m. — Adolis Garcia is not in the lineup for Texas.
+</item 36>
+
+<item 37>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Chris Smith put up 16 points, Josh Bannan 15 and Tyrell Harrison 12 to go with five rebounds and three blocks in just 14 minutes.
+
+First-year Bullets coach Justin Schueller couldn’t have been prouder of his team.
+
+Advertisement
+
+“It was a big game for us having dropped four, with two marquees out and we knew we had to come in here and play near a perfect game,” he said.
+
+“My initial thought is just pleasure in how the guys stuck to a plan, and found our advantages consistently throughout the night.”
+
+The Wildcats missed 18 of their first 19 three-point attempts before making a couple midway through the last quarter from Keanu Pinder, who finished with 22
+points and five rebounds.
+
+He was a lone shining light for a Wildcats team, who have lost four straight. Again, superstar Bryce Cotton struggled to 10 points and five assists on 3-of-19
+shooting.
+</item 37>
+
+<item 38>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Electrifying American point guard Parker Jackson-Cartwright (33 points, eight assists) and Finn Delany (21 points) were instrumental in the 32-19 fourth-quarter
+fightback from the Breakers, who were brave despite succumbing to their fourth successive defeat.
+
+“We were one lucky bounce away from winning this game,” NZ coach Mody Maor said. “Our guys are doing everything they can and everything I ask of them everyday.
+“They are working as hard as can be. Our fans should be proud of the level of effort our guys put in.”
+
+Advertisement
+
+They were without import power forward Zylan Cheatham, who suffered a broken foot in last Thursday’s loss to Adelaide, and Williams duly proved a beast in the
+low block against the undersized Anthony Lamb.
+
+Behind Williams’ dominance and Browne’s ball-handling and playmaking wizardry, the Phoenix pulled ahead 31-21 at quarter-time.
+</item 38>
+
+<item 39>
+World Series 2023 live score: Rangers vs. Diamondbacks updates, highlights, results from Game 3 (Sporting News, 2023-10-30T22:00:02+00:00)
+: Top of 3rd — Corey Seager rips a two-run home run! The Rangers produce some two-out magic as Seager smokes an inside changeup 421 feet over the right field
+wall to give Texas a 3-0 lead.
+
+8:41 p.m.: Top of 3rd — Marcus Semien comes up clutch with a single to left center! The star 2B has been struggling this postseason but he delivered here,
+driving in Nathaniel Lowe to give the Rangers a 1-0 lead.
+
+8:39 p.m.: Top of 3rd — Brandon Pfaadt struck out Josh Jung swinging and got Leody Tavares to ground out to second but Nathaniel Lowe advanced to third. He is
+90 feet away with two outs and Marcus Semien is coming to the plate.
+
+8:36 p.m.: Top of 3rd — Nathaniel Lowe gets the Rangers going right away with a double to right center field.
+</item 39>
+
+<item 40>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+“I had a couple of opportunities where I’m open and I shot the ball,” Crawford said. “Marcus (Lee) and Majok were setting great screens and in order for me to
+get those shots, them guys have to get me open.
+
+“They did a hell of a job in doing that and it was a team effort. The ball was hot, the ball was moving and everybody contributed today.”
+
+Advertisement
+
+Sydney only had themselves to blame for the loss as they went 10-of-37 from three-point range.
+
+Jaylen Adams (18 points, 10 rebounds) and Jordan Hunter (16, five) couldn’t lift the Kings over the line.
+
+“Sometimes you just miss shots,” Kings coach Mahmoud Abdelfattah said.
+
+“We’ve been practising these for the last two-and-a-half months, we got some great looks and at the end of the day that’s the difference.
+</item 40>
+
+<item 41>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+They finished with a staggering 23.
+
+The Breakers were left to rue wayward free-throw shooting (12 from 20 attempts), which meant they were never able to open up a double-digit lead.
+
+Former Golden State Warriors forward Anthony Lamb (25 points) is acclimatising quickly to the NBL, though the Breakers recruit had too little help as he notched
+nine fourth-quarter points.
+
+Advertisement
+
+© AAP
+</item 41>
+
+<item 42>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Despite being without star big Aron Baynes (suspended) and import guard Shannon Scott (hamstring), the Bullets soared to a second straight victory on Sunday and
+snapped a quirky streak in the process.
+
+It was their first win after seven straight losses in Sunday fixtures, in a run that dates back to last season.
+
+Far more importantly, the result levelled Brisbane’s current season record at 4-4 after five rounds.
+
+But it didn’t come easily as fourth-quarter specialists Tasmania trimmed a seven-point deficit back to a single point when Majok Deng drove to the rack with 34
+seconds remaining.
+
+Advertisement
+
+The two sides traded blows in the dying stages and the JackJumpers almost sent the game to overtime when they pinched Sam McDaniel’s inbounds pass on the final
+play.
+
+Jack McVeigh got a hand in to force the turnover and Tasmania found Jordon Crawford, but his decent look at an attempted game-leveller rimmed out.
+</item 42>
+
+<item 43>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+“Kudos to them, they deserved it.”
+
+Advertisement
+
+Phoenix hold off fast-finishing Breakers
+
+South East Melbourne Phoenix have survived a massive late scare to clinch a tense 103-100 victory over the fast-finishing New Zealand Breakers at John Cain
+Arena.
+
+The Phoenix were eyeing off a percentage pile-on when they led by a whopping 26 points on Saturday before the bottom-placed, injury-hit Breakers produced a
+brave rearguard to almost pinch a miracle.
+
+The Phoenix’s big four – Alan Williams (21 points, 13 rebounds), Mitch Creek (20 points), Gary Browne (18 points, eight assists) and Will Cummings (16 points,
+all in the first half) – led the way but the final stages got too close for comfort.
+</item 43>
+
+<item 44>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+The JackJumpers opened up on fire, racing to a 17-4 lead inside the opening five minutes including three balls to Crawford and McVeigh, but United soon steadied
+and it was the introduction of Lual-Acuil that inspired it.
+
+Melbourne would close the quarter outscoring Tasmania 17 points to four before three-pointers midway through the second stanza from Bowen and Clark put them up
+five.
+
+Advertisement
+
+United were still leading 43-42 at halftime, on the back of 11 extra rebounds and 10 second-chance points, before captain Chris Goulding opened his account at
+the start of the second half from downtown.
+
+Clark hit his second long ball of the game soon after to push Melbourne’s lead out to nine, his third stretched it to double-figures and Bowen landed two
+surprise ones of his own.
+</item 44>
+
+<item 45>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+But Goulding caught fire to lead United to a 52-51 at the main break.
+
+Defence was key in the second half as both sides tightened up, with Melbourne holding the visitors to just 15 points in the final period.
+
+Travers returned after half-time, finishing with six points and a game-high 11 rebounds.
+
+Advertisement
+
+Ariel Hukporti retained his spot in Melbourne’s starting five ahead of Jo Lual-Acuil Jr and impressed with seven points and 10 rebounds, including four on the
+offensive end.
+
+Bullets ride late luck to win over Tasmania
+
+Nathan Sobey has peeled off a game-high 28 points as Brisbane survived a late Tasmania fightback to continue their NBL resurgence with a tense 90-87 win.
+</item 45>
+
+<item 46>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+“My words during the week were that we’re just not playing good, that showed again tonight,” Perth coach John Rillie said.
+
+“Our offence isn’t functioning very good right now. We’re doing a great job holding teams to scores where we could put enough points on the board to win, in
+saying that we’re not doing that.
+
+“That’s certainly something we have to address and resolve here pretty quickly.”
+
+Advertisement
+
+Brisbane, who were on a four-game losing streak, started with the game’s first seven points and were still leading 20-9 by the end of the first quarter.
+
+While the Wildcats had their moments in the second quarter, Brisbane did well to lead 42-36 at the long break.
+
+It was 17-year-old Rocco Zikarsky who stood tall in the paint in the third quarter with Harrison in foul trouble.
+</item 46>
+
+<item 47>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Geelong coach Daniel Lowther said the strong winds made it hard for his side to clear the ball out of their defensive 50-metre zone and to move the ball with
+any certainty around the ground.
+
+Loading “At one point the rain hit our box, it was flowing,” Lowther said. “Both teams had to fight in the conditions, but it didn’t help the game. “Our marking
+contest wasn’t too flash, our ground ball representation was a bit hit and miss, so our defence were under a bit more pressure than they should have been, but
+they fought back really well,” Lowther said. Collingwood next play a Sydney line-up including former Magpies star Chloe Molloy, while Geelong will take on
+Richmond at Ikon Park.
+
+Dockers spoil Saints’ finals hopes Fremantle recorded a comfortable 24-point win yesterday to bring an abrupt end to St Kilda’s four-game streak and dash their
+AFLW finals hopes. J’Noemi Anderson is tackled by a group of Dockers.
+</item 47>
+
+<item 48>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Shea Ili (17 points) and Tanner Krebs (14) also reached double figures for Melbourne.
+
+The result extended United’s winning streak to six games, giving them an 8-1 record on top of the ladder.
+
+Import forward Gary Clark (24 points) and Justin Robinson (20) tried to give Illawarra a lift but Tyler Harvey managed just 10 points, three days after his
+clutch three-pointer sealed a thrilling win over Cairns.
+
+Advertisement
+
+In a sloppy start, United committed five turnovers in the first period and trailed at quarter-time for the first time this season.
+
+Clark’s eight points on perfect shooting led Illawarra to a 29-24 advantage at that point.
+
+His tally swelled to 16 by the main break and the Hawks’ lead reached double figures soon after United temporarily lost Travers to injury.
+
+But Goulding caught fire to lead United to a 52-51 at the main break.
+</item 48>
+
+<item 49>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+It was the Western Bulldogs’ eighth loss in a row, and their biggest-ever defeat, and they have just two rounds left to clinch a win this season. They next play
+17th-placed West Coast and then top-four side North Melbourne. For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes
+of Gold Coast, Geelong, Collingwood, St Kilda and Carlton.
+
+The Swans, who went winless in their debut season last year, were propelled to victory by a Chloe Molloy masterclass. After a five-goal second term, which
+included a four-minute burst of three majors, Sydney had already brought up their largest score in an AFLW game by halftime. Swan Chloe Molloy celebrates a
+goal. Credit: AFL Photos / Getty Images The Bulldogs held their own in the last quarter, but the damage had already been done. The total was also the biggest
+the Dogs have conceded in their history, topping the 83 Melbourne kicked against them in round three.
+</item 49>
+
+<item 50>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Ex-Taipan Kouat Noi (18 points) top-scored for the visitors, while Jaylen Adams (13) and DJ Hogg (13) – playing against his former side in his long-awaited
+debut for his new team following a shoulder injury – got on the scoresheet, but both shot under 30 per cent, embodying the Kings’ rocky evening.
+
+The two-time reigning champions were all at sea early, out-rebounded 18-6 in the opening term while missing their first 15 three-pointers.
+
+Cairns boosted their 26-20 quarter-time buffer to 12 points shortly before Miller’s night ended in stomach-churning style.
+
+Advertisement
+
+The injury left their backcourt stocks further depleted, with Taran Armstrong (foot) and captain Tahjere McCall (family reasons) already missing.
+</item 50>
+=== END ITEM id=7a133bc137777966 ===
+
+=== ITEM id=2dd2bce4e10031e0 ===
+Gold sentences and facts:
+Sentence 0: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 0.0: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 0.1: Caroline Ellison is the CEO of Alameda.
+  Fact 0.2: Bankman-Fried used Caroline Ellison as a front.
+  Fact 0.3: According to the government, Bankman-Fried had secret access to customer money, both cash and crypto.
+Sentence 1: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 1.0: The second week of the trial's standout testimony came from Caroline Ellison.
+  Fact 1.1: Caroline Ellison is Alameda Research's former CEO.
+  Fact 1.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 1.3: Caroline Ellison claimed the $14 billion was used to repay debts to lenders.
+  Fact 1.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 1.5: Caroline Ellison claimed she did this under the instruction of SBF.
+
+Retrieved items:
+<item 1>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+“He hadn’t known how to tell me,” she said.
+
+Ellison was also, of course, in a more personal relationship with Bankman-Fried. (A juror who’d been asleep for a discussion of the FTT token woke up when she
+started discussing it.) The two started sleeping together in the fall of 2018, on and off. At the time, she was a trader and Bankman-Fried was the CEO. They
+didn’t date until later — twice. Their first relationship stretched from the summer of 2020 through the summer of 2021; they agreed to keep it secret. (Some
+people found out, as they usually do.) The second time, from the fall of 2021 until the spring of 2022, they lived together.
+
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said.
+</item 3>
+
+<item 4>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+The political donations gave Bankman-Fried influence in the highest echelons of power. Ellison testified to Bankman-Fried’s venture investments, which gave him
+more dominance in the tech world. At every turn, the scams at FTX and Alameda led back to making Bankman-Fried more important.
+
+The pie chart that accompanied expert witness Peter Easton’s testimony. Image: The prosecution’s exhibit 1045
+
+This was backed up by expert testimony from Notre Dame accounting professor Peter Easton, who’d also assisted in investigating Enron and WorldCom. In a pie
+chart that showed how he’d traced funds for the $11.3 billion liability that Ellison, Singh, Wang, and Bankman-Fried had known about in June 2022, we saw that
+$1.2 billion was a loan repayment to crypto lender Genesis.
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+The one Wang said Alameda took to keep off FTX’s balance sheet? Yeah, so it was a totally innocent thing where what actually happened was that Bankman-Fried
+thought it was appropriate that Alameda take the position as a backstop liquidity provider, that’s all.
+
+In June 2022, Bankman-Fried heard about the account called “fiat@ftx” tracking how much money Alameda owed to FTX, he testified. He did not know what it was and
+did not bother to find out. He was busy! That was when Bankman-Fried directed Ellison to repay Alameda’s lenders, because he thought Alameda was good for it. He
+also gave BlockFi and Voyager, two crypto lenders, some capital infusions for good measure.
+
+He was “very surprised!”
+
+Remember that testimony Adam Yedidia gave about a conversation with Bankman-Fried in August 2022 about the enormous amount of money Alameda owed FTX? Well,
+Bankman-Fried remembers it differently.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 6>
+
+<item 7>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Was it that she should have taken them sooner? What the fuck?
+
+When Sassoon got up for a quick redirect, she demolished any points Cohen had attempted to make. But I didn’t really appreciate her cleverness until after
+Ellison left the stand, and the jurors left the room. She’d managed to set a neat little trap for Cohen.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval
+
+On the direct examination, near the end, Sassoon asked about an Alameda all-hands meeting, without bringing up many specifics. During the cross, Cohen asked
+Ellison what topics were covered in the meeting, while avoiding details. That opened the door for Sasson on redirect to work in that Ellison had confessed to
+stealing billions of FTX customers’ money, at Bankman-Fried’s direction.
+
+There had been an open question of whether jurors would hear the tapes of Ellison’s remarks. The testimony set up an argument for the prosecution to bring in
+those tapes.
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 8>
+
+<item 9>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 9>
+
+<item 10>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 10>
+
+<item 11>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 11>
+
+<item 12>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 12>
+
+<item 13>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said. Besides telling her about his presidential chances, he also told her that
+if there was a coin flip where tails destroyed the world and heads made the world twice as good, he’d flip the coin. He called this being “risk-neutral,” which
+seems like a fancy way of saying he was a gambling addict.
+
+She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022. The goal, Bankman-Fried told her, was to
+“optically” separate Alameda Research and FTX. “The whole time we were dating, he was my boss at work,” she said. They broke up because she wanted more from the
+relationship; Bankman-Fried was distant and not paying enough attention to her.
+</item 13>
+
+<item 14>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I was ready to hear this pursued further — but then it, too, was dropped.
+
+I think the defense was also trying to suggest that the government had coerced Ellison’s testimony, by suggesting that she had pleaded guilty to a charge of
+defrauding investors that she couldn’t have been involved in. After all, she didn’t prepare materials for them. Unfortunately, she did say that she had
+conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine. This
+line of questioning felt like a waste of time.
+
+There were rather a lot of sidebars during the cross-examination, to the point that when one occurred, several jurors looked entertained. There were a few
+yesterday, too, including one in which the prosecution complained that Bankman-Fried was visibly scoffing at Ellison’s answers, according to the court
+transcript.
+</item 14>
+
+<item 15>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+I’ve got some shitty ex-boyfriends, but none of them made me the CEO of their sin-eater hedge fund while refusing to give me equity and bragging about how there
+was a 5 percent chance they’d become the president of the United States, you know? Absolutely counting my blessings after Caroline Ellison’s first day on the
+stand. I wonder how many of the nine women on the jury are doing the same.
+
+Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX. She’s already pleaded guilty to criminal charges
+stemming from one of the worst romantic relationships I’ve ever heard of, and her testimony was widely anticipated before the trial. Today, that took the form
+of discussing a damning spreadsheet — one she prepared for her ex and boss Sam Bankman-Fried, now the defendant in a criminal fraud trial.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy.
+</item 15>
+
+<item 16>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 16>
+
+<item 17>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued.
+
+“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”
+
+A Frenchman who lives in London testifies in New York
+
+After lawyers from both sides depicted two very different Bankman-Frieds, the prosecution called its first two witnesses to the stand—and they weren’t
+blockbuster names or former lieutenants-turned-government-cooperators, like Ellison.
+
+The first was a victim: Marc-Antoine Julliard, a Paris-born cocoa trader who lives in London. In 2021, Julliard, who had coiffed hair and spoke with a strong
+French accent, decided to invest in crypto and landed on FTX as his exchange of choice, where he traded cryptocurrencies like Bitcoin and Dogecoin.
+
+On Nov. 8, in the crypto exchange’s final few days, he tried to pull out his cash and crypto.
+</item 17>
+
+<item 18>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 18>
+
+<item 19>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Instead, Bankman-Fried directed alleged co-conspirator Caroline Ellison to repay third-party loans and went on making investments.
+
+Bankman-Fried said that he found out about the fiat@ftx account — that’s the one that tracked how much Alameda owed FTX — in June 2022 while his senior staff
+was focused on fixing the software bug. He did not, however, discover what the account was for until October. I know this sounds unbelievable, but this is his
+actual testimony.
+
+His employees told him “they were busy and I should stop asking questions because it was distracting.”
+
+Simple questions nailed Bankman-Fried to the wall. Had he given his employees at Alameda the direction not to spend FTX customer deposits? Had he put in any
+policies to prevent Alameda employees from spending FTX customer money? Did he put in place any measures at Alameda to protect the FTX customer money? No, no,
+and no. Oh, but he was testifying to Congress about keeping customer funds safe.
+</item 19>
+
+<item 20>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+The day ended with a document that had been shared between Ellison and Bankman-Fried — with his comments appearing in bubbles along the main text. Ellison wrote
+she was worried about “both actual leverage and presenting on our balance sheet.” Bankman-Fried responded with a note: “Yup, and could also get worse.”
+</item 20>
+
+<item 21>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda got its war chest — 60 percent to 70 percent of the initial supply — for free, while seed investors got FTT at 10 cents a coin, and FTT first listed at
+$1 a coin. Bankman-Fried felt that $1 per coin was psychologically important, Ellison said, and he directed her to buy up FTT using Alameda if its price fell
+below a dollar.
+
+FTT was one of several “Sam coins,” a nickname for tokens that Bankman-Fried was heavily involved in and owned a lot of, either personally or through Alameda.
+Those coins were almost certainly worth less than the value displayed on the balance sheet because trying to sell them all at once would crater the prices.
+Bankman-Fried directed her to put those coins on the balance sheets Alameda showed to lenders, even though she felt it was “somewhat misleading.”
+
+Alameda was also getting loans from outside lenders, such as Genesis, because when FTX started, there weren’t a lot of customer funds to borrow, Ellison
+testified.
+</item 21>
+
+<item 22>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 22>
+
+<item 23>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 23>
+
+<item 24>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 24>
+
+<item 25>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 25>
+
+<item 26>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Then a bigger one. Then an effectively limitless one.
+
+Ellison testified to something similar, choking back tears: “When I started working at Alameda, I don’t think I would have believed you if you told me I would
+be sending false balance sheets to our lenders or taking customer money, but over time, it was something I became more comfortable with.”
+
+Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified. Alameda Research was, by then, FTX’s sin-eater. When FTX took a loss in
+the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet. FTX’s “insurance fund,” meant to
+keep traders from getting stuck with other traders’ losses, was totally made up — Alameda simply picked up the tab.
+
+Even that wasn’t good enough.
+</item 26>
+
+<item 27>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 27>
+
+<item 28>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+Much of said funding came from customers, and Easton testified that he found that user deposits were used by both FTX and Alameda to purchase real estate, make
+investments or direct funding toward political causes and charities.
+
+SBF trial: What we learned in week two
+
+The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to
+repay debts to lenders, using them as a line of credit under the instruction of SBF. Ellison also went into detail about how a $2 billion venture fund, FTX
+Ventures, was funded by money that had previously been allocated to Alameda from third-party lenders.
+
+And though there are no charges of bribery in the case, Ellison also testified to paying Chinese officials $150 million to restore access to $1 billion in
+frozen trading accounts.
+
+SBF trial: What we learned in the week one
+
+As expected, the opening statements in the SBF trial were spicy.
+</item 28>
+
+<item 29>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That was the basis of the worst of her testimony — and the spreadsheet from hell.
+
+Ellison said she’d prepared the spreadsheet at Bankman-Fried’s request in the fall of 2021 and shared it with him. The point was risk analysis around paying
+back Alameda’s loans if they were abruptly recalled by Genesis, their lender. Bankman-Fried wanted to use $3 billion for venture investments, so Ellison was
+ballparking what that would do to Alameda’s risk. In the as-is scenario, if things went south, she figured there was a 30 percent chance they wouldn’t be able
+to meet the loan recalls. If Bankman-Fried used $3 billion to make investments, there was a 100 percent chance they couldn’t meet the recalls, even with FTX
+customer funds.
+
+Echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length
+
+The problem here wasn’t really the math, which seemed pretty arbitrary.
+</item 29>
+
+<item 30>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+“All of that was built on lies,” Rehn said.
+
+In his opening statement, Rehn dodged explaining cryptocurrency to the jury. Instead, he punched hard on Bankman-Fried lying and stealing.
+
+Bankman-Fried sat almost motionless, occasionally glancing at Rehn, as the prosecutor told the jury that Bankman-Fried sold stock in FTX and borrowed millions
+from lenders by lying.
+
+The story Rehn told is familiar to anyone following the news. In May and June of 2022, Alameda Research — the crypto trading company ostensibly helmed by
+Caroline Ellison — didn’t have enough to pay its bills, so it pulled customer money to repay loans. By September, the hole in the FTX balance sheet was so big
+that customers could never be repaid.
+
+FTX “didn’t have a chief risk officer, which became an issue when the storm hit.”
+
+When CoinDesk published its article in November 2022, people realized FTX was a house of cards, Rehn said. Meanwhile, Bankman-Fried tweeted.
+</item 30>
+=== END ITEM id=2dd2bce4e10031e0 ===

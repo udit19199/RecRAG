@@ -1,0 +1,1538 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=1c0f2ec120aa7996 ===
+Gold sentences and facts:
+Sentence 0: While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it.
+  Fact 0.0: Ramaswamy's Republican colleagues have largely shunned TikTok.
+  Fact 0.1: Ramaswamy is presenting himself as one of the Cool Politicians.
+  Fact 0.2: The Cool Politicians are politicians who will actually use TikTok.
+Sentence 1: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist.
+  Fact 1.0: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok.
+  Fact 1.1: Audiences have started to resist artists making their songs trend on TikTok.
+
+Retrieved items:
+<item 1>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+A similar pattern was found in the four other countries they study looked at.
+
+The study also found that the TikTok audience can be an effective marketing tool for artists, as TikTok users, in particular, are considerably more likely to
+discover and share music than overall social media and short video platform (SFV) users.
+
+In the UK, TikTok users were 108% more likely to discover and share music than other social media users, while in Germany, they were 100% more likely. US TikTok
+users were 71% more likely to discover and share music.
+
+“In doing so, TikTok users help both emerging and established artists to reach new audiences,” the Luminate report stated.
+
+The study found that TikTok’s platform appears to be a major driver of the glocalization of music – the trend of local artists, performing in local languages,
+being elevated to a regional or global platform.
+
+“TikTok users have a stronger preference for international music than the average music listener,” the report said.
+</item 1>
+
+<item 2>
+The new, ‘efficient’ Spotify has a very different approach to podcasting (The Verge, 2023-10-25T16:10:29+00:00)
+CEO Daniel Ek echoed that sentiment. “We’re constantly finding new ways to bring more efficiencies out of the business… We’ve seen some improvements, but you
+should expect us to continue to look for more improvements going forward because that’s just our modus operandi.”
+
+While Ek and Vogel really hammered that “efficiency” theme (according to my transcript, they said the word more than 30 times over the course of the 50-minute
+call), what was left unsaid about podcasting spoke louder. In the past, they would excitedly tout how many millions of podcasts were on the platform, the latest
+new celebrity show, and the area’s explosive growth. But as investors have run out of patience for the time and money such ambitions required, the company’s
+leadership changed its tune.
+
+Rather than emphasizing, say, its new revenue sharing deal with Trevor Noah or the reliability of The Ringer, Ek pointed to Spotify’s new AI-driven translation
+product.
+</item 2>
+
+<item 3>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“Luminate’s findings prove what we had long known: that TikTok is the driving force behind music discovery in the industry, and that TikTok users are active,
+engaged and highly valuable drivers of music industry revenues.”
+
+The new study is part of an ongoing effort by TikTok to highlight its growing role in the development of global music culture. Last year, TikTok released a
+report asserting that 13 out of the 14 songs to reach number on the US Billboard Hot 100 in 2022 were driven by viral trends on TikTok.
+
+The data clearly shows why TikTok has focused so heavily on developing music-related services, to the point that one could be forgiven for thinking the company
+plans to reinvent itself as a part of the music industry.
+
+Last year, TikTok launched SoundOn, its own music distribution service, which has partnered with Believe-owned distro company TuneCore and Downtown
+Holdings-owned B2B tech and services company FUGA.
+</item 3>
+
+<item 4>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Nicki Minaj is an artist who’s been embroiled in controversy throughout her career, from posting bad takes about COVID vaccines to defending her husband Kenneth
+Petty, a convicted sex offender. She may be a brilliant artist, but her problematic history makes her far from the family-friendly public figure that brands are
+more likely to endorse.
+
+But with Gag City, Minaj has brands doing all of her marketing for her. “Pink Friday 2” is an artistic marvel in itself (though I am probably biased), but the
+free promotion that it’s been getting as a viral meme is particularly astounding. Artists have spent the last few years trying to drum up engagement for their
+work by making their songs trend on TikTok, which audiences have started to resist. Gag City doesn’t bank on being the viral song of the summer to drive
+streaming numbers — the bit is removed enough for non-stans to enjoy it, while still revolving around the album it’s promoting.
+</item 4>
+
+<item 5>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Third-party Reddit app Narwhal says it hopes to survive Reddit’s app purge with a subscription plan.
+
+Apropos “getting together,” Amanda reports that VidCon is still kickin’. For the first time, the conference hosted an industry leadership summit, where creator
+economy experts and creators could hash out their grievances with the state of the business and share ideas to make the job of a creator more sustainable. That
+makes sense, unlike creators raising venture capital: It’s so eye-wateringly hard to make money as a creator, I’d love to see the pitch that convinces a VC to
+cut a check to a creator, with a realistic expectation of a venture-scale return.
+
+Maybe they were hiding behind the sofa?: Sarah reports that Mastodon actually has 407K+ more monthly users than it thought — and it seems like Twitter has a lot
+more traffic than Musk said. Still, the peak now is about the same as it was a decade ago, and it’s unclear what the social platform can do to encourage more
+growth.
+</item 5>
+
+<item 6>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+In the years since, Democratic campaigns have increasingly prioritized social media strategy, establishing politician-influencers who wield content for votes.
+
+A 2022 midterm report by the Alliance for Securing Democracy found that in the Senate races, 47% of Democratic candidates had TikTok accounts, compared to 12%
+of Republican candidates. Of the major party House candidates, 30% of Democrats and 10% of Republicans were on TikTok, which as a platform was most prevalent in
+gubernatorial races.
+
+Though opposition to TikTok has been bipartisan, the crusade to ban the platform over national security concerns is primarily led by Republicans at the state
+level — a position that likely factors into the party’s social media struggles with young voters.
+
+Mehmet Oz, one of the few Republican candidates on TikTok, had the advantage of already having a large social media following when he announced his candidacy
+thanks to his popularity as Dr. Oz.
+</item 6>
+
+<item 7>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Republicans still don’t know how to talk to young voters online Vivek Ramaswamy struggles to gain an edge in the face of TikTok trolls
+
+In an appeal to younger voters, Republican presidential candidate Vivek Ramaswamy — who proposed raising the voting age to 25 — launched his TikTok presence
+with an endorsement from Jake Paul, the YouTuber turned boxer who built a content empire by marketing to children.
+
+Ramaswamy is one of the only Republican politicians making an effort to connect with Gen Z and young millennials, a demographic that overwhelmingly supported
+Democrats in the midterm elections. Despite the popularity and growing influence of far-right creators online, Republican candidates have historically failed to
+engage young voters on social media, if they try at all.
+
+While Democratic politicians like Rep. Alexandria Ocasio-Cortez and Sen. John Fetterman’s social media campaign strategies set the blueprint for politicians
+seeking internet fame, Republicans have neglected to adopt the digital fluency required to secure the youth vote.
+</item 7>
+
+<item 8>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 8>
+
+<item 9>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“Gen Z does not put up with bullshit,” Henry said. “That’s so much of what platforms like TikTok and Twitch cater to, and why they thrive on those platforms,
+because you can just pull out your phone and be talking while you’re getting ready with the worst angle possible. Republicans in general, it goes against so
+much of how they act otherwise and young people know that.”
+
+Ramaswamy’s TikTok strategy is puzzling; he appears to be trying to replicate the success of previous candidates who became social media stars over the course
+of their campaigns, but his TikTok presence conflicts with his own stances on social media and young voters. His communications director, Tricia McLaughlin, did
+not immediately respond to TechCrunch’s request for comment.
+
+Like many of his Republican colleagues, Ramaswamy has accused TikTok of being a threat to national security, and during a town hall days before he launched his
+account, described the platform as “digital fentanyl” from China.
+</item 9>
+
+<item 10>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“In the global and US markets, TikTok user engagement metrics are strongly associated with streaming volumes. In other words, higher TikTok engagement — whether
+that’s likes, views or shares — corresponds with elevated streaming volumes,” the Luminate report stated.
+
+However, TikTok’s impact on music isn’t limited to DSPs. The analysis found that TikTok users are also larger spenders on music off-platform as well. By wide
+margins, they are more likely to buy merch and attend live shows than the average consumer.
+
+In the US, 45% of TikTok users bought music-related merch over a 12-month period, compared to 35% of overall music listeners. Meanwhile, 38% attended a live
+music event during the year, compared to 33% of overall music listeners.
+
+Overall, US TikTok users spent 22% more on music-related purchases, compared to overall music listeners. A similar pattern was found in the four other countries
+they study looked at.
+</item 10>
+
+<item 11>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Hiya, folks, and welcome to Week in Review (WiR), TechCrunch’s digest of the past week in tech news. It’s TC’s column that highlights the major stories over the
+past few days, and — we humbly submit — it’s a darn useful resource for folks on the go.
+
+This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing
+FTX fallout. Also on the agenda: Gmail’s harsher rules to prevent spam, TikTok testing an ad-free subscription plan, and LinkedIn going big on AI tools. And
+that’s not all.
+
+If you haven’t, sign up here to get WiR in your inbox every Saturday. And if you have, our thanks. Now, let’s get on with the news.
+</item 11>
+
+<item 12>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+On Equity this week, the crew talked about the SBF trial; deals from VR firms Rainforest, At One Ventures, Section 32 and Greylock, where venture funding has
+declined; and how Fearless Fund, a firm founded to invest in women of color, is being barred from awarding grants to Black women founders.
+
+Meanwhile, Found featured Esther Rodriguez-Villegas from Acurable, a medical device company that makes patient-friendly wearable devices to diagnose and manage
+respiratory conditions at home. As a career-long academic, Rodriguez-Villegas talks about how she never intended to be a founder until she learned about how the
+currently available medical devices make it extremely difficult to detect and treat diseases like sleep apnea and epilepsy.
+
+And over on Chain Reaction, Jacquelyn did a crossover episode with Alex about the SBF trial.
+</item 12>
+
+<item 13>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+MBW’s Stat Of The Week is a series in which we highlight a data point that deserves the attention of the global music industry. Stat Of the Week is supported by
+Cinq Music Group , a technology-driven record label, distribution, and rights management company.
+
+TikTok is in the process of reinventing itself as both a partner to music companies, and a competitor to streaming and distribution services.
+
+Now, a new market analysis sheds some light on why the ByteDance-owned short video platform has focused so intensely on expanding its services in the music
+world, with the firm reporting to be a major driver of music consumption and spending.
+
+While that may not come as a surprise to those who’ve noted the overlap between TikTok and music culture, the numbers in the analysis shine a light on the scale
+of TikTok’s influence.
+
+According to the analysis, commissioned by TikTok and carried out by US market monitor Luminate, 62% of US TikTok users pay for a music streaming service,
+compared to 43% of all consumers.
+</item 13>
+
+<item 14>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“Luminate’s findings prove what we had long known: that TikTok is the driving force behind music discovery in the industry, and that TikTok users are active,
+engaged and highly valuable drivers of music industry revenues.” Ole Obermann, TikTok
+
+This past summer, TikTok launched its own music streaming service, TikTok Music, a premium-only service initially available in Brazil and Indonesia, featuring
+the catalogs of all three of the major global recording companies (Sony Music, Warner Music Group and Universal Music Group).
+
+It quickly expanded the service to Australia, Mexico and Singapore, though without Universal’s catalog.
+
+This past October, TikTok announced it would be holding its first-ever live music event, dubbed “TikTok In The Mix.”
+</item 14>
+
+<item 15>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+The attorney general’s press secretary blamed the site’s downfall on activists “hacking the system.”
+
+The presidential election is more than a year away, but it may be too late for Ramaswamy to make any headway on TikTok, where the platform’s young users still
+don’t take him seriously. He recently posted a video about getting ready for the next Republican debate, and was hit with yet another wall of edging comments.
+
+Even if candidates like Ramaswamy did everything right — like having a platform that didn’t alienate young voters and working with creators with more favorable
+reputations — they’d still represent a party that many Gen Z and millennial voters aren’t aligned with.
+
+“It’s really hard to be effective with a generation when a lot of your policy is attacking them,” Henry said. “If all of your policy is highly unfavorable for
+that generation, that’s a hard sell in itself, even if you’re an effective communicator with all the strategy in the world, to sell someone something they don’t
+want.”
+</item 15>
+
+<item 16>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+</item 16>
+
+<item 17>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Only the occasional tweets. Meet @Vivek Ramaswamy ♬ original sound – GenosPicks
+
+Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in
+Ramaswamy’s favor, though.
+
+His account, which has amassed over 50,000 followers in the weeks since he joined, has been barraged with comments either criticizing his positions or trolling
+him. He’s been the butt of Gen Z’s relentless comments about getting off to his content (the top comments on his videos are consistently jokes about edging). He
+also incited the wrath of witchtok creators, who filmed themselves casting hexes upon him and other conservatives.
+
+Ramaswamy is raking in TikTok engagement — even if it’s not how he intended — but Democrats are still dominating the Republican party in digital strategy.
+Ocasio-Cortez’s Instagram Stories garnered her nationwide popularity when she campaigned in 2018, reaching further than her local constituency.
+</item 17>
+
+<item 18>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Battery-boosting software tech: Tim covers Breathe Battery Technologies, a startup that’s developed a bit of software that can be slipped into just about any
+lithium-ion battery in use today — endowing it with either faster charging speeds or greater longevity.
+
+What lies beyond ChatGPT: Anna surveyed 10 investors about the future of AI and what they believe might be the next big thing. Among other topics, they touched
+on where startups still stand a chance, where oligopoly dynamics and first-mover advantages are shaping up and the value of proprietary data.
+</item 18>
+
+<item 19>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 19>
+
+<item 20>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Critics on both the right and the left described the launch as a disaster.
+
+Conservative organizations have proven especially out of their depth when facing the wrath of extremely online social media users, who mobilize trolling for
+social justice. In 2020, TikTok users reserved hundreds of tickets for a Trump rally and never showed up, leaving the president to face swaths of empty seats.
+When a Texas anti-abortion group opened an anonymous tip form to enforce the state’s ban on abortion after six weeks, Gen Z activists flooded the site with
+Shrek porn. This year, TikTok and Twitter users shut down the Missouri attorney general’s tip form for reporting clinics that provide gender-affirming care.
+Within days of launching, the site was spammed with fanfiction, satirical anecdotes about kids getting “transed” and fanfiction. The attorney general’s press
+secretary blamed the site’s downfall on activists “hacking the system.”
+</item 20>
+
+<item 21>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+I have to wonder if those decisions to change these policies were in response to competition from other platforms.
+
+I would say it this way: I think they are an acknowledgement, and maybe a closer connectivity to the community via Dan specifically. I credit Dan in his short
+time as CEO to really make some big, hard decisions. Both the launch of Partner Plus, as well as simulcasting, the embed stuff we talked about in the keynote —
+these are three things that I think are very much an acknowledgement of the feedback from the community. We’ve made that change, so I wouldn’t call it out of
+competitive pressures. I would call it out of focus on the community.
+</item 21>
+
+<item 22>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“This preference, combined with the high volume of music discovery and sharing activity on TikTok, can be harnessed to grow a fanbase without borders and has
+helped to launch global artists from genres such as Reggaeton, Afrobeats and K-Pop.”
+
+The report added: “TikTok users‘ interest in international music is evident in their music streaming preferences. Compared to the average music listener across
+each market, this audience is more likely to indicate that ‘access to music by global artists’ is an extremely important factor when selecting a music streaming
+service.”
+
+“TikTok is already famous for being the launchpad for creating viral hits and breaking new artists, but we wanted to understand how TikTok and its users impact
+the music industry more broadly,” Ole Obermann, TikTok’s Global Head of Music, said in a statement.
+</item 22>
+
+<item 23>
+VTubers have reached their inevitable conclusion (Polygon, 2023-10-19T16:01:50+00:00)
+Brands, too: Remember the Tony the Tiger VTuber in August of 2022?
+
+Many creators that jumped on the trend have since stopped using their avatars, but at the start of the COVID-19 pandemic, there was a large increase in VTubers
+on Twitch and other streaming platforms, like YouTube, as models and equipment became more accessible to the general public. Twitch has since gone on to
+highlight a wide variety of VTubers through its VTuber Takeover promotion, which most recently ran in August. Twitch also reported that VTubing-related content
+on the platform shot up by some 350% between January and August 2022. Despite this, some have argued that the VTubing bubble has all but burst.
+
+Polygon is celebrating TwitchCon 2023 with a package of stories covering streaming trends and news from the show. Check it out!
+
+“I do feel that VTubing has become less novel as the market has become more saturated,” says a streamer with agency Nijisanji who is not approved to speak
+publicly.
+</item 23>
+
+<item 24>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+He has also proposed barring anyone under 25 from voting, unless they serve in the military or pass a civics exam.
+
+His first videos portray him as the one candidate who cares about America’s youth. While his Republican colleagues have largely shunned TikTok, Ramaswamy is
+presenting himself as one of the Cool Politicians who will actually use it.
+
+“We have a generation of politicians that is badly out of touch,” Ramaswamy said in his inaugural video, which did not describe his policy stances.
+
+@jakepaul Getting Vivek on Tik Tok because i believe our politicians of the future should connect with gen z and milennials on social where we all live and
+breathe. Its bizarre that in this day and age our presidents have no connection with us via social. Only the occasional tweets.
+</item 24>
+
+<item 25>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Ken Russell, a Democrat who left the Miami City Commission to run for a House seat in 2022, leaned into the cringe with bait-and-switch thirst traps reminding
+viewers to vote. In another video titled “Appealing to the youth vote,” he recreated Steve Buscemi’s “How do you do, fellow kids?” to encourage voter
+registration.
+
+Audience engagement doesn’t rely on forcing fun. North Carolina Rep. Jeff Jackson updates constituents on TikTok, breaking down topics like the government
+shutdown in concise explanatory videos without the frills of internet humor. Even though his content is less exciting, his account has over 2.2 million
+followers.
+
+As an alternative to the politician-influencer, some campaigns are focusing on mobilizing creators who already have an engaged audience. Biden is not on TikTok,
+but his digital strategy team is building an “army of influencers” to reach viewers who wouldn’t typically keep up with the White House press corps.
+</item 25>
+
+<item 26>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+One remaining – and major – potential pitfall for TikTok has to do with the rise in tensions between China and Western countries.
+
+Amid concerns that parent company ByteDance may be sharing TikTok user data with the Chinese government, numerous governments – from the US to the European
+Union to Australia – have banned the app from government-issued devices.
+
+A small number of jurisdictions have banned or are attempting to ban TikTok altogether, including Montana and, most recently, Nepal.
+
+Cinq Music Group’s repertoire has won Grammy awards, dozens of Gold and Platinum RIAA certifications, and numerous No.1 chart positions on a variety of
+Billboard charts. Its repertoire includes heavyweights such as Bad Bunny, Janet Jackson, Daddy Yankee, T.I., Sean Kingston, Anuel, and hundreds more.Music
+Business Worldwide
+</item 26>
+
+<item 27>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+The same month, it struck a deal with Distrokid to have indie artists upload their music to TikTok Music and to Capcut, TikTok’s video editing software, as well
+as to TikTok’s Commercial Music Library, which offers a catalog of music for brands to use in their TikTok ads.
+
+Meanwhile, TikTok parent ByteDance has launched an AI music-making app, and most recently, TikTok unveiled the “Add to Music App” feature, which enables TikTok
+users to save music they’ve discovered directly to their Apple Music, Amazon Music (Prime or Unlimited) or Spotify accounts.
+
+These new partnerships indicate that TikTok is moving away from what at times appeared to be a trying relationship with the music industry. In one notable
+incident, TikTok disabled the use of copyrighted music for users in Australia, in what the platform described as an experiment, and what many observers saw as a
+hardball tactic in its licensing negotiations with music rights holders.
+</item 27>
+
+<item 28>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Brand Twitter tends to turn fun trends into advertising opportunities, taking organic community interactions and spitting out contrived versions clearly made to
+go viral. It may be grating, but in this case, it’s working in Minaj’s favor. This week, everyone wants to go to Gag City.
+</item 28>
+
+<item 29>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 29>
+
+<item 30>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“The amount of media and content that we consume, political and cultural, where people get their information … It’s getting more and more intertwined,” Henry
+said. “To be effective ideologically, when it comes to campaigns and these wins that we want, we have to understand how these ecosystems work, and be
+strategically using them or else we risk being left behind.”
+
+Engaging with voters online requires more than just working with popular creators. In Ramaswamy’s case, an endorsement from Jake Paul only drove animosity from
+TikTok viewers. While his older brother, Logan Paul, has made the occasional social commentary on his podcast, the younger Paul has rarely engaged with politics
+or social issues. Jake Paul is generally disliked online for the running list of allegations against him, including sexual assault accusations.
+
+The Paul brothers have a reputation of promoting anyone and anything for a paycheck, and when Jake Paul posted a political endorsement out of the blue, viewers
+immediately questioned how much Ramaswamy paid him.
+</item 30>
+=== END ITEM id=1c0f2ec120aa7996 ===
+
+=== ITEM id=b4f478073d6c2aba ===
+Gold sentences and facts:
+Sentence 0: Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote.
+  Fact 0.0: Defense analysts agree on this.
+  Fact 0.1: Much of the outlook for Ukraine is dependent on the outcome of the U.S. vote.
+Sentence 1: Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine.
+  Fact 1.0: Any illusion of the success of globalization was stripped away with Russia's most recent invasion of Ukraine.
+  Fact 1.1: Any illusion that the twenty-first century represents a break from the brutal twentieth century was stripped away with Russia's most recent invasion of Ukraine.
+
+Retrieved items:
+<item 1>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Intense fighting continues nonetheless, and particularly around Bakhmut and Avdiivka in eastern Ukraine where Russian forces are conducting offensive operations
+and have made some recent, confirmed advances. Analysts at the Institute for the Study of War noted last week that Russian forces have likely committed to
+offensive operations in multiple sectors of the front, during a period of the most challenging weather of the fall-winter season, "in an effort to seize and
+retain the initiative" before the Russian presidential elections in March 2024. In the meantime, the ISW noted in an analysis, "Ukrainian forces establish and
+consolidate defensive positions to conserve manpower and resources for future offensive efforts." Ukrainian forces have adopted a more defensive stance as
+circumstances dictate; a senior army general warned last week that front-line Ukrainian troops face artillery shortages and have scaled back some military
+operations because of a shortfall of foreign assistance.
+</item 1>
+
+<item 2>
+U.S.-China relations are now more about crisis prevention (Cnbc | World Business News Leader, 2023-11-13T23:46:00+00:00)
+Chinese Vice Premier He Lifeng also raised the issues during preparatory meetings with U.S. Treasury Secretary Janet Yellen in San Francisco on Nov. 10,
+according to state media. "Aside from Taiwan, export controls are Beijing's top concern, but there is no political space in Washington roll back existing
+controls," Gabriel Wildau, managing director at consulting firm Teneo, said in a note. "The immediate aftermath of the [Biden-Xi] meeting is likely to mark a
+cyclical high point for bilateral relations," he said. "The key question is whether this high point extends into a plateau or whether political pressures
+trigger a new cycle of deterioration," he said. "As previously discussed, the period since June has offered a window of opportunity to stabilize relations;
+following the meeting, this window may close." Taiwan is set to hold its presidential election in January, and a more pro-independence winner could stir more of
+Beijing's ire.
+</item 2>
+
+<item 3>
+India to be one of world's fastest growing economies over next decade (Zee Business, 2023-10-14T12:17:33+00:00)
+India's strong FDI inflows have been boosted by large inflows of investments from global technology MNCs such as Google and Facebook that are attracted to
+India's large, fast-growing domestic consumer market, as well as a strong upturn in foreign direct investment inflows from manufacturing firms.
+
+Overall, India is expected to continue to be one of the world's fastest growing economies over the next decade. This will make India one of the most important
+long-term growth markets for multinationals in a wide range of industries, including manufacturing industries such as autos, electronics and chemicals to
+services industries such as banking, insurance, asset management, health care and information technology, it added.
+
+Brahma Chellaney, professor of strategic studies at the New Delhi-based Center for Policy Research, wrote in a recent article that as India's geopolitical,
+economic and cultural clout grows, so does its global footprint.
+</item 3>
+
+<item 4>
+Japan’s prime minister Kishida says: ‘reassess our economy’ (Financial Times, 2023-10-01T23:01:09+00:00)
+“I would urge you to evaluate what we are doing in my country, look at the underlying strength of our economy and our plans for the future and then invest in
+Japan,” Kishida said in a recent speech at the Economic Club of New York.
+
+On the face of it, the Tokyo conference guests have been told by various experts that the stars do appear aligned in Japan’s favour, both on its own merits and
+in comparison with what is happening around it. But, because so many global funds have diverted expertise away from Japan in recent years, they are concerned
+that they need to know more, as a matter of urgency.
+
+“There is heightened interest in Japan after what has been, for many, a long period of not being focused on that country,” says Paul Hitchens, the head of the
+Japan research department at Jefferies, which hosted a major investor conference in Hong Kong.
+</item 4>
+
+<item 5>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+For security reasons, Israel has already told Chevron to shut down its offshore energy platform.
+
+The Middle East crisis brings back memories of the Arab oil embargo of 1973, when OPEC cut oil to supporters of Israel. It used to account for 50 per cent of
+the oil production back then. Although non-OPEC production has picked up and OPEC contribution is lower at 32 per cent, it is still sizeable to take oil prices
+higher. A 10 per cent rise in crude price will result in global inflation being 0.4 percentage points higher next year.
+
+The war may also impact Suez Canal trade, which is a key maritime route between Asia and Europe and accounts for 12 per cent of global trade by value and much
+larger by volume; also 5 per cent of world oil trade.
+
+As things stand today, trade may not yet be impacted through the Strait of Hormuz, which lies between Oman and Iran.
+</item 5>
+
+<item 6>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Those things have to happen. And I think we have to try to give the Ukrainians more of a technological advantage," he noted.
+
+The United States has said that it will begin flight training for Ukrainian pilots on F-16 fighter jets. Anadolu Agency | Getty Images
+
+Volker believes that a Trump presidency might not be the catastrophe for Ukraine that is feared, but said it would make future funding uncertain. "I doubt that
+even if Trump were elected that he would abandon support for Ukraine overall, because it would be a disaster for U.S. interests, and it would appear to be a
+failure. You'd have these images of Russians overrunning places, and brutality and so forth, so I don't think he wants that. But it's not clear exactly what he
+would do to try to end the war."
+</item 6>
+
+<item 7>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Scholars have argued that putting too much emphasis on the platforms can be too simplistic and reeks of technological determinism; they have also pointed out
+that cultures like the United States’ and the legacy media have a long history with post-truth. That said, there are certainly dynamics going on that we did not
+anticipate, and we don’t seem quite sure what to do with them, even with multiple areas of scholarship in communication, disinformation, and social media and
+democracy working on these inquiries for years.
+
+What seems clear is that the Internet is not the connectedness we imagined. The ecology and spirituality of the 1960s, which shaped and structured much of what
+we see as energy democracy and the good future today, told us we were all connected. Globally networked — it sounds familiar, like a fevered dream from the
+1980s or 1990s, a dream that in turn had its roots in the 1960s and before.
+</item 7>
+
+<item 8>
+Deepfake election risks trigger EU call for more generative AI safeguards (TechCrunch, 2023-09-26T17:26:57+00:00)
+Over the next six months, Meta says it wants to “work with partners in government, industry, civil society and academia in Europe and around the world, to
+ensure that we can develop robust, sustainable solutions to tackling AI-generated misinformation”, adding: “We will participate in the newly formed working
+group on AI-generated disinformation under the EU Code of Practice.”
+
+Kremlin propaganda
+
+Platforms must concentrate efforts to combat the spread of Kremlin propaganda, Jourova also warned today — including in the context of looming EU elections next
+year with the risk of Russia stepping up its election interference efforts.
+
+“One of my main messages to the signatories is to be aware of the context. Russian war against Ukraine, and the upcoming EU elections next year, are
+particularly relevant, because the risk of disinformation is particularly serious,” she said. “The Russian state has engaged in the war of ideas to pollute our
+information space with half-truth and lies to create a false image that democracy is no better than autocracy.
+</item 8>
+
+<item 9>
+U.S.-China relations are now more about crisis prevention (Cnbc | World Business News Leader, 2023-11-13T23:46:00+00:00)
+"For that reason the meeting is still important, especially ahead of a politically charged 2024 that will begin with an important presidential election in
+Taiwan in January and end with the U.S. presidential election." U.S.-China tensions have escalated over the last several years, beginning with tariffs under the
+Trump administration and spilling over into broader tech restrictions under the Biden administration.
+
+watch now
+
+Controversy in early February over an alleged Chinese spy balloon flying in U.S. airspace revealed how fragile relations have become — the incident pushed the
+two countries to suspend already limited high-level talks. In April, during that period of estrangement, Washington, D.C.-based think tank Center for Strategic
+and International Studies published a report that described U.S.-China relations as seemingly "caught in a worsening vicious cycle."
+</item 9>
+
+<item 10>
+How the conspiracy-fueled Epoch Times went mainstream and made millions (Hacker News, 2023-10-16T03:41:24+00:00)
+’s most extreme right-wing stories.
+
+There was plenty to write about: An election marred by disinformation, the bubbling culture wars and, most helpful for a media company missioned with ending the
+Chinese Communist Party, a pandemic originating from China provided endless opportunities for takes that aligned with hawkish conservatives and conspiracy
+theorists.
+
+The Epoch Times was early to lay blame on China for Covid — labeling it the “CCP Virus” in its coverage. (The origin of the outbreak is unknown; the best
+evidence still points to natural transmission from an animal market.) China’s documented handling of the virus, including withholding information from
+researchers, a crackdown on whistleblowers and an authoritarian public health response, added credibility to The Epoch Times’ unproven claims.
+
+“The dynamic for The Epoch Times changed in 2020, partly because of their criticism of China around Covid,” said A.J. Bauer, an assistant journalism professor
+at the University of Alabama who studies conservative media.
+</item 10>
+
+<item 11>
+Deepfake election risks trigger EU call for more generative AI safeguards (TechCrunch, 2023-09-26T17:26:57+00:00)
+“Today, this is a multi-million euro weapon of mass manipulation aimed both internally at the Russians as well as at Europeans and the rest of the world. We
+must address this risk. The very large platforms must address this risk. Especially that we have to expect that the Kremlin and others will be active before
+elections. I expect signatories to adjust their actions to reflect that there is a war in the information space waged against us and that there are upcoming
+elections where malicious actors will try to use the design features of the platforms to manipulate.”
+
+Per the Commission’s early analysis of Big Tech’s Code reports, YouTube shut down more than 400 channels between January and April 2023 which were involved in
+coordinated influence operations linked to the Russian-state sponsored Internet Research Agency (IRA). It also removed ads from almost 300 sites linked to
+state-funded propaganda sites.
+
+While the EU highlighted that TikTok’s fact-checking efforts now cover Russian, Ukrainian, Belarusian and 17 European languages, including through a new
+partnership with Reuters.
+</item 11>
+
+<item 12>
+India to be one of world's fastest growing economies over next decade (Zee Business, 2023-10-14T12:17:33+00:00)
+Emerging market economies with large volumes of USD denominated debt are especially vulnerable as they could be caught in a vicious circle of their external
+debt (in local currency terms) ballooning due to strong DXY and their servicing ability being impaired by tepid economic activity owing to high rates. Even
+advanced economies have felt the heat, and the ECB etc. have maintained a hawkish narrative, Jain said.
+
+Another developing story seems to be the greenshoots of recovery in China backed by domestic consumption in the Golden week, and tourism related to the Asian
+Games. For now, these seem to buttressed on stimulus and base effects as China is now fully open.
+
+The long-term trajectory remains to be seen. In any case, for now this has provided a floor for commodity prices, especially base metals. Fickle commodity
+prices will also be victims of fresh geopolitical tensions in West Asia, which has pushed up Brent crude. Food prices could also play truant with climate change
+affecting cropping area worldwide: sugar and rice prices are booming, the note said.
+</item 12>
+
+<item 13>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+A Ukrainian soldier is seen inside an artillery vehicle in his fighting position as Russia-Ukraine war continues in the direction of Kharkiv, Ukraine on
+November 20, 2023. Diego Herrera Carcedo | Anadolu | Getty Images
+
+At the start of 2023, hopes were high that a much-vaunted Ukrainian counteroffensive — expected to be launched in the spring — would change the dial in the war
+against Russia. It didn't, and the prospect of a breakthrough in 2024 is also unlikely, military experts and defense analysts told CNBC. They predict intense
+fighting is likely to continue into the next year but say Kyiv's forces are unlikely to launch any more counteroffensives. Russia, meanwhile, is likely to focus
+on consolidating the territory it has already seized, particularly in eastern Ukraine.
+</item 13>
+
+<item 14>
+"There are no sacred numbers" (Globes English | Israel Business Arena, 2023-10-12T18:50:29+00:00)
+I find it hard to understand how a war like this landed on us in a country as powerful as Israel. But we have no choice but to win."
+
+As for the effect of the war on economic activity, Leiderman says: "First of all, the duration and character of the war will have a decisive impact on the depth
+of damage to the economy. Many studies, as well as past experience, indicate that the longer the war lasts, the broader will be the impact on the economy. It is
+also known that this connection between the length of the fighting and the economic damage might not be linear. And of course, the more the war widens to more
+fronts, the greater will be the economic damage."
+
+Do you have a forecast for the consequences of the war for economic growth?
+
+"It’s too early to make a quantitative estimate of the effects on the growth of the economy in 2024 and 2025.
+</item 14>
+
+<item 15>
+Deepfake election risks trigger EU call for more generative AI safeguards (TechCrunch, 2023-09-26T17:26:57+00:00)
+“In this context, 832 videos related to the war have been fact-checked, of which 211 have been removed,” Jourova noted.
+
+The EU also flagged reporting by Microsoft that told it Bing Search had either promoted information or downgraded questionable information in relation to almost
+800,000 search queries related to the Ukraine crisis.
+
+Jourova’s speech also highlighted a couple of other areas where she urged Code signatories to go further — calling (yet again) for more consistent moderation
+and investment in fact-checking, especially in smaller Member States and languages.
+
+She also criticized platforms over access to data, saying they must step up efforts to make sure researchers are empowered to scrutinize disinformation flows
+“and contribute to the necessary transparency”.
+
+Both are areas where X/Twitter under new owner, Elon Musk, has moved out of step with EU expectations on countering disinformation.
+
+Twitter (now X) was an original signatory to the disinformation Code but Musk took the platform out of the initiative back in May, as critical scrutiny of his
+actions dialled up in the EU.
+</item 15>
+
+<item 16>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+After liberating a handful of villages in the summer, Ukrainian and Russian forces have been caught in largely attritional battles, with neither side making
+significant gains. Ukrainian military officials have conceded that hopes and expectations of a great breakthrough in the counteroffensive were not met. Still,
+Ukraine's leadership says that steep losses have been inflicted on Russian forces and that its forces have made vital progress in other areas such as the Black
+Sea with Ukraine's audacious attacks on Russian bases and assets in Crimea this summer prompting the Russian navy to withdraw a number of warships from
+Sevastopol, handing Kyiv a victory in the battle of the Black Sea.
+
+Panorama of the city from a bird's-eye view, shot on a drone, covered with snow on December 7, 2023 in Avdiivka, Ukraine. Libkos | Getty Images
+
+Weather conditions are deteriorating in Ukraine, with mud, freezing rain, snow and ice making offensive and reconnaissance operations challenging.
+</item 16>
+
+<item 17>
+Gen Z just saw the worst war in Israel in 50 years break out all over the internet, but they were raised on 'disturbing images' (Fortune,
+2023-10-10T20:17:09+00:00)
+Some Gen Zers have even adopted the mentality that “money isn’t real” and are justifying spending on items to “treat themselves” amid a bleak reality.
+
+Why it matters
+
+Of course, every generation has lived through era-defining historical events. Millennials remember the 9/11 terrorist attacks and the U.S. invasion of Iraq.
+Baby boomers lived through the civil rights movement and the Vietnam War. But no other generation has been plugged into the world through the internet from such
+a young age like Gen Z.
+
+Gen Z is already wielding their power in notable and sometimes comical ways. In June 2020, teenage TikTok users (with the help of K-pop fans) claimed to have
+sunk a Trump campaign rally by registering for thousands of tickets with no intention of actually attending.
+</item 17>
+
+<item 18>
+'Too big to fail' Egypt faces economic crisis but has an anti-Gaza refugee policy. Israel and the U.S. hope that will change (Fortune,
+2023-10-22T15:15:47+00:00)
+Visiting Chancellor Olaf Scholz praised German-Egyptian unity in working to prevent a Middle East “conflagration.” Chinese President Xi Jinping met Egyptian
+Prime Minister Mostafa Madbouly in Beijing.
+
+The war “underscores the important role Egypt has always played vis-a-vis security in and around Gaza,” said Robert Satloff, executive director at The
+Washington Institute for Near East Policy.
+
+That’s not lost on European governments that woke up to Egypt’s importance as a regional gas producer after Vladimir Putin’s invasion of Ukraine last year.
+European officials visited to assess Egypt’s potential as a gas supplier — with Israel’s help — to supplant at least some Russian supplies.
+
+Those same governments are now courting El-Sisi for help in alleviating the pressure on Gaza. But he has rejected any suggestion Egypt host Gazan refugees,
+suggesting Israel should instead take in Palestinians to its Negev desert.
+</item 18>
+
+<item 19>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+With both Ukraine and Russia investing heavily in the war, it's unlikely there will be any negotiations to end the conflict or agree to a cease-fire. Defense
+analysts argue that neither side would want to go into negotiations unless they're in a position of strength and able to dictate terms. "In the case of a
+Republican winning the presidential election next year, especially if that's Donald Trump, who seems to be the front-runner, and [if] funding is decreased
+substantially, then there will be increased pressure on Ukraine to negotiate," Mario Bikarski, a Europe and Russia analyst at the Economist Intelligence Unit,
+told CNBC.
+
+A Ukrainian tank drives along the field on December 7, 2023 in Avdiivka, Ukraine. Kostya Liberov | Getty Images
+</item 19>
+
+<item 20>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+But as for social media as a whole, of which Reddit would presumably play a part, Ohanian said it brings out the “worst parts of our nature in many ways.”
+What’s more, he expressed worries about the desire for people to be first and win on whatever leaderboard a platform features, which then leads to a situation
+where misinformation is able to spread.
+
+Humans evolved trusting the faces & voices we knew around the campfire. The idea of believing something bc of experts/institutions you've never met is actually
+new to our species. I visited @UVADemocracy + chatted with @karaswisher + @dkroy about what's next for social media. pic.twitter.com/PMBXi7T3vv — Alexis Ohanian
+🇦🇲 (@alexisohanian) October 31, 2023
+
+“Now, there’s so much pressure to be first, and UGC — user-generated content — will always win. It won’t always be right, though.
+</item 20>
+
+<item 21>
+Japan’s prime minister Kishida says: ‘reassess our economy’ (Financial Times, 2023-10-01T23:01:09+00:00)
+The geopolitics of US-China tensions, chip wars, decoupling and “friendshoring” seem, in particular, to be working significantly in Japan’s favour. Asia-focused
+global investment is rotating out of China and into Tokyo stocks, real estate and other assets, just as large parts of corporate Japan are engaging more
+actively with shareholders than at any time in the past.
+
+China, after years of stunning growth and investor attention, is very rapidly losing that sheen. Its economy is growing more slowly and the expected
+post-pandemic rebound is proving elusive. On top of that, Beijing’s policymaking — with its sudden crackdowns on entire industries, like video games and private
+tutoring, has generated a series of nasty surprises — and the unshakeable fear that others could occur at any time.
+
+“You are seeing more interest in Japan from investors, who were primarily invested in China, as China has slowed and some of its economic policies have been
+confusing and opaque,” says Kirk Neureiter, president of Fidelity Management & Research Japan.
+</item 21>
+
+<item 22>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+But a spread of the crisis to the whole Middle East can risk trade through this route, which accounts for 20 per cent of global oil trade passage. If Iran is
+embroiled into this conflict, then trade with landlocked Central Asia, which is a big agricultural producer, raw materials and minerals like copper, cotton,
+uranium, gold, natural gas, gets disrupted. Central Asia also hosts a network of road, rail, and air routes that link China, Europe, and South Asia.
+
+Impact on Indian markets
+
+In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer
+than anticipated. We may witness a scenario where rates are held higher till the year 2025. Higher crude oil bill and higher global rates will prompt the RBI to
+also remain hawkish in its approach with regards to rates and liquidity measures. EBITDA margins of India Inc. may again get impacted on account of higher input
+costs and higher freight and fuel costs.
+</item 22>
+
+<item 23>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+But it's not clear exactly what he would do to try to end the war." For his part, Trump has said that he'd be able to resolve the Ukraine war "in one day" if he
+was reelected, saying he'd convince the leaders of Ukraine and Russia to make a deal.
+
+More stalemate or negotiations?
+
+Ukraine's Defense Ministry said last week that its main goal in 2024 is to boost its domestic defense industry in the face of uncertain future supplies from its
+Western allies. It has also changed conscription laws, foreseeing the need to bolster its forces, which are dwarfed in size by Russia's but are more highly
+trained and equipped. Ukrainian President Volodymyr Zelenskyy said last week that the military had asked for up to 500,000 additional conscripts but said he
+needed to hear "more arguments" to support the sensitive and costly proposal.
+</item 23>
+
+<item 24>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+Driven by a confluence of factors, from China’s crackdown on the tech industry to escalating U.S.-China tensions, some of these investors are now turning their
+gaze to opportunities abroad, tracing the footsteps of a new generation of Chinese-founded startups that are expanding overseas.
+
+Between a rock and a hard place
+
+Since their entry into China in the late 1990s, American venture capital firms, led by powerhouses like Sequoia Capital, IDG Capital and GGV, have played a
+major role in funding high-risk, high-reward startups in the country’s consumer internet sector. This two-decade-long mutually beneficial relationship, however,
+now hangs in the balance as changes at home and abroad diminish the pool of investment opportunities for outside financiers.
+
+In recent years, Beijing’s sweeping tech crackdowns have introduced a new sense of uncertainty to investors.
+</item 24>
+
+<item 25>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+He said he never conceived of the influence the site would one day hold — when Reddit became a multibillion-dollar business with hundreds of millions of users.
+That thought would have been “ludicrous,” he said. And he certainly never could have imagined his startup could have become so successful that it could affect
+elections and democracies.
+
+“To… think Oh my god, I’m gonna be so successful, it could have a tremendous impact on democracy would take a level of delusion that even I, as a first-time
+CEO, just couldn’t have,” he noted. “Was that a blind spot? Absolutely,” he admitted.
+
+Ohanian identified that another part of the problem is that there are more people online today than early tech founders may have imagined. Though he’s glad that
+access to the technology has broadened, that has come with many complications.
+</item 25>
+
+<item 26>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+At the same time, domestic RMB funds play an increasing role in funding critical tech sectors. Zhipu AI, one of China’s most ambitious challengers to OpenAI,
+for instance, raised financing in RMB instead of USD.
+
+Even having the Chinese branches of famed American VCs listed on the cap table might deter U.S. investors from funding Chinese founders in their backyard. Local
+investors are now shunning Chinese “links”, of which definition is ever evolving and broadening, at all costs.
+
+The country’s USD investors continue to deploy capital in industries that aren’t in the crosshairs of U.S.-China competition, but overall, their activity has
+dwindled significantly due to the changing regulatory and geopolitical currents, coupled with a slowing economy. The year 2022 saw just $14.5 billion invested
+in Chinese companies by U.S.-headquartered VCs, compared to $45.4 billion the year before, according to a report from research firm PitchBook.
+</item 26>
+
+<item 27>
+U.S.-China relations are now more about crisis prevention (Cnbc | World Business News Leader, 2023-11-13T23:46:00+00:00)
+He added that "the two leaders may pledge to cooperate and coordinate on providing humanitarian aid to Gaza, ensure smooth passage of grain through the Black
+Sea, and support postwar reconstruction in Gaza and Ukraine." The U.S. remains China's largest trading partner on a single-country basis. However, Shen pointed
+out that trust between the U.S. and China is still quite low. "No one believes what [the other] says now," she said.
+
+watch now
+
+Paving the way
+
+Goodwill efforts have increased in the weeks leading up to the planned summit on Wednesday local time between Biden and Xi in San Francisco, alongside the
+Asia-Pacific Economic Cooperation meeting. For example, more direct flights between the U.S. and China are resuming from a low base. Chinese commodity importers
+in October signed the first agreements since 2017 to buy U.S. agricultural products in bulk, according to a release from the U.S. embassy in Beijing.
+</item 27>
+
+<item 28>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Aid and politics
+
+Another year of war in Europe has undoubtedly drained Western military resources and the political appetite to maintain massive amounts of military aid for
+Ukraine. Ongoing funding for Ukraine is far from secure in 2024 given the fact that the U.S. presidential election could herald a seismic change in the attitude
+toward and support for Kyiv. Specifically, all eyes are on former U.S. President Donald Trump, the Republican front-runner, who cultivated close relations with
+his Russian counterpart Vladimir Putin during his presidency. There are concerns that, given Trump's previous good relations with Moscow and "America First"
+policy, aid for Ukraine could be shelved rapidly. Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote. "I
+think it's important to understand the extent to which Ukraine is reliant on the U.S. right now, because it's quite significantly more reliant on the U.S.
+</item 28>
+
+<item 29>
+U.S.-China relations are now more about crisis prevention (Cnbc | World Business News Leader, 2023-11-13T23:46:00+00:00)
+embassy in Beijing. China's Ministry of Commerce last week announced it was gathering information in an effort to address unequal treatment of foreign
+businesses in China versus domestic ones — a longstanding business complaint. However, on the cultural front, the three remaining giant pandas in the U.S. on
+loan from Beijing returned to China last week due to an expiring contract. China has lent pandas to countries around the world as a diplomatic tool.
+</item 29>
+
+<item 30>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Ray reassured me that I was not crazy. Google results today do feel different from how they felt just five or six years ago for two major reasons. The first was
+Google’s response to the disinformation panic around the 2016 election, which involved questioning the notion that the most reliable information could be chosen
+by a form of popularity, meaning how many links a site received from other sites. As a result, the algorithm seemed to change its approach to links, especially
+when it came to news and sites offering legal, financial, or health advice, and instead paid more attention to what Google came to call E-E-A-T: experience,
+expertise, authoritativeness, and trustworthiness.
+
+“E-E-A-T has had a pretty big impact on what types of results you see,” Ray told me. She’s done extensive (and fascinating) research around how certain sites
+have fared under these new guidelines: Urban Dictionary, down! Mayo Clinic, up! Some people consider EEAT part of what’s making results better than ever.
+</item 30>
+
+<item 31>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+right now, because it's quite significantly more reliant on the U.S. than it is on the EU," Sam Cranny-Evans, defense analyst at the Royal United Services
+Institute defense think tank, told CNBC. "If the U.S. election goes in a way that is not in Ukraine's favor, coupled with the fact that the EU is not really
+stepping up to the plate — it's ammunition production is so far off what it should have been by now to give Ukraine a hope of surviving and a hope of victory —
+it's not a very cheery prediction for 2024."
+
+Good chemistry: President Donald Trump and Russian President Vladimir Putin shake hands during a joint press conference after their summit on July 16, 2018 in
+Helsinki, Finland. Chris McGrath | Getty Images News | Getty Images
+
+Rumblings of discontent over continuing Ukraine aid have been heard in some Republican quarters for months now, as well as in Eastern Europe. Former U.S.
+</item 31>
+
+<item 32>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+VCs fear that their portfolio companies might encounter a fate akin to that of Ant Group, whose colossal initial public offering was called off, and Didi, which
+weathered an extensive data security probe that eventually led to its delisting from New York. With China tightening its grip on overseas IPOs, investors who
+once relied on taking Chinese firms public in the U.S. are no longer assured of an exit channel.
+
+In the meantime, Washington has stepped up restrictions on the flow of U.S. money into China amid an escalating tech war between the two superpowers. In August,
+President Joe Biden signed an executive order barring U.S. investments in three strategically critical sectors in China — artificial intelligence, quantum
+computing and semiconductors.
+
+As USD funds in China await further clarity on the scope of the ban, they are practicing more discretion than ever before. They slow down capital deployment
+even amidst a global AI fervor that has given rise to a parallel AI universe in China.
+</item 32>
+
+<item 33>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+A massive strike by Israel in Gaza, potentially killing civilians in collateral damage, may attract more of the Middle East countries, including the de-facto
+leader Saudi Arabia to raise serious issues against Israel on humanitarian grounds. It will surely slow down the deal between Saudi and Israel that the US was
+facilitating. Besides Gaza, clashes have already been ongoing along Israel’s borders with Syria and Lebanon. If Iran gets dragged into the conflict, on account
+of claims of funding Hamas, this could embroil the entire Middle East in crisis.
+
+In this scenario, we see a major upward pressure on world inflation, on account of disruption in crude oil and world trade logistics.
+
+Possible disruption in crude and trade logistics
+
+Even before the Hamas attack, Saudi Arabia and Russia further cut oil production, in an already tight supply market. Iran is a big incremental supplier of oil,
+contributing 3 per cent to the global supply and any escalation risks taking energy prices higher. For security reasons, Israel has already told Chevron to shut
+down its offshore energy platform.
+</item 33>
+
+<item 34>
+India to be one of world's fastest growing economies over next decade (Zee Business, 2023-10-14T12:17:33+00:00)
+China's “decline,” as some have begun to call the conclusion of the country's four-decade-long economic boom, opens new opportunities for the Indian economy and
+other developing and emerging countries.
+
+Earlier this year, India reached another milestone when its population officially surpassed that of China, which had been the world's most populous country for
+more than 300 years.
+
+While China's shrinking, rapidly aging population is likely to impede economic growth and may curtail its geopolitical ambitions, India -- one of the world's
+youngest countries, with a median age of 28.2 -- is poised to reap a huge demographic dividend, the article said.
+
+But the driving force behind India's emergence as a major global power is its rapid economic growth. While India's gross domestic product is still smaller than
+China's, the country is currently the world's fastest-growing major economy and is projected to account for 12.9 per cent of global growth over the next five
+years, surpassing the United States' 11.3 per cent share, the article said.
+</item 34>
+
+<item 35>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Anatolii Stepanov | Afp | Getty Images
+
+"We're in this situation now where if there's not a clear winner, there's going to be a stalemate, and there's going to be, perhaps, a future frozen conflict.
+What can tilt the balance, in my view, is if the Ukrainians are not resupplied and they're not re-funded and they don't get the equipment and people that they
+need. Then this war could tilt to the Russians," Twitty noted.
+
+Expectations not met
+
+A year ago, Ukraine's international military support was solid with NATO pledging to support Kyiv for "as long as it takes" as it defended itself against
+Russia's invasion launched in February 2022. Over the summer, however, the challenge facing Ukraine's forces was glaringly obvious as they struggled to break
+through heavily fortified Russian positions and lines of defenses along a swathe of the 600-mile-long front line across the southern and east of the country.
+</item 35>
+
+<item 36>
+U.S.-China relations are now more about crisis prevention (Cnbc | World Business News Leader, 2023-11-13T23:46:00+00:00)
+U.S. President Joe Biden shakes hands with Chinese President Xi Jinping as they meet on the sidelines of the G20 leaders' summit in Bali, Indonesia, November
+14, 2022. Kevin Lamarque | Reuters
+
+BEIJING — After another rocky year of U.S.-China tensions, the two countries' presidents are set to meet this week in person for the second time since Joe Biden
+took office. It will be a rare summit before the U.S. presidential election cycle kicks off in earnest. Taking a tough stance on China, the second-largest
+economy in the world, has become one of the few areas of bipartisan agreement. Biden plans to run for reelection. "The focus will be on expanding dialogue in
+order to low[er] tail risks in the relationship and prevent a crisis that neither leader is looking for," said Michael Hirson, head of China Research at 22V
+Research. "Flashpoints such as Taiwan and the South China Sea need to be managed carefully," he said.
+</item 36>
+
+<item 37>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Away from the battlefield, military experts said that the trajectory the Russia-Ukraine war takes in 2024 will mostly be dictated thousands of miles away in the
+U.S., Ukraine's largest military supporter, and whether aid declines in the run-up — and following — the U.S. presidential election. "War is an uncertain
+endeavor," retired Army Lt. Gen. Stephen Twitty, former deputy commander of the U.S. European Command, told CNBC. "Russia can win the war, or the Ukrainians can
+win the war. And, as you're seeing things now, if you really think about it, what has been achieved this year? Very little has been achieved by Russia, and you
+can say the same thing for the Ukrainians," he said.
+
+Ukrainian servicemen take part in a military training exercise not far from front line in the Donetsk region on June 8, 2023.
+</item 37>
+
+<item 38>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Billionaire investor Paul Tudor Jones told CNBC the current geopolitical environment was the “most threatening and challenging” he’d ever seen following Hamas’s
+attack on Israel over the weekend and predicted the US will enter into a recession early next year. The shekel regained its footing as the central bank duelled
+short sellers to contain the market fallout from Israel’s conflict with militant group Hamas. European gas prices jumped, with Finland on high alert as it
+suspects a gas pipeline leak in the Baltic Sea was caused by a deliberate act of destruction, fuelling concerns about the safety of Europe’s energy
+infrastructure. Base metals sank amid fresh fears over property turmoil in China. Tweet of the day
+
+Quote of the day “This is as strong a level of confidence in the market that we have seen since before COVID,” said The Leasing Agency group managing director
+Terence Yeh as the return of international students and a growing number of apartments in inner-city Melbourne provides a shot in the arm for CBD hospitality
+businesses.
+</item 38>
+
+<item 39>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Right now, the current plot is about the centralization of discourse on a few corporate platforms. The rise of the platforms brings potential to network
+democratic uprisings, as well as buoy authoritarian leaders through post-truth memes and algorithms optimized to dish out anger and hatred. This is a more
+challenging story to narrate, because the setting is everywhere. The story unfolds in our bedrooms while we should be sleeping or waking up, filling the most
+quotidian moments of waiting in line in the grocery store or while in transit. The characters are us, even more intimately than with climate change. It makes it
+hard to see the shape and meaning of this story. And while we are increasingly aware of the influence that shifting our media and social lives onto big tech
+platforms has on our democracy, less attention is devoted to the influence this has on our ability to respond to climate change.
+
+Think about these three forces meeting — climate change, authoritarianism, the Internet. What comes to mind?
+</item 39>
+
+<item 40>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+The world can ill-afford another full-fledged war, when economies are already battling high inflation and interest rates, an ongoing Russia-Ukraine war and now,
+a slowing China. This is precisely why many countries are trying to restrict any escalation in the ongoing Israel-Hamas conflict. The non-escaltion of the
+current hostilities seems to be the base case presumed by the Indian stock market presently, going by the market movement in the last week.
+
+The US treasury secretary also stated that the current conflict is not likely to significantly impact global economic outlook. History too shows that the these
+conflicts tend to have limited impact on markets. We studied the history of conflicts between Israel and Hamas, and found that these tend to have limited impact
+on global financial markets, across crude oil, US 10-year yields, US equities and market volatility (see charts).
+
+However, as far as trade goes, there may be some impact. In 2022-23, Israel’s share in exports from India stood at 1.87 per cent.
+</item 40>
+
+<item 41>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+The twenty-first century is also about the struggle against new and rising forms of authoritarianism. In this narration, the twenty-first century began with a
+wave of crushed democratic uprisings and continued with the election of authoritarian leaders around the world who began to dismantle democratic institutions.
+Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with
+Russia’s most recent invasion of Ukraine. The plot is less clear, given the failure of democracy-building efforts in the twentieth century. There is a faintly
+discernable storyline of general resistance and rebuilding imperfect democracies.
+
+There’s also a third story about this century: the penetration of the Internet into every sphere of daily, social, and political life. Despite
+turn-of-the-century talk about the Information Age, we are only beginning to conceptualize what this means. Right now, the current plot is about the
+centralization of discourse on a few corporate platforms.
+</item 41>
+
+<item 42>
+Trump and the GOP are trying to drive a wedge between autoworkers and EVs (The Verge, 2023-09-28T16:37:13+00:00)
+Affordability is still a major concern, but vehicle prices are going up across the board, both for EVs and for gas vehicles. And automakers are still losing
+billions of dollars each year on EVs, with their gas-vehicle profits being redirected into the enormous investments needed to fund the transition.
+
+What is clear is that nothing is likely to stop the EV train now that it’s in motion. The automakers are committed, and UAW leadership wants to ensure that
+workers get to share the profits. And China looms large over everything, with the country producing the bulk of the components that go into EVs — a major
+concern of the union.
+
+What isn’t clear is whether Trump’s plan to drive a wedge between autoworkers and environmentalists will pay off. In his speech Wednesday, Trump tried to play
+up the division, heaping blame on Biden and the Democrats for the uncertainty around EVs.
+
+“The auto industry is being assassinated,” Trump said, according to Detroit News.
+</item 42>
+
+<item 43>
+U.S.-China relations are now more about crisis prevention (Cnbc | World Business News Leader, 2023-11-13T23:46:00+00:00)
+"This translates into a stalemate—and, in fact, spiraling tensions—that go even further than the typical 'security dilemma,' in which each side takes steps to
+defend itself which in turn generate insecurity for the other, who then responds in kind," the report said.
+
+The immediate aftermath of the [Biden-Xi] meeting is likely to mark a cyclical high point for bilateral relations Gabriel Wildau Teneo
+
+Sentiment began to improve over the summer after U.S. Secretary of State Antony Blinken finally made a high-stakes visit to Beijing in June, followed by visits
+from several other senior officials. In early October, U.S. Senate Majority Leader Chuck Schumer and five other U.S. senators representing both the Republican
+and Democratic parties had an 80-minute meeting with Chinese President Xi Jinping. But both sides are still waiting for more action. "The current trend in
+China-U.S.
+</item 43>
+
+<item 44>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Though he’s glad that access to the technology has broadened, that has come with many complications.
+
+“I don’t like the idea that the internet I’m so nostalgic for was actually an ivory tower,” he said, but on the flip side, he said, we’re all exposed to more
+people, in real-time, than we could have ever fathomed. And that can put people at odds with one another and with everyone’s different versions of the truth —
+even if their truth is believing in something as far-fetched as the earth being flat, he said, pointing to one example that has a following on Reddit.
+
+Meanwhile, asking platforms like Facebook, Twitter, or Reddit to be in charge of verifying truth and accuracy is a difficult task, he said. Ohanian also called
+out TikTok as “an arm for the Chinese government” that’s really good at “feeding us what we want, when we want it” — in other words, not always a fountain of
+truth, either.
+</item 44>
+
+<item 45>
+Check Point sees 'fantastic' year ahead even as rival report disappointing billings (Seeking Alpha, 2023-11-18T13:56:00+00:00)
+The financial damage from cybercrimes will reach an astronomical $10.5 trillion by 2025. As global economies go, that would rank third behind only the U.S. and
+China.
+
+But what’s bad for global conglomerates and the average person could be an opportunity for cybersecurity firms like Check Point Software (NASDAQ:CHKP).
+
+Even as rivals like Palo Alto Networks (PANW) and Fortinet (FTNT) cite an uncertain macroeconomic environment for weak billings forecasts, the need for
+cybersecurity is clearly growing. Global cybercrime damage costs are expected to increase 15% annually over the next two years, according to Cybersecurity
+Ventures.
+
+“There’s never been a better time to be in cyber,” Check Point (CHKP) President Rupal Shah Hollenbeck said in a Zoom interview this week. “It’s fortunate in
+that organizations are understanding the business value of cybersecurity in a really big way. Unfortunately, it’s because there are more hacks out there than
+ever before.”
+</item 45>
+
+<item 46>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+It replied with an automated email reading: “Busy now, please check back later.”
+
+Update: X’s global government affairs account has posted a thread responding to the EU’s criticism in which it claims the data shows other social networking
+services saw greater changes in subscriber growth and total growth for pro-Kremlin accounts, and for engagement and volume; it also writes that: “More than 700
+unique Community Notes have appeared on posts related to the Ukraine conflict. Through Community Notes’ new ‘Notes on Media’ feature, which automatically
+matches notes on an image or video to other posts that contain matching media, these notes appeared on over 1,200 additional posts. These notes are in numerous
+languages and are written specifically for local audiences.”
+
+Back in April, X/Twitter was named as one of 19 larger platforms that face the strictest level of regulation under the EU’s DSA.
+</item 46>
+
+<item 47>
+With hopes of victory fading, Ukraine's fight against Russia could get even harder in 2024 (Cnbc | World Business News Leader, 2023-12-25T23:36:00+00:00)
+Former U.S. Ambassador to NATO Kurt Volker told CNBC he believes American and EU aid packages for Ukraine will be approved come January, saying he believed this
+funding would tide Ukraine over for another year, militarily. Volker said that aid packages must include more advanced weaponry for Ukraine, however, like F-16
+fighter jets which have been pledged by Norway, Denmark and the Netherlands. Ukrainian pilots are beginning their training on the jets now but it could be a
+number of months before they're deployed in Ukraine. The U.S. is not providing F-16s to Ukraine but has authorized allies to provide their own jets. "A couple
+of things ought to change," Volker told CNBC. "We ought to lift restrictions on the weapons we're providing. We still don't provide the longest-range missiles
+and we still have not delivered any Western aircraft in Ukraine yet. Those things have to happen.
+</item 47>
+
+<item 48>
+Trump and the GOP are trying to drive a wedge between autoworkers and EVs (The Verge, 2023-09-28T16:37:13+00:00)
+Workers may agree with Trump that EVs are too expensive or that the charging infrastructure isn’t up to snuff, but they also don’t want to see it stopped dead
+in its tracks. They also have concerns about Biden’s efforts to accelerate EV production by providing incentives to automakers to retrofit factories and to car
+buyers through generous tax credits.
+
+“We’ve got a lot of people that are frustrated, just with all of them,” Aaron Westaway, a UAW member from outside Detroit, told E&E News. “Nobody’s happy with
+Trump, nobody’s happy with Biden.”
+
+The concerns among union workers reflect the attitudes of most Americans, writ large. According to Pew Research, 50 percent of US adults say they are unlikely
+to buy an EV, while 38 percent said they were likely to consider a battery-powered vehicle. Concerns about charging and range are at the top of the list. But
+environmental concerns also rank high, with many people saying they would consider an EV as a way to reduce carbon emissions.
+</item 48>
+
+<item 49>
+Gen Z just saw the worst war in Israel in 50 years break out all over the internet, but they were raised on 'disturbing images' (Fortune,
+2023-10-10T20:17:09+00:00)
+6 insurrection—an event unseen for centuries in American politics. Then there’s the first major European ground war since World War II in Ukraine, not to
+mention market crashes in 2008 and 2020 that recall the Great Depression itself. As the first digitally native generation, Gen Z is experiencing it all through
+videos, images, and articles online, which is shaping their mental health, workplace attitudes, and financial habits in visible ways.
+
+It’s no wonder, this Gen Z reporter notes, that 46% of young workers ages 18 to 26 say that they are regularly so distraught over what is happening in the news
+that they are unable to function at work, according to a 2023 Edelman report. By comparison, 38% of millennials, 24% of Gen Xers, and 19% of baby boomers and
+older generations say the same.
+
+Everything about their behavior communicates that Gen Z is just not okay with it.
+</item 49>
+
+<item 50>
+U.S.-China relations are now more about crisis prevention (Cnbc | World Business News Leader, 2023-11-13T23:46:00+00:00)
+But both sides are still waiting for more action. "The current trend in China-U.S. relations is one of easing," said Shen Yamei, director of the department for
+American Studies and an associate research fellow at the China Institute of International Studies. "This easing is a relaxation of the atmosphere," she said in
+Mandarin, translated by CNBC. "No actual changes have occurred." She pointed out, however, that the establishment of many new communication channels means there
+is much to look forward to.
+
+Export controls
+
+During this week's meeting, Shen expects the Chinese side to bring up U.S. export controls and investment restrictions. The Biden administration has restricted
+U.S. companies from selling high-end tech, primarily in semiconductors, to Chinese companies and sought to curb U.S. investments in such Chinese tech. U.S.
+Commerce Secretary Gina Raimondo in a trip in August had "said no" to China's requests to reduce the controls and called the them "matters of national
+security."
+</item 50>
+=== END ITEM id=b4f478073d6c2aba ===
+
+=== ITEM id=a910ee457968de03 ===
+Gold sentences and facts:
+Sentence 0: On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.
+  Fact 0.0: On October 12, 2023, Israel warned 1.1 million Gaza residents to leave for the southern region.
+  Fact 0.1: The warned Gaza residents were in the northern section of the enclave.
+  Fact 0.2: Israel issued the warning in advance of a potential ground invasion.
+Sentence 1: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 1.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"How come they never knew Hamas militants planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate heavily? We wait to see how it goes
+but it will be messy."
+
+Mossad is overated how comes they never knew this Hamas militants and had planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate
+heavily?We wait to see how it goes but it will be messy. pic.twitter.com/W5vpoylus2 — Ben Muasya. (@muasya_ben) October 7, 2023
+
+Another user said that no one can carry out such a major attack against Israel without intelligence support. "Who gave Hamas Intelligence? It was as if the
+entire Israeli army and the Mossad were asleep."
+</item 1>
+
+<item 2>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+The US had put stock in Israeli intelligence regarding Hamas in recent years and hadn’t monitored it independently.
+
+The human factor
+
+The technological concept is, of course, not limited to the border fence, or to intelligence, and is not just a product of Operation Protective Edge. For years,
+the IDF has been praising the ethos of a small and smart army, implicitly if not explicitly. In recent years, it has publicized countless technological projects
+and present itself as a high-tech army: establishing a technological division, called Shiloh, to coordinate the development of technologies for all branches of
+the army, and with the Directorate of Defense Research & Development (IMOD DDR&D or MAFAT).
+</item 3>
+
+<item 4>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+It may be a relatively simple effort, like waking the troops up at 4:00 am, placing them position, and putting an aircraft in the air for a few hours. You don’t
+even need pilots - unmanned aircraft operators are enough. There’s no need to mobilize reserves or convene a cabinet. Every commander is allowed to give
+instructions to those under him - if that would have happened, everything would be different.
+
+"This is exactly the same type of failure that was at the basis of Israeli thinking at the outbreak of the Yom Kippur War," Eiland continues. "After information
+was gathered that indicated the intentions of the Egyptians and Syrians to launch an attack, they decided not to mobilize reserves because the cost was high.
+But why didn't they order the regular army to get ready? They thought the chance of war breaking out was low, they thought it was an exercise, but they didn't
+calculate the potential damage, they didn't imagine how serious the extreme scenario could be."
+</item 4>
+
+<item 5>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 5>
+
+<item 6>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+At that time, the Ministry of Defense claimed it would be integrated into the "Smart and Lethal Border" project that was being tested along the northern border
+of the Gaza Strip which, the Ministry of Defense stated, included mobile robots and military drones for carrying out defense missions, without endangering
+soldiers' lives.
+
+At the time of the completion of the fence, Prime Minister Benjamin Netanyahu, then in the opposition, referred mainly to the below-ground aspect, saying that
+"Any time Hamas terrorists have tried to penetrate the border settlements through the tunnels, they were terminated underground. The below-ground barrier
+surrounding the Gaza Strip has already saved many lives." Then-Minister of Defense Benny Gantz said, "The barrier, which is a superior initial technological and
+inventive project that sets an iron wall, sensors and concrete between it and the residents of the south. It provides a sense of personal security that will
+allow this beautiful region to continue to grow."
+</item 7>
+
+<item 8>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+BHARAT is not immune to #terrorism and internal enemies @HMOIndia @PMOIndia @AmitShah — Dr. Jaswant Gandhi 🇮🇳 (@JaswantDr) October 7, 2023
+
+However, some speculated that Mossad knew what was going to happen but let Hamas make a mistake so that Israel could launch a ferocious attack on it. "Mossad
+was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, but they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful," a user said.
+
+#Mossad was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful
+</item 8>
+
+<item 9>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+"Despite the clear threat posed by Gaza, the decision makers preferred to avoid a policy that would mean returning a large part of the country's population to
+the reality of air raids and disrupted daily routines. The bottom line: the Iron Dome did not change the essential strategic situation; as firepower from the
+Gaza Strip developed, so did the terrorist organizations’ ability to control daily life in Israel’s hinterland, hold it hostage, and restrain Israel from taking
+proactive measures against them."
+
+"Why didn't the relative success of the Iron Dome translate into the even more important strategic achievement of restoring Israel's freedom of action against
+Hamas in the Strip?" asks Ortal rhetorically, and names several factors. "The first, like any other operational system, Iron Dome is also not perfect. The enemy
+studies it and develops its own challenges against it, and the decision makers recognized the fact that the State of Israel is not hermetically protected.
+Second, the enormous cost involved in deploying and operating [Iron Dome] batteries significantly impedes a policy based on continuous rounds of violence.
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+It provides a sense of personal security that will allow this beautiful region to continue to grow."
+
+"The concept underlying the construction of an advanced technology fence relates to the Second Lebanon War, when Hezbollah surmounted a high fence with a
+ladder," says Yehoshua Kalisky , senior researcher at Tel Aviv University's Institute for National Security Studies (INSS). "This was the reference scenario.
+There was no thought that they would use aircraft here to cross it or that they would come with a heavy machinery, and simply breach it."
+
+The illusion of superiority
+
+On the morning of Saturday, October 7, the above-ground section of the barrier turned out to be completely insubstantial, as was its fundamental concept of
+defense. Using drones easily purchased on the Internet, Hamas disabled both the cameras transmitting images to control room monitors in real time, and the (See
+and Fire) long distance stationary remote controlled weapon stations (RCWS).
+</item 10>
+
+<item 11>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+The second objective, at the same time, is to exact an… pic.twitter.com/MzKs7tfv4M — Benjamin Netanyahu - בנימין נתניהו (@netanyahu) October 7, 2023
+
+Reacting to this, however, a user said that knowing the proficiency of the Mossad he found the idea of a "surprise attack" to be a willing lie.
+
+Well, you got the war you wanted Beni...at what cost of Israeli lives you don't care. Knowing the proficiency of the Mossad I find the idea of a "surprise
+attack"to be a willing lie on your side of this. https://t.co/35qRvgBJt2 — timm (@timmainsson) October 7, 2023
+
+Ben Muasya, a journalist, said that Mossad is overrated.
+</item 11>
+
+<item 12>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+There had been a second line of defense, observation balloons, but for unknown reasons, all three had stopped working some weeks before the attack, and repairs
+were postponed until "after the holidays."
+
+Israel’s drone warfare fleet, which is capable of jamming signals of a hostile drone, and the attack drone fleet, known for warfare against incendiary balloons,
+also did not work for unknown reasons, and dozens of Hamas drones operated without interruption. The IDF's Iron Beam high energy laser (HEL) interception
+system, which was developed for such cases, among other things, has not yet entered into operational activity after many years of development. All allowed the
+Hamas terrorists to quickly reach the IDF bases along the Gaza border, disable the information and communications technology (ICT) systems, neutralizing the
+ability to call reinforcements without arousing much suspicion at IDF Kirya headquarters in Tel Aviv.
+
+Above all there was a sense of security and belief in technology and the sophisticated barrier’s ability to prevent any form of intrusion.
+</item 12>
+
+<item 13>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+They told themselves, we have B-52 bombers, there's no way we can't win."
+
+Technological sophistication and the massive investment in intelligence means have greatly increased the IDF's visual intelligence gathering capabilities,
+according to former IDF Intelligence Directorate head General (ret.) Aharon Ze'evi-Farkash. "I'm sure it doesn't come at the expense of human sources, but as
+time goes by, gathering visual intelligence is easier than human sources and they bring better results. It's hard to bring in a Palestinian 'Ashraf Marwan,' the
+agent who passed the information to Israel before the Egyptian attack in 1973. It’s a problem because the human source is essential to provide an interpretation
+of the rest of the information that’s received, and to make decisions. Golda knew who Marwan was and expected to hear what he would say about the Egyptian
+deployment in the south." At the same time, according to "The New York Times" a year before the attack, the IDF stopped monitoring Hamas' radio communications
+last year.
+</item 13>
+
+<item 14>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+On Saturday, October 7, for example, suspicious movement in Gaza convinced the Shin Bet head to send a special team to the southern border, but he was unable to
+convince the top IDF echelons to prepare accordingly. To handle those weak signals, Eiland claims, one must use "scenario theory", meaning, taking into account
+scenarios that have a low probability of occurring, but with devastating results should they occur, and the simple way to prepare for them.
+
+Eiland explains: "You detect certain noises on Friday night, but conclude that the probability of an attack is low, let's say only 10%. Those who act only on
+the probability do not consider the question: if this attack happens - will you be able to live with yourself for eliminating this threat? There’s also a third
+consideration, which is ease of effort: what is the effort required of me to prepare for this unlikely but dangerous scenario?
+</item 14>
+
+<item 15>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Shiloh, which is currently subordinate to the Ministry of Defense, was established following State Comptroller reports about the lack of coordination and
+synchronization between the Ministry of Defense and the IDF units; and lead a new border defense concept based on sensors and other technologies for gathering
+intelligence and thwarting infiltration; strengthening the Air Force in the form of additional aircraft and armaments; and strengthening the operational end of
+the regular front units.
+
+All this, while at the same time closing down armored battalions and consolidating helicopter squadrons. Ground force technological capabilities were also
+addressed, such as improved coordination between the infantry and air forces in air-to-ground actions, or identifying terrorists and weapons in an urban
+environment. However, there is a problem at the outset, says, Prof. Eviatar Matania of Tel Aviv University School of Political Sciences, Government and
+International Affairs, and founder and first director general of the Israel National Cyber Directorate: a large gap between the technology and the officers
+expected to implement it as part of the security concept.
+</item 15>
+
+<item 16>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Thirdly, as long as the rockets are intercepted in the skies over Israel, and not the skies over Gaza, the Israeli home front is forced to experience sirens,
+security rooms and shelters, and disrupted routine living. In other words, even the complete success of the Iron Dome left daily life on the home front in the
+hands of the terrorist organizations."
+
+In 2018, Ortal wrote about "the barrier" that, "it would be wrong to assume it will turn out to be more immune than its predecessors. The longer as we delay
+cutting the direct connection between the Hamas rockets and those of our other enemies, who make extensive use of this method of operation, and the idea of
+attacking our territory, the longer we will be condemned to watch from the sidelines and look at their constant enhancement."
+
+A strategic surprise
+
+In the months leading up to October 7, the former head of the Planning Division, Major General (Res.)
+</item 16>
+
+<item 17>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Iron Dome was so successful it not only supported the decision-making process but fundamentally changed it. Up until October 7, it served as a very successful
+plaster to threats to a sovereign state, because what legitimacy would a state leader have for going to war when no citizens were harmed?"
+
+Brigadier General Eran Ortal, until recently the commander of The Dado Center for Interdisciplinary Military Studies, a military research center subordinate to
+the Operations Directorate, also believes that various technological measures such as the Iron Dome, and the barrier, influenced decision-making in Israel. In
+his estimation, these helped the political echelon conduct a policy of military restraint towards the Gaza Strip, which in turn allowed Hamas to strengthen and
+gain offensive capabilities.
+</item 17>
+
+<item 18>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+India shipped goods around $8billion to Israel. Petroleum products account for 65 per cent of the exports, followed by gems and jewellery (15 per cent) and
+electrical machinery (3 per cent). Trade can be adversely impacted if operations at the Israeli ports are disrupted. Fertiliser movement from Israel’s Port of
+Ashdod accounts for 3 per cent of global potash supply. Any disruption on this front will also be a dampener.
+
+But, what if the current hostilities turn into a full-scale conflict?
+
+What supports this proposition is the fact that while there have been many conflicts between Israel and Hamas in the past decades, there have been none of this
+intensity. With at least 1,200 Israelis killed, this has been the biggest single-day killing of Jews since Holocaust, and Israel opposition is also united in
+retaliating. Israel has termed it a ‘War’, formed a war management cabinet with a key opposition member, and vowed to change the look of the ‘Middle East’.
+</item 18>
+
+<item 19>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Therefore, such systems always need what’s known as 'redundancy', i.e. backup systems, to make sure there isn’t a single point of vulnerability through which
+everything could collapse. The Air Force, for example, has several different models of aircraft just for this. Every plane also has several systems to back it
+up."
+
+The Iron Dome paradox
+
+Perhaps more than anything else, the Iron Dome system is representative as the technological response to the threat from Gaza. Matania explains, "The Iron Dome
+was built with the strategic vision of giving decision-makers breathing room, to allow them not to react immediately to the rockets, but to have the flexibility
+to react at the right time, and in the right place, in a range of ways. But some say its success was paradoxical. Iron Dome was so successful it not only
+supported the decision-making process but fundamentally changed it.
+</item 19>
+
+<item 20>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+None of the authorities ever took the risk of relying on advanced technologies."
+
+The fence that, until October 7, separated Israel and the Gaza Strip was completed in December 2021, 60 years after construction of the Berlin Wall began. It
+was intended to protect against a major security threat, but in practice it was much leaner than that. The fence was almost unmanned by soldiers, and relied
+mainly on sensors, above and below ground, surveillance cameras, and vehicle patrols. And, of course, there was no surrounding minefield.
+
+After Operation Protective Edge in 2014 revealed that Hamas forces were able to penetrate the Gaza border settlements at several points via underground tunnels,
+it was decided in 2016 to build a defense line focused on this threat called "the anti-tunnel barrier" that would replace the existing fence.
+</item 20>
+
+<item 21>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 21>
+
+<item 22>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 22>
+
+<item 23>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Truly disturbing acts of terror directed at civilians".
+
+Some of the images coming out of Sderot over the last few hours are reaching degrees of horror that I dont really think I can use words to properly describe.
+Truly disturbing acts of terror directed at civilians. — OSINTtechnical (@Osinttechnical) October 7, 2023
+
+Commenting on the coordinated attack, Rania Khalek, a journalist, said that the strategic planning that must have gone into this against "one of the most
+high-tech occupation and surveillance systems in the world" will be studied by many. "The Israelis must be totally losing it right now."
+</item 23>
+
+<item 24>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Published by Globes, Israel business news - en.globes.co.il - on November 5, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 24>
+
+<item 25>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+The world can ill-afford another full-fledged war, when economies are already battling high inflation and interest rates, an ongoing Russia-Ukraine war and now,
+a slowing China. This is precisely why many countries are trying to restrict any escalation in the ongoing Israel-Hamas conflict. The non-escaltion of the
+current hostilities seems to be the base case presumed by the Indian stock market presently, going by the market movement in the last week.
+
+The US treasury secretary also stated that the current conflict is not likely to significantly impact global economic outlook. History too shows that the these
+conflicts tend to have limited impact on markets. We studied the history of conflicts between Israel and Hamas, and found that these tend to have limited impact
+on global financial markets, across crude oil, US 10-year yields, US equities and market volatility (see charts).
+
+However, as far as trade goes, there may be some impact. In 2022-23, Israel’s share in exports from India stood at 1.87 per cent.
+</item 25>
+
+<item 26>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 26>
+
+<item 27>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas' surprise attack on Israel has shocked many who are now questioning the country's famed intelligence agency Mossad, which is known for its
+intelligence-gathering capability. For some, the belief that Mossad was among the best in the spying world was shattered today when Hamas carried out the
+biggest coordinated attack in Israel and captured some territory in southern Israel. It is not the attack that has surprised people but the scale at which Hamas
+operated and got control of some military bases and soldiers.
+
+Also Read: Israel at war: Hamas cells, military compounds destroyed, US backs Tel Aviv; all you need to know
+
+Younis Tirawi, who reports on Palestinian Affairs, said that Hamas militants had taken over Sderot police HQ and armored vehicles in the town. An analyst wrote
+that some of the images coming out of Sderot over the last few hours were reaching degrees of horror "that I don't really think I can use words to properly
+describe.
+</item 27>
+
+<item 28>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+With the fence as protection, manned deployment for Gaza border settlements was cancelled, (in any case, these had been reduced immediately after Operation
+Protective Edge), units deployed in the area were reduced, replaced with cameras and other electronic means.
+
+"When relying on technology, the expectation is that it will warn of the dangers and threats," Barnea says. "When the thinking is that you don't need soldiers
+because there are monitors, you expect in advance that you will receive the warning about the threat via the technological means and no one imagines a situation
+in which the observation array would be neutralized. On the contrary, it is seen as invulnerable. The problem begins when the enemy is also exposed to these
+means: RCWS are great, they are important and cost millions, but they are visible to everyone, and everyone knows where they are. Once you begin believing that
+the fence will stop all the relevant threats, you think even half a battalion on standby is enough.
+</item 28>
+
+<item 29>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+RELATED ARTICLES Tech experts battle to shut down Gaza financial pipeline
+
+"Overnight, we started receiving hundreds of reports about unusual activity by customers of financial institutions in the State of Israel," she says. Before
+October 7, IMPA received about 100 reports a day dealing with terror financing. That number jumped to about 1,000. "There is a 900% increase in reports on
+terror financing, and we don't waste time, everything happens very, very quickly. As we receive the information, we simultaneously pass it on to the operational
+professionals who locate the money pipelines, and block them. Some information will not necessarily lead to terror financing, but we don’t have time to waste.
+Bank CEOs call and draw our attention to the information they convey to us that warrants special attention."
+
+Has information from banks and financial institutions led to blocking the money pipeline for terrorism?
+
+"There was very high-quality intelligence that we passed on to the security agencies. We don't always know the results."
+</item 29>
+
+<item 30>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 30>
+=== END ITEM id=a910ee457968de03 ===

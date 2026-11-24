@@ -1,0 +1,36 @@
+[
+{"id": "4134c60a64416165", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 22, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 22, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 22, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 42, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 42, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]}
+]},
+{"id": "fccb4da078fb029d", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "where the prosecution and defense could gain ground or fall short in their arguments"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 11, "quote": "what the takeaways were from the opening arguments"}]}
+]},
+{"id": "2fd7e2880eddb899", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "cbca4652fd70aa88", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 15, "quote": "Team props, also known as “game props,” don’t rely on individual players but rather on the team as a whole."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 15, "quote": "Player props, on the other hand, are driven by individual performance."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "team props can range from which team will score the first bucket to the total points scored in a quarter to which team will lead at halftime"}]},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

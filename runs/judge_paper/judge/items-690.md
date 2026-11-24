@@ -1,0 +1,1540 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=c1d675b1ad8b5af6 ===
+Gold sentences and facts:
+Sentence 0: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 0.0: Postponements of such reports could complicate things for the Fed.
+  Fact 0.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+Sentence 1: With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them.
+  Fact 1.0: Inflation is down from its peak two summers ago.
+  Fact 1.1: Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates.
+  Fact 1.2: Wall Street is hopeful that the Federal Reserve could soon turn to cutting interest rates.
+
+Retrieved items:
+<item 1>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 1>
+
+<item 2>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+That growing understanding has sent yields in the bond market to their highest levels in more than a decade, which in turn has undercut prices for stocks and
+other investments. Treasury yields rose again on Tuesday following a mixed batch of reports on the economy. The yield on the 10-year Treasury edged up to 4.55
+per cent from 4.54 per cent late on Monday and is near its highest level since 2007. It’s up sharply from about 3.5 per cent in May and from 0.5 per cent about
+three years ago. One economic report on Tuesday showed confidence among consumers was weaker than economists expected. That’s concerning because strong spending
+by US households has been a bulwark keeping the economy out of a long-predicted recession.
+
+Besides high interest rates, a long list of other worries is also tugging at Wall Street. The most immediate is the threat of another US government shutdown as
+Capitol Hill threatens a stalemate that could shut off federal services across the country.
+</item 2>
+
+<item 3>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That will arrive on Friday. But “if Friday’s report also shows the labour market is cooling, stock investors may worry a little less about indefinitely higher
+interest rates,” said Mike Loewengart, head of model portfolio construction at Morgan Stanley Global Investment Office. A second report on the economy said
+growth in US services industries slowed in September by a touch more than economists expected.
+
+It also offered some hints of sticky pressure on inflation, with prices paid by services companies rising last month at a similar rate as in August. Oil prices
+tumbled on Wednesday to take some heat off inflation. Benchmark US crude fell $US5.01 to settle at $US84.22 per barrel for its worst drop in just over a year.
+It’s been pulling back since, topping $US93 last week. Brent crude, the international standard, lost $US5.11 to $US85.81. Loading Prices for crude had been
+generally charging higher from $US70 during the summer, following announcements of cuts to production by some oil-producing countries.
+</item 3>
+
+<item 4>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+Treasury Wine Estates (down 1.9 per cent) and Woolworths (down 1.2 per cent) dragged the consumer staples sector (down 1.1 per cent) lower. Pilbara Minerals
+(down 2.1 per cent) and Qantas (down 1.5 per cent) were also among the biggest large-cap decliners. The lowdown Stronger iron ore prices helped to bolster the
+local bourse on Monday but not enough to offset the prospect of higher-for-longer interest rates ahead of the Reserve Bank’s meeting on Tuesday. Iron ore
+heavyweights advanced after the iron ore price increased 1.4 per cent overnight with lithium miner Liontown resisting the downward momentum of lithium prices,
+which dropped to the lowest level in two years.
+
+Most sectors traded lower but interest-rate sensitive sectors including healthcare and consumer companies were among the weakest amid expectations that the RBA
+will keep rates on hold in October. The National Australia Bank has forecast another rate hike to 4.35 per cent in November.
+</item 4>
+
+<item 5>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 5>
+
+<item 6>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+The National Australia Bank has forecast another rate hike to 4.35 per cent in November. Elsewhere, Wall Street closed out its worst month and quarter of the
+year with more losses on Friday. The S&P 500 slipped 0.3 per cent and the majority of stocks within the index sank. The Dow Jones fell 0.5 per cent and the
+Nasdaq composite edged 0.1 per cent higher. The Australian sharemarket is set to retreat, with futures pointing to a fall of 38 points, or 0.5 per cent, at the
+open. Solid gains for stocks early on faded as pressure built from within the bond market. After easing earlier in the day on encouraging signals about
+inflation, Treasury yields got back to rising as the day progressed. The yield on the 10-year Treasury yield returned to 4.58 per cent, where it was late
+Thursday, after dipping to 4.52 per cent. It’s again near its highest level since 2007.
+</item 6>
+
+<item 7>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Rising rates have made already stretched big tech valuations look increasingly expensive, with the group remaining the most-crowded trade among fund managers,
+according to Bank of America. That’s prompted some investors to pay up for protection against a sell-off in Alphabet and Microsoft — two of the handful of
+heavyweights responsible for all of the S&P 500 Index’s advance this year. The pain in long-duration growth stocks, fuelled in recent weeks by a relentless
+surge in Treasury yields, is finally on the verge of subsiding. The yield on 10-year Treasuries was little changed at 4.85 per cent overnight. Oil closed at the
+lowest in more than a week amid signs the crude market’s tightness has slackened and the Israel-Hamas war will remain contained for the time being. West Texas
+Intermediate extended Monday’s drop with a 2.2 per cent fall to $US83.59 a barrel, paring most of the gains made after Hamas’ attack on Israel on October 7.
+</item 7>
+
+<item 8>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+The lowdown
+
+Hotter-than-expected inflation data and the prospect of more rate rises in the world’s biggest economy weighed on sentiment in the Australian sharemarket as
+interest-rate sensitive sectors such as IT and consumer discretionary dragged the index lower on Friday. While commodity prices boosted iron ore players,
+company specific news was behind some of the biggest swings. Resmed extended its losses after brokers at RBC downgraded the stock and gold miner Newcrest
+stepped up after investors approved its merger with US gold mining giant Newmont. US stocks slipped on Thursday as the clamps tighten on Wall Street from rising
+yields in the bond market. The S&P 500 was 0.7 per cent lower in afternoon trading and on track to break a four-day winning streak, its longest since August.
+The Dow Jones Industrial Average was down 204 points, or 0.6 per cent, as of 3pm Eastern time, and the Nasdaq composite was 0.8 per cent lower.
+</item 8>
+
+<item 9>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+Stocks have struggled under the weight of soaring Treasury yields in the bond market. High yields undercut stock prices by pulling investment dollars away from
+stocks and into bonds. They also crimp corporate profits by making borrowing more expensive.
+
+The yield on the 10-year Treasury, which is the centrepiece of the bond market, pulled back from its highest level since 2007, down to 4.73 per cent from 4.80
+per cent late on Tuesday. Shorter- and longer-term yields also eased to allow more oxygen for the stock market. Yields fell following a couple of reports
+indicating a slowing US economy. The first suggested hiring by employers outside the government was much weaker last month than expected. On Wall Street, that’s
+currently good news because a cooling job market could mean less upward pressure on inflation. That in turn could convince the Federal Reserve to take it easier
+on interest rates.
+</item 9>
+
+<item 10>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Infratil (down 3.6 per cent), Meridian Energy (down 2.7 per cent) and Resmed (down 2 per cent) were among the biggest large-cap decliners. The lowdown The
+Australian sharemarket shook off a positive lead from Wall Street on Wednesday after hotter-than-expected inflation data raised the prospect of another interest
+rate rise at the Reserve Bank’s next meeting, which would weigh on the equity market. Interest-rate sensitive sectors, including REITS and consumer companies,
+were among the weakest on the local bourse as investors digested the news.
+
+GSFM investment strategist Stephen Miller said the inflation data, taken with the October Reserve Bank board meeting minutes, which revealed the board had “low
+tolerance for a slower return of inflation to target than currently expected”, made the possibility of an interest rate rise from the central bank in November a
+“near certainty”. However, commodity prices supported mining companies as iron ore prices increased 2.9 per cent overnight, bolstering Australia’s iron ore
+giants.
+</item 10>
+
+<item 11>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 11>
+
+<item 12>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 12>
+
+<item 13>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+After the most aggressive monetary-tightening campaign in four decades, academics and economic practitioners are running autopsies on what could have prevented
+the cost-of-living crisis and how to ensure the same mistakes won’t be repeated.
+
+Markets have scrambled to price in high-for-longer interest rates, with a new war in the Middle East adding yet more risk to an already uncertain outlook
+confronting central bankers as they gather for their penultimate meetings of a tumultuous year.
+
+The policy navel-gazing is centering around three debates. How much flexibility central banks can allow in reaching their inflation targets, the effectiveness
+of asset purchases in the policy mix, and the merits of monetary and fiscal coordination.
+
+Bloomberg surveyed economists from around the world to gather views on those three debates. Their verdict: Central banks won’t break their economies in a rush
+to hit inflation targets, QE will be used more sparingly in the future, and fiscal policy risks countering the work of monetary authorities.
+</item 13>
+
+<item 14>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 14>
+
+<item 15>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+It’s again near its highest level since 2007.
+
+Loading Treasury bonds are seen as some of the safest investments possible, and when they pay higher yields, investors are less likely to pay high prices for
+stocks and other riskier investments. That’s a big reason why the S&P 500 dropped 4.9 per cent in September to drag what had been a big gain for the year down
+to 11.7 per cent. Treasury yields have been climbing sharply as Wall Street accepts a new normal where the Federal Reserve is likely to keep interest rates high
+for longer. The Fed is trying to push still-high inflation down to its target, and its main tool of high interest rates does that by trying to slow the economy
+and hurting prices for investments. The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut
+interest rates next year by less than it earlier expected.
+</item 15>
+
+<item 16>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+The stock market has largely been taking its cue from the bond market recently, and weak results announced in the afternoon for an auction of 30-year Treasury
+bonds sent yields of all kinds higher. Higher yields can knock down prices for stocks and slow the economy by making borrowing more expensive. Yields had
+already been on the rise in the morning after a report that showed inflation at the consumer level was a touch higher last month than economists expected. That
+raises worries about the Federal Reserve keeping its main interest rate high for a long time, as it tries to undercut inflation by knocking down investment
+prices and slowing the economy. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it comes to what it will do on November 1.
+The inflation report, though, also had some encouraging nuggets for financial markets underneath the surface. After ignoring prices for food and fuel, which Fed
+officials see as a better predictor of where inflation is heading, prices that consumers had to pay last month were in line with expectations.
+</item 16>
+
+<item 17>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Tweet of the day
+
+Quote of the day “Our view is that in the high likelihood there is another cash rate increase on Tuesday, that is going to be the nail in the coffin for
+consumer confidence,” said CreditorWatch chief economist Anneke Thompson, amid warnings from some economists that another rate rise, as some market watchers are
+predicting, will dampen spending intentions just in time for Christmas. You may have missed The men who built pubs and liquor juggernaut Endeavour Group into
+the world’s largest poker machine operator have triggered a public spat over the future of a business that they say has lost its way.
+</item 17>
+
+<item 18>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“Everybody has one eye on the Middle East conflict and one eye on what’s happening with bond yields. The decline in bond yields is the key driver today,” said
+John Praveen, managing director & co-chief investment officer at Paleo Leon. Loading While the Fed’s dovish comments were helping stocks on Tuesday and
+investors were being sanguine about the Middle East, Praveen said that view could change if, for example, the fighting spread to other countries in the region.
+“If tensions escalate bond yields might decline further because they’re a safe haven, but equities would sell off in that instance because of increased
+uncertainty and risk aversion,” he said.
+
+The Dow Jones Industrial Average rose 0.4 per cent, to 33,739.30, the S&P 500 gained 0.5 per cent and the Nasdaq Composite added 0.6 per cent. All 11 major S&P
+500 sectors were advancing with materials and consumer staples leading gains, while technology was the slowest gainer.
+</item 18>
+
+<item 19>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+She recommends they be ready to react preemptively, even when inflation hasn’t yet spun out of control.
+
+They may be called into action soon on that front, should an escalation in the conflict in the Middle East hit oil deliveries.
+
+When the next big global slowdown comes, though, flexibility may be needed the other way. Europe’s eight-year experiment with negative rates ended with mixed
+reviews last summer as to whether it was all worth it.
+
+The Bank for International Settlements argues that there’s room for greater tolerance for moderate shortfalls even if they’re persistent, because “low-inflation
+regimes, in contrast to high-inflation ones, have self-stabilizing properties.”
+
+Rethinking Quantitative Easing
+
+With a more flexible approach to those 2% targets, monetary policy after the 2008 financial crisis would have looked very different in many parts of the world.
+</item 19>
+
+<item 20>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+They also continued to decelerate from earlier months. A second economic report from the morning likewise offered both encouragement and caution for financial
+markets. It said slightly fewer US workers than expected applied for unemployment benefits last week. On one hand, it indicates a job market with few lay-offs,
+which means strength for the overall economy. But it could also be adding fuel to keep upward pressure on inflation.
+
+After the reports, the 10-year Treasury yield rose to 4.7 per cent from 4.56 per cent late Wednesday. The two-year Treasury yield, which more closely tracks
+expectations for the Fed, climbed to 5.06 per cent from 4.99 per cent. Yields are still down slightly for the week so far. After jumping last week to their
+highest levels in more than a decade, yields regressed following speeches that investors saw as hints that the Fed may not raise its main overnight interest
+rate further.
+</item 20>
+
+<item 21>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+Friday’s economic data shows that not only was inflation a touch cooler than expected in August, so was growth in spending by US consumers. That can be a
+positive for inflation because it means not as many dollars are pouring into purchases. That in turn could give companies less encouragement to try to raise
+prices further. But it may also dent what’s been a big driver keeping the US economy out of a recession.
+
+“It came to a boil during a hot summer, and the temperature is really starting to come down,” said Brian Jacobsen, chief economist at Annex Wealth Management,
+of spending growth by US consumers. “Higher energy prices, student loan debt repayments and real disposable incomes that have been on a declining trajectory
+since June doesn’t bode well.” Oil prices have jumped to their highest level in more than a year, which is pressuring the economy by raising fuel costs for
+everyone. A barrel of US crude sank 92¢ Friday to settle at $US90.79, but it’s still up sharply from $US70 in June.
+</item 21>
+
+<item 22>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 22>
+
+<item 23>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Dow Jones Industrial Average gained 222.24, or 0.7 per cent, to 34,061.32, and the Nasdaq composite jumped 184.09, or 1.4 per cent, to 13,478.28. Stocks
+surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation
+under control. A report on Friday underscored that pressure is easing on inflation after it showed employers hired fewer workers last month than economists
+expected. It’s a stunning turnaround from just a week ago, when Wall Street was reeling after the S&P 500 had fallen 10 per cent below its high point for the
+year. That sent Wall Street’s main index into what investors call a “correction.” Since then strong profit reports helped drive some stocks to towering gains.
+Generac, a maker of back-up generators, soared nearly 28 per cent for its best week since its stock began trading in 2010.
+</item 23>
+
+<item 24>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The laggards On the losing end, energy companies (down one per cent) weighed down the index. Woodside (down 0.8 per cent), Santos (down 0.4 per cent) and Ampol
+(down 1.2 per cent) dropped, along with coal miners Yancoal (down 1.7 per cent) and Whitehaven (down 2 per cent). Lynas Rare Earths (down 3.1 per cent) was the
+biggest large-cap decliner, while industrials companies (down 0.2 per cent) including Computershare (down 2.9 per cent), Seven West Holdings (down 1.9 per cent)
+and Worley (down 1.3 per cent) were also weaker. The lowdown
+
+TMS Capital portfolio manager Ben Clark said the big news for markets on Monday was the trading update from Westpac, which he said led a resurgence in the
+banking sector’s performance.
+</item 24>
+
+<item 25>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 25>
+
+<item 26>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 26>
+
+<item 27>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+The Australian dollar was US64.20¢ at the close as the US dollar fell for a fifth straight day, its longest losing streak since July. ‘Everybody has one eye on
+the Middle East conflict and one eye on what’s happening with bond yields.’ John Praveen, managing director at Paleo Leon The 10-year Treasury yield came off
+its 16-year peak, on track for its steepest single-day drop since May, as trading resumed in the US bond market, which had been closed for a holiday on Monday.
+Ten-year yields tumbled as much as 18 basis points to 4.62 per cent. Fed swaps currently show about a 60 per cent chance the Fed will stay on hold in December,
+compared with 60 per cent odds on another interest rate rise by then, just a week ago. But while oil prices eased after Monday’s rally, investors were still
+closely monitoring developments the Middle East.
+
+Israeli air strikes attacked Gaza on Tuesday, razing entire districts in the densely populated and impoverished enclave.
+</item 27>
+
+<item 28>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 28>
+
+<item 29>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+That’s reviving questions about whether central banks can deliver price stability all on their own.
+
+“If we were designing optimal policy arrangements from scratch, monetary and fiscal policy would both have a role in managing the economic cycle and inflation,
+and that there would be close coordination,” Philip Lowe said in his last speech as Australian central bank governor in September.
+
+Economists surveyed by Bloomberg predict fiscal policy will somewhat counteract the Fed’s efforts to rein in inflation in the US.
+
+“It’s true that there are circumstances where working hand in hand and supporting each other has proved helpful,” ECB President Christine Lagarde told a panel
+discussion in June at the institution’s annual economic forum.
+
+Fed Chair Jerome Powell, who sat to her right, signaled he wasn’t ready to rely on that kind of cooperation. “Our assignment is to deliver price stability kind
+of regardless of the stance of fiscal policy.”
+
+Central bankers warn that any failure to scale back fiscal spending risks coming at the cost of yet higher interest rates.
+</item 29>
+
+<item 30>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+Too much strength would give inflation more fuel, but too little would mean a recession.
+
+With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest
+rates and could soon turn to cutting them. That could help the economy avoid a recession and give a boost to all kinds of investment prices. Investors have been
+looking for a slowdown in the job market in particular. The hope is that it can cool more through employers cutting back on open positions than on employers
+laying off workers. Tuesday’s report showed that employers advertised just 8.7 million jobs on the last day of October, down by 617,000 from a month earlier. In
+the bond market, US Treasury yields continued to sag further from the heights they reached during late October. The yield on the 10-year Treasury fell to 4.18
+per cent from 4.26 per cent late on Monday, offering more breathing space for stocks and other markets.
+</item 30>
+=== END ITEM id=c1d675b1ad8b5af6 ===
+
+=== ITEM id=73b8e68b94c4ca73 ===
+Gold sentences and facts:
+Sentence 0: It was Bankman-Fried’s decision, she said, as he was the CEO of FTX.
+  Fact 0.0: The speaker said it was Bankman-Fried's decision.
+  Fact 0.1: Bankman-Fried was the CEO of FTX.
+Sentence 1: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 1.0: The second week of the trial's standout testimony came from Caroline Ellison.
+  Fact 1.1: Caroline Ellison is Alameda Research's former CEO.
+  Fact 1.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 1.3: Caroline Ellison claimed the $14 billion was used to repay debts to lenders.
+  Fact 1.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 1.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense argued that the FTX founder acted in good faith.
+  Fact 2.2: The defense argued that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense argued that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Whatever records the Southern District of New York has for the transactions will be shown.
+
+“What conversations happened between him and his co-conspirators that are now cooperating against him?”
+
+The second part is where all the drama is likely to come, says Christopher LaVigne, a litigation partner and co-chair of the cryptocurrency practice at the law
+firm Withers. Prosecutors have to connect those transactions to Bankman-Fried, show that he knew what he was doing was wrong, and prove that he lied about it
+anyway.
+
+“What was he saying to his parents and his other advisors about this?” LaVigne says. “What conversations happened between him and his co-conspirators that are
+now cooperating against him?”
+
+To further establish intent, the government can use Bankman-Fried’s own words. The indictment calls Bankman-Fried’s tweets in November 2022 “false and
+misleading.”
+
+“We had him going out directly to the internet,” LaVigne says.
+</item 1>
+
+<item 2>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 2>
+
+<item 3>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 3>
+
+<item 4>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+The trial of Sam Bankman-Fried is likely to be more consequential than just whether the man himself is found guilty. Depending on what evidence is introduced
+during the trial, it could be rough for the entire crypto industry.
+
+“How much damage can this trial do to the already beaten-down reputation of the industry at this point?” asks Yesha Yadav, a law professor at Vanderbilt
+University. “This trial is going to be an excruciating moment for the industry because no one knows what kind of evidence might come out.”
+
+Bankman-Fried, the founder of FTX and Alameda Research, is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy
+charges. FTX was a failed cryptocurrency exchange founded in 2019. According to a now-deleted profile from FTX investors Sequoia Capital, FTX was founded
+because of Bankman-Fried’s frustration with other exchanges when he was running Alameda Research, his crypto trading firm.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 5>
+
+<item 6>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 6>
+
+<item 7>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Sure, Sam Bankman-Fried’s trial has revealed that FTX was basically a seething mass of scams. But it has also revealed how Bankman-Fried blew up the lives of
+the people who are closest to him.
+
+Of course everyone who had money trapped on the FTX exchange when it collapsed — as the result of Bankman-Fried’s trading firm Alameda Research purloining its
+customers’ funds — had their lives altered. Even if they are made whole by the bankruptcy proceedings, that’s still money that they should have had access to at
+any time they wanted it. That may mean houses that weren’t purchased, medical procedures that were left undone, and life savings lost.
+
+There is a simultaneous drama of ruined lives playing out in the courtroom
+
+Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges. As we near the end of the prosecution’s case, I have been
+struck by how bizarre it all is.
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 8>
+
+<item 9>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 10>
+
+<item 11>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 11>
+
+<item 12>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Oh, but he was testifying to Congress about keeping customer funds safe.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+Who was making decisions to spend $8 billion of customer funds? Bankman-Fried couldn’t recall knowing anything about it. Were there rules or requirements for
+how money borrowed from FTX would be returned? Were there rules for risk management? “I was concerned with overall risk management,” Bankman-Fried said.
+
+But it was the testimony about June 2022 that resonated the most to me. Didn’t Bankman-Fried ask what “fiat@ftx” was? He did.
+</item 12>
+
+<item 13>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+First and foremost, they’re trying to prove their client is not guilty. But just in case they don’t get the outcome they want, they’re also laying the
+groundwork for appeals and sentencing arguments. Any piece of evidence they want to introduce for those two purposes has to come into play in the trial.
+
+Already, Bankman-Fried’s lawyers are marking arguments that his constitutional rights are being violated by his pretrial incarceration because, among other
+things, his internet connection wasn’t good enough for him to plan his defense, notes LaVigne. That could be grounds for an appeal.
+
+“Is he going to throw the entire industry under the bus?”
+
+Bankman-Fried’s behavior after the fall of FTX suggests he’s something of a wild card. He may suggest he was acting on the advice of his lawyers. But he may
+also introduce other evidence that could be troublesome — implying, for instance, that he was engaged in standard industry behavior or that everything that
+happened was Binance’s fault.
+</item 13>
+
+<item 14>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 14>
+
+<item 15>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+He could face up to 115 years in jail if convicted on all charges.
+
+The crypto industry as a whole suffered from FTX’s collapse, which was the first of many. BlockFi filed for Chapter 11 in November 2022, as did Genesis Global
+Trading in January.
+
+Where we are today
+
+Bankman-Fried will be represented by Cohen & Gresser, and Mark Cohen, a high-profile defense attorney and former federal prosecutor, will be the lead attorney.
+If that name sounds familiar, it might be because he also represented Ghislaine Maxwell in her sex trafficking trial related to Jeffrey Epstein. He requested an
+early release for Bankman-Fried but was denied.
+
+With the trial beginning, we’re witnessing how FTX’s story ends. But what’s on our mind is what happens to the investors and creditors affected by the collapse?
+And what happens to the billions in crypto assets tied up in legal proceedings?
+</item 15>
+
+<item 16>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 16>
+
+<item 17>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 17>
+
+<item 18>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 18>
+
+<item 19>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 19>
+
+<item 20>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 20>
+=== END ITEM id=73b8e68b94c4ca73 ===
+
+=== ITEM id=1c216d9185f0d41c ===
+Gold sentences and facts:
+Sentence 0: You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform.
+  Fact 0.0: Value can be found in player and team props.
+  Fact 0.1: Value in player and team props can be found by gathering information from multiple sources.
+  Fact 0.2: Value in player and team props can be found by tracking how players and their teammates perform.
+Sentence 1: These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects.
+  Fact 1.0: Props can be team prop bets.
+  Fact 1.1: Props can be individual player prop bets.
+  Fact 1.2: A prop bet can be on which team is winning at halftime.
+  Fact 1.3: A prop bet can be on the total number of receptions a player collects.
+
+Retrieved items:
+<item 1>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+You’ll often come across NBA team prop bets that are based on a team’s points, such as the first team to reach 20 points, the first team to score in a game, or
+whether the total points by both teams in a contest will end up being odd or even.
+
+Team props, also known as “game props,” don’t rely on individual players but rather on the team as a whole. Player props, on the other hand, are driven by
+individual performance.
+
+These individual props are focused on statistical milestones during a game. The most popular bets typically focus on points, rebounds, assists, and three-point
+field goals. You can also bet on combination wagers, such as points and rebounds together.
+
+In most cases, you can bet on traditional statistics for the five starters on each team.
+
+See more:
+
+Tips for betting on NBA props
+
+Every bettor should develop their strategies, but we do have three tips you can use for NBA props.
+</item 1>
+
+<item 2>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+The three main bet types—moneylines, point spreads, and totals—are constant in every major sport, but they don’t offer a lot in the way of variety. Prop bets
+do. They can add interest to a game that may seem one-sided in the major markets. Larger sporting events, especially the Super Bowl, offer a massive variety of
+bets, ranging from the typical to the exotic and everything in between. They are usually very easy to understand: Prop bets tend to ask a question of the
+bettor. Will a specific player hit a home run? Will Team X have over/under 3.5 field goals in a game? Will Team Y give up a powerplay goal? Whatever the
+question, prop bets are fairly easy to understand for the newcomer.
+
+Cons
+
+Props are difficult to research: Prop bets are so specific you’d think it would be easier to research them than other bet types, but the reality is that sports
+are extremely volatile. You can never truly predict how an athlete or a team will perform.
+</item 2>
+
+<item 3>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+As expected, these prop bets often focus on individual players and their accomplishments, such as scoring a goal or collecting an assist in a game. Soccer
+betting sites also have props such as how many cards the two teams playing will combine to draw or a team’s total number of corner kicks.
+
+How to read prop bet odds
+
+Prop bets at US sportsbooks use the same odds as other major bet types like moneylines, point spreads, and totals. These odds, known as American odds, use
+negative and positive numbers to show you how much money you stand to win.
+
+Positive odds show how much you stand to win for every $100 you wager. Let's say you wager on a quarterback to have over 2.5 touchdowns in a game at +145 odds,
+and he throws three in the game. If you wagered $100, you would be paid $245, your initial wager of $100 returned to you, plus $145 in winnings.
+
+Negative odds tell you how much you need to wager to win $100.
+</item 3>
+
+<item 4>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Use most of your budget on more stable bet types, such as moneylines, spreads, or totals. Focus only a small percentage of your bankroll on props.
+
+We wouldn’t recommend using prop bets as your main bet type when building your strategy. Use most of your budget on more stable bet types, such as moneylines,
+spreads, or totals. Focus only a small percentage of your bankroll on props. Exotic props are a guessing game: When large events like the Super Bowl roll
+around, you’ll be inundated with exotic and entertaining prop bets. These are almost impossible to research, and pure guessing isn’t good for anyone’s bankroll
+or betting strategy.
+
+Prop bet examples for major sports
+
+Every major sport with odds at the best sports betting apps will have prop bets. Below, we give examples of prop bets you might find when betting on major
+American sports.
+
+NBA prop bets
+
+The NBA offers a wide range of prop bets. They vary from player to team bets and lean heavily on the statistical side of the game.
+</item 4>
+
+<item 5>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Pros
+
+The lines don’t usually move as fast as other bet types: Prop bet odds are developed based on game lines and totals at sportsbooks, but prop bet lines tend to
+adjust more slowly. Let’s say you’re keeping an eye on the New York Jets vs. the Buffalo Bills, and you see the total shift due to an incoming winter storm.
+While many bettors will scramble to get their bet in on the ‘under’ before the lines move too much, it’s a good idea to scope out the prop bets for individual
+players. The main lines are shifting, but most of the best sports betting sites don’t have the personnel to keep tabs on every possible player, so you could
+find value in an ‘under’ on a quarterback’s passing yards because the lines haven’t caught up yet.
+
+Prop bet odds are developed based on game lines and totals at sportsbooks, but prop bet lines tend to adjust more slowly. Let’s say you’re keeping an eye on the
+New York Jets vs.
+</item 5>
+
+<item 6>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Negative odds tell you how much you need to wager to win $100. For example, if you bet a player will score less than 15.5 points in a basketball game at -135
+odds, you would need to bet $135 to win $100.
+
+Remember that you don’t have to wager that high or that low. Your payout will be calculated proportionally to your wager size when you finalize your bet slip.
+
+What is an exotic prop bet?
+
+An exotic prop bet is a non-traditional prop bet that is not focused on scenarios during a game. Instead, they can be as out of the ordinary as the sportsbook
+wants.
+
+In the US, the most exotic bets are available during the Super Bowl, which is the most prominent sports betting day of the year and offers up hundreds of prop
+bets to interested bettors.
+
+These bets can range from the number of songs sung during the halftime show to the result of the coin toss to the color of the sports drink dumped on the
+winning coach at the end of the game.
+</item 6>
+
+<item 7>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Accept the terms and conditions: Before finalizing your account information, you must accept the sportsbook’s terms and conditions. We recommend you read
+through these to understand the rules your sportsbook will enforce regarding bets, especially for the sports you intend to wager on. The terms and conditions
+are also available on the sportsbook website for you to read at any point.
+
+Get your bonus: At this point, you can accept your welcome bonus. Be sure to read through the bonus requirements before accepting anything. If a bonus code is
+needed, which you can find on our website, this is where you will input it during the registration process.
+
+Make a deposit: Now that you’ve signed up for an account, you can start funding your bankroll by making a deposit. Most legal sportsbooks have a variety of ways
+you can add funds to your account, such as through your bank or an e-wallet.
+
+Start betting: Go to the basketball section of your sportsbook and select the NBA.
+</item 7>
+
+<item 8>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+For the most part, you won’t come across too many exotic prop bets when using US sportsbooks, as many are just not legal bets. However, the largest sporting
+events, such as the Super Bowl or March Madness, will find sportsbooks offering up a wider range of prop bets. That’s usually when you’ll find more exotic
+props.
+
+Sportsbook rules for prop bets
+
+Before placing any kind of bet, we highly recommend you read the sportsbook’s terms and conditions. There, you will find all the rules for the various bets you
+will make.
+
+While most sportsbooks’ rules are similar, there are always small variations in how they handle certain situations that could impact your bets.
+
+One rule that is typically used by most sportsbooks involves player props. If you bet on a player and they don’t play in the game, most sportsbooks void the bet
+and refund your wager. But if that player is involved in the game even for a single play, then the bet stands.
+</item 8>
+
+<item 9>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Favorites to win the game are shown negative odds, such as -135, while the underdogs will have positive odds, like +165.
+
+NBA over/under bets: Also known as totals. These bets are focused on the combined point total of the two teams playing in a game. (Winners and losers don’t
+matter.) For example, the over/under could be set at 211.5 points in the Knicks vs. Heat matchup. If you were to pick the over on the bet, you’d need the two
+teams to combine for 212 points or more to win. They need to score 211 points or fewer if you went with the under.
+
+NBA props and futures
+
+NBA player and team props are growing in popularity. Sportsbooks are taking note and providing more NBA props than ever.
+
+After all, it’s much easier to focus on a single player and how he will perform than the entire team. Player props could focus on how many points a player
+scores or how many rebounds he pulls down.
+</item 9>
+
+<item 10>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+In point spread betting, you’re wagering on the game with a spread factored in. The favorite must win by the point spread or more, while the underdog needs to
+either lose by fewer points than the spread or win the game outright. Bowl game totals: The totals bet, commonly known as the over/under, requires you to
+determine whether the combined score of both teams will end up over or under a predicted total. With this bet type, you’re not concerned with which team wins or
+loses the game.
+
+The totals bet, commonly known as the over/under, requires you to determine whether the combined score of both teams will end up over or under a predicted
+total. With this bet type, you’re not concerned with which team wins or loses the game. Bowl game props: These can be team or individual player prop bets, such
+as which team is winning at halftime or the total number of receptions a player collects.
+</item 10>
+
+<item 11>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Let’s say you’re keeping an eye on the New York Jets vs. the Buffalo Bills, and you see the total shift due to an incoming winter storm. While many bettors will
+scramble to get their bet in on the ‘under’ before the lines move too much, it’s a good idea to scope out the prop bets for individual players. The main lines
+are shifting, but most of the best sports betting sites don’t have the personnel to keep tabs on every possible player, so you could find value in an ‘under’ on
+a quarterback’s passing yards because the lines haven’t caught up yet. There’s greater variety: The three main bet types—moneylines, point spreads, and
+totals—are constant in every major sport, but they don’t offer a lot in the way of variety. Prop bets do. They can add interest to a game that may seem
+one-sided in the major markets. Larger sporting events, especially the Super Bowl, offer a massive variety of bets, ranging from the typical to the exotic and
+everything in between.
+</item 11>
+
+<item 12>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+The significant turning point came in 2018 when the US Supreme Court made a pivotal decision. It overturned a longstanding federal law and allowed individual
+states the autonomy to determine their own sports betting regulations.
+
+This groundbreaking decision sparked a wave of change. Since that landmark ruling, over 30 states have embraced sports betting, including wagers on the NBA. For
+those residing or visiting betting-friendly states, the experience promises fairness and security.
+
+State-regulated online betting platforms are in place, ensuring that bettors receive fair odds. Furthermore, these platforms adhere to strict standards,
+ensuring a safe and transparent betting environment for everyone involved.
+
+Related Pages:
+</item 12>
+
+<item 13>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Moreover, information and public perception play a role. If a piece of news or a prevailing sentiment starts to gain traction about a particular team's
+increased chances of winning, this can influence how people bet, leading sportsbooks to adjust their lines accordingly.
+
+Point spread odds can and do change based on a combination of actual betting patterns, unexpected events, and shifts in public perception. Savvy bettors keep a
+close eye on these line moves, as they can offer insights into where the value lies in a particular bet.
+</item 13>
+
+<item 14>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 14>
+
+<item 15>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Start betting: Go to the basketball section of your sportsbook and select the NBA. From there, you can choose individual games and make bets like money lines,
+point spreads, totals, props, futures, and more.
+
+How to read NBA props odds
+
+At first glance, all the positive and negative numbers at US sportsbooks can be daunting. The good news is they are easy to read once you understand what you
+see.
+
+Negative numbers, such as -110, represent how much money you need to wager to win $100. In many cases, such as a moneyline bet, the negative number also
+indicates which side of the bet is the favorite to win.
+
+For example, if you were to bet on LeBron James scoring over 15.5 points in a contest at -125 odds, you’d need to wager $125 to win $100. If you did and your
+bet was correct, then you’d take home $225, which is your original $125 stake returned to you plus your $100 in profit.
+</item 15>
+
+<item 16>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Either way, the line shopping strategy is designed to help you maximize your potential return.
+
+NBA live betting
+
+Thanks to the increased popularity of online sports betting apps, in-game betting has exploded nationwide. Also known as live betting, in-game betting allows
+you to bet on a game while it’s unfolding.
+
+The action is fast, and the odds are constantly shifting, making for a new way to enjoy the flow of a game while still staying engaged as a bettor.
+
+Depending on the sportsbook, there is usually a strong variety of live betting opportunities. You’ll find game and player prop bets like whether the next bucket
+will be worth one, two, or three points.
+
+You can bet on the team leading at the end of the current quarter or on whether there will be a comeback victory. You can even boil live betting down to the
+results of the next possession.
+
+The most popular sportsbook apps, such as DraftKings, FanDuel, and BetMGM, offer NBA in-game betting, though each has its lines and betting opportunities.
+</item 16>
+
+<item 17>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+In the NBA, prop bets deal with both players and teams.
+
+Some examples of NBA player props are:
+
+How many points a player will score
+
+Number of rebounds a player will have
+
+How many assists a player will get
+
+Rebounds and assists combined
+
+Points, rebounds, and assists combined
+
+How many steals a player will get
+
+Number of three-pointers made
+
+Some examples of NBA team props include:
+
+Which team will reach 10 points first
+
+Which team will have the highest-scoring period
+
+Which team will score first
+
+Which team will win the first half
+
+Which team will win the second half
+
+Will there be a fourth-quarter comeback victory
+
+All of the best sports betting sites have their selection of prop bets for each NBA game, so shop around to find the sportsbooks that best suit your needs.
+
+How to bet on NBA props
+
+The first step to betting on NBA props is opening an account at an online sportsbook. The process is simple, free, and doesn’t take very long.
+</item 17>
+
+<item 18>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Prop bets are easy to understand and add a twist to most sporting events as you can bet on in-game events not tied to the outcome.
+
+Prop bets are popular throughout the year and are posted for every major sport, but the pinnacle for prop betting is the Super Bowl. It’s the most popular day
+of the year for prop bets, which range from the typical to the exotic.
+
+But you don’t have to wait for the Super Bowl to get involved in prop betting. See below for more on props, including the pros, cons, and prop bet examples from
+all the major sports.
+
+What is a prop bet?
+
+A prop bet is a “side bet” with a sportsbook on a specific event or statistical accomplishment within the game. These rarely have anything to do with the
+outcome of a game itself.
+
+For example, you might bet on:
+
+LeBron James scoring over 20 points in a single game
+
+Dallas Cowboys gaining over 300 receiving yards in a game
+
+Pros and cons of prop bets
+
+Every bet has positives and negatives, and prop bets are no different.
+</item 18>
+
+<item 19>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 19>
+
+<item 20>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Other prop bets can be focused on the team or even both teams.
+
+See more: Super Bowl prop bets
+
+MLB prop bets
+
+MLB betting sites are no exception when it comes to offering prop bets. Like the other sports, MLB has prop bets focused primarily on individual players and
+statistical achievements like home runs, RBI, and strikeouts.
+
+You might bet on an over/under for strikeouts for a starting pitcher in a game or even the number of bases a hitter will reach.
+
+NHL prop bets
+
+NHL betting sites have all of the props you’d expect from one of the major North American sports leagues, such as player assists or a certain player scoring a
+goal in a contest.
+
+You will also find bets for shots on goal, team goals in a game, and which team will score first.
+
+MLS prop bets
+
+The demand for Major League Soccer betting has increased as the sport's popularity continues growing nationwide. Prop bets are just one of the many bet types
+growing at sportsbooks to keep up with the demand.
+</item 20>
+
+<item 21>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+But if that player is involved in the game even for a single play, then the bet stands.
+
+We recommend reading through the T&Cs before placing any wagers so you’re not caught by surprise if an unexpected event should happen.
+
+Related Pages:
+</item 21>
+
+<item 22>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Remember that some of the best players in the NBA were once on the bench for most games until small increases in their playing time gave them a chance to shine.
+
+Shop for the best lines: This tip applies to every bet you make. Using multiple sportsbook accounts lets you find the best odds for every NBA prop bet. Even the
+smallest differences, like one sportsbook having odds at +125 and another at +135, can make a difference in your profit. By shopping for the best lines, you can
+make smarter bets and find the best value.
+
+Related Pages:
+</item 22>
+
+<item 23>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+See more: Best NCAA basketball betting sites
+
+2023-24 NBA Season
+
+October 24 Regular season begins November 3 - December 9 In-season tournament February 16-18 All-Star Weekend 2024 April 14 Regular season ends April 16-19
+Play-in tournament April 20 Playoffs begin June 6 NBA Finals Game 1
+
+NBA spreads, money lines, and over/unders
+
+For anyone new to NBA betting, the staple wager types are:
+
+NBA point spreads: Bet on games via margins of victory or loss. Say the New York Knicks are -7.5 favorites over the Miami Heat. That means the Knicks need to
+win the game by 8 points to win a spread bet. On the other hand, the Heat can lose by up to 7 points (or win outright).
+
+NBA moneylines: The simplest form of betting. You pick the winner of the game, and if you’re right, you’ll get paid out based on the odds when you finalize your
+bet slip.
+</item 23>
+
+<item 24>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Player props could focus on how many points a player scores or how many rebounds he pulls down. These are typically provided in an over/under format.
+
+Then, team props can range from which team will score the first bucket to the total points scored in a quarter to which team will lead at halftime. The
+selection is often robust, especially when high-profile teams play.
+
+Futures bets are exactly what their name implies: bets on events that will happen in the future. Common futures markets include:
+
+and much more. You can usually bet on NBA futures odds throughout the year, including well before the season starts and throughout the regular season. The
+further away from the event, the more likely you will find heavier odds in your favor.
+
+Is NBA betting legal in the U.S.?
+
+In the US, the landscape of sports betting, specifically NBA betting, has evolved considerably. While NBA betting is permitted, its legality varies across the
+nation. The significant turning point came in 2018 when the US Supreme Court made a pivotal decision.
+</item 24>
+
+<item 25>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+They vary from player to team bets and lean heavily on the statistical side of the game. Some NBA prop examples include:
+
+How many points a player will score
+
+Number of assists or three-pointers a player will have
+
+Which player will score the first basket of a game
+
+You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team
+will score in the game.
+
+See more: NBA prop bets
+
+NFL prop bets
+
+The National Football League is the king of sports betting, and NFL betting sites have no qualms about showcasing every kind of possible bet type for it.
+
+Bettors will find many prop bet opportunities, especially for the Super Bowl. During the regular season, one of the most popular prop bet options includes the
+“anytime touchdown scorer” bet, where you can wager on a player to score a TD at any point in the game. Other prop bets can be focused on the team or even both
+teams.
+</item 25>
+
+<item 26>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+The process is simple, free, and doesn’t take very long. Below are the steps to opening a new account at an online sportsbook.
+
+Choose your sportsbook: Any state with legal online sports betting has a variety of sportsbooks. If you aren’t sure which sportsbooks best fit your needs,
+research and read our reviews on each. And don’t forget that you can have an account with more than one. Once you decide which sportsbook you’re interested in,
+follow the link from our site to qualify for the best new customer welcome bonus.
+
+Register for an account: At the top of the homepage of the sportsbook website, you will find a button that says “register” or “sign up.” Click that, and you’ll
+be taken to a form you must fill out. It will ask for personal information such as your name, phone number, email address, last four digits of your Social
+Security number, and more.
+</item 26>
+
+<item 27>
+College Bowl Odds, Spreads, Money Lines and Totals - NCAAF 2023 Bowl Season (Sporting News, 2023-12-15T20:37:00+00:00)
+Consider them side bets made with the sportsbook about events or statistical milestones that happen in the game.
+
+These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects. Consider them
+side bets made with the sportsbook about events or statistical milestones that happen in the game. Bowl game parlays: Parlays are multi-leg bets on a single bet
+slip. All parts of the parlay must be successful for the bet to win. These offer larger payouts, but the chances of winning compared with those of an individual
+bet are greatly reduced.
+
+How to bet on college football bowl games
+
+Betting on NCAA football bowl games has never been easier, thanks to online betting sites sprouting up across the country.
+
+Create an account with any of the best sports betting apps to start betting. It’s a quick process. Below, we outline the steps for opening your own account.
+</item 27>
+
+<item 28>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Positive numbers, like +145, show how much you stand to win for every $100 you wager. If you were to bet $50 on Giannis Antetokounmpo to have over 7.5 rebounds
+and the odds were +130 at the time you finalized your bet slip, you would win $65 in profit if your bet wins.
+
+Positive numbers also indicate which side of the bet is the underdog in the eyes of the oddsmakers.
+
+Remember that you can bet as little or as much as you want, and your payout will be calculated based on your wager amount and the odds at the time you make your
+bet.
+
+Types of NBA props
+
+You can make two main prop bets on the National Basketball Association:
+
+Team props
+
+Player props
+
+Team props are typically focused on statistical accomplishments by a particular team and rarely on the game’s result.
+</item 28>
+
+<item 29>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+The NBA is one of the most popular sports to bet on in the US. NBA prop bets are an easy way to jump into basketball betting.
+
+Proposition bets, or props, are easy to understand, numerous, and cover both player props and team props to give you plenty of variety.
+
+Below, we look at betting NBA props at the best NBA betting sites and share some key information to make informed bets.
+
+What are NBA props?
+
+A prop bet is a side wager on an aspect of a game that usually doesn’t tie directly to the result. In the NBA, prop bets deal with both players and teams.
+</item 29>
+
+<item 30>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+You can never truly predict how an athlete or a team will perform. This makes it very hard to nail down smart prop bets. For example, you could bet on a certain
+player to score ‘over’ a point threshold, but you lose because that player had an off-night, even though they might have easily won that bet in other recent
+games.
+
+Prop bets are so specific you’d think it would be easier to research them than other bet types, but the reality is that sports are extremely volatile. You can
+never truly predict how an athlete or a team will perform. This makes it very hard to nail down smart prop bets. For example, you could bet on a certain player
+to score ‘over’ a point threshold, but you lose because that player had an off-night, even though they might have easily won that bet in other recent games.
+Prop bets can tie up your bankroll: We wouldn’t recommend using prop bets as your main bet type when building your strategy.
+</item 30>
+=== END ITEM id=1c216d9185f0d41c ===
+
+=== ITEM id=782cdbe1c9896cb7 ===
+Gold sentences and facts:
+Sentence 0: "And if the Braves let this be the story of their series, that's on them.
+  Fact 0.0: A quoted speaker says that if the Braves let this be the story of their series, that is on the Braves.
+Sentence 1: But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity.
+  Fact 1.0: Nocturne could have easily settled and coasted on classic Castlevania vibes.
+  Fact 1.1: The new Nocturne show steps its game up considerably.
+  Fact 1.2: The new Nocturne show uses the Castlevania franchise's iconic lore.
+  Fact 1.3: The new Nocturne show uses the franchise's iconic lore to challenge the viewer's understanding of what it truly means to fight for freedom, equality, and fraternity.
+
+Retrieved items:
+<item 1>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+Part of / The best entertainment of 2023
+
+Netflix’s first Castlevania animated series excelled by balancing its quiet, beautifully performed moments of human drama with explosive and artful action set
+pieces dazzling enough to evoke the feeling of playing Konami’s classic side-scroller for the first time. Despite the first show’s strengths, its regular issues
+with pacing and effectively cultivating characters from season to season made the idea of Netflix keeping the vampiric daddy issues ball rolling with
+Castlevania: Nocturne — a new spinoff series from executive producer Clive Bradley and co-directors Sam Deats and Adam Deats — a dubious one.
+
+Nocturne both looks and feels a lot like its predecessor in terms of its focus on a tortured scion waging war against machiavellian, bloodsucking ghouls who
+fancy themselves undead gods who walk among mortal livestock.
+</item 1>
+
+<item 2>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+As strong and different as the season starts, by its last two episodes, Nocturne does start to feel a bit like it’s rehashing moments from the first show — if
+not in exact form, then in terms of how neatly it brings its plotlines to a close. None of that’s enough to keep the show from hitting all the right notes,
+however, and by the time you hit the finale, there’s a solid chance you’ll already be hoping for more.
+</item 2>
+
+<item 3>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s
+iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity.
+
+Set in the late 18th century during the thick of the French Revolution, Castlevania: Nocturne picks up hundreds of years after the events of Netflix’s first
+Castlevania series as demon slayer Richter Belmont (Edward Bluemel) makes his way to France in search of vengeance and vampires. Like his distant holy
+whip-wielding ancestor Trevor, Richter’s innate talents for magic make him perfectly suited for getting into the family business, and being raised by his
+formidable warrior mother Julia (Sophie Skelton) instills in him a profound sense of pride in the work they do.
+
+Image: Netflix
+
+Together, Richter’s raw potential and Julia’s tutelage make him uniquely powerful even from a young age.
+</item 3>
+
+<item 4>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+Here's what you need to know about the controversy.
+
+Bryce Harper Atta Boy controversy, explained
+
+It all begins with the play. In Game 2, Harper led off the top of the ninth in a one-run game with a walk. J.T. Realmuto flew out to center for the first out,
+but on the next play, Nick Castellanos lifted a deep fly into right-center. It appeared it would be extra bases, and if Harper took off, he'd be able to score
+the tying run on the play.
+
+The problem for the Phillies was that Harris made a leaping grab up against the wall to rob Castellanos of the hit. Harper had well since rounded second on his
+way to third, but the throw from Harris missed both cut-off men by second. Austin Riley, however, ran in and scooped the ball and made an impressive throw to
+Matt Olson to nab Harper and end the game.
+</item 4>
+
+<item 5>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But in all the bloodshed, Nocturne still finds the time to make its characters (and by extension, you) think about what it means to slaughter technically
+innocent people for a genuinely noble cause. That beat isn’t entirely original, and Nocturne’s mindful about leaning on it too hard as it begins to weave
+Annette and Edouard’s stories together with Richter and Maria’s in France. Still, it creates a resonance between the show’s action and the concepts it’s
+tackling that makes the season as a whole work beautifully.
+
+Image: Netflix
+
+Occasionally, there are moments where the fluid dreaminess of Nocturne’s overall art direction butts up against the show’s application of 3D animation to make
+certain pivotal moments pop. It can be jarring when traditionally animated characters who were just popping in and out of view using tricks of the eye suddenly
+turn to the camera with deeper faces accented by flat shadows that weren’t there a second before.
+</item 5>
+
+<item 6>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+The best games this year told their stories in interesting ways, be it ignoring your superpowers to bike through your old neighborhood in Queens, a musical
+number, or fractured memories hidden in a puddle. But Baldur’s Gate 3 takes experimental storytelling to another level. Every choice and every new direction is
+a simple success, fail, or crit away. One roll of the dice after another can take you all the way from a crashed Nautiloid to the city of Baldur’s Gate itself.
+
+In a year filled with beautiful stories and powerful moments, it’s the spinning whir of Baldur’s Gate 3’s d20 that defined video game storytelling in 2023. —RG
+
+1. The Legend of Zelda: Tears of the Kingdom
+
+Developer: Nintendo EPD
+
+Where to play: Nintendo Switch
+
+Princess Zelda is missing. Ganondorf has returned, somehow, and he’s really hot. So an age-old hero in a green tunic has to step in.
+</item 6>
+
+<item 7>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+But despite all of Julia’s skill with her family’s deadly heirloom, Castlevania: Nocturne’s world is one teeming with vampires even centuries after Dracula has
+seemingly been destroyed, and the series opens at a devastating moment in Richter’s past that leaves him orphaned and unable to access his magic.
+
+Though Nocturne takes place in the same continuity as the previous Castlevania show, it also uses major pieces of lore from Konami’s Castlevania: Rondo of Blood
+and Symphony of the Night games to tell a riveting story about the inherent hypocrisies baked into the historic record of colonial nations embracing democratic
+revolution.
+
+Here, the French Revolution isn’t just a transformative period of social unrest between moneyed elites and impoverished peasants fed up with their subjugation.
+</item 7>
+
+<item 8>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+She said that reporters abstaining from writing on his comments would be akin to "protecting players from themselves."
+
+She also went on to say that what Arcia said wasn't a slur or hateful, and added the only reason anyone was concerned about it was because "they know it would
+motivate Harper to beat [the Braves]. Which implies the Braves do not feel they can handle a motivated Bryce Harper and are willing to suggest that is why they
+lost the other day."
+
+"I didn't say something sooner because I thought this was overblown," Janes continued. "And frankly, I thought it wouldn't help. But I am genuinely disgusted by
+the way some media members are acting like a reporter was in the wrong for this. He wasn't.
+
+"And if the Braves let this be the story of their series, that's on them. Win and it goes away. Period."
+</item 8>
+
+<item 9>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+It’s a war between undead ghouls like Drolta Tzuentes (Elarica Johnson) manipulating mortals from the shadows, selfish humans like a power-hungry Abbot
+(​​Richard Dormer), and agitators like summoner Maria (Pixie) who want to dismantle the entire oppressive system of power that makes France a formidable global
+presence.
+
+Image: Netflix
+
+Narratively, Nocturne’s focus on another brooding Belmont and its depiction of late-18th-century France as a country overrun by literally vampiric aristocrats
+drunk on the promise of a new messiah make the new series feel true to the essence of Castlevania. What makes Nocturne’s deep dive into this alternate history a
+worthwhile watch, though, is the way it presents France not just as a crumbling monarchy in the throes of a heroic social uprising but also as a colonial nation
+whose pivot to democracy at home can’t be divorced from its history of committing unfathomable atrocities abroad.
+</item 9>
+
+<item 10>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+When the Phillies beat the Braves in Game 4 to eliminate Atlanta and advance to the NLCS, players in the Philadelphia clubhouse celebrated by repeating, "Atta
+boy Harper."
+
+While the comments became a spark for the Phillies, it also became a subject of controversy. Players, including the Blue Jays' Kevin Gausman, decried the
+situation as a mistake by Mintz to report the comments, which were said out loud in the locker room rather than said in an interview setting. Others defended
+the situation, saying that anything in the clubhouse is open to be reported on.
+
+MORE: Why Arcia's comments motivated Harper after NLDS Game 2
+
+But perhaps the biggest backlash came from MLB Network's Alanna Rizzo, who blasted Mintz on "High Heat" for reporting on the incident. Following a BBWAA
+statement, Rizzo both publicly and privately apologized to Mintz for her reaction.
+
+Here's what you need to know about the controversy.
+</item 10>
+
+<item 11>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+The only difference was that Janes did not name the player.
+
+The reporting of Arcia's comments proved to be divisive across the baseball community. Among the most prominent to call out Mintz was Rizzo. The "High Heat"
+co-host said she was irritated by "bloggers or podcasters" going into the clubhouse and "ruining it for the rest of us" when "some jackoff comes in at the end
+of the season that gets a credential, God only knows why." She called the clubhouse "a sacred place" and defended the players who were upset by the reporting of
+Arcia's comments, before she called Mintz out by name.
+
+MORE: Every time Nick Castellanos has interrupted a somber moment with a home run
+
+"First of all, this guy, Jake Mintz, that's not even a reporter," Rizzo said. "That's taking away from true reporters and true journalists.
+</item 11>
+
+<item 12>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+After the game, Mintz wrote a well-reported story on how the Braves pulled off the improbable comeback, coming back from down four runs at one point, to win the
+game, and deep in the article, wrote the following:
+
+Kevin Pillar's young son, sporting a custom "Money Mike" headband, waddled over to his favorite center fielder for a fist bump. Third-string catcher Chadwick
+Tromp strutted by Harris' locker offering a congratulatory "Mike is him!" All while Braves shortstop Orlando Arcia cackled emphatically about Harper's
+misfortune, bellowing "ha-ha, atta-boy, Harper!" repeatedly as reporters circled the room.
+
+As Mintz pointed out, he was not the only one to allude to the celebration from Arcia. The Washington Post's Chelsea Janes also wrote about it, saying that one
+of Harris' teammates was yelling, "Atta boy Harper."
+</item 12>
+
+<item 13>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+Win and it goes away. Period."
+
+The incident elicited a response from the Baseball Writers Association of American (BBWAA), which defended Mintz, a BBWAA member.
+
+"For the record, Jake is a BBWAA member in good standing and has earned the right to be credentialed through his hard work and quality baseball coverage," the
+BBWAA wrote in the statement. "To assert otherwise, in vulgar terms, is both unprofessional and unacceptable. The BBWAA is deeply troubled that the league's own
+network would permit the disparaging of one of our members in this fashion. Scrutinizing our work is part of the territory but comments such as these should
+have no place on MLBN."
+
+Following the backlash to her comments, Rizzo apologized on "High Heat" to Mintz and the BBWAA. She said her comments were "completely inappropriate, it was
+inaccurate and it was beyond unprofessional.
+</item 13>
+
+<item 14>
+Castlevania: Nocturne is a revolutionary epic that does the franchise’s best games justice (The Verge, 2023-09-28T20:06:12+00:00)
+Nocturne reworks a number of Castlevania’s classic supporting characters like Maria — who fights using reimagined versions of the Four Sacred Beasts — and
+empathic singer Edouard (Sydney James Harcourt) to brilliant effect. But out of all the show’s old but new faces, ferrokinetic Vodoun practitioner Annette
+(Thuso Mbedu) stands out because of how strongly the show introduces her as a woman whose Haitian identity is what makes her able to understand the situation
+over in France with an exacting kind of clarity.
+
+It’s through Annette and the show’s exploration of Afro Caribbean syncretism that Nocturne expands the boundaries of Castlevania’s magical mythology, which is
+touched on heavily throughout the season’s eight episodes. Small nods to the video games and gnarly beheadings abound, particularly in the Powerhouse
+Animation-produced show’s bigger hyperkinetic brawls between its heroes and hordes of horrific creatures.
+</item 14>
+
+<item 15>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+I got caught up in the heat of the moment."
+
+"What I said was completely off base and I've had an interesting 24 hours and I've learned a lot more and I apologize to Jake. I talked to him already, I
+apologized to him privately and I also apologize to him publicly," Rizzo said. "They do a good job in the clubhouse and I was completely inaccurate in my
+assessment of what went down there."
+
+Alanna Rizzo gave "a very heartfelt apology to Jake Mintz and the entire BBWAA" pic.twitter.com/rT9tjSWLY3 — Awful Announcing (@awfulannouncing) October 13,
+2023
+
+Mintz, though calling her initial comments "incredibly hurtful/uncalled for," wrote on X saying that he was "glad she apologized," and asked people not to toss
+hate to her.
+</item 15>
+
+<item 16>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+"Thanks to all the reporters, journos, baseball twitter weirdos, acquaintances and friends who had my back over the last 48 hours," Mintz wrote. "And also, of
+course, the BBWAA. Community feels good, humbled to be a part of this one. Now, let's enjoy some ball."
+</item 16>
+
+<item 17>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+This year, we have the Avengers of rhythm games, Theatrhythm Final Bar Line, and Paranormasight: The Seven Mysteries of Honjo, an excellent riff on the visual
+novel penned by a beloved storyteller — whose best series has never appeared in the U.S.
+
+What should you know about Paranormasight before you play? Well, ideally nothing. Why else would I be eating up my word count?
+
+But if you insist: It’s a mystery — and a horror mystery at that. You travel to 1980s Japan, specifically the Tokyo neighborhood of Honjo, located not so far
+from the modern Tokyo Skytree. It’s hard to imagine that modern landmark ever towering alongside these streets, which are filled with shadows and lethal curses.
+
+If you have even a passing interest in urban legends, spooky folklore, cults, and deadly rituals, or you’ve enjoyed series like Zero Escape and Danganronpa,
+Paranormasight is an easy recommendation.
+</item 17>
+
+<item 18>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+(It’s up.) Figuring out how to get there is another matter.
+
+Even in games that prominently feature it, climbing is often functional, at best — whether it’s Link refusing to acknowledge handholds are a thing or Nathan
+Drake snapping to ledges with a level of magnetism only thought possible at CERN.
+
+Jusant is the first and only game I’ve played that gets it — that sees the inherent grace in the sport and portrays it on the screen, not as a means of getting
+somewhere, but as the reason to go there in the first place. —Ari Notis
+
+8. Marvel’s Spider-Man 2
+
+Developer: Insomniac Games
+
+Where to play: PlayStation 5
+
+Marvel’s Spider-Man 2 builds on the successes of the first game, both narratively and in its immensely satisfying gameplay. The game’s story takes a familiar
+Spider-Man narrative — that of friends turned foes — and adds new twists, building out compelling villains (and demanding ones) in the process.
+</item 18>
+
+<item 19>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+"That's taking away from true reporters and true journalists. Where were you on the random Tuesday in April in Cincinnati when this team was playing in
+Cincinnati? Where were you on a rain delay, and you have to sit in the press box for all of this time? It's ridiculous."
+
+"And then some jackoff comes in at the end of the season that gets a credential, God only knows why. And the clubhouse is a sacred space." Alanna Rizzo went off
+on Jake Mintz's clubhouse reporting on MLBN's "High Heat" Thursday. pic.twitter.com/6dooqeLPnh — Awful Announcing (@awfulannouncing) October 12, 2023
+
+Rizzo's comments immediately drew heat from the baseball journalism world, including from Janes, who posted a thread defending Mintz. Janes reported that
+cameras and recorders were recording, and that Arcia yelled the comments while they were recording and with more than a dozen reporters around.
+</item 19>
+
+<item 20>
+Bryce Harper 'Atta Boy' controversy, explained: Why Orlando Arcia's comments led to backlash, Alanna Rizzo rant (Sporting News, 2023-10-13T21:58:11+00:00)
+It had been reported Monday night when the Braves beat the Phillies in Game 2 of the NLDS, ending on a critical base-running play involving Bryce Harper, that
+Atlanta shortstop Orlando Arcia taunted about the Phillies' star in the clubhouse after the game.
+
+That report wound up generating plenty of controversy.
+
+Fox Sports' Jake Mintz, one of the two brothers that runs the popular Cespedes Family BBQ account, reported that Arcia had been celebrating after Atlanta's 5-4
+win by saying "Atta boy Harper" in the Braves' clubhouse, jeering at the fact that Harper was doubled off on the basepaths after an outstanding catch by Michael
+Harris in center field and an impressive relay to get Harper at first to end the game.
+
+The comments wound up coming back to bite the Braves two days later, with Harper homering twice — staring down Arcia after each — as he powered the Phillies to
+the 10-2 Game 3 win.
+</item 20>
+=== END ITEM id=782cdbe1c9896cb7 ===

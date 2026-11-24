@@ -1,0 +1,45 @@
+[
+{"id": "150fbe4c51934d83", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 16, "quote": "Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and"}, {"item": 16, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Bankman-Fried did not act like someone who was guilty."}, {"item": 7, "quote": "was willing to give up his personal wealth to make customers whole, Cohen argued."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 20, "quote": "“He didn’t steal any money.”"}, {"item": 7, "quote": "Bankman-Fried did not act like someone who was guilty."}]},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "140a56e43bd1ca4a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]}
+]},
+{"id": "b6d314cc74c102de", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 17, "quote": "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 17, "quote": "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+]},
+{"id": "f4663553d60874ec", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "“The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 13, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 13, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 13, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]},
+{"id": "8287fa06672ecc27", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

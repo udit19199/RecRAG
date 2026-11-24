@@ -1,0 +1,132 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "453b33b9312963c1",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from shaping search and the internet’s appearance to allegedly siphoning publishers’ content, traffic, and revenue, with AI worsening the harm."
+  },
+  {
+   "id": "a7aa986e0b713659",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: past setbacks against Argentina versus in-game difficulties in the final."
+  },
+  {
+   "id": "64c7a2aa6aca7117",
+   "kind": "answer",
+   "question": "Between the report by The Age on October 22, 2023, claiming that Google manipulates Search to maximize ad revenue, and the TechCrunch report on December 15, 2023, alleging that Google \"siphons off\" news publishers' content, readers, and ad revenue through anticompetitive means, was there consistency in the portrayal of Google's business practices by these news sources?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes. Both portrayed Google as using its dominance to prioritize its business interests at others’ expense."
+  },
+  {
+   "id": "18ae5517bcfb900a",
+   "kind": "answer",
+   "question": "After Seeking Alpha recommended a Hold rating for GitLab Inc. on December 3, 2023, due to valuation concerns, did TechCrunch's report on December 18, 2023, regarding the significant pressure on tech companies' valuations reflect a consistent or inconsistent viewpoint on the valuation pressures faced by tech companies like GitLab Inc.?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "0916a7c0066a10e2",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on high-performance centralization but differ on control of commercial assets."
+  },
+  {
+   "id": "bb50502e0bf6f042",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralising high-performance, but differ over control of commercial and corporate functions."
+  },
+  {
+   "id": "c6583173278f2b74",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both depict challenges, but in different situations: past losses to Argentina versus gameplay difficulties during the World Cup final."
+  },
+  {
+   "id": "87f3e3a5af343459",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay offered a price guarantee on qualifying items."
+  },
+  {
+   "id": "425b782157ba7820",
+   "kind": "answer",
+   "question": "Has the perspective on managing dementia in 'The Guardian' articles shown a change from the time Susan Saunders was reported to be caring for her mother with dementia (published at '2023-10-10') to the more recent report on new Alzheimer’s drugs (published at '2023-12-17')?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from practical caregiving and lifestyle support toward new treatments and earlier diagnosis."
+  },
+  {
+   "id": "80cb18b72e36dbfc",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles allege Bankman-Fried’s involvement; TechCrunch says Ellison took the funds under his instruction."
+  },
+  {
+   "id": "5d236a005a5ea585",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present challenges, but in different situations: past defeats against Argentina and gameplay errors in the World Cup final."
+  },
+  {
+   "id": "325ea577eeec3100",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on high-performance centralization; the QRU wants to retain commercial and corporate control."
+  },
+  {
+   "id": "191247cb2e80387e",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay offered a price-match guarantee for qualifying items."
+  },
+  {
+   "id": "90fba57c38b0376d",
+   "kind": "answer",
+   "question": "Between the report by The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the report by TechCrunch on the class action antitrust suit against Google published on December 15, 2023, was there a change in the portrayal of Google's business practices with respect to their impact on other companies?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from a mutually beneficial search deal with Apple to alleged harm to publishers’ traffic and revenue."
+  }
+ ],
+ "evidence": []
+}

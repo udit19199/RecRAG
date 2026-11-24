@@ -1,0 +1,54 @@
+[
+{"id": "f5c8b2b7f09d3077", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins)."}]}
+]},
+{"id": "ba623ab0a2be3557", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 27, "quote": "But by the age of 16, she is public property"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 27, "quote": "incapable of going outside without being mobbed"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 27, "quote": "her love of singing and dancing now a lucrative resource"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "d538609497226bab", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "0.7", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "While these models are still quite new"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "versions that actual humans buy have begun receiving discounts"}]}
+]},
+{"id": "20267904bafed491", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "The understandings that Israel reached with Hamas in 2012"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "were made \"to stop the fighting\", Ortal says"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 19, "quote": "Ortal says, and to get life back to normal as quickly as possible"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "4cec3a7b15332843", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

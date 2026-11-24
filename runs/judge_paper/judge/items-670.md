@@ -1,0 +1,1841 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=d0f172644ca55a7a ===
+Gold sentences and facts:
+Sentence 0: "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen," he told Fox News Digital.
+  Fact 0.0: A speaker said that they all found themselves at home looking at the people they worked with, the people they went out for drinks with, and the people in their extended family on a computer screen.
+  Fact 0.1: The speaker told Fox News Digital this.
+Sentence 1: We used to play in person, but since the pandemic I run the game virtually online from my house.
+  Fact 1.0: The speaker used to play the game in person.
+  Fact 1.1: Since the pandemic, the speaker runs the game virtually online from their house.
+
+Retrieved items:
+<item 1>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Here’s to 2024 being an even better D&D year for me.
+
+Eating Oranges in the Shower
+
+Sam Dunnewold, Dice Exploder podcast
+
+The Golden Cobra challenge is always a deep well of exciting (and free!) new larps from the bleeding edge of the hobby. This year, like a song that’s stuck in
+my head, I haven’t been able to stop thinking about Eating Oranges in the Shower by Hazel Anneke Dixon, a game about exactly what it sounds like. You play as
+members of a group chat who discover the /r/ShowerOrange subreddit, a real community dedicated to the “liberating” act of eating an orange while taking a
+shower. You each decide to try this out for yourself before returning to compare notes, and because it’s a LARP, you actually go do the thing.
+
+This game is so strange and delightful, not to mention delicious. The principal act is compelling on its own. It feels forbidden somehow, even as it’s obviously
+harmless.
+</item 1>
+
+<item 2>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+It’s the first heavy-duty chamber LARP I’ve played since the pandemic; it reset my brain and helped me remember what I value in play. Players continuously swap
+roles as they play through a very queer Greek myth in which young Orestes returns home and must decide whether to kill his treacherous mother and father-in-law.
+Never have I planned a murder with such erotically charged practice stabbing.
+
+Dungeon Crawl Classics
+
+Thilo Graf of AAW Games
+
+I run and play a ton of different RPG systems, but precious few have had such a tremendous and lasting impact on my design and games as Dungeon Crawl Classics
+by Goodman Games.
+
+With aesthetics influenced by all-time greats like Leiber and Moorcock, volatile magic, a relatively flat power curve for a d20-based game, and an emphasis on
+the skill of the players, as opposed to primarily rewarding the crafting of effective builds, DCC is a joy to run and play.
+</item 2>
+
+<item 3>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+"And this meant a lot of time looking at each other on-screen instead of in person."
+
+Long after the pandemic, many of these habits have persisted.
+
+"This video-ing of each other, it turns out, is far more tiring to humans than actually being together," said Nassar.
+
+"One reason is that our brains are wired for actual in-person interactions, not wired for interactions on the screen."
+
+Impacts of Zoom fatigue
+
+While video calls can be convenient, Elliott warned that staring at a computer or phone screen for extended periods of time can result in negative mental health
+consequences .
+
+"Zoom fatigue can aggravate stress, anxiety and burnout among workers," he told Fox News Digital.
+
+"Our brains are wired for actual in-person interactions, not wired for interactions on the screen."
+
+"Some people share that spending so much time interacting on screens makes it difficult to interact in real life."
+
+CAN YOU AVOID END-OF-THE-YEAR CAREER BURNOUT?
+</item 3>
+
+<item 4>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+It feels forbidden somehow, even as it’s obviously harmless.
+
+But Dixon also captures something ephemeral and nostalgic about what it’s like to be in a niche online community and group chat, and the magic of making
+discoveries in those spaces. On an increasingly centralized internet, that experience has become rare, and I miss it.
+
+Exquisite Biome
+
+Everest Pipkin, game and software developer
+
+I’ve heard Exquisite Biome described as “Spore for the kitchen table,” and if that isn’t a great pitch I don’t know what is.
+
+Coming from Caro Asercion (game designer) and Si Sweetman (illustrator), Exquisite Biome is in the world-building TTRPG tradition, but it focuses specifically
+on ecological biomes and the creatures that populate them. Through short generative prompts tied to a deck of playing cards, you build and witness the lives of
+animals far beyond the edge of our own world. Playing Exquisite Biome feels a little bit like being David Attenborough on an alien planet.
+</item 4>
+
+<item 5>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Playing Exquisite Biome feels a little bit like being David Attenborough on an alien planet.
+
+With beautiful, evocative art and short, easy-to-parse rules, Exquisite Biome is my go-to “what if we made up some weird little guys and set them in motion for
+an hour” game. And truly, what higher calling is there?
+
+Fetch My Blade
+
+Did you know you can play one of the best tabletop RPGs whenever you want, without any scheduling nightmares or unfeasible time commitments? You can when you
+play Fetch My Blade, a solo journaling role-playing game created by Kelly Tran and Ethan Yen!
+
+In Fetch My Blade, you role-play as a friendly or fierce dog of a retired legendary sword master. Create your character by choosing one of six dog breeds,
+including shih tzu, corgi, mastiff, border collie, husky, and chihuahua, or select your own! Determine three truths about your master and aid them when a
+mysterious stranger challenges them to a duel.
+</item 5>
+
+<item 6>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+CAN YOU AVOID END-OF-THE-YEAR CAREER BURNOUT? JOB EXPERTS REVEAL SECRETS
+
+Corcoran agreed, noting that many report feeling livelier, happier and more active during in-person meetings.
+
+"Because video platforms artificially limit our perspective, we miss the cues we’re used to from live, in-person interactions," she told Fox News Digital.
+
+"As social beings, we’re highly attuned to these cues, and it takes more work for us to look for and process them in the virtual environment, leading to the
+fatigue we experience."
+
+Even beyond the workplace, Elliott noted that people are using video in more personal contexts than ever before, such as sharing reels on social media and
+calling loved ones on FaceTime.
+
+"Because video platforms artificially limit our perspective, we miss the cues we’re used to from live, in-person interactions."
+
+"This can further exacerbate the problem if you're already spending a significant portion of your day on Zoom," he said.
+</item 6>
+
+<item 7>
+Can anyone survive Fortnite as a job? (Polygon, 2023-10-19T16:01:20+00:00)
+Things haven’t changed much since 2019 at some major studios: Diablo 4’s developers say they also underwent crunch to ship the game. Naturally, the action
+role-playing game had Twitch integration from the jump, and alongside a detailed content roadmap. There’s little incentive for any of this to change, even as
+big-budget games buckle under their own weight and studios are closing left and right. Not when publishers know that the longer a player is hooked, the more
+likely it is that they’ll spend money.
+
+At this point, live-service games need content creators like Twitch streamers to stay solvent. According to the developer speaking to Polygon, streamers help
+old games transform into new and visible moments. Developers need live-service games to stay in the conversation, because the base experience can worsen without
+a persistent player base.
+
+It’s “not even from a cost perspective,” the developer says, though obviously more players make profits more viable. “But [if] we don’t have 20,000 players,
+then matchmaking times are terrible.
+</item 7>
+
+<item 8>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Our campaign is called The Heartsguard Saga, and it’s based off Deven Rue’s map of a place called Euphoros. My players are at around level 15 and I frequently
+give them a variety of amazing and unique gear that I’ve dreamed up all on my own... which they go on to forget they have, and never use. We used to play in
+person, but since the pandemic I run the game virtually online from my house. I put a camera hovering over my gaming mat, and make a labeled grid for the
+players so they call out, “Move me from A5 to B10.” During important rolls, I even make my players face their camera toward their dice for added suspense!
+
+Petrana Radulovic, entertainment reporter
+
+I’d wanted to play Dungeons & Dragons since I was in high school, but I never knew how to get into it.
+</item 8>
+
+<item 9>
+Can anyone survive Fortnite as a job? (Polygon, 2023-10-19T16:01:20+00:00)
+While the playing habits of a Twitch streamer don’t represent the average player by any means, content creators certainly shape public opinion about games.
+
+“Negative sentiment is very profitable,” says the AAA game developer, who noted that social media platforms are built to highlight popular — and sometimes
+caustic — content. This dynamic sets up an inherent tension between game developers and hardcore players like Twitch streamers, who are not the main audience of
+most games but are often some of the most visible players.
+
+“I don’t at all think that streamers are embodying some typical player behaviors, like ‘Brandon,’” the developer continues, posing a name for an imaginary
+everyday consumer. “There’s definitely a model of consumers nowadays who probably parrot those sentiments. They did not arrive at those conclusions themselves.”
+
+“There is inherently [a] vicious and negative cycle for everyone involved, for how live service interacts with Twitch as a medium”
+
+The misinformation will vary, but Twitch both shapes that discourse while also becoming the very metric that people use to make sense of a game’s situation.
+</item 9>
+
+<item 10>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Thankfully, in the doldrums of 2020, someone I knew knew someone who knew someone (that’s literally what the connection was) who was interested in running a
+game. That kicked off my D&D career, but was this year that everything finally clicked in my brain and it went from a hobby I enjoyed to one that I spend every
+free minute of my spare time thinking about.
+
+Part of it is finally having reliable groups. After some initial shuffling of members, in 2023 I’ve been blessed to have not one but two separate D&D groups,
+both with enthusiastic members who are committed to at least trying to meet regularly. And yes, part of it is Baldur’s Gate 3, which helped me to understand
+some of the more complicated D&D mechanics and just generally made me very excited about combat in a way I never was before.
+
+I’ve still yet to actually have a game in person! My groups are spread out across North America, but I’m hoping to manifest an in-person session soon.
+</item 10>
+
+<item 11>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+You can even wear them as mourning jewelry.
+
+This Pathfinder 2nd edition-compatible setting has been as enchantingly addictive as the fictional ichor that propelled Ourichor into the renaissance era that
+the project is named after. While there are only two exquisitely illustrated supplements on creatures and equipment available currently, I recommend those with
+a love of the unusual to keep an eye out for more in the years to come, such as the upcoming Paragons of Luminant Age that introduces NPCs and explores their
+motives through the four moons.
+
+Marvel Multiverse Role-playing Game
+
+As a role-player, I’ve spent a lot of time looking for a good lightweight superhero RPG. I’ve tried quite a few but had yet to find one that really hit the mark
+for me until I tried Marvel Multiverse Role-playing Game. I have to say, I was initially dubious about this game but it has blown me out of the water.
+</item 11>
+
+<item 12>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+It’s a time in your life where you feel so, so much. You can see that earnestness in the teenage experience where everything is a big, huge issue — sometimes to
+the point of cringe — tied up in that big, global issue of the meteor that’s looking to destroy everything. —N. Carpenter
+
+Related August games you might have missed
+
+40. World of Warcraft Classic
+
+Developer: Blizzard Entertainment
+
+Where to play: Mac and Windows PC
+
+Something very, very interesting started to happen in the retro version of WoW this year. While Blizzard has been content to march one half of the game’s
+community forward through its history of expansions, it’s started to come up with creative ways to keep the other half — the half that wants to stay in the game
+as it was at launch — engaged.
+
+The first of these was Hardcore, a brilliant permadeath mode that instantly made this aging game both more dangerous and more social, resurrecting the spirit of
+its 2004 servers.
+</item 12>
+
+<item 13>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Here’s what we found.
+
+City of Winter
+
+Linda Codega, Ennie Award-winning entertainment journalist
+
+My friends and I still talk about the weekend we spent playing City of Winter. With lightweight rules but a heavy emphasis on the kind of ephemera usually
+reserved for much crunchier games, creating space for this game is almost as important as who you chose to play it with. Characters travel along a cloth map
+that illustrates a landscape with only barest indications of topography; the focus instead relies on themes of assimilation, diaspora, and — most importantly to
+the narrative — baggage. As a family of immigrants (bound by blood or by choice), players describe their home, their traditions, and then, as a darkness comes
+from the west side of the map, they leave it all behind, choosing what traditions and rituals they pick up from the places they visit and what they hold on to
+from their homeland.
+</item 13>
+
+<item 14>
+TwitchCon 2023 was better than last year, but everyone hated Las Vegas (TechCrunch, 2023-10-26T00:15:43+00:00)
+Las Vegas’ frenetic pacing is enthralling for many, but some Twitch users complained that the city’s energy didn’t fit the Twitch demographic. Moni’s UserVoice
+post noted that the sensory overload that makes Las Vegas feel like Las Vegas isn’t as alluring for introverted gamers.
+
+“I want to be mindful of the target audience Twitch serves — I would probably assume many of us felt the same about the overstimulation,” Twitch streamer
+herokerrey commented. “While I understand in-person events are a hype/stimulating experience, pairing it with one of the most active cities in the world may not
+have been the best pick.”
+
+Other users commented that they missed the spontaneous get-togethers that made previous conventions so enjoyable, and that the offsite events like creator
+mixers were scattered across the city. One commenter complained that transportation between events took as long as actually attending the events.
+</item 14>
+
+<item 15>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+), got every player invested in our characters and each other (even in a group of total strangers), and allowed the whole table to lean into both the strange
+and ridiculous nature of life. This year, it was just the kind of joy that I needed.
+
+2023 was a personal tabletop gold mine. We finally got Brennan Lee Mulligan’s first official 5e homebrew; I discovered tabletop meetup hub and game master meat
+market StartPlaying.Games, where you can, as I have, hire a handsome Scottish man to D&D dominate you and your friends every week; and I played a ton of my new
+favorite party game, As You ’Wich. It’s a dead-simple hand-builder that, for me at least, boils down to convincing your nephews to eat disgusting sandwiches
+(hair, mustard, and broken glass on marble rye, absolutely not toasted).
+</item 15>
+
+<item 16>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+What’s more, Larian had two years of player feedback with which to build its new masterpiece. That masterpiece launched in August, and it garnered the kind of
+attention that catapults a game from niche interests to widespread acclaim.
+
+Old CRPG fans finally came home, the Mass Effect generation has discovered a new kind of RPG to sink its teeth into, and D&D fans have found an exceptional
+digital version of their beloved tabletop game to play alone or with their party in co-op.
+
+Like a good DM, Baldur’s Gate 3 teases out story beats that feel personal to you, cleverly luring you into experiences that seem like they wouldn’t make sense
+in anyone else’s campaign. Every act delivers quiet, memorable character moments and anxiety-inducing battles. All of these situations feel organic, allowing
+Baldur’s Gate 3 to replicate, perhaps as closely as a video game can, Dungeons & Dragons’ best feature: the intoxicating sense that anything could happen at any
+moment.
+</item 16>
+
+<item 17>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Players take on the role of soldiers and other hangers-on just trying to make it out alive. The heady mix of dice-driven gunplay and a playing-card-style
+encounter creation makes it easy to run. But the fun begins even before that with character generation, which uses old school randomized tables to simulate an
+entire military career. If you’re looking to get your video gaming buddies around the table for something that doesn’t require a headset or shouting down
+pre-teens in a glitchy public lobby, the all-inclusive starter set comes highly recommended.
+
+Project ECCO
+
+It’s a near-impossible task to get a consistent group together, so solo TTRPGs have become my primary method of gaming. However, the barrier for me is finding a
+game with a balance of narrative and mechanics that isn’t overwhelmingly crunchy, but also isn’t open-ended to the point of choice paralysis. For me, Project
+ECCO found that balance.
+</item 17>
+
+<item 18>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+(The Justice Department ultimately concluded its investigation without charging Gaetz.)
+
+Looks like Matt Gaetz foray into streaming on Twitch is working out pic.twitter.com/S4GEDbgu8v — The Serfs (@theserfstv) September 30, 2022
+
+Platform culture matters
+
+To engage with users online, politicians must understand the culture of the platform. The streamers who appeared on Ocasio-Cortez’s stream brought their own
+fans, who may not have been politically engaged at all before their favorite creator introduced it to them. As a regular gamer herself, the representative is
+also up to date on the most popular games on Twitch; in 2020, it was “Among Us,” but in her most recent stream, she played the cooperative puzzle game “Pico
+Park.” Gaetz, on the other hand, fumbled his launch by treating his stream like a podcast recording, limiting the back-and-forth banter with viewers that makes
+Twitch so engaging.
+</item 18>
+
+<item 19>
+TwitchCon 2023 was better than last year, but everyone hated Las Vegas (TechCrunch, 2023-10-26T00:15:43+00:00)
+“It was a huge demand to come back. I think fandoms have grown in that time period, just the fervor around specific creators that was totally and wholly
+different than we’d seen before,” Delphin said of last year’s TwitchCon. “And the creators themselves had also absolutely exploded. It used to be that you’d
+come to TwitchCon, be the biggest creator, and you could walk around pretty freely. Now it’s huge, it’s a whole different kind of apparatus to manage.”
+
+Attendee feedback is clear: Next year’s convention, wherever it is, needs to have more accessible third places.
+
+The third place is a sociological term that refers to a physical space that isn’t work or home, where people can socialize without the obligations of
+productivity. If you can hang out there, it’s a third place. During the pandemic, virtual communities served as ad hoc third places in lieu of coffee shops,
+bookstores and gyms. Twitch, which saw exponential growth during the pandemic, was one of them.
+</item 19>
+
+<item 20>
+‘Zoom fatigue’ is common struggle for remote workers. Here’s how to handle it, according to experts (FOX News - Health, 2023-12-01T11:25:35+00:00)
+Julia Corcoran, a licensed clinical psychologist and board-certified coach, who is currently serving as the director of clinical strategy and experience at
+Modern Health in San Francisco.
+
+The challenge isn’t exclusive to Zoom; other videoconferencing platforms can have the same effect.
+
+The pandemic's effect
+
+With the COVID-19 pandemic, Zoom and other videoconferencing platforms "exploded in popularity," said Dr. Carl Nassar, PhD, a professional counselor based in
+Denver, Colorado.
+
+"We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer
+screen," he told Fox News Digital.
+
+WORKERS FIRED ON ZOOM: HERE'S HOW TO NAVIGATE A 'DEVASTATING' EXPERIENCE AND COME OUT ON THE OTHER SIDE
+
+"Our work went virtual, our social life went virtual, our doctors' appointments went virtual, and even our intimate relationships sometimes went virtual," he
+said.
+</item 20>
+
+<item 21>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+It is not as much of a heroic power fantasy as D&D 5e or Pathfinder, but neither is it as minimalist as many old-school games. With fickle gods, mutating
+magics, lucky scoundrels, and ferocious fighters, DCC feels like playing through a Bal-Sagoth or Eternal Champion song. It’s also easy to pick up if your group
+has any experience with D&D’s third edition or Pathfinder. DCC rocks! Its focus on simple, impactful rules was a core design inspiration for the (almost
+system-neutral) Survivalist’s Guide to Spelunking for 5e, a book I wrote with Douglas Niles and Stephen Yeardley. It warms my heart to know that DCC authors,
+judges, and players use the book as well!
+
+Dungeons & Dragons
+
+Mike Haracz, corporate R&D chef and host of Heroes’ Feast
+
+I’m lucky enough to be in the seventh year of a homebrew Dungeons & Dragons campaign, one I play with friends locally in the Chicagoland area.
+</item 21>
+
+<item 22>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+What difference does it make if something scores highly on some arbitrary rubric if it doesn’t resonate with the people in your community? And so I look at
+year-end lists like these as a kind of menu, boards of fare that clever game masters can use to pick just the right flavor for a given table.
+
+For me this year was all about reconnecting with the other dads in my neighborhood after years spent locked inside during the pandemic. I spun up a Discord that
+we used to organize friendly games of Call of Duty’s DMZ mode, organized a few visits to the local brewery to catch up make new connections, and generally just
+tried to get awkward, middle-aged men accustomed to seeing each other socially again. One night I decided to bust out Twilight: 2000, and it was an instant hit.
+
+Twilight: 2000 is a game about surviving in the aftermath of a fictional nuclear conflict in the heart of Europe. It’s an alternate history where the Cold War
+went hot, swallowing up an entire United States Marine division.
+</item 22>
+
+<item 23>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+I played a one-shot with some friends I was reconnecting with and we mostly group game mastered. We played a gang of messy screw-ups who didn’t hugely get
+along, my character had traded her old gender to the fae over the summer, and we tried to investigate a potential monster hunter, a NPC most of our characters
+found too cool to talk to. There was a gag about someone doing a club remix of “Danny Boy” at a memorial service and the group chat with those friends is still
+named “Danny Boyz (The Pipes, The Pipes).”
+
+Mörk Borg
+
+Jasmine Bhullar, writer, content creator, executive producer of DesiQuest
+
+Of the games I delved into this year, although several afforded hours of entertainment, I felt myself repeatedly returning to one in particular. Although Mörk
+Borg was released in 2020, it was only in 2023 that I happily stumbled upon it and was able to somehow get a table together to run a game.
+</item 23>
+
+<item 24>
+Can anyone survive Fortnite as a job? (Polygon, 2023-10-19T16:01:20+00:00)
+Suddenly, “live service” was everywhere — and games like Overwatch, which couldn’t achieve a similar pace, were posed as disappointments by content creators.
+
+Does an average player truly need their favorite game to give them something new, week in and week out? Developers say getting half of their players to actually
+finish games is unusual and worth celebrating, because the reality is that most people will never finish a game they start. Twenty-two percent of purchased
+games on Steam are unplayed outright. A number of things affect these percentages, like being a part of a sale or Game Pass, but the statistics still paint a
+picture. A reported 25% of players between the ages of 18 and 34 enjoy games between three and six hours a week, 28% play two hours or less, and 19% play
+between 13 to 24 hours or more, according to Statista. As they get older, fans apparently spend less time in games. In the most engaged age group, half of all
+players only log a couple of hours or so per week in their favorite games.
+</item 24>
+
+<item 25>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+On Twitch, debate streams between creators across the political spectrum are wildly popular, and between May 2021 and May 2022, the site’s Politics tag tripled
+in viewership. The platform itself is a haven for some figures on the far-right who have since been kicked off of YouTube.
+
+Republican politicians, however, have failed to establish the rapport with young voters that their Democratic counterparts have. While X, the site previously
+known as Twitter, has become a conservative incubator, Republican politicians haven’t taken advantage of the platform the way far-right influencers have.
+
+That gap in digital fluency is most apparent in the way politicians approach new platforms. In 2020, Ocasio-Cortez encouraged viewers to vote in the upcoming
+presidential election by inviting the most popular streamers to play the pandemic’s most popular game on her newly launched Twitch channel.
+</item 25>
+
+<item 26>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Furthermore, in the process of putting a game together, I found a glut of free online tools from dungeon generators to NPC character sheet generators that made
+game prep a breeze. I find myself coming back to this game again and again with each game session only giving me ideas for future campaigns. I know I’m not
+alone in this feeling given the number of Mörk Borg-compatible games that have sprung up this year, from Pirate Borg to Chris Lockey’s upcoming Abyss of
+Hallucinations.
+
+I’m Sorry Did You Say Street Magic
+
+Madison Durham, writer and journalist, staff writer at Reviewed
+
+To me, some of the most joyful moments in tabletop gaming come from the experience of creative collaboration — the magic of making something new with friends,
+be it a narrative, a character, a world, or in this case, a city. I’m Sorry Did You Say Street Magic by Caro Asercion is a GM-less city-building game, played
+between a group of two to six people with a stack of index cards and your favorite writing utensils.
+</item 26>
+
+<item 27>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+The second, just launched, is the wild Season of Discovery, which remixes and restructures the original WoW experience — interpolating staggered level caps,
+shuffling class roles — in ways that might just change MMO design forever. WoW Classic is quietly, and paradoxically, where Blizzard is doing its most
+forward-thinking work right now. —Oli Welsh
+
+39. Fire Emblem Engage
+
+Developer: Intelligent Systems
+
+Where to play: Nintendo Switch
+
+Fire Emblem Engage was designed for a very specific kind of sicko: one not particularly interested in the origin stories of a horde of teenagers, or the
+politics of a bourgeoise academy, or what kind of tea a teacher prefers, but instead one obsessed with the endless minutiae of combat stats, weapon loadouts,
+and team composition. I know this because I am one such sicko.
+
+If you’ve read any of my reviews or essays on Polygon, then you know I prefer strategy games that can get out of their own way.
+</item 27>
+
+<item 28>
+VTubers have reached their inevitable conclusion (Polygon, 2023-10-19T16:01:50+00:00)
+Brands, too: Remember the Tony the Tiger VTuber in August of 2022?
+
+Many creators that jumped on the trend have since stopped using their avatars, but at the start of the COVID-19 pandemic, there was a large increase in VTubers
+on Twitch and other streaming platforms, like YouTube, as models and equipment became more accessible to the general public. Twitch has since gone on to
+highlight a wide variety of VTubers through its VTuber Takeover promotion, which most recently ran in August. Twitch also reported that VTubing-related content
+on the platform shot up by some 350% between January and August 2022. Despite this, some have argued that the VTubing bubble has all but burst.
+
+Polygon is celebrating TwitchCon 2023 with a package of stories covering streaming trends and news from the show. Check it out!
+
+“I do feel that VTubing has become less novel as the market has become more saturated,” says a streamer with agency Nijisanji who is not approved to speak
+publicly.
+</item 28>
+
+<item 29>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+For the first year in recent memory, scale did not necessitate tradition, and scope did not preclude getting weird. In 2023, nothing was sacred in video games,
+and so they felt more vibrant than ever.
+
+Sure, some of the more “focused” games threw us for a pleasant loop: Dredge begins as a lonely fishing sim before transforming into something otherworldly, and
+Humanity morphed from a pensive art project into an all-out war. Dave the Diver, similarly, is not so much about being a diver as it is about running a sushi
+restaurant, or hunting for alien artifacts, or conversing with said aliens, or — you get the point. Whether you booted up your Steam Deck for a cross-country
+flight or hid your Switch off screen during that boring Zoom meeting, the game you returned to was rarely the one you left behind.
+
+This amorphousness (I’m begging our copy editor to let this one slide, because what other “word” could adequately summarize the video games of 2023?)
+</item 29>
+
+<item 30>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+After more than a decade of going on and on about the “board gaming renaissance,” it’s safe to say that tabletop role-play is finally having its moment in the
+spotlight. But while Dungeons & Dragons’ OGL fiasco has clearly lit a fire under many players eager to make a change, the fact of the matter is that a sizeable
+cohort of writers and designers have been toiling away at excellent games for years now. Their tireless efforts have yielded a bumper crop of excellent, some
+might say genre-defining, TTRPGs. Just like board games, a few modern classics have also cropped up: Look no further than The Quiet Year and The One Ring, both
+making their second appearance on this list.
+
+Just as before, Polygon asked nearly two dozen writers, designers, presenters, actors, and personalities from around the world of tabletop gaming to share with
+our readers the TTRPGs that made an impact on them and their players this year. Here’s what we found.
+</item 30>
+=== END ITEM id=d0f172644ca55a7a ===
+
+=== ITEM id=7af584da78195ccc ===
+Gold sentences and facts:
+Sentence 0: They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+  Fact 0.0: Jerry Dipoto is president of baseball operations.
+  Fact 0.1: Those referred to as 'they' would all have significant value if Jerry Dipoto decided to move one for a bat.
+Sentence 1: Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+  Fact 1.0: Aaron Judge came away with a new contract.
+  Fact 1.1: Justin Verlander came away with a new contract.
+  Fact 1.2: Trea Turner came away with a new contract.
+  Fact 1.3: Xander Bogaerts came away with a new contract.
+
+Retrieved items:
+<item 1>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Twins could trade Max Kepler, Jorge Polance
+
+Date: Sunday, Dec. 17
+
+Source: Jon Morosi, MLB Network
+
+The Twins are coming off an AL Central title, but could be looking to deal away two of their key players form the team. Max Kepler and Jorge Polanco could both
+reportedly be on the trade market, per MLB Network's Jon Morosi, though their market could hinge on the status of other infield free agents.
+
+Kepler appeared in 130 games for the Twins, and posted an impressive .260/.332/.484 slash line with 24 homers for Minnesota. Polanco was moved to an infield
+utility role with Edouard Julien and Royce Lewis emerging into regulars, but was still solid in 80 games, logging a .255/.335/.454 slash with 14 homers.
+
+Yamamoto requests meeting with Yankees
+
+Date: Sunday, Dec.
+</item 1>
+
+<item 2>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+3
+
+Source: Susan Slusser, San Francisco Chronicle
+
+The Giants have missed out on big names in the past like Aaron Judge and Carlos Correa, but they are looking to turn that around in 2023 with heavy involvement
+and Ohtani, among others. Per San Francisco Chronicle's Susan Slusser, teams believe the Giants "might have an edge" in the pursuit of Japanese ace Yoshinobu
+Yamamoto.
+
+Dylan Cease trade market heating up
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+One of the biggest names on the market early is White Sox ace Dylan Cease in trade talks. MLB Network's Jon Morosi reported three teams, the Dodgers, Braves and
+Orioles, are among several involved discussing a deal for Cease as the winter meetings begin.
+
+Rays, Mariners talking trades in winter meetings
+
+Date: Sunday, Dec.
+</item 2>
+
+<item 3>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+NY Post's Jon Heyman reported Miami is at least believed to be listening to trade packages for its young starters, including Jesus Luzardo, Braxton Garrett and
+Edward Cabrera, among others.
+
+Alex Verdugo 'expected' to stay with Yankees despite potential Juan Soto trade
+
+Date: Wednesday, Dec. 6
+
+Source: Jon Morosi, MLB Network
+
+The Yankees acquired Alex Verdugo yesterday from the Red Sox. With the team's reported interest in Juan Soto, there was some speculation that Verdugo could be
+flipped to the Padres, however, MLB Network's Jon Morosi reported that New York is "expected" to keep the outfielder rather than include him in a deal with San
+Diego.
+
+Juan Soto trade to Yankees 'is likely'
+
+Date: Wednesday, Dec. 6
+
+Source: Jack Curry, YES and Brandon Tierney, WFAN
+
+New York landed Alex Verdugo last night in a deal with the Red Sox.
+</item 3>
+
+<item 4>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+That informs the offseason trade landscape, which is headlined by a few stars deep into their arbitration windows. Without many clear rebuilders, it’s possible
+we see more swaps of big leaguers at positions of need between teams that expect to compete.
+
+Before we get to the list, a note on methodology. This isn’t a strict ranking of players’ trade value, nor is it solely about likelihood of being moved. We’re
+trying to balance both of those things, an inherently subjective exercise.
+
+All projected salaries for arbitration-eligible players are courtesy of MLBTR contributor Matt Swartz.
+
+1. Juan Soto, LF, Padres
+
+Other than Shohei Ohtani’s free agency, there may be no bigger story of the offseason than Soto’s future in San Diego. He is entering his final year of club
+control, projected for a $33M salary that would be the highest ever for an arbitration-eligible player.
+
+The Padres are scaling back payroll, perhaps as much as $50M.
+</item 4>
+
+<item 5>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Shohei Ohtani and Juan Soto have already found new homes, but much of the MLB offseason has yet to play out.
+
+Japanese pitcher Yoshinobu Yamamoto is the focus of many teams as he prepares to sign a massive deal, while Blake Snell, Cody Bellinger and Jordan Montgomery
+remain on the market. The trade market is also expected to be active once more dominoes fall, with Dylan Cease, Corbin Burnes and Tyler Glasnow among starters
+who could be moved this winter.
+
+The Winter Meetings are over, but because of the timeline of major decisions by Ohtani and Yamamoto, there could be a flurry of activity leading up to the end
+of the year.
+
+MORE: Why Shohei Ohtani signed with Dodgers over Blue Jays, other suitors
+
+Sporting News is tracking the rumors, signings and trades as MLB free agency continues. Follow along below for the latest news.
+</item 5>
+
+<item 6>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+16. Mariners SP
+
+We initially had Bryan Woo in this spot. It could just as easily have been Bryce Miller or Emerson Hancock, so we’ll cheat and just mention the Seattle rotation
+in general.
+
+They’re almost certainly not going to trade George Kirby. It’d take a lot to pry away Logan Gilbert. Moving any of Woo, Miller or Hancock could be more
+appealing for a front office that is looking for ways to add long-term offensive upside.
+
+None of that trio has even reached one year of major league service. Hancock only has three big league starts under his belt. Miller and Woo spent more time in
+the rotation this year, starting 25 and 18 games respectively. They both turned in mid-rotation results.
+
+Other clubs probably have differing opinions on which right-hander they prefer. (The Mariners likely have their own slight preferences.) They’d all have
+significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+
+17.
+</item 6>
+
+<item 7>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+20
+
+Source: Ken Rosenthal, The Athletic
+
+Buried at the bottom of Rosenthal’s piece on what an Ohtani contract might look like — incentives, opt-outs and all sorts of stuff — is this little bit of
+reporting:
+
+An agreement at the winter meetings in Nashville the first week of December would be the ideal outcome for MLB, but not necessarily for Ohtani. He perhaps will
+be better off waiting for the signing of Japanese righty Yoshinobu Yamamoto, who is expected to be posted for free agency as soon as Monday, triggering a 45-day
+window for teams to negotiate with him. Losing out on the 25-year-old Yamamoto, who could command more than $200 million, might put certain teams on tilt,
+improving the landscape for Ohtani.
+
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov.
+</item 7>
+
+<item 8>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Roberts said Ohtani is "clearly" the Dodgers' top priority, adding that the team is confident the two-time MVP will pitch again. Roberts wasn't able to offer a
+timeline for Ohtani's decision.
+
+Pair of pitchers could be signed after Ohtani deal
+
+Date: Tuesday, Dec. 5
+
+Source: Jon Morosi, MLB Network
+
+MLB is largely in a holding pattern as it awaits news on Ohtani. MLB Network's Jon Morosi reported the Rays could wind up trading Tyler Glasnow shortly after
+Ohtani signs, listing the Cubs and Reds as top contenders for the ace. He also reported Yoshinobu Yamamoto could sign following Ohtani's deal, and that the Red
+Sox have him among their top priorities.
+
+Cubs losing optimism in signing Ohtani
+
+Date: Tuesday, Dec.
+</item 8>
+
+<item 9>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Yates, who will be 37 when the season begins, is headed to the Rangers on a one-year deal, per Rosenthal. The right-hander, an All-Star closer for the Padres in
+2019, posted a 3.28 ERA in 61 appearances for the Braves in 2023.
+
+Devenski, 33, has agreed to a new one-year deal with the Rays that includes a club option for 2025, according to Passan. Devenski began 2023 with the Angels but
+was released in late August and signed with Tampa Bay. He posted a 5.08 ERA in 29 games for the Angels and dropped three full runs off that number in nine games
+with the Rays.
+
+Dave Roberts says Dodgers met with Ohtani
+
+Date: Tuesday, Dec. 5
+
+Source: Alden Gonzalez, ESPN
+
+Dodgers manager Dave Roberts told reporters Tuesday that the team met with Ohtani for 2-3 hours over the weekend.
+</item 9>
+
+<item 10>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+The Padres are scaling back payroll, perhaps as much as $50M. They need multiple starting pitchers and could stand to upgrade at first base and/or designated
+hitter.
+
+Trading Soto would allow the Friars to recoup MLB-ready talent while clearing significant spending room for multiple smaller additions. It would also be a
+devastating blow to the lineup. Soto overcame a relatively slow start (by his standards) to hit .275/.410/.519 with 35 home runs this year.
+
+The Padres are still motivated to win in the short term. Barring what would be a stunning run at Ohtani, they’re not going to acquire anyone better than Soto.
+
+President of baseball operations A.J. Preller continues to maintain they’ll explore a long-term deal. There’s nothing to suggest an extension is particularly
+likely. Soto rejected a $440M offer from the Nationals before he was traded at the 2022 deadline. The price would only be higher now that he’s a year and a half
+closer to free agency.
+</item 10>
+
+<item 11>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+The Athletic's Ken Rosenthal reported Gurriel has re-signed a contract with the Diamondbacks.
+
+According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with
+the club.
+
+Yamamoto dines with Mets owner
+
+Date: Sunday, Dec. 17
+
+Source: Joel Sherman, New York Post
+
+The Mets continued their strong push for the top free agent available, Yoshinobu Yamamoto, by hosting the Japanese pitcher for dinner Saturday night at team
+owner Steve Cohen's Connecticut home. Cohen and other top Mets officials previously flew to Japan to meet with Yamamoto on his home turf, so this is at least
+the second time the key players have met face-to-face.
+
+Sherman reports the bidding process for the 25-year-old "is supposed to intensify this week," with the Yankees, Dodgers, Giants, Red Sox, Phillies and Blue Jays
+also in the mix.
+</item 11>
+
+<item 12>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+Davis, Mike Yastrzemski
+
+Guardians: Josh Naylor, Cal Quantrill
+
+Mariners: Ty France
+
+Marlins: Josh Bell
+
+Mets: Jeff McNeil
+
+Nationals: Hunter Harvey, Lane Thomas
+
+Orioles: Anthony Santander
+
+Padres: Scott Barlow
+
+Phillies: Nick Castellanos
+
+Rays: Manuel Margot, Harold Ramírez
+
+Red Sox: Kenley Jansen, Chris Martin, Nick Pivetta
+
+Rockies: Brendan Rodgers
+
+Royals: Salvador Perez
+
+Tigers: Spencer Turnbull
+
+Twins: Kyle Farmer
+</item 12>
+
+<item 13>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Morosi reports Shohei Ohtani is "likely to decide on a team within the next week," according to a source.
+
+Status quo on Yankees' Juan Soto trade talks
+
+Date: Sunday, Dec. 3
+
+Source: Jon Heyman, New York Post
+
+The Yankees reportedly are pushing hard to acquire Juan Soto from the Padres, but Heyman says the teams haven't spoken since San Diego requested a six-player
+package in return for Soto and Trent Grisham. That ask included pitchers Michael King and Drew Thorpe, who the Yankees aren't inclined to move. Stay tuned...
+
+Shohei Ohtani field growing smaller
+
+Date: Friday, Dec. 1
+
+Source: Jeff Passan, ESPN
+
+It has been expected since before he hit free agency that Ohtani would set the record for the largest fully guaranteed contract in North American sports
+history, with Passan reporting the deal could reach as much as $600 million.
+</item 13>
+
+<item 14>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+It also makes him less likely to be traded this offseason.
+
+First-year GM Chris Getz has suggested no one on the roster is truly untouchable, an understandable approach for a team that just lost 101 games. Neither owner
+Jerry Reinsdorf nor Getz has called this a rebuild, though.
+
+Any slim hopes the White Sox may have of competing in 2024 would be dashed by trading Cease, the only above-average starting pitcher on the roster.
+
+7. Alex Verdugo, RF, Red Sox
+
+Verdugo’s name has been floated in trade rumors for a few seasons. The Red Sox have held onto him thus far. They have a new baseball operations leader in Craig
+Breslow, who has acknowledged the team has gotten early calls on the left-handed hitting outfielder.
+
+Jarren Duran and Masataka Yoshida also hit from the left side. Dealing Verdugo could free some at-bats for a right-handed addition while perhaps bringing in
+immediate help for the pitching staff or at second base.
+</item 14>
+
+<item 15>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+While the offseason has gotten rolling, trade season hasn’t quite arrived. The Tigers acquired Mark Canha from Milwaukee in the biggest swap of the first couple
+weeks. Otherwise, the GM Meetings simply served to set the stage for future transactions.
+
+That’ll surely involve some notable trades. Unlike the summer deadline, projecting which players will change hands is difficult at this stage of the offseason.
+
+Aside from the A’s, there aren’t any teams clearly in rebuild mode. Clubs like the Rockies, Royals, White Sox, Nationals and Angels have uphill paths to
+contention, yet none has indicated they’re prepared to punt on the 2024 season entirely.
+
+The Padres, Twins, Rays, Brewers and Guardians are all aiming to contend but have questions about their payroll. That’s standard operating procedure for Tampa
+Bay, Milwaukee and Cleveland. San Diego and, to a lesser extent, Minnesota have shown a willingness to spend in recent years but are scaling back — in both
+cases, likely tied to their uncertain local television rights contracts.
+</item 15>
+
+<item 16>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Bellinger would be returning to the Cubs, the team with which he rebuilt his value after a down year with the Dodgers. If he signed with the Blue Jays, he'd be
+bringing the powerful left-handed bat the team sought when it pursued Ohtani.
+
+Dodgers send stars to meet with Yamamoto
+
+Date: Wednesday, Dec. 13
+
+Source: Fabian Ardaya, The Athletic
+
+The Dodgers added one Japanese star this offseason. They're now looking to add another. Los Angeles reportedly sent Ohtani, Mookie Betts, Freddie Freeman and
+Will Smith to meet with Yamamoto, trying to convince the standout starting pitcher to join the National League superpower.
+
+Signing Yamamoto would be a major boost for the Dodgers, who still have a need at starting pitcher.
+
+Rays-Dodgers working on a Tyler Glasnow trade
+
+Date: Wednesday, Dec.
+</item 16>
+
+<item 17>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Passan reported a trade of Soto appears to be "edging closer to becoming a reality," and while several teams are out on him because of his large salary and
+pending free-agent status, there still could be a large market for the star outfielder.
+
+Much of the rest of the names on the trade market are arms. Dylan Cease and Tyler Glasnow are the pitchers most likely to be dealt this offseason, and Cleveland
+could also hold a pair of intriguing trade chips in closer Emmanuel Clase and former Cy Young winner Shane Bieber. The Brewers have also begun trade talks for
+former Cy Young winner Corbin Burnes.
+</item 17>
+
+<item 18>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Kelenic, 24, is the headliner of the deal as a former No. 6 overall pick in the 2018 MLB Draft and top five-ranked prospect in 2021. The 24-year-old has not
+found any consistency in his MLB career thus far, hitting .206 with a .656 OPS through three tumultuous seasons. He has 32 home runs, 109 RBI and 24 stolen
+bases in 974 plate appearances.
+
+Gonzales, 31, is also a decent rotation arm with 65 wins, 665 strikeouts and a 4.14 ERA over 893.0 innings pitched in his nine-year career.
+
+Giants emerging as possible frontrunners for Yoshinobu Yamamoto
+
+Date: Sunday, Dec.
+</item 18>
+
+<item 19>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Juan Soto to Yankees 'close to being finalized'
+
+Date: Wednesday, Dec. 6
+
+Source: Jon Morosi, MLB Network
+
+A trade between the Yankees and Padres for Soto is reportedly "close to being finalized," with right handers Michael King and Drew Thorpe expected to highlight
+the return to San Diego. MLB Network's Jon Morosi reported the package will include at least two more players, neither of which will be Alex Verdugo.
+
+Ohtani decision expected to be made before end of weekend
+
+Date: Wednesday, Dec. 6
+
+Source: Jon Morosi, MLB Network
+
+MLB free agency remains largely on hold as teams wait for Ohtani to sign, and though it had at at point been reported he could sign during the winter meetings,
+there appears to be a new timeline. MLB Network's Jon Morosi reported Ohtani is expected to make his pick before the end of the upcoming weekend. The winter
+meetings end on Thursday.
+</item 19>
+
+<item 20>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov. 17
+
+Source: Daniel Kramer, MLB.com
+
+Here’s the key piece of the article: “Industry sources told MLB.com this week that landing Ohtani doesn’t appear to be within the Mariners’ realistic agenda
+this offseason.”
+
+In a way, that’s surprising. The Mariners seem to check a lot of boxes for Ohtani. They’re set up to win for a long time with a bunch of young starting pitchers
+and a co-superstar in Julio Rodriguez. Plus, Ohtani would get to be part of the quest for the franchise’s first World Series title, he’d get to wear the same
+uniform as his baseball hero, Ichiro, and he’s lived there in the offseason. So it must be about the money, and Seattle’s reluctance to even get in the
+conversation. That’s gotta be super disappointing for Mariners fans starved for a title, right?
+</item 20>
+
+<item 21>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Yoshinobu Yamamoto meets with Phillies
+
+Date: Thursday, Dec. 14
+
+Source: Jon Heyman, New York Post
+
+The Phillies have not been one of the more frequent names connected to Yamamoto, however the Japanese free agent reportedly met with the team. The starting
+pitcher has met with a number of teams, including the Dodgers, Mets, Yankees and Red Sox.
+
+Philadelphia re-signed ace Aaron Nola this offseason, bringing back the powerful duo of Nola and Zack Wheeler. Adding Yamamoto would immediately give the
+Phillies' one of the best rotations in baseball.
+
+Cubs, Blue Jays the favorites for Cody Bellinger
+
+Date: Wednesday, Dec. 13
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays and Cubs were believed to be among the favorites to land Ohtani. But with the star two-way talent off to Los Angeles, the two are now believed to
+be the favorites to land Cody Bellinger, according to Heyman.
+</item 21>
+
+<item 22>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+New York has subsequently walked back some of their statements about a possible retool. They’re still aiming to compete in ’24 even if they’re signaling they
+won’t blow away the top of the free agent market.
+
+First-year president of baseball operations David Stearns has twice publicly said he anticipates Alonso being the Opening Day first baseman in Queens. That
+won’t stop teams from trying, but an offseason deal looks decidedly unlikely.
+
+Others of note
+
+A’s: Seth Brown
+
+Braves: Vaughn Grissom
+
+Brewers: Adrian Houser, Devin Williams, Brandon Woodruff
+
+Cardinals: Alec Burleson, Tommy Edman, Nolan Gorman, Tyler O’Neill
+
+Giants: J.D.
+</item 22>
+
+<item 23>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+His 3.39 mark across 193 2/3 innings this past season wasn’t quite so dominant but is still high-end production.
+
+Burnes struck out just under 26% of opposing hitters. While his lowest mark since his rookie season, that’s still an above-average figure.
+
+Adames is coming off a less impressive year. The 28-year-old hit .217/.310/.407 through 638 trips to the plate. That’s slightly below-average offense, although
+he still connected on 24 home runs.
+
+Adames is an excellent defensive shortstop with plus power in an offseason where there are essentially no free agent shortstops of note. Even with a mediocre
+on-base percentage, he’d generate plenty of interest.
+
+4. Shane Bieber, SP, Guardians
+
+Develop high-end starting pitching, trade a top starter as they become more expensive, replace him with talented younger arms. The Guardians have trodden this
+path with Corey Kluber, Mike Clevinger and Carlos Carrasco.
+</item 23>
+
+<item 24>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Verdugo had been the Red Sox's starting outfielder for the last four seasons, coming over as the centerpiece in the trade that sent Mookie Betts to the Dodgers.
+Verdugo hit .281 with 43 home runs, 206 RBI and 16 stolen bases over 2,071 plate appearances with Boston. He also led the American League in outfield assists in
+2020 and 2023.
+
+In return, Boston will get Weissert and two pitching prospects headlined by Fitts — the Yankees' No. 4-ranked pitching prospect and 12-ranked prospect overall.
+
+Relievers Yates, Devenski get one-year deals for 2024
+
+Date: Tuesday, Dec. 5
+
+Source: Ken Rosenthal, The Athletic and Jeff Passan, ESPN
+
+Veteran relievers Kirby Yates and Chris Devenski know where they'll be pitching in 2024, according to reports Tuesday.
+</item 24>
+
+<item 25>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Rays, Mariners talking trades in winter meetings
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+The Mariners and Rays have been frequent trade partners in recent years, and there's a chance they could be talking shop again at the winter meetings. MLB
+Network's Jon Morosi reported the teams are discussing Rays utility infielder Isaac Paredes, and potentially star left fielder Randy Arozarena, in talks to
+start the winter meetings.
+
+Jays unlikely to land both Ohtani, Soto
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+The Blue Jays have been among the most active names in both the Ohtani and Soto markets. And of course, those talks have had fans dreaming of a lineup that
+features, Ohtani, Soto, Vladimir Guerrero Jr., Bo Bichette and George Springer.
+</item 25>
+
+<item 26>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+And he is clearly looking for a top-of-the-market contract. Rogers reported sources indicate Bellinger's agent, Scott Boras, is seeking a deal worth well over
+$200 million for Bellinger, with one source saying he is "not budging."
+
+Rogers went on to note that some believe the Cubs won't be a team willing to pay a player that type of money until he's 40 years old, while a team like the Blue
+Jays might given their desperation to round out the roster.
+
+Padres closing in on contract for Yuki Matsui
+
+Date: Tuesday, Dec. 18
+
+Source: Yuki Yamada, Sankei Sports
+
+The Padres are nearing a deal for one of the top Japanese pitchers on the market. Per Sankei Sports' Yuki Yamada, the Padres are "close to signing" Rakuten
+Golden Eagles' reliever Yuki Matsui to a deal.
+</item 26>
+
+<item 27>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+15. Randy Arozarena, LF, Rays
+
+Arozarena hasn’t been the subject of the same level of trade speculation as Glasnow has. There’s an argument the Rays should be more willing to move the
+All-Star outfielder if they’re looking to create payroll room.
+
+Tampa Bay has greater depth in the outfield than they do on their injury-riddled pitching staff. Josh Lowe, Jose Siri, Harold Ramírez, Luke Raley and Manuel
+Margot are all on hand. (Margot has come up in trade rumors as well.)
+
+None of those players is as good as Arozarena. Trading star players for younger talent is familiar territory for the Tampa Bay front office though. Arozarena is
+projected for a $9M arbitration salary and controllable for three seasons. He’d have significant trade value if the Rays were to consider moving him.
+
+16. Mariners SP
+
+We initially had Bryan Woo in this spot.
+</item 27>
+
+<item 28>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+MLB's winter meetings are always a prime time for moves to happen as many of the top executives, players and agents all come together at the same spot.
+
+Last year's winter meetings wound up being explosive. Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+
+This year's winter meetings could wind up being similarly busy. There is a growing sense Shohei Ohtani could sign during the winter meetings, and a move of that
+magnitude could kick off the next wave of moves. There's also a number of top players on the trade market, including star Padres outfielder Juan Soto.
+
+Starting Sunday, Dec. 3, and running through Wednesday, Dec. 6, expect MLB's offseason to really kick into high gear.
+
+WINTER MEETINGS: Shohei Ohtani rumors, Juan Soto trade destination come to forefront
+
+Sporting News will be tracking all the latest news and rumors from the 2023 Winter Meetings.
+</item 28>
+
+<item 29>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+He has been linked to Toronto and Los Angeles throughout the process.
+
+Mariners considering Cody Bellinger
+
+Date: Tuesday, Dec. 5
+
+Source: Jon Morosi, MLB Network
+
+Following the trade the Mariners made with the Braves, MLB Network's Jon Morosi believes Seattle has cleared payroll space and now has room to make a splash for
+top free agent slugger Cody Bellinger. Seattle has Julio Rodriguez in center, but with Teoscar Hernandez still on the market and Jarred Kelenic now dealt, there
+is room for him in the outfield.
+
+Blue Jays 'believed' to have met with Shohei Ohtani
+
+Date: Monday, Dec. 4
+
+Source: Ken Rosenthal, The Athletic
+
+While one report earlier Monday indicated Ohtani isn't expected to sign before the end of the Winter Meetings, the process seems to be moving along.
+</item 29>
+
+<item 30>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Who will hand him that contract has been much more of a mystery. Little has been leaked about the top suitors for Ohtani beyond the usual suspects. Passan
+reported that at least three teams initially believed to be in the running — the Mets, Rangers and Red Sox — are believed to be out now. The teams most likely
+to still be in the mix are the Dodgers, Cubs, Blue Jays and Angels, with the Giants' status in the race for Ohtani unknown.
+
+Star players could be traded
+
+Date: Friday, Dec. 1
+
+Source: Jeff Passan, ESPN
+
+The free agency pool outside of Ohtani, Cody Bellinger, Blake Snell and Yoshinobu Yamamoto is a bit lacking in star power, but the trade market could ensure
+several big-name players are on the move this offseason.
+</item 30>
+=== END ITEM id=7af584da78195ccc ===
+
+=== ITEM id=9e52958c5f5463f1 ===
+Gold sentences and facts:
+Sentence 0: She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years.
+  Fact 0.0: The speaker explained this at the time of the 2022 Academy Awards.
+  Fact 0.1: Will slapped Chris Rock at the 2022 Academy Awards.
+  Fact 0.2: At the time Will slapped Chris Rock, the speaker and Will had been separated for six years.
+Sentence 1: Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy.
+  Fact 1.0: Outsiders are now aware that Jada and Will have been separated since 2016.
+  Fact 1.1: The timeline of Jada's relationship with Alsina is still fuzzy.
+
+Retrieved items:
+<item 1>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+His recent comments come after Jada made major revelations about their marriage in her memoir, including how she and Will have been separated for seven years.
+
+During the event in Baltimore, Will began by speaking to the crowd about his love and admiration for his partner, who he married in 1997. “I just really wanted
+to come out and just be here and hold it down for you the way you have held it down for me,” he said during the event, as reported by The Baltimore Sun.
+
+The King Richard star went on to describe the challenges and achievements he’s had throughout his marriage, adding: “We have had a very, very long and
+tumultuous [relationship]. We call it ‘brutiful.’ It was brutal and beautiful at the same time."
+
+At another point during the event, Will referred to his union with Jada as a “sloppy public experiment in unconditional love,” according to the Baltimore
+Banner.
+</item 1>
+
+<item 2>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+They’re really exploring something vastly different. It doesn’t end up that you go back into that little box of ‘this is a marriage, we’re living together’. It
+just doesn’t do that.”
+
+Every relationship is different, living in the public eye or not. Although living separately may not be an issue for some couples, there can still be some major
+signs that it’s time to leave a relationship behind. “When there is no stone left unturned, or when they have tried every single combination possible to make
+the relationship function and yet it doesn’t, that’s the time to pull the plug,” Winter added. “They’ve done their individual work and they have done the work
+together and ended up in the same place.”
+
+Will and Jada’s relationship could end in a variety of ways. The celebrity couple could stay separated, move back in together as a married pair, or they can get
+a divorce.
+</item 2>
+
+<item 3>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+This isn’t the first time that Jada and Will have taken some time apart from each other. During a 2020 episode of her Facebook Watch series, Red Table Talk,
+Jada disclosed that while she and Will were separated amicably, she had a relationship with singer August Alsina, describing their involvement as an
+“entanglement”.
+
+Throughout their marriage of 26 years, the A-listers have made it clear that divorce was never in the cards. Jada furthered that belief during a preview for an
+interview with Today’s Hoda Kotb, which aired on 13 October. “I made a promise that there will never be a reason for us to get a divorce,” she said. “We will
+work through, whatever. I just haven’t been able to break that promise.”
+
+Of course, outsiders aren’t fully aware of the “heavy-duty work” that Jada and Will have done throughout their marriage.
+</item 3>
+
+<item 4>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Although they’ve made their dedication to each other quite clear, there have been some grey areas over the last seven years about the terms of Will and Jada’s
+separation. In 2020, Jada made headlines when she revealed in a Red Table Talk episode with her husband that she had a relationship with Alsina. She explained
+that she and her husband were “separated amicably” when the romance occurred, which had not been disclosed to the press at the time. “We decided that we were
+going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,” Jada said. As the Girls
+Trip star recalled that she “got into a different kind of entanglement with August,” she was prompted by Will to confirm it “was a relationship, absolutely.”
+</item 4>
+
+<item 5>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+he wrote on Facebook at the time. “So, in the interest of redundant, repetitious, over and over-again-ness… Jada and I are… NOT GETTING A DIVORCE!!!!!!!!!!!!!”
+
+2018: Will revealed that he and Jada don’t refer to themselves as married
+
+In an episode of TIDAL’s Rap Radar podcast, Will said he and Jada “refer to ourselves as life partners, where you get into that space where you realise you are
+literally with somebody for the rest of your life. There’s no deal breakers. There’s nothing she could do - ever. Nothing that would break our relationship. She
+has my support till death and it feels so good to get to that space.”
+</item 5>
+
+<item 6>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Jada Pinkett Smith has revealed why she and her husband Will Smith never signed a prenuptial agreement before getting married.
+
+The former talk show host, 52, spoke candidly about her husband during a recent interview with Parade. While discussing her new memoir, Worthy, Jada revealed
+that she and Will didn’t sign a prenup when they were married in 1997 because they knew divorce wasn’t in the cards for them.
+</item 6>
+
+<item 7>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+(AFP via Getty Images)
+
+“They’re not resolving their problems, they’re rescheduling them. So, if you separate from someone, but you live in a separate house and you’re still together,
+it seems to me you’re just not letting go of the past because you want to stick to what’s familiar,” he claimed. “People stick to what they know, and it’s like
+you have a tether to that person. Your brain’s like: ‘I cannot let go of them because I am scared of the unknown.’ I don’t think I’ve ever seen a couple
+separate and come back again.”
+
+It’s unclear whether Jada and Will plan on ending their separation and living in the same home again. However, the couple have been candid about their plans to
+not get a divorce. Jada previously recalled that when she first decided to get married to Will in 1997, it would be for the long haul.
+</item 7>
+
+<item 8>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Jada Pinkett Smith has revealed that she and husband Will Smith have been separated for the last seven years.
+
+The Girls Trip star, 52, shared in a new interview with People published on 11 October that she and the King Richard actor, 55, are “still figuring it out” when
+it comes to their marriage of 26 years. She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six
+years.
+</item 8>
+
+<item 9>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+Jada then praised her children for how they’ve helped her grow, adding: “My children, they’re little gurus. They’ve taught me a deep sense of self-acceptance.”
+
+On 16 October, Will broke his silence on his wife’s comments during an interview with the New York Times. The outlet noted that he said his partner’s memoir
+“kind of woke him up” and that he has now realised she is more “resilient, clever and compassionate than he’d understood”.
+
+“When you’ve been with someone for more than half of your life, a sort of emotional blindness sets in, and you can all too easily lose your sensitivity to their
+hidden nuances and subtle beauties,” Will added.
+</item 9>
+
+<item 10>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+During an interview with Hoda Kotb for Today, which aired on 13 October, the actor confirmed that she and her partner have been living “completely separate
+lives” for the past seven years. However, according to Jada, their choice to live in separate homes doesn’t mean that they’ll be getting divorced anytime soon.
+
+“I made a promise that there will never be a reason for us to get a divorce,” she said. “We will work through whatever. And I just haven’t been able to break
+that promise.”
+
+When asked why she and Will didn’t “just amicably divorce,” Jada simply replied: “We don’t want to.”
+
+She then explained how her family shaped that decision, as she and the King Richard star share two children - Jaden, 25, and Willow, 22. Will also has a
+30-year-old son, Trey, who he shares with ex-wife Sheree Zampino. “We love our family and we love each other.
+</item 10>
+
+<item 11>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Will and Jada with their son Jayden in 2003 (Getty)
+
+2013: Jada denies open marriage rumours (sort of)
+
+After a quiet decade and a half making movies and raising their children, Jada took to Facebook to address rumours she and Will were in an open relationship.
+
+She wrote: “Here is how I will change my statement... Will and I BOTH can do WHATEVER we want, because we TRUST each other to do so. This does NOT mean we have
+an open relationship... this means we have a GROWN one.”
+
+2015: Will addresses divorce rumours
+
+Will addresses persistent separation rumours by clarifying the pair were not getting a divorce.
+
+“Under normal circumstances, I don’t usually respond to foolishness. But, so many people have extended [to] me their ‘deepest condolences’ that I figured -
+‘What the hell… I can be foolish, too!’” he wrote on Facebook at the time.
+</item 11>
+
+<item 12>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Will Smith has spoken out about his “tumultuous” relationship with his wife, Jada Pinkett Smith, while speaking to a crowd of fans in Baltimore, Maryland.
+
+The 55-year-old actor took the stage at the Enoch Pratt Free Library on 18 October, as he made an appearance at a press event for his wife’s book, Worthy,
+alongside their two children – Jaden, 25, and Willow, 22.
+</item 12>
+
+<item 13>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+However, during an appearance on the Today show on 16 October, Jada clarified to Hoda Kotb that she and the Suicide Squad actor are “working hard” and are
+“concentrating on healing” to get their relationship to a better place.
+
+“There’s no finding another great love, and I think that’s the point,” she said. “It’s like we are in a place now that we are in a deep, healing space. And we
+are really concentrating on healing the relationship between us.”
+
+The Girls Trip star continued: “There’s no divorce on paper. We really have been working hard. That’s the whole thing. We are working very hard at bringing our
+relationship together. Back to a life partnership.”
+</item 13>
+
+<item 14>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+I don’t think I would ever be mature enough, I don’t.”
+
+The Fresh Prince of Bel-Air star has also shared similar sentiments, as he said during an appearance on the Ellen Degeneres Show that “divorce just can’t be an
+option” for him and Jada. “It’s really that simple. And I think that’s the problem with LA - there are so many options. So a huge part of the success for [Jada]
+and I is that we just removed the other options.”
+
+Last week, Jada made headlines when she revealed that at the time of the 2022 Academy Awards, when Will slapped Chris Rock, she and her husband had been
+separated for six years. “We’ve been doing some really heavy-duty work together,” she said during an interview with People. “We just got deep love for each
+other and we are going to figure out what that looks like for us.”
+</item 14>
+
+<item 15>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Longtime Hollywood couple Will Smith and Jada Pinkett Smith sent shockwaves around the world this week when the Red Table Talk host revealed that she and the
+actor have been separated since 2016. Both Jada and Will have previously doubled down on their stance against getting a divorce, but her recent reveal about
+their lengthy separation poses a new question: When should couples just get a divorce?
+</item 15>
+
+<item 16>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Will Smith y Jada Pinkett Smith (Getty Images)
+
+According to Lucas, some of the controversy surrounding Will and Jada’s relationship ties back to the 2022 Academy Awards - when the King Richard star jumped
+onto the stage and struck Rock across the face after the comedian made a joke about Jada’s shaved head, which is a result of her alopecia. “Keep my wife’s name
+out of your f***ing mouth,” Will yelled. Now that it’s been revealed the couple was separated at the time, Lucas questioned Will’s behaviour and word choice
+during the awards ceremony.
+
+“That’s a weird reaction to have somebody who you’ve been broken up with for six years, you know? So, were they really broken up or is Jada saying that as an
+attention-seeking thing?” he asked.
+
+However, Winter still believes the controversial incident speaks different volumes about the work Will has put into his relationship.
+</item 16>
+
+<item 17>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Here’s a timeline of their relationship.
+
+1994: Will and Jada meet on the set of The Fresh Prince of Bel-Air
+
+Will and Jada met after she auditioned for the role of Will’s girlfriend on The Fresh Prince of Bel-Air. While she did not get the part, the pair hit it off -
+despite Will being married to Sheree Zampino at the time, with who he shares son Trey.
+
+“I had a realisation I wasn’t with the person I was supposed to be with,” he told Jada’s Red Table Talk in 2018. “I was sitting in a [bathroom] stall and I was
+crying and laughing uncontrollably, and I knew [Jada] was the woman I was supposed to be with.”
+
+Will and Jada in 2000 (Getty)
+
+1995: The pair officially begin dating
+
+It wasn’t until 1995 that Will and Jada began seriously dating after Will finalised his divorce from Zampino.
+</item 17>
+
+<item 18>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+But the structure of the life that we had established was strangling both of us.”
+
+2022: No infidelity statement and Oscars incident
+
+During an interview on CBS Sunday Morning earlier this month, Will said he and Jada had never accused each other of cheating.
+
+He said: “Never. There’s never been infidelity in our marriage...And we have never surprised one another with anything ever..I have decided that chatter about
+my life can be of a benefit to people. I think that chatter is the first stage to having a real conversation and being able to truly explore if some of the
+things in your heart are loving, or poisonous.”
+
+In March 2022, Will slapped Chris Rock at the 94th annual Oscars before he yelled at the comedian to “keep my wife’s name out your f***ing mouth”. It quickly
+became the most talked-about moment of the evening with the pair initially appearing to laugh off the tense moment.
+
+The altercation came after Rock said: “Jada, I love you.
+</item 18>
+
+<item 19>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+“It’s hard... the thing Will and I talk about a lot is the journey. We started in this [relationship] at a very young age, 22 years old... I think you expect
+your partner to know - especially when it comes to sex. It’s like: ‘Well, if you love me, you should know. If you love me, you should read my mind.’ That’s a
+huge pitfall,” she said at the time.
+
+The next month, Will’s memoir is released which details several issues the couple have had over the years. He wrote they were “suffering the brutal death of our
+romantic fantasies, the burning away of the idealistic illusion of the perfect marriage and the perfect family. Neither of us wanted a divorce; we knew we loved
+each other, and some aspects of our union were magical. But the structure of the life that we had established was strangling both of us.”
+</item 19>
+
+<item 20>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+“I told Will from the gate, I said let me tell you something: ‘If you marry me, know this: we’re gonna be together. We’re going to be under the same roof,’” she
+said during a 2018 episode of Red Table Talk. “For me personally, I’m not mature enough to have a divorce, I’m just not. I don’t think I would ever be mature
+enough, I don’t.”
+
+Will - who divorced his first wife, Sheree Zampino, in 1994 - has also shared similar sentiments about making his marriage with Jada work. Back in 2006, the
+Fresh Prince of Bel-Air star first explained to MTV News that divorce wasn’t an option for him and his second wife. “With Jada, I stood up in front of God and
+said: ‘Til death do us part,’” he said at the time. “So there are two possible outcomes.
+</item 20>
+
+<item 21>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+The altercation came after Rock said: “Jada, I love you. GI Jane 2, can’t wait to see you,” referring to Jada’s shaved head. While accepting the award for Best
+Actor, Will became teary as said he was a “fierce defender of his family”.
+</item 21>
+
+<item 22>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Perhaps one of the reasons why Jada and Will have promised not to get a divorce is because they also agreed not to sign a prenuptial agreement. In an interview
+with Parade published on 13 October, Jada explained it was her special connection with Will that encouraged them not to sign a prenup before getting married.
+
+“I feel that was a very real moment for the two of us to look each other in the eyes, recognise that there would be tough times in this journey and to say to
+each other: ‘No matter what, we’re going to figure it out and that’s why we don’t need a prenup, because I’m making a promise that divorce won’t be necessary,
+that we will figure this out,’” she recalled. “And we made that promise to each other without all of the bridal wedding beauty; it was just sitting on a log in
+his mother’s backyard, and going: ‘Hey’ - having to really look at the possibility of us not being together.”
+</item 22>
+
+<item 23>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+“We’ve been doing some really heavy-duty work together,” Jada said. “We just got deep love for each other and we are going to figure out what that looks like
+for us.”
+
+The pair have been married since 1997 and share son Jaden, 25, and daughter Willow, 22. The Fresh Prince of Bel-Air star also has a son Trey, 30, whom he shares
+with his first wife, Sheree Zampino.
+
+As for her children, Jada praised them for how they’ve helped her grow. “My children, they’re little gurus. They’ve taught me a deep sense of self-acceptance,”
+she told the outlet.
+
+Jada and Will have often opened up about their relationship over the years, and have had very public ups and downs throughout their marriage. Here’s a timeline
+of their relationship.
+</item 23>
+
+<item 24>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+She has my support till death and it feels so good to get to that space.”
+
+2020: August Alsina claims he had an affair with Jada
+
+August Alsina and Jada were introduced in 2015, but it wasn’t until 2020 that he claimed that he and Jada had dated while she was married and that her and
+Will’s marriage was open during that time.
+
+Alsina said Will gave him and Jada his “blessing”, adding: “I actually sat down with Will and had a conversation due to the transformation from their marriage
+to life partnership that they’ve spoken on several times and it not involving romanticism.”
+
+Alsina added he “totally gave myself to that relationship for years of my life and I truly and really, really deeply loved and have a ton of love for her.”
+
+The same day Alsina’s claims surfaced Jada’s reps said they were “absolutely not true”.
+</item 24>
+
+<item 25>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy. Indeed, the terms of
+Will and Jada’s separation are still unknown to the public and in some cases, having separate relationships can give couples the clarity they need about their
+marriage.
+
+“What’s pivotal here is, what was the agreement? Did we agree to separate to work on ourselves for the purpose of coming back together again?” Winter said. “Did
+we agree to separate and just be alone for a while and not have that discussion? And in the second case, if you have an affair, sometimes it can bring you back
+to the original person. You can get whatever you need to achieve or gain a different perspective, allowing you to decide if you want to come back or leave for
+good.”
+</item 25>
+
+<item 26>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+1997: Will and Jada get engaged and married
+
+Will popped the question to Jada in November 1997 before getting married just one month later in Baltimore.
+
+Jada wasn’t initially sold on the idea of marriage. She told People in 2019: “I never wanted to get married. But my mother was like: ‘You have to get married’ -
+she’s so old-school - and Will wanted a family. So I said: ‘All right, maybe it’s something I should do.’”
+
+1998: Their first child is born
+
+Jada and Will’s first child together, son Jayden, was born in July 1998.
+
+2000: Their second child was born
+
+Jada and Will welcomed daughter Willow in 2000.
+</item 26>
+
+<item 27>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Prior to sharing the video, Smith showed his support for his partner and her success in a statement toThe New York Times. During the interview, the outlet noted
+that Smith said his wife’s memoir “kind of woke him up” and that he has now realised she is more “resilient, clever and compassionate than he’d understood”.
+
+“When you’ve been with someone for more than half of your life, a sort of emotional blindness sets in, and you can all too easily lose your sensitivity to their
+hidden nuances and subtle beauties,” he added.
+
+In an interview with People published on 10 October, Jada first revealed that she and her husband were living separately. “We’ve been doing some really
+heavy-duty work together,” she said. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+</item 27>
+
+<item 28>
+A timeline of Will Smith and Jada Pinkett Smith’s relationship amid separation (The Independent - Life and Style, 2023-10-12T18:10:45+00:00)
+Less than two weeks later, Jada and Will appeared on an episode of Jada’s Red Table Talk where Jada confirmed that she did have a relationship with Alsina,
+saying that she and Will were separated at the time.
+
+“We decided that we were going to separate for a period of time and you go figure out how to make yourself happy and I’ll figure out how to make myself happy,”
+Jada said at the time.
+
+“From there, as time went on, I got into a different kind of entanglement with August... Yes, it was a relationship absolutely.”
+
+Jada also said that Will didn’t give permission, as the only person who could give her permission was herself.
+
+2021: Jada discusses her and Will’s sex life, Will’s memoir is released
+
+In another episode of Red Table Talk in October 2021, Jada said it “takes work” to maintain a spark in the bedroom.
+
+“It’s hard... the thing Will and I talk about a lot is the journey.
+</item 28>
+
+<item 29>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+In an interview with People on 10 October, Jada shared that during the 2022 Academy Awards - when Will slapped Chris Rock after he cracked a joke about Jada’s
+appearance - the pair had actually been separated for six years. “We’ve been doing some really heavy-duty work together,” she explained, while promoting her new
+memoir, Worthy. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+
+She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time, noting that they’ve taught her “a deep
+sense of self-acceptance”. Although the married couple are not living together, she insisted that their marriage has never been an open one, as she and Will
+have “eliminated the chance of betrayal” while going on to live their “separate lives”.
+</item 29>
+
+<item 30>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+“I feel as though Will has a tremendous love and commitment to Jada, as well as to the marriage and the family unit,” she said. “The pride that he takes in
+defending his wife is extraordinary, almost to the detriment of his image, at times.”
+
+Ultimately, the public will never fully know what “heavy-duty work” Will and Jada are doing in their relationship, and according to Winter, it’s not necessarily
+any of our business. Still, she believes that their choice to separate is something fluid and outside of the traditional marriage design - an evolving model
+that could also come to serve other couples. If Will and Jada have been spending seven years apart as a married couple, why would they decide to go back to
+living in the same household?
+
+“They’re in the rough with a machete, carving a new path for themselves,” Winter said. “Why would they say: ‘Hey, let’s go back to the house and just relax?’
+</item 30>
+=== END ITEM id=9e52958c5f5463f1 ===
+
+=== ITEM id=927dd2990031c5a2 ===
+Gold sentences and facts:
+Sentence 0: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 0.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 0.1: The case argues that Google "siphons off" news publishers' content.
+  Fact 0.2: The case argues that Google siphons off news publishers' readers.
+  Fact 0.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 0.4: The case argues that Google does this through anticompetitive means.
+Sentence 1: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 1.0: The argument in the case will probably come up later in the trial.
+  Fact 1.1: Epic chose to focus more on simply painting Google as the bad guy.
+  Fact 1.2: Epic made this choice on day one of the trial.
+
+Retrieved items:
+<item 1>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Or at least it was worse, before they were destroyed.”
+
+The best Google could do in response was to plant its own feeble seed with the jury, too: “Is Epic using the chats to distract me from all the evidence I do
+see?”
+
+“It’s true that Google could have automatically saved all chats for all relevant employees, but just because Google didn’t save some chats didn’t mean it
+violated antitrust laws,” Pomerantz argued.
+
+Epic’s opening statements seemed to paint a clearer picture for the jury than those from Google. But things got complicated for both parties when the first two
+witnesses — Epic Games Store head Steve Allison and Yoga Buddhi CEO Benjamin Simon, who also appeared in the earlier Epic v. Apple trial — took the stand.
+
+Both Epic and Google spent a long, long time on subtle lines of questioning.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 2>
+
+<item 3>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Google spent its 45 minutes attempting to explain that its dominance over the Android app market isn’t anything nefarious but simply the natural outcome of
+Google fiercely competing with the iPhone and its iOS App Store, where Google would like the court to believe that competition truly lies.
+
+If Google can convince the jury of that, it could be a winning argument in the case — because obviously, Google doesn’t have a monopoly on app stores or phones
+in general. “You cannot separate the quality of a phone from the quality of the apps in its app store, and that means Google and Apple compete against each
+other,” began Google lead attorney Glenn Pomerantz.
+
+But Google wound up spending much of its opening statement attempting to explain away its seemingly bad behavior as normal business practices and didn’t always
+succeed out of the gate.
+</item 3>
+
+<item 4>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 5>
+
+<item 6>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 6>
+
+<item 7>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 7>
+
+<item 8>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 8>
+
+<item 9>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+showed that Epic knew it was breaking bad at the time it did the deed.
+
+But Epic mentioned Project Liberty in its own opening statement — so, by that point, it had already been an hour since it admitted it intentionally broke
+Google’s rules. “Epic decided to stand up because that’s what you do to a bully,” Bornstein told the jury.
+
+“All we know is whatever is in the destroyed chats, as bad as the documents are, is worse.”
+
+And it’s possible no examination will be able to take the stink off one of Google’s ugliest moves: the one where Google employees up to and including CEO Sundar
+Pichai were caught setting sensitive chats to auto-delete to keep them out of a court’s hands. The court has already decided Google should be sanctioned in some
+way for making potential evidence disappear, and Bornstein used it to plant persistent seeds of doubt in the minds of jury members. “All we know is whatever is
+in the destroyed chats, as bad as the documents are, is worse.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 10>
+
+<item 11>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 11>
+
+<item 12>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 12>
+
+<item 13>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 13>
+
+<item 14>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 14>
+
+<item 15>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Both Epic and Google spent a long, long time on subtle lines of questioning. You really had to read between the lines to see that Epic was trying to make a
+point about how Google’s 70/30 revenue split is probably based on an arbitrary decision Valve made two decades ago with Steam or how Google was trying to make a
+point that Epic, too, likely believed that an app store provides more value than just payment processing and maybe deserves more money.
+</item 15>
+
+<item 16>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 16>
+
+<item 17>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 17>
+
+<item 18>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+[Editor’s note: Every journalist in the courtroom agreed the jury was attentive; most were also surprised by the rapid verdict.]
+
+They got it, they got it quickly, and they were able to pull apart what was going on and contrast it with the fiction of the story that Google was trying to
+tell.
+
+What was something that surprised you in the courtroom, something you heard come to light that you hadn’t heard before?
+
+I’d suspected a lot of the practices that Google had, you know, since 2018 or so when we first started this, to such an extent that some folks would
+occasionally call me a conspiracy theorist. It was really, really interesting to see that my understandings of what Google was doing behind the scenes were
+actually true — you’re leaking our conversations to reporters to get negative stories written about us; you’re paying other developers off to convince them not
+to launch their own stores; they were going around and paying carriers and OEMs secretly not to carry competing stores.
+</item 18>
+
+<item 19>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 19>
+
+<item 20>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Also, that one’s not over till the Supreme Court weighs in or declines to take a look.
+
+2) Google can’t tell jurors that Apple won its case, or that other plaintiffs settled. The judge in this case says so!
+
+3) Oh, and by the way, this is a jury trial.
+
+Wait, why does that matter?
+
+Epic and Google have to convince a jury, not the judge, which is totally different from how the Apple case played out. (That one was a “bench trial.”)
+
+Maybe all the evidence of tricky deals inside Google might sway a jury against the company? Maybe Google scaremongering that sideloaded apps equal gaping
+security holes will sway a jury against Epic instead? Who knows!
+
+(If you’re a Epic juror reading this — stop! Judge Donato explicitly said you’re in a “news-free bubble” through mid-December, folks.)
+
+Didn’t other parties sue Google too?
+
+They did! And then, they all settled.
+</item 20>
+=== END ITEM id=927dd2990031c5a2 ===

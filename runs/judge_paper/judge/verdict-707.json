@@ -1,0 +1,32 @@
+[
+{"id": "524d2280bf179dba", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 15, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 41, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 41, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]}
+]},
+{"id": "4093f89d9be237f1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 28, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 28, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 12, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 12, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]},
+{"id": "9f8b64cf5563cfe9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Sam acted in good faith and took reasonable business measures"}, {"item": 9, "quote": "(Cohen repeatedly harped on Bankman-Fried’s allegedly good-faith actions throughout his address to the jury.)"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Sam didn’t defraud anyone"}, {"item": 6, "quote": "He didn’t steal any money."}]},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

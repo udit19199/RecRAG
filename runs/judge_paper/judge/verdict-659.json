@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cef81eb24714907e",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium"}, {"item": 12, "quote": "his podcast, New Heights with Jason and Travis Kelce"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "He then admitted that he invited Swift to one of his games"}, {"item": 3, "quote": "Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "Sept. 24: Swift mingles with Donna Kelce"}, {"item": 7, "quote": "Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went"}]}
+    ]
+  },
+  {
+    "id": "86c46b33ff1e00df",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "For now, Griffais explained, it's important to Valve that developers don't need"}, {"item": 10, "quote": "to \"split their attention\" between different performance targets."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "For now, Griffais explained, it's important to Valve that developers don't need"}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+    ]
+  },
+  {
+    "id": "8200190be9cffd65",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 40, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 40, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 40, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 40, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 15, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 15, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 15, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+    ]
+  }
+]

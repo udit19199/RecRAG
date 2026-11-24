@@ -8,6 +8,8 @@ Launched by coordinator subagents (Claude Sonnet) that only launch Haiku subagen
 
 The first coordinators (Claude Sonnet) stopped on an API auth error after 308 files. The remaining files (81–103, 179–207, 289–311, 387–413) and four files that failed the check (1, 123, 250, 386; first verdicts kept in failed_once/) were relaunched under coordinators on the session's default model (Claude Opus), with the same Haiku judge prompt below. Only the coordinator model changed; every verdict is still written by Haiku.
 
+24 Nov 2026, B4 runs (top 20/30/50 straight to the answer): files 632 onward, launched the same way (Opus coordinators, Haiku judges, the prompt below). These files hold about 120,000 characters each instead of 60,000 because each item carries 20 to 50 passages; the guide and the per-item task are unchanged. B4_rev and B4_shuf get no gold-fact tasks: they give the answer model B4's exact passages in another order, so they take B4's verdicts.
+
 ## judge
 Read the file /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/judge_paper/judge/items-N.md completely (it can be long; read it in parts until the line "=== END ITEM" of its last item). It starts with your instructions and then has the items. Follow the instructions exactly for every item. Write your answer to /Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/judge_paper/judge/verdict-N.json as a JSON array, as the instructions describe. Quotes must be copied character for character from the item text; a line break in the file counts as a space. Do not modify any other file. Reply only with "done" and the number of items you wrote.
 

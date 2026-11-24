@@ -1,0 +1,28 @@
+[
+{"id": "df1d108237719243", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "Kenneth Walker III remains out with his oblique injury"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "probably starting him if Kenneth Walker III remains out with his oblique injury"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "consider other options if you have the depth"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "With Kenneth Walker III's oblique injury comes opportunity for the rookie"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "who already looked strong in the month leading up to Seattle's narrow Week 11 loss to the Rams"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "Seattle's narrow Week 11 loss to the Rams"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 29, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 29, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 29, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 29, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]}
+]},
+{"id": "fe841ae562cf2179", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 42, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 42, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 42, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 21, "quote": "an upcoming date with table-toppers and tournament favourites India"}, {"item": 21, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 21, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks, this time by eight wickets and nearly 25 overs to spare against Sri Lanka having been bowled out for a miserable 156 in Bengaluru, the 2019 champions"}, {"item": 21, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 21, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 21, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 21, "quote": "this time by eight wickets and nearly 25 overs to spare against Sri Lanka"}]},
+{"fact": "1.5", "status": "contradicted", "evidence": [{"item": 21, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks, this time by eight wickets and nearly 25 overs to spare against Sri Lanka having been bowled out for a miserable 156 in Bengaluru, the 2019 champions"}, {"item": 21, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+{"fact": "1.6", "status": "contradicted", "evidence": [{"item": 21, "quote": "England’s hopes of defending their World Cup crown are in tatters"}, {"item": 21, "quote": "an upcoming date with table-toppers and tournament favourites India"}]}
+]}
+]

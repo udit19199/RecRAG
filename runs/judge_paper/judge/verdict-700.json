@@ -1,0 +1,25 @@
+[
+{"id": "271739166f813f64", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 11, "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 11, "quote": "lives,” she adds."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "bd23a71d44a81caa", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "With inflation down from its peak two summers ago"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."}]}
+]},
+{"id": "4e09a60f573969a8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 25, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 25, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 25, "quote": "not ideal,” President Ferdinand Marcos, Jr."}, {"item": 13, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 13, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+]}
+]

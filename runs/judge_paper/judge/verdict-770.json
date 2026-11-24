@@ -1,0 +1,62 @@
+[
+  {"id": "13901157e4fae679", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 20, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 20, "quote": "The Verge reports"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7dd7b2577d5e4e58", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "Hope has been rising on Wall Street recently"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 18, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 18, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns"}]}
+  ]},
+  {"id": "7c6c2d3fbdc1af9b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "1.6", "status": "contradicted", "evidence": [{"item": 6, "quote": "India have already booked a place in semi-finals"}]}
+  ]},
+  {"id": "4d6a4952e9a87440", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed"}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 20, "quote": "Sam acted in good faith and took reasonable business measures"}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "de03653de0917bdb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "including its deal with Apple and other partners to make Google the default search engine"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 13, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 10, "quote": "including its deal with Apple and other partners to make Google the default search engine"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 10, "quote": "including its deal with Apple and other partners to make Google the default search engine"}, {"item": 13, "quote": "making itself the default search engine across platforms"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

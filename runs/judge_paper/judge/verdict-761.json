@@ -1,0 +1,64 @@
+[
+  {
+    "id": "d7d3833b2cf7d932",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 49, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 49, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 49, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 42, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 42, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 42, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 42, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]}
+    ]
+  },
+  {
+    "id": "88ab5aada19d9855",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from"}]},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 6, "quote": "The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}, {"item": 20, "quote": "The $65 billion line of credit Alameda Research had meant that it did not have to post collateral."}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 9, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 18, "quote": "as the prosecutor told the jury that Bankman-Fried sold stock in FTX and borrowed millions from lenders by lying."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,"}, {"item": 8, "quote": "The political donations gave Bankman-Fried influence in the highest echelons of power."}]},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "0bf7d46546784022",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 13, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 13, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 13, "quote": "13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 11, "quote": "Hope played a gem of an innings there, calmly anchoring West Indies in an increasingly nervous chase with a run-a-ball 43."}]},
+      {"fact": "1.5", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "58569a8aba9dc206",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 12, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 12, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 12, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "What followed was a roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}, {"item": 10, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 14, "quote": "“Sam acted in good faith and took reasonable business measures” is a pretty hard pill to swallow with that in mind."}]},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses sometimes fail."}]}
+    ]
+  }
+]

@@ -1,0 +1,1677 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=e50c72b0433cba02 ===
+Gold sentences and facts:
+Sentence 0: “I’m here until the end,” she said in her press conference on Friday.
+  Fact 0.0: A female speaker said 'I'm here until the end' in her press conference on Friday.
+Sentence 1: He has been out of work since his Blues tenure came to a close back in April, but it would be a hard sell to fans after his time with the London club went so poorly.
+  Fact 1.0: A man has been out of work since his tenure with the Blues came to a close back in April.
+  Fact 1.1: It would be a hard sell to fans for this man to return, since his time with the London club went so poorly.
+
+Retrieved items:
+<item 1>
+Paul Mitchell signed Tottenham and Chelsea superstars, fell out with Daniel Levy and has tailor-made plan for Manchester United (TalkSport,
+2023-10-16T21:00:00+00:00)
+"We are a long time from the Sir Alex Ferguson era. Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five
+years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right
+things.
+
+"You have to know that, over that period, the consistency of the decision-making will yield a good end result. I think we've seen that both Manchester City and
+Liverpool, that when you adopt that long-term strategy you can get real consistency and sustainable success.
+
+"I think that's the biggest thing for Manchester United; putting down their identity of what they want to be today, but most crucially what they want to be in
+five years' time, and where they want to be, and what they want to look like; from everything from young players, to the style of play, to the whole culture
+peace in Manchester United."
+</item 1>
+
+<item 2>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+“This is a huge honor to be given the opportunity to coach the most incredible team in world football history,” she said in a statement on Tuesday. “The
+feelings and connection I have for this team and for this country run deep. I’ve dreamed about coaching the USA for a long time so to get this opportunity is a
+dream come true. I know there is work to do to achieve our goals of winning consistently at the highest levels. To get there, it will require dedication,
+devotion and collaboration from the players, staff and everyone at the U.S. Soccer Federation.”
+
+Looking ahead for the USWNT
+
+Hayes’ appointment will have an immediate impact, even if she’s not immediately present. The particulars around timing and the plan moving forward have been one
+of the areas of discussion between Hayes and her representatives, Chelsea and U.S. Soccer that has continued through the start of November.
+</item 2>
+
+<item 3>
+Ten Hag’s gamble pays off against Chelsea as McTominay steals show | Jonathan Liew (The Guardian, 2023-12-06T23:45:56+00:00)
+Imagine what Manchester United could do if Erik ten Hag hadn’t already lost the dressing room. Yes, it’s been another of those weeks at Old Trafford: rancour,
+rumour and recrimination, barbs in the press and barbs at the press, defeat at Newcastle followed by this stirring recovery against Chelsea, and the startling
+realisation that United are now three points behind Manchester City. It’s still only Thursday, by the way.
+
+Perhaps ultimately this win only buys Ten Hag a few days’ grace, a warm flume of goodwill that lasts only as long as it takes for Dominic Solanke to run through
+on goal for Bournemouth on Saturday afternoon. Back in the grip of crisis, back in the now-familiar lexicon of surly unsourced stories about dressing room
+discontent. Such is the way of things at football’s most reliable content provider. This beast must always eat.
+
+But block out the noise for just a moment, as of course United cannot, and something interesting is happening here.
+</item 3>
+
+<item 4>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+GO DEEPER USWNT's Emma Hayes hire could create a problem in preparation for the Olympics
+
+What’s next for Chelsea?
+
+Questions surrounding Hayes’ future have cropped up previously in her tenure at Chelsea. She was linked to several jobs in the men’s English Football League in
+the past and has always been interested in managing Spain’s national team, although there was never an official conversation with Spain’s federation. So it was
+a question of when, not if, Hayes would leave. Still, news of her decision came as a shock to her staff and players.
+
+A few staff members were told on the morning of Nov. 4 before Chelsea’s away game at Aston Villa kicked off at 12.30 p.m. UK time. Most of the other staff
+members found out with the players in the post-match meeting minutes before the official club statement, which Hayes had no hand in writing and did not even see
+before publication, was released at 3 p.m.
+</item 4>
+
+<item 5>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+The specifics of how that will work without Hayes’ involvement remain a mystery. It would be understandable for players to feel like they are still auditioning
+for an absent director until May rolls around, while still knowing they must perform at the USWNT standard.
+
+Along these same lines, there is at least the suggestion that the federation could be willing to sacrifice coherent preparation for this upcoming Olympic
+tournament to focus more on the longer-term project of the 2027 World Cup. That itself represents a marked change from the expectations and pressure of constant
+performance and winning that the team is known for.
+
+Is that a good or a bad thing? Perhaps a little bit of both. The USWNT shouldn’t be ruled out of contention for the Olympics by any stretch, but this past
+summer’s World Cup did reveal that the problems facing the team are far more foundational than just poor coaching decisions or the strange midfield chemistry.
+Balancing realism with the pressure to win feels like a much more sustainable path forward for the USWNT.
+</item 5>
+
+<item 6>
+Pochettino looks past James mistake and stakes future on his ‘Chelsea DNA’ (The Guardian, 2023-10-20T21:30:28+00:00)
+It was the moment when Reece James simply could not handle the frustration. Named by Mauricio Pochettino as the Chelsea captain, James had not played since the
+opening weekend draw with Liverpool at Stamford Bridge when he injured a hamstring. Now, he seethed from the sideline as his team lost 1-0 at home to Aston
+Villa, a game in which his replacement, Malo Gusto, was controversially sent off.
+
+It was 24 September, Chelsea’s second home Premier League defeat on the spin after the one against Nottingham Forest and they were booed off again. James would
+lose his cool with an official in the tunnel and, when a Football Association charge was announced three days later for abusive conduct, it felt like only a
+matter of time before he was given a one-match ban.
+
+It did not come in time for Chelsea’s visit to Fulham on 2 October, when James was still injured. That would have been too simple.
+</item 6>
+
+<item 7>
+Pochettino looks past James mistake and stakes future on his ‘Chelsea DNA’ (The Guardian, 2023-10-20T21:30:28+00:00)
+For more information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our
+Privacy Policy . We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+“It’s how you are and about your character,” Pochettino said. “He feels football. I am 51 and still sometimes I feel that decisions are no good or unfair. You
+are competitive. Like with Mikel or myself or other coaches that played football, in our minds, we still believe we can play. Still, we have the animal
+instinct. We cannot be thinkers.”
+
+For Pochettino, it must be about channeling the emotion in the right way and not suppressing it. More broadly, he is in a better place after the wins at Fulham
+and Burnley, which followed the Carabao Cup victory over Brighton on the day that James was charged.
+</item 7>
+
+<item 8>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Soccer’s planned combined headquarters and national training facility in Georgia. As of yet, there’s no targeted date set for the move.
+
+Hayes, too, will benefit in ways other than compensation and prestige. She spoke to reporters about looking forward to spending more time with her five-year-old
+son, Harry. She has never been to one of his sports days, picked him up from school or taken him to an after-school club and she wants to do that.
+
+The main visible wrinkle in the process was Chelsea’s surprise move of announcing Hayes’ departure on Saturday, Nov. 4. With the contract not yet finalized and
+U.S. Soccer board approval still needed, Chelsea issued their statement at 11 a.m. ET in the U.S. in which it noted she would leave at the end of the season “to
+pursue a new opportunity outside of the WSL and club football.” The club feared that the news was starting to leak and wanted to share the news on its own.
+</item 8>
+
+<item 9>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+England and Chelsea captain Millie Bright was “devastated,” and most players were understandably sad — many of whom owe their career progression to Hayes — but
+know they still have a job to do this season.
+
+“It’s been a bit of a whirlwind. As a player and a person, I was devastated. I’ve been here nine years under Emma and the things I’ve learned,” Bright said.
+“She’s a mentor, a coach, a friend, a life coach. It’s more than just football playing under her.”
+
+Bright credits Hayes for her on and off-field guidance. (Photo by Marc Atkins, Getty Images)
+
+Hayes’ American assistant Denise Reddy, born in New Jersey, is likely to follow her across the pond. The former United States Under-20 coach has remained
+faithful to her friend of 20 years and voluntarily quit her job as assistant at Chicago Red Stars in 2010 when Hayes was fired as head coach. Chelsea’s general
+manager Paul Green will stay at the club.
+</item 9>
+
+<item 10>
+Ange aghast as Spurs suffer ‘unbelievable’ West Ham turnaround – with two of the worst goals you’ll see (The Roar | Sports Writers Blog,
+2023-12-07T22:28:31+00:00)
+“We’ll see what the appeal brings. The mentality is key for me, we took a knock but there have been a lot of knocks here over the last couple of years.
+
+Advertisement
+
+“But the team mentality is growing. I can’t emphasise it enough, the commitment to each other and the connection is a powerful thing because I know we’ve got
+quality.”
+
+Eddie Howe’s side are proving one of the most inconsistent in the league, albeit with a lengthy injury list.
+
+In the last month, they have defeated Manchester United, Arsenal and Chelsea – as well as drawing at French heavyweights PSG in the Champions League – but have
+now lost comfortably to two cellar dwellers in Everton and Bournemouth.
+
+“We have to do better,” said Howe.
+
+“There are reasons behind every performance and we have struggled to change players. That is a big miss with the quality of players out. The longer you do it,
+the harder it gets.
+</item 10>
+
+<item 11>
+Manchester divided as ten Hag pressure mounts after United Hammered, Ange-ball pays off again as Spurs sink Everton (The Roar | Sports Writers Blog,
+2023-12-23T21:19:19+00:00)
+What is the style of play, what’s the plan?
+
+“He needs to take a step back, ten Hag, and say what do I need to do with these players I have available in order to first of all stop leaking goals, because
+that’s a problem, and secondly, score goals – how do I get the next goal? Four games without a goal, it’s a long time.”
+
+Advertisement
+
+DEADLOCK BROKEN! West Ham lead against Manchester United! ????
+
+
+
+That assist from Lucas Paquetá though… ????
+
+
+
+Stream LIVE, or on-demand after, here ???? https://t.co/09W1bq24Ur#OptusSport #PL pic.twitter.com/Qqq7zugQmj — Optus Sport (@OptusSport) December 23, 2023
+
+Ten Hag tried to put a positive spin on the performance by claiming to BBC that they were the better side before the first goal.
+</item 11>
+
+<item 12>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Soccer that has continued through the start of November.
+
+Unless the situation changes drastically, Hayes will only have two camps, including four friendlies, with the USWNT ahead of the 2024 Olympics in Paris. She’ll
+miss three international windows between Tuesday’s announcement and her planned start date, including the 2024 CONCACAF Gold Cup in February and March.
+
+U.S. Soccer has a plan in place for the transition. Current interim head coach Twila Kilgore will continue in the role through May and will remain as a
+permanent assistant coach under Hayes after the swap is complete. U.S. Soccer said that Kilgore and the rest of the technical staff are working on a handoff
+plan for Hayes.
+
+“This is a unique situation, but the team is in safe hands with Twila,” Crocker said. “Her stewardship will be crucial during this period as we are focused on
+success at the Olympics.
+</item 12>
+
+<item 13>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Soccer’s own messaging. Crocker, in a September meeting with U.S. reporters along with Cone and U.S. Soccer CEO J.T. Batson, said he hoped to have a new head
+coach in place by December.
+
+But the initial contact with Hayes was made a couple of months ago, early into the search, with all three top-level executives from U.S. Soccer involved in
+those talks. The trio also described the interview process to journalists in that September meeting – a U.S. soccer statement describes it as involving
+“psychometrics and abstract reasoning tests, in-depth discussions of strategy, coaching philosophy and the current player pool, as well as evaluation on the
+reactions to pressure, culture-building and interactions with players and staff.” USMNT coach Gregg Berhalter went through a similar process, including an
+abstract reasoning test, when he was re-hired by Crocker earlier in 2023.
+</item 13>
+
+<item 14>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Sporting director Matt Crocker made the final decision to hire Hayes after a search process that began in August, following the team’s surprising exit in the
+round of 16 at the World Cup and the subsequent departure of head coach Vlatko Andonovski.
+
+“She has tremendous energy and an insatiable will to win,” U.S. Soccer president Cindy Parlow Cone said in a statement. “Her experience in the USA, her
+understanding of our soccer landscape and her appreciation of what it means to coach this team makes her a natural fit for this role and we could not be more
+pleased to have her leading our women’s national team forward.”
+
+Though Hayes is seen as one of the world’s top coaches in women’s soccer, the appointment still comes as something of a surprise. Here’s how the deal got done.
+
+Details of the deal
+
+At least part of the surprise surrounding Hayes’ hire – and the six-month runway before she officially takes charge – is down to U.S. Soccer’s own messaging.
+</item 14>
+
+<item 15>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+A representative from her camp declined to comment for this story.
+
+Crocker said in September that the final interviews would include lengthy technical and tactical assessments, as well as questions to determine the candidates’
+cultural fit. He and the federation stayed fairly consistent on their desired start date since the head coach role opened in August, but that became one of the
+major concessions made by U.S. Soccer in selecting Hayes.
+
+She’s headed Stateside 🇺🇸 U.S. Soccer has appointed Emma Hayes as the 10th full-time head coach in #USWNT history » https://t.co/sR7qfSnWVx Welcome, Emma!
+pic.twitter.com/WYn6Sg9RmX — U.S. Women's National Soccer Team (@USWNT) November 14, 2023
+
+Hayes will remain exclusively with Chelsea through the end of their WSL campaign and the Champions League season. She will not work with the U.S. in
+international windows.
+</item 15>
+
+<item 16>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Advertisement
+
+The hiring process included multiple rounds of evaluation, with the list of candidates becoming smaller each time. The first pass was driven purely by data,
+which was then whittled down to a double-digit list Crocker was considering as of September, and then a final shortlist, which also included Tony Gustavsson,
+head coach of Australia. Multiple sources confirmed both Hayes and Gustavsson flew to the U.S. for interviews.
+
+One source who was briefed on the situation said the federation had also checked in on the availability of Sarina Wiegman, despite clear messaging from both the
+English FA and Wiegman herself in August. “I’m staying out of it. I’ve heard it (from the press officer) but no, I’m with England and I’m really happy with
+England, and I have a contract until 2025,” Wiegman said. A representative from her camp declined to comment for this story.
+</item 16>
+
+<item 17>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+After all that pressure, all that tender hope, it looked a bit like a training goal.
+
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Newsletters may contain
+info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google reCaptcha to protect our
+website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+And that was pretty much that. From here United’s season continues to narrow. They can’t win the league now, can’t win the Champions League, can’t win the
+Carabao Cup.
+</item 17>
+
+<item 18>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Chelsea Women had created a frenzy. On Nov. 4, the English club released a statement saying their coach Emma Hayes was leaving at the end of the season to
+“pursue a new opportunity outside of the Women’s Super League and club football.” Hayes had just entered her second decade in charge of the club, and few knew
+where she would land next.
+
+Advertisement
+
+That same day The Athletic, among others, reported that Hayes’ next job would be with the U.S. women’s national team, leading a four-time World Cup and Olympic
+gold medal-winning program into a new era. On Tuesday, U.S. Soccer made her appointment official.
+
+Hayes, who previously won six WSL titles in England, will become the 10th full-time coach of the U.S., but not until her final season with Chelsea is complete
+next May.
+</item 18>
+
+<item 19>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+There is the possibility of Hayes retaining a connection to the club via some sort of ambassadorial role, but it’s likely contingent upon a lack of conflict
+with the USWNT role and responsibilities. Under American Todd Boehly’s co-ownership, expanding Chelsea’s profile and reach in the U.S. would make sense,
+especially with USWNT internationals Catarina Macario and Mia Fishel playing their club football there — and CBS Sports holding WSL rights.
+
+There is, for now, an immediate task for Hayes to focus on. Chelsea faces off against Real Madrid on Wednesday for their first match of the UWCL Champions
+League group stage. Her full American arrival will not come for another half a year after that.
+
+(Top photo: Julian Finney/Getty Images)
+</item 19>
+
+<item 20>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+She will not work with the U.S. in international windows.
+
+“I’m here until the end,” she said in her press conference on Friday. “I haven’t died, I haven’t gone anywhere. I’m here, doing this job. My full focus and
+attention is on what I do for Chelsea.”
+
+Advertisement
+
+Hayes could be tied up with Chelsea as late as May 25 if the London club makes the Champions League final; notably, an international window that would
+theoretically be Hayes’ first in charge begins just two days later, on May 27.
+
+However, there are ways in which the arrangement will benefit U.S. Soccer. The federation won’t owe any compensation to Chelsea, and Hayes will be fully
+committed to the program, with a move to Chicago in the works for next year following the completion of her time in London. Eventually, she’s expected to
+relocate to Atlanta thanks to U.S. Soccer’s planned combined headquarters and national training facility in Georgia.
+</item 20>
+
+<item 21>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+This began the race to confirm Hayes had been selected as the USWNT head coach.
+
+Talks between U.S. Soccer and Hayes’ representatives continued even after Chelsea’s press release. The federation’s board convened late on Saturday, Nov. 4 to
+approve the selection, even without the final details of the contract settled or signed.
+
+At the end of it all, the sides have agreed to a deal that will make Hayes the highest-paid women’s football coach in the world — though her salary is not tied
+to equal compensation with Berhalter. While her salary is in the same range as the USMNT head coach, it’s thought to be a reflection of the market value for
+Hayes. With reports that Chelsea was prepared to quadruple her salary to keep her, Hayes herself danced around the details in her first media availability with
+the club.
+
+“I believe in private conversations,” she said. “Of course, I’m disappointed to hear things being said in the press.
+</item 21>
+
+<item 22>
+Man United next manager: Assessing candidates to replace Erik ten Hag if Red Devils sack Dutch boss (Sporting News, 2023-12-13T20:52:15+00:00)
+It is a global context." Does he still feel the same way?
+
+Graham Potter
+
+While Potter's time at Chelsea crashed and burned, many still rate the former Brighton & Hove Albion boss highly and he could be in line for a project job such
+as this. Indeed, there have previously been rumours that Sir Jim Ratcliffe, the INEOS founder on the brink of purchasing a 25 per cent stake in United, would
+like Potter at the club. He has been out of work since his Blues tenure came to a close back in April, but it would be a hard sell to fans after his time with
+the London club went so poorly.
+
+Roberto De Zerbi
+
+One of the fastest rising managers in the game, Brighton manager Roberto De Zerbi is known for his tactical innovation in transitional play, and his name has
+cropped up a number of times when big clubs have an opening.
+</item 22>
+
+<item 23>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+“Of course, I’m disappointed to hear things being said in the press. I want to make sure I maintain my own professionalism in everything I do.”
+
+Advertisement
+
+U.S Soccer’s annual financial reports reveal the salaries of their head coaches and other executives. While Berhalter received a new contract this year, his
+previous deal that ran from April 2021 to March 2022, earned him $1.6 million, including $300,000 in bonuses. During that same time, Andonovski earned $446,495,
+of which only $50,000 was bonus money. With Hayes expected to earn close to $2 million per year in her deal, this will likely create a knock-on effect for other
+international women’s coaches negotiating their next contracts.
+
+U.S. Soccer’s rollout of their new head coach has not been an easy one for the federation’s communications staff, considering that Hayes is essentially
+unavailable for any formal ceremonies or media appearances until her time with Chelsea is complete.
+</item 23>
+
+<item 24>
+Ten Hag demands both positivity and pragmatism from erratic Onana (The Guardian, 2023-10-28T21:30:25+00:00)
+after newsletter promotion
+
+This is what Ten Hag has overseen in recent weeks as the protracted sale of the club has entered a new phase, with Sir Jim Ratcliffe’s bid to buy 25% for an
+inflated £1.3bn in return for control of football policy expected to go through imminently. But despite any implications this may have for the futures of Ten
+Hag’s players, the manager himself does not think the matter is a distraction.
+
+Bruno Fernandes volleys home for Manchester United against Burnley – one of two goals he has scored for the club this season. Photograph: Matthew
+Peters/Manchester United/Getty Images
+
+“Of course, they are committed to the club but especially they are committed to this team,” Ten Hag says. “They want to be successful and are therefore aware
+you need [to focus on] the team, your teammates. That is how the players are thinking and they are not thinking about strategic reviews or structures or
+whatever.”
+
+On Sunday at 3.30pm we will find out just how focused United’s players are.
+</item 24>
+
+<item 25>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+The manager’s future
+
+Erik ten Hag’s team are treading water at precisely the wrong moment: as Sir Jim Ratcliffe takes charge of Manchester United’s sporting department before making
+sweeping changes in the posts that will directly affect the manager. Richard Arnold has left despite officially staying until the end of the year and into his
+role may come Jean-Claude Blanc, the CEO of Ratcliffe’s Ineos Sport, as the man Ten Hag reports to. Ten Hag’s line manager may change too, as Ratcliffe
+considers whether a new football director is required, a position held by John Murtough. Ten Hag may have a first clue of his status in Ratcliffe’s new empire
+if he is sounded out for his view of a prime factor in his ability to coach and manage the side to success: United’s transfer policy. This leads us to Murtough
+…
+
+Will Murtough survive?
+
+The football director has no plans to depart but whether he remains in situ may be a matter for Ratcliffe.
+</item 25>
+
+<item 26>
+England choose survival over oblivion and a chance of summer trip to France | Jonathan Liew (The Guardian, 2023-12-01T22:57:40+00:00)
+These are issues not so much of tactics but cohesion and energy: the timing of runs, the sharpness required not just to anticipate where the ball is going to
+be, but actually get there. You can still chase when you’re running on fumes, but to create: this needs an idea and a vision, the clarity of mind to see the
+picture before it has materialised.
+
+skip past newsletter promotion Sign up to Moving the Goalposts Free weekly newsletter No topic is too small or too big for us to cover as we deliver a weekly
+roundup of the wonderful world of women’s football Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside
+parties. For more information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see
+our Privacy Policy . We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply.
+</item 26>
+
+<item 27>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Chelsea’s general manager Paul Green will stay at the club. It is unclear whether any other members of Chelsea’s technical staff are expected to depart.
+
+GO DEEPER What next for Chelsea after Emma Hayes?
+
+The relentless nature of managing a club takes its toll and after what will be 12 years at Chelsea come the end of the season, Hayes, a single parent whose
+father died last month, decided that it was the right time for a change, professionally and personally.
+
+Advertisement
+
+“The biggest factors are my son, leaving at the top and giving the club enough time to be able to transition without there being too much disruption,” she said
+in her press conference.
+
+The club has received several applications regarding Hayes’ replacement but has not yet started an official recruitment process. She will meet with Chelsea’s
+technical directors once a week to create a succession plan and will have a say in who takes the job after her.
+</item 27>
+
+<item 28>
+Pochettino looks past James mistake and stakes future on his ‘Chelsea DNA’ (The Guardian, 2023-10-20T21:30:28+00:00)
+Arsenal represent an acid test of the progress and the start of a daunting run in the league; after them, Chelsea face Brentford, Tottenham, Manchester City,
+Newcastle, Brighton and Manchester United. Pochettino, though, pushed back against the notion that he was seeking a first statement win at the club, something
+to ignite his tenure. All he wants are points to drive his team up from 11th in the table.
+
+Pochettino has appeared mired in a selection crisis since his arrival at Chelsea; James only one element of it and he will be without seven others through
+injury against Arsenal.
+
+“The moment we have all the squad at a high level and fit, we can say: ‘OK, we are going to Arsenal, Manchester City and we are going to beat you.’ At the
+moment, with the circumstances, I don’t think this game is going to be a statement to say: ‘Be careful, Chelsea is coming,’ or something like this.”
+</item 28>
+
+<item 29>
+How U.S. Women’s Soccer Team Lured Emma Hayes Away From Chelsea (The New York Times, 2023-11-15T21:40:47+00:00)
+Emma has endorsed Twila, she will be a key part of Emma’s staff when she arrives and moving forward, and we are excited for what’s to come with our USWNT
+program.”
+
+GO DEEPER How Emma Hayes' winning ways at Chelsea can benefit USWNT on the field
+
+It’s still an extremely tight turn for the Olympics, with 18 days for Hayes to get situated with the team ahead of the tournament, between the two international
+windows from May 27 to June 4, then July 8 to 16. The Olympic tournament will start on July 25.
+
+Advertisement
+
+There are, of course, logistical questions about roster selection over the next few months. Some of those may be answered relatively soon, with the roster for
+the upcoming camp that begins at the end of the month imminent. The greater challenge will likely be ongoing player evaluation over the next six months, at a
+time of great transition within the squad. The specifics of how that will work without Hayes’ involvement remain a mystery.
+</item 29>
+
+<item 30>
+Ten Hag’s Manchester United stand up and die at club stuck in the past tense | Barney Ronay (The Guardian, 2023-12-12T23:53:03+00:00)
+Finally you get to manage the everyday metrics on which you will be judged; team, results, style, energy, messaging. Win things, improve players, create a
+coherent and happy internal culture: but do it during an unceasing takeover circus while star players sulk and brief against you, while the ghost of Hamlet’s
+father still skulks in the eaves. This felt like the end of one thing, perhaps even the beginning of the end of something else.
+</item 30>
+=== END ITEM id=e50c72b0433cba02 ===
+
+=== ITEM id=5838dba70d78abf6 ===
+Gold sentences and facts:
+Sentence 0: As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games.
+  Fact 0.0: Harris is also the preferred goal-line back.
+  Fact 0.1: Harris scored in three of those games.
+Sentence 1: The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman.
+  Fact 1.0: The Wildcats scored a touchdown on their first drive.
+  Fact 1.1: The Wildcats' first drive was a seven play drive.
+  Fact 1.2: The Wildcats' first drive covered 61 yards.
+  Fact 1.3: The Wildcats' first-drive touchdown came thanks to a 25-yard dash.
+  Fact 1.4: The 25-yard dash was followed by a dive into the end zone.
+  Fact 1.5: Running back Jonah Coleman dove into the end zone.
+
+Retrieved items:
+<item 1>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+With Pickett nursing an ankle injury we could see the Steelers run the ball aplenty.
+
+STARTS: Najee Harris, Kyler Murray, Trey McBride, Marquise Brown, Pat Freiermuth, Diontae Johnson (PPR flex), Jaylen Warren (PPR only), Steelers DST
+
+Najee Harris, Kyler Murray, Trey McBride, Marquise Brown, Pat Freiermuth, Diontae Johnson (PPR flex), Jaylen Warren (PPR only), Steelers DST SITS: Kenny
+Pickett, James Conner, Rondale Moore, Cardinals DST
+
+Kenny Pickett, James Conner, Rondale Moore, Cardinals DST SLEEPERS: Greg Dortch (PPR only), George Pickens
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline James Conner RB ARI Arizona • #6
+
+Age: 28 • Experience: 7 yrs.
+</item 1>
+
+<item 2>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+Lions
+
+41 Devin Singletary, Texans @ Jets
+
+42 Dalvin Cook, Jets vs. Texans
+
+43 Zach Charbonnet, Seahawks @ 49ers
+
+44 Chase Brown, Bengals vs. Colts
+
+45 D'Ernest Johnson, Jaguars @ Browns
+
+46 Miles Sanders, Panthers @ Saints
+
+47 Joshua Kelley, Chargers vs. Broncos
+
+48 Royce Freeman, Rams @ Ravens
+
+49 Jaleel McLaughlin, Broncos @ Chargers
+
+50 Jeff Wilson Jr., Dolphins vs. Titans
+
+51 Ty Chandler, Vikings @ Raiders
+
+52 Justice Hill, Ravens vs. Rams
+
+53 Khalil Herbert, Bears vs. Lions
+
+54 Latavius Murray, Bills @ Chiefs
+
+55 Cordarrelle Patterson, Falcons vs. Buccaneers
+
+56 Kenneth Gainwell, Eagles @ Cowboys
+
+57 Tank Bigsby, Jaguars @ Browns
+
+58 Rico Dowdle, Cowboys vs.
+</item 2>
+
+<item 3>
+Patriots vs. Steelers FanDuel Picks: NFL DFS lineup advice for Week 14 TNF single-game tournaments (Sporting News, 2023-12-07T21:26:00+00:00)
+Expect the RB to be fed a ton. Whether that results in a touchdown remains to be seen, but if anyone is scoring a TD on the Pats roster Thursday night, it's
+Elliott.
+
+FLEX RB Najee Harris, Steelers ($14,000). Much like the Patriots, this Steelers offense will want to establish the ground game, and that starts with Harris. It
+wasn't long ago that the RB was the subject of major criticism for looking slow and ineffective, but that narrative has flipped in a big way. With an average of
+15 carries per game in the past five, we can expect at least that and maybe more from a Pittsburgh team that is starting Mitch Trubisky on Thursday night. As an
+added bonus, Harris is also the preferred goal-line back, scoring in three of those games. The Patriots' defense doesn't give up much, making Harris our best
+bet for success in an old-fashioned defensive struggle between two of the worst offenses the NFL has to offer.
+</item 3>
+
+<item 4>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+We have the Cowboys back just outside our top five with a juicy matchup against a Washington D that just got lit up by Saquon and the G-men.
+
+Raheem Mostert (@ Jets) should continue to eat for Miami, with rookie De'Von Achane (knee) unfortunately getting hurt almost immediately after returning from IR
+(more on that later). Gang Green hasn't been nearly as good against the run as it has been against the pass, as Jets opponents have averaged 139 rushing yards
+per game over the past two weeks. 'Fins backup Salvon Ahmed also landed on the IR with a foot injury, so consider stashing Jeff Wilson Jr. as a handcuff.
+
+Rounding out the top 10, the trio of Travis Etienne (@ Texans), Josh Jacobs (vs. Chiefs), and Breece Hall (vs. Dolphins) will be looking to bounce back from
+disappointing Week 11 outings on the ground.
+</item 4>
+
+<item 5>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Spears contributed 20 yards on the game-tying drive in the fourth quarter and another 27 yards in OT, but Mike Vrabel's squad ultimately lost. In what should be
+a high-scoring game against the Super Bowl-hopeful 'Fins, we like Spears to be busy as rookie QB Will Levis's top check-down option -- assuming Henry
+(head/neck) is out, of course.
+
+Ezekiel Elliott (@ Steelers) is another potential fill-in who should produce at least flex-worthy stats this week. With Rhamondre Stevenson (ankle) on the
+shelf, Elliott could see 20 touches. Similarly, Kenneth Gainwell (@ Cowboys) and Roschon Johnson (vs. Lions) could see big upticks in touches if D'Andre Swift
+and D'Onta Foreman can't suit up, but we're not as confident those backs can produce given their matchups.
+</item 5>
+
+<item 6>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+The Pats have surrendered 116 scrimmage yards per game and nine total TDs to RBs this season, so we like Barkley to pick up where he left off this Sunday (drive
+up that free-agency value, 'Quon!).
+
+You don't see running mates cracking the top five very often, but we had to make the exception for David Montgomery and Jahmyr Gibbs (vs. Packers). Entering
+Week 11, Green Bay had surrendered nearly 140 all-purpose yards per game to RBs. Between Detroit's o-line, the Lions' high-flying offensive attack, and the
+ruthless 1-2 punch DMont and Gibbs have been this season, the feast could be on very early for Dan Campbell's guys.
+
+Take a collective sigh of relief, Tony Pollard (vs. Commanders) owners! TP looked solid against Carolina last week, averaging 5.1 yards per carry and finally
+getting into the end zone for the first time since Week 1.
+</item 6>
+
+<item 7>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Can't say the same against the run as the Redbirds rank in the bottom five in pretty much every single run defense metric except yards after contact per rush
+(where they're league average). A running back has scored 17 or more PPR points in four of their past five against the Cardinals, and eight in 12 games have hit
+at least 15 PPR points. With Pickett nursing an ankle injury we could see the Steelers run the ball aplenty.
+</item 7>
+
+<item 8>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+3.
+
+We have two sets of teammates in our top 10 this week: Detroit's David Montgomery and Jahmyr Gibbs (@ Bears) and Miami's Raheem Mostert and De'Von Achane (vs.
+Titans). Both duos have such solid workloads in high-flying, run-first offenses — and such juicy matchups — that we can't imagine any of these studs finishing
+outside the elite eight. DMont and Gibbs combined for 193 yards and two TDs when they faced Chicago in Week 11. Tennessee just surrendered 31 points to Indy, so
+we know Miami will be dominating the time of possession and running early and often against Will Levis and company.
+
+Jets fans will be hoping for some Breece Lightning from stud second-year back Breece Hall (vs. Texans), and we think they will be rewarded for their patience.
+</item 8>
+
+<item 9>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+Patriots
+
+22 Jerome Ford, Browns vs. Jaguars
+
+23 Alexander Mattison, Vikings @ Raiders
+
+24 Najee Harris, Steelers vs. Patriots
+
+25 Ezekiel Elliott, Patriots @ Steelers
+
+26 Gus Edwards, Ravens vs. Rams
+
+27 James Cook, Bills @ Chiefs
+
+28 Zack Moss, Colts @ Bengals
+
+29 Keaton Mitchell, Ravens vs. Rams
+
+30 AJ Dillon, Packers @ Giants
+
+31 Dameon Pierce, Texans @ Jets
+
+32 Aaron Jones, Packers @ Giants
+
+33 Clyde Edwards-Helaire, Chiefs vs. BIlls
+
+34 Jerick McKinnon, Chiefs vs. Bills
+
+35 Roschon Johnson, Bears vs. Lions
+
+36 Tyjae Spears, Titans @ Dolphins
+
+37 Kareem Hunt, Browns vs. Jaguars
+
+38 Tyler Allgeier, Falcons vs. Buccaneers
+
+39 Chuba Hubbard, Panthers @ Saints
+
+40 D'Onta Foreman, Bears vs.
+</item 9>
+
+<item 10>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+TOUCHDOWNS: Harris has zero. Somehow it gets worse: He has one carry inside the 15-yard line. The Steelers have run the second-fewest red-zone plays (18, one
+more than New England) and second-fewest plays inside the 5-yard line (two, one more than New England). The Steelers have played four games! This is nuts.
+
+RAVENS: Have yet to allow a rushing score to a running back this year. They've been otherwise solid against RBs, holding them to 4.0 yards per carry on the
+season and roughly league-average in other metrics including missed tackles (15).
+</item 10>
+
+<item 11>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+But just three players have averaged over 4.0 yards per carry: Joe Mixon (4.5 yards per run, didn't have 100 total yards, didn't score), Zack Moss (4.1 yards
+per run, ran for 122 yards on 30 carries and caught a touchdown) and Pierre Strong (9.8 yards per carry, most of it coming in garbage time last week).
+
+HISTORY: Harris had over 120 total yards and a touchdown in a Week 17 win in Baltimore last year. He also scored on them with exactly 50 total yards against
+them in at home in Week 14. He has posted at least 10 non-PPR points in 3 of 4 career games.
+</item 11>
+
+<item 12>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+At least all of them went to his wideouts. All were in the red zone, none were on deep throws and none were on WR screens.
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline Najee Harris RB PIT Pittsburgh • #22
+
+Age: 25 • Experience: 3 yrs. Weekly Breakdown MATCHUP vs BAL BAL -4 O/U 38 OPP VS RB 12th PROJ PTS 9.3 RB RNK 30th YTD Stats RUYDS 210 REC 4 REYDS 34 TD 0
+FPTS/G 7.1 The Steelers' lack of scoring opportunities really crushes the upside for Harris, who admittedly has improved this season and could be on his way to
+being a reliable RB2. The Ravens have been pretty good against the run but they can give up some numbers. Harris is a volume-based back who is at best a low-end
+starting option given everything that's going on.
+</item 12>
+
+<item 13>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+I'd rather start Jahmyr Gibbs, Dameon Pierce and Najee Harris.
+
+LAST WEEK: His playing time hit a season-low 43% of the snaps as he continued losing third-down work to Chuba Hubbard. It hasn't crushed his reception totals at
+all but it's notable that his only game with more than four grabs came with Andy Dalton under center. Sanders also played just 31% of the Panthers' second-half
+snaps, a big-time change after his second-half snaps were a lot closer to Hubbard's in Weeks 2 and 3.
+
+SANDERS: His yards per carry has tumbled like a bowling ball downstairs this season, going from 4.0 against the Falcons to 3.1 against the Saints to 2.7 against
+the Seahawks to 1.5 against the Vikings. Tough matchups? Sure, even including the Vikings. Doesn't mean it's not a good look.
+</item 13>
+
+<item 14>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+Chiefs
+
+10 Breece Hall, Jets vs. Dolphins
+
+11 Rhamondre Stevenson, Patriots @ Giants
+
+12 Alvin Kamara, Saints @ Falcons
+
+13 Isiah Pacheco, Chiefs @ Raiders
+
+14 Brian Robinson Jr., Commanders @ Cowboys
+
+15 Bijan Robinson, Falcons vs. Saints
+
+16 Jonathan Taylor, Colts vs. Buccaneers
+
+17 James Conner, Cardinals vs. Rams
+
+18 D'Andre Swift, Eagles vs. Bills
+
+19 Joe Mixon, Bengals vs. Steelers
+
+20 Derrick Henry, Titans vs. Panthers
+
+21 Rachaad White, Buccaneers @ Colts
+
+22 Kyren Williams, Rams @ Cardinals
+
+23 Alexander Mattison, Vikings vs. Bears
+
+24 Gus Edwards, Ravens @ Chargers
+
+25 Zach Charbonnet, Seahawks vs. 49ers
+
+26 Javonte Williams, Broncos vs.
+</item 14>
+
+<item 15>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+Bears
+
+43 Dameon Pierce, Texans vs. Jaguars
+
+44 Royce Freeman, Rams @ Cardinals
+
+45 Jeff Wilson Jr., Dolphins @ Jets
+
+46 Rico Dowdle, Cowboys vs. Commanders
+
+47 Antonio Gibson, Commanders @ Cowboys
+
+48 Miles Sanders, Panthers @ Titans
+
+49 Tyjae Spears, Titans vs. Panthers
+
+50 Clyde Edwards-Helaire, Chiefs @ Raiders
+
+51 Dalvin Cook, Jets vs. Dolphins
+
+52 Zack Moss, Colts vs. Buccaneers
+
+53 Kenneth Gainwell, Eagles vs. Bills
+
+54 Tony Jones Jr., Cardinals vs. Rams
+
+55 Elijah Mitchell, 49ers @ Seahawks
+
+56 Jaleel McLaughlin, Broncos vs. Browns
+
+57 Justice Hill, Ravens @ Chargers
+
+58 Chase Edmonds, Buccaneers @ Colts
+
+59 Boston Scott, Eagles vs.
+</item 15>
+
+<item 16>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+All three of these backs have been mostly solid, and none have much to worry about in terms of backfield competition.
+
+WEEK 12 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start-sit
+
+Who are the best fantasy RB sleepers, waiver pickups in Week 12?
+
+Sleep on Rhamondre Stevenson (@ Giants) at your own peril. 'Mondre has accumulated 231 yards from scrimmage and a TD over New England's past two games, and the
+Pats are coming off bye. Washington just carved the G-men up like a turkey on the ground last week, surrendering a whopping 174 yards and a TD. Gobble gobble.
+
+Get Kyren Williams (@ Cardinals) right back into your lineup the moment Los Angeles activates him from IR. Arizona just made Devin Singletary look like Barry
+Sanders, so Williams (ankle) should enjoy a triumphant return to the field. Keep rolling with Alexander Mattison (vs.
+</item 16>
+
+<item 17>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+We still like Jaylen Warren better overall, but you can confidently take Najee Harris (vs. Patriots) out of the doghouse for good. Harris has been running with
+purpose, and his role in the passing game continues to make him a high-ceiling RB2 in a run-first offense that will be without Kenny Pickett (ankle) this week.
+New England might be banged up, but it's still a tough D to get chunk yardage against through the air. Look for Harris to see lots of screens and dump-downs in
+a rough-and-tumble Thursday night game in Pittsburgh.
+
+We love Baltimore's Keaton Mitchell (vs. Rams) and think he has the potential to smash Los Angeles at home this week.
+</item 17>
+
+<item 18>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Tampa Bay has a pretty good run defense, so Allgeier can't be trusted outside of a desperate flex play with his nine average touches over the past two weeks.
+
+What are the biggest RB injuries in Week 14?
+
+Derrick Henry (head/neck), Rhamondre Stevenson (ankle), Kenneth Walker III (oblique), Aaron Jones (knee), D'Onta Foreman (ankle), and D'Andre Swift
+(undisclosed) are all "questionable," at best, to suit up this week. We know for sure Stevenson will be out, but we'll have to monitor the injury reports
+throughout the week for the rest.
+
+Jonathan Taylor (thumb) underwent surgery last week and will miss the next few weeks, opening the door for Zack Moss to resume his role as Indy's super-sub lead
+back.
+
+We'll be updating these RB PPR rankings all week, so check back for the latest player movement.
+</item 18>
+
+<item 19>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+I'd rather start Breece Hall, Rhamondre Stevenson, Dameon Pierce and Jaleel McLaughlin (if Javonte Williams sits out).
+
+LAST WEEK: Harris had his first game with over 100 total yards against the Texans and averaged 5.1 yards per rush, just shy of the season-high he technically
+had on six carries against the 49ers in Week 1. A 32-yard reception helped him cross the triple-digit barrier.
+
+HARRIS: This might shock you, but Harris is averaging 4.3 yards per run this year with a 12.2% explosive run rate. Would you believe the explosive run rate,
+which reflects the frequency of his 12-plus-yard runs, is fifth-best among 44 qualifying running backs?! He's also 13th in avoided tackle rate and top-10 in
+yards after contact per carry at 3.53.
+
+TOUCHDOWNS: Harris has zero.
+</item 19>
+
+<item 20>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+Could this be the weekend that Keaton Mitchell (vs. Rams) gets back into RB2 range for the Ravens? Los Angeles might find itself spying Lamar Jackson and Gus
+Edwards so often that the speedy rookie busts a couple of big runs. Mitchell has racked up 330 yards and two TDs since he broke out four games ago, but the
+majority of that damage (134 yards and a TD) came in the initial breakout against Seattle. He has still yet to see 12 touches in a game, something we can't
+imagine will be the case by the end of the regular season.
+
+We also think Roschon Johnson (vs. Lions) could have a chance to take over lead-back duties in Chicago, as both Khalil Herbert and D'Onta Foreman have battled
+injuries and inconsistent touches this season.
+</item 20>
+
+<item 21>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+STEVENSON: Nothing has changed in terms of his efficiency. We can blame the offensive line to some degree but Stevenson has averaged 0.97 yards before contact
+per rush this season. That ranks 30th out of 41 qualifying running backs. And if you think that's bad then consider his yards after contact per rush average of
+1.79, which is dead last among those same 41 qualifiers.
+
+EXPLOSIVE RUNS: Stevenson has one (1) explosive carry of 12 or more yards. It was against Miami. It went 12 yards. This is a big change from 2022 when he had 21
+explosive runs and an explosive run rate of 10%, which was eighth-best.
+
+RECEIVING: Is averaging 3.6 targets per game and catching 67% of them but is getting just 7.3 yards per catch and has one (1) explosive catch of 16 or more
+yards.
+</item 21>
+
+<item 22>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+Titans
+
+6 De'Von Achane, Dolphins vs. Titans
+
+7 Breece Hall, Jets vs. Texans
+
+8 Jahmyr Gibbs, Lions @ Bears
+
+9 Alvin Kamara, Saints vs. Panthers
+
+10 Saquon Barkley, Giants vs. Packers
+
+11 Tony Pollard, Cowboys vs. Eagles
+
+12 Bijan Robinson, Falcons vs. Buccaneers
+
+13 Derrick Henry, Titans @ Dolphins
+
+14 Kyren Williams, Rams @ Ravens
+
+15 Josh Jacobs, Raiders vs. VIkings
+
+16 Rachaad White, Buccaneers @ Falcons
+
+17 Joe Mixon, Bengals vs. Colts
+
+18 D'Andre Swift, Eagles @ Cowboys
+
+19 Javonte Williams, Broncos @ Chargers
+
+20 Kenneth Walker III, Seahawks @ 49ers
+
+21 Jaylen Warren, Steelers vs. Patriots
+
+22 Jerome Ford, Browns vs.
+</item 22>
+
+<item 23>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+That one went for 32 yards against the Eagles in Week 1. Since then his longest reception has been for seven yards.
+
+PATRIOTS: Have run one (1) play inside the opponents' five-yard line this entire season. That should help explain the lack of touchdowns for Stevenson.
+
+RAIDERS: Rank in the bottom 10 versus RBs in yards per carry allowed (4.3) and yards after contact per rush allowed (3.04). But they're also in the top-10 in
+most rush attempts by RBs faced (24.4 per game) and they've given up just three rushing touchdowns and an explosive run on 4.9% of their snaps (that's actually
+10th best). And would you believe only one running back has scored more than 15 PPR points against the Raiders this season? It's James Cook.
+</item 23>
+
+<item 24>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+It wouldn't make much sense for a four-win team to rush back its franchise player.
+
+Patriots dual-purpose back Rhamondre Stevenson (ankle) suffered an injury on a nasty hip-drop tackle in New England's Week 13 loss to the Chargers. Bill
+Belichick and company already noted that 'Mondre would miss multiple weeks, so we're bumping Ezekiel Elliott way up against the Steelers.
+
+D'Andre Swift took a hard hit and exited Philadelphia's game late against the 49ers, but it's tough to know if he's actually hurt or was just kept out because
+of the lopsided score. If Swift can't go in Week 14 against Dallas, Kenneth Gainwell and Boston Scott will split touches, with Gainwell likely garnering flex
+value.
+
+Jonathan Taylor underwent thumb surgery last week and is expected to miss a few weeks. Tough for Taylor owners to ride the home stretch of the regular season
+without JT, but at least they could get him back for the end of the fantasy playoffs.
+</item 24>
+
+<item 25>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+(@ Browns) even in a tough matchup. Trevor Lawrence and his high-flying offense should dominate the time of possession against the Joe Flacco-led Browns,
+leaving ETN plenty of opportunities to add to his per-game PPR average of 17.4 points (third best in the NFL entering Week 13).
+
+Guess who's back? Back again? Achane's back — tell a friend! Stud rookie De'Von Achane (vs. Titans) went right back to roughing up the opposition in his Week 13
+return from a knee injury that sidelined him one week prior. The potential league-winner casually put up 103 yards and two TDs on the Commanders, and we can't
+help but place him and running mate Raheem Mostert in the top five this week despite a somewhat-tough matchup with Tennessee.
+</item 25>
+
+<item 26>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Eagles
+
+15 Kyren Williams, Rams @ Ravens
+
+16 Joe Mixon, Bengals vs. Colts
+
+17 Javonte Williams, Broncos @ Chargers
+
+18 Derrick Henry, Titans @ Dolphins
+
+19 D'Andre Swift, Eagles @ Cowboys
+
+20 Jaylen Warren, Steelers vs. Patriots
+
+21 Alexander Mattison, Vikings @ Raiders
+
+22 Jerome Ford, Browns vs. Jaguars
+
+23 Kenneth Walker III, Seahawks
+
+24 Najee Harris, Steelers vs. Patriots
+
+25 James Cook, Bills @ Chiefs
+
+26 Zack Moss, Colts @ Bengals
+
+27 Keaton Mitchell, Ravens vs. Rams
+
+28 AJ Dillon, Packers @ Giants
+
+29 Ezekiel Elliott, Patriots @ Steelers
+
+30 Aaron Jones, Packers @ Giants
+
+31 Jerick McKinnon, Chiefs @ Bills
+
+32 Tyjae Spears, Titans @ Dolphins
+
+33 Gus Edwards, Ravens vs. Rams
+
+34 Dameon Pierce, Texans @ Jets
+
+35 Roschon Johnson, Bears vs.
+</item 26>
+
+<item 27>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+49ers
+
+26 Javonte Williams, Broncos vs. Browns
+
+27 AJ Dillon, Packers @ Lions
+
+28 Jerome Ford, Browns @ Broncos
+
+29 Devin Singletary, Texans vs. Jaguars
+
+30 Kareem Hunt, Browns @ Broncos
+
+31 James Cook, Bills @ Eagles
+
+32 Jaylen Warren, Steelers @ Bengals
+
+33 Najee Harris, Steelers @ Bengals
+
+34 Khalil Herbert, Bears @ Vikings
+
+35 Tyler Allgeier, Falcons vs. Saints
+
+36 Chuba Hubbard, Panthers @ Titans
+
+37 Ezekiel Elliott, Patriots @ Giants
+
+38 Latavius Murray, Bills @ Eagles
+
+39 Roschon Johnson, Bears @ Vikings
+
+40 Joshua Kelley, Chargers vs. Ravens
+
+41 Keaton Mitchell, Ravens @ Chargers
+
+42 Ty Chandler, Vikings vs. Bears
+
+43 Dameon Pierce, Texans vs.
+</item 27>
+
+<item 28>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+He's still a decent start ahead of Najee Harris, Khalil Herbert and Jahmyr Gibbs but I'd rather chance my lineup with someone who has upside like Jaleel
+McLaughlin (if Javonte Williams sits out) or Alexander Mattison.
+
+FILM: The numbers don't quite match the talent -- Stevenson is a capable runner with great vision, balance and power to go with good speed. He struggled on
+lateral runs last week and his line failed him plenty on north-south runs. Game script kept him from finding a lot of work last week (one fourth-quarter touch).
+
+THIS SEASON: Stevenson has at least 16 touches in every game, which is good. Unfortunately he has yet to total 100 yards and has been under 70 yards three
+times, which is definitely the opposite of good.
+</item 28>
+
+<item 29>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+We'll talk more about Derrick Henry (concussion) in the injury section, but we can say with confidence here and now that Tyjae Spears (@ Dolphins) should be the
+hottest waiver-wire pickup of Week 14. Tennessee is a run-first offense and King Henry might be sidelined with a head injury, so Spears could very well pick up
+where he left off against Indy last weekend. The young back averaged 4.7 yards per carry (just shy of his 5.1 YPC entering the week) en route to 88 yards.
+
+Another backup getting a boost this week is the Patriots' Ezekiel Elliott (@ Steelers), who will assume lead-back duties after Rhamondre Stevenson went down
+with a pretty bad ankle injury in Week 13. Zeke might put in a vintage performance considering James Conner just went back to Pittsburgh and hung 105 yards and
+two TDs on his old squad.
+
+Could this be the weekend that Keaton Mitchell (vs.
+</item 29>
+
+<item 30>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+The injury highlights the importance of handcuffs, as Zack Moss has put up multiple top-10 performances with and without Taylor this season.
+
+Seattle's Kenneth Walker III (oblique) missed Week 12 and 13, and we're not confident in his ability to suit up against the hard-hitting 49ers coming off a big
+win in Philly. Backup Zach Charbonnet exited early because of a knee injury against the Cowboys, putting his status in doubt, too. If both are out, DeeJay
+Dallas would start and lead the backfield in touches.
+
+Green Bay's Aaron Jones has a sprained MCL, and sources have revealed that the Packers continue to consider him week-to-week. He only logged four carries before
+sustaining the injury in Week 11, then he sat for the Packers' Thanksgiving Day tilt with the Lions and their Sunday Night Football win over Kansas City. Why
+rush him back if Green Bay is already winning games?
+</item 30>
+=== END ITEM id=5838dba70d78abf6 ===
+
+=== ITEM id=839cb0384dcca064 ===
+Gold sentences and facts:
+Sentence 0: This whole line of argument is called “market definition.” If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google’s on the road to victory.
+  Fact 0.0: The whole line of argument is called 'market definition.'
+  Fact 0.1: If the court decides the relevant market is phones and app stores, rather than specifically Android ones, Google is on the road to victory.
+Sentence 1: She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue.
+  Fact 1.0: The woman admits that she may have misinterpreted the evidence.
+  Fact 1.1: The woman maintains that Google manipulates Search to maximise ad revenue.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 2>
+
+<item 3>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 3>
+
+<item 4>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Looking back on all that had changed around what first attracted people to Google, from the introduction of ads to the efforts to keep users within the universe
+of Google products, this seemed to be the last straw.
+
+The second major reason why Google results feel different lately was, of course, SEO — specifically, the obnoxious-kid-refusing-to-behave-in-class kind of SEO.
+
+“SEO that goes against Google’s guidelines, it’s not new,” Ray explained. A decade ago, it used to be called “black hat” SEO, in comparison to the search
+engine-approved “white hat” tactics. And Google has, as Sullivan and many SEOs told me, gotten better over time at catching SEOs playing tricks on the
+algorithm.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 5>
+
+<item 6>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 10>
+
+<item 11>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 11>
+
+<item 12>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 12>
+
+<item 13>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Some critics, including Megan Grey, contend that Google uses semantic keyword matching to make searches less precise on purpose, which widens the pool of
+content served and increases auctions for its ads. The quality tests, then, would ensure that the systems were still returning results that were justifiably
+related to the input.
+</item 13>
+
+<item 14>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+He speculated that the company didn’t want the public to think too hard about how search works because that awareness “encourages regulators and makes people
+realize, ‘Oh, there’s a lot of money here.’”
+
+There has always been advertising and polemics from cranks, scammers, and liars. But now we see this stuff surfacing alongside truth, and we can’t tell the
+difference. We move through our lives with a greater sense of distrust and fear and insecurity. At the end of the day, it’s Google’s world, and the SEOs are
+only living in it.
+
+And as much as I might hate the way the SEOs who don’t follow Google’s rules have altered my online experience, the reality is that most people running a
+company will break whatever rules they are able to get away with breaking.
+</item 14>
+
+<item 15>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 15>
+
+<item 16>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 16>
+
+<item 17>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+But Google denies pushing users towards the most monetisable subjects.
+
+Similarly, it’s also pretty common to see people complaining on the internet with some variation of “Google Search was a lot better 10 years ago”, which could
+absolutely be true. But it would be a stretch to assume that’s because of the company’s monetisation practices, when there’s a much simpler explanation. In
+2013, people were creating around 9 ZB of data every year (that’s nine zettabytes, or nine trillion gigabytes), which Google had to index constantly, whereas in
+2023 it’s more like 120 ZB. And not a whole lot of that is static websites like it was a decade ago, it’s live information that may be nested within various
+services and apps. What really happens when we search? Google has published extensive information about its Search procedures, so it’s not difficult to get its
+own take on what happens in the background when you send off a query.
+</item 17>
+
+<item 18>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 18>
+
+<item 19>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 19>
+
+<item 20>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 20>
+=== END ITEM id=839cb0384dcca064 ===
+
+=== ITEM id=3c530f1cdccda4be ===
+Gold sentences and facts:
+Sentence 0: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 0.0: The case will attempt to argue that Google restrains competition within two separate markets.
+  Fact 0.1: One of the two markets is the distribution of apps to Android users.
+  Fact 0.2: The other market is the market for payment processing solutions for content inside Android apps.
+Sentence 1: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 1.0: Google's public documentation says Google uses three categories to rank results that are local to a searcher.
+  Fact 1.1: The three categories are relevance, distance, and prominence.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 1>
+
+<item 2>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Didn’t other parties sue Google too?
+
+They did! And then, they all settled. All 50 state attorneys general and a number of consumers have tentatively settled with Google over app store antitrust
+claims, though it’s not clear what the deal might include.
+
+Match Group, the company behind Tinder, Match.com, OkCupid and other dating apps, just reached a surprise last-minute settlement too, one that makes it sound
+like Match effectively gave up.
+
+Epic stands alone.
+
+Could we get a settlement between Google and Epic as well?
+
+Epic seems to have no interest in settling as long as the “Google tax” exists, and the company’s repeatedly said it’s not interested in cash. So far, the
+company’s been willing to push these cases all the way through multiple appeals, cost be damned.
+
+It’s not clear what Google could proactively offer that would satisfy Epic, since CEO Tim Sweeney has also publicly suggested that Google would simply
+circumvent any settlement it offers.
+</item 2>
+
+<item 3>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 3>
+
+<item 4>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Or at least it was worse, before they were destroyed.”
+
+The best Google could do in response was to plant its own feeble seed with the jury, too: “Is Epic using the chats to distract me from all the evidence I do
+see?”
+
+“It’s true that Google could have automatically saved all chats for all relevant employees, but just because Google didn’t save some chats didn’t mean it
+violated antitrust laws,” Pomerantz argued.
+
+Epic’s opening statements seemed to paint a clearer picture for the jury than those from Google. But things got complicated for both parties when the first two
+witnesses — Epic Games Store head Steve Allison and Yoga Buddhi CEO Benjamin Simon, who also appeared in the earlier Epic v. Apple trial — took the stand.
+
+Both Epic and Google spent a long, long time on subtle lines of questioning.
+</item 4>
+
+<item 5>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+And when we tried to bundle Fortnite with other smartphone manufacturers like OnePlus and carriers of all sorts, they told us they couldn’t do a deal because
+Google had done a secret deal with them.
+
+It was really disconcerting to see the extent of bad faith efforts that were going on in a company of Google’s size. You’d think a trillion-dollar company would
+develop to the point where they have pretty respectable processes and leadership structures that provide a check and balance against wrongdoing, but they were
+rampantly destroying all their chats on these topics.
+
+You’d see long conversation threads would start to get into a spicy antitrust issue, and suddenly somebody points out the history’s on and the chat goes silent.
+They just turned it off to have the documents destroyed. It was great to see that all called out in detail.
+
+Any particular evidence where you’re like, “Oh wow, I never saw that, and now that specific thing came out for the world to see”?
+
+As an employee of Epic, I’ve not been able to see Google’s internal documents until the trial started.
+</item 5>
+
+<item 6>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+First, Epic announced it was bypassing Apple and Google’s app store fees. It deployed a hotfix update to Fortnite without either company’s knowledge, letting
+you purchase V-Bucks directly through its own payment processing option at a discount. Apple and Google almost immediately reacted by kicking Fortnite off their
+app stores for breaking the rules.
+
+Then: surprise! Epic was ready and waiting with two lawsuits and an attack ad, depicting a Fortnite hero throwing a unicorn-llama hammer into a giant screen
+reminiscent of Apple’s famous “1984” Macintosh ad.
+
+It was a striking publicity blitz followed by a lot of slow-moving court proceedings. While the Apple lawsuit went to court in 2021, the Google one was delayed
+again and again. A ruling came down for the Apple trial that September, and it was mostly decided in Apple’s favor, though both parties are waiting for the
+Supreme Court to potentially weigh in. Meanwhile, the machinations for its fight against Google continued, and now…
+
+It is time for trial number two.
+</item 6>
+
+<item 7>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 7>
+
+<item 8>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 8>
+
+<item 9>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Match may have settled its antitrust lawsuit with Google last week, but Fortnite maker Epic Games is still set to go to trial with the tech giant today,
+November 6, in hopes of convincing a jury that Google engages in anticompetitive behavior with regard to its Android app store, Google Play, and its commission
+structure. This case will differ slightly from Epic’s battle with Apple on the same topic because, this time, Epic can’t allege there’s no other way to load
+apps onto Android devices, as it could with Apple, because Android does allow for sideloading apps. Though Epic will suggest Google makes that process
+cumbersome, the bulk of its arguments will center around what it believes are anticompetitive agreements between Google and device manufacturers and developers.
+
+The precedent Epic’s case will rely on is a Microsoft case where courts found Microsoft to have a monopoly over the operating system and were abusing it, making
+it hard for users to download alternative browsers, like Netscape, on Windows devices.
+</item 9>
+
+<item 10>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+“Android’s choice and flexibility work well for consumers and developers of all sizes. We look forward to making our case in court as we fight to keep our users
+safe from harm, partner with developers to grow their businesses, and keep the Android ecosystem thriving and healthy for everyone,” reads a Google blog post by
+Wilson White, VP, Government Affairs & Public Policy.
+
+Epic’s lawsuit originally involved Match and several U.S. attorneys general, but Google reached a settlement with the latter last month and with Match last
+week. Epic will now fight the antitrust battle on its own. The lawsuit, held in the U.S. District Court in California’s Northern District, will include
+testimony from a number of Google and Android execs, including CEO Sundar Pichai, and Epic Games CEO Tim Sweeney, as well as Apple, Netflix and other Android
+developers.
+
+Google is also involved in another antitrust lawsuit with the Department of Justice over its alleged search monopoly.
+</item 10>
+
+<item 11>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 11>
+
+<item 12>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 12>
+
+<item 13>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 13>
+
+<item 14>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 14>
+
+<item 15>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Who will Epic and Google call as witnesses?
+
+We are going straight to the top of the org chart, folks. Google CEO Sundar Pichai and Epic CEO Tim Sweeney are absolutely expected to attend. Android
+co-founder Andy Rubin might be deposed, and Google says we’ll hear from current Android (and Chrome, and Chrome OS) boss Hiroshi Lockheimer. Google also tells
+us representatives from Apple, Netflix, Motorola, and AT&T should testify as well.
+
+How much hypocrisy can we expect in the courtroom?
+
+I’d say quite a bit! For example:
+
+Epic says it’s not in this for the money, it’s only suing to end Google’s monopoly — but Epic would surely profit if it doesn’t have to pay Google’s cut.
+
+It looks like Epic’s going to argue that you’re locked into Android after buying an Android phone, but I can personally attest that switching back and forth
+between the platforms is easier than ever.
+</item 15>
+
+<item 16>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 16>
+
+<item 17>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Both Epic and Google spent a long, long time on subtle lines of questioning. You really had to read between the lines to see that Epic was trying to make a
+point about how Google’s 70/30 revenue split is probably based on an arbitrary decision Valve made two decades ago with Steam or how Google was trying to make a
+point that Epic, too, likely believed that an app store provides more value than just payment processing and maybe deserves more money.
+</item 17>
+
+<item 18>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 18>
+
+<item 19>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+On Monday, Fortnite publisher Epic Games will drag a tech giant into court, alleging that its mobile app store is an illegal monopoly. You may be feeling some
+déjà vu!
+
+After all, didn’t Epic already go to trial with Apple, resulting in a ruling where Apple (mostly) won? Didn’t Epic fail to #FreeFortnite with its Llamacorn
+legal gambit? Didn’t that all happen years ago? What are we doing here again?
+
+The short answer: while Epic’s antitrust claims against Apple got their day in court, a similar lawsuit against Google never did. On November 6th, Epic v.
+Google will finally go to trial... a mere 1,180 days after Epic originally sued.
+
+Hi, I’m Sean, and I’ll be your guide to this whole delightful mess.
+
+Update, December 15th, 2023: It’s basically over now. What happened? Read this, this, and this to get the whole picture.
+
+Original story continues:
+
+Llamacorn what now? What is happening?
+</item 19>
+
+<item 20>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic, meanwhile, lost its antitrust battle with Apple and is now asking the Supreme Court to weigh in.
+</item 20>
+=== END ITEM id=3c530f1cdccda4be ===

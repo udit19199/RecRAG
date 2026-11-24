@@ -1,0 +1,1807 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=f5c8b2b7f09d3077 ===
+Gold sentences and facts:
+Sentence 0: Doe's story was adapted into the 1971 book "The Exorcist" by William Peter Blatty, which was then made into the 1973 movie starring Ellen Burstyn and Linda Blair.
+  Fact 0.0: Doe's story was adapted into the 1971 book The Exorcist.
+  Fact 0.1: William Peter Blatty wrote the 1971 book The Exorcist.
+  Fact 0.2: The 1971 book The Exorcist was made into the 1973 movie.
+  Fact 0.3: The 1973 movie starred Ellen Burstyn.
+  Fact 0.4: The 1973 movie starred Linda Blair.
+Sentence 1: Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins).
+  Fact 1.0: Clive Barker's 1987 film is his directorial debut.
+  Fact 1.1: Clive Barker's 1987 directorial debut adapts the 1986 novella The Hellbound Heart.
+  Fact 1.2: Clive Barker wrote the 1986 novella The Hellbound Heart.
+  Fact 1.3: The 1987 film tells the story of Larry, played by Andrew Robinson.
+  Fact 1.4: The 1987 film tells the story of Julia Cotton, played by Clare Higgins.
+
+Retrieved items:
+<item 1>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+—PV
+
+Oct. 31: The Exorcist III
+
+Where to watch: Prime Video, Criterion Channel
+
+Nearly 50 years since it was first released in theaters, William Friedkin’s The Exorcist has withstood the test of time as one of the most terrifying and
+influential horror films in American cinema. The sequel that came closest to capturing that same lightning in a bottle is The Exorcist III, written and directed
+by William Peter Blatty, the original screenwriter of the first film and author of the novel on which it was based.
+
+When a series of gruesome murders matching the modus operandi of an infamous serial killer begins to terrorize the city of Georgetown, Lt. William F. Kinderman
+(George C. Scott) investigates the psych ward of a local hospital in search of leads. Confronted with a suspect whose appearance matches that of his late friend
+Father Damien Karras, Kinderman finds himself thrust into a battle for his very soul as he confronts an evil beyond his comprehension.
+</item 1>
+
+<item 2>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+And for the score: Thom Yorke. Yes, Radiohead Thom Yorke.
+
+Where other directors would have obsessively recreated a source text, rebooting it into something unrecognizable, Guadagnino’s film is an homage — the sort of
+movie you imagine Argento would make with the budgets and creative freedom afforded by tech companies trying to buy cultural capital. It’s more political. More
+grotesque. The ending is just more.
+
+The truth is 2018’s Suspiria and the original Suspiria should be enjoyed together. In the past, that’s been a challenge, with the original film being
+surprisingly difficult to watch — especially if you prefer streaming. But this month, Criterion Collection has you covered, allowing for one of the most batshit
+double features of your life. —CP
+
+Oct.
+</item 2>
+
+<item 3>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Very loosely based on Argento’s own experience directing a failed production of Verdi’s Macbeth, Opera is a sumptuous and suspenseful slasher that holds the
+viewer’s attention and absolutely refuses to let go. Like Betty, one feels compelled to watch this macabre display of ritualistic horror play out to its
+conclusion in a desperate search of answers. Fortunately, unlike Betty, you won’t have to worry about losing your eyes if you find yourself overwhelmed by the
+frights. —TE
+
+Oct. 29: House of 1000 Corpses
+
+Where to watch: AMC Plus, Pluto TV, Tubi
+
+House of 1000 Corpses may be the true answer to the question “What is the best The Texas Chain Saw Massacre sequel?”
+
+The movie follows a group of teens who are putting together a book on roadside attractions when they stumble upon a serial killer-themed rest stop run by a
+weirdo. After their strange encounter, the kids set off on the road, only for their car to break down a few miles later.
+</item 3>
+
+<item 4>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Lovecraft and the anti-consumerist allegories of George A. Romero. The horrors hold up over 50 years after it was first released, and with just the right
+combination of inadvertent silliness and legitimate terror, Messiah of Evil is a satisfying watch and an excellent start to a month of horrors. —Toussaint Egan
+
+Oct. 2: Ginger Snaps
+
+Where to watch: Criterion Channel, Shudder, Peacock, Vudu, Tubi, Freevee, Plex
+
+There’s a sizable hole in the monster movie canon: There just aren’t enough good werewolf movies! Ginger Snaps is here to fix that. And if you love Jennifer’s
+Body, you’re in for a bloody treat.
+
+Directed by future Orphan Black co-creator John Fawcett, Ginger Snaps is a delightfully gruesome story about two sisters. One of them has gotten her period for
+the first time, and is turned into a werewolf shortly after. Things get messy, fast.
+</item 4>
+
+<item 5>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+In the presence of imminent horror, our first instinct is to scramble for answers and, in the absence of any to be found, our second instinct is to search for a
+means of escape. Through a captivating lead performance and deft sound design, Egan delivers a gripping horror story in just under 10 minutes. —TE
+
+Oct. 26: The Texas Chainsaw Massacre 2
+
+Where to watch: Max
+
+The Texas Chain Saw Massacre is a nauseating smoothie of rural horror, outré indie experimentation, and wannabe snuff film. Its murders aren’t real, but you’d
+be forgiven for being convinced the film’s actors are in genuine trouble; from the budget film stock to the filthy sets, it all feels… off. The result is not
+just a great horror flick, but a monumental work that originated many tropes of its genre and, most recently, earned a coveted spot in the Sight and Sound list
+of the greatest films of all time.
+
+The Texas Chainsaw Massacre 2 is nothing like that.
+</item 5>
+
+<item 6>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Produced after Kurosawa’s Cure (which we featured on last year’s Halloween calendar), Pulse is widely celebrated as one of the foundational texts in the canon
+of J-horror cinema, alongside Hideo Nakata’s Ring and Takashi Shimizu’s Ju-on: The Curse. Eerie and methodical, Kurosawa’s film is a nihilistic meditation on
+technology and human relationships that presages an advent of loneliness in a world growing more and more “connected” with each passing day. Rife with imagery
+that will stay with you long after it’s over, Pulse is a tremendous and terrifying movie worth experiencing. —TE
+
+Oct. 5: Apostle
+
+Where to watch: Netflix
+
+Don’t confuse Gareth Edwards (director of The Creator and Rogue One: A Star Wars Story) with Gareth Evans, director of the Raid movies. If you do, you may sit
+down to the Netflix-exclusive Apostle expecting expansive, detail-driven science fiction, and be unpleasantly surprised when you get a grimy, extremely gory
+period piece that goes to startling extremes.
+</item 6>
+
+<item 7>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Every person reads like a threat, and every new competitor or friend seems to be looking for a new way to drain the life out of the people around them — until
+they finally actually do it. But, like all Refn projects, what really sets The Neon Demon apart is how it looks. The griminess of the movie’s world turns
+brightly lit photo shoots into shadow-filled nightmares, with people who stalk the sets like jungle predators.
+
+Though The Neon Demon didn’t get the same acclaim as other so-called elevated horror movies from the time, looking back, it fits perfectly among the ranks of
+The Witch, It Follows, and Under the Skin. Refn’s nightmarish modeling movie is dripping with cynicism, cruelty, and a creeping atmosphere, with more meanness
+than almost any other movie from the era could muster. But it’s all in the pursuit of beauty, of course. —AG
+
+Oct. 16: Project Wolf Hunting
+
+Where to watch: Hi-Yah!
+</item 7>
+
+<item 8>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+The film centers on Arletty, a young woman who journeys to the remote coastal town of Point Dume, California, to track down her missing father, a reclusive
+painter who is plagued by disturbing visions of an impending apocalypse. After crossing paths with an eccentric aristocrat and his groupie companions, the group
+bears witness to the realization of the painter’s prophecy, as the townspeople are transformed into flesh-eating ghouls and the messiah of evil makes his return
+to the mortal realm.
+
+At times convoluted and bizarre, Messiah of Evil is a genuinely entertaining horror thriller filled with memorable scares and chilling set-pieces. From a
+cross-eyed albino man gleefully devouring a field mouse whole to a unsuspecting woman watching a Western as the theater around her slowly fills with ravenous
+undead zombies, it’s a dreamy and frightening experience that lands somewhere between the ineffable gothic horror of H.P. Lovecraft and the anti-consumerist
+allegories of George A. Romero.
+</item 8>
+
+<item 9>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+The story of The Exorcist III’s production is a tangled mess of false starts, studio interference, and thwarted artistic ambitions. Though it was originally
+conceived with Friedkin in mind to return as director, he eventually left the project due to creative differences with Blatty. John Carpenter was at one time
+tapped to direct, before he too stepped aside to allow Blatty himself to take the reins. Morgan Creek Productions, which financed the film, demanded Blatty
+reshoot the film’s final act, which originally ended without an exorcism. Even given these complications, The Exorcist III remains a fascinating and terrifying
+film in its own right, with a hodgepodge of fascinating creative choices and literary dialogue that makes the film feel like a sister piece to Blatty’s The
+Ninth Configuration. It may not have been the Exorcist sequel that audiences at the time wanted, but it’s still a damn fine picture. —TE
+</item 9>
+
+<item 10>
+The best horror movies you can watch right now (Polygon, 2023-09-28T15:26:41+00:00)
+An unsettling tale about a plastic surgeon (played by Pierre Brasseur) who kidnaps young women and performs surgery on them to try and find a face replacement
+for his daughter (Édith Scob), Eyes Without a Face is equal parts haunting and beautiful. Scob’s iconic face mask in the movie was later referenced in her role
+in the also-excellent Holy Motors many decades later. —PV
+
+Hellraiser
+
+Director: Clive Barker
+
+Cast: Andrew Robinson, Clare Higgins, Ashley Laurence
+
+Where to watch: Prime Video, AMC+, Shudder, Tubi, Pluto, Hoopla
+
+Clive Barker’s 1987 directorial debut adapts his 1986 novella The Hellbound Heart to tell the story of Larry (Andrew Robinson) and Julia Cotton (Clare Higgins).
+The Cottons are a married couple who move into the home of Larry’s recently deceased brother, Frank (Sean Chapman), with whom Julia had a previous affair.
+</item 10>
+
+<item 11>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+The Texas Chainsaw Massacre 2 is nothing like that. You won’t see its name in a film school syllabus, and the films it inspired can be counted on one hand.
+Nonetheless, there’s something commendable about the gall of Tobe Hooper, the original Texas Chain Saw director, returning to his series with the energy of a
+middle-aged man on his first ayahuasca retreat.
+
+Leatherface gets in a high-speed car battle, eventually standing on the roof of a speeding sedan. Dennis Hopper dual-wields chainsaws. A radio station office is
+obliterated like it’s a novelty rage room. Sometimes you want a steak, and sometimes you want a hamburger. Texas Chainsaw Massacre 2 is a damn juicy burger. —CP
+
+Oct. 27: Possessor
+
+Where to watch: Hulu
+
+My first Brandon Cronenberg (yes, David’s son) movie was Infinity Pool, his latest messed-up meditation on the rich and powerful.
+</item 11>
+
+<item 12>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+This incredibly dark and squirmy movie is much quieter and more internal than Evil Dead Rise, but it sure puts the screws to the audience, especially as it
+builds to an unforgettable, horrifying climax. —TR
+
+Oct. 20: Silent Hill
+
+Where to watch: Peacock
+
+The mid-2000s were a no man’s land for horror movies. By 2006, we were four years out from the blockbuster prestige of Gore Verbinski’s The Ring and the
+J-horror import boom that followed it in America, and only just beginning to transition into the Saw-dominated years of “realistic” horror. More importantly, we
+were still almost a decade away from the arthouse horror boom that would kick off closer to 2014 with films like It Follows. This was exactly the environment
+Silent Hill was released into, and it deserved so much better.
+
+The movie follows Rose, whose daughter, Sharon, is plagued with awful episodes of sleepwalking and nightmares about the mysterious abandoned town of Silent
+Hill.
+</item 12>
+
+<item 13>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Your time is precious, and your options are endless. The good news: We watch it all so you don’t have to. Polygon’s What to Watch highlights the best, the
+funniest, the scariest, and the most exciting in movies, TV, and everything in between. Stop scrolling, start watching!
+
+If there’s one thing we love here at Polygon, it’s the Halloween season.
+
+We cover horror year-round, whether it’s the best horror movies you can stream at home or the best horror movies on Netflix, and generally, we have our finger
+on the undead pulse of the newest and ghastliest releases in horror. We even have a list of the best horror movies of the year (ranked by scariness, of course).
+
+Even still, Halloween is an especially spooky time of year, and it warrants special attention and celebration.
+</item 13>
+
+<item 14>
+The best horror movies you can watch right now (Polygon, 2023-09-28T15:26:41+00:00)
+After inadvertently being resurrected by a drop of blood spilled by Larry on the floor of the house’s attic, Frank seduces Julia into luring new men to the
+house so that he can drain their life force and fully regain his mortal form. Surrounding this core narrative is the the story of the Lament Configuration, a
+puzzle box Frank acquired before his untimely death. When solved, it conjures hellish beings known as Cenobites to the mortal plane of existence, which indulge
+in hellish exercises of sadomasochistic mutilation. Easily the best and most enduring of the Hellraiser movie series, Barker’s 1987 original is a must-watch for
+horror fans. —TE
+
+Hereditary
+
+Director: Ari Aster
+
+Cast: Toni Collette, Alex Wolff, Milly Shapiro
+
+Where to watch: Max
+
+Hereditary is a victim of its own success.
+</item 14>
+
+<item 15>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Enjoyment of Dracula 2000 may vary depending on a tolerance for Hot Topic goofs, but if you don’t catch up with it, you can’t enjoy Lussier’s sequel, Dracula
+II: Ascension, starring Jason Scott Lee as a martial-arts-fighting priest who kicks Dracula’s ass! —Matt Patches
+
+Oct. 7: Prince of Darkness
+
+Where to watch: Peacock
+
+There aren’t enough movies about the end of the world. Sure, there are plenty of movies about preventing catastrophe at that scale, but rarely do they have the
+follow-through to truly get existentially terrifying. Thankfully, John Carpenter is no coward, and he made three movies about different kinds of apocalypses.
+But while The Thing is the best known, and In the Mouth of Madness is the zaniest, Prince of Darkness might be the scariest of the trilogy.
+
+Prince of Darkness follows a group of college researchers who are sent to study a strange canister found in the basement of a church.
+</item 15>
+
+<item 16>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+This is why it made our list of the best Blu-rays of 2023.
+
+But reader, while I’m one of those sickos who obsesses over video resolution and bitrate, I’ll be honest: You don’t need the fanciest version of Creepshow to
+enjoy its comedic chills. In fact, the most aesthetically harmonious format might be a poorly treated VHS tape that recorded the film off TBS in the mid-1990s.
+
+Horror anthologies have most recently been used to condense as much terror into a tiny package, like chugging a shot glass of hot sauce. Creepshow is a
+throwback to a softer, more leisurely style of horror — a middle ground between the plodding tinglers of Poe and contemporary slashers.
+
+Plus, Stephen King performs a one-person show as a hillbilly. So like, that should be enough. —Chris Plante
+
+Oct. 4: Pulse
+
+Where to watch: Prime Video
+
+What if technology could be used to communicate with the dead?
+</item 16>
+
+<item 17>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Evans’ mesmerizing Apostle deliberately starts in roughly the same place as the classic 1973 suspense thriller The Wicker Man, with a lone man heading to a
+remote Welsh island after getting a letter suggesting his sister is being held against her will there by a dangerous cult. Worming his way into the community by
+pretending to be a convert, Thomas (Dan Stevens, even more feral and intense than he is in The Guest or Beauty and the Beast) inevitably discovers a lot of
+nasty work going on on the island.
+
+Evans charts his own course with Apostle, veering far from the Wicker Man mold and into much bloodier territory. But he takes advantage of some of the same
+ideas: the ominous isolation of the island, the close-knit secrecy of its community, the predatory ideas that have flourished there under charismatic
+leadership. Stevens is particularly terrific in this movie, lunging from one scene to the next like a humanoid wolf who can barely contain his bloodlust.
+(Thomas has plenty of closely held secrets of his own.)
+</item 17>
+
+<item 18>
+5 things to know before watching the Five Nights at Freddy’s movie (Polygon, 2023-10-26T21:11:01+00:00)
+The possessed-animatronics horror video game Five Nights at Freddy’s is less than a decade old, but a movie version has been in the works almost since the game
+launched, which seems especially protracted for a development process. Warner Bros. bought the movie rights in 2015, and the project moved over to Blumhouse a
+couple of years later. Game creator Scott Cawthon wrote and rewrote the script, while kid-horror filmmakers like Gil Kenan (Monster House) and Chris Columbus
+(Gremlins, the first Harry Potter and Percy Jackson movies) signed on and jumped off the project.
+
+Finally, under director Emma Tammi, the film is hitting theaters simultaneously with a Peacock streaming debut. The franchise’s most hardcore fans probably
+consider themselves beyond ready to watch the Freddy’s film. But what about everyone else? If you’re not sure, have a look at this handy (and extremely
+spoiler-light) Q&A.
+</item 18>
+
+<item 19>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Things get messy, fast.
+
+Ginger Snaps doesn’t just do a great job filling in the werewolf canon. It’s a grisly body horror story placed onto an effective puberty allegory, with a
+compelling central sister relationship. If you’ve ever watched something like Sam Raimi’s Spider-Man and thought, This is great and surprisingly gooey, but give
+me stories like this about teen girls, then Ginger Snaps is for you.
+
+The movie has amassed a dedicated cult following in the years since its release. You’re next up to join the ranks — see you at the next full moon! —Pete Volk
+
+Oct. 3: Creepshow
+
+Where to watch: Kanopy
+
+The new Creepshow home video release — presented in vibrant 4K UHD Blu-ray — is the best way to revisit this horror anthology classic. You can see individual
+bubbles in the foam of the ocean as it slowly drowns Ted Danson. This is why it made our list of the best Blu-rays of 2023.
+</item 19>
+
+<item 20>
+The Halloween Countdown: 31 days of horror to watch (Polygon, 2023-10-10T15:27:53+00:00)
+Even still, Halloween is an especially spooky time of year, and it warrants special attention and celebration.
+
+For the past three years, Polygon has put together a Halloween countdown calendar, selecting 31 of our staff’s top horror-themed or Halloween-adjacent picks
+across movies and TV throughout the month of October, all available to watch at home. We’ve loved doing it, so much so that we’re bringing it back again — this
+time with a whole new batch of films and shows to choose from.
+
+Every day for the month of October, we’ll add a new recommendation to this countdown and tell you where you can watch it. So curl up on the couch, dim the
+lights, and grab some popcorn for a terrifying and entertaining marathon of horrific delights.
+
+Oct. 1: Messiah of Evil
+
+Where to watch: Prime Video, Shudder, Pluto TV, Plex
+
+A undersung classic of ’70s cosmic horror, Willard Huyck and Gloria Katz’s Messiah of Evil is a surreal and nightmarish experience that more than deserves its
+status as a cult horror classic.
+</item 20>
+=== END ITEM id=f5c8b2b7f09d3077 ===
+
+=== ITEM id=ba623ab0a2be3557 ===
+Gold sentences and facts:
+Sentence 0: But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource.
+  Fact 0.0: By the age of 16, the person described is public property.
+  Fact 0.1: By the age of 16, the person described is incapable of going outside without being mobbed.
+  Fact 0.2: By the age of 16, the person described's love of singing and dancing is now a lucrative resource.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker described it as almost a very strange, subtle clue to the media.
+  Fact 1.1: The clue signals that the media does not know everything that happened in that relationship.
+  Fact 1.2: The speaker says something really major and traumatic could have happened to her that the media does not know about.
+  Fact 1.3: The speaker told NPR this.
+
+Retrieved items:
+<item 1>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+After her split from Justin Timberlake, she dreams about quitting pop and opening a shop: “With the gift of hindsight I can see that I hadn’t given myself
+enough time to heal from the breakup,” she writes – though her requests for a break are not only turned down, but interpreted as a potential sign of sedition to
+be quashed and interrogated.
+
+In this restrictive environment, small kindnesses take on an outsized significance, like Paris Hilton encouraging her “to have fun for the first time in a long
+time”, leading to some infamous nights out with the heiress and Lindsay Lohan. Once again, Britney is seen as stepping out of bounds, potentially damaging her
+earning potential. One night she has her mother babysit her sons; when she returns home tipsy, Lynne Spears screams at her, she writes. “The shame I felt killed
+my heart. I stood there, reeling, and thought, OK, I guess it’s forbidden for me to party.”
+</item 1>
+
+<item 2>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+When she returns home from the forced stint in a brutal rehab facility, she finds that her parents have thrown away her childhood things, including a binder
+full of her poetry. “I felt an overwhelming sadness. I thought of the pages I’d written through tears. I never wanted to publish them or anything like that, but
+they were important to me. And my family had thrown them in the trash, just like they’d thrown me away.” She resolves to start over with a new notebook. “In
+that moment I made peace with my family,” she writes. “By which I mean that I realised I never wanted to see them again, and I was at peace with that.”
+
+Britney writes that she is working to feel “more compassion than anger” towards them. “It’s not easy.”
+</item 2>
+
+<item 3>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+The conservatorship stripped me of my womanhood, made me into a child.” It’s hard to explain, she says, “how quickly I could vacillate between being a little
+girl and being a teenager and being a woman, because of the way they had robbed me of my freedom … They wanted me to be wild onstage, the way they told me to
+be, and to be a robot the rest of the time.”
+
+Music seems to have become an afterthought
+
+Early on, Britney writes, she loved making music. She told the producer Max Martin that she wanted to sound more R&B than straight pop; she listened to Tainted
+Love the night before recording Baby, One More Time and stayed up late so that she would sound as gravelly and “fried” as Marc Almond. She was a studio
+perfectionist who would stay in the booth for hours, and the school setting and uniforms of the Baby video were her idea.
+</item 3>
+
+<item 4>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 4>
+
+<item 5>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+After her split from Timberlake, she likens herself to Benjamin Button. “Somehow that year, in becoming more vulnerable I started to feel like a child again.”
+
+The situation worsens amid postnatal depression. “It was as if some part of me became the baby,” she writes in an apologetic section about transferring her
+frustrations on to her interior decorator. “One part of me was a very demanding grown woman yelling about white marble, while another part of me was suddenly
+very childlike.”
+
+When she is placed under the conservatorship, she not only regresses, but feels dehumanised by the constant scrutiny. “I became a robot. But not just a robot –
+a sort of child-robot. The conservatorship stripped me of my womanhood, made me into a child.”
+</item 5>
+
+<item 6>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+In her forthcoming memoir, The Woman in Me, Britney Spears is expected to reflect on some of the most pivotal moments in her life, including her relationships.
+
+Over the years, the pop star’s love life has continued to make headlines. Most recently, her ex-husband Sam Asghari filed for divorce after only 14 months of
+marriage.
+</item 6>
+
+<item 7>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+Timberlake proves to be the last person you’d call in a crisis. “At some point he thought maybe music would help, so he got his guitar and he lay there with me,
+strumming it,” she writes. Almost as embarrassing is husband Kevin Federline’s attempt to start a music career. “He really thought he was a rapper now,” she
+writes, with the bafflement of someone who has never known pretension. “Bless his heart – because he did take it so seriously.”
+
+Motherhood leaves her vulnerable
+
+When Britney gets pregnant with her first son, she initially thinks it might protect her: “I wanted everyone to stay away: stand back! There’s a baby here!”
+Inevitably, it doesn’t work out that way. The paparazzi become aggressive, particularly once she has her kids in quick succession – becoming pregnant a second
+time three months after giving birth to her first.
+</item 7>
+
+<item 8>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 8>
+
+<item 9>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+That brief moment of freedom doesn’t last long: a year later, she is ambushed into the conservatorship, which also exercises jurisdiction over her body. “No
+matter how much I dieted and exercised, my father was always telling me I was fat,” she writes. Punishing gym routines leave her feeling “out of my mind”. Her
+diet is monitored – along with every other detail of her life – while she goes through the motions of her Las Vegas residency. “My body was strong enough to
+carry two children and agile enough to execute every choreographed move perfectly onstage. And now here I was, having every calorie recorded so people could
+continue to get rich off my body.”
+
+Here I was, having every calorie recorded so people could continue to get rich off my body
+
+On the other side of the conservatorship, she writes, freedom looks like being able to gain weight without anyone “shouting at me”. It’s eating chocolate again.
+It’s posting selfies – either nude or clothed – on Instagram.
+</item 9>
+
+<item 10>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Since then, Swift has released four “Taylor’s Version” albums: Fearless (Taylor’s Version) in April 2021, Red (Taylor’s Version) in November 2021, Speak Now
+(Taylor’s Version) in July 2023, and 1989 (Taylor’s Version) in October 2023.
+
+“It’s not lost on me that the two great catalysts for this happening were two horrendous things that happened to me,” Swift said, when asked about the success
+of her tour. “The first was getting cancelled within an inch of my life and sanity. The second was having my life’s work taken away from me by someone who hates
+me.”
+
+While Swift is arguably more famous now than ever before, the Grammy winner revealed that the constant attention and swarms of paparazzi won’t stop her from
+living her life. There’s also constant rumours surrounding her personal life, specifically rumours about her relationship with Alwyn that her publicist, Tree
+Paine, was forced to publicly deny.
+</item 10>
+
+<item 11>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+At the time, her representative also confirmed to People: “Yes, she’s single.”
+
+The news of the breakup came asTMZ alleged that Lucado had cheated on Spears, with claims that her father had purchased a video of the infidelity incident. The
+publication later alleged that Lucado denied the cheating allegations, with claims that he was seeing the other woman while he and Spears were broken up.
+
+Despite their seemingly rocky history, Lucado showed his support for his ex in a 2016 interview with theNew York Times about her conservatorship. Speaking to
+the publication, he said: “If anyone knew the real Britney, they would know that she would rather be remembered for being the great mother she is rather than
+the artist she is.”
+
+The publication also noted that Lucado denied the infidelity claims from Spears’ father, before he added: “And if anyone could see her interactions with her
+kids, they would know that there is no need for a conservatorship over Britney’s personal life.”
+</item 11>
+
+<item 12>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+Justin had embarrassed me publicly, so my rebuttal onstage was to kind of go there a little bit, too. But it was absolutely horrible.”
+
+She has an immaculate sense of shade
+
+Britney seems too pure of heart for active malice, but she has an immaculate way with a piercing characterisation. Timberlake’s band, ‘NSync, were big hip-hop
+heads, she writes, and sometimes “tried too hard to fit in” with Black artists. When Timberlake spots Ginuwine at an event, he “got all excited and said, so
+loud, ‘Oh yeah fo shiz, fo shiz! Ginuwiiiine! What’s up, homie!’”
+
+Her account of being encouraged to abort their pregnancy at home, lest anyone see them going in and out of hospital, is horrifying. Britney, with no pain
+relief, is writhing on the floor. Timberlake proves to be the last person you’d call in a crisis.
+</item 12>
+
+<item 13>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+“If the idea of my being in that place was to heal, that was not the effect.”
+
+She’s not scared of anything after that experience, she writes, “but it doesn’t make me feel strong; it makes me sad. I shouldn’t be this strong.”
+
+#FreeBritney protesters in 2021. Photograph: Étienne Laurent/EPA
+
+A nurse shows Britney the blossoming fan movement that is spreading awareness of its suspicions that all is not right with her conservatorship. Come June 2021,
+she calls 911 to report her father for conservatorship abuse days before a probate court hearing on the arrangement. “My voice had been used for me and against
+me so many times that I was afraid nobody would recognise it now if I spoke freely,” she writes. When she is granted her freedom in November 2021, she says she
+feels shock, relief, elation, sadness and joy.
+</item 13>
+
+<item 14>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+As the restrictions get tighter, Britney acts out – and ends up legally denied her freedom for 13 years, under a conservatorship controlled by her father.
+
+Her body felt like public property
+
+From day one, Britney’s body is made fair game. Between the videos for her debut single, Baby, One More Time and Sometimes, the media noted her changing
+physique and concluded that the 16-year-old must have had breast implants – rather than simply going through puberty. She notices that talkshow hosts ask her
+about her chest, while her boyfriend Justin Timberlake gets asked serious questions about his music. It’s one of many pressures that ultimately push her to
+breaking point, and when she writes about shaving her head in a salon in 2007, she frames it as a “fuck you” to the impossible beauty standards she felt forced
+to live up to: “I’d smiled politely while TV show hosts leered at my breasts, while American parents said I was destroying their children by wearing a crop
+top.”
+</item 14>
+
+<item 15>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+It’s posting selfies – either nude or clothed – on Instagram. Some people don’t understand the latter, she writes, “but I think if they’d been photographed by
+other people thousands of times, prodded and posed for other people’s approval, they’d understand that I get a lot of joy from posing the way I feel sexy and
+taking my own picture, doing whatever I want with it.”
+
+Her ‘virginity’ was a prison
+
+Britney was actively marketed as a virgin, a repulsive, archaic premise that made the 16-year-old’s inevitable sexuality into a kind of timebomb. In fact, she
+writes happily, she first slept with her older brother’s best friend when she was 14. Yet the fixation on her “purity” took “the focus off me as a musician and
+a performer”, she writes. “All some reporters could think of to ask me was whether or not my breasts were real (they were, actually) and whether or not my hymen
+was intact.”
+</item 15>
+
+<item 16>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+She accedes in order to retain access to her boys, but questions how she can perform at such a high level when she is perceived as “so sick that I couldn’t make
+my own decisions”. She makes futile attempts to escape the arrangement; meanwhile her father sends her to rehab and Alcoholics Anonymous because she has been
+taking over-the-counter energy supplements. The women at AA inspire her to start trying to take control over her life but she just hits more walls. Her father
+won’t let her remove her IUD to start a family with her new boyfriend, later husband, Sam Ashgari (they have divorced since Britney completed the memoir). After
+she objects to a new dance move suggested for her Vegas residency, she is sent to a solitary rehabilitation facility for two months, the most upsetting part of
+the book.
+
+Was I a bank robber? A wild animal? Why was I treated as though I were about to burn the place down and murder them all?
+</item 16>
+
+<item 17>
+Britney Spears and Kevin Federline: A complete timeline of their relationship (The Independent - Life and Style, 2023-10-20T15:02:26+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+It may be over a decade since Britney Spears and Kevin Federline ended their marriage, but the former couple continue to have their ups and downs when it comes
+to co-parenting their two teenage sons, Sean Preston and Jayden.
+
+Ahead of the release of the pop star’s memoir, The Woman in Me, which is due for release on 24 October, fans are anticipating Spears will share new details
+about her relationship with her second husband, Federline.
+</item 17>
+
+<item 18>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+When she arrives, so does another Swat team. “I’m a five-foot four-inch pop singer who calls everyone sir and ma’am,” she writes. “They treated me like I was a
+criminal or predator.”
+
+The conservatorship clamps down on her life, ruled by her father, who she alleges was “an alcoholic, someone who’d declared bankruptcy, who’d failed in
+business, who’d terrified me as a little girl”. She is medicated and surveilled. Her dates are required to agree to background checks and blood tests, made to
+sign NDAs, and receive a full rundown of her sexual history before the first date. “The insanity of this system kept me from finding basic companionship, having
+a fun night out or making new friends – let alone falling in love,” Britney writes. “It was just the worst thing that could possibly ever happen to my music, my
+career and my sanity.”
+</item 18>
+
+<item 19>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+There is no love lost for her family
+
+Britney writes about how she was always made to feel she was not enough as a kid; her father’s alleged alcoholism, neglect and brutal standards; how her mother
+always made her feel less-than. She is unsparing about her younger sister, who she characterises as a brat who was spared the pain of Britney’s impoverished
+childhood because of her success. “My mom and I had to witness the ugliness and the violence without believing that there was anywhere else to go.”
+
+Even once Britney is the biggest pop star in the world, her parents still seem to have an undue say in the running of her career, including making her sit for
+humiliating TV interviews – why exactly that is remains unanswered. Her father seizes control legally with the imposition of the conservatorship, telling her,
+chillingly, “I am Britney Spears now,” and her family appear to live off her dime while she lives an extraordinarily restricted life.
+</item 19>
+
+<item 20>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+At what point did I promise to stay 17 for the rest of my life?”
+
+What she knows now, she writes, “is that every part of normal life had been stripped from me – going out in public without becoming a headline, making normal
+mistakes as a new mother of two babies, feeling like I could trust the people around me. I had no freedom and yet also no security. At the time I was also
+suffering, I now know, from severe postpartum depression.” It left her suicidal. “I’ll admit it, I felt that I couldn’t live if things didn’t get better.”
+
+She knows she is trapped in a state of arrested development
+
+It’s often said that famous people are frozen in time at the age they became famous, but Britney was never allowed to be a real child, nor a real adult. Her
+2001 single I’m Not a Girl, Not Yet a Woman may be her most prescient recording; she is painfully conscious of this divide.
+</item 20>
+
+<item 21>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+He later issued an apology to Spears on Instagram, writing: “I’ve seen the messages, tags, comments, and concerns and I want to respond. I am deeply sorry for
+the times in my life where my actions contributed to the problem, where I spoke out of turn, or did not speak up for what was right. I understand that I fell
+short in these moments and in many others and benefited from a system that condones misogyny and racism.”
+
+In June 2021, he also shared his support for Spears after she testified publicly in a bid to end her conservatorship, which was controlled by her father, Jamie
+Spears. In a Los Angeles court hearing at the time, Spears alleged that she had been forced to take lithium against her will. She also claimed that the team
+managing her conservatorship had prevented her from having another baby by refusing to remove her IUD.
+
+“After what we saw today, we should all be supporting Britney at this time.
+</item 21>
+
+<item 22>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+Why was I treated as though I were about to burn the place down and murder them all?
+
+She is locked up, put on lithium, subject to relentless testing and mandatory therapy, can’t see her kids or dog, can’t bathe or dress in private or shut the
+door to her room, has set bed and waking times. For blood tests, “the tech drawing my blood would be flanked by the nurse, a security guard and my assistant.
+Was I a cannibal? Was I a bank robber? Was I a wild animal? Why was I treated as though I were about to burn the place down and murder them all?” She wonders if
+her family is trying to kill her. Made slow and sclerotic, “I began to feel like I was being ritually tortured,” she writes, feeling estranged from her own
+body. “If the idea of my being in that place was to heal, that was not the effect.”
+</item 22>
+
+<item 23>
+Britney Spears and Kevin Federline: A complete timeline of their relationship (The Independent - Life and Style, 2023-10-20T15:02:26+00:00)
+“Whether he realises it or not, Mr Federline has not only violated the privacy and dignity of the mother of his children, he has undermined his own children,
+whose privacy he should protect,” the statement read. “Putting aside his ITV interview, Mr Federline’s ill-advised decision to post an old video of his 11 and
+12-year-old children was cruel, bottom of the barrel stuff. It was abhorrent.”
+
+“In addition to demeaning himself and violating societal norms, he has now also created various legal issues for himself, including, but not limited to,
+implicating cyber-harassment and cyber-bullying statutes, among other things.”
+
+The Woman in Me hits shelves in the US and UK on 24 October.
+</item 23>
+
+<item 24>
+From Justin Timberlake to Sam Asghari: A timeline of Britney Spears’ relationships (The Independent - Life and Style, 2023-10-18T03:46:39+00:00)
+Spears is also the mother of two children – Sean, 18, and Jayden, 17 – who she shares with her second ex-husband, Kevin Federline.
+
+According to a press release for The Woman in Me, Spears’ memoir is “a brave and astonishingly moving story about freedom, fame, motherhood, survival, faith,
+and hope”. Spears’ book is also expected to cover the high-profile legal battle to end her conservatorship, which was dissolved in November 2021 after 13 years.
+
+Throughout her time in the spotlight, specifically during the ‘90s and 2000s, Spears has been in some heavily publicised romances. Unsurprisingly, fans are
+anticipating that Spears will detail some of her relationships in The Woman in Me, which is set for release on 24 October.
+
+From Justin Timberlake to her now ex-husband Sam Asghari, here’s everything we know about Britney Spears’ relationships and rumoured romances.
+</item 24>
+
+<item 25>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+“That’s probably the moment in my life when I had the most passion for music,” she writes. “I was unknown and I had nothing to lose if I messed up.”
+
+After that, her music barely gets a mention in A Woman Like Me. There’s a nod to her breaking records; the era-defining Toxic is dispensed with in a sentence.
+The only album that she goes into any kind of detail on is 2007’s cult favourite Blackout, made at the height of her public struggles yet full of potential. The
+studio was a refuge from the paparazzi hounding her outside; making a messy DIY video for the single Gimme More may be “by far the worst video I’ve ever shot in
+my life”, but the scrappiness meant “more interesting people started noticing and wanting to work with me”. There’s some later love for 2016’s Glory, and she
+writes proudly about her 2022 collaboration with Elton John, but says she has no plans to make music at the moment.
+</item 25>
+
+<item 26>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+Britney Spears and Justin Timberlake in 2002. Photograph: Tom Mihalek/AFP/Getty Images
+
+When Timberlake tells the world that she cheated on him, she is all but emblazoned with a scarlet letter. While she knows she is powerless against that
+narrative (“I don’t think Justin realised the power he had in shaming me. I don’t think he understands to this day”), him telling the world that they had a
+sexual relationship was liberating. “To be honest with you, I liked that Justin said that,” she writes. “Why did my managers work so hard to claim I was some
+kind of young-girl virgin even into my 20s? Whose business was it if I’d had sex or not?”
+
+But she still couldn’t escape the cycle that Timberlake set in motion: she describes her 2004 Onyx Hotel tour in the aftermath as “too sexual, for a start.
+</item 26>
+
+<item 27>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+She has never really known freedom
+
+As a child, Britney escaped her difficult home life – her alcoholic father often rowing with her mother – into the outdoors, which “gave me a sense of aliveness
+and danger”, she writes. Performing also makes her feel invincible. But by the age of 16, she is public property – incapable of going outside without being
+mobbed, and her love of singing and dancing now a lucrative resource.
+
+By the time of her second album, she wants for so little: skinny-dipping with her dancers after playing Rock in Rio in January 2001 is one of her happiest
+memories. “It was a taste of rebellion and freedom, but I was just having fun and being a 19-year-old,” she writes.
+</item 27>
+
+<item 28>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+Her life under the conservatorship is a horror story
+
+It feels fitting that The Woman in Me is being released a week before Halloween. No matter how much we already know about the 13 years that Britney lived under
+a conservatorship, her recounting of its imposition, life under it and her inability to escape it is nothing short of a horror story. It is appalling, like
+something out of a Victorian novel, not the very real experiences of a thirtysomething in the last decade.
+
+When she fears that Federline is going to take away access to her kids, she locks herself in a bathroom with one of her sons. “Before I knew what was happening,
+a Swat team in black suits burst through the bathroom door as if I’d hurt someone,” she writes, and she is subject to a forced hospital hold. Soon after, her
+mother invites her to her beach house because “the cops are after you”. When she arrives, so does another Swat team.
+</item 28>
+
+<item 29>
+‘I was being ritually tortured’: the most shocking moments in Britney Spears’ memoir (The Guardian, 2023-10-24T18:37:25+00:00)
+She suffers from postnatal depression and feels hopeless about her ability to protect her sons: “I got a little depressed once I was no longer keeping them safe
+inside my body … I wanted them back inside me so the world couldn’t get at them.”
+
+Every part of normal life had been stripped from me. I had no freedom and yet also no security
+
+She has a keen sense of injustice regarding a perceived contract that she never signed with the public and the press. “They just kept acting like I owed it to
+them to let the men who kept trying to catch me looking fat take photos of my infant sons.” Her postpartum body and shots of her without makeup were treated as
+“some kind of a sin – as if gaining weight was something unkind I’d done to them personally, a betrayal. At what point did I promise to stay 17 for the rest of
+my life?”
+</item 29>
+
+<item 30>
+Taylor Swift's 1989: The stories behind her biggest album (BBC News - Entertainment & Arts, 2023-10-13T23:00:08+00:00)
+"If she's got blue eyes, I will surmise that you'll probably date her."
+
+The fact that all the new songs were co-written and produced by Jack Antonoff suggests there may have been rights issues over the tracks she wrote with Max
+Martin - who has not been involved with the new re-recordings.
+
+That means the vault tracks are all bathed in the dreamy, soft-focus atmospherics of Out Of The Woods, rather than the upfront pop of Shake It Off.
+
+Speaking in 2015, Taylor admitted she'd been brutal about pruning songs from 1989's original tracklist.
+
+"There were so many songs I wrote for this album that were really good, but if I felt in any way that they would have belonged on my last album, Red, they got
+cut," she told New York radio's The Todd Show in the Morning.
+
+"There are really, really good songs on the cutting room floor because they weren't innovative enough or new enough.
+</item 30>
+=== END ITEM id=ba623ab0a2be3557 ===
+
+=== ITEM id=d538609497226bab ===
+Gold sentences and facts:
+Sentence 0: Microsoft also has a stripped-down Elite Series 2 “Core” version for $129.99, which is the same controller in white-and-black, red-and-black, or blue-and-black finishes without the rear paddles, accessory charging case, or extra stick toppers and D-pad.
+  Fact 0.0: Microsoft also sells a stripped-down Elite Series 2 'Core' version of its controller.
+  Fact 0.1: The Elite Series 2 Core version costs $129.99.
+  Fact 0.2: The Elite Series 2 Core is the same controller as the full Elite Series 2.
+  Fact 0.3: The Elite Series 2 Core comes in white-and-black, red-and-black, or blue-and-black finishes.
+  Fact 0.4: The Elite Series 2 Core does not include the rear paddles.
+  Fact 0.5: The Elite Series 2 Core does not include the accessory charging case.
+  Fact 0.6: The Elite Series 2 Core does not include the extra stick toppers.
+  Fact 0.7: The Elite Series 2 Core does not include the extra D-pad.
+Sentence 1: While these models are still quite new, versions that actual humans buy have begun receiving discounts.
+  Fact 1.0: The models mentioned are still quite new.
+  Fact 1.1: Versions that actual humans buy have begun receiving discounts.
+
+Retrieved items:
+<item 1>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+You can, of course, spec them up the wazoo if you’re willing to pay more, as exhibited by the review unit Apple sent us of the 16-inch model, which cost an
+eye-watering $7,199.
+
+While these models are still quite new, versions that actual humans buy have begun receiving discounts. The 14-inch MacBook Pro in its base configuration with
+the M3 Pro (11-core CPU / 14-core GPU), 18GB of RAM, and 512GB SSD is currently on sale for $1,749 ($250 off) at B&H Photo. A similar version with 1TB of
+storage and a 12-core / 18-core M3 Pro is down to $2,149 (also $250 off) at B&H Photo. As for the base 16-inch MacBook Pro with the M3 Pro (12-core CPU /
+18-core GPU), 18GB of RAM, and a 512GB SSD, it’s selling for $2,249 ($250 off) at Amazon and B&H Photo.
+</item 1>
+
+<item 2>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+The Max comes in both 14-core CPU/30-core GPU and 16-core CPU/40-core GPU flavors. Again, the one I am typing this on falls into the latter camp. That also
+means 48GB of memory and 1TB of storage by default. It’s a $4,000 computer, as configured. If you want to bump the memory and storage up to 128GB and 8TB,
+respectively, it comes to $7,200. That’s a pretty hefty increase from the base level 14- and 16-inch models, which run $1,600 and $2,500 to start.
+
+Apple lowered the barrier of entry for the lowest end model, but — as ever — upgrades start to add up quickly. We’re talking about a real investment here for
+you — or better yet, your company. It’s certainly a system that’s likely to last you a while.
+</item 2>
+
+<item 3>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+It’s simple math. People can’t get enough of the things. The Pro has three Thunderbolt 4/USB-C ports to the Air’s two. Also, for some reason, all of the ports
+(save for the headphone jack) are all on the same side with the Air. Things can get crowded fast. Both systems have the latest MagSafe connector — though I’d
+like to point out that despite being a bespoke charger, you’re able to top the laptops up faster via Thunderbolt. The other important addition on the Pro side
+is an HDMI port, which is key for the aforementioned external display support.
+
+From an industrial design perspective, not much has changed here from the 2021 model. Apple settled into a look it likes, balancing rounded edges with a flat,
+almost boxy design that isn’t dissimilar from the iPhone in that respect. On top is the familiar reflective Apple logo, while “MacBook Pro” is etched into the
+bottom.
+</item 3>
+
+<item 4>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+That’s a nice bump over the M3 iMac’s 3024/11810. In our Mac Studio review, the M2 Ultra got 2819 single and 21507 multi-core. Taking a step back in time to
+Geekbench 5 (which we’ve been running on M-series systems from the outset), the M3 Max gets a single-core score of 2323 and 23190 on the multi-core. That’s a
+big performance increase over the M3 iMac’s 2191/10619 and the M2 Max 14-inch Pro‘s 1952/15249.
+
+The M3 Max powering our Pro sports 16 CPU cores — that’s 12 performance and 4 efficiency — while the GPU packs in a whopping 40 cores. On Cinebench 2024, it
+scored 142 for single-core and 1693 with the multi-core, compared to the M3 Max’s 138/617. You can see a pattern emerging.
+</item 4>
+
+<item 5>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+The triangle computer shader makes processing complex geometrical images more efficient. That, in turn, allows for higher-quality graphics and more scene
+detail.
+
+The results are impressive. I’ve been spending a bit of time with the Soulslike title, Lies of P. It’s basically Pinocchio with more swords. It’s of a small –
+but increasing – number of day-and-date releases for macOS. A couple of years ago, it would have been inconceivable for the operating system to get the game the
+same day as PS5, Xbox Series X/S and Windows. That said, the macOS gaming library still has a long way to go.
+
+Indeed, the gameplay was smooth and detailed – something that also would have seemed impossible not all that long ago. Sony’s PS5 DualShock controller connects
+seamlessly and makes for a fun portable gaming experience.
+
+One thing I noticed during last week’s presentation is that Apple is leaning less heavily on Intel comparisons.
+</item 5>
+
+<item 6>
+What we expect at Apple's Scary Fast event: M3-powered MacBook Pros and new iMacs (Engadget, 2023-10-26T19:15:49+00:00)
+iMac
+
+A new 24-inch iMac could make its debut at the Scary Fast event. Bloomberg's Mark Gurman reported that a fresh model is expected to arrive this month. He noted
+that the iMac is in short supply at Apple retail stores, which is another sign that an upgrade is imminent.
+
+The 24-inch iMac is well overdue for a refresh, and there have been rumblings for a while that an M3 variant was in the pipeline. The most recent model was an
+M1-powered machine that arrived in April 2021. Making the leap to M3 — assuming that the new chip lineup is more capable than the M2 series — may make any new
+iMac worth the upgrade for many users.
+
+MacBook Pro
+
+Devindra Hardawar/Engadget
+
+There's a very good chance Apple will have at least one MacBook Pro refresh to show off at the event. Both Kuo and Gurman have indicated that will be the case.
+</item 6>
+
+<item 7>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+The Ultra, for example, is for all in intents and purposes, two Maxes stitched together. There are other factors at play as well, like the fact that Mac Studio
+and Mac Pro do a better job with heat dissipation, while the MacBook Pros are more equipped than the fan-less Airs, which throttle performance more quickly due
+to heat.
+
+There are still a handful of ways, however, that even the baseline M3 will outperform the M2 Ultra. Two clear instances are ray tracing and mesh shading, which
+were previously software-accelerated.
+
+With Blackmagic Disk Speed, which measures SSD performance, the 16-inch Pro scored 6367 write and 5057 read speeds, vs. the Mac Studio’s 6648/5716. Running
+Geekbench 6, the system scored 3149 on the single-core test and 21269 multi-core. That’s a nice bump over the M3 iMac’s 3024/11810.
+</item 7>
+
+<item 8>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+The supply chain ultimately thought different(ly). What announcing the M3, M3 Pro and M3 Max at once affords the company, however, is options — though less so
+for the M3-only iMac.
+
+Between the 14- and 16-inch MacBook Pros, you’ve got all three configurations covered. Presumably an M3 Ultra is also on the way in the not-too-distant future,
+but will almost certainly be confined to desktops like the Mac Studio, and Mac Pro, owing to the limitations of system architectures. Apple also recently shot
+down rumors surrounding a 27-inch iMac. The 14-inch MacBook Pro can be configured with any of the three new chips, while the 16-inch is limited to just the Pro
+and Max.
+
+Apple sent us the 16-inch with the M3 Max. The company, understandably, likes to put its best foot forward with this stuff (so yes, it’s also the Space Black
+model).
+</item 8>
+
+<item 9>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+Its M2 processor didn’t kick-start a revolution like the M1 generation, but it’s a great performer for any user outside of more demanding creatives.
+
+It does have some slight downsides, like slower storage in the base 256GB configuration and a notch cutout in its otherwise excellent screen. But even so, there
+hasn’t been a more travel-friendly laptop offered by Apple since the days of the polarizing 12-inch MacBook, and this one’s good enough to be the No. 1 laptop
+we now recommend in our buying guide.
+
+The newer 15-inch MacBook Air with M2 is a lot like a blown-up 13-inch Air, and judging from our glowing review, there’s nothing wrong with that. Like its
+smaller counterpart, it has an M2 chip, two Thunderbolt 4 / USB-C ports, MagSafe charging, and its base model comes with a 256GB SSD and 8GB of RAM.
+</item 9>
+
+<item 10>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+M2 Pro MacBook Pro
+
+As for the 14- and 16-inch MacBook Pros from early 2023 with M2 Pro / Max processors, they’re still more than capable — they may even be a better buy than the
+new models if you can find them at a steep discount.
+
+For example, the base 14-inch MacBook Pro with an M2 Pro chip, a 512GB SSD, and 16GB of RAM is selling for $1,629 ($370 off) at Amazon, which is a new low price
+that may not last very long. However, the 14-inch model with 1TB of storage, a 12-core M2 Pro CPU, and 19 GPU cores is down to $1,999 (a steep $500 off) at B&H
+Photo. Now we’re talking!
+
+Sadly, the situation isn’t quite as good for the 16-inch MacBook Pro with the M2 Pro.
+</item 10>
+
+<item 11>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+In fact, it shouldn’t go unremarked upon that the arrival of the new 14-inch signaled the merciful end to that particular technology, as the last Touch Bar Mac
+— the 13-inch Pro — was replaced by the new 14-inch model.
+
+Design
+
+I would say, more than anything, the thing I miss moving from the MacBook Pro to the Air is the ports. True story: At last year’s CES, I had to locate an Apple
+Store in the Venetian because my external SD reader failed (I won’t say which TechCrunch staff member laughed at me in that predicament, but they know who they
+are). I understand that an SD reader is kind of a niche need in these days of everyone shooting everything on their, so I can at least understand Apple’s
+justification for keeping it to the Pro system (the new iMac doesn’t have one, either).
+
+Ports are a different story. More ports is better. It’s simple math. People can’t get enough of the things.
+</item 11>
+
+<item 12>
+What we expect at Apple's Scary Fast event: M3-powered MacBook Pros and new iMacs (Engadget, 2023-10-26T19:15:49+00:00)
+Both Kuo and Gurman have indicated that will be the case.
+
+Gurman pointed out that the 13-inch, 14-inch and 16-inch MacBook Pro all currently have extended shipping times on Apple's web store. That's often an indicator
+that the company is winding down the supply of existing products. Furthermore, Gurman reported that Apple has been testing M3 Max and M3 Pro MacBook Pro models.
+Those could now be ready for prime time.
+
+However, Kuo doesn't expect Apple to have a huge inventory of new MacBook Pro units to sell this year. He previously didn't anticipate that Apple would start
+selling M3-powered laptops before the end of the year due to limited supply of between 400,000 and 500,000 units. Unless demand drops, Kuo said supply may
+remain tight until early 2024.
+</item 12>
+
+<item 13>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+The best MacBook Pro deals
+
+The MacBook Pro line is once again in a transitional phase. Apple announced Macs using a new M3 processor at its “Scary Fast” event the night before Halloween,
+including a new 14-inch MacBook Pro that replaces the 13-inch M2 model. That means Touch Bar Macs are finally dead, but some of those outgoing M2 models are
+still available for now. You’ll find any deals on them further down, but first, let’s focus on the new M3 generation.
+
+M3 and M3 Pro MacBook Pro
+
+The new entry point into the MacBook Pro world is a MagSafe-equipped MacBook Pro that uses the existing 14-inch design and slightly pares it down. The 14-inch
+M3 MacBook Pro has the same 3024 x 1964 resolution display and 120Hz refresh rate as its pricier siblings, and in addition to a MagSafe charging port, it has an
+SD card slot and HDMI port.
+</item 13>
+
+<item 14>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+The latter model also features an expanded port selection, from two USB-C ports to four. It’s almost like getting an M2 Pro-powered MacBook Pro 14 but in
+desktop form. However, keep in mind that buying any Mac Mini means you have to provide your own mouse, keyboard, and monitor.
+
+Right now, the base M2 Mac Mini is selling for a new all-time low of $479 ($120 off) at Amazon and B&H Photo, while the M2 Pro version is selling for a
+respectable $1,149 ($150 off) at B&H Photo. The M2 Mac Mini remains a great value for a desktop computer, with the M2 Pro version functioning like a baby Mac
+Studio for much less.
+
+Related The best thing about my Mac Studio is its mustache
+</item 14>
+
+<item 15>
+What we expect at Apple's Scary Fast event: M3-powered MacBook Pros and new iMacs (Engadget, 2023-10-26T19:15:49+00:00)
+Unless demand drops, Kuo said supply may remain tight until early 2024.
+
+MacBook sales have waned this year, mainly due to "the limited M2 computing power upgrade," Kuo wrote on X. That might be a reason why Apple is willing to start
+shipping M3 MacBook Pros now, even if supply is constrained. Announcing new models just a few days before reporting quarterly earnings could help give investors
+confidence in the company (recent increases of Apple TV+, Apple Arcade and Apple News+ prices could play into that too).
+
+If M3-powered models don't lead to a boost in sales, though, Kuo suggests it's more likely that a MacBook Pro with a new design will arrive in 2025.
+Furthermore, Apple may try to beef up the division with a more budget-friendly MacBook that has an annual sales target of between 8 million and 10 million.
+
+USB-C accessories
+
+Rumors also point to Apple unveiling more USB-C accessories as it shifts away from the Lightning port.
+</item 15>
+
+<item 16>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+The best (and only) deal available right now on the creator-friendly laptop is at Amazon, where you can grab the base M2 Pro model for $2,299.99 ($200 off) with
+512GB storage. That’s not great, but hopefully we see better deals before the laptop is no longer available new.
+
+M1 Pro and M1 Max MacBook Pro
+
+For now, the older 2021 MacBook Pros can occasionally be had for some steep discounts that actually make a two-generation-old laptop still worth considering.
+You’re unlikely to find any base models still kicking around, but if you want a souped-up configuration on the cheap, you may be in luck.
+
+The 16-inch MacBook Pro from 2021 with 16GB of RAM and an expanded 1TB of storage is available at B&H Photo for $1,799 ($900 off).
+</item 16>
+
+<item 17>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+You can see a pattern emerging. The M3 Max outperforms the M3 on everything (no surprise there) and the M2 Ultra on several single-core tests, while often
+coming within spitting distance with some of the multi-core tests.
+
+With GeekBench 6 Metal, which tests GPU performance during complex tasks, the M3 Max scored an average of 153273. That’s a nice increase over the M2 Max’s
+131883 average, while still getting trounced by the M2 Ultra’s 208584. AMD’s cards still best even the top-performing Apple chips by a good margin, with the
+Radeon RX 6900XT scoring 242924.
+
+Relative to its own family of chips, the M3 Max is doing impressive things, given that the M2 Ultra tops out at a 24-core CPU, 76-core GPU and 32-core neural
+engine. The Mac Studio’s large body and airflow system are also much more equipped to dissipate heat, when compared to the MacBook Pro’s compact profile.
+</item 17>
+
+<item 18>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+Have you tried typing in gloves? Not easy.
+
+Apple describes the new color in the most Apple way possible, “The finish features a breakthrough chemistry that forms an anodization seal to greatly reduce
+fingerprints.” The company hasn’t perfected the wholly fingerprint-proof surface, but the new finish does an excellent job keeping things to a minimum.
+
+Camera
+
+Both new Pro models are built around Apple’s Liquid Retina XDR display. The 14-inch sports 3024 x 1964 pixels to the 16’s 3456 x 2234 pixels — both come out to
+a pixel density of 254 ppi. The 15-inch Air, meanwhile, has a 224 ppi density. The 16-inch system’s display is largely unchanged from the 2021 model. It has a
+1000 nit sustained brightness and 1600 nit peak with HDR (high dynamic range) content. For SDR (standard dynamic range) content, however, brightness has been
+bumped up from a 500 to 600 nits max.
+</item 18>
+
+<item 19>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+But it differs by having a larger, 15.3-inch notched screen with 2880 x 1864 resolution, six speakers instead of four, a 10-core GPU that costs extra on the
+13-inch, and a higher starting price of $1,299. Bumping up to a larger, faster 512GB of storage will run you $1,499.
+
+Surprisingly, the 15-inch M2 Air started receiving some discounts even before it shipped, which let early adopters save between $50 and $100. As of right now,
+you can get it $300 off by ordering it at Amazon or Best Buy, where it’s currently selling for $999. The expanded 512GB model is also $300 off at Best Buy,
+selling for $1,199.
+
+The best MacBook Pro deals
+
+The MacBook Pro line is once again in a transitional phase.
+</item 19>
+
+<item 20>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+M2 MacBook Air
+
+As for the newer, fancier 13-inch MacBook Air with M2, the base model with 256GB of storage and an eight-core GPU recently got a price drop. Along with
+introducing a 15-inch M2 Air, Apple announced during this year’s WWDC that the 13-inch model now starts at $1,099 instead of $1,199. As for deals, the 13-incher
+is currently selling for $899 ($200 off) at B&H Photo, Additionally, Best Buy and B&H Photo are offering an equal diacount on the upgraded configuration, which
+can be had with a 512GB SSD and 10-core GPU for $1,199 ($200 off).
+
+The M2 MacBook Air is a super slim and light laptop with a 1080p webcam that’s actually usable as well as a handy magnetic charger that frees up one of its
+precious two USB-C ports.
+</item 20>
+
+<item 21>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+That said, if you plan on going with a higher-spec configuration than that, you’ll likely want to spring for the M3 Pro model instead (see below).
+
+The 14- and 16-inch MacBook Pros for late 2023 are another round of spec-bump models, much like their previous 2022 incarnations. Now starting with the M3 Pro
+chip (or the speedier M3 Max) and 18GB of base RAM instead of 16GB, the new models remain targeted at creatives doing content work like video editing, photo
+processing, and other graphical work. Like their predecessors and the M1 Pro generation before that, they offer MagSafe charging, three USB-C / Thunderbolt 4
+ports, HDMI-out, and a full-size SD card slot, with prices starting at $1,999 for the 14-inch and $2,499 for the 16-inch.
+</item 21>
+
+<item 22>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+It’s certainly a system that’s likely to last you a while. It’s true that Apple is currently on a one-year upgrade cycle for it first-party M-series chips, but
+it’s genuinely tough to imagine and advanced as pronounced as the one it made from Intel to in-house silicon happening any time soon. There’s no such thing as a
+future-proofed laptop, so the best you can hope for is one that will give you good mileage. That certainly applies here.
+
+Along with building new chips, Apple has spent the last few years listening to consumers in a way it hadn’t for decades. That means finally updating the camera,
+building a better keyboard (the class action settlement probably tipped the scales as well) and ditching the well-meaning but ultimately ineffectual Touch Bar
+altogether.
+</item 22>
+
+<item 23>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+Apple sells MacBooks equipped with its own M-series chips in a wide range of sizes and price points. The offerings start with the 13-inch MacBook Air from 2020
+at $999 and go all the way up to the latest 16-inch MacBook Pro starting at $2,499. But finding a deal on a current Mac with an M1, M2, or even the new M3 chip
+— as well as the higher-end M3 Pro and M3 Max — is actually not that difficult.
+
+While Macs may not experience perpetual discounts, it’s not uncommon to see various current models discounted by as much as $400. Alternatively, purchasing
+refurbished options directly from Apple is another way to save money without as much waiting for the changing winds of deals to blow your way. Apple’s
+refurbished store provides a one-year warranty on all products and generally offers discounts of up to 15 to 20 percent off the price of a new unit.
+</item 23>
+
+<item 24>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+I’ve begun thinking of the 16-inch MacBook Pro as something more along the lines of a portable desktop. That is to say that the M3 Max is plenty powerful for
+even most professional uses. The chip also affords the laptop the ability to power up to four external displays, making it a fine workstation option for many.
+When it’s time to take your work home (assuming you don’t live in France), you can pop it in your bag and take it with you. I would recommend against taking
+your work (and large laptop) home with you every night, but you do you.
+
+https://techcrunch.com/2023/11/06/apple-imac-m3-review/
+
+The new MacBook Pro, which goes on sale this week, was announced at last week’s Scary Fast event, alongside a new iMac and — of course — several members of the
+M3 line. That latter bit marked a big departure for the company, following rumors that Apple had planned the initial M3 launch for WWDC.
+</item 24>
+
+<item 25>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+I never go on a trip without the Belkin MagSafe camera mount.
+
+The on-board speaker and microphone systems, meanwhile, remain mostly unchanged from the 2021 M1 Pro. There are six speakers, with two large grilles on either
+side of the keyboard. The system supports both Spatial Audio and Dolby Atmos. It’s not an exceptional speaker system, but it gets the job done. The Pro also has
+a three-mic array with directional beamforming.
+
+M3 Max
+
+The M3 line is the first of Apple’s desktop chips to be created using the 3nm process, following the iPhone 15 Pro’s lead. Apple has employed the 5nm process
+since the 2020’s M1 introduction. The new process brings performance gains with less power consumption, and the Mac is the first PC line to employ the
+technology.
+
+Gaming continues to be an important narrative for Apple’s silicon journey, and it was very much at the heart of last week’s M3 announcements.
+</item 25>
+
+<item 26>
+The best deals on MacBooks right now (The Verge, 2023-10-26T18:17:19+00:00)
+However, you can also get a tricked-out M1 Max (10-core CPU / 32-core GPU) model with 64GB of RAM and 2TB of storage for $2,499 ($1,800 off) at B&H Photo. I
+know that’s not exactly affordable, but that laptop once sold for $4,299 and still performs well in 2023.
+
+The best Mac Mini deals
+
+The latest Mac Mini comes in a base configuration with Apple’s M2 processor or in a more powerful configuration with the M2 Pro. It’s an excellent upgrade to
+one of the most affordable yet performant desktop computers you can get (as long as gaming isn’t your priority). The M2 Mac Mini starts with 8GB of RAM and a
+256GB SSD for $599, while the M2 Pro model features a superior processor plus gigabit ethernet, 16GB of RAM, and 512GB of storage for $1,299.
+
+The latter model also features an expanded port selection, from two USB-C ports to four.
+</item 26>
+
+<item 27>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+Around that, you’ll see a series of small screws that signal the company’s newfound push into repairability spurred on by the broader call for right to repair
+legislation. There is also a heat vent on either side.
+
+The Pros are a good bit thicker than the Air. The 14- and 16-inch are 0.61 and 0.66 inches tall, respectively, versus the 15-inch Air’s 0.45 inches. This is
+due, in no small part to the Pros’ inclusion of a fan and airflow system. You’re unlikely to trigger the fan during most everyday operations, but more complex
+tasks like 3D rendering require a lot of compute power, so it’s there when you need it. Meanwhile, the 14-inch Pro (3.4 pounds) weighs just a hair more than the
+15-inch Air (3.3 pounds). At 4.7/4.8 pounds (for the M3 Pro and Max), there’s a pronounced increase with the 16-inch Pro.
+</item 27>
+
+<item 28>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+GPU updates were the centerpiece of the news for several reasons. One is a feature the company calls Dynamic Caching. Apple writes,
+
+With Dynamic Caching, only the exact amount of memory needed is used for each task. This is an industry first, transparent to developers, and the cornerstone of
+the new GPU architecture. It dramatically increases the average utilization of the GPU, which significantly increases performance for the most demanding pro
+apps and games.
+
+More simply put, the idea is allocating just the right amount of local memory to a given task. It’s something Apple has been working on for a while. The other
+two additions should be more familiar for anyone who’s spent time behind a game controller. The first is ray tracing, a feature designed to bring added realism
+to the gaming experience, though more accurate depictions of lighting and reflections.
+
+That feature is now hardware-accelerated, along with mesh shading. The triangle computer shader makes processing complex geometrical images more efficient.
+</item 28>
+
+<item 29>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+There were still a few during the event, but four-year-old non-proprietary chips are no longer the main point of comparison. Enough time and upgrades have
+elapsed since the M1 arrived. In fact, this Friday marks three years since it was announced. Apple again,
+
+Rendering speeds are now up to 2.5x faster than on the M1 family of chips. The CPU performance cores and efficiency cores are 30 percent and 50 percent faster
+than those in M1, respectively, and the Neural Engine is 60 percent faster than the Neural Engine in the M1 family of chips.
+
+It’s worth pointing out here that Apple’s chip numbering system isn’t as straight forward as it seems at first blush. For instance, while the M3 represents an
+advance over the M2, you can still expect to see, say, the M2 Ultra to outperform the M3. Pros, Maxes and Ultras are progressively larger versions of their
+baseline chip, containing more CPU, GPU and neural engine cores.
+</item 29>
+
+<item 30>
+Apple 16-inch M3 Max MacBook Pro review: A desktop among laptops (TechCrunch, 2023-11-06T14:00:15+00:00)
+Apple fans love a new color. In the case of the MacBook line, it could be attributable to the fact that there’s little variation in the laptops’ aluminum
+design. The last few generations have traded almost exclusively in space gray and silver (dark and light gray, essentially). The new Airs opened this up a bit,
+however, with the addition of starlight (a subtle light-gold) and midnight (a much darker gray). The space black is a nice addition. It gives off a nice glow
+when the light hits it. The biggest thing here, however, is the fingerprint factor. The Airs I’ve tested were silver and starlight, so I can’t really speak to
+this directly, but the midnight Air is a notorious fingerprint magnet. There are pages and pages of conversations about it on Reddit, including “tips” for a
+fingerprint-free midnight Mac. Have you tried typing in gloves? Not easy.
+</item 30>
+=== END ITEM id=d538609497226bab ===
+
+=== ITEM id=20267904bafed491 ===
+Gold sentences and facts:
+Sentence 0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 0.0: Israel stopped allowing deliveries of food to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.1: Israel stopped allowing deliveries of fuel to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.2: Israel stopped allowing deliveries of other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 0.3: Israel is reportedly preparing for a ground invasion.
+Sentence 1: The understandings that Israel reached with Hamas in 2012 were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible.
+  Fact 1.0: Israel reached understandings with Hamas in 2012.
+  Fact 1.1: The understandings were made to stop the fighting, according to Ortal.
+  Fact 1.2: The understandings were made to get life back to normal as quickly as possible, according to Ortal.
+Sentence 2: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 2.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+They told themselves, we have B-52 bombers, there's no way we can't win."
+
+Technological sophistication and the massive investment in intelligence means have greatly increased the IDF's visual intelligence gathering capabilities,
+according to former IDF Intelligence Directorate head General (ret.) Aharon Ze'evi-Farkash. "I'm sure it doesn't come at the expense of human sources, but as
+time goes by, gathering visual intelligence is easier than human sources and they bring better results. It's hard to bring in a Palestinian 'Ashraf Marwan,' the
+agent who passed the information to Israel before the Egyptian attack in 1973. It’s a problem because the human source is essential to provide an interpretation
+of the rest of the information that’s received, and to make decisions. Golda knew who Marwan was and expected to hear what he would say about the Egyptian
+deployment in the south." At the same time, according to "The New York Times" a year before the attack, the IDF stopped monitoring Hamas' radio communications
+last year.
+</item 1>
+
+<item 2>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Iron Dome was so successful it not only supported the decision-making process but fundamentally changed it. Up until October 7, it served as a very successful
+plaster to threats to a sovereign state, because what legitimacy would a state leader have for going to war when no citizens were harmed?"
+
+Brigadier General Eran Ortal, until recently the commander of The Dado Center for Interdisciplinary Military Studies, a military research center subordinate to
+the Operations Directorate, also believes that various technological measures such as the Iron Dome, and the barrier, influenced decision-making in Israel. In
+his estimation, these helped the political echelon conduct a policy of military restraint towards the Gaza Strip, which in turn allowed Hamas to strengthen and
+gain offensive capabilities.
+</item 2>
+
+<item 3>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+"Despite the clear threat posed by Gaza, the decision makers preferred to avoid a policy that would mean returning a large part of the country's population to
+the reality of air raids and disrupted daily routines. The bottom line: the Iron Dome did not change the essential strategic situation; as firepower from the
+Gaza Strip developed, so did the terrorist organizations’ ability to control daily life in Israel’s hinterland, hold it hostage, and restrain Israel from taking
+proactive measures against them."
+
+"Why didn't the relative success of the Iron Dome translate into the even more important strategic achievement of restoring Israel's freedom of action against
+Hamas in the Strip?" asks Ortal rhetorically, and names several factors. "The first, like any other operational system, Iron Dome is also not perfect. The enemy
+studies it and develops its own challenges against it, and the decision makers recognized the fact that the State of Israel is not hermetically protected.
+Second, the enormous cost involved in deploying and operating [Iron Dome] batteries significantly impedes a policy based on continuous rounds of violence.
+</item 3>
+
+<item 4>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"How come they never knew Hamas militants planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate heavily? We wait to see how it goes
+but it will be messy."
+
+Mossad is overated how comes they never knew this Hamas militants and had planned a sudden attack on Israel? Or was it a trap to get a reason to retaliate
+heavily?We wait to see how it goes but it will be messy. pic.twitter.com/W5vpoylus2 — Ben Muasya. (@muasya_ben) October 7, 2023
+
+Another user said that no one can carry out such a major attack against Israel without intelligence support. "Who gave Hamas Intelligence? It was as if the
+entire Israeli army and the Mossad were asleep."
+</item 4>
+
+<item 5>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Published by Globes, Israel business news - en.globes.co.il - on November 5, 2023.
+
+© Copyright of Globes Publisher Itonut (1983) Ltd., 2023.
+</item 5>
+
+<item 6>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 6>
+
+<item 7>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Giora Eiland, held a series of lectures for senior officers on the reasons for the strategic surprise that fell on the IDF in the Yom Kippur War. "Not one of
+the officers imagined that 50 years after that mistake, it would repeat itself in exactly the same way," he tells Globes.
+
+The strategic surprise that hit the State of Israel about four weeks ago bears similar characteristics to the Japanese attack on the US naval base at Pearl
+Harbor in 1941; to the Argentine surprise attack on Britain's Falkland Islands in 1982; the Al-Qaeda attack on the United States on September 11, 2001; and to
+the spread of ISIS throughout the Middle East in 2014.
+
+In fact, Barnea claims, despite the technological progress and sophistication, intelligence officials are questioning whether there really is a trend towards
+improvement of early detection and thwarting of strategic threats.
+</item 7>
+
+<item 8>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+There had been a second line of defense, observation balloons, but for unknown reasons, all three had stopped working some weeks before the attack, and repairs
+were postponed until "after the holidays."
+
+Israel’s drone warfare fleet, which is capable of jamming signals of a hostile drone, and the attack drone fleet, known for warfare against incendiary balloons,
+also did not work for unknown reasons, and dozens of Hamas drones operated without interruption. The IDF's Iron Beam high energy laser (HEL) interception
+system, which was developed for such cases, among other things, has not yet entered into operational activity after many years of development. All allowed the
+Hamas terrorists to quickly reach the IDF bases along the Gaza border, disable the information and communications technology (ICT) systems, neutralizing the
+ability to call reinforcements without arousing much suspicion at IDF Kirya headquarters in Tel Aviv.
+
+Above all there was a sense of security and belief in technology and the sophisticated barrier’s ability to prevent any form of intrusion.
+</item 8>
+
+<item 9>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Matania explains that the IDF has always advocated technological advancement as part of a concept that values quality over quantity. "This existed even during
+[Israel’s first Prime Minster David] Ben-Gurion’s time, because it was clear that we could not defeat the enemy in terms of quantity, and it also integrated
+well with saving human lives - an important pillar in the security concept - but at that time, innovation was expressed in tactical issues. After the Yom Kippur
+War, Israel pulled strongly in the direction of building military technological superiority, and this integrated well with the Israeli economy, which was
+gradually opening up to the world, and the computer revolution.
+
+This effort bore fruit as early as 1982, when we proved to the whole world that we could destroy most of the Syrian surface-to-air missile array using
+precision-guided weaponry. Israel's security concept was updated by Dan Meridor and Lt. Col.
+</item 9>
+
+<item 10>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 10>
+
+<item 11>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Thirdly, as long as the rockets are intercepted in the skies over Israel, and not the skies over Gaza, the Israeli home front is forced to experience sirens,
+security rooms and shelters, and disrupted routine living. In other words, even the complete success of the Iron Dome left daily life on the home front in the
+hands of the terrorist organizations."
+
+In 2018, Ortal wrote about "the barrier" that, "it would be wrong to assume it will turn out to be more immune than its predecessors. The longer as we delay
+cutting the direct connection between the Hamas rockets and those of our other enemies, who make extensive use of this method of operation, and the idea of
+attacking our territory, the longer we will be condemned to watch from the sidelines and look at their constant enhancement."
+
+A strategic surprise
+
+In the months leading up to October 7, the former head of the Planning Division, Major General (Res.)
+</item 11>
+
+<item 12>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas' surprise attack on Israel has shocked many who are now questioning the country's famed intelligence agency Mossad, which is known for its
+intelligence-gathering capability. For some, the belief that Mossad was among the best in the spying world was shattered today when Hamas carried out the
+biggest coordinated attack in Israel and captured some territory in southern Israel. It is not the attack that has surprised people but the scale at which Hamas
+operated and got control of some military bases and soldiers.
+
+Also Read: Israel at war: Hamas cells, military compounds destroyed, US backs Tel Aviv; all you need to know
+
+Younis Tirawi, who reports on Palestinian Affairs, said that Hamas militants had taken over Sderot police HQ and armored vehicles in the town. An analyst wrote
+that some of the images coming out of Sderot over the last few hours were reaching degrees of horror "that I don't really think I can use words to properly
+describe.
+</item 12>
+
+<item 13>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Shiloh, which is currently subordinate to the Ministry of Defense, was established following State Comptroller reports about the lack of coordination and
+synchronization between the Ministry of Defense and the IDF units; and lead a new border defense concept based on sensors and other technologies for gathering
+intelligence and thwarting infiltration; strengthening the Air Force in the form of additional aircraft and armaments; and strengthening the operational end of
+the regular front units.
+
+All this, while at the same time closing down armored battalions and consolidating helicopter squadrons. Ground force technological capabilities were also
+addressed, such as improved coordination between the infantry and air forces in air-to-ground actions, or identifying terrorists and weapons in an urban
+environment. However, there is a problem at the outset, says, Prof. Eviatar Matania of Tel Aviv University School of Political Sciences, Government and
+International Affairs, and founder and first director general of the Israel National Cyber Directorate: a large gap between the technology and the officers
+expected to implement it as part of the security concept.
+</item 13>
+
+<item 14>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+On Saturday, October 7, for example, suspicious movement in Gaza convinced the Shin Bet head to send a special team to the southern border, but he was unable to
+convince the top IDF echelons to prepare accordingly. To handle those weak signals, Eiland claims, one must use "scenario theory", meaning, taking into account
+scenarios that have a low probability of occurring, but with devastating results should they occur, and the simple way to prepare for them.
+
+Eiland explains: "You detect certain noises on Friday night, but conclude that the probability of an attack is low, let's say only 10%. Those who act only on
+the probability do not consider the question: if this attack happens - will you be able to live with yourself for eliminating this threat? There’s also a third
+consideration, which is ease of effort: what is the effort required of me to prepare for this unlikely but dangerous scenario?
+</item 14>
+
+<item 15>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 15>
+
+<item 16>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Technology greatly influences our way of thinking and is seen as the answer to everything - only no one ever asks themselves what the vulnerabilities are, and
+what is the backup plan for the doomsday scenario when the technology layer collapses."
+
+Barnea compares Israel’s sense of technological superiority with US activity during the Vietnam War between 1965 and 1968. "The Americans relied on massive
+aerial bombardment with precision bombs and napalm bombs that burned huge areas, and advocated the "scorched earth" concept. They convinced themselves that the
+Vietcong could not withstand it. In practice, the North Vietnamese army studied the American activity. It dug tunnels, moved equipment and people between
+bombings, eventually enabling it to reach the important bases in the south of the country, and overwhelm the Americans. In fact, the US military so believed in
+the damage it was causing that they reported a far greater number of casualties on the other side than the actual number, which in turn created an illusion of
+victory.
+</item 16>
+
+<item 17>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 17>
+
+<item 18>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 18>
+
+<item 19>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 19>
+
+<item 20>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+The second objective, at the same time, is to exact an… pic.twitter.com/MzKs7tfv4M — Benjamin Netanyahu - בנימין נתניהו (@netanyahu) October 7, 2023
+
+Reacting to this, however, a user said that knowing the proficiency of the Mossad he found the idea of a "surprise attack" to be a willing lie.
+
+Well, you got the war you wanted Beni...at what cost of Israeli lives you don't care. Knowing the proficiency of the Mossad I find the idea of a "surprise
+attack"to be a willing lie on your side of this. https://t.co/35qRvgBJt2 — timm (@timmainsson) October 7, 2023
+
+Ben Muasya, a journalist, said that Mossad is overrated.
+</item 20>
+=== END ITEM id=20267904bafed491 ===
+
+=== ITEM id=4cec3a7b15332843 ===
+Gold sentences and facts:
+Sentence 0: From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.
+  Fact 0.0: The Netflix description states that Jess and Bill Walker are doing their best to keep their family connected.
+  Fact 0.1: Jess and Bill Walker are doing their best to keep their family connected as their children grow older.
+  Fact 0.2: Jess and Bill Walker's children are growing more independent.
+  Fact 0.3: Jess and Bill Walker's children are growing more distant.
+Sentence 1: Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that "the holidays are a time for families to come together.
+  Fact 1.0: McLean spoke about the Christmas season.
+  Fact 1.1: McLean was born in New Rochelle, New York.
+  Fact 1.2: McLean said that the holidays are a time for families to come together.
+
+Retrieved items:
+<item 1>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+"Many parents make the mistake of teaching their children that Christmas is a time to make a ‘wish list’ and get what they want," she said.
+
+"Many parents make the mistake of teaching their children that Christmas is a time to make a ‘wish list’ and get what they want."
+
+"This is loads of fun, but can often create a big case of 'the gimmes’ in your children."
+
+She added, "Life is balance. It’s about receiving and giving."
+
+As parents guide their kids to create a wish list, Keeley encouraged them to spend equal time creating a list of gifts to give to family and friends.
+
+"Collaborate with them on what they want to give to the people they love, and encourage them to use their imagination and creative ability, not just your credit
+card," she said.
+</item 1>
+
+<item 2>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+CHRISTMAS TREE SHOPPING? HERE'S HOW TO SELECT THE PERFECT ONE FOR YOU
+
+"Aside from the time I asked my husband to turn our bathroom into a Hallmark movie and he actually pulled it off, unrealistic expectations around Christmas
+usually just set up moms for inevitable disappointment," Keeley said.
+
+"Beautiful family Christmas memories can be made without the drive-in ‘Grinch’ movie, the tacky light tour and the neighborhood Christmas cookie bake-off all in
+the same weekend."
+
+Instead, parents should "take it easy and leave plenty of room to relax," said Keeley.
+
+2. Using Christmas as a bribe
+
+While it’s easy for parents to use a message of "be good or else" as a parenting tactic before Santa Claus comes down the chimney, Keeley said this approach
+lowers parenting standards.
+
+"I refer to this tactic as ‘stooping to Santa,’" she said. "Don’t lower your parenting standards to bribery, especially around a season and a character that is
+supposed to symbolize peace and goodwill on Earth."
+</item 2>
+
+<item 3>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I think anytime that emotions are heightened, with the holidays certainly being one of those times, our expectations are really high,” she said. “We’re
+expecting it to be this joyful, happy, perfect occasion. So, we sometimes forget that the holidays come with a lot of stress.”
+
+Despite tensions between relatives at the dinner table, that doesn’t mean your relationship shouldn’t be celebrated. Saba Lurie is a licensed marriage and
+family therapist at Take Root Thereapy in California. She explained to The Independent that while there isn’t a right or wrong time to introduce your partner to
+your family, the intentions of such an introduction must be clear. Not only should you have already discussed where your relationship is headed, but you should
+also tell your partner everything they need to know about your family.
+
+“I think you should tell the person why you’re bringing them home for the holidays, so you’re on the same page about the intentions and what’s motivating the
+decision to include,” she said.
+</item 3>
+
+<item 4>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+When it comes to introducing your partner to your family, there’s still some extra planning to be done ahead of time. If you’re travelling this month, you may
+need to decide on sleeping arrangements - as opposed to residing in your parent’s house - in order to minimise family stress.
+
+“It would be really helpful to have conversations beforehand, so it’s clear what you are agreeing or not agreeing to,” Lurie explained. “For example, if your
+family isn’t comfortable with you bringing someone home and sleeping in the same bedroom, then you and your partner may stay elsewhere. But those would be
+conversations that you all need to have together. It really depends on your relationship with your family and with your partner.”
+
+It’s also important to be checking in with your partner while spending time with your family. These check-ins may include some quality time together, so that
+any family drama that may arise isn’t hurting your relationship.
+
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’
+</item 4>
+
+<item 5>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’ Like a temperature check,” she added. “Those are points where the two of you can come
+and remind each other: ‘We are a team in this.’ Or, the two of you could go on a walk and separate from the family, just for a little bit of time to reset
+within the relationship.”
+
+During the holiday season, your partner may be seeing how you interact with your family for the first time. But that’s not necessarily a bad thing, according to
+the relationship experts. “I think introducing a significant other to family is a really vulnerable act, and that vulnerability is going to be what allows for
+greater intimacy,” Lurie said. “When your significant other sees you with your family, they may see another side of you that they may not have had access to
+before.”
+
+(Getty Images)
+
+On the other hand, your partner could learn that your relationship with your parents and extended family members is complex.
+</item 5>
+
+<item 6>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+With this in mind, parents should avoid "processing their frustration around the holidays audibly around the children," she said.
+
+"The ‘mom brain’ is wired to process problems rapidly and move on to solutions," she said. "The ‘child brain,’ however, is wired to process a problem internally
+and take on the responsibility."
+
+Said Keeley, "Knowing this, make sure you don’t do any ‘grinchy griping’ out loud to the children. You may see it as temporary venting, but they see it as, ‘Mom
+is upset and I’m probably the reason.’"
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+Instead, parents should stay calm, find a reason to be grateful and vocalize it, even when frustrations accumulate.
+
+5. Neglecting the ‘give list’
+
+While building a wish list is fun for kids, Keeley emphasized the moral importance of the "give list."
+</item 6>
+
+<item 7>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"We have our lists and we like to get things done."
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+"I also remember the first time we met — ee were getting ready to go out and she dug in her purse and pulled out all these tubes of lipstick. I said, ‘Oh my
+God. You've surpassed me.’ We both constantly put on lipstick. It's so funny."
+
+Bazella continued, "We both like [garden] gnomes and we’re kind of collecting them now. Our mannerisms are similar. We have the same sense of humor."
+
+"One of the main dreams is that we stay healthy and I live long enough … so we can make up some of this time." — Sherri Geerts
+
+Bazella said she has met all four of her siblings — and also has formed a relationship with her birth father, Victor Rebeck, 84.
+</item 7>
+
+<item 8>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+These parents, said Keeley, "subconsciously compensate for a lack of self-worth and validate their role as a [parent] by creating too much busyness in their
+life."
+
+She said that "all that results from a mom who runs herself into the ground is just that: a mom who runs herself into the ground."
+
+DELICIOUS CUT-OUT SUGAR COOKIES FOR CHRISTMAS: TRY THE SIMPLE RECIPE
+
+She added, "If this is you, take a breath, put away the to-do list and ask yourself, ‘What would I have to believe in order to have a relaxed and joyful
+Christmas?’ Maybe we can use that as a guide to sit back and relax."
+
+4. Griping like the Grinch
+
+Parents should be sure not to be "grinchy" around their kids amid holiday stress, Keeley said.
+
+Children up to the age of 9 process information egocentrically, she said — which means if there’s a problem, they see themselves as the cause.
+</item 8>
+
+<item 9>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family.
+However, it’s likely you’ve found yourself mulling over an array of reasons why the holidays may not be the right time for such an introduction.
+
+The holiday season is often perceived as the most wonderful time of year, but that’s not necessarily the case for everyone.
+</item 9>
+
+<item 10>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+In a recent poll from the American Psychological Association, 41 per cent of US adults said their stress levels increased from November to January when compared
+to other months of the year. Nearly 50 per cent of Americans also described their stress level during the season as “moderate”.
+
+Everyone has different concerns leading up to Christmas, Hanukkah, or New Years - from family drama at the dinner table to a small spats with your mother about
+decorations. With what can be stressful events, it only begs the question: do you really want to bring your partner into the mix? While it’s important to
+eventually introduce your loved ones to your significant other, relationship experts believe there are some discussions you should have beforehand, especially
+during the holidays.
+
+Speaking to The Independent, Rachel Zar - a licensed marriage and family therapist at Spark Chicago Therapy - acknowledged that while every family is different,
+there’s a variety of problems that could arise during the holiday season - mainly because we put too much pressure on having a joyful holiday.
+</item 10>
+
+<item 11>
+‘Is this worth it?’: The difficult questions the Shameless founders have had to ask each other (The Age, 2023-10-07T18:00:00+00:00)
+says McDonald. “How do we do this and have a family if the whole business is relying on us showing up together at the same time?”
+
+Advertisement
+
+The only way to ensure it wouldn’t be an issue was to create a contingency plan. In their case, that plan involved expanding Shameless Media by growing the team
+and up-skilling junior employees. While neither Andrews nor McDonald sees kids in her near future, they found it reassuring to work towards a solution.
+Regardless of the topic of conversation, whether it be personal or work-focused, the two try to be completely honest with each other. “We realised with every
+honest conversation we had, our relationship was so much better – it was far more intimate,” says McDonald. The relationship McDonald and Andrews have with
+Shameless listeners is also based on trust. Their podcast episodes are meticulously well-researched, book recommendations are solid and the advice given via
+their Ask Shameless newsletter aims to always hit the mark.
+</item 11>
+
+<item 12>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+CLICK HERE TO GET THE FOX NEWS APP
+
+"Even if it's a pine cone covered in peanut butter and bird seed for loved ones to use as a bird feeder, the gift came from the heart and a beautiful lesson was
+learned — that’s the best Christmas gift of all," she said.
+</item 12>
+
+<item 13>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+Months later, after returning “kicking and screaming” to the “quote-unquote real world,” Kalmus was planning a return trip to the Possibility Alliance over the
+winter holidays.
+
+He was still mulling why the Possibility Alliance’s “low energy” lifestyle had felt so meaningful and what was missing from modern life.
+
+Ethan Hughes his goats out to
+
+“Everything is too fast,” Kalmus said. “It’s obvious to a lot of people, but it’s a new revelation to me. There’s nothing more important in life than
+relationships.”
+
+This article was originally published on NBCNews.com
+</item 13>
+
+<item 14>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 14>
+
+<item 15>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+That isn’t necessarily a cause for concern, as long as you inform your significant other about the interworkings of your family dynamics.
+
+“I think that we tend to be our best relational self when we’ve really done the work around understanding all of our past relationships,” Zar explained. “You
+can tell your partner: ‘I don’t have a close relationship with my brother, and here’s why. Here are the intentional choices that I’ve made around it.’ Or you
+can say: ‘Here’s my chosen family. These are the people who are important to me.’ Your significant other will see that you’ve been introspective and have
+takeaways around how you’ve navigated your family’s origin.”
+
+As long as you and your partner have discussed your relationship expectations - both before and during the holidays – introducing them to your family may deepen
+your relationship and could be a step in the right direction.
+</item 15>
+
+<item 16>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"I do remember the day I had to give her up," Geerts told Fox News Digital.
+
+"I got to name her and I got to dress her. There was a lady there to take her away, and she was kind of shaky and it scared me because I didn’t want her to pick
+her up."
+
+Geerts said she thought about her daughter every single year on her birthday.
+
+Now that the two have met, they've been getting together several times a year, either in California or Minnesota.
+
+COUPLE OF 60 YEARS, SEPARATED FOR 215 DAYS AMID PANDEMIC, REUNITES IN TOUCHING VIDEO: 'I MISSED YOU SO MUCH'
+
+And from the first time they met in person, they began discovering things they have in common.
+
+"We both keep things in order," Bazella said. "We have our lists and we like to get things done."
+</item 16>
+
+<item 17>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“Sometimes it can be helpful for them to know about the dynamics that they’re stepping into and how they can best support you. Frankly, they should be aware if
+there is tension or if there is stress within your family.”
+
+(Getty Images)
+
+Communication before the holidays goes both ways, and there are things that your family should know about your significant other too. “If there’s something
+about your partner that could be surprising to your family, or that’s a notable difference from who someone you’ve brought home before, tell your relatives
+that,” Zar said. “Let’s set your family and partner up for success.”
+
+Before bringing your significant other home for the holidays, you may want to express to your family how you wish for them to feel included - such as
+incorporating your partner’s family traditions into your own celebration. However, Zar advised against oversharing information before Christmas. You still want
+your family and partner to connect in person, rather than hearing about each other through the grapevine.
+</item 17>
+
+<item 18>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+The Santa bribe turns the focus of Christmas into "selfish gain on the part of your children," Keeley added.
+
+"Love your kids enough to learn how to manage their behavior appropriately and teach them self-discipline."
+
+"It’s also lazy parenting, which never pays off in the long run," she said. "Being a mom is a professional career and deserves to be treated accordingly."
+
+She added, "Love your kids enough to learn how to manage their behavior appropriately and teach them self-discipline."
+
+3. Becoming a ‘holiday martyr’
+
+It’s important to keep the holidays well-rounded, Keeley said.
+
+5 HOLIDAY DECORATING MISTAKES THAT COULD REDUCE YOUR CHEER THIS YEAR
+
+She called out "martyr moms" who are at their "peak performance" during Christmastime, putting everyone else before themselves.
+
+"They wear themselves out making sure everyone else has the perfect Christmas, but never put themselves on the receiving end," she said.
+</item 18>
+
+<item 19>
+Arnold Schwarzenegger, Reese Witherspoon parent with tough love: 'Learning from failure' (FOX News - Entertainment, 2023-10-10T08:00:40+00:00)
+I want to know who they’re with, where they’re going. Even now that they’re driving, I want them to text me when they arrive and when they’re heading home."
+
+LIKE WHAT YOU’RE READING? CLICK HERE FOR MORE ENTERTAINMENT NEWS
+
+Bure explained that they "work hard to keep our communication open and talk through any situation" and they are "always willing to listen."
+
+"But I don’t always say yes," she added. "My goal as a parent is not to make my kids happy but to guide them to be respectful, curious, responsible, resilient,
+kind, giving and thoughtful adults."
+
+NATASHA BURE PRAISES MOM CANDACE CAMERON FOR HER FAITH, BEING 'BOLD' AMID BACKLASH
+
+Kristen Bell and Dax Shepard
+
+Kristen Bell and Dax Shepard share two daughters together, Lincoln, 10, and Delta, 8, and have been married for 10 years.
+</item 19>
+
+<item 20>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+Pressures are high for parents and caregivers around the holidays.
+
+That means there’s room for error, according to parenting expert Hannah Keeley, who offered up some of the biggest mistakes parents tend to make at
+Christmastime.
+
+In an email she sent to Fox News Digital, Virginia-based Keeley identified the top five holiday blunders that parents often make.
+
+HOME FOR THE HOLIDAYS? HERE'S HOW TO AVOID STRESS AROUND FAMILY MEMBERS, ACCORDING TO EXPERTS
+
+Here are the mistakes Keeley thinks parents should try to avoid.
+
+Diving right in …
+
+1. Creating unrealistic expectations
+
+Parents who make a "must-do" Christmas list that’s a "mile long" at the "first sniff of peppermint mochas" are perhaps setting themselves up for failure — and
+Keeley said she empathized with this instinct.
+
+Doing the most could lead to a season of disappointment, she warned.
+
+CHRISTMAS TREE SHOPPING?
+</item 20>
+=== END ITEM id=4cec3a7b15332843 ===

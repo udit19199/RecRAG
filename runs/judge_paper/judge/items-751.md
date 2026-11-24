@@ -1,0 +1,1519 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=f05bac7a7672ce16 ===
+Gold sentences and facts:
+Sentence 0: Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills.
+  Fact 0.0: Today, social networks are often run by large corporations.
+  Fact 0.1: Meta, Snap and Google are examples of large corporations that run social networks.
+  Fact 0.2: On social networks run by large corporations, advertisers pay the bills.
+Sentence 1: By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter.
+  Fact 1.0: By the end of 2012, Google and Facebook were angling to acquire the London lab.
+  Fact 1.1: Three people familiar with the matter said Google and Facebook were angling to acquire the London lab by the end of 2012.
+
+Retrieved items:
+<item 1>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+If anything, Ohanian credits Twitter (now called X) with coming up with the best system for moderation so far.
+
+“Community Notes, I personally think is a good — it’s the best measure I’ve seen yet. And frankly, I wish we had thought of it first,” he said.
+
+Still, he called out the notion that a platform, like X, can be a town square.
+
+“The public square [analogy]…falls flat. Because if that then implies that it’s a public square, which means like, what? a town or a city? If you’re the person
+in charge of it, you’re the mayor. But there’s no democratic election,” Ohanian pointed out. “You’re a CEO. So then you’re like the king? If you want to lean
+into the town square thing, fine. Just own it and say, yeah, it’s a town square and I am the infinite dictator, tyrant of it.”
+</item 1>
+
+<item 2>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 2>
+
+<item 3>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter. Hassabis and his co-founders
+insisted on two conditions: No DeepMind technology could be used for military purposes, and its AGI technology must be overseen by an independent board of
+technologists and ethicists.
+
+Google offered $US650 million. Zuckerberg of Facebook offered a bigger payout to DeepMind’s founders but would not agree to the conditions. DeepMind sold to
+Google. Zuckerberg was determined to build an AI lab of his own. He hired Yann LeCun, a French computer scientist who had also done pioneering AI research, to
+run it. A year after Hinton’s auction, Zuckerberg and LeCun flew to Lake Tahoe for the same AI conference. While padding around a suite at the Harrah’s casino
+in his socks, Zuckerberg personally interviewed top researchers, who were soon offered millions of dollars in salary and stock. AI was once laughed off.
+</item 3>
+
+<item 4>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+You cannot escape conversations about AI no matter how far or fast you run. Hyperbole abounds around what current AI tech will be able to do (revolutionize
+every industry!) and what current AI tech will be able to do (take over the world!). Closer to the ground, TechCrunch+ is working to understand where startups
+might find footholds in the market by levering large language models (LLMs), a recent and impactful new method of creating artificially intelligent software.
+
+How AI will play in startup land is not a new topic of conversation. A few years back, one venture firm asked how AI-focused startups would monetize and whether
+they would suffer from impaired margins due to costs relating to running models on behalf of customers. That conversation died down, only to come roaring back
+in recent quarters as it became clear that while LLM technology is quickly advancing, it’s hardly cheap to run in its present form.
+
+But costs are only one area where we have unanswered questions.
+</item 4>
+
+<item 5>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+When Google bought DeepMind, it bought the whole thing. Musk was out. Financially, he had come out ahead, but he was unhappy. Three Google executives now firmly
+in control of DeepMind were there: Page; Sergey Brin, a Google co-founder and Tesla investor; and Eric Schmidt, Google’s chair. Among the other attendees were
+Reid Hoffman, another PayPal founder; and Toby Ord, an Australian philosopher studying “existential risk”.
+
+The DeepMind founders reported that they were pushing ahead with their work but that they were aware the technology carried serious risks. Suleyman, the
+DeepMind co-founder, gave a presentation called “The Pitchforkers Are Coming.” AI could lead to an explosion in disinformation, he told the board. He fretted
+that as the technology replaced countless jobs in the coming years, the public would accuse Google of stealing their livelihoods. Google would need to share its
+wealth with the millions who could no longer find work and provide a “universal basic income,” he argued. Musk agreed.
+</item 5>
+
+<item 6>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 6>
+
+<item 7>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+Consumers are hungry for a new way of social networking, where trust and safety are paramount and power isn’t centralized with a Big Tech CEO in charge… or at
+least that’s what Mozilla believes. The mission-driven tech company behind the Firefox browser, Pocket reader and other apps is now investing its energy into
+the so-called “fediverse” — a collection of decentralized social networking applications, like Mastodon, that communicate with one another over the ActivityPub
+protocol.
+
+The idea is to rethink social networking from the ground up.
+
+Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills. This has created a world where modern
+social networks are profit-driven, and consumer needs aren’t always at the forefront, Mozilla believes. This disconnect between what people want and what
+today’s networks offer hit an inflection point last year, when billionaire Elon Musk bought Twitter, leading to a surge of interest in alternatives to
+centralized social networking, including apps like Mastodon and Bluesky.
+</item 7>
+
+<item 8>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+AI was once laughed off. Now the richest men in Silicon Valley were shelling out billions to keep from being left behind. The lost ethics board
+
+When Musk invested in DeepMind, he broke his own informal rule – that he would not invest in any company he didn’t run himself. The downsides of his decision
+were already apparent when, only a month or so after his birthday spat with Page, he again found himself face to face with his former friend and fellow
+billionaire. Larry Page, co-founder of Google. Credit: Bloomberg The occasion was the first meeting of DeepMind’s ethics board, on August 14, 2015. The board
+had been set up at the insistence of the startup’s founders to ensure that their technology did no harm after the sale. The members convened in a conference
+room just outside Musk’s office at SpaceX. But that’s where Musk’s control ended. When Google bought DeepMind, it bought the whole thing. Musk was out.
+</item 8>
+
+<item 9>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 9>
+
+<item 10>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+</item 10>
+
+<item 11>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+Countless startups and scale-ups have built businesses atop OpenAI’s proprietary GPT-X large language models (LLMs), and over the weekend hundreds of OpenAI
+customers reportedly started contacting OpenAI’s rivals, which include Anthropic, Google and Cohere, concerned that their own businesses might be impacted if
+OpenAI was to disintegrate overnight.
+
+Over-reliance
+
+The panic has been palpable. But there are precedents from elsewhere in the technology sphere, perhaps most notably that of the cloud computing industry, which
+became renowned for the way it locked companies in to centralized, vortex-like silos.
+
+“Part of the frenzy around the future of OpenAI is due to too many startups over-relying on their proprietary models,” Luis Ceze, University of Washington
+computer science professor and OctoML CEO, told TechCrunch in an emailed statement. “It’s dangerous to put all your chips in one basket — we saw that in the
+early cloud days which led to companies shifting to multi-cloud and hybrid environments.”
+</item 11>
+
+<item 12>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+It won’t always be right, though. But it becomes the epicenter of where the conversation is. And then I’ll think what percentage of our population really wants
+to earnestly take the breath and say, let me stop doomscrolling, and let me just wait until people can do the work, synthesize it and then help me react?” he
+continued.
+
+“We are also so plugged into all these storylines, whether it’s from traditional media, whether it’s from user-generated — someone on their phone, you know,
+posting to a Telegram group. We are overwhelmed and overloaded, and it’s unfortunately appealing to the worst parts of a lot of our instincts,” Ohanian added.
+
+In part, some of the issues around how social media platforms developed had to do with how the companies were originally developed. Ohanian, for example, shared
+that Reddit grew out of his running of a forum site in college, when he believed that online community felt as real as offline.
+</item 12>
+
+<item 13>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+“This is another indication that AI is progressing faster than even many experts anticipated,” Victoria Krakovna, who would soon join DeepMind as an “AI safety”
+researcher, wrote in a blog post. DeepMind’s founders were increasingly worried about what Google would do with their inventions. In 2017, they tried to break
+away from the company. Google responded by increasing the salaries and stock award packages of the DeepMind founders and their staff. They stayed put. The
+ethics board never had a second meeting. The Breakup
+
+Convinced that Page’s optimistic view of AI was dead wrong, and angry at his loss of DeepMind, Musk built his own lab. OpenAI was founded in late 2015, just a
+few months after he met with Altman at the Rosewood hotel in Silicon Valley. Sam Altman Credit: Bloomberg Businessweek Musk pumped money into the lab, and his
+former PayPal buddies – Hoffman and Thiel – came along for the ride.
+</item 13>
+
+<item 14>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Third-party Reddit app Narwhal says it hopes to survive Reddit’s app purge with a subscription plan.
+
+Apropos “getting together,” Amanda reports that VidCon is still kickin’. For the first time, the conference hosted an industry leadership summit, where creator
+economy experts and creators could hash out their grievances with the state of the business and share ideas to make the job of a creator more sustainable. That
+makes sense, unlike creators raising venture capital: It’s so eye-wateringly hard to make money as a creator, I’d love to see the pitch that convinces a VC to
+cut a check to a creator, with a realistic expectation of a venture-scale return.
+
+Maybe they were hiding behind the sofa?: Sarah reports that Mastodon actually has 407K+ more monthly users than it thought — and it seems like Twitter has a lot
+more traffic than Musk said. Still, the peak now is about the same as it was a decade ago, and it’s unclear what the social platform can do to encourage more
+growth.
+</item 14>
+
+<item 15>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Though he’s glad that access to the technology has broadened, that has come with many complications.
+
+“I don’t like the idea that the internet I’m so nostalgic for was actually an ivory tower,” he said, but on the flip side, he said, we’re all exposed to more
+people, in real-time, than we could have ever fathomed. And that can put people at odds with one another and with everyone’s different versions of the truth —
+even if their truth is believing in something as far-fetched as the earth being flat, he said, pointing to one example that has a following on Reddit.
+
+Meanwhile, asking platforms like Facebook, Twitter, or Reddit to be in charge of verifying truth and accuracy is a difficult task, he said. Ohanian also called
+out TikTok as “an arm for the Chinese government” that’s really good at “feeding us what we want, when we want it” — in other words, not always a fountain of
+truth, either.
+</item 15>
+
+<item 16>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 16>
+
+<item 17>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+(Spoiler alert: Yes.)
+
+Rumors are swilling that OpenAI may be considering developing its own AI chips. That’s going to get interesting, especially if you’ll recall that Nvidia’s
+ongoing stock market rally is likely driven by the current boom in AI. The company’s ChatGPT’s mobile app hit a record $4.6 million in revenue last month, but
+growth is slowing. Oh, and there’s no need to shed tears for Nvidia quite yet; Brian’s piece breaking down how Nvidia became a major player in robotics is super
+interesting.
+
+Adobe has doubled down on its Firefly generative AI models. This week, Frederic covered how the software can now generate more realistic images and can help
+artists create vector graphics in Illustrator. Neato.
+
+More on the AI front
+
+If AI can’t go to the mountain, the mountain will come to AI: Dutch startup Tidalflow exits stealth with backing from Google’s Gradient Ventures. It is aiming
+to help any software play nice with ChatGPT and other LLM ecosystems.
+</item 17>
+
+<item 18>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+There’s this picture from more than a decade ago that still goes viral on the web every once in a while. You’ve probably seen it: it was created by the venture
+capitalist Andrew Parker, and it compares a few dozen startups with subsections of Craigslist. Back then, Craigslist was all things to all people online, and a
+generation of startups figured they could do part of the job a lot better.
+
+Some of those companies failed — sometimes because of Craigslist! — but some also became gigantically successful. Airbnb worked because it was more searchable,
+reliable, and trustworthy than a random Craigslist listing; StubHub sold you secondhand tickets without the 50 percent chance those tickets were fake; Etsy
+offered a much more fun shopping and discovery experience than a bunch of text listings and crappy photos.
+
+For a decade, startups tried to unbundle Craigslist. Now they can do the same for social networks.
+</item 18>
+
+<item 19>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+With Amo, the founder of Zenly wants to make social apps social again The startup raised $20 million and is launching ID today
+
+In 2018, I wrote a TechCrunch article stating that 2018 was “the year social networks were no longer social.” Reflecting on that article, I’m not sure that 2018
+was the turning point. But the premise of the article still holds up well.
+
+At some point, social networks were no longer about connecting with your closest friends, keeping up with long-distance family members and feeling a special
+connection with people you love.
+
+TikTok, Instagram, Snapchat, Facebook, YouTube and X (formerly Twitter) are all slowly evolving to become the same infinite scrollable feed of
+algorithm-optimized short videos from top performers.
+
+And it turns out that I’m not the only one who has noticed that social networks have been slowly drifting away from their original purpose.
+</item 19>
+
+<item 20>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+On the surface, Microsoft is currently looking like the biggest winner amidst the OpenAI turmoil, as it was already apparently looking to reduce its reliance on
+OpenAI even though it remains once of its major shareholders. But Facebook’s parent Meta could also stand to benefit, as businesses pursue multi-modal
+strategies or models with a more “open” ethos embedded.
+
+“Open source today offers a wide variety of models for companies to essentially diversify,” Ceze added. “By doing so, these startups can quickly pivot and
+minimize risk. There is also a major upside — many of these models already outperform the likes of OpenAI’s in terms [of] price-performance and speed.”
+
+A leaked internal memo from Google earlier this year seemed to express fears that despite the huge advances made by proprietary LLM models from the likes of
+OpenAI, open source AI would ultimately trump them all. “We have no moat, and neither does OpenAI,” the document noted.
+</item 20>
+=== END ITEM id=f05bac7a7672ce16 ===
+
+=== ITEM id=6cd00aaf248fa22d ===
+Gold sentences and facts:
+Sentence 0: We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving.
+  Fact 0.0: People identify with the superhero's struggles.
+  Fact 0.1: People identify with the superhero's little glimmers of connection and triumph.
+  Fact 0.2: Identifying with the superhero makes the superhero the perfect superhero for Thanksgiving.
+Sentence 1: Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are thankful for, either with family or friends.
+  Fact 1.0: Thanksgiving is a holiday.
+  Fact 1.1: The food is arguably the main component of Thanksgiving day.
+  Fact 1.2: Thanksgiving is a beloved time of year.
+  Fact 1.3: Americans come together during Thanksgiving to celebrate what they are thankful for.
+  Fact 1.4: Americans celebrate what they are thankful for with family or with friends during Thanksgiving.
+
+Retrieved items:
+<item 1>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+The game’s narrative remains intact, no matter what. There never occurs a feeling of the devs trying too hard to make it seem like her missions are stretching
+out of their boundaries.
+
+Although they are designed well this time but one has to commend Insomniac’s team to keep a limit on not making MJ’s gameplay moments seem forced or going
+beyond a certain point. They serve their purpose without affecting the main plot of Marvel’s Spider-Man 2 or overlapping with Peter or Miles’ stories. In a way,
+each character has been given a good amount of time to shine. At times, it may feel like MJ’s playable sequences should have been extended. But it’s nice to see
+that the devs decided to not do that; sometimes less is more and fine.
+
+Despite Spider-Man 2 being more of a Peter’s story (in its entirety), MJ’s role has been given equal significance too. There’s a visible growth in her arc
+especially considering her profession as a journalist.
+</item 1>
+
+<item 2>
+Meet the American who made cranberries a Turkey Day tradition, Marcus Urann, farmer with can-do spirit (FOX News - Lifestyle, 2023-11-23T08:50:55+00:00)
+"They’ve been part of a fabric of our region from Indigenous people until today."
+
+Urann saw what cranberries could be far beyond the land of the Pilgrims.
+
+"I felt I could do something for New England," Urann told the Associated Press in a story that ran around the nation on Thanksgiving in 1959.
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+"You know, everything in life is what you do for others."
+
+To read more stories in this unique "Meet the American Who…" series from Fox News Digital, click here .
+</item 2>
+
+<item 3>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+Peter’s plot involves a retelling of the Venom origin story, with beats that will be recognizable to those even passingly familiar with the Spider-Man mythos.
+If Spider-Man 2 is a game of retellings, Peter’s story clings most closely to the canon. If you’ve seen Sam Raimi’s Spider-Man 3, you’ll know the gist of what
+to expect when the symbiote finds its way to Peter. It isn’t until the late game that Peter’s story starts pushing more strongly against our canonical memories
+and into something more unique to Insomniac.
+
+Miles’ story takes more liberties. Hailey Cooper, Miles’ love interest from his solo game, returns here, taking more of an MJ-esque role and carving out her own
+identity separate from Miles’. American Sign Language is featured heavily throughout Miles’ missions because of Hailey’s presence, feeling as natural and
+integral to the story as anything from the canon.
+</item 3>
+
+<item 4>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+(If you can get past the Frankenstein-ification of the boroughs, that is. RIP Chelsea.)
+
+There are hints of greater thematic aspirations within Spider-Man 2. Questions about mass incarceration, recidivism, and reintegration into society for formerly
+incarcerated people; worries about the surveillance state and what we give up when we engage with modern technology. These things appear, however fleetingly, in
+Spider-Man 2, but there isn’t enough time to elaborate on any single one in the unrelenting march of set-piece after glorious set-piece.
+
+But I’m glad they’re there, anyway. Because if we’re going to retell a story, we ought to retell it anew. Canons were made to be broken, and Spider-Man 2 swings
+in that direction. With a sequel teed up by the game’s final act, I’m eager to see where Insomniac goes with that momentum. Next stop: the Bronx.
+
+Marvel’s Spider-Man 2 will be released Oct.
+</item 4>
+
+<item 5>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+There’s a visible growth in her arc especially considering her profession as a journalist. Yes, she’s Peter’s love interest, but that’s not everything she’s
+there for. Players can easily see it happening throughout the game’s duration.
+
+The verdict?
+
+ADVERTISEMENT Article continues below this ad
+
+It’s obvious to expect that a lot of fans who didn’t like MJ’s missions in the first installment won’t like her this time as well. But considering how she was
+before and how she’s in Spider-Man 2, the overall change is quite praiseworthy. Things are different this time, thankfully.
+
+MJ’s missions are now having some actual meaning attached to them rather than acting like fillers. Players who want to have a few interesting moments aside from
+the main quests featuring Miles and Peter can have a sense of finishing well-designed stealth quests. Mary’s gameplay missions end up increasing the overall
+quality of Spider-Man 2.
+</item 5>
+
+<item 6>
+Spider-Man: Across the Spider-Verse on Netflix, A Haunting in Venice, and every new movie to watch this weekend (Polygon, 2023-11-03T22:15:00+00:00)
+Happy Friday, Polygon readers! Each week, we round up the most notable releases to streaming and video rental, highlighting the biggest and best new movies for
+you to watch at home.
+
+This week’s biggest debut is Spider-Man: Across the Spider-Verse, which is now streaming on Netflix. That’s not all, as Insidious: The Red Door — the fifth
+installment in the Insidious horror franchise — also arrives on the platform this week alongside Jawan, one of the biggest Indian action movies of the year.
+There’s plenty more exciting releases this week too, with A Haunting in Venice now streaming on Hulu, the Italian superhero movie Freaks vs. the Reich on Prime
+Video, plus the premiere of The Kill Room and Outlaw Johnny Black from director-star Michael Jai White on VOD.
+
+Here’s everything new to watch this weekend!
+</item 6>
+
+<item 7>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+What is Thanksgiving and where did it come from?
+
+Thanksgiving is a national holiday in the United States celebrated every fourth Thursday in November.
+
+The annual feast is in honour of the “first” Thanksgivings in America, in 1619 in Virginia, and in 1621, when colonists in Plymouth, Massachusetts, later known
+as the Pilgrims, allegedly shared a meal with the Wampanoag Indians, who were native to the land.
+
+The later feast was in honour of the help the Pilgrims received from the Native Americans in cultivating crops and surviving their first harsh winter and it
+lasted three days.
+
+Macy's Thanksgiving Day Parade takes place in New York Show all 15 1 / 15 Macy's Thanksgiving Day Parade takes place in New York Macy's Thanksgiving Day Parade
+takes place in New York Performers walk in front of Macy's Tom Turkey float in the Thanksgiving Day Parade in New York AP Macy's Thanksgiving Day Parade takes
+place in New York The Ronald McDonald balloon is inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the
+</item 7>
+
+<item 8>
+The best movies of 2023 so far (Polygon, 2023-10-07T12:38:36+00:00)
+There’s so much going on in this patter-filled, joke-a-second comedy that it feels like 2023’s Everything Everywhere All at Once, right down to the big life
+messages smuggled into all the goofery. It’s a high-speed joke-fest that doesn’t take Barbie any more seriously than she deserves — but does pay solemn homage
+to all the ways, positive and negative, that Barbie fandom makes people feel. —TR
+
+8. Spider-Man: Across the Spider-Verse
+
+Directors: Joaquim Dos Santos, Kemp Powers, Justin K. Thompson
+
+Cast: Shameik Moore, Hailee Steinfeld, Daniel Kaluuya
+
+Where to watch: Netflix, or for digital rental/purchase
+
+2018’s Spider-Man: Into the Spider-Verse changed the game for superhero movies and animated movies. It raised the bar for what a Spider-Man story could be, and
+inspired animators to push the boundaries of what their movies could look like.
+</item 8>
+
+<item 9>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 9>
+
+<item 10>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+If you want curated lists of our favorite media, check out What to Play and What to Watch .
+
+Retellings are compelling because they allow writers to toy with readers’ preconceived notions of how the story “should go,” both in terms of genre conventions
+and in terms of plot. We know Little Red Riding Hood will go to her grandmother’s house, where she will find that her grandmother has been eaten by a wolf, just
+as we know Spider-Man will be bitten by a radioactive spider. The fun, both for the author and the reader, comes in deviating from those norms — in finding new
+ways to tell old tales.
+
+With Marvel’s Spider-Man 2, Insomniac Games attempts something similar.
+
+Mainstream Spider-Man stories are increasingly Spider-Men stories, and Spider-Man 2, the third Spidey game from Insomniac, is no different.
+</item 10>
+
+<item 11>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+(It’s up.) Figuring out how to get there is another matter.
+
+Even in games that prominently feature it, climbing is often functional, at best — whether it’s Link refusing to acknowledge handholds are a thing or Nathan
+Drake snapping to ledges with a level of magnetism only thought possible at CERN.
+
+Jusant is the first and only game I’ve played that gets it — that sees the inherent grace in the sport and portrays it on the screen, not as a means of getting
+somewhere, but as the reason to go there in the first place. —Ari Notis
+
+8. Marvel’s Spider-Man 2
+
+Developer: Insomniac Games
+
+Where to play: PlayStation 5
+
+Marvel’s Spider-Man 2 builds on the successes of the first game, both narratively and in its immensely satisfying gameplay. The game’s story takes a familiar
+Spider-Man narrative — that of friends turned foes — and adds new twists, building out compelling villains (and demanding ones) in the process.
+</item 11>
+
+<item 12>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+As for our heroes, Miles and Peter return from their individual outings for a dramatic team-up. Their two stories are threaded together, allowing for randomized
+encounters where Peter might show up while you’re playing as Miles (or vice versa), with the two of you tag-teaming a random criminal and slamming them into the
+ground in what feels like the world’s least fair fight. And yes, they do the Spider-Man-pointing-at-Spider-Man meme in-game. And yes, it is charming the first
+time (though maybe less so the second). The main story sometimes swaps Spider-Mans mid-mission, as in the dramatic opening sequence where Sandman coats the city
+in dust as Peter and Miles rush to help firefighters and first responders, with eerie echoes of 9/11. Side missions often allow either Spider-Man to tackle
+them, but the main story beats require one or the other, as each hero is allowed his full particularity as a singular Spider-Man.
+</item 12>
+
+<item 13>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+The game also sheds its predecessor’s odious Spider-Cop bits in favor of establishing a deeper connection between the Spider-Mans and their city, giving the
+game room to breathe while further immersing you in its heroes’ worlds and struggles.
+
+And then there’s the gameplay. For my money, there are few experiences more enjoyable in gaming than swinging around New York City with Spider-Man. It was fun
+in the early 2000s, and it’s still fun now. And with a bigger map to explore (and wings to fly, if you so choose to use them), there’s basically no limit to the
+fun you can get up to. The deployment of two protagonists is seamless — Peter and Miles play differently, bringing their own stories and desires to the table —
+and switching between them is effortless. It’s also the rare open-world game that doesn’t feel bloated with missions and side quests, instead leaving you
+wanting more Spider adventures. —PV
+
+7.
+</item 13>
+
+<item 14>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+Of the two Spider-Mans, it’s Miles who feels more alive with the possibility to break free of expectation and canon
+
+Narratively, juggling two Spider-Mans requires a different kind of deftness. Two villains new to the series take center stage — Kraven the Hunter and Venom — as
+well as a returning cast of nearly every villain from the previous two games. Without delving into spoilers, a large majority of that cast is sidelined early
+on, leaving Kraven and Venom as our principal antagonists, albeit with large roles for returning villains the Lizard (who made a brief appearance in Miles
+Morales) and Mister Negative. There are others besides them that should delight comic fans, setting up future conflicts for either expansions or the presumed
+Spider-Man 3 to tackle. If what you come to Spider-Man for is spectacle and villainy, Spider-Man 2 has the goods and then some.
+
+As for our heroes, Miles and Peter return from their individual outings for a dramatic team-up.
+</item 14>
+
+<item 15>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+But how?
+
+Compared to the lack of interactivity in 2018’s Spider-Man, MJ is now capable of tackling the enemies around her. In the first title, all she could do was to
+move from one point to the other. Now, she’s able to do more than that – make pretty good and lethal moves. To be precise, the devs have given MJ a little
+firepower, if not in too much capacity. Now, she’s got weapons instead of being clueless in moments of being vulnerable against armed enemies. Yes, she hasn’t
+got any superpowers, but she’s got other means to help herself out.
+
+Due to such involvement, players have now got a reason to be more invested into a given mission focusing on MJ. It wasn’t the case at all taking into
+consideration her previous iteration in Insomniac’s original game. Mary Jane can now handle the circumstances in her own manner, thus breaking free from the
+linear approach of just trying to hide and escape.
+</item 15>
+
+<item 16>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Marvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were
+essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable
+to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.
+
+But Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic.
+We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving. And Spider-Man
+writers know it.
+
+Thanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding
+friends and family is perhaps one of the most humane acts we can pursue.
+</item 16>
+
+<item 17>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+With the recent release of Marvel’s Spider-Man 2, Insomniac has witnessed a huge appreciation from fans for delivering a memorable sequel. Not to mention the
+epic portrayal of Peter Parker and Miles Morales fighting against some of the strongest villains. But then, there’s MJ as well who has made a comeback from the
+first installment. And it’s her arc that has actually received an impressive elevation this time. Especially when considering the poorly received missions
+featuring Mary Jane in the original game from 2018.
+
+America’s Favorite Video Today
+
+So what’s actually changed in 2023 that has created a vast difference? There are certain key reasons making Mary Jane in Spider-Man 2 a treat to watch. Not just
+from the perspective of her relationship with Peter, but her own missions showcasing a different side this time. One can even call her the third unofficial
+superhero in the latest PS5 exclusive.
+</item 17>
+
+<item 18>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Sure, everyone in that room is trying to hold things together. Mary Jane wants to impress Norman, Harry wants to impress Norman and Mary Jane, Peter loves Mary
+Jane but doesn’t dare hurt Harry, and Aunt May is finishing what’s presumably a dope turkey, in an attempt to care for all of them.
+
+It’s the trying that counts: Life can be hard, weird, and cruel, but while sitting down for a meal with our nearest and dearest, maybe for at least a little
+while, we won’t need to have it all figured out.
+
+Not all Spider-Man Thanksgiving dinners end up falling apart, and some succeed in reminding Peter that he isn’t alone. The first season of The Spectacular
+Spider-Man ends with a bang: One of Peter’s closest pals, Eddie Brock, has become Venom, and has threatened everyone Peter holds dear. This comes just after
+Peter himself was infected by the symbiote, and went through the now-iconic throes of pushing everyone away.
+</item 18>
+
+<item 19>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Americans started preparing their Thanksgiving menus weeks ago, with the requisite turkeys and stuffing ingredients likely already purchased for the holiday,
+which is celebrated this year on Thursday 23 November.
+
+Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are
+thankful for, either with family or friends.
+
+In America, Thanksgiving is a cultural holiday that symbolises peace, thankfulness, and the beginning of the holiday season.
+
+What is Thanksgiving and where did it come from?
+</item 19>
+
+<item 20>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Aunt May has just gotten out of the hospital, and even noted jerk “Flash” Thompson has given Peter hell for how awful he’s been acting.
+
+Peter, attempting to make things right, opts to cook the Thanksgiving meal all by himself, but mostly succeeds in ruining the kitchen. No worries — Gwen Stacy
+and her father, along with a recuperating Aunt May and her doctor, all help out, and the episode concludes with a pleasant dinner. There are no big turns or
+twists, aside from Aunt May revealing that she’s publishing a cookbook. It’s just simple, earned solace in a life marked by chaos. Peter even gets a kiss from
+Gwen on his porch, a sequence conducted with a John Hughes sense of satisfying romantic flair.
+
+Various Spider-Man comics have also dabbled in seeing what Thanksgiving looks like when you’re young and arachnid-themed, but real life has associated
+Spider-Man with the holiday, too. Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade.
+</item 20>
+
+<item 21>
+Are NBA Christmas Day Games a Better Tradition Than NFL Thanksgiving Day Games? (Essentially Sports, 2023-12-25T21:27:33+00:00)
+This season, NFL’s Thanksgiving Day games created history. Across all the three games, the NFL recorded an average viewership of 34.1 million. These figures
+surpassed last year’s record viewership of 33.6 million. Furthermore, the combined unduplicated audience for all three games reached 133 million, marking the
+second-highest total audience on Thanksgiving, surpassed only by last year’s numbers.
+
+These figures paint a pretty one-sided picture, but the choice is much more nuanced. Comparing the NBA Christmas Day Games and NFL Thanksgiving Day Games comes
+down to personal preference. Each tradition holds its own significance, adding to the diverse fabric of American sports culture. Whether one prefers the slam
+dunks and three-pointers of the NBA or the hard-hitting action on the football field, both traditions offer a festive and entertaining way to celebrate holidays
+with family and friends.
+
+Are the NFL’s new decisions threatening the NBA’s Christmas Day dominance?
+</item 21>
+
+<item 22>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+Whether it’s the upside-down kiss, the death of Uncle Ben or Jefferson Davis, or simply the spider bite that starts it all, Spider-Man 2099 believes that
+upholding these canon events, even the painful ones, is key to preserving the stability of each strand of reality. Miles disagrees, believing it is Spider-Man’s
+job to resist the seemingly inevitable — to always do what’s right, not simply what’s preordained. The film ends with a promise of pushing back against
+Spider-Man 2099, and with it, the established canon.
+
+I was hungry for Spider-Man 2 to push back in a similar way — to treat the established story like Angela Carter repurposing “Little Red Riding Hood” to her
+whims, like Michael Cunningham plumbing “Rumpelstiltskin” for a story about the desire to have a child, or like Helen Oyeyemi and her body of work.
+</item 22>
+
+<item 23>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+In addition, vendors are also selling a range of goodies – from ornaments to jewellery to scarves – which is the perfect chance to do some early holiday
+shopping.
+
+Hosting a movie marathon
+
+Instead of hosting a big dinner, you could opt for another budget-friendly activity at your home: hosting a movie marathon. With the help of your friends, you
+can make a list of any horror, romance, or comedy movies that you want to watch for the day. You could also top off the activity off by supplying an assortment
+of snacks for your pals, or by cooking a meal all together.
+
+Your movie options can also match the theme of Thanksgiving, with films like A Beautiful Day in the Neighborhood (2019), Toy Story (1995), Addams Family Values
+(1993) and A Charlie Brown Thanksgiving (1973). If you want, you could add some Christmas movies to the mix, including Elf (2003), It’s A Wonderful Life (1947)
+and Steel Magnolias (1989).
+</item 23>
+
+<item 24>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Going hiking
+
+Depending on the weather outside, your plans for Friendsgiving could consist of going on a hike. Whether it’s at your local park or a trail that’s an hour or so
+away from you, hiking is the perfect daytime activity for you and your friend group – no matter how big or small.
+
+Decorating or baking sweets
+
+(Getty Images)
+
+Decorating or baking some sweet treats is another easy indoor activity. Whether you make a pie from scratch or simply frost your ready-bake sugar cookies, it’s
+something interactive for you and your pals to do together.
+
+You can also opt for treats that are on theme with the fall and winter seasons, from baking an apple crisp to decorating gingerbread cookies.
+
+Running a Turkey trot
+
+Whether it’s before, during, or after Thanksgiving Day, many cities in America host an annual Turkey Trot run.
+</item 24>
+
+<item 25>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade. Other Marvel characters have appeared on floats, but only
+Spider-Man has been inflated to 80 feet and pulled through the Upper West Side. (That also makes him the only Marvel character to have his head horrifically
+torn open by a tree branch.)
+
+From his first comic book appearance, Spider-Man has been a reminder that life is hard and complicated, and being a superhero doesn’t preclude anyone from
+experiencing ordinary frustrations, setbacks, and confusion. But no matter how Spider-Man’s Thanksgiving escapades turn out, they remind readers and viewers
+that the holiday is about the hope of mutual connection, support, and nurturing. Even if the girl of your dreams is out of reach and the Green Goblin is on your
+case, a table, some friends, and Aunt May’s rad turkey might just make everything better for a little while.
+</item 25>
+
+<item 26>
+Meet the American who made cranberries a Turkey Day tradition, Marcus Urann, farmer with can-do spirit (FOX News - Lifestyle, 2023-11-23T08:50:55+00:00)
+Plucky little cranberries have grown for millennia amid sandy soils and short summers of southeastern Massachusetts and Cape Cod.
+
+The Pilgrims explored and then settled this same area in 1620 — and celebrated the first Thanksgiving the following year.
+
+"When the Pilgrims first set foot on Cape Cod, even before they saw Plymouth Rock, they may have well stepped on the American cranberry," Richard S. Cox and
+Jacob Walker write in their book, "Massachusetts Cranberry Culture: A History from Bog to Table."
+
+Their 2012 book is a romantic ode to the quirks of New England history, geography and culture — and of its low-growing fruit.
+
+MEET THE AMERICAN WHO GAVE THE NATION OUR THANKSGIVING ORIGIN STORY: PILGRIM EDWARD WINSLOW
+
+It "seems doubtful," however, that the Pilgrims even noticed the cranberries.
+
+"For all its tasty charms, the cranberry is hardly the sort to attract attention," Cox and Walker say in their book.
+</item 26>
+
+<item 27>
+The best movies of 2023 so far (Polygon, 2023-10-07T12:38:36+00:00)
+Maybe Hollywood as a whole took away the wrong lesson (we’ve seen so many multiverse movies), but Into the Spider-Verse redefined genre staples.
+
+The sequel continues to raise the bar. It’s a little busier than the first, pulling in more characters, more frantic visuals, more emotional throughlines, but
+it’s still bold, daring, and unlike anything else in the superhero movie sphere.
+
+As the characters bounce across the multiverse, the animation style shifts, with each character rooted in a different style. Spider-Gwen’s world is rendered
+with watercolors, which shift according to the tone of her story. She gets a step up in this movie — a second chance for Gwen Stacy, whose previous iterations
+across media have not ended well. Meanwhile, Spider-Punk, the brash counterculture rebel, is made up of collaged bits, and animated against the norm so he
+stands out even more. Every frame of the movie is a visual feast, just bursting with lovingly rendered details.
+</item 27>
+
+<item 28>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feeding friends and family is perhaps one of the most humane acts we can pursue. It’s less about the spirit of giving, and more about admitting that people
+have innate, basic needs, like food and social comfort, and that those needs are best fulfilled when people work in tandem. Honestly, we should try to do it
+more on every other day of the year: The number of people volunteering to help feed the homeless and families in need peaks around November and December, but
+that energy needs to be carried through the preceding 10 months, too.
+
+Spider-Man represents these needs, even though very few of us have to balance photojournalist work, a fraught dating life, and pummeling Dr. Octopus. Peter
+Parker is often the most financially strapped among his Avengers buddies, and frequently the loneliest, too. Those are recognizable traits among many young
+people, even those without radioactive-spider powers. When you’re growing up and trying to figure out the world, it’s easy to feel lost and isolated.
+</item 28>
+
+<item 29>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+You play as both the yassified Peter Parker from Spider-Man Remastered and Miles Morales from his eponymous debut in 2020, switching between the two at your
+leisure with all the speed afforded by the PlayStation 5’s SSD.
+
+In fact, speed is one of the primary improvements on display in the first PS5-exclusive Spider-Man game. New to the series are web wings, which allow the
+Spider-Mans to fly through the city, gliding over rooftops and gaining speed from wind tunnels without needing to rely on buildings, bridges, or other anchors
+for web-slinging. (They’re especially useful when crossing the East River into the newly added Brooklyn and Queens.) Web-swinging is faster now as well,
+enhancing that ineffable feeling of being Spider-Man as you glide through New York with ease. Whether you’re playing as Miles or Peter, traversing the three
+available boroughs is an undeniable joy — so much so that I found myself using fast travel less frequently than in the previous two games, because movement felt
+that much more fluid.
+</item 29>
+
+<item 30>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+The Macy's Thanksgiving Day Parade takes place in New York City
+
+The day is also celebrated with the annual Macy’s Thanksgiving Day Parade in New York City.
+
+The world’s largest Thanksgiving parade includes giant balloons of cartoons that float above the city sky, as well as marching bands and dancers.
+
+Following Thanksgiving, the month-long shopping for the winter holidays begins, with Black Friday kicking off the season.
+
+Why is Thanksgiving controversial?
+
+Although many Americans view Thanksgiving as a beloved holiday, it is viewed by many who have abandoned the holiday as a erroneous celebration of what was
+actually the conquest of Native Americans and Native American lands. The celebration has become controversial, as Thanksgiving has a contentious history that
+goes far beyond when the first feast was held.
+
+In addition to a holiday steeped with cultural appropriation, the period of history in America is frequently white-washed, which leads some Americans to ignore
+the holiday, or, to instead observe a National day of Mourning.
+
+Where is it celebrated?
+</item 30>
+
+<item 31>
+Spider-Man: Across the Spider-Verse on Netflix, A Haunting in Venice, and every new movie to watch this weekend (Polygon, 2023-11-03T22:15:00+00:00)
+A Haunting in Venice is his best yet, as Branagh’s confidence as director and performer in this mode only continues to grow. It’s perfect fall viewing.
+
+Quiz Lady
+
+Where to watch: Available to stream on Hulu
+
+Genre: Comedy
+
+Run time: 1h 39m
+
+Director: Jessica Yu
+
+Cast: Awkwafina, Sandra Oh, Will Ferrell
+
+Sandra Oh and Awkwafina play a pair of estranged sisters who try to win big on a game show to pay off their mom’s debts. The supporting cast includes Will
+Ferrell, Jason Schwartzman, Tony Hale, and the late Paul Reubens.
+
+New on Prime Video
+
+Freaks vs.
+</item 31>
+
+<item 32>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the parade passes down 6th Avenue Reuters Macy's
+Thanksgiving Day Parade takes place in New York An NYPD officer stands by AP Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon
+flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A marching band takes part in the parade Reuters Macy's Thanksgiving Day
+Parade takes place in New York A balloon flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A performer in the parade AP Macy's
+Thanksgiving Day Parade takes place in New York The Ronald McDonald balloon flies in the parade AP Macy's Thanksgiving Day Parade takes place in New York A
+clown performs in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Olaf balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York Flag wavers take part in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York Clowns on roller blades perform in
+the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is
+</item 32>
+
+<item 33>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+One of the Miles-specific side quests involves learning about the artistic history of Harlem, and it entwines the real-life histories of Josephine Baker,
+Langston Hughes, and Charlie Parker with the fictional history of SHIELD and other Marvel properties. An early mission shows off Insomniac’s technical chops
+with a section that cleverly borrows a trick from Ratchet & Clank: Rift Apart. Of the two Spider-Mans, it’s Miles who feels more alive with the possibility to
+break free of expectation and canon.
+
+[Ed. note: Spoilers follow for Spider-Man: Across the Spider-Verse.]
+
+The recent Spider-Man: Across the Spider-Verse has an obsession with “canon events,” pivotal moments in a Spider-Man’s life that the film’s villain, Spider-Man
+2099, is dedicated to maintaining across the multiverse.
+</item 33>
+
+<item 34>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+One can even call her the third unofficial superhero in the latest PS5 exclusive.
+
+A refreshing take on Mary Jane’s stealth missions makes her a strong character in Marvel’s Spider-Man 2
+
+ADVERTISEMENT Article continues below this ad
+
+In the first title, stepping into MJ’s shoes was a great concept, but the devs somehow couldn’t execute the plan flawlessly. As a result, missions featuring her
+as a playable character were heavily criticized by most of the fans. There was nothing too special about those quests whatsoever.
+
+Now, looking at Mary Jane in Marvel’s Spider-Man 2, there’s a very clear difference one can make out. In short, it feels comparing night and day. Being a
+journalist at The Daily Bugle, her character is bound to go places in order to investigate mysteries. The first game had such situations, but the sequel
+improved on them. It gives MJ a lot more strength instead of being someone who always needs to be rescued in the last moment. But how?
+</item 34>
+
+<item 35>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+However, you don’t need to have a big meal to celebrate your Friendsgiving, as there are many ways to change up your usual plans this year.
+
+Here’s a list of activities that you could do for Friendsgiving that aren’t the typical sit-down dinner.
+
+Shopping at local holiday markets
+
+(Getty Images)
+
+While Christmas is still over a month away, many cities in the US already have their holiday-themed markets up and running. And since Friendsgiving isn’t
+necessarily held on the Thanksgiving holiday, why not use it as an opportunity to check out some new shops?
+
+For example, in New York City, Bank of America is currently hosting its annual Winter Village at Bryant Park in Manhattan. At the beloved New York City spot,
+there’s a wide variety of food vendors, so you and your friends can take your pick at what you want for dinner and dessert.
+</item 35>
+
+<item 36>
+Mary Jane in Marvel’s Spider-Man 2 Is a Disguised Superhero, in a Good Way (Essentially Sports, 2023-11-01T21:00:28+00:00)
+Mary’s gameplay missions end up increasing the overall quality of Spider-Man 2. All things considered, it is great to see Insomniac improving on this aspect
+instead of removing it completely.
+
+ADVERTISEMENT Article continues below this ad
+
+Marvel’s Spider-Man 2 is now available on PlayStation 5 worldwide.
+
+Watch This Story: The Console Wars Are Heating Head-to-Head: Xbox and PlayStation Fans Battle Over Which Custom Controller is Better, Starfield or Spider-Man 2?
+</item 36>
+
+<item 37>
+Spider-Man: Across the Spider-Verse on Netflix, A Haunting in Venice, and every new movie to watch this weekend (Polygon, 2023-11-03T22:15:00+00:00)
+Here’s everything new to watch this weekend!
+
+New on Netflix
+
+Spider-Man: Across the Spider-Verse
+
+Where to watch: Available to stream on Netflix
+
+Genre: Superhero action
+
+Run time: 2h 20m
+
+Director: Joaquim Dos Santos, Kemp Powers, Justin K. Thompson
+
+Cast: Shameik Moore, Hailee Steinfeld, Oscar Isaac
+
+The highly anticipated follow-up to 2018’s Spider-Man: Into the Spider-Verse sees Miles Morales facing off not only against a dimension-hopping nemesis in the
+form of the Spot, but a whole multiverse of Spider-Mans, Spider-People, and even a Spider-Dinosaur as he attempts to save the day once again.
+
+From our multiversal review:
+
+Not every theme and plot and moment in Across the Spider-Verse lands, particularly with the other part of this story still most of a year away.
+</item 37>
+
+<item 38>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While the winter holidays are still weeks away, you could use your Friendsgiving to host your annual gift exchanges.
+
+For example, many friend groups in the US have opted for the budget-friendly activity of Secret Santa, where each person is randomly assigned someone to give a
+gift to. During the exchange, you then reveal to your pal that you’re their “secret Santa,” before giving them their present.
+</item 38>
+
+<item 39>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+On Thursday 23 November, Americans will be hard at work to prepare their Thanksgiving dinner, with foods on the menus ranging from a roasted turkey to a green
+bean casserole.
+
+Aside from the dishes served in the lavish feast, which can vary based on families’ cultures and traditions, Thanksgiving is also the annual holiday for people
+to commemorate all that they’re grateful for.
+
+In the midst of planning the big meal, there’s also a huge range of ingredients that need to be purchased at your local grocery store.
+</item 39>
+
+<item 40>
+Spider-Man: Across the Spider-Verse on Netflix, A Haunting in Venice, and every new movie to watch this weekend (Polygon, 2023-11-03T22:15:00+00:00)
+But he makes great use of expressive close-ups (often of himself) and shallow focus, with a few creepy It Follows-like shots of blurry figures approaching from
+the distance, and a terrifically claustrophobic scene inside an MRI machine. Dalton’s college story, meanwhile, occasionally borders on campus-prank zaniness:
+It includes what can only be described as a puke ghost, and there’s one amusing use of the horror movie cliche about the haunted little kid who makes terrifying
+drawings of the ghouls only he can see. (Naturally, that kid grows up to become a star pupil in an insufferable freshman art class.)
+</item 40>
+
+<item 41>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+Or, to give a more mass media example, like Star Wars: Visions, which gives creative leeway to a variety of animators and storytellers to play with the very
+basics of what makes Star Wars Star Wars.
+
+Spider-Man 2 doesn’t go quite this far, but where it does go is still satisfyingly slant. Wrinkles to critical characters and plot points will keep even
+seasoned Spider-fans on their toes. Moreover, it plays like a dream, with smart additions to combat that enhance the power fantasy of being Spider-Man. Each
+Spider-Man now has a full arsenal of special moves and gadgets that complement one another, making even the most basic combat encounter feel like a
+choreographed ballet of kicks, thwips, and zaps. The game is beautifully rendered, taking full advantage of the newest PlayStation, with such detailed textures
+on each unlockable suit that you’d swear they were real, and ray-traced window after ray-traced window in a loving rendition of New York.
+</item 41>
+
+<item 42>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+For the occasion, everyone can bring a different type of wine – from red to white – and give a few sips from each bottle a shot. If you’re someone who’s a big
+fan of wine, you could even end up discovering a brand that becomes your new favourite drink. When hosting the activity, you could make your own charcuterie
+board – filled with different meats and cheeses – to pair with wine.
+
+Playing a football game
+
+If your friends have a fun, competitive side, you can take part in another outdoor activity. You and your friend group can host the event in any big outdoor
+space you’d like, whether it’s a local park or your pal’s backyard.
+
+In addition, football meets the typical theme of Thanksgiving, as a beloved tradition on the actual holiday is to watch a sports game with the family.
+
+Hosting an early holiday gift exchange
+
+Who’s to say that you can’t give your gifts to your friends a bit early this season?
+</item 42>
+
+<item 43>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+The game is utterly devoted to giving the players the feeling of playing a hero in the Marvel universe with tons of cool powers and power categories based on
+key Marvel heroes like Spider-Man and the Hulk. The system is easy, streamlined, and really carries the four-color comic book flavor. Probably one of the
+coolest aspects of the game is that while there is an exhaustive list of Marvel heroes and villains at the back of the book, you can create your own hero with
+their own power set and use that “bestiary” of heroic and villainous figures as allies and enemies in your own heroic adventures. For those of us who’ve always
+wanted to make their own X-Gene Mutant, Spirit of Vengeance, or Spidersona, this is a must-have book that will bring hours of enjoyment.
+
+Masks of the Masks
+
+Superhero comics, for all their many flaws, remain my life’s great passion.
+</item 43>
+
+<item 44>
+The best surprise vampires in things you did not expect to see vampires (Polygon, 2023-11-15T18:02:00+00:00)
+The clever folks behind Spider-Man got around the strict content standards of their network with a loophole that might be even creepier than how vampires
+normally feed: by giving him little suckers on the palms of his hands that drain victims of “plasma.”
+
+Hilariously, a creative application of vampirism would be how the show would later adapt another villain normally too violent for kids TV: Carnage, a serial
+killing symbiote who now “drained” his victims’ “life force” instead of cutting them to bits.
+
+Spider-Man: Across the Spider-Verse: Miguel O’Hara
+
+Miguel O’Hara, the Spider-Man of 2099, is one of Spider-Man: Across the Spider-Verse’s big enigmas. Comics readers will know plenty about his whole deal, but
+the movie doesn’t really explain much — except for a brief scene where he’s shown to have fangs, and an offhand reference that he is kind of a vampire? Sure,
+he’s a jerk, but he’s still kind of cool.
+</item 44>
+
+<item 45>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+Where is it celebrated?
+
+Thanksgiving is one of the the most important cultural holidays in America, however, Canada also has its own Thanksgiving Day, on the second Monday in October,
+and Liberia celebrates Thanksgiving on the first Thursday of November.
+
+What do people eat on Thanksgiving?
+
+In America, turkeys are an integral part of Thanksgiving Day, with most dinners including the bird.
+
+An estimated 46m turkeys are killed annually for the holiday, however, two turkeys are pardoned each year by the president.
+
+But Americans who don’t eat meat or follow a vegan lifestyle don’t have to worry about missing out, as there are numerous vegan and vegetarian Thanksgiving
+options.
+
+Americans also indulge in Thanksgiving favourites such as yams topped with marshmallows, stuffing, cranberry sauce, cornbread, and pumpkin pie.
+</item 45>
+
+<item 46>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feelings of loneliness spike during the holidays, meaning that there’s a good chance you’ll feel even more like Peter Parker when late November rolls
+around.
+
+It’s what makes the Thanksgiving scene in the 2002 Spider-Man film so engaging. That whole movie is an exercise in heart-on-your-sleeve sweetness. Everyone
+who’s seen it knows the Thanksgiving dinner rapidly descends into chaos, with Norman Osborn ominously sticking his fingers into Aunt May’s sweet-potato
+casserole, figuring out Spider-Man’s secret identity, and delivering a grossly sexist diatribe to his son Harry, leaving Harry and Mary Jane at odds with each
+other. Aunt May and Peter clearly wind up with a ton of leftovers after everyone else storms out.
+
+But for Peter, who’s just lost his Uncle Ben and has been facing the initial trials of being Spider-Man, there’s a nice moment of personal respite at the
+opening of that scene, where he walks into a room where he knows he’s loved, bearing an offering of cranberry sauce,.
+</item 46>
+
+<item 47>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+perform in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York The Tom Turkey float is in place to start the parade Reuters
+
+Later, US Presidents including George Washington, John Adams and James Madison called for days of thanks throughout their presidencies.
+
+However, it was not until 1863, during the Civil War, that President Abraham Lincoln declared a national Thanksgiving Day would be held each November to be
+celebrated by all of the country.
+
+When is Thanksgiving?
+
+Thanksgiving takes place each year on the fourth Thursday of November.
+
+This year, Thanksgiving falls on 23 November.
+
+Why do Americans celebrate it and what do they do?
+
+Although Thanksgiving may originally have had religious significance, the day has become a mostly secular holiday.
+
+Most Americans consider the holiday a day to gather and express their thanks through food, family, and football – with multiple NFL teams playing on the
+holiday.
+
+During some Thanksgiving celebrations, people write down what they are thankful for and then read aloud from the pieces of paper.
+</item 47>
+
+<item 48>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+“Those slavering jaws; the lolling tongue; the rime of saliva on the grizzled chops.”
+
+This is Angela Carter, not on Venom, but on the wolf from “Little Red Riding Hood” in The Bloody Chamber, her collection of reimagined folk and fairy tales.
+It’s actually from “The Company of Wolves,” which is one of three retellings of “Little Red Riding Hood” in the collection, each with its own spin on the
+familiar tale.
+
+Polygon Recommends is our way of endorsing our favorite games, movies, TV shows, comics, tabletop books, and entertainment experiences. When we award the
+Polygon Recommends badge, it’s because we believe the recipient is uniquely thought-provoking, entertaining, inventive, or fun — and worth fitting into your
+schedule. If you want curated lists of our favorite media, check out What to Play and What to Watch .
+</item 48>
+
+<item 49>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 49>
+
+<item 50>
+Spider-Man 2 toys with Marvel history to be as much fun as possible (Polygon, 2023-10-16T14:00:00+00:00)
+Next stop: the Bronx.
+
+Marvel’s Spider-Man 2 will be released Oct. 20 on PlayStation 5. The game was reviewed using a pre-release download code provided by Sony Interactive
+Entertainment. Vox Media has affiliate partnerships. These do not influence editorial content, though Vox Media may earn commissions for products purchased via
+affiliate links. You can find additional information about Polygon’s ethics policy here .
+</item 50>
+=== END ITEM id=6cd00aaf248fa22d ===
+
+=== ITEM id=58e4d1c7776f1863 ===
+Gold sentences and facts:
+Sentence 0: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 0.0: The second week of the trial's standout testimony came from Caroline Ellison.
+  Fact 0.1: Caroline Ellison is Alameda Research's former CEO.
+  Fact 0.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 0.3: Caroline Ellison claimed the $14 billion was used to repay debts to lenders.
+  Fact 0.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 0.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 1: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 1.0: The government claimed that Bankman-Fried used Caroline Ellison as a front.
+  Fact 1.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 1.2: Caroline Ellison is the CEO of Alameda.
+  Fact 1.3: The government claimed that Bankman-Fried had 'secret access' to customer money, both cash and crypto.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+I’ve got some shitty ex-boyfriends, but none of them made me the CEO of their sin-eater hedge fund while refusing to give me equity and bragging about how there
+was a 5 percent chance they’d become the president of the United States, you know? Absolutely counting my blessings after Caroline Ellison’s first day on the
+stand. I wonder how many of the nine women on the jury are doing the same.
+
+Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX. She’s already pleaded guilty to criminal charges
+stemming from one of the worst romantic relationships I’ve ever heard of, and her testimony was widely anticipated before the trial. Today, that took the form
+of discussing a damning spreadsheet — one she prepared for her ex and boss Sam Bankman-Fried, now the defendant in a criminal fraud trial.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.) “We ultimately took about $14 billion, some of which we were not able to
+pay back.” She tilted her head down to answer the questions, then lifted her head when she’d finished her answer.
+
+Bankman-Fried called this being “risk-neutral,” which seems like a fancy way of saying he was a gambling addict
+
+In Ellison’s telling, Alameda was troubled from her earliest time there in 2018. “Shortly after I started, I learned the company was in worse shape than I
+realized,” Ellison said. Alameda had initially been funded with loans “from acquaintances,” she said, and those loans were recalled a few weeks after she
+arrived. (There was a staff revolt within Alameda Research over lost millions and general financial chaos, according to Michael Lewis’ Going Infinite.) Ellison
+asked Bankman-Fried why he hadn’t shared the company’s shaky circumstances in the job offer. “He hadn’t known how to tell me,” she said.
+</item 2>
+
+<item 3>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Perhaps you are wondering, was the jury also there? Reader, it was.
+
+Bankman-Fried denied he knew about the effectively infinite line of credit Alameda Research received from FTX. This argument was peculiar; essentially my
+take-away was that the CEO of a financial company simply didn’t pay attention to finances.
+
+FTX couldn’t get bank accounts right away. Bankman-Fried anticipated it would take a year or two. Rather than wait, he decided to use Alameda as the “payment
+provider” for bank transfers. “My understanding at the time was that there were teams managing the process,” he said. “At the time, I wasn’t entirely sure what
+was happening.”
+
+Well, sure, understandable! He’s an introvert!
+
+Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the line” to $1 billion
+
+In 2021, FTX was growing to millions of users, with $1 billion of revenue.
+</item 3>
+
+<item 4>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 4>
+
+<item 5>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said. Besides telling her about his presidential chances, he also told her that
+if there was a coin flip where tails destroyed the world and heads made the world twice as good, he’d flip the coin. He called this being “risk-neutral,” which
+seems like a fancy way of saying he was a gambling addict.
+
+She was named co-CEO of Alameda with Sam Trabucco in 2021, while she and Bankman-Fried were broken up, and CEO in 2022. The goal, Bankman-Fried told her, was to
+“optically” separate Alameda Research and FTX. “The whole time we were dating, he was my boss at work,” she said. They broke up because she wanted more from the
+relationship; Bankman-Fried was distant and not paying enough attention to her.
+</item 7>
+
+<item 8>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 8>
+
+<item 9>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Well, Bankman-Fried remembers it differently. See, Yedidia was just asking about Alameda’s risk profile, and Bankman-Fried wasn’t talking about insolvency at
+all.
+
+Also, when Singh and Bankman-Fried had the dramatic balcony conversation at their penthouse, it was just that Singh thought Alameda’s liabilities had gotten too
+high, and FTX was spending too much money on marketing. But Bankman-Fried still thought that Alameda had more assets than liabilities, so it was all fine, and
+besides, if Singh thought he was going to be better at marketing, he could take it over. It didn’t have anything to do with the money Alameda owed FTX at all.
+
+Of course not! Bankman-Fried didn’t learn about the $8 billion liability associated with Alameda until October 2022, he said. And he learned it all by himself,
+by looking at a computer database. When he found it, he was “very surprised!”
+</item 9>
+
+<item 10>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 10>
+
+<item 11>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Prosecutor Danielle Sassoon had run an effective direct examination, creating an easy-to-follow narrative. By contrast, Cohen appeared to be bumbling around,
+taking up one topic only to abruptly pivot. Sure, we’re still in the prosecution’s case, but Cohen had all night to prepare his lines of questioning.
+
+Apparently, Alameda had a problem with retaining accountants
+
+We established that Bankman-Fried had a much larger appetite for risk than Ellison. I thought perhaps it might be building to something, but this line of
+questioning was quickly dropped. We established that Bankman-Fried and Ellison reacted differently to stress, and that they also had different approaches to
+media: namely, that Ellison avoided it while Bankman-Fried sought it out. Okay?
+
+We discovered that there was one accountant at Alameda in 2021, and two more junior accountants were hired in 2022. Apparently, Alameda had a problem with
+retaining accountants, which didn’t surprise me much; CEOs generally don’t do the balance sheets for their companies.
+</item 11>
+
+<item 12>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 12>
+
+<item 13>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Was it that she should have taken them sooner? What the fuck?
+
+When Sassoon got up for a quick redirect, she demolished any points Cohen had attempted to make. But I didn’t really appreciate her cleverness until after
+Ellison left the stand, and the jurors left the room. She’d managed to set a neat little trap for Cohen.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval
+
+On the direct examination, near the end, Sassoon asked about an Alameda all-hands meeting, without bringing up many specifics. During the cross, Cohen asked
+Ellison what topics were covered in the meeting, while avoiding details. That opened the door for Sasson on redirect to work in that Ellison had confessed to
+stealing billions of FTX customers’ money, at Bankman-Fried’s direction.
+
+There had been an open question of whether jurors would hear the tapes of Ellison’s remarks. The testimony set up an argument for the prosecution to bring in
+those tapes.
+</item 13>
+
+<item 14>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 14>
+
+<item 15>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+The day ended with a document that had been shared between Ellison and Bankman-Fried — with his comments appearing in bubbles along the main text. Ellison wrote
+she was worried about “both actual leverage and presenting on our balance sheet.” Bankman-Fried responded with a note: “Yup, and could also get worse.”
+</item 15>
+
+<item 16>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+That was all done by Bankman-Fried, he testified. In early 2020, Wang said he discovered for the first time Alameda's negative balance exceeded FTX's revenue,
+an indication that Alameda was taking customer funds. Wang said he brought this to Bankman-Fried's attention several times. In late 2021, Wang discovered
+Alameda had withdrawn $3 billion from its $65 billion line of credit. Wang's compensation was a base salary of $200,000 per year plus stock. He owned roughly
+17% of FTX. Even though they were co-founders, "ultimately it was Sam's decision to make" when there were disagreements, he said.
+</item 16>
+
+<item 17>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda got its war chest — 60 percent to 70 percent of the initial supply — for free, while seed investors got FTT at 10 cents a coin, and FTT first listed at
+$1 a coin. Bankman-Fried felt that $1 per coin was psychologically important, Ellison said, and he directed her to buy up FTT using Alameda if its price fell
+below a dollar.
+
+FTT was one of several “Sam coins,” a nickname for tokens that Bankman-Fried was heavily involved in and owned a lot of, either personally or through Alameda.
+Those coins were almost certainly worth less than the value displayed on the balance sheet because trying to sell them all at once would crater the prices.
+Bankman-Fried directed her to put those coins on the balance sheets Alameda showed to lenders, even though she felt it was “somewhat misleading.”
+
+Alameda was also getting loans from outside lenders, such as Genesis, because when FTX started, there weren’t a lot of customer funds to borrow, Ellison
+testified.
+</item 17>
+
+<item 18>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+“He hadn’t known how to tell me,” she said.
+
+Ellison was also, of course, in a more personal relationship with Bankman-Fried. (A juror who’d been asleep for a discussion of the FTT token woke up when she
+started discussing it.) The two started sleeping together in the fall of 2018, on and off. At the time, she was a trader and Bankman-Fried was the CEO. They
+didn’t date until later — twice. Their first relationship stretched from the summer of 2020 through the summer of 2021; they agreed to keep it secret. (Some
+people found out, as they usually do.) The second time, from the fall of 2021 until the spring of 2022, they lived together.
+
+That gave Ellison an unusual view of his character. “He was very ambitious,” she said.
+</item 18>
+
+<item 19>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Then, Nishad Singh, about a month after founding Alameda Research. Finally, Caroline Ellison.
+
+Not having a risk team, when you are any kind of financial anything, is certainly a choice
+
+Though Bankman-Fried was the CEO, and also the majority owner, he wanted to be clear: he did not supervise Wang’s direct work. Anyway, after a bunch of wildly
+successful arbitrage — 50 percent to 100 percent annualized returns, per his testimony — he decided to found a cryptocurrency exchange, FTX. He figured he’d
+fail; that there was only a 20 percent chance of success. Bankman-Fried did not define what he expected the time period to be on this estimate, but arguably 20
+percent was a much higher chance of success than FTX would enjoy once Alameda dipped into the customer deposits.
+
+By the way, because he was such a good guy, Bankman-Fried made a point of “periodically” handling support tickets himself.
+</item 19>
+
+<item 20>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+The one Wang said Alameda took to keep off FTX’s balance sheet? Yeah, so it was a totally innocent thing where what actually happened was that Bankman-Fried
+thought it was appropriate that Alameda take the position as a backstop liquidity provider, that’s all.
+
+In June 2022, Bankman-Fried heard about the account called “fiat@ftx” tracking how much money Alameda owed to FTX, he testified. He did not know what it was and
+did not bother to find out. He was busy! That was when Bankman-Fried directed Ellison to repay Alameda’s lenders, because he thought Alameda was good for it. He
+also gave BlockFi and Voyager, two crypto lenders, some capital infusions for good measure.
+
+He was “very surprised!”
+
+Remember that testimony Adam Yedidia gave about a conversation with Bankman-Fried in August 2022 about the enormous amount of money Alameda owed FTX? Well,
+Bankman-Fried remembers it differently.
+</item 20>
+
+<item 21>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+That was the basis of the worst of her testimony — and the spreadsheet from hell.
+
+Ellison said she’d prepared the spreadsheet at Bankman-Fried’s request in the fall of 2021 and shared it with him. The point was risk analysis around paying
+back Alameda’s loans if they were abruptly recalled by Genesis, their lender. Bankman-Fried wanted to use $3 billion for venture investments, so Ellison was
+ballparking what that would do to Alameda’s risk. In the as-is scenario, if things went south, she figured there was a 30 percent chance they wouldn’t be able
+to meet the loan recalls. If Bankman-Fried used $3 billion to make investments, there was a 100 percent chance they couldn’t meet the recalls, even with FTX
+customer funds.
+
+Echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length
+
+The problem here wasn’t really the math, which seemed pretty arbitrary.
+</item 21>
+
+<item 22>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 22>
+
+<item 23>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I was ready to hear this pursued further — but then it, too, was dropped.
+
+I think the defense was also trying to suggest that the government had coerced Ellison’s testimony, by suggesting that she had pleaded guilty to a charge of
+defrauding investors that she couldn’t have been involved in. After all, she didn’t prepare materials for them. Unfortunately, she did say that she had
+conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine. This
+line of questioning felt like a waste of time.
+
+There were rather a lot of sidebars during the cross-examination, to the point that when one occurred, several jurors looked entertained. There were a few
+yesterday, too, including one in which the prosecution complained that Bankman-Fried was visibly scoffing at Ellison’s answers, according to the court
+transcript.
+</item 23>
+
+<item 24>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 24>
+
+<item 25>
+Sam Bankman-Fried didn’t ask where the $8 billion went (The Verge, 2023-10-31T19:52:07+00:00)
+Instead, Bankman-Fried directed alleged co-conspirator Caroline Ellison to repay third-party loans and went on making investments.
+
+Bankman-Fried said that he found out about the fiat@ftx account — that’s the one that tracked how much Alameda owed FTX — in June 2022 while his senior staff
+was focused on fixing the software bug. He did not, however, discover what the account was for until October. I know this sounds unbelievable, but this is his
+actual testimony.
+
+His employees told him “they were busy and I should stop asking questions because it was distracting.”
+
+Simple questions nailed Bankman-Fried to the wall. Had he given his employees at Alameda the direction not to spend FTX customer deposits? Had he put in any
+policies to prevent Alameda employees from spending FTX customer money? Did he put in place any measures at Alameda to protect the FTX customer money? No, no,
+and no. Oh, but he was testifying to Congress about keeping customer funds safe.
+</item 25>
+
+<item 26>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 26>
+
+<item 27>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+The political donations gave Bankman-Fried influence in the highest echelons of power. Ellison testified to Bankman-Fried’s venture investments, which gave him
+more dominance in the tech world. At every turn, the scams at FTX and Alameda led back to making Bankman-Fried more important.
+
+The pie chart that accompanied expert witness Peter Easton’s testimony. Image: The prosecution’s exhibit 1045
+
+This was backed up by expert testimony from Notre Dame accounting professor Peter Easton, who’d also assisted in investigating Enron and WorldCom. In a pie
+chart that showed how he’d traced funds for the $11.3 billion liability that Ellison, Singh, Wang, and Bankman-Fried had known about in June 2022, we saw that
+$1.2 billion was a loan repayment to crypto lender Genesis.
+</item 27>
+
+<item 28>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Sam Bankman-Fried, the founder of bankrupt cryptocurrency exchange FTX, is seen during a hearing as a U.S judge revoked his bail, at a courthouse in New York,
+U.S., August 11, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+$65 billion line of credit
+
+For months, Bankman-Fried has known that Wang and Ellison, who were integral members of his personal and professional inner circles, had turned on him. Both
+pleaded guilty in December and have since been cooperating with the U.S. attorney's office in Manhattan. Wang's testimony, which stretched into Friday, was
+given under a cooperation agreement with the government. Ellison is expected to take the stand under a similar arrangement.
+
+U.S.
+</item 28>
+
+<item 29>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Ellison is expected to take the stand under a similar arrangement.
+
+U.S. District Judge Lewis Kaplan presides as Gary Wang testifies during the fraud trial of Sam Bankman-Fried over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+Born in China, Wang moved to the U.S. at age 7, and grew up in Minnesota before going to the Massachusetts Institute of Technology to study math and computer
+science. He worked at Google after college. Wang, who first met Bankman-Fried during high school at a summer camp, owned 10% of Alameda, while his boss owned
+the other 90%. Wang told the court about the advantages that Alameda received by having code baked into FTX's software that allowed special access to the crypto
+exchange.
+</item 29>
+
+<item 30>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 30>
+=== END ITEM id=58e4d1c7776f1863 ===

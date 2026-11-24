@@ -1,0 +1,53 @@
+[
+  {"id": "55373c35939bbe9a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 39, "quote": "If the debt continues to rise more than the economy, risks will increase"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 39, "quote": "If the debt continues to rise more than the economy, risks will increase"},
+      {"item": 39, "quote": "the government may “crowd out” private investment"}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 39, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 46, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%"},
+      {"item": 46, "quote": "President Ferdinand Marcos, Jr."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 46, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%"},
+      {"item": 46, "quote": "and that’s a little high for us and it is not ideal"},
+      {"item": 46, "quote": "President Ferdinand Marcos, Jr."}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 46, "quote": "President Ferdinand Marcos, Jr."},
+      {"item": 48, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}
+    ]},
+    {"fact": "1.3", "status": "stated", "evidence": [
+      {"item": 48, "quote": "(ABS-CBN, Aug. 9, 2023)"}
+    ]}
+  ]},
+  {"id": "25c3c6b89821beaa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 8, "quote": "Harbaugh reportedly watched the game from the team hotel"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 8, "quote": "and now the leading piece of drama returns"}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 41, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 41, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday"}
+    ]},
+    {"fact": "1.2", "status": "stated", "evidence": [
+      {"item": 41, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}
+    ]},
+    {"fact": "1.3", "status": "stated", "evidence": [
+      {"item": 41, "quote": "and although Michigan had hoped to block the suspension"}
+    ]},
+    {"fact": "1.4", "status": "stated", "evidence": [
+      {"item": 41, "quote": "the Wolverines will be without their coach on the sidelines in Happy Valley"}
+    ]}
+  ]}
+]

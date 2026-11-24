@@ -1,0 +1,27 @@
+[
+{"id": "3aea671cf6ee2103", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "OFFICIAL: Jim Harbaugh suspended for the remaining three regular season games."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 34, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 34, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 44, "quote": "It would be Harbaugh's second suspension of the season"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 44, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 44, "quote": "self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 44, "quote": "an NCAA investigation that found Harbaugh lied to investigators"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 29, "quote": "Harbaugh reportedly watched the game from the team hotel"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 29, "quote": "and now the leading piece of drama returns"}]}
+]},
+{"id": "d9806a7b8e170ede", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "In the long term, scientists also point to a number of recent developments"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Health coach Susan Saunders found herself “parenting” her mother"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "while her own daughters were babies"}]}
+]},
+{"id": "729a01c7cda55865", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

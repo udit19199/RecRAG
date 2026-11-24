@@ -1,0 +1,38 @@
+[
+  {"id": "cab3112e4fe4b7d8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 21, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 21, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 21, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 21, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room."}]}
+  ]},
+  {"id": "2bed94e69e3884a9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 42, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 42, "quote": "Moving any of Woo, Miller or Hancock could be more appealing"}, {"item": 42, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 45, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 45, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 45, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 45, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}]}
+  ]},
+  {"id": "0ac273e76bebbbc4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 18, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 18, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}, {"item": 18, "quote": "President Ferdinand Marcos, Jr."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 4, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+  ]},
+  {"id": "3eeb4b30395fece3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 12, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

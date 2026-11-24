@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1c0f2ec120aa7996",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 24, "quote": "While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 24, "quote": "While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 24, "quote": "While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+    ]
+  },
+  {
+    "id": "b4f478073d6c2aba",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 28, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 41, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 41, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+    ]
+  },
+  {
+    "id": "a910ee457968de03",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+    ]
+  }
+]

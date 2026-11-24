@@ -1,0 +1,20 @@
+[
+{"id": "af3534e79f45b767", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "His 31-yard field goal is good"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "the Buffs take the first lead of the game on their first drive."}]}
+]},
+{"id": "6a0855383e3b2836", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "397d5e99330d86b9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 25, "quote": "Ketamine is primarily used as an anesthetic during surgical procedures"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 25, "quote": "in recent years it's been used as a remedy for treatment-resistant depression"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]}
+]}
+]

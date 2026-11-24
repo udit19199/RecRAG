@@ -1,0 +1,26 @@
+[
+{"id": "18bcfce28d32a7d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 27, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 27, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+]},
+{"id": "f2bde719374f7208", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 44, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 44, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 44, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 30, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 30, "quote": "he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium"}, {"item": 30, "quote": "an invitation she famously accepted on 24 September."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "151c95191d2c2f54", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+]}
+]

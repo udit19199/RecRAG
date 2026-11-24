@@ -45,7 +45,17 @@ reuse_verdicts = json.loads((folder / "verdict-reuse.json").read_text()) if (fol
 
 new: dict[str, JudgeTask] = {}
 links = []
+# B4_rev and B4_shuf give the answer model B4's exact 50 passages in another
+# order; gold facts found depend only on which text was given, so they take B4's
+# verdicts (runs/judge_paper/slide_data.py) and get no tasks of their own.
+SAME_TEXT_AS = {"B4_rev": "B4", "B4_shuf": "B4"}
+# B4 items hold 20-50 passages; files of about 120,000 characters (24 Nov) keep
+# the file count down. Same guide and task per item; only how many items share
+# a file changes.
+SIZE = 120000 if any(l.startswith("B4") for l in runs) else 60000
 for label, reps in runs.items():
+    if label in SAME_TEXT_AS:
+        continue
     for rep, dirs in reps.items():
         for run_dir in dirs:
             for saved in load_run(Path(run_dir)):
@@ -74,7 +84,7 @@ random.Random(20261121).shuffle(tasks)
 numbered = [int(p.stem.split("-")[1]) for p in folder.glob("items-*.json") if p.stem.split("-")[1].isdigit()]
 first = 1 + max(numbered, default=-1)
 if tasks:
-    _write_judge_batches(folder, tasks, 60000, first)
+    _write_judge_batches(folder, tasks, SIZE, first)
 links_path.write_text("".join(l + "\n" for l in old_links) + "".join(json.dumps(l) + "\n" for l in links))
 last = max([int(p.stem.split("-")[1]) for p in folder.glob("items-*.json") if p.stem.split("-")[1].isdigit()], default=-1)
 print(f"{len(links)} new (run, question) pairs; {len(reuse_items)} tasks reuse an earlier verdict; "

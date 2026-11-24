@@ -74,7 +74,8 @@ for m, reps in REG.items():
                         rows[r["record_id"]] = r
             out["n"].append(len(rows))
             out["right"].append(100 * sum(map(right, rows.values())) / len(rows))
-            sh = facts.get((m, rep, qt), {})
+            # B4_rev / B4_shuf: B4's exact passages reordered, so B4's gold facts.
+            sh = facts.get(({"B4_rev": "B4", "B4_shuf": "B4"}.get(m, m), rep, qt), {})
             for k, t in (("f50", 0.5), ("f75", 0.75), ("f100", 1.0)):
                 out[k].append(100 * sum(s >= t - 1e-9 for s in sh.values()) / len(sh) if sh else None)
             out.setdefault("facts_n", []).append(len(sh))

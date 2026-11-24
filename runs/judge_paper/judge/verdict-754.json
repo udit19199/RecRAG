@@ -1,0 +1,27 @@
+[
+  {"id": "7a962ffbd717f385", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "with the Director-General of the National Economic and Development Authority"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of"}, {"item": 1, "quote": "the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "The present Board of Trustees of the Fund"}, {"item": 1, "quote": "shall also constitute the proposed Board of Trustees of the PhilEd."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 14, "quote": "which will reduce the company’s board to five directors."}]}
+  ]},
+  {"id": "a468387f4beaa865", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "412c7f0998a9286b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 2, "quote": "instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}, {"item": 6, "quote": "and was told he didn't want investors as directors"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}, {"item": 6, "quote": "but he did plan on having a board with experts."}]}
+  ]}
+]

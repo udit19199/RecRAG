@@ -1,0 +1,141 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "305d1f4212cdf203",
+   "kind": "answer",
+   "question": "Does 'The New York Times' article suggest that Connor Bedard has the potential to dominate in the NHL due to his performance in junior hockey, while the 'Yardbarker' article credits Dean Evason with developing several players into NHL stalwarts, indicating a difference in the factors contributing to NHL success?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "0cb41f09dabfa3ac",
+   "kind": "answer",
+   "question": "Does the article from The Guardian suggest that Britney Spears had less control over her privacy at the age of 16 compared to the control over privacy that the BBC News - Entertainment & Arts article implies Taylor Swift has over her personal experiences?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "3bb032d252c68bdb",
+   "kind": "answer",
+   "question": "After TechCrunch reported on Google's annual hardware event on October 7, 2023, and then on Google's expenditure to be the default search engine on various platforms on November 13, 2023, did TechCrunch's subsequent report on December 15, 2023, regarding a class action antitrust suit against Google indicate a consistent or inconsistent portrayal of Google's business practices?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "2f76ed935b3baf04",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay offered a price-matching policy."
+  },
+  {
+   "id": "862dbbc80802a117",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay offered price matching for qualifying items."
+  },
+  {
+   "id": "892be35502b04a18",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralizing high-performance programs, but the QRU wants to retain its commercial and corporate independence."
+  },
+  {
+   "id": "241c412c011eb1c4",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: past defeats to Argentina versus gameplay struggles in the World Cup final."
+  },
+  {
+   "id": "59bd1af99dbbf59e",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay continued to offer its price-match guarantee."
+  },
+  {
+   "id": "ead258daf8b5fa2b",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: preparation for Argentina versus gameplay struggles in the final."
+  },
+  {
+   "id": "c923b0a002ed091d",
+   "kind": "answer",
+   "question": "Does the Cnbc | World Business News Leader article suggest that Sam Bankman-Fried had a different approach to the composition of FTX's board compared to the TechCrunch articles' portrayal of his actions regarding the misuse of customer funds and committing fraud for personal gain?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "4abf83faf301f029",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both implicate Bankman-Fried; TechCrunch explicitly says Ellison acted under his instruction."
+  },
+  {
+   "id": "be6e5169b39c4c1a",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both portray the All Blacks as facing gameplay challenges, in different situations."
+  },
+  {
+   "id": "356d9816b8e812be",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages or versions of the Gemini project."
+  },
+  {
+   "id": "31e483df02c1df61",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there a change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from Apple defending Google as the best available search engine to allegations that Google’s practices harmed competition and reinforced market dominance."
+  },
+  {
+   "id": "ee92b7c1a245ad91",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from broad influence over how the internet appears to specific alleged harms to publishers’ traffic and revenue."
+  }
+ ],
+ "evidence": []
+}

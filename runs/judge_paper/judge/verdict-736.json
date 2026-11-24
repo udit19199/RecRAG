@@ -1,0 +1,26 @@
+[
+{"id": "e18089a2456368ce", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 11, "quote": "His career has only blossomed in the years since he took that trip"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 11, "quote": "some artists might feel trepidation at the attainment of so much success from such an early age"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 11, "quote": "Mitchell is clear-eyed"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 42, "quote": "Since then he’s been linked to club jobs in Europe"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 42, "quote": "opted to stick around with the national team"}]}
+]},
+{"id": "b7e095745bf95c88", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 24, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 24, "quote": "as the Springboks play for their country"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 24, "quote": "the generation of players and leaders that will call time on their international careers at week’s end"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "The Springboks took a 12-3 lead after 34 minutes"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 12, "quote": "The Springboks took a 12-3 lead after 34 minutes"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 12, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 19, "quote": "The All Blacks are 18-point favourites for the opening semi-final."}, {"item": 19, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 19, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 19, "quote": "as well as a maiden defeat in 2020 in Sydney"}]}
+]},
+{"id": "b5028a60b4323c71", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

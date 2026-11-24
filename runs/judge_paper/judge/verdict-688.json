@@ -1,0 +1,28 @@
+[
+  {"id": "c80de76a9cf5cd98", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 19, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]}
+  ]},
+  {"id": "1283a6666e432de8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "That answer ultimately lies with the jury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 18, "quote": "the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 18, "quote": "the jury, which was selected on Wednesday morning before lawyers for the government"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 18, "quote": "then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 17, "quote": "according to Mark Cohen, one of his lawyers."}, {"item": 17, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}, {"item": 18, "quote": "Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX?"}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "758e0b0d8002669d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+  ]}
+]

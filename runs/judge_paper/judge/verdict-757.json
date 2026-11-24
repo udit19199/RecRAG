@@ -1,0 +1,18 @@
+[
+  {"id": "858ad905cfce290b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 34, "quote": "a straight shootout between Oldham-born Ratcliffe"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 22, "quote": "With United out of Europe"}, {"item": 44, "quote": "they find themselves out of Europe altogether"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 22, "quote": "Manchester United should not be performing like this on what is supposed to be the classic European night at Old Trafford."}, {"item": 22, "quote": "It was another utterly forgettable display."}, {"item": 44, "quote": "There was nothing much at all. Where was the energy?"}, {"item": 36, "quote": "this 1-0 defeat to Bayern Munich"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "Bayern made it 1-0 in Manchester. Kingsley Coman got it"}, {"item": 36, "quote": "Another infamous European night at Old Trafford."}]},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "61310c35ebde5521", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 48, "quote": "Ketamine is primarily used as an anesthetic during surgical procedures"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 48, "quote": "in recent years it's been used as a remedy for treatment-resistant depression"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]}
+  ]}
+]

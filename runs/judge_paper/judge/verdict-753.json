@@ -1,0 +1,35 @@
+[
+{"id": "b38f9227b3277315", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 11, "quote": "is on trial for seven counts of wire fraud and conspiracy"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 14, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 31, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 31, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 31, "quote": "never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 31, "quote": "basically got in over his head"}]}
+]},
+{"id": "bdaa268e085a981a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 39, "quote": "The company did accomplish that goal"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 39, "quote": "but in doing so, it inadvertently and profoundly changed how the internet looked"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 39, "quote": "but in doing so, it inadvertently and profoundly changed how the internet looked"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 1, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 1, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]},
+{"id": "b3af8e585c3715a1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "seven counts of fraud and conspiracy"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 13, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 13, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,26 @@
+[
+  {"id": "3f30bd99f092bf4f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 48, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 48, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 48, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 18, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 18, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 49, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 49, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 49, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]},
+  {"id": "66caee1a3cd241f1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 20, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 20, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "With the recent release of Marvel’s Spider-Man 2, Insomniac has witnessed a huge appreciation from fans for delivering a memorable sequel."}, {"item": 14, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+  ]},
+  {"id": "99168412e67531b1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

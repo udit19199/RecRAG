@@ -1,0 +1,19 @@
+[
+{"id": "3f536bbf8a507d2a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "6e672d0f95391c7a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 36, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 36, "quote": "He also believes that after everything on social media becomes so perfectly curated for us"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 31, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+]}
+]

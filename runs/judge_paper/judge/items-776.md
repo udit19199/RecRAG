@@ -1,0 +1,1663 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=5caa54d8409692d1 ===
+Gold sentences and facts:
+Sentence 0: DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year.
+  Fact 0.0: DeepMind is Google's premier AI research lab.
+  Fact 0.1: DeepMind is expected to debut a next-gen chatbot called Gemini.
+  Fact 0.2: The Gemini chatbot debut is expected before the end of the year.
+Sentence 1: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 1.0: DeepMind did not release the full model, Gemini Ultra.
+  Fact 1.1: DeepMind released only a "lite" version called Gemini Pro.
+
+Retrieved items:
+<item 1>
+One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)
+An MIT study showed that, for tasks like writing cover letters, “delicate” emails and cost-benefit analyses, ChatGPT decreased the amount of time it took
+workers to complete the tasks by 40% while increasing output quality by 18%, as measured by third-party evaluators.
+
+“Because [the AI models powering OpenAI] have been trained extensively on vast amounts of data,” Shang added, “they [have] shifted focus from training
+specialized chatbots for specific domains to creating more general-purpose systems that can handle a variety of topics easily through prompting with
+instructions … [Chatbots like ChatGPT] don’t require users to learn any new form of language, as long as they provide a task and some desired output just like
+how a manager would communicate to an intern.”
+
+Now, there’s mixed evidence as to whether ChatGPT is actually being used in these ways.
+</item 1>
+
+<item 2>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Beyond GPT-4 and OpenAI DevDay announcements, OpenAI recently connected ChatGPT to the internet for all users. And with the integration of DALL-E 3, users are
+also able to generate both text prompts and images right in ChatGPT.
+
+Here’s a timeline of ChatGPT product updates and releases, starting with the latest, which we’ve been updating throughout the year. And if you have any other
+questions, check out our ChatGPT FAQ here.
+
+Timeline of the most recent ChatGPT updates
+
+December 2023
+
+OpenAI re-opens ChatGPT Plus subscriptions
+
+After pausing ChatGPT Plus subscriptions in November due to a “surge of usage,” OpenAI CEO Sam Altman announced they have once again enabled sign-ups. The Plus
+subscription includes access to GPT-4 and GPT-4 Turbo.
+
+we have re-enabled chatgpt plus subscriptions! 🎄 thanks for your patience while we found more gpus.
+</item 2>
+
+<item 3>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+A person can also specify their family size, so the text-generating AI can give responses about meals, grocery and vacation planning accordingly.
+
+The FTC is reportedly investigating OpenAI
+
+The FTC is reportedly in at least the exploratory phase of investigation over whether OpenAI’s flagship ChatGPT conversational AI made “false, misleading,
+disparaging or harmful” statements about people.
+
+TechCrunch Reporter Devin Coldewey reports:
+
+This kind of investigation doesn’t just appear out of thin air — the FTC doesn’t look around and say “That looks suspicious.” Generally a lawsuit or formal
+complaint is brought to their attention and the practices described by it imply that regulations are being ignored. For example, a person may sue a supplement
+company because the pills made them sick, and the FTC will launch an investigation on the back of that because there’s evidence the company lied about the side
+effects.
+
+OpenAI announced the general availability of GPT-4
+
+Starting July 6, all existing OpenAI developers “with a history of successful payments” can access GPT-4.
+</item 3>
+
+<item 4>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+The announcement spurred a 10x increase in new downloads for Bing globally, indicating a sizable consumer demand for new AI experiences.
+
+Other companies beyond Microsoft joined in on the AI craze by implementing ChatGPT, including OkCupid, Kaito, Snapchat and Discord — putting the pressure on Big
+Tech’s AI initiatives, like Google.
+
+OpenAI launches ChatGPT Plus, starting at $20 per month
+
+After ChatGPT took the internet by storm, OpenAI launched a new pilot subscription plan for ChatGPT called ChatGPT Plus, aiming to monetize the technology
+starting at $20 per month. A month prior, OpenAI posted a waitlist for “ChatGPT Professional” as the company began to think about monetizing the chatbot.
+
+January 2023
+
+OpenAI teases ChatGPT Professional
+
+OpenAI said that it’s “starting to think about how to monetize ChatGPT” in an announcement on the company’s official Discord server.
+</item 4>
+
+<item 5>
+How OpenAI's ChatGPT has changed the world in just a year (Engadget, 2023-11-30T14:00:50+00:00)
+With the November 30, 2022 release of GPT-3.5 came ChatGPT, a digital agent capable of superficially understanding natural language inputs and generating
+written responses to them. Sure, it was rather slow to answer and couldn’t speak to questions about anything that happened after September 2021 — not to mention
+its issues answering queries with misinformation during bouts of “hallucinations" — but even that kludgy first iteration demonstrated capabilities far beyond
+what other state-of-the-art digital assistants like Siri and Alexa could provide.
+
+ChatGPT’s release timing couldn’t have been better. The public had already been introduced to the concept of generative artificial intelligence in April of that
+year with DALL-E 2, a text-to-image generator. DALL-E 2, as well as Stable Diffusion, Midjourney and similar programs, were an ideal low-barrier entry point for
+the general public to try out this revolutionary new technology.
+</item 5>
+
+<item 6>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+ChatGPT: Everything you need to know about the AI-powered chatbot
+
+ChatGPT, OpenAI’s text-generating AI chatbot, has taken the world by storm. What started as a tool to hyper-charge productivity through writing essays and code
+with short text prompts has evolved into a behemoth used by more than 92% of Fortune 500 companies for more wide-ranging needs. And that growth has propelled
+OpenAI itself into becoming one of the most-hyped companies in recent memory, even if CEO and co-founder Sam Altman’s firing and swift return raised concerns
+about its direction and opened the door for competitors.
+
+What does that mean for OpenAI, ChatGPT and its other ambitions? The fallout is still settling, but it might empower competitors like Meta and its LLaMA family
+of large language models, or help other AI startups get attention and funding as the industry watches OpenAI implode and put itself back together.
+</item 6>
+
+<item 7>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+For example, having the model always respond in a given language. Or improving the model’s ability to consistently format responses, as well as hone the “feel”
+of the model’s output, like its tone, so that it better fits a brand or voice. Most notably, fine-tuning enables OpenAI customers to shorten text prompts to
+speed up API calls and cut costs.
+
+OpenAI is partnering with Scale AI to allow companies to fine-tune GPT-3.5. However, it is unclear whether OpenAI is developing an in-house tuning tool that is
+meant to complement platforms like Scale AI or serve a different purpose altogether.
+</item 7>
+
+<item 8>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+pic.twitter.com/RKjmkEw2Qr — Filip Piekniewski🌻 🐘:@filippie509@techhub.social (@filippie509) December 6, 2023
+
+And these:
+
+Trying out Gemini Pro: it is pretty disappointing for my example. I asked it to make an analog clock using HTML like this one that ChatGPT made. It can cite
+some code from Github but it's off by a few ms… pic.twitter.com/neb42Vzm3m — Mohsen Azimi (@mohsen____) December 7, 2023
+
+GPT 4 still greater than Gemini Pro. Created Tic Tac Toe game with ChatGPT and Bard(Running on Gemini Pro) See video for the result. ChatGPT wrote the code on
+first try(First Video). Bard on 3 tries(Second Video).
+</item 8>
+
+<item 9>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+China requires AI apps to obtain an administrative license
+
+Multiple generative AI apps have been removed from Apple’s China App Store ahead of the country’s latest generative AI regulations that are set to take effect
+August 15.
+
+“As you may know, the government has been tightening regulations associated with deep synthesis technologies (DST) and generative AI services, including
+ChatGPT. DST must fulfill permitting requirements to operate in China, including securing a license from the Ministry of Industry and Information Technology
+(MIIT),” Apple said in a letter to OpenCat, a native ChatGPT client. “Based on our review, your app is associated with ChatGPT, which does not have requisite
+permits to operate in China.”
+
+July 2023
+
+ChatGPT for Android is now available in the US, India, Bangladesh and Brazil
+
+A few days after putting up a preorder page on Google Play, OpenAI has flipped the switch and released ChatGPT for Android. The app is now live in a handful of
+countries.
+</item 9>
+
+<item 10>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Researchers discover a way to make ChatGPT consistently toxic
+
+A study co-authored by scientists at the Allen Institute for AI shows that assigning ChatGPT a “persona” — for example, “a bad person,” “a horrible person” or
+“a nasty person” — through the ChatGPT API increases its toxicity sixfold. Even more concerning, the co-authors found having the conversational AI chatbot pose
+as certain historical figures, gendered people and members of political parties also increased its toxicity — with journalists, men and Republicans in
+particular causing the machine learning model to say more offensive things than it normally would.
+
+The research was conducted using the latest version, but not the model currently in preview based on OpenAI’s GPT-4.
+
+Y Combinator-backed startups are trying to build ‘ChatGPT for X’
+
+YC Demo Day’s Winter 2023 batch features no fewer than four startups that claim to be building “ChatGPT for X.”
+</item 10>
+
+<item 11>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+In its privacy policy, the ChatGPT maker makes a passing acknowledgement of the objection requirements attached to relying on “legitimate interest” (LI),
+pointing users towards more information about requesting an opt out — when it writes: “See here for instructions on how you can opt out of our use of your
+information to train our models.”
+
+What controversies have surrounded ChatGPT?
+
+Recently, Discord announced that it had integrated OpenAI’s technology into its bot named Clyde where two users tricked Clyde into providing them with
+instructions for making the illegal drug methamphetamine (meth) and the incendiary mixture napalm.
+
+An Australian mayor has publicly announced he may sue OpenAI for defamation due to ChatGPT’s false claims that he had served time in prison for bribery. This
+would be the first defamation lawsuit against the text-generating service.
+
+CNET found itself in the midst of controversy after Futurism reported the publication was publishing articles under a mysterious byline completely generated by
+AI.
+</item 11>
+
+<item 12>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+Bard on 3 tries(Second Video). pic.twitter.com/cYd9hepcgT — Edison Ade (@buzzedison) December 6, 2023
+
+Just tested Google's Bard with Gemini Pro update. No bugless snake game on 1st try; reported, asked to fix—couldn't. Tried ChatGPT 3.5 free version, got correct
+bug-free code on the first attempt! 🚀🐍 #ChatGPT #Bard #Gemini pic.twitter.com/WQfilgG21D — N KIRAN KUMAR (@NKIRANKUMARS1) December 6, 2023
+
+And, as with all generative AI models, Gemini Pro isn’t immune to “jailbreaks” — i.e. prompts that get around the safety filters in place to attempt to prevent
+it from discussing controversial topics.
+</item 12>
+
+<item 13>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+What does GPT mean in ChatGPT?
+
+GPT stands for Generative Pre-Trained Transformer.
+
+What’s the difference between ChatGPT and Bard?
+
+Much like OpenAI’s ChatGPT, Bard is a chatbot that will answer questions in natural language. Google announced at its 2023 I/O event that it will soon be adding
+multimodal content to Bard, meaning that it can deliver answers in more than just text, responses can give you rich visuals as well. Rich visuals mean pictures
+for now, but later can include maps, charts and other items.
+
+ChatGPT’s generative AI has had a longer lifespan and thus has been “learning” for a longer period of time than Bard.
+
+What is the difference between ChatGPT and a chatbot?
+
+A chatbot can be any software/system that holds dialogue with you/a person but doesn’t necessarily have to be AI-powered. For example, there are chatbots that
+are rules-based in the sense that they’ll give canned responses to questions.
+</item 13>
+
+<item 14>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Browsing is available on both the iOS and Android ChatGPT apps.
+
+Mercedes is adding ChatGPT to its infotainment system
+
+U.S. owners of Mercedes models that use MBUX will be able to opt into a beta program starting June 16 activating the ChatGPT functionality. This will enable the
+highly versatile large language model to augment the car’s conversation skills. You can join up simply by telling your car “Hey Mercedes, I want to join the
+beta program.”
+
+It’s not really clear what for, though.
+
+ChatGPT app is now available on iPad, adds support for Siri and Shortcuts
+
+The new ChatGPT app version brings native iPad support to the app, as well as support for using the chatbot with Siri and Shortcuts. Drag and drop is also now
+available, allowing users to drag individual messages from ChatGPT into other apps.
+
+On iPad, ChatGPT now runs in full-screen mode, optimized for the tablet’s interface.
+</item 14>
+
+<item 15>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+This week, Google took the wraps off of Gemini, its new flagship generative AI model meant to power a range of products and services including Bard, Google’s
+ChatGPT competitor. In blog posts and press materials, Google touted Gemini’s superior architecture and capabilities, claiming that the model meets or exceeds
+the performance of other leading gen AI models like OpenAI’s GPT-4.
+
+But the anecdotal evidence suggests otherwise.
+
+A “lite” version of Gemini, Gemini Pro, began rolling out to Bard yesterday, and it didn’t take long before users began voicing their frustrations with it on X
+(formerly Twitter).
+
+The model fails to get basic facts right, like 2023 Oscar winners:
+
+I'm extremely disappointed with Gemini Pro on Bard. It still give very, very bad results to questions that shouldn't be hard anymore with RAG. A simple question
+like this with a simple answer like this, and it still got it WRONG.
+</item 15>
+
+<item 16>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+prompts that get around the safety filters in place to attempt to prevent it from discussing controversial topics.
+
+Using an automated method to algorithmically change the context of prompts until Gemini Pro’s guardrails failed, AI security researchers at Robust Intelligence,
+a startup selling model-auditing tools, managed to get Gemini Pro to suggest ways to steal from a charity and assassinate a high-profile individual (albeit with
+“nanobots” — admittedly not the most realistic weapon of choice).
+
+Now, Gemini Pro isn’t the most capable version of Gemini — that model, Gemini Ultra, is set to launch sometime next year in Bard and other products. Google
+compared the performance of Gemini Pro to GPT-4’s predecessor, GPT-3.5, a model that’s around a year old.
+
+But Google nevertheless promised improvements in reasoning, planning and understanding with Gemini Pro over the previous model powering Bard, claiming Gemini
+Pro was better at summarizing content, brainstorming and writing. Clearly, it has some work to do in those departments.
+</item 16>
+
+<item 17>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+A simple question like this with a simple answer like this, and it still got it WRONG. pic.twitter.com/5GowXtscRU — Vitor de Lucca 🏳️‍🌈 /
+threads.net/@vitor_dlucca (@vitor_dlucca) December 7, 2023
+
+Note that Gemini Pro claims incorrectly that Brendan Gleeson won Best Actor last year, not Brendan Fraser — the actual winner.
+
+I tried asking the model the same question and, bizarrely, it gave a different wrong answer:
+
+“Navalny,” not “All the Beauty and the Bloodshed,” won Best Documentary Feature last year; “All Quiet on the Western Front” won Best International Film; “Women
+Talking” won Best Adapted Screenplay; and “Pinocchio” won Best Animated Feature Film. That’s a lot of mistakes.
+
+Science fiction author Charlie Stross found many more examples of confabulation in a recent blog post.
+</item 17>
+
+<item 18>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Released March 14, GPT-4 is available for paying ChatGPT Plus users and through a public API. Developers can sign up on a waitlist to access the API.
+
+ChatGPT is available in Azure OpenAI service
+
+ChatGPT is generally available through the Azure OpenAI Service, Microsoft’s fully managed, corporate-focused offering. Customers, who must already be
+“Microsoft managed customers and partners,” can apply here for special access.
+
+OpenAI launches an API for ChatGPT
+
+OpenAI makes another move toward monetization by launching a paid API for ChatGPT. Instacart, Snap (Snapchat’s parent company) and Quizlet are among its initial
+customers.
+
+February 2023
+
+Microsoft launches the new Bing, with ChatGPT built in
+
+At a press event in Redmond, Washington, Microsoft announced its long-rumored integration of OpenAI’s GPT-4 model into Bing, providing a ChatGPT-like experience
+within the search engine.
+</item 18>
+
+<item 19>
+One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)
+Countless other ChatGPT rivals and derivatives have arrived to market since, most recently Amazon Q, a more business-oriented take on ChatGPT. DeepMind,
+Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year.
+
+Stella Biderman, an AI researcher at Booz Allen Hamilton and the open research group EleutherAI, told me that she doesn’t see ChatGPT as an AI breakthrough per
+se. (OpenAI, which has released dozens of research papers on its models, tellingly never released one on ChatGPT.) But, she says, ChatGPT was a bonafide “user
+experience breakthrough” — taking generative AI mainstream.
+
+“The primary impact [ChatGPT] has had [is] encouraging people training AIs to try to mimic it, or encouraging people studying AIs to use it as their central
+object of study,” Biderman said.
+</item 19>
+
+<item 20>
+One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)
+A Pew Research survey from August showed that only 18% of Americans have ever tried ChatGPT, and that most who’ve tried it use the chatbot for entertainment
+purposes or answering one-off questions. Teens might not be using ChatGPT all that often, either (despite what some alarmist headlines imply), with one poll
+finding that only two in five teenagers have used the tech in the last six months.
+
+ChatGPT’s limitations might be to blame.
+
+While undeniably capable, ChatGPT is far from perfect, owing to the way it was developed and “taught.” Trained to predict the likeliest next word — or likeliest
+next parts of words — by observing billions of examples of text from around the web, ChatGPT sometimes “hallucinates,” or writes answers that sound plausible
+but aren’t factually correct. (ChatGPT’s hallucinating tendencies got its answers banned from the Q&A site Stack Overflow and from at least one academic
+conference — and accused of defamation.)
+</item 20>
+
+<item 21>
+How OpenAI's ChatGPT has changed the world in just a year (Engadget, 2023-11-30T14:00:50+00:00)
+OpenAI also expanded the chatbot’s multimodal capabilities, adding support for both voice and image inputs for user queries in a September 25 update.
+
+Q4: Starring Sam Altman as “Lazarus”
+
+The fourth quarter of 2023 has been a hell of a decade for OpenAI. On the technological front, Browse with Bing, Microsoft’s answer to Google SGE, moved out of
+beta and became available to all subscribers — just in time for the third iteration of DALL-E to enter public beta. Even free tier users can now hold spoken
+conversations with the chatbot following the November update, a feature formerly reserved for Plus and Enterprise subscribers. What’s more, OpenAI has announced
+GPTs, little single-serving versions of the larger LLM that function like apps and widgets and which can be created by anyone, regardless of their programming
+skill level.
+
+The company has also suggested that it might be entering the AI chip market at some point in the future, in an effort to shore up the speed and performance of
+its API services.
+</item 21>
+
+<item 22>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+According to a waitlist link OpenAI posted in Discord, the monetized version will be called ChatGPT Professional. The waitlist document includes the benefits of
+this new paid version of the chatbot which include no “blackout” windows, no throttling and an unlimited number of messages with ChatGPT — “at least 2x the
+regular daily limit.”
+
+December 2022
+
+ShareGPT lets you easily share your ChatGPT conversations
+
+A week after ChatGPT was released into the wild, two developers — Steven Tey and Dom Eccleston — made a Chrome extension called ShareGPT to make it easier to
+capture and share the AI’s answers with the world.
+
+November 2022
+
+ChatGPT first launched to the public as OpenAI quietly released GPT-3.5
+
+GPT-3.5 broke cover with ChatGPT, a fine-tuned version of GPT-3.5 that’s essentially a general-purpose chatbot.
+</item 22>
+
+<item 23>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs
+to spout toxic, biased text.
+
+ChatGPT’s mobile app hits record $4.58M in revenue in September
+
+OpenAI amassed 15.6 million downloads and nearly $4.6 million in gross revenue across its iOS and Android apps worldwide in September. But revenue growth has
+now begun to slow, according to new data from market intelligence firm Appfigures — dropping from 30% to 20% in September.
+
+September 2023
+
+ChatGPT can now browse the internet (again)
+
+OpenAI posted on Twitter/X that ChatGPT can now browse the internet and is no longer limited to data before September 2021. The chatbot had a web browsing
+capability for Plus subscribers back in July, but the feature was taken away after users exploited it to get around paywalls.
+</item 23>
+
+<item 24>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Instead, users will automatically be switched to models based on the prompt.
+
+ChatGPT officially gets web search
+
+OpenAI has formally launched its internet-browsing feature to ChatGPT, some three weeks after re-introducing the feature in beta after several months in hiatus.
+The AI chatbot that has historically been limited to data up to September, 2021.
+
+OpenAI integrates DALL-E 3 into ChatGPT
+
+The integration means users don’t have to think so carefully about their text-prompts when asking DALL-E to create an image. Users will also now be able to
+receive images as part of their text-based queries without having to switch between apps.
+
+Microsoft-affiliated research finds flaws in GPT-4
+
+A Microsoft-affiliated scientific paper looked at the “trustworthiness” — and toxicity — of LLMs, including GPT-4.
+</item 24>
+
+<item 25>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+OpenAI’s GPT Store lets you build (and monetize) your own GPT
+
+Users and developers will soon be able to make their own GPT, with no coding experience required. Anyone building their own GPT will also be able to list it on
+OpenAI’s marketplace and monetize it in the future.
+
+ChatGPT has 100 million weekly active users
+
+After being released nearly a year ago, ChatGPT has 100 million weekly active users. OpenAI CEO Sam Altman also revealed that over two million developers use
+the platform, including more than 92% of Fortune 500 companies.
+
+OpenAI launches DALL-E 3 API, new text-to-speech models
+
+DALL-E 3, OpenAI’s text-to-image model, is now available via an API after first coming to ChatGPT-4 and Bing Chat. OpenAI’s newly released text-to-speech API,
+Audio API, offers six preset voices to choose from and two generative AI model variants.
+</item 25>
+
+<item 26>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+OpenAI has offered up a selection of ways to put the chatbot to work in the classroom.
+
+OpenAI launches ChatGPT Enterprise
+
+ChatGPT Enterprise can perform the same tasks as ChatGPT, such as writing emails, drafting essays and debugging computer code. However, the new offering also
+adds “enterprise-grade” privacy and data analysis capabilities on top of the vanilla ChatGPT, as well as enhanced performance and customization options.
+
+Survey finds relatively few American use ChatGPT
+
+Recent Pew polling suggests the language model isn’t quite as popular or threatening as some would have you think. Ongoing polling by Pew Research shows that
+although ChatGPT is gaining mindshare, only about 18% of Americans have ever actually used it.
+
+OpenAI brings fine-tuning to GPT-3.5 Turbo
+
+With fine-tuning, companies using GPT-3.5 Turbo through the company’s API can make the model better follow specific instructions. For example, having the model
+always respond in a given language.
+</item 26>
+
+<item 27>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Fine-tuning costs:
+
+Training: $0.008 / 1K tokens
+
+Usage input: $0.012 / 1K tokens
+
+Usage output: $0.016 / 1K tokens
+
+OpenAI acquires Global Illumination
+
+In OpenAI’s first public acquisition in its seven-year history, the company announced it has acquired Global Illumination, a New York-based startup leveraging
+AI to build creative tools, infrastructure and digital experiences.
+
+“We’re very excited for the impact they’ll have here at OpenAI,” OpenAI wrote in a brief post published to its official blog. “The entire team has joined OpenAI
+to work on our core products including ChatGPT.”
+
+The ‘custom instructions’ feature is extended to free ChatGPT users
+
+OpenAI announced that it’s expanding custom instructions to all users, including those on the free tier of service. The feature allows users to add various
+preferences and requirements that they want the AI chatbot to consider when responding.
+</item 27>
+
+<item 28>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+ChatGPT got an overall three-star rating in the report, with its lowest ratings relating to transparency, privacy, trust and safety.
+
+OpenAI blames DDoS attack for ChatGPT outage
+
+OpenAI confirmed that a DDoS attack was behind outages affecting ChatGPT and its developer tools. ChatGPT experienced sporadic outages for about 24 hours,
+resulting in users being unable to log into or use the service.
+
+OpenAI debuts GPT-4 Turbo
+
+OpenAI unveiled GPT-4 Turbo at its first-ever OpenAI DevDay conference. GPT-4 Turbo comes in two versions: one that’s strictly text-analyzing and another that
+understands the context of both text and images.
+
+GPT-4 gets a fine-tuning
+
+As opposed to the fine-tuning program for GPT-3.5, the GPT-4 program will involve more oversight and guidance from OpenAI teams, the company says — largely due
+to technical hurdles.
+</item 28>
+
+<item 29>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+I tried the same prompt and got a very similar response. ChatGPT, by contrast, gives a bullet-list summary with citations to news articles:
+
+Interestingly, Gemini Pro did provide a summary of updates on the war in Ukraine when I asked it for one. However, the information was over a month out of date:
+
+Google emphasized Gemini’s enhanced coding skills in a briefing earlier this week. Perhaps it’s genuinely improved in some areas — posts on X suggest as much.
+But it also appears that Gemini Pro struggles with basic coding functions like this one in Python:
+
+Tried gemini based Bard, and well, it still can't write intersection of two polygons. It's one of those rare relatively simple to express functions that wasn't
+ever implemented in python, there is no stack overflow post, and all these models fail on it.
+</item 29>
+
+<item 30>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+The most recent model is GPT-4.
+
+Can I use ChatGPT for free?
+
+There is a free version of ChatGPT that only requires a sign-in in addition to the paid version, ChatGPT Plus.
+
+Who uses ChatGPT?
+
+Anyone can use ChatGPT! More and more tech companies and search engines are utilizing the chatbot to automate text or quickly answer user questions/concerns.
+
+What companies use ChatGPT?
+
+Multiple enterprises utilize ChatGPT, although others may limit the use of the AI-powered tool.
+
+Most recently, Microsoft announced at it’s 2023 Build conference that it is integrating it ChatGPT-based Bing experience into Windows 11. A Brooklyn-based 3D
+display startup Looking Glass utilizes ChatGPT to produce holograms you can communicate with by using ChatGPT. And nonprofit organization Solana officially
+integrated the chatbot into its network with a ChatGPT plug-in geared toward end users to help onboard into the web3 space.
+
+What does GPT mean in ChatGPT?
+</item 30>
+
+<item 31>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+ChatGPT is AI-powered and utilizes LLM technology to generate text after a prompt.
+
+Can ChatGPT write essays?
+
+Yes.
+
+Can ChatGPT commit libel?
+
+Due to the nature of how these models work, they don’t know or care whether something is true, only that it looks true. That’s a problem when you’re using it to
+do your homework, sure, but when it accuses you of a crime you didn’t commit, that may well at this point be libel.
+
+We will see how handling troubling statements produced by ChatGPT will play out over the next few months as tech and legal experts attempt to tackle the fastest
+moving target in the industry.
+
+Does ChatGPT have an app?
+
+Yes, there is now a free ChatGPT app that is currently limited to U.S. iOS users at launch. OpenAi says an android version is “coming soon.”
+
+What is the ChatGPT character limit?
+
+It’s not documented anywhere that ChatGPT has a character limit.
+</item 31>
+
+<item 32>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+OpenAI promises to defend business customers against copyright claims
+
+Bowing to peer pressure, OpenAI it will pay legal costs incurred by customers who face lawsuits over IP claims against work generated by an OpenAI tool. The
+protections seemingly don’t extend to all OpenAI products, like the free and Plus tiers of ChatGPT.
+
+As OpenAI’s multimodal API launches broadly, research shows it’s still flawed
+
+OpenAI announced that GPT-4 with vision will become available alongside the upcoming launch of GPT-4 Turbo API. But some researchers found that the model
+remains flawed in several significant and problematic ways.
+
+OpenAI launches API, letting developers build ‘assistants’ into their apps
+
+At its OpenAI DevDay, OpenAI announced the Assistants API to help developers build “agent-like experiences” within their apps. Use cases range from a natural
+language-based data analysis app to a coding assistant or even an AI-powered vacation planner.
+</item 32>
+
+<item 33>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Subscribers to OpenAI’s premium ChatGPT plans, ChatGPT Plus and ChatGPT Enterprise, can type in a request for an image and hone it through conversations with
+the chatbot — receiving the results directly within the chat app.
+
+Opera GX integrates ChatGPT-powered AI
+
+Powered by OpenAI’s ChatGPT, the AI browser Aria launched on Opera in May to give users an easier way to search, ask questions and write code. Today, the
+company announced it is bringing Aria to Opera GX, a version of the flagship Opera browser that is built for gamers.
+
+The new feature allows Opera GX users to interact directly with a browser AI to find the latest gaming news and tips.
+
+August 2023
+
+OpenAI releases a guide for teachers using ChatGPT in the classroom
+
+OpenAI wants to rehabilitate the system’s image a bit when it comes to education, as ChatGPT has been controversial in the classroom due to plagiarism. OpenAI
+has offered up a selection of ways to put the chatbot to work in the classroom.
+</item 33>
+
+<item 34>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+In a post on X, CEO Sam Altman looked back on the night before its launch: “what a year it’s been…”
+
+a year ago tonight we were probably just sitting around the office putting the finishing touches on chatgpt before the next morning’s launch. what a year it’s
+been… — Sam Altman (@sama) November 30, 2023
+
+Apple and Google avoid naming ChatGPT as their ‘app of the year’
+
+Neither Apple nor Google chose an AI app as its app of the year for 2023, despite the success of ChatGPT’s mobile app, which became the fastest-growing consumer
+application in history before the record was broken by Meta’s Threads.
+
+An attack from researchers prompts ChatGPT to reveal training data
+
+A test led by researchers at Google DeepMind found that there is a significant amount of privately identifiable information in OpenAI’s LLMs.
+</item 34>
+
+<item 35>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+OpenAI plans to open up access to new developers by the end of July.
+
+In the future, OpenAI says that it’ll allow developers to fine-tune GPT-4 and GPT-3.5 Turbo, one of the original models powering ChatGPT, with their own data,
+as has long been possible with several of OpenAI’s other text-generating models. That capability should arrive later this year, according to OpenAI.
+
+June 2023
+
+ChatGPT app can now search the web only on Bing
+
+OpenAI announced that subscribers to ChatGPT Plus can now use a new feature on the app called Browsing, which allows ChatGPT to search Bing for answers to
+questions.
+
+The Browsing feature can be enabled by heading to the New Features section of the app settings, selecting “GPT-4” in the model switcher and choosing “Browse
+with Bing” from the drop-down list. Browsing is available on both the iOS and Android ChatGPT apps.
+</item 35>
+
+<item 36>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+OpenAI reportedly delays the launch of its GPT store to 2024
+
+According to a memo seen by Axios, OpenAI plans to delay the launch of its highly anticipated GPT store to early 2024. Custom GPTs and the accompanying store
+was a major announcement at OpenAI’s DevDay conference, with the store expected to open last month.
+
+November 2023
+
+ChatGPTs mobile apps top 110M installs and nearly $30M in revenue
+
+After launching for iOS and Androidin May and July, ChatGPT’s have topped 110 million combined installs and have reached nearly $30 million in consumer
+spending, according to a market analysis by data.ai.
+
+ChatGPT celebrates one-year anniversary
+
+OpenAI hit a major milestone: one year of ChatGPT. What began as a “low-key research preview” evolved into a powerhouse that changed the AI industry forever.
+</item 36>
+
+<item 37>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+April 2023
+
+ChatGPT parent company OpenAI closes $300M share sale at $27B-29B valuation
+
+VC firms including Sequoia Capital, Andreessen Horowitz, Thrive and K2 Global are picking up new shares, according to documents seen by TechCrunch. A source
+tells us Founders Fund is also investing. Altogether the VCs have put in just over $300 million at a valuation of $27 billion to $29 billion. This is separate
+to a big investment from Microsoft announced earlier this year, a person familiar with the development told TechCrunch, which closed in January. The size of
+Microsoft’s investment is believed to be around $10 billion, a figure we confirmed with our source.
+
+OpenAI previews new subscription tier, ChatGPT Business
+
+Called ChatGPT Business, OpenAI describes the forthcoming offering as “for professionals who need more control over their data as well as enterprises seeking to
+manage their end users.”
+</item 37>
+
+<item 38>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+The app is now live in a handful of countries.
+
+ChatGPT is coming to Android
+
+ChatGPT is available to “pre-order” for Android users.
+
+The ChatGPT app on Android looks to be more or less identical to the iOS one in functionality, meaning it gets most if not all of the web-based version’s
+features. You should be able to sync your conversations and preferences across devices, too — so if you’re iPhone at home and Android at work, no worries.
+
+OpenAI launches customized instructions for ChatGPT
+
+OpenAI launched custom instructions for ChatGPT users, so they don’t have to write the same instruction prompts to the chatbot every time they interact with it.
+
+The company said this feature lets you “share anything you’d like ChatGPT to consider in its response.” For example, a teacher can say they are teaching
+fourth-grade math or a developer can specify the code language they prefer when asking for suggestions.
+</item 38>
+
+<item 39>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+October 2023
+
+ChatGPT app revenue shows no signs of slowing, but it’s not #1
+
+OpenAI’s chatbot app far outpaces all others on mobile devices in terms of downloads, but it’s surprisingly not the top AI app by revenue. Several other AI
+chatbots, like “Chat & Ask AI” and “ChatOn — AI Chat Bot Assistant”, are actually making more money than ChatGPT.
+
+ChatGPT tests the ability to upload and analyze files for Plus users
+
+Subscribers to ChatGPT’s Enterprise Plan have reported new beta features, including the ability to upload PDFs to analyze and and ask questions about them
+directly. The new rollout also makes it so users no longer have to manually select a mode like DALL-E and browsing when using ChatGPT. Instead, users will
+automatically be switched to models based on the prompt.
+</item 39>
+
+<item 40>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+While there is a more…nefarious side to ChatGPT, it’s clear that AI tools are not going away anytime soon. Since its initial launch nearly a year ago, ChatGPT
+has hit 100 million weekly active users, and OpenAI is heavily investing in it.
+
+Prior to the leadership chaos, on November 6, OpenAI held its first developer conference: OpenAI DevDay. During the conference, it announced a slew of updates
+coming to GPT, including GPT-4 Turbo (super-charged versions of GPT-4, its latest language-writing model), a multimodal API and a GPT store where users can
+create and monetize their own custom versions of GPT.
+
+GPT-4, which can write more naturally and fluently than previous models, remains largely exclusive to paying ChatGPT users. But you can access GPT-4 for free
+through Microsoft’s Bing Chat in Microsoft Edge, Google Chrome and Safari web browsers.
+</item 40>
+
+<item 41>
+How OpenAI's ChatGPT has changed the world in just a year (Engadget, 2023-11-30T14:00:50+00:00)
+That number is impressively large and likely why Altman still has his job.
+
+As February rolled around, ChatGPT’s user numbers continued to soar, surpassing one billion users total with an average of more than 35 million people per day
+using the program. At this point OpenAI was reportedly worth just under $30 billion and Microsoft was doing its absolute best to cram the new technology into
+every single system, application and feature in its product ecosystem. ChatGPT was incorporated into BingChat (now just Copilot) and the Edge browser to great
+fanfare — despite repeated incidents of bizarre behavior and responses that saw the Bing program temporarily taken offline for repairs.
+
+Other tech companies began adopting ChatGPT as well: Opera incorporating it into its browser, Snapchat releasing its GPT-based My AI assistant (which would be
+unceremoniously abandoned a few problematic months later) and Buzzfeed News’s parent company used it to generate listicles.
+</item 41>
+
+<item 42>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Can you save a ChatGPT chat?
+
+Yes. OpenAI allows users to save chats in the ChatGPT interface, stored in the sidebar of the screen. There are no built-in sharing features yet.
+
+Are there alternatives to ChatGPT?
+
+Yes. There are multiple AI-powered chatbot competitors such as Together, Google’s Bard and Anthropic’s Claude, and developers are creating open source
+alternatives. But the latter are harder — if not impossible — to run today.
+
+The Google-owned research lab DeepMind claimed that its next LLM, will rival, or even best, OpenAI’s ChatGPT. DeepMind is using techniques from AlphaGo,
+DeepMind’s AI system that was the first to defeat a professional human player at the board game Go, to make a ChatGPT-rivaling chatbot called Gemini.
+
+Apple is developing AI tools to challenge OpenAI, Google and others.
+</item 42>
+
+<item 43>
+One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)
+Prior to ChatGPT, people were already familiar with chatbots — they’ve existed for decades after all. But the models powering ChatGPT are much more
+sophisticated than what many users were accustomed to.
+
+“Human-computer interaction researchers have studied how conversational interfaces can improve understandability of information, and the socialization aspects
+of chatbots bring increased engagement,” Shang said. “Now, AI models have enabled conversational agents to conduct conversations nearly indistinguishable from
+human dialogues.”
+
+Adam Hyland, also a PhD student studying AI at the University of Washington, points out the emotional component: conversations with ChatGPT have a palpably
+different “feel” than with more rudimentary chatbots.
+
+“In the 1960s, ELIZA offered a chatbot, the response to which was very similar to how people reacted to ChatGPT,” Hyland said, referring to the chatbot created
+by MIT computer scientist Joseph Weizenbaum in 1966. “Humans interacting with the system inferred emotional content and a narrative through line in chat
+messages.”
+</item 43>
+
+<item 44>
+Early impressions of Google’s Gemini aren’t great (TechCrunch, 2023-12-07T16:12:30+00:00)
+(Among other mistruths, Gemini Pro said that Stross contributed to the Linux kernel; he never has.)
+
+Translation doesn’t appear to be Gemini Pro’s strong suit, either. It struggles to give a six-letter word in French:
+
+FYI, Google Gemini is complete trash. pic.twitter.com/EfNzTa5qas — Benjamin Netter (@benjaminnetter) December 6, 2023
+
+When I ran the same prompt through Bard (“Can you give me a 6-letters word in French?”), Gemini Pro responded with a seven-letter word instead of a five-letter
+one — which gives some credence to the reports about Gemini’s poor multilingual performance.
+
+What about summarizing news? Surely Gemini Pro, with Google Search and Google News at its disposal, can give a recap of something topical? Not necessarily.
+
+It seems Gemini Pro is loath to comment on potentially controversial news topics, instead telling users to… Google it themselves.
+
+I tried the same prompt and got a very similar response.
+</item 44>
+
+<item 45>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Should we automate away all the jobs, including the fulfilling ones? Should we develop nonhuman minds that might eventually outnumber, outsmart, obsolete and
+replace us? Should we risk loss of control of our civilization? Such decisions must not be delegated to unelected tech leaders. Powerful AI systems should be
+developed only once we are confident that their effects will be positive and their risks will be manageable.
+
+OpenAI connects ChatGPT to the internet
+
+OpenAI launched plugins for ChatGPT, extending the bot’s functionality by granting it access to third-party knowledge sources and databases, including the web.
+Available in alpha to ChatGPT users and developers on the waitlist, OpenAI says that it’ll initially prioritize a small number of developers and subscribers to
+its premium ChatGPT Plus plan before rolling out larger-scale and API access.
+
+OpenAI launches GPT-4, available through ChatGPT Plus
+
+GPT-4 is a powerful image- and text-understanding AI model from OpenAI.
+</item 45>
+
+<item 46>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Most read
+
+AI, faked: Google unveiled a new flagship AI model this week called Gemini. But it didn’t release the full model, Gemini Ultra — only a “lite” version called
+Gemini Pro. In a press briefing and blog posts, Google touted Gemini’s coding capabilities and multimodal prowess, claiming that the model can understand
+images, audio and videos just as well as text. But Gemini Pro — which is strictly text-in, text-out — has proven to be mistake-prone. And in a worse look for
+Google, the company was caught faking a Gemini demo by tuning text prompts with still images off camera.
+
+Offensive notebooks: In another Google PR blunder, people who attended the company’s K&I Black Summit in August were given third-party notebooks containing
+highly insensitive language. My colleague Dominic-Madori writes that the inside of the notebooks were printed with the phrase “I was just cotton the moment, but
+I came back to take your notes” (emphasis ours).
+</item 46>
+
+<item 47>
+One year later, ChatGPT is still alive and kicking (TechCrunch, 2023-11-30T14:10:43+00:00)
+what a year it’s been… — Sam Altman (@sama) November 30, 2023
+
+In the months following its launch, ChatGPT gained paid tiers with additional features, including a plan geared toward enterprise customers. OpenAI also
+upgraded ChatGPT with web searching, document analyzing and image creating (via DALL-E 3) capabilities. And, leaning on speech recognition, voice synthesis and
+text-image understanding models developed in house, OpenAI gave ChatGPT the ability to “hear,” “speak,” “see” and take actions.
+
+Indeed, ChatGPT became priority number one at OpenAI — not simply a one-off product but a development platform to build upon. And, as often happens in a
+competition-driven marketplace, it shifted the focus at other AI firms and research labs, too.
+
+Google scrambled to launch a response to ChatGPT, eventually releasing Bard, a more or less comparable AI chatbot, in February.
+</item 47>
+
+<item 48>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+ChatGPT can engage with a range of topics, including programming, TV scripts and scientific concepts. Writers everywhere rolled their eyes at the new
+technology, much like artists did with OpenAI’s DALL-E model, but the latest chat-style iteration seemingly broadened its appeal and audience.
+
+FAQs:
+
+What is ChatGPT? How does it work?
+
+ChatGPT is a general-purpose chatbot that uses artificial intelligence to generate text after a user enters a prompt, developed by tech startup OpenAI. The
+chatbot uses GPT-4, a large language model that uses deep learning to produce human-like text.
+
+When did ChatGPT get released?
+
+November 30, 2022 is when ChatGPT was released for public use.
+
+What is the latest version of ChatGPT?
+
+Both the free version of ChatGPT and the paid ChatGPT Plus are regularly updated with new GPT models. The most recent model is GPT-4.
+
+Can I use ChatGPT for free?
+</item 48>
+
+<item 49>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+Apple is developing AI tools to challenge OpenAI, Google and others. The tech giant created a chatbot that some engineers are internally referring to as “Apple
+GPT,” but Apple has yet to determine a strategy for releasing the AI to consumers.
+
+How does ChatGPT handle data privacy?
+
+OpenAI has said that individuals in “certain jurisdictions” (such as the EU) can object to the processing of their personal information by its AI models by
+filling out this form. This includes the ability to make requests for deletion of AI-generated references about you. Although OpenAI notes it may not grant
+every request since it must balance privacy requests against freedom of expression “in accordance with applicable laws”.
+
+The web form for making a deletion of data about you request is entitled “OpenAI Personal Data Removal Request”.
+</item 49>
+
+<item 50>
+ChatGPT: Everything you need to know about the AI-powered chatbot (TechCrunch, 2023-09-28T20:03:39+00:00)
+That means a decision could take up to five more months.
+
+Auto-GPT is Silicon Valley’s latest quest to automate everything
+
+Auto-GPT is an open-source app created by game developer Toran Bruce Richards that uses OpenAI’s latest text-generating models, GPT-3.5 and GPT-4, to interact
+with software and services online, allowing it to “autonomously” perform tasks.
+
+Depending on what objective the tool’s provided, Auto-GPT can behave in very… unexpected ways. One Reddit user claims that, given a budget of $100 to spend
+within a server instance, Auto-GPT made a wiki page on cats, exploited a flaw in the instance to gain admin-level access and took over the Python environment in
+which it was running — and then “killed” itself.
+</item 50>
+=== END ITEM id=5caa54d8409692d1 ===
+
+=== ITEM id=daab36df1552ea02 ===
+Gold sentences and facts:
+Sentence 0: And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.0: Valve has made a gaggle of minor physical upgrades with its new iteration.
+  Fact 0.1: Valve has made big improvements with its new iteration.
+  Fact 0.2: The minor physical upgrades are part of the new iteration alongside the big improvements.
+Sentence 1: We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games.
+  Fact 1.0: Valve looks at a store that could be both.
+  Fact 1.1: Valve decided to focus exclusively on games.
+Sentence 2: The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day.
+  Fact 2.0: The Steam Deck OLED will go on sale on November 16th at 1pm ET.
+  Fact 2.1: Valve has units ready to ship on November 16th.
+
+Retrieved items:
+<item 1>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+For the first year in recent memory, scale did not necessitate tradition, and scope did not preclude getting weird. In 2023, nothing was sacred in video games,
+and so they felt more vibrant than ever.
+
+Sure, some of the more “focused” games threw us for a pleasant loop: Dredge begins as a lonely fishing sim before transforming into something otherworldly, and
+Humanity morphed from a pensive art project into an all-out war. Dave the Diver, similarly, is not so much about being a diver as it is about running a sushi
+restaurant, or hunting for alien artifacts, or conversing with said aliens, or — you get the point. Whether you booted up your Steam Deck for a cross-country
+flight or hid your Switch off screen during that boring Zoom meeting, the game you returned to was rarely the one you left behind.
+
+This amorphousness (I’m begging our copy editor to let this one slide, because what other “word” could adequately summarize the video games of 2023?)
+</item 1>
+
+<item 2>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+(Parts will once again be sold through iFixit.) However, I did enjoy the new power supply, with its faster charging (45 minutes gets you from 20% to 80%) and
+2.5-meter cable that stretches the length of my couch.
+
+One small, charming detail: The carrying case now has a tinier carrying case within it. If you want to be extra cautious, stick to the original bulky case. But
+if you need to toss the Steam Deck in your backpack for a day trip? Go with the slim case that has funny little thumbstick nipples!
+
+All of the tweaks, large and small, amount to a perfect handheld — made better by the price, which remains the same as the original Steam Deck available today,
+just that the OLED will come with more stuff.
+</item 2>
+
+<item 3>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The updated display is smooth, crisp and bright, like a perfect lemon tart. (Even then, I do not recommend licking the screen.)
+
+Battery life
+
+One of the downsides of the first Steam Deck was its short battery life, which maxed out at eight hours, and that was only under ideal conditions. Valve says
+the new Steam Deck battery will last 30 to 50 percent longer, depending on how you’re playing, and it charges faster — the company claims it will go from 20
+percent to 80 percent in 45 minutes.
+
+Custom AMD APU
+
+The Steam Deck OLED has a die-shrunk version of the custom AMD APU found in the original Steam Deck — same CPU and GPU, just more efficient. This is the process
+Sony takes advantage of to build the PS4 Slim and PS5 Slim, but instead of collapsing the Steam Deck around smaller hardware, Valve chose to add a bigger
+battery and larger fan to its existing chassis.
+</item 3>
+
+<item 4>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The first thing to know about the Steam Deck OLED is that it’s not the Steam Deck 2. The Steam Deck OLED is a mid-cycle refresh from Valve, similar to the
+Switch OLED upgrade, but there’s a lot more going on internally here. Its screen is better, its battery life is better, its thumbsticks are better, the haptics
+are better, and its chip and thermals are better. One thing that hasn’t changed is its form factor — this is still one of the biggest babies on the handheld
+block.
+
+The new Steam Deck’s main upgrade is its OLED screen, which replaces the original LCD and, crucially, has native support for HDR and faster frame rates. The
+OLED also has smaller bezels, making the display larger at 7.4 inches, compared with the original 7-inch screen.
+</item 4>
+
+<item 5>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The original Steam Deck had a 7-inch 800p LCD running at 60Hz. The new model squeezes a 7.4-inch OLED screen into the same space, significantly shrinking the
+bezels around the display. The new panel runs at the same resolution, but with a refresh rate of up to 90Hz. It’s also HDR, covering 110 percent of the P3 color
+space with a peak brightness of 1,000 nits — the old model maxed out at around 400 nits. Like all OLED screens, it has pure blacks and near-instantaneous
+response times. As before, anti-glare etched glass is available, but only on the premium model.
+
+The Steam Deck OLED has a die-shrunk version of the same custom APU found in the original Steam Deck. The new APU is produced on a 6nm process, rather than the
+older 7nm process.
+</item 5>
+
+<item 6>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Surprise! Valve has announced a new Steam Deck and — double surprise — we’ve already reviewed it. It might not look like a big change from the outside, but the
+Steam Deck OLED is a thorough mid-cycle refresh of a machine that’s not even two years old. At the same time, Valve is also adjusting the configuration of its
+entry-level model, making it a far more compelling option. Apologies to anyone who literally bought a Steam Deck yesterday.
+
+At an event held for press prior to the device's launch, Greg Coomer, a product designer at Valve, called the new model "the definitive version of the Steam
+Deck." He explained that the device contains many things the company wanted to include at the LCD model's launch but wasn't able to, along with some additions
+based on community feedback.
+
+As its name suggests, the most noticeable upgrade to the Steam Deck OLED is the display. The original Steam Deck had a 7-inch 800p LCD running at 60Hz.
+</item 6>
+
+<item 7>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The Steam Deck OLED now includes a Wi-Fi 6E radio (great if you have a modern router and connection to make use of it) and a dedicated Bluetooth module, which
+allows for improved audio quality with wireless headphones, the option to wake the Steam Deck from a controller, and the capability to connect many Bluetooth
+controllers for multiplayer. The haptics are noticeably improved, with a wider frequency range. And the touchscreen is markedly better — it’s responsive to the
+point where I don’t feel the need to plug in a USB-C keyboard anytime I need to type a few words.
+
+A review for spec specifics If you’re the sort of person who likes the nitty-gritty technical details of screens and batteries, we also recommend reading The
+Verge’s review.
+
+Valve also claims that the Steam Deck OLED is more repairable, which, mercifully, I didn’t have the need to test for myself. (Parts will once again be sold
+through iFixit.)
+</item 7>
+
+<item 8>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The improved 90 Hz refresh rate falls short of the Asus ROG Ally’s 120 Hz, though it’s worth considering that the higher the frame rate, the faster the battery
+drain — assuming you can even spot the difference between 90 Hz and 120 Hz.
+
+You know what’s more interesting than a list of technical specs? Actually seeing the screen. It’s gorgeous. On Sunday morning, I picked at Sega’s Like a Dragon
+Gaiden: The Man Who Erased His Name while watching football and Christmas movies with my family. The new Yakuza game looks fantastic on high settings at 60 fps,
+its night sequences flaunting the OLED’s dark blacks and the abundance of neon signage showcasing the HDR.
+
+I got so distracted pulverizing bad dudes that it took me some time to notice the Steam Deck OLED’s most welcome feat. When playing AAA games on the original
+Steam Deck, I had always kept the handheld plugged into an outlet. But with the OLED model, a couple of hours had passed before I realized I’d forgotten to
+connect the charger.
+</item 8>
+
+<item 9>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The updated display is the highlight of the device, while things like faster charging, improved antennas and smoother haptics are welcome bonuses. More
+importantly, this is Valve renewing its commitment to portable PC gaming, and that’s a relief to see. The Steam Deck is the granddaddy of handheld PCs and Valve
+has the resources to continue innovating in this space. For now, the OLED model is a half-step toward the Steam Deck 2, which may be the final version of the
+device — unless Valve finally learns how to count to three.
+</item 9>
+
+<item 10>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The range still tops out at $649, but you’re getting a lot more for your money: All of the hardware improvements, 1TB of storage instead of 512GB and an
+improved carry case that can pop out into a slimmer shell that’s smaller and easier to fit in a bag. As mentioned, it also has the same anti-glare etched glass
+as the outgoing 512GB LCD model.
+
+Finally, there’s also a Limited Edition version of the 1TB model, with a translucent shell and a customized carry case, which will be sold at $679. We imagine
+stocks will not last very long, as it looks pretty rad:
+
+Valve
+
+While there are no concrete updates on future hardware developments, Valve engineer Pierre-Loup Griffais noted that, so long as interest in handheld gaming
+remains high, the company has "plans for successive generations of handhelds." For now, Griffais explained, it's important to Valve that developers don't need
+to "split their attention" between different performance targets.
+</item 10>
+
+<item 11>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Other improvements include support for both Wi-Fi 6E and Bluetooth 5.3, together with a new antenna array that will give a better experience when using both at
+the same time. There’s also a reworked power supply (it has a logo now!) with a longer 2.5m cable that will charge the OLED model from 20 to 80 percent in “as
+little as 45 minutes.” The thumbsticks have also been made 1mm taller, and the touch pads' haptics are slightly sharper.
+
+Valve
+
+The Steam Deck OLED starts at $549, and will replace all but the entry-level model in the range.
+</item 11>
+
+<item 12>
+The best October Prime Day gaming deals (The Verge, 2023-10-10T12:30:00+00:00)
+$400 at Amazon (refurbished)
+
+Jsaux Mod Case for Steam Deck $ 24 $ 30 20 % off $ 24 $ 24 $ 30 20 % off A protective modular case system for Valve’s Steam Deck. It consists of a base case
+with grippy texture, a built-in kickstand, a removable lid, and a rear mounting system that can attach a power bank using an adjustable strap or Jsaux’s add-on
+cooling fan. $24 at Amazon
+
+Jsaux’s 45W USB-C charger with a five-foot cable and included right-angle adapter may be designed for the Steam Deck, but it’s also a great charger for a
+Nintendo Switch or just about any USB-C phone or tablet. It’s just $15.19 ($3 off) right now at Amazon.
+
+with a five-foot cable and included right-angle adapter may be designed for the Steam Deck, but it’s also a great charger for a Nintendo Switch or just about
+any USB-C phone or tablet.
+</item 12>
+
+<item 13>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+The HDR OLED model is what they would have released the first time around, if the technology had existed before 2022. The handheld market has evolved quickly —
+in just over a year, the Steam Deck proved there’s widespread demand for handheld PCs, and its success helped drive chip makers and display manufacturers to
+build hardware specifically for high-fidelity mobile play. This is great news for Valve and the Steam Deck, and also the other handhelds coming out of companies
+like Ayaneo, ASUS, Ayn, Logitech, Retroid and Razer. Hell, maybe even Playdate will get an HDR OLED display one day. (Just kidding; Playdate is literally
+perfect).
+
+So, no, the HDR OLED refresh isn't the Steam Deck 2, but it is a welcome improvement on an already good device. The Steam Deck OLED is the facetuned,
+photoshopped, spit-shined version of Valve’s handheld, and it features tangible, clever improvements.
+</item 13>
+
+<item 14>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Playing the Steam Decks back-to-back highlighted another significant quality-of-life improvement: heat management. My palms have gotten toasty playing the OLED
+model, but they haven’t broken a sweat like they often do with the original. The new fan may be larger, but it’s not any louder, and it clearly works a treat.
+
+The Steam Deck OLED has a new Wi-Fi 6E module and improved antennas that should enable faster downloads for anyone with a compatible router. I don’t have a 6E
+router or multi-gigabit Wi-Fi, but with a regular Wi-Fi 6 router, the top download speed I saw on the new Steam Deck was 562mbps, which was about 10 percent
+faster than the old Steam Deck, and 10 percent slower than the speeds I get on my MacBook Pro. The device uses Bluetooth 5.3 and adds a dedicated antenna, which
+should improve functionality when using Wi-Fi and Bluetooth at the same time.
+</item 14>
+
+<item 15>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Valve Valve Steam Deck OLED SCORE 89 Engadget 89 Critics - Not yet scored N/A Users - Not yet scored N/A Pros Improved battery life
+
+Bright and smooth visuals
+
+Better thermals
+
+Feels less top-heavy
+
+Long charging cable Cons Still ridiculously large
+
+Seriously it’s so big
+
+Valve Valve Steam Deck OLED This isn't the Steam Deck 2 some are waiting for, it's just a welcome improvement on an already good device. $549 at Steam
+
+OLED screen
+
+The HDR OLED display looks fantastic. It features a wider P3 color gamut, pure blacks and a peak brightness of 1,000 nits, compared with the original max of 400
+nits. In action, this means the screen’s bezels meld with the black of any game, creating a more polished frame for retro aspect ratios and providing room for
+higher-contrast colors. The screen on the new model doesn’t support variable refresh rates (VRR), but it now tops out at 90Hz, while the original could only hit
+60Hz.
+</item 15>
+
+<item 16>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Currently, more than 10,000 titles on Steam fall under the playable or verified labels, with more added every day.
+
+When will the Steam Deck OLED be available?
+
+The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day. The company has lowered the price of its LCD
+lineup and will sell through its backstock of 64GB and 512GB models until they’re all gone. It’ll continue selling the 256GB LCD model at a reduced price of
+$400, while the 512GB OLED model will cost $550 and the 1TB OLED model will cost $650. There’s also a limited edition 1TB OLED version priced at $680 that comes
+with a special carrying case, a translucent gray body and orange accents.
+
+Valve
+
+Wrap-up
+
+According to the developers I spoke with at Valve, this is the definitive version of the Steam Deck.
+</item 16>
+
+<item 17>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+Yes. But you might find that the screen and the battery justify the double dip. For someone like me, who puts hundreds of hours into the Steam Deck each year,
+the upgrade is inescapable.
+
+And if you don’t have a Steam Deck? How many times can I say it: This is my favorite console ever. And it just got better.
+
+The Steam Deck OLED will be available Nov. 16 to purchase through the Steam storefront. The hardware was reviewed with a unit provided by Valve. Vox Media has
+affiliate partnerships. These do not influence editorial content, though Vox Media may earn commissions for products purchased via affiliate links. You can find
+additional information about Polygon’s ethics policy here .
+</item 17>
+
+<item 18>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+In early 2022, Valve released my favorite video game console. But even I had some gripes. With the Steam Deck, I could — for the first time — play the bulk of
+my sprawling collection of video games wherever I’d like. But I tended to bundle it with a huge portable power supply. I also couldn’t quite shirk how much
+better games looked on our family’s OLED TV.
+
+And yet, for me, an adult with limited time to play video games alone in a quiet room, nothing could beat the Steam Deck’s freedom. Barring the occasional
+diversion, Valve’s handheld PC had served as my preferred gaming option ever since I published our review. Then, last week, the Steam Deck OLED arrived. It’s as
+if the Steam Deck team collected a laundry list of complaints about the original, then responded to all of them one by one.
+
+Polygon Recommends is our way of endorsing our favorite games, movies, TV shows, comics, tabletop books, and entertainment experiences.
+</item 18>
+
+<item 19>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Engadget
+
+Hades is my most-played game on the original Steam Deck, so I used that to test out Valve’s battery life claims. Though it doesn’t support HDR, a game like
+Hades pops on the OLED, and its animations look more fluid than on the LCD version. The OLED lasted four hours and 23 minutes before dying. With the same
+settings (800p with a 60 fps cap and similar brightness) the original model died after two hours and 42 minutes. That’s a 62 percent improvement, surpassing
+Valve’s own estimates, though batteries degrade and I’ve had my LCD Steam Deck since the device’s launch in early 2022. In a stress test that involved playing
+Elden Ring with everything maxed out, the OLED battery lasted two hours and 20 minutes, about 40 percent longer than the original.
+
+Playing the Steam Decks back-to-back highlighted another significant quality-of-life improvement: heat management.
+</item 19>
+
+<item 20>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+For developers, this means the device has the same performance targets as the original and there’s no need to create games specifically for the new hardware. In
+the end, the device weighs about 30 grams less than the original model, or the equivalent of five quarters.
+
+Engadget
+
+In use
+
+Which leads us to the bad news for my tiny hand gang. The Steam Deck OLED is the same monstrous size as the original: 11.7 inches long, 4.5 inches tall and
+nearly 2 inches thick. The thumbsticks on the new model are actually 1mm taller than the first version. This was one of my main complaints about the Steam Deck
+when I first reviewed it: I have smaller-than-average hands, and the Steam Deck looks and feels absolutely ridiculous when I’m holding it. It’s just massive, no
+matter how long my manicure gets. However, the OLED model feels more balanced than the original. It’s less top-heavy, and it does technically weigh less.
+</item 20>
+
+<item 21>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+When we award the Polygon Recommends badge, it’s because we believe the recipient is uniquely thought-provoking, entertaining, inventive, or fun — and worth
+fitting into your schedule. If you want curated lists of our favorite media, check out What to Play and What to Watch .
+
+It appears, at first glance, that Valve cribbed from Nintendo’s playbook with the Switch OLED, for which Nintendo upgraded the device’s screen but not its guts.
+In terms of raw power, the Steam Deck OLED is identical to the original Steam Deck. Valve says this synchronicity is meant in part to continue to provide
+developers with a single goal when optimizing their games — though it promises that the Steam Deck 2 (which the company hopes to release in two to three years)
+will have a generational power leap.
+
+For those who haven’t tried a Steam Deck, though, I wouldn’t wait for its sequel. Because while Valve hasn’t upped the horsepower, it has improved practically
+everything else.
+</item 21>
+
+<item 22>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+Because while Valve hasn’t upped the horsepower, it has improved practically everything else. The Steam Deck OLED has longer battery life, faster Wi-Fi, and a
+stand-alone Bluetooth module. And the screen isn’t just OLED; it’s HDR OLED — the first HDR OLED screen on any gaming portable, with a peak brightness of 1,000
+nits for HDR content and 600 nits for SDR (for comparison, the original screen’s peak brightness was 400 nits). And somehow, with all of these additions, the
+Steam Deck OLED is lighter.
+
+So, goodbye, old Steam Deck; hello, new Steam Deck.
+
+The Steam Deck OLED delivers on Valve’s original promise
+
+OLED is in the name for a reason.
+
+The OLED panel in the new Steam Deck is lighter, thinner, and more power efficient than its LCD predecessor. It’s also bigger and faster. Though the device has
+the same shape as the original Steam Deck, smaller screen bezels allow for a display that’s slightly larger, at 7.4 inches compared to 7 inches.
+</item 22>
+
+<item 23>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+The immediate reality is a bit of a mess and a little complicated, but this, Valve says, will be the Steam Deck line-up moving forward:
+
+256GB Steam Deck LCD ($399)
+
+512GB Steam Deck OLED ($549)
+
+1TB Steam Deck OLED ($649)
+
+As a result of the changes, the 64GB LCD Steam Deck (previously sold at $399) will drop to $349, and the 512GB LCD (previously $649) will drop to $499. Once
+Valve sells through its inventory of both, those lines will be discontinued. Valve says it will continue to support all LCD models with software updates.
+
+So, the long-term lineup starts at the same $399 price, which gets you the old LCD Steam Deck, but with 256GB of storage instead of 64GB. The new step-up model
+costs $20 more at $549, but comes with an OLED display and the improvements outlined above, plus double the storage.
+</item 23>
+
+<item 24>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The OLED screen makes for a fancier Steam Deck, but it’s the battery life (and some tweaks throughout the design to carve out more of it) that lets Valve’s new
+handheld truly deliver on its promise of a portable gaming PC.
+
+All the tiny, delightful improvements of Steam Deck OLED
+
+Since the original Steam Deck launched, Valve has been improving the hardware through updates — its team estimates around 300 to date. That will continue with
+both the Steam Deck OLED and the original Steam Deck, the latter of which will get a fresh BIOS update to align itself with some of the former’s upgrades. The
+original device will see some battery life improvement; just don’t expect the OLED model’s jump of 30-50%.
+
+Some changes — even smallish ones — demand new hardware. And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new
+iteration.
+</item 24>
+
+<item 25>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+Manufacturers typically use die-shrinks to either improve performance or efficiency, and Valve has chosen the latter. The max frequency of both the GPU and CPU
+are identical between the LCD and OLED models, so for developers tuning their games for Steam Decks, they only have a single performance target.
+
+In concert with the more-efficient processor, there’s also a 25 percent larger battery with a 50Whr capacity, compared to the original’s 40Whr. According to
+Valve, these changes combined result in a 30-50 percent increase in longevity between the two generations — the official battery life claim is "three to 12
+hours." In our review, we measured a playtime increase of 62 percent when playing Hades on the OLED model versus our 18-month-old original. (Batteries degrade
+over time, which explains why our gains were more pronounced.)
+
+The new internals make the Steam Deck OLED marginally lighter, and also cooler to the touch when playing games, aided by a slightly larger fan.
+</item 25>
+
+<item 26>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+The panel has a wider color gamut (110% DCI-P3, for the visual obsessives) and the beautiful, inky blacks that OLED dorks like myself adore.
+
+Steam Deck OLED’s bigger, better battery Valve’s promise of 30-50% more battery raised one obvious question: Is that comparing the OLED model with a Steam Deck
+running its original firmware (which had poor battery life), or a Steam Deck using the latest firmware? Valve’s answer: the latter! So if you’re a Steam Deck
+owner, expect those big battery improvements over your current Steam Deck experience.
+
+The OLED panel also has a 90 Hz refresh rate — perfect for frame doubling from 45 frames per second. In case that jargon means nothing to you, suffice it to say
+that gameplay on the Steam Deck OLED looks smoother.
+</item 26>
+
+<item 27>
+The Steam Deck OLED arrives November 16 with an improved screen and longer battery life (Engadget, 2023-11-09T18:00:32+00:00)
+When asked about the potential for future hardware — like a return of the Steam Machine or an updated Steam Controller — there were no firm updates, but there
+does seem to be something happening. Griffais agreed that enabling the Steam Deck to work as a hybrid living room console was a "side goal" of the team, and
+noted that everything Valve does to improve SteamOS will benefit other devices. Coomer added that Valve is still working internally on "a bunch of controllers
+and prototypes." If SteamOS is being used on larger displays, the team would want to augment that experience with better input options. "We don't have any
+announcements on that front, but it's why we're building prototypes and thinking about the future there," Coomer said.
+
+The Steam Deck OLED will be available to order on November 16th at 1PM ET. Valve expects units to begin shipping as soon as orders start to roll in. The updated
+pricing on the existing LCD models is already in effect.
+</item 27>
+
+<item 28>
+The Steam Deck OLED improves much more than its screen (Polygon, 2023-11-09T18:00:00+00:00)
+Valve will be selling three models:
+
+$649 - 1 TB OLED (up from 512 GB)
+
+$529 - 512 GB OLED (up from 256 GB)
+
+$399 - 256 GB non-OLED Steam Deck (up from 64 GB)
+
+Plus, for a limited time, the company will offer a special edition 1 TB Steam Deck OLED made with a translucent shell for $679 — only in the U.S. and Canada.
+Though let’s be real: This thing will sell like hotcakes and Valve will reconsider the definition of “limited supply.” Have I considered ordering one of these
+limited editions? Yes. But I am also practicing restraint. Like, how many Steam Decks should one human have?
+
+I suppose that’s the question, really. If you already have a Steam Deck, is the OLED model technically an incremental improvement? Yes. But you might find that
+the screen and the battery justify the double dip.
+</item 28>
+
+<item 29>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+Engadget
+
+Even with improvements to the battery, thermals and weight distribution, the Steam Deck OLED is still more of a Wii U than a Vita. It’s a beast of a handheld,
+and it makes the most sense as a portable console to use around the house, rather than a truly travel-ready device. The new model even comes with an extra-long,
+2.5m charging cable, designed specifically with couch-based players in mind. I didn’t test out the docking station with the new Steam Deck, but Valve recently
+released a SteamOS update that lets players take advantage of HDR and VRR on external displays, which only drives home the Wii U-ness of it all.
+
+As far as software, you know the drill by now. Valve has rolled out labels for Steam games signifying how well they’ll work on the handheld, with four levels:
+unknown, unsupported, playable and verified. Playable games generally come with a small caveat, like having to deploy the on-screen keyboard, while verified
+games have been fully optimized for portable play.
+</item 29>
+
+<item 30>
+Steam Deck OLED review: It's just better (Engadget, 2023-11-09T18:00:38+00:00)
+It’s less top-heavy, and it does technically weigh less. These small adjustments have made a noticeable difference during my playtime, and the device feels
+slightly more manageable as a handheld — or maybe I’m just too distracted by all of its bright, pretty colors to care about the cramping in my palms.
+
+The thumbsticks on the new handheld have an improved texture that shouldn’t turn gray after a few months’ use, and they feel perfectly serviceable. In my
+hands-on time so far, I've found that the OLED touchscreen responds immediately to input, and the haptic feedback on the built-in trackpads feels even more
+precise, populating in reactive pin-pricks under the textured plastic.
+
+I spent a few cozy nights on my couch swapping between the LCD and OLED Steam Decks, and honestly, after I’m done with this review, I’ll probably retire my
+original model. The Steam Deck OLED is sharper and more responsive; indie games, AAA games and plain old Steam menus look so much better on the new hardware.
+</item 30>
+=== END ITEM id=daab36df1552ea02 ===
+
+=== ITEM id=9471768a7bfd9f64 ===
+Gold sentences and facts:
+Sentence 0: Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No.
+  Fact 0.0: The section is titled 'Love Story'.
+  Fact 0.1: This brings us to the fated sighting of Swift at Arrowhead Stadium.
+  Fact 0.2: The fated sighting of Swift at Arrowhead Stadium was on Monday.
+  Fact 0.3: Swift was cheering on No.
+Sentence 1: The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before.
+  Fact 1.0: The game is taking place at Arrowhead Stadium.
+  Fact 1.1: Swift has performed at Arrowhead Stadium herself.
+  Fact 1.2: Swift has attended a game at Arrowhead Stadium before.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide.
+  Fact 2.1: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“I appreciate you always trying to make it to both of our games.”
+
+“She also told me thank you because she was in an alternate universe, she was sitting there with Deadpooland Wolverine,” Kelce added, referencing Reynolds’ and
+Jackman’s respective superhero movie characters. “It was a hot ticket, man, you know what I’m saying? That suite was rockin’.
+
+“They were enjoying themselves. Somebody told me that everybody was enjoying themselves in that suite,” Kelce said.
+
+Not only has NFL viewership increased since Swift began attending her rumoured boyfriend’s games, but jersey sales for the Chiefs tight end have reportedly
+spiked by 400 per cent, according to a report from the NFL’s e-commerce partner, Fanatics.
+
+Following critcism the league is focusing too much on Swift, the NFL responded with an official statement handed to People on 4 October.
+
+“We frequently change our bios and profile imagery based on what’s happening in and around our games, as well as culturally,” the message read.
+</item 1>
+
+<item 2>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 2>
+
+<item 3>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+The dating speculation first began in July, when Kelce confessed that he tried and failed to give Swift a friendship bracelet with his number on it during her
+Eras Tour show. On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24
+September. Since then, Swift has attended three more of Kelce’s games.
+
+Kelce showed his support for Swift when he attended her Eras Tour show in Buenos Aires, Argentina, on 11 November. During the concert, Swift gave a shout-out to
+the Chiefs player when she changed her “Karma” lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang,
+letting out a laugh as fans in the audience screamed in response. The “All Too Well” singer was later seen running into his arms and kissing the NFL player
+following the concert, as he whisked her away backstage.
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 4>
+
+<item 5>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+After the game, which saw the Chiefs beat the Chicago Bears 41-10, Kelce was seen leaving the stadium in a blue and white splatter-paint denim suit. Eagle-eyed
+fans were quick to believe that Kelce’s outfit paid homage to Swift’s forthcoming album, 1989 (Taylor’s Version), which is due for re-release on 27 October.
+
+After the two escaped the crowd at Arrowhead Stadium in Kelce’s convertible, according to photos and videos posted online, the football star reportedly rented
+out Prime Social Rooftop in Kansas City for a post-game celebration with his family, his teammates, and Swift.
+
+“Travis bought out the restaurant for his family and team. Taylor arrived, wearing a denim dress, and was seen snacking, having some cocktails and dancing
+alongside Travis,” the witness told Entertainment Tonight. “The two were very affectionate with one another but kept things fun and lighthearted.
+</item 5>
+
+<item 6>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce believes the National Football League’s coverage of his rumoured girlfriend Taylor Swift is a bit too much.
+
+Following his game against the New York Jets on 1 October, the 33-year-old Kansas City Chiefs tight end opened up about the NFL broadcast on the most recent
+episode of his podcast, New Heights with Jason and Travis Kelce.
+</item 6>
+
+<item 7>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Travis’ teammates also showed up to the after-party, as well as his mom, Donna Kelce. The party lasted until 2 am.”
+
+The late-night outing came days after the NFL star officially addressed ongoing dating rumours about him and the “Anti-Hero” singer. During an episode of The
+Pat McAfee Show on 21 September, he mocked his brother Jason Kelce for joking that he “100 per cent” believed his younger sibling was dating Swift.
+
+“It’s hilarious how much traction this has actually gotten, right now it’s like a game of telephone,” Kelce said. “Where everybody’s whispering in each other’s
+ears and hearing random stuff. No one actually knows what’s going on, especially when you got Jason Kelce on live television telling people just both sides - he
+doesn’t know, it’s true, this and that.”
+
+He also noted that he was still open to pursuing a relationship with Swift, revealing that he subtly asked if she’d want to attend one of his football games.
+</item 7>
+
+<item 8>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 8>
+
+<item 9>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But at the same time, they're overdoing it a little bit."
+
+Jason also chimed in on the matter, saying, "I just think the NFL is not used to celebrities coming to the games. Like basketball has it all figured out.
+They're all courtside, they're sitting there. They show 'em once or twice, but then they get back to the game."
+
+Oct. 12: Swift attends Chiefs-Broncos
+
+"Now it's too late for you and your white horse *Bronco, to come around" - White Horse
+
+One day after her movie premiere, Swift is in the house for the Chiefs' "Thursday Night Football" divisional matchup against the Broncos. The game is taking
+place at Arrowhead Stadium, where Swift has performed herself and attended a game before. According to Al Michaels, the game will have minimal Swift coverage,
+though so far there has already been a mention of the superstar.
+
+Oct.
+</item 9>
+
+<item 10>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+How do you not get that? That's called images right there."
+
+Oct. 1: Swift attends Chiefs-Jets
+
+"Welcome to New York, it's been waiting for you," - Welcome to New York
+
+OK, so the Jets technically play in New Jersey, but we're just basing this off their name. Swift went to her second consecutive Chiefs game, showing up with
+some famous friends, Blake Lively, Ryan Reynolds and Hugh Jackman. In the week leading up to the game, there were reports that the singer would be at the game.
+The Chiefs defeated the Jets 23-20.
+
+Oct. 5: NFL defends itself
+
+Swift coverage is everywhere and the league even changed their social media bio to one of the singer's lyrics. The league's X (formerly Twitter) bio to read,
+"NFL (Taylor's Version)," while their Instagram account read, "Chiefs are 2-0 as Swifties."
+</item 10>
+
+<item 11>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in." - Gold Rush
+
+While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.
+
+"It is hilarious how much traction this has actually got," he said of all the talk. "It's like that old game in school called telephone where everybody is just
+whispering in each others ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."
+
+He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the
+Chiefs.
+
+"I threw it out there, I threw the ball in her court and I told her you know, I've seen you rock the stage in Arrowhead you might have to come see me rock the
+stage in Arrowhead and see which one is a little more lit. We will see what happens in the near future."
+</item 11>
+
+<item 12>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 12>
+
+<item 13>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Oct. 15: Kelce, Swift make 'SNL' cameos
+
+The two were spotted out in NYC together and then had a surprise appearance on "Saturday Night Live." Kelce had a cameo in a skit about how much coverage Swift
+was getting during games, while the singer introduced the musical act of the night, Ice Spice.
+
+Oct. 22: Swift attends fifth Chiefs game
+
+Swift has now attended games broadcast across all five networks (CBS, NBC, Fox, ESPN and Amazon). This week, she is watching the Chiefs face the Chargers and
+will be shown on CBS. She is sporting a Chiefs sweatshirt and is seated next to Kansas City quarterback Patrick Mahomes' wife, Brittany.
+</item 13>
+
+<item 14>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.
+
+In addition to the kiss, the football star also had the perfect reaction to a fan calling him Swift’s boyfriend. After a fan shouted: “Let’s go Taylor’s
+boyfriend” while Kelce was waiting for an elevator, he responded with a small smile on his face and by pumping his fist into the air.
+
+Aside from their appearances at sports events, Swift and Kelce have also been photographed together on other occasions, including a date earlier this month in
+New York City after their surprise appearances on the season 49 premiere of Saturday Night Live. At the time, sources alleged to Entertainment Tonight that,
+during the date, Kelce got a little too close to Swift’s security personnel and allegedly told her bodyguard to step aside.
+
+However, during an episode of his podcast, Kelce explained what he said to the security, and clarified that he didn’t push the bodyguard.
+</item 14>
+
+<item 15>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 15>
+
+<item 16>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"Yeah, my personal life -- that's not so personal. I did this to myself Jason, I know this. What's real is that you know it is my personal life. ... She's not
+in the media as much as I am doing this show every single week."
+
+Sept. 27: Jerry Jones comments on the Swift effect
+
+Swift is getting the owners talking, too.
+
+"It is hard to move that needle dramatically on a great feeling, a great attraction in the NFL," Jones said Wednesday on 105.3FM The Fan in Dallas. "We get a
+lot of eye balls. She blew it off the charts. It is amazing. It makes you smile. But it just shows the depth of her following, especially with her core
+constituency. We all, I think, felt the same way when she's sitting up there with [Travis Kelce's] mom and she's going nuts when he's playing and those hearts
+are popping out everywhere.
+</item 16>
+
+<item 17>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 17>
+
+<item 18>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She explained that she doesn’t necessarily pay attention to the cameras and fans around her in those stadiums because she is watching her boyfriend play.
+
+(Denver Post via Getty Images)
+
+“I’m just there to support Travis,” she said. “I have no awareness of if I’m being shown too much and pissing off a few dads, Brads, and Chads.”
+
+When discussing how many Swifties have now started watching NFL games since she started dating Kelce, she quipped about how much she likes the sport. “Football
+is awesome, it turns out,” she joked. “I’ve been missing out my whole life.”
+
+Swift’s effect on the NFL didn’t go unnoticed in October, as one game between the Chiefs and New York Jets - which she attended with some of her famous friends
+- became the most-watched Sunday NFL show since the Super Bowl LVII in February 2023.
+</item 18>
+
+<item 19>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Suddenly, football fans and Swifties were living through this surprising collision. Swift lyrics were infiltrating NFL game commentary, and her fans were
+furiously becoming football experts. All that needed to happen was for Swift herself to infiltrate a game, determining once and for all whether there was
+anything to these rumours or not. This Is Me Trying
+
+On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games. “I told her, ‘I’ve seen you rock the stage in Arrowhead,
+you might have to come see me rock a stage at Arrowhead and we can see which one’s a little more lit,’” he said. “We’ll see what happens in the near future.”
+Were they finally about to hard-launch their friendship/potential romance to the world, laying all speculation to rest? Love Story This finally brings us to the
+fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto.
+</item 19>
+
+<item 20>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+“Well I know for DAMN SURE that s*** about ‘having kids within the next year’ is NOT coming from Taylor’s side,” one claimed. “She’s got the Eras Tour booked
+all through next year, and she’d rather die than cancel a show. But we do know who’s been public about looking for a ‘BREEDER.’”
+
+The comments about Travis and Swift’s romance came days after they seemingly confirmed their relationship. On 22 October, Swift made her return to Arrowhead
+Stadium to watch as the Kansas City Chiefs won their game against the Los Angeles Chargers. The occasion marked Swift’s fourth time attending one of Kelce’s
+games, amid ongoing reports that they are dating.
+
+Following the event, Chariah Gordon, the partner of Kelce’s teammate Mecole Hardman Jr, took to Instagram to share a snap of the singer and NFL player’s sweet
+PDA moment. In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.
+</item 20>
+=== END ITEM id=9471768a7bfd9f64 ===

@@ -1,0 +1,51 @@
+[
+  {"id": "b88a5efdd39ea077", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 21, "quote": "added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 21, "quote": "added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d178c8b3f9cfa705", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Inter Miami scheduled a two-match tour of China in early November after their regular season concluded."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Inter Miami scheduled a two-match tour of China in early November after their regular season concluded."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Likely with the sole intent of keeping Messi fit in that time off, and the added bonus of raking in significant cash"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "Likely with the sole intent of keeping Messi fit in that time off, and the added bonus of raking in significant cash"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Eventually, Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "the defeat coupled with CF Montreal’s big 4-1 victory over Portland means Inter Miami are officially out of the postseason running."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 14, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 14, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 14, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+  ]},
+  {"id": "a88c24c0a0a6ebb7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "then the Eagles dropped back-to-back games in blowout fashion to the 49ers and Cowboys"}]},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 18, "quote": "Philadelphia rolled to a 31-17 win over Miami"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 18, "quote": "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\""}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 18, "quote": "Philadelphia rolled to a 31-17 win over Miami"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 18, "quote": "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\" keeping the Dolphins' offense off the scoreboard in the second half"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 18, "quote": "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\" keeping the Dolphins' offense off the scoreboard in the second half and playing smart football every step of the way down the stretch."}]}
+  ]},
+  {"id": "b5d039a2af40aa6f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 5, "quote": "in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "In his opening statement, Rehn dodged explaining cryptocurrency to the jury. Instead, he punched hard on Bankman-Fried lying and stealing."}]},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "“Sam acted in good faith and took reasonable business measures”"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 21, "quote": "“Sam didn’t defraud anyone,”"}, {"item": 6, "quote": "“He didn’t steal any money.”"}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 13, "quote": "In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it”"}]}
+  ]}
+]

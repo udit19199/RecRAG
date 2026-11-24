@@ -1,0 +1,2027 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=cab3112e4fe4b7d8 ===
+Gold sentences and facts:
+Sentence 0: He immediately left the game and proceeded to the locker room following the hit, and it was confirmed that he would not return with a head injury.
+  Fact 0.0: He immediately left the game following the hit.
+  Fact 0.1: He proceeded to the locker room following the hit.
+  Fact 0.2: It was confirmed that he would not return to the game with a head injury.
+Sentence 1: The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for further evaluation in the locker room.
+  Fact 1.0: The player is a former All-Pro.
+  Fact 1.1: The former All-Pro battled a lingering hamstring injury earlier this year.
+  Fact 1.2: The former All-Pro received attention on the sidelines after limping off.
+  Fact 1.3: The former All-Pro then left the game for further evaluation in the locker room.
+
+Retrieved items:
+<item 1>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+DB
+
+Talanoa Hufanga (49ers), who emerged as a ballhawk for San Francisco's secondary in 2022, left early against the Buccaneers with a knee injury. Coach Kyle
+Shanahan confirmed to reporters on Monday that the All-Pro suffered a season-ending ACL tear.
+</item 1>
+
+<item 2>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+We'll talk more about Derrick Henry (concussion) in the injury section, but we can say with confidence here and now that Tyjae Spears (@ Dolphins) should be the
+hottest waiver-wire pickup of Week 14. Tennessee is a run-first offense and King Henry might be sidelined with a head injury, so Spears could very well pick up
+where he left off against Indy last weekend. The young back averaged 4.7 yards per carry (just shy of his 5.1 YPC entering the week) en route to 88 yards.
+
+Another backup getting a boost this week is the Patriots' Ezekiel Elliott (@ Steelers), who will assume lead-back duties after Rhamondre Stevenson went down
+with a pretty bad ankle injury in Week 13. Zeke might put in a vintage performance considering James Conner just went back to Pittsburgh and hung 105 yards and
+two TDs on his old squad.
+
+Could this be the weekend that Keaton Mitchell (vs.
+</item 2>
+
+<item 3>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Meanwhile, Pipkins was also limited on Friday.
+
+The Patriots will be down a couple of wide receivers as Douglas and Boutte have been ruled out after not practicing on Friday. For Douglas, he missed the entire
+week due to a concussion he suffered against the Giants, while Boutte was downgraded on the injury report on Thursday and missed back-to-back days due to an
+illness on top of his shoulder injury.
+
+Lions (-4) at Saints
+
+The Lions just designated Hooker for return, who has been rehabbing a torn ACL he suffered at Tennessee last year, this week so the rookie quarterback was not
+expected to be activated this week. Meanwhile, Anzalone did not practice at all this week, so his prospects look bleak for Week 13. As for Jackson, he was a
+full participant on both Thursday and Friday.
+
+Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a
+chance to play.
+</item 3>
+
+<item 4>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Smith did return, however, for the final drive of the game in the losing effort. Head coach Pete Carroll said that Smith will "make it back." When asked if that
+means for Thursday's matchup against San Francisco, the coach said, "I would think so."
+
+Sam Howell (Commanders) received medical attention on the sidelines after enduring several hard hits to the upper body on a touchdown run against the Giants. He
+was quickly cleared of a potential concussion, however, and remained in the game. Veteran journeyman Jacoby Brissett is Washington's backup.
+
+RB
+
+Aaron Jones (Packers) suited up against the Chargers despite a lingering hamstring issue, only to manage just five carries before suffering a knee injury. The
+former Pro Bowler needed help to leave the field and was then carted to the locker room, replaced by A.J. Dillon.
+</item 4>
+
+<item 5>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+What are the biggest WR injuries in Week 14?
+
+In Week 13, Demario Douglas (concussion) and Rashid Shaheed (thigh) missed game action, and Tank Dell (leg), Amari Cooper (concussion), Christian Watson
+(hamstring), and Marquise Brown (heel) exited early from their respective games.
+
+UPDATE: Christian Kirk suffered a groin injury on Monday night, and he figures to be more doubtful than questionable for this week's game against Cleveland. If
+he's out, Zay Jones and Tim Jones will see more targets, but with Trevor Lawrence (ankle) also hurt, it's tough to count on either.
+
+UPDATE: Douglas (concussion) has been ruled OUT for Week 14.
+
+As usual, we'll update these WR PPR rankings throughout the week, so check back for the latest player movement and analysis.
+</item 5>
+
+<item 6>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+ET, according to ESPN's Jeremy Fowler. The receiver was limited in practice thanks to the toe injury that has plagued him since leaving Week 8's game against
+the Eagles, but barring a setback, he will return to action this weekend.
+
+The receiver was working his way into flex territory with a couple of good performances before picking up the injury. However, we wouldn't consider him to be
+worthy of a fantasy start this week unless you're in a bind. It's unclear whether Samuel will regain the same workload or if he'll be playing in limited action
+as he works his way back. Jamison Crowder emerged in Samuel's absence and Jahan Dotson has seen his production drastically increase, as well. The wait-and-see
+approach is the preferred one heading into Week 10.
+</item 6>
+
+<item 7>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+The fact that he has 13 total targets in his past three games combined makes it tough to buy into him suddenly getting 10-plus targets this week. The matchup is
+also a problem -- the Browns have the defensive backs to hang tight with a slower-than-normal Kupp in man-to-man coverage, which they play in a lot. The Browns
+also have the pass rush to force Matthew Stafford to get the ball out quickly and without much distance. I'm not that nervous to bench Kupp for Rashee Rice,
+Courtland Sutton and both of the top Seattle WRs.
+</item 7>
+
+<item 8>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Geno Smith's struggles complicate their fantasy prospects, as well.
+
+What are the biggest WR injuries in Week 13?
+
+Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging
+injuries. For now, we've placed Higgins and Brown in our Week 13 list and omitted Burks and Toney. We'll also be eyeing the Chargers' Josh Palmer (knee), who's
+eligible to come off the IR this week but probably won't suit up against New England.
+
+Last week, the most notable WRs to exit their respective games with injuries include Chris Olave (concussion), Amari Cooper (ribs), Demario Douglas
+(concussion), and Rashid Shaheed (thigh). We've left all four WRs out of our initial Week 13 list but will closely monitor their teams' injury reports to gauge
+their playing prospects.
+</item 8>
+
+<item 9>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Dillon. Green Bay ruled him questionable to return, then downgraded him to out, but coach Matt LaFleur said after the Packers' win over Los Angeles that he
+doesn't expect the injury to be a long-term issue.
+
+De'Von Achane (Dolphins) returned from injured reserve -- and a four-game absence -- but limped to the sidelines after his second touch of the first quarter
+against the Raiders. Miami ruled him questionable to return with a knee injury, and while he later returned to the sidelines from a locker-room visit, he was
+replaced on the field indefinitely by Raheem Mostert. Head coach Mike McDaniel told reporters on Monday that Achane is day-to-day. While he hasn't been ruled
+out of Friday's matchup with the Jets, he's not been given the green light either, so his status is worth monitoring.
+
+Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury.
+</item 9>
+
+<item 10>
+Fantasy Football RB Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:07:00+00:00)
+We also don't love Jerome Ford or Kareem Hunt (vs. Jaguars), as Jacksonville entered Week 12 allowing just 12.3 standard fantasy points per game to RBs (third
+lowest in the NFL).
+
+We say it almost every week, but the song remains the same: don't start Carolina backs Chuba Hubbard or Miles Sanders (@ Saints). It's even worse than usual
+this week, as New Orleans has a pretty hard-hitting front-seven and the Bayou is no place for below-average offenses.
+
+What are the biggest RB injuries in Week 14?
+
+Two-time rushing champ Derrick Henry (head) suffered a huge blow to the head and neck area in Tennessee's Week 13 loss to the Colts, so don't be surprised if
+the king gives up his throne to Tyjae Spears this week. He immediately left the game and proceeded to the locker room following the hit, and it was confirmed
+that he would not return with a head injury.
+</item 10>
+
+<item 11>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+If he's out, Boyd is a must-start, and you can try one of Cincinnati's secondary receivers in deep leagues.
+
+WEEK 10 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is T.J. Hockenson playing Week 10?
+
+UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans.
+
+UPDATE 2: Hockenson is officially ACTIVE.
+
+Hockenson (ribs) is listed as "questionable" for Week 10, but he's already said he plans to play on Sunday. The tight end has dealt with his fair share of
+injury woes this season, however, he's yet to miss a game.
+</item 11>
+
+<item 12>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Cardinals at Steelers (-5.5)
+
+Despite missing the entire week of practice, the Cardinals are holding out hope for Brown to play by listing him as questionable. McBride is also questionable
+after being limited on Thursday and Friday, but told reporters that he's "good to go."
+
+Pittsburgh has listed Adams as its lone player with a game designation to wrap up the week. Safety Minkah Fitzpatrick (hamstring) practiced fully throughout the
+week, carries no designation, and told reporters Friday that he will play this weekend.
+
+Colts (-1) at Titans
+
+Colts : CB JuJu Brents (quad), RB Jonathan Taylor (thumb) OUT
+
+: CB JuJu Brents (quad), RB Jonathan Taylor (thumb) OUT Titans: WR Treylon Burks (concussion) QUESTIONABLE
+
+Indianapolis ruled out Brents and Taylor after they both missed the entire week of practice.
+</item 12>
+
+<item 13>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week
+9 as a big part of the offense with Josh Dobbs under center.
+
+As long as Hockenson is playing, he's not being benched in any fantasy format. The tight end projects as a top option at the position and remains the Vikings'
+leader in targets with 80 on the season. Dobbs enjoyed targeting the tight ends in Arizona and continued that trend in his Minnesota debut. The floor for
+Hockenson is equivalent to that of a rooftop bar.
+
+WEEK 10 DFS: DK lineup | FD lineup | Best values | Best stacks
+
+Is Curtis Samuel playing Week 10?
+
+UPDATE: Samuel is officially ACTIVE.
+
+Samuel (toe) is expected to play on Sunday when the Commanders take on the Seahawks at 4:25 p.m. ET, according to ESPN's Jeremy Fowler.
+</item 13>
+
+<item 14>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning back the clocks last week, it now gets darker earlier for the foreseeable future. That darkness allows us to see the stars on a clear night, so
+it's only natural to wonder if the pass-catching stars will shine bright in Week 10 of the NFL season. We already know Tee Higgins and Nico Collins are OUT,
+while Justin Jefferson, Ja'Marr Chase, and T.J. Hockenson are among the other star pass-catchers beaten up heading into the week. Can we expect them on the
+field when the action kicks off Sunday?
+
+Below, we'll give you the latest news on these ailing pass-catchers and break down how their injuries could potentially affect the Week 10 fantasy landscape.
+
+WEEK 10 INJURY UPDATES: Early WRs | RBs
+
+Is Justin Jefferson playing Week 10?
+
+UPDATE: The Vikings will not activate Jefferson before Sunday's game and have officially ruled him OUT, according to NFL Network's Tom Pelissero.
+</item 14>
+
+<item 15>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+They weren't awful against Dallas last week on a per-touch basis, but neither finished with more than 12 touches. Even worse, no Carolina back has enjoyed a
+60-yard rushing game since Oct. 15. Bad offensive line, negative game scripts, awful coaching — it's all bad, man!
+
+What are the biggest RB injuries in Week 12?
+
+Second-year Seahawks back Kenneth Walker III suffered an oblique injury in Week 11 that the ever-hip Pete Carroll referred to as "legit." KW3 has a better
+chance of missing multiple weeks than he does at suiting up for Seattle's Thanksgiving Day game against Fred Warner and the 49ers. If Zach Charbonnet somehow
+finds himself on your waiver wire, an early Merry Christmas to you if you have the FAAB or a high waiver priority.
+
+The hits just keep on coming for the Packers' Aaron Jones, who suffered a knee injury but seems to have at least caught a break in the sense that he didn't tear
+his ACL.
+</item 15>
+
+<item 16>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Chase put a scare into the fantasy community on Wednesday when he was listed as a DNP, but after logging back-to-back limited practices, there is a lot more
+optimism heading into Sunday. With Tee Higgins (hamstring) already ruled out, Cincinnati will be hoping Chase can feel healthy enough to play when they host the
+Texans at 1 p.m. ET on Sunday.
+
+The Bengals, despite getting a win over the Bills last Sunday, are a beaten-down bunch. Their defense will also be without a prominent edge rusher, Sam Hubbard,
+complicating matters for a team hoping to stack wins as they compete for an AFC North crown. On the bright side, Joe Burrow appears to be finally healthy and
+should have no problems targeting Tyler Boyd, Trenton Irwin, and Andrei Iosivas in the passing game. If Chase does end up suiting up, fantasy owners should
+enjoy an even larger workload than the receiver already had.
+</item 16>
+
+<item 17>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Randy Mueller raised the thought last week, recalling examples from his career as a GM when offering a pick one round higher than a prospect’s actual draft
+round proved alluring. Detroit used a third-round choice for Hooker, who is recovering from ACL surgery. Hooker would have been valued higher if healthy. Could
+that be true again at some point in the future?
+
+• News that Indianapolis Colts rookie quarterback Anthony Richardson might undergo season-ending shoulder surgery could carry a silver lining. Richardson got to
+play enough for the Colts to evaluate where he stands, but if he shuts it down for the season, neither he nor the team would have to suffer through a full
+season of growing pains. Gardner Minshew’s three-pick game against Jacksonville on Sunday works against the idea Indy is better positioned to compete with the
+journeyman in the lineup, but most coaches and execs I’ve spoken with believe that to be the case in the short term.
+</item 17>
+
+<item 18>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+He was seen walking on the sidelines shortly afterward but ruled doubtful to return. Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing
+yards on the year, replaced Walker as Seattle's top ball carrier. Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an
+"oblique strain that was legit" and could miss time.
+
+D'Onta Foreman (Bears) remained a headliner of Chicago's backfield against the Lions, even with Khalil Herbert back from injured reserve, but managed just 14
+yards on the ground before suffering an ankle injury. He walked off with a limp and attempted to run on the sidelines but did not return to the field after the
+Bears ruled him questionable.
+
+Pick Six Newsletter Crafted By The Best NFL Experts Get the day's big stories + fun stuff you love like mock drafts, picks and power rankings.
+</item 18>
+
+<item 19>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Sit Him (Lineup Decisions) Projections powered by Sportsline Cooper Kupp WR LAR L.A. Rams • #10
+
+Age: 30 • Experience: 7 yrs. Weekly Breakdown MATCHUP vs CLE LAR -3.5 O/U 40 OPP VS WR 14th PROJ PTS 13.8 WR RNK 25th YTD Stats REC 27 TAR 51 REYDS 393 TD 1
+FPTS/G 10.6 You're never supposed to sit your studs, but what if your stud is playing through something that made him look like a dud last week? That was Kupp,
+who in Week 12 ran a ton of short routes and couldn't separate and didn't have much sudden movement. If he's going to come through this week it'll likely come
+on a ton of short targets and/or some targets inside the 10-yard line.
+</item 19>
+
+<item 20>
+Fantasy Football RB PPR Rankings Week 14: Who to start, best sleepers at running back (Sporting News, 2023-12-07T22:09:00+00:00)
+Tampa Bay has a pretty good run defense, so Allgeier can't be trusted outside of a desperate flex play with his nine average touches over the past two weeks.
+
+What are the biggest RB injuries in Week 14?
+
+Derrick Henry (head/neck), Rhamondre Stevenson (ankle), Kenneth Walker III (oblique), Aaron Jones (knee), D'Onta Foreman (ankle), and D'Andre Swift
+(undisclosed) are all "questionable," at best, to suit up this week. We know for sure Stevenson will be out, but we'll have to monitor the injury reports
+throughout the week for the rest.
+
+Jonathan Taylor (thumb) underwent surgery last week and will miss the next few weeks, opening the door for Zack Moss to resume his role as Indy's super-sub lead
+back.
+
+We'll be updating these RB PPR rankings all week, so check back for the latest player movement.
+</item 20>
+
+<item 21>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+The former All-Pro, who battled a lingering hamstring injury earlier this year, received attention on the sidelines after limping off, then left the game for
+further evaluation in the locker room. He was ruled questionable to return. NFL Media reported on Monday that Kupp suffered a low ankle sprain and will be
+evaluated going forward.
+
+Darius Slayton (Giants) had a big impact against the Commanders, hauling in a deep score from Tommy DeVito, before exiting with an arm injury. He was ruled out
+for the remainder of the contest halfway through the third quarter.
+
+EDGE
+
+Joey Bosa (Chargers) appeared to injure his right leg or foot while held in a block during a first-quarter pass-rushing attempt against the Packers. He limped
+to the sidelines and was carted to the locker room, then ruled questionable to return.
+</item 21>
+
+<item 22>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+I agree to receive the "Pick Six Newsletter" and marketing communications, updates, special offers (including partner offers), and other information from CBS
+Sports and the Paramount family of companies. By pressing sign up, I confirm that I have read and agree to the Terms of Use and acknowledge Paramount's Privacy
+Policy See All Newsletters Please check the opt-in box to acknowledge that you would like to subscribe. Thanks for signing up! Keep an eye on your inbox. Sorry!
+There was an error processing your subscription.
+
+WR
+
+Tyreek Hill (Dolphins) briefly left Miami's game against the Raiders while nursing a hand injury and was ruled questionable to return, but he took the field
+again soon afterward, securing seven catches for 80 yards and a score before halftime. Hill has left multiple games this year, only to return in all of them.
+
+Cooper Kupp (Rams) had just a single catch against the Seahawks before suffering an ankle injury while blocking.
+</item 22>
+
+<item 23>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Week 11 of the 2023 NFL season has provided plenty of drama, from the Bears hanging with the Lions to the Giants getting a rebound from emergency quarterback
+Tommy DeVito. But the latest round of regular-season action has also brought another wave of unfortunate injuries. Here's a roundup of the latest big names to
+go down around the league:
+
+QB
+
+C.J. Stroud (Texans) left for a single play against the Cardinals after absorbing a hard hit, with backup Davis Mills entering in relief. Stroud did not receive
+an injury designation, however, and returned after a quick check-in from trainers.
+
+Geno Smith (Seahawks) suffered an injury to his throwing arm after guiding a 16-7 lead over the Rams, showing frustration while trying to stretch the arm after
+a hit from Aaron Donald. Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left
+in the third quarter.
+</item 23>
+
+<item 24>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Jefferson (hamstring) is officially listed as "questionable" for Sunday's game against the Saints. Kickoff is slated for 1 p.m. ET, but fantasy owners won't
+have to wait long for news on the star receiver. In order to be eligible to play, Jefferson will need to be activated by 4 p.m. ET on Saturday. Earlier in the
+week head coach Kevin O'Connell said that it would be "a little aggressive" for Jefferson to get back on the field this week. However, the receiver's three
+straight limited practices were enough for the team to at least weigh the decision, but thankfully, an early answer awaits.
+
+WEEK 10 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start 'em, sit 'em
+
+Jefferson's fantasy outlook is always through the roof, but it will be interesting to see if that changes with Josh Dobbs under center instead of Kirk Cousins.
+</item 24>
+
+<item 25>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+If they're ailing, the Rams would be smart to try and use the run game early and often. Expect a low-scoring game.
+
+STARTS: Kyren Williams, Amari Cooper, Puka Nacua, David Njoku, Jerome Ford,
+
+Kyren Williams, Amari Cooper, Puka Nacua, David Njoku, Jerome Ford, SITS: Cooper Kupp (flex at best), Kareem Hunt, Tutu Atwell, Tyler Higbee, Royce Freeman,
+both QBs, both DSTs (low-end options)
+
+Cooper Kupp (flex at best), Kareem Hunt, Tutu Atwell, Tyler Higbee, Royce Freeman, both QBs, both DSTs (low-end options) SLEEPERS: Elijah Moore (PPR flex)
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Amari Cooper WR CLE Cleveland • #2
+
+Age: 29 • Experience: 9 yrs.
+</item 25>
+
+<item 26>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+For 2023, the NFL league average of QB throws to running backs is 18.2%, so he's just below the current league average.
+
+Sit Him (Lineup Decisions) Projections powered by Sportsline Amari Cooper WR CLE Cleveland • #2
+
+Age: 29 • Experience: 9 yrs. If you start Cooper, you should not only have lower expectations but basically pray to the Fantasy Gods for some garbage production
+or ludicrous target volume. It's hard to trust Cooper to come through for a reliable stat line, and there's a lot of downside for a single-digit-point week.
+He's at best a low-end No. 3 receiver; I'd rather start Tyler Lockett, Chris Godwin or Drake London.
+
+LAST GAME: With rookie Dorian Thompson-Robinson at quarterback, Cooper saw six targets and caught one for 16 yards. Half of the six targets were uncatchable.
+</item 26>
+
+<item 27>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+In their past three games, they gave up 4.1 yards per rush to the Ravens (just 6.3% of their runs went 10-plus yards), 7.8 yards per rush to the Steelers thanks
+to a long TD run by Jaylen Warren (23.8% of their runs went 10-plus yards) and 4.6 yards per rush to the Broncos (18.5% of their runs went 10-plus yards).
+Playing more snaps because the Browns offense has been inept isn't the reason for it either because they struggled with the run in the first half against all
+three teams (over 5.3 yards per carry allowed against each). It's silly to say the Rams passing game is struggling when Matthew Stafford just threw four
+touchdowns, but Cooper Kupp looked like he played hurt last week and Puka Nacua didn't look that much better.
+</item 27>
+
+<item 28>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Weekly Breakdown MATCHUP @ LAR LAR -3.5 O/U 40.5 OPP VS WR 3rd PROJ PTS 11.4 WR RNK 23rd YTD Stats REC 47 TAR 86 REYDS 765 TD 2 FPTS/G 12.3 It appears Cooper
+will play through a rib injury he suffered last week, and it also appears he'll catch passes from new Browns quarterback Joe Flacco. This is actually a great
+thing for Cooper; over his past two weeks his ADOT sat at 7.57 yards, which was roughly half of what it was in his first nine games at 15.42 yards. Clearly, the
+Browns wanted Cooper to run shorter routes and make things easier on rookie QB Dorian Thompson-Robinson.
+</item 28>
+
+<item 29>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+In addition, K.J. Osborn (concussion) is also listed as "questionable," though his status steadily improved throughout the week from DNP on Wednesday to full
+practice on Friday. If Jefferson is back, he's a must-start. If Jefferson is out but Osborn returns, both Osborn and Jordan Addison are worth using.
+
+WEEK 10 PPR RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is Ja'Marr Chase playing Week 10?
+
+UPDATE: ESPN's Jeremy Fowler reported late Saturday that the Bengals are "hopeful" that Chase will play against Houston, but they won't know for sure until
+after a pre-game workout.
+
+UPDATE 2: Chase is officially ACTIVE.
+
+Chase (back) appears ready to take his status down to kickoff. According to The Athletic's Dianna Russini, the Bengals' star receiver will work out on Sunday
+morning and his status will be determined afterward.
+</item 29>
+
+<item 30>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Receiving Yards Through Six NFL Games Rk Player Season Yds 1 Don Hutson 1942 819 2 Tyreek Hill 2023 812 3 Wes Welker 2011 785 4 Elroy Hirsch 1951 766 5 Santana
+Moss 2005 743 6 DeAndre Hopkins 2015 726 7 Raymond Berry 1960 725 8 Jerry Rice 1986 723 9 Bob Boyd 1954 718 10 Bobby Mitchell 1962 714
+
+• Jared Goff is enjoying the second-best start to a season for his career from a statistical standpoint, behind only his 2018 Super Bowl season with the Rams.
+With the Lions at 5-1 and Goff heading toward a likely contract extension, could another team come after his injured backup, former University of Tennessee
+quarterback Hendon Hooker?
+</item 30>
+=== END ITEM id=cab3112e4fe4b7d8 ===
+
+=== ITEM id=2bed94e69e3884a9 ===
+Gold sentences and facts:
+Sentence 0: They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+  Fact 0.0: Jerry Dipoto is president of baseball operations.
+  Fact 0.1: Those referred to as 'they' would all have significant value if Jerry Dipoto decided to move one for a bat.
+Sentence 1: Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+  Fact 1.0: Aaron Judge came away with a new contract.
+  Fact 1.1: Justin Verlander came away with a new contract.
+  Fact 1.2: Trea Turner came away with a new contract.
+  Fact 1.3: Xander Bogaerts came away with a new contract.
+
+Retrieved items:
+<item 1>
+Unraveling Potential Reasons Why the Dodgers May Not Pursue Shohei Ohtani and Mike Trout in Free Agency Despite Their Availability (Essentially Sports,
+2023-11-18T21:21:03+00:00)
+Pitchers or Hitters? Who Will the Dodgers Prioritize This Free Agency?
+
+The Dodgers have been in dire need of pitchers for a few seasons. Their current highest strikeout rate by a pitcher in a single postseason is 137 SOs by Clayton
+Kershaw, followed by 119 SOs by Bobby Miller and 117 SOs by Julio Urias. With Shohei Ohtani’s high strikeout rate of 167 this season, he’ll be an invaluable
+addition to the team. However, there’s a little hiccup that could keep that from happening.
+
+Ohtani will not be available to pitch throughout the 2024 season due to an elbow ligament injury he’s currently recovering from. Given the pitcher’s unavoidable
+absence, it will not be advisable for the Dodgers to hire him until 2025. Yes, Ohtani does have magnificent hitting form as well.
+</item 1>
+
+<item 2>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+The winter meetings end on Thursday.
+
+Yoshinobu Yamamoto meeting with Yankees, already met with Mets
+
+Date: Wednesday, Dec. 6
+
+Source: Jon Morosi, MLB Network and Will Sammon, The Athletic
+
+The Yankees could be on the verge of adding Soto, but they might not be done. The Yankees are reportedly going to meet with Yoshinobu Yamamoto in New York, the
+top pitcher on the market, on Monday. MLB Network's Jon Morosi reported New York is considered to be one of the top teams to sign him, along with the Red Sox,
+Giants, Dodgers and Cubs.
+
+That will be the second time Yamamoto has met with a New York team. He reportedly already met with Mets owner Steve Cohen in Japan last week.
+
+'Decent chance' Corbin Burnes is traded this winter
+
+Date: Wednesday, Dec.
+</item 2>
+
+<item 3>
+Shohei Ohtani rumors tracker: Latest news, updates on Dodgers, Cubs & more as free agency short list emerges (Sporting News, 2023-12-01T22:05:46+00:00)
+The Giants are considered to be an unknown.
+
+In addition to the teams, Passan also reported Ohtani is expecting a contract somewhere between $550 and $600 million, which would be the largest guaranteed
+contract in North American sports.
+
+Blue Jays could alter roster with Ohtani signing
+
+Date: Nov. 30
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays are one of the teams believed to still be among the strongest in the mix for Ohtani. The New York Post's Jon Heyman reported there could be some
+changes if Ohtani signs with the Blue Jays, however, reporting that some rivals believe Bo Bichette and Vladimir Guerrero Jr. could hit the trade block if
+Toronto lands the star.
+
+Trading the two infielders might seem counterproductive to signing Ohtani in the first place. Those two would be the biggest supporting bats in the lineup
+around Ohtani.
+</item 3>
+
+<item 4>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+The Athletic's Ken Rosenthal reported Gurriel has re-signed a contract with the Diamondbacks.
+
+According to ESPN's Jeff Passan, the deal is for $42 million over three years with a club option for a fourth year and an opt out after his second season with
+the club.
+
+Yamamoto dines with Mets owner
+
+Date: Sunday, Dec. 17
+
+Source: Joel Sherman, New York Post
+
+The Mets continued their strong push for the top free agent available, Yoshinobu Yamamoto, by hosting the Japanese pitcher for dinner Saturday night at team
+owner Steve Cohen's Connecticut home. Cohen and other top Mets officials previously flew to Japan to meet with Yamamoto on his home turf, so this is at least
+the second time the key players have met face-to-face.
+
+Sherman reports the bidding process for the 25-year-old "is supposed to intensify this week," with the Yankees, Dodgers, Giants, Red Sox, Phillies and Blue Jays
+also in the mix.
+</item 4>
+
+<item 5>
+Unraveling Potential Reasons Why the Dodgers May Not Pursue Shohei Ohtani and Mike Trout in Free Agency Despite Their Availability (Essentially Sports,
+2023-11-18T21:21:03+00:00)
+The Los Angeles Angels have gone through a tough year. After a heartbreaking 2023 season, they now have to cope with the impending exit of their star two-way
+star, Shohei Ohtani. The team is also open to trading their nine-time Silver Slugger hitter Mike Trout, should he request it. In a huge miss, a team that
+couldn’t do well even with two of the league’s biggest talents on their roster may lose said stars at the same time. Will they choose to stay in LA?
+
+America’s Favorite Video Today
+
+The Halos’ cross-town rivals, the Los Angeles Dodgers, have been eyeing the dynamic Troutani duo for a long time. However, despite fans’ expectations, the
+Dodgers’ Ohtani-Trout conquest might not take place—and for good reasons.
+
+Do the Dodgers have the budget to afford Ohtani and Trout on the same roster?
+</item 5>
+
+<item 6>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+The price would only be higher now that he’s a year and a half closer to free agency.
+
+In the absence of an extension or a definitive declaration that Soto is off the trade market, speculation will linger. Alden González of ESPN wrote last week
+that many throughout the industry believe the three-time All-Star will be available.
+
+2. Corbin Burnes, SP, Brewers
+
+3. Willy Adames, SS, Brewers
+
+Burnes and Adames are tied together with good reason. They’re each one year from the open market and projected for a noteworthy arbitration salary — $15.1M for
+Burnes, $12.4M for Adames. Milwaukee is reportedly open to offers on the majority of the roster.
+
+A former Cy Young winner, Burnes may be the best pitcher available in trade. The right-hander posted a sub-3.00 ERA each season from 2020-22.
+</item 6>
+
+<item 7>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+20
+
+Source: Ken Rosenthal, The Athletic
+
+Buried at the bottom of Rosenthal’s piece on what an Ohtani contract might look like — incentives, opt-outs and all sorts of stuff — is this little bit of
+reporting:
+
+An agreement at the winter meetings in Nashville the first week of December would be the ideal outcome for MLB, but not necessarily for Ohtani. He perhaps will
+be better off waiting for the signing of Japanese righty Yoshinobu Yamamoto, who is expected to be posted for free agency as soon as Monday, triggering a 45-day
+window for teams to negotiate with him. Losing out on the 25-year-old Yamamoto, who could command more than $200 million, might put certain teams on tilt,
+improving the landscape for Ohtani.
+
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov.
+</item 7>
+
+<item 8>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+3
+
+Source: Susan Slusser, San Francisco Chronicle
+
+The Giants have missed out on big names in the past like Aaron Judge and Carlos Correa, but they are looking to turn that around in 2023 with heavy involvement
+and Ohtani, among others. Per San Francisco Chronicle's Susan Slusser, teams believe the Giants "might have an edge" in the pursuit of Japanese ace Yoshinobu
+Yamamoto.
+
+Dylan Cease trade market heating up
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+One of the biggest names on the market early is White Sox ace Dylan Cease in trade talks. MLB Network's Jon Morosi reported three teams, the Dodgers, Braves and
+Orioles, are among several involved discussing a deal for Cease as the winter meetings begin.
+
+Rays, Mariners talking trades in winter meetings
+
+Date: Sunday, Dec.
+</item 8>
+
+<item 9>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Twins could trade Max Kepler, Jorge Polance
+
+Date: Sunday, Dec. 17
+
+Source: Jon Morosi, MLB Network
+
+The Twins are coming off an AL Central title, but could be looking to deal away two of their key players form the team. Max Kepler and Jorge Polanco could both
+reportedly be on the trade market, per MLB Network's Jon Morosi, though their market could hinge on the status of other infield free agents.
+
+Kepler appeared in 130 games for the Twins, and posted an impressive .260/.332/.484 slash line with 24 homers for Minnesota. Polanco was moved to an infield
+utility role with Edouard Julien and Royce Lewis emerging into regulars, but was still solid in 80 games, logging a .255/.335/.454 slash with 14 homers.
+
+Yamamoto requests meeting with Yankees
+
+Date: Sunday, Dec.
+</item 9>
+
+<item 10>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+New York has subsequently walked back some of their statements about a possible retool. They’re still aiming to compete in ’24 even if they’re signaling they
+won’t blow away the top of the free agent market.
+
+First-year president of baseball operations David Stearns has twice publicly said he anticipates Alonso being the Opening Day first baseman in Queens. That
+won’t stop teams from trying, but an offseason deal looks decidedly unlikely.
+
+Others of note
+
+A’s: Seth Brown
+
+Braves: Vaughn Grissom
+
+Brewers: Adrian Houser, Devin Williams, Brandon Woodruff
+
+Cardinals: Alec Burleson, Tommy Edman, Nolan Gorman, Tyler O’Neill
+
+Giants: J.D.
+</item 10>
+
+<item 11>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+The Padres are scaling back payroll, perhaps as much as $50M. They need multiple starting pitchers and could stand to upgrade at first base and/or designated
+hitter.
+
+Trading Soto would allow the Friars to recoup MLB-ready talent while clearing significant spending room for multiple smaller additions. It would also be a
+devastating blow to the lineup. Soto overcame a relatively slow start (by his standards) to hit .275/.410/.519 with 35 home runs this year.
+
+The Padres are still motivated to win in the short term. Barring what would be a stunning run at Ohtani, they’re not going to acquire anyone better than Soto.
+
+President of baseball operations A.J. Preller continues to maintain they’ll explore a long-term deal. There’s nothing to suggest an extension is particularly
+likely. Soto rejected a $440M offer from the Nationals before he was traded at the 2022 deadline. The price would only be higher now that he’s a year and a half
+closer to free agency.
+</item 11>
+
+<item 12>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+Passan wrote a piece about 10 teams to watch the rest of the offseason, and he threw this little note in the section about the Red Sox, and how they needed to
+sign Yoshinobu Yamamoto.
+
+Boston's bats are good, or good enough at least, to avoid having to spend like mad in a down year for free agent hitters -- unless, of course, it's for Ohtani,
+who has an affinity for Boston. If the Red Sox don't hit that jackpot, they're backfilled nicely with a system that includes outfielder Roman Anthony, shortstop
+Marcelo Mayer and catcher Kyle Teel, among the best trios of offensive prospects in baseball.
+
+It's cool when the best player in the world is a free agent and has an "affinity" for your town.
+
+'Money's great, but winning's better'
+
+Date: Nov.
+</item 12>
+
+<item 13>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Yates, who will be 37 when the season begins, is headed to the Rangers on a one-year deal, per Rosenthal. The right-hander, an All-Star closer for the Padres in
+2019, posted a 3.28 ERA in 61 appearances for the Braves in 2023.
+
+Devenski, 33, has agreed to a new one-year deal with the Rays that includes a club option for 2025, according to Passan. Devenski began 2023 with the Angels but
+was released in late August and signed with Tampa Bay. He posted a 5.08 ERA in 29 games for the Angels and dropped three full runs off that number in nine games
+with the Rays.
+
+Dave Roberts says Dodgers met with Ohtani
+
+Date: Tuesday, Dec. 5
+
+Source: Alden Gonzalez, ESPN
+
+Dodgers manager Dave Roberts told reporters Tuesday that the team met with Ohtani for 2-3 hours over the weekend.
+</item 13>
+
+<item 14>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+Davis, Mike Yastrzemski
+
+Guardians: Josh Naylor, Cal Quantrill
+
+Mariners: Ty France
+
+Marlins: Josh Bell
+
+Mets: Jeff McNeil
+
+Nationals: Hunter Harvey, Lane Thomas
+
+Orioles: Anthony Santander
+
+Padres: Scott Barlow
+
+Phillies: Nick Castellanos
+
+Rays: Manuel Margot, Harold Ramírez
+
+Red Sox: Kenley Jansen, Chris Martin, Nick Pivetta
+
+Rockies: Brendan Rodgers
+
+Royals: Salvador Perez
+
+Tigers: Spencer Turnbull
+
+Twins: Kyle Farmer
+</item 14>
+
+<item 15>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Verdugo had been the Red Sox's starting outfielder for the last four seasons, coming over as the centerpiece in the trade that sent Mookie Betts to the Dodgers.
+Verdugo hit .281 with 43 home runs, 206 RBI and 16 stolen bases over 2,071 plate appearances with Boston. He also led the American League in outfield assists in
+2020 and 2023.
+
+In return, Boston will get Weissert and two pitching prospects headlined by Fitts — the Yankees' No. 4-ranked pitching prospect and 12-ranked prospect overall.
+
+Relievers Yates, Devenski get one-year deals for 2024
+
+Date: Tuesday, Dec. 5
+
+Source: Ken Rosenthal, The Athletic and Jeff Passan, ESPN
+
+Veteran relievers Kirby Yates and Chris Devenski know where they'll be pitching in 2024, according to reports Tuesday.
+</item 15>
+
+<item 16>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Rays, Mariners talking trades in winter meetings
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+The Mariners and Rays have been frequent trade partners in recent years, and there's a chance they could be talking shop again at the winter meetings. MLB
+Network's Jon Morosi reported the teams are discussing Rays utility infielder Isaac Paredes, and potentially star left fielder Randy Arozarena, in talks to
+start the winter meetings.
+
+Jays unlikely to land both Ohtani, Soto
+
+Date: Sunday, Dec. 3
+
+Source: Jon Morosi, MLB Network
+
+The Blue Jays have been among the most active names in both the Ohtani and Soto markets. And of course, those talks have had fans dreaming of a lineup that
+features, Ohtani, Soto, Vladimir Guerrero Jr., Bo Bichette and George Springer.
+</item 16>
+
+<item 17>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+It appears the team could be close to landing the biggest trade acquisition of the offseason. YES' Jack Curry reported the Yankees have "intensified efforts" to
+trade for Soto and that a deal "is likely." He expects New York to deal four or five players.
+
+Additionally, WFAN's Brandon Tierney reported YES was told by the team to prepare for a 2 p.m. ET emergency "Hot Stove Show" and that there is a chance the
+Yankees complete the deal by lunch.
+
+Orioles 'close to deal' with reliever Craig Kimbrel
+
+Date: Wednesday, Dec. 6
+
+Source: Ken Rosenthal, The Athletic and Joel Sherman, New York Post
+
+The Orioles are said to be "close" to a deal with free agent and former Phillies closer Kimbrel, Rosenthal reported Wednesday morning.
+
+Baltimore will be without All-Star closer Felix Bautista for the entire 2024 season after receiving Tommy John surgery in October.
+</item 17>
+
+<item 18>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Roberts said Ohtani is "clearly" the Dodgers' top priority, adding that the team is confident the two-time MVP will pitch again. Roberts wasn't able to offer a
+timeline for Ohtani's decision.
+
+Pair of pitchers could be signed after Ohtani deal
+
+Date: Tuesday, Dec. 5
+
+Source: Jon Morosi, MLB Network
+
+MLB is largely in a holding pattern as it awaits news on Ohtani. MLB Network's Jon Morosi reported the Rays could wind up trading Tyler Glasnow shortly after
+Ohtani signs, listing the Cubs and Reds as top contenders for the ace. He also reported Yoshinobu Yamamoto could sign following Ohtani's deal, and that the Red
+Sox have him among their top priorities.
+
+Cubs losing optimism in signing Ohtani
+
+Date: Tuesday, Dec.
+</item 18>
+
+<item 19>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Morosi reports Shohei Ohtani is "likely to decide on a team within the next week," according to a source.
+
+Status quo on Yankees' Juan Soto trade talks
+
+Date: Sunday, Dec. 3
+
+Source: Jon Heyman, New York Post
+
+The Yankees reportedly are pushing hard to acquire Juan Soto from the Padres, but Heyman says the teams haven't spoken since San Diego requested a six-player
+package in return for Soto and Trent Grisham. That ask included pitchers Michael King and Drew Thorpe, who the Yankees aren't inclined to move. Stay tuned...
+
+Shohei Ohtani field growing smaller
+
+Date: Friday, Dec. 1
+
+Source: Jeff Passan, ESPN
+
+It has been expected since before he hit free agency that Ohtani would set the record for the largest fully guaranteed contract in North American sports
+history, with Passan reporting the deal could reach as much as $600 million.
+</item 19>
+
+<item 20>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+And he is clearly looking for a top-of-the-market contract. Rogers reported sources indicate Bellinger's agent, Scott Boras, is seeking a deal worth well over
+$200 million for Bellinger, with one source saying he is "not budging."
+
+Rogers went on to note that some believe the Cubs won't be a team willing to pay a player that type of money until he's 40 years old, while a team like the Blue
+Jays might given their desperation to round out the roster.
+
+Padres closing in on contract for Yuki Matsui
+
+Date: Tuesday, Dec. 18
+
+Source: Yuki Yamada, Sankei Sports
+
+The Padres are nearing a deal for one of the top Japanese pitchers on the market. Per Sankei Sports' Yuki Yamada, the Padres are "close to signing" Rakuten
+Golden Eagles' reliever Yuki Matsui to a deal.
+</item 20>
+
+<item 21>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+Kepler will be a free agent after next season; Polanco’s contract has a $12.5M team option for 2025 that comes with a $750K buyout.
+
+They’re each good players. Kepler is a plus defender in right field who hit .260/.332/.484 with 24 homers this year. Polanco was limited to 80 games but ran a
+.255/.335/.454 showing. He’s one of the sport’s better offensive second basemen and saw some third base action for Minnesota late in the year.
+
+The Twins have Matt Wallner and Trevor Larnach as left-handed hitting corner outfield options. They’re deeper on the infield, where Willi Castro and Kyle Farmer
+(another trade candidate) are possibilities at second/third base behind starters Edouard Julien and Royce Lewis.
+
+Top prospect Brooks Lee, the No. 8 overall pick in 2022, isn’t far from MLB readiness. The Twins could look to move Kepler or Polanco for rotation depth or to
+bring in a righty bat to balance the lineup.
+</item 21>
+
+<item 22>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Angels discussing Blake Snell
+
+Date: Tuesday, Dec. 19
+
+Source: Jon Morosi, MLB Network
+
+The Angels came up empty on bringing back Ohtani. Now, they're looking to land another splashy name on the free-agent market. MLB Network's Jon Morosi reported
+Los Angeles has had discussions with two-time Cy Young winner Blake Snell.
+
+Per Morosi, the Angels are not believed to be a strong contender for Yamamoto, thus allowing them to put more of an effort on landing Snell rather than waiting
+for Yamamoto to make a decision.
+
+Cody Bellinger looking for package starting at $200 million
+
+Date: Tuesday, Dec. 18
+
+Source: Jesse Rogers, ESPN
+
+With Ohtani signed to Los Angeles, Bellinger remains the top free-agent bat on the market. And he is clearly looking for a top-of-the-market contract.
+</item 22>
+
+<item 23>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Who will hand him that contract has been much more of a mystery. Little has been leaked about the top suitors for Ohtani beyond the usual suspects. Passan
+reported that at least three teams initially believed to be in the running — the Mets, Rangers and Red Sox — are believed to be out now. The teams most likely
+to still be in the mix are the Dodgers, Cubs, Blue Jays and Angels, with the Giants' status in the race for Ohtani unknown.
+
+Star players could be traded
+
+Date: Friday, Dec. 1
+
+Source: Jeff Passan, ESPN
+
+The free agency pool outside of Ohtani, Cody Bellinger, Blake Snell and Yoshinobu Yamamoto is a bit lacking in star power, but the trade market could ensure
+several big-name players are on the move this offseason.
+</item 23>
+
+<item 24>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+They’re already light on consistent hitting beyond Aaron Judge. On the surface, trading their second-best hitter seems counterintuitive.
+
+The big question is whether the front office believes Oswald Peraza is capable of stepping into an everyday second base role in 2024. If they feel the
+23-year-old is ready, trading Torres to clear spending room while bringing back outfield or pitching help makes sense.
+
+11. Jonathan India, 2B, Reds
+
+The Reds’ infield surplus has fueled trade speculation on India back to the deadline. Cincinnati didn’t seem inclined to make that move midseason, pointing to
+India’s role as a clubhouse leader. While that’s certainly still a factor, he didn’t hit well down the stretch and finished the year with a middling
+.244/.338/.407 batting line. He’s a well below-average keystone defender.
+
+There’s an argument the Reds are better off relying on an up-the-middle tandem of Matt McLain and either Noelvi Marte or Elly De La Cruz.
+</item 24>
+
+<item 25>
+Unraveling Potential Reasons Why the Dodgers May Not Pursue Shohei Ohtani and Mike Trout in Free Agency Despite Their Availability (Essentially Sports,
+2023-11-18T21:21:03+00:00)
+Shohei Ohtani’s predicted $535 million for 11 years (according to a Sports Illustrated segment) will bring the Dodgers down to pay him a good $48.63 million
+annually.
+
+The Dodgers already have six players whom they have to pay above $10 million a year: Freddie Freeman ($27 million), Mookie Betts ($25 million), Clayton Kershaw
+($20 million), Chris Taylor ($15 million), Max Muncy ($13.5 million), and J.D. Martinez ($10 million). Among the top-paid players, Clayton Kershaw is exiting
+the team this season. That, along with a few other player offloads, will free up enough space in the Dodgers payroll to support two $25 million or three $10
+million p/a players on their team. Neither Trout nor Ohtani falls within that price range, so keeping both together at the same time would not be a feasible
+option for the Dodgers right now.
+
+Pitchers or Hitters?
+</item 25>
+
+<item 26>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+NY Post's Jon Heyman reported Miami is at least believed to be listening to trade packages for its young starters, including Jesus Luzardo, Braxton Garrett and
+Edward Cabrera, among others.
+
+Alex Verdugo 'expected' to stay with Yankees despite potential Juan Soto trade
+
+Date: Wednesday, Dec. 6
+
+Source: Jon Morosi, MLB Network
+
+The Yankees acquired Alex Verdugo yesterday from the Red Sox. With the team's reported interest in Juan Soto, there was some speculation that Verdugo could be
+flipped to the Padres, however, MLB Network's Jon Morosi reported that New York is "expected" to keep the outfielder rather than include him in a deal with San
+Diego.
+
+Juan Soto trade to Yankees 'is likely'
+
+Date: Wednesday, Dec. 6
+
+Source: Jack Curry, YES and Brandon Tierney, WFAN
+
+New York landed Alex Verdugo last night in a deal with the Red Sox.
+</item 26>
+
+<item 27>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+The Pirates also added another left-hander who pitched in 2023 for an AL West team in Marco Gonzales, though he had an offseason stop in Atlanta in the middle.
+
+Bidding for Yamamoto begins Monday
+
+Date: Monday, Dec. 18
+
+Source: Jeff Passan, ESPN
+
+There has been plenty of speculation about offers sent over to Yamamoto to this point, but Passan reports he has yet to receiver any formal offers. However,
+that will start to change on Monday, with the bidding slated to begin.
+
+Braves cut Matt Carpenter after trying to trade him
+
+Date: Monday, Dec. 18
+
+Source: Robert Murray, FanSided
+
+Atlanta reportedly was hoping to trade Matt Carpenter after acquiring him in a deal earlier this offseason from the Padres. The team acquired him and took on $4
+million along with trading for Ray Kerr, but was looking to deal away his contract to someone else, according to The Athletic's Ken Rosenthal.
+</item 27>
+
+<item 28>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+That informs the offseason trade landscape, which is headlined by a few stars deep into their arbitration windows. Without many clear rebuilders, it’s possible
+we see more swaps of big leaguers at positions of need between teams that expect to compete.
+
+Before we get to the list, a note on methodology. This isn’t a strict ranking of players’ trade value, nor is it solely about likelihood of being moved. We’re
+trying to balance both of those things, an inherently subjective exercise.
+
+All projected salaries for arbitration-eligible players are courtesy of MLBTR contributor Matt Swartz.
+
+1. Juan Soto, LF, Padres
+
+Other than Shohei Ohtani’s free agency, there may be no bigger story of the offseason than Soto’s future in San Diego. He is entering his final year of club
+control, projected for a $33M salary that would be the highest ever for an arbitration-eligible player.
+
+The Padres are scaling back payroll, perhaps as much as $50M.
+</item 28>
+
+<item 29>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Kelenic, 24, is the headliner of the deal as a former No. 6 overall pick in the 2018 MLB Draft and top five-ranked prospect in 2021. The 24-year-old has not
+found any consistency in his MLB career thus far, hitting .206 with a .656 OPS through three tumultuous seasons. He has 32 home runs, 109 RBI and 24 stolen
+bases in 974 plate appearances.
+
+Gonzales, 31, is also a decent rotation arm with 65 wins, 665 strikeouts and a 4.14 ERA over 893.0 innings pitched in his nine-year career.
+
+Giants emerging as possible frontrunners for Yoshinobu Yamamoto
+
+Date: Sunday, Dec.
+</item 29>
+
+<item 30>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Passan reported a trade of Soto appears to be "edging closer to becoming a reality," and while several teams are out on him because of his large salary and
+pending free-agent status, there still could be a large market for the star outfielder.
+
+Much of the rest of the names on the trade market are arms. Dylan Cease and Tyler Glasnow are the pitchers most likely to be dealt this offseason, and Cleveland
+could also hold a pair of intriguing trade chips in closer Emmanuel Clase and former Cy Young winner Shane Bieber. The Brewers have also begun trade talks for
+former Cy Young winner Corbin Burnes.
+</item 30>
+
+<item 31>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+It also makes him less likely to be traded this offseason.
+
+First-year GM Chris Getz has suggested no one on the roster is truly untouchable, an understandable approach for a team that just lost 101 games. Neither owner
+Jerry Reinsdorf nor Getz has called this a rebuild, though.
+
+Any slim hopes the White Sox may have of competing in 2024 would be dashed by trading Cease, the only above-average starting pitcher on the roster.
+
+7. Alex Verdugo, RF, Red Sox
+
+Verdugo’s name has been floated in trade rumors for a few seasons. The Red Sox have held onto him thus far. They have a new baseball operations leader in Craig
+Breslow, who has acknowledged the team has gotten early calls on the left-handed hitting outfielder.
+
+Jarren Duran and Masataka Yoshida also hit from the left side. Dealing Verdugo could free some at-bats for a right-handed addition while perhaps bringing in
+immediate help for the pitching staff or at second base.
+</item 31>
+
+<item 32>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Yamamoto requests meeting with Yankees
+
+Date: Sunday, Dec. 17
+
+Source: Jon Heyman, New York Post
+
+Yamamoto has been making the rounds with MLB teams, and per Heyman, he reportedly asked to meet with the Yankees for a second time. The meeting with New York
+comes a day after he met with the Mets at team owner Steve Cohen's Connecticut home.
+
+Lourdes Gurriel Jr. re-signs with Diamondbacks
+
+Date: Sunday, Dec. 17
+
+Source: Ken Rosenthal, The Athletic and ESPN's Jeff Passan
+
+The Diamondbacks acquired Lourdes Gurriel Jr. last offseason in a trade involving Daulton Varsho and Gabriel Moreno. And after helping Arizona get to the World
+Series, Gurriel is ready to come back to Arizona. The Athletic's Ken Rosenthal reported Gurriel has re-signed a contract with the Diamondbacks.
+</item 32>
+
+<item 33>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+The Padres have reportedly sent Juan Soto to the Yankees in exchange for four pitchers and catcher Kyle Higashioka, according to the New York Post's Joel
+Sherman. Soto immediately adds to a potent left-handed bat to a lineup sorely in need of some thump from the left side, and provides some much-needed support to
+2022 AL MVP Aaron Judge.
+
+MORE: Full Juan Soto trade details
+
+Craig Kimbrel signs with Orioles
+
+Date: Wednesday, Dec. 6
+
+Source: Ken Rosenthal, The Athletic and Joel Sherman, New York Post
+
+The Orioles are bolstering their bullpen, signing Craig Kimbrel to a one-year, $13 million deal, according to The Athletic's Ken Rosenthal. The NY Post's Joel
+Sherman reported he has a $1 million buyout for 2025 and a $13 million club option. The 35-year-old right-hander amassed 23 saves in 69 innings in 2023 with a
+3.26 ERA.
+</item 33>
+
+<item 34>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+While the offseason has gotten rolling, trade season hasn’t quite arrived. The Tigers acquired Mark Canha from Milwaukee in the biggest swap of the first couple
+weeks. Otherwise, the GM Meetings simply served to set the stage for future transactions.
+
+That’ll surely involve some notable trades. Unlike the summer deadline, projecting which players will change hands is difficult at this stage of the offseason.
+
+Aside from the A’s, there aren’t any teams clearly in rebuild mode. Clubs like the Rockies, Royals, White Sox, Nationals and Angels have uphill paths to
+contention, yet none has indicated they’re prepared to punt on the 2024 season entirely.
+
+The Padres, Twins, Rays, Brewers and Guardians are all aiming to contend but have questions about their payroll. That’s standard operating procedure for Tampa
+Bay, Milwaukee and Cleveland. San Diego and, to a lesser extent, Minnesota have shown a willingness to spend in recent years but are scaling back — in both
+cases, likely tied to their uncertain local television rights contracts.
+</item 34>
+
+<item 35>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+His 3.39 mark across 193 2/3 innings this past season wasn’t quite so dominant but is still high-end production.
+
+Burnes struck out just under 26% of opposing hitters. While his lowest mark since his rookie season, that’s still an above-average figure.
+
+Adames is coming off a less impressive year. The 28-year-old hit .217/.310/.407 through 638 trips to the plate. That’s slightly below-average offense, although
+he still connected on 24 home runs.
+
+Adames is an excellent defensive shortstop with plus power in an offseason where there are essentially no free agent shortstops of note. Even with a mediocre
+on-base percentage, he’d generate plenty of interest.
+
+4. Shane Bieber, SP, Guardians
+
+Develop high-end starting pitching, trade a top starter as they become more expensive, replace him with talented younger arms. The Guardians have trodden this
+path with Corey Kluber, Mike Clevinger and Carlos Carrasco.
+</item 35>
+
+<item 36>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Kansas City can use plenty of rotation help after a dismal 2023 season, so Lugo figures to be one of the Royals' top arms in 2024 and perhaps beyond.
+
+Yamamoto to meet with Red Sox, Blue Jays
+
+Date: Tuesday, Dec. 12
+
+Source: Mark Feinsand, MLB.com
+
+MLB.com's Mark Feinsand reports Japanese ace Yoshinobu Yamamoto will meet with both the Red Sox and Blue Jays in the coming days.
+
+Yamamoto has already met with the Mets, Giants and Yankees, with the Dodgers also believed to be involved in the bidding. With both meetings still upcoming, the
+report is an indication the Yamamoto sweepstakes aren't on the verge of a conclusion.
+
+MORE: Ranking the best fits for Japanese star Yoshinobu Yamamoto
+
+Dodgers formally announce Ohtani signing
+
+Date: Monday, Dec.
+</item 36>
+
+<item 37>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+It was the first time he stayed healthy for a 162-game schedule. The result was a season that’ll get him down-ballot MVP support.
+
+Robert is a prime-aged superstar and, unlike Soto or Burnes, he’s nowhere near free agency. He’ll make $12.5M next year, $15M in 2025 and is controllable via
+$20M team options for 2026-27. Trading Robert would signify a complete teardown that the Sox probably don’t want. Yet the haul would be astronomical if they
+decided to go in that direction.
+
+25. Pete Alonso, 1B, Mets
+
+Alonso was the subject of early offseason trade speculation. With the Mets projecting a less active offseason and placing a priority on 2025, it wasn’t out of
+the question he could be available. Alonso is projected for a $22M arbitration salary and will be a free agent after next year.
+
+New York has subsequently walked back some of their statements about a possible retool.
+</item 37>
+
+<item 38>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+15. Randy Arozarena, LF, Rays
+
+Arozarena hasn’t been the subject of the same level of trade speculation as Glasnow has. There’s an argument the Rays should be more willing to move the
+All-Star outfielder if they’re looking to create payroll room.
+
+Tampa Bay has greater depth in the outfield than they do on their injury-riddled pitching staff. Josh Lowe, Jose Siri, Harold Ramírez, Luke Raley and Manuel
+Margot are all on hand. (Margot has come up in trade rumors as well.)
+
+None of those players is as good as Arozarena. Trading star players for younger talent is familiar territory for the Tampa Bay front office though. Arozarena is
+projected for a $9M arbitration salary and controllable for three seasons. He’d have significant trade value if the Rays were to consider moving him.
+
+16. Mariners SP
+
+We initially had Bryan Woo in this spot.
+</item 38>
+
+<item 39>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+MLBTR projects Verdugo for a $9.2M salary in his final season of arbitration. He’s coming off another league-average offensive showing, when he hit
+.264/.324/.421 with 13 home runs through 602 plate appearances.
+
+Verdugo hasn’t become the All-Star player the Sox envisioned when building the Mookie Betts return around him. He’s a solid regular, a high-contact hitter who
+rates as a decent defender in right field.
+
+8. Trent Grisham, CF, Padres
+
+9. Ha-Seong Kim, 2B, Padres
+
+If the Padres hold Soto, dealing Grisham and/or Kim could be an alternative means of trimming payroll. While neither is going to make anywhere near Soto money
+in 2024, they’re each on mid-level salaries of note.
+
+Grisham is projected for a $4.9M salary in his second-to-last season of arbitration.
+</item 39>
+
+<item 40>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+The Athletic's Ken Rosenthal reports Ohtani is "believed" to have met with the Blue Jays at the team's complex in Florida on Monday, far away from the meetings
+in Nashville. The Blue Jays have been pursuing Ohtani and Juan Soto in hopes of striking a deal for one of the two stars.
+
+Shohei Ohtani, Yoshinobu Yamamoto decision not expected until after winter meetings
+
+Date: Monday, Dec. 4
+
+Source: Jon Heyman, The New York Post
+
+The baseball markets are waiting for the first major domino to fall this offseason in free agency, but it does not appear as though that will happen before the
+winter meetings conclude. Jon Heyman reports that neither Shohei Ohtani not Yoshinobu Yamamoto are expected to get a deal done before the final meetings on
+Wednesday.
+
+Wade Miley back with Brewers on 1-year deal
+
+Date: Monday, Dec.
+</item 40>
+
+<item 41>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov. 17
+
+Source: Daniel Kramer, MLB.com
+
+Here’s the key piece of the article: “Industry sources told MLB.com this week that landing Ohtani doesn’t appear to be within the Mariners’ realistic agenda
+this offseason.”
+
+In a way, that’s surprising. The Mariners seem to check a lot of boxes for Ohtani. They’re set up to win for a long time with a bunch of young starting pitchers
+and a co-superstar in Julio Rodriguez. Plus, Ohtani would get to be part of the quest for the franchise’s first World Series title, he’d get to wear the same
+uniform as his baseball hero, Ichiro, and he’s lived there in the offseason. So it must be about the money, and Seattle’s reluctance to even get in the
+conversation. That’s gotta be super disappointing for Mariners fans starved for a title, right?
+</item 41>
+
+<item 42>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+16. Mariners SP
+
+We initially had Bryan Woo in this spot. It could just as easily have been Bryce Miller or Emerson Hancock, so we’ll cheat and just mention the Seattle rotation
+in general.
+
+They’re almost certainly not going to trade George Kirby. It’d take a lot to pry away Logan Gilbert. Moving any of Woo, Miller or Hancock could be more
+appealing for a front office that is looking for ways to add long-term offensive upside.
+
+None of that trio has even reached one year of major league service. Hancock only has three big league starts under his belt. Miller and Woo spent more time in
+the rotation this year, starting 25 and 18 games respectively. They both turned in mid-rotation results.
+
+Other clubs probably have differing opinions on which right-hander they prefer. (The Mariners likely have their own slight preferences.) They’d all have
+significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+
+17.
+</item 42>
+
+<item 43>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Yoshinobu Yamamoto meets with Phillies
+
+Date: Thursday, Dec. 14
+
+Source: Jon Heyman, New York Post
+
+The Phillies have not been one of the more frequent names connected to Yamamoto, however the Japanese free agent reportedly met with the team. The starting
+pitcher has met with a number of teams, including the Dodgers, Mets, Yankees and Red Sox.
+
+Philadelphia re-signed ace Aaron Nola this offseason, bringing back the powerful duo of Nola and Zack Wheeler. Adding Yamamoto would immediately give the
+Phillies' one of the best rotations in baseball.
+
+Cubs, Blue Jays the favorites for Cody Bellinger
+
+Date: Wednesday, Dec. 13
+
+Source: Jon Heyman, New York Post
+
+The Blue Jays and Cubs were believed to be among the favorites to land Ohtani. But with the star two-way talent off to Los Angeles, the two are now believed to
+be the favorites to land Cody Bellinger, according to Heyman.
+</item 43>
+
+<item 44>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Shohei Ohtani and Juan Soto have already found new homes, but much of the MLB offseason has yet to play out.
+
+Japanese pitcher Yoshinobu Yamamoto is the focus of many teams as he prepares to sign a massive deal, while Blake Snell, Cody Bellinger and Jordan Montgomery
+remain on the market. The trade market is also expected to be active once more dominoes fall, with Dylan Cease, Corbin Burnes and Tyler Glasnow among starters
+who could be moved this winter.
+
+The Winter Meetings are over, but because of the timeline of major decisions by Ohtani and Yamamoto, there could be a flurry of activity leading up to the end
+of the year.
+
+MORE: Why Shohei Ohtani signed with Dodgers over Blue Jays, other suitors
+
+Sporting News is tracking the rumors, signings and trades as MLB free agency continues. Follow along below for the latest news.
+</item 44>
+
+<item 45>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+MLB's winter meetings are always a prime time for moves to happen as many of the top executives, players and agents all come together at the same spot.
+
+Last year's winter meetings wound up being explosive. Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+
+This year's winter meetings could wind up being similarly busy. There is a growing sense Shohei Ohtani could sign during the winter meetings, and a move of that
+magnitude could kick off the next wave of moves. There's also a number of top players on the trade market, including star Padres outfielder Juan Soto.
+
+Starting Sunday, Dec. 3, and running through Wednesday, Dec. 6, expect MLB's offseason to really kick into high gear.
+
+WINTER MEETINGS: Shohei Ohtani rumors, Juan Soto trade destination come to forefront
+
+Sporting News will be tracking all the latest news and rumors from the 2023 Winter Meetings.
+</item 45>
+
+<item 46>
+MLB free agency tracker: Live updates on news, rumors, signings and trades after 2023 Winter Meetings (Sporting News, 2023-12-23T23:54:00+00:00)
+Bellinger would be returning to the Cubs, the team with which he rebuilt his value after a down year with the Dodgers. If he signed with the Blue Jays, he'd be
+bringing the powerful left-handed bat the team sought when it pursued Ohtani.
+
+Dodgers send stars to meet with Yamamoto
+
+Date: Wednesday, Dec. 13
+
+Source: Fabian Ardaya, The Athletic
+
+The Dodgers added one Japanese star this offseason. They're now looking to add another. Los Angeles reportedly sent Ohtani, Mookie Betts, Freddie Freeman and
+Will Smith to meet with Yamamoto, trying to convince the standout starting pitcher to join the National League superpower.
+
+Signing Yamamoto would be a major boost for the Dodgers, who still have a need at starting pitcher.
+
+Rays-Dodgers working on a Tyler Glasnow trade
+
+Date: Wednesday, Dec.
+</item 46>
+
+<item 47>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+He allowed a 4.58 ERA over 177 innings this past season. That’s nearly two and a half runs higher than his sparkling 2.20 mark of the prior year. As is often
+the case, his true talent probably lies somewhere in the middle.
+
+Cease still missed plenty of bats — 27.3% strikeout rate, 13.6% swinging strike percentage — while issuing a few more walks than ideal. His fastball averaged
+95.6 mph, down a tick from the preceding season.
+
+The right-hander has shown the ability to pitch at an ace-caliber level. He is two seasons from free agency and projected for an $8.8M arbitration salary,
+making him more affordable than the other high-end starting pitchers near the top of this list.
+
+The extra year of control probably gives him more trade value than any of Burnes, Bieber or Glasnow. It also makes him less likely to be traded this offseason.
+</item 47>
+
+<item 48>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+Juan Soto to Yankees 'close to being finalized'
+
+Date: Wednesday, Dec. 6
+
+Source: Jon Morosi, MLB Network
+
+A trade between the Yankees and Padres for Soto is reportedly "close to being finalized," with right handers Michael King and Drew Thorpe expected to highlight
+the return to San Diego. MLB Network's Jon Morosi reported the package will include at least two more players, neither of which will be Alex Verdugo.
+
+Ohtani decision expected to be made before end of weekend
+
+Date: Wednesday, Dec. 6
+
+Source: Jon Morosi, MLB Network
+
+MLB free agency remains largely on hold as teams wait for Ohtani to sign, and though it had at at point been reported he could sign during the winter meetings,
+there appears to be a new timeline. MLB Network's Jon Morosi reported Ohtani is expected to make his pick before the end of the upcoming weekend. The winter
+meetings end on Thursday.
+</item 48>
+
+<item 49>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+A $10M per year backup catcher is a luxury for a team trying to trim salary.
+
+Minnesota likely wouldn’t be able to offload the entire deal, but they could try to shed around half the money or take on a smaller contract in return.
+
+Vázquez’s year wasn’t much worse than a season that got Omar Narváez two years and $15M last winter, while Tucker Barnhart secured a two-year, $6.5M guarantee
+despite a much lesser offensive track record.
+
+24. Luis Robert Jr., CF, White Sox
+
+Robert has the most trade value of any player on this list. He may also be the least likely to move. Last week, Getz called him a franchise building block and
+noted he had no plans to proactively shop Robert even as he left open the possibility of listening to offers on anyone.
+
+It’s not hard to understand why. Robert’s an elite defensive center fielder who connected on 38 home runs while hitting .264/.315/.542.
+</item 49>
+
+<item 50>
+MLB Winter Meetings tracker: Live updates on news, rumors, signings and trades for 2023 free agency (Sporting News, 2023-12-03T23:24:00+00:00)
+He has been linked to Toronto and Los Angeles throughout the process.
+
+Mariners considering Cody Bellinger
+
+Date: Tuesday, Dec. 5
+
+Source: Jon Morosi, MLB Network
+
+Following the trade the Mariners made with the Braves, MLB Network's Jon Morosi believes Seattle has cleared payroll space and now has room to make a splash for
+top free agent slugger Cody Bellinger. Seattle has Julio Rodriguez in center, but with Teoscar Hernandez still on the market and Jarred Kelenic now dealt, there
+is room for him in the outfield.
+
+Blue Jays 'believed' to have met with Shohei Ohtani
+
+Date: Monday, Dec. 4
+
+Source: Ken Rosenthal, The Athletic
+
+While one report earlier Monday indicated Ohtani isn't expected to sign before the end of the Winter Meetings, the process seems to be moving along.
+</item 50>
+=== END ITEM id=2bed94e69e3884a9 ===
+
+=== ITEM id=0ac273e76bebbbc4 ===
+Gold sentences and facts:
+Sentence 0: If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+  Fact 0.0: If the debt continues to rise more than the economy, risks will increase.
+  Fact 0.1: If the debt continues to rise more than the economy, the government may 'crowd out' private investment.
+  Fact 0.2: The government may crowd out private investment as it competes with the private sector for funds to service its debt.
+Sentence 1: And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr. told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+  Fact 1.0: President Ferdinand Marcos, Jr. said 'We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%'.
+  Fact 1.1: President Ferdinand Marcos, Jr. said the Philippines' debt-to-GDP ratio of about 63% is a little high for the country and is not ideal.
+  Fact 1.2: President Ferdinand Marcos, Jr. said this to members of the US-ASEAN Business Council who visited Malacañang.
+  Fact 1.3: ABS-CBN reported this on Aug. 9, 2023.
+
+Retrieved items:
+<item 1>
+Japan’s prime minister Kishida says: ‘reassess our economy’ (Financial Times, 2023-10-01T23:01:09+00:00)
+The geopolitics of US-China tensions, chip wars, decoupling and “friendshoring” seem, in particular, to be working significantly in Japan’s favour. Asia-focused
+global investment is rotating out of China and into Tokyo stocks, real estate and other assets, just as large parts of corporate Japan are engaging more
+actively with shareholders than at any time in the past.
+
+China, after years of stunning growth and investor attention, is very rapidly losing that sheen. Its economy is growing more slowly and the expected
+post-pandemic rebound is proving elusive. On top of that, Beijing’s policymaking — with its sudden crackdowns on entire industries, like video games and private
+tutoring, has generated a series of nasty surprises — and the unshakeable fear that others could occur at any time.
+
+“You are seeing more interest in Japan from investors, who were primarily invested in China, as China has slowed and some of its economic policies have been
+confusing and opaque,” says Kirk Neureiter, president of Fidelity Management & Research Japan.
+</item 1>
+
+<item 2>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+The government calls for embedding resilience, sustainability, and nature-based solutions in infrastructure planning and investment to enhance climate
+resilience. Likewise, investments in renewable energy are expected not only to enhance energy security but also reduce greenhouse gas (GHG) emissions.
+
+From an economic vantage point, GHG emissions are economic “bads” and are a cause of inefficiency as they get over-produced. Their effects, however, go beyond
+national borders, and while the Philippines contributes minimally to global GHG emissions, the World Risk Index 2022 report identifies the Philippines as the
+most disaster-prone country in the world.
+
+The government envisions that by 2028: (1) Climate and disaster risk resilience of communities and institutions will increase (2) Ecosystem resilience will be
+enhanced, and (3) A low-carbon economy transition is enabled.
+
+To ensure that these are realized, the government is set to safeguard cross-sectoral convergence and implement a comprehensive risk management approach to
+address the adverse consequences posed by climate change.
+</item 2>
+
+<item 3>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+This plan gradually narrows the deficit to 3% of GDP by 2028, down from 7.3% in 2022, such that the debt-to-GDP ratio is reduced from nearly 61% in 2022 to a
+more sustainable level of at most 53% by 2028.
+
+DEBT MANAGEMENT
+
+The National Government’s debt was less than 40% before the pandemic struck. It expended much of its fiscal space combatting the pandemic, incurring debt and
+large budget deficits. While the current 61% debt-to-GDP ratio may be manageable for an emerging economy like the Philippines for some time, the country may not
+have the fiscal space to respond to another potential domestic or external shock. If the debt continues to rise more than the economy, risks will increase, and
+the government may “crowd out” private investment as it competes with the private sector for funds to service its debt.
+
+The planned fiscal consolidation entails harmonizing the revenue needs with the promotion of investment through the structure and administration of the reformed
+incentive system.
+</item 3>
+
+<item 4>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023).
+
+Whom are we to believe, but inflation — which independently says it as it is.
+
+“While inflation in the Philippines has been on a downward trend since January, the country needs to achieve a 3.7% average inflation rate for the next five
+months for the country to hit the BSP’s forecast of 5.5% inflation for 2023, Assistant National Statistician Rachel Lacsa said (Ibid.). Some economists say that
+deficit budgets and the remedies — monetary (borrowings increasing money supply) and fiscal (like raising taxes) increase inflation, and stubborn inflation
+further entrenches structural deficits in the system. It is a vicious cycle.”
+
+National budgets might not be innocent of political agendas (call them plans and programs) that can divert money from the proper socio-economic goals of
+equilibrium as a balanced budget might work towards.
+</item 4>
+
+<item 5>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+The National Government plans to raise more revenue to finance the country’s socio-economic needs, largely through a progressive and simplified tax system, more
+efficient and effective tax collection measures through digitalization and, to some extent, from policy measures such as value-added tax on digital service
+providers and excise tax on sweetened beverages and junk food.
+
+Achieving fiscal stability presupposes the sustainability of fiscal policy, and fiscal stability helps “crowd in” private investment.
+
+PRICE STABILITY AND INFLATION
+
+In his second State of the Nation Address (SONA), President Ferdinand Marcos, Jr. singled out inflation as the country’s most pressing problem. In the first
+nine months of 2023, inflation averaged 6.6% — far above the upper end of the target range of 2-4% set by the BSP. If left unchecked, inflation could undermine
+growth. Not only does this increase costs to organizations, but it also sets in motion second-round effects as workers start demanding higher wages,
+consequently increasing business costs and discouraging investments.
+</item 5>
+
+<item 6>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+To this end, the first goal of the PDP is social transformation which includes, among others, sustained expenditure on social services, mainly education,
+health, and social protection.
+
+The first two goals of the PDP help attain the developmental objectives of efficiency and equity, which rest on the pillars of sustainability and resilience.
+The third fosters societal resilience: an enabling environment encompassing institutions, macroeconomic stability, and the physical and natural environment.
+
+Institutions are vital to economic acceleration, which is why the government’s steps to enhance the ease of doing business are most welcome. Infrastructure
+development also enables an economy to sustain higher levels of growth, which, in turn, catalyzes yet more investment. The Public-Private Partnership (PPP) Act
+is up for the signature of President Marcos and, if approved, is expected to further enhance the business atmosphere in mobilizing private resources for
+infrastructure development.
+
+The government aims to sustain its infrastructure program at 5-6% of GDP through 2028 amid a six-year medium-term fiscal framework.
+</item 6>
+
+<item 7>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The Department of Budget and Management (DBM) defines the government budget as “the financial plan of the government…which shows what its resources are, and how
+they will be generated and used over the fiscal period. It refers to the income, expenditures and sources of borrowings of the National Government (NG) that are
+used to achieve national objectives, strategies and programs.”
+
+Section 22, Article VII of the Constitution states that: “The President shall submit to the Congress within 30 days from the opening of every regular session,
+as the basis of the general appropriation bill, a budget of expenditures and sources of financing including receipts from existing and proposed revenue
+measures.”
+
+The National Government (NG) budget is the totality of the budgets of all government entities, namely the National Government, the non-financial
+government-owned and -controlled corporations (which usually includes only the 14 major GOCCs), government financial institutions (GFIs), local government units
+(LGUs), the social security institutions (the Government Service Insurance System or GSIS, the Social Security System or SSS, the military pensions, PhilHealth,
+etc.
+</item 7>
+
+<item 8>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+We recently presented a paper at the 5th Paderanga-Varela Memorial Lecture entitled “Alternate Service Delivery Systems: Health and Education.” In that lecture,
+we looked at the Department of Health (DoH) and the Department of Education (DepEd) as service delivery systems, delivering healthcare and education
+respectively.
+
+We concluded that the service delivery system of the DoH is far superior to the DepEd for two main reasons. The first is that the DoH has devolved its hospitals
+to the local government units while the DepEd has not. Secondly, the DoH has spun off its health financing into the Philippine Health Insurance Corp.
+(PhilHealth) while the DepEd has not. In this article we argue for the creation of the Philippine Education Development Fund (PhilEd).
+
+When Isidro Consunji, President of DMCI Holdings, Inc. was asked by his officers what the role of his Chief Financial Officer (CFO) would be, he gave a
+three-word answer, “Fund my dreams.”
+</item 8>
+
+<item 9>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+“After extensive deliberations and negotiations, the House of Representatives on Wednesday (Sept. 27) approved on third and final reading the P5.768-trillion
+national budget for next year, just before Congress adjourns for a month-long break,” the Press and Public Affairs Bureau of Congress announced on its website,
+congress.gov.ph. The 310-strong legislative chamber voted 296 against three, with zero abstentions, to approve House Bill (HB) No. 8980 or the 2024 national
+budget on third and final reading. Almost unanimously.
+
+House Speaker Ferdinand Martin G. Romualdez noted that the budgeting process was marked by rigorous discussions, particularly concerning confidential and
+intelligence funds, which the House meticulously scrutinized to ensure accountability and responsible utilization. He lauded “the timely passage of the 2024
+General Appropriations Bill (GAB),” stating that it not only “demonstrated the commitment of the House to upholding its constitutional role but also underscored
+its dedication to serving the Filipino people with transparency and accountability.”
+</item 9>
+
+<item 10>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+It will also promote a green and blue economy coupled with improved governance to guarantee long-term climate and disaster resilience.
+
+BUILDING RESILIENCE THROUGH SUSTAINABLE DEVELOPMENT
+
+Coming off from the pandemic and with the current global economic climate, it is opportune for the government to proactively drive for actionable policies and
+programs that focus on building the resiliency of the economy through sustainable development with greater emphasis given to addressing climate change.
+
+Navigating external and domestic economic headwinds will not be an easy feat for the administration, but the private sector will be an important catalyst for
+sustainable development. With the private sector sharing industry knowledge, resources and potentially even leading certain socio-economic programs and projects
+of the National Government, it is to be hoped that AmBisyon Natin 2040 of long and healthy lives for Filipinos that are strongly rooted, comfortable, and secure
+will be achieved.
+
+This article is for general information only and is not a substitute for professional advice where the facts and circumstances warrant. The views and opinions
+expressed above are those of the author and do not necessarily represent the views of SGV & Co.
+</item 10>
+
+<item 11>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+Why then, do we have a deficit budget for 2024?
+
+The national budget for 2024 is at P5.768 trillion, 9.5% higher than the current (2023) budget of P5.268 trillion. Observers note that this first budget fully
+prepared by the current administration accounts for 21.7% of gross domestic product (GDP). The 2024 expenditure program is higher by P499.6 billion or a
+year-on-year growth rate of 9.5% as compared to the 2023 level of P5.268 trillion. The P5.768-trillion budget, to be supported mainly by P3.5-trillion tax
+revenues (based on 2023 tax revenue projections), would mean a budget deficit of some P2.268 trillion, to be funded by additional borrowings. This could
+increase government debt from the current P14.24 trillion (as of July) to P16+ trillion by the end of 2024.
+</item 11>
+
+<item 12>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+For the energy sector in particular, amendments to the PSA are envisioned to help raise the capital needed to speed up the energy transition of the country to
+renewables.
+
+In addition, the Regional Comprehensive Economic Partnership (RCEP), a trading bloc that encompasses the ten members of the Association of Southeast Asian
+Nations (ASEAN) and the ASEAN Plus One Free Trade Agreement (FTA) partners Japan, China, South Korea, Australia, and New Zealand, is already in force for the
+Philippines, helping ease market access through trade and investment rules and supporting global and regional supply chains. The Philippines can potentially
+position itself as a regional manufacturing hub if the right incentives and policy measures are put in place to encourage local and foreign investors to
+participate. Together, trade and investment are expected to play an important role in attaining economic transformation, the second goal of the PDP.
+
+HUMAN CAPITAL AND INFRASTRUCTURE
+
+The ability of people to take advantage of market opportunities arising from investment rests on human capital.
+</item 12>
+
+<item 13>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+the government borrows money either from foreign sources or from the domestic capital market which increases the debt stock of the NG and its debt servicing
+requirements; b.) the government borrows money from the Bangko Sentral ng Pilipinas; or, c.) the government withdraws funds from its cash balances in the
+Treasury. Historically, National Government expenditures have always exceeded total revenues resulting in annual budget deficits, the DBM declared. “Thus, the
+National Government had to resort to borrowing to cover said deficits which resulted in the ballooning of foreign and domestic debts,” the budget office
+admitted.
+
+“However, in 1994, the government broke the deficit trend by posting a budget surplus of P16 billion through an aggressive privatization and revenue generation
+program and a prudent expenditure program. Since then, the government has been exerting efforts to maintain the surplus budget policy. The surplus budget policy
+is important to encourage economic growth,” the DBM said.
+</item 13>
+
+<item 14>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+Public policies attempt to fulfill one or more of the following objectives: efficiency, equity, and stability. Efficiency and stability are necessary conditions
+for sustainable growth while equity helps make development inclusive.
+
+This is the second article in our series following the 2nd SGV Tax Symposium, which focused on how a sustainable and effective tax ecosystem can advance the
+sustainability agenda for both the public and private sectors.
+
+In this article, we will discuss the Philippine strategy for sustainable development.
+
+GROWTH THROUGH TRADE AND INVESTMENT
+
+The Philippine Development Plan (PDP) 2023-2028 aims for a deep economic and social transformation to reinvigorate job creation and accelerate poverty reduction
+by steering the economy back to a high-growth path. In this regard, two main performance indicators are identified and will be monitored by the National
+Government.
+
+The first is for the country to graduate into upper middle-income class status within the term of the current administration.
+</item 14>
+
+<item 15>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+Inflation is partly driven by supply-side issues and the government is allocating more resources to the agriculture sector to boost production. Mr. Marcos also
+mentioned that the National Government had distributed 28,000 new tools and machinery to farmers. An additional 600 km of farm-to-market roads were laid down to
+support the 14 million hectares of farmland, enhancing farmer access to markets. In addition, he signed Executive Order No. 28 in May, forming the Inter-Agency
+Committee on Inflation and Market Outlook, which is tasked to keep inflation within government targets and boost the economy.
+
+ENHANCING CLIMATE RESILIENCE
+
+While price stability and fiscal sustainability are important macroeconomic issues, environmental sustainability is increasingly gaining importance. Climate
+change uncertainties and challenges need to be managed and both the Philippine government and the private sector are hard-pressed to deliver their commitments
+to addressing them. Despite climate change risks, the Philippines has the opportunity to position itself as a prime destination of foreign investments against
+climate change or environmental, social, and governance (ESG) investments.
+</item 15>
+
+<item 16>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+For this, the economy must grow its per capita income above the threshold set by the World Bank, which means a gross national income (GNI) per capita of at
+least $4,466. In 2022, the Philippines achieved a GNI per capita of $3,950.
+
+The second is to lower the poverty level from 18.1% in 2021 to single digits by 2028 — the end of the term of the current administration. Both indicators
+require high growth rates. For the next year through 2028, the government pencils the growth rate between 6.5% and 8%.
+
+Growth is expected to be investment-led with the implementation of structural changes such as the Corporate Recovery and Tax Incentives for Enterprises (CREATE)
+law, which lowered the corporate income tax rate, and the amendments to the Public Service Act (PSA), Foreign Investment Act (FIA), and Retail Trade
+Liberalization Act (RTLA), which further liberalized the economy. The new legislation is expected to attract more local and foreign investment, especially in
+the liberalized sectors.
+</item 16>
+
+<item 17>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+The surplus budget policy is important to encourage economic growth,” the DBM said.
+
+The exhortations of the national budget managers must be quoted word for word to educate the non-economists and questioning common people about how a surplus
+budget is necessary versus a deficit budget:
+
+“The less the government borrow from the public, the lesser the pressure on interest and inflation rates and the more funds are made available in the financial
+market. Such funds may be used by businessmen to build factories, hire workers, buy equipment and open more employment opportunities. By keeping more funds in
+the hands of the private sector rather than competing for credit, the government helps make financing available for families who want to own homes, buy cars, or
+support their children’s education. The government also needs to generate a budget surplus to repay the huge debt it has accumulated over the years. The
+reduction of the national budget debt will correspondingly lessen government’s requirements for interest and principal payments. This becomes important
+particularly during periods of rising interest rates and unstable exchange rates” (dbm.gov.ph).
+</item 17>
+
+<item 18>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+During the Congressional budget hearing, Finance Secretary Benjamin Diokno optimistically provided updates on the government’s fiscal and revenue collection
+performances and presented sources of funding for the national budget. Tax revenue is projected to increase from P3.5 trillion in 2023 to P6.5 trillion in 2028,
+while non-tax revenues are expected to decline from P191 billion in 2023 to P184 billion in 2028, Diokno told the Philippine News Agency (pna.gov.ph, Aug. 10).
+
+Diokno said the Finance department aims to gradually reduce net financing or new debt from P1.42 trillion in 2022 to P1.22 trillion in 2024, which will help
+bring the country’s debt-to-GDP ratio to almost below 60% by 2025. And yet, “We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63%
+and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr.
+</item 18>
+
+<item 19>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+But traditional politicians (called “trapo” in the Philippines) might have it in their hearts to think about the country and the welfare of future generations.
+
+How many generations will pay for the monstrous debt incurred for the dubious objectives and vanities of some today?
+
+Amelia H. C. Ylagan is a doctor of Business Administration from the University of the Philippines.
+
+ahcylagan@yahoo.com
+</item 19>
+
+<item 20>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+), the Oil Price Stabilization Fund, the Bangko Sentral ng Pilipinas, and the Central Bank-Board of Liquidators. It is allocated for the implementation of
+various government programs and projects, the operation of government offices, payment of salaries of government employees, and payment of public debts. These
+expenditures are classified by expense class, sector and implementing unit of government (dbm.gov.ph).
+
+The sources of appropriations of the annual budget are: 1.) new general appropriations legislated by Congress for every budget year under the General
+Appropriations Act (GAA); and 2.) existing appropriations previously authorized by Congress. Under the Constitution, Article VI, Section 29, no money can be
+withdrawn from the Treasury except in pursuance of an appropriation made by law.
+
+The DBM calls a budget balanced when revenues match expenditures or disbursements. When expenditures exceed revenues, the government incurs a deficit which may
+result in the following situations: a.)
+</item 20>
+=== END ITEM id=0ac273e76bebbbc4 ===
+
+=== ITEM id=3eeb4b30395fece3 ===
+Gold sentences and facts:
+Sentence 0: “Certainly there wasn’t a valid alternative to Google at the time,” Cue said.
+  Fact 0.0: Cue said there certainly wasn't a valid alternative to Google at the time.
+Sentence 1: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 1.0: Google could solve this problem today if it wanted to.
+  Fact 1.1: Google gets other benefits from Android.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google “siphons off” news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that this is done through anticompetitive means.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 1>
+
+<item 2>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+In response, Google enacted a plan, which execs dubbed “Go Big in Europe,” to enhance search results in France and Germany in 2019 and 2020 with more local
+content: news, post-game soccer video highlights, information on local television options for streaming, and pronunciation practice for different language. The
+aim was to incentivize users to click on Google’s home screen, rather than the competition’s.
+
+That revelation effectively supports the Justice Department’s argument that Google, without the push of competition, has little incentive to improve its
+products, a classic consequence in a monopoly.
+
+Mozilla digs in on Google’s supremacy in search
+
+Interestingly, on November 1 Mozilla CEO Mitchell Baker provided a defense of Google’s quality as a search engine, even in “competitive” environments.
+Specifically, Baker recounted how, Mozilla “failed” when it switched Firefox’s default search engine from Google to Yahoo.
+</item 2>
+
+<item 3>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 3>
+
+<item 4>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 5>
+
+<item 6>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 6>
+
+<item 7>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 7>
+
+<item 8>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 8>
+
+<item 9>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 9>
+
+<item 10>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 10>
+
+<item 11>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 11>
+
+<item 12>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 12>
+
+<item 13>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 13>
+
+<item 14>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 14>
+
+<item 15>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 15>
+
+<item 16>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 16>
+
+<item 17>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 17>
+
+<item 18>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 18>
+
+<item 19>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 19>
+
+<item 20>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 20>
+=== END ITEM id=3eeb4b30395fece3 ===

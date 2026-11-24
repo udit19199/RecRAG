@@ -1,0 +1,31 @@
+[
+  {
+    "id": "5dc3ce552892511b",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 35, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 35, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 49, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 49, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+    ]
+  },
+  {
+    "id": "27a8d239296eebc4",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 17, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 17, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 17, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 17, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 22, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}]},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+[
+{"id": "2bfe195337fd3046", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 20, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 21, "quote": "The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two attorneys, featured a study in contrasts."}, {"item": 10, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 15, "quote": "“Sam acted in good faith and took reasonable business measures”"}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 30, "quote": "“Sam didn’t defraud anyone,” he said early on in his opening statement."}, {"item": 29, "quote": "“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”"}]},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]},
+{"id": "476ed1e8fd4556f3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 18, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 18, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 18, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "2c78ba63edadcf2c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 47, "quote": "But as Wang testified against him, Bankman-Fried looked visibly upset"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 44, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 44, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "The prosecution has made a strong case that Bankman-Fried presided over the various forms of fraud that played out at Alameda Research and FTX, orchestrating some of it and engaging in some of it directly."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 26, "quote": "“Sam acted in good faith and took reasonable business measures”"}]},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

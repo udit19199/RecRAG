@@ -1,0 +1,1683 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 2 items.
+
+=== ITEM id=8edb87abafe76787 ===
+Gold sentences and facts:
+Sentence 0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night, keeping the heat on the losing Eagles ahead of them before hosting that team in Dallas in Week 14.
+  Fact 0.0: The Cowboys opened Week 13 by rallying to beat the Seahawks on Thursday night.
+  Fact 0.1: The Cowboys kept the heat on the Eagles.
+  Fact 0.2: The Eagles lost their game.
+  Fact 0.3: The Eagles were ahead of the Cowboys.
+  Fact 0.4: The Cowboys hosted the Eagles in Dallas in Week 14.
+Sentence 1: Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart football every step of the way down the stretch.
+  Fact 1.0: Philadelphia beat Miami 31-17.
+  Fact 1.1: Philadelphia's win over Miami was on "Sunday Night Football".
+  Fact 1.2: Philadelphia rolled to the win.
+  Fact 1.3: Philadelphia kept the Dolphins' offense off the scoreboard in the second half.
+  Fact 1.4: Philadelphia played smart football every step of the way down the stretch.
+
+Retrieved items:
+<item 1>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+They'll go for it.
+
+10:16 p.m. — Raheem Mostert is running wild. He rips off back-to-back runs of 21 and 15 yards, respectively, and the Dolphins are deep into Eagles territory
+just like that.
+
+Raheem Mostert moves the chains in back to back plays pic.twitter.com/cKtaJouqeZ — DIE-HARD 🦅 Fans (@Eaglesfans9) October 23, 2023
+
+10:11 p.m. — The Eagles manage only one first down on the drive, and the Dolphins have a chance to get pretty strong field position after Philadelphia's first
+punt of the night.
+
+10:10 p.m. — Zach Sieler gets to Hurts and takes him down for a loss of three yards.
+
+10:06 p.m. — The Eagles will be backed up deep in their own territory to start the next drive, but it's a big opportunity for Hurts and co. to stretch the lead
+back to two possessions.
+</item 1>
+
+<item 2>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+After the Eagles' defense clamped down on Tagovailoa and the Dolphins, the offense pieced together a touchdown drive spanning nearly seven minutes to ice the
+game.
+
+A.J. Brown overcame a slow start and shined for the Eagles, posting 137 yards and a touchdown in the win. Brown has now ripped off five consecutive games of at
+least 125 yards and seems to be on his way to a career-best season.
+
+Hurts, Brown and the Eagles have higher goals than just individual success, and a win over one of the AFC's best teams is one way to make a statement.
+Philadelphia moves to 6-1, while the Dolphins miss a chance to open up a two-game lead in the AFC East and fall to 5-2 ahead of a matchup with the Patriots.
+
+MORE: Latest injury updates on Dolphins WR Jaylen Waddle
+
+The Sporting News tracked live scoring updates and highlights from "Sunday Night Football" between the Dolphins and Eagles. Check out all of the key moments you
+might have missed.
+</item 2>
+
+<item 3>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Jerry Jones said earlier in the week that Sunday night's game would show him how the Cowboys stack up against the NFL's best.
+
+The answer? Not very well.
+
+Everything that could go wrong for Dallas on Sunday did go wrong, in a game that confirmed a 49ers team that ended the Cowboys' season in each of the last two
+years remains a level above its NFC counterpart.
+
+The 49ers carved up Dallas' defense on the opening drive, and that was a sign of what was to come. Brock Purdy threw four touchdowns in the 42-10 rout,
+including three to George Kittle. Christian McCaffrey scored a touchdown for a 14th consecutive game as all of San Francisco's offensive weapons got involved.
+
+MORE: Comparing stats for NFC stars Nick Bosa, Micah Parsons
+
+Defensively, the 49ers were relentless. Nobody had a larger impact than Fred Warner, who finished the night with an interception, sack and forced fumble in a
+swarming performance.
+</item 3>
+
+<item 4>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The 49ers knocked the Cowboys out of the playoffs in both of the last two seasons, so a win for Dallas on Sunday could be helpful just from a psychological
+standpoint.
+</item 4>
+
+<item 5>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:15 p.m. — Julio Jones is on the board with his first catch as an Eagle. It's a three-yard gain for the future Hall of Famer.
+
+9:12 p.m. — The Eagles have the Dolphins' offense uncomfortable so far. Miami is punting after another Tagovailoa incompletion, and this will be a big moment
+for the Dolphins' defense.
+
+Eagles 10, Dolphins 3
+
+9:06 p.m. TOUCHDOWN — Happy National Tight Ends Day! Dallas Goedert with a great catch-and-run all the way into the end zone to give the Eagles the lead.
+
+9:05 p.m. — Christian Wilkins gets called for roughing the passer, pushing the Eagles right to the edge of the red zone.
+
+9:03 p.m. — On 4th & 1, you already know what the play is. Hurts gets two yards on a quarterback sneak to keep the Eagles' drive alive.
+</item 5>
+
+<item 6>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+📺: #MIAvsPHI on NBC
+
+📱: Stream on #NFLPlus https://t.co/0rIJPFKW6L pic.twitter.com/Izpm8KQDCA
+
+9:23 p.m. — What a fourth down play for the Eagles! Hurts comes under heavy pressure but gets away and finds A.J. Brown for what was initially called a
+touchdown. Instead, Philadelphia will be at the goal line looking to take a 17-3 lead.
+
+9:22 p.m. — Hurts is very fortunate to see Smith (and not a Dolphins defender) come down with a pass after he was hit during a throw.
+
+9:19 p.m. — DeVonta Smith with a nice catch on a dart from Hurts to take the Eagles into Miami territory. Aside from the one turnover, the Eagles are putting
+together long, sustained drives.
+
+9:15 p.m.
+</item 6>
+
+<item 7>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+8:27 p.m. — A little bit of chaos as Deebo Samuel drops a ball that was pretty close to being a fumble, but it's all a non-issue as Dallas is hit with an
+offsides penalty. The 49ers are right about in field goal range.
+
+8:25 p.m. — After a facemask penalty and a nine-yard pass to Brandon Aiyuk, the 49ers are already over midfield.
+
+8:23 p.m. — Kickoff is a bit on the later end, but we are about to get underway. The 49ers will start with the ball.
+
+8:10 p.m. — Jerry Jones said this week that this game will be a test of how the Cowboys match up with the NFL's best, as if there wasn't already pressure on
+Dallas to show something after the 49ers knocked them out of the playoffs in back-to-back years.
+
+7:56 p.m. — Frank Gore and Vernon Davis are in the house!
+</item 7>
+
+<item 8>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:43 p.m. — Hill is up to 65 yards on eight catches. No other Dolphins receiver has more than two catches, and Hill now has 879 yards on the season.
+
+Eagles 17, Dolphins 10
+
+9:39 p.m. TOUCHDOWN — Tagovailoa hits Hill in the end zone for a touchdown! Hill was facing double coverage but simply beat both defenders. Miami has the
+deficit back to one possession.
+
+9:38 p.m. — Rookie Nolan Smith sacks Tagovailoa with 44 seconds remaining in the half.
+
+9:37 p.m. — The Dolphins are down to the Eagles' 29-yard line after catches by Braxton Berrios and Tyreek Hill. They have a chance to score on back-to-back
+possessions, as they get the ball out of halftime.
+
+9:33 p.m. TWO-MINUTE WARNING — Woah!
+</item 8>
+
+<item 9>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+He gets Philadelphia a first down.
+
+8:23 p.m. — The Eagles will start the game with the ball, and we are underway!
+
+8:18 p.m. — As many have pointed out, Tua Tagovailoa and Jalen Hurts were once teammates and competitors at Alabama. Both have something to prove tonight,
+considering Hurts hasn't looked like himself for much of this season.
+
+8:10 p.m. — The Dolphins can open up a two-game AFC East lead on the Bills with a win tonight. Buffalo was upset by the Patriots earlier today.
+
+8:03 p.m. — Lincoln Financial Field has a new look for Kelly Green day.
+
+Lincoln Financial Field, with a new logo and wordmark for this stadium: pic.twitter.com/vHEm7uBDgi — Zach Berman (@ZBerm) October 22, 2023
+
+7:55 p.m. — Oh yeah, Julio Jones is back in the NFL.
+</item 9>
+
+<item 10>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+MORE: Why Brock Purdy remains one of the NFL's cheapest starting quarterbacks
+
+The Sporting News tracked live scoring updates and highlights from "Sunday Night Football" between the Cowboys and 49ers. Check out all of the key moments you
+might have missed.
+
+Cowboys vs. 49ers final score
+
+1 2 3 4 F Cowboys 0 7 3 0 10 49ers 7 14 7 14 42
+
+Cowboys vs. 49ers results, highlights from 'Sunday Night Football'
+
+(All times Eastern)
+
+Final: 49ers 42, Cowboys 10
+
+11:26 p.m. — That'll do it! The 49ers trounce the Cowboys and reassert themselves as one of the NFL's most dominant teams. Through five games, San Francisco is
+unbeaten.
+
+11:24 p.m. — These teams are trading possessions as the clock winds down.
+</item 10>
+
+<item 11>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Hurts gets two yards on a quarterback sneak to keep the Eagles' drive alive.
+
+End of first quarter: Dolphins 3, Eagles 3
+
+8:57 p.m. — DeVonta Smith has the Eagles into Dolphins territory after an eight-yard grab.
+
+8:56 p.m. — Boston Scott with a really nice return to set up the Eagles at their own 39-yard line.
+
+Dolphins 3, Eagles 3
+
+8:52 p.m. FIELD GOAL — The Dolphins can't capitalize on the opportunity, so Jason Sanders ties the game with a field goal.
+
+8:51 p.m. — A Tyreek Hill touchdown is erased by a holding penalty.
+
+8:50 p.m. — The Eagles have lost yardage on three different plays in this quarter, which doesn't seem sustainable. It'll be 3rd & Goal from the 12.
+
+8:48 p.m.
+</item 11>
+
+<item 12>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+It'll be a field goal try for Jake Elliott.
+
+8:30 p.m. — Jalen Hurts is celebrating National Tight Ends Day by hitting Dallas Goedert on back-to-back passes for a total of 45 yards. The Eagles are into the
+red zone.
+
+Fitting that the first big play of the game goes to Dallas Goedert on #NationalTightEndsDay
+
+
+
+📺: #MIAvsPHI on NBC
+
+📱: Stream on #NFLPlus https://t.co/0rIJPFKW6L pic.twitter.com/DPfTTVQbnz — NFL (@NFL) October 23, 2023
+
+8:28 p.m. — Swift has five touches already. No one else has seen the ball.
+
+8:26 p.m. — The Eagles are riding D'Andre Swift early, as the running back is up to three carries through three snaps. He gets Philadelphia a first down.
+
+8:23 p.m.
+</item 12>
+
+<item 13>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The crew is entering their second season together after Tirico replaced play-by-play legend Al Michaels while Stark took over for Michele Tafoya.
+
+Fans can also stream the game via Peacock or NBCSports.com with a subscription, along with Fubo, which offers a free trial.
+
+Viewers in Canada can stream every NFL game via DAZN.
+
+Cowboys vs. 49ers start time
+
+Date: Sunday, Oct. 8
+
+Sunday, Oct. 8 Start time: 8:20 p.m. ET (5:20 p.m. CT)
+
+Sunday night's game between the Cowboys and 49ers is set to kick off at 8:20 p.m. ET (5:20 p.m. local time) from Levi's Stadium in Santa Clara, Calif.
+
+The 49ers and Cowboys have a long history with one another, but San Francisco has gotten the better of Dallas in each of their last two meetings.
+</item 13>
+
+<item 14>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Not allowing even a field goal is a huge win for Dallas.
+
+8:56 p.m. — The 49ers are excelling on third down early in this game, and Purdy flips it to Kyle Juszczyk to keep the Niners' drive alive on 3rd & 1.
+
+8:54 p.m. — Now Kearse lines up offsides... That extends the drive for the 49ers, who aren't moving as freely as they were on that opening drive.
+
+8:50 p.m. — Jayron Kearse comes through with the Cowboys' first sack of the night, but Deebo Samuel makes up 11 of the 12 yards San Francisco needs on the next
+play.
+
+8:46 p.m. — There's the first catch of the night for Lamb, but he doesn't get the first down and Dak Prescott is sacked by Nick Bosa to quickly end the drive.
+This 49ers defense has picked up right where it left off against the Cowboys in January.
+</item 14>
+
+<item 15>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+For a Cowboys team that has embarrassed a few opponents this year, they might be on the bad end of an ugly game here.
+
+49ers 28, Cowboys 10
+
+10:27 p.m. TOUCHDOWN — Not one, not two, THREE touchdowns for George Kittle. The 49ers have everything working offensively tonight, and any Kittle fantasy
+owners are thrilled.
+
+10:25 p.m. — Aiyuk's loss is Deebo Samuel's gain. Samuel goes 43 yards on the very next play, which tells you how automatic the 49ers' offense is right now. San
+Francisco is in the red zone looking to make this a three-score game.
+
+10:23 p.m. — An offensive holding call wipes out a 40-yard gain from Aiyuk. Wow. That's a momentum swing. Spencer Burford is the culprit.
+
+10:21 p.m. — The Purdy-to-Aiyuk connection continues to get stronger.
+</item 15>
+
+<item 16>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+49ers 35, Cowboys 10
+
+10:47 p.m. TOUCHDOWN — Purdy hits Kyle Juszczyk for the 49ers' fifth touchdown of the night. That's four touchdowns for Purdy alone, and San Francisco is
+pouring it all on the Cowboys.
+
+End of third quarter: 49ers 28, Cowboys 10
+
+10:43 p.m. — San Francisco is moving the ball inch-by-inch now, and the 'Niners are a yard away from making this a 25-point game.
+
+10:38 p.m. — The 49ers are on the verge of entering the red zone after a 19-yard catch by Jauan Jennings. Purdy is up to 242 yards to go along with his three
+touchdowns.
+
+10:32 p.m. INTERCEPTION — Prescott heaves it downfield under pressure and it's intercepted by Tashaun Gipson.
+</item 16>
+
+<item 17>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Viewers in Canada can stream every NFL game via DAZN.
+
+Dolphins vs. Eagles start time
+
+Date: Sunday, Oct. 22
+
+Sunday, Oct. 22 Start time: 8:20 p.m. ET
+
+Sunday night's game between the Dolphins and Eagles is set to kick off at 8:20 p.m. ET from Lincoln Financial Field in Philadelphia, Penn.
+
+The Eagles haven't beaten the Dolphins since 2011, when Miami's loss resulted in the firing of coach Tony Sparano the following day. The Dolphins got the better
+of Philadelphia in both 2015 and 2019, but none of those matchups carried the anticipation that this one does.
+</item 17>
+
+<item 18>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+End of first quarter: 49ers 7, Cowboys 0
+
+9:04 p.m. — Confirmed: 49ers ball. San Francisco has an instant opportunity here.
+
+9:01 p.m. FUMBLE — Oh no! Pollard gets the ball knocked out deep in the Cowboys' own territory, and it looks like it was recovered by the 49ers. Officials are
+checking to make sure nobody was out of bounds, but that ball was very much out of Pollard's control. The 49ers could be set up in the red zone.
+
+8:59 p.m. — The drive completely falls apart for the 49ers. A delay of game penalty sets San Francisco back, and Christian McCaffrey is dropped for a five-yard
+loss on 3rd & 15. Not allowing even a field goal is a huge win for Dallas.
+
+8:56 p.m.
+</item 18>
+
+<item 19>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+to stretch the lead back to two possessions.
+
+10:05 p.m. — Miami will punt from just past midfield, after a drive that started with some promise.
+
+10:04 p.m. — The Dolphins face 3rd & 18, largely the result of a holding penalty. Tagovailoa has already converted one of these tonight.
+
+10:01 p.m. — Raheem Mostert has struggled to get going, but he takes the Dolphins into Eagles territory with a solid 7-yard gain.
+
+10:00 p.m. — Hill picks up where he left off and goes 17 yards to give this Dolphins drive an early spark.
+
+End of first half: Eagles 17, Dolphins 10
+
+9:45 p.m. — Any hope the Eagles had of doing something before halftime ends with a Jaelan Phillips sack of Hurts. Philadelphia will go to halftime up 17-10.
+
+9:43 p.m. — Hill is up to 65 yards on eight catches.
+</item 19>
+
+<item 20>
+Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel  (Sporting News, 2023-12-18T21:00:03+00:00)
+After tonight’s game, the Seahawks’ schedule eases up a bit, with winnable games against the Titans, Steelers and Cardinals. But they could really use a victory
+to give them some confidence going into the final stretch.
+
+Picks to consider
+</item 20>
+
+<item 21>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Game: Dolphins vs. Eagles
+
+Dolphins vs. Eagles Date: Sunday, Oct. 22
+
+Sunday, Oct. 22 TV channel: NBC
+
+NBC Live stream: Peacock | NBCSports.com | Fubo (U.S.) | DAZN (Canada)
+
+Dolphins vs. Eagles can be watched on NBC, which has long held the broadcast rights to "Sunday Night Football."
+
+Mike Tirico (play-by-play) and Cris Collinsworth (color analyst) will be on the call from Levi's Stadium while Melissa Stark will serve as the sideline
+reporter. The crew is in its second season together after Tirico replaced play-by-play legend Al Michaels in 2022 while Stark took over for Michele Tafoya.
+
+Fans can also stream the game via Peacock or NBCSports.com with a subscription, along with Fubo, which offers a free trial.
+
+Viewers in Canada can stream every NFL game via DAZN.
+
+Dolphins vs.
+</item 21>
+
+<item 22>
+Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on TNF? (Sporting News, 2023-11-30T21:31:00+00:00)
+When the Seahawks and Cowboys meet in Dallas on "Thursday Night Football" to open NFL Week 13 (8:15 p.m. ET, Amazon Prime Video), it will be a prime-time
+matchup featuring two potential playoff teams and plenty of key fantasy football start 'em, sit 'em question marks.
+
+With a game total of 47.5 and the Cowboys favored by three field goals, it may be another rout for the home team against a weaker opponent. Dallas has some
+red-hot fantasy assets, while Seattle's struggling offensive skill players might be best suited for fantasy benches.
+</item 22>
+
+<item 23>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+11:07 p.m. — Tagovailoa is sacked on back-to-back plays, and this game has quickly spiraled for the Dolphins. It's 4th & 10.
+
+11:00 p.m. TOUCHDOWN — Kenneth Gainwell hits the Dolphins with the spin move and likely ices this game! The Eagles lead 31-17 with just under five minutes
+remaining.
+
+10:58 p.m. — The Eagles might've just hit the Dolphins with the dagger. Hurts goes downfield and hits A.J. Brown for a huge 42-yard gain. Philadelphia is
+knocking on the door after a long, long drive.
+
+10:55 p.m. — The Brotherly Shove works AGAIN. It wasn't close, either. The Eagles are churning away, soaking up valuable time.
+
+10:53 p.m. — Hurts' sneak is a success, as usual. The Eagles have a fresh set of downs.
+
+10:52 p.m.
+</item 23>
+
+<item 24>
+Prisco's Week 12 NFL picks: Jaguars beat Texans in AFC South battle, Saints get key divisional win vs. Falcons (CBSSports.com, 2023-11-23T21:30:38+00:00)
+Dak Prescott plays well again. Cowboys roll.
+
+Pick: Cowboys 32, Commanders 16 (Result: Cowboys 45-10)
+
+Thursday, 8:20 p.m. ET (NBC, fubo)
+
+This is a huge division game for two teams that have had a good rivalry over the past decade. The Seahawks are coming off a bad loss to the Rams, while the
+49ers are coming off two dominant victories. Geno Smith is banged up, so his health is key. The 49ers have the look of a Super team again. They show it here.
+
+Pick: 49ers 28, Seahawks 19 (Result: 49ers 31-13)
+
+Friday, 3 p.m. ET (Amazon Prime Video)
+
+This Friday game the day after Thanksgiving isn't what it was expected to be with the Jets being an offensive disaster.
+</item 24>
+
+<item 25>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:33 p.m. TWO-MINUTE WARNING — Woah! Tagovailoa rescues a Dolphins drive that was headed in the wrong direction with a 29-yard pass to Cedrick Wilson. Great job
+by Wilson to keep both feet in after the grab.
+
+9:30 p.m. — Jaylen Waddle walked back to the locker room and is questionable to return with a back injury. Major blow for the Dolphins.
+
+Eagles 17, Dolphins 3
+
+9:24 p.m. TOUCHDOWN — Guess what play the Eagles ran on 1st & Goal from the one? Hurts gets tush-pushed in for the touchdown to put Philadelphia up big.The
+@Eagles Brotherly Shove their way to a 2-possession lead
+</item 25>
+
+<item 26>
+Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel  (Sporting News, 2023-12-18T21:00:03+00:00)
+For a good stretch of the season, the Eagles appeared unstoppable and have been a favorite to return to the Super Bowl. After a surprising loss to the Jets in
+Week 6 (their first of the season), Philadelphia went on a five-game winning streak, impressively taking down top teams like the Dolphins, Cowboys and Chiefs.
+Most of those games were gritty, close wins, but then the Eagles dropped back-to-back games in blowout fashion to the 49ers and Cowboys, raising alarm bells
+amongst the Philly fanbase.
+
+The Eagles are looking to rebound against a Seahawks team that has been reeling even worse, losing four straight. Sitting four games behind the 49ers in the NFC
+West, despite a disappointing season, Seattle still has a shot at a wild card playoff spot.
+</item 26>
+
+<item 27>
+Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-10-02T22:00:04+00:00)
+Fans are starting to leave the Meadowlands as it's been all Seahawks tonight.
+
+10:45 p.m.: Daniel Jones has now been sacked seven times in the game.
+
+Bobby Wagner gets Jones again, setting up second-and-28 for the Giants, who were already at a disadvantage thanks to a penalty on first down.
+
+End of third quarter: Seahawks 21, Giants 3
+
+10:33 p.m.: PICK SIX! In the worst possible outcome for the Giants, Devon Witherspoon sits on an underneath route and intercepts Daniel Jones, returning the
+pick 97 yards for a touchdown. The PAT is good!
+
+What could have been a one-possession game is now a three-score game. And Daniel Jones now has two turnovers in this one.
+
+Seahawks 21, Giants 3
+
+10:30 p.m.: The Giants just pulled off one of their biggest plays of the night.
+</item 27>
+
+<item 28>
+Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-10-02T22:00:04+00:00)
+Seahawks vs. Giants final score
+
+1 2 3 4 Final Seahawks 7 7 7 3 24 Giants 0 3 0 0 3
+
+Seahawks vs. Giants live updates, highlights from 'Monday Night Football'
+
+(All times Eastern)
+
+Team stats
+
+Seahawks Giants First downs 13 17 Third downs 3-12 6-16 Fourth downs 0-2 2-4 Total yards 281 248 Passing 15-26, 160 yards 27-34, 136 yards Rushing att-yards
+23-121 29-112 Penalties-yards 8-74 6-45 Turnovers 0 3 Time of possession 24:00 36:00
+
+Final: Seahawks 24, Giants 3
+
+11:18 p.m.: It's a wrap at MetLife Stadium. The Seahawks advance to 3-1 on the year while the Giants fall to 1-3.
+</item 28>
+
+<item 29>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+— The Purdy-to-Aiyuk connection continues to get stronger. Aiyuk goes for 23 yards to give the 49ers some breathing room after opening their drive with a false
+start.
+
+49ers 21, Cowboys 10
+
+10:17 p.m. FIELD GOAL — The 49ers' defense tightens the screws and limits Dallas to a field goal. Brandon Aubrey drills it from 50 yards out, and it's down to a
+21-10 lead for San Francisco.
+
+10:13 p.m. — Prescott hits CeeDee Lamb for a big 29-yard gain. That quickly takes the Cowboys into 49ers territory to start the second half.
+
+End of first half: 49ers 21, Cowboys 7
+
+9:58 p.m. — San Francisco's defense is all over the Cowboys yet again. It's Dre Greenlaw's turn to sack Prescott, and Dallas is waving the white flag on the
+half.
+</item 29>
+
+<item 30>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+A key 3rd & 8 here for the Eagles.
+
+8:40 p.m. — The Eagles quickly force a punt after Tagovailoa's pass on 3rd & 15 falls short. So, neither of these explosive offenses start with a touchdown.
+
+8:39 p.m. — Haason Reddick swallows up Raheem Mostert for a five-yard loss to quickly set the Dolphins back.
+
+8:38 p.m. — Tyreek Hill is on the board with a 15-yard catch on a Tagovailoa pass.
+
+Eagles 3, Dolphins 0
+
+8:33 p.m. FIELD GOAL — Elliott connects from 24 yards out, and the Eagles strike first despite their promising drive fizzling out.
+
+8:32 p.m. — Eagles fans are unhappy after Philadelphia opts for three consecutive runs in the red zone. It'll be a field goal try for Jake Elliott.
+
+8:30 p.m.
+</item 30>
+
+<item 31>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+A perfectly drawn-up 26-yard play puts Dallas right back in this game.
+
+KaVontae Turpin shows off the wheels and gets in the end zone 💨 @KaVontaeTurpin
+
+
+
+📺: #DALvsSF on NBC
+
+📱: Stream on #NFLPlus https://t.co/gzzkvIRUdj pic.twitter.com/1bwEuaj5pN — NFL (@NFL) October 9, 2023
+
+9:24 p.m. — Prescott hits Jake Ferguson for a big third down conversion, and then some. That's 20 yards.
+
+9:23 p.m. — Tony Pollard has had a tough night so far, with just 10 yards on six touches.
+
+9:22 p.m. — Prescott fires a nice pass to Cooks to give the Cowboys another first down.
+
+9:20 p.m. — The Cowboys have a first down! And it only took 17+ minutes.
+</item 31>
+
+<item 32>
+Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-10-02T22:00:04+00:00)
+It was all Seahawks on “Monday Night Football” as the team turned in a dominant defensive effort en route to a 24-3 win over the Giants to wrap up Week 4 of the
+NFL season.
+
+In addition to sacking Daniel Jones 11 times, Seattle’s defense forced New York’s QB to commit three turnovers — a fumble and two interceptions, none more
+notable than rookie Devon Witherspoon's 97-yard pick-6 that turned the game on its ear.
+
+With the win, the Seahawks move to 3-1 on the season, including a perfect 2-0 record away from home. The Giants drop to 1-3 on the season and have been
+outscored 64-3 in two primetime home losses.
+
+The Sporting News tracked score updates and highlights from throughout Monday night's meeting between New York and Seattle.
+
+Seahawks vs.
+</item 32>
+
+<item 33>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+Week 10 in the NFL had some of the league's best teams not playing. But that didn't stop the excitement, with five teams winning on walk-off field goals and
+more games coming right down to the wire.
+
+With that, there were some surprising results and expected domination. Some favorites dug deep to win. Some underdogs turned in shocking upsets.
+
+Putting the latest wins and losses into a blender, here's Sporting News' updated look at how all teams stack up against each other, 1-32 going into Week 11:
+
+NFL WEEK 11 PICKS: Straight up | Against the spread
+
+NFL power rankings Week 11
+
+1. Philadelphia Eagles 8-1 (previous week: 1)
+
+The Eagles enjoyed a bye trying to get a little healthier for the more difficult stretch run in a top-heavy NFC as they have tough games at the Chiefs (the
+Super Bowl 57 rematch), vs. the Bills, vs.
+</item 33>
+
+<item 34>
+Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel  (Sporting News, 2023-12-18T21:00:03+00:00)
+Monday Night Football closes out the NFL’s Week 15 tonight with a pair of teams desperately looking to snap losing streaks. The Eagles vs. Seahawks matchup
+should be an exciting game, making it a great time to use our sportsbook bonus codes and links to sign up for new sports betting accounts and claim some
+fantastic welcome offers.
+
+Before tonight’s MNF kickoff in Seattle, just use our exclusive bonus codes at Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel to claim
+more than $5,000 in bonuses.
+</item 34>
+
+<item 35>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Eagles 24, Dolphins 17
+
+10:35 p.m. TOUCHDOWN — What an answer from the Eagles! A.J. Brown breaks a tackle and goes right into the end zone to put the Eagles back in front. It's 24-17.
+
+10:34 p.m. — Goedert comes through with a huge catch to extend the Eagles' drive and enter the red zone.
+
+10:33 p.m. — The Eagles are getting chunks of yards early on this drive, including a 25-yard catch by DeVonta Smith as they barrel into Dolphins territory.
+
+10:30 p.m. — Jevon Holland and David Long were both injured on the kickoff, resulting in a bit of a delay. They both were able to walk off.
+
+Dolphins 17, Eagles 17
+
+10:23 p.m. TOUCHDOWN — Watch out! Kader Kohou deflects a pass from Hurts and it's returned by Jerome Baker for a touchdown.
+</item 35>
+
+<item 36>
+Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook,
+DraftKings and FanDuel  (Sporting News, 2023-12-18T21:00:03+00:00)
+Since you need your moneyline bet to win to claim the $150 in bonus bets, if you’re wagering on tonight’s MNF game, you’ll probably want to go with the favored
+Eagles. Read on for odds and more picks to consider for tonight’s Monday Night Football matchup.
+
+Eagles vs. Seahawks MNF odds + picks to consider: Use our bonus codes and links for the best football betting promos
+
+Here are odds for tonight’s Eagles vs. Seahawks Monday Night Football game.
+
+The Eagles and Seahawks come into this Monday Night Football game on troubling losing streaks. The NFC matchup has important playoff implications, particularly
+for Philadelphia.
+
+Philly’s two-game losing streak has dropped them to second place in the NFC East behind the Cowboys, who are also 10-3 but have the tiebreaker thanks to their
+slightly better divisional record.
+</item 36>
+
+<item 37>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+11:00 p.m. INTERCEPTION — So much for that. Oren Burks gets the 49ers' third interception of the night as Prescott continues to struggle against this San
+Francisco defense.
+
+10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late. Tony Pollard rips off a 26-yard run to finally break through.
+
+49ers 42, Cowboys 10
+
+10:53 p.m. TOUCHDOWN — And just like that, Jordan Mason runs in for another 49ers touchdown! This is ugly on all levels for the Cowboys, and Leighton Vander
+Esch is now down as well. 42-10, 49ers.
+
+10:52 p.m. INTERCEPTION — Fred Warner now has a sack, forced fumble and an interception tonight. A pass from Prescott is deflected into his hands, and the 49ers
+have another instant scoring opportunity.
+</item 37>
+
+<item 38>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Check out all of the key moments you might have missed.
+
+Dolphins vs. Eagles final score
+
+1 2 3 4 F Dolphins 3 7 7 0 17 Eagles 3 14 7 7 31
+
+Dolphins vs. Eagles results, highlights from 'Sunday Night Football'
+
+(All times Eastern)
+
+Final: Eagles 31, Dolphins 17
+
+11:16 p.m. — And that'll do it. The Eagles finish strong and get back on track with an impressive win over the Dolphins.
+
+11:12 p.m. — D'Andre Swift goes 22 yards for a first down, so the Eagles will simply kneel it the rest of the way.
+
+11:09 p.m. — The Eagles take over on downs and will have the chance to just run out the clock on Miami.
+
+11:07 p.m.
+</item 38>
+
+<item 39>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and
+could potentially snap his four-game scoring drought.
+
+New York Giants (5-9) at Philadelphia Eagles (10-4) | 4:30 p.m. ET
+
+Will the Eagles defense shake off the rust?: Appointing Matt Patricia as defensive play-caller didn't change much for the Eagles, whose defense has given up the
+third-most points in the NFL over their current three-game losing streak (95). Although the unit has reached its lowest point, there are reasons to be
+optimistic about Monday's matchup.
+
+New York ranks 31st among teams in points and yards per game this season and has surrendered a staggering 76 sacks, the third-most in a single season in NFL
+history. Not to mention, the annual trip to Philadelphia has essentially been a scheduled loss for the Giants, with their last win at Lincoln Financial Field
+coming in 2013.
+</item 39>
+
+<item 40>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+The Eagles have a fresh set of downs.
+
+10:52 p.m. — It's 4th & 1, but it looks like the Eagles will go for it deep in their own territory. It's a risk, even with the Brotherly Shove at their
+disposal.
+
+10:47 p.m. INTERCEPTION — The Dolphins have been impressive on third down tonight, but not that time. Tagovailoa's pass to Mostert is picked off by Darius Slay,
+and Miami's defense suddenly has to meet the moment to keep this game within one possession.
+
+10:44 p.m. — You think the Dolphins are happy to have Waddle back on the field? He rescues Miami's drive with a first down catch on 3rd & 12.
+
+End of third quarter: Eagles 24, Dolphins 17
+
+10:39 p.m. — Jaylen Waddle is back in the game and makes his presence felt with a first down catch to start the Dolphins' drive.
+</item 40>
+
+<item 41>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The Cowboys' offense looked very much like it did in last season's playoff exit -- uncomfortable and out of sorts. Dallas was sluggish through the first half of
+the game, and the night unraveled quickly when Dak Prescott threw three interceptions in the second half. It got out of hand so quickly that Sam Darnold entered
+the game for the 49ers with more than 12 minutes remaining.
+
+For Prescott and the Cowboys, questions about whether they can get over the hump against the class of the NFC will persist. While their wins have been dominant,
+Dallas already sits two games behind the Eagles in the NFC East.
+
+The 49ers are rolling right along, with all of their major offensive weapons now healthy and the defense living up to its billing as well. San Francisco, now
+5-0, doesn't face a team with a winning record until Week 10, though the Browns, Vikings and Bengals are far from automatic wins for Kyle Shanahan's team.
+</item 41>
+
+<item 42>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+7:56 p.m. — Frank Gore and Vernon Davis are in the house! A couple greats from the 49ers' last golden era under Jim Harbaugh.
+
+Frank Gore and Vernon Davis in the building for SNF 🔥 pic.twitter.com/XMKgK4aeaF — OurSF49ers (@OurSf49ers) October 8, 2023
+
+7:36 p.m. — CeeDee Lamb is coming off back-to-back games with only four catches. Is he due for a huge performance tonight?
+
+7:11 p.m. — New 49ers acquisition Randy Gregory is officially inactive against his former team.
+
+7:01 p.m. — The Eagles are going to win in Los Angeles, so the 49ers need a win to keep pace atop the NFC. After they had to play the last two NFC championship
+games on the road, the No. 1 seed is undoubtedly in the back of their minds.
+
+6:45 p.m.
+</item 42>
+
+<item 43>
+Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown tournaments (Sporting News, 2023-12-18T22:47:00+00:00)
+It's part of what made this team so hard to beat earlier in the season. They've become a pass-happy offense in recent history, relying mostly on the legs and
+arm of Jalen Hurts to do everything. After getting smacked by the Cowboys last week, the Eagles weren't afforded the opportunity to establish the run. That will
+be a point of emphasis this time around, especially since Hurts is dealing with an illness. It's been three weeks since Swift had any kind of impact. That needs
+to change if the Eagles want to get back on track.
+
+FLEX TE Dallas Goedert, Eagles ($6,200)
+
+One of the players that should help this team get-right is Goedert. The TE is healthy once again, having returned against the Cowboys last week and settled in
+nicely by collecting all four targets for 30 yards.
+</item 43>
+
+<item 44>
+Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown tournaments (Sporting News, 2023-12-18T22:47:00+00:00)
+The Seahawks are just about hanging on by a thread. At 6-7, the team is on the outside looking in when it comes to the playoff picture. A win on Monday night
+against the suddenly reeling Eagles could be a big boost in their chances going forward -- a matchup that is actually a pretty good one after looking beneath
+the surface. The Eagles come in as losers of two straight, losing in blowout fashion both times no less. Suddenly the sky is falling as the Cowboys have taken
+over the NFC East division lead, complicating matters as the regular season winds down. The sense of urgency for both sides means we are looking at two teams
+with plenty to lose, setting up for a fun Monday night under the lights at Lumen Field.
+</item 44>
+
+<item 45>
+NFL roundup: Pats hit new low as Lions reach 9-3 for first time since 1962 (The Guardian, 2023-12-03T22:11:26+00:00)
+The 49ers spent an offseason chirping at the Birds – Samuel called one Eagles cornerback “trash” – and then entered the Linc as a rare betting favorite against
+a 10-win team at home.
+
+The Eagles (10-2) suffered a scare when Hurts jogged off the field in the fourth and went straight to the locker room. He was cleared to play and returned to
+action with about 10 minutes left. It was not immediately clear when Hurts was injured.
+
+By the time last season’s NFL MVP runner-up returned, the Eagles trailed 35-13 and were on their way toward their first home loss of the season. Hurts did hit
+DeVonta Smith for a two-yard TD on his return drive. He finished 26-of-45 passing for 298 yards. Purdy put the finishing touches on the win with a 46-yard TD to
+Samuel.
+
+Perhaps all that braggadocio paid off for the 49ers.
+</item 45>
+
+<item 46>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+That's a pick six, and the Dolphins have tied the game just like that after the no-call.
+
+10:22 p.m. — This looks more obvious than a certain penalty on James Bradberry from February.
+
+Looks like the refs missed another facemask, this one on James Bradberry pic.twitter.com/fYYeWnEWaGhttps://t.co/54oa1jfeHf — Dov Kleiman (@NFL_DovKleiman)
+October 23, 2023
+
+10:20 p.m. — James Bradberry appears to get ahold of Cedrick Wilson's face mask on 4th & 3, but no flag flies. The Dolphins turn it over on downs.
+
+10:19 p.m. — Tyreek Hill just can't hang onto what would've been a big-time catch. It's not a fumble, but it is a fourth down for the Dolphins. They'll go for
+it.
+
+10:16 p.m.
+</item 46>
+
+<item 47>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+1 seed is undoubtedly in the back of their minds.
+
+6:45 p.m. — The run of great prime-time weather continues, as it's set to be in the high 70s and sunny in Santa Clara tonight. No excuses for these powerful
+offenses.
+
+What channel is Cowboys vs. 49ers on today?
+
+Game: Cowboys vs. 49ers
+
+Cowboys vs. 49ers Date: Sunday, Oct. 8
+
+Sunday, Oct. 8 TV channel: NBC
+
+NBC Live stream: Peacock | NBCSports.com | Fubo (U.S.) | DAZN (Canada)
+
+Cowboys vs, 49ers can be watched on NBC, which has long held the broadcast rights to "Sunday Night Football."
+
+Mike Tirico (play-by-play) and Cris Collinsworth (color analyst) will be on the call from Levi's Stadium while Melissa Stark will serve as the sideline
+reporter.
+</item 47>
+
+<item 48>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+Deion Sanders once said, “If you look good, you feel good, and if you feel good, you play good." The Eagles looked good on Sunday night, donning Kelly Green
+jerseys and helmets for their matchup with the Dolphins.
+
+And their play absolutely matched the look.
+
+Philadelphia rolled to a 31-17 win over Miami on "Sunday Night Football," keeping the Dolphins' offense off the scoreboard in the second half and playing smart
+football every step of the way down the stretch.
+
+The Dolphins quickly made up a 17-3 deficit, scoring a touchdown just before halftime and finding the end zone again in the third quarter when Jerome Baker
+intercepted a deflected pass from Jalen Hurts for a pick-six.
+
+MORE: How Mike McDaniel overcame alcoholism to become rising NFL coach
+
+The defining series of the game came right after the pick-six when Hurts shrugged off the turnover and led a surgical touchdown drive.
+</item 48>
+
+<item 49>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+It'll be 3rd & Goal from the 12.
+
+8:48 p.m. — Jaylen Waddle goes airborne to bring down a Tagovailoa pass on third down and set up a 1st & Goal opportunity for Miami.
+
+8:46 p.m. FUMBLE — Jaelan Phillips and Bradley Chubb get in there to knock the ball out of Hurts' hands! The Dolphins have an instant scoring opportunity just
+outside the red zone.
+
+Bradley Chubb jars it loose and the Dolphins take over with great field position
+
+
+
+📺: #MIAvsPHI on NBC
+
+📱: Stream on #NFLPlus https://t.co/0rIJPFKW6L pic.twitter.com/DDjWGEWofz — NFL (@NFL) October 23, 2023
+
+8:44 p.m. — David Long is all over Hurts, quickly deflecting his second down pass. A key 3rd & 8 here for the Eagles.
+</item 49>
+
+<item 50>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+— Oh yeah, Julio Jones is back in the NFL.
+
+What a group 🤌 pic.twitter.com/fV9WgGOpRY — Philadelphia Eagles (@Eagles) October 22, 2023
+
+7:41 p.m. — Believe it or not, Tyreek Hill has a chance to break 1,000 yards tonight. He would need 186, but with the way he's played this season, that at least
+seems to be within reach.
+
+7:29 p.m. — Don't forget the Eagles will be back in Kelly Green tonight. This will be a fascinating uniform matchup.
+
+7:20 p.m. — It's 55 degrees and dropping in Philadelphia. That's not unusual for the Eagles, but will Tua Tagovailoa be able to rise to the occasion in cooler
+weather?
+
+What channel is Dolphins vs. Eagles on today?
+
+Game: Dolphins vs. Eagles
+
+Dolphins vs.
+</item 50>
+=== END ITEM id=8edb87abafe76787 ===
+
+=== ITEM id=99a4b553543615d4 ===
+Gold sentences and facts:
+Sentence 0: Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them.
+  Fact 0.0: Argentina has provided highlights.
+  Fact 0.1: Japan has provided highlights.
+  Fact 0.2: Chile has provided highlights.
+  Fact 0.3: Samoa has provided highlights.
+  Fact 0.4: Fiji has provided highlights.
+  Fact 0.5: Los Pumas are also in the semi-finals.
+  Fact 0.6: England have beaten Argentina.
+  Fact 0.7: England have beaten Japan.
+  Fact 0.8: England have beaten Chile.
+  Fact 0.9: England have beaten Samoa.
+  Fact 0.10: England have beaten Fiji.
+Sentence 1: S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse.
+  Fact 1.0: This report is datelined Saint-Etienne.
+  Fact 1.1: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com.
+  Fact 1.2: The Wallabies' Rugby World Cup fate is decided by Fiji and Portugal.
+  Fact 1.3: The Fiji and Portugal match is played in Toulouse.
+  Fact 1.4: The Wallabies' Rugby World Cup fate is decided in Toulouse.
+
+Retrieved items:
+<item 1>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+So the team understands that and we have our belief in anything's possible at the World Cup.
+
+READ MORE: ﻿'Blame myself': Eddie reveals great World Cup regret
+
+READ MORE: Referee ripped after Junior Paulo's dominant KO
+
+LIVE COVERAGE: All the latest updates from Bathurst 1000
+
+Mark Nawaqanitawase runs the ball during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"But also, we understand how strong Fiji is. And we're proud for them as a proud nation. For myself, I'll be proud of it either way it goes. We'll be ready if
+it comes our way."
+
+Kerevi was photographed holding his face in disbelief in one of the defining images of the World Cup ﻿after the Wallabies were pumped 40-6 by Wales in Lyon.
+</item 1>
+
+<item 2>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 2>
+
+<item 3>
+THE GREATEST! Boks beat All Blacks in instant classic to claim record FOURTH RWC in controversial, dramatic final (The Roar | Sports Writers Blog,
+2023-10-28T21:06:03+00:00)
+Advertisement
+
+Robertson will have an almighty task on his hand, with multiple generational players including Dane Coles, Sam Whitelock, Brodie Retallick and Aaron Smith to
+call time on their international careers. Others like Ardie Savea, Mo’unga, Beauden Barrett and Shannon Frizell will also head to Japan.
+
+While Foster didn’t want to take anything away from the Springboks’ win, he said the game had some issues to sort out regarding the officiating.
+
+“I’m proud of our guys, to go down to that red card so early and fight our way back and give ourselves a chance is pretty special,” the departing All Blacks
+coach said.
+
+“I don’t think it went wrong in any clear [place on the pitch], it was a real arm wrestle, both teams have their moment, incredibly proud of the way we fought
+and to get within a whisker of pulling it off is heart-breaking.
+</item 3>
+
+<item 4>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+“Some of those cricketers on that park today would go in your best ever England white ball XI. It’s just been a bridge too far for most of them.
+
+“What I don’t like is giving players a cop out… when we win the 50-over World Cup and the 20-over World Cup, aren’t they great? We’re brilliant. And when the
+wheels come of it’s the structure. It’s the structure of English cricket, we’re a disgrace.
+
+“We play 20-over cricket, we play 100-ball cricket, we don’t play enough 50-over cricket – how much 50-over cricket domestically has Virat Kohli played? Or
+Heinrich Klaasen or anyone out here?
+
+“That’s what’s made this great side over the last six years, travelling round the world playing T20 franchises. It’s such a lame excuse.”
+</item 4>
+
+<item 5>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 5>
+
+<item 6>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+We’re not at that level. And we can’t pretend to be at that level. But can we be at that level by 2027? Yes, we can,” said Jones.
+
+“We’re definitely off the pace but the opportunity to get better is there. I love the game. I love working with young players. I loved seeing some of the young
+players maturing during the World Cup and some of them struggle. And that’s all part of it. But I love the game and I love coaching the Wallabies.”
+
+Jones was named Wallabies coach at the start of the year as replacement for Dave Rennie. He came in with grand statements that his team could win the Rugby
+Championship, Bledisloe Cup and make a smash and grab on the World Cup.
+</item 6>
+
+<item 7>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The #Springboks are gearing up for another tough challenge this week with a semi-final clash against England 🇿🇦🏴󠁧󠁢󠁥󠁮󠁧󠁿#StrongerTogether #RWC2023
+pic.twitter.com/HLSnnjWggB — Springboks (@Springboks) October 18, 2023
+
+England are the only side still competing who are yet to lose a game, and that will stand them in good stead coming into this semi-final. Dominant wins over
+Argentina, Japan and Chile sealed passage to the last eight, and after being given an almighty scare by Samoa in their final pool match, England overcame a
+Fijian fightback in Marseille to triumph 30-24. Despite being outscored by three tries to two, captain Owen Farrell kicked 20 points, sending his side into the
+last four at the expense of 2023's breakout stars.
+</item 7>
+
+<item 8>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England replacements: Theo Dan, Ellis Genge, Kyle Sinckler, Ollie Chessum, Billy Vunipola, Danny Care, George Ford, Ollie Lawrence.
+
+The Springboks are unchanged from that epic quarter-final with France, having all played their part as Jacques Nienaber's side hung on in the second half. The
+contribution of backs Kurt-Lee Arendse, Damian de Allende and Cheslin Kolbe saw all three cross for first-half tries, with Kolbe's coming off the back of a
+charged-down conversion from France's Thomas Ramos. Preventing those two points proved crucial in the end.
+
+The key contribution, though, came from Eben Etzebeth, who bulldozed his way over to score the only five-pointer of the second half and wrestle the game back
+into South African hands.
+</item 8>
+
+<item 9>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The 2019 Rugby World Cup final between England and South Africa was one of many firsts: the game itself capped off a sensational tournament played outside of
+the sport's traditional strongholds for the first time; it was the first final in which South Africa scored a try, and by full-time, the 32-12 score in the
+Springboks' favour sealed a record-equalling third title for the Rainbow Nation.
+
+Fast forward four years, and South Africa once again prepare to take on England in an all-or-nothing match to decide which nation gets a shot at World Cup glory
+— but this time around, the pair meet in the semi-finals of the 2023 tournament, rather than the decider.
+
+That won't make an ounce of difference for either camp, though, as these two long-time rivals prepare for a battle that could re-define the definition of a
+'physical encounter.'
+</item 9>
+
+<item 10>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The Melbourne Rebels are expected to follow.
+
+RA chief executive Phil Waugh says building trust back between the governing body and states is essential to their plans.
+
+Under fire Wallabies coach Eddie Jones also advocated for Australian rugby to move to a centralised model, believing the nation had fallen behind the rest of
+the world.
+
+“We’re a state-based union that’s run by the states, the national union wants to assume more responsibility and when things were going well, no one questioned
+that,” Jones said.
+
+Advertisement
+
+“But over the last period of time, they haven’t been going so well and this tournament’s probably been the icing on the cake where it’s got to a stage where I
+think people, most people probably think there’s time for change. But it’s not going to go easy.
+
+“[It’s] one of the key issues. We need to maximize the development of the players.
+</item 10>
+
+<item 11>
+England choose survival over oblivion and a chance of summer trip to France | Jonathan Liew (The Guardian, 2023-12-01T22:57:40+00:00)
+And as they rallied so spectacularly to salvage a match that looked cooked after 35 minutes, running on fumes and adrenaline, sustained by the sizzle of the
+Wembley crowd, the cold air on their skin and the flickering candle of qualification for Paris next summer, it was as if a kind of energy was surging within
+them.
+
+An energy that we have not really glimpsed from them since they reassembled this autumn, barely a month on from the trauma of Sydney, still a little dazed and
+concussed.
+
+Beth Mead came on for Chloe Kelly at half-time, Georgia Stanway moved further forward and made herself a menace in the penalty area, and the old buddies Toone
+and Alessia Russo teamed up off the bench. The Dutch retreated further and further into Wembley’s wide open spaces, giving Lauren James the time and territory
+to dictate.
+</item 11>
+
+<item 12>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+talkSPORT will have updates from all the action in Paris as England take on the Springboks from 8:00pm
+
+9 Owen Farrell will be looking to inspire England to victory against the Springboks Credit: Getty
+
+Over in India, England's Cricket World Cup hopes hang by a thread after their latest shock defeat to Afghanistan.
+
+They will be boosted by the news that Ben Stokes is fit for the match after he picked up a hip injury five days before the tournament.
+
+But victory for England could scarcely be more crucial.
+
+Having also lost to New Zealand in their opener, their chances of finishing in the top four and progressing to the semi-finals are looking dubious.
+
+But South Africa, despite winning their first two games, suffered a shock defeat to the Netherlands in their most recent match - a sign for England that the
+Proteas can be beaten.
+</item 12>
+
+<item 13>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The Springboks have done it tough, too, having already faced two of the tournament favourites on their way to the semi-finals. Comfortable defeats of Scotland,
+Romania and Tonga couldn't mask the disappointment of the 13-8 loss to Ireland, which consigned South Africa to second in Pool B. However, with Ireland sent
+home by the All Blacks in the quarters, the Bokke showed their World Cup mettle to edge the hosts 29-28 at the Stade de France, sneaking past Les Bleus in one
+of the best games of rugby you're ever likely to see.
+</item 13>
+
+<item 14>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England and South Africa face off in the 2023 Rugby World Cup's second semi-final, played at the Stade de France in Saint-Denis, France. The game kicks off at 9
+p.m. local time on Saturday, October 21, 2023.
+
+Here are the kick-off times for this game around the world:
+
+Location Date Time USA Sat, Oct. 21 3:00 p.m. ET Canada Sat, Oct. 21 3:00 p.m. ET Australia Sun, Oct. 22 6:00 a.m. AEDT UK Sat, Oct. 21 8:00 p.m. BST New
+Zealand Sun, Oct. 22 8:00 a.m. NZDT India Sun, Oct. 22 12:30 a.m. IST Singapore Sun, Oct. 22 3:00 a.m. SGT Malaysia Sun, Oct.
+</item 14>
+
+<item 15>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+He and Franco Mostert pack down together in the second row, while hooker Bongi Mbonambi, utility Deon Fourie, veteran Duane Vermeulen and the devilish Kwagga
+Smith will all be looking to back up superb quarter-final performances to take the Springboks to a second consecutive World Cup final.
+
+South Africa starting XV: Damian Willemse, Kurt-Lee Arendse, Jesse Kriel, Damian de Allende, Cheslin Kolbe, Manie Libbok, Cobus Reinach; Steven Kitshoff, Bongi
+Mbonambi, Frans Malherbe, Eben Etzebeth, Franco Mostert, Siya Kolisi, Pieter-Steph du Toit, Duane Vermeulen.
+
+South Africa replacements: Deon Fourie, Ox Nche, Vincent Koch, RG Snyman, Kwagga Smith, Faf de Klerk, Handre Pollard, Willie le Roux.
+</item 15>
+
+<item 16>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+NEW PODCAST! Michael Atkinson and Sam Worthington preview a thrilling final round of pool games to decide the quarter-finalists at the Rugby World Cup in
+France﻿
+
+He wanted to regain form at club level ﻿with Urayasu D-Rocks but his hand remained up for Test selection.
+
+"I chose to leave Australian shores and understand the ruling around that and what it holds," he said.
+
+"I've got to perform for my club first and if you get the call up, you get the call up. If you don't, I'll take my three months break and enjoy that."
+
+Kerevi is an unabashed Jones fan.
+
+Eddie Jones with fans during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"He's up at 4am working hard. We catch him in the gym, he's working hard and I swear he doesn't even sleep.
+</item 16>
+
+<item 17>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+In short, this semi-final requires a huge step up in quality for Borthwick's side, and that's why we think that the Springboks will be victorious at the Stade
+de France. South Africa have already shown they can match, and beat, the world's best, and we think that they'll do the latter in Saint-Denis.
+</item 17>
+
+<item 18>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+“That judgment will be decided by the 2027 World Cup.”
+
+He said the team – including coaches and players – have already completed their own review of the World Cup disaster. The next one would be “a formal review to
+be done by independent consultants” and he was ready to participate.
+
+“I didn’t come back to Australia to have a holiday – sit down at Coogee Beach, eat fish and chips, have a nice flat white. It was always going to be a battle.
+When you’ve got a team that hasn’t done well for a long period of time, it’s always a battle.”
+
+Advertisement
+
+Jones said it was crucial that Rugby Australia got alignment in the code from grassroots through to the top team as it looks to rebuild it’s international
+standing. Australia, a two-time world champion, is currently ranked 10th in the world.
+
+“You just got to watch the quarterfinals at the weekend. We’re not at that level.
+</item 18>
+
+<item 19>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+New Zealand played some scintillating rugby in victory (AFP via Getty Images)
+
+They led 13-0 and though they may not have realised, no team had ever squandered a lead that large in a World Cup quarter-final. Not that they would have
+expected an easy ride from there.
+
+They conceded a penalty straight from the restart as their kick chase was illegally impeded and Sexton duly slotted the three.
+
+Ireland had made something of a statement during the Haka as their fans drowned it out with a rousing rendition of Fields of Athenry and the players formed a
+figure of eight in memory of ex-international and Munster coach Anthony Foley, who tragically died in 2016, as they stared down their opponents.
+</item 19>
+
+<item 20>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+England vs. South Africa betting odds, prediction
+
+The last time these two sides met was a tumultuous period to say the least, particularly for English rugby. South Africa's dominant 27-13 victory at Twickenham
+proved to be the last game in charge for Eddie Jones, the coach who had taken England to the 2019 World Cup final. In his place, Steve Borthwick was hired, and
+he's just one game away from repeating that feat.
+
+England's form at this tournament has been perfect — at face value. Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in
+the semi-finals — and England have beaten all of them. However, only Japan and Chile were defeated with bonus points, and the narrow wins over both Samoa and
+Fiji in their last two games showed that England are certainly gettable.
+</item 20>
+
+<item 21>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Oct 8th, 2023
+
+Oct 8th, 2023
+
+S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by
+Fiji and Portugal in Toulouse.
+
+Australia will gather together in their plush Saint-Galmier hotel at 9pm local time (6am Monday AEDT) to view what will almost certainly be their World Cup
+execution.
+
+The Wallabies are currently sitting second in Pool C but a single bonus point would be enough for Fiji to leapfrog them and advance to the quarter-finals in
+Marseille.
+
+Watch all the action from Rugby World Cup 2023 on the home of rugby, Stan Sport.
+</item 21>
+
+<item 22>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+The 30-year-old is undoubtedly one of the world's finest centres in peak form but injuries conspired to limit his potential in France.﻿
+
+Samu Kerevi of Australia reacts after the record loss at the Rugby World Cup. (Getty)
+
+"I don't think I performed where I wanted to perform at a World Cup," Kerevi said.
+
+"I hold myself to high standards and I just felt like I could have helped the team more in certain aspects ... I've been out of the game for nine months but I
+felt good coming into it ... I just felt like I was blowing a bit, but felt good towards the back end of a couple of games. But again, it's not where I want my
+performance to be.
+
+Despite being dropped for Lalakai Foketi for the pool win against Portugal, Kerevi said he had no thoughts of following fellow Fijian-Wallaby ﻿Marika Koroibete
+into international retirement.
+
+NEW PODCAST!
+</item 22>
+
+<item 23>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+It’s such a lame excuse.”
+
+Atherton described the England players as looking ‘dazed and shell-shocked, unable to comprehend what has befallen them’, and wrote in The Times that the Sri
+Lankan defeat officially represented the ‘end of an era’ for English white-ball supremacy.
+
+Advertisement
+
+“Each defeat, now four in five matches, has chipped away at the confidence of a group of players at the end of a cycle,” Atherton wrote.
+
+“No batsman looks in any kind of form. Every player has been used; some discarded and used again. They lost faith in their all-rounder strategy before the South
+Africa match, making three changes, and then went back to it here, making three more.
+
+“Players sense uncertainty in decision-making – and there has been a lot of uncertainty.
+
+“It was hard to think that they could put in a worse performance than in Mumbai but they managed it with the bat in Bengaluru.”
+</item 23>
+
+<item 24>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+I’ve got the experience of being in difficult situations before,” Jones said.
+
+“This is not an unusual situation. You’ve got a team that was struggling for a period of time, you’ve got underneath it a system that’s not supporting it and at
+some stage you bottom out.
+
+“This is the opportunity now to change the team- as we’ve started with picking younger players with bright futures – and then we’ve got to look at the
+development system underneath as well.
+
+“It’s not a simple equation that the Wallabies are bad. Let’s be serious about this. The Wallabies are not where they need to be but underneath that we need to
+fix the system to go forward. And if we can do that now we’ve got a rosy future.”
+
+Sports opinion delivered daily
+</item 24>
+
+<item 25>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+And then there were those 37 phases… the most painful finish in Irish rugby history.
+
+Ireland were left bereft after an agonising defeat (PA Wire)
+
+Instead of being feted as the heroes to finally overcome that insurmountable obstacle, the Ireland players will still have to answer endless questions about the
+heavy burden of previous knockout failures and fans will endure at least four more years of choking jokes at their expense.
+
+As for the All Blacks, they looked lost at times during this World Cup cycle and it’s still faintly remarkable that head coach Ian Foster survived last summer
+as the home defeats to Ireland, South Africa and Argentina piled up.
+
+Yet somehow, he hung on and turned things round. He has the unwanted title of being the first New Zealand coach to lose a World Cup pool match but now a
+semi-final awaits next Friday evening against an Argentina side that, frankly, are a tier below them. Forget the hand-wringing ahead of the tournament, the All
+Blacks are one very small step away from another World Cup final.
+</item 25>
+
+<item 26>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+While Ireland will rue the 37 phases that ended in heartbreak, they may just go down in New Zealand rugby history. Tired bodies made tackle after tackle and not
+a single penalty was given away.
+
+The delight at the final whistle showed this wasn’t just any quarter-final victory and while Ireland ponder just what they have to do to finally win a World Cup
+knockout match, the All Blacks can dream of lifting the Webb Ellis Cup for a fourth time. The pain and ecstasy of sport writ large.
+</item 26>
+
+<item 27>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+"Last week 45,000 fans (versus Portugal), last night (60,000 in Lyon). Rugby's such a small aspect in terms of Australians but our fans have turned up here,
+we've seen them and spoken to them and their unconditional love for us, the fact that they came 20,000km to get here and support us, has been awesome.
+
+"My message is just to understand that we're working extremely hard, there's no stone unturned, especially the youth in this team, to leave the jersey in a
+better place and just to stick with us.
+
+"I know the results haven't been coming our way the last couple of years but when it does turn, that's what we're building towards.﻿"
+</item 27>
+
+<item 28>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Advertisement
+
+“What’s changed back there that I could think that, what I can offer, can change what they’re doing still?
+
+“I’ll always love rugby. I’ll always love Australian rugby. Could I see myself working in Australia again? I doubt it.”
+
+But RA have been making moves to try and twist Nucifora’s arm.
+
+While Nucifora was never in the running for the director of high-performance, it’s understood they are trying to get him on board as a consultant when he wraps
+up with Ireland.
+</item 28>
+
+<item 29>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+22 3:00 a.m. SGT Malaysia Sun, Oct. 22 3:00 a.m. MYT Hong Kong Sun, Oct. 22 3:00 a.m. HKT
+
+England vs South Africa live stream, TV channel
+
+TV networks worldwide will be showing all 48 matches at the tournament live, including many on free-to-air television.
+
+On social platforms alone, video content from the Rugby World Cup and organisers World Rugby drew more than 2.1 billion views in 2019 — almost six times the
+previous figure.
+</item 29>
+
+<item 30>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised
+high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia.
+
+They also expressed their strong support for Rugby Australia to conduct a “fully independent and transparent top-to-bottom review of the Wallabies program and
+how it can be improved” in light of the historic first World Cup pool exit.
+
+They added: “It should also provide a clear view of what is needed in a leadership and governance framework to ensure we put the right people, in the right
+roles, in the right system.”
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The QRU has also expressed their desire for Rugby Australia to reinstate the annual $1.7 million in funding to each of the Super Rugby franchises that was
+withdrawn following the Covid pandemic to help keep the game afloat.
+</item 30>
+
+<item 31>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+None of those targets were achieved and Jones changed his tune about building for the future when he named a young team for the doomed Cup campaign – where his
+team became the first Australians to bow out of a RWC in the pool stages.
+
+He finished the year with a 2-7 win loss record – the only two victories coming against lowly Georgia and Portugal.
+
+Advertisement
+
+On Tuesday he said he no regrets with leaving experienced players such as Quade Cooper and Michael Hooper out of the side for the tournament.
+
+“Everyone’s got their own judgment and they’re allowed to have that judgment,” he said. “My choice was that I decided to go with youth. And I stand by that
+because I think we’ve got a a lot of good young players who are really going to benefit from that experience at the World Cup, and going forward to the 2027
+World Cup.”
+</item 31>
+
+<item 32>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Every match ad free, live and on demand in 4K UHD
+
+The most likely outcome is that Fiji wins easily and the Wallabies will be pushing confirm on their off-season holiday plans.﻿
+
+"We've only got ourselves to blame, we put ourselves in this position," Wallabies centre Samu Kerevi, who was born in Fiji, said after an open training session
+in front of 1000 keen locals at the Andrezieux-Boutheon rugby club on Saturday.
+
+"We'll sit down as a team and watch together on Sunday night. I think we understand the situation ... our results and the way we played, we put ourselves in
+this position. So the team understands that and we have our belief in anything's possible at the World Cup.
+</item 32>
+
+<item 33>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+Leading the charge was the always outspoken Sir Geoff Boycott, who wrote in The Telegraph that the team were paying the price for poor preparation in the
+lead-up to the World Cup, as well as shoddy team selection extending back to The Ashes earlier this year.
+
+“It is an old saying: “By failing to prepare, you prepare to fail”,” Boycott wrote.
+
+“History shows that England rarely bat well in India where the ball spins. Our guys are okay on flat pitches but if it turns they have a problem.
+
+“So the best way to try and overcome that would have been for our squad of players to get to India early and play four or five warm-up matches. What did England
+do?
+
+Advertisement
+
+Plan only two warm-up games with one getting rained off. Not smart planning… batting and bowling against stiff opponents sharpens your game and puts you on your
+mettle. Against Sri Lanka, they were once again exposed.
+</item 33>
+
+<item 34>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Rugby Australia is moving closer to naming their new director of high-performance, with World Rugby’s director of high-performance Peter Horne set to take on
+the role – and the move could help land highly-regarded coach Joe Schmidt for the vacant Wallabies job.
+
+As The Roar reported last week, Horne had emerged as the leading candidate in recent weeks.
+
+It’s believed he has edged out former Sydney University, Australian Sevens and Harlequins’ director of rugby Billy Millard for the role.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The finer points of the negotiations are being out, but it’s likely Horne will be announced over the next week once the sports administrator wraps up a crucial
+series of meetings this week with World Rugby.
+
+Horne is leading World Rugby meetings with tier-two nations this week in Sydney, with former Fiji coach Simon Raiwalui in attendance before he officially wraps
+up and joins World Rugby.
+</item 34>
+
+<item 35>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Seriously, the amount of time he puts into effort, into his staff, into the players, always has time for us ... and I think fans don't see that," he said.
+
+"At the end of the day, we didn't get the results, you know, we didn't perform the way we wanted to as a team and it's not on Eddie - it's on all of us.
+
+"So I understand what the fans feel and they're just passionate and it's awesome to have that. But no-one realises what goes on inside. No-one realises the
+things that we're working on tirelessly, to work hard, but especially him and the staff, f--ing work so hard, bro.
+
+Samu Kerevi during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"They're away from families, they're sacrificing as well and … I don't read into the comment stuff, but the young boys, I hear a lot that's going on, social
+media and stuff.
+</item 35>
+
+<item 36>
+Liverpool vs Everton begins epic Saturday with World Cup semi-final as well as Chelsea vs Arsenal – and it could end with a bang (TalkSport,
+2023-10-20T21:34:28+00:00)
+They sit tenth in the table having won four and lost as many from their opening eight games.
+
+But their most recent Premier League victory over Brentford may give the Red Devils hope their season is on the up.
+
+Sheffield United vs Manchester United is live on talkSPORT - kick off is at 8:00pm
+
+9 United got a dramatic win over Brentford before the international break Credit: Getty
+
+An England vs South Africa double header
+
+If you've had your football fix for the day, there's also a packed Saturday of rugby and cricket.
+
+It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+
+After England secured victory over Fiji in the quarter-finals, they now look to overcome defending champions South Africa to advance into their second
+consecutive Rugby World Cup final.
+</item 36>
+
+<item 37>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+Click below for more ⤵️ https://t.co/LeUuw4kPfP — RugbyPass (@RugbyPass) October 19, 2023
+
+Marcus Smith hardly put a foot wrong at fullback against Fiji, but the world champions are an entirely different proposition for England to deal with at the
+back. The high-ball security and hulking frame of Freddie Steward returns to the No. 15 jersey in one of three changes, while at inside centre, Manu Tuilagi
+starts hoping to repeat his heroics of four years ago, when his early try in a dominant semi-final performance took England past the All Blacks.
+
+England's other two changes come in the tight five, with Steve Borthwick making some big calls ahead of this game. Joe Marler starts ahead of vice-captain Ellis
+Genge at loosehead prop, and Ollie Chessum is replaced in the second-row by George Martin.
+</item 37>
+
+<item 38>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+But I don't think people really understand demons, everyone's fights in between.
+
+"Eddie's a human as well and at the end of the day it's a results-driven sport, you know, we need results to get that. But he's committed to us and we love that
+about him.
+
+"He hasn't thought about going home, he's thought about how we can contribute best and that's what we've done these last three days. I feel for him, you know,
+like as a head coach, you maybe can't show that side of himself.
+
+Eddie Jones and Will Skelton talk at Stade Roger Baudras. (Getty)
+
+"But he's been so strong for us and gives us strength to just be positive. And again, we put ourselves in this situation."
+
+Wide World of Sports also asked Kerevi to deliver a message to disillusioned Wallabies fans.﻿
+
+"I think at home there's so many sports going on and some saying rugby's dying, but rugby's massive here overseas," he said.
+</item 38>
+
+<item 39>
+England choose survival over oblivion and a chance of summer trip to France | Jonathan Liew (The Guardian, 2023-12-01T22:57:40+00:00)
+after newsletter promotion
+
+And clarity is perhaps what this team has been lacking most of late: clarity of selection, clarity of formation, clarity of mission and motivation. How much
+prestige should we really attach to the Nations League, anyway? Is it primarily an Olympic qualification shootout or something worth winning in its own right?
+England ended up trying to answer these questions on the hoof, and somehow it was only when their options had finally clarified down to one – survival or
+oblivion – that they recovered their poise and verve.
+
+This entire post-pandemic international cycle – a Euros, a World Cup, an Olympics and another Euros squeezed into three years – feels like a kind of sadism
+dressed up as a panorama of opportunity. There is a school of thought out there that a fallow summer might not have been the worst thing for this team: time to
+reflect and process, time to breathe, time to refresh.
+
+Instead, they now travel to Glasgow on Tuesday for one last push. The minds are still frazzled.
+</item 39>
+
+<item 40>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+But the first real in-match statement came on 27 minutes as New Zealand-born Aki – perhaps the player of the World Cup so far who had made a tournament-high 61
+carries, 33 dominant carries and 23 defenders beaten heading into the weekend – brilliantly jinked inside two defenders, fended off another and powered through
+a gap to dive over the line.
+
+Yet more All-Black class saw Ardie Savea go over in the corner after quick ball was shipped wide but with scrum-half Aaron Smith in the sin-bin for a deliberate
+knock-on, Ireland narrowed the gap to 18-17 just before the break as another New Zealand-born Irish star, Jamison Gibson-Park, sniped from a lineout maul and
+somehow stretched out for the try.
+
+The All Blacks extended an incredible record of leading at half-time of their quarter-final in every single World Cup but that lead had never felt more fragile.
+</item 40>
+
+<item 41>
+Thirty-seven phases of agony define Ireland’s greatest heartbreak as curse continues (The Independent - Sports, 2023-10-14T21:36:10+00:00)
+Sign up to our free sport newsletter for all the latest news on everything from cycling to boxing Sign up to our free sport email for all the latest news Please
+enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read
+our privacy notice Thanks for signing up to the
+
+Sport email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+This time was supposed to be different. This Ireland team were different… are different. But, come the end, the result was the same. On quarter-final weekend,
+for the eighth time in 10 Rugby World Cups, Ireland head home defeated and the wait for a first-ever knockout win goes on.
+</item 41>
+
+<item 42>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Horne briefly worked at Saracens as a general manger.
+
+RA always said they wanted to have the role filled by Christmas, with chief-executive Phil Waugh saying the successful candidate had one of the biggest jobs to
+change the game’s standing in Australia.
+
+“It’s a big job,” Waugh said. “It’s the biggest job on my leadership team in terms of the impact it has on the general sentiment around the game.”
+
+Horne will oversee all of Australia’s men’s and women’s high-performance programs.
+
+Advertisement
+
+He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs.
+
+Perhaps most pressing will be building a list of coaching candidates to take over from Eddie Jones, with RA wanting to have the new Wallabies coach set in stone
+by the start of Super Rugby.
+</item 42>
+
+<item 43>
+England choose survival over oblivion and a chance of summer trip to France | Jonathan Liew (The Guardian, 2023-12-01T22:57:40+00:00)
+They’ll always have Paris. Throughout this Nations League campaign this has been an England team fighting its own sense of entropy, still giving everything,
+still trying the same plans and processes in the hope that eventually something would click. And at 9.34pm on a briskly cold Wembley night, it finally did. Ella
+Toone’s injury-time goal earned England three points and kept their faintly glowing Olympic dream alive. But somehow it also did so much more.
+
+It breathed life into a team and a cycle, and a moment that for so much of the evening had felt like it was drawing to its natural conclusion provided a rousing
+encore to a cast preparing for its final curtain. There will be new challenges and new frontiers to conquer soon enough, a fresh set of European Championship
+qualifiers in the spring, but for now this iteration of the Lionesses still has tricks up its sleeve, still has talent and creativity to burn, still has a fire
+that can scorch any team on the planet.
+</item 43>
+
+<item 44>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The latter is winning only his seventh England cap but gets the starting nod alongside Maro Itoje, with Genge, Chessum and the rest of the replacements hoping
+to make an impact sizeable enough to overcome the Springboks' infamous 'bomb squad'.
+
+Their time is now 🙌
+
+
+
+Here is the @EnglandRugby team to take on reigning champions South Africa in the semi-final in Paris#RWC2023 | #ENGvRSA pic.twitter.com/nkf6rXBPUU — Rugby World
+Cup (@rugbyworldcup) October 19, 2023
+
+England starting XV: Freddie Steward, Jonny May, Joe Marchant, Manu Tuilagi, Elliot Daly, Owen Farrell, Alex Mitchell; Joe Marler, Jamie George, Dan Cole, Maro
+Itoje, George Martin, Courtney Lawes, Tom Curry, Ben Earl.
+</item 44>
+
+<item 45>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+Speaking after the match, Buttler admitted his team had been ‘short of our best by a very long way’, saying there is ‘no clear answer’ as to how to turn their
+fortunes around.
+
+“It’s incredibly tough, an incredibly disappointing tournament. As captain, you feel that a lot,” he said.
+
+Advertisement
+
+“We’ve been short of our best by a very long way. I’m disappointed for myself and the boys that we’ve not given a good account of ourselves… if there was one
+golden nugget that we’re not doing then we’d pick that up.”
+
+Sports opinion delivered daily
+
+England’s tournament may only stay mathematically alive until Sunday evening (AEST), when they face the daunting challenge of tournament hosts India in Lucknow,
+with defeat certain to end their semi-final chances for good.
+</item 45>
+
+<item 46>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+The last time Cheslin Kolbe played England at a Rugby World Cup... 🇿🇦 🏆#RWC2023 | #ENGvRSA pic.twitter.com/Riw2uaSaKa — Rugby World Cup (@rugbyworldcup) October
+19, 2023
+
+Both sides' journeys have seen twists, turns, and bumps in the road, but it's led them both to within 80 minutes of a Rugby World Cup final. England will no
+doubt be looking to echo the spirit of 2019, when they beat the All Blacks 19-7 to reach the final, but in South Africa, they face a side who have taken their
+game to new heights just to reach the semis.
+
+MORE: 2023 Rugby World Cup final: Details, kick-off time and every team's route
+
+What time does England vs South Africa kick off?
+</item 46>
+
+<item 47>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 47>
+
+<item 48>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+We need to maximize the development of the players. At the end of the day, that’s the key to success and alignment of your resources, for a small country.
+
+“Because Australia, if you look at the history of rugby, when we were amateur, we were probably ahead of the game because we had the influence of rugby league.
+We had the influence of AFL and our players were more professional than the rest of the world.”
+
+He added: “I know what’s going on and we need to get a better system of developing players. We need to develop better players and we need to develop a larger
+batch of better players and that only comes through changing the whole system.”
+
+While all five Australian Super Rugby sides fundamentally are on board with regards to moving to a centralised high-performance program, The Roar added that
+some states, including the ACT Brumbies as well as the QRU, don’t want to give up their commercial assets.
+</item 48>
+
+<item 49>
+England choose survival over oblivion and a chance of summer trip to France | Jonathan Liew (The Guardian, 2023-12-01T22:57:40+00:00)
+Sarina Wiegman talks a lot about defending against counterattacks, because this is basically the key to the whole enterprise. Cut off the counter, and with
+England’s technical quality they can easily dominate. It is also the essential measure of how the team is functioning as a collective: the efficiency of the
+press, the closing of the angles, the command of space. Lineth Beerensteyn’s two goals were the sort England simply were not conceding four months ago.
+
+Mary Earps shows her frustration after conceding a second goal to the Netherlands. Photograph: Tom Jenkins/The Guardian
+
+So England passed the ball around a bit and gave it away a bit and essentially ran around trying to feel normal again, and on countless occasions Kelly or Hemp
+would win a first or second ball, look up and see a penalty area empty of white shirts.
+</item 49>
+
+<item 50>
+Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal (Sporting News, 2023-10-20T22:00:05+00:00)
+TV channel Streaming USA — Peacock Canada TSN TSN+ UK ITV ITV X Australia Channel 9 Stan Sport, 9Now New Zealand Sky GO Sky GO India — Fan Code Hong Kong BeIN
+Sports BeIN Sports Malaysia BeIN Sports BeIN Sports Singapore BeIN Sports BeIN Sports
+
+MORE: Every single team to have lifted the Rugby World Cup trophy
+
+England vs South Africa lineups, team news
+
+"The start is crucial, the end is vital..."
+
+
+
+- Steve Borthwick explains changing 3️⃣ of his England starters for Saturday's Rugby World Cup semi-final, from Liam Heagney 👨‍💻 in Paris. #RWC2023 #ENGvRSA
+#EnglandRugby
+</item 50>
+=== END ITEM id=99a4b553543615d4 ===

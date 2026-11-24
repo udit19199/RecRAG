@@ -1,0 +1,31 @@
+[
+{"id": "2e06895656f03d9b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 16, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+{"fact": "0.1", "status": "contradicted", "evidence": [{"item": 29, "quote": "Oldham-born Ratcliffe, who had previously offered"}, {"item": 16, "quote": "if the Manchester born Ratcliffe follows through"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 16, "quote": "follows through with his vision to revolutionise the club"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 16, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "to leave them eliminated from Europe"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "afab5c0589e6ff07", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 18, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 18, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 18, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 18, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+]},
+{"id": "4e0fe00c2581d203", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 19, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 19, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 19, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 49, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 49, "quote": "the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 49, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 49, "quote": "the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 49, "quote": "the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+]}
+]

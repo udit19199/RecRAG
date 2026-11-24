@@ -1,0 +1,1714 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=4a755810b340707a ===
+Gold sentences and facts:
+Sentence 0: Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran.
+  Fact 0.0: Altman's exit is indeed shocking
+  Fact 0.1: Altman has been the face of generative AI technology
+  Fact 0.2: Arun Chandrasekaran, a Gartner analyst, said this
+Sentence 1: Altman has been telling investors that he’s planning to launch a new venture, according to The Information.
+  Fact 1.0: Altman has been telling investors that he is planning to launch a new venture
+  Fact 1.1: The Information is the source of this report
+Sentence 2: Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now.
+  Fact 2.0: The prevailing theory is based on the board's language
+  Fact 2.1: The prevailing theory is based on the way giant tech companies work
+  Fact 2.2: The prevailing theory is floating around right now
+
+Retrieved items:
+<item 1>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+The Information, speaking to three sources formerly with the company, reports that they no longer expect the sale — led by Thrive Capital — to happen, or, if it
+does, to come with a lesser valuation because of the recent turn of events.
+
+Altman planning new venture
+
+Altman has been telling investors that he’s planning to launch a new venture, according to The Information. Brockman is expected to join the effort — whatever
+form it takes. (Possibly an AI chip startup.)
+
+i love you all. today was a weird experience in many ways. but one unexpected one is that it has been sorta like reading your own eulogy while you’re still
+alive. the outpouring of love is awesome. one takeaway: go tell your friends how great you think they are.
+</item 1>
+
+<item 2>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He’s sat with multiple heads of state to discuss AI’s potential and perils. Just Thursday, he took part in a CEO summit at the Asia-Pacific Economic Cooperation
+conference in San Francisco, where OpenAI is based.
+
+He predicted AI will prove to be “the greatest leap forward of any of the big technological revolutions we’ve had so far.” He also acknowledged the need for
+guardrails, calling attention to the existential dangers future AI could pose.
+
+Some computer scientists have criticized that focus on far-off risks as distracting from the real-world limitations and harms of current AI products. The U.S.
+Federal Trade Commission has launched an investigation into whether OpenAI violated consumer protection laws by scraping public data and publishing false
+information through its chatbot.
+</item 2>
+
+<item 3>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman also co-founded Worldcoin, a biometric and cryptocurrency project that’s been scanning people’s eyeballs with the goal of creating a vast digital
+identity and financial network.
+
+___
+
+Associated Press business writers Haleluya Hadero in New York, Kelvin Chan in London and Michael Liedtke and David Hamilton in San Francisco contributed to this
+report.
+</item 3>
+
+<item 4>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+After sending a memo internally, he published the text on X.
+
+After learning today’s news, this is the message I sent to the OpenAI team: https://t.co/NMnG16yFmm pic.twitter.com/8x39P0ejOM — Greg Brockman (@gdb) November
+18, 2023
+
+Senior OpenAI researchers resign
+
+Three senior OpenAI researchers resign after Brockman, including the director of research Jakub Pachocki and head of preparedness Aleksander Madry.
+
+—
+
+November 16
+
+Ilya Sutskever schedules call with Altman
+
+According to a post on X (formerly Twitter) from Brockman, Ilya Sutskever, the chief scientist at OpenAI and a co-founder, texted Altman on Thursday evening
+about scheduling a Friday noon call.
+
+Sam and I are shocked and saddened by what the board did today.
+</item 4>
+
+<item 5>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Sam Altman has been fired from OpenAI, Inc., the 501(c)(3) nonprofit that acts as the governing body for OpenAI, the AI startup behind ChatGPT, DALL-E 3, GPT-4
+and other highly capable generative AI systems. He’ll both leave the company’s board of directors and step down as CEO.
+
+In a post on OpenAI’s official blog, the company writes that Altman’s departure follows a “deliberative review process by the board” that concluded that Altman
+“wasn’t consistently candid in his communications” with other board members, “hindering its ability to exercise its responsibilities.”
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+“The board no longer has confidence in [Altman’s] ability to continue leading OpenAI,” the blog post reads.
+</item 5>
+
+<item 6>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman posted Friday on X: “i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved
+working with such talented people. will have more to say about what’s next later.”
+
+The Associated Press and OpenAI have a licensing and technology agreement allowing OpenAI access to part of the AP’s text archives.
+
+Altman helped start OpenAI as a nonprofit research laboratory in 2015. But it was ChatGPT’s explosion into public consciousness that thrust Altman into the
+spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media. On a world tour this year, he was mobbed by
+a crowd of adoring fans at an event in London.
+
+He’s sat with multiple heads of state to discuss AI’s potential and perils.
+</item 6>
+
+<item 7>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Altman has a long history steering OpenAI. After co-founding the company alongside Peter Thiel, LinkedIn cofounder Reid Hoffman and others, Altman, who formerly
+headed startup accelerator Y Combinator and also holds a seat on the board at Worldcoin, the ambitious cryptocurrency project, initially served as a co-chair of
+OpenAI alongside Elon Musk. Musk left in 2018 to avoid a conflict of interest with Tesla.
+
+Altman over the past several months played an active role in attempting to shape regulators’ responses to AI, appearing at U.S. congressional hearings and
+meeting personally with world leaders including President Joe Biden, German Chancellor Olaf Scholz and French President Emmanuel Macron, among others, on an
+international policy tour.
+
+More important than being one of the most brilliant and impactful people our industry has ever had Sam is one of the most generous and caring people I know.
+I've never met someone who has supported and lifted up more people around them than him. Couldn't be a prouder brother.
+</item 7>
+
+<item 8>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Timeline of Sam Altman’s firing from OpenAI
+
+November 29
+
+Microsoft gains a board observer
+
+Microsoft will gain representation on the new initial board of directors in the form of a non-voting observer, OpenAI announced. It wasn’t immediately clear who
+this observer might be — only that they won’t have an official vote in board business.
+
+November 21
+
+Sam Altman, OpenAI reach agreement on return as CEO and ‘initial’ new board
+
+In a sudden late announcement, OpenAI revealed that it and Altman “have reached an agreement in principle” for him to return as the company’s CEO. In addition
+to Altman’s return, its new “initial” board will include former Salesforce chief executive Bret Taylor, former US Secretary of the Treasury Larry Summers and
+Quora founder Adam D’Angelo.
+
+We have reached an agreement in principle for Sam Altman to return to OpenAI as CEO with a new initial board of Bret Taylor (Chair), Larry Summers, and Adam
+D'Angelo.
+</item 8>
+
+<item 9>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+That’s according to Bloomberg, which in a brief — citing sources close to the matter — said that discussions are happening between Quora CEO Adam D’Angelo, one
+current member of the OpenAI board, and Altman — and possibly other board members as well.
+
+Board tensions boil over
+
+The New York Times reports that, before his ousting, Sam Altman made a move to push out board member Helen Toner because he thought a paper she had co-written
+was overly critical of OpenAI. That, among other issues, led to OpenAI’s current predicament. Speaking of, The Times indicates that negotiations to hire Altman
+back continue — but that one major sticking point remaining is “guardrails” meant to improve Altman’s communication with the board.
+
+—
+
+November 20
+
+Altman joins Microsoft
+
+Sam Altman, Greg Brockman and colleagues announce that they’ll join Microsoft to lead a new AI research team.
+</item 9>
+
+<item 10>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+—
+
+November 18
+
+“Not … in response to malfeasance”
+
+In an internal memo obtained by Axios sent Saturday morning, OpenAI COO Brad Lightcap said yesterday’s announcement “took [the management team] by surprise” and
+that management had had “multiple conversations with the board to try to better understand the reasons and process behind their decision.” Discussions were
+ongoing as of Saturday morning, per the memo.
+
+“We can say definitively that the board’s decision was not made in response to malfeasance or anything related to our financial, business, safety, or
+security/privacy practices,” Lightcap added. “This was a breakdown in communication between Sam and the board … We still share your concerns about how the
+process has been handled, are working to resolve the situation, and will provide updates as we’re able.”
+
+OpenAI’s funding in jeopardy
+
+The planned sale of OpenAI employee shares that would value the startup at about $86 billion could be in jeopardy.
+</item 10>
+
+<item 11>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He was recruited in 2014 to take lead of the startup incubator YCombinator.
+
+“Sam is one of the smartest people I know, and understands startups better than perhaps anyone I know, including myself,” read YCombinator co-founder Paul
+Graham’s 2014 announcement that Altman would become its president. Graham said at the time that Altman was “one of those rare people who manage to be both
+fearsomely effective and yet fundamentally benevolent.”
+
+OpenAI started out as a nonprofit when it launched with financial backing from Tesla CEO Elon Musk and others. Its stated aims were to “advance digital
+intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return.”
+
+That changed in 2018 when it incorporated a for-profit business Open AI LP, and shifted nearly all its staff into the business, not long after releasing its
+first generation of the GPT large language model for mimicking human writing.
+</item 11>
+
+<item 12>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Later Monday, that number climbed to over 650.
+
+Altman and Brockman considering return
+
+As reported by The Verge, Altman’s move to Microsoft isn’t a done deal — and both Altman and Brockman are still open to returning to OpenAI. That is, if the
+remaining board members who initially fired him step aside.
+
+OpenAI board considers merger
+
+OpenAI’s board of directors approached Dario Amodei, the co-founder and CEO of rival large-language model developer Anthropic, about a potential merger of the
+two companies, The Information reports. The approach was part of an effort by OpenAI to persuade Amodei to replace Altman as CEO — but Amodei quickly turned
+down the CEO offer.
+
+—
+
+November 19
+
+Altman to meet at OpenAI HQ
+
+According to The Information, Altman is expected to meet at OpenAI’s San Francisco headquarters as executives at OpenAI push to have him reinstated as CEO.
+</item 12>
+
+<item 13>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+We are collaborating to figure out the details. Thank you so much for your patience through this. — OpenAI (@OpenAI) November 22, 2023
+
+Altman also posted about the new deal, giving some insight into the roller coaster that we’ve all been riding since his firing was revealed Friday. In his
+words, his decision to join Microsoft on Sunday “was the best path for me and the team.” Since then, the new board’s composition and Microsoft’s support appear
+to have been enough to bring him back to the AI company he co-founded.
+
+Altman and board in talks
+
+OpenAI’s board of directors is reportedly in talks with Sam Altman, ex-Y Combinator president and an OpenAI co-founder, to return to OpenAI as CEO as soon as
+this week.
+</item 13>
+
+<item 14>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+one takeaway: go tell your friends how great you think they are. — Sam Altman (@sama) November 18, 2023
+
+Investors pushing for Altman’s return
+
+Investors — furious at the turn of events — are reportedly exerting pressure on OpenAI’s board to reinstate Altman, going so far as to recruit Microsoft.
+Nadella is said to be sympathetic.
+
+Board agrees to reverse course — in principle
+
+The Verge reports that the board agreed in principle to resign and to allow Altman and Brockman to return. It waffled, however, missing a deadline yesterday by
+which many OpenAI staffers were set to leave the company. Altman is said to be ambivalent about coming back and asking for “significant” governance changes.
+
+—
+
+November 17
+
+Brockman demoted
+
+Brockman says he got a text from Sutskever shortly after noon on Friday asking for a quick call.
+</item 14>
+
+<item 15>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He said OpenAI still has a “deep bench of technical leaders” but its next executives will have to steer it through the challenges of scaling the business and
+meeting the expectations of regulators and society.
+
+Forrester analyst Rowan Curran speculated that Altman’s departure, “while sudden,” did not likely reflect deeper business problems.
+
+“This seems to be a case of an executive transition that was about issues with the individual in question, and not with the underlying technology or business,”
+Curran said.
+
+Altman has a number of possible next steps. Even while running OpenAI, he placed large bets on several other ambitious projects.
+
+Among them are Helion Energy, for developing fusion reactors that could produce prodigious amounts of energy from the hydrogen in seawater, and Retro
+Biosciences, which aims to add 10 years to the human lifespan using biotechnology.
+</item 15>
+
+<item 16>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI, the company behind viral AI hits like
+ChatGPT, GPT-4 and DALL-E 3, by OpenAI’s board of directors. Then, the company’s longtime president and co-founder, Greg Brockman, resigned — as did three
+senior OpenAI researchers. And the fallout continues.
+
+Tip TechCrunch
+
+Do you work at OpenAI and know more about Sam Altman’s departure?
+
+Do you work at OpenAI and know more about Sam Altman’s departure? Get in touch with TechCrunch
+
+It’s a fast-moving situation that we’re still trying to get to the bottom of. No doubt more will become clear as time goes on. To make it easier to follow all
+that’s happened in the meantime, though, we’ve put together a timeline; we’ll do our best to keep it current.
+</item 16>
+
+<item 17>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+The company said its board consists of OpenAI’s chief scientist, Ilya Sutskever, and three non-employees: Quora CEO Adam D’Angelo, tech entrepreneur Tasha
+McCauley, and Helen Toner of the Georgetown Center for Security and Emerging Technology.
+
+OpenAI’s key business partner, Microsoft, which has invested billions of dollars into the startup and helped provide the computing power to run its AI systems,
+said that the transition won’t affect its relationship.
+
+“We have a long-term partnership with OpenAI and Microsoft remains committed to Mira and their team as we bring this next era of AI to our customers,” said an
+emailed Microsoft statement.
+
+While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s. He was recruited in 2014 to take lead of
+the startup incubator YCombinator.
+</item 17>
+
+<item 18>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+After sending a Google Meet link, Brockman was told that he was being removed from the board as chairman “but was vital to the company and would retain his
+role” as president, and that Altman had been fired.
+
+Altman’s firing publicly announced
+
+OpenAI published a post on its blog announcing the executive shake-up. The company’s management team was aware shortly after.
+
+i loved my time at openai. it was transformative for me personally, and hopefully the world a little bit. most of all i loved working with such talented people.
+will have more to say about what’s next later. 🫡 — Sam Altman (@sama) November 17, 2023
+
+All-hands meeting
+
+OpenAI held an all-hands meeting Friday afternoon during which Sutskever defended Altman’s ouster. He dismissed suggestions that pushing Altman out amounted to
+a “hostile takeover,” and claimed that it was necessary to protect OpenAI’s mission of “making AI beneficial to humanity.”
+</item 18>
+
+<item 19>
+A timeline of Sam Altman’s firing from OpenAI — and the fallout (TechCrunch, 2023-11-18T20:16:46+00:00)
+Sam and I are shocked and saddened by what the board did today. Let us first say thank you to all the incredible people who we have worked with at OpenAI, our
+customers, our investors, and all of those who have been reaching out. We too are still trying to figure out exactly… — Greg Brockman (@gdb) November 18, 2023
+
+Murati told of Altman’s firing
+
+Brockman alleges that Mira Murati, OpenAI’s CTO and now interim CEO, was informed on Thursday night that Altman would be fired.
+</item 19>
+
+<item 20>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+But later on X, formerly Twitter, Brockman posted a message he sent to OpenAI employees in which he wrote, “based on today’s news, i quit.”
+
+In another X post on Friday night, Brockman said Altman was asked to join a video meeting at noon Friday with the company’s board members, minus Brockman,
+during which OpenAI co-founder and Chief Scientist Ilya Sutskever informed Altman he was being fired.
+
+“Sam and I are shocked and saddened by what the board did today,” Brockman wrote, adding that he was informed of his removal from the board in a separate call
+with Sutskever a short time later.
+
+OpenAI declined to answer questions on what Altman’s alleged lack of candor was about. The statement said his behavior was hindering the board’s ability to
+exercise its responsibilities.
+
+Altman posted Friday on X: “i loved my time at openai.
+</item 20>
+=== END ITEM id=4a755810b340707a ===
+
+=== ITEM id=cdacff381b489dfe ===
+Gold sentences and facts:
+Sentence 0: These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook.
+  Fact 0.0: Delays may lead to bets being refunded.
+  Fact 0.1: Whether bets are refunded depends on the circumstances and the specific rules of the sportsbook.
+Sentence 1: Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move.
+  Fact 1.0: Every sportsbook adjusts when a betting line moves or odds change for a legitimate reason.
+  Fact 1.1: Examples of legitimate reasons include an injury or a roster move.
+Sentence 2: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 2.0: Sportsbooks are also gathering this information.
+  Fact 2.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+
+Retrieved items:
+<item 1>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+DraftKings Sportsbook: DraftKings, known as a daily fantasy sports operator before becoming a renowned sportsbook, offers up a nice variety of futures bets,
+including the NBA Rookie of the Year award. The online sportsbook and betting app are intuitive and offer an easy-to-understand betting experience.
+Additionally, DraftKings fields a competitive welcome bonus for new players.
+
+DraftKings, known as a daily fantasy sports operator before becoming a renowned sportsbook, offers up a nice variety of futures bets, including the NBA Rookie
+of the Year award. The online sportsbook and betting app are intuitive and offer an easy-to-understand betting experience. Additionally, DraftKings fields a
+competitive welcome bonus for new players. FanDuel Sportsbook: Also known for being in the DFS market, FanDuel has one of the largest followings in the country.
+It offers competitive odds for NBA ROTY and has one of the best sports betting apps. Look for a quality welcome bonus for new players and attractive promotions
+for existing customers.
+</item 1>
+
+<item 2>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Rookie of the Year is not the only form of NBA futures betting. Legal online sportsbooks have a wide selection of NBA futures you can bet on, including:
+
+In addition to futures bets, you can wager on many NBA bets during the regular season and postseason. NBA game lines (moneylines, point spreads, and totals) are
+the most popular, but you’ll also be able to bet on NBA team and player props, parlays, and more.
+
+The NBA is the second-most popular odds market to bet on in the US, behind NFL betting odds. That means every online betting site always has a great selection
+of NBA odds.
+</item 2>
+
+<item 3>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+See more: Best NCAA basketball betting sites
+
+2023-24 NBA Season
+
+October 24 Regular season begins November 3 - December 9 In-season tournament February 16-18 All-Star Weekend 2024 April 14 Regular season ends April 16-19
+Play-in tournament April 20 Playoffs begin June 6 NBA Finals Game 1
+
+NBA spreads, money lines, and over/unders
+
+For anyone new to NBA betting, the staple wager types are:
+
+NBA point spreads: Bet on games via margins of victory or loss. Say the New York Knicks are -7.5 favorites over the Miami Heat. That means the Knicks need to
+win the game by 8 points to win a spread bet. On the other hand, the Heat can lose by up to 7 points (or win outright).
+
+NBA moneylines: The simplest form of betting. You pick the winner of the game, and if you’re right, you’ll get paid out based on the odds when you finalize your
+bet slip.
+</item 3>
+
+<item 4>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 4>
+
+<item 5>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Season Player Position Team 2023 Paolo Banchero Forward Orlando Magic 2022 Scottie Barnes Forward Toronto Raptors 2021 LaMelo Ball Guard Charlotte Hornets 2020
+Ja Morant Guard Memphis Grizzlies 2019 Luka Dončić Guard/Forward Dallas Mavericks 2018 Ben Simmons Forward/Guard Philadelphia 76ers 2017 Malcolm Brogdon Guard
+Milwaukee Bucks 2016 Karl-Anthony Towns Center Minnesota Timberwolves 2015 Andrew Wiggins Forward/Guard Minnesota Timberwolves 2014 Michael Carter-Williams
+Guard Philadelphia 76ers 2013 Damian Lillard Guard Portland Trail Blazers 2012 Kyrie Irving Guard Cleveland Cavaliers 2011 Blake Griffin Forward Los Angeles
+Clippers 2010 Tyreke Evans Guard/Forward Sacramento Kings
+
+What other NBA futures can I bet on?
+
+Rookie of the Year is not the only form of NBA futures betting.
+</item 5>
+
+<item 6>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Player props could focus on how many points a player scores or how many rebounds he pulls down. These are typically provided in an over/under format.
+
+Then, team props can range from which team will score the first bucket to the total points scored in a quarter to which team will lead at halftime. The
+selection is often robust, especially when high-profile teams play.
+
+Futures bets are exactly what their name implies: bets on events that will happen in the future. Common futures markets include:
+
+and much more. You can usually bet on NBA futures odds throughout the year, including well before the season starts and throughout the regular season. The
+further away from the event, the more likely you will find heavier odds in your favor.
+
+Is NBA betting legal in the U.S.?
+
+In the US, the landscape of sports betting, specifically NBA betting, has evolved considerably. While NBA betting is permitted, its legality varies across the
+nation. The significant turning point came in 2018 when the US Supreme Court made a pivotal decision.
+</item 6>
+
+<item 7>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, the only way to find these opportunities is shopping lines.
+
+See more: NFL futures bets
+
+Can I get a better line or odds after I’ve already bet?
+
+When you bet, you lock in the odds or line as currently posted. If they change, for better or worse, you’re stuck with the odds from when you wagered.
+
+That’s precisely why you should go line shopping before you bet. Of course, if significant changes occur, you can take more action at the improved odds or more
+favorable line.
+
+Is line shopping worth my time?
+
+Because it can provide you the opportunity to lay less, win more, and improve your chances, line shopping is certainly worth your time. Plus, it doesn’t have to
+take up all that much of it.
+
+Use the live odds feed above to do a basic survey. You’ll find it takes just seconds to compare lines and odds. Plus, download and install multiple licensed
+online sportsbook apps on your phone, and you can do a more thorough shop in just a few minutes.
+</item 7>
+
+<item 8>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Remember that some of the best players in the NBA were once on the bench for most games until small increases in their playing time gave them a chance to shine.
+
+Shop for the best lines: This tip applies to every bet you make. Using multiple sportsbook accounts lets you find the best odds for every NBA prop bet. Even the
+smallest differences, like one sportsbook having odds at +125 and another at +135, can make a difference in your profit. By shopping for the best lines, you can
+make smarter bets and find the best value.
+
+Related Pages:
+</item 8>
+
+<item 9>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Favorites to win the game are shown negative odds, such as -135, while the underdogs will have positive odds, like +165.
+
+NBA over/under bets: Also known as totals. These bets are focused on the combined point total of the two teams playing in a game. (Winners and losers don’t
+matter.) For example, the over/under could be set at 211.5 points in the Knicks vs. Heat matchup. If you were to pick the over on the bet, you’d need the two
+teams to combine for 212 points or more to win. They need to score 211 points or fewer if you went with the under.
+
+NBA props and futures
+
+NBA player and team props are growing in popularity. Sportsbooks are taking note and providing more NBA props than ever.
+
+After all, it’s much easier to focus on a single player and how he will perform than the entire team. Player props could focus on how many points a player
+scores or how many rebounds he pulls down.
+</item 9>
+
+<item 10>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Once the season has started and you get to see how the various rookies are performing, you can gather the relevant data. But sportsbooks are also gathering this
+information, and they begin to tighten the NBA Rookie of the Year lines in response.
+
+So, while you can better guess which player will hoist the Wilt Chamberlain Trophy, the odds will be tighter, and your potential return on your wager will be
+reduced.
+
+Pros and cons of betting early on the NBA Rookie of the Year:
+
+Pros:
+
+You have an opportunity to find better value.
+
+The betting odds are fresh and haven't been adjusted.
+
+Cons:
+
+There is a much higher risk as a player's performance, health, and team dynamic can change throughout the season.
+
+You’ll find limited information to make an informed bet.
+
+Pros and cons of waiting to bet on the NBA Rookie of the Year:
+
+Pros:
+
+There is a lot more information available to make an informed bet.
+
+You don’t risk betting on a player not remotely in contention.
+
+Cons:
+
+There is a reduced opportunity to find value.
+</item 10>
+
+<item 11>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+The significant turning point came in 2018 when the US Supreme Court made a pivotal decision. It overturned a longstanding federal law and allowed individual
+states the autonomy to determine their own sports betting regulations.
+
+This groundbreaking decision sparked a wave of change. Since that landmark ruling, over 30 states have embraced sports betting, including wagers on the NBA. For
+those residing or visiting betting-friendly states, the experience promises fairness and security.
+
+State-regulated online betting platforms are in place, ensuring that bettors receive fair odds. Furthermore, these platforms adhere to strict standards,
+ensuring a safe and transparent betting environment for everyone involved.
+
+Related Pages:
+</item 11>
+
+<item 12>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+That means checking the posted lines and odds for the same bets at different sportsbooks.
+
+You can do this for moneylines, point spreads, totals bets, prop bets, and more. Finding the best line or better odds on any bet is like finding money.
+
+You can shop around using multiple sportsbook apps on your phone or live odds feeds like the one above. Pick a side, then use the drop-down menus and tabs to
+find the odds and lines for that bet.
+
+Finally, bet when you see an opportunity at better odds or an improved line compared to the competition.
+
+Line shopping for futures
+
+People tend to bet futures at their favorite online sportsbook. However, shopping for better odds on any future bet is worth your time. Most game lines are
+similar at different sportsbooks, but the odds in futures markets can vary significantly.
+
+Sportsbooks sometimes have higher liabilities for specific teams and offer better odds on others to lay that off. Timing is everything.
+
+Get it right, and you can easily take advantage of changes in different futures markets due to liability.
+</item 12>
+
+<item 13>
+NBA MVP Odds 2024 Season - Jokic and Giannis early favorites (Sporting News, 2023-10-04T22:11:54+00:00)
+Season Player Team 2022-23 Joel Embiid Philadelphia 76ers 2021-22 Nikola Jokić Denver Nuggets 2020-21 Nikola Jokić Denver Nuggets 2019-20 Giannis Antetokounmpo
+Milwaukee Bucks 2018-19 Giannis Antetokounmpo Milwaukee Bucks 2017-18 James Harden Houston Rockets 2016-17 Russell Westbrook Oklahoma City Thunder 2015-16 Steph
+Curry Golden State Warriors 2014-15 Steph Curry Golden State Warriors 2013-14 Kevin Durant Oklahoma City Thunder 2012-13 LeBron James Miami Heat 2011-12 LeBron
+James Miami Heat 2010-11 Derrick Rose Chicago Bulls
+
+What other NBA futures can I bet on?
+
+The NBA MVP is far from the only NBA futures bet you can make. Here are some other popular NBA futures odds.
+
+The NBA is the second-most popular sport in the US for betting, behind only the NFL. In turn, the bet types run deep.
+</item 13>
+
+<item 14>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Either way, the line shopping strategy is designed to help you maximize your potential return.
+
+NBA live betting
+
+Thanks to the increased popularity of online sports betting apps, in-game betting has exploded nationwide. Also known as live betting, in-game betting allows
+you to bet on a game while it’s unfolding.
+
+The action is fast, and the odds are constantly shifting, making for a new way to enjoy the flow of a game while still staying engaged as a bettor.
+
+Depending on the sportsbook, there is usually a strong variety of live betting opportunities. You’ll find game and player prop bets like whether the next bucket
+will be worth one, two, or three points.
+
+You can bet on the team leading at the end of the current quarter or on whether there will be a comeback victory. You can even boil live betting down to the
+results of the next possession.
+
+The most popular sportsbook apps, such as DraftKings, FanDuel, and BetMGM, offer NBA in-game betting, though each has its lines and betting opportunities.
+</item 14>
+
+<item 15>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+His wingspan and defensive prowess will challenge opponents. Offensively, he capitalizes on mismatches and has diverse scoring abilities, from the paint to the
+3-point line. His underrated passing syncs well with OKC's pace and style.
+
+How to bet on NBA Rookie of the Year
+
+The first thing you need when preparing to bet on the NBA Rookie of the Year Award, or any other bet, is an account at an online sportsbook.
+
+Signing up for a new betting account doesn’t take much time. Once you visit the online sportsbook you’re interested in, click a “sign up” or “register” button.
+This will take you to a form for your details. Fill that out and accept the sportsbook’s terms and conditions.
+
+At that point, you’ll be able to claim your welcome bonus, which you’ll qualify for by following the link on this page from our site to the online sportsbook.
+If you need to enter a code to get the bonus, you’ll also find that code on our site.
+</item 15>
+
+<item 16>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+If you need to use a bonus or promo code, enter it at this stage. Once you’ve signed up, make your initial deposit, and you’re ready to start NBA betting.
+
+See more: Best NBA betting promos
+
+What to look for in an NBA betting site
+
+Here are some key factors to consider:
+
+Deposits and Payouts:
+
+Check if funds are available instantly after depositing.
+
+Understand the variety of deposit methods the sportsbook offers.
+
+For payouts, know the withdrawal methods and wait times.
+
+Be aware of any limits or restrictions on withdrawals.
+
+NBA Odds:
+
+Always select betting sites offering the best NBA odds for long-term benefits.
+
+Odds can differ among sportsbooks; getting the best deal can increase your winnings.
+
+For instance, consider using both if one book offers the Boston Celtics at +800 and another at +1500.
+
+User Experience:
+
+Assess how easy it is to navigate the site.
+
+Gauge the efficiency of customer support.
+
+Ensure the site has a responsible gaming section.
+
+The overall user experience should be smooth and hassle-free.
+</item 16>
+
+<item 17>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other side to get it that way.
+
+That’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like
+an injury or roster move. It’ll be difficult for you to find value in that case.
+
+But when a line moves or odds change because of betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right
+there.
+
+Line shopping is a tool to help you spot changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.
+
+Choose a side, shop around at online sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable
+to your viewpoint.
+
+See more: What is a parlay bet?
+</item 17>
+
+<item 18>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 18>
+
+<item 19>
+NBA MVP Odds 2024 Season - Jokic and Giannis early favorites (Sporting News, 2023-10-04T22:11:54+00:00)
+Popular features include the “edit my bet” and “easy parlay” options, which have helped make BetMGM a leading sportsbook in many states where sports betting is
+legal. Caesars Sportsbook: The Caesars betting app may be basic, but the simplicity is part of the draw for customers, along with an outstanding selection of
+competitive odds. Caesars also provides NBA betting promos and more sports betting bonuses & promotions for existing customers.
+
+When should you bet on NBA MVP futures?
+
+You can bet on the regular-season NBA MVP award well before the season starts. But when is the best time? That comes down to your tolerance for risk versus
+reward.
+
+The odds are so favorable when the lines for NBA Most Valuable Player are first released because the oddsmakers, like you, have very little information to work
+with.
+
+They are basing their odds on past performance and expected future accomplishments, as well as the quality of the team around the top candidates for the award.
+Thus, the odds are quite favorable.
+</item 19>
+
+<item 20>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 20>
+
+<item 21>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Ensure the site has a responsible gaming section.
+
+The overall user experience should be smooth and hassle-free.
+
+Safety and Security:
+
+Top NBA betting sites prioritize users' safety.
+
+Ensure your personal information is secure.
+
+Some sportsbooks excel in ensuring cybersecurity; always go for those with solid reputations.
+
+How to find the best NBA lines
+
+Not all sportsbook betting odds are created equal. If you're willing to put in some legwork, you can shop for the best NBA lines to maximize your potential
+return.
+
+Movement in the odds depends on multiple factors, including team news, injuries, public betting, recent play, and even the number of games a team plays in a
+row.
+
+Oddsmakers use all the available information to craft their lines, and you can find value in shopping around for the most favorable lines and odds.
+
+You can use our NBA odds page (see link above) to find the best lines for your prospective bet, or you can open accounts at multiple sportsbooks and do the
+shopping yourself.
+</item 21>
+
+<item 22>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Bettors across the country can wager on which player they believe will win the coveted NBA Rookie of the Year award as part of NBA futures betting.
+
+Like other NBA futures odds, this can be bet on before the start of the NBA regular season and throughout the year. The best NBA betting apps make it simple and
+convenient.
+
+Below, you can check the latest NBA Rookie of the Year odds as posted at online sportsbooks and how to bet on them.
+
+Current NBA ROTY odds
+
+Check the current NBA ROTY odds below. Click on any odds to claim your bonus and get started.
+
+Who are the NBA RoY odds favorites?
+
+Victor Wembanyama: Coach Gregg Popovich's Spurs have a gem in Victor Wembanyama, a generational talent and a strong Rookie of the Year contender. Even with a
+young roster and potential load management, Wembanyama's undeniable impact is evident.
+
+His elite defense, highlighted by his 7-foot-4 height and 8-foot wingspan, allows him to dominate where others can't.
+</item 22>
+
+<item 23>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Caesars Sportsbook: Caesars knows its way around sports betting when you use its app and online sportsbook. It offers favorable odds for almost every bet type,
+including NBA ROTY betting, and offers a nice variety of deposit and withdrawal options. Additionally, Caesars has a competitive welcome bonus for new players
+and runs NBA betting promos for existing players.
+
+When is the best time for NBA ROTY odds?
+
+The earlier you bet on NBA ROTY, the better the odds. But you’ll be doing so without much information that could be key in making an educated decision.
+
+Conversely, if you wait for the data you need for an informed bet, the odds will tighten up, and you will see less of a return on your wager.
+
+When the lines are first released for NBA ROTY honors, the season hasn’t even started yet, so there are no statistics, trends, or player news. The pre-season
+odds are so favorable because even the oddsmakers don’t have the data to craft more specific lines.
+</item 23>
+
+<item 24>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck with a push instead of a
+profit.
+
+What is the Vegas line?
+
+Las Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is copying a line, it’s usually copying the Vegas line. Most
+online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all lines in every major sport.
+
+If those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take advantage when sportsbooks stray
+from the Vegas line.
+
+Why do the lines move?
+
+It’s worth reiterating that sportsbooks want an equal amount of money bet on each side of every bet. When that happens, they earn the small profit built into
+the odds without concern about who wins or loses.
+</item 24>
+
+<item 25>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Line shopping is the key that unlocks the best odds and lines at top sports betting sites.
+
+The process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is quite often better odds
+and improved lines.
+
+What is line shopping, and why is it worth your time? Find the answers below in our complete guide to line shopping.
+
+How do sportsbooks set odds and lines?
+
+The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.
+
+Other sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics,
+statistics, injury and roster news, performance, matchup data, and more to develop the lines and odds.
+
+Betting lines and odds are then subject to change based on the betting public’s reaction and any additional information that comes to light ahead of the game.
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+</item 25>
+
+<item 26>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Look for a quality welcome bonus for new players and attractive promotions for existing customers.
+
+Also known for being in the DFS market, FanDuel has one of the largest followings in the country. It offers competitive odds for NBA ROTY and has one of the
+best sports betting apps. Look for a quality welcome bonus for new players and attractive promotions for existing customers. BetMGM Sportsbook: As one of the
+most recognizable names in the gambling industry, BetMGM knows how to attract and keep customers with competitive odds for all bet types, including futures bets
+and the NBA Rookie of the Year. BetMGM offers many deposit and withdrawal options and 24/7 customer service, and generous sports betting bonuses and promotions.
+
+As one of the most recognizable names in the gambling industry, BetMGM knows how to attract and keep customers with competitive odds for all bet types,
+including futures bets and the NBA Rookie of the Year. BetMGM offers many deposit and withdrawal options and 24/7 customer service, and generous sports betting
+bonuses and promotions.
+</item 26>
+
+<item 27>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+With legal sports betting now at your fingertips in over 30 states, it’s easier than ever to bet on basketball at one of the best NBA betting sites.
+
+The NBA gives you plenty of games, teams and players to bet on across hundreds of odds markets. As a bettor, you'll want to find the best NBA betting lines
+night after night plus NBA futures markets from NBA Finals odds to Rookie of the Year odds.
+
+See below for where to look and more on betting on the NBA at the best sports betting sites.
+
+Best NBA betting sites for 2023
+
+When it comes to betting on the NBA, you can choose any online betting site and have plenty of odds to choose from.
+
+You can bet everything from moneylines, totals, and point spreads to player props for scoring, rebounding, and assists, or futures bets like odd to win the
+Eastern Conference or individual award winners like NBA MVP odds.
+
+Here are our favorite sportsbooks for NBA betting.
+</item 27>
+
+<item 28>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+We urge you to read the requirements for any available promotions and offers before accepting them so you’re aware of any restrictions before betting.
+
+You can now place your initial deposit, which is easy at online betting sites thanks to various deposit and withdrawal options.
+
+To bet on the NBA Rookie of the Year, navigate to the basketball section of the sportsbook website, select the NBA, and go to the futures tab.
+
+You’ll find Rookie of the Year odds, NBA MVP odds, and more there. Select the bet you want to make, enter the amount you want to bet, and finalize your bet
+slip.
+
+Ensure you’re using only legal online sportsbooks for any type of betting. Offshore sportsbooks advertise widely on the internet, but they are illegal and offer
+no protection against fraud and other criminal activities.
+
+Best sportsbooks for NBA Rookie of the Year odds
+
+Here are some of the best sports betting sites where you can bet on the next NBA Rookie of the Year.
+</item 28>
+
+<item 29>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 29>
+
+<item 30>
+NBA Rookie of the Year Odds - Wembanyama the early favorite (Sporting News, 2023-10-04T22:54:23+00:00)
+Cons:
+
+There is a reduced opportunity to find value.
+
+The odds may not be as favorable.
+
+Keep in mind that it’s always important to take into consideration your risk tolerance while you weigh the potential rewards. No matter when you decide to make
+your wager, always gather as much information as possible before risking your hard-earned money.
+
+Who are the past NBA ROTY winners?
+
+For context, here is a list of the National Basketball Association Rookie of the Year winners since 2010.
+</item 30>
+=== END ITEM id=cdacff381b489dfe ===
+
+=== ITEM id=b370e741770a81d8 ===
+Gold sentences and facts:
+Sentence 0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 0.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+Sentence 1: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion.
+  Fact 1.0: Israel stopped allowing deliveries of food, fuel and other supplies to Gaza's 2.3 million residents on Oct. 10, 2023.
+  Fact 1.1: Israel is reportedly preparing for a ground invasion.
+
+Retrieved items:
+<item 1>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 1>
+
+<item 2>
+Palestine’s growing tech industry has been literally blown apart by Israel’s war on Hamas (TechCrunch, 2023-10-14T07:46:27+00:00)
+Sturgill said that as well as the intensely difficult conditions in Gaza, which is being hit by Israeli missiles, the situation in Ramallah is “super tense. I
+feel like the situation is going to get significantly worse there over the coming weeks.”
+
+Iliana Montauk, co-founder and CEO of Manara — a social impact startup funded by Y Combinator, Seedcamp, Reid Hoffman, Eric Ries, Marc Benioff, Paul Graham, and
+Jessica Livingston, among others — told TechCrunch via email that connectivity has decreased significantly in the past 24 hours.
+
+“Though Gaza has been bombed many times before, this time is completely different for the tech sector for several reasons. Electricity was cut off to the entire
+[Gaza] strip. A significant amount of infrastructure has been bombed (including both ISPs and many tall apartment buildings that hold cell phone towers). Entire
+middle-class neighborhoods are being destroyed.”
+</item 2>
+
+<item 3>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+"The Israelis must be totally losing it right now."
+
+the strategic planning that must have gone into this against one of the most high tech occupation and surveillance systems in the world will be studied by many,
+the Israelis must be totally losing it right now https://t.co/oUX2rokEjh — Rania Khalek (@RaniaKhalek) October 7, 2023
+
+Tarik Cyril Amar said: "And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed."
+
+And the intel, and the special forces training... both areas where Israel mythology will be very upset indeed. — Tarik Cyril Amar (@TarikCyrilAmar) October 7,
+2023
+
+Mjoachim, another user, said that Israel's defence forces have lost their fame. He said the IDF lost an army base, a general was captured right out of his
+house.
+</item 3>
+
+<item 4>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+This is a real-time deterrence," reveals IMPA director general Adv. Ilit Ostrovitch-Levi. "And then there was a domino effect. Following this blocking, more
+countries began to look around, and blocked funds intended for terror. All this information, which is now shared at an international level, leads to the closing
+of more and more Hamas funding pipelines, in real time. With worldwide cooperation, Israel’s security and enforcement authorities are thwarting the transfer of
+millions of dollars earmarked for terrorism, every day."
+
+Headed by Ostrovitch-Levi since May 2022, IMPA is an intelligence body that conducts the most complex of international economic investigations, and fights
+terror financing routinely. On October 7, Ostrovitch-Levi received a painful reminder of the vital importance of her work. "Already on that Saturday night, with
+Israeli under heavy rocket fire, we talked about preparing ourselves for the campaign we’re now entering, the fight against terror financing channels.
+</item 4>
+
+<item 5>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+While Israel has granted permits to about 17,000 Gaza residents to enter and work in Israel, the food, fuel and medical supplies that people in Gaza use all
+first pass through Israel.
+
+Israel controls two physical checkpoints along Gaza, which monitor both the entry and exit of people and trucks. Israel limits the kind and quantity of
+materials that pass into Gaza. And the blockades generally prohibit Gazans who do not have work permits or special clearance – for medical purposes, for example
+– from entering Israel.
+
+Israel’s restrictions through the blockade intensified since Hamas’ surprise attack on 20 Israeli towns and several military bases on Oct. 7, with Israel then
+announcing a broad blockade of imports into Gaza. This stopped all food, fuel and medical supplies from entering the region.
+</item 5>
+
+<item 6>
+"There are no sacred numbers" (Globes English | Israel Business Arena, 2023-10-12T18:50:29+00:00)
+The first week of fighting in the bitter war in Israel’s south is almost over, with the financial markets trying to gauge the damage that the Israeli economy
+will sustain. Clearly, we are talking about a very significant event, but the fog of war makes it hard to estimate its full consequences. The main index on the
+Tel Aviv Stock Exchange, the Tel Aviv 35, fell 6.4% over the week.
+
+Prof. Leo Leiderman, chief economic adviser at Bank Hapoalim and a professor of economics at Tel Aviv University, sets out for "Globes" his proposals for
+rehabilitating the economy and repairing the damage that the war will cause.
+
+What has been going through your mind in these first days of the war?
+
+"What most preoccupies me is not the economy but concern for the families of the soldiers, the wounded, and the captives, and solidarity with them. I have four
+relatives from Kibbutz Nir Oz who are still missing, and we have no information about them.
+</item 6>
+
+<item 7>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Truly disturbing acts of terror directed at civilians".
+
+Some of the images coming out of Sderot over the last few hours are reaching degrees of horror that I dont really think I can use words to properly describe.
+Truly disturbing acts of terror directed at civilians. — OSINTtechnical (@Osinttechnical) October 7, 2023
+
+Commenting on the coordinated attack, Rania Khalek, a journalist, said that the strategic planning that must have gone into this against "one of the most
+high-tech occupation and surveillance systems in the world" will be studied by many. "The Israelis must be totally losing it right now."
+</item 7>
+
+<item 8>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+We don't always know the results."
+
+"Gaza could be more beautiful than Dubai "
+
+The network to block terror financing funds includes many entities, including private citizens. "The world's financial intelligence authorities are now at the
+heart of this struggle, and we’re working together to thwart the financing channels that we’ve located. In addition, we’ve been approached by many experts from
+the private sector; people with intelligence experience because they’ve worked in these organizations, or have high-tech experience, and have mobilized like
+crazy. Israeli entrepreneurs in Silicon Valley have contacted us; they write code, search for information, and give us lots of information. We aggregate and
+examine everything."
+
+IMPA is charged with rooting out the sources of funding for terrorism, working together with the National Bureau for Counter Terror Financing of Israel (NBCTF)
+in the Ministry of Defense, which is the coordinating body of all activities to thwart terror financing, the Shin Bet, Military Intelligence Directorate (AMAN),
+and all other relevant intelligence and security agencies.
+</item 8>
+
+<item 9>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+In an article five years ago, Ortal, currently in active military service an unavailable for interview, wrote, "Israeli restraint as regards proactive thwarting
+of offensive capabilities in the Gaza Strip stems from a clear Israeli strategy that strives to reduce the influence of the enemy on the current routine of life
+in Israel, even at the price of worsening of the threat in the future." Ortal pointed out that this policy was natural and that "a Western nation cannot lead
+its life in an endless state of emergency. But alongside the understanding of the need for a containment policy, it must be recognized that the risks are high,
+as evidenced by the steeply worsening intensity of conflicts between Israel and the terrorist organizations in Gaza."
+
+According to Ortal, in recent decades, Hamas and Hezbollah developed ballistic missiles and terror tunnels in response to Israeli policy that sought minimal
+friction with the enemy through separation and withdrawal from the security zone in southern Lebanon, and the Gaza Strip.
+</item 9>
+
+<item 10>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+For security reasons, Israel has already told Chevron to shut down its offshore energy platform.
+
+The Middle East crisis brings back memories of the Arab oil embargo of 1973, when OPEC cut oil to supporters of Israel. It used to account for 50 per cent of
+the oil production back then. Although non-OPEC production has picked up and OPEC contribution is lower at 32 per cent, it is still sizeable to take oil prices
+higher. A 10 per cent rise in crude price will result in global inflation being 0.4 percentage points higher next year.
+
+The war may also impact Suez Canal trade, which is a key maritime route between Asia and Europe and accounts for 12 per cent of global trade by value and much
+larger by volume; also 5 per cent of world oil trade.
+
+As things stand today, trade may not yet be impacted through the Strait of Hormuz, which lies between Oman and Iran.
+</item 10>
+
+<item 11>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+However, IMPA’s goal, Ostrovitch-Levi explains, is not only to stop the individual raising of funds for terror financing, but the entire interrelated chain,
+from the fund-raiser to the transferrer, and on through to the recipient. "We have the ability to build the intelligence scenario, synchronize all the sources
+of information received, and delineate the money trail from abroad to Hamas. We’re interested not only in who is running the campaign, the association or
+entity, but where the money is coming from, and where it’s going. We need to stop all of the elements in this network."
+
+Ever since October 7, everyone has been discussing and analyzing the question of about the intelligence agencies, and why there was no warning. Where was IMPA
+before?
+
+"Hamas collects lots of money all the time, and the security agencies deter money transfers. There was no sudden increase in the raising of billions, and you
+must also remember that most of the money is raised globally, not in Israel.
+</item 11>
+
+<item 12>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+International aid groups are warning that they cannot deliver food and other basic services to people in the Gaza Strip and that a “dire” humanitarian crisis is
+set to worsen.
+
+International aid groups provide food and other means of support to about 63% of people in Gaza.
+
+Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground
+invasion.
+
+On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential
+ground invasion.
+
+I am a scholar of peace and conflict economics and a former World Bank consultant, including during the 2014 war between Hamas and Israel.
+</item 12>
+
+<item 13>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+With them and with the US, we established a kind of task force, which is not subject to any country or unifying body, countries that are working in
+coordination, and meet every few days to exchange intelligence, and advance the struggle."
+
+In general, following an appeal by IMPA to its counterparts around the world, there has been a dramatic increase in intelligence coming to Israel from abroad.
+"The amount of information doubled in the month of fighting, compared with the monthly average. Before the war, we received about 24 intelligence reports a
+month from parallel authorities, compared with 50 today."
+
+Countries around the world cooperating with Israel to fight terrorism sounds almost ideal, but it’s hard not to wonder where they were before.
+
+"Many countries felt this had nothing to do with them, that it wasn’t their struggle.
+</item 13>
+
+<item 14>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+"Despite the clear threat posed by Gaza, the decision makers preferred to avoid a policy that would mean returning a large part of the country's population to
+the reality of air raids and disrupted daily routines. The bottom line: the Iron Dome did not change the essential strategic situation; as firepower from the
+Gaza Strip developed, so did the terrorist organizations’ ability to control daily life in Israel’s hinterland, hold it hostage, and restrain Israel from taking
+proactive measures against them."
+
+"Why didn't the relative success of the Iron Dome translate into the even more important strategic achievement of restoring Israel's freedom of action against
+Hamas in the Strip?" asks Ortal rhetorically, and names several factors. "The first, like any other operational system, Iron Dome is also not perfect. The enemy
+studies it and develops its own challenges against it, and the decision makers recognized the fact that the State of Israel is not hermetically protected.
+Second, the enormous cost involved in deploying and operating [Iron Dome] batteries significantly impedes a policy based on continuous rounds of violence.
+</item 14>
+
+<item 15>
+Palestine’s growing tech industry has been literally blown apart by Israel’s war on Hamas (TechCrunch, 2023-10-14T07:46:27+00:00)
+Last time I was in Gaza a year ago, almost everyone I talked to asked me how they could get a job and leave Gaza. They were worried about more bombings and
+wanted to bring their children up in a place without such a high risk. These people just want to live normal lives.”
+
+Those who are living in the West Bank say the activity in Gaza has had an inevitable impact.
+
+“For a Palestinian young woman like me living in the West Bank, I can confirm that there has been a noticeable freeze in terms of activity,” said Leen Abubaker
+of Flow Accelerator and co-founder at Sawaed19. “Tech companies are either operating on a very limited scale, with employees struggling to reach their offices
+in the West Bank due to unsafe roads blocked by Israeli occupation forces and settlers, or they have been forced out of business entirely in Gaza.”
+</item 15>
+
+<item 16>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas is an excuse, new lands are wonderful
+
+
+
+I definitely support Israel pic.twitter.com/AbLdeazQjR October 7, 2023
+
+Israeli Prime Minister Benjamin Netanyahu said that since this morning, Israel had been at war and its first objective was to clear out the hostile forces that
+infiltrated its territory. "The second objective, at the same time, is to exact an immense price from the enemy, within the Gaza Strip as well," he said, adding
+that the third objective was to reinforce other fronts so that nobody should mistakenly join this war. "We are at war. In war, one needs to be level-headed. I
+call on all citizens of Israel to unite in order to achieve our highest goal – victory in the war," Netanyahu said.
+
+Since this morning, the State of Israel has been at war. Our first objective is to clear out the hostile forces that infiltrated our territory and restore the
+security and quiet to the communities that have been attacked.
+</item 16>
+
+<item 17>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+India shipped goods around $8billion to Israel. Petroleum products account for 65 per cent of the exports, followed by gems and jewellery (15 per cent) and
+electrical machinery (3 per cent). Trade can be adversely impacted if operations at the Israeli ports are disrupted. Fertiliser movement from Israel’s Port of
+Ashdod accounts for 3 per cent of global potash supply. Any disruption on this front will also be a dampener.
+
+But, what if the current hostilities turn into a full-scale conflict?
+
+What supports this proposition is the fact that while there have been many conflicts between Israel and Hamas in the past decades, there have been none of this
+intensity. With at least 1,200 Israelis killed, this has been the biggest single-day killing of Jews since Holocaust, and Israel opposition is also united in
+retaliating. Israel has termed it a ‘War’, formed a war management cabinet with a key opposition member, and vowed to change the look of the ‘Middle East’.
+</item 17>
+
+<item 18>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+Hamas' surprise attack on Israel has shocked many who are now questioning the country's famed intelligence agency Mossad, which is known for its
+intelligence-gathering capability. For some, the belief that Mossad was among the best in the spying world was shattered today when Hamas carried out the
+biggest coordinated attack in Israel and captured some territory in southern Israel. It is not the attack that has surprised people but the scale at which Hamas
+operated and got control of some military bases and soldiers.
+
+Also Read: Israel at war: Hamas cells, military compounds destroyed, US backs Tel Aviv; all you need to know
+
+Younis Tirawi, who reports on Palestinian Affairs, said that Hamas militants had taken over Sderot police HQ and armored vehicles in the town. An analyst wrote
+that some of the images coming out of Sderot over the last few hours were reaching degrees of horror "that I don't really think I can use words to properly
+describe.
+</item 18>
+
+<item 19>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+Dozens of our staff have been called up to reserve duty, in large part managers working regularly in the fight against terror financing."
+
+Since then, most of IMPA’s work has focused on identifying and blocking the terror money pipelines. "We work very reactively - we see a fundraising campaign,
+try to deter it, and stop it from happening again. There are no breaks, because they are constantly active. It’s a daily struggle. Our analysts have been
+sitting on the social networks from day two of the war, just manually monitoring visible sources of information on these networks to locate fundraising
+campaigns for terrorist organizations operating in Gaza."
+
+Three days after the war began, IMPA also issued a call to all global regulated entities for increased vigilance towards terrorism financing campaigns in
+response to the ongoing war and state of emergency, and to report all activities that raise suspicion of terror support and terror financing, in an effective
+and immediate manner.
+</item 19>
+
+<item 20>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+Another affair that was uncovered, combined trade and hawala. Hamas funds originating in Iran, which were transferred in cash to money changers in Turkey for
+transfer to Gaza. At the same time Hamed al-Khachari, a Gazan money changer who worked for Hamas (who was assassinated by Israel in 2019), located Gazan
+merchants who imported goods from Turkish companies and owned payment on the goods. They paid cash to Khachari, who transferred the money to Hamas in Gaza.
+Meanwhile, the money changers in Turkey received funds from Hamas abroad that were used to pay the Turkish companies.
+
+Hamas is already preparing for "the day after"
+
+Although it has been almost impossible to transfer money and goods to Gaza since October 7, with hawala shuttered, and no trade, Hamas continues to raise funds.
+"The situation in Gaza is known, and nothing can be brought in, but fundraising activity continues in Judea and Samaria.
+</item 20>
+
+<item 21>
+Israel’s startup ecosystem: down but not out (TechCrunch, 2023-10-13T19:10:07+00:00)
+The world is still coming to terms with Hamas’ deadly attacks on Israelis last weekend — and everything else that has unfolded so far in the aftermath,
+including the barrage of retaliation strikes on Gaza.
+
+Undoubtedly, the ramifications for the technology ecosystem pale in comparison to the human toll that the fighting is taking, on both sides. But when
+considering how the wider region will weather the destruction, and one day recover, it’s an important industry to consider. Please also read here about how this
+is playing out for Palestinians in Gaza and beyond. And a below, we show how a look at how the situation is playing out in the startup ecosystem in Israel sheds
+light on its impact to the country as a whole.
+
+In such a small country, just about everyone knows someone who was directly affected by the attacks, or someone involved in the subsequent defense and
+retaliation — and often all three.
+
+Technology is, without question, a giant part of Israel’s economy.
+</item 21>
+
+<item 22>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+BHARAT is not immune to #terrorism and internal enemies @HMOIndia @PMOIndia @AmitShah — Dr. Jaswant Gandhi 🇮🇳 (@JaswantDr) October 7, 2023
+
+However, some speculated that Mossad knew what was going to happen but let Hamas make a mistake so that Israel could launch a ferocious attack on it. "Mossad
+was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, but they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful," a user said.
+
+#Mossad was not so ignorant that it did not know about this #attack. Israel wanted to invade Palestine, they had no excuse, stupid #Hamas gave them the reason.
+Hamas is an excuse, new lands are wonderful
+</item 22>
+
+<item 23>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+The world can ill-afford another full-fledged war, when economies are already battling high inflation and interest rates, an ongoing Russia-Ukraine war and now,
+a slowing China. This is precisely why many countries are trying to restrict any escalation in the ongoing Israel-Hamas conflict. The non-escaltion of the
+current hostilities seems to be the base case presumed by the Indian stock market presently, going by the market movement in the last week.
+
+The US treasury secretary also stated that the current conflict is not likely to significantly impact global economic outlook. History too shows that the these
+conflicts tend to have limited impact on markets. We studied the history of conflicts between Israel and Hamas, and found that these tend to have limited impact
+on global financial markets, across crude oil, US 10-year yields, US equities and market volatility (see charts).
+
+However, as far as trade goes, there may be some impact. In 2022-23, Israel’s share in exports from India stood at 1.87 per cent.
+</item 23>
+
+<item 24>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+About 64% of people in Gaza are considered food insecure, meaning they do not have reliable access to sufficient amounts of food.
+
+Food as a percentage of Gaza’s total imports has skyrocketed by 50% since 2005, when Israel first imposed a temporary blockade. And the amount of food the West
+Bank and Gaza actually produce has tumbled by 30% since then.
+
+It is hard for Gaza to produce food within its own borders. One factor is that Israeli airstrikes hit Gaza’s only power generation plant and main sewage
+treatment plant in 2008 and again in 2018. These attacks resulted in the spread of sewage waste on land and in the water, destroying farmlands and food crops
+and threatening fish stocks in the ocean as well.
+
+The UN’s big role in Gaza
+
+Gaza’s weak economy and isolation because of the blockade mean that it relies heavily on international aid organizations to provide basic services to residents.
+</item 24>
+
+<item 25>
+Israel's blockade of Gaza means that a region the size of Philadelphia faces a real risk of starvation, says Peace Studies scholar (Fortune,
+2023-10-13T19:50:48+00:00)
+Some Republican politicians have said that UNRWA has “cozied up” to Hamas. And an internal UNRWA ethics committee has accused top staff at the agency of “sexual
+misconduct, nepotism, retaliation … and other abuses of authority” that created a toxic work environment.
+
+Meanwhile, since the war between Israel and Hamas began on Oct. 8, more than 1,500 Gazans have been killed and more than 5,300 injured, while Hamas attacks have
+killed more than 1,300 people in Israel and injured about 3,200 others.
+
+International aid groups and European Union officials have called for a humanitarian corridor to be set up in Gaza – meaning a protected path specifically for
+civilians, aid workers and necessary basic items to pass through safely back and forth from Gaza to Israel and Egypt. So far, there are no clear plans for such
+a protected pathway.
+
+Topher L. McDougal is Professor of Economic Development & Peacebuilding, University of San Diego.
+</item 25>
+
+<item 26>
+&#039;Massive intel failure by Mossad&#039;: Hamas&#039; surprise attack on Israel shocks internet (Business Today | Latest Stock Market And Economy News India,
+2023-10-07T15:37:43+00:00)
+He said the IDF lost an army base, a general was captured right out of his house. "Invincible "Merkava MK4 MBT's captured, and destroyed...what is wrong with
+the Israeli security and defence forces? And (what) MOSSAD did?"
+
+Dr Jaswant Gandhi, a professor of management, said that attack on Israel was a "great Mossad failure". He said India had to learn a lot and keep all
+intelligence agencies duly greased and internecine conflict-proof. "Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence
+Agencies duly greased and internecine conflict-proof. BHARAT is not immune to #terrorism and internal enemies," he wrote on X.
+
+#Israel_under_attack Great #Mossad failure. GoI has to learn a lot and keep all Intelligence Agencies duly greased and internecine conflict proof.
+</item 26>
+
+<item 27>
+Israel thwarts Hamas on the financial battlefield (Globes English | Israel Business Arena, 2023-11-19T19:05:30+00:00)
+RELATED ARTICLES Tech experts battle to shut down Gaza financial pipeline
+
+"Overnight, we started receiving hundreds of reports about unusual activity by customers of financial institutions in the State of Israel," she says. Before
+October 7, IMPA received about 100 reports a day dealing with terror financing. That number jumped to about 1,000. "There is a 900% increase in reports on
+terror financing, and we don't waste time, everything happens very, very quickly. As we receive the information, we simultaneously pass it on to the operational
+professionals who locate the money pipelines, and block them. Some information will not necessarily lead to terror financing, but we don’t have time to waste.
+Bank CEOs call and draw our attention to the information they convey to us that warrants special attention."
+
+Has information from banks and financial institutions led to blocking the money pipeline for terrorism?
+
+"There was very high-quality intelligence that we passed on to the security agencies. We don't always know the results."
+</item 27>
+
+<item 28>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Ortal points out that between Operation Pillar of Defense in 2012 and Operation Protective Edge in 2014, Israel significantly reduced targeted countermeasures
+against terrorist operatives, and none focused on Hamas operatives. According to his analysis, this was because, prior to the Iron Dome coming into use in 2011,
+the most dangerous threat posed by Gaza developed in the period preceding Operation Protective Edge. The understandings that Israel reached with Hamas in 2012
+were made "to stop the fighting", Ortal says, and to get life back to normal as quickly as possible. This, after air raid sirens sounded in Tel Aviv and
+Jerusalem for the first time since the Yom Kippur War, and the education system shut down for more than a week.
+
+Even after Iron Dome, Israel found it difficult to stand up against the significant disruption of daily life on the home front.
+</item 28>
+
+<item 29>
+Dissecting impact of Israel-Hamas conflict on markets  (Business Line, 2023-10-14T15:20:36+00:00)
+A massive strike by Israel in Gaza, potentially killing civilians in collateral damage, may attract more of the Middle East countries, including the de-facto
+leader Saudi Arabia to raise serious issues against Israel on humanitarian grounds. It will surely slow down the deal between Saudi and Israel that the US was
+facilitating. Besides Gaza, clashes have already been ongoing along Israel’s borders with Syria and Lebanon. If Iran gets dragged into the conflict, on account
+of claims of funding Hamas, this could embroil the entire Middle East in crisis.
+
+In this scenario, we see a major upward pressure on world inflation, on account of disruption in crude oil and world trade logistics.
+
+Possible disruption in crude and trade logistics
+
+Even before the Hamas attack, Saudi Arabia and Russia further cut oil production, in an already tight supply market. Iran is a big incremental supplier of oil,
+contributing 3 per cent to the global supply and any escalation risks taking energy prices higher. For security reasons, Israel has already told Chevron to shut
+down its offshore energy platform.
+</item 29>
+
+<item 30>
+Office rents in Israel stay firm - for now (Globes English | Israel Business Arena, 2023-12-03T15:15:32+00:00)
+Less than a month before the war, "Globes" reported a huge deal in which Amnon Shashua's unicorn AI21 Labs announced it was leasing 7,000 square meters for NIS
+15 million annually in Tel Aviv's Da Vinci project.
+
+It will now be interesting to see when the next such big deal for office space is signed in Tel Aviv following the impact of the Israel-Hamas war. Sources in
+the income-producing property sector in Israel say that over the past few weeks there has been some interest in the sector, although mainly for smaller deals
+involving hundreds of square meters each.
+
+The reports: "No change in rents
+
+Azrieli Group (TASE: AZRG), is one of the biggest companies in the sector, with 15 office buildings comprising 632,000 square meters of space and 97% occupancy.
+Last week Azrieli published its financial results for the third quarter of 2023 saying that the company had not been impacted by the war.
+</item 30>
+=== END ITEM id=b370e741770a81d8 ===
+
+=== ITEM id=9d5727d77577411a ===
+Gold sentences and facts:
+Sentence 0: He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line.
+  Fact 0.0: He is helping to usher in a youth movement up front for Argentina.
+  Fact 0.1: Julian Alvarez is considered the future of the forward line.
+  Fact 0.2: Alejandro Garnacho is considered the future of the forward line.
+Sentence 1: 2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity.
+  Fact 1.0: The kickoff is 2 hours away.
+  Fact 1.1: Argentine journalist Gaston Edul is well-connected.
+  Fact 1.2: A report from Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity.
+
+Retrieved items:
+<item 1>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+Xherdan Shaqiri: “For me it’s clear, Messi and Ronaldo are the best players in the world… these guys are among the best athletes in the history of sport, along
+with Michael Jordan and Tom Brady.”#cf97 #vamosfire pic.twitter.com/puTvUqC0a1 — Alex Calabrese (@amcalabrese12) October 2, 2023
+
+1 hour 45 mins to kick: The status of Lionel Messi is unclear, but Chicago is still feeling Messi fever!
+
+Hi from Chicago! Not sure if Messi is here (my hunch is no), but I am here to cover the Inter Miami v Fire game, and the Messi shirt 👚 ⚽️ vendors are here, too!
+</item 1>
+
+<item 2>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+According to Argentine journalist German Balcarce of River Plate publication RMG, the match will take place on January 20 and will be played at AT&T Stadium,
+the home of the Dallas Cowboys. However, with the El Salvador friendly, which is confirmed by the club, happening literally the day before in El Salvador, it
+would be impossible for Inter Miami to play this match as reported unless they split the squad.
+
+The match would supposedly be the second leg of a two-part trip for River Plate, who will also meet Liga MX club Deportivo Guadalajara (formerly Chivas) on
+January 17 at the same venue. This will be updated with any additional information on whether this match will be moved to another day or nixed entirely.
+</item 2>
+
+<item 3>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Meanwhile, Fabrizio Romano also shot it down from a journalistic standpoint.
+
+There isn't enough of a break for him to reasonably integrate with Barcelona, and at 36 years old he's sure to welcome the extended time off.
+
+Tata Martino on rumors of Messi playing on loan with Barcelona this winter:
+
+
+
+"Is he going for fun? Maybe he's going to visit Barcelona. Other than that, I don't know anything else about it." pic.twitter.com/qJwoJOwkC6 — Felipe Cárdenas
+(@FelipeCar) October 8, 2023
+
+2 hours to kickoff: Lionel Messi's club Inter Miami were eliminated from MLS playoff contention after their latest defeat, a 1-0 loss to FC Cincinnati last
+weekend. Messi had missed the previous four matches but returned to the field for the final 30 minutes. He was powerless to turn the tide of the game, after
+Inter Miami had missed so many gilt-edged chances in the first half.
+</item 3>
+
+<item 4>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+We have the 🐐 in the building pic.twitter.com/aPt7b0waFq — Chicago Fire FC (@ChicagoFire) October 4, 2023
+
+1 hour 30 mins to kick: A lot of teams have indicated that their preparation for Inter Miami varies wildly depending on whether Lionel Messi will play, but
+Chicago Fire midfielder Xherdan Shaqiri played his own cards close to his chest when asked if they are waiting for news on Messi's availability.
+
+"The preparation is not going to change, we're going to prepare as normal as always," Shaqiri said in his pre-match availability Monday. "Everybody is excited
+to play against Inter Miami. If Messi is injured or not, personally I am not thinking too much about this. Of course Inter Miami is a different team when Messi
+is playing or not playing, you see that in the last games when Messi is in the team they are better, but we prepare like normal for every game."
+</item 4>
+
+<item 5>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+Inter Miami play NYCFC in Noche d'Or to replace China trip
+
+With the club's elimination from 2023 MLS playoff contention, Lionel Messi is facing nearly a full month off from competitive fixtures before he takes the field
+for Argentina against Uruguay and Brazil in CONMEBOL World Cup qualifying.
+
+Likely with the sole intent of keeping Messi fit in that time off, and the added bonus of raking in significant cash, Inter Miami scheduled a two-match tour of
+China in early November after their regular season concluded.
+
+They were expected to visit two Chinese Super League sides, starting with a match against Qingdao Hainiu on November 5, followed by a game against Chengdu
+Rongcheng three days later However, it was reported on October 30 the planned tour was off. Gaston Edu of TyC Sports reported the visit had been cancelled due
+to "commercial and bureaucratic" reasons.
+
+Inter Miami no va a viajar a China.
+</item 5>
+
+<item 6>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+MORE: Details on Lionel Messi's injury as he battles "fatigue" and a "scar tissue issue".
+
+La idea es que Leo Messi vuelva a sumar minutos mañana cuando Inter Miami juegue contra Cincinnati. pic.twitter.com/ePNWHb4vSs — Gastón Edul (@gastonedul)
+October 6, 2023
+
+Inter Miami vs FC Cincinnati lineups & team news
+
+There was a report that Lionel Messi could finally make his return from injury, and while it felt unlikely that Messi would start three days after missing out
+entirely, he appears on the bench today and could be available for a second half appearance if required.
+
+Jordi Alba remains sidelined with a hamstring injury, missing since his injury just minutes before Messi, and without a publicly known timeline for a return.
+Also missing is striker Leonardo Campana who was absent from the midweek defeat to the Chicago Fire with a muscle injury, although Gerardo Martino described his
+issue as "minor."
+</item 6>
+
+<item 7>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+@MiamiHerald @HeraldSports @InterMiamiCF #InterMiamiCF #Messi𓃵 #cf97 #MLS pic.twitter.com/hp8KHzkwNB — Michelle Kaufman (@kaufsports) October 4, 2023
+
+2 hours to kickoff: Tata Martino has played his cards extremely close to his chest when it comes to the fitness of Lionel Messi. Each week we see how
+tight-lipped the Inter Miami boss has been regarding Messi's injury.
+
+Prior to tonight's match against the Chicago Fire, Martino was asked about the return of Jordi Alba, and he stated that there is a timeline in place for Alba's
+return. When asked if there's a timeline for Messi's return, Martino refused to acknowledge if there is.
+
+Tata Martino when I asked about Lionel Messi's return timeline:
+
+
+
+"I understand your desire to know the exact timelines, but if I had the exact timelines I would share them.
+
+
+
+"I just don't have them."
+</item 7>
+
+<item 8>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Inter Miami's home field advantage tonight will be significantly hampered.
+
+Not sure how much can be appreciated via the photo, but La Familia — Inter Miami’s supporters’ groups — are mostly sitting here before kickoff.
+
+
+
+No drums, chanting, or enthusiasm in what is a protest to the increased price of season tickets for 2024.#InterMiamiCF #Messi𓃵 pic.twitter.com/YaP4ivlX0P —
+Franco Panizo (@FrancoPanizo) October 7, 2023
+
+15 mins to kickoff: Interestingly, while tonight's match should kick off without any negative attention, it seems the club just managed to get off the ground
+without a hitch. According to Michelle Kaufman of the Miami Herald, the supporter groups had planned a protest regarding 2024 season ticket prices, but the club
+offered to meet with them this coming week so they called it off until that can take place.
+
+A reminder, this match officially kicks off at 7:39 p.m.
+</item 8>
+
+<item 9>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+@fccincinnati goalkeeper @roman_413 had nothing but praise for @LuchoAcosta94 and Pat Noonan 🟠🔵 pic.twitter.com/Xyp2ozr7n5 — CBS Sports Golazo ⚽️
+(@CBSSportsGolazo) October 3, 2023
+
+1 hour 15 mins to kick: Lionel Messi was nominated for not only MLS Newcomer of the Year for the 2023 season, but also 2023 MLS MVP.
+
+Laughable doesn't even begin to describe that blatant PR move, considering that most of the damage Messi has done for Inter Miami has come in Cup competitions.
+He has one goal and two assists in 247 minutes of play in actual MLS competition. Lionel Messi has been fun, but let's hope the league doesn't make a mockery of
+itself by actually giving Messi either honor.
+</item 9>
+
+<item 10>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+47th min: Luciano Acosta is fouled on the edge of the attacking third, and it gives FC Cincinnati a free-kick early in the second half. Alvaro Barreal's
+delivery is floated way high in the air and falls to the far post, but after a nervy moment it's cleared.
+
+Lionel Messi begins to warm up on the touchline, and he may be brought on soon to help Inter Miami save their postseason chances.
+
+Kickoff: The second half is underway, and there are no changes from Inter Miami, which means Lionel Messi remains on the bench for now. With their playoff hopes
+now squarely on the line, it's a huge call from Gerardo Martino not to bring Messi on now, and it could speak to how fit he truly is.
+
+FC Cincinnati make one change, as Sergio Santos comes off, replaced by Aaron Boupendza up front.
+</item 10>
+
+<item 11>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+MORE: A full rundown of how each game in the Messi vs Ronaldo matchup has played out
+
+Inter Miami to play El Salvador in January
+
+Inter Miami's first confirmed friendly of the 2024 preseason will see the club travel to San Sebastian to take on the El Salvador national team on January 19.
+
+The match does not fall under an official FIFA international window, meaning the national team will likely not feature any players from Europe or other leagues
+currently in season.
+
+"We look forward to facing the El Salvador national team in what will be a good first test for our squad against the best players from the country,” said Chief
+Soccer Officer and Sporting Director Chris Henderson.
+
+Ticketing and broadcast details will be available at a later date.
+
+MORE: All the details regarding Lionel Messi's Inter Miami contract and salary
+
+Inter Miami visit Hong Kong in February tour of Asia
+
+The club announced in early December that Inter Miami would take a tour of Asia in early February as part of their 2024 preseason slate.
+</item 11>
+
+<item 12>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+With the 2023 MLS season closing earlier than expected for Inter Miami, eliminated from playoff contention, Lionel Messi will have significant time off before
+the new campaign begins in February 2024.
+
+With every new season come preseason friendlies, as the players hope to ramp up their match fitness prior to the start of the coming campaign. Players need game
+time to build their bodies to the point where they can play full 90-minute matches, especially when they are contesting multiple games a week.
+
+Inter Miami's preseason will be watched with extra observation as Messi draws considerable attention wherever he goes, home or abroad. The Argentina star had
+looked like being part of a tour of China, although that's no longer the case, while the prospect of facing a familiar side from home is a tantalising one.
+
+The Sporting News has compiled all the known preseason matches either confirmed or reported prior to the start of Inter Miami's 2024 season.
+</item 12>
+
+<item 13>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+The team from Argentina hold a special place in the heart of Messi and Martino. Not only are both men from the city of Rosario, where Newell's are based, but
+Messi developed at the club's youth academy and Martino played more than 400 senior games for the club before becoming head coach in 2012.
+
+"I am delighted to welcome my beloved Newell's to our home here in Miami. It will be a special match due to everything Newell's Old Boys means to me," said the
+Inter Miami coach. "It will also be a good opportunity to prepare for what will surely be an exciting season."
+
+Messi signed for Barcelona after spending six years as a youth player at Newell's, during which time he reportedly scored 234 goals.
+
+Will Inter Miami face River Plate in Dallas?
+
+In late November, it was reported that Inter Miami have arranged to contest a friendly against Argentine giants River Plate in Dallas, Texas in late January.
+</item 13>
+
+<item 14>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+Inter Miami no va a viajar a China. La gira que incluía dos amistosos se cae por temas burocráticos/comerciales. pic.twitter.com/8I0jBxg4Zz — Gastón Edul
+(@gastonedul) October 30, 2023
+
+Instead, Inter Miami met NYCFC in a hastily arranged friendly at DRV PNK Stadium on November 10 to honor Lionel Messi's most recent Ballon d'Or. The friendly is
+being dubbed the "Noche d'Or" or "Night of Gold" as a nod to his latest achievement.
+</item 14>
+
+<item 15>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+MORE: Inter Miami season tickets for 2024 season see unprecedented jump in price
+
+(Also, you'll notice a photo of Lionel Messi's jersey hanging in his locker in that tweet below, a pretty good indication that he'll return tonight)
+
+Scene is set for Fan Appreciation Night 🏟️#MIAvCIN | 7:30 PM ET pic.twitter.com/9I07uq9hGW — Inter Miami CF (@InterMiamiCF) October 7, 2023
+
+2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for
+this match in some capacity. Edul reported that "the idea is for Leo Messi to get minutes when Inter Miami plays FC Cincinnati".
+
+That makes it sound like Messi will only be available off the bench, but it's better than nothing to have a game-changer like him available at all.
+</item 15>
+
+<item 16>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+🤔 pic.twitter.com/Svq79fvbBG — Major League Soccer (@MLS) October 4, 2023
+
+1 hour to kickoff: With lineups not yet released, there is finally a report regarding Lionel Messi's availability. According to Michelle Kaufman of the Miami
+Herald, Messi "did not arrive with the team" to Soldier Field. While that's not outright confirmation that he will not take part in the match, it's a very
+strong indication that he will not be involved tonight.
+
+1 hour 15 mins to kick: With lineups due imminently, and nothing to indicate if Lionel Messi is involved tonight or not, the Chicago Fire media team has jokes.
+</item 16>
+
+<item 17>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Messi joined Inter Miami with the club bottom of the Eastern Conference, and the gap was just too big to overcome. Messi's injury certainly played a role, but
+even so, there was just not enough room for error.
+
+It's official: Inter Miami has been mathematically eliminated from MLS playoff contention. pic.twitter.com/u39ZgeXI9M — Tom Bogert (@tombogert) October 8, 2023
+
+Inter Miami vs FC Cincinnati: Second Half
+
+90+3 min: With five minutes of added time on the board, Lionel Messi draws another foul in a very dangerous position, this one much more obvious for the
+official to make. It's just outside the penalty area from a central position, and Messi stands over it yet again.
+
+His effort on goal is close to finding the top-left corner, but it's just high, clipping off the very top of the crossbar.
+</item 17>
+
+<item 18>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+A reminder, this match officially kicks off at 7:39 p.m. ET so there will be a slight delay from the advertised 7:30 p.m. time.
+
+Inter Miami fan news: the 5 supporters’ groups known as La Familia threatened to stage a protest this game re: ticket price hike for 2024, but team offered to
+meet w/them next week, so protest off at least until next game. @MiamiHerald @HeraldSports @InterMiamiCF #InterMiamiCF — Michelle Kaufman (@kaufsports) October
+7, 2023
+
+30 mins to kickoff: Lionel Messi's availability for Inter Miami is a welcome sight for the club, as they take the field today with their backs against the wall.
+Inter Miami must win tonight to ensure they remain alive in the playoff race. A draw or a loss, however, would see them vulnerable to outside results.
+</item 18>
+
+<item 19>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+MORE: Read all the details regarding Inter Miami vs Al Nassr featuring Messi vs Ronaldo
+
+Inter Miami friendly matches for 2024 preseason
+
+Below are all the known fixtures that have either been confirmed by the club directly or widely reported by media.
+
+It was anticipated that Inter Miami would embark on a two-match tour of China, but that has now been cancelled, with the trip proving too difficult logistically
+to arrange. It was replaced by a friendly against fellow MLS side NYCFC to honor Lionel Messi's Ballon d'Or.
+
+The biggest confirmed match is the meeting between Messi and rival Cristiano Ronaldo as Inter Miami announced a pair of fixtures in Saudi Arabia, including
+against Ronaldo's Al Nassr on February 1.
+
+MORE: When does Inter Miami's 2024 season begin? Lionel Messi to retake field in February
+
+Confirmed Inter Miami preseason fixtures
+
+Unconfirmed Inter Miami preseason fixtures reported
+
+Date Kickoff (ET) Match Location Sat, Jan.
+</item 19>
+
+<item 20>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+Spain's World Cup-winning midfielder spent five years with Vissel Kobe after spending his entire club career until that point with Barcelona, where he played
+alongside Messi, Sergio Busquets and Jordi Alba during an era of astonishing success in Catalonia.
+
+"Vissel Kobe is a powerhouse club in Asia coming off of a historic season after winning the J1 League, so we're thrilled about this opportunity to sharpen our
+team in a match like this one. We continue to look for the best ways to prepare for 2024, and feel confident this match and this tour will help us do that,"
+said Chief Soccer Officer and Sporting Director Chris Henderson.
+
+Boyhood Messi club to face Inter Miami in USA
+
+After their Asia trip, Inter Miami will host a friendly at DRV PNK Stadium against Newell's Old Boys.
+
+The team from Argentina hold a special place in the heart of Messi and Martino.
+</item 20>
+=== END ITEM id=9d5727d77577411a ===

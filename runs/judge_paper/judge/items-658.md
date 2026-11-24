@@ -1,0 +1,1831 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=bb06cba13f0831f9 ===
+Gold sentences and facts:
+Sentence 0: Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation.
+  Fact 0.0: Back then, as today, home prices had boomed for years.
+  Fact 0.1: Fed officials were ultimately forced to hike interest rates.
+  Fact 0.2: Fed officials hiked interest rates aggressively in an attempt to fight inflation.
+  Fact 0.3: Home prices had boomed for years before Fed officials hiked interest rates.
+Sentence 1: Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+  Fact 1.0: Postponements of such reports could complicate things for the Fed.
+  Fact 1.1: The Fed has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy.
+
+Retrieved items:
+<item 1>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 1>
+
+<item 2>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+It had been above 5 per cent, and at its highest level in more than a decade, during October. The yield on the two-year Treasury, which more closely tracks
+expectations for the Fed, went on a jagged run following the economic reports. It fell from 4.61 per cent just before the reports’ release to 4.57 per cent and
+then yo-yoed before easing back to 4.57 per cent.
+
+Loading Traders widely expect the Federal Reserve to hold its key interest rate steady at its meeting next week, before potentially cutting rates in March,
+according to data from CME Group. Fed officials have recently hinted that the federal funds rate may indeed already be at its peak. It’s above 5.25 per cent, up
+from nearly zero early last year. But Fed Chair Jerome Powell and others have also warned Wall Street about being overzealous in its predictions about how early
+a cut could happen. Lower yields have been one reason prices for cryptocurrencies have been rising recently.
+</item 2>
+
+<item 3>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+The stock market has largely been taking its cue from the bond market recently, and weak results announced in the afternoon for an auction of 30-year Treasury
+bonds sent yields of all kinds higher. Higher yields can knock down prices for stocks and slow the economy by making borrowing more expensive. Yields had
+already been on the rise in the morning after a report that showed inflation at the consumer level was a touch higher last month than economists expected. That
+raises worries about the Federal Reserve keeping its main interest rate high for a long time, as it tries to undercut inflation by knocking down investment
+prices and slowing the economy. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it comes to what it will do on November 1.
+The inflation report, though, also had some encouraging nuggets for financial markets underneath the surface. After ignoring prices for food and fuel, which Fed
+officials see as a better predictor of where inflation is heading, prices that consumers had to pay last month were in line with expectations.
+</item 3>
+
+<item 4>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+After the most aggressive monetary-tightening campaign in four decades, academics and economic practitioners are running autopsies on what could have prevented
+the cost-of-living crisis and how to ensure the same mistakes won’t be repeated.
+
+Markets have scrambled to price in high-for-longer interest rates, with a new war in the Middle East adding yet more risk to an already uncertain outlook
+confronting central bankers as they gather for their penultimate meetings of a tumultuous year.
+
+The policy navel-gazing is centering around three debates. How much flexibility central banks can allow in reaching their inflation targets, the effectiveness
+of asset purchases in the policy mix, and the merits of monetary and fiscal coordination.
+
+Bloomberg surveyed economists from around the world to gather views on those three debates. Their verdict: Central banks won’t break their economies in a rush
+to hit inflation targets, QE will be used more sparingly in the future, and fiscal policy risks countering the work of monetary authorities.
+</item 4>
+
+<item 5>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+They also continued to decelerate from earlier months. A second economic report from the morning likewise offered both encouragement and caution for financial
+markets. It said slightly fewer US workers than expected applied for unemployment benefits last week. On one hand, it indicates a job market with few lay-offs,
+which means strength for the overall economy. But it could also be adding fuel to keep upward pressure on inflation.
+
+After the reports, the 10-year Treasury yield rose to 4.7 per cent from 4.56 per cent late Wednesday. The two-year Treasury yield, which more closely tracks
+expectations for the Fed, climbed to 5.06 per cent from 4.99 per cent. Yields are still down slightly for the week so far. After jumping last week to their
+highest levels in more than a decade, yields regressed following speeches that investors saw as hints that the Fed may not raise its main overnight interest
+rate further.
+</item 5>
+
+<item 6>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 6>
+
+<item 7>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+Stocks have struggled under the weight of soaring Treasury yields in the bond market. High yields undercut stock prices by pulling investment dollars away from
+stocks and into bonds. They also crimp corporate profits by making borrowing more expensive.
+
+The yield on the 10-year Treasury, which is the centrepiece of the bond market, pulled back from its highest level since 2007, down to 4.73 per cent from 4.80
+per cent late on Tuesday. Shorter- and longer-term yields also eased to allow more oxygen for the stock market. Yields fell following a couple of reports
+indicating a slowing US economy. The first suggested hiring by employers outside the government was much weaker last month than expected. On Wall Street, that’s
+currently good news because a cooling job market could mean less upward pressure on inflation. That in turn could convince the Federal Reserve to take it easier
+on interest rates.
+</item 7>
+
+<item 8>
+Economists, central bankers are rethinking the quantitative easing strategy that saved the world but created bubbles and distortions (Fortune,
+2023-10-22T15:26:11+00:00)
+That’s reviving questions about whether central banks can deliver price stability all on their own.
+
+“If we were designing optimal policy arrangements from scratch, monetary and fiscal policy would both have a role in managing the economic cycle and inflation,
+and that there would be close coordination,” Philip Lowe said in his last speech as Australian central bank governor in September.
+
+Economists surveyed by Bloomberg predict fiscal policy will somewhat counteract the Fed’s efforts to rein in inflation in the US.
+
+“It’s true that there are circumstances where working hand in hand and supporting each other has proved helpful,” ECB President Christine Lagarde told a panel
+discussion in June at the institution’s annual economic forum.
+
+Fed Chair Jerome Powell, who sat to her right, signaled he wasn’t ready to rely on that kind of cooperation. “Our assignment is to deliver price stability kind
+of regardless of the stance of fiscal policy.”
+
+Central bankers warn that any failure to scale back fiscal spending risks coming at the cost of yet higher interest rates.
+</item 8>
+
+<item 9>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+Too much strength would give inflation more fuel, but too little would mean a recession.
+
+With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest
+rates and could soon turn to cutting them. That could help the economy avoid a recession and give a boost to all kinds of investment prices. Investors have been
+looking for a slowdown in the job market in particular. The hope is that it can cool more through employers cutting back on open positions than on employers
+laying off workers. Tuesday’s report showed that employers advertised just 8.7 million jobs on the last day of October, down by 617,000 from a month earlier. In
+the bond market, US Treasury yields continued to sag further from the heights they reached during late October. The yield on the 10-year Treasury fell to 4.18
+per cent from 4.26 per cent late on Monday, offering more breathing space for stocks and other markets.
+</item 9>
+
+<item 10>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Infratil (down 3.6 per cent), Meridian Energy (down 2.7 per cent) and Resmed (down 2 per cent) were among the biggest large-cap decliners. The lowdown The
+Australian sharemarket shook off a positive lead from Wall Street on Wednesday after hotter-than-expected inflation data raised the prospect of another interest
+rate rise at the Reserve Bank’s next meeting, which would weigh on the equity market. Interest-rate sensitive sectors, including REITS and consumer companies,
+were among the weakest on the local bourse as investors digested the news.
+
+GSFM investment strategist Stephen Miller said the inflation data, taken with the October Reserve Bank board meeting minutes, which revealed the board had “low
+tolerance for a slower return of inflation to target than currently expected”, made the possibility of an interest rate rise from the central bank in November a
+“near certainty”. However, commodity prices supported mining companies as iron ore prices increased 2.9 per cent overnight, bolstering Australia’s iron ore
+giants.
+</item 10>
+
+<item 11>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Tweet of the day
+
+Quote of the day “Our view is that in the high likelihood there is another cash rate increase on Tuesday, that is going to be the nail in the coffin for
+consumer confidence,” said CreditorWatch chief economist Anneke Thompson, amid warnings from some economists that another rate rise, as some market watchers are
+predicting, will dampen spending intentions just in time for Christmas. You may have missed The men who built pubs and liquor juggernaut Endeavour Group into
+the world’s largest poker machine operator have triggered a public spat over the future of a business that they say has lost its way.
+</item 11>
+
+<item 12>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 12>
+
+<item 13>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 13>
+
+<item 14>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+“The bond market is retracing,” he said. “There’s also been strength in resource stocks amid rumours that the Chinese government might launch a substantial
+stimulus package.” Clark said interest-rate sensitive sectors climbed on increased probabilities of an easing in interest rates. “Consumer discretionary and
+information technology companies are winners in lower-interest rate environments,” he said. As more annual general meetings kick off in the next few weeks,
+Clark said he would be looking at trading updates, especially of companies that didn’t give solid guidance in their last update.
+
+Elsewhere, Wall Street advanced overnight, with the S&P 500 and Nasdaq touching three-week highs as dovish comments from the Fed officials pushed Treasury
+yields lower. Following remarks from other top Fed officials on Monday, Atlanta Fed President Raphael Bostic said the US central bank did not need to raise
+interest rates any further, and that he saw no recession ahead. Oil edged lower, with West Texas Intermediate settling below $US86 a barrel following its
+biggest rally since April.
+</item 14>
+
+<item 15>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+It’s again near its highest level since 2007.
+
+Loading Treasury bonds are seen as some of the safest investments possible, and when they pay higher yields, investors are less likely to pay high prices for
+stocks and other riskier investments. That’s a big reason why the S&P 500 dropped 4.9 per cent in September to drag what had been a big gain for the year down
+to 11.7 per cent. Treasury yields have been climbing sharply as Wall Street accepts a new normal where the Federal Reserve is likely to keep interest rates high
+for longer. The Fed is trying to push still-high inflation down to its target, and its main tool of high interest rates does that by trying to slow the economy
+and hurting prices for investments. The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut
+interest rates next year by less than it earlier expected.
+</item 15>
+
+<item 16>
+Buckle up for more ‘turbulence’ in the housing market, BofA says—it’s a housing recession, 1980s style (Fortune, 2023-10-06T20:05:26+00:00)
+The rise in the consumer price index peaked at around 14% in 1980 before then–Fed Chair Paul Volcker’s hawkish policies sent mortgage rates to 18% in a year’s
+time, cooling inflation, but sparking a recession. This caused a serious downturn in the housing market in which home sales and building levels cratered.
+However, national home prices actually remained stable.
+
+At the start of Volcker’s term as Fed chair in August 1979, the median U.S. home sales price was $64,700. And even after a near doubling of mortgage rates, that
+figure rose to $69,400 by the second quarter of 1981.
+
+Over the past 18 months, the Fed’s current chair, Jerome Powell, has been following a very similar game plan to Volcker’s, raising interest rates aggressively
+to quash inflation.
+</item 16>
+
+<item 17>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 17>
+
+<item 18>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 18>
+
+<item 19>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 19>
+
+<item 20>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Dow Jones Industrial Average gained 222.24, or 0.7 per cent, to 34,061.32, and the Nasdaq composite jumped 184.09, or 1.4 per cent, to 13,478.28. Stocks
+surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation
+under control. A report on Friday underscored that pressure is easing on inflation after it showed employers hired fewer workers last month than economists
+expected. It’s a stunning turnaround from just a week ago, when Wall Street was reeling after the S&P 500 had fallen 10 per cent below its high point for the
+year. That sent Wall Street’s main index into what investors call a “correction.” Since then strong profit reports helped drive some stocks to towering gains.
+Generac, a maker of back-up generators, soared nearly 28 per cent for its best week since its stock began trading in 2010.
+</item 20>
+=== END ITEM id=bb06cba13f0831f9 ===
+
+=== ITEM id=6e5f321c1bd78570 ===
+Gold sentences and facts:
+Sentence 0: Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents.
+  Fact 0.0: Epic will also suggest that Google hid items from discovery by allowing executives and employees to have 'off the record' chats.
+  Fact 0.1: Google will counter this, saying it has provided the court with thousands of chat logs.
+  Fact 0.2: Google says it has provided the court with millions of documents.
+Sentence 1: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 1.0: Google did not release the full model, Gemini Ultra.
+  Fact 1.1: Google released only a 'lite' version called Gemini Pro.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that this happens through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What were your settlement talks with Google CEO Sundar Pichai like?
+
+We can’t talk about content, but we met for an hour and had a professional discussion... in which we didn’t reach a settlement. We were rather far apart, let’s
+say, because what Epic wants ultimately is free competition and fair competition for everybody, and the removal of the payments tie and removal of the
+anticompetitive measures, which obviously leads to far better deals for consumers and developers.
+
+What we don’t want is a special deal just for ourselves, and Google’s strategy so far as you’ve seen from all these deals has been to basically take out all
+their potential competitors one at a time while they’re still weak and small, before they build up or unite into a formidable force. Epic’s not going to go
+along with something like that and do a special deal just for ourselves.
+
+You’ve said that a couple times, but the email that you accused Google of leaking suggested that Epic was interested in a special deal of some sort at that
+time.
+</item 1>
+
+<item 2>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Looking at this from a less academic perspective, it’s worth noting that Google charges up to ten times more per transaction than you pay with PayPal or a
+credit card, which does seem like a lot! And though Epic can’t argue it in court, I’ll point out that Apple wasn’t able to explicitly justify a 30 percent fee
+to that case’s judge.
+
+On the other hand, it does kinda seem like Epic wants something for nothing! As far as I can tell, Epic hasn’t stated what kind of fee would actually be
+reasonable for Google to charge in exchange for placement in Google’s store — instead, Epic CEO Tim Sweeney seemingly suggests there shouldn’t be a Google fee
+at all if a developer wants to use its own payment system.
+
+How did Epic’s argument fare against Apple?
+
+Well… both sides lost! But Epic arguably lost more.
+</item 2>
+
+<item 3>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Enough that the judge has decided to explicitly tell the jury we’re not seeing all the evidence, because Google employees all the way up to CEO Sundar Pichai
+were caught setting those conversations to auto-delete. This issue has come up in the US v. Google antitrust trial in Washington, DC — still ongoing at the
+start of Epic’s trial — as well.
+
+And the dirt isn’t all on Google’s side. Epic was caught straight-up admitting it premeditated the whole plan to bypass Google’s payment systems. Since Google
+is countersuing over that, it could be a big deal.
+
+When you say “straight-up admitting...”
+
+Here is an email from Epic CEO Tim Sweeney that, I think, speaks for itself:
+
+“Here is our official plan for communicating with Google about bypassing the Google Play Store: SAY NOTHING TILL IT SHIPS” Image via Epic v. Apple
+
+We’ll have a whole cast of intriguing people called as witnesses during the trial who might dish even more.
+
+Who will Epic and Google call as witnesses?
+</item 3>
+
+<item 4>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+And when we tried to bundle Fortnite with other smartphone manufacturers like OnePlus and carriers of all sorts, they told us they couldn’t do a deal because
+Google had done a secret deal with them.
+
+It was really disconcerting to see the extent of bad faith efforts that were going on in a company of Google’s size. You’d think a trillion-dollar company would
+develop to the point where they have pretty respectable processes and leadership structures that provide a check and balance against wrongdoing, but they were
+rampantly destroying all their chats on these topics.
+
+You’d see long conversation threads would start to get into a spicy antitrust issue, and suddenly somebody points out the history’s on and the chat goes silent.
+They just turned it off to have the documents destroyed. It was great to see that all called out in detail.
+
+Any particular evidence where you’re like, “Oh wow, I never saw that, and now that specific thing came out for the world to see”?
+
+As an employee of Epic, I’ve not been able to see Google’s internal documents until the trial started.
+</item 4>
+
+<item 5>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 5>
+
+<item 6>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+As an example, Epic will point to Activision Blizzard, the owner of King.com and maker of Candy Crush and Call of Duty, as one developer that wanted to go the
+route of opening its own app store. Google and Activision Blizzard then entered into a three-year agreement in January 2020, worth approximately $360 million,
+to keep the developer on Google Play, Epic will argue.
+
+Google, however, will characterize this program as a way to incentivize developers to launch their apps on Android at the same time as they launch on iOS and
+plans to dispute Epic’s claims that it prevented developers from opening their own app stores.
+
+Android allows sideloading
+
+Google will make note that, unlike Apple, it also allows apps to be sideloaded on Android devices — something Epic takes advantage of today. It will note this
+process is streamlined and helps keep users safe.
+</item 6>
+
+<item 7>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+So this trial has been four years in the making. I look back at a September 2019 email that was in discovery about a plan to draw Google into a legal battle
+over antitrust. Can you describe what it felt like, after four years, to hear the jury find for Epic?
+
+Well, it’s a great day for all developers to see that the Sherman Antitrust Act works in the new era of tech monopolies; we’ve not had a major antitrust verdict
+against a tech company that meant change and benefits for everybody since the 1990s, with the US v. Microsoft. Back in the early days of the internet. So this
+is an awesome thing and it’s much needed by the industry which is being strangled by a few gatekeepers imposing insane amounts of control and extracting huge
+taxes, which not only raise prices for consumers but also make a lot of kinds of products just unviable.
+
+I understand the significance, but... you were there in person.
+</item 7>
+
+<item 8>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 9>
+
+<item 10>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 10>
+
+<item 11>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 11>
+
+<item 12>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Or at least it was worse, before they were destroyed.”
+
+The best Google could do in response was to plant its own feeble seed with the jury, too: “Is Epic using the chats to distract me from all the evidence I do
+see?”
+
+“It’s true that Google could have automatically saved all chats for all relevant employees, but just because Google didn’t save some chats didn’t mean it
+violated antitrust laws,” Pomerantz argued.
+
+Epic’s opening statements seemed to paint a clearer picture for the jury than those from Google. But things got complicated for both parties when the first two
+witnesses — Epic Games Store head Steve Allison and Yoga Buddhi CEO Benjamin Simon, who also appeared in the earlier Epic v. Apple trial — took the stand.
+
+Both Epic and Google spent a long, long time on subtle lines of questioning.
+</item 12>
+
+<item 13>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic, meanwhile, lost its antitrust battle with Apple and is now asking the Supreme Court to weigh in.
+</item 13>
+
+<item 14>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+No, we’ve always turned down special deals just for Epic. We’ve always fought on the principal that all developers should be, you know, given the same
+opportunities. One of the documents in evidence was a 2019 email I sent — right before Fortnite launched the Marvel season with all this amazing new content and
+the Star Wars event featuring J.J. Abrams. Right before that, I sent an email to all the Google senior executives saying that we wanted to bring Fortnite to the
+Google Play Store in time for that event, and we wanted them to allow us and all other developers to process certain payments and keep them all.
+
+That was our proposal to Google in 2019. If Google had said yes to that, that would have been awesome for all developers — the Android ecosystem would have
+become much, much stronger, and Google would be in a much better position in the smartphone industry than they are today. We would’ve never had a dispute
+because the problem would have been solved.
+
+It’s always been in Google’s power to solve this problem.
+</item 14>
+
+<item 15>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+</item 15>
+
+<item 16>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 16>
+
+<item 17>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+Thou shalt not have a competing store on iOS and thou shalt not use a competing payment method. And I think Apple should be receiving at least as harsh
+antitrust scrutiny as Google.
+
+It’s interesting to me that because Google distributes the Android operating system as open source, they had to put all these deals out in the open. More out in
+the open, I should say — certainly they still wanted to keep them secret.
+
+But I’m going down my story about all the best emails from the Epic v. Apple trial — and we do have a lot of documents from both Apple and Google that show they
+were similarly self-serving in terms of deals.
+
+I’d say this is the thing that’s disappointed me the most with Apple and Google: even at the peak of the antitrust trial against Microsoft, Microsoft was
+awesome to developers. Microsoft has always been awesome to developers, always being respectful, giving developers a great deal and treating them as partners,
+you know? And so even as Microsoft was crushing corporate competitors, the developer experience was excellent.
+</item 17>
+
+<item 18>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Also, that one’s not over till the Supreme Court weighs in or declines to take a look.
+
+2) Google can’t tell jurors that Apple won its case, or that other plaintiffs settled. The judge in this case says so!
+
+3) Oh, and by the way, this is a jury trial.
+
+Wait, why does that matter?
+
+Epic and Google have to convince a jury, not the judge, which is totally different from how the Apple case played out. (That one was a “bench trial.”)
+
+Maybe all the evidence of tricky deals inside Google might sway a jury against the company? Maybe Google scaremongering that sideloaded apps equal gaping
+security holes will sway a jury against Epic instead? Who knows!
+
+(If you’re a Epic juror reading this — stop! Judge Donato explicitly said you’re in a “news-free bubble” through mid-December, folks.)
+
+Didn’t other parties sue Google too?
+
+They did! And then, they all settled.
+</item 18>
+
+<item 19>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+showed that Epic knew it was breaking bad at the time it did the deed.
+
+But Epic mentioned Project Liberty in its own opening statement — so, by that point, it had already been an hour since it admitted it intentionally broke
+Google’s rules. “Epic decided to stand up because that’s what you do to a bully,” Bornstein told the jury.
+
+“All we know is whatever is in the destroyed chats, as bad as the documents are, is worse.”
+
+And it’s possible no examination will be able to take the stink off one of Google’s ugliest moves: the one where Google employees up to and including CEO Sundar
+Pichai were caught setting sensitive chats to auto-delete to keep them out of a court’s hands. The court has already decided Google should be sanctioned in some
+way for making potential evidence disappear, and Bornstein used it to plant persistent seeds of doubt in the minds of jury members. “All we know is whatever is
+in the destroyed chats, as bad as the documents are, is worse.
+</item 19>
+
+<item 20>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 20>
+
+<item 21>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+The lawyers can see them, but I saw almost all the key elements in this case at the same time the jury saw them. Two things stand out big time. Google’s Project
+Hug was an astonishingly corrupt effort at a massive scale — the same corrupt deal structure they tried to do with Epic when they wanted to pay us off to launch
+Fortnite on Google Play and not launch our own store.
+
+As soon as we thwarted their effort, they went around to 27 different developers and offered each one a payoff to undermine any effort we had to get their games
+onto our store exclusively. Activision and Riot and Supercell had direct distribution plans that they were planning on; Google paid them not to pursue those
+plans. Just direct blatant violations of anti-competition law, it’s crazy a company of Google’s scale would do that.
+
+“If you’re a smaller developer than Spotify, you get screwed.”
+
+The other astonishing one was the Spotify deal. Spotify is the one company that had comparable negotiating power to Fortnite.
+</item 21>
+
+<item 22>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 22>
+
+<item 23>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 23>
+
+<item 24>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Epic Games will specifically reference one agreement it had made with the OEM OnePlus, to make Epic games available on its devices through the Epic Games app.
+But OnePlus had to cancel the deal over concerns that the arrangement would have it bypassing the Google Play Store. The case will also examine a deal between
+Google and Samsung that Epic says was designed to prevent the Galaxy Store from being a competitive threat and require Google Play Billing on apps distributed
+by Samsung.
+
+Epic will argue Google’s developer agreements are anti-competitive
+
+A second set of agreements Epic will highlight are those between Google and Android app developers themselves. One such program, the “Project Hug” initiative, a
+part of the Google Games Velocity Program, will be cited as an example of where Google paid competitors not to distribute their apps on Android outside of the
+Play Store by targeting those that were most at risk of attrition from Play, then approaching them with a monetary offer.
+</item 24>
+
+<item 25>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Both Epic and Google spent a long, long time on subtle lines of questioning. You really had to read between the lines to see that Epic was trying to make a
+point about how Google’s 70/30 revenue split is probably based on an arbitrary decision Valve made two decades ago with Steam or how Google was trying to make a
+point that Epic, too, likely believed that an app store provides more value than just payment processing and maybe deserves more money.
+</item 25>
+
+<item 26>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Well… both sides lost! But Epic arguably lost more. Even though Apple has incredible power over the iPhone, Judge Yvonne Gonzalez Rogers ruled the company
+didn’t have an unfair monopoly in this case – partly because she decided the relevant market for Fortnite was “digital mobile gaming transactions” rather than,
+say, iPhone apps. She also decided that Epic violated its developer agreement with Apple and would have to pay.
+
+But she also barred Apple from keeping iPhone users in the dark about alternate ways they can pay for apps – and may have even allowed developers to add their
+own payment mechanisms. I won’t dwell on the Apple ruling, as I’m ethically bound, but my colleague Adi Robertson has a comprehensive breakdown.
+
+How can Epic possibly have a case against Google when Apple already won?
+
+Epic declined to answer this on the record, among other questions we asked... but three things to consider:
+
+1) That was a different case. Also, that one’s not over till the Supreme Court weighs in or declines to take a look.
+</item 26>
+
+<item 27>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 27>
+
+<item 28>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 28>
+
+<item 29>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+This program, still in pilot testing, is open to all developers who sell apps in the 35 markets where it’s now available, including the U.S., and reduces the
+standard commission by 4% for companies who choose to use their own payment processing solution. Spotify and Bumble were the initial testers for the new system,
+first introduced in November 2022, and Match, as part of its settlement agreement, will also now take advantage of this option.
+
+Google will also argue that its commissions aren’t just tied to payment processing, but rather help it to develop other features and controls to keep Android
+users safe and guide them to discovering new applications, as well as help fund the tools and services developers need to build and grow their apps. Google also
+helps developers reach a broader audience beyond the mobile phone, with support for Android across platforms, ranging from tablets to TVs to autos and more. And
+it will note that 99% of its developers qualify for a commission of 15% or less, based on their revenues.
+</item 29>
+
+<item 30>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Google spent its 45 minutes attempting to explain that its dominance over the Android app market isn’t anything nefarious but simply the natural outcome of
+Google fiercely competing with the iPhone and its iOS App Store, where Google would like the court to believe that competition truly lies.
+
+If Google can convince the jury of that, it could be a winning argument in the case — because obviously, Google doesn’t have a monopoly on app stores or phones
+in general. “You cannot separate the quality of a phone from the quality of the apps in its app store, and that means Google and Apple compete against each
+other,” began Google lead attorney Glenn Pomerantz.
+
+But Google wound up spending much of its opening statement attempting to explain away its seemingly bad behavior as normal business practices and didn’t always
+succeed out of the gate.
+</item 30>
+
+<item 31>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Who will Epic and Google call as witnesses?
+
+We are going straight to the top of the org chart, folks. Google CEO Sundar Pichai and Epic CEO Tim Sweeney are absolutely expected to attend. Android
+co-founder Andy Rubin might be deposed, and Google says we’ll hear from current Android (and Chrome, and Chrome OS) boss Hiroshi Lockheimer. Google also tells
+us representatives from Apple, Netflix, Motorola, and AT&T should testify as well.
+
+How much hypocrisy can we expect in the courtroom?
+
+I’d say quite a bit! For example:
+
+Epic says it’s not in this for the money, it’s only suing to end Google’s monopoly — but Epic would surely profit if it doesn’t have to pay Google’s cut.
+
+It looks like Epic’s going to argue that you’re locked into Android after buying an Android phone, but I can personally attest that switching back and forth
+between the platforms is easier than ever.
+</item 31>
+
+<item 32>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+On Monday, Fortnite publisher Epic Games will drag a tech giant into court, alleging that its mobile app store is an illegal monopoly. You may be feeling some
+déjà vu!
+
+After all, didn’t Epic already go to trial with Apple, resulting in a ruling where Apple (mostly) won? Didn’t Epic fail to #FreeFortnite with its Llamacorn
+legal gambit? Didn’t that all happen years ago? What are we doing here again?
+
+The short answer: while Epic’s antitrust claims against Apple got their day in court, a similar lawsuit against Google never did. On November 6th, Epic v.
+Google will finally go to trial... a mere 1,180 days after Epic originally sued.
+
+Hi, I’m Sean, and I’ll be your guide to this whole delightful mess.
+
+Update, December 15th, 2023: It’s basically over now. What happened? Read this, this, and this to get the whole picture.
+
+Original story continues:
+
+Llamacorn what now? What is happening?
+</item 32>
+
+<item 33>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 33>
+
+<item 34>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 34>
+
+<item 35>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 35>
+
+<item 36>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Match may have settled its antitrust lawsuit with Google last week, but Fortnite maker Epic Games is still set to go to trial with the tech giant today,
+November 6, in hopes of convincing a jury that Google engages in anticompetitive behavior with regard to its Android app store, Google Play, and its commission
+structure. This case will differ slightly from Epic’s battle with Apple on the same topic because, this time, Epic can’t allege there’s no other way to load
+apps onto Android devices, as it could with Apple, because Android does allow for sideloading apps. Though Epic will suggest Google makes that process
+cumbersome, the bulk of its arguments will center around what it believes are anticompetitive agreements between Google and device manufacturers and developers.
+
+The precedent Epic’s case will rely on is a Microsoft case where courts found Microsoft to have a monopoly over the operating system and were abusing it, making
+it hard for users to download alternative browsers, like Netscape, on Windows devices.
+</item 36>
+
+<item 37>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 37>
+
+<item 38>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+That sounds fascinating, but if I don’t care about Fortnite or rich companies suing each other, what’s in it for me?
+
+The future of Google’s app store could depend on this trial — both Epic and Google agree on that. Epic wants to break up Google’s alleged monopoly on Android
+app stores and payment methods, so developers aren’t stuck paying the “Google Tax” or passing that fee along to you.
+
+But if Epic wins — according to Google, anyhow — it could make Android phones less safe by dismantling basic protections against sideloaded apps, and damage
+Android’s ability to compete with the iPhone because it (arguably) can’t run a competitive app store by giving it away for free.
+
+Or maybe you just want juicy dirt on both companies? More on that later!
+
+What exactly is Epic claiming?
+
+Epic argues that Google makes it so difficult for developers and users to get around its Android app store, and that app store’s standard fees, that it’s
+created an illegal monopoly that unjustly enriches Google while artificially driving up app prices because other stores can’t compete.
+</item 38>
+
+<item 39>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+The competitive landscape with other app stores, OEMs
+
+The tech giant additionally plans to push back at Epic’s claims that it doesn’t have competition in the app store business. It will point out that not only does
+the Play Store compete with Apple’s App Store, which the Ninth Circuit ruling in the Apple case agreed upon, too, but Android also supports competitive app
+stores like Samsung’s Galaxy Store and Amazon’s Appstore.
+
+Epic, however, will attempt to demonstrate that Google makes it hard for alternative app stores to succeed and reach consumers, noting that 90% of apps are
+still downloaded through Google Play. And it will point out that Google bundles the Play Store with other Google apps that Android OEMs (original equipment
+manufacturers) have to agree to in order to use Android.
+
+Epic will also bring up “Anti-Fragmentation Agreements” (AFAs) that prevent the OEMs from modifying Android to allow for frictionless downloading of apps
+outside of Google Play.
+</item 39>
+
+<item 40>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+We know that because they came to us and told us they were doing that. And we know it because after all that went down, I talked to an Activision employee who
+was close to that effort, working with the team building the store, and he reported that the entire store team Activision had employed to build their competing
+store had been disbanded as soon as Activision signed their deal with Google.
+
+[Editor’s note: We did not hear from such a person at trial; I’d be eager to speak to them now!]
+
+We know Activision was telling Google they were building their computing store; we know in Google internal discussions they said they didn’t want Activision
+building a competing store. They agreed to sign this deal, and they were gleeful about the fact they dissuaded perhaps their number one competitor at the time
+from launching their own store.
+
+Four years later, Microsoft acquired Activision Blizzard — and one of the big talking points from Microsoft to the European Union was that the merger
+strengthened the company overall in order to provide a viable computing store on iOS and Android.
+</item 40>
+
+<item 41>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 41>
+
+<item 42>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 42>
+
+<item 43>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+I did like Pomerantz’s commonsense argument that Google can’t possibly have a monopoly on Android app stores when “every single Samsung phone comes with two app
+stores right on the homescreen,” which continued:
+
+When they show these charts that show all these downloads from Play and not from the Galaxy Store, that’s what the Samsung phone users are choosing. They’re
+touching Play. Nothing’s keeping them from touching the Galaxy Store; it’s just what works for them.
+
+I called Google “comparatively open” earlier, and that openness will likely be heavily debated in the weeks to come. Epic promised to “show that Google has
+closed off each and every other option” to the Play Store during this trial. But Google points to the simple fact that it allows alternate app channels at all —
+something Android rival iOS doesn’t.
+
+Pomerantz boasted that over a billion people have gone through the process Epic portrays as needlessly onerous to get apps outside the Play Store.
+</item 43>
+
+<item 44>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+When should we expect a jury verdict?
+
+Judge Donato told jurors that we’re looking at roughly five weeks of trial starting November 6th and extending through early December. The schedule suggests the
+court will take Thanksgiving off, finish looking at all the evidence by December 4th, take a couple more days off before closing arguments, and then let jurors
+come to a decision.
+
+“I fully expect we’ll have plenty of time to reach a verdict well before the December holiday period,” said Judge Donato.
+
+Okay, I’m sold — how can I watch the trial unfold?
+</item 44>
+
+<item 45>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 45>
+
+<item 46>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Could Google actually lose?
+
+When I walked into the courtroom on Monday morning, it seemed impossible. If Epic couldn’t prove Apple’s walled iOS garden is a monopoly, how could the
+comparatively open Google do worse against the windmill-tilting Fortnite developer?
+
+But now that both sides have made their opening arguments to a jury, I’m not quite as sure. Because while Google spent most of its first day attempting to
+explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog.
+
+Epic lead attorney Gary Bornstein was tasked with making the case that Android functions as an unlawful monopoly. He did so by basically calling Google a bully
+and a cheat that “bribes” or “blocks” any attempt to compete with Android’s Google Play store. The result? A status quo where the vast, vast majority of Android
+app installs are from Google Play, with only a tiny sliver attributable to the Galaxy Store that comes preinstalled on every Samsung phone.
+</item 46>
+
+<item 47>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+“Android’s choice and flexibility work well for consumers and developers of all sizes. We look forward to making our case in court as we fight to keep our users
+safe from harm, partner with developers to grow their businesses, and keep the Android ecosystem thriving and healthy for everyone,” reads a Google blog post by
+Wilson White, VP, Government Affairs & Public Policy.
+
+Epic’s lawsuit originally involved Match and several U.S. attorneys general, but Google reached a settlement with the latter last month and with Match last
+week. Epic will now fight the antitrust battle on its own. The lawsuit, held in the U.S. District Court in California’s Northern District, will include
+testimony from a number of Google and Android execs, including CEO Sundar Pichai, and Epic Games CEO Tim Sweeney, as well as Apple, Netflix and other Android
+developers.
+
+Google is also involved in another antitrust lawsuit with the Department of Justice over its alleged search monopoly.
+</item 47>
+
+<item 48>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 48>
+
+<item 49>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+First, Epic announced it was bypassing Apple and Google’s app store fees. It deployed a hotfix update to Fortnite without either company’s knowledge, letting
+you purchase V-Bucks directly through its own payment processing option at a discount. Apple and Google almost immediately reacted by kicking Fortnite off their
+app stores for breaking the rules.
+
+Then: surprise! Epic was ready and waiting with two lawsuits and an attack ad, depicting a Fortnite hero throwing a unicorn-llama hammer into a giant screen
+reminiscent of Apple’s famous “1984” Macintosh ad.
+
+It was a striking publicity blitz followed by a lot of slow-moving court proceedings. While the Apple lawsuit went to court in 2021, the Google one was delayed
+again and again. A ruling came down for the Apple trial that September, and it was mostly decided in Apple’s favor, though both parties are waiting for the
+Supreme Court to potentially weigh in. Meanwhile, the machinations for its fight against Google continued, and now…
+
+It is time for trial number two.
+</item 49>
+
+<item 50>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Didn’t other parties sue Google too?
+
+They did! And then, they all settled. All 50 state attorneys general and a number of consumers have tentatively settled with Google over app store antitrust
+claims, though it’s not clear what the deal might include.
+
+Match Group, the company behind Tinder, Match.com, OkCupid and other dating apps, just reached a surprise last-minute settlement too, one that makes it sound
+like Match effectively gave up.
+
+Epic stands alone.
+
+Could we get a settlement between Google and Epic as well?
+
+Epic seems to have no interest in settling as long as the “Google tax” exists, and the company’s repeatedly said it’s not interested in cash. So far, the
+company’s been willing to push these cases all the way through multiple appeals, cost be damned.
+
+It’s not clear what Google could proactively offer that would satisfy Epic, since CEO Tim Sweeney has also publicly suggested that Google would simply
+circumvent any settlement it offers.
+</item 50>
+=== END ITEM id=6e5f321c1bd78570 ===
+
+=== ITEM id=0da9c483f731e555 ===
+Gold sentences and facts:
+Sentence 0: He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line.
+  Fact 0.0: He is helping to usher in a youth movement up front for Argentina.
+  Fact 0.1: Julian Alvarez is considered the future of the forward line.
+  Fact 0.2: Alejandro Garnacho is considered the future of the forward line.
+Sentence 1: 2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity.
+  Fact 1.0: The kickoff is 2 hours away.
+  Fact 1.1: Argentine journalist Gaston Edul is well-connected.
+  Fact 1.2: A report from Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity.
+
+Retrieved items:
+<item 1>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+🤔 pic.twitter.com/Svq79fvbBG — Major League Soccer (@MLS) October 4, 2023
+
+1 hour to kickoff: With lineups not yet released, there is finally a report regarding Lionel Messi's availability. According to Michelle Kaufman of the Miami
+Herald, Messi "did not arrive with the team" to Soldier Field. While that's not outright confirmation that he will not take part in the match, it's a very
+strong indication that he will not be involved tonight.
+
+1 hour 15 mins to kick: With lineups due imminently, and nothing to indicate if Lionel Messi is involved tonight or not, the Chicago Fire media team has jokes.
+</item 1>
+
+<item 2>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+According to Argentine journalist German Balcarce of River Plate publication RMG, the match will take place on January 20 and will be played at AT&T Stadium,
+the home of the Dallas Cowboys. However, with the El Salvador friendly, which is confirmed by the club, happening literally the day before in El Salvador, it
+would be impossible for Inter Miami to play this match as reported unless they split the squad.
+
+The match would supposedly be the second leg of a two-part trip for River Plate, who will also meet Liga MX club Deportivo Guadalajara (formerly Chivas) on
+January 17 at the same venue. This will be updated with any additional information on whether this match will be moved to another day or nixed entirely.
+</item 2>
+
+<item 3>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+MORE: Inter Miami season tickets for 2024 season see unprecedented jump in price
+
+(Also, you'll notice a photo of Lionel Messi's jersey hanging in his locker in that tweet below, a pretty good indication that he'll return tonight)
+
+Scene is set for Fan Appreciation Night 🏟️#MIAvCIN | 7:30 PM ET pic.twitter.com/9I07uq9hGW — Inter Miami CF (@InterMiamiCF) October 7, 2023
+
+2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for
+this match in some capacity. Edul reported that "the idea is for Leo Messi to get minutes when Inter Miami plays FC Cincinnati".
+
+That makes it sound like Messi will only be available off the bench, but it's better than nothing to have a game-changer like him available at all.
+</item 3>
+
+<item 4>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Messi takes it but puts it way over the crossbar. A bit rusty?
+
+57th min: Jean Mota has a shot from distance, and it looks to be a vicious knuckler with some dip, but it goes just wide.
+
+55th min: HERE COMES LIONEL MESSI! He will enter with around 35 minutes to save Inter Miami's season, replacing Tomas Aviles in a very attacking change. Jean
+Mota also comes on to replace David Ruiz, which is harsh as the young midfielder had been very good.
+
+50th min: Chance, FC Cincinnati! DRAKE CALLENDER MAKES A MASSIVE DOUBLE SAVE! FC Cincinnati are RIGHT on the doorstep, but he comes up huge twice! Aaron
+Boupendza is the most aggrieved, as his follow-up came from directly in front of the goal but he was stymied by Callender's outstretched right foot!
+</item 4>
+
+<item 5>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+Inter Miami play NYCFC in Noche d'Or to replace China trip
+
+With the club's elimination from 2023 MLS playoff contention, Lionel Messi is facing nearly a full month off from competitive fixtures before he takes the field
+for Argentina against Uruguay and Brazil in CONMEBOL World Cup qualifying.
+
+Likely with the sole intent of keeping Messi fit in that time off, and the added bonus of raking in significant cash, Inter Miami scheduled a two-match tour of
+China in early November after their regular season concluded.
+
+They were expected to visit two Chinese Super League sides, starting with a match against Qingdao Hainiu on November 5, followed by a game against Chengdu
+Rongcheng three days later However, it was reported on October 30 the planned tour was off. Gaston Edu of TyC Sports reported the visit had been cancelled due
+to "commercial and bureaucratic" reasons.
+
+Inter Miami no va a viajar a China.
+</item 5>
+
+<item 6>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+MORE: Details on Lionel Messi's injury as he battles "fatigue" and a "scar tissue issue".
+
+La idea es que Leo Messi vuelva a sumar minutos mañana cuando Inter Miami juegue contra Cincinnati. pic.twitter.com/ePNWHb4vSs — Gastón Edul (@gastonedul)
+October 6, 2023
+
+Inter Miami vs FC Cincinnati lineups & team news
+
+There was a report that Lionel Messi could finally make his return from injury, and while it felt unlikely that Messi would start three days after missing out
+entirely, he appears on the bench today and could be available for a second half appearance if required.
+
+Jordi Alba remains sidelined with a hamstring injury, missing since his injury just minutes before Messi, and without a publicly known timeline for a return.
+Also missing is striker Leonardo Campana who was absent from the midweek defeat to the Chicago Fire with a muscle injury, although Gerardo Martino described his
+issue as "minor."
+</item 6>
+
+<item 7>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Important midfielder Gregore, who has missed most of the season with a foot injury, is back in training and should return to the field at some point, although
+when is not known. Defender Tomas Aviles is back from suspension and starts in the three center-back system.
+
+Inter Miami starting lineup (5-3-2): Callender (GK) — Yedlin, Aviles, Kryvtsov, Miller, Allen — Ruiz, Busquets, Cremaschi — Farias, Martinez.
+
+Inter Miami subs (12): Dos Santos (GK), Sailor, Taylor, Mota, Arroyo, Ulloa, Robinson, Messi, Stefanelli.
+
+Defender Alvas Powell is suspended for the match after being sent off against the New York Red Bulls last time out, with Santiago Arias stepping in at
+right-back.
+</item 7>
+
+<item 8>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+The trip will see Inter Miami play a collection of top players from the Hong Kong First Division. The match will be played on February 4 at Hong Kong Stadium,
+which seats approximately 40,000 fans, while the club will hold an open training session the day prior. Tickets go on sale December 15 on ticket exchange site
+Klook.
+
+While the match is the only one in Asia confirmed as of yet, Inter Miami's reference of the trip as a "tour of Asia" suggests more matches could be announced in
+due time. It's notable that Inter Miami will indeed travel to Asia after their attempts to play matches in China back in November fell through.
+
+"We're very excited to be visiting Hong Kong and indeed Asia for the very first time," explained Jorge Mas, Inter Miami CF Managing Owner. "From the very
+beginning we set out to be a global club at Inter Miami.
+</item 8>
+
+<item 9>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+For Chicago, Kei Kamara is on the bench, with Georgios Koutsias slotted in up front just as he was on the weekend. Mexican playmaker Jairo Torres sits, with
+Fabian Herbers deployed on the right wing.
+
+Lionel Messi misses his fourth straight Inter Miami game due to injury 🤕 pic.twitter.com/W1DRc9NJNo — B/R Football (@brfootball) October 4, 2023
+
+45 mins to kickoff: Lineups are now exceedingly late, but while we wait, a nod to Chicago Fire striker Kei Kamara, who could tie Landon Donovan on the all-time
+Major League Soccer scoring list tonight with a goal. Kamara's 144 goals are just one behind the former USMNT great, while Chris Wondolowski's 171 goals leads
+the league's career chart.
+
+Will @keikamara tie Landon Donovan tonight for second on the all-time scoring list?
+</item 9>
+
+<item 10>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Messi missed the last match against Bolivia, and missed four Inter Miami games after, but he returned for a half-hour of action in their final fixture before
+the international break. However, he doesn't start, but is reportedly fit enough to come off the bench for most or all of the second half.
+
+Nicolas Tagliafico started both matches in September, and while Marcos Acuna is back with the team following an injury, the former retains his starting spot.
+Messi's club teammate Facundo Farias was also included on the roster but it'd be surprising if he saw the field.
+
+Argentina starting lineup (4-3-3): E. Martinez (GK) — Molina, Romero, Otamendi, Tagliafico — De Paul, Mac Allister, E. Fernandez — J. Alvarez, L. Martinez, N.
+Gonzalez.
+</item 10>
+
+<item 11>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+30th min: Chance, Inter Miami! Facundo Farias forces Roman Celentano into a full-stretch save! A right-footed blast sees the FC Cincinnati goalkeeper make his
+first big stop. It's an utter siege from Inter Miami through the opening half-hour! Supporters' Shield winners FC Cincinnati have barely survived thus far!
+
+28th min: Obinna Nwobodo is booked for a very late tackle on Facundo Farias in transition. He has to watch himself, as he gives the referee a sarcastic
+applause, which is a good way to draw the official's ire and get sent off.
+
+26th min: Inter Miami have another good set-piece opportunity as the rain begins to fall hard at Inter Miami. It's really coming down in South Florida, and more
+could be on the way. Sergio Busquets takes it and blasts it straight into the wall.
+
+Inter Miami fans chant "Mess, Messi" as they have a free kick!
+</item 11>
+
+<item 12>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+PT
+
+8:30 p.m. ET / 5:30 p.m. PT TV Channel: — None —
+
+— None — Streaming: Apple TV+ (MLS Season Pass)
+
+Chicago Fire vs. Inter Miami betting odds & lines
+
+Inter Miami have been mired in a slump without Lionel Messi, and with the Argentine likely to miss out again today, the Herons are heavy underdogs on the road
+at Chicago.
+
+Goals are expected in this match as both sides have conceded in bunches for the most part this year.
+</item 12>
+
+<item 13>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Had Inter Miami been still in the playoff hunt, with a potential postseason run on the horizon, Argentina might have played it a bit safer with Messi in this
+international window. Yet now that his long offseason break is confirmed, Messi may be more aggressive with his minutes here knowing that, after Inter Miami's
+final two meaningless regular-season matches, he will only have international breaks to keep him sharp until February.
+
+According to a report earlier today, Messi will not start tonight, but is likely to play much or all of the second half, while Lautaro Martinez and Julian
+Alvarez both start a national team match for the first time. World Cup hero Mario Kempes is a big fan of that.
+
+"No deberíamos entrar en la polémica, como pasó con Batistuta y Crespo. Lautaro tuvo un bajón en el Mundial, entró Julián y cambió muchos las cosas, pero ahora
+volvió a hacer goles. Y Julián es muy molesto.
+</item 13>
+
+<item 14>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Inter Miami's home field advantage tonight will be significantly hampered.
+
+Not sure how much can be appreciated via the photo, but La Familia — Inter Miami’s supporters’ groups — are mostly sitting here before kickoff.
+
+
+
+No drums, chanting, or enthusiasm in what is a protest to the increased price of season tickets for 2024.#InterMiamiCF #Messi𓃵 pic.twitter.com/YaP4ivlX0P —
+Franco Panizo (@FrancoPanizo) October 7, 2023
+
+15 mins to kickoff: Interestingly, while tonight's match should kick off without any negative attention, it seems the club just managed to get off the ground
+without a hitch. According to Michelle Kaufman of the Miami Herald, the supporter groups had planned a protest regarding 2024 season ticket prices, but the club
+offered to meet with them this coming week so they called it off until that can take place.
+
+A reminder, this match officially kicks off at 7:39 p.m.
+</item 14>
+
+<item 15>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+We have the 🐐 in the building pic.twitter.com/aPt7b0waFq — Chicago Fire FC (@ChicagoFire) October 4, 2023
+
+1 hour 30 mins to kick: A lot of teams have indicated that their preparation for Inter Miami varies wildly depending on whether Lionel Messi will play, but
+Chicago Fire midfielder Xherdan Shaqiri played his own cards close to his chest when asked if they are waiting for news on Messi's availability.
+
+"The preparation is not going to change, we're going to prepare as normal as always," Shaqiri said in his pre-match availability Monday. "Everybody is excited
+to play against Inter Miami. If Messi is injured or not, personally I am not thinking too much about this. Of course Inter Miami is a different team when Messi
+is playing or not playing, you see that in the last games when Messi is in the team they are better, but we prepare like normal for every game."
+</item 15>
+
+<item 16>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+MORE: A full rundown of how each game in the Messi vs Ronaldo matchup has played out
+
+Inter Miami to play El Salvador in January
+
+Inter Miami's first confirmed friendly of the 2024 preseason will see the club travel to San Sebastian to take on the El Salvador national team on January 19.
+
+The match does not fall under an official FIFA international window, meaning the national team will likely not feature any players from Europe or other leagues
+currently in season.
+
+"We look forward to facing the El Salvador national team in what will be a good first test for our squad against the best players from the country,” said Chief
+Soccer Officer and Sporting Director Chris Henderson.
+
+Ticketing and broadcast details will be available at a later date.
+
+MORE: All the details regarding Lionel Messi's Inter Miami contract and salary
+
+Inter Miami visit Hong Kong in February tour of Asia
+
+The club announced in early December that Inter Miami would take a tour of Asia in early February as part of their 2024 preseason slate.
+</item 16>
+
+<item 17>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+A reminder, this match officially kicks off at 7:39 p.m. ET so there will be a slight delay from the advertised 7:30 p.m. time.
+
+Inter Miami fan news: the 5 supporters’ groups known as La Familia threatened to stage a protest this game re: ticket price hike for 2024, but team offered to
+meet w/them next week, so protest off at least until next game. @MiamiHerald @HeraldSports @InterMiamiCF #InterMiamiCF — Michelle Kaufman (@kaufsports) October
+7, 2023
+
+30 mins to kickoff: Lionel Messi's availability for Inter Miami is a welcome sight for the club, as they take the field today with their backs against the wall.
+Inter Miami must win tonight to ensure they remain alive in the playoff race. A draw or a loss, however, would see them vulnerable to outside results.
+</item 17>
+
+<item 18>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+That's nice and all, but the best way to appreciate the fans would be to not price out the loyal supporters from season tickets next year. Instead, Inter Miami
+has jacked 2024 membership rates to put the club amongst some of the most expensive tickets in not just MLS, but the world.
+
+While there will certainly be folks who can afford those high-demand tickets, many of those individuals won't be the same fans who have supported the club from
+its inception in 2020. This means Inter Miami have chosen to secure maximum profit at the expense of its fanbase, and a high turnover amongst the regular
+in-person support from this season to next is likely.
+</item 18>
+
+<item 19>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Meanwhile, Fabrizio Romano also shot it down from a journalistic standpoint.
+
+There isn't enough of a break for him to reasonably integrate with Barcelona, and at 36 years old he's sure to welcome the extended time off.
+
+Tata Martino on rumors of Messi playing on loan with Barcelona this winter:
+
+
+
+"Is he going for fun? Maybe he's going to visit Barcelona. Other than that, I don't know anything else about it." pic.twitter.com/qJwoJOwkC6 — Felipe Cárdenas
+(@FelipeCar) October 8, 2023
+
+2 hours to kickoff: Lionel Messi's club Inter Miami were eliminated from MLS playoff contention after their latest defeat, a 1-0 loss to FC Cincinnati last
+weekend. Messi had missed the previous four matches but returned to the field for the final 30 minutes. He was powerless to turn the tide of the game, after
+Inter Miami had missed so many gilt-edged chances in the first half.
+</item 19>
+
+<item 20>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Messi joined Inter Miami with the club bottom of the Eastern Conference, and the gap was just too big to overcome. Messi's injury certainly played a role, but
+even so, there was just not enough room for error.
+
+It's official: Inter Miami has been mathematically eliminated from MLS playoff contention. pic.twitter.com/u39ZgeXI9M — Tom Bogert (@tombogert) October 8, 2023
+
+Inter Miami vs FC Cincinnati: Second Half
+
+90+3 min: With five minutes of added time on the board, Lionel Messi draws another foul in a very dangerous position, this one much more obvious for the
+official to make. It's just outside the penalty area from a central position, and Messi stands over it yet again.
+
+His effort on goal is close to finding the top-left corner, but it's just high, clipping off the very top of the crossbar.
+</item 20>
+
+<item 21>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+The team from Argentina hold a special place in the heart of Messi and Martino. Not only are both men from the city of Rosario, where Newell's are based, but
+Messi developed at the club's youth academy and Martino played more than 400 senior games for the club before becoming head coach in 2012.
+
+"I am delighted to welcome my beloved Newell's to our home here in Miami. It will be a special match due to everything Newell's Old Boys means to me," said the
+Inter Miami coach. "It will also be a good opportunity to prepare for what will surely be an exciting season."
+
+Messi signed for Barcelona after spending six years as a youth player at Newell's, during which time he reportedly scored 234 goals.
+
+Will Inter Miami face River Plate in Dallas?
+
+In late November, it was reported that Inter Miami have arranged to contest a friendly against Argentine giants River Plate in Dallas, Texas in late January.
+</item 21>
+
+<item 22>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Messi, who had missed the last four games due to injury, returned to play 35 minutes off the bench, but by the time he stepped on the pitch, Inter Miami’s early
+dominance in the match had come and gone. Messi played a part, but he was unable to fully change the tide of the game.
+
+Eventually, Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge, and the defeat coupled with CF
+Montreal’s big 4-1 victory over Portland means Inter Miami are officially out of the postseason running.
+
+The Sporting News followed the Inter Miami vs. FC Cincinnati match live, providing score updates, commentary and highlights as they happened.
+
+MORE: Inter Miami playoff scenarios before potential do-or-die match against FC Cincinnati
+
+Inter Miami vs FC Cincinnati final score
+
+Score Goal scorers Inter Miami 0 – FC Cincinnati 1 Barreal (78')
+
+Kickoff: 7:39 p.m.
+</item 22>
+
+<item 23>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+MORE: Read all the details regarding Inter Miami vs Al Nassr featuring Messi vs Ronaldo
+
+Inter Miami friendly matches for 2024 preseason
+
+Below are all the known fixtures that have either been confirmed by the club directly or widely reported by media.
+
+It was anticipated that Inter Miami would embark on a two-match tour of China, but that has now been cancelled, with the trip proving too difficult logistically
+to arrange. It was replaced by a friendly against fellow MLS side NYCFC to honor Lionel Messi's Ballon d'Or.
+
+The biggest confirmed match is the meeting between Messi and rival Cristiano Ronaldo as Inter Miami announced a pair of fixtures in Saudi Arabia, including
+against Ronaldo's Al Nassr on February 1.
+
+MORE: When does Inter Miami's 2024 season begin? Lionel Messi to retake field in February
+
+Confirmed Inter Miami preseason fixtures
+
+Unconfirmed Inter Miami preseason fixtures reported
+
+Date Kickoff (ET) Match Location Sat, Jan.
+</item 23>
+
+<item 24>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+Chicago are into a playoff position, while Inter Miami's playoff chances take a massive hit with the defeat. Lionel Messi's club no longer controls its own
+destiny, needing outside help to make the postseason.
+
+Via @IanHest, #InterMiamiCF would be on the brink of playoff elimination if this result holds. pic.twitter.com/xqyyY5ifzP — Kyle Bonn (@the_bonnfire) October 5,
+2023
+
+Chicago Fire vs. Inter Miami: Second Half
+
+90th min: Facundo Farias is booked for a hip check on Miguel Navarro, which might have been a retaliation foul for Navarro's jawing at Sergio Busquets.
+
+Three minutes of added time are shown on the board.
+
+83rd min: Referee Joe Dickerson has to step between Sergio Busquets and Miguel Navarro as the two are jawing at each other. It wasn't hard to read Navarro's
+lips as he walked away, and his words aren't repeatable here.
+</item 24>
+
+<item 25>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+The play is off the training ground, as his delivery goes vertically to try and create a lateral cross opportunity for DeAndre Yedlin, but it's overcooked and
+completely wasted over the end line. Yikes.
+
+Kickoff: The match is under way at DRV PNK Stadium! One club's status for the postseason is as assured as possible, while the other team's status is far from
+certain.
+
+Inter Miami vs FC Cincinnati: Pre-match commentary, analysis, stats, and more
+
+5 mins to kickoff: While there is no active protest happening from the Inter Miami supporter section, they are also taking more muted measures to make their
+feelings known. They have made a collective effort not to be their usual cheerful selves before kickoff, sitting quietly instead of waving flags and making
+noise.
+
+With such a massive game on hand, this is a very clear sign of frustration with the enormous increase in ticket prices next season. Inter Miami's home field
+advantage tonight will be significantly hampered.
+</item 25>
+
+<item 26>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+Without Lionel Messi, Inter Miami have looked exceedingly mortal. They put in a 90-minute performance littered with individual mistakes, and the Chicago Fire
+made them pay, winning 4-1 via braces from Xherdan Shaqiri and substitute Maren Haile-Selassie.
+
+The result boosts Chicago’s postseason hopes significantly, moving them into a playoff position in the Eastern Conference standings.
+
+Inter Miami’s playoff hopes, conversely, are now on life support, needing to win out in their final three games and get outside help. The club is winless in
+four games with Messi out injured, and it has seen their chances at a postseason berth nearly evaporate.
+
+Shaqiri’s brace was the biggest talking point for the hosts, as the former Liverpool midfielder has not always been at his best since joining MLS, but in front
+of a record Chicago Fire crowd at Soldier Field, he rose to the occasion.
+
+The Sporting News followed the Chicago Fire vs. Inter Miami match live, providing score updates, commentary and highlights as they happened.
+</item 26>
+
+<item 27>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Inter Miami fans chant "Mess, Messi" as they have a free kick! pic.twitter.com/VkyvULPUHp — Mundo Albiceleste ⭐🌟⭐🇦🇷 (@MundoAlbicelest) October 8, 2023
+
+24th min: Chance, Inter Miami! THEY'VE HIT THE WOODWORK AGAIN! Benja Cremaschi is fed through on a one-two with Josef Martinez, and with the outside of his
+right foot, he bends it around Matt Miazga but clatters the near post. The THIRD time Inter Miami have hit the bar in under a half-hour! How unlucky??
+
+22nd min: Chance, Inter Miami! Inter Miami hit the woodwork again! Josef Martinez, who has been electric so far, rips a shot from a tight angle about 15 yards
+out, and while it beats Roman Celentano, it also clatters the far post and deflects out!
+</item 27>
+
+<item 28>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+@MiamiHerald @HeraldSports @InterMiamiCF #InterMiamiCF #Messi𓃵 #cf97 #MLS pic.twitter.com/hp8KHzkwNB — Michelle Kaufman (@kaufsports) October 4, 2023
+
+2 hours to kickoff: Tata Martino has played his cards extremely close to his chest when it comes to the fitness of Lionel Messi. Each week we see how
+tight-lipped the Inter Miami boss has been regarding Messi's injury.
+
+Prior to tonight's match against the Chicago Fire, Martino was asked about the return of Jordi Alba, and he stated that there is a timeline in place for Alba's
+return. When asked if there's a timeline for Messi's return, Martino refused to acknowledge if there is.
+
+Tata Martino when I asked about Lionel Messi's return timeline:
+
+
+
+"I understand your desire to know the exact timelines, but if I had the exact timelines I would share them.
+
+
+
+"I just don't have them."
+</item 28>
+
+<item 29>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+ET / 4:39 p.m. PT
+
+Location: DRV PNK Stadium (Ft. Lauderdale, FL)
+
+Referee: Rubiel Vazquez
+
+Starting lineups:
+
+Inter Miami (5-3-2, right to left): 1. Callender (GK) — 2. Yedlin (Taylor, 76'), 6. Aviles (Messi, 55'), 27. Kryvtsov, 31. Miller, 32. Allen — 41. Ruiz (Mota,
+55'), 5. Busquets, 30. Cremaschi — 11. Farias, 17. Martinez (Stefanelli, 76').
+
+FC Cincinnati (5-4-1, right to left): 18. Celentano (GK) — 13. Arias, 4. Hagglund, 21.
+</item 29>
+
+<item 30>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+Chicago Fire starting lineup (4-2-3-1): Brady (GK) — Dean, Omsberg, Teran, Navarro — Doumbia, G. Gimenez — B. Gutierrez, Shaqiri, J. Torres — Kamara.
+
+Chicago Fire subs (9): Richey (GK), Teran, Haile-Selassie, Casas Jr, Aceves, Burks, Souquet, Przybylko, Kamara.
+
+The status of Lionel Messi is uncertain, but it feels unlikely that he will be involved given recent matches. He could, however, be more ready for action over
+the weekend when Inter Miami face FC Cincinnati.
+
+Inter Miami will definitely be without the services of both Jordi Alba and Leonardo Campana who are both out with muscle injuries. Midfielder Gregore has
+returned to training after months on the sideline with a foot injury, and could be involved in the coming matches as he ramps up his fitness.
+</item 30>
+
+<item 31>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+"I just don't have them."
+
+
+
+🤔🧐🤨#InterMiamiCF #Messi𓃵 pic.twitter.com/U7doZYX491 — Franco Panizo (@FrancoPanizo) October 4, 2023
+
+Chicago Fire vs. Inter Miami lineups & team news
+
+Frank Klopas has rotated his two young attackers, Brian Gutierrez and Jairo Torres along with famed Swiss international Xherdan Shaqiri in the attack. He has
+also done his best to keep his striker stop rolling along with Kei Kamara and Georgios Koutsias alternating up front and MLS veteran Kacper Przybylko coming off
+the bench.
+
+Injuries to defenders Mauricio Pineda and Miguel Navarro, plus striker Victor Bezerra, will keep them out for today's match, while Chris Mueller is done for the
+year with a hip problem.
+</item 31>
+
+<item 32>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+¡El Comandante! Ante la ausencia de Di María y de confirmarse la presencia de Messi en el banco de los suplentes, Nicolás Otamendi sería el capitán de
+#Argentina 🇦🇷 en el duelo de esta noche contra #Paraguay 🇵🇾. pic.twitter.com/eMwOg5agu2 — ESPN Fútbol Argentina (@ESPNFutbolArg) October 12, 2023
+
+1 hour 45 mins to kick: There was a rumor that Lionel Messi could be headed to Barcelona on loan to cover the gap left by Inter Miami's failure to qualify for
+the MLS playoffs, but the rumor never made much sense, and it's been squashed on numerous fronts.
+
+Inter Miami coach Gerardo Martino made light of the rumor in his post-match press conference over the weekend after defeat to FC Cincinnati left them
+mathematically eliminated, saying that he'd only go to Spain "for fun."
+</item 32>
+
+<item 33>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+Inter Miami no va a viajar a China. La gira que incluía dos amistosos se cae por temas burocráticos/comerciales. pic.twitter.com/8I0jBxg4Zz — Gastón Edul
+(@gastonedul) October 30, 2023
+
+Instead, Inter Miami met NYCFC in a hastily arranged friendly at DRV PNK Stadium on November 10 to honor Lionel Messi's most recent Ballon d'Or. The friendly is
+being dubbed the "Noche d'Or" or "Night of Gold" as a nod to his latest achievement.
+</item 33>
+
+<item 34>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+@fccincinnati goalkeeper @roman_413 had nothing but praise for @LuchoAcosta94 and Pat Noonan 🟠🔵 pic.twitter.com/Xyp2ozr7n5 — CBS Sports Golazo ⚽️
+(@CBSSportsGolazo) October 3, 2023
+
+1 hour 15 mins to kick: Lionel Messi was nominated for not only MLS Newcomer of the Year for the 2023 season, but also 2023 MLS MVP.
+
+Laughable doesn't even begin to describe that blatant PR move, considering that most of the damage Messi has done for Inter Miami has come in Cup competitions.
+He has one goal and two assists in 247 minutes of play in actual MLS competition. Lionel Messi has been fun, but let's hope the league doesn't make a mockery of
+itself by actually giving Messi either honor.
+</item 34>
+
+<item 35>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+HALFTIME: Inter Miami 0-0 FC Cincinnati
+
+Needing victory in this match to ensure they remain in the MLS playoff picture, Inter Miami completely dominated the confirmed 2023 regular season champs but
+somehow did not manage to capitalize on their overwhelming pressure. Inter Miami were so unlucky not to cash in on multiple occasions, hitting the woodwork an
+insane three times, all in the first 30 minutes. Lionel Messi may yet have a job to do tonight, currently available off the bench.
+
+FC Cincinnati had one really good look that they missed as well but otherwise were on their heels the entire 45 minutes. Head coach Pat Noonan tells the
+broadcast he feels FC Cincinnati had "a lack of courage on the ball" that half, "as bad as its been all year."
+
+Elsewhere, Inter Miami will be nervous about other results from around the league.
+</item 35>
+
+<item 36>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+65th min: Chance, FC Cincinnati! Inter Miami have hit the post three times, but now it's FC Cincinnati who have struck the woodwork! Brandon Vazquez gets his
+head to a corner but it comes off the post.
+
+64th min: Inter Miami have to remain wary of the vicious FC Cincinnati counter-attack, and here a lovely Luciano Acosta switch laterally across the top of the
+penalty area finds Alvaro Barreal in space, but his hit is blocked.
+
+Pat Noonan makes his second change of the match, bringing Yuya Kubo on for Junior Moreno in midfield.
+
+58th min: Lionel Messi's influence has been immediate, and he earns a dangerous free-kick just outside the penalty area, well within his range. Messi appears to
+be struggling to get good footing on this field, but it's the shirt pull from Miazga which brings him down.
+
+Messi takes it but puts it way over the crossbar. A bit rusty?
+</item 36>
+
+<item 37>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Inter Miami were in simply too big of a hole in the MLS playoff race, one which even Lionel Messi couldn’t drag them out of.
+
+With two matches remaining in the season, Inter Miami have been officially eliminated from the MLS playoff race, with Supporters’ Shield winners FC Cincinnati
+dealing the deathblow with a 1-0 victory at DRV PNK Stadium.
+
+The match had every hallmark of what made Inter Miami a flawed side when Lionel Messi arrived. Inter Miami utterly dominated the first half, but could not find
+the breakthrough, instead hitting the woodwork three separate times in the opening half-hour and four overall in the match. On the other end, Drake Callender
+was nothing short of sensational in goal, but even his heroics were just not enough to stymie the electric counter-attack that FC Cincinnati possess.
+</item 37>
+
+<item 38>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+20, 2024 TBD (rumored) Inter Miami vs. River Plate AT&T Stadium
+
+(Dallas, TX, USA)
+
+Messi vs Ronaldo set as Inter Miami schedule Al Nassr friendly
+
+Lionel Messi and Cristiano Ronaldo will meet in a club friendly between Inter Miami and Al Nassr in Riyadh, Saudi Arabia on Thursday, February 1 with kickoff at
+1 p.m. ET (9 p.m. local time in Saudi Arabia).
+
+The match comes as the second of a double-header for Inter Miami in Saudi Arabia as part of the annual Riyadh Season Cup showcase. Three days prior, Inter Miami
+will also meet fellow Saudi club Al Hilal.
+
+Messi and Ronaldo have squared off 35 times across their careers, with Messi winning 16 times to Ronaldo's 10, plus nine draws. Messi claimed the most recent
+face-off as PSG won their friendly matchup 5-4 in Riyadh last time around.
+</item 38>
+
+<item 39>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Elsewhere, Inter Miami will be nervous about other results from around the league. Most painful is the 2-0 lead for CF Montreal over Portland, which would be a
+big blow to Inter Miami, meaning they would be eliminated with anything less than a win tonight.
+
+Inter Miami vs FC Cincinnati: First Half
+
+43rd min: There's a goal mouth scrap that sees Roman Celentano scrambling wildly on the doorstep as the ball bounces around awkwardly, but nobody can get on the
+end of it for Inter Miami.
+
+38th min: While Inter Miami haven't generated any clear-cut chances since the Celentano save on the half-hour mark, they've remained in complete control of this
+match. The broadcast shows Lionel Messi on the bench, and he looks very antsy, like he wants to enter the game badly.
+
+Some Inter Miami players are called off the touchline to warm up, but Messi isn't one of them.
+
+30th min: Chance, Inter Miami!
+</item 39>
+
+<item 40>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Officially the fourth time they've hit the woodwork, although this one wasn't quite as dramatic.
+
+89th min: Lionel Messi draws a very contentious foul by Yuya Kubo whose tackle from behind looked clean but draws a whistle regardless. Messi's delivery from a
+deep central position is floated in and headed out by Matt Miazga for a corner.
+
+The ensuing set-piece is played short and eventually comes to Messi whose deep delivery is seeking the far corner but nervously tapped wide by Roman Celentano.
+Eventually, a foul by Messi ends the chance and leaves Santiago Arias rolling around on the ground.
+
+88th min: Two more changes for FC Cincinnati as Dominique Badji enters for Luciano Acosta, whose night is done a few minutes early despite trailing by a goal in
+the Golden Boot race. Malik Pinto also comes on for Brandon Vazquez.
+</item 40>
+
+<item 41>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+With the 2023 MLS season closing earlier than expected for Inter Miami, eliminated from playoff contention, Lionel Messi will have significant time off before
+the new campaign begins in February 2024.
+
+With every new season come preseason friendlies, as the players hope to ramp up their match fitness prior to the start of the coming campaign. Players need game
+time to build their bodies to the point where they can play full 90-minute matches, especially when they are contesting multiple games a week.
+
+Inter Miami's preseason will be watched with extra observation as Messi draws considerable attention wherever he goes, home or abroad. The Argentina star had
+looked like being part of a tour of China, although that's no longer the case, while the prospect of facing a familiar side from home is a tantalising one.
+
+The Sporting News has compiled all the known preseason matches either confirmed or reported prior to the start of Inter Miami's 2024 season.
+</item 41>
+
+<item 42>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+He acknowledges that they've had their chances, but haven't taken them yet.
+
+HALFTIME: Chicago Fire 0-0 Inter Miami
+
+No score at the break. The Chicago Fire had the better chances, but neither side really took a firm hold of the match for an extended period of time.
+
+"We have to play further forward, we played side to side too much," Inter Miami head coach Gerardo Martino told the Apple TV+ broadcast as he headed into the
+locker room. There's a lot riding on these next 45 minutes.
+
+HT: Fairly dull first half for Miami.
+
+
+
+Not too much going forward, too sideways.
+
+
+
+Desperately need some combination play in the final third.
+
+
+
+Expect some attacking changes in the second half.
+</item 42>
+
+<item 43>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+He's pressured while making a one-on-one run, and the delivery from the right flashes wide of the near post as he slides to meet it.
+
+Both teams will believe they should be in front!
+
+9' | Toto creates a chance early off the crossbar 😳🤯#MIAvCIN | 0-0 pic.twitter.com/aogoOmlhCU — Inter Miami CF (@InterMiamiCF) October 7, 2023
+
+8th min: Inter Miami have held the attacking possession in the opening stage of the match, looking to break down FC Cincinnati early, but Matt Miazga holds firm
+before he's fouled as Josef Martinez undercuts him in the air.
+
+3rd min: An early free-kick for Inter Miami from about 35 yards away shaded way right, and with Lionel Messi on the bench, Noah Allen stands over the ball.
+</item 43>
+
+<item 44>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+Xherdan Shaqiri: “For me it’s clear, Messi and Ronaldo are the best players in the world… these guys are among the best athletes in the history of sport, along
+with Michael Jordan and Tom Brady.”#cf97 #vamosfire pic.twitter.com/puTvUqC0a1 — Alex Calabrese (@amcalabrese12) October 2, 2023
+
+1 hour 45 mins to kick: The status of Lionel Messi is unclear, but Chicago is still feeling Messi fever!
+
+Hi from Chicago! Not sure if Messi is here (my hunch is no), but I am here to cover the Inter Miami v Fire game, and the Messi shirt 👚 ⚽️ vendors are here, too!
+</item 44>
+
+<item 45>
+Inter Miami friendly matches for 2024 preseason: Lionel Messi to play Newell's Old Boys, China tour cancelled (Sporting News, 2023-11-30T21:41:00+00:00)
+Spain's World Cup-winning midfielder spent five years with Vissel Kobe after spending his entire club career until that point with Barcelona, where he played
+alongside Messi, Sergio Busquets and Jordi Alba during an era of astonishing success in Catalonia.
+
+"Vissel Kobe is a powerhouse club in Asia coming off of a historic season after winning the J1 League, so we're thrilled about this opportunity to sharpen our
+team in a match like this one. We continue to look for the best ways to prepare for 2024, and feel confident this match and this tour will help us do that,"
+said Chief Soccer Officer and Sporting Director Chris Henderson.
+
+Boyhood Messi club to face Inter Miami in USA
+
+After their Asia trip, Inter Miami will host a friendly at DRV PNK Stadium against Newell's Old Boys.
+
+The team from Argentina hold a special place in the heart of Messi and Martino.
+</item 45>
+
+<item 46>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+Still, Ryan's follow-up indicated that his error quote was doubled in price over the actual cost, which still leaves his seats increasing from around $6,800 to
+a whopping $15,300 for two seats, an increase of 125% year-on-year.
+</item 46>
+
+<item 47>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+A draw or a loss, however, would see them vulnerable to outside results.
+
+If Inter Miami do not win, two of the following three possible outcomes would trigger their elimination from playoff contention: CF Montreal beats Portland
+Timbers; NYCFC wins versus D.C. United; and Chicago Fire picks up points against Charlotte FC.
+
+Those are all conceivable results, and therefore Inter Miami will wish to keep it in their own hands just a little longer. They'll eventually need other results
+to go their way to climb the table, but for now, their survival is solely up to them.
+
+45 mins to kickoff: Lineups are in, and Lionel Messi is on the bench for Inter Miami.
+
+For FC Cincinnati, Luciano Acosta starts despite the match being meaningless from a tangible standpoint, understandable considering he is chasing the Golden
+Boot. Ian Murphy comes in for Yerson Mosquera at the back, while Aaron Boupendza is rotated out up front with Brandon Vazquez and Sergio Santos starting
+together up front.
+</item 47>
+
+<item 48>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+47th min: Luciano Acosta is fouled on the edge of the attacking third, and it gives FC Cincinnati a free-kick early in the second half. Alvaro Barreal's
+delivery is floated way high in the air and falls to the far post, but after a nervy moment it's cleared.
+
+Lionel Messi begins to warm up on the touchline, and he may be brought on soon to help Inter Miami save their postseason chances.
+
+Kickoff: The second half is underway, and there are no changes from Inter Miami, which means Lionel Messi remains on the bench for now. With their playoff hopes
+now squarely on the line, it's a huge call from Gerardo Martino not to bring Messi on now, and it could speak to how fit he truly is.
+
+FC Cincinnati make one change, as Sergio Santos comes off, replaced by Aaron Boupendza up front.
+</item 48>
+
+<item 49>
+Inter Miami season tickets: Lionel Messi demand causes 2024 prices soar to most expensive in world (Sporting News, 2023-10-04T22:12:56+00:00)
+Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all
+time.
+
+Along with that skyrocketing attention comes a leap in prices, and sadly the club seems to be passing that cost on to the supporters.
+
+In 2024, Inter Miami will sport some of the world's most expensive tickets, rivaling the prices of Champions League giants such as Barcelona, Arsenal, and other
+massive clubs around Europe, while dwarfing other MLS ticket packages.
+
+While Fox Sports reported the club has an extensive waiting list for 2024 season tickets, the massive increase in price could push out many of the team's most
+dedicated supporters who have been with the team since its inception in 2020, causing massive turnover in the fanbase.
+
+A reminder that for most clubs, season-ticket packages include only home league matches, and while members usually get first access to purchase tickets for
+knockout competitions, those all come at an additional cost.
+</item 49>
+
+<item 50>
+Chicago Fire vs Inter Miami live score, result, updates, highlights from Lionel Messi in MLS match (Sporting News, 2023-10-04T23:33:00+00:00)
+“As a player, you want these kinds of final games and to play for something. We put ourselves in this position, and we have a chance to do it, so now we have to
+perform.”
+
+Also, Shaqiri confirmed he's Team Messi over Team Ronaldo.
+
+Q: Messi or Ronaldo?
+
+
+
+🗣️Xherdan Shaqiri (Chicago Fire): “I’m always a big Messi admirer, if I have to choose now I will go with Messi. He won the WC which was the only thing he
+missed. So for sure Messi.”#Messi #InterMiamiCF pic.twitter.com/Tv4rVXddrU — Inter Miami FC Hub (@Intermiamicfhub) October 3, 2023
+
+35 mins to kickoff: Finally lineups have been released, and Lionel Messi is not part of the Inter Miami squad. Otherwise, it's a regular starting XI for Gerardo
+Martino, with Josef Martinez up front as Leonardo Campana is out with a knock.
+</item 50>
+=== END ITEM id=0da9c483f731e555 ===

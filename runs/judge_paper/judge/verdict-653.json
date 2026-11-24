@@ -1,0 +1,20 @@
+[
+{"id": "b1c9d45fc337a318", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 37, "quote": "After departing Washington in 2012, Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 37, "quote": "After departing Washington in 2012, Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 37, "quote": "After departing Washington in 2012, Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others"}]}
+]},
+{"id": "0bfe11f7dd91bab3", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 8, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 8, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 8, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 8, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 8, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Beware of Terry McLaurin (vs. Dolphins)"}, {"item": 8, "quote": "Dolphins), Puka Nacua and Tutu Atwell (vs. Browns), Drake London (@ Jets), and Tyler Lockett and Jaxon Smith-Njigba (@ Cowboys) this week."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

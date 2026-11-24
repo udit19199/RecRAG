@@ -1,0 +1,28 @@
+[
+{"id": "f8a548627697ae9f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 17, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 17, "quote": "including the distribution of apps to Android users"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 17, "quote": "the market for payment processing solutions for content inside Android apps"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "6cced4134224b435", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 33, "quote": "“All of that was built on lies,” Rehn said."}, {"item": 33, "quote": "In his opening statement, Rehn dodged explaining cryptocurrency to the jury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 33, "quote": "“All of that was built on lies,” Rehn said."}, {"item": 33, "quote": "In his opening statement, Rehn dodged explaining cryptocurrency to the jury."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "eaf4c2777e590f8c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+]}
+]

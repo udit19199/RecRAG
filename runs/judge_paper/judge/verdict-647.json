@@ -1,0 +1,39 @@
+[
+  {
+    "id": "77231c821100d759",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 29, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 29, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 29, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 29, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 29, "quote": "Lee was hampered by injury in 2023 but slashed .349/.421/.575 in 2022 with 36 doubles, 10 triples and a career-best 23 home runs."}]},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 33, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+      {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 33, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]},
+      {"fact": "1.2", "status": "contradicted", "evidence": [{"item": 33, "quote": "Jadeja has been bowling some beautiful spells in this tournament for India, especially in the middle overs. He picked up 16 wickets, conceding just 398 at an economy rate of 4.25 in 10 matches."}]}
+    ]
+  },
+  {
+    "id": "b79452d3a9f66e25",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 22, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 22, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 30, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 30, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 30, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 30, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+    ]
+  },
+  {
+    "id": "6e1eb9e636234fd2",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "It has been expected since before he hit free agency that Ohtani would set the record for the largest fully guaranteed contract in North American sports"}]},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 30, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 30, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 30, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 30, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 30, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]}
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+{"id": "bb06cba13f0831f9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 16, "quote": "Over the past 18 months, the Fed’s current chair, Jerome Powell, has been following a very similar game plan to Volcker’s, raising interest rates aggressively to quash inflation."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "6e5f321c1bd78570", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 35, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 35, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 35, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "much of the “collective intelligence” that Google tapped into was content “misappropriated from Publishers,” the complaint alleges"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from publishers’ websites"}]},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 27, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press"}]}
+]},
+{"id": "0da9c483f731e555", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "2 hours to kickoff"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+]}
+]

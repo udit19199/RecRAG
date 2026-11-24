@@ -1,0 +1,28 @@
+[
+  {"id": "ac9c18e20249c689", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+  ]},
+  {"id": "99295f25c61e5a59", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "When FTX took a loss in the hundreds of million dollars because a trader had exploited its system, Wang moved that loss onto Alameda’s balance sheet."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}, {"item": 18, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 13, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 13, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 13, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+  ]},
+  {"id": "4de63b84704a7701", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]}
+  ]},
+  {"id": "b0c4b12383240999", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 33, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+  ]}
+]

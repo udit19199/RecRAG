@@ -1,0 +1,211 @@
+[
+  {
+    "id": "63f925e9da215204",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 29,
+            "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 29,
+            "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "That answer ultimately lies with the jury"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "which was selected on Wednesday morning before lawyers for the government"
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "which was selected on Wednesday morning before lawyers for the government"
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."
+          }
+        ]
+      },
+      {
+        "fact": "1.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 45,
+            "quote": "Sam acted in good faith and took reasonable business measures"
+          },
+          {
+            "item": 45,
+            "quote": "Cohen tried to make the common white-collar defense argument"
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "e21d69d2b6b7e2e1",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "is reportedly preparing for a ground invasion."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "519fe0f27df0d4e0",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Not only has he produced at a high level, but his play has been instrumental in the Vikings turning things around after a 1-4 start."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Not only has he produced at a high level, but his play has been instrumental in the Vikings turning things around after a 1-4 start."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 6,
+            "quote": "Not only has he produced at a high level, but his play has been instrumental in the Vikings turning things around after a 1-4 start."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 33,
+            "quote": "But they’ve also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won’t be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 33,
+            "quote": "But they’ve also seen the fourth-lowest ADOT from tight ends (5.0 yards per target), almost as if teams know they won’t be able to succeed on downfield shots against them (zero completions of 20-plus yards from tight ends)."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 33,
+            "quote": "almost as if teams know they won’t be able to succeed on downfield shots against them"
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 33,
+            "quote": "(zero completions of 20-plus yards from tight ends)"
+          }
+        ]
+      }
+    ]
+  }
+]

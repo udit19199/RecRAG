@@ -1,0 +1,1735 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=43e2843df65217db ===
+Gold sentences and facts:
+Sentence 0: Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount.
+  Fact 0.0: Hope has been rising on Wall Street recently.
+  Fact 0.1: The hope on Wall Street is that the US economy is slowing from its recent hot pace.
+  Fact 0.2: The hope on Wall Street is that the US economy is slowing by just the right amount.
+Sentence 1: A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns.
+  Fact 1.0: A shutdown would drag on the US economy.
+  Fact 1.1: A shutdown would raise the risk of a recession.
+  Fact 1.2: Financial markets have held up relatively well through past shutdowns.
+
+Retrieved items:
+<item 1>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives. The unprecedented move to remove a speaker from the
+position likely doesn’t change much in the short term, with funding for the US government set until November 17.
+
+“That said, a leadership vacuum in the House raises the odds of a government shutdown when the current funding extension expires,” according to economists at
+Goldman Sachs. A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past
+shutdowns. On Wall Street, big tech stocks helped to support the market after leading it lower a day earlier. They tend to move more sharply with expectations
+for rates because high-growth stocks are seen as some of the biggest victims of high yields. In markets abroad, stock indexes were mixed across much of Europe.
+</item 1>
+
+<item 2>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+Loading The big jump for the 10-year Treasury yield since the summer has pulled mortgage rates to their highest levels since the turn of the millennium, and
+such moves could slow the economy without requiring more Fed hikes. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it
+comes to what it will do on November 1, when it announces its next move on interest rates, said Seema Shah, chief global strategist at Principal Asset
+Management. She called the data “reassuringly uneventful”.
+
+“The question around whether or not there will be one more interest rate hike is yet to be answered,” she said. Rising crude oil prices have put extra pressure
+on inflation since the summer, and they were volatile again on Thursday. After jumping early in the day, a barrel of benchmark US crude slipped US58¢ to settle
+at $US82.91. Brent crude, the international standard, rose US18¢ to $US86 a barrel.
+</item 2>
+
+<item 3>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+Too much strength would give inflation more fuel, but too little would mean a recession.
+
+With inflation down from its peak two summers ago, Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest
+rates and could soon turn to cutting them. That could help the economy avoid a recession and give a boost to all kinds of investment prices. Investors have been
+looking for a slowdown in the job market in particular. The hope is that it can cool more through employers cutting back on open positions than on employers
+laying off workers. Tuesday’s report showed that employers advertised just 8.7 million jobs on the last day of October, down by 617,000 from a month earlier. In
+the bond market, US Treasury yields continued to sag further from the heights they reached during late October. The yield on the 10-year Treasury fell to 4.18
+per cent from 4.26 per cent late on Monday, offering more breathing space for stocks and other markets.
+</item 3>
+
+<item 4>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+At Expedia Group, another stronger-than-forecast report sent its stock nearly 22 per cent higher for its best week since the market was surging out of the
+coronavirus crash in early 2020. But it was interest rates, yields and inflation that were at the centre of all the wild movements for financial markets around
+the world.
+
+Before last week, stocks had been struggling under the weight of rapidly rising Treasury yields. Those yields were in turn catching up to the Fed’s main
+interest rate, which is above 5.25 per cent and at its highest level since 2001. Loading Higher rates and yields slow the economy, hurt prices for investments
+and raise the risk of something breaking within the financial system, such as the three high-profile US bank failures that rattled financial markets during the
+spring. “It was really fear that the Fed was going to go too far,” said Katie Nixon, chief investment officer for Northern Trust Wealth Management. The Fed put
+such pressure on the economy intentionally, hoping to starve inflation of its fuel.
+</item 4>
+
+<item 5>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The Fed put such pressure on the economy intentionally, hoping to starve inflation of its fuel. It wants the job market to cool, particularly pay raises going
+to workers. The Fed fears too-strong pay gains could create a vicious cycle that keeps inflation high.
+
+Analysts said Friday’s jobs report offered encouraging signals for the Fed, with average hourly earnings rising less in October from September than expected,
+though it doesn’t mean the job is done. Treasury yields in the bond market tumbled immediately after the jobs report, releasing more of the pressure that had
+built up on Wall Street. The yield on the 10-year Treasury eased to 4.52 per cent from 4.67 per cent late Thursday and from more than five per cent last week,
+when it hit its highest level since 2007. In the US, traders are moving up expectations for when the first cut to interest rates by the Fed could happen,
+potentially by the summer, according to data from CME Group. Such cuts can act like steroids for financial markets.
+</item 5>
+
+<item 6>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+The stock market has largely been taking its cue from the bond market recently, and weak results announced in the afternoon for an auction of 30-year Treasury
+bonds sent yields of all kinds higher. Higher yields can knock down prices for stocks and slow the economy by making borrowing more expensive. Yields had
+already been on the rise in the morning after a report that showed inflation at the consumer level was a touch higher last month than economists expected. That
+raises worries about the Federal Reserve keeping its main interest rate high for a long time, as it tries to undercut inflation by knocking down investment
+prices and slowing the economy. Nothing in Thursday’s inflation report should sway the Fed one way or the other when it comes to what it will do on November 1.
+The inflation report, though, also had some encouraging nuggets for financial markets underneath the surface. After ignoring prices for food and fuel, which Fed
+officials see as a better predictor of where inflation is heading, prices that consumers had to pay last month were in line with expectations.
+</item 6>
+
+<item 7>
+ASX rises after Wall Street gains on rate optimism; Oil drops (The Sydney Morning Herald, 2023-10-10T23:50:33+00:00)
+Energy was among the laggards after its more than 3 per cent rally on Monday. A measure of US-listed Chinese shares added 3 per cent amid reports that the Asian
+nation is considering new economic stimulus. “Policymakers have begun to acknowledge a lesser need for further policy action given financial conditions have
+tightened considerably after the recent surge in Treasury yields,” said Ben Jeffery at BMO Capital Markets. “This acknowledgment may have reduced angst around
+the need for additional rate increases.” Loading Investors will be watching for any hints in the September Fed meeting minutes due on Wednesday that would
+suggest the Fed may not follow through with the last rise indicated in its economic projections, according to Anna Wong at Bloomberg Economics. Two critical
+coming indicators for the US economy — Thursday’s consumer price index and Friday’s University of Michigan consumer-sentiment survey — may give a more
+definitive read, she noted.
+</item 7>
+
+<item 8>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+The National Australia Bank has forecast another rate hike to 4.35 per cent in November. Elsewhere, Wall Street closed out its worst month and quarter of the
+year with more losses on Friday. The S&P 500 slipped 0.3 per cent and the majority of stocks within the index sank. The Dow Jones fell 0.5 per cent and the
+Nasdaq composite edged 0.1 per cent higher. The Australian sharemarket is set to retreat, with futures pointing to a fall of 38 points, or 0.5 per cent, at the
+open. Solid gains for stocks early on faded as pressure built from within the bond market. After easing earlier in the day on encouraging signals about
+inflation, Treasury yields got back to rising as the day progressed. The yield on the 10-year Treasury yield returned to 4.58 per cent, where it was late
+Thursday, after dipping to 4.52 per cent. It’s again near its highest level since 2007.
+</item 8>
+
+<item 9>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+Meanwhile, healthcare heavyweight CSL shed 1.4 per cent, weighing down the healthcare sector and insurance companies IAG (down 2.6 per cent) and Suncorp (down 2
+per cent) gave back some of their gains from Tuesday. Gold miners Newcrest (down 2.1 per cent) and Evolution (down 3.5 per cent) were also among the biggest
+large-cap decliners after the spot gold price dropped 0.9 per cent overnight. Information technology (down 1.1 per cent) was the weakest sector on the local
+bourse with WiseTech losing 1.4 per cent. The lowdown
+
+Novus Capital senior client adviser Gary Glover said the Australian sharemarket was surprisingly resilient following a negative lead from Wall Street and the
+latest inflation data, with markets starting to wake up to the fact that interest rates could stay higher for longer. “Considering the damage overnight in the
+US, Australian markets held on pretty well,” he said.
+</item 9>
+
+<item 10>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That in turn could convince the Federal Reserve to take it easier on interest rates. After already raising its main interest rate to the highest level since
+2001, the Fed has indicated it may keep its overnight rate higher next year than it had earlier expected. Treasury yields have correspondingly snapped higher as
+traders accept a new normal for markets of high rates for longer. The Fed is paying particular attention to the job market because too much strength there could
+drive wages for workers much higher, which it fears could keep inflation well above its target of 2 per cent.
+
+Oil prices slumped overnight. Credit: AP Wednesday’s report from ADP suggested private employers added 89,000 jobs last month, a much sharper slowdown in hiring
+than the 140,000 that economists expected. The report doesn’t have a perfect track record in predicting what the more comprehensive jobs report from the US
+government will say. That will arrive on Friday.
+</item 10>
+
+<item 11>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+They also continued to decelerate from earlier months. A second economic report from the morning likewise offered both encouragement and caution for financial
+markets. It said slightly fewer US workers than expected applied for unemployment benefits last week. On one hand, it indicates a job market with few lay-offs,
+which means strength for the overall economy. But it could also be adding fuel to keep upward pressure on inflation.
+
+After the reports, the 10-year Treasury yield rose to 4.7 per cent from 4.56 per cent late Wednesday. The two-year Treasury yield, which more closely tracks
+expectations for the Fed, climbed to 5.06 per cent from 4.99 per cent. Yields are still down slightly for the week so far. After jumping last week to their
+highest levels in more than a decade, yields regressed following speeches that investors saw as hints that the Fed may not raise its main overnight interest
+rate further.
+</item 11>
+
+<item 12>
+ASX set for bright start despite Wall Street slip; $A drops (The Sydney Morning Herald, 2023-12-05T21:51:55+00:00)
+This is what the market has priced in today.”
+
+The local gains came after most stocks slipped on Wall Street overnight, although the US market stayed near its highest level in 20 months following a mixed set
+of reports that kept alive questions about whether the world’s largest economy can pull off a perfect landing where it kills high inflation, but avoids a
+recession. The S&P 500 edged down by 0.1 per cent for its first back-to-back loss since October. The Dow Jones slipped 0.2 per cent and the Nasdaq composite
+rose 0.3 per cent. Stocks were down more sharply in Asia amid worries about the health of China’s economy, the world’s second largest. US stocks and Treasury
+yields wavered after reports showed that US employers advertised far fewer jobs at the end of October than expected, while growth for services businesses
+accelerated more last month than expected. Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the
+right amount.
+</item 12>
+
+<item 13>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+That growing understanding has sent yields in the bond market to their highest levels in more than a decade, which in turn has undercut prices for stocks and
+other investments. Treasury yields rose again on Tuesday following a mixed batch of reports on the economy. The yield on the 10-year Treasury edged up to 4.55
+per cent from 4.54 per cent late on Monday and is near its highest level since 2007. It’s up sharply from about 3.5 per cent in May and from 0.5 per cent about
+three years ago. One economic report on Tuesday showed confidence among consumers was weaker than economists expected. That’s concerning because strong spending
+by US households has been a bulwark keeping the economy out of a long-predicted recession.
+
+Besides high interest rates, a long list of other worries is also tugging at Wall Street. The most immediate is the threat of another US government shutdown as
+Capitol Hill threatens a stalemate that could shut off federal services across the country.
+</item 13>
+
+<item 14>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+Loading Wall Street has dealt with such shutdowns in the past, and stocks have historically been turbulent in the run-up to them, according to Lori Calvasina,
+strategist at RBC Capital Markets. After looking at the seven shutdowns that lasted 10 days or more since the 1970s, she found the S&P 500 dropped an average of
+roughly 10 per cent in the three months heading into them. But stocks managed to hold up rather well during the shutdowns, falling an average of just 0.3 per
+cent, before rebounding meaningfully afterward. Wall Street is also contending with higher oil prices, shaky economies around the world, a strike by US
+autoworkers that could put more upward pressure on inflation and a resumption of US student-loan repayments that could dent spending by households.
+
+On Wall Street, the vast majority of stocks fell under such pressures, including 90 per cent of those within the S&P 500.
+</item 14>
+
+<item 15>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+Such cuts can act like steroids for financial markets. For investors around the world, the “Fed matters more than other central banks,” and weak US data is “the
+only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report. A separate report on Friday said growth
+in US services industries, such as finance and construction, was weaker last month than economists expected. The report from the Institute for Supply Management
+also suggested a slight easing in prices.
+
+Excitement about a potentially easier Fed was more than enough to offset a fall for Apple, which is Wall Street’s most influential stock. The most valuable US
+stock fell 0.5 per cent despite reporting stronger profit for the latest quarter than analysts expected. Analysts said investors were likely disappointed with
+Apple’s forecast for revenue for the last three months of 2023.
+</item 15>
+
+<item 16>
+ASX to open lower; Wall Street falls as the clamp tightens from rising bond yields (The Age, 2023-10-12T20:00:32+00:00)
+The lowdown
+
+Hotter-than-expected inflation data and the prospect of more rate rises in the world’s biggest economy weighed on sentiment in the Australian sharemarket as
+interest-rate sensitive sectors such as IT and consumer discretionary dragged the index lower on Friday. While commodity prices boosted iron ore players,
+company specific news was behind some of the biggest swings. Resmed extended its losses after brokers at RBC downgraded the stock and gold miner Newcrest
+stepped up after investors approved its merger with US gold mining giant Newmont. US stocks slipped on Thursday as the clamps tighten on Wall Street from rising
+yields in the bond market. The S&P 500 was 0.7 per cent lower in afternoon trading and on track to break a four-day winning streak, its longest since August.
+The Dow Jones Industrial Average was down 204 points, or 0.6 per cent, as of 3pm Eastern time, and the Nasdaq composite was 0.8 per cent lower.
+</item 16>
+
+<item 17>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+It’s again near its highest level since 2007.
+
+Loading Treasury bonds are seen as some of the safest investments possible, and when they pay higher yields, investors are less likely to pay high prices for
+stocks and other riskier investments. That’s a big reason why the S&P 500 dropped 4.9 per cent in September to drag what had been a big gain for the year down
+to 11.7 per cent. Treasury yields have been climbing sharply as Wall Street accepts a new normal where the Federal Reserve is likely to keep interest rates high
+for longer. The Fed is trying to push still-high inflation down to its target, and its main tool of high interest rates does that by trying to slow the economy
+and hurting prices for investments. The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut
+interest rates next year by less than it earlier expected.
+</item 17>
+
+<item 18>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That will arrive on Friday. But “if Friday’s report also shows the labour market is cooling, stock investors may worry a little less about indefinitely higher
+interest rates,” said Mike Loewengart, head of model portfolio construction at Morgan Stanley Global Investment Office. A second report on the economy said
+growth in US services industries slowed in September by a touch more than economists expected.
+
+It also offered some hints of sticky pressure on inflation, with prices paid by services companies rising last month at a similar rate as in August. Oil prices
+tumbled on Wednesday to take some heat off inflation. Benchmark US crude fell $US5.01 to settle at $US84.22 per barrel for its worst drop in just over a year.
+It’s been pulling back since, topping $US93 last week. Brent crude, the international standard, lost $US5.11 to $US85.81. Loading Prices for crude had been
+generally charging higher from $US70 during the summer, following announcements of cuts to production by some oil-producing countries.
+</item 18>
+
+<item 19>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+Friday’s economic data shows that not only was inflation a touch cooler than expected in August, so was growth in spending by US consumers. That can be a
+positive for inflation because it means not as many dollars are pouring into purchases. That in turn could give companies less encouragement to try to raise
+prices further. But it may also dent what’s been a big driver keeping the US economy out of a recession.
+
+“It came to a boil during a hot summer, and the temperature is really starting to come down,” said Brian Jacobsen, chief economist at Annex Wealth Management,
+of spending growth by US consumers. “Higher energy prices, student loan debt repayments and real disposable incomes that have been on a declining trajectory
+since June doesn’t bode well.” Oil prices have jumped to their highest level in more than a year, which is pressuring the economy by raising fuel costs for
+everyone. A barrel of US crude sank 92¢ Friday to settle at $US90.79, but it’s still up sharply from $US70 in June.
+</item 19>
+
+<item 20>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+“Considering the damage overnight in the US, Australian markets held on pretty well,” he said. “I thought it would be a bigger down day across the board.”
+Glover said the market was volatile but quite range-bound, similar to previous periods of high inflation in the 1940s and 1970s. Elsewhere, Wall Street’s ugly
+September got even worse on Tuesday, as a sharp drop for stocks brought them back to where they were in June. The S&P 500 tumbled 1.5 per cent for its fifth
+loss in the last six days. The Dow Jones dropped 1.1 per cent, and the Nasdaq composite lost 1.6 per cent.
+
+Loading September has brought a loss of 5.2 per cent so far for the S&P 500, putting it on track to be the worst month of the year by far, as the realisation
+sets in that the Federal Reserve will indeed keep interest rates high for a long time.
+</item 20>
+=== END ITEM id=43e2843df65217db ===
+
+=== ITEM id=8c7eccbd1880a593 ===
+Gold sentences and facts:
+Sentence 0: While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location.
+  Fact 0.0: Stores' usual hours of operation are from 6am to 9pm.
+  Fact 0.1: Stores' opening and closing times on the holiday vary based on location.
+Sentence 1: Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+  Fact 1.0: Thanksgiving is celebrated every year.
+  Fact 1.1: Thanksgiving is celebrated on the fourth Thursday of the month.
+  Fact 1.2: Thanksgiving falls on 23 November this year.
+
+Retrieved items:
+<item 1>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+It also has a decent 1080p webcam. The chassis isn't especially light at 3.6 pounds, and we found the battery to last roughly seven hours in testing, which is
+just OK. But for less than $400, this is a strong value for those who just want an affordable notebook for the basics.
+
+FAQs
+
+When is Black Friday 2023?
+
+Black Friday 2023 lands on November 24 this year, with Cyber Monday 2023 following up a few days later on November 27. However, the early deals have already
+begun. The entire month of November might as well be renamed Holiday Shopping Month as that’s when companies really start to get serious with their discounts.
+
+What day is Black Friday 2023 at Walmart?
+
+Walmart Black Friday deals will begin early this year on November 8. Walmart+ members will get a few hours of early access to Black Friday deals if they shop
+online on November 8, with access for everyone else starting later that day.
+</item 1>
+
+<item 2>
+This horror flick boasts the best opening 13 minutes of a film you’ll see this year (The Age, 2023-11-15T18:30:00+00:00)
+Despite Thanksgiving Day’s heavy baggage (like Australia Day, many in the US have increasingly questioned the holiday’s ties to colonial aggression), the film’s
+key creative breakthrough for Roth and Rendell came from something decidedly more contemporary: watching online “trample videos” from Black Friday shopping
+sales, traditionally held the day after Thanksgiving, that started proliferating on social media around a decade ago with news reports and clips of shoppers in
+a consumerist frenzy. “These Black Friday sales, they were never a thing when I was a kid. But now I know they’re even in Australia, they’re everywhere,” says
+Roth, who saw fertile horror territory in the holiday’s materialistic shift. “The whole idea of Thanksgiving is you’re supposed to be thankful for what you have
+and for your health, but then you just go out and kill your neighbour for a waffle iron.”
+</item 2>
+
+<item 3>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+If you've held out until now to do your shopping, we've compiled a list of over 180 of the best deals from Walmart's Black Friday sale and highlighted our
+favorites from different departments. We'll be updating the list throughout Cyber Monday, so keep checking back.
+
+What are Walmart's Black Friday hours in 2023?
+
+The days of lining up outside big-box stores on Black Friday eve have officially ended, and we're not sorry. Not only is this kinder on Walmart employees, but
+it puts the kibosh on the kinds of doorbuster melees that often took place in the past. (They were a national embarrassment.)
+
+For 2023, Walmart launched its Black Friday deals online first, with the last round of rollbacks going live Wednesday, Nov. 22 at 3 p.m. ET. In-person shoppers
+had to wait until Friday, Nov. 24 at 6 a.m. when Walmart stores officially opened their doors, although hours can differ depending on the location.
+</item 3>
+
+<item 4>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+However, it likely won’t be the last opportunity for you to save. As someone who’s been covering deals for The Verge and Polygon for years, I’m shocked by how
+often I see these low prices, often spoken of as if they’re a flash in the pan, extending through much of December. That said, it’s more likely that price cuts
+on products you want can go by unnoticed unless you’re tracking deals yourself.
+
+Track deals yourself
+
+We love to tell you about great deals. But there’s a limit to the kind of products that we write about, and the ones that we see. If you’re not comfortable
+leaving it up to the chance that we’re going to tell you about price cuts on the products you really want, you have the power to track deals with relative ease.
+
+If you only shop on Amazon, CamelCamelCamel remains one of the best tools for tracking price changes and history for products.
+</item 4>
+
+<item 5>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Black Friday is almost here, but we wouldn't blame you if you've felt like it's been here for a while. What was once a one-day event filled with limited-time
+deals has grown into a month-long event with a plethora of sales to sift through each day. This year, Amazon, Target, Best Buy and Walmart and several other
+retailers kicked off their Black Friday deals early, with some starting as soon as late October. If you're overwhelmed by the amount of discounts showing up in
+your feeds, you're not alone.
+
+
+
+To help, we at Engadget have collected all of the best Black Friday deals you can shop right now, primarily on tech we've tested and reviewed. These are the
+best tech deals you can get this year, on the gadgets we know to be worth your money.
+</item 5>
+
+<item 6>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+“One of the most important aspects of a healthy sleep schedule is waking up around the same time each morning, so try to limit yourself to a one-hour window if
+you need to adjust when you get up in the morning and when you go to sleep at night. One hour sounds like an insignificant amount of time, but it can completely
+throw our circadian rhythm, or more simply known as internal clock, off balance,” he says.
+
+Despite this, a spokesperson for Sleep School, a science-based sleep education and therapy service, told The Independent that it is “impartial” on the extent to
+which the clocks changing impacts sleep, arguing that the important factor is the duration of time asleep and a consistent schedule.
+
+Fewer depressive episodes
+
+A Danish study from 2017 of more than 185,000 people over 15 years found that the transition from summer time to standard time was associated with an 11 per
+cent rise in depressive episodes. Conversely, the switch from winter to summer time was found to have no effect.
+</item 6>
+
+<item 7>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+The best deals of the year were once known to occur during Black Friday and Cyber Monday, which in 2023 take place on Friday, Nov. 24, and Monday, Nov. 27,
+respectively. Not anymore!
+
+In 2023, the best Black Friday deals kicked off on Nov. 17 at Amazon, Best Buy, Walmart, and other retailers. Instead of hosting all of the doorbuster deals on
+one day right after Thanksgiving, retailers see the value in maximizing the amount of time you have to shop for products before Black Friday. And I’ve gotta
+say, it’s quite nice to not feel rushed while shopping.
+
+In addition to presenting you with the best board game deals and price drops on gaming monitors, plus deals on SSDs and microSD cards, there are some bits of
+info and wisdom I’ve organized into sections below that might help you feel more informed as you begin to shop for the holidays.
+</item 7>
+
+<item 8>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+The Society has urged the UK government to adopt British Summer Time on a permanent basis.
+
+“RoSPA is in favour of this proposal, and is calling for the government to adopt British Summer Time (GMT+1) all year,” the society states.
+
+Dark, icy roads can be dangerous (Getty)
+
+“This would mean road users will no longer experience the sudden onset of darkness during their autumn commutes, potentially saving many lives.”
+
+And they’re not alone. The Royal Society for the Prevention of Accidents also supports the call to abolish DST, citing figures from the RAC Foundation which
+state that road traffic collisions increase by 19 per cent in the fortnight after putting the clocks back one hour from British Summer Time, reducing by 11 per
+cent when we put the clocks forward.
+
+Increased immunity
+
+Getting a good night’s sleep during the winter months is essential in protecting us against the seasonal increase in colds and flu. Research shows that even a
+small reduction in sleep has been shown to impact your immune system, however.
+</item 8>
+
+<item 9>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+Live your life healthier and happier with our free Living Well newsletter, packed with wellness advice, practical tips and nutritious recipes Live your life
+healthier and happier with our free weekly Living Well newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to
+be emailed about offers, events and updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Living Well email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Winter is coming, as the clocks go backwards one hour at 2am on Sunday 29 October.
+
+This will give us an extra hour in bed as we prepare for the colder months when the sun sets earlier and days get significantly shorter.
+
+The clocks won’t go forward again until Sunday 31 March 2024.
+
+Even so, the debate as to whether we should continue to comply with Daylight Saving Time (DST) protocols continues to run rife.
+</item 9>
+
+<item 10>
+Cranberries: A Thanksgiving Staple With a Rich History and Unique Biology (Scitechdaily | Science Space And Technology News 2017, 2023-11-21T20:46:17+00:00)
+In recent decades, the cranberry industry has branched out into juices, snacks, and other products in pursuit of year-round markets. But for many people,
+Thanksgiving is still the time when they’re most likely to see cranberries in some form on the menu.
+
+Written by Serina DeSalvio, Ph.D. Candidate in Genetics and Genomics, Texas A&M University.
+
+Adapted from an article originally published in The Conversation.
+</item 10>
+
+<item 11>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Americans started preparing their Thanksgiving menus weeks ago, with the requisite turkeys and stuffing ingredients likely already purchased for the holiday,
+which is celebrated this year on Thursday 23 November.
+
+Apart from the food - arguably the main component of the day - the holiday is a beloved time of year when Americans come together to celebrate what they are
+thankful for, either with family or friends.
+
+In America, Thanksgiving is a cultural holiday that symbolises peace, thankfulness, and the beginning of the holiday season.
+
+What is Thanksgiving and where did it come from?
+</item 11>
+
+<item 12>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+The length of the race can vary, with options ranging from a 5K to a half marathon, so you and your pals can take your pick at what you’d prefer.
+
+For example, in New York City this year, one Turkey Trot is being held at the Flushing Meadows-Corona Park. During the race, which takes place on 25 November,
+participants will be running for the Rolling Thunder organsiation, which is a non-profit “for mainstream athletes who are developmentally disabled or have other
+special needs”.
+
+At-home wine tasting
+
+Typically, a night out at the bars with your friends can get a bit expensive, depending on which spots you go to. In a similar vein, a trip to a winery can rack
+up a hefty bill, and it’s not the most enjoyable activity when it’s cold outside. With that in mind, your Friendsgiving plans could consist of hhosting your own
+at-home wine tasting.
+</item 12>
+
+<item 13>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+Many people are concerned about spiking energy bills this winter (Getty/iStock)
+
+During winter, evening energy demand peaks between 5pm and 7pm, with UK households potentially facing three-hour power cuts this winter, the National Grid has
+warned, due to a shortage of gas.
+
+“We are no longer in an energy crisis in Europe but an energy war and, dependent on weather conditions this winter, it is very likely we may need to start
+rationing energy very seriously to avoid bigger energy issues in December and January when gas reserves start to run low,” adds Professor Foley.
+
+“There is no doubt that by foregoing the DST in winter we would save a lot of energy, reduce our bills and carbon emissions during this energy war, especially
+during a cost of living crisis.”
+
+Fewer road accidents
+
+The Royal Society for the Prevention of Accidents (RoSPA) has called for the abolition of DST, arguing that turning the clocks back increases the risk of road
+accidents, due to more people driving during darker winter months.
+</item 13>
+
+<item 14>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+But tracking these layoffs helps us to understand the impact on innovation, which companies are facing tough pressures and who is available to hire for the
+businesses lucky to be growing right now. Unfortunately, it also serves as a reminder of the deeply human impact of layoffs and how risk profiles could evolve
+from here.
+
+Below you’ll find a comprehensive list of all the known layoffs in tech that have occurred in 2023, to be updated monthly. If you have a tip on a layoff,
+contact us here. If you prefer to remain anonymous, you can contact us here.
+
+The running total of layoffs for 2023 based on full months to date is 224,503, according to Layoffs.fyi. Tech layoffs conducted to date this year currently
+exceed the total number of tech layoffs in 2022, according to the data in the tracker.
+
+Data visualization by Miranda Halpern, created with Flourish
+
+December 2023
+
+ShareChat
+
+Is cutting 15% of its workforce in a “strategic restructuring” effort for 2024.
+</item 14>
+
+<item 15>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+In addition, vendors are also selling a range of goodies – from ornaments to jewellery to scarves – which is the perfect chance to do some early holiday
+shopping.
+
+Hosting a movie marathon
+
+Instead of hosting a big dinner, you could opt for another budget-friendly activity at your home: hosting a movie marathon. With the help of your friends, you
+can make a list of any horror, romance, or comedy movies that you want to watch for the day. You could also top off the activity off by supplying an assortment
+of snacks for your pals, or by cooking a meal all together.
+
+Your movie options can also match the theme of Thanksgiving, with films like A Beautiful Day in the Neighborhood (2019), Toy Story (1995), Addams Family Values
+(1993) and A Charlie Brown Thanksgiving (1973). If you want, you could add some Christmas movies to the mix, including Elf (2003), It’s A Wonderful Life (1947)
+and Steel Magnolias (1989).
+</item 15>
+
+<item 16>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+As a bellwether for the rest of the holiday period — traditionally the biggest period for retail sales in the year — the flat sales speak to another tough year
+for online retailers.
+
+Adobe Analytics is predicting $37.2 billion in online spend for the full five days, up just 5.4% year on year and accounting for 16.8% of all holiday spend. And
+Black Friday will see $9.6 billion in sales, up roughly the same, 5.7%, versus figures last year. (The published figures in 2022 were $9.13 billion.) Salesforce
+has not provided forecasts.
+
+For some context on today’s Thanksgiving figures, last year’s published figures from Adobe were $5.29 billion, which actually represents an increase of just
+under 4%. (It’s likely Adobe Analytics readjusted its final figures for last year, which is why we see a higher percentage of growth.)
+</item 16>
+
+<item 17>
+Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)
+This docuseries digs into questions that still swirl around the case.
+
+Wingwomen (Netflix Film)
+
+From Netflix: Tired of life on the run, a pro thief decides to retire — but not before one easy last job with her partner in crime and a feisty new getaway
+driver.
+
+13 Going on 30
+
+13 Hours: The Secret Soldiers of Benghazi
+
+60 Days In: Season 5
+
+The Addams Family
+
+The Big Lebowski
+
+The Change-Up
+
+Desperado
+
+Downsizing
+
+Drag Me to Hell
+
+Love in the Wild: Season 1
+
+Madea’s Family Reunion
+
+The Mummy (2017)
+
+Paul Blart: Mall Cop
+
+Paul Blart: Mall Cop 2
+
+Pitch Perfect
+
+The Scorpion King
+
+Scott Pilgrim vs. the World
+
+Sherlock Gnomes
+
+Six Feet Under: Seasons 1-5
+
+Sixteen Candles
+
+The Social Network
+
+Ted 2
+
+Victorious: Season 3
+
+Whiplash
+
+Available Nov.
+</item 17>
+
+<item 18>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Here are when stores open and close on Thanksgiving Day and Black Friday in the US.
+
+Whole Foods
+
+If you’re looking for some fresh produce to cook up a storm, then you’re in luck, as Whole Foods is set to be open during the holiday season. However, they will
+run on a limited schedule, and hours of operation may vary, so be sure to check your local store. Whole Foods stores will be open on Black Friday, with hours of
+operation depending on location.
+
+Costco
+
+All Costco stores in the US will be closed on Thanksgiving Day, as noted by the retailer’s official site. Costco Warehouses will reopen on Friday, with hours
+depending on store locations. The retailer has already started some of its online sales for Black Friday, with some in-store sales going from 24 November
+through 27 November.
+
+Walmart
+
+The retail giant will be closed on the holiday, before reopening the next day for Black Friday, an annual shopping occasion filled with store deals.
+</item 18>
+
+<item 19>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+For the occasion, everyone can bring a different type of wine – from red to white – and give a few sips from each bottle a shot. If you’re someone who’s a big
+fan of wine, you could even end up discovering a brand that becomes your new favourite drink. When hosting the activity, you could make your own charcuterie
+board – filled with different meats and cheeses – to pair with wine.
+
+Playing a football game
+
+If your friends have a fun, competitive side, you can take part in another outdoor activity. You and your friend group can host the event in any big outdoor
+space you’d like, whether it’s a local park or your pal’s backyard.
+
+In addition, football meets the typical theme of Thanksgiving, as a beloved tradition on the actual holiday is to watch a sports game with the family.
+
+Hosting an early holiday gift exchange
+
+Who’s to say that you can’t give your gifts to your friends a bit early this season?
+</item 19>
+
+<item 20>
+Here are the shipping deadlines to get your holiday gifts on time (The Verge, 2023-12-18T19:26:44+00:00)
+Similar to Walmart and Amazon, be aware that items at Target shipped or sold by third-party retailers can result in longer lead times. Product listings usually
+spell out your options for pickup, same-day delivery, and standard shipping — complete with estimated availability times — before you add them to your cart.
+</item 20>
+
+<item 21>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Walmart’s usual hours are from 6am to 11pm every day, but opening times on Black Friday are based on stores’ locations.
+
+Target
+
+The beloved retail store will also be closed on Thanksgiving Day before reopening the next day for Black Friday. Hours of operation for the day after
+Thanksgiving vary based on the store’s location.
+
+Trader Joe’s
+
+Stores will be closed on 23 November in observance of the federal holiday. Trader Joe’s stores will reopen on Black Friday, with hours of operation depending on
+each store.
+
+Wegmans
+
+While Wegamans will be open on Thanksgiving, hours of operation are limited. For example, one Wegmans store in Brooklyn, New York, will be closed at 4pm,
+instead of at 11pm like it usually does. Opening and closing times for Wegmans can vary based on the location of the store.
+
+Although most Wegmans stores are expected to reopen at 6am on Black Friday, specific opening and closing times vary for each location.
+</item 21>
+
+<item 22>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Today’s 5.5% rate is definitely an improvement on last year’s 2.9%. But it’s nothing compared to the years preceding COVID-19, such as 2017, where we were
+seeing growth of 18% or more.
+
+Inflation is making an impact but not as much as the worry around consumer spending, said Adobe, which said that spending is being led actually by more
+discounts to encourage buying, rather than less buying of more expensive products. That leads one to wonder what kind of impact that’s having on retailers’
+margins.
+
+“Cyber Week is off to a strong start with Thanksgiving driving a record $5.6 billion in online spend as consumers took advantage of strong discounts and
+continued their shopping plans, virtually,” said Vivek Pandya, lead analyst, Adobe Digital Insights, in a statement. “Mobile shopping hit an all-time high, as
+shoppers took to their smartphones to get the best deals during holiday gatherings, further solidifying mobile’s growing importance in e-commerce.”
+</item 22>
+
+<item 23>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Walmart will match its online Black Friday deals in stores starting November 10.
+
+Will Amazon have a Black Friday sale in 2023?
+
+Amazon will likely have a Black Friday sale in 2023. While the online retailer hasn’t made its deals known yet like Walmart has, Amazon will almost certainly
+have deals across all of the types of products it sells, including electronics. We anticipate seeing record-low prices on Amazon devices in particular, like
+Echo speakers, Fire TVs, Kindles and more. In years past, Amazon Black Friday deals have brought some of the best prices of the year on our favorite gadgets and
+gear, including headphones, tablets, smartwatches, robot vacuums and more.
+
+What other retailers have Black Friday sales in 2023?
+
+Most retailers have Black Friday sales, so you can expect to see Target, Best Buy, and others join Walmart and Amazon in discounting inventory to capitalize on
+holiday shopping interest.
+</item 23>
+
+<item 24>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+You can find out more on the day by heading over to the store’s website. Dollar General is expected to be open during its usual hours during Black Friday, with
+specific closing and opening times based on location.
+
+CVS
+
+A representative with CVS told ThePioneerWoman.com that most, but not all, CVS locations will be open on Thanksgiving. To check your local store, be sure to
+head over to the CVS’ website. On Black Friday, CVS locations will be open during its regular hours.
+
+Dunkin’ Donuts
+
+The beloved coffee chain will be open on Thanksgiving Day but with limited hours. Opening and closing times of stores on the holiday vary based on location.
+
+Dunkin’ Donuts with reopen on Black Friday, with its usual hour of operation based on each store.
+
+Walgreens
+
+Most Walgreens stores will be closed on 23 November this year, according to a press release shared by the brand on 16 November.
+</item 24>
+
+<item 25>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Adobe Analytics’ figures are based, it says, on 1 trillion visits to U.S. retail sites, 100 million SKUs and 18 product categories. Salesforce says it taps data
+from 1.5 billion consumers in its research. (Both companies work with a number of giant and smaller retailers, so they have the infrastructure to provide this
+kind of intel to these customers on an ongoing basis.)
+
+Breaking out some of the trends in how people are shopping:
+
+— Overall, desktop sales are still exceeding other kinds of screens when it comes to conversions and number of items purchased, but mobile is the standout
+device in the evening hours, when it accounted for a whopping 59% of all online sales (likely because people were using that time to socialize and buy on the
+sly).
+</item 25>
+
+<item 26>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 26>
+
+<item 27>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+Research shows that even a small reduction in sleep has been shown to impact your immune system, however.
+
+Making the move from daylight saving time interferes with your natural circadian rhythm, the 24-hour biological cycle that is influenced by morning light and
+evening darkness, however.
+
+“It’s hard to understate the importance of a good night’s sleep,” says Giulia Guerrini, lead pharmacist of digital pharmacy Medino. “Having too much or too
+little sleep can have adverse side effects, so you should aim to get between seven and eight hours of sleep as consistently as possible.”
+
+Never underestimate the value of a good night’s sleep (Getty)
+
+“One of the biggest disruptors to our sleep is when UK clocks go forward one hour at 1am on the last Sunday in March and go back one hour at 2am on the last
+Sunday in October, which is rapidly approaching on 30 October.
+</item 27>
+
+<item 28>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Starbucks
+
+Earlier this month, a spokesperson for Starbucks told Country Living that stores will be open on Thanksgiving Day. While its usual hours of operation are from
+6am to 9pm, stores’ opening and closing times on the holiday vary based on location.
+
+Although Starbucks is expected to operate from 6am to 9pm on Black Friday, specific hours vary for each store.
+
+Aldi
+
+According to Aldi’s official website, all stores will be closed on Thanksgiving Day. Aldi will be reopening on Black Friday, as its hours of operation are
+usually from 8.30am to 9pm. However, specific opening and closing hours vary for each location.
+
+Dollar General
+
+The low-priced retailer will be open from 7am to 10pm on Thanksgiving Day but times may vary depending on location. You can find out more on the day by heading
+over to the store’s website.
+</item 28>
+
+<item 29>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While the winter holidays are still weeks away, you could use your Friendsgiving to host your annual gift exchanges.
+
+For example, many friend groups in the US have opted for the budget-friendly activity of Secret Santa, where each person is randomly assigned someone to give a
+gift to. During the exchange, you then reveal to your pal that you’re their “secret Santa,” before giving them their present.
+</item 29>
+
+<item 30>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Thanksgiving Thursday, when stores in the U.S. are closed and many are spending time off work, has become the de facto start of the holiday shopping season both
+for those looking to get bargains online and for online retailers to kick off holiday sales deals to meet that demand. But if there is a message from this
+year’s Thanksgiving sales, it is that consumers are holding steady, but don’t hold your breath for a growth boom.
+
+Adobe Analytics said that people in the U.S. on Thursday spent $5.6 billion online, which it calculates at an increase of just 5.5% on last year.
+
+Salesforce, which also calculates sales based on data collected by its Commerce Cloud division, noted that globally, online sales reached $31.7 billion with its
+U.S. tally at $7.5 billion — both up only 1%. Salesforce’s calculations of average order value were equally modest.
+</item 30>
+
+<item 31>
+Here are the shipping deadlines to get your holiday gifts on time (The Verge, 2023-12-18T19:26:44+00:00)
+You can also get packages within an hour on Christmas Eve (if you order before 4PM local time) with a service called Shipt. An annual Shipt subscription
+provides unlimited deliveries on orders above $35 for $99 a year, though an annual membership is currently going for half off. Alternatively, you can pay for
+same-day shipping with Shipt on a per-order basis via Target’s website. Shipping fees may vary depending on your location and the contents of the order. Here
+are answers to some frequently asked questions that might help.
+
+Target RedCard credit card holders receive free two-day shipping on many items from the retailer’s website.
+
+Many (but not all) orders over $35 are eligible for free two-day shipping, even if you don’t have a Target RedCard. It’s determined by the item’s location and
+your ZIP code.
+
+Target stores will be open on Christmas Eve, though it’s wise to get pickup orders and same-day shipping orders in by December 23rd to be on the safe side.
+</item 31>
+
+<item 32>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+Where is it celebrated?
+
+Thanksgiving is one of the the most important cultural holidays in America, however, Canada also has its own Thanksgiving Day, on the second Monday in October,
+and Liberia celebrates Thanksgiving on the first Thursday of November.
+
+What do people eat on Thanksgiving?
+
+In America, turkeys are an integral part of Thanksgiving Day, with most dinners including the bird.
+
+An estimated 46m turkeys are killed annually for the holiday, however, two turkeys are pardoned each year by the president.
+
+But Americans who don’t eat meat or follow a vegan lifestyle don’t have to worry about missing out, as there are numerous vegan and vegetarian Thanksgiving
+options.
+
+Americans also indulge in Thanksgiving favourites such as yams topped with marshmallows, stuffing, cranberry sauce, cornbread, and pumpkin pie.
+</item 32>
+
+<item 33>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+On Thursday 23 November, Americans will be hard at work to prepare their Thanksgiving dinner, with foods on the menus ranging from a roasted turkey to a green
+bean casserole.
+
+Aside from the dishes served in the lavish feast, which can vary based on families’ cultures and traditions, Thanksgiving is also the annual holiday for people
+to commemorate all that they’re grateful for.
+
+In the midst of planning the big meal, there’s also a huge range of ingredients that need to be purchased at your local grocery store.
+</item 33>
+
+<item 34>
+Check Point sees 'fantastic' year ahead even as rival report disappointing billings (Seeking Alpha, 2023-11-18T13:56:00+00:00)
+"We have the right level of redundancies and business continuity plans in place around the world," Hollenbeck said. "So we're okay."
+</item 34>
+
+<item 35>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+However, since Thanksgiving Day is a federal holiday in the US, some stores will be completely shut down on the holiday.
+
+For example, both Target and Walmart announced permanent closures on the holiday in 2020, with the policy remaining in place ever since. The outbreak of the
+pandemic had initially pushed these chains to close their doors on Thanksgiving, in order to limit crowding and spread out the shopping season.
+
+However, that doesn’t mean that all grocery stores will remain closed on Thanksgiving Day. In fact, there are some retailers that you could make your way to on
+the morning of the holiday, in preparation for your annual feast.
+
+Once Thanksgiving Day comes to a close, many stores will be reopening on Friday. From there, shops be operating during their earlier or usual business hours, in
+preparation for some of the biggest sales of the year.
+
+Here are when stores open and close on Thanksgiving Day and Black Friday in the US.
+</item 35>
+
+<item 36>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+However, you don’t need to have a big meal to celebrate your Friendsgiving, as there are many ways to change up your usual plans this year.
+
+Here’s a list of activities that you could do for Friendsgiving that aren’t the typical sit-down dinner.
+
+Shopping at local holiday markets
+
+(Getty Images)
+
+While Christmas is still over a month away, many cities in the US already have their holiday-themed markets up and running. And since Friendsgiving isn’t
+necessarily held on the Thanksgiving holiday, why not use it as an opportunity to check out some new shops?
+
+For example, in New York City, Bank of America is currently hosting its annual Winter Village at Bryant Park in Manhattan. At the beloved New York City spot,
+there’s a wide variety of food vendors, so you and your friends can take your pick at what you want for dinner and dessert.
+</item 36>
+
+<item 37>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the parade passes down 6th Avenue Reuters Macy's
+Thanksgiving Day Parade takes place in New York An NYPD officer stands by AP Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon
+flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A marching band takes part in the parade Reuters Macy's Thanksgiving Day
+Parade takes place in New York A balloon flies in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York A performer in the parade AP Macy's
+Thanksgiving Day Parade takes place in New York The Ronald McDonald balloon flies in the parade AP Macy's Thanksgiving Day Parade takes place in New York A
+clown performs in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Olaf balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York Flag wavers take part in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York Clowns on roller blades perform in
+the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is
+</item 37>
+
+<item 38>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+The Macy's Thanksgiving Day Parade takes place in New York City
+
+The day is also celebrated with the annual Macy’s Thanksgiving Day Parade in New York City.
+
+The world’s largest Thanksgiving parade includes giant balloons of cartoons that float above the city sky, as well as marching bands and dancers.
+
+Following Thanksgiving, the month-long shopping for the winter holidays begins, with Black Friday kicking off the season.
+
+Why is Thanksgiving controversial?
+
+Although many Americans view Thanksgiving as a beloved holiday, it is viewed by many who have abandoned the holiday as a erroneous celebration of what was
+actually the conquest of Native Americans and Native American lands. The celebration has become controversial, as Thanksgiving has a contentious history that
+goes far beyond when the first feast was held.
+
+In addition to a holiday steeped with cultural appropriation, the period of history in America is frequently white-washed, which leads some Americans to ignore
+the holiday, or, to instead observe a National day of Mourning.
+
+Where is it celebrated?
+</item 38>
+
+<item 39>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+Conversely, the switch from winter to summer time was found to have no effect.
+
+People frequently report an increase in SAD and depressive symptoms in winter (Getty/iStock)
+
+“This study shows that the transition from summer time to standard time was associated with an increase in the incidence rate of unipolar depressive episodes,”
+the study authors concluded. “Distress associated with the sudden advancement of sunset, marking the coming of a long period of short days, may explain this
+finding.”
+
+A drop in heart attacks
+
+Not everyone is convinced, however. Charlie Morley, author of Wake Up to Sleep, cites a 2014 study by the College of Cardiology, which reported a significant
+drop in heart attacks in the 24 hours immediately following turning back the clocks.
+
+“Fascinatingly, each year when the clocks go back for Daylight Saving and 1.6 billion people across 70 countries gain an extra hour in bed, there is a 21 per
+cent decrease in heart attacks the next day,” he says.
+</item 39>
+
+<item 40>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+What is Thanksgiving and where did it come from?
+
+Thanksgiving is a national holiday in the United States celebrated every fourth Thursday in November.
+
+The annual feast is in honour of the “first” Thanksgivings in America, in 1619 in Virginia, and in 1621, when colonists in Plymouth, Massachusetts, later known
+as the Pilgrims, allegedly shared a meal with the Wampanoag Indians, who were native to the land.
+
+The later feast was in honour of the help the Pilgrims received from the Native Americans in cultivating crops and surviving their first harsh winter and it
+lasted three days.
+
+Macy's Thanksgiving Day Parade takes place in New York Show all 15 1 / 15 Macy's Thanksgiving Day Parade takes place in New York Macy's Thanksgiving Day Parade
+takes place in New York Performers walk in front of Macy's Tom Turkey float in the Thanksgiving Day Parade in New York AP Macy's Thanksgiving Day Parade takes
+place in New York The Ronald McDonald balloon is inflated Getty Macy's Thanksgiving Day Parade takes place in New York Sinclair's DINO balloon flies as the
+</item 40>
+
+<item 41>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 41>
+
+<item 42>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+Table of Contents Table of Contents What are Walmart's Black Friday hours in 2023? Is Walmart holding a Cyber Monday sale? TV deals Laptop deals
+Headphone/earbud deals Tablet deals Smartwatch deals Gaming deals Speaker and soundbar deals Vacuum deals Robot vacuum deals Home and kitchen deals Outdoor
+deals Apple deals Pet deals Fitness deals Toys and gift deals
+
+UPDATE: Nov. 25, 2023, 4:00 a.m. EST We've updated this story with the latest deals from the Walmart early Cyber Monday sale.
+
+Early birds already know that Walmart launched its first round of Black Friday deals back on Nov. 8 and just dished out another round the day before
+Thanksgiving. Some of the retailer's most popular rollbacks have already sold out. Leave items in your shopping cart too long and you'll risk losing out on your
+haul.
+
+Although the official Black Friday programming has kept us busy all month long, the big day has finally arrived — actual Black Friday.
+</item 42>
+
+<item 43>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Salesforce’s calculations of average order value were equally modest. Globally, average orders were up just 2% to $103 per “basket” while in the U.S. they were
+up a paltry 1% to $119.
+
+Mobile devices had a standout year: Adobe said that some $3.3 billion was spent over mobile devices on Thanksgiving, up 14% and an all-time record for the day.
+
+Salesforce added that online traffic in general to e-commerce sites, which includes browsing, was up too, but again only in single digits of 4% globally and 6%
+in the U.S.
+
+The two are actively tracking sales for today, Black Friday, and for the whole of the “Cyber Weekend” — which not only kicks off holiday shopping but has a
+particularly strong showing in online sales due to people traveling to be with family.
+</item 43>
+
+<item 44>
+8 predictions for AI in 2024 (TechCrunch, 2023-12-19T16:19:34+00:00)
+I would expect an AI that focuses on practical applications of users’ own data, using Apple’s increasingly central position in their lives to integrate the many
+signals and ecosystems the company is privy to. There will likely also be a clever and elegant way to handle problematic or dangerous prompts, and although it
+will almost certainly have multimodal understanding (primarily to handle user images), I imagine they’ll totally skip media generation. Expect some narrowly
+tailored but impressive agent capabilities as well: “Siri, get a table for 4 at a sushi place downtown around 7 and book a car to take us” sort of thing.
+
+What’s hard to say is whether they will bill it as an improved Siri or as a whole new service, Apple AI, with a name you can choose yourself. They may feel the
+old brand is freighted with years of being comparatively incapable, but millions already say “hey Siri” every 10 seconds so it’s more likely they’ll opt to keep
+that momentum.
+</item 44>
+
+<item 45>
+Thanksgiving 2023: What stores will be open on the holiday? (The Independent - Life and Style, 2023-11-06T10:40:17+00:00)
+While this is the first time that Walgreens has closed its doors on the holiday, some 24-hour stores will still be open during certain hours on Thanksgiving
+Day, depending on store location.
+
+Walgreens stores will reopen on 24 November, with opening and closing times depending on the location of the store.
+</item 45>
+
+<item 46>
+Here are the shipping deadlines to get your holiday gifts on time (The Verge, 2023-12-18T19:26:44+00:00)
+The same thing happens year after year. Things get busy with work, school, and life in general until you’re suddenly up against the clock as you race your gifts
+to your local post office, FedEx store, or UPS location. We’ve all been there, but we’d like to be of some help as you plan your next move and begin sending out
+your holiday packages.
+
+If you plan on sending your gifts via traditional mail, what follows are the upcoming domestic shipping deadlines for various retailers and shipment carriers so
+you can ensure that your packages arrive before Christmas, Kwanzaa, or whatever holiday it is you celebrate this time of year. Hopefully, it’ll help you avoid
+some holiday stress, if at all possible.
+</item 46>
+
+<item 47>
+When do the clocks change in 2023? (The Independent - Life and Style, 2023-10-24T05:50:17+00:00)
+“There’s also a big drop in suicides and car crashes worldwide. That all adds up to tens of thousands of fewer deaths around the world from just one extra hour
+of sleep.”
+
+When did Daylight Saving Time begin?
+
+The UK first introduced Daylight Saving Time in 1916 when the government introduced British Summer Time (BST) to encourage people to spend more time outdoors in
+daylight.
+
+The change hasn’t always proved popular, however, with the European parliament voting in favour of scrapping DST in 2019, a change that was due to take effect
+for the first time in 2021, but plans have been stalled.
+
+A 2019 YouGov poll found that the majority of Brits were marginally in favour of keeping DST, however, with 44 per cent electing to keep the current system,
+while 39 per cent voted in favour of ditching the change.
+</item 47>
+
+<item 48>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+It’s all explained here.
+
+Most Black Friday return policies extend through January 2024
+
+According to Best Buy, certain products bought now (dating back to Oct. 27) until Dec. 30 may be returned before Jan. 13.
+
+Target will accept most unopened items in new condition within 90 days of purchase.
+
+Walmart has an extended holiday return policy in effect that allows items purchased between Oct. 1 and Dec. 31 to be returned on or before Jan. 31, 2024.
+
+Amazon’s extended return policy is in effect for most items that are purchased between Nov. 1 and Dec. 31. Those items can be returned before Jan. 31, 2024.
+However, Apple-brand products purchased in that time frame can only be returned on or before Jan. 15, 2024.
+
+Black Friday likely won’t be your last opportunity to save
+
+There will be amazing deals during Black Friday and Cyber Monday on everything, from tabletop and board games to toys, video games, and more.
+</item 48>
+
+<item 49>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Going hiking
+
+Depending on the weather outside, your plans for Friendsgiving could consist of going on a hike. Whether it’s at your local park or a trail that’s an hour or so
+away from you, hiking is the perfect daytime activity for you and your friend group – no matter how big or small.
+
+Decorating or baking sweets
+
+(Getty Images)
+
+Decorating or baking some sweet treats is another easy indoor activity. Whether you make a pie from scratch or simply frost your ready-bake sugar cookies, it’s
+something interactive for you and your pals to do together.
+
+You can also opt for treats that are on theme with the fall and winter seasons, from baking an apple crisp to decorating gingerbread cookies.
+
+Running a Turkey trot
+
+Whether it’s before, during, or after Thanksgiving Day, many cities in America host an annual Turkey Trot run.
+</item 49>
+
+<item 50>
+Why do Americans celebrate Thanksgiving? (The Independent - Life and Style, 2023-11-11T09:04:08+00:00)
+perform in the parade Reuters Macy's Thanksgiving Day Parade takes place in New York The Charlie Brown balloon is inflated Getty Macy's Thanksgiving Day Parade
+takes place in New York The Tom Turkey float is in place to start the parade Reuters
+
+Later, US Presidents including George Washington, John Adams and James Madison called for days of thanks throughout their presidencies.
+
+However, it was not until 1863, during the Civil War, that President Abraham Lincoln declared a national Thanksgiving Day would be held each November to be
+celebrated by all of the country.
+
+When is Thanksgiving?
+
+Thanksgiving takes place each year on the fourth Thursday of November.
+
+This year, Thanksgiving falls on 23 November.
+
+Why do Americans celebrate it and what do they do?
+
+Although Thanksgiving may originally have had religious significance, the day has become a mostly secular holiday.
+
+Most Americans consider the holiday a day to gather and express their thanks through food, family, and football – with multiple NFL teams playing on the
+holiday.
+
+During some Thanksgiving celebrations, people write down what they are thankful for and then read aloud from the pieces of paper.
+</item 50>
+=== END ITEM id=8c7eccbd1880a593 ===
+
+=== ITEM id=a374c87a56d82510 ===
+Gold sentences and facts:
+Sentence 0: “But nah, it was awesome.” On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+  Fact 0.0: A speaker said 'But nah, it was awesome.'
+  Fact 0.1: On Saturday, the competition said goodbye to a range of players.
+  Fact 0.2: On Saturday, the competition said goodbye to Western Bulldogs forward Richelle Cranston.
+  Fact 0.3: Richelle Cranston has battled stage five chronic kidney disease while playing this season.
+  Fact 0.4: On Saturday, the competition said goodbye to Hawthorn's Akec Makur Chuot.
+  Fact 0.5: Akec Makur Chuot is a Hawthorn player.
+  Fact 0.6: Akec Makur Chuot played 40 games for three clubs.
+Sentence 1: The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year.
+  Fact 1.0: The Dogs are Richelle Cranston's third club.
+  Fact 1.1: Richelle Cranston started at Melbourne.
+  Fact 1.2: Richelle Cranston had a stint with Geelong.
+  Fact 1.3: Richelle Cranston joined the Bulldogs last year.
+
+Retrieved items:
+<item 1>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But more modest attendances in subsequent games, including two sub-2,000 crowds in Perth, suggest the popularity of the Matildas’ run to the semi-finals has
+only had a limited impact on support for domestic women’s sport.
+
+skip past newsletter promotion Sign up to Australia Sport Free newsletter Get a daily roundup of the latest sports news, features and comment from our
+Australian sports desk Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see
+our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google
+reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Livingstone said the “green and gold fever” associated with the Women’s World Cup was a one-off and the AFL has plans in place for long-term growth.
+</item 1>
+
+<item 2>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+Alyssa Healy has rejected any suggestion Australia’s stranglehold on international women’s cricket is slipping, saying their Test loss to India is barely a blip
+on the team’s record.
+
+Australia stumbled to their first Test defeat to India by eight wickets in Mumbai on Sunday, after being outplayed by the hosts in foreign spinning conditions.
+
+The loss comes after one of the more difficult periods for the Australian side in the past six years, with the retirements of Meg Lanning and Rachael Haynes.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+After winning their fourth straight global ICC event earlier this year in the 50-over World Cup, Australia retained the Ashes via a drawn multi-format series in
+England in July.
+
+That tour included losing four of six white-ball matches, with Australia’s win in the Test enough to have them level on points with England and hold onto the
+trophy.
+</item 2>
+
+<item 3>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Lions duo Charlotte Mullins and Ruby Svarc celebrate. Credit: Getty Images The Lions got the game on their terms early with five repeat entries into the
+attacking 50m in the opening 10 minutes of the game. Davidson and Ellie Hampson drew first blood before Casey Sherriff kicked Melbourne’s opening goal.
+
+Tayla Harris, Tyla Hanks and Hore slotted a goal each in the second term to put their side ahead. Crumbling under the Brisbane attack, the visitors conceded
+four unanswered goals from Taylor Smith, Sophie Conway (two goals) and Ruby Svarc while remaining goalless in the third term. Midfield stars Olivia Purcell (14
+contested possessions) and Tyla Hanks (11) showed their mettle as they attempted to drag their side over the line, but the Demons were outclassed and sorely
+missing Paxy Paxman (hamstring). Melbourne could be without Maeve Chaplin in their finals campaign, after the defender sustained a concussion injury in the
+third term.
+</item 3>
+
+<item 4>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Dogs forward reveals battle with kidney disease Western Bulldogs forward Richelle Cranston has revealed she’s been living, and playing, with stage five chronic
+kidney disease. “I still manage to do the things I love,” the inaugural AFLW player posted to Instagram. “It’s just really hard sometimes.” Richelle Cranston of
+the Bulldogs: “It’s just really hard sometimes.” Credit: Getty Images The 34-year-old posted the caption along with a video detailing her life with the disease
+including weekly blood tests and daily blood pressure checks, tracking water and food intake, taking medications including resonium (to lower potassium levels),
+all while training in the high-performance environment.
+
+The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year. Cranston lined up for
+the Bulldogs in her side’s 57-point loss to Sydney on Saturday at Whitten Oval, 14.12 (96) to 6.3 (39).
+</item 4>
+
+<item 5>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+But two goals from Amelia Radford and Georgia Gee kept the hosts close, while defender Ellyse Gamble (nine intercept possessions) proved a roadblock for the
+Suns’ attackers. Single lit up the park with a clinical slice through the corridor, dodging two tackles to put the ball in the hands of Georgia Clayden, who
+capped the centre clearance with the only major of the third term. With both sides goalless in the final quarter, the Suns were able to cruise home. With AAP
+</item 5>
+
+<item 6>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I’m excited like I think the group’s coming together really nicely and where really well-prepared compared to previous years,” Riddell told Fox Footy. “So, I
+can’t wait I think it’s an exciting time for us.” The game was one-way traffic against the Dogs with the game played almost entirely in the Roos’ attacking
+half. Riddell credited her side’s “team performance” after two losses to the Dees and Crows. North Melbourne have secured a top-four spot for finals. Credit:
+Getty For the Western Bulldogs, it was another tough day out as they notched their ninth loss of the season. They won just one game this year, an eight-point
+victory last weekend over 17th-placed West Coast.
+
+Britney Gutknecht kicked the Dogs’ only goal against the Kangaroos, which came early in the final term to avoid a record for the lowest AFLW score in the
+history of the competition.
+</item 6>
+
+<item 7>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+The Dogs have plenty to work on for next season as they look to regain a competitive edge, which was lost after a finals berth last year. Along with being in a
+rebuild, they were badly injury-hit this season and used 32 players, more than any other club. Suns secure finals spot AAP Unsung hero Lucy Single has helped
+Gold Coast book their second AFLW finals appearance with a 14-point win over Essendon. Losing midfield powerhouse Charlie Rowbottom to an ankle injury proved no
+obstacle in the Suns’ maiden clash with the Bombers, as they finished the regular season in fifth spot after a 6.3 (39) to 3.7 (25) victory to kick off pride
+round at Great Barrier Reef Arena on Friday.
+
+While their men’s side have yet to make a finals appearance, this is the second time Gold Coast’s women have clinched a play-off spot, having also done so in
+the cancelled 2020 season.
+</item 7>
+
+<item 8>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The QRU also expressed its satisfaction that RA was willing to discuss the annual $1.7m being reinstated, which had been withheld because of the Covid pandemic
+to keep the game afloat.
+
+Meanwhile, The Roar understands the ACT Brumbies have sent RA confirmation of solvency for the next 12 months.
+
+RA was forced to take out a $40m loan from Ares to keep the game afloat.
+
+Advertisement
+
+While RA has around another $15m left to spend from the loan, the governing body is looking to borrow up to another $60m so they’re in the strongest possible
+position to capitalise on the two major money-making events – the 2025 British and Irish Lions series and home men’s World Cup in 2017 – and succeed.
+</item 8>
+
+<item 9>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+“And, to be honest, maybe 18, after I didn’t get the last list spot at Collingwood, but I’m glad the stars aligned the way they did.” In a twist of fate,
+defender Charlie Dean re-fractured his right foot at training, opening another list spot for Collingwood to snatch Markov back from Carlton – and the rest is
+history. “Having trained at Collingwood for two months, I felt like I was almost doing the dirty on ‘Fly’ [Craig McRae], going behind his back – I was almost
+like a cheater,” he said. “He was very respectful and understanding, and it probably allowed me to open myself up and be vulnerable to that football club. I’m
+super grateful for them showing interest in me, in the first place.
+
+“I know I’ve signed with [Collingwood] and on the dotted lines, I’ve agreed to hate Carlton, but there’s a bit of me that is really grateful and appreciative to
+them.”
+</item 9>
+
+<item 10>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“We love going in those four walls. We train there three, four times a week. So having that familiarity of the ground is awesome ... So I would be super-excited
+to make finals for one, but then play at home would be just that extra and having all our support behind us really drives us on the field.” Tears abound in
+Phillips’ emotional farewell
+
+There were emotional scenes at Alberton Oval as the siren sounded on AFLW great Erin Phillips’ last game, with Port Adelaide saluting her with a huge 58-point
+win over Greater Western Sydney on Saturday. The crowd, which included Phillips’ father Greg and mother Julie (both in tears after the game), more family and
+friends, and Adelaide captain Chelsea Randall, erupted as the curtain finally came down for the three-time premiership player after eight seasons and 67 games.
+</item 10>
+
+<item 11>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Lions’ Orla O’Dwyer speeds away against the Crows. Credit: Getty Images Adelaide started fast but the game evened up as the Lions had the better of the
+second quarter with three goals to one. The Crows then took back control in the third with three goals to none, which set the stage for a tense final term. The
+fourth quarter was a heated arm wrestle, and scores were tied with four minutes left on the clock. The Lions’ Bella Dawes kicked the only goal of the last term,
+but it was a series of behinds in the final minutes that won the game for them, including one from Lily Postlethwaite that broke the stalemate.
+
+Adelaide’s Niamh Kelly navigates her way through traffic against brisbane. Credit: Getty The two sides have had intense battles in the competition’s history,
+including two grand finals, and this was no different.
+</item 11>
+
+<item 12>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Tackled above waist and below shoulders. No sling or double motion. Sheppard lands on her back. ′ ‘Girls’ play hard too,” Harford said on X, the social media
+site formerly known as Twitter. This echoed Collingwood defender and Fox Footy commentator Ruby Schleicher’s thoughts at the time, who called it a “monster
+tackle” but believed it was “fair”. “I don’t see any dirtiness in that,” Schleicher said on Fox Footy. “It was pretty heavy on her head, wasn’t it? I look at
+that – I still see a fair tackle. There’s no doubt the match review [officer] will look at it because they have to I guess. The duty of care for the player.”
+
+The decision a week comes after Adelaide premiership defender Najwa Allen was handed a three-ban suspension, the longest ban in AFLW history, for a high bump on
+Western Bulldog Kirsten McLeod. The Crows elected not to challenge the decision.
+</item 12>
+
+<item 13>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+RA is also in the early stages of looking to renew its next broadcast deal, with the governing body hoping to at least double its current deal with Nine
+Entertainment/Stan Sport, which is seeing them paid $29m per year until the end of 2025.
+</item 13>
+
+<item 14>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Kangaroos’ Alice O’Loughlin and Melbourne’s Maeve Chaplin battle for the ball. Credit: AFL Photos It was a hard-fought, low-scoring battle between the two
+powerhouse sides that play a similar game style. Each set up well, are fast and like a good dose of contested marking. But Narrm controlled more of the game by
+tightening around the contest and being cleaner going forward. They also defended extremely well by suffocating the opportunities North created and prevailed
+5.7 (37) to 2.2 (14). While the Demons scored just one goal a quarter in the second half – Tyla Hanks in the third and Eden Zanker in the fourth – the Kangaroos
+were goalless for three terms, having led by five points at the first change. Their opening goals were thanks to Niamh Martin and Tess Craven.
+
+Then a crafty goal from Demons skipper Kate Hore to open the second term put her side up, and Melbourne never gave up the lead.
+</item 14>
+
+<item 15>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+Brisbane Lions (2001-03), Geelong (2007, 2009, 2011), Hawthorn (2013-15) and Richmond (2017, 2019-20) all won three flags in short succession this century, with
+the Magpies’ challenge now to back up their memorable season. Brayden Maynard enjoys the Pies’ win. Credit: Eddie Jim Maynard initially baulked when asked
+whether Collingwood could win back-to-back flags, but said their bulletproof culture instilled belief they could “do anything”. “We’ve got to lap [this
+premiership] up, and we’re going to have some serious fun, and we might burn down Melbourne,” a still-disbelieving Maynard said.
+
+“I’m looking forward to celebrating with the team because it’s taken two years of getting after it and getting better every day – we’ve got better for this
+moment. Loading “We just want to win.
+</item 15>
+
+<item 16>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot. If the Saints had
+qualified, it would have been their maiden finals appearance. Saints goalkicker Jesse Wardlaw had a heavy collision with Carlton’s Keeley Sherar late in the
+final quarter of their clash.
+
+Georgia Patrikios showed her class in the do-or-die match, collecting 25 disposals and eight contested possessions in a powerhouse display, while Hannah Priest
+was a brick wall in defence, with nine intercept possessions. Abbie McKay worked overtime to counter Patrikios in the midfield, but her side was outclassed
+across the park. McKay racked up 28 disposals and 12 clearances alongside Mimi Hill (30 disposals), while defender Sherar (17) toiled against a potent Saints
+attack. Meanwhile, Sydney prevailed in a fierce tug-of-war with the Dockers to seal their first AFLW finals appearance.
+</item 16>
+
+<item 17>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Single filled the massive Rowbottom-size gap, collecting 25 disposals and six clearances in her prolific performance across the field while also playing a
+crucial tagging role on Maddy Prespakis. Coast with the most: Georgia Clayden of the Suns celebrates after kicking a goal. Credit: AFL Photos / Getty Images The
+former rugby sevens player was well-supported by Claudia Whitford (25 possessions) and Alison Drennan (22 touches). Prespakis was held to eight contested
+possessions, well below a season average of 14 per game, while Georgia Nanscawen proved a potent threat with 13 contested possessions and three score
+involvements.
+
+The Bombers broke through first with a goal from Amber Clarke but young talent Darcie Davies (two goals) was able to respond after being gifted 50 metres from a
+protected area infringement by Mia Bush. Daisy D’Arcy, Jacqueline Dupuy, Jamie Stanton and Davies attempted to break away from the low-scoring tug-of-war in the
+second with goals of their own.
+</item 17>
+
+<item 18>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+AAP Pies hold on against comeback Cats
+
+Sunday’s clash between Collingwood and Geelong at Victoria Park was less about who was the overall better side than it was decided by who could adapt best to
+the blustery wind and rain. The answer: the Magpies. Collingwood survived a fourth quarter comeback from Geelong to finish with a six-point victory and stay
+firmly in finals contention, whereas the Cats now face an uphill battle to finish in the eight in two weeks’ time. Jordyn Allen of the Magpies is tackled by
+Geelong’s Claudia Gunjaca in the round-eight match at Victoria Park. Credit: Getty Geelong scored just one point in the first quarter and had just 1.3 on the
+board at three-quarter-time, but kicked two goals to none in the final term to close in on Collingwood.
+</item 18>
+
+<item 19>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Comeback kings Richmond take the points in Cairns A late goal by Emelia Yassir has helped Richmond to their first win in four games, putting their AFLW finals
+campaign back on track with an 11-point victory over Hawthorn. Tight tussle: Richmond’s Emelia Yassir is tackled. Credit: Getty Images Separated by one point at
+half-time and down by nine points entering the last quarter, the Tigers pulled off a 6.5 (41) to 4.6 (30) victory to keep their finals hopes alive at Cazaly’s
+Stadium in Cairns on Friday night.
+
+Hawthorn were limited to just one point in the decisive final quarter. Midfield duo Monique Conti (35 disposals, seven clearances) and Grace Egan (28, 5) were
+typically influential for Richmond, while Hawthorn were led by Emily Bates (18, four) and Jasmine Fleming (18, one). “Richmond were just absolute beasts,
+especially their midfielders.
+</item 19>
+
+<item 20>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+Loading “We just want to win. We come into the club every day and get better, and we just set ourselves up, so when we come to game day, we know we’ve done
+everything, to get the result we want.” Maynard had a tumultuous start to September after his infamous collision with Melbourne’s Angus Brayshaw left the Demon
+concussed and him defending himself at the tribunal. With a three-match ban hanging over his head, Maynard feared his dream to achieve premiership glory could
+be lost before he beat the charge.
+
+Collingwood’s triumph helped banish the pain of their grand final defeat to West Coast in 2018, when Maynard was unfortunate not to receive a free kick for a
+block against Willie Rioli in the same passage that led to Dom Sheed’s match-winning goal. “Everyone knows that was a bizarre and crazy sort of week, mentally
+[after the Brayshaw incident],” Maynard said. “I wasn’t going well because of the what-ifs, if I missed this.
+</item 20>
+
+<item 21>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+J’Noemi Anderson is tackled by a group of Dockers. Credit: AFL Photos The Dockers dominated the Saints from the start to win 6.9 (45) to 3.3 (21) at Fremantle
+Oval. Having been on the verge of making their first finals appearance, St Kilda (4-4) could now miss the top eight even if they beat the fourth-placed Brisbane
+Lions and the ninth-placed Carlton.
+
+Dana East was everywhere for Fremantle, leading the game in disposals (19) and contested possessions (11), alongside Orlagh Lally (19 disposals, five
+clearances). Jamiee Lambert was the shining light for the otherwise subdued Saints, collecting a game-high seven clearances and 13 contested possessions. Docker
+Hayley Miller hunts a loose ball against St Kilda. Credit: Getty Fremantle flew out of the gates from the first siren, producing their highest-scoring quarter
+of the season with 26 points in the opening term.
+</item 21>
+
+<item 22>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“It was an awesome game and four quarters of Port Adelaide footy … It was awesome to finish up like that,” Phillips told Fox Footy after the 13.10 (88) to 4.6
+(30) win over the Giants. Erin Phillips celebrates a goal during her final AFLW match. Credit: AFL Photos Earlier, she told the ABC that she wanted her legacy
+to include doing everything she could to grow the game.
+
+“Hopefully I can be remembered as someone who took their opportunities, loved the game and was willing to do whatever it took to ensure the next generation was
+in a better position,” she said. Richelle Cranston of the Bulldogs is chaired off the ground by teammates Isabelle Pritchard and Ellie Blackburn after
+announcing her retirement. Credit: Getty The 38-year-old kicked a momentous goal from a set shot in the final quarter, and she was smothered by her jubilant
+teammates afterwards.
+</item 22>
+
+<item 23>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+If the Lions had lost, they were at risk of falling out of the top four with second-season side Essendon chasing their spot. Last season’s best and fairest Ally
+Anderson said her side loved playing at its training ground in Springfield, which it has made a fortress, and work well in hot conditions . “It was really hot.
+It was a grind… But yeah, it was a good finish,” Anderson told Fox Footy post-game. “Every week that we play here, every time that we play here, we get better
+and better. So, it was just a matter of time before we finally got the first win and then it hopefully [will] open the floodgates a bit.”
+
+The Lions next play St Kilda before taking on the reigning premiers Melbourne in the final round. After this weekend, they have staked their claim as being
+premiership contenders again. Adelaide will play top-four side North Melbourne next weekend before 18th-placed Western Bulldogs.
+</item 23>
+
+<item 24>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Magpies ruck Sabrina Frederick, who starred with 39 hit-outs and used her height to bring the ball to ground at the advantage of her midfielders, said her side
+had been practising for games like this.
+
+“Even in the chaos, it’s quite comfortable because we train it. We train what scenarios to do in what moments, and even though it’s a bit crazy, it felt so
+calm. We put players in place and we know what we’re doing,” said Frederick. “But close games are good ones, for everyone. We knew they were going to come out
+like that [in the last quarter]. When they’re down, they’re just going to give us everything.” Collingwood’s Brianna Davey kicks her team forward against
+Geelong. Credit: Getty Frederick admitted at times she “couldn’t see” and felt like she could be “blown away”.
+</item 24>
+
+<item 25>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+WEEK ONE FINALS FIXTURE SATURDAY NOVEMBER 11 First Qualifying Final: Adelaide v Brisbane Lions, 2.35pm local (3.05pm AEDT), Norwood Oval First Elimination
+Final: Gold Coast v Sydney, 6.15pm local (7.15pm AEDT), Heritage Bank Stadium SUNDAY NOVEMBER 12 Second Elimination Final: Geelong v Essendon, 1.05pm AEDT,
+GMHBA Stadium Second Qualifying Final: Melbourne v North Melbourne, 3.05pm AEDT, Ikon Park The eight was not decided until the final game of the regular season,
+when Sydney downed Fremantle by 22 points to leapfrog St Kilda into the final spot, after the Saints had kept themselves in the race with a 20-point win over
+Carlton earlier in the day, 7.4 (46) to 3.8 (26).
+</item 25>
+
+<item 26>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Conversely, the score was the most the Saints have conceded in any quarter this season.
+
+Aine Tighe set the tone for the Dockers with a brilliant goal less than 30 seconds into the first quarter, followed by two majors from Gabby O’Sullivan and
+another by Angelique Stannett. Ella Friend slotted a much-needed goal for the visitors to make it 4.2 (26) to 1.3 (9) at quarter-time. With less than a minute
+till the long break, captain Hayley Miller (two goals) kicked the only major of the second quarter to give Fremantle a comfortable 26-point lead at half-time.
+Despite two goals from Tyanna Smith and J’Noemi Anderson in the second half, the Saints struggled to eat into the deficit. Fremantle (4-4) face reigning
+premiers Melbourne next, before finishing the season against 11th-placed Sydney.
+</item 26>
+
+<item 27>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+Quince paste and hand-picked grapes have played a part in helping the Sydney Swans launch themselves to the top of the AFLW attendance charts, less than two
+years after their first match in the women’s league.
+
+The Swans play their final home match of the regular season this weekend with an average attendance of 4,365 from four games so far – 124 more than the next
+best club Adelaide – and a marquee pride match against Collingwood at Henson Park to come on Sunday where a crowd in excess of 4,000 is expected.
+
+The club’s focus has been to target local communities and make match days compelling for fans on and off the field, according to executive GM of marketing at
+the Swans, Loretta Johns.
+
+“Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting
+our games,” she said.
+
+Fans of Australian rules football in the Harbour City have a reputation for being fickle.
+</item 27>
+
+<item 28>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+It was the Western Bulldogs’ eighth loss in a row, and their biggest-ever defeat, and they have just two rounds left to clinch a win this season. They next play
+17th-placed West Coast and then top-four side North Melbourne. For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes
+of Gold Coast, Geelong, Collingwood, St Kilda and Carlton.
+
+The Swans, who went winless in their debut season last year, were propelled to victory by a Chloe Molloy masterclass. After a five-goal second term, which
+included a four-minute burst of three majors, Sydney had already brought up their largest score in an AFLW game by halftime. Swan Chloe Molloy celebrates a
+goal. Credit: AFL Photos / Getty Images The Bulldogs held their own in the last quarter, but the damage had already been done. The total was also the biggest
+the Dogs have conceded in their history, topping the 83 Melbourne kicked against them in round three.
+</item 28>
+
+<item 29>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Hanks was pivotal for the Demons and starred with 26 disposals, seven tackles and one goal, while her partner in the midfield Olivia Purcell had 28 touches,
+five clearances and five tackles. For the Roos, Ash Riddell led the disposal count with 31, while skipper Emma Kearney was crucial in defence. Melbourne’s
+Alyssa Bannan is tackled by Lulu Pullar of the Kangaroos. Credit: Getty Hanks said with the state of competition, they just had to take it week by week, but it
+was good to get the win. “We knew we were up against the best tonight,” said Hanks. “It’s a nice feeling tonight.”
+
+Lions roar in big battle Meanwhile, on Saturday afternoon, the Brisbane Lions put an end to Adelaide’s unbeaten run with a three-point victory at Brighton Homes
+Arena in a top-four thriller, 5.12 (42) to 6.3 (39), in a spectacle worthy of being a final.
+</item 29>
+
+<item 30>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Richmond were just absolute beasts, especially their midfielders. They really worked hard all night,” Hawthorn coach Bec Goddard said after the game. “Our work
+rate really dropped off and we just watched them play some really good footy. “If you’re a Hawks fan, you would’ve seen some really exciting moments of footy
+tonight.
+
+“Keep getting excited. We are coming, we’re growing, we’re getting better.” Hawthorn’s Irish ace Aine McDonagh kicked the opening goal before Tigers skipper
+Katie Brennan slotted two unanswered majors to celebrate her 50th game in style. Fellow 50-gamer Greta Bodey put boot to ball to snatch her own goal before
+quarter-time. A skirmish erupted in the second term after Brennan took exception to a tackle by Mattea Breed on Laura McClelland. McClelland was gifted a
+50-metre penalty following a bump against Sarah Hosking by Sophie Locke and converted from inside the goal square while players were occupied by the tussle.
+</item 30>
+
+<item 31>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I don’t think I’ve been as nervous to kick a goal in my life, to be honest,” she joked. “But nah, it was awesome.” On Saturday, the competition also said
+goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season,
+and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+
+Cranston, who was an inaugural AFLW player, will start kidney dialysis in January so had no option but to hang up the boots and focus on her treatment and
+health. “[I’m feeling] sad. Emotions hit me when the siren went. It’s been a really emotional week, the girls have really gotten around me. But yeah, my health
+has sort of deteriorated, it’s been a really hard year,” Cranston told Fox Footy after the Bulldogs lost to North Melbourne 7.13 (55) to 1.3 (9).
+</item 31>
+
+<item 32>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+The Magpies coach said on Saturday night he was yet to return to St Vincent’s Hospital where his wife Gabrielle gave birth to their daughter Maggie at 7.45am on
+grand final morning. Gabrielle went to the hospital with her sister at 10pm on Friday night after going into labour, before ringing McRae at 6am to join them at
+the hospital to be with them when the baby was born. Collingwood president Jeff Browne praised McRae and the players for their character and driving the change
+the club undertook when the new coach was appointed. He said the win was “the ultimate satisfaction” for him, and he was rapt to be there after a health scare
+put him in hospital briefly on the eve of the finals.
+
+“[It was] a bit of pit stop, a little bit of late pre-season training and got myself back into it,” Browne said.
+</item 32>
+
+<item 33>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+“We’ll continue to keep building the base and keep building the foundations and have it not just strong at year seven, season eight, but strong for generations
+to come.”
+
+In a bid to improve the spectacle of the AFLW, the league introduced longer quarters this year and an interchange cap to help increase scoring. The effect,
+according to Livingstone, has been positive.
+
+“We’ve increased game time by eight minutes per match, on average, and we’ve had record scores across the rounds,” she said. “Whereas leading into the season we
+hadn’t scored more than 100 goals in a round, we’ve regularly been scoring over 100 goals in a round.”
+
+The Swans recorded their highest total last round, in their 14-12-96 to 6-3-39 defeat of the Western Bulldogs, the league’s winless bottom side. Molloy recorded
+17 score involvements to set a new AFLW mark.
+
+But Livingstone said the AFL was happy with the level of competition.
+</item 33>
+
+<item 34>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“I can name the whole team. Everyone had their second in the last couple minutes.
+
+“That was such a team effort, everyone had a moment there when they had to put their head over the footy and lay a tackle and not let it slip.” Swanson (25
+disposals, eight clearances) stood out for the Eagles, while Bombers workhorse Maddy Prespakis (30 disposals, nine clearances) was typically prominent in the
+midfield alongside Georgia Nanscawen (21, six). With two rounds left, West Coast have a chance to build their winning streak when they meet the bottom of the
+table Western Bulldogs next round. Slipping one place to sixth, Essendon have must-win matches against Carlton and Gold Coast on the road to the finals. The
+Bombers will be without Steph Cain, who was sidelined with a concussion after an elbow to the head from Swanson.
+</item 34>
+
+<item 35>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Geelong coach Daniel Lowther said the strong winds made it hard for his side to clear the ball out of their defensive 50-metre zone and to move the ball with
+any certainty around the ground.
+
+Loading “At one point the rain hit our box, it was flowing,” Lowther said. “Both teams had to fight in the conditions, but it didn’t help the game. “Our marking
+contest wasn’t too flash, our ground ball representation was a bit hit and miss, so our defence were under a bit more pressure than they should have been, but
+they fought back really well,” Lowther said. Collingwood next play a Sydney line-up including former Magpies star Chloe Molloy, while Geelong will take on
+Richmond at Ikon Park.
+
+Dockers spoil Saints’ finals hopes Fremantle recorded a comfortable 24-point win yesterday to bring an abrupt end to St Kilda’s four-game streak and dash their
+AFLW finals hopes. J’Noemi Anderson is tackled by a group of Dockers.
+</item 35>
+
+<item 36>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+“I’m super grateful that I’ve got a little chant like that, and hopefully, it’s a little legacy I can continue, and I’m just happy the Magpie army are looking
+after me. I feel like they’re always on my side, no matter what mistake I make ... if anything, they motivate me to continue to take the game on and just be my
+true self.” Markov felt like he was cheating on Collingwood when he began training with the Blues, after finding out the Pies overlooked him for what was then
+their final list spot.
+
+That followed Gold Coast delisting the 27-year-old, who also played 23 games for Richmond. There was interest in him at the time, but he feared his career might
+be over. “I went through the national draft and no one looked into me, so there were technically 17 clubs that didn’t really want me,” he said.
+</item 36>
+
+<item 37>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+We’re stoked. It’s pretty special for the club.” Missing star ruck Ally Morphett to a season-ending wrist injury, Laura Gardiner stood the tallest in the
+midfield, while Molloy (two goals), Montana Ham, Privitelli and Brooke Lochland hit the scoreboard. An off-season recruit from Geelong, 20-year-old Gardiner had
+the ball on a string with a game-high 33 disposals and 18 contested possessions.
+
+Demons denied the minor premiership The Brisbane Lions have toppled AFLW heavyweights Melbourne by 25 points to clinch a double chance in the finals and deny
+the Demons the minor premiership. A year after Melbourne walked away with the 2022 premiership, the Lions avenged their upset grand final loss by defeating the
+defending premiers 8.5 (53) to 4.4 (28) at Brighton Homes Arena on Saturday. Melbourne’s Lauren Peace fights for the ball againt the Lions.
+</item 37>
+
+<item 38>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Crows elected not to challenge the decision. ‘Horror week’: Bombers stunned by struggling, controversy-hit Eagles West Coast withstood a late-term surge
+from Essendon to narrowly claim their second win of the AFLW season.
+
+Fresh off a controversy caused by comments their coach Michael Prior made following last week’s 70-point loss to Melbourne, the Eagles prevailed 3.5 (23) to 2.7
+(19) in a slugfest at the appropriately named Windy Hill on Sunday. West Coast’s Kate Bartlett (left) and Isabella Lewis celebrate Sunday’s surprise win over
+Essendon flanked by their teammates. Credit: Getty Prior had blasted the decision to pit strugglers West Coast against defending premiers Melbourne, saying:
+“How we play that team is beyond me. That is what you get when you get fixturing like that.” He later backtracked on the criticism, but his comments did put
+added pressure and focus on his team this week. Michael Prior guided West Coast to a gutsy win.
+</item 38>
+
+<item 39>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Bridie Hipwell kicked the only goal of the third quarter to give Hawthorn a game-high nine-point lead. Loading Richmond rebounded in the last term, with
+Courtney Jones ending Hawthorn’s three-goal run with her first touch of the night, cutting the margin to three points. Dogged by inaccuracy in front of goal,
+Yassir reduced the deficit to a single point before finally breaking through on her third attempt. That put the Tigers ahead by six points with 11 minutes left,
+before Caitlin Greiser sealed the win with a massive goal from 45 metres.
+</item 39>
+
+<item 40>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Down by four points at half-time in the low-scoring game, a third-term goal from Rebecca Privitelli sparked the Swans to a 5.10 (40) to 2.6 (18) win on Sunday
+at Fremantle Oval.
+
+The second-year expansion side stormed home with three unanswered goals to secure eighth spot. It’s a dramatic improvement, with the Swans winless in their
+first season. “Any club that’s able to go from winless one year to a finals berth, it’s incredible,” Sydney co-captain Chloe Molloy told Fox Footy after the
+match. “You can see the emotion on the girls’ faces. Coming into the season, the odds were against us. Just to get into the eight, we’ve managed to do that.
+We’re stoked. It’s pretty special for the club.”
+</item 40>
+
+<item 41>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Molloy, the Swans’ star off-season recruit, turned on one of the best performances of her career to demolish their injury-hit hosts.
+
+The former Collingwood ace was a class above as she kicked 3.4 from her 28 possessions and played a crucial role in setting up numerous other Sydney goals.
+Loading “She [Molloy] was itching to get in there [in the midfield],” Swans coach Scott Gowans said. “We kept her forward deliberately. It was important Chloe
+played a good block of time forward so we could have a look at it.” The Blues lost to Greater Western Sydney by two points on Saturday afternoon, denying them
+the chance to leapfrog into the top eight, 8.1 (49) to 7.5 (47).
+
+Narrm reclaim top spot Reigning premiers Narrm have reclaimed top spot on the ladder and their position as flag favourites after defeating third-placed North
+Melbourne by 23 points at Ikon Park on Saturday night.
+</item 41>
+
+<item 42>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“But I go out with on a happy note. I love these girls and I’ll be over at the pancake pocket [Pancake Parlour at Whitten Oval] watching them from now on and
+have a few bevs on the sideline.” Roos’ lock in top-four spot; Dogs have issues to work through in off-season North Melbourne secured third spot on the ladder
+and the double chance in finals after downing the Western Bulldogs by a whopping 46 points. They will head into finals with momentum but a glaring issue to work
+on: kicking accuracy. Despite the comfortable win, they could have done a lot more damage after booting double the number of behinds to goals.
+
+Star midfielder Ash Riddell, who had 36 touches and seven clearances, said she was excited to go up against Melbourne or Adelaide in the first weekend of finals
+depending on other results this round, as they were the only two sides who beat them this year.
+</item 42>
+
+<item 43>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But crowds are short of targets that could accelerate the extension of the regular season, which grows from 10 games this year to 12 games by 2025.
+
+5,474 fans were at North Sydney Oval to watch the Swans’ first AFLW victory earlier in the season. Photograph: Jack Snape/The Guardian
+
+The league enjoyed strong attendances in round one, which were partly attributed to the so-called Matildas effect, but some clubs have struggled to attract fans
+in large numbers this season. Crowds of less than 1,500 have been recorded in both traditional markets such as Melbourne and Perth, as well as areas targeted
+for growth like Blacktown and the Gold Coast.
+
+The A-League Women launched this month with a first round highlighted by a crowd of more than 11,000 in Sydney.
+</item 43>
+
+<item 44>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Michael Prior guided West Coast to a gutsy win. Credit: Getty
+
+Aisling McCarthy and Amy Franklin drew first blood for West Coast within the opening five minutes, while the hosts were kept goalless. The Bombers only added
+three behinds in the second term and the Eagles failed to score as the blustery conditions took their toll on the game. West Coast’s Kellie Gibson broke the
+goal drought with the only major of the third quarter, before the home side came to life with the wind at their backs in the final term, with skipper Bonnie
+Toogood and Amber Clarke reducing the margin to four points. Toogood continued to pepper the scoreboard, but the Eagles held on to secure a rare victory. “We’ve
+had a horror week back at home, and it’s been really bloody tough on all of us, and Mick as well. I’m just really proud of the girls,” West Coast captain Emma
+Swanson said post-game on the broadcast. “I can name the whole team.
+</item 44>
+
+<item 45>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the open letter to their members on Wednesday morning, QRU chief executive David Hanham and chairman Brett Clark moved to update constituents on the reform
+measures that RA is attempting to usher through the game.
+
+Last week, The Roar revealed that the New South Wales Rugby Union was in the latter stages of handing over their license to RA.
+
+By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property.
+
+Advertisement
+
+The decision will see all male and female Waratahs players, including coaches and high-performance staff, as well as all commercial and operations staff, run
+out of RA’s office.
+
+NSW Waratahs chief executive Paul Doorn informed stakeholders of the decision last week.
+
+RA is cognisant that not every Super Rugby franchise will follow suit immediately, but the governing body is hopeful that now one of the two biggest states has
+agreed to hand over the keys, others will follow suit swiftly.
+</item 45>
+
+<item 46>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Chloe Scheer was once again the star in front of goals with three majors, while the Cats finished with seven individual goalkickers. Georgie Prespakis (35
+touches, eight clearances) and Amy McDonald (23 touches, eight clearances) were a formidable midfield duo, while the retiring Renee Garing had a whopping 11
+tackles. Overall, it was a strong team effort from a side that will be hungry for a finals win. Last year, the Cats had an impressive home-and-away run but
+bowed out narrowly in an elimination final to North Melbourne. Geelong young defender Rebecca Webster told this masthead earlier in the week how important the
+home crowd is for them come knockout finals. “Playing at GMHBA is like a massive advantage for us,” said Webster. “We love going in those four walls. We train
+there three, four times a week.
+</item 46>
+
+<item 47>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Continued that form into this season and was outstanding for Western Australia at the National Championships winning his team’s MVP award and All-Australian
+honours after averaging 23.5 disposals and 6.5 marks playing as a defender and midfielder. Played a handful of senior games for Claremont and ended the season
+being one of his team’s best in a premiership win at under-18 level. His agility, speed for his size and precise kicking are all features of his game.
+</item 47>
+
+<item 48>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+AAP Cats secure elimination final home-ground advantage
+
+Geelong have not only secured their spot in the top eight with a huge 40-point win over Hawthorn on Saturday at GMHBA Stadium but locked in home-ground
+advantage for the first elimination final. The Cats finished sixth, with the 9.6 (60) to 3.2 (20) win over the Hawks boosting their percentage to a healthy
+141.2, almost 40 ahead of Essendon, who sit one rung below them on equal points. Momentum is also in Geelong’s favour after two big wins in a row, having
+demolished Richmond by 38 points last weekend. Chloe Scheer (left) and Julia Crockett-Grills of the Cats celebrate. Credit: Getty Against the Hawks, they
+controlled ball movement from the get-go, kicking four goals straight to open the match and keeping their opposition goalless to half-time.
+</item 48>
+
+<item 49>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+Adams and McStay – who arrived from the Lions in the off-season as an unrestricted free agent – leaned on each other to cope with the difficult moment, and
+needed some privacy to deal with their personal misfortune before they could share in the team’s raucous celebrations. McStay may need as many as eight weeks to
+recover from the high-grade medial collateral ligament strain he suffered in the club’s preliminary final win. Collingwood’s injured recruit Dan McStay at
+training before the grand final. Credit: Eddie Jim “We shed a few tears and a bit of emotion, then we brushed it off and said, ‘Let’s get on with it and go
+celebrate with the boys’. It was a great night,” Adams said. John Noble was another sad story, playing every game in the home-and-away season, only to be
+dropped for Collingwood’s qualifying final clash with Melbourne and never forcing his way back in.
+</item 49>
+
+<item 50>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Melbourne’s Lauren Peace fights for the ball againt the Lions. Credit: Getty Images The Lions were at risk of slipping from the top four after last week’s
+21-point loss to St Kilda, but will now finish the home-and-away season fourth, avoiding a sudden-death elimination final and marking coach Craig Starcevich’s
+75th game in style.
+
+Meanwhile, Melbourne ceded the minor premiership to Adelaide and dropped to second spot. The Lions put on a show across the park, with powerhouse duo Ally
+Anderson (22 disposals) and Jade Ellenger (22) going to work in the midfield while Dakota Davidson (two goals) led the charge in the forward line. Captain Bre
+Koenen was superb in defence as she played on Melbourne’s leader Kate Hore, collecting a game-high 12 intercept possessions and limiting the prolific goalkicker
+to just one goal. Lions duo Charlotte Mullins and Ruby Svarc celebrate.
+</item 50>
+=== END ITEM id=a374c87a56d82510 ===

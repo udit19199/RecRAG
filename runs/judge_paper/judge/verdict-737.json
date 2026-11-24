@@ -1,0 +1,21 @@
+[
+{"id": "083a97cf9a5f626c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 42, "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "plus an additional 10 percent of that price difference"}]}
+]},
+{"id": "4fd4df3b342b04ef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 18, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 18, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 18, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]}
+]},
+{"id": "1aab8ce95fd9ddaa", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 26, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 26, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]}
+]}
+]

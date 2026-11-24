@@ -21,8 +21,11 @@ items = [i for i in answer_items(dirs) if i.id not in done]
 if items:
     n = len(glob.glob("runs/judge_paper/answers/items-answers-*.json"))
     random.Random(20261122).shuffle(items)
-    out = Path(f"runs/judge_paper/answers/items-answers-{n:03d}.json")
-    out.write_text(JudgeItems(answers=items).model_dump_json(indent=1))
-    print(len(items), "new answer items in", out)
+    # At most 100 items per file (24 Nov: the B4 runs add several hundred).
+    for k in range(0, len(items), 100):
+        out = Path(f"runs/judge_paper/answers/items-answers-{n:03d}.json")
+        out.write_text(JudgeItems(answers=items[k:k + 100]).model_dump_json(indent=1))
+        print(len(items[k:k + 100]), "new answer items in", out)
+        n += 1
 else:
     print("no new answer items")

@@ -1,0 +1,35 @@
+[
+{"id": "7ea48a3e1f4c28bc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "(Fraud, conspiracy to commit fraud, and money laundering, in case you were wondering.)"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 6, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 15, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 15, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 15, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 15, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "4943d1f74196f7d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 20, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 47, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 47, "quote": "After missing last week's game, Tyreek Hill now needs to"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 47, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 47, "quote": "to reach his stated goal of 2,000 receiving yards this season."}]}
+]},
+{"id": "3f052f38cbe68efc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "19d8a9f2fe57b7b9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 18, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 18, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "2.0", "status": "missing", "evidence": []}
+]}
+]

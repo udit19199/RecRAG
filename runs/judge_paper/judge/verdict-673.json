@@ -1,0 +1,35 @@
+[
+{"id": "8755b872b8890b74", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 25, "quote": "Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "Normal customers — the defense objected to “normal” but was overruled — could be automatically liquidated"}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 12, "quote": "No other customer trading on FTX had “allow_negative” privileges — only Alameda."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []}
+]},
+{"id": "6e6fbd4f2568a05a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "It would seem that, as the Springboks play for their country,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 28, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 28, "quote": "the All Blacks are playing for themselves as much as anyone – and the generation of players and leaders that will call time on their international careers at week’s end."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 23, "quote": "The All Blacks had their chances"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 23, "quote": "their usual safe handling, a feature throughout the World Cup after their first-up loss to France"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 23, "quote": "a feature throughout the World Cup after their first-up loss to France"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 23, "quote": "their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 23, "quote": "Springboks’ blitz defence in the wet conditions."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "c0a0926de83d2567", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 26, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 26, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 28, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 28, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]}
+]}
+]

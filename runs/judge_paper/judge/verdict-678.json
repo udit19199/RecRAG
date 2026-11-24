@@ -1,0 +1,34 @@
+[
+  {"id": "d5cdcdbefc952e9e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 17, "quote": "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 17, "quote": "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 17, "quote": "Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 50, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 50, "quote": "Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents."}]}
+  ]},
+  {"id": "919b4f6d8752412c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 21, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 21, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+  ]},
+  {"id": "60b34adffe29d3a9", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 27, "quote": "Alameda Research’s former CEO, Caroline Ellison,"}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 13, "quote": "A conscious criminal…"}, {"item": 13, "quote": "The prosecution’s account of the alleged crimes by Bankman-Fried"}, {"item": 17, "quote": "Instead, he punched hard on Bankman-Fried lying and stealing."}]},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 13, "quote": "Or did he act in good faith, and like many a startup founder, fly too close to the sun?"}, {"item": 12, "quote": "Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued."}]},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []},
+    {"fact": "2.7", "status": "stated", "evidence": [{"item": 13, "quote": "Or did he act in good faith, and like many a startup founder, fly too close to the sun?"}, {"item": 12, "quote": "Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued."}]}
+  ]}
+]

@@ -1,0 +1,34 @@
+[
+  {"id": "e09193e96c902701", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 29, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 29, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 29, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 29, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]}
+  ]},
+  {"id": "db55ff147af86563", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 2, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 24, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 24, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 24, "quote": "With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 24, "quote": "the win assured the Swans of retaking eighth spot."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 15, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 15, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 15, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 15, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 15, "quote": "Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said."}]}
+  ]},
+  {"id": "c8fb5432e4b9a258", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 25, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 25, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 25, "quote": "In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 22, "quote": "On September 21, Kelce announced on The Pat McAfee Show he had invited Swift to watch one of his games."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Sept. 24: Swift attends Chiefs game"}, {"item": 10, "quote": "Swift took Kelce up on his offer"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 18, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+  ]}
+]

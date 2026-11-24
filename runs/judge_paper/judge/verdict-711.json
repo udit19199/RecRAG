@@ -1,0 +1,37 @@
+[
+{"id": "c4c6b5451185283f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 3, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 3, "quote": "many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "content “misappropriated from Publishers,” the complaint alleges."}, {"item": 25, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,"}]},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "1e45ea82d0137198", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Alameda also allegedly kept FTX from looking bad by assuming some of its losses."}, {"item": 23, "quote": "Bankman-Fried directed him to have Alameda take it on instead, because FTX’s balance sheets were visible to investors and Alameda’s weren’t."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 19, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 19, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]}
+]},
+{"id": "be8d78e8d9760aa0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 24, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 24, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 24, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 24, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+]}
+]

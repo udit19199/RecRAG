@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a81b3ac0c14fdb26",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 44, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 26, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 26, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 26, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 26, "quote": "sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]}
+    ]
+  },
+  {
+    "id": "51b7a599ee3728d1",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 24, "quote": "Users’ natural behavior for search is to follow the path of least resistance, i.e. most people just pick up their phone and just use the default search engine."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "We make Google be the default search engine,” he said, “because we’ve always thought it was the best."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "because we’ve always thought it was the best."}]}
+    ]
+  },
+  {
+    "id": "c614cbb84279e785",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+    ]
+  },
+  {
+    "id": "f3729206d6abc0d4",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "Like Sorcerers, you’ll pick your Warlock subclass during character creation."}, {"item": 12, "quote": "Warlocks are extreme knowledge-seekers who are willing to form a pact with otherwordly beings"}]},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  }
+]

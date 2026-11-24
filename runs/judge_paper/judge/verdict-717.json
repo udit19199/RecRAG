@@ -1,0 +1,34 @@
+[
+{"id": "eb15470c132c0173", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Cohen tried to make the common white-collar defense argument"}, {"item": 10, "quote": "Sam acted in good faith and took reasonable business measures"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried admitted he’d been told."}]}
+]},
+{"id": "4bb927e38202e879", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 13, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 17, "quote": "claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 17, "quote": "from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 17, "quote": "from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]}
+]},
+{"id": "3369f77c8e33f0ad", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Claim $5,000+ in bonuses from Caesars Sportsbook, BetMGM, Bet365, FanDuel, DraftKings, BetRivers"}, {"item": 19, "quote": "The promo codes on this page are for new customers only."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Here are details explaining how the Caesars Sportsbook welcome offer works"}, {"item": 5, "quote": "When registering your new Caesars Sportsbook account"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Here’s how that welcome offer works at BetMGM Sportsbook"}, {"item": 6, "quote": "Start by entering the bonus code SPORTSPICK when you create your BetMGM Sportsbook account"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 16, "quote": "Claim here: Bet365 bonus code TSNCO for promo of your choice"}, {"item": 19, "quote": "The promo codes on this page are for new customers only."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 16, "quote": "FanDuel has a new offer when using our exclusive FanDuel promo code link"}, {"item": 10, "quote": "Those signing up at FanDuel Sportsbook Vermont by Jan"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 2, "quote": "Register as a new user"}, {"item": 2, "quote": "Claim here: DraftKings promo code for $1,200 in bonus bets"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 2, "quote": "The BetRivers promo code SPORTSRIV gives new users a 2nd chance bet up to $500"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "Many times, all you’ll need to do is sign up for a new account through the links on this page to claim a bonus"}, {"item": 4, "quote": "The welcome bonuses and ongoing promotions coming soon from new online betting sites in Vermont"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 12, "quote": "Many times, all you’ll need to do is sign up for a new account through the links on this page to claim a bonus"}, {"item": 19, "quote": "The promo codes on this page are for new customers only."}]}
+]}
+]

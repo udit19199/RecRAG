@@ -1,0 +1,2112 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=2d28e2280d67bd96 ===
+Gold sentences and facts:
+Sentence 0: McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago.
+  Fact 0.0: McHenry has brushed off attempts to take the job more permanently.
+  Fact 0.1: McHenry was appointed to the role after the ouster of McCarthy.
+  Fact 0.2: The ouster of McCarthy was unprecedented.
+  Fact 0.3: The ouster of McCarthy happened more than two weeks ago.
+Sentence 1: Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives.
+  Fact 1.0: Wall Street is also absorbing the ouster of Kevin McCarthy.
+  Fact 1.1: Kevin McCarthy was the speaker of the House of Representatives.
+  Fact 1.2: Kevin McCarthy was ousted as speaker of the House of Representatives.
+
+Retrieved items:
+<item 1>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Once a formality in Congress, the vote for House speaker has devolved into another bitter GOP showdown for the gavel.
+
+As Republicans upset and exhausted by the infighting retreated for private conversations, hundreds of protesters, if not more, amassed outside the Capitol over
+the Israel-Hamas war, a stark reminder of the dangers of having the House adrift as political challenges intensify at home and abroad.
+
+Ahead of the morning vote, Jordan, the combative Judiciary Committee chairman, made an unusual plea for party unity — almost daring his colleagues to put
+forward the alternative proposal for a temporary speaker.
+
+“We’ve been at this two weeks,” Jordan said at the Capitol. “American people deserve to have their government functioning.”
+
+But as the roll call got under way, he lost more than he gained, picking up three backers but adding more detractors. No further votes were scheduled.
+</item 1>
+
+<item 2>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+“We have a chance today to end that chaos, end that uncertainty,” Cole said.
+
+He said that Jordan was not a “shrinking violet” but someone who could lead the House.
+
+Democratic Rep. Pete Aguilar of California nominated Jeffries, noting the Democratic leader continues to win more votes and is the best choice to move the
+country forward.
+
+“The country cannot afford more delays and more chaos,” Aguilar said.
+
+Jordan had relied on backing from Trump, the party’s frontrunner in the 2024 election to challenge President Joe Biden, and groups pressuring rank-and-file
+lawmakers for the vote, but it was not enough.
+
+Flexing their independence, the holdouts are a mix of pragmatists — ranging from seasoned legislators and committee chairs worried about governing, to newer
+lawmakers from districts where voters back home prefer President Joe Biden to Trump.
+
+Some Republicans resent being pressured by Jordan’s allies and say they are being threatened with primary opponents if they don’t support him as speaker. Others
+are simply upset at the way the whole process has dragged out.
+</item 2>
+
+<item 3>
+Will the Panthers fire Frank Reich? Impatient David Tepper could turn up Carolina's hot seat with 'Thursday Night Football' loss (Sporting News,
+2023-11-06T21:17:51+00:00)
+And I don't think that people are thinking that there's trouble right now with those people. But would anybody be surprised with anything that happens in
+Carolina this year? No."
+
+"One thing about David Tepper is he's not very patient and he does whatever he wants..
+
+
+
+I don't think anybody would be surprised if anything happens in Carolina with the season that they're having" ~ @AdamSchefter #PMSLive
+pic.twitter.com/PV7bfVUtHp — Pat McAfee (@PatMcAfeeShow) November 6, 2023
+
+Schefter pointed to Carolina's firing of Rhule as an example of Tepper's impatience. There had been rumors that the owner was going to wait things out with
+Rhule in the weeks leading up to his in-season departure. Instead, he decided to pull the trigger and part with him.
+</item 3>
+
+<item 4>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives. The unprecedented move to remove a speaker from the
+position likely doesn’t change much in the short term, with funding for the US government set until November 17.
+
+“That said, a leadership vacuum in the House raises the odds of a government shutdown when the current funding extension expires,” according to economists at
+Goldman Sachs. A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past
+shutdowns. On Wall Street, big tech stocks helped to support the market after leading it lower a day earlier. They tend to move more sharply with expectations
+for rates because high-growth stocks are seen as some of the biggest victims of high yields. In markets abroad, stock indexes were mixed across much of Europe.
+</item 4>
+
+<item 5>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Don Bacon, R-Neb.
+
+For more than two weeks the stalemate has shut down the U.S. House, leaving a seat of American democracy severely hobbled at a time of challenges at home and
+abroad. The House Republican majority appears to have no idea how to end the political turmoil and get back to work.
+
+With Republicans in majority control of the House, 221-212, any candidate can lose only a few detractors. It appears there is no Republican at present who can
+win a clear majority, 217 votes, to become speaker.
+
+In fact, the hard-charging Judiciary chairman lost rather than gained votes despite hours spent trying to win over holdouts, no improvement from the 20 and then
+22 Republicans he lost in early rounds this week.
+
+Friday’s vote was 194 for Jordan, his lowest tally yet, and 210 for Jeffries, with two absences on each side.
+
+“He doesn’t have the votes to be speaker,” Rep.
+</item 5>
+
+<item 6>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+“He doesn’t have the votes to be speaker,” Rep. Carlos Gimenez, R-Fla., said after a late Thursday meeting when Jordan sought to hear detractors out and shore
+up support.
+
+The holdouts want “nothing” from Jordan, Gimenez said, adding that some of the lawmakers in the meeting simply called on Jordan to drop out of the race.
+
+One extraordinary idea, to give the interim speaker pro tempore, Rep. Patrick McHenry, more powers for the next several months to at least bring the House back
+into session and conduct crucial business, was swiftly rejected by Jordan’s own ultra-conservative allies.
+
+A “betrayal,” said Rep. Jim Banks, R-Ind.
+
+Next steps were highly uncertain as angry, frustrated Republicans predict the House could essentially stay closed for the foreseeable future — perhaps until the
+mid-November deadline for Congress to approve funding or risk a federal government shutdown.
+
+“We’re trying to figure out if there’s a way we can get back with a Republican-only solution,” said veteran legislator Rep.
+</item 6>
+
+<item 7>
+Amidst Managerial Shake-Ups, These 5 MLB Teams Are Looking for a New Leader: Who Are the Top Candidates? (Essentially Sports, 2023-10-30T22:30:39+00:00)
+With that, one has to wait and watch who serves as the best fit.
+
+ADVERTISEMENT Article continues below this ad
+
+With the facts broken down, it is a matter of time that the teams narrow down their best options. MLB world will welcome 2024 with high expectations. With new
+management, the fans expect teams to come back with great vigor and ferocity.
+
+Watch This Story: Every MLB Team That Has Never Won a World Series
+</item 7>
+
+<item 8>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+A closed-door meeting Thursday to regroup grew heated at times with Republican factions blaming one another for sending their majority into chaos, lawmakers
+said.
+
+Elevating McHenry to an expanded speaker’s role could be a possible off-ramp for the crisis, but it would not be as politically simple as it might seem.
+
+Republicans are loath to partner with the Democrats in a bipartisan way on the arrangement, and it’s highly unlikely Republicans could agree to give McHenry
+more powers on their own, since their hard-liners don’t like it.
+
+McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more
+than two weeks ago.
+
+To win over GOP colleagues, Jordan had relied on backing from Trump, the party’s front-runner in the 2024 election, and groups pressuring rank-and-file
+lawmakers for the vote. But they were not enough and in fact backfired on some.
+
+Jordan has been a top Trump ally, particularly during the Jan.
+</item 8>
+
+<item 9>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Tom Cole, R-Okla.
+
+“That’s what normal majorities do. What this majority has done is prove it’s not a normal majority.”
+
+What was clear was that Jordan was refusing to step aside, appearing determined to wait out his foes even as his path to become House speaker was all but
+collapsing.
+
+Many view Jordan, a founding member of the hard-right House Freedom Caucus, as too extreme for a central seat of U.S. power, second in line to the presidency.
+
+“One thing I cannot stomach or support is a bully,” said a statement from Rep. Mariannette Miller-Meeks, R-Iowa, who voted against Jordan on the second ballot
+and said she received “credible death threats.”
+
+Democratic Leader Jeffries reiterated that his party was “ready, willing and able” to partner with more traditional Republicans on a path to re-open the House
+—- particularly as Congress is being asked to consider President Joe Biden’s aid package for Israel, Ukraine and other needs.
+</item 9>
+
+<item 10>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Republican Rep. Jim Jordan failed again Wednesday on a crucial second ballot to become House speaker, the hard-fighting ally of Donald Trump losing even more
+GOP colleagues who are refusing to give him the gavel.
+
+Next steps were highly uncertain as angry, frustrated Republicans looked at other options. A bipartisan group of lawmakers floated an extraordinary plan — to
+give the interim speaker-pro-tempore, Rep. Patrick McHenry, R-N.C., more power to reopen the immobilized House and temporarily conduct routine business.
+
+What was clear was that Jordan’s path to become House speaker was almost certainly lost. He was opposed by 22 Republicans, two more than he lost in first round
+voting the day before.
+
+“We’ll keep talking to members, keep working on it,” Jordan, a founding member of the hard-right Freedom Caucus, said after the vote, vowing to stay in the
+race.
+
+The House came to another abrupt standstill, stuck now 15 days without a speaker — a position of power second in line to the presidency — since the sudden
+ouster of Kevin McCarthy.
+</item 10>
+
+<item 11>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Jordan has been a top Trump ally, particularly during the Jan. 6 Capitol attack by the former president’s backers who were trying to overturn the 2020 election
+he lost to Biden. Days later, Trump awarded Jordan a Medal of Freedom.
+
+First elected in 2006, Jordan has few bills to his name from his time in office. He also faces questions about his past.
+
+Some years ago, Jordan denied allegations from former wrestlers during his time as an assistant wrestling coach at Ohio State University who accused him of
+knowing about claims they were inappropriately groped by an Ohio State doctor. Jordan has said he was never aware of any abuse.
+</item 11>
+
+<item 12>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Influencer marketing agencies on both ends of the political spectrum are ramping up their recruitment faster than the Federal Elections Commission can regulate
+the industry. This year, the conservative agency Influenceable has been recruiting Gen Z creators to rally behind far-right politicians and parrot GOP talking
+points, without disclosing their pay. The tactic irked some Republicans, the Texas Tribune reported, including a Texas state representative who called for an
+investigation into the company.
+
+Given the resistance to Republican politicians in online spaces that attract young people, it’s unsurprising that candidates may rely on shadowy agencies like
+Influenceable to do the work for them. Republican politicians have a reputation for botching even the most straightforward digital campaigns. In May, Florida
+Gov. Ron DeSantis launched his presidential campaign on Twitter Spaces in an audio conversation with Elon Musk. The conversation started late and was so riddled
+with technical issues that it ended after just 21 minutes. Critics on both the right and the left described the launch as a disaster.
+</item 12>
+
+<item 13>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Congress faces daunting challenges, risking a federal shutdown at home if it fails to fund the government and fielding Biden’s requests for aid to help Ukraine
+and Israel in the wars abroad.
+
+First elected in 2006, Jordan has few bills to his name from his time in office. He also faces questions about his past. Some years ago, Jordan denied
+allegations from former wrestlers during his time as an assistant wrestling coach at Ohio State University who accused him of knowing about claims they were
+inappropriately groped by an Ohio doctor. Jordan has said he was never aware of any abuse.
+
+___
+
+Associated Press writers Kevin Freking and Mary Clare Jalonick contributed to this report.
+</item 13>
+
+<item 14>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Republicans dropped Rep. Jim Jordan on Friday as their nominee for House speaker, making the decision during a closed-door session after the hard-edged ally of
+Donald Trump failed badly on a third ballot for the gavel.
+
+Afterward, Jordan said simply of his colleagues, “We put the question to them, they made a different decision.”
+
+The hard-charging Judiciary Committee chairman said House Republicans now need to come together and “figure out who our speaker is going to be.”
+
+The House impasse deepening into a full-blown crisis, Republicans have no realistic or workable plan to unite the fractured GOP majority, elect a new speaker
+and return to the work of Congress that has been languishing since hard-liners ousted Kevin McCarthy at the start of the month.
+
+Majority Leader Steve Scalise said they’re going “come back and start over” on Monday.
+
+Angry, frustrated Republicans who have been watching their majority control descend into chaos left the private session blaming one another for the divisions
+they have created.
+</item 14>
+
+<item 15>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+11, 2001, terror attacks to ensure continuity of government.
+
+The novel concept of boosting the interim speaker’s role was gaining favor with a pair of high-profile Republicans: Former GOP speakers Newt Gingrich and John
+Boehner.
+
+Gingrich said while he likes Jordan, he has “no faith” the nominee can get much beyond the 200 votes he won in the first vote.
+
+“We can’t sit around and suck our thumbs and hope the world will wait until the House Republicans get their act together,” Gingrich told Fox News’ Sean Hannity
+on his show.
+
+Boehner reposted Gingrich’s views saying, “I agree,” on social media.
+
+The two men have deep experience with the subject. Both were chased to early retirement.
+
+“The Republicans are unable to function right now,” Jeffries said late Tuesday. “All options are on the table to end the Republican civil war,” he added
+Wednesday.
+
+In nominating Jordan, veteran Republican Rep. Tom Cole of Oklahoma said it was time to end the upheaval that he had warned against with McCarthy’s sudden
+ouster.
+</item 15>
+
+<item 16>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+Others are simply upset at the way the whole process has dragged out.
+
+They cast their ballots for McCarthy, Majority Leader Steve Scalise — who had been the party’s first nominee to replace McCarthy — and others, one vote even
+going to the retired Boehner.
+
+“Jim Jordan will be a great speaker,” Trump had said Tuesday said outside a courthouse in Manhattan, where he is facing business fraud charges. “I think he’s
+going to have the votes soon, if not today, over the next day or two.”
+
+Jordan has been a top Trump ally, particularly during the Jan. 6 Capitol attack by the former president’s backers who were trying to overturn the 2020 election
+he lost to Biden. Days later, Trump awarded Jordan a Medal of Freedom.
+
+The political climb has been steep for Jordan who is known more as a chaos agent than a skilled legislator, raising questions about how he would lead.
+</item 16>
+
+<item 17>
+Republicans just dumped Jim Jordan again. They're looking for another speaker candidate (Fortune, 2023-10-18T20:36:54+00:00)
+No further votes were scheduled.
+
+The holdouts added to a surprisingly large and politically diverse group of 20 Republicans who had rejected Jordan’s nomination the day before, many resenting
+the hardball tactics seeking to enforce support, and viewing the Ohio congressman as too extreme for a central seat of U.S. power.
+
+With Republicans in majority control of the House, 221-212, Jordan must pick up most of his GOP foes to win. Wednesday’s tally, with 199 Republicans voting for
+Jordan and 212 for Democratic leader Hakeem Jeffries of New York, left no candidate with a clear majority, as the 22 Republicans voted for someone else.
+
+One new Jordan opponent, Rep. Vern Buchanan of Florida, explained his vote, “I think it’s time to move on.”
+
+Bipartisan groups of lawmakers have been floating ways to operate the House by giving greater power to McHenry or another temporary speaker. The House had never
+ousted its speaker before McCarthy, and McHenry could tap the temporary powers that were created after the Sept.
+</item 17>
+
+<item 18>
+Amidst Managerial Shake-Ups, These 5 MLB Teams Are Looking for a New Leader: Who Are the Top Candidates? (Essentially Sports, 2023-10-30T22:30:39+00:00)
+This newest president of baseball operations for the Mets is a former Brewer himself.
+
+The Fifth Team In The List Is San Diego Padres
+
+Bob Melvin was said to be returning to the Padres as manager, despite the team’s 82-80 record and 2023 postseason absence. But in a turn of events, the San
+Francisco Giants hired Melvin when San Diego gave permission to interview him for SanFran’s managerial vacancy.
+
+ADVERTISEMENT Article continues below this ad
+
+Now, the Padres’ vacant position is linking to former Cardinals manager Mike Shildt multiple times. Bob Nightengale of USA Today Sports reports that Shildt is
+the front-runner to take over. “The Padres will be hiring their sixth manager in just 10 years under (general manager) A. J. Preller. Former St. Louis Cardinals
+manager Mike Shildt is the favorite while associate manager Ryan Flaherty is getting strong consideration,” Nightengale said.
+</item 18>
+
+<item 19>
+Amidst Managerial Shake-Ups, These 5 MLB Teams Are Looking for a New Leader: Who Are the Top Candidates? (Essentially Sports, 2023-10-30T22:30:39+00:00)
+That said, the skipper market is abuzz!
+
+Starting With The Los Angeles Angels
+
+ADVERTISEMENT Article continues below this ad
+
+After Joe Maddon was relieved of his managerial duties, Phil Nevin signed up as the interim manager for the remaining 106 games of 2022. Post that, he went on
+to sign a one-year contract to manage the Angels in 2023, and the interim tag was lifted. Nevin’s 2024 club option was rejected by the Halos, who underwent
+partial two seasons of 119-149 (.444) play under his supervision. Since this was a non-negotiable, the seat stands vacant.
+
+The biggest challenge in this scenario is that the Angels star, Shohei Ohtani is yet to reveal which team he would be joining. In case the Angels re-sign the
+two-way phenom, the manager would get to head the roster with the 2021 MVP and Mike Trout. A once in a lifetime opportunity.
+</item 19>
+
+<item 20>
+Republicans dump Jim Jordan as House Speaker nominee, leaving Congress in crisis yet again (Fortune, 2023-10-20T19:10:22+00:00)
+Next steps are highly uncertain as lawmakers start offering new ideas for a possible speaker. But it appears no one at present can win a GOP majority.
+
+“We’re in a very bad place right now,” McCarthy said earlier.
+
+In a floor vote Friday morning, Jordan’s third reach for the gavel, he lost 25 Republican colleagues, worse than he had fared earlier in the week, and far from
+the majority needed, as they reject his hardline approach.
+
+But after two failed votes, Jordan’s third attempt at the gavel essentially collapsed — in large part because more centrist Republicans are revolting over the
+nominee and the hardball tactics being used to win their votes. They have been bombarded with harassing phone calls and even reported death threats.
+
+Ahead of the vote, Jordan showed no signs of stepping aside, insisting at a Capitol press conference: “The American people are hungry for change.”
+
+But afterward Jordan told colleagues behind closed doors, “I tried my best,” according to one of his opponents, Rep. Don Bacon, R-Neb.
+</item 20>
+=== END ITEM id=2d28e2280d67bd96 ===
+
+=== ITEM id=c27d9b0d38b8e256 ===
+Gold sentences and facts:
+Sentence 0: That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+  Fact 0.0: The answer ultimately lies with the jury.
+  Fact 0.1: The jury was selected on Wednesday morning.
+  Fact 0.2: The jury was selected before lawyers for the government.
+  Fact 0.3: Bankman-Fried swapped two very different stories of the former crypto mogul's sudden rise and almost instantaneous fall.
+  Fact 0.4: The former crypto mogul had a sudden rise and an almost instantaneous fall.
+Sentence 1: The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy.
+  Fact 1.0: The highly anticipated criminal trial was for Sam Bankman-Fried.
+  Fact 1.1: Sam Bankman-Fried is a former CEO of bankrupt crypto exchange FTX.
+  Fact 1.2: FTX is a bankrupt crypto exchange.
+  Fact 1.3: The criminal trial started on Tuesday.
+  Fact 1.4: The criminal trial determines whether Sam Bankman-Fried is guilty of seven counts of fraud and conspiracy.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Alameda Research, a crypto hedge fund he also owned, argued Rehn. Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,
+Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+
+Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and
+investors. “The defendant lied to the world,” Rehn alleged.
+
+And who was this defendant? Not a crypto “boy” genius, as so many in the media (Fortune included) have written, but a “man” who “stole billions of dollars from
+thousands of victims,” Rehn said. “You will see the full picture.”
+
+…or a well-meaning founder?
+</item 1>
+
+<item 2>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+Meanwhile, Bankman-Fried tweeted. “FTX is fine. Assets are fine” and “We don’t invest customer assets even in treasuries.”
+
+Pointing at Bankman-Fried, Rehn said, “This man stole billions of dollars from thousands of people.”
+
+So how was the defense going to follow it up? I was very curious, having learned yesterday that Bankman-Fried had never been offered a plea deal since he and
+his attorneys had told the government they wouldn’t negotiate. Surely there would be some manner of evidence, some something, that would have made him so
+confident.
+
+There was, instead, a metaphor.
+
+Defense attorney Mark Cohen, with the energy of a patient father telling his obnoxious children a bedtime story, assured us that working at a startup was like
+building a plane while flying it, and that FTX the plane had flown right into the perfect storm: the crypto crash.
+</item 2>
+
+<item 3>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I was ready to hear this pursued further — but then it, too, was dropped.
+
+I think the defense was also trying to suggest that the government had coerced Ellison’s testimony, by suggesting that she had pleaded guilty to a charge of
+defrauding investors that she couldn’t have been involved in. After all, she didn’t prepare materials for them. Unfortunately, she did say that she had
+conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine. This
+line of questioning felt like a waste of time.
+
+There were rather a lot of sidebars during the cross-examination, to the point that when one occurred, several jurors looked entertained. There were a few
+yesterday, too, including one in which the prosecution complained that Bankman-Fried was visibly scoffing at Ellison’s answers, according to the court
+transcript.
+</item 3>
+
+<item 4>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The testimony set up an argument for the prosecution to bring in those tapes. The judge ruled in favor of the jury hearing the recordings and we briefly
+recessed.
+
+That was when Bankman-Fried’s mother approached the defense lawyers.
+
+The late afternoon was short and snappy. Christian Drappi, a former Alameda software engineer who looked like a handsome funeral director in a black suit and
+tie, testified briefly to set up the tape. When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the
+theft of customer funds to him and a few other employees, Drappi said. The all-hands took place the following day, and was secretly recorded by an employee
+who’d joined Alameda three days before.
+
+In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval. Drappi said he resigned less than 24 hours after the
+meeting. The recording was later sent to Drappi, who sent it to the government.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 5>
+
+<item 6>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+Follow along for all the latest news and regular updates from the trial.
+
+But a lot of testimony relied on Ellison recounting conversations she’d had in person, or on auto-deleting text messaging platforms. This gave the defense an
+opportunity to try to make her sound unreliable. After all, she had an incentive to flip on Bankman-Fried: the possibility of leniency in her sentencing. Given
+her fun tweets about speed, the fact that she was Bankman-Fried’s ex-girlfriend, and that she’d apparently written a bunch of stuff down, I was expecting
+fireworks. For the first time in this trial, maybe the defense had an opening.
+
+Instead, I got a sad trombone. In Cohen’s disorganized cross-examination, he mostly bored the jury. At one point, two different jurors appeared to be asleep.
+
+Midway through the morning I began wondering if there was a mercy rule for cross-examinations. Prosecutor Danielle Sassoon had run an effective direct
+examination, creating an easy-to-follow narrative.
+</item 6>
+
+<item 7>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+“Sam acted in good faith and took reasonable business measures” is a pretty hard pill to swallow with that in mind.
+
+Man, it’s no good when your defense lawyer has just made you sound worse than the prosecution already did. And while Cohen tried to make the common white-collar
+defense argument that Bankman-Fried, as CEO, was simply too busy to oversee what everyone did every day, he just made me more suspicious. That’s why you hire a
+risk officer and delegate! That’s the whole point! I could barely even hear Cohen blaming Caroline Ellison and Changpeng “CZ” Zhao for the debacle over the “no
+risk officer” ringing in my ears.
+
+Following the defense’s opening statements, things got still worse for Bankman-Fried. The prosecution called its first witness, Marc-Antoine Julliard, whose
+money got stuck on FTX. Juilliard, who was born in Paris and lives in London, testified that he trusted FTX because Bankman-Fried came across as a leading
+figure of the industry.
+</item 7>
+
+<item 8>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued.
+
+“In the end, Sam started and built two billion-dollar businesses,” he concluded. “He didn’t steal any money.”
+
+A Frenchman who lives in London testifies in New York
+
+After lawyers from both sides depicted two very different Bankman-Frieds, the prosecution called its first two witnesses to the stand—and they weren’t
+blockbuster names or former lieutenants-turned-government-cooperators, like Ellison.
+
+The first was a victim: Marc-Antoine Julliard, a Paris-born cocoa trader who lives in London. In 2021, Julliard, who had coiffed hair and spoke with a strong
+French accent, decided to invest in crypto and landed on FTX as his exchange of choice, where he traded cryptocurrencies like Bitcoin and Dogecoin.
+
+On Nov. 8, in the crypto exchange’s final few days, he tried to pull out his cash and crypto.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Whatever records the Southern District of New York has for the transactions will be shown.
+
+“What conversations happened between him and his co-conspirators that are now cooperating against him?”
+
+The second part is where all the drama is likely to come, says Christopher LaVigne, a litigation partner and co-chair of the cryptocurrency practice at the law
+firm Withers. Prosecutors have to connect those transactions to Bankman-Fried, show that he knew what he was doing was wrong, and prove that he lied about it
+anyway.
+
+“What was he saying to his parents and his other advisors about this?” LaVigne says. “What conversations happened between him and his co-conspirators that are
+now cooperating against him?”
+
+To further establish intent, the government can use Bankman-Fried’s own words. The indictment calls Bankman-Fried’s tweets in November 2022 “false and
+misleading.”
+
+“We had him going out directly to the internet,” LaVigne says.
+</item 9>
+
+<item 10>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 10>
+
+<item 11>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+When he found it, he was “very surprised!”
+
+Besides the two obvious lies Bankman-Fried told on the stand — about Alameda Research’s name and about “allow_negative” — I have been struck by how little he
+seems to know about his own companies. Apparently, Singh, Wang, and Ellison were out there just doing whatever their little hearts desired. Because
+Bankman-Fried was a CEO, but definitely not the kind that pays any attention to money at his crypto trading firm and futures exchange.
+</item 11>
+
+<item 12>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+The defense has struggled to shake the credibility of witnesses such as Yedidia, Wang, and Ellison
+
+That “basically confirmed my suspicions that had been rising all day” that Bankman-Fried had purloined the funds, Sun said. He ran Bankman-Fried through
+possible explanations, including a margin loan program, and explained that none of them could fit the actual situation — for instance, Alameda had borrowed more
+from FTX than had ever been in the margin loan program. He said Bankman-Fried acknowledged their conversation with a “yup, yup.” “I was expecting a bigger
+response, but it was very muted,” Sun said.
+
+After that, Singh spilled the beans: Alameda had withdrawn assets that included the customer funds, Sun testified. He quit the next day. Like Yedidia, Sun
+testified with immunity.
+
+In the courtroom, we were treated to a Good Morning America appearance by Bankman-Fried on December 1st, 2022.
+</item 12>
+
+<item 13>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+In it, Bankman-Fried tried to justify the missing funds through the margin loan program. It was such a flimsy excuse that even George Stephanopoulos could see
+through it.
+
+Did Bankman-Fried really think he could get away with it all? He must still think so, or he would not be dragging his closest companions’ names through the mud
+in a jury trial. Throughout the entire prosecution’s case, the defense has struggled to shake the credibility of witnesses such as Yedidia, Wang, and Ellison.
+The hits the defense made on Singh didn’t make me doubt the overall truth of his story — they just made me think that Singh was kind of self-serving and trying
+to secure himself a lenient sentence.
+</item 13>
+
+<item 14>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 14>
+
+<item 15>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+It is honestly kind of incredible to watch a man torpedo his own credibility on direct testimony. We’re not even at the cross yet, and the judge has already
+instructed him to answer the question he’s being asked by his own lawyer.
+
+The jury is watching all of this intently.
+
+The main thing that’s been clear so far from Bankman-Fried’s testimony is that the man really loves the sound of his own voice. So far, the count of “Objection,
+narrative!” to Bankman-Fried’s answers, followed by “Sustained” is at three.
+
+Also, sometimes when Bankman-Fried says “we,” he only means himself.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, has been found guilty on seven counts including charges of wire fraud. FTX was a fraud
+“from the start,” the Securities and Exchange Commission alleged — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer
+funds.” Follow along for all the latest news and regular updates from the trial.
+</item 15>
+
+<item 16>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+Who is Sam Bankman-Fried, the former CEO of crypto exchange FTX? Is he a liar and a fraud? Or did he act in good faith, and like many a startup founder, fly too
+close to the sun?
+
+That answer ultimately lies with the jury, which was selected on Wednesday morning before lawyers for the government and then Bankman-Fried swapped two very
+different stories of the former crypto mogul’s sudden rise and almost instantaneous fall.
+
+Here’s what happened on the second day of the trial, which featured pointed allegations, a friend from MIT, and an audience replete with big names, including
+Bankman-Fried’s professorial parents and Damian Williams, U.S. attorney for the Southern District of New York.
+
+A conscious criminal…
+
+The prosecution’s account of the alleged crimes by Bankman-Fried, who spent most of his day in court staring into a laptop while seated between his two
+attorneys, featured a study in contrasts.
+</item 16>
+
+<item 17>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+
+Soon, however, the clock neared 4:30 p.m., and court adjourned for the day. Yedidia will continue his testimony on Thursday, followed by Matt Huang, a former
+partner at the high-powered venture capital firm Sequoia Capital, and then Gary Wang, a key Bankman-Fried lieutenant and one of the government’s star witnesses.
+</item 17>
+
+<item 18>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+How much? Almost $100,000, he said. And was he ever able to? “Never,” he told prosecutors.
+
+Shortly afterward, as the trial neared late afternoon, the government called Adam Yedidia to the stand. A fast-talking graduate of MIT, he and Bankman-Fried
+were close friends in college, he said. And after Bankman-Fried left Jane Street, the high-frequency trading firm where the former billionaire got his start in
+finance after MIT, he persuaded Yedidia to join him as a trader at Alameda and then as a developer at FTX.
+
+When Yedidia first took the stand, Danielle Sassoon, one of the lead prosecutors, said that the college friend of Bankman-Fried had legal immunity during his
+testimony. Why did he make such a deal with the government, she asked.
+
+“I was concerned that I had unwittingly written code that contributed to a crime,” he said.
+</item 18>
+
+<item 19>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+First and foremost, they’re trying to prove their client is not guilty. But just in case they don’t get the outcome they want, they’re also laying the
+groundwork for appeals and sentencing arguments. Any piece of evidence they want to introduce for those two purposes has to come into play in the trial.
+
+Already, Bankman-Fried’s lawyers are marking arguments that his constitutional rights are being violated by his pretrial incarceration because, among other
+things, his internet connection wasn’t good enough for him to plan his defense, notes LaVigne. That could be grounds for an appeal.
+
+“Is he going to throw the entire industry under the bus?”
+
+Bankman-Fried’s behavior after the fall of FTX suggests he’s something of a wild card. He may suggest he was acting on the advice of his lawyers. But he may
+also introduce other evidence that could be troublesome — implying, for instance, that he was engaged in standard industry behavior or that everything that
+happened was Binance’s fault.
+</item 19>
+
+<item 20>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court for alleged fraud and money laundering while leading
+crypto exchange FTX and sister company Alameda. Here’s our latest coverage as the case nears its end.
+
+The trial of Bankman-Fried, the former CEO and co-founder of collapsed crypto exchange FTX, is entering its next chapter as proceedings resume Thursday. As
+confirmed during a teleconference Wednesday, SBF will be taking the stand, along with a handful of other witnesses as the onus shifts toward the defense after
+the prosecution brought its case to its conclusion.
+
+As former federal prosecutor Josh Naftalis told TechCrunch, SBF taking to the stand in his own trial is a “Hail Mary” ahead of a verdict and potential
+sentencing for seven counts tied to fraud and money laundering.
+
+“Once it goes to cross[-examination], he doesn’t get to say, ‘I’m done,’” Naftalis said.
+</item 20>
+
+<item 21>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 21>
+
+<item 22>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Sure, Sam Bankman-Fried’s trial has revealed that FTX was basically a seething mass of scams. But it has also revealed how Bankman-Fried blew up the lives of
+the people who are closest to him.
+
+Of course everyone who had money trapped on the FTX exchange when it collapsed — as the result of Bankman-Fried’s trading firm Alameda Research purloining its
+customers’ funds — had their lives altered. Even if they are made whole by the bankruptcy proceedings, that’s still money that they should have had access to at
+any time they wanted it. That may mean houses that weren’t purchased, medical procedures that were left undone, and life savings lost.
+
+There is a simultaneous drama of ruined lives playing out in the courtroom
+
+Bankman-Fried is charged with seven counts: two counts of wire fraud and five conspiracy charges. As we near the end of the prosecution’s case, I have been
+struck by how bizarre it all is.
+</item 22>
+
+<item 23>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“You will see the full picture.”
+
+…or a well-meaning founder?
+
+But Bankman-Fried, whose cheekbones were more prominent after spending about seven weeks in a Brooklyn prison, was no liar, according to Mark Cohen, one of his
+lawyers. “Sam didn’t defraud anyone,” he said early on in his opening statement.
+
+What the jury will see is a nerdy startup founder who acted in “good faith,” not the prosecution’s “cartoon of a villain.” (Cohen repeatedly harped on
+Bankman-Fried’s allegedly good-faith actions throughout his address to the jury.)
+
+Alameda was not subterranean or shady. It was a successful hedge fund, he said. FTX was no Ponzi scheme. It was a “very innovative, successful company.”
+</item 23>
+
+<item 24>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+“One year ago, it looked like the defendant was on the top of the world,” began Thane Rehn, a prosecutor for the government, in his opening statement. The
+former CEO of FTX oversaw a supposedly thriving crypto exchange, jetted between international locales, and hobnobbed with celebrities like Tom Brady and Larry
+David. He repeatedly emphasized to customers that their money was safe and secure.
+
+But “all of that, all of it, was built on lies,” Rehn declared to the jury. “Behind the curtains, he was not what he appeared to be.” What followed was a
+roughly 30-minute story that repeatedly emphasized how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to
+political candidates, and finance risky bets.
+
+The key to his alleged scheme? Alameda Research, a crypto hedge fund he also owned, argued Rehn.
+</item 24>
+
+<item 25>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Follow along for all the latest news and regular updates from the trial.
+
+Yesterday, during an evidentiary hearing, Bankman-Fried was repeatedly scolded by Judge Lewis Kaplan for not answering prosecutor Danielle Sassoon’s questions
+on cross-examination. Today, Bankman-Fried was scolded by Kaplan for not answering his counsel Mark Cohen’s questions on direct examination. Bankman-Fried has
+also occasionally interrupted Cohen with “yes” and “yup.”
+
+We spent a lot of the morning explaining vocabulary. I will spare you the full list, though I will say that explaining “Amazon Web Services” and “database” was
+a bit too detail-oriented. Then Bankman-Fried tried to define “market manipulation.” After Bankman-Fried gave his definition, Kaplan told the jury that he was
+the final authority on that, thanks.
+
+In fairness to Bankman-Fried, he has been clearer and much easier to understand than he was at the evidentiary hearing yesterday. There was a minimum of word
+salad today.
+</item 25>
+
+<item 26>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+I have never seen Sam Bankman-Fried so still as he was during the prosecution’s opening statement. The characteristic leg-jiggling was absent. He barely moved
+as the prosecutor listed the evidence against him: internal company files, what customers were told, the testimony of his co-conspirators and his own words.
+
+His hair was shorn, the result of a haircut from a fellow prisoner, the Wall Street Journal reported. He wore a suit bought at a discount at Macy’s, per the
+Journal; it hung on him. He appeared to have lost some weight.
+
+“All of that was built on lies.”
+
+Bankman-Fried, at this time last year, had a luxury lifestyle as the CEO of crypto exchange FTX, said the assistant US attorney, Thane Rehn, in the cadence of a
+high schooler delivering his lines in a student play. Bankman-Fried hung out with Tom Brady. He was on magazine covers, lived in a $30 million penthouse, and
+spent time with world politicians.
+</item 26>
+
+<item 27>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 27>
+
+<item 28>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+“All of that was built on lies,” Rehn said.
+
+In his opening statement, Rehn dodged explaining cryptocurrency to the jury. Instead, he punched hard on Bankman-Fried lying and stealing.
+
+Bankman-Fried sat almost motionless, occasionally glancing at Rehn, as the prosecutor told the jury that Bankman-Fried sold stock in FTX and borrowed millions
+from lenders by lying.
+
+The story Rehn told is familiar to anyone following the news. In May and June of 2022, Alameda Research — the crypto trading company ostensibly helmed by
+Caroline Ellison — didn’t have enough to pay its bills, so it pulled customer money to repay loans. By September, the hole in the FTX balance sheet was so big
+that customers could never be repaid.
+
+FTX “didn’t have a chief risk officer, which became an issue when the storm hit.”
+
+When CoinDesk published its article in November 2022, people realized FTX was a house of cards, Rehn said. Meanwhile, Bankman-Fried tweeted.
+</item 28>
+
+<item 29>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+The recording was later sent to Drappi, who sent it to the government. Joseph Bankman, the defendant’s father and a senior advisor to FTX’s philanthropic arm,
+wasn’t in the room for the recording. Barbara Fried looked unhappy, rubbing her left temple as though she had a tremendous headache.
+
+And in a small miracle of pacing, the government got Zac Prince, the founder and former CEO of crypto lender BlockFi, on the stand just long enough to blame
+FTX’s bankruptcy for BlockFi’s subsequent bankruptcy before we broke for the day.
+
+I’ve been asked by some people why the reporting coming out of the trial seems so skewed toward the prosecution. There’s an answer for this: the prosecution has
+put together a strong, comprehensive indictment of Bankman-Fried’s behavior at FTX and Alameda. The defense, so far, has managed to do almost nothing in
+response.
+</item 29>
+
+<item 30>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 30>
+=== END ITEM id=c27d9b0d38b8e256 ===
+
+=== ITEM id=c48bf246825ab5b7 ===
+Gold sentences and facts:
+Sentence 0: In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia.
+  Fact 0.0: The Wallabies had a World Cup flop.
+  Fact 0.1: The Queensland Rugby Union reaffirmed its position.
+  Fact 0.2: The Queensland Rugby Union is committed to moving to a centralised high-performance model.
+  Fact 0.3: The Queensland Rugby Union will not follow the NSW Waratahs by handing over the keys to Rugby Australia.
+Sentence 1: He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs.
+  Fact 1.0: A person will be tasked with integrating the programs.
+  Fact 1.1: RA is trying to centralise all of the Super Rugby's high-performance programs.
+
+Retrieved items:
+<item 1>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+It was reported during the campaign that Jones had an interview for the Japan head coach role but he denied that again on Tuesday, having previously also denied
+the story.
+
+“I haven’t been speaking to anyone, mate,” was all Jones would say on multiple reports of conversations with sources in Japanese rugby.
+
+He said he understood why Australian fans were hurting.
+
+“We feel all the supporters hurt and really appreciate the great support we had in France and back in Australia for the team,” said Jones.
+
+Advertisement
+
+“Sometimes the change you have to have is uncomfortable. It is quite difficult. And sometimes you have to go through this to get into a better state and I
+believe that the problems we’ve had particularly at the national team will put us in a better state going forward.”
+
+Jones clearly believes he is the right man to carry Australia on.
+
+“I think I’ve got the foresight to see where we need to go. I’ve got the experience of being in difficult situations before,” Jones said.
+</item 1>
+
+<item 2>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+None of those targets were achieved and Jones changed his tune about building for the future when he named a young team for the doomed Cup campaign – where his
+team became the first Australians to bow out of a RWC in the pool stages.
+
+He finished the year with a 2-7 win loss record – the only two victories coming against lowly Georgia and Portugal.
+
+Advertisement
+
+On Tuesday he said he no regrets with leaving experienced players such as Quade Cooper and Michael Hooper out of the side for the tournament.
+
+“Everyone’s got their own judgment and they’re allowed to have that judgment,” he said. “My choice was that I decided to go with youth. And I stand by that
+because I think we’ve got a a lot of good young players who are really going to benefit from that experience at the World Cup, and going forward to the 2027
+World Cup.”
+</item 2>
+
+<item 3>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+Markov is “a big advocate” for all players being recognised.
+
+“The best thing we can do is wrap our arms around them, and just let him feel what we sort of feel,” he said. “I’ve been on the other side of the fence, and it
+is hard because you’re seeing all your friends succeed and sort of living the dream that you aspire to have, but I know it makes people hungrier. I know the
+boys who missed out will be the ones who are training the house down, and pushing the boys who have seen the mountain top. They’re going to motivate the boys to
+try and see it again.” ‘Incredibly sore’: Howe played out decider with rib injury Peter Ryan
+
+This wasn’t the type of “car crash” injury Jeremy Howe has suffered before, but it was brutal nonetheless. The high-flying Magpie has revealed he played out the
+grand final in pain after he was floored by a bone-crunching knock to the ribs from Lions forward Charlie Cameron during the last quarter.
+</item 3>
+
+<item 4>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Clean hands and ball use
+
+AFL player comparison: Daniel Rioli (Richmond)
+
+Jake Rogers
+
+State: Queensland
+
+State League Club: Gold Coast Suns Academy
+
+Community Club: Broadbeach
+
+Date of Birth: 02/03/05
+
+Height: 170cm
+
+A tenacious livewire through the midfield, the Gold Coast Suns Academy member is a one-touch player with great vision and creativity. Showed all those traits at
+the National Championship by starring for the Allies where he consistently set up his team through the middle of the ground. Quick and with elite agility, he
+was always in the contest. Averaged 22.5 disposals at 77 percent efficiency, 5.5 clearances and 5.2 tackles to be a driving force for the title-winning team.
+</item 4>
+
+<item 5>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Rugby Australia is moving closer to naming their new director of high-performance, with World Rugby’s director of high-performance Peter Horne set to take on
+the role – and the move could help land highly-regarded coach Joe Schmidt for the vacant Wallabies job.
+
+As The Roar reported last week, Horne had emerged as the leading candidate in recent weeks.
+
+It’s believed he has edged out former Sydney University, Australian Sevens and Harlequins’ director of rugby Billy Millard for the role.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The finer points of the negotiations are being out, but it’s likely Horne will be announced over the next week once the sports administrator wraps up a crucial
+series of meetings this week with World Rugby.
+
+Horne is leading World Rugby meetings with tier-two nations this week in Sydney, with former Fiji coach Simon Raiwalui in attendance before he officially wraps
+up and joins World Rugby.
+</item 5>
+
+<item 6>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Every match ad free, live and on demand in 4K UHD
+
+The most likely outcome is that Fiji wins easily and the Wallabies will be pushing confirm on their off-season holiday plans.﻿
+
+"We've only got ourselves to blame, we put ourselves in this position," Wallabies centre Samu Kerevi, who was born in Fiji, said after an open training session
+in front of 1000 keen locals at the Andrezieux-Boutheon rugby club on Saturday.
+
+"We'll sit down as a team and watch together on Sunday night. I think we understand the situation ... our results and the way we played, we put ourselves in
+this position. So the team understands that and we have our belief in anything's possible at the World Cup.
+</item 6>
+
+<item 7>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Ian Foster, who made two changes to his starting side and three in total, was forced to defend his centre’s actions while twisting the knife into Sexton’s
+finish.
+
+“It happens on most sporting parks when tensions are high and a lot at stake,” Foster said.
+
+“Unfortunately recently it’s also included players saying a few things to referees. Is it right for the game? I don’t know. You don’t hear a lot of players
+complaining about it.”
+
+Advertisement
+
+Captain Sam Cane added: “It’s players’ different personalities and emotions running high in those moments. There’s always people who have different tactics but
+it’s always just left out there.”
+
+Foster recalled Sam Whitelock to the starting side in the only change to the pack.
+
+Whitelock, whose breakdown penalty win after 37 phases denied Ireland a match-winning penalty, has been recalled and will partner Scott Barrett in the
+second-row. Brodie Retallick will come off the bench.
+</item 7>
+
+<item 8>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The pain of the days and weeks after that dark July, as well as the bumps and bruises along the way, including as recently as August when they suffered their
+biggest defeat to the Boks to lose the inaugural and prestigious Qatar Cup, still runs deep.
+
+“It was quite special to hear some of the things those certain players said from the heart. You know, you think you know someone but once they open up and
+really be vulnerable in front of a team, it was quite special to hear,” back-rower Dalton Papali’i said this week.
+
+
+
+“It was truly something special when you hear those boys open up. You know those leaders have been through a lot in their careers, the highs and the lows, the
+off-field and on-field stuff, and for them to open up, it sort of makes you feel welcomed and you want to play this game for them.
+</item 8>
+
+<item 9>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Horne’s close relationship with former Ireland coach and All Blacks assistant Joe Schmidt could be one of the keys to landing the 2018 World Rugby coach of the
+year.
+
+After leaving his Irish post after six years following the 2019 World Cup, Schmidt worked alongside Horne at World Rugby.
+
+It’s believed the duo have a strong working relationship.
+
+While Schmidt’s Irish side bombed out in successive quarter-finals under his leadership, the New Zealander took the Emerald Isle to the top of World Rugby’s
+rankings.
+
+Along the way, Schmidt played an instrumental role in not just seeing them become one of the world’s best teams but helped usher through transformational change
+off the field, as Ireland moved to a centralised system.
+
+Advertisement
+
+Schmidt briefly exited the international coaching scene following the 2019 World Cup, citing a desire to move home to New Zealand to be closer to his family.
+</item 9>
+
+<item 10>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The QRU also expressed its satisfaction that RA was willing to discuss the annual $1.7m being reinstated, which had been withheld because of the Covid pandemic
+to keep the game afloat.
+
+Meanwhile, The Roar understands the ACT Brumbies have sent RA confirmation of solvency for the next 12 months.
+
+RA was forced to take out a $40m loan from Ares to keep the game afloat.
+
+Advertisement
+
+While RA has around another $15m left to spend from the loan, the governing body is looking to borrow up to another $60m so they’re in the strongest possible
+position to capitalise on the two major money-making events – the 2025 British and Irish Lions series and home men’s World Cup in 2017 – and succeed.
+</item 10>
+
+<item 11>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+I’ve got the experience of being in difficult situations before,” Jones said.
+
+“This is not an unusual situation. You’ve got a team that was struggling for a period of time, you’ve got underneath it a system that’s not supporting it and at
+some stage you bottom out.
+
+“This is the opportunity now to change the team- as we’ve started with picking younger players with bright futures – and then we’ve got to look at the
+development system underneath as well.
+
+“It’s not a simple equation that the Wallabies are bad. Let’s be serious about this. The Wallabies are not where they need to be but underneath that we need to
+fix the system to go forward. And if we can do that now we’ve got a rosy future.”
+
+Sports opinion delivered daily
+</item 11>
+
+<item 12>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised
+high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia.
+
+They also expressed their strong support for Rugby Australia to conduct a “fully independent and transparent top-to-bottom review of the Wallabies program and
+how it can be improved” in light of the historic first World Cup pool exit.
+
+They added: “It should also provide a clear view of what is needed in a leadership and governance framework to ensure we put the right people, in the right
+roles, in the right system.”
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The QRU has also expressed their desire for Rugby Australia to reinstate the annual $1.7 million in funding to each of the Super Rugby franchises that was
+withdrawn following the Covid pandemic to help keep the game afloat.
+</item 12>
+
+<item 13>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Advertisement
+
+After a year in where the Wallabies’ detail and nous was clearly absent on the field, the highly detailed Schmidt would help bring rugby smarts to the
+Australian program.
+
+Indeed, the manipulation and ability to play both sides of the ruck was clearly visible by Ireland during his Irish tenure.
+
+What’s more, should RA go down a path of bringing Schmidt into the fold, his own relationship with Ireland’s long-time director of high-performance David
+Nucifora could see the Australian reconsider his position with the governing body.
+
+Last year Nucifora told The Roar he would unlikely consider returning to RA when he leaves his post with Ireland following next year’s Olympics.
+
+“I don’t think it’d be wise to revisit,” Nucifora said.
+
+“I think that you have a go at something once, you do your best and then if it’s not good enough or it didn’t work you move on, do something else.
+</item 13>
+
+<item 14>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+We’re not at that level. And we can’t pretend to be at that level. But can we be at that level by 2027? Yes, we can,” said Jones.
+
+“We’re definitely off the pace but the opportunity to get better is there. I love the game. I love working with young players. I loved seeing some of the young
+players maturing during the World Cup and some of them struggle. And that’s all part of it. But I love the game and I love coaching the Wallabies.”
+
+Jones was named Wallabies coach at the start of the year as replacement for Dave Rennie. He came in with grand statements that his team could win the Rugby
+Championship, Bledisloe Cup and make a smash and grab on the World Cup.
+</item 14>
+
+<item 15>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+The 30-year-old is undoubtedly one of the world's finest centres in peak form but injuries conspired to limit his potential in France.﻿
+
+Samu Kerevi of Australia reacts after the record loss at the Rugby World Cup. (Getty)
+
+"I don't think I performed where I wanted to perform at a World Cup," Kerevi said.
+
+"I hold myself to high standards and I just felt like I could have helped the team more in certain aspects ... I've been out of the game for nine months but I
+felt good coming into it ... I just felt like I was blowing a bit, but felt good towards the back end of a couple of games. But again, it's not where I want my
+performance to be.
+
+Despite being dropped for Lalakai Foketi for the pool win against Portugal, Kerevi said he had no thoughts of following fellow Fijian-Wallaby ﻿Marika Koroibete
+into international retirement.
+
+NEW PODCAST!
+</item 15>
+
+<item 16>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Seriously, the amount of time he puts into effort, into his staff, into the players, always has time for us ... and I think fans don't see that," he said.
+
+"At the end of the day, we didn't get the results, you know, we didn't perform the way we wanted to as a team and it's not on Eddie - it's on all of us.
+
+"So I understand what the fans feel and they're just passionate and it's awesome to have that. But no-one realises what goes on inside. No-one realises the
+things that we're working on tirelessly, to work hard, but especially him and the staff, f--ing work so hard, bro.
+
+Samu Kerevi during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"They're away from families, they're sacrificing as well and … I don't read into the comment stuff, but the young boys, I hear a lot that's going on, social
+media and stuff.
+</item 16>
+
+<item 17>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+But I don't think people really understand demons, everyone's fights in between.
+
+"Eddie's a human as well and at the end of the day it's a results-driven sport, you know, we need results to get that. But he's committed to us and we love that
+about him.
+
+"He hasn't thought about going home, he's thought about how we can contribute best and that's what we've done these last three days. I feel for him, you know,
+like as a head coach, you maybe can't show that side of himself.
+
+Eddie Jones and Will Skelton talk at Stade Roger Baudras. (Getty)
+
+"But he's been so strong for us and gives us strength to just be positive. And again, we put ourselves in this situation."
+
+Wide World of Sports also asked Kerevi to deliver a message to disillusioned Wallabies fans.﻿
+
+"I think at home there's so many sports going on and some saying rugby's dying, but rugby's massive here overseas," he said.
+</item 17>
+
+<item 18>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 18>
+
+<item 19>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+"Last week 45,000 fans (versus Portugal), last night (60,000 in Lyon). Rugby's such a small aspect in terms of Australians but our fans have turned up here,
+we've seen them and spoken to them and their unconditional love for us, the fact that they came 20,000km to get here and support us, has been awesome.
+
+"My message is just to understand that we're working extremely hard, there's no stone unturned, especially the youth in this team, to leave the jersey in a
+better place and just to stick with us.
+
+"I know the results haven't been coming our way the last couple of years but when it does turn, that's what we're building towards.﻿"
+</item 19>
+
+<item 20>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the open letter to their members on Wednesday morning, QRU chief executive David Hanham and chairman Brett Clark moved to update constituents on the reform
+measures that RA is attempting to usher through the game.
+
+Last week, The Roar revealed that the New South Wales Rugby Union was in the latter stages of handing over their license to RA.
+
+By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property.
+
+Advertisement
+
+The decision will see all male and female Waratahs players, including coaches and high-performance staff, as well as all commercial and operations staff, run
+out of RA’s office.
+
+NSW Waratahs chief executive Paul Doorn informed stakeholders of the decision last week.
+
+RA is cognisant that not every Super Rugby franchise will follow suit immediately, but the governing body is hopeful that now one of the two biggest states has
+agreed to hand over the keys, others will follow suit swiftly.
+</item 20>
+
+<item 21>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“We explain to the whole squad why we are going a certain route. It is not about individual selection,” Springboks coach Jacques Nienaber said shortly after
+announcing two changes to his starting side and five in total, after going in with a forwards-heavy 7-1 bench split.
+
+Advertisement
+
+“It is for South Africa. As selectors we know there will be pressure on us if we don’t deliver a result but at the back of our minds we know this selection is
+for South Africa.
+
+“The players take it like that. It is not about person or ego, not that they have egos, but you can’t think of that. You have to think about South Africa and
+the Springboks.”
+
+Seemingly the Springboks are playing for more than themselves. They’re playing for their country.
+
+It’s a powerful force, one that saw them progress through the knockout stages to reach the final after consecutive one-point victories.
+
+Pressure?
+</item 21>
+
+<item 22>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+It’s been far from smooth, having overseen their historic defeats to Argentina as well as the 2-1 series loss to Ireland on home soil.
+
+A famous 35-23 win over the Springboks at Ellis Park saw him save his career, with Scott Robertson being lined up on the side.
+
+But it wasn’t enough for New Zealand Rugby to back him before this year’s Test season got underway, with Robertson announced as Foster’s successor.
+
+“Am I at peace?” Foster repeated a question during his World Cup team announcement when asked about where his mental state was ahead of his last Test in charge
+of the All Blacks.
+
+“Yeah, I’m reasonably peaceful. I love the word but I’m not sure I’m peaceful right now.”
+
+Advertisement
+
+He added: “I’ve just started to get my back nice and straight from last year and now you’re trying to make me hunched over again!
+
+“It’s the life of this business, it’s a tough game.
+</item 22>
+
+<item 23>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The QRU confirmed that on Wednesday morning.
+
+Advertisement
+
+“The QRU is committed to working with Rugby Australia to lead reform of our game at a high-performance level, and help Rugby Australia develop an improved game
+through high-performance centralisation,” the statement read.
+
+“Centralisation” would include a national player-contracting model, and alignment of key high-performance staff, such as coaching, strength and conditioning,
+and medical to operate as one national system.”
+
+The letter pointed to RA’s involvement in Les Kiss’ appointment as Reds coach, with the former State of Origin winger turned coach, who has spent the best part
+of two decades coaching in Ireland and England, replacing Brad Thorn.
+
+As The Roar has previously reported, the QRU stopped short of wanting to hand over its commercial property.
+
+“While the QRU is very supportive of high-performance alignment, it will not agree to any proposal on centralising commercial or corporate functions,” the
+letter read.
+</item 23>
+
+<item 24>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+“That judgment will be decided by the 2027 World Cup.”
+
+He said the team – including coaches and players – have already completed their own review of the World Cup disaster. The next one would be “a formal review to
+be done by independent consultants” and he was ready to participate.
+
+“I didn’t come back to Australia to have a holiday – sit down at Coogee Beach, eat fish and chips, have a nice flat white. It was always going to be a battle.
+When you’ve got a team that hasn’t done well for a long period of time, it’s always a battle.”
+
+Advertisement
+
+Jones said it was crucial that Rugby Australia got alignment in the code from grassroots through to the top team as it looks to rebuild it’s international
+standing. Australia, a two-time world champion, is currently ranked 10th in the world.
+
+“You just got to watch the quarterfinals at the weekend. We’re not at that level.
+</item 24>
+
+<item 25>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+RA is also in the early stages of looking to renew its next broadcast deal, with the governing body hoping to at least double its current deal with Nine
+Entertainment/Stan Sport, which is seeing them paid $29m per year until the end of 2025.
+</item 25>
+
+<item 26>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Four years ago, Rassie Erasmus delivered one of the great rugby speeches ahead of the 2019 World Cup final.
+
+“You don’t have the right today to worry about your mistakes,” Erasmus said before the Springboks sealed a stunning 32-12 victory over England to claim their
+third William Webb Ellis Cup.
+
+“If you worry about your mistakes today, you’ve got ego problems.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+“You are not representing yourself today. You are fighting for the things that happen in South Africa.
+
+“You are tackling for the boy who didn’t get the same opportunities that you got eventually.”
+
+Four years later and the “ego” Erasmus spoke about is what is driving the standards and expectations around the Springboks’ bid to go back-to-back.
+
+“We explain to the whole squad why we are going a certain route.
+</item 26>
+
+<item 27>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+But after initially moving back into the coaching fray with the Blues in Super Rugby, he joined the All Blacks ahead of last year’s Rugby Championship as New
+Zealand Rugby shook the All Blacks coaching team up following their historic series loss to Andy Farrell’s Irish.
+
+Schmidt’s expertise proved telling, with he and Jason Ryan transforming the All Blacks and helping Ian Foster’s side reach the final of this year’s World Cup
+after stunning wins over Ireland and Argentina in the knockout stages.
+
+Importantly, the 58-year-old, The Roar understands, is interested in the Wallabies coaching job.
+
+Dan McKellar, Stephen Larkham, Andy Friend and Ian Foster remain interested in the role.
+
+Should RA move on him, Schmidt’s backing would be largely supported by the Super Rugby franchises, with several sources telling The Roar that the experienced
+coach is exactly the type of person the Wallabies need.
+</item 27>
+
+<item 28>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+NEW PODCAST! Michael Atkinson and Sam Worthington preview a thrilling final round of pool games to decide the quarter-finalists at the Rugby World Cup in
+France﻿
+
+He wanted to regain form at club level ﻿with Urayasu D-Rocks but his hand remained up for Test selection.
+
+"I chose to leave Australian shores and understand the ruling around that and what it holds," he said.
+
+"I've got to perform for my club first and if you get the call up, you get the call up. If you don't, I'll take my three months break and enjoy that."
+
+Kerevi is an unabashed Jones fan.
+
+Eddie Jones with fans during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"He's up at 4am working hard. We catch him in the gym, he's working hard and I swear he doesn't even sleep.
+</item 28>
+
+<item 29>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The Melbourne Rebels are expected to follow.
+
+RA chief executive Phil Waugh says building trust back between the governing body and states is essential to their plans.
+
+Under fire Wallabies coach Eddie Jones also advocated for Australian rugby to move to a centralised model, believing the nation had fallen behind the rest of
+the world.
+
+“We’re a state-based union that’s run by the states, the national union wants to assume more responsibility and when things were going well, no one questioned
+that,” Jones said.
+
+Advertisement
+
+“But over the last period of time, they haven’t been going so well and this tournament’s probably been the icing on the cake where it’s got to a stage where I
+think people, most people probably think there’s time for change. But it’s not going to go easy.
+
+“[It’s] one of the key issues. We need to maximize the development of the players.
+</item 29>
+
+<item 30>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 30>
+
+<item 31>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+“The very strength of our State unions is the expertise they bring in their own markets.
+
+Advertisement
+
+“We are open to work on commercial initiatives together but will always retain our independence for the benefit of Queensland Rugby, its members and
+stakeholders.
+
+“Queensland Rugby has built a sustainable business model through the elimination of legacy operating debt, delivered four-straight operating profits and worked
+in partnership with Governments to successfully deliver $31 million of improvements to Ballymore through the construction of the National Rugby Training Centre,
+the home of the Wallaroos and Queensland Reds.”
+
+The letter also pointed to the 71,000 players across the state, including more than 16,000 of those female participants, 257 schools featuring rugby as part of
+its program, as well as its Hospital Cup competition and regional club competitions, as evidence that the game was in good health in Queensland.
+</item 31>
+
+<item 32>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+Quince paste and hand-picked grapes have played a part in helping the Sydney Swans launch themselves to the top of the AFLW attendance charts, less than two
+years after their first match in the women’s league.
+
+The Swans play their final home match of the regular season this weekend with an average attendance of 4,365 from four games so far – 124 more than the next
+best club Adelaide – and a marquee pride match against Collingwood at Henson Park to come on Sunday where a crowd in excess of 4,000 is expected.
+
+The club’s focus has been to target local communities and make match days compelling for fans on and off the field, according to executive GM of marketing at
+the Swans, Loretta Johns.
+
+“Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting
+our games,” she said.
+
+Fans of Australian rules football in the Harbour City have a reputation for being fickle.
+</item 32>
+
+<item 33>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+“We’ll continue to keep building the base and keep building the foundations and have it not just strong at year seven, season eight, but strong for generations
+to come.”
+
+In a bid to improve the spectacle of the AFLW, the league introduced longer quarters this year and an interchange cap to help increase scoring. The effect,
+according to Livingstone, has been positive.
+
+“We’ve increased game time by eight minutes per match, on average, and we’ve had record scores across the rounds,” she said. “Whereas leading into the season we
+hadn’t scored more than 100 goals in a round, we’ve regularly been scoring over 100 goals in a round.”
+
+The Swans recorded their highest total last round, in their 14-12-96 to 6-3-39 defeat of the Western Bulldogs, the league’s winless bottom side. Molloy recorded
+17 score involvements to set a new AFLW mark.
+
+But Livingstone said the AFL was happy with the level of competition.
+</item 33>
+
+<item 34>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+The current tour of India is not a multi-format series, but the defeat in the one-off Test marks Australia’s first loss in a four-day game since January 2014.
+
+But quizzed over whether the defeat suggested Australia’s unprecedented period of dominance was ending, Healy was defiant.
+
+“It’s probably not even a blip,” Healy said.
+
+Advertisement
+
+“It (Test cricket) is a format where we’re not overly familiar with, in conditions that we’re not familiar with.
+
+“I see more positives out of this and than any sort of negativity.
+
+“There is always a lot of expectation and external noise about our team and how we’re performing.
+
+“They are so used to seeing us winning, that I think, at times, they forget that we’ve actually seen quite a lot of change over the last 12 to 18 months.
+
+“That kind of goes unnoticed external to our group.”
+
+Australia have spoken about shifting their mindset in white-ball cricket after the losses in England, pursuing a more attacking approach.
+</item 34>
+
+<item 35>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“We don’t want to talk too much about post-game stuff, but that was a tough one, probably the toughest I have had as a coach. He took it the way I expected him
+to. He’s a champion.”
+
+Papali’i said the All Blacks were intent on sending their leaders out on a high.
+
+“There’s a few leaders in the team, it’s going to be their last game in the jersey, so it’s a big game for us and even the other players that are staying,
+knowing that we want to send those boys out on a high,” he said.
+
+“How much they put into the jersey. We are standing on their…what’s that quote? It’s standing on the shoulders of giants.”
+
+The generational change isn’t just occurring on the field but off it, too.
+
+Advertisement
+
+Foster will depart the All Blacks set up after 12 years, the last four as head coach.
+</item 35>
+
+<item 36>
+Rollback Policy, a Boon or a Curse? The Controversial System That Might Redefine the Golfing World by the End of 2030 (Essentially Sports,
+2023-12-03T23:45:00+00:00)
+What about the others? That’s for the Augusta National and PGA of America to decide.
+
+Notably, Seth Waugh, the PGA of America CEO, in a memo to R&A, denounced the proposals, taking along nine other PGAs across the globe. While Fred Ridley, the
+chairman of Augusta National, didn’t exactly bang the drum for MLR, the former amateur golfer did stand behind the governing bodies, saying he would much prefer
+to see the issue finally addressed. Notably, Augusta infamously ‘Tiger-proofed’ their course to make it ‘tougher’ for golfers (read Tiger Woods).
+
+One thing should be noted here. Although R&A and USGA both organize two LPGA majors, the Women’s Open and the U.S. Women’s Open, respectively, the rules will
+apply only to two men’s golf. Why?
+</item 36>
+
+<item 37>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But more modest attendances in subsequent games, including two sub-2,000 crowds in Perth, suggest the popularity of the Matildas’ run to the semi-finals has
+only had a limited impact on support for domestic women’s sport.
+
+skip past newsletter promotion Sign up to Australia Sport Free newsletter Get a daily roundup of the latest sports news, features and comment from our
+Australian sports desk Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see
+our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google
+reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Livingstone said the “green and gold fever” associated with the Women’s World Cup was a one-off and the AFL has plans in place for long-term growth.
+</item 37>
+
+<item 38>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+So far RA have said they intend backing Jones and he said he believed he had official support. He refused to answer a question on potential break clauses in his
+contract with RA.
+
+Advertisement
+
+On whether he will see out his contract through the end of 2027, Jones said: “It’s not absolutely my decision. “We’ve got a review going forward and let’s see
+what happens at the end of the review.
+
+He said he was not worried about being sacked but accepted it was possible.
+
+“I don’t control those sort of things. All I can do is coach. I went to the World Cup, came in for a short period of time and had to make a decision on the
+team, made the decision we needed to go with youth, and whilst the results in the World Cup weren’t the results we wanted, I think I’ve left the Australian team
+in a great position to go on to 2027.
+
+“That judgment will be decided by the 2027 World Cup.”
+</item 38>
+
+<item 39>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+Three looming ODIs against India in the next week and three ensuing T20s will be the first showing of that, with the hosts also a rising force in the white-ball
+game.
+
+Advertisement
+
+“Within our group we’re really comfortable with where we’re at, and the progression we’re on,” Healy said.
+
+“Ultimately there’s a big T20 World Cup in Bangladesh towards the end of next year, that is a real carrot for us.
+
+“These are the sort of big trophies that we’re wanting to win.
+
+“And yes, every series in between now and then is important, but at the same time we’re building towards that World Cup.
+
+“Maybe you can ask me that (supremacy) question at the end of the six white-ball games to see how we’re going and we can answer that.
+
+“These next six games will probably give us a better indication about how we’re tracking but also what we might need to improve on.”
+</item 39>
+
+<item 40>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+So the team understands that and we have our belief in anything's possible at the World Cup.
+
+READ MORE: ﻿'Blame myself': Eddie reveals great World Cup regret
+
+READ MORE: Referee ripped after Junior Paulo's dominant KO
+
+LIVE COVERAGE: All the latest updates from Bathurst 1000
+
+Mark Nawaqanitawase runs the ball during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"But also, we understand how strong Fiji is. And we're proud for them as a proud nation. For myself, I'll be proud of it either way it goes. We'll be ready if
+it comes our way."
+
+Kerevi was photographed holding his face in disbelief in one of the defining images of the World Cup ﻿after the Wallabies were pumped 40-6 by Wales in Lyon.
+</item 40>
+
+<item 41>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+We need to maximize the development of the players. At the end of the day, that’s the key to success and alignment of your resources, for a small country.
+
+“Because Australia, if you look at the history of rugby, when we were amateur, we were probably ahead of the game because we had the influence of rugby league.
+We had the influence of AFL and our players were more professional than the rest of the world.”
+
+He added: “I know what’s going on and we need to get a better system of developing players. We need to develop better players and we need to develop a larger
+batch of better players and that only comes through changing the whole system.”
+
+While all five Australian Super Rugby sides fundamentally are on board with regards to moving to a centralised high-performance program, The Roar added that
+some states, including the ACT Brumbies as well as the QRU, don’t want to give up their commercial assets.
+</item 41>
+
+<item 42>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Horne briefly worked at Saracens as a general manger.
+
+RA always said they wanted to have the role filled by Christmas, with chief-executive Phil Waugh saying the successful candidate had one of the biggest jobs to
+change the game’s standing in Australia.
+
+“It’s a big job,” Waugh said. “It’s the biggest job on my leadership team in terms of the impact it has on the general sentiment around the game.”
+
+Horne will oversee all of Australia’s men’s and women’s high-performance programs.
+
+Advertisement
+
+He will also be tasked with “integrating” the programs, with RA trying to centralise all of the Super Rugby’s high-performance programs.
+
+Perhaps most pressing will be building a list of coaching candidates to take over from Eddie Jones, with RA wanting to have the new Wallabies coach set in stone
+by the start of Super Rugby.
+</item 42>
+
+<item 43>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+Wallabies coach Eddie Jones has again denied any contact with Japan and committed to staying in the job through to the next World Cup.
+
+“That’s the intention, mate, but as you know, we play in a game where the coach doesn’t decide how long they stay,” he said at a media conference on Tuesday,
+adding he had a “100 percent” passion to continue coaching the Wallabies.
+
+“I’m staying. I’ve always been committed to Australian rugby, want to leave it in a better place and that’s still the job. “
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+He was asked about his pre-tournament press conference where he attacked reporters’ negativity – “I probably need to give myself an uppercut, don’t I?” he
+joked.
+
+Jones said he accepted that a review would be required into the World Cup flop, but his statement puts the ball firmly in Rugby Australia’s court as far as his
+future goes.
+</item 43>
+
+<item 44>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Oct 8th, 2023
+
+Oct 8th, 2023
+
+S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by
+Fiji and Portugal in Toulouse.
+
+Australia will gather together in their plush Saint-Galmier hotel at 9pm local time (6am Monday AEDT) to view what will almost certainly be their World Cup
+execution.
+
+The Wallabies are currently sitting second in Pool C but a single bonus point would be enough for Fiji to leapfrog them and advance to the quarter-finals in
+Marseille.
+
+Watch all the action from Rugby World Cup 2023 on the home of rugby, Stan Sport.
+</item 44>
+
+<item 45>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+PARIS – The All Blacks have downplayed Rieko Ioane’s gestures towards Ireland fans and retiring great Johnny Sexton, as the three-time world champions said they
+have learned to “respect Argentina” ahead of their semi-final on Saturday (6am AEDT).
+
+It comes as Michael Cheika embraced the underdog status and said he was hoping Los Pumas “inspired” Argentina “not by our results but by our ambition”, as the
+former Wallabies coach readies for another clash against the All Blacks and a second semi-final.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+Ioane copped a spray from Sexton following their 28-24 nail-biting win over Ireland.
+
+It came after the lethal back cupped his ear at Irish supporters at the Stade de France after the final whistle, as well as putting his finger to his lips in a
+‘shush gesture’.
+</item 45>
+
+<item 46>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+Advertisement
+
+“What’s changed back there that I could think that, what I can offer, can change what they’re doing still?
+
+“I’ll always love rugby. I’ll always love Australian rugby. Could I see myself working in Australia again? I doubt it.”
+
+But RA have been making moves to try and twist Nucifora’s arm.
+
+While Nucifora was never in the running for the director of high-performance, it’s understood they are trying to get him on board as a consultant when he wraps
+up with Ireland.
+</item 46>
+
+<item 47>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 47>
+
+<item 48>
+RA set to announce local as high-performance director – and how it could help land Schmidt as Wallabies coach (The Roar | Sports Writers Blog,
+2023-12-11T22:30:02+00:00)
+His appointment reflects RA’s desire to go down an administrative path rather than former coach of any standing like Millard would have offered.
+
+Horne, who joined World Rugby in 2015 as a general manager of high-performance before moving into his current role, will sit at the top of the high-performance
+tree, with the next Wallabies coach to report into him.
+
+Advertisement
+
+During his tenure with World Rugby, the Sydneysider has played an important role in setting up competitions, high-performance structures and pathways across
+developing countries.
+
+He also played a role in helping Super Rugby integrate Fiji Drua and Moana Pasifika into the competition.
+
+Those successes played out in the recent Rugby World Cup, with Chili, Fiji, Georgia and Portugal delivering encouraging performances that positively reflected
+World Rugby’s desire to spread and build the game. Horne briefly worked at Saracens as a general manger.
+</item 48>
+
+<item 49>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“To inspire is not about results, it’s not just one player who played well; no, it’s about our behaviour in general, our ability to be ready to come back from
+difficult times and seizing our opportunities.
+
+“There are not a lot of opportunities in life – us playing in a semi-final is even rarer and we want to have no regrets.”
+</item 49>
+
+<item 50>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+“It’s the life of this business, it’s a tough game. It’s tough when you’re trying to get your performance right. It’s a tough game when people around you see
+things differently, but we’ve learned a lot about ourselves.
+
+“We take massive pride in the jersey and making sure we reach the levels we want to. The rest of that is probably a conversation for another day.
+
+“It hasn’t altered our vision of where we want this team to be. I know we’ve surprised a few people but I don’t think we’ve surprised ourselves.”
+</item 50>
+=== END ITEM id=c48bf246825ab5b7 ===
+
+=== ITEM id=c47bdd4c24c3dcc1 ===
+Gold sentences and facts:
+Sentence 0: Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.
+  Fact 0.0: Jim Harbaugh was suspended.
+  Fact 0.1: Jim Harbaugh held his usual weekly news conference on Monday despite the suspension.
+  Fact 0.2: Jim Harbaugh mostly avoided addressing the only topic on anyone's mind at the news conference.
+Sentence 1: It would be Harbaugh's second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators.
+  Fact 1.0: The suspension would be Harbaugh's second suspension of the season.
+  Fact 1.1: The Wolverines self-imposed a three-game ban on Harbaugh to start the season.
+  Fact 1.2: The self-imposed ban occurred amid an NCAA investigation.
+  Fact 1.3: The NCAA investigation found that Harbaugh lied to investigators.
+Sentence 2: Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns.
+  Fact 2.0: Harbaugh reportedly watched the game from the team hotel.
+  Fact 2.1: The leading piece of drama now returns.
+
+Retrieved items:
+<item 1>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Although the Big Ten has closed its investigation, we are continuing to cooperate with the NCAA as it moves forward with its ongoing investigation. Consistent
+with our commitment to integrity, we will continue to take the appropriate actions, including disciplinary measures, based on information we obtain. Earlier
+today, Michigan Athletics relieved Chris Partridge of his duties as a member of the Michigan Football staff. Due to employee privacy laws, we are unable to
+comment further."
+
+Because Michigan and Harbaugh on Thursday dropped their litigation against the Big Ten, he will not be on Michigan's sideline this week against Maryland and
+next week against Ohio State to end the regular season.
+
+Former Wolverines assistant and Harbaugh confidant Biff Poggi on Friday offered his former boss an invitation. Poggi, in his first year as Charlotte's head
+coach, asked Harbaugh to join the 49ers for their games vs. Rice on Saturday and at South Florida on Nov. 25.
+</item 1>
+
+<item 2>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Rice on Saturday and at South Florida on Nov. 25.
+
+I am extending an open invitation to Jim Harbaugh to join me on the sidelines for the next two Charlotte football games. It would be my honor to stand next to
+you again as we did for three years — Biff poggi (@BiffPoggi) November 17, 2023
+
+Thursday, Nov. 16
+
+Michigan accepts Harbaugh's three-game suspension
+
+Michigan has dropped its litigation against the Big Ten over Harbaugh's three-game suspension, and it will accept the punishment levied against the head coach.
+
+From Michigan:
+
+"This morning, the University, Coach Harbaugh, and the Big Ten resolved their pending litigation. The Conference agreed to close its investigation, and the
+University and Coach Harbaugh agreed to accept the three-game suspension. Coach Harbaugh, with the University's support, decided to accept this sanction to
+return the focus to our student-athletes and their performance on the field.
+</item 2>
+
+<item 3>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Will Harbaugh be on the field before the end of the regular season? The Big Ten made a Friday ruling that will prohibit Harbaugh from being on the field for the
+final three regular-season games as a result of the in-person scouting and sign-stealing scandal that led to the resignation of staffer Conor Stallions. ESPN
+reported there will be a temporary restraining order hearing on Nov. 17 that will answer that question.
+
+On the field, Michigan answered the question about its College Football Playoff. Sort of. The Wolverines proved they could beat Penn State (8-2, 5-2) in a
+20-yard box. Neither team completed a pass of 20 yards or more. Michigan trailed 3-0 after the first quarter. The Wolverines had eight carries for 10 yards, and
+Penn State's Abdul Carter set the tone with a jarring hit on Blake Corum that nearly resulted in a fumble.
+
+Michigan took control with the running game.
+</item 3>
+
+<item 4>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan players and coaches arrive. No Jim Harbaugh on the bus. pic.twitter.com/wnGzqAxwcp — Adam Rittenberg (@ESPNRittenberg) November 11, 2023
+
+Michigan offensive coordinator Sherrone Moore will serve as acting head coach if Harbaugh is not available.
+
+Friday, Nov. 10
+
+Michigan files temporary restraining order against the Big Ten
+
+In an effort to delay Harbaugh's suspension, the university filed a temporary restraining order in Washtenaw County Trial Court on Friday night. If granted, the
+suspension would be delayed, but the clock is ticking before the Wolverines' game vs. Penn State on Saturday.
+
+Michigan's temporary restraining order request has been filed.
+
+
+
+Plaintiffs: Jim Harbaugh, U-M regents
+
+Defendants: Big Ten, Tony Petitti
+
+
+
+Judicial officer: Timothy P. Connors
+</item 4>
+
+<item 5>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+The Conference has confirmed that it is not aware of any information suggesting Coach Harbaugh's involvement in the allegations. The University continues to
+cooperate fully with the NCAA's investigation.
+
+From the Big Ten:
+
+"The Big Ten Conference's commitment to student-athletes, sportsmanship and the commissioner's duty to protect the integrity of competition will never waver.
+Today's decision by the University of Michigan to withdraw its legal challenge against the conference's November 10th notice of disciplinary action is
+indicative of the high standards and values that the conference and the university seek to uphold, the University of Michigan is a valued member of the Big Ten
+Conference and the conference will continue to work cooperatively with the university and the NCAA during this process."
+
+Monday, Nov. 13
+
+Harbaugh says he'll state his case at Friday hearing
+
+Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.
+</item 5>
+
+<item 6>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Here is Michigan’s 10-page letter to the Big Ten responding to the sportsmanship investigation, reporting with @RossDellenger 1/3 pic.twitter.com/P0oYgIbS67 —
+Dan Wetzel (@DanWetzel) November 9, 2023
+
+No timetable for Big Ten decision
+
+The Big Ten is reviewing the "lengthy" official response from Michigan and Jim Harbaugh and it's unclear when a potential ruling might come down, says ESPN's
+Pete Thamel. His colleague Adam Rittenberg reported Wednesday that a decision was expected by Thursday.
+
+Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh. There’s no indication of any timetable on a decision on
+potential Big Ten discipline in the case of Michigan’s alleged illegal signal stealing.
+</item 6>
+
+<item 7>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+He initially told reporters he would speak during a scheduled hearing Friday, but then backtracked a bit and sounded as if he wasn't committed to that course,
+pending legal advice.
+
+Harbaugh said he will speak at the hearing on Friday. He said he’s looking for “due process.” Mentioned a civics class he took 40 years ago. “You’re innocent
+until proven guilty. I’d like that opportunity.” — Nicole Auerbach (@NicoleAuerbach) November 13, 2023
+
+Harbaugh clarifies that he’s not sure whether he’ll testify Friday. “That’s not my dance floor,” he says. “I’ve watched a lot of shows. I’ve watched Judge Judy
+a lot.” — Austin Meek (@byAustinMeek) November 13, 2023
+
+Sunday, Nov.
+</item 7>
+
+<item 8>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+ET flight looms.
+
+Michigan's administration has not heard from the Big Ten as of this hour, per sources. The team will begin its preparations to leave for Penn State around 1
+p.m. ET. Really going down to the wire with any discipline, which, as several sources noted, isn't really fair to players. — Adam Rittenberg (@ESPNRittenberg)
+November 10, 2023
+
+Harbaugh still expected to fly to State College
+
+Dinich reported earlier on Friday that punishment to Michigan could come around the time the team is expected to get on a plane and fly to Pennsylvania for its
+game against Penn State. But regardless of when the punishment is announced, Harbaugh's attorney, Tom Mars, reportedly told ESPN the coach will be headed to
+State College.
+
+"I'm confident he's going to be on that plane one way or another," Mars reportedly told ESPN.
+</item 8>
+
+<item 9>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+We have to wait for the news, but a suspension is certainly on the table. — Heather Dinich (@CFBHeather) November 10, 2023
+
+If it’s more than 2 games or $10k, the Big Ten will need special permission from an executive board composed of league reps https://t.co/6Z7jb2zqH4 — Heather
+Dinich (@CFBHeather) November 10, 2023
+
+Punishment expected on Friday
+
+The college football world will wait with bated breath on Friday as it awaits what Michigan and Jim Harbaugh will face from the Big Ten. ESPN's Heather Dinich
+reported the punishment is expected to be announced early Friday afternoon. She noted the team is leaving for State College at 1 p.m. CT for the Penn State game
+on Saturday.
+
+sources indicate a Big Ten response is coming early this afternoon.
+</item 9>
+
+<item 10>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+sources indicate a Big Ten response is coming early this afternoon. Michigan leaves at 1 and flies midafternoon out of Detroit after getting through security
+checks, per usual routine. — Heather Dinich (@CFBHeather) November 10, 2023
+
+Thursday, Nov. 9
+
+Big Ten considering 'range of possibilities' for Harbaugh
+
+ESPN's Adam Rittenberg reported there are a "range of possibilities" the Big Ten is considering as punishment for Harbaugh. The possibility of a suspension has
+often garnered most of the headlines, but Rittenberg reported the conference is also considering a significant fine.
+
+While we wait ... although Big Ten has considered a suspension for Michigan coach Jim Harbaugh, it is considering a range of possibilities, including a
+significant fine, sources told @CFBHeather and me. Public reprimands/fines are common penalties under B1G sportsmanship policy.
+</item 10>
+
+<item 11>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+On the other, he could emerge as a martyr for Michigan fans given there is reportedly no proof yet he knew of Stalion's rule-breaking.
+
+Harbaugh will have a temporary restraining order hearing on Nov. 17, according to ESPN.com. That will determine whether he returns to the field for the final
+two games against Maryland and No. 1 Ohio State.
+
+It's an inescapable fact that Harbaugh is 31-3 – and Michigan is 35-3 – since the program bottomed out at the end of the 2020 season. While it is almost
+impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough
+stain to erase knowing those violations are now on the Big Ten record.
+
+What will Harbaugh do now? That is almost impossible to predict given his combative personality. Would he sign a contract extension and continue to fight the
+NCAA? Will Harbaugh finally take the parachute to the NFL?
+</item 11>
+
+<item 12>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+12
+
+U-M president praises Wolverines for handling 'challenges and adversity'
+
+The day after the Penn State win, University of Michigan President Santa Ono posted on social media, praising the team's ability to "respond to any challenge
+head on with a conviction to do better and to emerge even stronger."
+
+Countless members of the University of Michigan family have reached out to me over the weekend and I wanted to express my appreciation. Like any community, we
+face our share of challenges and adversity. There have been many such moments in our history. But as our team showed so… — Santa Ono (@SantaJOno) November 12,
+2023
+
+The post drew immediate and extensive blowback on social media and beyond, as observers questioned Ono's tone with Michigan in the midst of a self-inflicted
+controversy.
+
+Saturday, Nov. 11
+
+Warde Manuel issues strong statement against Big Ten
+
+Michigan athletic director Warde Manuel did not mince words in a statement on the Big Ten's suspension of Harbaugh.
+</item 12>
+
+<item 13>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+However, the primary difference is Michigan is accused of using in-person scouting, which has been prohibited under NCAA rules for nearly 30 years, to acquire
+its information.
+
+Monday, Nov. 6
+
+No connection between Buckeyes coach, Michigan investigation
+
+Ohio State coach Ryan Day and his family have no connection to the Big Ten and NCAA investigations into Michigan, Yahoo Sports reported.
+
+A report emerged over the weekend indicating Day may have had some involvement in the probe into the Buckeyes' arch-rivals, but the NCAA told the Big Ten there
+are no ties that it knows of between the Ohio State coach and the investigation.
+
+NCAA shares findings with Big Ten as Harbaugh suspension looms
+
+Yahoo Sports reported Monday that the NCAA shared its investigation findings with the Big Ten, noting that the findings "do not connect the in-person scouting
+and recording of opponents’ sidelines to Harbaugh."
+
+Still, the conference is considering a suspension for Harbaugh and could hand down punishments before the end of the week.
+</item 13>
+
+<item 14>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+OFFICIAL: Jim Harbaugh suspended for the remaining three regular season games.
+
+
+
+"Michigan has been found in violation of the Big Ten Sportsmanship Policy for conducting an impermissible, in-person scouting operation over multiple years..."
+https://t.co/htnUkshmnF — Chris Vannini (@ChrisVannini) November 10, 2023
+
+Jim Harbaugh joins Michigan for trip to State College
+
+According to the sleuths on the ground in Ann Arbor, Harbaugh is on the team bus and heading to the airport with his team as Michigan awaits word on a potential
+suspension.
+
+Jim Harbaugh boarding the bus pic.twitter.com/CWBJbwEEhi — Austin Meek (@byAustinMeek) November 10, 2023
+
+Michigan still awaiting word from Big Ten
+
+According to ESPN's Adam Rittenberg, Michigan still hasn't heard about an impending punishment from the Big Ten as its 1 p.m. ET flight looms.
+</item 14>
+
+<item 15>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+MORE: Why Jim Harbaugh won't find refuge in the NFL
+
+It was reported earlier in the week that coaches were putting pressure on the Big Ten to hit Michigan with some form of punishment, with Purdue's Ryan Walters
+publicly calling for action and claiming the allegations are no longer simply allegations.
+
+Harbaugh was already suspended three games at the start of the season, in a ban imposed by the school itself in an attempt to ward off a separate NCAA
+investigation.
+
+Friday, Nov. 3
+
+Suspended football analyst Connor Stalions resigns
+
+Michigan football analyst Connor Stalions, the focus of the NCAA's investigation, resigned on Friday night, the university confirmed.
+
+Statement from Michigan (confirming earlier reports that Connor Stalions is no longer with the program): "Connor Stalions resigned his position with Michigan
+Athletics this afternoon. We are unable to comment further regarding this personnel matter."
+</item 15>
+
+<item 16>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+pic.twitter.com/Qm9iehYVTR — Pete Thamel (@PeteThamel) November 11, 2023
+
+Harbaugh will not be on the sidelines vs. Penn State
+
+Michigan filed a temporary restraining order against the Big Ten on Friday night, hoping to block Harbaugh's suspension. But there will not be a ruling before
+the Wolverines' game vs. Penn State, with the hearing scheduled for Friday, Nov. 17.
+
+No ruling on Michigan’s TRO filing today, so Jim Harbaugh will not coach vs. Penn State.
+
+
+
+Statement from the school: “We look forward to presenting our case next week where we intend to demonstrate that the Big Ten has not acted legally or fairly.”
+</item 16>
+
+<item 17>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Nicole Auerbach (@NicoleAuerbach) November 11, 2023
+
+Harbaugh hearing coming down to wire before Penn State game
+
+ESPN's Pete Thamel reported it's unclear Harbaugh will be granted a hearing in time to be able to coach against Penn State. With kickoff scheduled for noon ET,
+Thamel said "the drama's going to go right up 'till noon."
+
+Latest from ⁦@CollegeGameDay⁩ on Jim Harbaugh’s TRO legal filing. Will he coach Michigan at Penn State today? pic.twitter.com/bz3R1eYxI9 — Pete Thamel
+(@PeteThamel) November 11, 2023
+
+The case is reportedly in the hands of Judge Carol Kunhke, a Michigan alumnus.
+
+Harbaugh was not on the Michigan team bus with other coaches and players when it arrived at Beaver Stadium Saturday morning.
+
+Michigan players and coaches arrive. No Jim Harbaugh on the bus.
+</item 17>
+
+<item 18>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Who is the good guy? Who is the villain? Ohio State and Michigan locked in their answers a long time ago. More than 17 million people watched last year's
+matchup – a 45-23 Michigan victory where Stalions' involvement continues to be scrutinized through a double-barrel Big Ten and NCAA investigation. Big Ten
+commissioner Tony Petitti's ruling sent a shockwave through the conference Friday, mainly because the third game means Harbaugh will not be on the sideline for
+The Game. Early forecasts say 20 million will tune in for The Game this year.
+
+Will Harbaugh really not be there? That is for the courts to decide, but Moore’s comments suggest Harbaugh, president Santa Ono and athletic director Warde
+Manuel are on a united front; consequences be damned in 2024 and beyond.
+
+In the short term? The College Football Playoff committee could slide Michigan up to No. 2 now, and the debate with the Buckeyes and No.
+</item 18>
+
+<item 19>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Yahoo says a multi-game suspension for Harbaugh is on the table, though Michigan is fully expected to fight a ban if one is handed down. It would be Harbaugh's
+second suspension of the season, as the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh
+lied to investigators.
+
+Saturday, Nov. 4
+
+Harbaugh 'likely' to be suspended
+
+According to The Athletic's Pete Thamel, the Big Ten might be getting closer to handing down a suspension for Harbaugh.
+
+"Over the past few days, Petitti has spoken with the athletic directors, he's spoken with the presidents, he's spoken with the coaches. And the next steps
+appear that there will be some type of punishment for Michigan. The most likely scenario here is some type of suspension for Jim Harbaugh," Thamel said on
+ESPN's "College GameDay."
+</item 19>
+
+<item 20>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 20>
+=== END ITEM id=c47bdd4c24c3dcc1 ===

@@ -1,0 +1,29 @@
+[
+  {"id": "0d4de7e32eeff0b0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "but not all of them are effective"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "and none are foolproof."}]}
+  ]},
+  {"id": "e179c9a7645c8087", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 2, "quote": "The anticompetitive effects of Google’s scheme cause profound harm to competition"}]}
+  ]},
+  {"id": "90831cc33eedc1bd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 17, "quote": "Research shows that even a small reduction in sleep has been shown to impact your immune system, however."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 20, "quote": "This sex difference in insomnia emerges after puberty, suggesting that hormonal differences such as menstruation, pregnancy and menopause may be the cause of this increased risk in women,” Dr Browning says."}]}
+  ]}
+]

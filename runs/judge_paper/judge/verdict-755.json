@@ -1,0 +1,32 @@
+[
+  {"id": "c73378df44a81b33", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 17, "quote": "Love Story This finally brings us to the"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 17, "quote": "This finally brings us to the"}, {"item": 17, "quote": "fated sighting of Swift at Arrowhead Stadium on Monday"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 17, "quote": "fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 17, "quote": "cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 21, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "89a5f925f12e0e94", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse."}]}
+  ]},
+  {"id": "886b8676caa30047", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 34, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 34, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 34, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 34, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 43, "quote": "Cohen repeatedly harped on Bankman-Fried’s allegedly good-faith actions throughout his address to the jury."}, {"item": 37, "quote": "“Sam acted in good faith and took reasonable business measures”"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 11, "quote": "“He didn’t steal any money.”"}, {"item": 43, "quote": "“Sam didn’t defraud anyone,” he said early on in his opening statement."}]},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

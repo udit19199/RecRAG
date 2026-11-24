@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ef28ba1f3e67fc22",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 32, "quote": "The official details have not been reported"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 32, "quote": "the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal."}]},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 42, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+      {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 42, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "2b4e52a877104f7a",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "If the debt continues to rise more than the economy, risks will increase"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 15, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 15, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 15, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 15, "quote": "President Ferdinand Marcos, Jr."}, {"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "told members of the US-ASEAN Business Council who visited Malacañang (ABS-CBN, Aug. 9, 2023)."}]}
+    ]
+  },
+  {
+    "id": "3574baaaa4651da0",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "It would be Harbaugh's second suspension of the season"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 2, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 32, "quote": "Harbaugh reportedly watched the game from the team hotel"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 32, "quote": "and now the leading piece of drama returns."}]}
+    ]
+  }
+]

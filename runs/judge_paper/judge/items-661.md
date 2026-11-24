@@ -1,0 +1,1682 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=59903aa7700857be ===
+Gold sentences and facts:
+Sentence 0: “Certainly there wasn’t a valid alternative to Google at the time,” Cue said.
+  Fact 0.0: Cue said there certainly wasn't a valid alternative to Google at the time.
+Sentence 1: For all the other benefits they get from Android, Google could solve this problem today if they wanted to.
+  Fact 1.0: Google could solve this problem today if it wanted to.
+  Fact 1.1: Google gets other benefits from Android.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google “siphons off” news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that this is done through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 1>
+
+<item 2>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 2>
+
+<item 3>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 3>
+
+<item 4>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 5>
+
+<item 6>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 6>
+
+<item 7>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 9>
+
+<item 10>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 10>
+
+<item 11>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+In response, Google enacted a plan, which execs dubbed “Go Big in Europe,” to enhance search results in France and Germany in 2019 and 2020 with more local
+content: news, post-game soccer video highlights, information on local television options for streaming, and pronunciation practice for different language. The
+aim was to incentivize users to click on Google’s home screen, rather than the competition’s.
+
+That revelation effectively supports the Justice Department’s argument that Google, without the push of competition, has little incentive to improve its
+products, a classic consequence in a monopoly.
+
+Mozilla digs in on Google’s supremacy in search
+
+Interestingly, on November 1 Mozilla CEO Mitchell Baker provided a defense of Google’s quality as a search engine, even in “competitive” environments.
+Specifically, Baker recounted how, Mozilla “failed” when it switched Firefox’s default search engine from Google to Yahoo.
+</item 11>
+
+<item 12>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 12>
+
+<item 13>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 13>
+
+<item 14>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 14>
+
+<item 15>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 15>
+
+<item 16>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 16>
+
+<item 17>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 17>
+
+<item 18>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 18>
+
+<item 19>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+</item 19>
+
+<item 20>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 20>
+
+<item 21>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 21>
+
+<item 22>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 22>
+
+<item 23>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 23>
+
+<item 24>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 24>
+
+<item 25>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 25>
+
+<item 26>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“We try to get people up and running as fast as possible.”
+
+Cue acknowledged that the ISA didn’t allow Apple to offer users a choice of search engines during setup but also said he wouldn’t want to do that anyway. “We
+try to get people up and running as fast as possible,” he said. “Setup is just critical stuff.” Showing people a bunch of search engines they’ve never heard of
+would just be a bad user experience, he argued; even Cue couldn’t remember the names of some of the alternatives to Google. “We make Google be the default
+search engine,” he said, “because we’ve always thought it was the best. We pick the best one and let users easily change it.” (“Easily” is a persistent point of
+contention in this trial — DuckDuckGo’s CEO, who testified last week, claimed it takes “too many steps” to switch.)
+
+As for the privacy pop-ups? This is where Bellshaw began to press on how exactly Apple decided Google had the best product.
+</item 26>
+
+<item 27>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 27>
+
+<item 28>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 28>
+
+<item 29>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Google spent its 45 minutes attempting to explain that its dominance over the Android app market isn’t anything nefarious but simply the natural outcome of
+Google fiercely competing with the iPhone and its iOS App Store, where Google would like the court to believe that competition truly lies.
+
+If Google can convince the jury of that, it could be a winning argument in the case — because obviously, Google doesn’t have a monopoly on app stores or phones
+in general. “You cannot separate the quality of a phone from the quality of the apps in its app store, and that means Google and Apple compete against each
+other,” began Google lead attorney Glenn Pomerantz.
+
+But Google wound up spending much of its opening statement attempting to explain away its seemingly bad behavior as normal business practices and didn’t always
+succeed out of the gate.
+</item 29>
+
+<item 30>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 30>
+=== END ITEM id=59903aa7700857be ===
+
+=== ITEM id=b71c6deafe405826 ===
+Gold sentences and facts:
+Sentence 0: But “all of that, all of it, was built on lies,” Rehn declared to the jury.
+  Fact 0.0: Rehn declared to the jury that “all of that, all of it, was built on lies.”
+Sentence 1: FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+  Fact 1.0: Gary Wang is an FTX co-founder.
+  Fact 1.1: Gary Wang is the former CTO of FTX.
+  Fact 1.2: Caroline Ellison is the former CEO of Alameda Research.
+  Fact 1.3: Gary Wang pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+  Fact 1.4: Caroline Ellison pleaded guilty in December 2022 to federal criminal charges in relation to the FTX collapse.
+
+Retrieved items:
+<item 1>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Ellison is expected to take the stand under a similar arrangement.
+
+U.S. District Judge Lewis Kaplan presides as Gary Wang testifies during the fraud trial of Sam Bankman-Fried over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+Born in China, Wang moved to the U.S. at age 7, and grew up in Minnesota before going to the Massachusetts Institute of Technology to study math and computer
+science. He worked at Google after college. Wang, who first met Bankman-Fried during high school at a summer camp, owned 10% of Alameda, while his boss owned
+the other 90%. Wang told the court about the advantages that Alameda received by having code baked into FTX's software that allowed special access to the crypto
+exchange.
+</item 1>
+
+<item 2>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+That was before he realized FTX had stolen customer funds — at which point, he resigned.
+
+Gary Wang, the co-founder of FTX and Alameda Research and another college roommate. He took the stand after Yedidia and sang like a canary about the secret
+privileges he’d created for Alameda in the FTX code.
+
+Nishad Singh, a longtime family friend, who copped to what sounded an awful lot like classic embezzlement. He said he’d backdated transactions on FTX to help
+create doctored balance sheets to show to investors. He pleaded guilty to six charges, including wire fraud, money laundering, and conspiracy counts around his
+political donations.
+
+Caroline Ellison, Bankman-Fried’s ex-girlfriend. She told us about the seven phony balance sheets she’d created. She was clear: Alameda took customer funds;
+Bankman-Fried knew about it and even invested them against her advice.
+
+Joe Bankman, Bankman-Fried’s father.
+</item 2>
+
+<item 3>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+FTX was a fraud “from the start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of
+customer funds.” Follow along for all the latest news and regular updates from the trial.
+
+The day started off promisingly for the defense as it cross-examined Gary Wang, the chief technology officer of FTX and co-owner of both FTX and Alameda.
+Christian Everdell, one of Bankman-Fried’s defense attorneys, couldn’t undo the damage of last week’s code review. But he managed to shake the rust off long
+enough to make Wang sound less reliable, drowning the jury in confusing technicalities.
+
+Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation —
+something he alleged other accounts at FTX didn’t get. Everdell tried to undermine this claim by talking about the spot margin program, which let users lend
+each other assets for margin trading.
+</item 3>
+
+<item 4>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+U.S. Attorney Damian Williams called Bankman-Fried’s alleged crimes “one of the biggest financial frauds in American history,” in a press conference.
+
+The aftermath
+
+FTX co-founder and former CTO Gary Wang, and Alameda Research’s former CEO, Caroline Ellison, both pleaded guilty in December 2022 to federal criminal charges
+in relation to the FTX collapse. They’re also facing civil penalties from the U.S. Securities and Exchange Commission (SEC) and Commodity Futures Trading
+Commission (CFTC) alongside the criminal charges. Wang and Ellison plan to cooperate with prosecutors and will be major witnesses in the trial, given their
+close ties to Bankman-Fried, FTX and Alameda.
+
+In January, Bankman-Fried pleaded not guilty to all counts, which include wire fraud, conspiracy to commit money laundering and conspiracy to misuse customer
+funds. He could face up to 115 years in jail if convicted on all charges.
+</item 4>
+
+<item 5>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Sam Bankman-Fried, the founder of bankrupt cryptocurrency exchange FTX, is seen during a hearing as a U.S judge revoked his bail, at a courthouse in New York,
+U.S., August 11, 2023 in this courtroom sketch. Jane Rosenberg | Reuters
+
+$65 billion line of credit
+
+For months, Bankman-Fried has known that Wang and Ellison, who were integral members of his personal and professional inner circles, had turned on him. Both
+pleaded guilty in December and have since been cooperating with the U.S. attorney's office in Manhattan. Wang's testimony, which stretched into Friday, was
+given under a cooperation agreement with the government. Ellison is expected to take the stand under a similar arrangement.
+
+U.S.
+</item 5>
+
+<item 6>
+Today the FTX jury suffered through a code review (The Verge, 2023-10-06T22:21:46+00:00)
+As a result of today’s testimony, I am both more and less confused. I am clearer on what probably happened at FTX. What I don’t understand is why Gary Wang did
+it.
+
+Wang was the co-founder and chief technology officer of FTX, as well as the co-founder of Alameda Research. He owned only 10 percent of Alameda and 17 percent
+of FTX. He got a $200,000 a year salary, with no performance bonuses. (Okay, sure, at times he was a billionaire on paper.) By contrast, Bankman-Fried owned 90
+percent of Alameda and 65 percent of FTX.
+
+Yet Wang’s testimony suggests he took bizarre risks for his own relatively small share. Bankman-Fried didn’t code, so none of his fingerprints are on the
+technical changes that let FTX allegedly defraud its customers and investors. Meanwhile, Wang supervised the code behind a key prosecution claim: that Alameda
+Research was afforded secret, special privileges with FTX’s funds.
+</item 6>
+
+<item 7>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+According to the SEC, FTX was a fraud “from the start,” diverting customers’ funds to Alameda.
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+
+“Really just old-fashioned embezzlement.”
+
+What’s left of FTX is now being led by John J. Ray III — you may remember him as the guy who cleaned up Enron and who also said FTX is worse than Enron. Just
+before the trial began, the FTX lawyers filed suit against Bankman-Fried’s parents, saying they should give back millions of dollars they got from their kid.
+Ray has also referred to Bankman-Fried’s conduct as “really just old-fashioned embezzlement.”
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 8>
+
+<item 9>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 9>
+
+<item 10>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 10>
+
+<item 11>
+The jury finally hears from Sam Bankman-Fried (The Verge, 2023-10-28T00:12:41+00:00)
+Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both
+companies, he said. Bankman-Fried handed the company off to Caroline Ellison and Sam Trabucco, who immediately after being named co-CEO promptly drifted away to
+early retirement. (Quiet quitting king!) Bankman-Fried did remain involved in hedging and risk at Alameda, though.
+
+About that $1 billion of revenue in 2021: Bankman-Fried definitely did not know that Singh, his employee, had backdated interest payments to get FTX “over the
+line” to $1 billion. See, he’d just asked his employees to check and see if there was any source of funds that was missing to get to $1 billion. This testimony
+was especially rambling.
+
+Oh, also that MobileCoin loss? The one Wang said Alameda took to keep off FTX’s balance sheet?
+</item 11>
+
+<item 12>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+“We had him going out directly to the internet,” LaVigne says. If he wrote things on Twitter or said things in interviews that weren’t true, that’s more fodder
+for the government’s case. “They can point to that and say, ‘This is what he said, this is what actually happened.’”
+
+Other evidence may include Signal messages and testimony from co-conspirators who plead guilty to their own charges. Alameda Research CEO Caroline Ellison, who
+was also sometimes Bankman-Fried’s girlfriend, may play an important role — Bankman-Fried leaked her diaries to The New York Times and was consequently jailed
+for witness tampering. The government has indicated FTX co-founder Gary Wang and engineering head Nishad Singh will also be among the witnesses called to give
+testimony about Bankman-Fried.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him
+
+There may be testimony from lenders, venture capitalists, and customers in order to establish the basis for some charges.
+</item 12>
+
+<item 13>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Here are the hits:
+
+Bankman-Fried gave interviews freely — and quickly rose to public prominence in the industry. Though FTX hadn’t been in the business as long as competing
+exchanges such as Coinbase, Kraken, or Gemini, Bankman-Fried positioned himself as an important, boyish face for crypto. (At one point, Bankman-Fried told a
+colleague at FTX that “I honestly think it’s negative EV [this may mean “expected value,” as in poker] for me to cut my hair. I think it’s important for people
+to think I look crazy.”)
+
+Because he was so successful at this kind of public relations, his fall from grace was another mark against an industry that was already roiled by bankruptcies
+and scandals. Some additional trouble for the crypto industry is likely to come from one crucial element of the fraud trial — the part where the government must
+prove intent.
+
+The first part of proving the government’s case is pretty simple and a little boring: prosecutors must show that certain transactions took place.
+</item 13>
+
+<item 14>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+In the indictment, the prosecutors allege that Bankman-Fried lied to FTX investors. Some of those investors may be called on to testify, which is not the kind
+of thing VC big shots generally enjoy — and which might create collateral damage for the industry.
+
+If, for instance, Sequoia Capital did due diligence around its investment in FTX, whatever Bankman-Fried told its partners could be important. Was FTX already
+sending Alameda customer funds at that point? Did Bankman-Fried know about it? And did he tell VCs at the time? (If he told them it wasn’t happening, that would
+establish intent.) Binance was also an early investor in FTX, and former executives may be called on to testify as well, says Hermine Wong, the former head of
+policy at Coinbase and a former SEC regulator.
+
+Bankman-Fried’s defense can also introduce risks for people who dealt with him. Defense lawyers have several simultaneous objectives. First and foremost,
+they’re trying to prove their client is not guilty.
+</item 14>
+
+<item 15>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Witness Adam Yedidia answers questions during Sam Bankman-Fried fraud trial over the collapse of FTX, the bankrupt cryptocurrency exchange, at Federal Court in
+New York City, October 5, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Two of Sam Bankman-Fried's former friends from MIT, who also worked at crypto exchange FTX while living with the company's founder in the Bahamas, took the
+stand in a Manhattan courtroom this week to testify against their former classmate, confidant, and boss — a man who allegedly ran a crypto empire that defrauded
+thousands of customers out of billions of dollars. Gary Wang, the lesser-known co-founder of FTX, was asked by Assistant U.S. Attorney Nicolas Roos on Thursday,
+"Did you commit financial crimes while working at FTX?" "Yes," responded Wang.
+</item 15>
+
+<item 16>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Assistant United States Attorney Nicolas Roos questions Gary Wang during Sam Bankman-Fried's fraud trial over the collapse of FTX, the bankrupt cryptocurrency
+exchange, at Federal Court in New York City, U.S., October 6, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+An $8 billion bug
+
+Adam Yedidia, who was the prosecution's second witness on Wednesday, continued his testimony on Thursday. Yedidia met Bankman-Fried in college at MIT, and the
+pair remained close friends. Yedidia, assuming a robotic posture on the stand, worked out of FTX's Hong Kong office from January to October of 2021 and then in
+the Bahamas until last year's collapse. In his testimony, he referred to a group Signal thread called "People of the House," referring to Bankman-Fried's $35
+million penthouse, where many employees lived.
+</item 16>
+
+<item 17>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Bankman-Fried faces seven federal charges, including wire fraud, securities fraud and money laundering, that could put him in prison for the rest of his life.
+Thus far, Bankman-Fried, 31, has remained mostly quiet in court intently listening to witnesses and at times writing notes to his attorneys. But as Wang
+testified against him, Bankman-Fried looked visibly upset, shifting his gaze from his former friend to the ground, and at one point putting his head in his
+hands.
+
+Sam Bankman-Fried listens as Assistant U.S. Attorney Nicolas Roos questions Gary Wang during Bankman-Fried's fraud trial over the collapse of FTX, the bankrupt
+cryptocurrency exchange, at Federal Court in New York City, U.S., October 6, 2023, in this courtroom sketch. Jane Rosenberg | Reuters
+
+Wang, 30, was technology chief for FTX, which spiraled into bankruptcy in November.
+</item 17>
+
+<item 18>
+SBF’s trial starts soon, but how did he — and FTX — get here? (TechCrunch, 2023-10-01T14:00:29+00:00)
+SBF’s trial has started, this is how he and FTX got here
+
+The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of
+seven counts of fraud and conspiracy. And as one former federal prosecutor put it: “The odds seem to be stacked against him at this point.”
+
+The 31-year-old co-founded FTX in 2019; within a few years the once third-largest crypto exchange’s valuation hit $32 billion at its peak. It’s now trying to
+claw back any funds to distribute to creditors.
+
+But how did the once third-largest crypto exchange get here?
+
+Before FTX, Bankman-Fried co-founded crypto-trading firm Alameda Research in 2017. He co-founded FTX in 2019 as a complement to Alameda, to help bring in
+revenue and liquidity for the trading arm.
+</item 18>
+
+<item 19>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+That was all done by Bankman-Fried, he testified. In early 2020, Wang said he discovered for the first time Alameda's negative balance exceeded FTX's revenue,
+an indication that Alameda was taking customer funds. Wang said he brought this to Bankman-Fried's attention several times. In late 2021, Wang discovered
+Alameda had withdrawn $3 billion from its $65 billion line of credit. Wang's compensation was a base salary of $200,000 per year plus stock. He owned roughly
+17% of FTX. Even though they were co-founders, "ultimately it was Sam's decision to make" when there were disagreements, he said.
+</item 19>
+
+<item 20>
+How is it still getting worse for Sam Bankman-Fried? (The Verge, 2023-10-12T23:08:14+00:00)
+I have been waiting for a juicy cross-examination, as I live for chaos and drama. I am beginning to think I am not going to get one.
+
+Ellison had given, in her direct testimony, fairly damning evidence tying FTX CEO Sam Bankman-Fried to the conspiracy to take FTX customer funds. There were
+fake balance sheets, one of which was sent to crypto lender Genesis. After a Genesis representative received the balance sheet, he texted Ellison to tell her
+he’d spoken to Bankman-Fried — strongly suggesting that Bankman-Fried was aware of the contents of the fake balance sheet. Not great!
+
+Sam Bankman-Fried, the founder of failed cryptocurrency exchange FTX, is on trial for seven counts of wire fraud and conspiracy. FTX was a fraud “from the
+start,” the Securities and Exchange Commission alleges — with a “multi-billion-dollar deficiency caused by his own misappropriation of customer funds.” Follow
+along for all the latest news and regular updates from the trial.
+</item 20>
+=== END ITEM id=b71c6deafe405826 ===
+
+=== ITEM id=b14d89680a3a3a16 ===
+Gold sentences and facts:
+Sentence 0: After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it.
+  Fact 0.0: William learned of Diana’s death from his father.
+  Fact 0.1: William learned of Diana’s death at the royal residence of Balmoral in Scotland.
+  Fact 0.2: The character William is played by Rufus Kampa.
+  Fact 0.3: William is left heartbroken with grief.
+  Fact 0.4: William is angry at his family’s response to Diana’s death.
+Sentence 1: The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997.
+  Fact 1.0: The latest installment takes place between the late 1990s and the mid-2000s.
+  Fact 1.1: The latest installment includes the lead-up to Princess Diana’s fatal Paris car crash.
+  Fact 1.2: Princess Diana’s fatal Paris car crash happened in 1997.
+
+Retrieved items:
+<item 1>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+She then poses for them in her swimsuit, but complains in a later episode that they can “never relax” with the press “constantly” around.
+
+Diana (Debicki) on the Fayed yacht (Daniel Escale/Netflix)
+
+Former Vanity Fair editor Tina Brown, who wrote the controversial 2007 book Diana Chronicles, claimed that Diana would often tip off the press and “ couldn’t
+resist giving them the images they wanted”, including on the boat. Photographer Daniel Pirrie, who ended up selling the photo of the kiss, claimed that Diana
+herself invited him to photograph her on holiday with Dodi in France that summer. “She told me she’d be on the yacht somewhere in the Mediterranean,” he told
+The Daily Mail in 2013. “She let me know she was going to be on a tender going out to the yacht. I think overall, she was happy with all the pictures taken that
+summer… I knew that Diana had wanted [the kiss photo] to be taken.”
+</item 1>
+
+<item 2>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+He is not located, but later walks back to the house on his own accord, drenched in rain. “14 hours, that poor boy was gone,” the Queen later says.
+
+William (Kampa) goes missing after his mother’s death (Keith Bernstein)
+
+It’s true that William and Harry initially stayed in Balmoral with their grandmother following the death of Diana. While it’s not known whether he went missing,
+during a visit to Scotland in 2021, William recalled how that experience was one of the “saddest” moments of his life. “I was in Balmoral when I was told that
+my mother had died. Still in shock, I found sanctuary in the service at Crathie Kirk that very morning,” he recalled. “And in the dark days of grief that
+followed, I found comfort and solace in the Scottish outdoors. As a result, the connection I feel to Scotland will forever run deep.”
+
+The Crown season six part one is on Netflix now, with part two arriving on 14 December.
+</item 2>
+
+<item 3>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+The season begins with Princess Diana (played by Elizabeth Debicki) whisking her sons - Prince William (played by Rufus Kampa) and Prince Harry (played by Fflyn
+Edwards) - away on summer holiday to Saint-Tropez, France. After staying several days on Mohamed Al Fayed’s yacht, the boys return home to London where their
+father, the then-Prince of Wales, accompanies them to Balmoral Castle to vacation with the rest of the royal family in Scotland.
+
+In episode three, Diana’s partner Dodi Fayed (played by Khalid Abdalla) surprises her with a quick trip to Paris, France. However, the princess is keen to
+return home to the United Kingdom, and is eager to speak to her sons over the phone. A mob of paparazzi following the couple delays Diana’s scheduled phone call
+with William and Harry, until she’s able to catch them again later that evening.
+
+It is in this scene that The Crown depicts the doting mother’s final conversation with her sons.
+</item 3>
+
+<item 4>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+With the show heading into the late Nineties and early Noughties in its final season, which arrived on Netflix on Thursday (16 November), events are being
+depicted on screen that many of the public will remember well.
+
+The first part of season six takes place in the summer of 1997, and sees Prince Charles (Dominic West) building on his relationship with Camilla Parker Bowles
+(Olivia Williams), while Princess Diana (Elizabeth Debicki) sparks up a romance with film producer Dodi Fayed (Khalid Abdalla). The show also features the
+pair’s death in a car crash in Paris.
+
+As the new season arrives, and fans wonder what in The Crown is based in reality, here’s everything you need to know.
+
+Diana’s role with Tony Blair’s government
+
+Episode one sees Diana visiting Tony (Bertie Carvel) and Cherie Blair (Lydia Leonard) with William after asking for a meeting with him.
+</item 4>
+
+<item 5>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+It’s just a bit mad here. I don’t really understand how I ended up here. Mummy just needs to make some changes to her life, that’s all. But that’s not your
+problem, that’s mine.”
+
+Before saying their goodbyes, Diana reminds William and Harry that she will be seeing them the next day - although that day never comes. “I’ll see you both
+tomorrow night,” she says. “Just the three of us.”
+
+The moment unsurprisingly tugged on the heartstrings of many viewers, who took to social media to share their thoughts on the devastating moment.
+
+“The last phone call between Harry, William and Diana broke my heart,” one fan wrote on X, formerly known as Twitter.
+
+“That precious phone call between Diana and her sons,” said someone else. “Don’t mind me, I’m just gonna cry in one corner.”
+
+“The last call between Harry, William and Diana is heartbreaking,” a third user commented.
+</item 5>
+
+<item 6>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Dodi’s proposal to Diana on the night they died
+
+After bursting into tears going for dinner at the Ritz, move upstairs, he proposes to her with a ring she had previously pointed out when they sheltered from
+crowds in a Monte Carlo jewellery shop. She tells him to get up off his knee “I know the whole world is wondering if we’re going to get married, but that’s not
+a reason to actually do it.” However, they share a drink and bittersweet conversation about how they need to live their lives going forward - advice
+
+Dodi is shown proposing to Diana before they died (Daniel Escale/Netflix)
+
+In real life, Dodi did not propose to Diana on that fateful evening in Paris. However, at the inquest into the death in 2007, the jury were shown CCTV footage
+of him purchasing an engagement ring worth £11,600 in a jewellers across the square from the Ritz on the afternoon of the crash.
+</item 6>
+
+<item 7>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Mohamed al Fayed’s role in securing kiss photo
+
+Throughout season six, Mohamed al Fayed (Salim Daw) is shown as heavily invested in his son Dodi’s relationship with Diana, even ringing up the maid to ask if
+they have been “intimate”. In Arabic, he then asks his secretary if they can find him an Arabic photographer – “not just any idiot with a long lens”, but “the
+best photographer on the Meditarranean”.
+
+Salim Daw as Mohamed al Fayed (Netflix)
+
+It’s not known whether Mohamed was so instrumental in securing the photo of Dodi and Diana kissing for the first time. However, following the Harrods owner’s
+death this year, biographer Tom Bower recalled in The Times how Al-Fayed “gleefully” showed him the photographs of Dodi and Diana and allegedly “revealed how he
+had rapidly bought a yacht suitable for his son’s seduction of her”.
+</item 7>
+
+<item 8>
+Robin Williams' drug addiction made him 'a monster': Friends recall depth of actor's cocaine use (FOX News - Entertainment, 2023-10-19T17:22:01+00:00)
+Williams reportedly appeared tired while on set and didn't seem to be his usual self before he died by suicide on Aug. 11, 2014.
+
+The comedian was diagnosed with the neurological disorder posthumously after an autopsy was performed. Lewy body dementia is the second most common type of
+dementia after Alzheimer's. The disease affects brain regions involved in thinking, memory and movement, according to the Mayo Clinic.
+
+The autopsy found no illegal drugs or traces of alcohol in Williams' system.
+
+"The last time I saw Robin Williams, I hadn’t seen him for a few months, and he was thin, and he didn’t recognize my wife," Steven Pearl, a comedian and friend,
+said during the documentary. "He hardly said a word. It took him a second to recognize me. I go, ‘Whoa, something’s wrong here.’ I didn't know what. Nobody
+would really tell me. And then I never saw him again after that."
+
+CLICK HERE TO GET THE FOX NEWS APP
+</item 8>
+
+<item 9>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+The model later confronts Dodi, asking if he was with Diana when he leaves her to go see his father. Diana also alludes to a “lawsuit” between Dodi and his ex.
+
+Diana (Debicki) and Dodi (Abdalla) (PA)
+
+This storyline comes to close to the truth as told by model Kelly Fisher, who claimed to have been engaged to Dodi when he met Diana. Fisher had previously
+modelled for brands such as Victoria’s Secret and magazines including Elle and Marie Claire. As in The Crown, Fisher – who met Fayed in July 1996 – was on
+another Fayed yacht when Dodi and Diana were first photographed. She staged a press conference where she announced that she was filing a breach-of-contract
+lawsuit against Dodi, after he allegedly asked her to stop modelling as much and prioritise the relationship.
+</item 9>
+
+<item 10>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+However, she grew to become closer to Camilla. Despite announcing in 2005 that Camilla would become the Princess Consort rather than Queen Consort, it was
+announced that Camilla would be queen seven months before Elizabeth’s death.
+
+Access unlimited streaming of movies and TV shows with Amazon Prime Video Sign up now for a 30-day free trial Sign up
+
+Access unlimited streaming of movies and TV shows with Amazon Prime Video Sign up now for a 30-day free trial Sign up
+
+Dodi Fayed’s engagement to an American model
+
+When viewers first meet Dodi in The Crown, he’s in Paris with a woman with short, blonde hair. However, it’s not Diana, but an American woman who he says he’s
+picking out fabric for a Malibu home with and says he’s marrying in three weeks. His father Mohamed is unimpressed, calling him to Saint Tropez to meet a
+“special guest” and leave his “gold-digger” fiance – who he also calls “Madame Bikini” – behind.
+</item 10>
+
+<item 11>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+It is in this scene that The Crown depicts the doting mother’s final conversation with her sons.
+
+William, then 15, and Harry, then 12, inquire over the phone when their mother will be coming back home from Paris. “I’m coming home tomorrow, and I’m seeing
+you both tomorrow night,” Diana replies in the episode, which also takes place on the same day as her fatal car crash later that evening. The boys then ask
+Diana whether she plans on marrying Dodi, considering their relationship has been plastered all over the tabloids.
+
+Diana’s poignant last words to William and Harry shown in The Crown scene
+
+“Well, you know better than to believe the papers,” she tells William, before adding: “I’m emphatically not going to marry Dodi. To be honest, I can’t wait to
+come home.”
+
+When William sweetly asks his mother if she’s doing “okay”, Diana candidly tells her eldest son: “I’m okay. It’s just a bit mad here.
+</item 11>
+
+<item 12>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+The first four episodes of The Crown season six are officially here, but many viewers believe one scene has depicted the most devastating moment throughout the
+entire series.
+
+On 16 November, Netflix dropped the first four episodes of The Crown’s final season, followed by the last six episodes on 14 December. The latest installment
+takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997.
+</item 12>
+
+<item 13>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+“It was heavy and very manic, and incredibly invasive. And it had a kind of pressure to it,” Debicki said in an interview with Netflix.
+
+“At times it’s almost like an animalistic response to being pursued, by that many actors playing the press, because there’s nowhere you can go and you only have
+to be in a situation like that for about a minute, before you realise this is completely unbearable.”
+
+The first four episodes of The Crown season six are available to stream on Netflix in the US and UK.
+</item 13>
+
+<item 14>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Asks the Queen if she’d received the invitation to Camilla’s 50th birthday, to which she says she has, but cannot attend as she’s in Derbyshire. When Charles
+points out that plans “can always be changed”, she replies: “Why would we want to change it?” She doesn’t attend, but later tells Prince Philip that she doesn’t
+want for Camilla to be considered “wicked, because she’s not” or to be unkind to her.
+
+Charles (West) hosts Camilla’s (Williams) birthday (Netflix)
+
+It took a while for Queen Elizabeth and Camilla to grow close. According to historian Robert Lacey, she was reluctant to accept Charles’s request to be more
+accommodating to Camilla. Unlike in The Crown, she is said to have once referred to Camilla as “that wicked woman” to Charles’s face. However, she grew to
+become closer to Camilla.
+</item 14>
+
+<item 15>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Sign up to our free IndyArts newsletter for all the latest entertainment news and reviews Sign up to our free IndyArts newsletter Please enter a valid email
+address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our privacy notice
+Thanks for signing up to the
+
+IndyArts email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Netflix’s acclaimed royal drama moves closer to the present day, the line between fact and fiction feels ever more blurred.
+
+While Peter Morgan’s show has always presented a dramatised take on real-life events, many have argued that viewers struggle to tell the difference between the
+real royal family and the events on the show. When season five arrived last year, there were calls for the show to include a “fictional explainer” – something
+Netflix did not do.
+</item 15>
+
+<item 16>
+Bride defended after asking mother to walk her down the aisle instead of stepfather (The Independent - Life and Style, 2023-11-27T18:21:04+00:00)
+The Independent has contacted u/PopShort7064 for comment.
+</item 16>
+
+<item 17>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Through tears, she claimed that he had proposed to her (something his family denied) and promised to buy her a house in Malibu. However, she dropped the lawsuit
+following Dodi’s death.
+
+Diana’s close relationship with paparazzi on France yacht trip
+
+When Dodi and Diana first spend time together on his father’s yacht in France, the paparazzi are never far away. However, when William refuses to go outside
+until the photographers leave them alone, she takes a boat out to visit them. Wearing a swimming costume, she asks them: “We’re having a lovely time, apart from
+one little thing: you lot.” “Don’t be like that, you love us really,” they reply. Diana asks them to leave her alone as they’re “freaking out” her sons, before
+telling one photographer – who she knows by name – that if they go away, “you’re going to get a big surprise with the next thing I do”.
+</item 17>
+
+<item 18>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+It was later believed to have been delivered to their room before they went to Dodi’s flat, where a ring bearing the words “Dis-moi Oui” (“Tell me Yes”) – also
+the name of episode three – was later recovered, alongside a receipt for a “bague de fiançaille” (engagement ring). Speaking at the inquest, his father Mohamed
+claimed that the pair had met the jeweller in Monte Carlo during the holiday on the yacht, and that he believed Dodi planned to propose that night.
+
+Prince William goes missing in Balmoral after Diana’s death
+
+After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry
+at his family’s response to it. At one point, Charles is informed that the prince is not in his room and that “no one can find him”, prompting Charles and
+Prince Harry to look for him and a subsequent hunt across the grounds for the young royal.
+</item 18>
+
+<item 19>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+“The last call between Harry, William and Diana is heartbreaking,” a third user commented.
+
+In both the series and in real-life, Diana and Dodi - along with their chauffeur, Henri Paul - were killed on 31 August 1997 when their Mercedes-Benz was
+pursued by paparazzi and crashed in the Pont de l’Alma tunnel in Paris. The mother of two was 36 years old.
+
+The fatal car crash was recreated in the very first scene of season six. While the incident is not shown on-screen, a car carrying Diana and Dodi is seen
+speeding past a man walking his dog, before entering the tunnel. As the vehicle’s horn blares, he calls emergency services on his cell phone.
+
+Australian actor Elizabeth Debicki, who took over the role of Diana from Emma Corrin in season five, admitted it was “difficult to recreate” the scene -
+especially with her character being hounded by the paparazzi. “It was heavy and very manic, and incredibly invasive.
+</item 19>
+
+<item 20>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Recalling their discussion to the Queen, Blair says that Diana feels she “still has a lot to offer the country as a public servant”. He says that she had asked
+if there was a way to work with the government on “a more formal basis” and that any “official role” would be appreciated.
+
+Bertie Carvel as Blair (Netflix)
+
+Following Diana’s death, Downing Street confirmed that Diana had visited Blair at Chequers with her son a few weeks before, where they discussed a special role
+for her as an overseas “ambassador” for Britain. Diana told a journalist at the time that the prime minister had recognised her skills and asked her to
+undertake “missions” abroad for Britain.
+
+Queen Elizabeth’s reluctance to accept Camilla
+
+As The Crown season six begins, Charles is frustrated at the public for demonising Camilla long after his split from Diana.
+</item 20>
+=== END ITEM id=b14d89680a3a3a16 ===
+
+=== ITEM id=3a2c382d7967733f ===
+Gold sentences and facts:
+Sentence 0: 13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+  Fact 0.0: The 12th over is timestamped 13 Dec 2023 00.58 GMT.
+  Fact 0.1: At the end of the 12th over, West Indies were 102-4.
+  Fact 0.2: At the end of the 12th over, Hope had 26 runs.
+  Fact 0.3: At the end of the 12th over, Hetmyer had 1 run.
+  Fact 0.4: The 12th over had just a single and a wicket.
+  Fact 0.5: Shai Hope could not break the legspin shackles in the 12th over.
+Sentence 1: 6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first boundary.
+  Fact 1.0: The 16th over is timestamped 6d ago, 22.54 GMT.
+  Fact 1.1: At the end of the 16th over, West Indies were 112-4.
+  Fact 1.2: At the end of the 16th over, Hope had 29 runs.
+  Fact 1.3: At the end of the 16th over, Powell had 8 runs.
+  Fact 1.4: Hope is playing an exemplary innings.
+  Fact 1.5: Hope opens the face to steer Rehan for Hope's first boundary.
+
+Retrieved items:
+<item 1>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.50 GMT 15th over: West Indies 99-4 (Hope 23, Powell 1) Rashid finishes with figures of 4-0-21-2. He’s had a great series: eight wickets at 15 with an
+absurd economy rate of 6.26. But he’s going to end on the losing side.
+
+
+
+6d ago 22.48 GMT WICKET! West Indies 95-4 (Rutherford c Curran b Rashid 30) Buttler brings back Rashid for his final over, knowing it’s now or never for
+England, and gets an immediate reward. Rutherford smashes a drive towards short extra, where Curran dives to his left to take a superb catch. It’s not the
+despair, Laura…
+</item 1>
+
+<item 2>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 21.39 GMT The difference two days make Tuesday, Tarouba England 267-3, 19 sixes
+
+Thursday, Taroura England 132 all out, five sixes
+
+Updated at 21.45 GMT
+
+6d ago 21.36 GMT WICKET! England 132 all out (Curran c Rutherford b Holder 12) Sam Curran clouts the next ball to long-off to end an increasingly miserable
+England innings. They were 109 for four after 14 overs, and then the house fell down. West Indies need 133 to win the series.
+
+Updated at 21.38 GMT
+
+6d ago 21.33 GMT WICKET! England 132-9 (Rashid run out 1) Adil Rashid sacrifices himself, just like in the 2019 World Cup final, so that Curran can stay on
+strike. Four balls remaining.
+</item 2>
+
+<item 3>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.25 GMT ENGLAND REVIEW FOR LBW AGAINST RUTHERFORD! This looks really close. Rutherford pushed around a legbreak from Rashid and was hit on the pad in
+front of middle and leg.
+
+
+
+6d ago 22.24 GMT 9th over: West Indies 58-3 (Hope 11, Rutherford 2) Moeen replaces Rehan and rushes through a pretty good over, four singles from it. West
+Indies are still on top but another wicket would make things very interesting.
+
+
+
+6d ago 22.21 GMT WICKET! West Indies 54-3 (Charles c Buttler b Rashid 27) Adil Rashid strikes straight away. On this occasion it had nothing to do with his
+bowling, but maybe a little to do with his aura. He accidentally bowled a very wide, dipping full toss to Charles, who clunked it low to Jos Buttler at short
+extra cover.
+</item 3>
+
+<item 4>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Often there is a sense as a tour enters its final days of thoughts turning to home, and perhaps the focus was not as laser-sharp as it might have been for this
+game, determination less than absolute to grasp this opportunity to end England’s run of reverses in the Caribbean. Whatever the reason, the pyrotechnics that
+rocketed England to victory in the two previous matches never sparked in this one. It took a fabulous delivery from Gudakesh Motie to end Phil Salt’s run of
+absurd form with his score a modest 38, but some of the other wickets that fell during the period that defined England’s innings and the game seemed a little
+careless.
+
+In the fourth over Jos Buttler casually turned a Jason Holder delivery to fine leg, where Oshane Thomas was positioned, hands cupped. Harry Brook tried to
+paddle-sweep Motie but sent the ball only a few feet into the air, giving Nicholas Pooran an easy catch.
+</item 4>
+
+<item 5>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+In the episode, ‘ecky thump’ is a secret Lancastrian martial art using black puddings as a weapon. I’m not suggesting we go as far introducing black puddings
+immediately. A phased withdrawal of the cricket bat will cause less fuss.” But what would you call The Hundred? Bloody Eck?
+
+Updated at 22.00 GMT
+
+6d ago 21.54 GMT WICKET! West Indies 20-1 (King c Buttler b Topley 3) One down, nine to go. Brandon King slogs Topley miles in the air towards mid-on, where
+Buttler takes a simple catch. Jos Buttler takes the catch to dismiss Brandon King, and the first West Indies wicket is gone. Photograph: Randy Brooks/AFP/Getty
+Images King traipses off the pitch.
+</item 5>
+
+<item 6>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+Photograph: Ricardo Mazalán/AP 𝗔 𝗦𝗜𝗫 𝗧𝗢 𝗙𝗜𝗡𝗜𝗦𝗛! 🙌@WindiesCricket claim the series 3-2 and a white-ball clean-sweep 🏏#WIvENG pic.twitter.com/chrYkHbtcp — Cricket
+on TNT Sports (@cricketontnt) December 21, 2023
+
+Updated at 23.34 GMT
+
+6d ago 23.13 GMT 19.1 overs: West Indies 127-6 (Hope 37, Holder 4) Holder inside edges Woakes this far wide of leg stump for three runs. It would have been four
+but for an outstanding stop from Rehan Ahmed.
+</item 6>
+
+<item 7>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+Updated at 23.20 GMT
+
+6d ago 23.16 GMT I suppose it’s appropriate that it ended with a six, the 120th of the series. Hope played a gem of an innings there, calmly anchoring West
+Indies in an increasingly nervous chase with a run-a-ball 43. England fought admirably to defend a below-par total; but for Hope, they would probably have done
+it.
+
+Updated at 23.17 GMT
+
+6d ago 23.14 GMT WEST INDIES WIN THE SERIES 3-2! 19.2 overs: West Indies 133-6 (Hope 43, Holder 4) That’s it! Hope pings Woakes over extra cover for six to seal
+another series victory for West Indies! West Indies’ Shai Hope (right) celebrates with Jason Holder after hitting a six to win the match by 4 wickets.
+</item 7>
+
+<item 8>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+That’s Rashid’s 99th T20I wicket – in truth it was a bit of a drag down but from the front of the hand so it skidded onto Mayers who didn’t time it and was
+caught by Brook in the deep. England needed that BIG TIME. A masterclass from Rashid in the rest of the over, Nicholas Pooran is the new man and his clip for
+one is the only run from the over. 8th over: West Indies 79-2 (Hope 19, Pooran 1)
+
+Updated at 00.56 GMT
+
+13 Dec 2023 00.28 GMT 7th over: West Indies 78-1 (Mayers 35, Hope 19) Rehan to Kyle Mayers. First ball is dragged down and launched over the midwicket boundary
+for SIX. Pressure on the young leggie. What a shot! Mayers holds the pose as he lofts a supreme drive down the ground for SIX more. Brutal elegance.
+</item 8>
+
+<item 9>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 02.09 GMT West Indies win by 4 wickets! Andre Russell smashes the winning runs off Sam Curran! A length ball is spanked over point for a one bounce
+four to give the home side the win, they go 1-0 up in the series.
+
+Updated at 02.29 GMT
+
+13 Dec 2023 02.07 GMT 18th over: West Indies 168-6 (Powell 31, Russell 25) Adil Rashid is recalled for his final over, can he turn the game back to England?
+Nope. ANDRE RUSSELL SMASHES THE RASHID GOOGLY CLEAN OUT OF THE GROUND! Huge SIX! The big man even allows himself a coy smile. He enjoyed that one. A dot the
+next ball is followed by a powerful drive all along the baize for four! Eleven in total off the over and West Indies now just need four runs.
+</item 9>
+
+<item 10>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.33 GMT 11th over: West Indies 71-3 (Hope 14, Rutherford 12) After 23 balls without a West Indian boundary, Rutherford lifts Moeen handsomely over
+extra cover for four. That’s an excellent shot which keeps West Indies in control of the run-chase.
+
+Updated at 22.33 GMT
+
+6d ago 22.28 GMT 10th over: West Indies 62-3 (Hope 12, Rutherford 5) West Indies know how dangerous Rashid is and are content to sit on him. I think that was
+Charles’ plan as well, but then he saw a low full toss and his brain went rogue. Time for drinks, after which West Indies need 71 from 60 balls.
+
+
+
+6d ago 22.25 GMT Rutherford is not out! I need someone else’s glasses: it was comfortably missing leg stump and England have lost a review.
+</item 10>
+
+<item 11>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+That made it 70 for four and the game was one ball into its ninth over, at which point Liam Livingstone and Moeen Ali had to focus for a while on disaster
+prevention rather than entertainment.
+
+Gudakesh Motie is embraced his his West Indies teammates after dismissing England’s in-form Phil Salt. Photograph: Randy Brooks/AFP/Getty Images
+
+Suddenly bowlers were energised by the prospect of posting, for a change, less-than-humiliating figures. Akeal Hosein’s were outstanding, his four overs going
+for just 20 and bringing the wickets of Will Jacks and Moeen, undone by a relay catch on the boundary after combining with Livingstone to add 40 for the fifth
+wicket. Livingstone followed precisely two overs later, prodding the ball limply back into the hands of Motie, at which point things really fell apart, the last
+five wickets surrendered in 20 balls for just 11 runs.
+</item 11>
+
+<item 12>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.37 GMT 12th over: West Indies 80-3 (Hope 15, Rutherford 20) England appeal unsuccessfully for caught behind when Rutherford misses a swipe at Rashid.
+There’s only one review left and they decide not to risk it. A good job too; there was nothing on UltraEdge. Out of nothing Rutherford launches a full ball from
+Rashid down the ground for six, almost knocking himself off his feet in the process. West Indies are managing an awkward chase pretty well.
+</item 12>
+
+<item 13>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant. The 35-year-old, who rose to the top of the T20 bowling rankings for the first
+time on Wednesday, took two wickets and conceded just 21 while Topley was even better, also claiming a pair of victims but conceding only 17. England take
+plenty of positives from this series, but the result was not one.
+</item 13>
+
+<item 14>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 02.36 GMT James Wallace That’s it from me this evening/morning. Time to haul myself out of the OBO armchair and skulk off for some kip. That was an
+intriguing game and sets up this T20I series nicely. A real statement has been laid down by Rovman Powell and his men, West Indies were up against it early
+doors with England crunching their way to 112-2 off the first ten overs but Jos Buttler’s side only managed to make 59 runs off the next ten, losing eight
+wickets along the way. A total of 171 was thirty or more shy of where England would have liked to have ended up and so it proved as West Indies peeled up their
+sleeves and showed how muscular their own batting card is – the home side cleared the ropes fourteen times compared to England’s six. Andre Russell and Rovman
+Powell found the stands with ease at the business end of the match to get West Indies over the line with eleven balls remaining.
+</item 14>
+
+<item 15>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+That is all.”
+
+
+
+6d ago 22.13 GMT 6th over: West Indies 39-2 (Charles 16, Hope 5) Charles mistimes a short ball from Woakes just short of Moeen in the covers. In the end Moeen
+does well to save the boundary. This has been a good fightback by England, with only nine runs scored in the last three overs.
+
+
+
+6d ago 22.09 GMT 5th over: West Indies 37-2 (Charles 15, Hope 4) Topley continues, which makes sense because the spinners will be doing most of the work after
+the Powerplay, and concedes only three runs. He has quietly had a good series and is comfortably the most economical seamer on either side.
+</item 15>
+
+<item 16>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.57 GMT WICKET! West Indies 113-5 (Powell c Rashid b Topley 8) England haven’t given this up. Powell edges Topley to short third man, where Rashid
+takes a smart low catch to his left. West Indies need 20 from 21 balls. Reece Topley (right) celebrates the dismissal of Rovman Powell. Photograph: Randy
+Brooks/AFP/Getty Images
+
+Updated at 23.07 GMT
+
+6d ago 22.54 GMT 16th over: West Indies 112-4 (Hope 29, Powell 8) Hope, who is playing an exemplary innings, opens the face to steer Rehan for his first
+boundary. Rehan has struggled as the series has progressed, an d later in the over Powell muscles him over long-on for six. West Indies are 21 runs away from a
+hat-trick of T20 series wins this year: South Africa away, India and England at home.
+</item 16>
+
+<item 17>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+Adil Rashid (right) celebrates the dismissal of Johnson Charles (left). Photograph: Randy Brooks/AFP/Getty Images
+
+Updated at 22.43 GMT
+
+6d ago 22.17 GMT 7th over: West Indies 51-2 (Charles 26, Hope 7) Rehan Ahmed’s first over disappears for 12. It started quite gently, with four singles and a
+two off the first five balls, but then Charles clattered a no-nonsense straight six. “We’re not going to win this, Rob,” writes Guy Hornsby. “But I’m just here
+to say I’m still watching for Woakes’ seam position and Rehan’s googly. That is all.”
+</item 17>
+
+<item 18>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+What a difference two days make. Somehow Tuesday’s ludicrous, record-smashing, high-scoring entertainment was followed by a sequel on the same surface that
+eventually delivered thrilling low-scoring entertainment, and a different result claimed in very different style. It was eventually won for West Indies with
+four balls to spare and in the most unfitting of ways – with a massive six – by Shai Hope, again proving himself the right man for a run-chase.
+
+So a series marked by stunning power hitting, roaring run rates and an unexpected midway transformation in England’s performances and prospects concluded with a
+3-2 triumph for West Indies, who extended their supremacy over England at home to four series in three formats across nearly five years.
+
+England assembled exactly the same players in exactly the same place and exactly the same situation – losing the toss, put in to bat – but this was an entirely
+different performance.
+</item 18>
+
+<item 19>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+Hetmyer danced out of his crease and got a good piece of the length ball but it flew flat and hard to Duckett on the midwicket sponge. And he does it on his
+100th T20I appearance! 💯#BBCCricket #WIvENG pic.twitter.com/LYhUBtNnUj — Test Match Special (@bbctms) December 13, 2023
+
+Updated at 01.02 GMT
+
+13 Dec 2023 00.49 GMT WICKET! Pooran c & b Rehan Ahmed 13 (West Indies 100-3) Rehan back into the attack after his first over was minced for n n n n nineteen.
+Got him! Pooran flicks back a full ball and Rehan takes a nifty catch tumbling away to his left. Shimron Hetymer is the new batter and he tucks a single into
+the leg side to open his account.
+</item 19>
+
+<item 20>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+Photograph: Randy Brooks/AFP/Getty Images King traipses off the pitch. Photograph: Randy Brooks/AFP/Getty Images
+
+Updated at 22.14 GMT
+
+6d ago 21.54 GMT 2nd over: West Indies 20-0 (King 3, Charles 13) Johnson Charles was playher of the match when West Indies beat England at the T20 World Cup 11
+years ago. Charles walloped 84 off 56 balls that day, and he looks like he fancies something similar here. He pulls Woakes for a big six, albeit with a hint of
+top-edge, and glides a boundary past short third man. West Indies are off to a flyer.
+</item 20>
+
+<item 21>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 02.01 GMT 17th over: West Indies 157-6 (Powell 31, Russell 14) Tymal Mills is entrusted. Singles off the first two balls. Powell swipes a full ball
+into the deep to collect a couple. SIX! Mills goes short and Powell gets a mighty top edge for a maximum! Fortune favours the brave, the Windies skipper gave
+that everything and it could have gone anywhere. Mills sends one down the leg side – wide ball. Pressure on the bowler here… Shot! Short and wide from Mills and
+sent to the fence with Swiss clock timing by Powell. Sixteen off the over, looking terminal for Buttler and co. 15 needed from 18 balls.
+</item 21>
+
+<item 22>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+12 Dec 2023 23.48 GMT An innings of two halves for England From 77 for no loss to 171 all out with three balls to spare. England's recent white ball approach is
+a variable one yielding mixed...often frustrating results #WIvENG — Aatif Nawaz (@AatifNawaz) December 12, 2023
+
+
+
+12 Dec 2023 23.47 GMT Time to stick the kettle on and raid the fridge before West Indies start their chase. 3-19 for Andre Russell on his comeback for West
+Indies, balancing the attack perfectly.
+</item 22>
+
+<item 23>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 01.41 GMT 13th over: West Indies 112-4 (Hope 27, Powell 10) Rehan has two balls left to complete his over. The first ball is flayed for four by
+Powell behind point! Valuable runs for West Indies. Rehan’s final ball is a dot, defended by Powell into the off side. West Indies need 60 from 42 balls.
+
+Updated at 01.42 GMT
+
+13 Dec 2023 01.30 GMT Simon Burnton is our man in Barbados and he sends good news! “It’s a 9.35pm restart. We haven’t lost any overs.” We should be underway in
+about eight minutes. I believe that 10.10pm local time is the cut off for the match – that’ll be 2.10am here in London town. Excuse me whilst I head to the
+kitchen to microdose some Kenco.
+</item 23>
+
+<item 24>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+12.4 overs: West Indies 108-4 (Hope 27, Powell 6)
+
+Updated at 01.09 GMT
+
+13 Dec 2023 00.58 GMT 12th over: West Indies 102-4 (Hope 26, Hetmyer 1) Just a single and the wicket off the over, Shai Hope can’t break the legspin shackles.
+Windies skipper Rovman Powell is the new man and Buttler cranks the pressure by inserting a slip.
+
+Updated at 01.04 GMT
+
+13 Dec 2023 00.52 GMT WICKET! Hetmyer c Duckett b Rashid 1 (West Indies 101-4) Adil Rashid takes his 100th T20I wicket! A crucial one in the context of the game
+too – the dangerous Hetmyer is sent on his way for just a single as England look to ramp up the pressure heading into the nub end of this match.
+</item 24>
+
+<item 25>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 01.14 GMT Promising news – the rain seems to be tailing off and a rope is being dragged around the outfield to take off any excess water. I’ll bring
+news as soon as it wafts over from Barbados to my sofa.
+
+
+
+13 Dec 2023 01.00 GMT Rain stops play (West Indies 108-4 and require 64 runs off 44 balls) What’s all this then? Out of nowhere the heavens crack like an inky
+brûlée and rain starts to pour. The players scurry off as the covers are hauled on. Crucially – West Indies are six runs ahead of the Duckworth Lewis Stern
+rate. IF the rain doesn’t abate – and it looks heavy at the moment – then the home side will take the spoils.
+</item 25>
+
+<item 26>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 00.16 GMT 4th over: West Indies 47-1 (Mayers 18, Hope 5) Tymal Mills comes onto bowl for England for the first time in eighteen months, he has
+plenty of T20 skills up his sleeve, can he showcase them here? Hmmm, a couple of wides slanted down the leg side isn’t the best of starts. Mills lets out a
+hearty groan at the second. Two full balls are worked for singles… Kablammo! Mills to Mayers – short ball – pulled onto the roof for SIX! What a shot, new ball
+please! DROP! And it is Ben Duckett who shells it! It would have been even better than the first grab but the ball smashes into his palm as he leaps to his
+right and comes straight out. They stick or they don’t. It’s all happening.
+</item 26>
+
+<item 27>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+Nicholas Pooran looks glum as his bails go flying. Photograph: Ricardo Mazalán/AP
+
+Updated at 22.15 GMT
+
+6d ago 21.59 GMT 3rd over: West Indies 30-1 (Charles 13, Pooran 9) Nicholas Pooran strolls to the crease and launches his second ball over midwicket for six.
+And why not. England thought he had edged the next ball to the keeper, though eventually they ran out of time to review. West Indies need 103 from 17 overs.
+“Evening Rob,” says Kim Thonger. “Jolly exciting this game, in a damaged sort of way. It occurs to me perhaps T20 internationals need a complete rebrand. May I
+propose we rename them Ecky Thump. The term was Introduced in Kung Fu Kapers, a 1975 episode of BBC comedy The Goodies.
+</item 27>
+
+<item 28>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 21.31 GMT 19th over: England 129-8 (Curran 9, Rashid 1) The hat-trick ball is another attempted yorker that Rashid flicks wide of Russell for a single.
+He would have had three wickets in four balls had Hosein taken a tricky low chance at third man to dismiss Curran. Russell, who bowled really well, finishes
+with two for 25.
+</item 28>
+
+<item 29>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+Brutal elegance. Rehan comes back well with two sharply turning leggies. Bosh! Shai Hope gets in on the act and smears a length ball over mid on for the third
+six of the over. It’s a learning curve for the tyro spinner but that doesn’t make it any less bruising.
+
+
+
+13 Dec 2023 00.23 GMT 6th over: West Indies 59-1 (Mayers 22, Hope 13) Curran is called back, Mills granted just the one over for the time being. Two slower
+balls bring two soothing dots for England. A single each to Mayers and Hope. Curran does very well to get out of the over with just three runs conceded.
+Powerplay complete. How long till we see some spin from Rehan? Not long at all, he’s on for the next over.
+</item 29>
+
+<item 30>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 23.00 GMT 17th over: West Indies 114-5 (Hope 30, Russell 1) The wicket England really need is that of Shai Hope, who is quietly guiding West Indies
+towards the finish line.
+</item 30>
+
+<item 31>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 01.51 GMT 15th over: West Indies 125-6 (Powell 12, Russell 2) Andre Russell the man to face the hattrick ball… Boo! A decent ball on the stumps is
+patted back by the big man. Drama in Barbados, Russell works for a couple. Ahmed takes his cap with a broad smile on his face – he hasn’t had it all his own way
+but finishes with 3-39 from his set of four. Advantage England? 47 needed from 30 balls.
+
+Updated at 01.54 GMT
+
+13 Dec 2023 01.47 GMT WICKET! Shepherd c Curran b Rehan Ahmed 0 (West Indies 123-6) Rehan Ahmed on a hattrick! Buttler brings Curran into slip and Shepherd
+pokes a leggie to him off his very first ball. Great stuff from Rehan who has turned the game England’s way in the space of a minute.
+</item 31>
+
+<item 32>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+The wicket has given Ahmed a confidence boost and he gets out of the over with three dots. 11th over: West Indies 101-3 (Hope 25, Hetmyer 1)
+
+
+
+13 Dec 2023 00.43 GMT 10th over: West Indies 99-2 (Hope 25, Pooran 13) Rashid is given another after his excellent first over. The googly is spotted by Pooran
+and driven down the ground handsomely for SIX! A glide behind point bring a single, Hope returns the favour with a flick into the leg side. A short ball is
+panned into the deep by Pooran for a couple to end the over. Bon Jovi O’clock – West Indies need 73 from 60. Time for a quick slurp for the players and a
+knuckle stretch for me. Is there anybody alive out there?!
+</item 32>
+
+<item 33>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 23.09 GMT 18.4 overs: West Indies 123-5 (Hope 37, Russell 3) Sam Curran concedes only one run from the first four balls of a superb penultimate over. The
+ball is getting very wet, though, so there’s a short break in play while England call for a dry towel. West Indies need 10 from 8 balls.
+
+
+
+6d ago 23.04 GMT 18th over: West Indies 122-5 (Hope 36, Russell 3) Jos Buttler gambles by continuing with Rehan Ahmed, who has been relatively expensive. It
+doesn’t come off: Hope skims a back cut between short third and backward point for four to move the requirement back below a run a ball. It’s very hard to see
+how England can with this now.
+</item 33>
+
+<item 34>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts? Show Download the Guardian app from the iOS App Store on iPhone or the Google Play store on Android
+by searching for 'The Guardian'.
+
+If you already have the Guardian app, make sure you’re on the most recent version.
+
+In the Guardian app, tap the Menu button at the bottom right, then go to Settings (the gear icon), then Notifications.
+
+Turn on sport notifications. Was this helpful? Thank you for your feedback.
+
+Halfway through their innings they were 62 for three, and if England had 15 more runs at the same point they had also made a complete hash of the rest of it.
+That was a trap which, thanks to Hope’s 43-ball 43 as he again steered his side to their target, West Indies avoided. This batting display may have lacked their
+usual flamboyance but until the final ball it was entirely appropriate for the occasion.
+
+Amid the wider theme of transformation Adil Rashid’s excellence remains constant.
+</item 34>
+
+<item 35>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 23.36 GMT Jos Buttler’s reaction We probably didn’t adapt quickly enough with the bat – I thought 16o w0uld have been a decent score on a used wicket. It
+was a fantastic bowling effort; we did well to hang in the game as long as we did. Phil Salt has had a brilliant series. We found out lots about ourselves as a
+team. [On the stop-clock experiment] It was only in the last game that we really noticed it. It’s good to keep the game moving.
+
+
+
+6d ago 23.19 GMT England’s miserable white-ball year ends with another series defeat. Plenty of good has come from this series, though, most notably the
+performance of Phil Salt. While there are a few slots to fill, most notably at No3, they are in reasonable shape ahead of nexr year’s World Cup.
+</item 35>
+
+<item 36>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.45 GMT 14th over: West Indies 94-3 (Hope 19, Rutherford 30) West Indies are rushing towards a series victory. Rutherford hooks the new bowler Sam
+Curran for six more, and there are 11 from the over in total. Rutherford has 30 from 23 balls, Hope 19 from 28. They’re playing their roles to perfection.
+
+
+
+6d ago 22.40 GMT 13th over: West Indies 83-3 (Hope 17, Rutherford 21) Rehan Ahmed returns, perhaps in the hope of tempting Rutherford into one big shot too
+many. Instead it’s Shai Hope, who is happily playing the anchor role, who faces five of the six deliveries. England are running out of time.
+</item 36>
+
+<item 37>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+West Indies are off to a flyer.
+
+
+
+6d ago 21.49 GMT 1st over: West Indies 7-0 (King 1, Charles 2) There’s some early inswing to the right-handers for Reece Topley. Brandon King survives an LBW
+appeal first ball – it was missing leg – before another inswinger to Johnson Charles runs away for four leg-byes. Every boundary hurts when the target is so
+low, even in the first over.
+
+
+
+6d ago 21.45 GMT After a very short break, the players are back on the field.
+</item 37>
+
+<item 38>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 00.20 GMT 5th over: West Indies 56-1 (Mayers 20, Hope 12) Woakes continues, after five balls he’s gone for just three runs. Can he get out of the
+over cheaply? No – A length ball is clubbed down the ground for SIX with a minimum of fuss by Shai Hope. West Indies have come out of the traps as well as
+England did, one over of the Powerplay left.
+</item 38>
+
+<item 39>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 00.03 GMT 2nd over: West Indies 30-0 (King 21, Mayers 9) Will Jacks to bowl his workmanlike spin at the other end. Uh-Oh! He drops short and Kyle
+Mayers murders it, the ball lands on the roof of the stadium. That deserved everything it got. Mayers cuts for three behind point and then King skips jauntily
+out of his crease to skim the ball for four down the ground!
+
+
+
+12 Dec 2023 23.59 GMT 1st over: West Indies 16-0 (King 16, Mayers) Brandon King gets the home side off to a blistering start, sending Sam Curran down the ground
+for four and swiping a brace of SIXES over mid-wicket. Game on!
+
+
+
+12 Dec 2023 23.56 GMT No sooner have I sploshed some water on me teabag… the players emerge. West Indies need 172 to win!
+</item 39>
+
+<item 40>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+A wicket once so true turned untrustworthy and they struggled to a score of 132, less than half the 267 to which they had joyously motored just 48 hours
+previously. And though the home side’s response was anything but overwhelming, neither was the result ever in significant doubt.
+
+“We’ve had some high-scoring games, but the last game was almost the complete opposite of what happened here,” Reece Topley said. “We were probably just under
+par with the first-innings score but with the ball we were excellent, pushed them right to the end. I think it’s been an amazing series. Both teams have played
+some unbelievable cricket. I was so excited turning up today, because it was basically a final and those are the games you want to play in and be on the right
+side of. The bottom line is you want to win this series, I want to win every series I can for England.”
+</item 40>
+
+<item 41>
+West Indies clinch T20 series after Shai Hope edges hosts past England total (The Guardian, 2023-12-21T23:45:58+00:00)
+Just as surely as when they came out on Tuesday facing an almost unachievable task, the outcome of the West Indies’ run chase seemed inevitable from the start.
+With such a meagre target they needed little more than to keep their heads, and though both Topley and Sam Curran conceded only two with their final overs to
+push the contest into its final over, that never looked in doubt.
+
+skip past newsletter promotion Sign up to The Spin Free weekly newsletter Subscribe to our cricket newsletter for our writers' thoughts on the biggest stories
+and a review of the week’s action Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more
+information see our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy
+. We use Google reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Quick Guide How do I sign up for sport breaking news alerts?
+</item 41>
+
+<item 42>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+Russell at his best adds so much to West Indies's side. With him at 7, and Holder, Shepherd and Hosein to follow, West Indies bat incredibly deep — Tim Wigmore
+(@timwig) December 12, 2023
+
+Updated at 23.48 GMT
+
+12 Dec 2023 23.46 GMT England all out 171! Tymal Mills gets a gossamer thin edge through to Pooran and England are all out with three deliveries to spare! What
+a turnaround for West Indies who were staring down the barrel with England flying 77-0 after six overs.
+
+
+
+12 Dec 2023 23.44 GMT WICKET! Rashid b Joseph 0 (England 170-9) Rashid goes to swipe Joseph in the final over and hacks the ball onto his timbers. England nine
+down…
+</item 42>
+
+<item 43>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 01.55 GMT 16th over: West Indies 141-6 (Powell 26, Russell 4) Livingstone continues. Four singles off the first four balls keeps the pressure on the
+West Indies. HOLD THAT THOUGHT. Rovman Powell crunches consecutive sixes down the ground with a shrug and swagger to make it sixteen off the over. The scales
+tip once more, England need to do away with one or both of Powell and Russell – there’s no way they don’t win this for West Indies if they are there at the end.
+31 needed from 24 balls.
+</item 43>
+
+<item 44>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+6d ago 22.05 GMT 4th over: West Indies 34-2 (Charles 15, Hope 1) England needed early wickets to have a realistic chance of victory. One more in the Powerplay,
+before they bring on Adil Rashid, would put them right back in the game.
+
+
+
+6d ago 22.03 GMT WICKET! West Indies 33-2 (Pooran b Woakes 10) UltraEdge shows Pooran did edge that ball from Topley – but it doesn’t matter because Woakes has
+got him! Pooran tried to ride the bounce of an awkward delivery that cramped him for room, took the inside of an angled bat and ricocheted onto the stumps.
+Nicholas Pooran looks glum as his bails go flying.
+</item 44>
+
+<item 45>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+We’ll be back to cover the second match in Grenada on Thursday, do join us for that. Until then, thank you and goodnight.
+
+Updated at 02.36 GMT
+
+13 Dec 2023 02.28 GMT Andre Russell is Player of the Match: In his first T20I in over two years he took 3-29 and smashed 29* off just 14 deliveries with the
+game in the balance. He seems very pleased to be back in maroon. Life is so funny. Since when I got selected for the West Indies two weeks ago I’ve been
+dreaming of being man of the match.”
+</item 45>
+
+<item 46>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 00.37 GMT 9th over: West Indies 87-2 (Hope 23, Pooran 3) Will the wickets slow the Windies as they did England? Rehan is replaced by Tymal Mills who
+starts with another wide. Rusty stuff so far from the southpaw seamer. That’s better – a series of slower balls and back of the hand trickery restricts Pooran
+and Hope before the final ball is top edged over Buttler’s head for a one bounce four. West Indies need 85 from 66 balls.
+
+
+
+13 Dec 2023 00.32 GMT WICKET! Kyle Mayers c Brook b Rashid 35 (West Indies 79-3) The sorcerer follows his apprentice and bags a wicket first ball!
+</item 46>
+
+<item 47>
+West Indies v England: fifth and deciding men’s T20 cricket international – live (The Guardian, 2023-12-21T19:39:01+00:00)
+It would have been four but for an outstanding stop from Rehan Ahmed.
+
+
+
+6d ago 23.12 GMT 19th over; West Indies 124-6 (Hope 37, Holder 1) Holder is almost run out first ball! He took a very dodgy single to mid-off and was well short
+of the crease when Curran just failed to gather Rashid’s throw. Nine to win from six balls, Chris Woakes to bowl them.
+
+
+
+6d ago 23.10 GMT WICKET! West Indies 123-6 (Russell c Livingstone b Curran 3) Oh my. Russell slugs a low full toss straight down the throat of Livingstone at
+long-on, and England – who have been behind the game throughout this innings – are again dreaming of an improbable victory. West Indies need 10 from 7 balls.
+</item 47>
+
+<item 48>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 01.45 GMT WICKET! Shai Hope c Brook b Rehan Ahmed 36 (West Indies 123-5) Ahmed is bunted for SIX by Shai Hope but strikes with the next ball as Hope
+holes out!
+
+
+
+13 Dec 2023 01.44 GMT 14th over: West Indies 112-4 (Hope 27, Powell 10) Liam Livingstone instead of Rashid and he does well to keep it to singles, England
+trying to take this as deep as possible and hope West Indies fluff their lines at the death. West Indies need 55 from 36 balls.
+</item 48>
+
+<item 49>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+13 Dec 2023 00.10 GMT 3rd over: West Indies 36-1 (Mayers 10, Hope 4) Shai Hope is the new man and digs out a Woakes yorker and somehow manages to crunch it away
+down the ground for four. The replay of the Duckett catch is extremely enjoyable, Woakes owes him one for that as it was a poor ball outside off stump.
+
+
+
+13 Dec 2023 00.07 GMT WICKET! Brandon King c Duckett b Woakes 22 (West Indies 32-1) Chris Woakes into the attack to replace the beleaguered Sam Curran. OH. MY.
+LORDY. Ben Duckett flies to his left at backward point to pull off a spectacular diving catch off a full blooded cut shot from King. Stunner!
+</item 49>
+
+<item 50>
+West Indies v England: first T20 international – live (The Guardian, 2023-12-12T21:49:56+00:00)
+12 Dec 2023 23.42 GMT WICKET! Ahmed c Powell b Russell 1 (England 169-8) Rehan Ahmed follows shortly after, trying to smear a length ball down the ground he can
+only find Powell lurking ten yards in from the sponge. Russell gets two in the over and finishes his spell and his first T20I in two years with figures of 3-19.
+Nicely done. 19th over: England 169-8 (Woakes 2, Rashid 0)
+
+
+
+12 Dec 2023 23.37 GMT WICKET! Livingstone b Russell 27 (England 167-7) Livingstone chops a cutter from Russell onto his stumps!
+</item 50>
+=== END ITEM id=3a2c382d7967733f ===

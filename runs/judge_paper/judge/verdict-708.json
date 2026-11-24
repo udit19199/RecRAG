@@ -1,0 +1,34 @@
+[
+{"id": "aa447b0f5c379278", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 7, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 7, "quote": "from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 7, "quote": "using them as a line of credit under the instruction of SBF."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 28, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 28, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 28, "quote": "the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 28, "quote": "the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "f6aa6f3d9a86d83f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 35, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 35, "quote": "For the masses of NFL fans across the U.S."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 50, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 50, "quote": "For the masses of NFL fans across the U.S."}]}
+]},
+{"id": "0b830c35cc80f413", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "The Eagles come in as losers of two straight, losing in blowout fashion both times no less."}]},
+{"fact": "0.3", "status": "contradicted", "evidence": [{"item": 26, "quote": "Philly’s two-game losing streak has dropped them to second place in the NFC East behind the Cowboys"}]},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 27, "quote": "Philadelphia rolled to a 31-17 win over Miami"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 27, "quote": "Philadelphia rolled to a 31-17 win over Miami on \"Sunday Night Football,\""}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 27, "quote": "Philadelphia rolled to a 31-17 win over Miami"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 27, "quote": "keeping the Dolphins' offense off the scoreboard in the second half"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 27, "quote": "playing smart football every step of the way down the stretch"}]}
+]}
+]

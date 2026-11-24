@@ -1,0 +1,29 @@
+[
+{"id": "c28d7550c999a2e1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 45, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 39, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 39, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 39, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 39, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 39, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "287b7c50429ca8f1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "The All Blacks had their chances"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "their usual safe handling, a feature throughout the World Cup after their first-up loss to France"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 19, "quote": "after their first-up loss to France"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 19, "quote": "their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 19, "quote": "their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the Springboks’ blitz defence in the wet conditions."}]}
+]},
+{"id": "f7abcbf9d9a931a1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "They aren’t allegations. It happened,"}, {"item": 13, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

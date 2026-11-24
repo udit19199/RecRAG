@@ -1,0 +1,24 @@
+[
+{"id": "dda7da92eb23b478", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 39, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 39, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 39, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 32, "quote": "With the recent release of Marvel’s Spider-Man 2"}, {"item": 32, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 32, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+]},
+{"id": "14965abc4c6cd57f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 27, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 27, "quote": "plus an additional 10 percent of that price difference."}]}
+]},
+{"id": "7ab32fc8fab7264e", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 29, "quote": "The understandings that Israel reached with Hamas in 2012"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 29, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 29, "quote": "Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]}
+]
