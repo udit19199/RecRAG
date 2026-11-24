@@ -1691,6 +1691,32 @@
    "notall_notright": 0.0
   }
  },
+ "evidence_2x2_majority": {
+  "B4 comparison_query": {
+   "all_right": 70,
+   "all_notright": 11,
+   "notall_right": 25,
+   "notall_notright": 19
+  },
+  "B4 temporal_query": {
+   "all_right": 53,
+   "all_notright": 14,
+   "notall_right": 36,
+   "notall_notright": 22
+  },
+  "B2 comparison_query": {
+   "all_right": 53,
+   "all_notright": 8,
+   "notall_right": 47,
+   "notall_notright": 17
+  },
+  "B2 temporal_query": {
+   "all_right": 31,
+   "all_notright": 5,
+   "notall_right": 66,
+   "notall_notright": 23
+  }
+ },
  "transition": {
   "rag->B2 comparison_query": {
    "right->right": 190,

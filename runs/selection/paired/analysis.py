@@ -224,6 +224,26 @@ for m in SETUPS:
         say(f"  {m:10} {qt[:4]} all facts: right {cell['all_right']:.1f} not right {cell['all_notright']:.1f} | not all: right {cell['notall_right']:.1f} not right {cell['notall_notright']:.1f}")
 
 say()
+say("Evidence vs right, per question by majority of 3 repeats (all gold facts found in >=2 of 3 repeats)")
+out["evidence_2x2_majority"] = {}
+for m in ("B4", "B2"):
+    if m not in methods:
+        continue
+    for qt in TYPES:
+        c = Counter()
+        for q in qids[qt]:
+            v = [rows.get((m, rep, q)) for rep in "123"]
+            v = [x for x in v if x and x["share"] is not None]
+            if not v:
+                continue
+            allf = sum(x["share"] >= 1 - 1e-9 for x in v) >= 2
+            ok = sum(x["right"] for x in v) >= 2
+            c[("all" if allf else "notall", "right" if ok else "notright")] += 1
+        cell = {f"{a}_{b}": c[(a, b)] for a in ("all", "notall") for b in ("right", "notright")}
+        out["evidence_2x2_majority"][f"{m} {qt}"] = cell
+        say(f"  {m:10} {qt[:4]} all facts: right {cell['all_right']} not right {cell['all_notright']} | not all: right {cell['notall_right']} not right {cell['notall_notright']}")
+
+say()
 say("How answers change: Normal RAG answer -> other setup answer, same question and repeat number (all 3 repeats pooled, out of 375)")
 out["transition"] = {}
 for tgt in ("B2", "B4"):

@@ -266,6 +266,12 @@ Evidence found (all gold facts) vs answered right, per repeat on average
   CLOSED     comp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
   CLOSED     temp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
 
+Evidence vs right, per question by majority of 3 repeats (all gold facts found in >=2 of 3 repeats)
+  B4         comp all facts: right 70 not right 11 | not all: right 25 not right 19
+  B4         temp all facts: right 53 not right 14 | not all: right 36 not right 22
+  B2         comp all facts: right 53 not right 8 | not all: right 47 not right 17
+  B2         temp all facts: right 31 not right 5 | not all: right 66 not right 23
+
 How answers change: Normal RAG answer -> other setup answer, same question and repeat number (all 3 repeats pooled, out of 375)
   rag->B2 comp right->right:190  right->insufficient:1  right->wrong:3  insufficient->right:77  insufficient->insufficient:7  insufficient->wrong:35  wrong->right:33  wrong->insufficient:4  wrong->wrong:25
   rag->B2 temp right->right:170  right->insufficient:5  right->wrong:4  insufficient->right:104  insufficient->insufficient:44  insufficient->wrong:18  wrong->right:15  wrong->insufficient:0  wrong->wrong:15
