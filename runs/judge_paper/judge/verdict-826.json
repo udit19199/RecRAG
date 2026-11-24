@@ -1,0 +1,49 @@
+[
+{"id": "409688a7ae3828e5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.7", "status": "stated", "evidence": [{"item": 3, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "b407d6d09f90df26", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "89999b4e29f34eee", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 20, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 12, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]}
+]},
+{"id": "d1ade1e0bb12cc5f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 20, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "4c2045b169270c65", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 14, "quote": "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 14, "quote": "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 13, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 13, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 13, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 13, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 13, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]}
+]}
+]

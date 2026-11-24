@@ -1,0 +1,60 @@
+[
+{"id": "7c0e21a67226088a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 11, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 11, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 11, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []}
+]},
+{"id": "adaef34f3ff30c8c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 25, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried was even compared to Warren Buffet"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 10, "quote": "many called him the white horse of crypto (TechCrunch never did, for what it’s worth)."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 45, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 45, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 45, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 45, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 45, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 45, "quote": "never meant to commit fraud"}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 45, "quote": "never meant to commit fraud or steal"}]},
+{"fact": "2.7", "status": "stated", "evidence": [{"item": 45, "quote": "basically got in over his head."}]}
+]},
+{"id": "c88590ad3e5e0ba9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda"}]},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 8, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX."}, {"item": 8, "quote": "row labeled “FTX borrows,” which Ellison said were customer funds."}]},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 13, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 13, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 13, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 13, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]}
+]},
+{"id": "062f542fab6ffe0b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

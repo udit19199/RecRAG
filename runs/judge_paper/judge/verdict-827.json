@@ -1,0 +1,44 @@
+[
+{"id": "a9509a59ea2f837a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 1, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]}
+]},
+{"id": "9e95d677a9f2465f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 43, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 43, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."}]}
+]},
+{"id": "b530fc3e9c41f7db", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "The Commission said it is looking at X’s compliance with the DSA across a number of areas"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 15, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 15, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 15, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]},
+{"id": "4ffef8704c09a98a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}, {"item": 7, "quote": "Ellison did indeed confess to stealing customer funds"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 13, "quote": "The spreadsheet makes this clear with a row labeled “FTX borrows,” which Ellison said were customer funds."}, {"item": 16, "quote": "The $65 billion line of credit Alameda Research had meant that it did not have to post collateral."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 16, "quote": "Bankman-Fried told Ellison that FTX would be a good source of capital."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 2, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

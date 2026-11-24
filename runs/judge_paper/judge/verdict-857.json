@@ -1,0 +1,118 @@
+[
+  {
+    "id": "277ec4276e9e0154",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 22, "quote": "The Justice Department is focused on the deals Google makes"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 22, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 22, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "how Google tried to have Chrome preinstalled on iPhones"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9ae0922e70ad0e1e",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 24, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 24, "quote": "New customers can get up to $1000 in bonus bets if they lose their first bet."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 27, "quote": "expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 27, "quote": "with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses"}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 27, "quote": "with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bd42abf7179fabb7",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 17, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 17, "quote": "how Google tried to take it further"}
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 17, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {"id": "98c1e244d9b54763", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 38, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "famously trade and wear friendship bracelets at Swift’s Eras Tour concerts."}, {"item": 38, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 38, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 38, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 38, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 34, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 34, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+  ]},
+  {"id": "6e6b6ff7b94e71d4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 22, "quote": "Johnny Cardoso had to pull out of the September camp due to an ankle injury"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 22, "quote": "but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 22, "quote": "but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 22, "quote": "but he has returned to action with Brazilian club Internacional, indicating a return to fitness, and has been included on the squad."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 36, "quote": "rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 36, "quote": "rookie sensation De'Von Achane hit Injured Reserve this week with a knee injury."}]}
+  ]}
+]

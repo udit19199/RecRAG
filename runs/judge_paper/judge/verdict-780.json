@@ -1,0 +1,31 @@
+[
+  {"id": "38862df97cc47ceb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]}
+  ]},
+  {"id": "d8be70f2a6cbe531", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "b24841a5e4d0d5ef", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 22, "quote": "“Sam acted in good faith and took reasonable business measures” is a pretty hard pill to swallow with that in mind."}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 47, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 47, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 47, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]}
+  ]}
+]

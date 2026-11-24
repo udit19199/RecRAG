@@ -1,0 +1,36 @@
+[
+{"id": "60c4695789c1dff5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 13, "quote": "But “all of that, all of it, was built on lies,” Rehn declared to the jury."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 42, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 42, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 42, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 42, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 42, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 42, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.6", "status": "stated", "evidence": [{"item": 42, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.7", "status": "stated", "evidence": [{"item": 42, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "b10baec127c92534", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 49, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 49, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 49, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 49, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)"}]}
+]},
+{"id": "a5c45afc381238a9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 12, "quote": "Erik ten Hag is a top coach from Ajax"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 12, "quote": "they need a top blueprint not only for now but for the next five years"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 12, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 12, "quote": "sometimes on that journey there are hard moments when you don't get the right results"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 12, "quote": "even though you're doing the right things."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 13, "quote": "The latest slip saw the Red Devils crash out of Europe"}, {"item": 13, "quote": "to leave them eliminated from Europe in their worst performance in the competition since 2005."}]},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]}
+]

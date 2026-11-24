@@ -1,0 +1,35 @@
+[
+{"id": "5a24f9fd7824f527", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 43, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 43, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 42, "quote": "Prince William (played by Rufus Kampa)"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 43, "quote": "William (Rufus Kampa) is left heartbroken with grief"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 43, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+]},
+{"id": "2769f5a2d179a7c6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 10, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "b60f521693588114", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 43, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 43, "quote": "“Certainly there wasn’t a valid alternative to Google at the time,” Cue said."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

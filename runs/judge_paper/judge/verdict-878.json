@@ -1,0 +1,32 @@
+[
+{"id": "10ce8163c94ffd10", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "The Justice Department is focused on the deals Google makes"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 18, "quote": "with Apple but also with Samsung and Mozilla and many others"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 18, "quote": "The Justice Department is focused on the deals Google makes"}, {"item": 18, "quote": "to ensure it is the default search engine on practically every platform"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more"}]}
+]},
+{"id": "7a0d3cfdbc1e3fe0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 25, "quote": "Outsiders are now aware that Jada and Will have been separated since 2016"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 25, "quote": "but the timeline of her relationship with Alsina is still fuzzy"}]}
+]},
+{"id": "85b55dd1fbf5399b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 27, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income"}]},
+{"fact": "0.1", "status": "contradicted", "evidence": [{"item": 27, "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income"}, {"item": 22, "quote": "Uber reported net income of $221 million in the third quarter"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports"}]}
+]},
+{"id": "17c4c5b0e4803070", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 12, "quote": "Certainly there wasn’t a valid alternative to Google at the time,” Cue said"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

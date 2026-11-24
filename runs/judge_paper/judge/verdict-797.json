@@ -1,0 +1,60 @@
+[
+  {"id": "1dbeeb5f62124174", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "This week was Google’s annual hardware event"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 15, "quote": "where the search and consumer tech giant showed off what it’s been working on."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 15, "quote": "where the search and consumer tech giant showed off what it’s been working on."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 28, "quote": "Wired removed the article for not meeting its standards, but the degree to which"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 28, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 28, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 28, "quote": "the degree to which it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 12, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 12, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 12, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 12, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 12, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "77601b1fdc5060dc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 24, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 24, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 24, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]}
+  ]},
+  {"id": "59881071d587554e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 17, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 17, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 17, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 17, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}, {"item": 10, "quote": "he specifically pointed the finger at Ellison, the former CEO of Alameda"}]},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "1.6", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}, {"item": 8, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 1, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 1, "quote": "Sam didn’t defraud anyone,” he said early on in his opening statement."}, {"item": 11, "quote": "“He didn’t steal any money.”"}]},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "dcfba617831b210a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 5, "quote": "Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 5, "quote": "Weekly Breakdown MATCHUP @ ATL ATL -2.5 O/U 42.5"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 5, "quote": "OPP VS WR 6th PROJ PTS 12.1"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 5, "quote": "OPP VS WR 6th PROJ PTS 12.1"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 5, "quote": "PROJ PTS 12.1 WR RNK 37th"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 5, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 5, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.7", "status": "stated", "evidence": [{"item": 5, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.8", "status": "stated", "evidence": [{"item": 5, "quote": "YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+    {"fact": "0.9", "status": "stated", "evidence": [{"item": 5, "quote": "FPTS/G 11.4"}]},
+    {"fact": "0.10", "status": "stated", "evidence": [{"item": 5, "quote": "The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia in Week 4."}]},
+    {"fact": "0.11", "status": "stated", "evidence": [{"item": 5, "quote": "The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2 and Washington's 34-31 OT loss to Philadelphia in Week 4."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

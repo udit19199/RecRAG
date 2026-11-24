@@ -1,0 +1,23 @@
+[
+  {"id": "b55a29c5510f58fa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 42, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 42, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 42, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 13, "quote": "Sam acted in good faith and took reasonable business measures"}]},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d8b231ad090a888e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 34, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 34, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 34, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 34, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 11, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+  ]}
+]

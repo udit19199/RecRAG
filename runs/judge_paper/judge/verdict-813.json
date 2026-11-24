@@ -1,0 +1,40 @@
+[
+{"id": "9bc1411b90bc1aad", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "torching the Commanders to the tune of five catches, 157 yards, and two TDs."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "torching the Commanders to the tune of five catches, 157 yards, and two TDs."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "after torching the Commanders to the tune of five"}, {"item": 18, "quote": "resulting in Miami's WR1 returning to the top spot against a putrid Washington stop unit."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 21, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 21, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]}
+]},
+{"id": "6e1e5170c6f7206b", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "The official details have not been reported, though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "though the report indicated it will shatter Mike Trout's record 12-year, $426.5 million deal."}]},
+{"fact": "1.0", "status": "contradicted", "evidence": [{"item": 10, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 10, "quote": "ESPN's Jeff Passan reports Ohtani has agreed to a colossal 10-year, $700 million contract"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "ae447fe3bb74ec3c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 23, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 23, "quote": "creating a strong need for technologists and designers to be in the process together."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "e1a34aaae61c2665", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}, {"item": 19, "quote": "taking customer money"}]},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 15, "quote": "Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX."}, {"item": 15, "quote": "which Ellison said were customer funds."}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 9, "quote": "Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]}
+]}
+]

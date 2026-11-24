@@ -1,0 +1,29 @@
+[
+  {"id": "f53575593e8bf33a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 15, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 16, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 16, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 16, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 13, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a couple."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 13, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 8, "quote": "The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number"}]}
+  ]},
+  {"id": "ec433d5690e2a8ea", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 41, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 41, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 41, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 41, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+  ]},
+  {"id": "a258e3fdf57e4e0f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 6, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+  ]}
+]

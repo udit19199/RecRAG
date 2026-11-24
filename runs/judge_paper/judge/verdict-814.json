@@ -1,0 +1,47 @@
+[
+{"id": "0ef79c061247fe79", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 16, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 16, "quote": "a fan tradition at her concerts"}, {"item": 16, "quote": "on Taylor Swift concerts, there are friendship bracelets"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 16, "quote": "with his number on it to give to her"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 16, "quote": "with his number on it to give to her"}, {"item": 16, "quote": "I wanted to give Taylor Swift one with my number"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 16, "quote": "seemingly expressing his interest in Swift."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "She’s got the Eras Tour booked all through next year"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "she’d rather die than cancel a show."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 20, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 19, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 19, "quote": "Taylor Swift has revealed when her relationship with Travis Kelce really started."}, {"item": 20, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]}
+]},
+{"id": "8ba2cc6897d071bb", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "After turning in three limited practices this week"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "After turning in three limited practices this week, we'll trust that Hockenson is ready to go"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "especially since he continued to play through the ailment in Week 9"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 13, "quote": "he continued to play through the ailment in Week 9 as a big part of the offense"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 13, "quote": "as a big part of the offense with Josh Dobbs under center"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "7a133bc137777966", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 28, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 28, "quote": "after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 28, "quote": "after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 28, "quote": "It gave the JackJumpers a game-high 19-point lead"}, {"item": 28, "quote": "after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)"}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "2dd2bce4e10031e0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 12, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 12, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 12, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 12, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 28, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 28, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 28, "quote": "claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 28, "quote": "claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 28, "quote": "from customers to repay debts to lenders, using them as a line of credit"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 28, "quote": "using them as a line of credit under the instruction of SBF"}]}
+]}
+]

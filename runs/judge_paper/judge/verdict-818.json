@@ -1,0 +1,62 @@
+[
+  {
+    "id": "7ef8be3b91580813",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 9, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones"}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 9, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 2, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  },
+  {
+    "id": "571711127ea0ffd8",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "This matchup has an over/under of 42.5 points"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.5", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.6", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.7", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.8", "status": "stated", "evidence": [{"item": 13, "quote": "MATCHUP @ ATL ATL -2.5 O/U 42.5 OPP VS WR 6th PROJ PTS 12.1 WR RNK 37th YTD Stats REC 25 TAR 31 REYDS 261 TD 1"}]},
+      {"fact": "0.9", "status": "stated", "evidence": [{"item": 13, "quote": "FPTS/G 11.4"}]},
+      {"fact": "0.10", "status": "stated", "evidence": [{"item": 13, "quote": "The only two games McLaurin posted good numbers in were Washington's 35-33 win over Denver in Week 2"}]},
+      {"fact": "0.11", "status": "stated", "evidence": [{"item": 13, "quote": "Washington's 34-31 OT loss to Philadelphia in Week 4."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "7be4dad0cac44884",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 12, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 12, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 12, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 39, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 39, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 39, "quote": "In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2."}]}
+    ]
+  },
+  {
+    "id": "95a9d6967fe02fef",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 28, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 28, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 4, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 4, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+    ]
+  }
+]

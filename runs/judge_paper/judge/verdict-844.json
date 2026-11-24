@@ -1,0 +1,42 @@
+[
+{"id": "75777049778ffaef", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 15, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 15, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 15, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 15, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 15, "quote": "Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging injuries."}]}
+]},
+{"id": "9d9ac01ae85cc4a5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 15, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "A conscious criminal"}, {"item": 30, "quote": "He defrauded sophisticated investors and lenders"}, {"item": 30, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 30, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads"}]}
+]},
+{"id": "701f7967e43f3e6e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 29, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 30, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 30, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]}
+]},
+{"id": "bad2a3e4b41eb44f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]}
+]

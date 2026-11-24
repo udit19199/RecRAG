@@ -1,0 +1,33 @@
+[
+  {"id": "4a755810b340707a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "spotlight as a face of generative AI — technology that can produce novel imagery, passages of text and other media."}]},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 1, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 1, "quote": "according to The Information."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "cdacff381b489dfe", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 10, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 10, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]}
+  ]},
+  {"id": "b370e741770a81d8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 12, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023, and is reportedly preparing for a ground invasion."}]}
+  ]},
+  {"id": "9d5727d77577411a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 15, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 15, "quote": "2 hours to kickoff: A report from well-connected Argentine journalist Gaston Edul last night indicated"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 15, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+  ]}
+]

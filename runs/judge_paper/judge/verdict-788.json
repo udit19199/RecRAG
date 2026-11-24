@@ -1,0 +1,44 @@
+[
+  {"id": "70140c122f2d79df", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "This isn’t the first time that Jada has opened up about her long-term commitment to her husband."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "As for her children, Jada praised them for how they’ve helped her grow."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "My children, they’re little gurus."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 5, "quote": "she and the King Richard star share two children - Jaden, 25, and Willow, 22."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 5, "quote": "she and the King Richard star share two children - Jaden, 25, and Willow, 22."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "She praised her and Will’s two children - Jaden, 25, and Willow, 22 - for being her “little gurus” throughout this time"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "My children, they’re little gurus. They’ve taught me a deep sense of self-acceptance"}]}
+  ]},
+  {"id": "2d59c11cba42c0e8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 8, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 8, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "64a79dc26034c8e2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 19, "quote": "at Old Trafford, where Kingsley Coman sealed a 1-0 win"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 19, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+  ]},
+  {"id": "cad3689a00bed7ce", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 16, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 16, "quote": "She admits that she may have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 23, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 23, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 23, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 23, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 23, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

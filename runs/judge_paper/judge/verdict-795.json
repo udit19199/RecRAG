@@ -1,0 +1,43 @@
+[
+{"id": "04580dc4001e3857", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 16, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 16, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 28, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 28, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 28, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "1f97b33147f5b887", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 24, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 24, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 24, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 24, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 24, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "5af5ef52323362db", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of seven counts of fraud and conspiracy."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "996fdaf05b4a5038", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "SBF trial: Everything to know from the FTX courtroom ahead of his testimony Sam Bankman-Fried is in court"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 25, "quote": "seven counts of fraud and conspiracy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Bankman-Fried said he worked 12 to 22 hours a day, and took one day off every couple of months. Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

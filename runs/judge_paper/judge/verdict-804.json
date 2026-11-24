@@ -1,0 +1,35 @@
+[
+{"id": "c9cd616d905f2bf9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 22, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 22, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 22, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "bd4a038571d1be63", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 6, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]},
+{"id": "ff9963fb4db5293a", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 16, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 16, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 16, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 16, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 16, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 16, "quote": "Both PMS and mutual funds provide expert guidance in navigating volatile markets and seizing investment opportunities that help create wealth."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 12, "quote": "Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 12, "quote": "especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 12, "quote": "especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023)."}]}
+]},
+{"id": "6718f7f86609d962", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 23, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 23, "quote": "the pair of cases, which revolve around Republicans crafting state-specific laws"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 23, "quote": "state-specific laws that order platforms to keep their hands off of some social media posts"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]}
+]}
+]

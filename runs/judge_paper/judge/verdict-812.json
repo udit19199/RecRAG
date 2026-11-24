@@ -1,0 +1,28 @@
+[
+{"id": "e8868f225c9649f2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 12, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 12, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 12, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 12, "quote": "and then Bankman-Fried swapped two very"}, {"item": 12, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 29, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 29, "quote": "Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX,"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 29, "quote": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he’s guilty of"}, {"item": 29, "quote": "seven counts of fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 9, "quote": "The prosecution painted Bankman-Fried as someone who knowingly"}, {"item": 9, "quote": "committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 9, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 9, "quote": "never meant to commit fraud"}, {"item": 9, "quote": "or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 9, "quote": "or steal and basically got in over his head."}]}
+]},
+{"id": "676c927357c1a1ab", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "That answer ultimately lies with the jury"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 10, "quote": "which was selected on Wednesday morning before lawyers for the government"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 10, "quote": "and then Bankman-Fried swapped two very"}, {"item": 10, "quote": "different stories of the former crypto mogul’s sudden rise and almost instantaneous fall."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 15, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 15, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 15, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 35, "quote": "The prosecution painted Bankman-Fried as someone who knowingly"}, {"item": 35, "quote": "committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 35, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 35, "quote": "never meant to commit fraud"}, {"item": 35, "quote": "or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 35, "quote": "or steal and basically got in over his head."}]}
+]}
+]

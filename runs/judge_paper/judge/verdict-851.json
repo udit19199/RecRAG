@@ -1,0 +1,101 @@
+[
+  {
+    "id": "a1cd67c51ac320e2",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 7, "quote": "“I’m here until the end,” she said in her press conference on Friday."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "He has been out of work since his Blues tenure came to a close back in April, but it would be a hard sell to fans after his time with the London club went so poorly."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "but it would be a hard sell to fans after his time with the London club went so poorly."}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "769a8a6ca8ce1725",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 13, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 13, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 3, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 3, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "f294368762182c4f",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 23, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "contradicted",
+        "evidence": [
+          {"item": 23, "quote": "Announced on September 28 that the Fortnite maker is laying off 16% of its workforce, amounting to 870 people."},
+          {"item": 4, "quote": "Epic Games fired roughly 830 people this year, or 16 percent of its staff."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {"id": "2a1d9dbafcacece9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 45, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 45, "quote": "the All Blacks kicked for the corner on a couple occasions out wide."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 13, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 13, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+  ]},
+  {"id": "b7ea1c2a64c3efab", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 30, "quote": "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the"}, {"item": 30, "quote": "theft of customer funds to him and a few other employees, Drappi said."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 30, "quote": "theft of customer funds to him and a few other employees, Drappi said."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 29, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 29, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 3, "quote": "During the opening statement, Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 39, "quote": "Ellison was the head of Alameda Research, the aforementioned hedge fund, during the implosion of it and FTX."}, {"item": 29, "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 3, "quote": "During the opening statement, Cohen had blamed Ellison for not taking out a hedge on some of the risks Alameda was trading."}]}
+  ]}
+]

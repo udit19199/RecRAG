@@ -1,0 +1,37 @@
+[
+{"id": "457730afc3cf13d8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+]},
+{"id": "91603a1aaac78658", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "The two-way phenom is the most sought-after free agent in MLB history"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 20, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 20, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]}
+]},
+{"id": "eccdd0105c993c96", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 22, "quote": "Moreover, Bankman-Fried allegedly directed employees to conceal the flow of money into FTX’s coffers and forged financial documents distributed to lenders and investors."}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "1c5c8958df779f9f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 16, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 16, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

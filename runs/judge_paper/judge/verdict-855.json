@@ -1,0 +1,29 @@
+[
+{"id": "8593093aaa564eae", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 29, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 29, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 29, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "but the timeline of her relationship with Alsina is still fuzzy."}]}
+]},
+{"id": "6e41e7ab645cdc2f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "amid allegations that the Wolverines used illegal in-person scouting and the recording of signals to steal signs this season."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "afa0bc9dafb20db5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 22, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 22, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 22, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 22, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 22, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+]}
+]

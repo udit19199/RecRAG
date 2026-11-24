@@ -1,0 +1,24 @@
+[
+  {"id": "1d105322b7d49967", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 45, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 45, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 45, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 41, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 41, "quote": "which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]}
+  ]},
+  {"id": "2671994736635b00", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "2 hours to kickoff"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "A report from well-connected Argentine journalist Gaston Edul"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "A report from well-connected Argentine journalist Gaston Edul last night indicated that Inter Miami are likely to have Lionel Messi back for this match in some capacity."}]}
+  ]},
+  {"id": "d5f7b1a691caabc5", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

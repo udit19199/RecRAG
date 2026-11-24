@@ -1,0 +1,20 @@
+[
+  {"id": "4aaf836d3a24cfb8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 28, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 28, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 28, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 28, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 28, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 40, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 40, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]}
+  ]},
+  {"id": "e6cedd25d069b543", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 11, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 11, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 11, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 11, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "Postponements of such reports could complicate things for the Fed, which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]}
+  ]}
+]

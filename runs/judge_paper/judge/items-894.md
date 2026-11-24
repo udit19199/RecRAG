@@ -1,0 +1,1807 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=20ad70e95d087e64 ===
+Gold sentences and facts:
+Sentence 0: But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one.
+  Fact 0.0: This will probably come up later in the trial.
+  Fact 0.1: Epic chose to focus more on simply painting Google as the bad guy.
+  Fact 0.2: Epic did this on day one.
+Sentence 1: But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro.
+  Fact 1.0: The company did not release the full model, Gemini Ultra.
+  Fact 1.1: Only a "lite" version called Gemini Pro was released.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google "siphons off" news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case says this is done through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+That sounds fascinating, but if I don’t care about Fortnite or rich companies suing each other, what’s in it for me?
+
+The future of Google’s app store could depend on this trial — both Epic and Google agree on that. Epic wants to break up Google’s alleged monopoly on Android
+app stores and payment methods, so developers aren’t stuck paying the “Google Tax” or passing that fee along to you.
+
+But if Epic wins — according to Google, anyhow — it could make Android phones less safe by dismantling basic protections against sideloaded apps, and damage
+Android’s ability to compete with the iPhone because it (arguably) can’t run a competitive app store by giving it away for free.
+
+Or maybe you just want juicy dirt on both companies? More on that later!
+
+What exactly is Epic claiming?
+
+Epic argues that Google makes it so difficult for developers and users to get around its Android app store, and that app store’s standard fees, that it’s
+created an illegal monopoly that unjustly enriches Google while artificially driving up app prices because other stores can’t compete.
+</item 1>
+
+<item 2>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 2>
+
+<item 3>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+showed that Epic knew it was breaking bad at the time it did the deed.
+
+But Epic mentioned Project Liberty in its own opening statement — so, by that point, it had already been an hour since it admitted it intentionally broke
+Google’s rules. “Epic decided to stand up because that’s what you do to a bully,” Bornstein told the jury.
+
+“All we know is whatever is in the destroyed chats, as bad as the documents are, is worse.”
+
+And it’s possible no examination will be able to take the stink off one of Google’s ugliest moves: the one where Google employees up to and including CEO Sundar
+Pichai were caught setting sensitive chats to auto-delete to keep them out of a court’s hands. The court has already decided Google should be sanctioned in some
+way for making potential evidence disappear, and Bornstein used it to plant persistent seeds of doubt in the minds of jury members. “All we know is whatever is
+in the destroyed chats, as bad as the documents are, is worse.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 4>
+
+<item 5>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Or at least it was worse, before they were destroyed.”
+
+The best Google could do in response was to plant its own feeble seed with the jury, too: “Is Epic using the chats to distract me from all the evidence I do
+see?”
+
+“It’s true that Google could have automatically saved all chats for all relevant employees, but just because Google didn’t save some chats didn’t mean it
+violated antitrust laws,” Pomerantz argued.
+
+Epic’s opening statements seemed to paint a clearer picture for the jury than those from Google. But things got complicated for both parties when the first two
+witnesses — Epic Games Store head Steve Allison and Yoga Buddhi CEO Benjamin Simon, who also appeared in the earlier Epic v. Apple trial — took the stand.
+
+Both Epic and Google spent a long, long time on subtle lines of questioning.
+</item 5>
+
+<item 6>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 6>
+
+<item 7>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+That was our proposal.
+
+Oh, I think I read that one in court. I didn’t realize that was the same thing. It’s so far off from what I heard [about a “special billing exception”] that I
+didn’t recognize it being that. Does winning the verdict in this Google case help your appeal with the Apple case in any way?
+
+There’s no linkage between the cases and law, so it would just come down to whether the court is in any way following current events on this topic. But there’s
+no legal connection between the two. It really comes down to the decisions of the humans involved: the justices and the support teams involved when considering
+the appeal.
+
+Google will appeal this; they’ve told us they’re going to challenge the verdict. Will Epic rely on this ruling in the meantime?
+
+We’re not going to wait. We’re going to do absolutely everything we can as quickly as we can to start changing the world. We not only have this verdict here in
+the United States, it is a worldwide verdict, right?
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 9>
+
+<item 10>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+First, Epic announced it was bypassing Apple and Google’s app store fees. It deployed a hotfix update to Fortnite without either company’s knowledge, letting
+you purchase V-Bucks directly through its own payment processing option at a discount. Apple and Google almost immediately reacted by kicking Fortnite off their
+app stores for breaking the rules.
+
+Then: surprise! Epic was ready and waiting with two lawsuits and an attack ad, depicting a Fortnite hero throwing a unicorn-llama hammer into a giant screen
+reminiscent of Apple’s famous “1984” Macintosh ad.
+
+It was a striking publicity blitz followed by a lot of slow-moving court proceedings. While the Apple lawsuit went to court in 2021, the Google one was delayed
+again and again. A ruling came down for the Apple trial that September, and it was mostly decided in Apple’s favor, though both parties are waiting for the
+Supreme Court to potentially weigh in. Meanwhile, the machinations for its fight against Google continued, and now…
+
+It is time for trial number two.
+</item 10>
+
+<item 11>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 11>
+
+<item 12>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 12>
+
+<item 13>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 13>
+
+<item 14>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 14>
+
+<item 15>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+On Monday, Fortnite publisher Epic Games will drag a tech giant into court, alleging that its mobile app store is an illegal monopoly. You may be feeling some
+déjà vu!
+
+After all, didn’t Epic already go to trial with Apple, resulting in a ruling where Apple (mostly) won? Didn’t Epic fail to #FreeFortnite with its Llamacorn
+legal gambit? Didn’t that all happen years ago? What are we doing here again?
+
+The short answer: while Epic’s antitrust claims against Apple got their day in court, a similar lawsuit against Google never did. On November 6th, Epic v.
+Google will finally go to trial... a mere 1,180 days after Epic originally sued.
+
+Hi, I’m Sean, and I’ll be your guide to this whole delightful mess.
+
+Update, December 15th, 2023: It’s basically over now. What happened? Read this, this, and this to get the whole picture.
+
+Original story continues:
+
+Llamacorn what now? What is happening?
+</item 15>
+
+<item 16>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 16>
+
+<item 17>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 17>
+
+<item 18>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Who will Epic and Google call as witnesses?
+
+We are going straight to the top of the org chart, folks. Google CEO Sundar Pichai and Epic CEO Tim Sweeney are absolutely expected to attend. Android
+co-founder Andy Rubin might be deposed, and Google says we’ll hear from current Android (and Chrome, and Chrome OS) boss Hiroshi Lockheimer. Google also tells
+us representatives from Apple, Netflix, Motorola, and AT&T should testify as well.
+
+How much hypocrisy can we expect in the courtroom?
+
+I’d say quite a bit! For example:
+
+Epic says it’s not in this for the money, it’s only suing to end Google’s monopoly — but Epic would surely profit if it doesn’t have to pay Google’s cut.
+
+It looks like Epic’s going to argue that you’re locked into Android after buying an Android phone, but I can personally attest that switching back and forth
+between the platforms is easier than ever.
+</item 18>
+
+<item 19>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+Match may have settled its antitrust lawsuit with Google last week, but Fortnite maker Epic Games is still set to go to trial with the tech giant today,
+November 6, in hopes of convincing a jury that Google engages in anticompetitive behavior with regard to its Android app store, Google Play, and its commission
+structure. This case will differ slightly from Epic’s battle with Apple on the same topic because, this time, Epic can’t allege there’s no other way to load
+apps onto Android devices, as it could with Apple, because Android does allow for sideloading apps. Though Epic will suggest Google makes that process
+cumbersome, the bulk of its arguments will center around what it believes are anticompetitive agreements between Google and device manufacturers and developers.
+
+The precedent Epic’s case will rely on is a Microsoft case where courts found Microsoft to have a monopoly over the operating system and were abusing it, making
+it hard for users to download alternative browsers, like Netscape, on Windows devices.
+</item 19>
+
+<item 20>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+</item 20>
+
+<item 21>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 21>
+
+<item 22>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 22>
+
+<item 23>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 23>
+
+<item 24>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 24>
+
+<item 25>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+It will note this process is streamlined and helps keep users safe. But Epic will claim that this process is made to be overly difficult for end users, with
+multiple steps involved and “scare screens” that warn users of the security risks involved with sideloading.
+
+Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats, but Google will counter this as
+well, saying it has provided the court with thousands of chat logs and millions of documents.
+
+The tech giant will ultimately push the notion that this case isn’t about competition, but about money — that is, Epic Games wants to reach the Play Store’s 2.5
+billion users without having to pay.
+
+“Android’s choice and flexibility work well for consumers and developers of all sizes.
+</item 25>
+
+<item 26>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+I did like Pomerantz’s commonsense argument that Google can’t possibly have a monopoly on Android app stores when “every single Samsung phone comes with two app
+stores right on the homescreen,” which continued:
+
+When they show these charts that show all these downloads from Play and not from the Galaxy Store, that’s what the Samsung phone users are choosing. They’re
+touching Play. Nothing’s keeping them from touching the Galaxy Store; it’s just what works for them.
+
+I called Google “comparatively open” earlier, and that openness will likely be heavily debated in the weeks to come. Epic promised to “show that Google has
+closed off each and every other option” to the Play Store during this trial. But Google points to the simple fact that it allows alternate app channels at all —
+something Android rival iOS doesn’t.
+
+Pomerantz boasted that over a billion people have gone through the process Epic portrays as needlessly onerous to get apps outside the Play Store.
+</item 26>
+
+<item 27>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 27>
+
+<item 28>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What were your settlement talks with Google CEO Sundar Pichai like?
+
+We can’t talk about content, but we met for an hour and had a professional discussion... in which we didn’t reach a settlement. We were rather far apart, let’s
+say, because what Epic wants ultimately is free competition and fair competition for everybody, and the removal of the payments tie and removal of the
+anticompetitive measures, which obviously leads to far better deals for consumers and developers.
+
+What we don’t want is a special deal just for ourselves, and Google’s strategy so far as you’ve seen from all these deals has been to basically take out all
+their potential competitors one at a time while they’re still weak and small, before they build up or unite into a formidable force. Epic’s not going to go
+along with something like that and do a special deal just for ourselves.
+
+You’ve said that a couple times, but the email that you accused Google of leaking suggested that Epic was interested in a special deal of some sort at that
+time.
+</item 28>
+
+<item 29>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+So this trial has been four years in the making. I look back at a September 2019 email that was in discovery about a plan to draw Google into a legal battle
+over antitrust. Can you describe what it felt like, after four years, to hear the jury find for Epic?
+
+Well, it’s a great day for all developers to see that the Sherman Antitrust Act works in the new era of tech monopolies; we’ve not had a major antitrust verdict
+against a tech company that meant change and benefits for everybody since the 1990s, with the US v. Microsoft. Back in the early days of the internet. So this
+is an awesome thing and it’s much needed by the industry which is being strangled by a few gatekeepers imposing insane amounts of control and extracting huge
+taxes, which not only raise prices for consumers but also make a lot of kinds of products just unviable.
+
+I understand the significance, but... you were there in person.
+</item 29>
+
+<item 30>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 30>
+
+<item 31>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 31>
+
+<item 32>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+Thou shalt not have a competing store on iOS and thou shalt not use a competing payment method. And I think Apple should be receiving at least as harsh
+antitrust scrutiny as Google.
+
+It’s interesting to me that because Google distributes the Android operating system as open source, they had to put all these deals out in the open. More out in
+the open, I should say — certainly they still wanted to keep them secret.
+
+But I’m going down my story about all the best emails from the Epic v. Apple trial — and we do have a lot of documents from both Apple and Google that show they
+were similarly self-serving in terms of deals.
+
+I’d say this is the thing that’s disappointed me the most with Apple and Google: even at the peak of the antitrust trial against Microsoft, Microsoft was
+awesome to developers. Microsoft has always been awesome to developers, always being respectful, giving developers a great deal and treating them as partners,
+you know? And so even as Microsoft was crushing corporate competitors, the developer experience was excellent.
+</item 32>
+
+<item 33>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+But if you do want to see a vision of a future that Epic would accept, look no further than this letter it sent to state attorneys general — laying out a
+settlement that would basically prohibit Google from doing the anticompetitive things that Epic claims it did.
+
+There’s also this tweet from Sweeney:
+
+Google wouldn’t tell The Verge if it’s offered Epic any kind of settlement yet.
+
+Why if I just want the dirty laundry on both these companies? You promised dirt...
+
+Oh, it could get good.
+
+The allegations made before trial suggest Google was playing loads of dirty tricks with names like “Project Hug,” “Project Agave,” and “Project Banyan”, with
+Epic claiming it’s seen evidence Google was paying off game developers and phone makers not to abandon its app store — to the tune of hundreds of millions of
+dollars. Google allegedly even toyed with the idea of buying Epic to keep Fortnite from inspiring other game developers to abandon ship.
+
+Plus, there’s evidence Google deleted potentially incriminating messages to keep them out of a court’s hands.
+</item 33>
+
+<item 34>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+“Android’s choice and flexibility work well for consumers and developers of all sizes. We look forward to making our case in court as we fight to keep our users
+safe from harm, partner with developers to grow their businesses, and keep the Android ecosystem thriving and healthy for everyone,” reads a Google blog post by
+Wilson White, VP, Government Affairs & Public Policy.
+
+Epic’s lawsuit originally involved Match and several U.S. attorneys general, but Google reached a settlement with the latter last month and with Match last
+week. Epic will now fight the antitrust battle on its own. The lawsuit, held in the U.S. District Court in California’s Northern District, will include
+testimony from a number of Google and Android execs, including CEO Sundar Pichai, and Epic Games CEO Tim Sweeney, as well as Apple, Netflix and other Android
+developers.
+
+Google is also involved in another antitrust lawsuit with the Department of Justice over its alleged search monopoly.
+</item 34>
+
+<item 35>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The future of Google’s app store is at stake in a lawsuit by Fortnite publisher Epic Games. Epic sued Google in 2020 after a fight over in-app purchase fees,
+claiming the Android operating system’s Google Play Store constituted an unlawful monopoly — while Google says its demands would damage Android’s ability to
+offer a secure user experience and compete with Apple’s iOS. Follow along with updates here.
+
+Bornstein showed jurors charts of Google’s fat app profit margins (70 percent on $12 billion in revenue a year, says Epic) and pointed out several ugly-seeming
+ways Google has allegedly attempted to keep anyone from taking that money away — like paying game developers not to build their own app stores or standalone app
+launchers like Epic did with Fortnite.
+
+“Google pays actual and potential competitors not to compete. Literally gives them money and other things of value,” said Bornstein. “It’s like Google saying,
+‘Here’s $360 million’ — that’s an actual number you’ll hear about — why don’t you sit this one out and let me win?”
+</item 35>
+
+<item 36>
+What to know about Fortnite maker Epic Games’ antitrust battle with Google, starting today (TechCrunch, 2023-11-06T16:47:11+00:00)
+To make its case, Epic plans to bring claims under Sections 1 and 2 of U.S. antitrust law, the Sherman Act, as well as California’s anticompetitive laws, the
+Cartwright Act, and the Unfair Competition Law. It will attempt to argue that Google restrains competition within two separate markets, including the
+distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+
+Google argues its commissions aren’t just tied to billing, but offers discount for third-party billing options
+
+Today, Google requires apps to use its own first-party billing system, and charges app developers a 15% to 30% commission on the sales it processes.
+
+However, Google will counter Epic’s arguments by pointing out that it has rolled out a new option for app developers called User Choice Billing, which Epic has
+declined to use.
+</item 36>
+
+<item 37>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Also, that one’s not over till the Supreme Court weighs in or declines to take a look.
+
+2) Google can’t tell jurors that Apple won its case, or that other plaintiffs settled. The judge in this case says so!
+
+3) Oh, and by the way, this is a jury trial.
+
+Wait, why does that matter?
+
+Epic and Google have to convince a jury, not the judge, which is totally different from how the Apple case played out. (That one was a “bench trial.”)
+
+Maybe all the evidence of tricky deals inside Google might sway a jury against the company? Maybe Google scaremongering that sideloaded apps equal gaping
+security holes will sway a jury against Epic instead? Who knows!
+
+(If you’re a Epic juror reading this — stop! Judge Donato explicitly said you’re in a “news-free bubble” through mid-December, folks.)
+
+Didn’t other parties sue Google too?
+
+They did! And then, they all settled.
+</item 37>
+
+<item 38>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 38>
+
+<item 39>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+When should we expect a jury verdict?
+
+Judge Donato told jurors that we’re looking at roughly five weeks of trial starting November 6th and extending through early December. The schedule suggests the
+court will take Thanksgiving off, finish looking at all the evidence by December 4th, take a couple more days off before closing arguments, and then let jurors
+come to a decision.
+
+“I fully expect we’ll have plenty of time to reach a verdict well before the December holiday period,” said Judge Donato.
+
+Okay, I’m sold — how can I watch the trial unfold?
+</item 39>
+
+<item 40>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Enough that the judge has decided to explicitly tell the jury we’re not seeing all the evidence, because Google employees all the way up to CEO Sundar Pichai
+were caught setting those conversations to auto-delete. This issue has come up in the US v. Google antitrust trial in Washington, DC — still ongoing at the
+start of Epic’s trial — as well.
+
+And the dirt isn’t all on Google’s side. Epic was caught straight-up admitting it premeditated the whole plan to bypass Google’s payment systems. Since Google
+is countersuing over that, it could be a big deal.
+
+When you say “straight-up admitting...”
+
+Here is an email from Epic CEO Tim Sweeney that, I think, speaks for itself:
+
+“Here is our official plan for communicating with Google about bypassing the Google Play Store: SAY NOTHING TILL IT SHIPS” Image via Epic v. Apple
+
+We’ll have a whole cast of intriguing people called as witnesses during the trial who might dish even more.
+
+Who will Epic and Google call as witnesses?
+</item 40>
+
+<item 41>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+(Google told The Verge over email that this refers to how many users have enabled the Android sideloading flow, not necessarily followed through with an
+install.) “A billion people have done it after getting notified of the potential risks,” Pomerantz said. “That’s because Android users have a real choice.”
+
+Google also took its own turn trying to paint Epic as the bad guy. First, it pointed out how Epic hatched a secret plan called “Project Liberty” to quietly
+update Fortnite with code to bypass app store fees, get its app kicked off Apple’s and Google’s app stores, and sue.
+
+Then, it showed off a few out-of-context quotes from internal Epic communications — suggesting that phrases like “How do we not look like the bad guys?” and
+“Just planting the nefarious seed now” and “I mean everything we’re attempting is technically a violation of Google’s policy, right?” showed that Epic knew it
+was breaking bad at the time it did the deed.
+</item 41>
+
+<item 42>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Well… both sides lost! But Epic arguably lost more. Even though Apple has incredible power over the iPhone, Judge Yvonne Gonzalez Rogers ruled the company
+didn’t have an unfair monopoly in this case – partly because she decided the relevant market for Fortnite was “digital mobile gaming transactions” rather than,
+say, iPhone apps. She also decided that Epic violated its developer agreement with Apple and would have to pay.
+
+But she also barred Apple from keeping iPhone users in the dark about alternate ways they can pay for apps – and may have even allowed developers to add their
+own payment mechanisms. I won’t dwell on the Apple ruling, as I’m ethically bound, but my colleague Adi Robertson has a comprehensive breakdown.
+
+How can Epic possibly have a case against Google when Apple already won?
+
+Epic declined to answer this on the record, among other questions we asked... but three things to consider:
+
+1) That was a different case. Also, that one’s not over till the Supreme Court weighs in or declines to take a look.
+</item 42>
+
+<item 43>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Both Epic and Google spent a long, long time on subtle lines of questioning. You really had to read between the lines to see that Epic was trying to make a
+point about how Google’s 70/30 revenue split is probably based on an arbitrary decision Valve made two decades ago with Steam or how Google was trying to make a
+point that Epic, too, likely believed that an app store provides more value than just payment processing and maybe deserves more money.
+</item 43>
+
+<item 44>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Google spent its 45 minutes attempting to explain that its dominance over the Android app market isn’t anything nefarious but simply the natural outcome of
+Google fiercely competing with the iPhone and its iOS App Store, where Google would like the court to believe that competition truly lies.
+
+If Google can convince the jury of that, it could be a winning argument in the case — because obviously, Google doesn’t have a monopoly on app stores or phones
+in general. “You cannot separate the quality of a phone from the quality of the apps in its app store, and that means Google and Apple compete against each
+other,” began Google lead attorney Glenn Pomerantz.
+
+But Google wound up spending much of its opening statement attempting to explain away its seemingly bad behavior as normal business practices and didn’t always
+succeed out of the gate.
+</item 44>
+
+<item 45>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 45>
+
+<item 46>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+Could Google actually lose?
+
+When I walked into the courtroom on Monday morning, it seemed impossible. If Epic couldn’t prove Apple’s walled iOS garden is a monopoly, how could the
+comparatively open Google do worse against the windmill-tilting Fortnite developer?
+
+But now that both sides have made their opening arguments to a jury, I’m not quite as sure. Because while Google spent most of its first day attempting to
+explain complicated ins and outs of business, Epic was able to paint a black-and-white picture of good and evil with itself as the clear underdog.
+
+Epic lead attorney Gary Bornstein was tasked with making the case that Android functions as an unlawful monopoly. He did so by basically calling Google a bully
+and a cheat that “bribes” or “blocks” any attempt to compete with Android’s Google Play store. The result? A status quo where the vast, vast majority of Android
+app installs are from Google Play, with only a tiny sliver attributable to the Galaxy Store that comes preinstalled on every Samsung phone.
+</item 46>
+
+<item 47>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+And when we tried to bundle Fortnite with other smartphone manufacturers like OnePlus and carriers of all sorts, they told us they couldn’t do a deal because
+Google had done a secret deal with them.
+
+It was really disconcerting to see the extent of bad faith efforts that were going on in a company of Google’s size. You’d think a trillion-dollar company would
+develop to the point where they have pretty respectable processes and leadership structures that provide a check and balance against wrongdoing, but they were
+rampantly destroying all their chats on these topics.
+
+You’d see long conversation threads would start to get into a spicy antitrust issue, and suddenly somebody points out the history’s on and the chat goes silent.
+They just turned it off to have the documents destroyed. It was great to see that all called out in detail.
+
+Any particular evidence where you’re like, “Oh wow, I never saw that, and now that specific thing came out for the world to see”?
+
+As an employee of Epic, I’ve not been able to see Google’s internal documents until the trial started.
+</item 47>
+
+<item 48>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+[Editor’s note: Every journalist in the courtroom agreed the jury was attentive; most were also surprised by the rapid verdict.]
+
+They got it, they got it quickly, and they were able to pull apart what was going on and contrast it with the fiction of the story that Google was trying to
+tell.
+
+What was something that surprised you in the courtroom, something you heard come to light that you hadn’t heard before?
+
+I’d suspected a lot of the practices that Google had, you know, since 2018 or so when we first started this, to such an extent that some folks would
+occasionally call me a conspiracy theorist. It was really, really interesting to see that my understandings of what Google was doing behind the scenes were
+actually true — you’re leaking our conversations to reporters to get negative stories written about us; you’re paying other developers off to convince them not
+to launch their own stores; they were going around and paying carriers and OEMs secretly not to carry competing stores.
+</item 48>
+
+<item 49>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Didn’t other parties sue Google too?
+
+They did! And then, they all settled. All 50 state attorneys general and a number of consumers have tentatively settled with Google over app store antitrust
+claims, though it’s not clear what the deal might include.
+
+Match Group, the company behind Tinder, Match.com, OkCupid and other dating apps, just reached a surprise last-minute settlement too, one that makes it sound
+like Match effectively gave up.
+
+Epic stands alone.
+
+Could we get a settlement between Google and Epic as well?
+
+Epic seems to have no interest in settling as long as the “Google tax” exists, and the company’s repeatedly said it’s not interested in cash. So far, the
+company’s been willing to push these cases all the way through multiple appeals, cost be damned.
+
+It’s not clear what Google could proactively offer that would satisfy Epic, since CEO Tim Sweeney has also publicly suggested that Google would simply
+circumvent any settlement it offers.
+</item 49>
+
+<item 50>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 50>
+=== END ITEM id=20ad70e95d087e64 ===
+
+=== ITEM id=2545d17675662998 ===
+Gold sentences and facts:
+Sentence 0: Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto.
+  Fact 0.0: Shares of Rogers extended losses on news of the lawsuit.
+  Fact 0.1: Rogers shares closed down 2.2% to C$53.07 in Toronto.
+Sentence 1: Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it.
+  Fact 1.0: Amazon tumbled 4 per cent after the Federal Trade Commission filed an antitrust lawsuit against it.
+  Fact 1.1: 17 state attorneys general filed an antitrust lawsuit against Amazon.
+  Fact 1.2: The Federal Trade Commission and the 17 state attorneys general filed the antitrust lawsuit against Amazon together.
+
+Retrieved items:
+<item 1>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+Still Excluded
+
+Both Rogers-Hixon and Martha Rogers said in documents that they’re still being excluded from some parts of board and committee meetings and are being given
+redacted board documents.
+
+“I cannot properly perform my duties as a director if information that is provided to the rest of the directors is being withheld from me,” Rogers-Hixon said in
+her affidavit. The two sisters are seeking a judge’s order to force the company to share information with them and allow them to attend, in full, all meetings
+of the board, as well as board committees they belong to.
+
+Rogers took “reasonable steps” to protect company information from a competitor, Schmidt said. Rogers-Hixon and Martha Rogers could have resolved the matter by
+choosing a different lawyer, “and they chose not to do so,” she added.
+
+The court filing also suggests that Rogers-Hixon was forced out of her role as a director of Maple Leaf Sports & Entertainment, the company that owns Toronto’s
+professional hockey and basketball teams and in which Rogers Communications is a large minority investor.
+</item 1>
+
+<item 2>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Now, onto the roundup!
+
+A window into Google’s most popular search queries
+
+Judge Amit Mehta ruled to make a list public that provides a glimpse of which search terms make Google the most money. The list of popular search terms ordered
+by revenue includes 20 terms that were lucrative for the week of September 22, 2018. Information like revenue per search term, how many queries each of those
+terms got, along with a separate list of popular search terms ordered by queries (not revenue), were all redacted. The list we can see is as follows:
+
+iPhone 8
+
+iPhone 8 plus
+
+Auto insurance
+
+Car insurance
+
+Cheap flights
+
+Car insurance quotes
+
+DirecTV
+
+Online colleges
+
+AT&T
+
+Hulu
+
+iPhone
+
+Uber
+
+Spectrum
+
+Comcast
+
+Xfinity
+
+Insurance quotes
+
+Free credit report
+
+Cheap car insurance
+
+AARP
+
+LifeLock
+
+There is, in reality, little surprise here.
+</item 2>
+
+<item 3>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“Just like any store owner who wouldn’t want to promote a bad deal to their customers, we don’t highlight or promote offers that are not competitively priced.”
+Zapolsky argued the FTC’s lawsuit could force it to stop highlighting low prices, “a perverse result that would be directly opposed to the goals of antitrust
+law.”
+
+“Long overdue” lawsuit
+
+On Amazon’s own forum for merchants, called Seller Central, several users cheered on the FTC and said they hoped it would result in changes to the company’s
+business practices. Amazon’s tense relationship with merchants has been well-chronicled over the years, with sellers expressing a range of grievances over
+issues like rising fees, an arcane suspensions process, and heightened competition on the marketplace from all sides, including the e-commerce giant. “I think
+it’s great, Amazon deserves it,” one person commented, adding, “More should be coming on the way.”
+</item 3>
+
+<item 4>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+The end result of these tactics, the FTC argues, is elevated prices across the web. The company steadily hikes the fees it charges sellers and prevents them
+from discounting on other sites, so sellers often inflate their prices off of Amazon, creating an “artificial price floor everywhere,” according to the
+complaint. The FTC is seeking to hold Amazon liable for allegedly violating anti-monopoly law, though it has not yet outlined the specific remedies it believes
+would best resolve its concerns. In antitrust cases, remedies are often determined only after a court finds the defendant liable. In a blog post, Amazon general
+counsel David Zapolsky said third-party sellers set their own prices on the marketplace. The company also invests in tools to help sellers offer “competitive
+prices,” he said. “Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said.
+</item 4>
+
+<item 5>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+A worker sorts out parcels in the outbound dock at the Amazon fulfillment center in Eastvale, California, on Aug. 31, 2021. Watchara Phomicinda | MediaNews
+Group | The Riverside Press-Enterprise via Getty Images
+
+It was late in the day on Oct. 27, 2021, when Fred Ruckel received the dreaded automated email from Amazon . Amazon’s software had detected that Ruckel’s
+popular cat toy, called the Ripple Rug, was being sold somewhere else for a cheaper price. His product would no longer be shown in Amazon’s all-important buy
+box, an area of the listing where shoppers click “Add to Cart.” Ruckel is the sole seller of the Ripple Rug on Amazon, so the move all but ensured his product
+would disappear from the website, costing him thousands of dollars per day.
+</item 5>
+
+<item 6>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Amazon in recent years made the forum anonymous, but users must have a seller account in order to post. Another post included a screenshot of a message Amazon
+sent to sellers the day after the FTC filed its complaint, which said, “As your partners, we know that this news may generate questions for you and our business
+together. This lawsuit does not change anything about our relationship with you or how we operate today.” One user called it “BS verbiage,” adding, “Businesses
+that sell in their store are indeed customers. And which of us has gotten good customer service?” Another user described their experience in the last 12 months
+of selling on Amazon as “being up all night at an effing casino but I'm stuck, the drugs are starting to wear off, but I'm trying to break even on the mortgage
+payment I'm using to play. That's how it is selling on Amazon right now to me.” The seller went on to describe the experience as a “race to the bottom.”
+</item 6>
+
+<item 7>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Hart said Amazon sales comprise about 90% of his business, meaning any hit those sales take on Amazon has a considerable impact. He recalled “24 anxious hours”
+in September 2022 when a third-party seller of his popular construction toy Brain Flakes listed the toy for a lower price on Target than it was offered on
+Amazon.
+
+Molson Hart, CEO of Viahart, an educational toy company that sells on Amazon. Courtesy: Molson Hart
+</item 7>
+
+<item 8>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+Big Tech stocks tend to be among the hardest hit by high rates, and they were the heaviest weights on the index. Apple fell 2.3 per cent and Microsoft lost 1.7
+per cent. Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it. They accuse the
+e-commerce behemoth of using its dominant position to inflate prices on other platforms, overcharge sellers and stifle competition. In China, concerns continued
+over heavily indebted real estate developer Evergrande. The property market crisis there is dragging on China’s economic growth and raising worries about
+financial instability. France’s CAC 40 fell 0.7 per cent, and Germany’s DAX lost 1 per cent.
+
+Crude oil prices rose, adding to worries about inflation. A barrel of benchmark US crude climbed 71¢ to $US90.39. Brent crude, the international standard, added
+67¢ to $US93.96 per barrel.
+</item 8>
+
+<item 9>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 9>
+
+<item 10>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“We can tailor our ads to hit exactly the consumers we want,” Moller said. “It’s a perfect marriage of a transaction, and that’s one of the beauties of what
+their marketplace offers.” Needham said he feels he would have been more supportive of the case if it were filed a few years ago, pre-pandemic. At that time, he
+said, "I would have felt, yes Amazon is a monopoly… But actually after Covid, into 2023, ecommerce has had a lot of big changes.” He added, "The competition is
+just not what it was in 2019." Competitors like Shopify and Walmart are increasingly viable alternatives for many categories of sellers, Needham said, not to
+mention rapidly growing Chinese e=commerce companies like Temu. As a result, Needham said he’s seen some significant changes from Amazon. Among those is a
+greater ability for Amazon sellers to communicate with buyers, offering select customers certain promotions.
+</item 10>
+
+<item 11>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+The laggards Real estate investment trusts (REITS, down 2 per cent) dropped further following the latest inflation data, with Mirvac (down 3.7 per cent) and
+Dexus (down 3.3 per cent) sliding lower. Dexus chief executive Darren Steinberg on Wednesday announced he would step down from the position next year after 11
+years at the helm. At the annual meeting in Sydney on Wednesday, the remuneration report received a first strike after failing to pass the 25 per cent voting
+threshold. Loading Consumer staples (down 1.4 per cent) were also weaker with Woolworths losing 2 per cent despite sales across the company rising 5.3 per cent
+in the 14 weeks to October, as it vowed to pass on easing costs for protein and fresh produce amid rising mortgage and rental pressures. In other company news,
+shares in embattled funds manager Magellan dropped 3.5 per cent after the abrupt departure of its chief executive, David George.
+</item 11>
+
+<item 12>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 12>
+
+<item 13>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+The result was that five Rogers Communications directors were fired, replaced by five allies of Edward Rogers. Soon after, then-CEO Joe Natale was sacked and
+replaced by Staffieri, the former chief financial officer. Rogers-Hixon and Martha Rogers had opposed the CEO change.
+
+In early 2022, family members agreed to temporarily shelve their disagreements, according to this week’s court filing, to avoid negative publicity as the
+company sought regulators’ approval for the takeover of Shaw Communications Inc. The C$20 billion transaction was the company’s biggest deal ever and among the
+largest corporate transactions in Canadian history.
+
+Negotiations Collapse
+
+As part of that truce, Rogers-Hixon and Martha Rogers agreed not to participate in board discussions about the Shaw deal or receive materials on it, because of
+an argument about Rogers-Hixon’s personal lawyer, whose firm also does work for Telus Corp., a competitor to Rogers and Shaw.
+</item 13>
+
+<item 14>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+The documents show that the fractures inside the prominent Toronto family have never healed. Rogers Communications is the country’s largest wireless provider
+and the owner of a cable television empire, the Toronto Blue Jays baseball team and other media and sports assets. The family’s controlling stake in the public
+company is worth close to C$8 billion ($5.9 billion), according to calculations based on company filings for its 2023 annual meeting.
+
+Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto. They’ve dropped 16% this year.
+
+The children of late founder Ted Rogers have frequently fought one another — sometimes driving down Rogers’ stock price as investors grew worried about the
+company’s governance.
+
+The bad blood spilled into full view in October 2021, when Edward Rogers publicly battled his sisters and his mother for control of the board and won in court.
+The result was that five Rogers Communications directors were fired, replaced by five allies of Edward Rogers.
+</item 14>
+
+<item 15>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+The seller went on to describe the experience as a “race to the bottom.” “It's long overdue," another commenter wrote. "When they close me down, I'm applying
+for a job with the FTC.” Still, others commented that the FTC’s complaint is misguided. “Selling on Amazon is a life-changing opportunity and the amount of
+sellers that throw stones at the platform is astounding,” one user wrote.
+
+Seller skepticism
+
+Even sellers who may be sympathetic to the idea of regulating Amazon have concerns, specifically that the FTC's highlighted issues aren't necessarily ones that
+would make the seller and consumer experience better. Scott Needham, who sells on Amazon and runs a product-finder tool for other Amazon sellers, said he was
+“surprised by some of the points that the FTC selected.”
+
+watch now
+
+“I have over the years been very critical of Amazon,” Needham told CNBC. “I’ve lost a lot of sleep because of some of the things that they have done.
+</item 15>
+
+<item 16>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+The RSAs also motivate other companies to make or sell more Android devices, he said.
+
+Expedia complains of too many ads on search, expensive ad payments
+
+On November 1, Barry Diller, chair of Expedia and IAC, testified about his concerns regarding the increasing number of ads in search results having an impact on
+organic listings.
+
+“I must say I’m on the edge of revolt now that Google’s actions are so punitive, not just for Expedia but also for IAC and all the players that depend upon
+something of a level playing field,” wrote Diller in a letter to Google back in 2019, according to Bloomberg.
+
+Google CEO Sundar Pichai fired back that Google’s travel listings was one of the most popular experiences the company built.
+
+Expedia execs also testified about the cost of ads and how increases had no impact on search results.
+</item 16>
+
+<item 17>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 17>
+
+<item 18>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“But I’m not sure if this would actually change that.” Scott Moller, an Amazon seller and co-founder of an agency that helps merchants run their storefronts,
+said the e-commerce giant has removed some of the challenges that used to be part of running an online business. With FBA, he said, he can ship an item into one
+of Amazon’s warehouses for $7.49 per package, while shipping it himself through a traditional carrier would cost him about $12. “I don’t have to have my own
+warehouse,” said Moller, who sells grilling accessories on Amazon under the brand Grill Sergeant. “I can use their staff, their storage, and I can instantly
+also take the data of advertising, so I can target ads.” He also disputed the FTC’s claim that Amazon has become littered with ads in search results, causing
+shoppers to wade through potentially less-relevant products of lesser quality. “We can tailor our ads to hit exactly the consumers we want,” Moller said.
+</item 18>
+
+<item 19>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Infratil (down 3.6 per cent), Meridian Energy (down 2.7 per cent) and Resmed (down 2 per cent) were among the biggest large-cap decliners. The lowdown The
+Australian sharemarket shook off a positive lead from Wall Street on Wednesday after hotter-than-expected inflation data raised the prospect of another interest
+rate rise at the Reserve Bank’s next meeting, which would weigh on the equity market. Interest-rate sensitive sectors, including REITS and consumer companies,
+were among the weakest on the local bourse as investors digested the news.
+
+GSFM investment strategist Stephen Miller said the inflation data, taken with the October Reserve Bank board meeting minutes, which revealed the board had “low
+tolerance for a slower return of inflation to target than currently expected”, made the possibility of an interest rate rise from the central bank in November a
+“near certainty”. However, commodity prices supported mining companies as iron ore prices increased 2.9 per cent overnight, bolstering Australia’s iron ore
+giants.
+</item 19>
+
+<item 20>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+The Shaw takeover finally closed on April 3 of this year, and the Rogers siblings engaged in talks “intended to resolve all issues between us,” Rogers-Hixon
+stated in an affidavit. “I was hopeful all issues could be resolved without negative publicity.” But those negotiations collapsed last month, she said.
+
+It isn’t clear from the court filings whether the discussions included the possibility that any Rogers family members would sell their stake in Rogers
+Communications, leave their roles at the company, or exit the family trust that controls almost all of the voting shares of the public company.
+
+“This matter should be resolved privately,” Rogers Communications spokesperson Sarah Schmidt said by email. “We’ve demonstrated that we will not be distracted
+by these actions — we have significant momentum in the market, our merger is tracking ahead of plan, and we remain squarely focused on doing what’s right for
+our customers and stakeholders.”
+</item 20>
+
+<item 21>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+Two members of the billionaire family that controls Rogers Communications Inc. are suing the company, saying they’ve been frozen out of board meetings and
+blocked from getting information, reigniting a bitter power struggle within one of Canada’s wealthiest clans.
+
+Melinda Rogers-Hixon says she’s the target of a “personal vendetta” by her older brother, Rogers Chair Edward Rogers, according to a letter contained in the
+court filing. The Rogers siblings were close to an agreement that would have resolved their longstanding differences, but Edward Rogers reneged on it, according
+to the Sept. 20 missive by Rogers-Hixon, which was sent to Chief Executive Officer Tony Staffieri.
+
+The court petition was filed by Rogers-Hixon and her sister, Martha Rogers, and it argues the company has been “oppressive” to them.
+
+The documents show that the fractures inside the prominent Toronto family have never healed.
+</item 21>
+
+<item 22>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 22>
+
+<item 23>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Fred Ruckel
+
+Nearly three years later, Ruckel’s experience hits at the core of a sweeping antitrust lawsuit filed last week by the Federal Trade Commission against Amazon.
+The agency accused Amazon of wielding its monopoly power to squeeze merchants and thwart rivals. For consumers, that’s led to artificially inflated prices and a
+degraded shopping experience, the agency alleges. In the 172-page suit, the FTC said Amazon relies on an “anti-discounting strategy” and a “massive web-crawling
+apparatus that constantly tracks online prices” to stifle competition. The agency said Amazon punishes third-party sellers who offer cheaper products elsewhere
+by threatening to disqualify them from appearing in the buy box if it detects a lower price. Losing the buy box is an “existential threat” to sellers’
+businesses, the complaint alleges. The end result of these tactics, the FTC argues, is elevated prices across the web.
+</item 23>
+
+<item 24>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Google, which is also seeking to capitalise on surging demand for AI technology, saw revenue climb 11 per cent to $US76.7 billion, with net income of $US19.7
+billion thanks to a recovery in digital advertising revenue. However, its closely watched cloud division, which houses its data storage business and many of its
+AI efforts, missed Wall Street expectations. “Investors were disappointed by the relatively weak performance at its Google cloud platform, which is at risk of
+falling further behind” competitors’ offerings, Jesse Cohen, a senior analyst at Investing.com, wrote in an email. Loading During trading hours, the S&P 500
+slipped off session highs, led by losses in energy shares as oil slid below $US84 a barrel, but once again the index found support above the key 4200 mark.
+Verizon Communications, 3M and General Electric climbed on bullish forecasts. Facebook and Instagram owner Meta dropped after being sued by California and dozen
+of other US states over harmful youth marketing claims.
+</item 24>
+
+<item 25>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+On a YTD basis, Amazon shares have expanded by almost 50% in value.
+
+"AMZN's cost-cutting initiatives and margin improvements make it a solid buying opportunity, despite concerns such as the FTC lawsuit and a weakening economy."
+writes SA Investing Group Leader Danie Jones with a bullish stance on the stock. Meanwhile, fellow Investing Group Leader Sensor Unlimited expects the stock to
+continue being range-bound in the near term due to the key challenges on its operating margins, competition in key growth areas, and valuation risks.
+
+Consensus EPS Estimates: $0.60
+
+Consensus Revenue Estimates: $141.621B
+
+Earnings Insight: Amazon has beaten EPS and revenue expectations in half of the past 8 quarters.
+
+Also reporting: Kenvue (KVUE), Intel (INTC), Ford Motor Company (F), Altria Group (MO), Merck & Co.
+</item 25>
+
+<item 26>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“I’ve lost a lot of sleep because of some of the things that they have done. And the issues that they brought up, while they are interesting, they haven’t
+created me a lot of pain.” Needham said he was particularly puzzled by the inclusion of the claims that Amazon is coercive in the way it encourages sellers to
+use its fulfillment service, known as Fulfillment by Amazon, or FBA. Needham said many sellers “love FBA” because of its compelling value in terms of the price
+and promise to deliver two-day shipping. For many, using FBA doesn’t feel like a requirement, but they believe using it will make their businesses "easier and
+more effective." "I think that the power that Amazon wields over sellers is considerable and absolutely worth looking into,” Needham said. “But I’m not sure if
+this would actually change that.”
+</item 26>
+
+<item 27>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+Rogers’ corporate governance committee is conducting an investigation of the events that took place in 2021, documents show. The committee has asked for copies
+of “all correspondence” between Rogers-Hixon and former CEO Natale, three other former executives, the five ousted directors, Martha Rogers, journalists and
+others, according to a letter to Rogers-Hixon that’s included with the court filing.
+
+“The investigation is intended to inform decisions that may be made about your status as a director of RCI,” says the letter signed by Robert Gemmell, a former
+Citigroup Inc. banker who is Rogers’ lead director.
+
+Although the company is controlled by a family trust, it’s structured in a way that gives significant power to the trust’s chair, in this case Edward Rogers,
+the only son of late founder Ted Rogers. That’s what allowed him to reshape the board in 2021 over the opposition of family members.
+
+The family dynamics have grown even more complicated in recent months because of the deaths of three key insiders.
+</item 27>
+
+<item 28>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 28>
+
+<item 29>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Shopify, for example, gives sellers much more control over how they communicate with customers, Needham said, adding that although Amazon still controls the
+communication process, at least there is one. "I wish it was a clear-cut case,” Needham said. “I have a vested interest in the marketplace doing really well, as
+a seller and as a service provider. And... this case, it doesn’t make the marketplace better for sellers."
+
+Concerns over Amazon pricing policies, fees
+
+Many sellers have zeroed in on Amazon’s pricing policies and rising fees as rightful areas of concern in the FTC's lawsuit. Molson Hart, whose company Viahart
+sells toys on Amazon, has been a longtime critic of Amazon’s pricing policies. Hart complained of how Amazon’s seller fees impact pricing in a 2019 Medium post
+and later that year testified about his experience before a House committee.
+</item 29>
+
+<item 30>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 30>
+=== END ITEM id=2545d17675662998 ===
+
+=== ITEM id=e9faccdb91f34a5f ===
+Gold sentences and facts:
+Sentence 0: But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response.
+  Fact 0.0: Sportsbooks are also gathering this information.
+  Fact 0.1: Sportsbooks begin to tighten the NBA Rookie of the Year lines in response.
+Sentence 1: If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability.
+  Fact 1.0: Sportsbooks might adjust the odds to balance their liability if a significant amount of money is placed on one team or participant.
+
+Retrieved items:
+<item 1>
+2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet (CBSSports.com, 2023-10-13T21:17:17+00:00)
+Futures: While money line, against the spread and over/under bets are all single-game bets, futures markets encompass almost anything that falls outside of that
+spectrum. Futures bets include total regular-season wins, championship odds, MVP odds and more.
+
+Parlay: This popular betting style is a little more complex. A parlay requires you to include two or more bets within a single wager, and all of your bets must
+win for the parlay to be a winner. For example, if you wager $100 on a three-leg parlay at 6 to 1 odds, you could win $600 if all three legs of the bet are
+winners.
+
+Juice: Also known as "The Vig" or vigorish, juice is effectively the tax that oddsmakers charge for handling a wager. If a book determines a game is a virtual
+coinflip, they may price both options at -110 to give themselves a 10% rake on all the action.
+</item 1>
+
+<item 2>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Either way, the line shopping strategy is designed to help you maximize your potential return.
+
+NBA live betting
+
+Thanks to the increased popularity of online sports betting apps, in-game betting has exploded nationwide. Also known as live betting, in-game betting allows
+you to bet on a game while it’s unfolding.
+
+The action is fast, and the odds are constantly shifting, making for a new way to enjoy the flow of a game while still staying engaged as a bettor.
+
+Depending on the sportsbook, there is usually a strong variety of live betting opportunities. You’ll find game and player prop bets like whether the next bucket
+will be worth one, two, or three points.
+
+You can bet on the team leading at the end of the current quarter or on whether there will be a comeback victory. You can even boil live betting down to the
+results of the next possession.
+
+The most popular sportsbook apps, such as DraftKings, FanDuel, and BetMGM, offer NBA in-game betting, though each has its lines and betting opportunities.
+</item 2>
+
+<item 3>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Traditional bet types, such as moneylines, where one bets on the outright winner; run lines, which focus on the margin of victory; and totals that predict
+combined team scores, are all readily available.
+
+For those who relish a deeper drop into the game, BetMGM has a deep lineup of player and team prop bets. Whether it's forecasting a player's strikeouts in a
+game or predicting the cumulative runs scored by a team, there's something for every strategy.
+
+For the long-term visionaries, BetMGM rolls out an impressive array of futures bets. Fans can place wagers on outcomes such as which team will clinch its
+division or which player will be honored as the league's Most Valuable Player.
+
+See more:
+
+Caesars Sportsbook
+
+Caesars has a comprehensive suite of MLB odds to elevate the game-watching experience. That includes run lines, predicting the margin of victory; totals, where
+bettors forecast the combined scores; and player props, focusing on individual milestones such as hits, home runs, or RBIs.
+</item 3>
+
+<item 4>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Do point spread odds change?
+
+Yes, point spread odds can change, and these shifts are commonly referred to as "line movement."
+
+Lines move when the point spread or the odds associated with a particular bet change after sportsbooks have initially set them. There are several reasons for
+these adjustments.
+
+One of the most common causes is an imbalance in the amount of money being wagered on one side of the bet. If a significant majority of bettors are placing
+their money on one team to cover the spread, the top sports betting apps will adjust the point spread to make the other side more appealing, thereby balancing
+the betting action.
+
+Another factor that can affect the spread odds is the occurrence of unexpected events, such as injuries to key players, changes in team strategies, or even
+significant weather events that might impact a game's outcome.
+
+For instance, if a star quarterback is announced as injured just days before a big game, the point spread might shift in favor of the opposing team.
+
+Moreover, information and public perception play a role.
+</item 4>
+
+<item 5>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+Does overtime count in my moneyline bet?
+
+Yes, in most sports and with most sportsbooks (including new betting sites), overtime (or any extra time or tiebreakers) does count in a moneyline bet.
+
+That said, always check the specific rules of the sportsbook you're using to ensure you understand their policies.
+
+Why do moneyline odds change?
+
+Moneyline odds change for several reasons.
+
+Public Betting Patterns: If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their
+liability. By making the odds less favorable for a heavily-bet team and more favorable for the less-bet team, they can encourage more even betting.
+
+If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability. By making the odds
+less favorable for a heavily-bet team and more favorable for the less-bet team, they can encourage more even betting.
+</item 5>
+
+<item 6>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on one side might indicate that the
+initial odds were potentially "off," prompting an adjustment. Event Dynamics: For live betting, where bets are placed while the event is in progress, the
+evolving dynamics of the match can lead to frequent changes in the odds.
+
+Sportsbooks adjust moneyline odds to ensure they remain profitable, balance their book, and reflect the most current information about the event.
+
+Related Pages:
+</item 6>
+
+<item 7>
+2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet (CBSSports.com, 2023-10-13T21:17:17+00:00)
+Sportsbooks will project what a player's stat will be at the end of a game, and you will wager whether the player will end that game over or under that
+projection. Popular player props include how many touchdown passes a quarterback will throw or how many three-point shots a basketball player will hit.
+
+Underdog: The underdog is the team deemed less likely to win the game based on the odds. A bet on an underdog typically yields a larger return than a bet on the
+favorite.
+
+Favorite: On the other hand, a favorite is the team that is deemed more likely to win the game. Bettors often pay a premium for betting on a favorite but
+they're also the team that more often wins the game outright.
+
+Consensus odds: These odds are generally defined as an average of all available betting markets. Different sportsbooks may price markets variably based on the
+action they've taken or their own interpretation of information.
+</item 7>
+
+<item 8>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+Ensure the site has a responsible gaming section.
+
+The overall user experience should be smooth and hassle-free.
+
+Safety and Security:
+
+Top NBA betting sites prioritize users' safety.
+
+Ensure your personal information is secure.
+
+Some sportsbooks excel in ensuring cybersecurity; always go for those with solid reputations.
+
+How to find the best NBA lines
+
+Not all sportsbook betting odds are created equal. If you're willing to put in some legwork, you can shop for the best NBA lines to maximize your potential
+return.
+
+Movement in the odds depends on multiple factors, including team news, injuries, public betting, recent play, and even the number of games a team plays in a
+row.
+
+Oddsmakers use all the available information to craft their lines, and you can find value in shopping around for the most favorable lines and odds.
+
+You can use our NBA odds page (see link above) to find the best lines for your prospective bet, or you can open accounts at multiple sportsbooks and do the
+shopping yourself.
+</item 8>
+
+<item 9>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Getting more points or laying fewer on a typical NFL point spread or NBA point spread might lead to winning a bet you’d otherwise lose. Plus, if you find better
+odds on any bet, you can potentially drop fewer dollars when you lose and earn more when you win.
+
+Shopping lines will help you consistently find the best prices on your bets. It won't help you pick more winners, but it will improve your chances and lead to
+bigger wins and more affordable losses. That’s undoubtedly worth your time.
+
+For example, you might like the Kansas City Chiefs to beat the Cincinnati Bengals in a mid-season NFL game. Say you look around and see that three of four
+licensed online sportsbooks in your state have the Chiefs as -3 favorites, but the fourth has them at just -2.5.
+
+Let’s say the Chiefs win by exactly three, a distinct possibility since a single field goal decides most NFL games. Bets at the first three sportsbooks would
+push. However, you’d have a winner at the fourth.
+</item 9>
+
+<item 10>
+Totals Betting - What is an Over/Under Bet? (Sporting News, 2023-11-01T22:08:31+00:00)
+Bookmakers adjust the line to balance the action and protect themselves from potential losses.
+
+One of the most common reasons for line movement is a significant amount of money being wagered on one side (either over or under). Bookmakers adjust the line
+to balance the action and protect themselves from potential losses. Injury Updates: If a key player is injured or unable to play, this can influence the
+expected total score, leading bookmakers to adjust the line accordingly.
+
+If a key player is injured or unable to play, this can influence the expected total score, leading bookmakers to adjust the line accordingly. Weather
+Conditions: In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a
+lower-scoring game, causing the line to move down.
+
+In outdoor sports, weather can play a significant role. For example, heavy rain or snow in a football game might lead to expectations of a lower-scoring game,
+causing the line to move down.
+</item 10>
+
+<item 11>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Pros
+
+The lines don’t usually move as fast as other bet types: Prop bet odds are developed based on game lines and totals at sportsbooks, but prop bet lines tend to
+adjust more slowly. Let’s say you’re keeping an eye on the New York Jets vs. the Buffalo Bills, and you see the total shift due to an incoming winter storm.
+While many bettors will scramble to get their bet in on the ‘under’ before the lines move too much, it’s a good idea to scope out the prop bets for individual
+players. The main lines are shifting, but most of the best sports betting sites don’t have the personnel to keep tabs on every possible player, so you could
+find value in an ‘under’ on a quarterback’s passing yards because the lines haven’t caught up yet.
+
+Prop bet odds are developed based on game lines and totals at sportsbooks, but prop bet lines tend to adjust more slowly. Let’s say you’re keeping an eye on the
+New York Jets vs.
+</item 11>
+
+<item 12>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+What makes NBA betting special or unique?
+
+Basketball odds are known to fluctuate more than those of other sports. The factors that play into those lines shifting can range from having only a few impact
+players per team to the sheer frequency of games.
+
+By following a single team, you can track its momentum swings, which players tend to get on hot or cold streaks, or how well they play at home vs. on the road.
+You can use that information to your advantage for both pre-game and live wagers.
+
+Similar categories of moneylines, spreads, totals, and NBA prop bets should appear across both formats.
+
+The NBA is also special because of the number of bets available for every game, ranging from pre-game to live betting and parlays.
+
+When you add up the standard bets, game props, player props, in-game betting, and more, there’s a staggering volume of bets for every NBA game at online
+sportsbooks.
+</item 12>
+
+<item 13>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+This bet can be a fun way to keep tabs on certain players throughout the entire season. Home run leader: Which player do you think will crank out the most
+homers during the regular season?
+
+Which player do you think will crank out the most homers during the regular season? Regular-season win totals: Make an over/under wager on a team based on the
+number of wins a sportsbook sets for them. Do you think your team will finish over that predicted win total, or will they come in under it?
+
+Every sportsbook offers its own selection of futures and props bets, so shop around to find the sportsbooks that best fit your needs.
+
+How to find the best MLB lines
+
+It stands to reason that bettors always seek the most favorable MLB odds. “Line shopping” involves researching several different sportsbooks to compare odds.
+
+This might involve using an odds feed, like the ones you’ll find here, or by comparing the odds on multiple online sportsbooks or MLB betting apps.
+</item 13>
+
+<item 14>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+That means checking the posted lines and odds for the same bets at different sportsbooks.
+
+You can do this for moneylines, point spreads, totals bets, prop bets, and more. Finding the best line or better odds on any bet is like finding money.
+
+You can shop around using multiple sportsbook apps on your phone or live odds feeds like the one above. Pick a side, then use the drop-down menus and tabs to
+find the odds and lines for that bet.
+
+Finally, bet when you see an opportunity at better odds or an improved line compared to the competition.
+
+Line shopping for futures
+
+People tend to bet futures at their favorite online sportsbook. However, shopping for better odds on any future bet is worth your time. Most game lines are
+similar at different sportsbooks, but the odds in futures markets can vary significantly.
+
+Sportsbooks sometimes have higher liabilities for specific teams and offer better odds on others to lay that off. Timing is everything.
+
+Get it right, and you can easily take advantage of changes in different futures markets due to liability.
+</item 14>
+
+<item 15>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+The significant turning point came in 2018 when the US Supreme Court made a pivotal decision. It overturned a longstanding federal law and allowed individual
+states the autonomy to determine their own sports betting regulations.
+
+This groundbreaking decision sparked a wave of change. Since that landmark ruling, over 30 states have embraced sports betting, including wagers on the NBA. For
+those residing or visiting betting-friendly states, the experience promises fairness and security.
+
+State-regulated online betting platforms are in place, ensuring that bettors receive fair odds. Furthermore, these platforms adhere to strict standards,
+ensuring a safe and transparent betting environment for everyone involved.
+
+Related Pages:
+</item 15>
+
+<item 16>
+NBA Prop Bets - Best Team and Player Props 2023/24 Season (Sporting News, 2023-10-02T23:49:35+00:00)
+Pay attention to player and team news: Oddsmakers use various information to develop their lines for games and players, and you should, too. Keep tabs on player
+news and injuries, when top players are being rested, how they performed in recent games, and more. You can find value in player and team props by gathering
+information from multiple sources and tracking how players and their teammates perform. For example, if one of the starting guards is questionable for a game,
+you might want to consider the other guard for increased points or assists since they’ll likely handle a heavier load.
+
+Keep an eye on usage and minutes: Even slight increases to a player’s average minutes can make a difference when betting player props, especially later in the
+season when aging veteran players tend to rest more. Keep yourself informed on usage and minutes trends for the players you’re considering betting on, and use
+them to your advantage.
+</item 16>
+
+<item 17>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks want even betting so much that they’ll move a line or change the odds to draw more bets to the other side to get it that way.
+
+That’s when you’ll see a difference between the lines and odds. Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like
+an injury or roster move. It’ll be difficult for you to find value in that case.
+
+But when a line moves or odds change because of betting patterns, only the sportsbook that saw the betting makes the change. That’s your opportunity right
+there.
+
+Line shopping is a tool to help you spot changes due to betting patterns. Then, you can simply take advantage of movement in a line or changes in the odds.
+
+Choose a side, shop around at online sportsbooks, compare the lines and odds, and then pounce when you find one that has something different and more favorable
+to your viewpoint.
+
+See more: What is a parlay bet?
+</item 17>
+
+<item 18>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+This includes your initial $10 wager, along with a profit of $15.30.
+
+It's essential to note that this calculation gives you the total payout, not just your earnings. If you're keen on tracking your profits from betting, remember
+to subtract your original stake from the payout to get an accurate figure.
+
+Why do moneyline odds change?
+
+Lines at the best sports betting apps change quickly due to two primary reasons:
+
+Public betting
+
+New information
+
+Before setting odds for an event, oddsmakers gather extensive data. Once they finalize the odds, they release them to the public.
+
+As a bettor, you can bet immediately or wait for potential shifts in the odds, although predicting these shifts is challenging.
+
+For instance, when examining odds for the next Super Bowl champion released shortly after the previous Super Bowl, these odds are based mostly on the recently
+concluded season.
+
+As the new season approaches and teams make changes, odds adjust based on perceived championship chances. As games progress, lines continue to evolve based on
+team performances.
+
+Public betting can also sway lines.
+</item 18>
+
+<item 19>
+Point Spread Betting - What is a Point Spread Bet? (Sporting News, 2023-11-01T22:50:52+00:00)
+Moreover, information and public perception play a role. If a piece of news or a prevailing sentiment starts to gain traction about a particular team's
+increased chances of winning, this can influence how people bet, leading sportsbooks to adjust their lines accordingly.
+
+Point spread odds can and do change based on a combination of actual betting patterns, unexpected events, and shifts in public perception. Savvy bettors keep a
+close eye on these line moves, as they can offer insights into where the value lies in a particular bet.
+</item 19>
+
+<item 20>
+The Best NBA Betting Sites and Apps for the 2023-24 Season (Sporting News, 2023-10-02T21:58:37+00:00)
+See more: Best NCAA basketball betting sites
+
+2023-24 NBA Season
+
+October 24 Regular season begins November 3 - December 9 In-season tournament February 16-18 All-Star Weekend 2024 April 14 Regular season ends April 16-19
+Play-in tournament April 20 Playoffs begin June 6 NBA Finals Game 1
+
+NBA spreads, money lines, and over/unders
+
+For anyone new to NBA betting, the staple wager types are:
+
+NBA point spreads: Bet on games via margins of victory or loss. Say the New York Knicks are -7.5 favorites over the Miami Heat. That means the Knicks need to
+win the game by 8 points to win a spread bet. On the other hand, the Heat can lose by up to 7 points (or win outright).
+
+NBA moneylines: The simplest form of betting. You pick the winner of the game, and if you’re right, you’ll get paid out based on the odds when you finalize your
+bet slip.
+</item 20>
+
+<item 21>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Shop around, and you can find opportunities to lay less, win more, and improve your chances.
+
+See more: How to bet on sports in the US
+
+Shop for the best lines at online sportsbooks
+
+Below is a live odds feed that shows you the differences between lines and odds for the same bets at many of the top sportsbooks in the country. Look here for
+current opportunities.
+
+What’s the best way to shop lines?
+
+The easiest way to line-shop is to find something like the live odds feed above. It’s a one-stop shop. Shopping lines here will take just seconds.
+
+Performing the task manually may take longer, but you can check with more sportsbooks or the chosen few you feel consistently offer the best lines and odds. The
+best way to do this is to download and install more than one of the best sports betting apps on your phone.
+
+Then, tap around among the sportsbooks to compare lines and odds for the bets you plan.
+
+Best sportsbooks for line shopping
+
+The biggest brands in sports betting offer competitive lines in dozens of states.
+</item 21>
+
+<item 22>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+You’re betting on which team you believe is going to win the game. Each team is given odds by the sportsbook to indicate their perceived chances of winning. The
+underdog is represented by a positive (+) number, and the favorite is represented by a negative number (-).
+
+Similar to a point spread in other sports, the run line bet gives the underdog a handicap of 1.5 runs in the game. The underdog needs to lose by one run or win
+outright for bets on them to be successful, while the favorite in the game needs to win by two runs or more to cover the spread.
+
+Totals bets, also known as over/unders, focus on the combined number of runs both teams score. Oddsmakers assign a total number of runs, and bettors must decide
+if the two teams will score over or under that predicted total. The actual winner of the game doesn’t matter.
+
+You’ll find these staple bet types at every online sportsbook that supports MLB betting.
+</item 22>
+
+<item 23>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+
+Every sportsbook’s goal is to even out the betting on both sides of every bet. That allows sportsbooks to earn the profit built into the odds and lines without
+worrying about which side wins.
+
+The betting is rarely the same at every sportsbook. While one sportsbook may be forced to move a line or change the odds because of betting, another won’t.
+That’s when you’ll spot a difference between sportsbooks. This difference may allow you to book a bet at improved odds or a more favorable line.
+
+The lines and odds may even be different right from the jump. Either way, the differences are why line shopping always makes sense. Shop around, and you can
+find opportunities to lay less, win more, and improve your chances.
+</item 23>
+
+<item 24>
+MLB Betting Sites & Apps - The Best Baseball Sportsbooks 2023 (Sporting News, 2023-10-24T22:32:27+00:00)
+Wagers include extra innings unless specified otherwise.
+
+The game must start on the scheduled day (local stadium time) for bets to have action.
+
+The game must go 9 innings or 8½ if the home team is winning for the run line to have action.
+
+On ‘team to score first’ wagers, once a run is scored, the prop will be graded, regardless of how long the game lasts.
+
+Wagers on postseason baseball series are based on the team to win the series, regardless of the number of games involved.
+
+For player props, the player must be in the starting lineup for wagers to have action.
+
+It’s important to read through the rules for baseball betting before placing your MLB bets, and you can find them in the terms and conditions section of your
+sportsbook’s website.
+
+Related Pages:
+</item 24>
+
+<item 25>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, the only way to find these opportunities is shopping lines.
+
+See more: NFL futures bets
+
+Can I get a better line or odds after I’ve already bet?
+
+When you bet, you lock in the odds or line as currently posted. If they change, for better or worse, you’re stuck with the odds from when you wagered.
+
+That’s precisely why you should go line shopping before you bet. Of course, if significant changes occur, you can take more action at the improved odds or more
+favorable line.
+
+Is line shopping worth my time?
+
+Because it can provide you the opportunity to lay less, win more, and improve your chances, line shopping is certainly worth your time. Plus, it doesn’t have to
+take up all that much of it.
+
+Use the live odds feed above to do a basic survey. You’ll find it takes just seconds to compare lines and odds. Plus, download and install multiple licensed
+online sportsbook apps on your phone, and you can do a more thorough shop in just a few minutes.
+</item 25>
+
+<item 26>
+Prop Betting - What is a Prop Bet? (Sporting News, 2023-11-06T21:23:22+00:00)
+Let’s say you’re keeping an eye on the New York Jets vs. the Buffalo Bills, and you see the total shift due to an incoming winter storm. While many bettors will
+scramble to get their bet in on the ‘under’ before the lines move too much, it’s a good idea to scope out the prop bets for individual players. The main lines
+are shifting, but most of the best sports betting sites don’t have the personnel to keep tabs on every possible player, so you could find value in an ‘under’ on
+a quarterback’s passing yards because the lines haven’t caught up yet. There’s greater variety: The three main bet types—moneylines, point spreads, and
+totals—are constant in every major sport, but they don’t offer a lot in the way of variety. Prop bets do. They can add interest to a game that may seem
+one-sided in the major markets. Larger sporting events, especially the Super Bowl, offer a massive variety of bets, ranging from the typical to the exotic and
+everything in between.
+</item 26>
+
+<item 27>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Line shopping is the key that unlocks the best odds and lines at top sports betting sites.
+
+The process is as simple as checking the lines and odds for your prospective bet at multiple online sports betting sites. The result is quite often better odds
+and improved lines.
+
+What is line shopping, and why is it worth your time? Find the answers below in our complete guide to line shopping.
+
+How do sportsbooks set odds and lines?
+
+The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds.
+
+Other sports betting apps simply copy those lines. The oddsmakers and oddsmaking services use computer models and algorithms that consider analytics,
+statistics, injury and roster news, performance, matchup data, and more to develop the lines and odds.
+
+Betting lines and odds are then subject to change based on the betting public’s reaction and any additional information that comes to light ahead of the game.
+Sportsbooks will move the line or change the odds if the public bets heavily on one side.
+</item 27>
+
+<item 28>
+Moneyline Betting - What is the Moneyline and How Does it Work? (Sporting News, 2023-11-01T21:25:48+00:00)
+New Information: Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an
+event. When such information becomes public, sportsbooks may adjust the odds accordingly.
+
+Changes in factors like player injuries, player substitutions, or even changes in weather conditions can affect the perceived outcome of an event. When such
+information becomes public, sportsbooks may adjust the odds accordingly. Professional Bettors: Large wagers from sharp bettors or professional gamblers can
+cause the lines to shift. These individuals often have insights or information that can influence the odds.
+
+Large wagers from sharp bettors or professional gamblers can cause the lines to shift. These individuals often have insights or information that can influence
+the odds. Initial Miscalculation: Sometimes, the initial odds set by oddsmakers may be perceived as offering value to bettors. In such cases, heavy betting on
+one side might indicate that the initial odds were potentially "off," prompting an adjustment.
+</item 28>
+
+<item 29>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+Shop around at the following top online sportsbooks to find the best prices on your bets.
+
+Caesars Sportsbook
+
+Caesars' odds and lines are consistently among the best in the country, making it a must-see when shopping lines. The point spreads here can be a half-point to
+two points better than the competition’s, and the moneyline odds may be more favorable.
+
+BetMGM Sportsbook
+
+The lines and odds at BetMGM are consistently competitive. Plus, sports betting promos and odds boosts abound, so you'll find a better price on many bets here.
+
+DraftKings Sportsbook
+
+DraftKings has more open betting markets than most online sportsbooks, and the lines and odds are always competitive.
+
+FanDuel Sportsbook
+
+FanDuel is committed to posting competitive odds and runs so many generous promos and odds boosts that it is always worth a look.
+
+How to find the best lines and odds for any bet
+
+Shopping around lets you find the best lines and odds for any bet.
+</item 29>
+
+<item 30>
+Line Shopping in Sports Betting - How to Find the Best Odds (Sporting News, 2023-11-06T22:21:05+00:00)
+However, you’d have a winner at the fourth. If you didn’t shop around, you’d never have found that half-point victory and be stuck with a push instead of a
+profit.
+
+What is the Vegas line?
+
+Las Vegas sportsbooks set the standard for lines and odds across the country. If a sportsbook is copying a line, it’s usually copying the Vegas line. Most
+online betting sites don’t stray too far from the Vegas line, using it as a foundation for setting all lines in every major sport.
+
+If those lines do shift, it’s usually because of increased betting on one side of a bet. Shop lines locally, and you can take advantage when sportsbooks stray
+from the Vegas line.
+
+Why do the lines move?
+
+It’s worth reiterating that sportsbooks want an equal amount of money bet on each side of every bet. When that happens, they earn the small profit built into
+the odds without concern about who wins or loses.
+</item 30>
+=== END ITEM id=e9faccdb91f34a5f ===

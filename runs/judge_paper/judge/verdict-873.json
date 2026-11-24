@@ -1,0 +1,26 @@
+[
+  {"id": "03490e4c4be0c23a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 11, "quote": "His career has only blossomed in the years since he took that trip"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 11, "quote": "while some artists might feel trepidation at the attainment of so much success from such an early age"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 11, "quote": "Mitchell is clear-eyed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 42, "quote": "Since then he’s been linked to club jobs in Europe"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 42, "quote": "but opted to stick around with the national team."}]}
+  ]},
+  {"id": "297249d4e8bebce1", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 17, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 17, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]}
+  ]},
+  {"id": "d450d8f80acc1aa0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]}
+  ]}
+]

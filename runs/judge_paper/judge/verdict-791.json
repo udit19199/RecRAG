@@ -1,0 +1,32 @@
+[
+  {"id": "ed7337722ed8eff2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 35, "quote": "In the year since Altman catapulted ChatGPT to global fame, he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 35, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 35, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 46, "quote": "Sam Altman is among the backers of an AI startup, founded by two teenagers"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 46, "quote": "This week was Google’s annual hardware event"}]},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 45, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 45, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now"}]}
+  ]},
+  {"id": "6aa5fe8404bc99dc", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 44, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 44, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 44, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "fbeaef641669834d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "In the wake of the Wallabies’ World Cup flop"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "the Queensland Rugby Union have reaffirmed their position"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "they are committed to moving to a centralised high-performance model"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 3, "quote": "but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "He will also be tasked with “integrating” the programs"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs"}]}
+  ]}
+]

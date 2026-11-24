@@ -1,0 +1,22 @@
+[
+{"id": "06d4f94512096819", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 21, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 21, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 21, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 21, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 21, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 21, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 24, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 15, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 15, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 15, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 15, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "83e4d1d5903332cd", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with Russia’s most recent invasion of Ukraine."}]}
+]}
+]

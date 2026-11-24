@@ -1,0 +1,36 @@
+[
+{"id": "c43093bdecaee5a7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 32, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 32, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 32, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 32, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "8cf4177b598b0022", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 23, "quote": "One of the major sources of Gen Z’s distress, of course, is climate change."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "1.7", "status": "missing", "evidence": []},
+{"fact": "1.8", "status": "missing", "evidence": []}
+]},
+{"id": "584463fa6b84b652", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "Last week, Wang testified that Alameda got access to a special credit line"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 4, "quote": "A conscious criminal…"}, {"item": 8, "quote": "is facing seven counts of criminal charges: two counts of wire fraud, and five counts of conspiracy"}]},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

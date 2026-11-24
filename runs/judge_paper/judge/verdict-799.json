@@ -1,0 +1,37 @@
+[
+  {"id": "d81bfb64965ba080", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 13, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 13, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 13, "quote": "Source: The Big Ten is reviewing the lengthy written responses from both Michigan and Jim Harbaugh."}]}
+  ]},
+  {"id": "872e9411f5be4259", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 19, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 19, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 19, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 19, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 18, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 18, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 18, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]}
+  ]},
+  {"id": "ff90f40a4ae970f4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 4, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]}
+  ]},
+  {"id": "6f7b4030d69fb5f7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 18, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 18, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]}
+]

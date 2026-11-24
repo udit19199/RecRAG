@@ -1,0 +1,132 @@
+[
+  {
+    "id": "6f5bb01f282ae2b8",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 11,
+            "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 11,
+            "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 11,
+            "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 40,
+            "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 40,
+            "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 40,
+            "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 40,
+            "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "78bcceca57493386",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 31,
+            "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 31,
+            "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 8,
+            "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+          }
+        ]
+      }
+    ]
+  }
+]

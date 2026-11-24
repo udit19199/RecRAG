@@ -1,0 +1,30 @@
+[
+{"id": "9a74928da812e07d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 43, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 43, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 43, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 12, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 19, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 19, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]}
+]},
+{"id": "826b12f532eedaf5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 50, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 50, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 50, "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 5, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 5, "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."}]}
+]},
+{"id": "72c6b7faeb29cff2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 13, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 13, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 13, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 13, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 16, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 16, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."}]}
+]}
+]

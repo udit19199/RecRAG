@@ -1,0 +1,33 @@
+[
+  {
+    "id": "fcee19e792e17906",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 11, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 11, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 11, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 11, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 11, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 42, "quote": "“all of that, all of it, was built on lies,” Rehn declared to the jury."}, {"item": 11, "quote": "“The defendant lied to the world,” Rehn alleged."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 49, "quote": "Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,"}, {"item": 49, "quote": "make billions of dollars of investments for his own interest"}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 42, "quote": "how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}, {"item": 45, "quote": "The political donations gave Bankman-Fried influence in the highest echelons of power."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 42, "quote": "how Bankman-Fried allegedly stole customer funds to facilitate his jet-setting lifestyle, donate millions to political candidates, and finance risky bets."}, {"item": 45, "quote": "The political donations gave Bankman-Fried influence in the highest echelons of power."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 34, "quote": "What the jury will see is a nerdy startup founder who acted in “good faith,”"}, {"item": 34, "quote": "“Sam didn’t defraud anyone,” he said early on in his opening statement."}]},
+      {"fact": "2.5", "status": "stated", "evidence": [{"item": 34, "quote": "“Sam didn’t defraud anyone,” he said early on in his opening statement."}, {"item": 25, "quote": "“He didn’t steal any money.”"}]},
+      {"fact": "2.6", "status": "stated", "evidence": [{"item": 40, "quote": "And while Cohen tried to make the common white-collar defense argument that Bankman-Fried, as CEO, was simply too busy to oversee what everyone did every day"}, {"item": 46, "quote": "In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it”"}]}
+    ]
+  },
+  {
+    "id": "c9e4c7e1fd60385c",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "But by the age of 16, she is public property – incapable of going outside without being mobbed, and her love of singing and dancing now a lucrative resource."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 44, "quote": "It was almost like this very strange, subtle clue to the media"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 44, "quote": "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 44, "quote": "and I can have something really major and traumatic happen to me and they don't know about it"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 44, "quote": "she told NPR."}]}
+    ]
+  }
+]

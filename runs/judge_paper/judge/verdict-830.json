@@ -1,0 +1,20 @@
+[
+{"id": "ecd48b73ea69691d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Before setting odds for an event, oddsmakers gather extensive data."}, {"item": 17, "quote": "The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 12, "quote": "Sportsbooks will move the line or change the odds if the public bets heavily on one side."}, {"item": 13, "quote": "Bookmakers adjust the line to balance the action and protect themselves from potential losses."}]}
+]},
+{"id": "6a466111d515bb6c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 6, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 6, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 20, "quote": "Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season."}]}
+]},
+{"id": "575a430fdabc8a23", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "Before setting odds for an event, oddsmakers gather extensive data."}, {"item": 27, "quote": "The best sportsbooks employ oddsmakers and oddsmaking services to set their lines and odds."}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 5, "quote": "If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability."}]}
+]}
+]

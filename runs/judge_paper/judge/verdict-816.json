@@ -1,0 +1,41 @@
+[
+{"id": "f65b1e5229b8e167", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 19, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 19, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 19, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 19, "quote": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+]},
+{"id": "02d3b4d51cfacea5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 26, "quote": "But it didn’t release the full model, Gemini Ultra — only a “lite” version called Gemini Pro."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 22, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 22, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 22, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 22, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 22, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "4cd723b279c1f48a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]}
+]},
+{"id": "9b02bc92261ccd84", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+]}
+]

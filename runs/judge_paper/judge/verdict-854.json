@@ -1,0 +1,26 @@
+[
+{"id": "999b150634b87713", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 45, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 45, "quote": "Sensing an opportunity to strike against 14 men, the All Blacks kicked for the corner on a couple occasions out wide."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 13, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 13, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "2d5df9d99995a695", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 15, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "But victory for England could scarcely be more crucial."}, {"item": 17, "quote": "their chances of finishing in the top four and progressing to the semi-finals are looking dubious."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "South Africa once again prepare to take on England"}, {"item": 14, "quote": "this time around, the pair meet in the semi-finals of the 2023 tournament"}]},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "86459d891094f347", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 15, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "but not all of them are effective and none are foolproof."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 19, "quote": "but not all of them are effective and none are foolproof."}]}
+]}
+]

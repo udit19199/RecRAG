@@ -1,0 +1,24 @@
+[
+  {"id": "b503310d32bf2f33", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 44, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 44, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 44, "quote": "And so, alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 33, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 33, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 41, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 41, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]},
+  {"id": "9d795b57c235dd77", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 26, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 26, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+  ]},
+  {"id": "b520d26c4e2f385e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 16, "quote": "Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 16, "quote": "Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy."}]}
+  ]}
+]

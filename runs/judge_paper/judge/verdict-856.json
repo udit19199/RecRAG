@@ -1,0 +1,19 @@
+[
+{"id": "cf8ce5b152570fbf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 16, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 16, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 16, "quote": "In the above scenario, supply disruption will lead to higher inflation and central bankers will have to adjust their policies and hold rates higher for longer than anticipated."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 26, "quote": "Back then, just like today, home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 26, "quote": "for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 26, "quote": "Back then, just like today, home prices had boomed"}]}
+]},
+{"id": "44e37a37141848c5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 14, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]}
+]

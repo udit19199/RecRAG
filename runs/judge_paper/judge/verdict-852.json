@@ -1,0 +1,33 @@
+[
+{"id": "277e5a0b963d8fc0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "as the prosecutor told the jury that Bankman-Fried sold stock in FTX and borrowed millions from lenders by lying."}, {"item": 22, "quote": "A conscious criminal"}]},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "Bankman-Fried did not act like someone who was guilty. Rather, he was willing to give up his personal wealth to make customers whole, Cohen argued."}, {"item": 22, "quote": "Or did he act in good faith, and like many a startup founder, fly too close to the sun?"}]},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 6, "quote": "intimidating Alameda’s former CEO, Caroline Ellison, by leaking her private diary."}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 17, "quote": "In the recording, Ellison did indeed confess to stealing customer funds with Bankman-Fried’s approval."}]}
+]},
+{"id": "d7c92dbb73ace795", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 20, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 20, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "YouTube publicly committed to three principles/pledges behind its development of music-based generative AI tools"}, {"item": 8, "quote": "They promised “invest[ment] in the AI-powered technology”"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 8, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters"}, {"item": 8, "quote": "[from] trademark and copyright abuse"}]}
+]},
+{"id": "720f6a0891b1ac33", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 14, "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."}]}
+]}
+]

@@ -1,0 +1,16 @@
+[
+  {"id": "9bc976204880f1f4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 11, "quote": "Back then, just like today, home prices had boomed for years"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 11, "quote": "Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "raising interest rates aggressively to quash inflation."}, {"item": 11, "quote": "Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 11, "quote": "home prices had boomed for years before Fed officials were ultimately forced to hike interest rates aggressively in an attempt to fight inflation."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 4, "quote": "Postponements of such reports could complicate things for the Fed"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 4, "quote": "has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]}
+  ]},
+  {"id": "ab07d6380872a3e4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 2, "quote": "Israel warned 1.1 million Gaza residents in the northern section of the enclave"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 2, "quote": "Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 43, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]}
+]
