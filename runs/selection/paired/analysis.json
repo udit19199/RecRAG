@@ -2232,5 +2232,69 @@
    "identical": 248,
    "same_set": 249
   }
+ },
+ "infnull": {
+  "answer_mix": {
+   "rag inference_query": {
+    "right": 96.53333333333333,
+    "abstain": 2.6666666666666665,
+    "wrong": 0.8
+   },
+   "rag null_query": {
+    "right": 93.6,
+    "abstain": 0.0,
+    "wrong": 6.4
+   },
+   "graphrag inference_query": {
+    "right": 98.13333333333334,
+    "abstain": 0.8,
+    "wrong": 1.0666666666666667
+   },
+   "graphrag null_query": {
+    "right": 92.53333333333333,
+    "abstain": 0.0,
+    "wrong": 7.466666666666667
+   }
+  },
+  "repeat_range": {
+   "rag inference_query": [
+    95.2,
+    96.8,
+    97.6
+   ],
+   "rag null_query": [
+    94.4,
+    93.6,
+    92.8
+   ],
+   "graphrag inference_query": [
+    98.4,
+    97.6,
+    98.4
+   ],
+   "graphrag null_query": [
+    92.8,
+    93.6,
+    91.2
+   ]
+  },
+  "paired": {
+   "graphrag vs rag inference_query": {
+    "questions": 125,
+    "mean_diff_points": 1.6,
+    "ci95": [
+     0.2666666666666667,
+     3.4666666666666672
+    ]
+   },
+   "graphrag vs rag null_query": {
+    "questions": 125,
+    "mean_diff_points": -1.0666666666666667,
+    "ci95": [
+     -3.4666666666666672,
+     1.3333333333333333
+    ]
+   }
+  }
  }
 }

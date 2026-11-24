@@ -17,8 +17,8 @@ OUT = Path("runs/selection/paired")
 QS = {f"multihop-rag-{i}" for i in json.load(open("runs/nograph/questions.json"))["indices"]}
 TYPES = ["comparison_query", "temporal_query"]
 SETUPS = [("rag", "Normal RAG, top 10"), ("B2", "LLM picks 10 of top 50"),
-          ("B4", "Top 50 straight"), ("B4_100", "Top 100 straight"),
-          ("graphrag", "Agentic Hybrid RAG")]
+          ("B4", "Top 50 straight"), ("B4_100", "Top 100 straight"), ("B4_200", "Top 200 straight"),
+          ("B2_100", "LLM picks 10 of top 100"), ("graphrag", "Agentic Hybrid RAG")]
 
 
 def loc(d):
@@ -34,6 +34,9 @@ for name in sel:
 p = Path("runs/selection/paired/B4_100_registry.json")
 if p.exists():
     REG["B4_100"] = json.load(open(p))["B4_100"]
+p = Path("runs/selection/paired/next_registry.json")
+if p.exists():
+    REG.update(json.load(p))
 
 rows = {}
 for m, reps in REG.items():

@@ -64,6 +64,10 @@ for name in ("B4_100", "WRONG10", "CLOSED"):
     p = Path(f"runs/selection/paired/{name}_registry.json")
     if p.exists():
         REG[name] = json.load(open(p))[name]
+p = Path("runs/selection/paired/next_registry.json")
+if p.exists():
+    REG.update(json.load(p))
+REG = {k: v for k, v in REG.items() if not k.endswith("_infnull")}
 
 run_rep = {str(loc(d)): (m, rep) for m, reps in REG.items() for rep, ds in reps.items() for d in ds}
 shares = {}
@@ -145,6 +149,10 @@ ORDERS = "B4+B4_rev+B4_shuf"
 PAIRS += [("B2", "B4_rev"), ("B2", "B4_shuf"), ("B2", ORDERS)]
 if "B4_100" in methods:
     PAIRS += [("B4_100", "B4"), ("B4_100", "B2")]
+if "B4_200" in methods:
+    PAIRS += [("B4_200", "B4_100"), ("B4_200", "B2"), ("B4_200", "graphrag")]
+if "B2_100" in methods:
+    PAIRS += [("B2_100", "B4_100"), ("B2_100", "B2"), ("B2_100", "graphrag")]
 if "WRONG10" in methods:
     PAIRS += [("rag", "WRONG10"), ("B4", "WRONG10"), ("WRONG10", "CLOSED")]
 if "CLOSED" in methods:
@@ -171,7 +179,7 @@ for m in methods:
 
 say()
 say("CHECK 2: evidence found vs answered right (counts are per repeat, averaged over the 3 repeats)")
-SETUPS = [m for m in ("rag", "B1", "B2", "B3", "B4_20", "B4_30", "B4", "B4_100", "graphrag", "nograph", "WRONG10", "CLOSED") if m in methods]
+SETUPS = [m for m in ("rag", "B1", "B2", "B2_100", "B3", "B4_20", "B4_30", "B4", "B4_100", "B4_200", "graphrag", "nograph", "WRONG10", "CLOSED") if m in methods]
 BUCKETS = [("none (0 facts)", lambda s: s == 0), ("under half", lambda s: 0 < s < 0.5),
            ("half to all but some", lambda s: 0.5 <= s < 1 - 1e-9), ("all facts", lambda s: s >= 1 - 1e-9)]
 out["evidence_vs_right"] = {}
@@ -347,6 +355,76 @@ for rep in "23":
     sets = sum(set(rag10["1"][q]) == set(rag10[rep][q]) for q in QS)
     say(f"  Normal RAG top 10 (final500): repeat {rep} identical to repeat 1 for {same} of {len(QS)}, same set {sets}")
     out["same_top50"][f"rag10_rep{rep}"] = {"identical": same, "same_set": sets}
+
+say()
+say("Inference and null questions (runs/selection/questions_infnull.json): answer mix and")
+say("answered-right range per setup, mean of 3 repeats. Null questions have no gold facts:")
+say("right = said 'Insufficient Information' (exact match) or a Haiku verdict.")
+IQS = {f"multihop-rag-{i}" for i in json.load(open("runs/selection/questions_infnull.json"))["indices"]}
+ITYPES = ["inference_query", "null_query"]
+IREG = {"rag": final["rag"], "graphrag": final["graphrag"]}
+p = Path("runs/selection/paired/infnull_registry.json")
+if p.exists():
+    IREG.update(json.load(p))
+irows = {}
+for m, reps in IREG.items():
+    for rep in "123":
+        for d in reps.get(rep, []):
+            for line in open(loc(d) / "results.jsonl"):
+                r = json.loads(line)
+                if r["record_id"] not in IQS or r["question_type"] not in ITYPES:
+                    continue
+                a = normalize_answer(r["answer"]) if r["answer"] else ""
+                ok = bool(right(r))
+                irows[(m, rep, r["record_id"])] = {
+                    "qt": r["question_type"], "right": ok,
+                    "abstain": a == ABSTAIN and not ok}
+iqids = {qt: sorted({q for (_, _, q), v in irows.items() if v["qt"] == qt}) for qt in ITYPES}
+imethods = [m for m in ("rag", "B0_infnull", "B4_infnull", "B2_infnull", "graphrag")
+            if any(k[0] == m for k in irows)]
+out["infnull"] = {"answer_mix": {}, "repeat_range": {}, "paired": {}}
+for m in imethods:
+    for qt in ITYPES:
+        c = Counter()
+        for rep in "123":
+            for q in iqids[qt]:
+                v = irows.get((m, rep, q))
+                if v:
+                    c["right" if v["right"] else "abstain" if v["abstain"] else "wrong"] += 1
+        t = sum(c.values())
+        if not t:
+            continue
+        out["infnull"]["answer_mix"][f"{m} {qt}"] = {k: 100 * c[k] / t for k in ("right", "abstain", "wrong")}
+        v = [100 * sum(irows[(m, rep, q)]["right"] for q in iqids[qt] if (m, rep, q) in irows) /
+             max(1, sum((m, rep, q) in irows for q in iqids[qt])) for rep in "123"]
+        out["infnull"]["repeat_range"][f"{m} {qt}"] = v
+        say(f"  {m:12} {qt[:9]:9} right {100 * c['right'] / t:5.1f}  insufficient {100 * c['abstain'] / t:5.1f}"
+            f"  wrong {100 * c['wrong'] / t:5.1f}  right range {min(v):.1f}-{max(v):.1f}")
+
+
+def iqmean(m, qt):
+    return {q: sum(irows[(m, rep, q)]["right"] for rep in "123" if (m, rep, q) in irows) /
+            max(1, sum((m, rep, q) in irows for rep in "123")) for q in iqids[qt]}
+
+
+def ipaired(a, b, qt):
+    ma, mb = iqmean(a, qt), iqmean(b, qt)
+    qs = sorted(set(ma) & set(mb))
+    d = [ma[q] - mb[q] for q in qs]
+    rng = random.Random(1)
+    boots = sorted(sum(rng.choice(d) for _ in d) / len(d) for _ in range(10000))
+    return {"questions": len(qs), "mean_diff_points": 100 * sum(d) / len(d),
+            "ci95": [100 * boots[250], 100 * boots[9750]]}
+
+
+for a, b in (("B2_infnull", "rag"), ("B4_infnull", "rag"), ("B2_infnull", "B4_infnull"), ("graphrag", "rag")):
+    if not any(k[0] == a for k in irows) or not any(k[0] == b for k in irows):
+        continue
+    for qt in ITYPES:
+        r = ipaired(a, b, qt)
+        out["infnull"]["paired"][f"{a} vs {b} {qt}"] = r
+        say(f"  paired {a:>12} vs {b:<12} {qt[:9]}: {r['mean_diff_points']:+.1f}"
+            f" (95% {r['ci95'][0]:+.1f} to {r['ci95'][1]:+.1f})")
 
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT / "analysis.json").write_text(json.dumps(out, indent=1) + "\n")

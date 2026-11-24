@@ -54,7 +54,9 @@ SAME_TEXT_AS = {"B4_rev": "B4", "B4_shuf": "B4"}
 # a file changes.
 SIZE = 120000 if any(l.startswith("B4") for l in runs) else 60000
 for label, reps in runs.items():
-    if label in SAME_TEXT_AS:
+    if label in SAME_TEXT_AS or label.endswith("_infnull"):
+        # infnull runs (inference + null questions) get answered-right judging
+        # only; SPEC: no gold-fact judging for them.
         continue
     for rep, dirs in reps.items():
         for run_dir in dirs:

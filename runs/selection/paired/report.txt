@@ -337,3 +337,13 @@ CHECK 5: same top 50 in every repeat? (B4 repeats 2 and 3 against repeat 1)
   repeat 3: identical 234, same chunks in another order 16, different chunks 0; chunks swapped []; first difference at rank []; questions whose 'all gold in top 50' changed 0
   Normal RAG top 10 (final500): repeat 2 identical to repeat 1 for 249 of 250, same set 249
   Normal RAG top 10 (final500): repeat 3 identical to repeat 1 for 248 of 250, same set 249
+
+Inference and null questions (runs/selection/questions_infnull.json): answer mix and
+answered-right range per setup, mean of 3 repeats. Null questions have no gold facts:
+right = said 'Insufficient Information' (exact match) or a Haiku verdict.
+  rag          inference right  96.5  insufficient   2.7  wrong   0.8  right range 95.2-97.6
+  rag          null_quer right  93.6  insufficient   0.0  wrong   6.4  right range 92.8-94.4
+  graphrag     inference right  98.1  insufficient   0.8  wrong   1.1  right range 97.6-98.4
+  graphrag     null_quer right  92.5  insufficient   0.0  wrong   7.5  right range 91.2-93.6
+  paired     graphrag vs rag          inference: +1.6 (95% +0.3 to +3.5)
+  paired     graphrag vs rag          null_quer: -1.1 (95% -3.5 to +1.3)
