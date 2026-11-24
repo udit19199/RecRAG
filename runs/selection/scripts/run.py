@@ -12,7 +12,9 @@ VARIANT:
       up to 10 by ID, as in B2.
   B4      Normal RAG, top 50 by vector score (B2's candidates), all 50 sent to the
           answer model in retrieval order. No picking call. (Bhanu, 24 Nov 2026)
+  B2_100  as B2, candidates top 100 instead of top 50 (25 Nov 2026).
   B4_20   as B4, top 20.      B4_30   as B4, top 30.      B4_100  as B4, top 100 (25 Nov 2026).
+  B4_200  as B4, top 200 (25 Nov 2026).
   B4_rev  as B4, the 50 in reversed order (best-scoring last).
   B4_shuf as B4, the 50 shuffled; the order is fixed per question (seeded by the
           question text), so the 3 repeats differ only in the answer call.
@@ -46,8 +48,9 @@ variant, rep = sys.argv[1], sys.argv[2]
 shard, shards = int(sys.argv[3]), int(sys.argv[4])
 limit = int(sys.argv[5]) if len(sys.argv) > 5 else None
 MILVUS = os.environ.get("RECRAG_VECTOR_DB") == "milvus"
-B4 = {"B4": 50, "B4_20": 20, "B4_30": 30, "B4_100": 100, "B4_rev": 50, "B4_shuf": 50}
-assert variant in ("B0", "B1", "B2", "B3", *B4)
+B4 = {"B4": 50, "B4_20": 20, "B4_30": 30, "B4_100": 100, "B4_200": 200, "B4_rev": 50, "B4_shuf": 50}
+B2 = {"B2": 50, "B2_100": 100}
+assert variant in ("B0", "B1", "B3", *B2, *B4)
 os.environ["RECRAG_RUN_NAMESPACE"] = "milvus/runs" if MILVUS else "selection/runs"
 questions_path = Path(os.environ.get("RECRAG_QUESTIONS", ROOT / "runs/nograph/questions.json"))
 indices = json.loads((ROOT / questions_path if not questions_path.is_absolute() else questions_path).read_text())["indices"][shard::shards]
@@ -231,14 +234,15 @@ elif variant == "B1":
     options = RetrievalOptions(top_k=TOP, rerank=True, rerank_candidate_k=50, rerank_top_k=TOP)
 else:
     benchmark.refine_retrieval = select
-    # B3's first search is the question's top 20; B2's is the question's top 50.
-    options = RetrievalOptions(top_k=50 if variant == "B2" else 20)
+    # B3's first search is the question's top 20; B2's is the question's top 50,
+    # B2_100's the top 100.
+    options = RetrievalOptions(top_k=B2.get(variant, 20))
 os.environ["RECRAG_CONCURRENCY"] = "1"
 path = benchmark.run("rag", "multihop_rag", 0, len(indices), options=options, record_indices=indices)
 run_dir = Path(path).parent if Path(path).is_file() else Path(path)
 (run_dir / "variant.json").write_text(
     json.dumps({"variant": variant, "vector_db": "milvus 2.5.10 rag_chunks" if MILVUS else "llama-index", "rep": rep, "shard": shard, "shards": shards, "limit": limit,
-                "select_instruction": SELECT_INSTRUCTION if variant in ("B2", "B3") else None,
+                "select_instruction": SELECT_INSTRUCTION if variant in ("B2", "B2_100", "B3") else None,
                 "query_instruction": QUERY_INSTRUCTION if variant == "B3" else None,
                 "passages_to_answer": B4.get(variant, TOP),
                 "order": {"B4_rev": "reversed", "B4_shuf": "shuffled, seed sha256(question)"}.get(variant, "retrieval")}) + "\n"

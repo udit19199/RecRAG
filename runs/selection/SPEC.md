@@ -95,3 +95,15 @@ index: runs/rag/indexes/07062033… (Normal RAG, never rebuilt)
 answer model: gpt-6-luna, reasoning effort medium, Normal RAG answer prompt (benchmark.py)
 scoring: answered right only (exact match, then Claude Haiku answer judge; on null questions right = said 'Insufficient Information'). No gold-fact judging.
 where: Instabox VM, runs/selection/scripts/vm_infnull.sh, 3 lanes in parallel
+
+## B4_200 and B2_100, plus the B2 inference/null retry (25 Nov 2026)
+
+Top 100 straight beats every setup including Agentic Hybrid RAG, so two follow-ups: does the curve keep rising past 100 (B4_200: Normal RAG top 200 straight, as B4 in everything else), and does picking from a bigger pool close the gap (B2_100: the B2 picking call on the top 100 candidates, up to 10 picked). Also a retry of the B2 inference/null run, whose first attempt died on a transient API error mid r1 (jobs/INFNULL_lanes.log); B0 and B4 finished there.
+
+variants: B4_200 (top 200 straight), B2_100 (LLM picks up to 10 of top 100, same picking prompt and code as B2), B2 retry on questions_infnull.json
+questions: 250 each (runs/nograph/questions.json for B4_200/B2_100; runs/selection/questions_infnull.json for the B2 retry)
+repeats: 3
+index: runs/rag/indexes/07062033… (Normal RAG, never rebuilt)
+answer model: gpt-6-luna, reasoning effort medium, Normal RAG answer prompt (benchmark.py); B2_100 reuses the B2 picking prompt (SELECT_INSTRUCTION) word for word
+scoring: answered right (exact match, then Claude Haiku answer judge); gold facts found for B2_100 (Claude Haiku fact judge, frozen runs/final500 claims); B4_200 answered right only ("not scored" for facts)
+where: Instabox VM, runs/selection/scripts/vm_next.sh, 3 lanes in parallel
