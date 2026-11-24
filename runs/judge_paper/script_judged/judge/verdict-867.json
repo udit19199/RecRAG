@@ -1,0 +1,142 @@
+[
+ {
+  "id": "b9b92aa7ac4c723c",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "issuing a public warning Wednesday about reports that illegal content and disinformation targeting the Israel-Hamas war is circulating on the platform"
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 2,
+      "quote": "issuing a public warning Wednesday about reports that illegal content and disinformation targeting the Israel-Hamas war is circulating on the platform"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "c03b0b64bb2db3de",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 15,
+      "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 15,
+      "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 15,
+      "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said, “but the level of performance and how he could control a game and dominate a game in junior — it indicated he was going to be able to do that at some point in the NHL."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.2",
+    "status": "missing",
+    "evidence": []
+   }
+  ]
+ },
+ {
+  "id": "f0bc202812e5ee2c",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 25,
+      "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 25,
+      "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 25,
+      "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."
+     }
+    ]
+   },
+   {
+    "fact": "0.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 25,
+      "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "She specified that she isn’t trying to hide her relationship from the public eye."
+     }
+    ]
+   }
+  ]
+ }
+]

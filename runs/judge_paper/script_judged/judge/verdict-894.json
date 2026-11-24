@@ -1,0 +1,177 @@
+[
+ {
+  "id": "20ad70e95d087e64",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 13,
+      "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 13,
+      "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."
+     }
+    ]
+   },
+   {
+    "fact": "0.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 13,
+      "quote": "But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as the bad guy on day one."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "2.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 24,
+      "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "2.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 24,
+      "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "2.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 24,
+      "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "2.3",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 24,
+      "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   },
+   {
+    "fact": "2.4",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 24,
+      "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2545d17675662998",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."
+     }
+    ]
+   },
+   {
+    "fact": "0.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 14,
+      "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."
+     }
+    ]
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."
+     }
+    ]
+   },
+   {
+    "fact": "1.1",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."
+     }
+    ]
+   },
+   {
+    "fact": "1.2",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 8,
+      "quote": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e9faccdb91f34a5f",
+  "facts": [
+   {
+    "fact": "0.0",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "0.1",
+    "status": "missing",
+    "evidence": []
+   },
+   {
+    "fact": "1.0",
+    "status": "stated",
+    "evidence": [
+     {
+      "item": 5,
+      "quote": "If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability."
+     }
+    ]
+   }
+  ]
+ }
+]
