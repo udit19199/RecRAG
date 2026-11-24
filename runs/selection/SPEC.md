@@ -83,3 +83,15 @@ where: Instabox VM, runs/selection/scripts/vm_new.sh, 2 lanes in parallel
 estimated cost: about $5 at list price (B4_100 about 33,000 input tokens per question; WRONG10 about 3,000)
 
 CLOSED (25 Nov 2026, Udit: "you said we need a closed box run as well"): closed book. The answer model gets the question and no chunks at all (empty context), same answer prompt and settings; 250 questions, 3 repeats; answered right only (Haiku answer judge). Run: runs/selection/scripts/vm_closed.sh on the Instabox VM (wrong10.py with CLOSED=1). With the Normal RAG prompt the model is told to say 'Insufficient Information' when the context cannot answer, so this run shows how much it answers from the question alone; WRONG10 shows the same with unrelated chunks in the context.
+
+## B0/B2/B4 on inference and null questions (25 Nov 2026)
+
+The finding "the gain is mostly fewer 'Insufficient Information' answers" raises the question whether more chunks make the model answer unanswerable (null) questions wrongly. Same three setups on the inference and null questions of the latest run.
+
+variants: B0 (Normal RAG top 10 straight, non-Milvus), B2 (LLM picks 10 of top 50), B4 (top 50 straight)
+questions: 250 (runs/selection/questions_infnull.json: the 125 inference_query + 125 null_query record indices of the latest run, from runs/final500/questions.json multihop_rag; RECRAG_QUESTIONS env var in run.py)
+repeats: 3
+index: runs/rag/indexes/07062033… (Normal RAG, never rebuilt)
+answer model: gpt-6-luna, reasoning effort medium, Normal RAG answer prompt (benchmark.py)
+scoring: answered right only (exact match, then Claude Haiku answer judge; on null questions right = said 'Insufficient Information'). No gold-fact judging.
+where: Instabox VM, runs/selection/scripts/vm_infnull.sh, 3 lanes in parallel

@@ -27,7 +27,12 @@ Milvus (runs/milvus/SPEC.md): with RECRAG_VECTOR_DB=milvus, every vector search
 goes to the rag_chunks collection in self-hosted Milvus (same 7,728 chunks, same
 saved llama-index vectors, HNSW) instead of the llama-index store; the query is
 embedded the same way (text-embedding-3-small via the pipeline's embedder). Run
-folders go under runs/milvus/runs/. Variant B0 is plain Normal RAG, top 10.
+folders go under runs/milvus/runs/. Variant B0 is plain Normal RAG, top 10
+(it works without Milvus too: top 10 straight through the same code path, no
+picking; used for the inference/null question set, 25 Nov 2026).
+
+RECRAG_QUESTIONS (path to a questions json with "indices") overrides the
+question set; default runs/nograph/questions.json.
 """
 
 import json
@@ -42,9 +47,10 @@ shard, shards = int(sys.argv[3]), int(sys.argv[4])
 limit = int(sys.argv[5]) if len(sys.argv) > 5 else None
 MILVUS = os.environ.get("RECRAG_VECTOR_DB") == "milvus"
 B4 = {"B4": 50, "B4_20": 20, "B4_30": 30, "B4_100": 100, "B4_rev": 50, "B4_shuf": 50}
-assert variant in ("B1", "B2", "B3", *B4) or (MILVUS and variant == "B0")
+assert variant in ("B0", "B1", "B2", "B3", *B4)
 os.environ["RECRAG_RUN_NAMESPACE"] = "milvus/runs" if MILVUS else "selection/runs"
-indices = json.loads((ROOT / "runs/nograph/questions.json").read_text())["indices"][shard::shards]
+questions_path = Path(os.environ.get("RECRAG_QUESTIONS", ROOT / "runs/nograph/questions.json"))
+indices = json.loads((ROOT / questions_path if not questions_path.is_absolute() else questions_path).read_text())["indices"][shard::shards]
 if limit:
     indices = indices[:limit]
 INDEX = ROOT / "runs/rag/indexes/07062033a2e929ec10405ef3a38d541e51b907cbb7041de545f72ab1e7b71799"
