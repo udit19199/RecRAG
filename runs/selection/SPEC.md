@@ -63,3 +63,21 @@ scoring: answered right (exact match, then Claude Haiku answer judge); gold fact
 ceiling: runs/selection/scripts/ceiling.py, text match of evals/retrieval_quality.py (locate_gold, ranked_items, any_overlap), top 10/20/30/50, no model calls
 where: Instabox VM, runs/selection/scripts/vm_b4.sh, 3 lanes in parallel
 estimated cost: about $4 at list price
+
+## B4_100 and WRONG10 (25 Nov 2026)
+
+Udit's words (25 Nov 2026):
+> Run all of them.
+(after the list of checks: a top-100 size step, and a floor where the answer model gets no relevant evidence; his follow-up: "we need to get these done asap" and "launch this stuff in the background")
+
+B4_100: Normal RAG's top 100 by vector score, all 100 sent to the answer model in retrieval order; as B4 in everything else (same 250 questions, 3 repeats, GPT-6 Luna, same answer prompt, Haiku scoring: answered right and gold facts found on the frozen final500 claims).
+WRONG10: the floor. Each question is answered from the Normal RAG top 10 of another question of the same type; a donor is accepted only if none of its 10 chunks lies on an article that holds a gold sentence of the question and none overlaps a gold sentence. Donor map: seed 20261125, fixed across repeats (runs/selection/paired/wrong10_donors.json). No retrieval call; answer step = benchmark.answer_saved, same prompt. Scoring: answered right only (Haiku answer judge). No gold-facts judging: by construction no gold sentence is in the context.
+
+variants: B4_100, WRONG10
+questions: 250 (runs/nograph/questions.json, 125 comparison + 125 temporal)
+repeats: 3
+index: runs/rag/indexes/07062033… (Normal RAG, never rebuilt)
+answer model: gpt-6-luna, reasoning effort medium, Normal RAG answer prompt (benchmark.py)
+scoring: answered right (exact match, then Claude Haiku answer judge); gold facts found for B4_100 only (Claude Haiku fact judge, frozen runs/final500 claims)
+where: Instabox VM, runs/selection/scripts/vm_new.sh, 2 lanes in parallel
+estimated cost: about $5 at list price (B4_100 about 33,000 input tokens per question; WRONG10 about 3,000)
