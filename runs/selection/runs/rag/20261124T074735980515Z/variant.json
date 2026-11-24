@@ -1,0 +1,1 @@
+{"variant": "B4_rev", "vector_db": "llama-index", "rep": "2", "shard": 0, "shards": 1, "limit": null, "select_instruction": null, "query_instruction": null, "passages_to_answer": 50, "order": "reversed"}

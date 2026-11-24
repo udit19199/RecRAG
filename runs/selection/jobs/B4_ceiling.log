@@ -1,0 +1,11 @@
+{"reps_same_50_passages": {"1": 250, "2": 233, "3": 234}, "questions": 250, "top10_same_as_normal_rag_final500_rep1": "250/250"}
+comparison_query: 125 questions, 285 gold sentences (0 not found in corpus)
+  top 10: all gold in  16.8% of questions;  45.3% of gold sentences
+  top 20: all gold in  36.0% of questions;  63.5% of gold sentences
+  top 30: all gold in  49.6% of questions;  71.2% of gold sentences
+  top 50: all gold in  67.2% of questions;  82.5% of gold sentences
+temporal_query: 125 questions, 312 gold sentences (0 not found in corpus)
+  top 10: all gold in  14.4% of questions;  39.7% of gold sentences
+  top 20: all gold in  21.6% of questions;  53.8% of gold sentences
+  top 30: all gold in  34.4% of questions;  65.4% of gold sentences
+  top 50: all gold in  54.4% of questions;  77.9% of gold sentences

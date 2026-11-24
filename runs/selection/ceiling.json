@@ -1,0 +1,37 @@
+{
+ "reps_same_50_passages": {
+  "1": 250,
+  "2": 233,
+  "3": 234
+ },
+ "questions": 250,
+ "top10_same_as_normal_rag_final500_rep1": "250/250",
+ "by_type": {
+  "comparison_query": {
+   "questions": 125,
+   "gold_sentences": 285,
+   "gold_unlocated": 0,
+   "all_gold_top10": 21,
+   "all_gold_top20": 45,
+   "all_gold_top30": 62,
+   "all_gold_top50": 84,
+   "gold_found_top10": 129,
+   "gold_found_top20": 181,
+   "gold_found_top30": 203,
+   "gold_found_top50": 235
+  },
+  "temporal_query": {
+   "questions": 125,
+   "gold_sentences": 312,
+   "gold_unlocated": 0,
+   "all_gold_top10": 18,
+   "all_gold_top20": 27,
+   "all_gold_top30": 43,
+   "all_gold_top50": 68,
+   "gold_found_top10": 124,
+   "gold_found_top20": 168,
+   "gold_found_top30": 204,
+   "gold_found_top50": 243
+  }
+ }
+}

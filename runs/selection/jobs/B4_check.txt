@@ -1,0 +1,15 @@
+B4 1 20261124T065013360245Z rows 250, passages 50 empty answers 0
+B4 2 20261124T070529956977Z rows 250, passages 50 empty answers 0
+B4 3 20261124T072059062802Z rows 250, passages 50 empty answers 0
+B4_20 1 20261124T065013069363Z rows 250, passages 20 empty answers 0
+B4_20 2 20261124T070502814984Z rows 250, passages 20 empty answers 0
+B4_20 3 20261124T072013647736Z rows 250, passages 20 empty answers 0
+B4_30 1 20261124T065013759413Z rows 250, passages 30 empty answers 0
+B4_30 2 20261124T070520474180Z rows 250, passages 30 empty answers 0
+B4_30 3 20261124T072058666337Z rows 250, passages 30 empty answers 0
+B4_rev 1 20261124T073554075261Z rows 250, passages 50 empty answers 0
+B4_rev 2 20261124T074735980515Z rows 250, passages 50 empty answers 0
+B4_rev 3 20261124T080011973873Z rows 250, passages 50 empty answers 0
+B4_shuf 1 20261124T073414752595Z rows 250, passages 50 empty answers 0
+B4_shuf 2 20261124T074601969203Z rows 250, passages 50 empty answers 0
+B4_shuf 3 20261124T075912371457Z rows 250, passages 50 empty answers 0
