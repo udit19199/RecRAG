@@ -60,7 +60,7 @@ REG.update(json.load(open("runs/judge_paper/runs.json")))
 sel = json.load(open("runs/selection/run_registry.json"))
 for name in sel:
     REG.setdefault(name, sel[name])
-for name in ("B4_100", "WRONG10"):
+for name in ("B4_100", "WRONG10", "CLOSED"):
     p = Path(f"runs/selection/paired/{name}_registry.json")
     if p.exists():
         REG[name] = json.load(open(p))[name]
@@ -146,7 +146,9 @@ PAIRS += [("B2", "B4_rev"), ("B2", "B4_shuf"), ("B2", ORDERS)]
 if "B4_100" in methods:
     PAIRS += [("B4_100", "B4"), ("B4_100", "B2")]
 if "WRONG10" in methods:
-    PAIRS += [("rag", "WRONG10"), ("B4", "WRONG10")]
+    PAIRS += [("rag", "WRONG10"), ("B4", "WRONG10"), ("WRONG10", "CLOSED")]
+if "CLOSED" in methods:
+    PAIRS += [("rag", "CLOSED"), ("B2", "CLOSED")]
 say("CHECK 1 and 6: paired differences (A minus B), answered right, points; 2x2 by majority of 3 repeats")
 out["paired"] = {}
 for a, b in PAIRS:
@@ -169,7 +171,7 @@ for m in methods:
 
 say()
 say("CHECK 2: evidence found vs answered right (counts are per repeat, averaged over the 3 repeats)")
-SETUPS = [m for m in ("rag", "B1", "B2", "B3", "B4_20", "B4_30", "B4", "B4_100", "graphrag", "nograph", "WRONG10") if m in methods]
+SETUPS = [m for m in ("rag", "B1", "B2", "B3", "B4_20", "B4_30", "B4", "B4_100", "graphrag", "nograph", "WRONG10", "CLOSED") if m in methods]
 BUCKETS = [("none (0 facts)", lambda s: s == 0), ("under half", lambda s: 0 < s < 0.5),
            ("half to all but some", lambda s: 0.5 <= s < 1 - 1e-9), ("all facts", lambda s: s >= 1 - 1e-9)]
 out["evidence_vs_right"] = {}
@@ -261,7 +263,7 @@ for qt in TYPES:
     say(f"  {qt[:4]}: complete {n_c}, incomplete {len(qs) - n_c}; yes/no gold answers: {yn_all} of {len(qs)} overall, {yn_inc} of the {len(qs) - n_c} incomplete")
     ans = Counter(e for q in qs for e in exp[q] if rows[("B4", "1", q)]["yesno"])
     say(f"     gold yes/no split: {dict(ans)}")
-    for m in [x for x in SETUPS if x not in ("WRONG10",)] + (["WRONG10"] if "WRONG10" in methods else []):
+    for m in SETUPS:
         for name, flag in (("complete", True), ("incomplete", False)):
             sub = [q for q in qs if complete[q] == flag]
             sub_yn = [q for q in sub if rows[("B4", "1", q)]["yesno"]]

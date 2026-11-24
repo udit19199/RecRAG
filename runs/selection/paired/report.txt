@@ -35,6 +35,20 @@ CHECK 1 and 6: paired differences (A minus B), answered right, points; 2x2 by ma
         B2 vs B4_shuf  temp: diff +0.3 (95% -3.5 to +4.0)  both 90 only-B2 7 only-B4_shuf 6 neither 22  sign-test p=1.00
         B2 vs B4+B4_rev+B4_shuf comp: diff +2.8 (95% -0.4 to +6.0)  both 95 only-B2 5 only-B4+B4_rev+B4_shuf 0 neither 25  sign-test p=0.06
         B2 vs B4+B4_rev+B4_shuf temp: diff +1.8 (95% -1.1 to +4.7)  both 89 only-B2 8 only-B4+B4_rev+B4_shuf 2 neither 26  sign-test p=0.11
+    B4_100 vs B4       comp: diff +6.4 (95% +1.1 to +12.3)  both 93 only-B4_100 13 only-B4 2 neither 17  sign-test p=0.01
+    B4_100 vs B4       temp: diff +11.5 (95% +6.1 to +17.3)  both 87 only-B4_100 18 only-B4 2 neither 18  sign-test p=0.00
+    B4_100 vs B2       comp: diff +2.7 (95% -3.2 to +8.8)  both 95 only-B4_100 11 only-B2 5 neither 14  sign-test p=0.21
+    B4_100 vs B2       temp: diff +7.7 (95% +2.4 to +13.3)  both 92 only-B4_100 13 only-B2 5 neither 15  sign-test p=0.10
+       rag vs WRONG10  comp: diff +51.7 (95% +43.2 to +60.3)  both 0 only-rag 66 only-WRONG10 0 neither 59  sign-test p=0.00
+       rag vs WRONG10  temp: diff +47.7 (95% +39.5 to +56.0)  both 0 only-rag 59 only-WRONG10 0 neither 66  sign-test p=0.00
+        B4 vs WRONG10  comp: diff +76.3 (95% +68.8 to +83.5)  both 0 only-B4 95 only-WRONG10 0 neither 30  sign-test p=0.00
+        B4 vs WRONG10  temp: diff +73.3 (95% +66.1 to +80.3)  both 0 only-B4 89 only-WRONG10 0 neither 36  sign-test p=0.00
+   WRONG10 vs CLOSED   comp: diff -0.5 (95% -1.3 to +0.0)  both 0 only-WRONG10 0 only-CLOSED 0 neither 125  sign-test p=1.00
+   WRONG10 vs CLOSED   temp: diff -4.5 (95% -8.0 to -1.6)  both 0 only-WRONG10 0 only-CLOSED 5 neither 120  sign-test p=0.06
+       rag vs CLOSED   comp: diff +51.2 (95% +42.7 to +59.7)  both 0 only-rag 66 only-CLOSED 0 neither 59  sign-test p=0.00
+       rag vs CLOSED   temp: diff +43.2 (95% +34.7 to +51.7)  both 4 only-rag 55 only-CLOSED 1 neither 65  sign-test p=0.00
+        B2 vs CLOSED   comp: diff +79.5 (95% +72.8 to +85.9)  both 0 only-B2 100 only-CLOSED 0 neither 25  sign-test p=0.00
+        B2 vs CLOSED   temp: diff +72.5 (95% +65.3 to +79.5)  both 5 only-B2 92 only-CLOSED 0 neither 28  sign-test p=0.00
 
 Repeat range of answered right (lowest-highest of 3 repeats), per setup
   A0_vector_top10          comp 54.4-58.4 (mean 56.8)
@@ -55,6 +69,8 @@ Repeat range of answered right (lowest-highest of 3 repeats), per setup
   B3                       temp 78.4-80.0 (mean 79.5)
   B4                       comp 75.2-78.4 (mean 76.3)
   B4                       temp 71.2-75.2 (mean 73.3)
+  B4_100                   comp 80.8-84.0 (mean 82.7)
+  B4_100                   temp 83.2-86.4 (mean 84.8)
   B4_20                    comp 64.0-65.6 (mean 64.8)
   B4_20                    temp 55.2-56.0 (mean 55.5)
   B4_30                    comp 68.0-72.0 (mean 70.4)
@@ -63,6 +79,10 @@ Repeat range of answered right (lowest-highest of 3 repeats), per setup
   B4_rev                   temp 73.6-76.8 (mean 75.7)
   B4_shuf                  comp 75.2-78.4 (mean 77.3)
   B4_shuf                  temp 73.6-79.2 (mean 76.8)
+  CLOSED                   comp 0.0-1.6 (mean 0.5)
+  CLOSED                   temp 4.0-5.6 (mean 4.5)
+  WRONG10                  comp 0.0-0.0 (mean 0.0)
+  WRONG10                  temp 0.0-0.0 (mean 0.0)
   agent_milvus             comp 69.6-74.4 (mean 71.7)
   agent_milvus             temp 72.0-79.2 (mean 76.0)
   graphrag                 comp 68.8-71.2 (mean 70.4)
@@ -143,6 +163,16 @@ CHECK 2: evidence found vs answered right (counts are per repeat, averaged over 
     under half                9.0 q/repeat  right  44.4%  said Insufficient Information  44.4%
     half to all but some     46.7 q/repeat  right  71.4%  said Insufficient Information  20.7%
     all facts                67.3 q/repeat  right  80.7%  said Insufficient Information   2.5%
+  B4_100 comp
+    none (0 facts)            0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    under half                0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    half to all but some      0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    all facts                 0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+  B4_100 temp
+    none (0 facts)            0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    under half                0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    half to all but some      0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    all facts                 0.0 q/repeat  right   nan%  said Insufficient Information   nan%
   graphrag comp
     none (0 facts)            8.3 q/repeat  right  16.0%  said Insufficient Information  52.0%
     under half               23.3 q/repeat  right  55.7%  said Insufficient Information  20.0%
@@ -163,6 +193,26 @@ CHECK 2: evidence found vs answered right (counts are per repeat, averaged over 
     under half               26.7 q/repeat  right  68.8%  said Insufficient Information  22.5%
     half to all but some     48.3 q/repeat  right  75.2%  said Insufficient Information  10.3%
     all facts                41.0 q/repeat  right  81.3%  said Insufficient Information   4.1%
+  WRONG10 comp
+    none (0 facts)            0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    under half                0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    half to all but some      0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    all facts                 0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+  WRONG10 temp
+    none (0 facts)            0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    under half                0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    half to all but some      0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    all facts                 0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+  CLOSED comp
+    none (0 facts)            0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    under half                0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    half to all but some      0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    all facts                 0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+  CLOSED temp
+    none (0 facts)            0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    under half                0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    half to all but some      0.0 q/repeat  right   nan%  said Insufficient Information   nan%
+    all facts                 0.0 q/repeat  right   nan%  said Insufficient Information   nan%
 
 Answer mix per setup (all questions of the type, mean of repeats): right / Insufficient Information / wrong
   rag        comp right  51.7  insufficient  31.7  wrong  16.5
@@ -179,10 +229,16 @@ Answer mix per setup (all questions of the type, mean of repeats): right / Insuf
   B4_30      temp right  63.5  insufficient  23.7  wrong  12.8
   B4         comp right  76.3  insufficient   2.9  wrong  20.8
   B4         temp right  73.3  insufficient  13.9  wrong  12.8
+  B4_100     comp right  82.7  insufficient   0.8  wrong  16.5
+  B4_100     temp right  84.8  insufficient   4.3  wrong  10.9
   graphrag   comp right  70.4  insufficient   9.1  wrong  20.5
   graphrag   temp right  76.5  insufficient  11.5  wrong  12.0
   nograph    comp right  70.1  insufficient  10.1  wrong  19.7
   nograph    temp right  74.9  insufficient  12.3  wrong  12.8
+  WRONG10    comp right   0.0  insufficient 100.0  wrong   0.0
+  WRONG10    temp right   0.0  insufficient 100.0  wrong   0.0
+  CLOSED     comp right   0.5  insufficient  99.5  wrong   0.0
+  CLOSED     temp right   4.5  insufficient  92.5  wrong   2.9
 
 Evidence found (all gold facts) vs answered right, per repeat on average
   rag        comp all facts: right 19.3 not right 1.3 | not all: right 45.3 not right 59.0
@@ -199,10 +255,16 @@ Evidence found (all gold facts) vs answered right, per repeat on average
   B4_30      temp all facts: right 36.0 not right 9.0 | not all: right 43.3 not right 36.7
   B4         comp all facts: right 70.7 not right 10.7 | not all: right 24.7 not right 19.0
   B4         temp all facts: right 54.3 not right 13.0 | not all: right 37.3 not right 20.3
+  B4_100     comp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
+  B4_100     temp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
   graphrag   comp all facts: right 39.0 not right 6.7 | not all: right 49.0 not right 30.3
   graphrag   temp all facts: right 33.0 not right 6.3 | not all: right 62.7 not right 23.0
   nograph    comp all facts: right 41.0 not right 8.3 | not all: right 46.7 not right 29.0
   nograph    temp all facts: right 33.3 not right 7.7 | not all: right 60.3 not right 23.7
+  WRONG10    comp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
+  WRONG10    temp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
+  CLOSED     comp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
+  CLOSED     temp all facts: right 0.0 not right 0.0 | not all: right 0.0 not right 0.0
 
 How answers change: Normal RAG answer -> other setup answer, same question and repeat number (all 3 repeats pooled, out of 375)
   rag->B2 comp right->right:190  right->insufficient:1  right->wrong:3  insufficient->right:77  insufficient->insufficient:7  insufficient->wrong:35  wrong->right:33  wrong->insufficient:4  wrong->wrong:25
@@ -227,10 +289,16 @@ CHECK 4: does a question whose Normal RAG top 50 lacks gold still get answered r
      B4_30      incomplete n= 41 right  43.9%  | yes/no n= 41  43.9%  other n=  0   nan%  | insufficient  25.2%
      B4         complete   n= 84 right  87.3%  | yes/no n= 80  87.5%  other n=  4  83.3%  | insufficient   0.0%
      B4         incomplete n= 41 right  53.7%  | yes/no n= 41  53.7%  other n=  0   nan%  | insufficient   8.9%
+     B4_100     complete   n= 84 right  86.1%  | yes/no n= 80  85.8%  other n=  4  91.7%  | insufficient   0.0%
+     B4_100     incomplete n= 41 right  75.6%  | yes/no n= 41  75.6%  other n=  0   nan%  | insufficient   2.4%
      graphrag   complete   n= 84 right  79.4%  | yes/no n= 80  80.0%  other n=  4  66.7%  | insufficient   4.0%
      graphrag   incomplete n= 41 right  52.0%  | yes/no n= 41  52.0%  other n=  0   nan%  | insufficient  19.5%
      nograph    complete   n= 84 right  77.0%  | yes/no n= 80  77.1%  other n=  4  75.0%  | insufficient   6.3%
      nograph    incomplete n= 41 right  56.1%  | yes/no n= 41  56.1%  other n=  0   nan%  | insufficient  17.9%
+     WRONG10    complete   n= 84 right   0.0%  | yes/no n= 80   0.0%  other n=  4   0.0%  | insufficient 100.0%
+     WRONG10    incomplete n= 41 right   0.0%  | yes/no n= 41   0.0%  other n=  0   nan%  | insufficient 100.0%
+     CLOSED     complete   n= 84 right   0.8%  | yes/no n= 80   0.8%  other n=  4   0.0%  | insufficient  99.2%
+     CLOSED     incomplete n= 41 right   0.0%  | yes/no n= 41   0.0%  other n=  0   nan%  | insufficient 100.0%
   temp: complete 68, incomplete 57; yes/no gold answers: 112 of 125 overall, 50 of the 57 incomplete
      gold yes/no split: {'no': 52, 'yes': 60}
      rag        complete   n= 68 right  64.7%  | yes/no n= 62  68.3%  other n=  6  27.8%  | insufficient  25.0%
@@ -247,10 +315,16 @@ CHECK 4: does a question whose Normal RAG top 50 lacks gold still get answered r
      B4_30      incomplete n= 57 right  47.4%  | yes/no n= 50  47.3%  other n=  7  47.6%  | insufficient  42.1%
      B4         complete   n= 68 right  82.4%  | yes/no n= 62  82.3%  other n=  6  83.3%  | insufficient   0.5%
      B4         incomplete n= 57 right  62.6%  | yes/no n= 50  66.0%  other n=  7  38.1%  | insufficient  29.8%
+     B4_100     complete   n= 68 right  82.8%  | yes/no n= 62  83.9%  other n=  6  72.2%  | insufficient   2.5%
+     B4_100     incomplete n= 57 right  87.1%  | yes/no n= 50  90.0%  other n=  7  66.7%  | insufficient   6.4%
      graphrag   complete   n= 68 right  78.9%  | yes/no n= 62  80.1%  other n=  6  66.7%  | insufficient   8.3%
      graphrag   incomplete n= 57 right  73.7%  | yes/no n= 50  73.3%  other n=  7  76.2%  | insufficient  15.2%
      nograph    complete   n= 68 right  79.4%  | yes/no n= 62  81.7%  other n=  6  55.6%  | insufficient   5.9%
      nograph    incomplete n= 57 right  69.6%  | yes/no n= 50  68.7%  other n=  7  76.2%  | insufficient  19.9%
+     WRONG10    complete   n= 68 right   0.0%  | yes/no n= 62   0.0%  other n=  6   0.0%  | insufficient 100.0%
+     WRONG10    incomplete n= 57 right   0.0%  | yes/no n= 50   0.0%  other n=  7   0.0%  | insufficient 100.0%
+     CLOSED     complete   n= 68 right   4.4%  | yes/no n= 62   2.2%  other n=  6  27.8%  | insufficient  91.2%
+     CLOSED     incomplete n= 57 right   4.7%  | yes/no n= 50   2.7%  other n=  7  19.0%  | insufficient  94.2%
 
 CHECK 5: same top 50 in every repeat? (B4 repeats 2 and 3 against repeat 1)
   repeat 2: identical 233, same chunks in another order 16, different chunks 1; chunks swapped [(1, 1)]; first difference at rank [(49, 1)]; questions whose 'all gold in top 50' changed 0

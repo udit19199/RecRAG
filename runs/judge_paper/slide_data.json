@@ -1120,5 +1120,203 @@
     125
    ]
   }
+ },
+ "WRONG10": {
+  "comparison_query": {
+   "right": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "f50": [
+    null,
+    null,
+    null
+   ],
+   "f75": [
+    null,
+    null,
+    null
+   ],
+   "f100": [
+    null,
+    null,
+    null
+   ],
+   "n": [
+    125,
+    125,
+    125
+   ],
+   "facts_n": [
+    0,
+    0,
+    0
+   ]
+  },
+  "temporal_query": {
+   "right": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "f50": [
+    null,
+    null,
+    null
+   ],
+   "f75": [
+    null,
+    null,
+    null
+   ],
+   "f100": [
+    null,
+    null,
+    null
+   ],
+   "n": [
+    125,
+    125,
+    125
+   ],
+   "facts_n": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "CLOSED": {
+  "comparison_query": {
+   "right": [
+    0.0,
+    0.0,
+    1.6
+   ],
+   "f50": [
+    null,
+    null,
+    null
+   ],
+   "f75": [
+    null,
+    null,
+    null
+   ],
+   "f100": [
+    null,
+    null,
+    null
+   ],
+   "n": [
+    125,
+    125,
+    125
+   ],
+   "facts_n": [
+    0,
+    0,
+    0
+   ]
+  },
+  "temporal_query": {
+   "right": [
+    4.0,
+    4.0,
+    5.6
+   ],
+   "f50": [
+    null,
+    null,
+    null
+   ],
+   "f75": [
+    null,
+    null,
+    null
+   ],
+   "f100": [
+    null,
+    null,
+    null
+   ],
+   "n": [
+    125,
+    125,
+    125
+   ],
+   "facts_n": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "B4_100": {
+  "comparison_query": {
+   "right": [
+    80.8,
+    83.2,
+    84.0
+   ],
+   "f50": [
+    null,
+    null,
+    null
+   ],
+   "f75": [
+    null,
+    null,
+    null
+   ],
+   "f100": [
+    null,
+    null,
+    null
+   ],
+   "n": [
+    125,
+    125,
+    125
+   ],
+   "facts_n": [
+    0,
+    0,
+    0
+   ]
+  },
+  "temporal_query": {
+   "right": [
+    86.4,
+    83.2,
+    84.8
+   ],
+   "f50": [
+    null,
+    null,
+    null
+   ],
+   "f75": [
+    null,
+    null,
+    null
+   ],
+   "f100": [
+    null,
+    null,
+    null
+   ],
+   "n": [
+    125,
+    125,
+    125
+   ],
+   "facts_n": [
+    0,
+    0,
+    0
+   ]
+  }
  }
 }

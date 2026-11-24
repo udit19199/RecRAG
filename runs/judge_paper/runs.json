@@ -164,5 +164,38 @@
   "3": [
    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T075912371457Z"
   ]
+ },
+ "WRONG10": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T213124865939Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T213608460086Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T214109942989Z"
+  ]
+ },
+ "CLOSED": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T213309991831Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T213801668293Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T214331966531Z"
+  ]
+ },
+ "B4_100": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T213118443444Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T214200158037Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T215327585832Z"
+  ]
  }
 }
