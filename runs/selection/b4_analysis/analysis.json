@@ -1,0 +1,138 @@
+{
+ "comparison_query": {
+  "questions": 125.0,
+  "gold_sentences": 285.0,
+  "chunks_in_top50": 6250.0,
+  "gold_chunks_in_top50": 239.0,
+  "gold_chunks_in_top10": 132.0,
+  "b2_gold_chunks_in_picks": 204.0,
+  "b2_picks_total": 1250.0,
+  "b2_gold_sentences_covered_by_picks": 201.0,
+  "gold_sentences_covered_by_top10": 129.0,
+  "gold_sentences_covered_by_top50": 235.0,
+  "b2_picks_from_top10": 1096.0,
+  "complete_questions": 84.0,
+  "b4_right_complete": 73.33333333333337,
+  "b2_right_complete": 75.00000000000001,
+  "incomplete_questions": 41.0,
+  "incomplete_missing_article_entirely": 26.0,
+  "incomplete_article_present_chunk_missing": 15.0,
+  "missing_gold_sentences": 50.0,
+  "missing_gold_in_absent_article": 30.0,
+  "b4_right_incomplete": 21.99999999999999,
+  "b2_right_incomplete": 24.99999999999998
+ },
+ "temporal_query": {
+  "questions": 125.0,
+  "gold_sentences": 312.0,
+  "chunks_in_top50": 6250.0,
+  "gold_chunks_in_top50": 247.0,
+  "gold_chunks_in_top10": 127.0,
+  "b2_gold_chunks_in_picks": 186.0,
+  "b2_picks_total": 1240.0,
+  "b2_gold_sentences_covered_by_picks": 182.0,
+  "gold_sentences_covered_by_top10": 124.0,
+  "gold_sentences_covered_by_top50": 243.0,
+  "b2_picks_from_top10": 1052.0,
+  "incomplete_questions": 57.0,
+  "incomplete_missing_article_entirely": 37.0,
+  "incomplete_article_present_chunk_missing": 20.0,
+  "missing_gold_sentences": 69.0,
+  "missing_gold_in_absent_article": 39.0,
+  "b4_right_incomplete": 35.66666666666664,
+  "b2_right_incomplete": 37.66666666666666,
+  "complete_questions": 68.0,
+  "b4_right_complete": 56.00000000000012,
+  "b2_right_complete": 58.666666666666806
+ },
+ "examples_incomplete": {
+  "temporal_query": [
+   {
+    "record_id": "multihop-rag-503",
+    "question": "Between the TechCrunch report on Google's AI demo involving the Gemini Ultra model and the TechCrunch report on the antitrust suit filed against Google, was there a change in the nature of the issues reported concerning Google's practices?",
+    "gold_sentences": 3,
+    "missing": 1,
+    "article_absent": 1
+   },
+   {
+    "record_id": "multihop-rag-508",
+    "question": "After the report by Fortune on October 4, 2023, regarding Sam Bankman-Fried's use of a front for secret access to customer funds, and the subsequent report by TechCrunch on October 7, 2023, alleging that Sam Bankman-Fried knowingly committed fraud, did The Verge report on Sam Bankman-Fried's trial indicate consistent or inconsistent information regarding his actions related to customer funds?",
+    "gold_sentences": 3,
+    "missing": 2,
+    "article_absent": 1
+   },
+   {
+    "record_id": "multihop-rag-513",
+    "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+    "gold_sentences": 3,
+    "missing": 2,
+    "article_absent": 2
+   },
+   {
+    "record_id": "multihop-rag-595",
+    "question": "Between the report from The Verge on September 28, 2023, concerning Sam Bankman-Fried's role before the collapse of FTX, and the report from TechCrunch on October 7, 2023, alleging Sam Bankman-Fried's fraudulent activities, was there a change in the portrayal of Sam Bankman-Fried's actions related to the FTX trial?",
+    "gold_sentences": 3,
+    "missing": 2,
+    "article_absent": 1
+   },
+   {
+    "record_id": "multihop-rag-623",
+    "question": "Between the report from Fortune published on October 4, 2023, which discussed Mark Cohen's claims about Caroline Ellison, and the subsequent reports from The Verge regarding statements made by Caroline Ellison, was there a change in the narrative concerning her role and actions as the CEO of Alameda Research?",
+    "gold_sentences": 3,
+    "missing": 1,
+    "article_absent": 1
+   },
+   {
+    "record_id": "multihop-rag-662",
+    "question": "Between the TechCrunch report on Sam Bankman-Fried's actions published before October 31, 2023, and The Verge report on Sam Bankman-Fried's acknowledgment of financial discrepancies, was there a change in the narrative regarding Sam Bankman-Fried's awareness of the financial issues?",
+    "gold_sentences": 2,
+    "missing": 1,
+    "article_absent": 1
+   }
+  ],
+  "comparison_query": [
+   {
+    "record_id": "multihop-rag-547",
+    "question": "Does the Fortune article suggest that Sam Bankman-Fried was responsible for the alleged deceit behind FTX's success, while the TechCrunch article focuses on Gary Wang and Caroline Ellison's admission of guilt to federal criminal charges in relation to the FTX collapse?",
+    "gold_sentences": 2,
+    "missing": 1,
+    "article_absent": 0
+   },
+   {
+    "record_id": "multihop-rag-563",
+    "question": "Does the TechCrunch article suggest that Caroline Ellison acted under the instruction of Sam Bankman-Fried in misusing customer funds, while The Verge article focuses on Sam Bankman-Fried's persona in the cryptocurrency industry, and the second TechCrunch article alleges that Sam Bankman-Fried committed fraud for personal gain, indicating different aspects of his involvement in the FTX collapse?",
+    "gold_sentences": 3,
+    "missing": 2,
+    "article_absent": 2
+   },
+   {
+    "record_id": "multihop-rag-583",
+    "question": "Does the TalkSport article suggest a bleak future for Manchester United with Jim Ratcliffe's vision, while the Sporting News article indicates a setback for Manchester United in European competitions?",
+    "gold_sentences": 2,
+    "missing": 1,
+    "article_absent": 1
+   },
+   {
+    "record_id": "multihop-rag-640",
+    "question": "Do the articles from Sporting News discussing MLB, NBA, and general sports betting all agree that Sportsbooks adjust their policies or odds in response to external events such as weather conditions, player injuries, or other significant information?",
+    "gold_sentences": 3,
+    "missing": 1,
+    "article_absent": 1
+   },
+   {
+    "record_id": "multihop-rag-747",
+    "question": "Does the Sporting News article on the Marshall Thundering Herd indicate no change in starting quarterback similar to the quarterback replacement reported for the Seattle Seahawks by Sporting News?",
+    "gold_sentences": 2,
+    "missing": 1,
+    "article_absent": 1
+   },
+   {
+    "record_id": "multihop-rag-800",
+    "question": "Does 'The Guardian' describe 'the match' as a showcase of equal financial power between teams, while 'CBSSports.com' focuses on the current performance of the 'Dallas team' without mentioning their financial status?",
+    "gold_sentences": 2,
+    "missing": 2,
+    "article_absent": 2
+   }
+  ]
+ }
+}
