@@ -1,0 +1,227 @@
+CHECK 1 and 6: paired differences (A minus B), answered right, points; 2x2 by majority of 3 repeats
+        B2 vs B4       comp: diff +3.7 (95% +0.5 to +7.2)  both 95 only-B2 5 only-B4 0 neither 25  sign-test p=0.06
+        B2 vs B4       temp: diff +3.7 (95% +0.3 to +7.5)  both 87 only-B2 10 only-B4 2 neither 26  sign-test p=0.04
+        B2 vs rag      comp: diff +28.3 (95% +20.5 to +36.0)  both 65 only-B2 35 only-rag 1 neither 24  sign-test p=0.00
+        B2 vs rag      temp: diff +29.3 (95% +21.9 to +37.1)  both 56 only-B2 41 only-rag 3 neither 25  sign-test p=0.00
+        B4 vs rag      comp: diff +24.5 (95% +17.1 to +32.3)  both 64 only-B4 31 only-rag 2 neither 28  sign-test p=0.00
+        B4 vs rag      temp: diff +25.6 (95% +17.9 to +33.3)  both 56 only-B4 33 only-rag 3 neither 33  sign-test p=0.00
+        B4 vs B4_rev   comp: diff -1.9 (95% -5.3 to +1.3)  both 93 only-B4 2 only-B4_rev 5 neither 25  sign-test p=0.45
+        B4 vs B4_rev   temp: diff -2.4 (95% -5.9 to +1.1)  both 85 only-B4 4 only-B4_rev 7 neither 29  sign-test p=0.55
+        B4 vs B4_shuf  comp: diff -1.1 (95% -5.1 to +2.9)  both 93 only-B4 2 only-B4_shuf 6 neither 24  sign-test p=0.29
+        B4 vs B4_shuf  temp: diff -3.5 (95% -7.5 to +0.0)  both 87 only-B4 2 only-B4_shuf 9 neither 27  sign-test p=0.07
+    B4_rev vs B4_shuf  comp: diff +0.8 (95% -2.9 to +4.5)  both 94 only-B4_rev 4 only-B4_shuf 5 neither 22  sign-test p=1.00
+    B4_rev vs B4_shuf  temp: diff -1.1 (95% -5.1 to +2.7)  both 88 only-B4_rev 4 only-B4_shuf 8 neither 25  sign-test p=0.39
+        B2 vs graphrag comp: diff +9.6 (95% +3.2 to +16.0)  both 79 only-B2 21 only-graphrag 6 neither 19  sign-test p=0.01
+        B2 vs graphrag temp: diff +0.5 (95% -6.9 to +7.7)  both 85 only-B2 12 only-graphrag 12 neither 16  sign-test p=1.00
+        B2 vs nograph  comp: diff +9.9 (95% +4.0 to +15.5)  both 87 only-B2 13 only-nograph 4 neither 21  sign-test p=0.05
+        B2 vs nograph  temp: diff +2.1 (95% -4.5 to +8.5)  both 82 only-B2 15 only-nograph 12 neither 16  sign-test p=0.70
+        B2 vs A3_picks_no_graph_rows comp: diff +8.3 (95% +2.4 to +14.1)  both 83 only-B2 17 only-A3_picks_no_graph_rows 5 neither 20  sign-test p=0.02
+        B2 vs A3_picks_no_graph_rows temp: diff +0.5 (95% -6.7 to +7.5)  both 83 only-B2 14 only-A3_picks_no_graph_rows 15 neither 13  sign-test p=1.00
+  graphrag vs nograph  comp: diff +0.3 (95% -4.8 to +5.1)  both 79 only-graphrag 6 only-nograph 12 neither 28  sign-test p=0.24
+  graphrag vs nograph  temp: diff +1.6 (95% -2.7 to +5.9)  both 90 only-graphrag 7 only-nograph 4 neither 24  sign-test p=0.55
+        B2 vs B3       comp: diff +4.0 (95% -1.1 to +9.1)  both 90 only-B2 10 only-B3 3 neither 22  sign-test p=0.09
+        B2 vs B3       temp: diff -2.4 (95% -9.1 to +4.3)  both 87 only-B2 10 only-B3 14 neither 14  sign-test p=0.54
+        B3 vs B4       comp: diff -0.3 (95% -5.9 to +5.3)  both 87 only-B3 6 only-B4 8 neither 24  sign-test p=0.79
+        B3 vs B4       temp: diff +6.1 (95% -0.5 to +12.8)  both 82 only-B3 19 only-B4 7 neither 17  sign-test p=0.03
+        B2 vs B1       comp: diff +20.3 (95% +13.3 to +27.2)  both 74 only-B2 26 only-B1 2 neither 23  sign-test p=0.00
+        B2 vs B1       temp: diff +14.4 (95% +8.5 to +20.8)  both 77 only-B2 20 only-B1 2 neither 26  sign-test p=0.00
+        B4 vs B4_30    comp: diff +5.9 (95% +0.8 to +11.2)  both 85 only-B4 10 only-B4_30 4 neither 26  sign-test p=0.18
+        B4 vs B4_30    temp: diff +9.9 (95% +4.0 to +15.7)  both 73 only-B4 16 only-B4_30 7 neither 29  sign-test p=0.09
+        B4 vs B4_20    comp: diff +11.5 (95% +5.6 to +17.9)  both 78 only-B4 17 only-B4_20 3 neither 27  sign-test p=0.00
+        B4 vs B4_20    temp: diff +17.9 (95% +11.2 to +24.8)  both 64 only-B4 25 only-B4_20 5 neither 31  sign-test p=0.00
+
+Repeat range of answered right (lowest-highest of 3 repeats), per setup
+  A0_vector_top10          comp 54.4-58.4 (mean 56.8)
+  A0_vector_top10          temp 59.2-65.6 (mean 62.7)
+  A2_graph_top10           comp 56.0-56.8 (mean 56.3)
+  A2_graph_top10           temp 64.0-72.0 (mean 66.9)
+  A3_picks_no_graph_rows   comp 69.6-73.6 (mean 71.7)
+  A3_picks_no_graph_rows   temp 72.8-79.2 (mean 76.5)
+  B0_milvus                comp 48.8-52.0 (mean 50.9)
+  B0_milvus                temp 49.6-52.0 (mean 50.7)
+  B1                       comp 59.2-60.8 (mean 59.7)
+  B1                       temp 61.6-64.0 (mean 62.7)
+  B2                       comp 79.2-80.8 (mean 80.0)
+  B2                       temp 74.4-80.0 (mean 77.1)
+  B2_milvus                comp 78.4-80.8 (mean 79.5)
+  B2_milvus                temp 72.8-76.0 (mean 74.1)
+  B3                       comp 73.6-78.4 (mean 76.0)
+  B3                       temp 78.4-80.0 (mean 79.5)
+  B4                       comp 75.2-78.4 (mean 76.3)
+  B4                       temp 71.2-75.2 (mean 73.3)
+  B4_20                    comp 64.0-65.6 (mean 64.8)
+  B4_20                    temp 55.2-56.0 (mean 55.5)
+  B4_30                    comp 68.0-72.0 (mean 70.4)
+  B4_30                    temp 61.6-65.6 (mean 63.5)
+  B4_rev                   comp 77.6-79.2 (mean 78.1)
+  B4_rev                   temp 73.6-76.8 (mean 75.7)
+  B4_shuf                  comp 75.2-78.4 (mean 77.3)
+  B4_shuf                  temp 73.6-79.2 (mean 76.8)
+  agent_milvus             comp 69.6-74.4 (mean 71.7)
+  agent_milvus             temp 72.0-79.2 (mean 76.0)
+  graphrag                 comp 68.8-71.2 (mean 70.4)
+  graphrag                 temp 73.6-79.2 (mean 76.5)
+  nograph                  comp 66.4-72.0 (mean 70.1)
+  nograph                  temp 72.8-76.0 (mean 74.9)
+  rag                      comp 51.2-52.0 (mean 51.7)
+  rag                      temp 45.6-49.6 (mean 47.7)
+
+CHECK 2: evidence found vs answered right (counts are per repeat, averaged over the 3 repeats)
+  rag comp
+    none (0 facts)           17.0 q/repeat  right  21.6%  said Insufficient Information  54.9%
+    under half               40.0 q/repeat  right  40.8%  said Insufficient Information  44.2%
+    half to all but some     47.3 q/repeat  right  53.5%  said Insufficient Information  26.8%
+    all facts                20.7 q/repeat  right  93.5%  said Insufficient Information   0.0%
+  rag temp
+    none (0 facts)           15.0 q/repeat  right  28.9%  said Insufficient Information  71.1%
+    under half               45.0 q/repeat  right  35.6%  said Insufficient Information  54.1%
+    half to all but some     46.0 q/repeat  right  55.1%  said Insufficient Information  38.4%
+    all facts                19.0 q/repeat  right  73.7%  said Insufficient Information  14.0%
+  B1 comp
+    none (0 facts)            8.0 q/repeat  right   0.0%  said Insufficient Information 100.0%
+    under half               19.0 q/repeat  right  38.6%  said Insufficient Information  29.8%
+    half to all but some     46.0 q/repeat  right  55.8%  said Insufficient Information  21.0%
+    all facts                52.0 q/repeat  right  80.1%  said Insufficient Information   0.0%
+  B1 temp
+    none (0 facts)           10.0 q/repeat  right  43.3%  said Insufficient Information  56.7%
+    under half               42.0 q/repeat  right  50.0%  said Insufficient Information  42.9%
+    half to all but some     43.0 q/repeat  right  65.1%  said Insufficient Information  27.1%
+    all facts                30.0 q/repeat  right  83.3%  said Insufficient Information   6.7%
+  B2 comp
+    none (0 facts)            4.0 q/repeat  right  16.7%  said Insufficient Information  33.3%
+    under half               14.7 q/repeat  right  72.7%  said Insufficient Information   4.5%
+    half to all but some     45.0 q/repeat  right  78.5%  said Insufficient Information   4.4%
+    all facts                61.3 q/repeat  right  87.0%  said Insufficient Information   0.0%
+  B2 temp
+    none (0 facts)            4.3 q/repeat  right  76.9%  said Insufficient Information  15.4%
+    under half               33.0 q/repeat  right  64.6%  said Insufficient Information  24.2%
+    half to all but some     50.7 q/repeat  right  78.9%  said Insufficient Information  11.8%
+    all facts                37.0 q/repeat  right  85.6%  said Insufficient Information   4.5%
+  B3 comp
+    none (0 facts)            3.0 q/repeat  right  11.1%  said Insufficient Information  33.3%
+    under half               14.3 q/repeat  right  60.5%  said Insufficient Information  25.6%
+    half to all but some     55.0 q/repeat  right  72.1%  said Insufficient Information   5.5%
+    all facts                52.7 q/repeat  right  88.0%  said Insufficient Information   0.0%
+  B3 temp
+    none (0 facts)            4.7 q/repeat  right  57.1%  said Insufficient Information  35.7%
+    under half               28.7 q/repeat  right  69.8%  said Insufficient Information  16.3%
+    half to all but some     55.0 q/repeat  right  81.2%  said Insufficient Information  10.3%
+    all facts                36.7 q/repeat  right  87.3%  said Insufficient Information   1.8%
+  B4_20 comp
+    none (0 facts)            5.0 q/repeat  right   6.7%  said Insufficient Information  53.3%
+    under half               23.3 q/repeat  right  40.0%  said Insufficient Information  37.1%
+    half to all but some     48.7 q/repeat  right  53.4%  said Insufficient Information  21.2%
+    all facts                48.0 q/repeat  right  94.4%  said Insufficient Information   0.0%
+  B4_20 temp
+    none (0 facts)            3.0 q/repeat  right   0.0%  said Insufficient Information 100.0%
+    under half               35.0 q/repeat  right  31.4%  said Insufficient Information  60.0%
+    half to all but some     56.0 q/repeat  right  64.3%  said Insufficient Information  27.4%
+    all facts                31.0 q/repeat  right  72.0%  said Insufficient Information   8.6%
+  B4_30 comp
+    none (0 facts)            4.0 q/repeat  right   8.3%  said Insufficient Information  33.3%
+    under half               17.0 q/repeat  right  35.3%  said Insufficient Information  33.3%
+    half to all but some     43.3 q/repeat  right  56.9%  said Insufficient Information  13.1%
+    all facts                60.7 q/repeat  right  94.0%  said Insufficient Information   0.0%
+  B4_30 temp
+    none (0 facts)            2.0 q/repeat  right  16.7%  said Insufficient Information  83.3%
+    under half               19.3 q/repeat  right  34.5%  said Insufficient Information  50.0%
+    half to all but some     58.7 q/repeat  right  61.9%  said Insufficient Information  29.5%
+    all facts                45.0 q/repeat  right  80.0%  said Insufficient Information   2.2%
+  B4 comp
+    none (0 facts)            1.0 q/repeat  right   0.0%  said Insufficient Information 100.0%
+    under half                7.0 q/repeat  right  38.1%  said Insufficient Information  14.3%
+    half to all but some     35.7 q/repeat  right  61.7%  said Insufficient Information   4.7%
+    all facts                81.3 q/repeat  right  86.9%  said Insufficient Information   0.0%
+  B4 temp
+    none (0 facts)            2.0 q/repeat  right   0.0%  said Insufficient Information 100.0%
+    under half                9.0 q/repeat  right  44.4%  said Insufficient Information  44.4%
+    half to all but some     46.7 q/repeat  right  71.4%  said Insufficient Information  20.7%
+    all facts                67.3 q/repeat  right  80.7%  said Insufficient Information   2.5%
+  graphrag comp
+    none (0 facts)            8.3 q/repeat  right  16.0%  said Insufficient Information  52.0%
+    under half               23.3 q/repeat  right  55.7%  said Insufficient Information  20.0%
+    half to all but some     47.7 q/repeat  right  72.7%  said Insufficient Information   4.9%
+    all facts                45.7 q/repeat  right  85.4%  said Insufficient Information   0.0%
+  graphrag temp
+    none (0 facts)            9.3 q/repeat  right  64.3%  said Insufficient Information  25.0%
+    under half               23.0 q/repeat  right  60.9%  said Insufficient Information  21.7%
+    half to all but some     53.3 q/repeat  right  80.0%  said Insufficient Information  10.0%
+    all facts                39.3 q/repeat  right  83.9%  said Insufficient Information   4.2%
+  nograph comp
+    none (0 facts)            5.3 q/repeat  right  12.5%  said Insufficient Information  43.8%
+    under half               17.7 q/repeat  right  52.8%  said Insufficient Information  35.8%
+    half to all but some     52.7 q/repeat  right  69.6%  said Insufficient Information   7.6%
+    all facts                49.3 q/repeat  right  83.1%  said Insufficient Information   0.0%
+  nograph temp
+    none (0 facts)            9.0 q/repeat  right  63.0%  said Insufficient Information  29.6%
+    under half               26.7 q/repeat  right  68.8%  said Insufficient Information  22.5%
+    half to all but some     48.3 q/repeat  right  75.2%  said Insufficient Information  10.3%
+    all facts                41.0 q/repeat  right  81.3%  said Insufficient Information   4.1%
+
+Answer mix per setup (all questions of the type, mean of repeats): right / Insufficient Information / wrong
+  rag        comp right  51.7  insufficient  31.7  wrong  16.5
+  rag        temp right  47.7  insufficient  44.3  wrong   8.0
+  B1         comp right  59.7  insufficient  18.7  wrong  21.6
+  B1         temp right  62.7  insufficient  29.9  wrong   7.5
+  B2         comp right  80.0  insufficient   3.2  wrong  16.8
+  B2         temp right  77.1  insufficient  13.1  wrong   9.9
+  B3         comp right  76.0  insufficient   6.1  wrong  17.9
+  B3         temp right  79.5  insufficient  10.1  wrong  10.4
+  B4_20      comp right  64.8  insufficient  17.3  wrong  17.9
+  B4_20      temp right  55.5  insufficient  33.6  wrong  10.9
+  B4_30      comp right  70.4  insufficient  10.1  wrong  19.5
+  B4_30      temp right  63.5  insufficient  23.7  wrong  12.8
+  B4         comp right  76.3  insufficient   2.9  wrong  20.8
+  B4         temp right  73.3  insufficient  13.9  wrong  12.8
+  graphrag   comp right  70.4  insufficient   9.1  wrong  20.5
+  graphrag   temp right  76.5  insufficient  11.5  wrong  12.0
+  nograph    comp right  70.1  insufficient  10.1  wrong  19.7
+  nograph    temp right  74.9  insufficient  12.3  wrong  12.8
+
+CHECK 4: does a question whose Normal RAG top 50 lacks gold still get answered right? (text match, every setup)
+  comp: complete 84, incomplete 41; yes/no gold answers: 121 of 125 overall, 41 of the 41 incomplete
+     gold yes/no split: {'yes': 78, 'no': 43}
+     rag        complete   n= 84 right  59.9%  | yes/no n= 80  59.2%  other n=  4  75.0%  | insufficient  26.2%
+     rag        incomplete n= 41 right  35.0%  | yes/no n= 41  35.0%  other n=  0   nan%  | insufficient  43.1%
+     B1         complete   n= 84 right  70.2%  | yes/no n= 80  70.0%  other n=  4  75.0%  | insufficient   7.5%
+     B1         incomplete n= 41 right  38.2%  | yes/no n= 41  38.2%  other n=  0   nan%  | insufficient  41.5%
+     B2         complete   n= 84 right  89.3%  | yes/no n= 80  90.4%  other n=  4  66.7%  | insufficient   0.0%
+     B2         incomplete n= 41 right  61.0%  | yes/no n= 41  61.0%  other n=  0   nan%  | insufficient   9.8%
+     B3         complete   n= 84 right  83.7%  | yes/no n= 80  84.6%  other n=  4  66.7%  | insufficient   2.0%
+     B3         incomplete n= 41 right  60.2%  | yes/no n= 41  60.2%  other n=  0   nan%  | insufficient  14.6%
+     B4_20      complete   n= 84 right  77.8%  | yes/no n= 80  77.9%  other n=  4  75.0%  | insufficient   8.3%
+     B4_20      incomplete n= 41 right  38.2%  | yes/no n= 41  38.2%  other n=  0   nan%  | insufficient  35.8%
+     B4_30      complete   n= 84 right  83.3%  | yes/no n= 80  83.3%  other n=  4  83.3%  | insufficient   2.8%
+     B4_30      incomplete n= 41 right  43.9%  | yes/no n= 41  43.9%  other n=  0   nan%  | insufficient  25.2%
+     B4         complete   n= 84 right  87.3%  | yes/no n= 80  87.5%  other n=  4  83.3%  | insufficient   0.0%
+     B4         incomplete n= 41 right  53.7%  | yes/no n= 41  53.7%  other n=  0   nan%  | insufficient   8.9%
+     graphrag   complete   n= 84 right  79.4%  | yes/no n= 80  80.0%  other n=  4  66.7%  | insufficient   4.0%
+     graphrag   incomplete n= 41 right  52.0%  | yes/no n= 41  52.0%  other n=  0   nan%  | insufficient  19.5%
+     nograph    complete   n= 84 right  77.0%  | yes/no n= 80  77.1%  other n=  4  75.0%  | insufficient   6.3%
+     nograph    incomplete n= 41 right  56.1%  | yes/no n= 41  56.1%  other n=  0   nan%  | insufficient  17.9%
+  temp: complete 68, incomplete 57; yes/no gold answers: 112 of 125 overall, 50 of the 57 incomplete
+     gold yes/no split: {'no': 52, 'yes': 60}
+     rag        complete   n= 68 right  64.7%  | yes/no n= 62  68.3%  other n=  6  27.8%  | insufficient  25.0%
+     rag        incomplete n= 57 right  27.5%  | yes/no n= 50  26.7%  other n=  7  33.3%  | insufficient  67.3%
+     B1         complete   n= 68 right  74.5%  | yes/no n= 62  76.3%  other n=  6  55.6%  | insufficient  15.2%
+     B1         incomplete n= 57 right  48.5%  | yes/no n= 50  50.0%  other n=  7  38.1%  | insufficient  47.4%
+     B2         complete   n= 68 right  86.3%  | yes/no n= 62  88.2%  other n=  6  66.7%  | insufficient   2.5%
+     B2         incomplete n= 57 right  66.1%  | yes/no n= 50  68.0%  other n=  7  52.4%  | insufficient  25.7%
+     B3         complete   n= 68 right  84.8%  | yes/no n= 62  85.5%  other n=  6  77.8%  | insufficient   3.9%
+     B3         incomplete n= 57 right  73.1%  | yes/no n= 50  73.3%  other n=  7  71.4%  | insufficient  17.5%
+     B4_20      complete   n= 68 right  71.1%  | yes/no n= 62  72.6%  other n=  6  55.6%  | insufficient  16.2%
+     B4_20      incomplete n= 57 right  36.8%  | yes/no n= 50  35.3%  other n=  7  47.6%  | insufficient  54.4%
+     B4_30      complete   n= 68 right  77.0%  | yes/no n= 62  77.4%  other n=  6  72.2%  | insufficient   8.3%
+     B4_30      incomplete n= 57 right  47.4%  | yes/no n= 50  47.3%  other n=  7  47.6%  | insufficient  42.1%
+     B4         complete   n= 68 right  82.4%  | yes/no n= 62  82.3%  other n=  6  83.3%  | insufficient   0.5%
+     B4         incomplete n= 57 right  62.6%  | yes/no n= 50  66.0%  other n=  7  38.1%  | insufficient  29.8%
+     graphrag   complete   n= 68 right  78.9%  | yes/no n= 62  80.1%  other n=  6  66.7%  | insufficient   8.3%
+     graphrag   incomplete n= 57 right  73.7%  | yes/no n= 50  73.3%  other n=  7  76.2%  | insufficient  15.2%
+     nograph    complete   n= 68 right  79.4%  | yes/no n= 62  81.7%  other n=  6  55.6%  | insufficient   5.9%
+     nograph    incomplete n= 57 right  69.6%  | yes/no n= 50  68.7%  other n=  7  76.2%  | insufficient  19.9%
+
+CHECK 5: same top 50 in every repeat? (B4 repeats 2 and 3 against repeat 1)
+  repeat 2: identical 233, same chunks in another order 16, different chunks 1; chunks swapped [(1, 1)]; first difference at rank [(49, 1)]; questions whose 'all gold in top 50' changed 0
+  repeat 3: identical 234, same chunks in another order 16, different chunks 0; chunks swapped []; first difference at rank []; questions whose 'all gold in top 50' changed 0
+  Normal RAG top 10 (final500): repeat 2 identical to repeat 1 for 249 of 250, same set 249
+  Normal RAG top 10 (final500): repeat 3 identical to repeat 1 for 248 of 250, same set 249
