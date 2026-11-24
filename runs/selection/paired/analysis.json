@@ -389,6 +389,84 @@
    "only_b": 5,
    "neither": 31,
    "sign_test_p": 0.00032491423189640045
+  },
+  "B2 vs B4_rev comparison_query": {
+   "questions": 125,
+   "mean_diff_points": 1.8666666666666667,
+   "ci95": [
+    -1.8666666666666665,
+    5.6000000000000005
+   ],
+   "both_right": 95,
+   "only_a": 5,
+   "only_b": 3,
+   "neither": 22,
+   "sign_test_p": 0.7265625
+  },
+  "B2 vs B4_rev temporal_query": {
+   "questions": 125,
+   "mean_diff_points": 1.3333333333333333,
+   "ci95": [
+    -1.8666666666666671,
+    4.8
+   ],
+   "both_right": 90,
+   "only_a": 7,
+   "only_b": 2,
+   "neither": 26,
+   "sign_test_p": 0.1796875
+  },
+  "B2 vs B4_shuf comparison_query": {
+   "questions": 125,
+   "mean_diff_points": 2.666666666666667,
+   "ci95": [
+    -1.3333333333333335,
+    6.933333333333333
+   ],
+   "both_right": 96,
+   "only_a": 4,
+   "only_b": 3,
+   "neither": 22,
+   "sign_test_p": 1.0
+  },
+  "B2 vs B4_shuf temporal_query": {
+   "questions": 125,
+   "mean_diff_points": 0.2666666666666668,
+   "ci95": [
+    -3.4666666666666672,
+    4.000000000000001
+   ],
+   "both_right": 90,
+   "only_a": 7,
+   "only_b": 6,
+   "neither": 22,
+   "sign_test_p": 1.0
+  },
+  "B2 vs B4+B4_rev+B4_shuf comparison_query": {
+   "questions": 125,
+   "mean_diff_points": 2.755555555555556,
+   "ci95": [
+    -0.35555555555555474,
+    5.955555555555557
+   ],
+   "both_right": 95,
+   "only_a": 5,
+   "only_b": 0,
+   "neither": 25,
+   "sign_test_p": 0.0625
+  },
+  "B2 vs B4+B4_rev+B4_shuf temporal_query": {
+   "questions": 125,
+   "mean_diff_points": 1.7777777777777783,
+   "ci95": [
+    -1.0666666666666664,
+    4.711111111111112
+   ],
+   "both_right": 89,
+   "only_a": 8,
+   "only_b": 2,
+   "neither": 26,
+   "sign_test_p": 0.109375
   }
  },
  "repeat_range": {
@@ -1085,6 +1163,162 @@
    "right": 74.93333333333334,
    "abstain": 12.266666666666667,
    "wrong": 12.8
+  }
+ },
+ "evidence_2x2": {
+  "rag comparison_query": {
+   "all_right": 19.333333333333332,
+   "all_notright": 1.3333333333333333,
+   "notall_right": 45.333333333333336,
+   "notall_notright": 59.0
+  },
+  "rag temporal_query": {
+   "all_right": 14.0,
+   "all_notright": 5.0,
+   "notall_right": 45.666666666666664,
+   "notall_notright": 60.333333333333336
+  },
+  "B1 comparison_query": {
+   "all_right": 41.666666666666664,
+   "all_notright": 10.333333333333334,
+   "notall_right": 33.0,
+   "notall_notright": 40.0
+  },
+  "B1 temporal_query": {
+   "all_right": 25.0,
+   "all_notright": 5.0,
+   "notall_right": 53.333333333333336,
+   "notall_notright": 41.666666666666664
+  },
+  "B2 comparison_query": {
+   "all_right": 53.333333333333336,
+   "all_notright": 8.0,
+   "notall_right": 46.666666666666664,
+   "notall_notright": 17.0
+  },
+  "B2 temporal_query": {
+   "all_right": 31.666666666666668,
+   "all_notright": 5.333333333333333,
+   "notall_right": 64.66666666666667,
+   "notall_notright": 23.333333333333332
+  },
+  "B3 comparison_query": {
+   "all_right": 46.333333333333336,
+   "all_notright": 6.333333333333333,
+   "notall_right": 48.666666666666664,
+   "notall_notright": 23.666666666666668
+  },
+  "B3 temporal_query": {
+   "all_right": 32.0,
+   "all_notright": 4.666666666666667,
+   "notall_right": 67.33333333333333,
+   "notall_notright": 21.0
+  },
+  "B4_20 comparison_query": {
+   "all_right": 45.333333333333336,
+   "all_notright": 2.6666666666666665,
+   "notall_right": 35.666666666666664,
+   "notall_notright": 41.333333333333336
+  },
+  "B4_20 temporal_query": {
+   "all_right": 22.333333333333332,
+   "all_notright": 8.666666666666666,
+   "notall_right": 47.0,
+   "notall_notright": 47.0
+  },
+  "B4_30 comparison_query": {
+   "all_right": 57.0,
+   "all_notright": 3.6666666666666665,
+   "notall_right": 31.0,
+   "notall_notright": 33.333333333333336
+  },
+  "B4_30 temporal_query": {
+   "all_right": 36.0,
+   "all_notright": 9.0,
+   "notall_right": 43.333333333333336,
+   "notall_notright": 36.666666666666664
+  },
+  "B4 comparison_query": {
+   "all_right": 70.66666666666667,
+   "all_notright": 10.666666666666666,
+   "notall_right": 24.666666666666668,
+   "notall_notright": 19.0
+  },
+  "B4 temporal_query": {
+   "all_right": 54.333333333333336,
+   "all_notright": 13.0,
+   "notall_right": 37.333333333333336,
+   "notall_notright": 20.333333333333332
+  },
+  "graphrag comparison_query": {
+   "all_right": 39.0,
+   "all_notright": 6.666666666666667,
+   "notall_right": 49.0,
+   "notall_notright": 30.333333333333332
+  },
+  "graphrag temporal_query": {
+   "all_right": 33.0,
+   "all_notright": 6.333333333333333,
+   "notall_right": 62.666666666666664,
+   "notall_notright": 23.0
+  },
+  "nograph comparison_query": {
+   "all_right": 41.0,
+   "all_notright": 8.333333333333334,
+   "notall_right": 46.666666666666664,
+   "notall_notright": 29.0
+  },
+  "nograph temporal_query": {
+   "all_right": 33.333333333333336,
+   "all_notright": 7.666666666666667,
+   "notall_right": 60.333333333333336,
+   "notall_notright": 23.666666666666668
+  }
+ },
+ "transition": {
+  "rag->B2 comparison_query": {
+   "right->right": 190,
+   "right->insufficient": 1,
+   "right->wrong": 3,
+   "insufficient->right": 77,
+   "insufficient->insufficient": 7,
+   "insufficient->wrong": 35,
+   "wrong->right": 33,
+   "wrong->insufficient": 4,
+   "wrong->wrong": 25
+  },
+  "rag->B2 temporal_query": {
+   "right->right": 170,
+   "right->insufficient": 5,
+   "right->wrong": 4,
+   "insufficient->right": 104,
+   "insufficient->insufficient": 44,
+   "insufficient->wrong": 18,
+   "wrong->right": 15,
+   "wrong->insufficient": 0,
+   "wrong->wrong": 15
+  },
+  "rag->B4 comparison_query": {
+   "right->right": 189,
+   "right->insufficient": 0,
+   "right->wrong": 5,
+   "insufficient->right": 72,
+   "insufficient->insufficient": 8,
+   "insufficient->wrong": 39,
+   "wrong->right": 25,
+   "wrong->insufficient": 3,
+   "wrong->wrong": 34
+  },
+  "rag->B4 temporal_query": {
+   "right->right": 168,
+   "right->insufficient": 0,
+   "right->wrong": 11,
+   "insufficient->right": 95,
+   "insufficient->insufficient": 51,
+   "insufficient->wrong": 20,
+   "wrong->right": 12,
+   "wrong->insufficient": 1,
+   "wrong->wrong": 17
   }
  },
  "incomplete": {

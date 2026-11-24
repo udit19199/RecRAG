@@ -29,6 +29,12 @@ CHECK 1 and 6: paired differences (A minus B), answered right, points; 2x2 by ma
         B4 vs B4_30    temp: diff +9.9 (95% +4.0 to +15.7)  both 73 only-B4 16 only-B4_30 7 neither 29  sign-test p=0.09
         B4 vs B4_20    comp: diff +11.5 (95% +5.6 to +17.9)  both 78 only-B4 17 only-B4_20 3 neither 27  sign-test p=0.00
         B4 vs B4_20    temp: diff +17.9 (95% +11.2 to +24.8)  both 64 only-B4 25 only-B4_20 5 neither 31  sign-test p=0.00
+        B2 vs B4_rev   comp: diff +1.9 (95% -1.9 to +5.6)  both 95 only-B2 5 only-B4_rev 3 neither 22  sign-test p=0.73
+        B2 vs B4_rev   temp: diff +1.3 (95% -1.9 to +4.8)  both 90 only-B2 7 only-B4_rev 2 neither 26  sign-test p=0.18
+        B2 vs B4_shuf  comp: diff +2.7 (95% -1.3 to +6.9)  both 96 only-B2 4 only-B4_shuf 3 neither 22  sign-test p=1.00
+        B2 vs B4_shuf  temp: diff +0.3 (95% -3.5 to +4.0)  both 90 only-B2 7 only-B4_shuf 6 neither 22  sign-test p=1.00
+        B2 vs B4+B4_rev+B4_shuf comp: diff +2.8 (95% -0.4 to +6.0)  both 95 only-B2 5 only-B4+B4_rev+B4_shuf 0 neither 25  sign-test p=0.06
+        B2 vs B4+B4_rev+B4_shuf temp: diff +1.8 (95% -1.1 to +4.7)  both 89 only-B2 8 only-B4+B4_rev+B4_shuf 2 neither 26  sign-test p=0.11
 
 Repeat range of answered right (lowest-highest of 3 repeats), per setup
   A0_vector_top10          comp 54.4-58.4 (mean 56.8)
@@ -177,6 +183,32 @@ Answer mix per setup (all questions of the type, mean of repeats): right / Insuf
   graphrag   temp right  76.5  insufficient  11.5  wrong  12.0
   nograph    comp right  70.1  insufficient  10.1  wrong  19.7
   nograph    temp right  74.9  insufficient  12.3  wrong  12.8
+
+Evidence found (all gold facts) vs answered right, per repeat on average
+  rag        comp all facts: right 19.3 not right 1.3 | not all: right 45.3 not right 59.0
+  rag        temp all facts: right 14.0 not right 5.0 | not all: right 45.7 not right 60.3
+  B1         comp all facts: right 41.7 not right 10.3 | not all: right 33.0 not right 40.0
+  B1         temp all facts: right 25.0 not right 5.0 | not all: right 53.3 not right 41.7
+  B2         comp all facts: right 53.3 not right 8.0 | not all: right 46.7 not right 17.0
+  B2         temp all facts: right 31.7 not right 5.3 | not all: right 64.7 not right 23.3
+  B3         comp all facts: right 46.3 not right 6.3 | not all: right 48.7 not right 23.7
+  B3         temp all facts: right 32.0 not right 4.7 | not all: right 67.3 not right 21.0
+  B4_20      comp all facts: right 45.3 not right 2.7 | not all: right 35.7 not right 41.3
+  B4_20      temp all facts: right 22.3 not right 8.7 | not all: right 47.0 not right 47.0
+  B4_30      comp all facts: right 57.0 not right 3.7 | not all: right 31.0 not right 33.3
+  B4_30      temp all facts: right 36.0 not right 9.0 | not all: right 43.3 not right 36.7
+  B4         comp all facts: right 70.7 not right 10.7 | not all: right 24.7 not right 19.0
+  B4         temp all facts: right 54.3 not right 13.0 | not all: right 37.3 not right 20.3
+  graphrag   comp all facts: right 39.0 not right 6.7 | not all: right 49.0 not right 30.3
+  graphrag   temp all facts: right 33.0 not right 6.3 | not all: right 62.7 not right 23.0
+  nograph    comp all facts: right 41.0 not right 8.3 | not all: right 46.7 not right 29.0
+  nograph    temp all facts: right 33.3 not right 7.7 | not all: right 60.3 not right 23.7
+
+How answers change: Normal RAG answer -> other setup answer, same question and repeat number (all 3 repeats pooled, out of 375)
+  rag->B2 comp right->right:190  right->insufficient:1  right->wrong:3  insufficient->right:77  insufficient->insufficient:7  insufficient->wrong:35  wrong->right:33  wrong->insufficient:4  wrong->wrong:25
+  rag->B2 temp right->right:170  right->insufficient:5  right->wrong:4  insufficient->right:104  insufficient->insufficient:44  insufficient->wrong:18  wrong->right:15  wrong->insufficient:0  wrong->wrong:15
+  rag->B4 comp right->right:189  right->insufficient:0  right->wrong:5  insufficient->right:72  insufficient->insufficient:8  insufficient->wrong:39  wrong->right:25  wrong->insufficient:3  wrong->wrong:34
+  rag->B4 temp right->right:168  right->insufficient:0  right->wrong:11  insufficient->right:95  insufficient->insufficient:51  insufficient->wrong:20  wrong->right:12  wrong->insufficient:1  wrong->wrong:17
 
 CHECK 4: does a question whose Normal RAG top 50 lacks gold still get answered right? (text match, every setup)
   comp: complete 84, incomplete 41; yes/no gold answers: 121 of 125 overall, 41 of the 41 incomplete

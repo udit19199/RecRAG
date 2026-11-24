@@ -110,6 +110,9 @@ def say(s=""):
 
 
 def qmean(m, qt):
+    if "+" in m:
+        parts = [qmean(x, qt) for x in m.split("+")]
+        return {q: sum(p[q] for p in parts) / len(parts) for q in set.intersection(*(set(p) for p in parts))}
     return {q: sum(rows[(m, rep, q)]["right"] for rep in "123" if (m, rep, q) in rows) /
             max(1, sum((m, rep, q) in rows for rep in "123")) for q in qids[qt] if (m, "1", q) in rows}
 
@@ -138,6 +141,8 @@ def paired(a, b, qt):
 PAIRS = [("B2", "B4"), ("B2", "rag"), ("B4", "rag"), ("B4", "B4_rev"), ("B4", "B4_shuf"), ("B4_rev", "B4_shuf"),
          ("B2", "graphrag"), ("B2", "nograph"), ("B2", "A3_picks_no_graph_rows"), ("graphrag", "nograph"),
          ("B2", "B3"), ("B3", "B4"), ("B2", "B1"), ("B4", "B4_30"), ("B4", "B4_20")]
+ORDERS = "B4+B4_rev+B4_shuf"
+PAIRS += [("B2", "B4_rev"), ("B2", "B4_shuf"), ("B2", ORDERS)]
 if "B4_100" in methods:
     PAIRS += [("B4_100", "B4"), ("B4_100", "B2")]
 if "WRONG10" in methods:
@@ -145,7 +150,7 @@ if "WRONG10" in methods:
 say("CHECK 1 and 6: paired differences (A minus B), answered right, points; 2x2 by majority of 3 repeats")
 out["paired"] = {}
 for a, b in PAIRS:
-    if a not in methods or b not in methods:
+    if any(x not in methods for x in a.split("+") + b.split("+")):
         continue
     for qt in TYPES:
         r = paired(a, b, qt)
@@ -200,6 +205,37 @@ for m in SETUPS:
         t = sum(c.values())
         out["answer_mix"][f"{m} {qt}"] = {k: 100 * c[k] / t for k in ("right", "abstain", "wrong")}
         say(f"  {m:10} {qt[:4]} right {100 * c['right'] / t:5.1f}  insufficient {100 * c['abstain'] / t:5.1f}  wrong {100 * c['wrong'] / t:5.1f}")
+
+say()
+say("Evidence found (all gold facts) vs answered right, per repeat on average")
+out["evidence_2x2"] = {}
+for m in SETUPS:
+    for qt in TYPES:
+        c = Counter()
+        for rep in "123":
+            for q in qids[qt]:
+                v = rows.get((m, rep, q))
+                if v and v["share"] is not None:
+                    c[("all" if v["share"] >= 1 - 1e-9 else "notall", "right" if v["right"] else "notright")] += 1
+        cell = {f"{a}_{b}": c[(a, b)] / 3 for a in ("all", "notall") for b in ("right", "notright")}
+        out["evidence_2x2"][f"{m} {qt}"] = cell
+        say(f"  {m:10} {qt[:4]} all facts: right {cell['all_right']:.1f} not right {cell['all_notright']:.1f} | not all: right {cell['notall_right']:.1f} not right {cell['notall_notright']:.1f}")
+
+say()
+say("How answers change: Normal RAG answer -> other setup answer, same question and repeat number (all 3 repeats pooled, out of 375)")
+out["transition"] = {}
+for tgt in ("B2", "B4"):
+    for qt in TYPES:
+        c = Counter()
+        for rep in "123":
+            for q in qids[qt]:
+                a, b = rows.get(("rag", rep, q)), rows.get((tgt, rep, q))
+                if a and b:
+                    oc = lambda v: "right" if v["right"] else "insufficient" if v["abstain"] else "wrong"
+                    c[(oc(a), oc(b))] += 1
+        cell = {f"{a}->{b}": c[(a, b)] for a in ("right", "insufficient", "wrong") for b in ("right", "insufficient", "wrong")}
+        out["transition"][f"rag->{tgt} {qt}"] = cell
+        say(f"  rag->{tgt} {qt[:4]} " + "  ".join(f"{k}:{v}" for k, v in cell.items()))
 
 say()
 say("CHECK 4: does a question whose Normal RAG top 50 lacks gold still get answered right? (text match, every setup)")
