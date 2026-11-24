@@ -1,0 +1,49 @@
+[
+  {
+    "id": "5d6ed2c972ddcaaa",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "guidance lays out ways to responsibly use AI in the courts"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "guidance lays out ways to responsibly use AI in the courts, including being aware of potential bias and upholding privacy"}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 24, "quote": "They promised “invest[ment] in the AI-powered technology”"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 24, "quote": "that, amongst other things, would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 24, "quote": "would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse”"}
+        ]
+      }
+    ]
+  }
+]

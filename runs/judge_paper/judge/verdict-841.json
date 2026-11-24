@@ -1,0 +1,20 @@
+[
+{"id": "c3d4f79a66350d9c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 14, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 14, "quote": "For all the other benefits they get from Android, Google could solve this problem today if they wanted to."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 39, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 39, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 39, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 39, "quote": "but Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "645fb952f78d0ba9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 49, "quote": "With a 10% surge in the stock this year,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 49, "quote": "Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 49, "quote": "Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+]}
+]

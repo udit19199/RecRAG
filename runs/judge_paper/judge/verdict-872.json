@@ -1,0 +1,23 @@
+[
+  {
+    "id": "f1a41403be0f904f",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 14, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 14, "quote": "although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley"}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 14, "quote": "although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley"}]}
+    ]
+  },
+  {
+    "id": "d7f76ffcc56175dc",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 10, "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen,\" he told Fox News Digital."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 10, "quote": "he told Fox News Digital."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 25, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 25, "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."}]}
+    ]
+  }
+]

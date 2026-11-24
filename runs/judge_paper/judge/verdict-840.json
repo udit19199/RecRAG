@@ -1,0 +1,37 @@
+[
+  {"id": "3f738202fc06fe65", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "Love Story This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 28, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 28, "quote": "fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 21, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 21, "quote": "where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 21, "quote": "where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 11, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 22, "quote": "since she started dating Kelce"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 11, "quote": "She specified that she isn’t trying to hide her relationship from the public eye."}, {"item": 22, "quote": "since she started dating Kelce"}]}
+  ]},
+  {"id": "aabefc2f28828898", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 38, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 38, "quote": "The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 36, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 36, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 36, "quote": "Apple has already indicated that it plans to appeal, but appealing is a lengthy process that can take around 18 months."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 7, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 7, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 7, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 7, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 7, "quote": "They use their store, their payments, they force developers to all have the same terms, they force OEMs and carriers to all have the same terms."}]}
+  ]},
+  {"id": "8abd5c96f5040abb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "0.6", "status": "missing", "evidence": []},
+    {"fact": "0.7", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "While these models are still quite new, versions that actual humans buy have begun receiving discounts."}]}
+  ]}
+]
