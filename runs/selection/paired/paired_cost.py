@@ -2,8 +2,9 @@
 
 Mean over the 125 questions of each type within a repeat, then the average and the
 lowest-highest of the 3 repeats, per setup and question type (comparison, temporal).
-Cost = results.jsonl question_cost calls estimated_usd (US$), reported in cents; latency =
-retrieval_and_answer_seconds. Same rows and registries as analysis.py.
+Cost = results.jsonl list_question_cost_usd (list price, no cache discount), reported as
+US dollars per 1,000 questions; latency = retrieval_and_answer_seconds.
+Same rows and registries as analysis.py.
 
 Usage (repo root, light): PYTHONPATH=. .venv/bin/python runs/selection/paired/paired_cost.py
   (not cost.py: run as a script it would shadow the repo-root cost.py for benchmark.py's imports)
@@ -53,21 +54,18 @@ for m, name in SETUPS:
     for qt in TYPES:
         qs = sorted({q for (mm, _, q) in rows if mm == m and rows[(mm, _, q)]["question_type"] == qt})
         cell = {}
-        for field, key in (("question_cost", "cents"), ("retrieval_and_answer_seconds", "seconds")):
+        for field, key in (("list_question_cost_usd", "dollars_per_1000"),
+                           ("retrieval_and_answer_seconds", "seconds")):
             per_rep = []
             for rep in "123":
-                vals = [
-                    (sum(c["estimated_usd"] for c in rows[(m, rep, q)][field]["calls"])
-                     if field == "question_cost" else rows[(m, rep, q)][field])
-                    for q in qs if (m, rep, q) in rows]
+                vals = [rows[(m, rep, q)][field] for q in qs if (m, rep, q) in rows]
                 per_rep.append(sum(vals) / len(vals))
             cell[key] = {"mean": sum(per_rep) / len(per_rep), "repeats": per_rep}
-        if "cents" in cell:
-            cell["cents"] = {"mean": cell["cents"]["mean"] * 100,
-                             "repeats": [v * 100 for v in cell["cents"]["repeats"]]}
+        cell["dollars_per_1000"] = {"mean": cell["dollars_per_1000"]["mean"] * 1000,
+                                    "repeats": [v * 1000 for v in cell["dollars_per_1000"]["repeats"]]}
         out.setdefault(m, {})[qt] = cell
-        lines.append(f"{m:10} {qt[:4]} cents {cell['cents']['mean']:.2f} "
-                     f"({min(cell['cents']['repeats']):.2f}-{max(cell['cents']['repeats']):.2f})  "
+        lines.append(f"{m:10} {qt[:4]} $/1k {cell['dollars_per_1000']['mean']:.2f} "
+                     f"({min(cell['dollars_per_1000']['repeats']):.2f}-{max(cell['dollars_per_1000']['repeats']):.2f})  "
                      f"seconds {cell['seconds']['mean']:.1f} "
                      f"({min(cell['seconds']['repeats']):.1f}-{max(cell['seconds']['repeats']):.1f})  n={len(qs)}")
 
