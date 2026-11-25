@@ -522,10 +522,10 @@
   },
   "B4_200 vs B4_100 comparison_query": {
    "questions": 125,
-   "mean_diff_points": -1.6000000000000005,
+   "mean_diff_points": 3.2,
    "ci95": [
-    -6.133333333333335,
-    3.2
+    -1.0666666666666664,
+    7.733333333333333
    ],
    "both_right": 102,
    "only_a": 6,
@@ -535,10 +535,10 @@
   },
   "B4_200 vs B4_100 temporal_query": {
    "questions": 125,
-   "mean_diff_points": -4.800000000000001,
+   "mean_diff_points": 0.5333333333333332,
    "ci95": [
-    -8.8,
-    -0.8000000000000004
+    -2.9333333333333336,
+    4.0
    ],
    "both_right": 102,
    "only_a": 6,
@@ -548,10 +548,10 @@
   },
   "B4_200 vs B2 comparison_query": {
    "questions": 125,
-   "mean_diff_points": 1.066666666666666,
+   "mean_diff_points": 5.866666666666666,
    "ci95": [
-    -5.6000000000000005,
-    8.0
+    -0.7999999999999998,
+    12.8
    ],
    "both_right": 94,
    "only_a": 14,
@@ -561,10 +561,10 @@
   },
   "B4_200 vs B2 temporal_query": {
    "questions": 125,
-   "mean_diff_points": 2.933333333333333,
+   "mean_diff_points": 8.266666666666667,
    "ci95": [
-    -2.6666666666666674,
-    8.799999999999999
+    2.666666666666667,
+    14.133333333333335
    ],
    "both_right": 93,
    "only_a": 15,
@@ -574,10 +574,10 @@
   },
   "B4_200 vs graphrag comparison_query": {
    "questions": 125,
-   "mean_diff_points": 10.666666666666668,
+   "mean_diff_points": 15.466666666666669,
    "ci95": [
-    3.733333333333334,
-    17.599999999999998
+    8.8,
+    22.400000000000002
    ],
    "both_right": 81,
    "only_a": 27,
@@ -587,10 +587,10 @@
   },
   "B4_200 vs graphrag temporal_query": {
    "questions": 125,
-   "mean_diff_points": 3.4666666666666663,
+   "mean_diff_points": 8.8,
    "ci95": [
-    -2.1333333333333337,
-    9.333333333333332
+    3.4666666666666663,
+    14.399999999999999
    ],
    "both_right": 93,
    "only_a": 15,
@@ -956,12 +956,12 @@
    "comparison_query": [
     86.4,
     84.8,
-    72.0
+    86.4
    ],
    "temporal_query": [
     83.2,
     88.0,
-    68.8
+    84.8
    ]
   },
   "B4_30": {
@@ -1783,14 +1783,14 @@
    "wrong": 10.933333333333334
   },
   "B4_200 comparison_query": {
-   "right": 81.06666666666666,
+   "right": 85.86666666666666,
    "abstain": 0.26666666666666666,
-   "wrong": 18.666666666666668
+   "wrong": 13.866666666666667
   },
   "B4_200 temporal_query": {
-   "right": 80.0,
+   "right": 85.33333333333333,
    "abstain": 2.4,
-   "wrong": 17.6
+   "wrong": 12.266666666666667
   },
   "graphrag comparison_query": {
    "right": 70.4,
@@ -2240,18 +2240,18 @@
   },
   "B4_200 comparison_query complete": {
    "n": 84,
-   "right_pct": 81.74603174603175,
+   "right_pct": 86.11111111111111,
    "yesno_n": 80,
-   "yesno_right_pct": 82.08333333333333,
+   "yesno_right_pct": 86.66666666666667,
    "other_n": 4,
    "other_right_pct": 75.0,
    "insufficient_pct": 0.0
   },
   "B4_200 comparison_query incomplete": {
    "n": 41,
-   "right_pct": 79.67479674796748,
+   "right_pct": 85.36585365853658,
    "yesno_n": 41,
-   "yesno_right_pct": 79.67479674796748,
+   "yesno_right_pct": 85.36585365853658,
    "other_n": 0,
    "other_right_pct": NaN,
    "insufficient_pct": 0.8130081300813008
@@ -2492,20 +2492,20 @@
   },
   "B4_200 temporal_query complete": {
    "n": 68,
-   "right_pct": 80.3921568627451,
+   "right_pct": 85.7843137254902,
    "yesno_n": 62,
-   "yesno_right_pct": 81.18279569892474,
+   "yesno_right_pct": 86.55913978494624,
    "other_n": 6,
-   "other_right_pct": 72.22222222222223,
+   "other_right_pct": 77.77777777777777,
    "insufficient_pct": 0.9803921568627451
   },
   "B4_200 temporal_query incomplete": {
    "n": 57,
-   "right_pct": 79.53216374269006,
+   "right_pct": 84.7953216374269,
    "yesno_n": 50,
-   "yesno_right_pct": 79.33333333333333,
+   "yesno_right_pct": 84.66666666666667,
    "other_n": 7,
-   "other_right_pct": 80.95238095238095,
+   "other_right_pct": 85.71428571428571,
    "insufficient_pct": 4.093567251461988
   },
   "graphrag temporal_query complete": {
