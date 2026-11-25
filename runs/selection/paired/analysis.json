@@ -2655,9 +2655,9 @@
     "wrong": 0.8
    },
    "B2_infnull null_query": {
-    "right": 91.6,
+    "right": 91.2,
     "abstain": 0.0,
-    "wrong": 8.4
+    "wrong": 8.8
    },
    "graphrag inference_query": {
     "right": 98.13333333333334,
@@ -2704,12 +2704,12 @@
    "B2_infnull inference_query": [
     99.2,
     99.2,
-    0.0
+    99.2
    ],
    "B2_infnull null_query": [
     92.0,
     91.2,
-    0.0
+    90.4
    ],
    "graphrag inference_query": [
     98.4,
@@ -2733,10 +2733,10 @@
    },
    "B2_infnull vs rag null_query": {
     "questions": 125,
-    "mean_diff_points": -2.0,
+    "mean_diff_points": -2.4,
     "ci95": [
-     -5.7333333333333325,
-     1.333333333333334
+     -5.6000000000000005,
+     0.5333333333333334
     ]
    },
    "B4_infnull vs rag inference_query": {
@@ -2765,10 +2765,10 @@
    },
    "B2_infnull vs B4_infnull null_query": {
     "questions": 125,
-    "mean_diff_points": -1.4666666666666666,
+    "mean_diff_points": -1.8666666666666667,
     "ci95": [
-     -4.133333333333333,
-     0.9333333333333335
+     -4.0,
+     -4.4408920985006264e-17
     ]
    },
    "graphrag vs rag inference_query": {
